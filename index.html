@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrix Reprogrammed</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      font-family: 'Courier New', Courier, monospace;
+      color: #00FF00;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #face-layer {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    #face-layer img {
+      max-width: 90vw;
+      max-height: 90vh;
+      filter: brightness(1.2) contrast(1.6);
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding-top: 2rem;
+      color: #00FF00;
+    }
+
+    .sigil img {
+      width: 80px;
+      opacity: 0.75;
+      filter: drop-shadow(0 0 12px white);
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2.2em;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      color: #00FF00;
+      text-shadow: 0 0 8px #00FF00, 0 0 4px #00FF00;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: #00FF00;
+      text-shadow: 0 0 6px #00FF00, 0 0 3px #00FF00;
+    }
+
+    nav a {
+      color: #00FF00;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.25em;
+      font-weight: bold;
+      text-shadow: 0 0 18px #00FF00, 0 0 6px #00FF00;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #00FF00;
+      color: #00FF00;
+      background: transparent;
+      font-size: 1.25em;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      text-shadow: 0 0 12px #00FF00;
+    }
+
+    .wikileaks a {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1em;
+      font-weight: bold;
+      color: #00FF00;
+      text-shadow: 0 0 10px #00FF00;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div id="face-layer">
+    <img src="face_big.png" alt="The Signal">
+  </div>
+
+  <div class="content">
+    <div class="sigil">
+      <img src="sigil.png" alt="Sigil">
+    </div>
+    <h1>MATRIX REPROGRAMMED</h1>
+    <div class="tagline">Decode the illusion. Follow the Signal.</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="codex.html">Codex</a>
+      <a href="transmissions.html">Transmissions</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="members.html">Members</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="cta-button" href="members.html">Follow The Signal</a>
+
+    <div class="wikileaks">
+      <a href="https://wikileaks.org/vault7" target="_blank">wikileaks.org/vault7</a>
+      <a href="https://wikileaks.org/podesta-emails" target="_blank">wikileaks.org/podesta-emails</a>
+      <a href="https://wikileaks.org/cia-vault" target="_blank">wikileaks.org/cia-vault</a>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const characters = "アァイィウヴエカガキクグケゲコゴABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = new Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#0F0";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = characters[Math.floor(Math.random() * characters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        drops[i]++;
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+      }
+    }
+
+    setInterval(drawMatrix, 50);
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>

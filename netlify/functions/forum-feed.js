@@ -1,7 +1,17 @@
 const { getStore } = require('@netlify/blobs');
 
 function json(statusCode, body) {
-  return { statusCode, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify(body) };
+  return {
+    statusCode,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'no-store',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS'
+    },
+    body: JSON.stringify(body)
+  };
 }
 
 function publicPost(post) {
@@ -18,11 +28,21 @@ function publicPost(post) {
 }
 
 exports.handler = async function(event) {
-  if (event.httpMethod === 'OPTIONS') return { statusCode: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' }, body: '' };
-  if (event.httpMethod !== 'GET') return json(405, { error: 'Method not allowed' });
+  try {
+    if (event.httpMethod === 'OPTIONS') return json(204, { ok: true });
+    if (event.httpMethod !== 'GET') return json(405, { error: 'Method not allowed' });
 
-  const store = getStore('matrix-forum');
-  const approved = await store.get('approved-posts.json', { type: 'json' }) || [];
-  const posts = Array.isArray(approved) ? approved.slice(0, 50).map(publicPost) : [];
-  return json(200, { posts });
+    const store = getStore('matrix-forum');
+    let approved = [];
+    try {
+      const existing = await store.get('approved-posts.json', { type: 'json' });
+      approved = Array.isArray(existing) ? existing : [];
+    } catch {
+      approved = [];
+    }
+    const posts = approved.slice(0, 50).map(publicPost);
+    return json(200, { posts });
+  } catch (err) {
+    return json(500, { error: `Forum feed error: ${err.message || 'unknown error'}` });
+  }
 };

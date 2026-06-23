@@ -16,6 +16,7 @@ Domain connection can be handled at the end once the site machine is strong.
 - Signal Intel Desk added for wars, declassified files, elite networks, court records, WikiLeaks/archive drops, sanctions, surveillance, censorship, organized crime/state overlap, and public-record corruption.
 - Human Cost evidence panel added with sourced/statistical framing and no fake live counter.
 - Signal Video Drops page added for future AI/Rumble/Facebook video infrastructure.
+- Rumble Channel Network added with links for `VVaccines`, `Vcabal`, `VPlandemics`, `V5G`, and `V2030`.
 - `robots.txt` added.
 - `sitemap.xml` added.
 - `netlify.toml` added with static publish settings, security headers, and clean redirects.
@@ -26,17 +27,25 @@ Domain connection can be handled at the end once the site machine is strong.
 - `index.html` — homepage / main funnel
 - `books.html` — archive and Amazon ASIN doors
 - `news.html` — Signal Intel Desk
-- `videos.html` — future video drops infrastructure
+- `videos.html` — future video drops infrastructure and Rumble channel routes
 - `black-file.html` — lead magnet gateway
 - `dog-the-architect.html` — premium flagship page
 - `intelligence-dossiers.html` — intelligence series page
 - `crime-dossiers.html` — crime series page
 - `masonic-esoteric.html` — masonic/esoteric series page
 - `codex.html` — symbolic codex page
-- `transmissions.html` — Rumble/video pathway
+- `transmissions.html` — Rumble channel network / video pathway
 - `podcast.html` — audio pathway
 - `members.html` — membership/follow signal page
 - `contact.html` — contact page
+
+## Rumble Channels Added
+
+- `https://rumble.com/c/VVaccines`
+- `https://rumble.com/c/Vcabal`
+- `https://rumble.com/c/VPlandemics`
+- `https://rumble.com/c/V5G`
+- `https://rumble.com/c/V2030`
 
 ## Next Best Upgrades
 

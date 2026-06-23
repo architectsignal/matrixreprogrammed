@@ -1,0 +1,55 @@
+name: ElevenLabs Video POST Test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/elevenlabs-video-post-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  ELEVENLABS_VIDEO_PROBE_MODE: generate
+  ELEVENLABS_VIDEO_ENDPOINT: https://api.elevenlabs.io/v1/image-to-video/generate
+  ELEVENLABS_VIDEO_MODEL_ID: default
+
+jobs:
+  post-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Try ElevenLabs image-to-video POST endpoint
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node scripts/probe-elevenlabs-video-api.js
+
+      - name: Upload POST test artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-video-post-test
+          path: artifacts/elevenlabs-video-probe
+          retention-days: 7
+
+      - name: Commit POST diagnostics
+        run: |
+          git config user.name "matrix-reprogrammed-bot"
+          git config user.email "actions@github.com"
+          git add diagnostics/elevenlabs-video-probe
+          if git diff --cached --quiet; then
+            echo "No POST diagnostics changes to commit."
+          else
+            git commit -m "Update ElevenLabs video POST diagnostics"
+            git push
+          fi

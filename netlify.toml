@@ -1,0 +1,29 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/intel"
+  to = "/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/archive"
+  to = "/books.html"
+  status = 301
+
+[[redirects]]
+  from = "/blackfile"
+  to = "/black-file.html"
+  status = 301

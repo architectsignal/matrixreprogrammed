@@ -34,6 +34,21 @@
   status = 301
 
 [[redirects]]
+  from = "/books"
+  to = "/books.html"
+  status = 200
+
+[[redirects]]
+  from = "/amazon-store"
+  to = "/amazon-store-books.html"
+  status = 200
+
+[[redirects]]
+  from = "/news"
+  to = "/news.html"
+  status = 200
+
+[[redirects]]
   from = "/intel"
   to = "/news.html"
   status = 301

@@ -2,6 +2,10 @@
   const form = document.getElementById('signal-board-form');
   const status = document.getElementById('signal-form-status');
   const feed = document.getElementById('signal-board-feed');
+  const unlockButton = document.getElementById('unlock-signal-pass');
+  const passStatus = document.getElementById('signal-pass-status');
+  const submitSection = document.getElementById('submit-signal');
+  const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
 
   function esc(s){
     return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -9,6 +13,28 @@
 
   function shortDate(value){
     try { return new Date(value).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); } catch { return ''; }
+  }
+
+  function hasSignalPass(){
+    return localStorage.getItem(PASS_KEY) === 'yes';
+  }
+
+  function applySignalPassState(){
+    const unlocked = hasSignalPass();
+    if (submitSection) submitSection.classList.toggle('signal-locked', !unlocked);
+    if (form) {
+      Array.from(form.elements).forEach(el => {
+        if (el.name === 'website') return;
+        el.disabled = !unlocked;
+      });
+    }
+    const lockMessage = document.querySelector('.signal-lock-message');
+    if (lockMessage) {
+      lockMessage.textContent = unlocked ? 'Signal Pass unlocked on this device. Posting is open.' : 'Posting is locked until Signal Pass is unlocked on this device.';
+    }
+    if (passStatus) {
+      passStatus.textContent = unlocked ? 'Signal Pass unlocked. You can now post.' : 'Signal Pass not unlocked on this device yet.';
+    }
   }
 
   function renderPost(post){
@@ -23,7 +49,7 @@
       const data = await res.json();
       const posts = Array.isArray(data.posts) ? data.posts : [];
       if (!posts.length) {
-        feed.innerHTML = '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Post a source, question, reader note, or human-cost update.</p></article>';
+        feed.innerHTML = '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Unlock a Signal Pass and post a source, question, reader note, or human-cost update.</p></article>';
         return;
       }
       feed.innerHTML = posts.map(renderPost).join('');
@@ -47,6 +73,14 @@
     }
   }
 
+  if (unlockButton) {
+    unlockButton.addEventListener('click', function(){
+      localStorage.setItem(PASS_KEY, 'yes');
+      applySignalPassState();
+      if (submitSection) submitSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
   if (feed) {
     feed.addEventListener('click', function(event){
       const button = event.target.closest('.report-signal');
@@ -58,8 +92,15 @@
   if (form) {
     form.addEventListener('submit', async function(event){
       event.preventDefault();
+      if (!hasSignalPass()) {
+        status.textContent = 'Unlock Signal Pass before posting.';
+        const gate = document.getElementById('signal-pass');
+        if (gate) gate.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
       status.textContent = 'Posting signal...';
       const payload = Object.fromEntries(new FormData(form).entries());
+      payload.signalPass = 'local-unlocked';
       try {
         const res = await fetch('/.netlify/functions/submit-forum-post', {
           method: 'POST',
@@ -77,5 +118,6 @@
     });
   }
 
+  applySignalPassState();
   loadFeed();
 })();

@@ -9,6 +9,8 @@ on:
       - '**.html'
       - '**.css'
       - '**.js'
+      - 'data/**'
+      - 'scripts/**'
       - 'sitemap.xml'
       - 'robots.txt'
       - 'netlify.toml'
@@ -28,6 +30,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Generate book system
+        run: node scripts/build-book-system.js
+
+      - name: Generate homepage
+        run: node scripts/build-homepage.js
+
+      - name: Inject analytics
+        run: node scripts/inject-analytics.js
 
       - name: Generate Black File PDF
         run: node scripts/build-black-file-pdf.js

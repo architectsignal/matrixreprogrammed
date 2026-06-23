@@ -8,6 +8,7 @@ Domain connection can be handled at the end once the site machine is strong.
 ## Completed
 
 - Homepage rebuilt as a brand/sales funnel.
+- Homepage cinematic `Signal Gate` added: first-landing welcome overlay with Matrix rain behind it, typed terminal intro, Enter Archive CTA, Black File CTA, skip option, replay button, and localStorage memory so repeat visitors are not blocked.
 - Matrix rain preserved and moved into reusable `matrix.js`.
 - Matrix rain upgraded with sharper glow, high-DPI canvas handling, smoother animation, gold signal flickers, and reduced-motion support.
 - Shared elite dark styling added in `styles.css`: premium glass panels, serif hero typography, pill navigation, stronger cards, better buttons, forms, mobile responsiveness, gold/green highlights, and system-wide visual consistency.
@@ -17,7 +18,8 @@ Domain connection can be handled at the end once the site machine is strong.
 - Four reader pathway shelves created: Masonic & Esoteric, Survival & War, Dark Psychology, and Dossiers & Public Record.
 - D.O.G The Architect upgraded as the flagship premium occult masterwork page.
 - Black File upgraded as the lead-magnet and email-capture gateway.
-- Black File preview download added.
+- Black File branded PDF lead magnet added and generated during Netlify deploy.
+- Black File preview text retained as backup.
 - Black File welcome sequence written.
 - Four shelf branch email sequences written.
 - D.O.G collector hardback email sequence written.
@@ -26,14 +28,15 @@ Domain connection can be handled at the end once the site machine is strong.
 - Human Cost evidence panel added with sourced/statistical framing and no fake live counter.
 - Signal Video Drops page added for future AI/Rumble/Facebook video infrastructure.
 - Rumble Channel Network added with links for `VVaccines`, `Vcabal`, `VPlandemics`, `V5G`, and `V2030`.
+- ElevenLabs GitHub Actions voice-test workflow added.
 - `robots.txt` added.
 - `sitemap.xml` added.
-- `netlify.toml` added with static publish settings, security headers, and clean redirects.
+- `netlify.toml` added with static publish settings, security headers, clean redirects, and Black File PDF generation.
 - Daily Signal Intel Desk automation scheduled.
 
 ## Current Core Pages
 
-- `index.html` — homepage / main funnel
+- `index.html` — homepage / main funnel with Signal Gate welcome overlay
 - `books.html` — archive and Amazon ASIN doors
 - `news.html` — Signal Intel Desk
 - `videos.html` — future video drops infrastructure and Rumble channel routes
@@ -62,14 +65,13 @@ Domain connection can be handled at the end once the site machine is strong.
 
 ## Next Best Upgrades
 
-1. Create the polished final Black File PDF to replace the placeholder preview text file.
-2. Upgrade `news.html` into a true weekly/daily drop layout with archive cards and source slots.
-3. Add a reusable HTML/component generation system so future pages are easier to maintain.
-4. Connect Netlify Forms to an email platform.
-5. Build video automation using ElevenLabs API and GitHub Actions.
-6. Add Facebook/Rumble publishing only after account/API connection is verified.
-7. Add preview/deploy checks before domain connection.
-8. Add analytics and conversion tracking.
+1. Upgrade `news.html` into a true weekly/daily drop layout with archive cards and source slots.
+2. Add a reusable HTML/component generation system so future pages are easier to maintain.
+3. Connect Netlify Forms to an email platform.
+4. Build video automation using ElevenLabs API and GitHub Actions.
+5. Add Facebook/Rumble publishing only after account/API connection is verified.
+6. Add preview/deploy checks before domain connection.
+7. Add analytics and conversion tracking.
 
 ## Evidence Rules For Intel Desk
 

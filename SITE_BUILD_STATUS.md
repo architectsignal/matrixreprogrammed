@@ -30,6 +30,8 @@ Domain connection can be handled at the end once the site machine is strong.
 - D.O.G collector hardback email sequence written.
 - Funnel master plan and internal `funnel-map.html` created.
 - Signal Intel Desk added for wars, declassified files, elite networks, court records, WikiLeaks/archive drops, sanctions, surveillance, censorship, organized crime/state overlap, and public-record corruption.
+- Daily Intel Drop automation added: source scan, scoring, latest drop JSON, social post Markdown, `news.html` update, site audit, commit, and Facebook Page post when Meta secrets exist.
+- Weekly D.O.G video automation added: source-led package, dark D.O.G manga scene prompts/cards, ElevenLabs narration, vertical MP4 rendering, artifact upload, commit, and Facebook Page video upload when Meta secrets exist.
 - Human Cost evidence panel added with sourced/statistical framing and no fake live counter.
 - Signal Video Drops page added for video dispatches, Rumble routes, source-led explainers, and book trailers.
 - Rumble Channel Network added with links for `VVaccines`, `Vcabal`, `VPlandemics`, `V5G`, and `V2030`.
@@ -68,16 +70,22 @@ Domain connection can be handled at the end once the site machine is strong.
 - `https://rumble.com/c/V5G`
 - `https://rumble.com/c/V2030`
 
+## Automation Workflows
+
+- `.github/workflows/daily-intel-drop.yml` — daily source-led site update and Facebook post.
+- `.github/workflows/weekly-dog-video.yml` — weekly D.O.G-style MP4 render and Facebook video upload.
+- `.github/workflows/elevenlabs-voice-test.yml` — manual ElevenLabs voice test.
+- `.github/workflows/site-qa.yml` — site audit.
+
 ## Next Best Upgrades
 
-1. Run the Site QA workflow from GitHub Actions and review output.
-2. Upgrade `news.html` into a true weekly/daily drop layout with source cards and archive slots.
-3. Add a reusable HTML/component generation system so future pages are easier to maintain.
-4. Connect Netlify Forms to an email platform.
-5. Build video automation using ElevenLabs API and GitHub Actions.
-6. Add Facebook/Rumble publishing only after account/API connection is verified.
-7. Add preview/deploy checks before domain connection.
-8. Add analytics and conversion tracking.
+1. Run `Daily Intel Drop` in dry-run first, then live if it passes.
+2. Run `Weekly D.O.G Video Package` in dry-run first, then live if it passes.
+3. Add YouTube upload automation.
+4. Add Rumble upload automation if account/API upload access is available.
+5. Add true AI image generation for each weekly D.O.G scene if an approved image/video generation API is connected.
+6. Connect Netlify Forms to an email platform.
+7. Add analytics and conversion tracking.
 
 ## Evidence Rules For Intel Desk
 

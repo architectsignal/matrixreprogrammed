@@ -1,0 +1,62 @@
+name: Weekly D.O.G Video Package
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 8 * * 1"
+
+permissions:
+  contents: write
+
+env:
+  ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
+
+jobs:
+  weekly-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate fresh Intel Drop first
+        run: node scripts/intel-drop-engine.js
+
+      - name: Build weekly D.O.G video package
+        run: node scripts/build-weekly-dog-video-package.js
+
+      - name: Generate ElevenLabs voiceover
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        run: node scripts/generate-weekly-voiceover.js
+
+      - name: Upload weekly video package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-dog-video-package
+          path: |
+            video-packages/**/package.md
+            video-packages/**/package.json
+            video-packages/**/narration.txt
+            video-packages/**/poster.svg
+            video-packages/**/voiceover.mp3
+          retention-days: 14
+
+      - name: Commit weekly video package metadata
+        run: |
+          git config user.name "matrix-reprogrammed-bot"
+          git config user.email "actions@github.com"
+          git add data/latest-drop.json data/latest-video-package.json data/drops social/daily video-packages
+          if git diff --cached --quiet; then
+            echo "No weekly package changes to commit."
+          else
+            git commit -m "Weekly D.O.G video package $(date -u +%F)"
+            git push
+          fi

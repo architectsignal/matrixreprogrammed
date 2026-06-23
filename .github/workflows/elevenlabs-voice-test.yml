@@ -1,0 +1,36 @@
+name: ElevenLabs Voice Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
+
+jobs:
+  voice-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate ElevenLabs voice test
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        run: node scripts/test-elevenlabs-voice.js
+
+      - name: Upload test audio artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-voice-test-audio
+          path: artifacts/matrix-reprogrammed-elevenlabs-test.mp3
+          if-no-files-found: error
+          retention-days: 7

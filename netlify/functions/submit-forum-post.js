@@ -1,4 +1,4 @@
-const { openForumStore } = require('./_forum-store');
+const { openForumStore, forumStorageError } = require('./_forum-store');
 
 const CATEGORIES = new Set(['Source Drop','Book Question','Intel Desk Tip','D.O.G Symbol Question','War File / Human Cost','Crime-State Overlap','Reader Review']);
 const HARD_BLOCKED = [
@@ -92,6 +92,6 @@ exports.handler = async function(event) {
 
     return json(201, { ok: true, status: 'public', id: post.id });
   } catch (err) {
-    return json(500, { error: `Forum storage error: ${err.message || 'unknown error'}` });
+    return json(500, forumStorageError(err));
   }
 };

@@ -1,0 +1,39 @@
+name: Live Smoke Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 9 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check deployed pages
+        run: |
+          set -e
+          BASE="https://matrixreprogrammed.netlify.app"
+          mkdir -p smoke
+
+          check_page() {
+            path="$1"
+            expected="$2"
+            echo "Checking $BASE$path for: $expected"
+            curl -L --fail --silent --show-error "$BASE$path" -o "smoke/${path//\//_}.html"
+            grep -i "$expected" "smoke/${path//\//_}.html" >/dev/null
+          }
+
+          check_page "/" "MATRIX REPROGRAMMED"
+          check_page "/books" "THE BOOK ARCHIVE"
+          check_page "/books.html" "THE BOOK ARCHIVE"
+          check_page "/news" "Latest 7 Days"
+          check_page "/news.html" "Human Cost Evidence Panel"
+          check_page "/amazon-store" "THE BOOK WALL"
+          check_page "/amazon-store-books.html" "THE BOOK WALL"
+          check_page "/black-file.html" "Black File"
+          check_page "/book-as-above-so-below.html" "As Above"
+
+          echo "Live smoke test passed."

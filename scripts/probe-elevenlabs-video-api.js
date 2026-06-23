@@ -3,7 +3,9 @@ const path = require('path');
 
 const root = process.cwd();
 const outDir = path.join(root, 'artifacts', 'elevenlabs-video-probe');
+const diagnosticsDir = path.join(root, 'diagnostics', 'elevenlabs-video-probe');
 fs.mkdirSync(outDir, { recursive: true });
+fs.mkdirSync(diagnosticsDir, { recursive: true });
 
 const apiKey = process.env.ELEVENLABS_API_KEY;
 const explicitEndpoint = process.env.ELEVENLABS_VIDEO_ENDPOINT;
@@ -26,6 +28,11 @@ const candidateEndpoints = [
   'https://api.elevenlabs.io/v1/studio/video',
   'https://api.elevenlabs.io/v1/creative/video'
 ];
+
+function writeBoth(filename, content) {
+  fs.writeFileSync(path.join(outDir, filename), content);
+  fs.writeFileSync(path.join(diagnosticsDir, filename), content);
+}
 
 async function request(method, url, options = {}) {
   const res = await fetch(url, {
@@ -56,10 +63,20 @@ async function probeOnly() {
       }
     }
   }
-  fs.writeFileSync(path.join(outDir, 'probe-results.json'), JSON.stringify(rows, null, 2));
-  fs.writeFileSync(path.join(outDir, 'probe-results.md'), rows.map(r => `## ${r.method} ${r.endpoint}\n\nStatus: ${r.status || 'ERR'}\n\n\`\`\`text\n${r.bodyPreview || r.error || ''}\n\`\`\``).join('\n\n'));
+  const json = JSON.stringify(rows, null, 2);
+  const md = [
+    '# ElevenLabs Video API Probe Results',
+    '',
+    `Generated: ${new Date().toISOString()}`,
+    '',
+    'No secret values are printed here. The probe only records endpoint, method, HTTP status, content type, and a short response preview.',
+    '',
+    ...rows.map(r => `## ${r.method} ${r.endpoint}\n\nStatus: ${r.status || 'ERR'}\n\nContent-Type: ${r.contentType || 'n/a'}\n\n\`\`\`text\n${r.bodyPreview || r.error || ''}\n\`\`\``)
+  ].join('\n\n');
+  writeBoth('probe-results.json', json);
+  writeBoth('probe-results.md', md);
   console.log('ElevenLabs video API probe complete. No video generation was attempted.');
-  console.log(`Results written to ${outDir}`);
+  console.log(`Results written to ${outDir} and ${diagnosticsDir}`);
 }
 
 async function generateWithExplicitEndpoint() {
@@ -75,10 +92,11 @@ async function generateWithExplicitEndpoint() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   });
-  fs.writeFileSync(path.join(outDir, 'generate-response.json'), JSON.stringify(result, null, 2));
+  const json = JSON.stringify(result, null, 2);
+  writeBoth('generate-response.json', json);
   console.log(`Explicit endpoint generation attempted: ${explicitEndpoint}`);
   console.log(`Status: ${result.status}`);
-  console.log('Response saved as artifact. If it contains a video/job ID, the next script can poll/download it.');
+  console.log('Response saved as artifact and diagnostics file. If it contains a video/job ID, the next script can poll/download it.');
 }
 
 async function main() {

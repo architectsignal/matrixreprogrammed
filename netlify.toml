@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "node scripts/build-black-file-pdf.js"
 
 [[headers]]
   for = "/*"
@@ -7,6 +8,12 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/downloads/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
 
 [[redirects]]
   from = "/home"

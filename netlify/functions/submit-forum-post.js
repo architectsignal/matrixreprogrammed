@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { openForumStore } = require('./_forum-store');
 
 const CATEGORIES = new Set(['Source Drop','Book Question','Intel Desk Tip','D.O.G Symbol Question','War File / Human Cost','Crime-State Overlap','Reader Review']);
 const HARD_BLOCKED = [
@@ -79,7 +79,7 @@ exports.handler = async function(event) {
       ua: clean((event.headers && event.headers['user-agent']) || '', 200)
     };
 
-    const store = getStore('matrix-forum');
+    const store = openForumStore();
     let approved = [];
     try {
       const existing = await store.get('approved-posts.json', { type: 'json' });

@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { openForumStore } = require('./_forum-store');
 
 function json(statusCode, body) {
   return {
@@ -32,7 +32,7 @@ exports.handler = async function(event) {
     if (event.httpMethod === 'OPTIONS') return json(204, { ok: true });
     if (event.httpMethod !== 'GET') return json(405, { error: 'Method not allowed' });
 
-    const store = getStore('matrix-forum');
+    const store = openForumStore();
     let approved = [];
     try {
       const existing = await store.get('approved-posts.json', { type: 'json' });

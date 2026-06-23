@@ -36,52 +36,94 @@ function redactDeep(value, key = '') {
   return value;
 }
 
-function extractRows(raw) {
-  const possibleArrays = [];
-  if (Array.isArray(raw)) possibleArrays.push(raw);
-  if (raw && typeof raw === 'object') {
-    for (const key of ['requests', 'data', 'items', 'results', 'events', 'logs']) {
-      if (Array.isArray(raw[key])) possibleArrays.push(raw[key]);
-    }
+function collectArrays(raw, arrays = []) {
+  if (!raw) return arrays;
+  if (Array.isArray(raw)) arrays.push(raw);
+  if (typeof raw === 'object') {
+    for (const v of Object.values(raw)) collectArrays(v, arrays);
   }
-  const arr = possibleArrays[0] || [];
+  return arrays;
+}
+
+function extractRows(raw) {
+  const arr = collectArrays(raw).sort((a, b) => b.length - a.length)[0] || [];
   return arr.map((r, i) => {
-    const method = r.method || r.http_method || r.request_method || r.verb || '';
-    const url = r.url || r.path || r.endpoint || r.route || r.request_url || r.request_path || r.api_path || '';
-    const status = r.status || r.status_code || r.response_status || r.http_status || '';
+    if (!r || typeof r !== 'object') return null;
+    const method = r.method || r.http_method || r.request_method || r.verb || r.request?.method || r.request?.http_method || '';
+    const url = r.url || r.path || r.endpoint || r.route || r.request_url || r.request_path || r.api_path || r.request?.url || r.request?.path || r.request?.endpoint || '';
+    const status = r.status || r.status_code || r.response_status || r.http_status || r.response?.status || r.response?.status_code || '';
     const created = r.created_at || r.timestamp || r.time || r.requested_at || r.date || '';
     const model = r.model || r.model_id || r.request?.model_id || r.request?.model || '';
     const product = r.product || r.feature || r.category || r.type || '';
     return { index: i + 1, created, method, url, status, model, product };
-  }).filter(r => Object.values(r).some(Boolean));
+  }).filter(Boolean).filter(r => Object.values(r).some(Boolean));
+}
+
+async function callVariant(label, method, body = undefined) {
+  const url = new URL(endpoint);
+  if (method === 'GET' && !url.searchParams.has('limit')) url.searchParams.set('limit', '50');
+  const options = {
+    method,
+    headers: {
+      'xi-api-key': apiKey,
+      'Accept': 'application/json'
+    }
+  };
+  if (body !== undefined) {
+    options.headers['Content-Type'] = 'application/json';
+    options.body = JSON.stringify(body);
+  }
+  const res = await fetch(url.toString(), options);
+  const contentType = res.headers.get('content-type') || '';
+  const responseBody = contentType.includes('application/json') ? await res.json().catch(() => ({})) : await res.text().catch(() => '');
+  const rows = extractRows(responseBody);
+  return {
+    label,
+    method,
+    requestShape: body === undefined ? 'no body' : Object.keys(body).join(', ') || '{}',
+    status: res.status,
+    contentType,
+    rowCount: rows.length,
+    rows,
+    redactedBody: redactDeep(responseBody)
+  };
 }
 
 async function main() {
   if (!apiKey) throw new Error('Missing ELEVENLABS_API_KEY secret.');
 
-  const url = new URL(endpoint);
-  if (!url.searchParams.has('limit')) url.searchParams.set('limit', '50');
+  const now = new Date();
+  const start = new Date(now.getTime() - 1000 * 60 * 60 * 24 * 7);
+  const startUnix = Math.floor(start.getTime() / 1000);
+  const endUnix = Math.floor(now.getTime() / 1000);
 
-  const res = await fetch(url.toString(), {
-    method: 'GET',
-    headers: {
-      'xi-api-key': apiKey,
-      'Accept': 'application/json'
+  const variants = [
+    ['GET limit', 'GET', undefined],
+    ['POST empty', 'POST', {}],
+    ['POST limit', 'POST', { limit: 50 }],
+    ['POST unix window', 'POST', { start_unix: startUnix, end_unix: endUnix, limit: 50 }],
+    ['POST date window', 'POST', { start_date: start.toISOString(), end_date: now.toISOString(), limit: 50 }]
+  ];
+
+  const attempts = [];
+  for (const [label, method, body] of variants) {
+    try {
+      attempts.push(await callVariant(label, method, body));
+    } catch (err) {
+      attempts.push({ label, method, requestShape: body === undefined ? 'no body' : Object.keys(body).join(', ') || '{}', error: err.message, status: 'ERR', rowCount: 0, rows: [] });
     }
-  });
+  }
 
-  const contentType = res.headers.get('content-type') || '';
-  const body = contentType.includes('application/json') ? await res.json().catch(() => ({})) : await res.text().catch(() => '');
-  const redacted = redactDeep(body);
-  const rows = extractRows(body);
+  const best = attempts.find(a => a.rowCount > 0) || attempts.find(a => Number(a.status) >= 200 && Number(a.status) < 300) || attempts[0];
+  const allRows = attempts.flatMap(a => (a.rows || []).map(r => ({ ...r, sourceAttempt: a.label, sourceStatus: a.status })));
 
   const summary = {
     generated_at: new Date().toISOString(),
-    endpoint: url.origin + url.pathname,
-    status: res.status,
-    contentType,
-    rowCount: rows.length,
-    rows
+    endpoint: new URL(endpoint).origin + new URL(endpoint).pathname,
+    attempts: attempts.map(a => ({ label: a.label, method: a.method, requestShape: a.requestShape, status: a.status, contentType: a.contentType, rowCount: a.rowCount, rows: a.rows || [] })),
+    best: best ? { label: best.label, method: best.method, status: best.status, rowCount: best.rowCount } : null,
+    rowCount: allRows.length,
+    rows: allRows
   };
 
   const md = [
@@ -91,7 +133,9 @@ async function main() {
     '',
     `Endpoint: ${summary.endpoint}`,
     '',
-    `HTTP status: ${summary.status}`,
+    '## Attempts',
+    '',
+    ...summary.attempts.map(a => `- ${a.label}: ${a.method} (${a.requestShape}) → HTTP ${a.status}; rows ${a.rowCount}`),
     '',
     `Rows detected: ${summary.rowCount}`,
     '',
@@ -99,7 +143,7 @@ async function main() {
     '',
     '## Extracted rows',
     '',
-    rows.length ? rows.map(r => `- ${r.created || 'unknown time'} · ${r.method || '?'} · ${r.url || '(no path found)'} · status ${r.status || '?'}${r.model ? ` · model ${r.model}` : ''}${r.product ? ` · ${r.product}` : ''}`).join('\n') : 'No structured request rows detected. Check redacted-response.json for the response shape.',
+    allRows.length ? allRows.map(r => `- ${r.created || 'unknown time'} · ${r.method || '?'} · ${r.url || '(no path found)'} · status ${r.status || '?'}${r.model ? ` · model ${r.model}` : ''}${r.product ? ` · ${r.product}` : ''} · via ${r.sourceAttempt}`).join('\n') : 'No structured request rows detected. The endpoint may require a different POST schema or UI-only access.',
     '',
     '## What to look for',
     '',
@@ -108,10 +152,9 @@ async function main() {
 
   writeBoth('safe-summary.json', JSON.stringify(summary, null, 2));
   writeBoth('safe-summary.md', md);
-  writeBoth('redacted-response.json', JSON.stringify({ status: res.status, contentType, body: redacted }, null, 2));
+  writeBoth('redacted-response.json', JSON.stringify({ attempts: attempts.map(a => ({ label: a.label, method: a.method, status: a.status, contentType: a.contentType, rowCount: a.rowCount, body: a.redactedBody || a.error || null })) }, null, 2));
 
-  console.log(`ElevenLabs request log query complete: HTTP ${res.status}`);
-  console.log(`Rows detected: ${rows.length}`);
+  console.log(md);
   console.log(`Results saved to ${outDir} and ${diagnosticsDir}`);
 }
 

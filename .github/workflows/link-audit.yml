@@ -1,0 +1,20 @@
+name: Matrix Reprogrammed Link Audit
+
+on:
+  push:
+    paths:
+      - "**.html"
+      - "styles.css"
+      - "matrix.js"
+      - "tools/link-audit.js"
+      - ".github/workflows/link-audit.yml"
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+      - name: Run internal link audit
+        run: node tools/link-audit.js

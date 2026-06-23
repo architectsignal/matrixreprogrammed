@@ -1,0 +1,40 @@
+name: Facebook Page Brand Update
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/facebook-page-update.yml'
+      - 'scripts/post-facebook-page-update.js'
+  workflow_dispatch:
+    inputs:
+      facebook_mode:
+        description: "Facebook mode: live or dry-run"
+        required: false
+        default: "live"
+
+permissions:
+  contents: read
+
+env:
+  FACEBOOK_PAGE_UPDATE_MODE: ${{ github.event.inputs.facebook_mode || 'live' }}
+  FACEBOOK_PAGE_UPDATE_LINK: https://matrixreprogrammed.com/
+
+jobs:
+  post-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Post Matrix Reprogrammed page update
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+        run: node scripts/post-facebook-page-update.js

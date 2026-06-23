@@ -4,81 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Podcast | Matrix Reprogrammed</title>
-  <meta name="description" content="Matrix Reprogrammed podcast hub for audio transmissions, archive readings, dossier breakdowns, and symbolic investigations." />
+  <meta name="description" content="Matrix Reprogrammed podcast hub for audio transmissions, dossier readings, symbol breakdowns, Intel Desk updates, and hidden-system investigations." />
   <meta property="og:title" content="Podcast | Matrix Reprogrammed" />
-  <meta property="og:description" content="Matrix Reprogrammed podcast hub for audio transmissions, archive readings, dossier breakdowns, and symbolic investigations." />
+  <meta property="og:description" content="Audio transmissions, dossier readings, symbol breakdowns, Intel Desk updates, and hidden-system investigations." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<main class="wrap section">
-  <h1>PODCAST</h1>
-  <p class="lead">Audio transmissions coming soon: dossier readings, author notes, symbol breakdowns, and hidden-system investigations.</p>
-  <div class="terminal">EPISODE MAP
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="videos.html">Videos</a><a href="transmissions.html">Rumble</a><a href="black-file.html">Black File</a><a href="contact.html">Contact</a></nav></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">Audio Transmissions · Dossier Readings · Archive Voice</div><h1>PODCAST</h1><p class="lead">The future audio wing of Matrix Reprogrammed: dossier readings, symbolic breakdowns, Intel Desk briefings, book trailers, author transmissions, and long-form hidden-system investigations.</p><div class="cta-row"><a class="btn" href="videos.html">Video Drops</a><a class="btn alt" href="transmissions.html">Rumble Network</a><a class="btn alt" href="black-file.html">Black File</a></div></section>
+<section class="section wrap split"><div class="terminal">EPISODE MAP
 01 — Reality Is Edited
 02 — The Door Before The Temple
 03 — Intelligence As Architecture
 04 — Crime As System Shadow
-05 — The Symbol Is Not Decoration</div>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+05 — The Symbol Is Not Decoration
+06 — The War File
+07 — The Black File</div><div class="card redline"><h2>Audio Strategy</h2><p>Every episode should point to one action: request the Black File, enter a shelf, open the Intel Desk, or read a specific book page.</p><p><a class="btn" href="funnel-map.html">View Funnel Map</a></p></div></section>
+<section class="section wrap grid"><article class="card"><h2>Dossier Readings</h2><p>Cold, public-record readings from the Intelligence and Crime Dossiers with evidence boundaries preserved.</p></article><article class="card"><h2>Symbol Breakdowns</h2><p>Short symbolic explanations feeding the Masonic shelf and D.O.G The Architect.</p></article><article class="card"><h2>Intel Briefings</h2><p>Weekly audio recaps from the Intel Desk: war files, court records, declassified drops, sanctions, and archive signals.</p></article><article class="card"><h2>Book Funnels</h2><p>Each episode can become a direct path into a book landing page, Amazon, or the Black File email funnel.</p></article></section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Podcast and video scripts should preserve evidence boundaries and avoid unsupported allegations.</p></footer></div><script src="matrix.js"></script></body></html>

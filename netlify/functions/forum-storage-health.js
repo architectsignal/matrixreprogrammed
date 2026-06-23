@@ -1,4 +1,4 @@
-const { getStore } = require('@netlify/blobs');
+const { openForumStore, forumStorageError } = require('./_forum-store');
 
 function json(statusCode, body) {
   return {
@@ -15,12 +15,13 @@ exports.handler = async function(event) {
   if (event.httpMethod !== 'GET') return json(405, { ok: false, error: 'Method not allowed' });
 
   try {
-    const store = getStore('matrix-forum');
+    const store = openForumStore();
     const key = 'storage-health.json';
     const payload = {
       ok: true,
       checkedAt: new Date().toISOString(),
       store: 'matrix-forum',
+      mode: process.env.FORUM_NETLIFY_SITE_ID || process.env.NETLIFY_SITE_ID || process.env.SITE_ID || process.env.BLOBS_SITE_ID ? 'manual-env-or-netlify-env' : 'automatic-netlify-context',
       message: 'Forum storage write/read check passed.'
     };
 
@@ -43,6 +44,7 @@ exports.handler = async function(event) {
       ok: true,
       store: 'matrix-forum',
       checkedAt: readBack.checkedAt,
+      mode: readBack.mode,
       counts: {
         publicPosts: Array.isArray(approved) ? approved.length : 0,
         reports: Array.isArray(reports) ? reports.length : 0,
@@ -53,7 +55,7 @@ exports.handler = async function(event) {
     return json(500, {
       ok: false,
       store: 'matrix-forum',
-      error: String(error && error.message ? error.message : error)
+      ...forumStorageError(error)
     });
   }
 };

@@ -36,6 +36,9 @@ jobs:
       - name: Update Intel Desk page
         run: node scripts/update-news-from-drop.js
 
+      - name: Build Intel Bulletin Archive
+        run: node scripts/build-intel-archive-page.js
+
       - name: Generate Black File PDF
         run: node scripts/build-black-file-pdf.js
 
@@ -46,7 +49,7 @@ jobs:
         run: |
           git config user.name "matrix-reprogrammed-bot"
           git config user.email "actions@github.com"
-          git add data/latest-drop.json data/drops social/daily news.html downloads/the-black-file-matrix-reprogrammed.pdf
+          git add data/latest-drop.json data/drops social/daily news.html intel-archive.html downloads/the-black-file-matrix-reprogrammed.pdf
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else

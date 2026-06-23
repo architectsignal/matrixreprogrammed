@@ -4,84 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D.O.G The Architect | Matrix Reprogrammed</title>
-  <meta name="description" content="D.O.G The Architect is the flagship occult and esoteric masterwork from Matrix Reprogrammed: thirty-three gates through hidden architecture and symbolic reality." />
+  <meta name="description" content="D.O.G The Architect is the flagship Matrix Reprogrammed occult masterwork: thirty-three gates through symbolism, hidden architecture, sacred number, mystery schools, artificial intelligence, and the war over meaning." />
   <meta property="og:title" content="D.O.G The Architect | Matrix Reprogrammed" />
-  <meta property="og:description" content="D.O.G The Architect is the flagship occult and esoteric masterwork from Matrix Reprogrammed: thirty-three gates through hidden architecture and symbolic reality." />
-  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Thirty-three gates through symbolism, hidden architecture, sacred number, mystery schools, artificial intelligence, and the war over meaning." />
+  <meta property="og:type" content="book" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"D.O.G The Architect","author":{"@type":"Person","name":"Nicholas Matthews"},"publisher":{"@type":"Organization","name":"Matrix Reprogrammed"},"description":"A flagship occult and esoteric masterwork built around thirty-three symbolic gates, hidden architecture, sacred number, mystery-school language, and the modern war over meaning.","url":"https://matrixreprogrammed.com/dog-the-architect.html"}</script>
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="videos.html">Videos</a><a href="dog-the-architect.html">D.O.G</a><a href="intelligence-dossiers.html">Intelligence</a><a href="crime-dossiers.html">Crime</a><a href="masonic-esoteric.html">Masonic</a><a href="black-file.html">Black File</a><a href="transmissions.html">Rumble</a></nav></header>
 <main>
-<section class="hero wrap">
-  <div class="eyebrow">Flagship masterwork</div>
-  <h1>D.O.G<br>THE ARCHITECT</h1>
-  <p class="lead">Not a book about symbols. A book about the architecture behind them. Thirty-three gates through mystery schools, temples, myths, sacred geometry, artificial intelligence, and the hidden war over meaning itself.</p>
-  <div class="cta-row"><a class="btn" href="books.html">Buy From The Archive</a><a class="btn alt" href="black-file.html">Read The Black File</a></div>
-</section>
-<section class="section wrap grid">
-  <article class="card"><h2>The Thirty-Three Gates</h2><p>A symbolic ascent through the body, temple, city, mind, machine, crown, and threshold.</p></article>
-  <article class="card"><h2>Occult Architecture</h2><p>The book treats symbols as working structures: doors, seals, mirrors, stairs, masks, and hidden operating systems.</p></article>
-  <article class="card"><h2>Luxury Edition Energy</h2><p>Position this as the collector hardback: engraved plates, black-and-copper mood, forbidden codex language, premium object value.</p></article>
-</section>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+<section class="hero wrap"><div class="eyebrow">Flagship masterwork</div><h1>D.O.G<br>THE ARCHITECT</h1><p class="lead">Not a book about symbols. A book about the architecture behind them. Thirty-three gates through mystery schools, temples, myths, sacred geometry, artificial intelligence, and the hidden war over meaning itself.</p><div class="cta-row"><a class="btn" href="books.html">Buy From The Archive</a><a class="btn alt" href="black-file.html">Open The Black File</a><a class="btn alt" href="news.html">Follow The Intel Desk</a></div></section>
+<section class="section wrap split"><div class="terminal">D.O.G SIGNAL
+> Door. Order. Geometry.
+> The body is the temple.
+> The symbol is not decoration.
+> The false crown imitates the true crown.
+> Thirty-three gates. One architecture.</div><div class="card"><h2>Premium Position</h2><p>This is the collector-object centre of the brand: luxury occult hardback, copperplate engraving energy, forbidden codex tone, and the deepest symbolic system in the Matrix Reprogrammed archive.</p><p><a class="btn" href="books.html">Find The Book</a></p></div></section>
+<section class="section wrap grid"><article class="card"><h2>The Thirty-Three Gates</h2><p>A symbolic ascent through body, temple, city, mind, machine, crown, threshold, and source.</p></article><article class="card"><h2>Occult Architecture</h2><p>Symbols are treated as working structures: doors, seals, mirrors, stairs, masks, temples, and hidden operating systems.</p></article><article class="card"><h2>AI & False Light</h2><p>The modern machine is read through ancient language: artificial crown, synthetic oracle, false illumination, and the cage without bars.</p></article><article class="card"><h2>The Reader Path</h2><p>D.O.G feeds the wider archive: Intelligence Dossiers for power, Crime Dossiers for networks, Masonic/esoteric for symbols, and the Intel Desk for current-source traffic.</p></article></section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Symbolic analysis, esoteric commentary, public-record investigation, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script></body></html>

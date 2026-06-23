@@ -19,7 +19,17 @@ function clean(value, max) {
 }
 
 function json(statusCode, body) {
-  return { statusCode, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }, body: JSON.stringify(body) };
+  return {
+    statusCode,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'no-store',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS'
+    },
+    body: JSON.stringify(body)
+  };
 }
 
 function validUrl(value) {
@@ -32,46 +42,56 @@ function validUrl(value) {
 }
 
 exports.handler = async function(event) {
-  if (event.httpMethod === 'OPTIONS') return { statusCode: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' }, body: '' };
-  if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
+  try {
+    if (event.httpMethod === 'OPTIONS') return json(204, { ok: true });
+    if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
 
-  let payload;
-  try { payload = JSON.parse(event.body || '{}'); } catch { return json(400, { error: 'Invalid JSON' }); }
+    let payload;
+    try { payload = JSON.parse(event.body || '{}'); } catch { return json(400, { error: 'Invalid JSON.' }); }
 
-  const category = clean(payload.category, 80);
-  const name = clean(payload.name || 'Anonymous', 80) || 'Anonymous';
-  const title = clean(payload.title, 140);
-  const body = clean(payload.body, 2400);
-  const sourceUrl = validUrl(clean(payload.sourceUrl, 500));
-  const honeypot = clean(payload.website, 100);
-  const signalPass = clean(payload.signalPass, 40);
+    const category = clean(payload.category, 80);
+    const name = clean(payload.name || 'Anonymous', 80) || 'Anonymous';
+    const title = clean(payload.title, 140);
+    const body = clean(payload.body, 2400);
+    const sourceUrl = validUrl(clean(payload.sourceUrl, 500));
+    const honeypot = clean(payload.website, 100);
+    const signalPass = clean(payload.signalPass, 40);
 
-  if (honeypot) return json(200, { ok: true, status: 'received' });
-  if (signalPass !== 'local-unlocked') return json(402, { error: 'Signal Pass required before posting.' });
-  if (!CATEGORIES.has(category)) return json(400, { error: 'Choose a valid category.' });
-  if (title.length < 5) return json(400, { error: 'Title is too short.' });
-  if (body.length < 20) return json(400, { error: 'Message is too short.' });
+    if (honeypot) return json(200, { ok: true, status: 'received' });
+    if (signalPass !== 'local-unlocked') return json(402, { error: 'Signal Pass required before posting.' });
+    if (!CATEGORIES.has(category)) return json(400, { error: 'Choose a valid category.' });
+    if (title.length < 5) return json(400, { error: 'Title is too short.' });
+    if (body.length < 20) return json(400, { error: 'Message is too short.' });
 
-  const combined = `${title} ${body}`;
-  if (HARD_BLOCKED.some(rx => rx.test(combined))) return json(400, { error: 'Blocked by the hard legal/safety floor.' });
+    const combined = `${title} ${body}`;
+    if (HARD_BLOCKED.some(rx => rx.test(combined))) return json(400, { error: 'Blocked by the hard legal/safety floor.' });
 
-  const post = {
-    id: `sig_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`,
-    category,
-    name,
-    title,
-    body,
-    sourceUrl,
-    status: 'public',
-    createdAt: new Date().toISOString(),
-    approvedAt: new Date().toISOString(),
-    ua: clean(event.headers['user-agent'] || '', 200)
-  };
+    const post = {
+      id: `sig_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`,
+      category,
+      name,
+      title,
+      body,
+      sourceUrl,
+      status: 'public',
+      createdAt: new Date().toISOString(),
+      approvedAt: new Date().toISOString(),
+      ua: clean((event.headers && event.headers['user-agent']) || '', 200)
+    };
 
-  const store = getStore('matrix-forum');
-  const approved = await store.get('approved-posts.json', { type: 'json' }) || [];
-  approved.unshift(post);
-  await store.setJSON('approved-posts.json', approved.slice(0, 500));
+    const store = getStore('matrix-forum');
+    let approved = [];
+    try {
+      const existing = await store.get('approved-posts.json', { type: 'json' });
+      approved = Array.isArray(existing) ? existing : [];
+    } catch {
+      approved = [];
+    }
+    approved.unshift(post);
+    await store.setJSON('approved-posts.json', approved.slice(0, 500));
 
-  return json(201, { ok: true, status: 'public', id: post.id });
+    return json(201, { ok: true, status: 'public', id: post.id });
+  } catch (err) {
+    return json(500, { error: `Forum storage error: ${err.message || 'unknown error'}` });
+  }
 };

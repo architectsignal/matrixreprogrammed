@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - '.github/workflows/elevenlabs-endpoint-discovery.yml'
+      - 'scripts/query-elevenlabs-request-log.js'
 
 permissions:
   contents: read

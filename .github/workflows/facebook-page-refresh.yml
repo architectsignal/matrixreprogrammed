@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       facebook_mode:
-        description: "Facebook mode: live or dry-run"
+        description: "Facebook mode: live, dry-run, or validate"
         required: false
-        default: "live"
+        default: "dry-run"
   push:
     branches:
       - main
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 env:
-  FACEBOOK_PAGE_UPDATE_MODE: ${{ github.event.inputs.facebook_mode || 'live' }}
+  FACEBOOK_PAGE_UPDATE_MODE: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.facebook_mode || 'dry-run' }}
 
 jobs:
   page-refresh:

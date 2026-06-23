@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-book-system.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js",
+    "build": "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js",
     "books": "node scripts/build-book-system.js",
+    "home": "node scripts/build-homepage.js",
     "audit": "node scripts/audit-site.js"
   },
   "dependencies": {

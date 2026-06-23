@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js"
 
 [functions]
   directory = "netlify/functions"

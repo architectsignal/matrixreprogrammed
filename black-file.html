@@ -4,90 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Black File | Matrix Reprogrammed</title>
-  <meta name="description" content="Download or request The Black File, a Matrix Reprogrammed lead magnet mapping 33 hidden systems behind the modern world." />
+  <meta name="description" content="Request The Black File from Matrix Reprogrammed: a 33-system reader gateway into intelligence, crime, symbols, war files, elite networks, media power, money, and control." />
   <meta property="og:title" content="The Black File | Matrix Reprogrammed" />
-  <meta property="og:description" content="Download or request The Black File, a Matrix Reprogrammed lead magnet mapping 33 hidden systems behind the modern world." />
+  <meta property="og:description" content="The free reader gateway into the Matrix Reprogrammed archive: 33 hidden systems behind the modern world." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<main class="wrap section split">
-  <section>
-    <h1>THE BLACK FILE</h1>
-    <p class="lead">33 hidden systems behind the modern world: symbols, intelligence networks, secret societies, media influence, financial architecture, crime logistics, and the psychology of consent.</p>
-    <div class="terminal">> FILE STATUS: OPEN
-> USE: Reader initiation / email capture / archive entry point
-> PROMISE: Not all doors are locked. Some are disguised as decoration.</div>
-  </section>
-  <section class="card">
-    <h2>Request Access</h2>
-    <p>Connect this form to your email platform. Netlify Forms will detect it when deployed through Netlify.</p>
-    <form name="black-file-request" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="black-file-request" />
-      <input name="name" placeholder="Name" />
-      <input name="email" type="email" placeholder="Email" />
-      <button class="btn" type="submit">Open The File</button>
-    </form>
-  </section>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="videos.html">Videos</a><a href="dog-the-architect.html">D.O.G</a><a href="intelligence-dossiers.html">Intelligence</a><a href="crime-dossiers.html">Crime</a><a href="masonic-esoteric.html">Masonic</a><a href="black-file.html">Black File</a><a href="transmissions.html">Rumble</a></nav></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">Reader initiation file</div><h1>THE BLACK FILE</h1><p class="lead">Thirty-three hidden systems behind the modern world: symbols, intelligence networks, secret societies, elite power, media influence, financial architecture, crime logistics, war machinery, and the psychology of consent.</p><div class="cta-row"><a class="btn" href="#request">Request Access</a><a class="btn alt" href="books.html">Enter Book Archive</a><a class="btn alt" href="news.html">Open Intel Desk</a></div></section>
+<section class="section wrap split"><section><div class="terminal">> FILE STATUS: OPEN
+> FUNCTION: reader initiation
+> PURPOSE: turn curiosity into archive entry
+> PROMISE: not all doors are locked
+> SOME ARE DISGUISED AS DECORATION</div><div class="grid" style="margin-top:22px"><article class="card"><h3>33 Systems</h3><p>Each entry points toward a deeper Matrix Reprogrammed book door: D.O.G, Intelligence Dossiers, Crime Dossiers, Masonic/esoteric, or the Intel Desk.</p></article><article class="card"><h3>Reader Ladder</h3><p>Free file → archive page → Amazon book → KU readthrough → paperback/hardback collector editions.</p></article></div></section><section id="request" class="card redline"><h2>Request Access</h2><p>This is the conversion door. Netlify Forms will collect leads once the site is deployed through Netlify. Later we can connect it to an email platform.</p><form name="black-file-request" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="black-file-request" /><input name="name" placeholder="Name" /><input name="email" type="email" placeholder="Email" /><button class="btn" type="submit">Open The File</button></form></section></section>
+<section class="section wrap grid"><article class="card"><h2>What Readers Get</h2><p>A dark, clean map of the systems running beneath the public story: files, symbols, institutions, money, intelligence, crime, media, and consent.</p></article><article class="card"><h2>What It Sells</h2><p>The full archive. Every Black File entry should point to a book series or Intel Desk theme.</p></article><article class="card"><h2>What Comes Next</h2><p>After signup: send an automated welcome email, then a five-part sequence leading into D.O.G and The Intelligence Dossiers.</p></article></section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script></body></html>

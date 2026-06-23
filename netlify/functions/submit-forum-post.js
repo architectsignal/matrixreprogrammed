@@ -44,8 +44,10 @@ exports.handler = async function(event) {
   const body = clean(payload.body, 2400);
   const sourceUrl = validUrl(clean(payload.sourceUrl, 500));
   const honeypot = clean(payload.website, 100);
+  const signalPass = clean(payload.signalPass, 40);
 
   if (honeypot) return json(200, { ok: true, status: 'received' });
+  if (signalPass !== 'local-unlocked') return json(402, { error: 'Signal Pass required before posting.' });
   if (!CATEGORIES.has(category)) return json(400, { error: 'Choose a valid category.' });
   if (title.length < 5) return json(400, { error: 'Title is too short.' });
   if (body.length < 20) return json(400, { error: 'Message is too short.' });

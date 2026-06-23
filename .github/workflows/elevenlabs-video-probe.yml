@@ -1,0 +1,49 @@
+name: ElevenLabs Video API Probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      probe_mode:
+        description: "probe = safe endpoint check, generate = try explicit endpoint"
+        required: false
+        default: "probe"
+      video_endpoint:
+        description: "Optional explicit ElevenLabs video endpoint from Request Log"
+        required: false
+        default: ""
+      video_model_id:
+        description: "Optional video model id if required"
+        required: false
+        default: "default"
+
+permissions:
+  contents: read
+
+env:
+  ELEVENLABS_VIDEO_PROBE_MODE: ${{ github.event.inputs.probe_mode || 'probe' }}
+  ELEVENLABS_VIDEO_ENDPOINT: ${{ github.event.inputs.video_endpoint || '' }}
+  ELEVENLABS_VIDEO_MODEL_ID: ${{ github.event.inputs.video_model_id || 'default' }}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Probe ElevenLabs video API
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node scripts/probe-elevenlabs-video-api.js
+
+      - name: Upload probe artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-video-api-probe
+          path: artifacts/elevenlabs-video-probe
+          retention-days: 7

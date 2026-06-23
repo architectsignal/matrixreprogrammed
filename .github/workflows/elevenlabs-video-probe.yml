@@ -17,7 +17,7 @@ on:
         default: "default"
 
 permissions:
-  contents: read
+  contents: write
 
 env:
   ELEVENLABS_VIDEO_PROBE_MODE: ${{ github.event.inputs.probe_mode || 'probe' }}
@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -47,3 +49,15 @@ jobs:
           name: elevenlabs-video-api-probe
           path: artifacts/elevenlabs-video-probe
           retention-days: 7
+
+      - name: Commit probe diagnostics
+        run: |
+          git config user.name "matrix-reprogrammed-bot"
+          git config user.email "actions@github.com"
+          git add diagnostics/elevenlabs-video-probe
+          if git diff --cached --quiet; then
+            echo "No probe diagnostics changes to commit."
+          else
+            git commit -m "Update ElevenLabs video API probe diagnostics"
+            git push
+          fi

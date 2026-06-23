@@ -3,7 +3,24 @@ const path = require('path');
 
 const root = process.cwd();
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'books.json'), 'utf8'));
-const books = [...data.books].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+
+function normalizeBook(book) {
+  if (book.key !== 'dog-the-architect') return book;
+  return {
+    ...book,
+    title: 'As Above, So Below',
+    subtitle: 'D.O.G The Architect: thirty-three gates through hidden architecture, symbol, temple, mystery schools, AI, false light, and the war over meaning.',
+    generatedUrl: 'book-as-above-so-below.html',
+    description: 'The flagship D.O.G / Matrix Reprogrammed masterwork: As Above, So Below — a symbolic ascent through temple, mystery schools, sacred architecture, AI, false light, and the war over meaning.',
+    keywords: ['as above so below', ...(book.keywords || [])]
+  };
+}
+
+const unpublishedKeys = new Set(['masons-united-nations']);
+const books = [...data.books]
+  .filter(book => !unpublishedKeys.has(book.key) && book.status !== 'planned' && book.status !== 'unpublished')
+  .map(normalizeBook)
+  .sort((a, b) => (b.priority || 0) - (a.priority || 0));
 
 function esc(s = '') {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -43,7 +60,7 @@ const html = `<!DOCTYPE html>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Matrix Reprogrammed | Decode the Illusion</title>
-  <meta name="description" content="Matrix Reprogrammed is the dark book archive and Intel Desk for D.O.G The Architect, public-record dossiers, war files, dark psychology, Masonic symbolism, intelligence systems, crime networks, and hidden-system analysis by Nicholas Matthews." />
+  <meta name="description" content="Matrix Reprogrammed is the dark book archive and Intel Desk for As Above, So Below, D.O.G The Architect, public-record dossiers, war files, dark psychology, Masonic symbolism, intelligence systems, crime networks, and hidden-system analysis by Nicholas Matthews." />
   <meta property="og:title" content="Matrix Reprogrammed | Decode the Illusion" />
   <meta property="og:description" content="Books, source-led Intel Desk updates, public-record dossiers, dark psychology, survival, war files, Masonic symbolism, and hidden-system analysis by Nicholas Matthews." />
   <meta property="og:type" content="website" />
@@ -57,8 +74,8 @@ const html = `<!DOCTYPE html>
 <div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="search.html">Search</a><a href="news.html">Intel Desk</a><a href="videos.html">Videos</a><a href="transmissions.html">Rumble</a><a href="black-file.html">Black File</a></nav></header>
 <main id="main-archive">
 <section class="hero wrap"><div class="eyebrow">The archive is open</div><h1>REALITY IS EDITED.<br>LEARN TO READ THE CODE.</h1><p class="lead">A living archive of books, dossiers, source-led bulletins, symbols, war files, survival psychology, intelligence systems, crime networks, public records, and hidden architecture.</p><div class="cta-row"><a class="btn" href="start-here.html">Choose Your Door</a><a class="btn alt" href="search.html">Search The Archive</a><a class="btn alt" href="news.html">Open Intel Desk</a><a class="btn alt" href="black-file.html">Request The Black File</a></div></section>
-<section class="section wrap split"><div class="terminal">&gt; SIGNAL DETECTED\n&gt; The archive is now database-driven.\n&gt; Books become doors.\n&gt; News becomes structure.\n&gt; Search becomes navigation.\n&gt; The reader chooses the path.\n&gt; The system points deeper.</div><aside class="card redline"><div class="pill">Flagship</div><h2>${esc(flagship.title)}</h2><p>${esc(flagship.description)}</p><div class="cta-row small"><a class="btn" href="${esc(urlFor(flagship))}">Enter Flagship</a><a class="btn alt" href="${esc(urlFor(blackFile))}">Black File</a></div></aside></section>
-<section class="section wrap"><h2>Featured Doors</h2><p class="lead">The strongest entry points are pulled from the central book database so the homepage stays aligned with the archive.</p><div class="grid">${featured.map((b, i) => card(b, i === 0 ? 'Flagship Door' : b.category)).join('')}</div></section>
+<section class="section wrap split"><div class="terminal">&gt; SIGNAL DETECTED\n&gt; The archive is database-driven.\n&gt; Only live or confirmed books become public doors.\n&gt; Planned books stay out of the sales route.\n&gt; News becomes structure.\n&gt; Search becomes navigation.\n&gt; The system points deeper.</div><aside class="card redline"><div class="pill">Flagship</div><h2>${esc(flagship.title)}</h2><p>${esc(flagship.description)}</p><div class="cta-row small"><a class="btn" href="${esc(urlFor(flagship))}">Enter Flagship</a><a class="btn alt" href="${esc(urlFor(blackFile))}">Black File</a></div></aside></section>
+<section class="section wrap"><h2>Featured Doors</h2><p class="lead">The strongest confirmed entry points are pulled from the central book database so the homepage stays aligned with the archive.</p><div class="grid">${featured.map((b, i) => card(b, i === 0 ? 'Flagship Door' : b.category)).join('')}</div></section>
 <section class="section wrap"><h2>Reader Pathways</h2><p class="lead">Choose the obsession that already has your attention. The archive will give it structure.</p><div class="grid"><article class="card"><h2>Symbols & Secret Orders</h2><p>D.O.G, Masonic symbols, degrees, ritual architecture, temple language, mystery echoes, and hidden design.</p>${symbols.map(b => `<p><a class="btn" href="${esc(urlFor(b))}">${esc(b.title)}</a></p>`).join('')}</article><article class="card"><h2>Files, War & Power</h2><p>Intelligence dossiers, crime-state overlap, public records, sanctions, war files, archives, courts, and oversight failure.</p>${power.map(b => `<p><a class="btn" href="${esc(urlFor(b))}">${esc(b.title)}</a></p>`).join('')}</article><article class="card"><h2>Mind, Control & Survival</h2><p>Manipulation defense, crisis psychology, emotional control, survival function, and the inner mechanics of attention.</p>${mind.map(b => `<p><a class="btn" href="${esc(urlFor(b))}">${esc(b.title)}</a></p>`).join('')}</article></div></section>
 <section class="section wrap split"><div class="card"><h2>Signal Intel Desk</h2><p>Short source-led bulletins on wars, declassified files, court records, Epstein-related public records, WikiLeaks/archive drops, sanctions, surveillance, censorship, and crime-state overlap.</p><div class="cta-row small"><a class="btn" href="news.html">Latest 7 Days</a><a class="btn alt" href="intel-archive.html">Bulletin Archive</a></div></div><div class="card redline"><h2>Join The Signal</h2><p>Request The Black File and enter the archive through thirty-three systems, reader pathways, and one map through the machine.</p><form name="black-file" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="black-file" /><input name="email" type="email" placeholder="your@email.com" /><button class="btn" type="submit">Request The Black File</button></form></div></section>
 </main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script><script src="welcome-gate.js"></script></body></html>`;

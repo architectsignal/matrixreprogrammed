@@ -10,7 +10,29 @@
     ['videos.html','video_drops']
   ];
 
+  function currentRoute(){
+    const path = window.location.pathname;
+    const found = routeMap.find(([needle]) => path.includes(needle));
+    return found ? found[1] : path === '/' || path.endsWith('/index.html') ? 'home' : 'other';
+  }
+
+  function internalSend(name, data){
+    const payload = JSON.stringify({ name, route: currentRoute(), page: window.location.pathname || '/', title: document.title, ...(data || {}) });
+    if (navigator.sendBeacon) {
+      const blob = new Blob([payload], { type: 'application/json' });
+      navigator.sendBeacon('/.netlify/functions/track-event', blob);
+      return;
+    }
+    fetch('/.netlify/functions/track-event', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: payload,
+      keepalive: true
+    }).catch(function(){});
+  }
+
   function providerSend(name, data){
+    internalSend(name, data);
     if (window.plausible) window.plausible(name, { props: data });
     if (window.gtag) window.gtag('event', name, data || {});
     if (window.dataLayer) window.dataLayer.push({ event: name, ...(data || {}) });
@@ -32,13 +54,7 @@
     if (/books\.html/i.test(url.pathname)) type = 'book_archive_click';
     if (/news\.html/i.test(url.pathname)) type = 'intel_desk_click';
     if (/dog-the-architect\.html/i.test(url.pathname)) type = 'dog_click';
-    return { type, href: url.href, host, text, page: window.location.pathname || '/' };
-  }
-
-  function currentRoute(){
-    const path = window.location.pathname;
-    const found = routeMap.find(([needle]) => path.includes(needle));
-    return found ? found[1] : path === '/' || path.endsWith('/index.html') ? 'home' : 'other';
+    return { type, href: url.href, host, text };
   }
 
   document.addEventListener('click', function(event){
@@ -51,12 +67,8 @@
   document.addEventListener('submit', function(event){
     const form = event.target;
     if (!form || !form.tagName || form.tagName.toLowerCase() !== 'form') return;
-    providerSend('form_submit', {
-      form: form.getAttribute('name') || form.id || 'unnamed_form',
-      page: window.location.pathname || '/',
-      route: currentRoute()
-    });
+    providerSend('form_submit', { form: form.getAttribute('name') || form.id || 'unnamed_form' });
   }, true);
 
-  providerSend('page_view', { page: window.location.pathname || '/', route: currentRoute(), title: document.title });
+  providerSend('page_view', {});
 })();

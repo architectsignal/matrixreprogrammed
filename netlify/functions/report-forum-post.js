@@ -1,7 +1,7 @@
-const { getStore } = require('@netlify/blobs');
+const { openForumStore, forumStorageError } = require('./_forum-store');
 
 function json(statusCode, body) {
-  return { statusCode, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' }, body: JSON.stringify(body) };
+  return { statusCode, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Methods': 'POST, OPTIONS' }, body: JSON.stringify(body) };
 }
 
 function clean(value, max) {
@@ -9,20 +9,24 @@ function clean(value, max) {
 }
 
 exports.handler = async function(event) {
-  if (event.httpMethod === 'OPTIONS') return { statusCode: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' }, body: '' };
-  if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
+  try {
+    if (event.httpMethod === 'OPTIONS') return json(204, { ok: true });
+    if (event.httpMethod !== 'POST') return json(405, { error: 'Method not allowed' });
 
-  let payload;
-  try { payload = JSON.parse(event.body || '{}'); } catch { return json(400, { error: 'Invalid JSON' }); }
+    let payload;
+    try { payload = JSON.parse(event.body || '{}'); } catch { return json(400, { error: 'Invalid JSON' }); }
 
-  const id = clean(payload.id, 80);
-  const reason = clean(payload.reason, 800);
-  if (!id || reason.length < 5) return json(400, { error: 'Report needs a post id and reason.' });
+    const id = clean(payload.id, 80);
+    const reason = clean(payload.reason, 800);
+    if (!id || reason.length < 5) return json(400, { error: 'Report needs a post id and reason.' });
 
-  const store = getStore('matrix-forum');
-  const reports = await store.get('reported-posts.json', { type: 'json' }) || [];
-  reports.unshift({ id, reason, createdAt: new Date().toISOString(), ua: clean(event.headers['user-agent'] || '', 200) });
-  await store.setJSON('reported-posts.json', reports.slice(0, 1000));
+    const store = openForumStore();
+    const reports = await store.get('reported-posts.json', { type: 'json' }) || [];
+    reports.unshift({ id, reason, createdAt: new Date().toISOString(), ua: clean((event.headers && event.headers['user-agent']) || '', 200) });
+    await store.setJSON('reported-posts.json', reports.slice(0, 1000));
 
-  return json(202, { ok: true, status: 'reported' });
+    return json(202, { ok: true, status: 'reported' });
+  } catch (err) {
+    return json(500, forumStorageError(err));
+  }
 };

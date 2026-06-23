@@ -16,7 +16,7 @@
   }
 
   function hasSignalPass(){
-    return localStorage.getItem(PASS_KEY) === 'yes';
+    try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; }
   }
 
   function applySignalPassState(){
@@ -29,12 +29,13 @@
       });
     }
     const lockMessage = document.querySelector('.signal-lock-message');
-    if (lockMessage) {
-      lockMessage.textContent = unlocked ? 'Signal Pass unlocked on this device. Posting is open.' : 'Posting is locked until Signal Pass is unlocked on this device.';
-    }
-    if (passStatus) {
-      passStatus.textContent = unlocked ? 'Signal Pass unlocked. You can now post.' : 'Signal Pass not unlocked on this device yet.';
-    }
+    if (lockMessage) lockMessage.textContent = unlocked ? 'Signal Pass unlocked on this device. Posting is open.' : 'Posting is locked until Signal Pass is unlocked on this device.';
+    if (passStatus) passStatus.textContent = unlocked ? 'Signal Pass unlocked. You can now post.' : 'Signal Pass not unlocked on this device yet.';
+  }
+
+  async function readResponse(res){
+    const text = await res.text();
+    try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; }
   }
 
   function renderPost(post){
@@ -46,7 +47,8 @@
     if (!feed) return;
     try {
       const res = await fetch('/.netlify/functions/forum-feed', { headers: { 'Accept': 'application/json' } });
-      const data = await res.json();
+      const data = await readResponse(res);
+      if (!res.ok) throw new Error(data.error || ('Feed failed with HTTP ' + res.status));
       const posts = Array.isArray(data.posts) ? data.posts : [];
       if (!posts.length) {
         feed.innerHTML = '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Unlock a Signal Pass and post a source, question, reader note, or human-cost update.</p></article>';
@@ -54,29 +56,32 @@
       }
       feed.innerHTML = posts.map(renderPost).join('');
     } catch (err) {
-      feed.innerHTML = '<article class="card redline"><h3>Signal feed offline</h3><p>Posts could not be loaded right now.</p></article>';
+      feed.innerHTML = '<article class="card redline"><h3>Signal feed offline</h3><p>' + esc(err.message || 'Posts could not be loaded right now.') + '</p></article>';
     }
   }
 
   async function reportPost(id){
-    const reason = prompt('Report reason: threats, doxxing, private victim names, explicit exploitation material, spam, or illegal content?');
+    const reason = prompt('Report reason: hard-floor violation?');
     if (!reason) return;
     try {
-      await fetch('/.netlify/functions/report-forum-post', {
+      const res = await fetch('/.netlify/functions/report-forum-post', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({ id, reason })
       });
+      const data = await readResponse(res);
+      if (!res.ok) throw new Error(data.error || ('Report failed with HTTP ' + res.status));
       alert('Report received. The post remains public unless removed after review.');
     } catch (err) {
-      alert('Report could not be sent right now.');
+      alert(err.message || 'Report could not be sent right now.');
     }
   }
 
   if (unlockButton) {
     unlockButton.addEventListener('click', function(){
-      localStorage.setItem(PASS_KEY, 'yes');
+      try { localStorage.setItem(PASS_KEY, 'yes'); } catch {}
       applySignalPassState();
+      if (status) status.textContent = 'Signal Pass unlocked. You can now post.';
       if (submitSection) submitSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
@@ -107,11 +112,12 @@
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
         });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || 'Submission failed');
+        const data = await readResponse(res);
+        if (!res.ok) throw new Error(data.error || ('Post failed with HTTP ' + res.status));
         form.reset();
         status.textContent = 'Signal posted. It is now live on the board.';
         await loadFeed();
+        applySignalPassState();
       } catch (err) {
         status.textContent = err.message || 'Could not post signal.';
       }

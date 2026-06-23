@@ -1,0 +1,57 @@
+name: Deep Site Pressure Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'data/**'
+      - 'scripts/**'
+      - 'netlify.toml'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - '.github/workflows/deep-site-test.yml'
+  schedule:
+    - cron: '45 9 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  deep-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Generate book system
+        run: node scripts/build-book-system.js
+
+      - name: Generate homepage
+        run: node scripts/build-homepage.js
+
+      - name: Inject analytics
+        run: node scripts/inject-analytics.js
+
+      - name: Generate Black File PDF
+        run: node scripts/build-black-file-pdf.js
+
+      - name: Run deep site pressure test
+        run: node scripts/deep-site-test.js
+        env:
+          LIVE_BASE: https://matrixreprogrammed.netlify.app
+
+      - name: Upload deep test report
+        uses: actions/upload-artifact@v4
+        with:
+          name: deep-site-test-report
+          path: deep-site-test-report.md

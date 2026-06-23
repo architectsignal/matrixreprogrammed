@@ -17,9 +17,17 @@ Fields:
 - `name`
 - `email`
 
-Current preview download:
+Current lead magnet download:
+
+- `downloads/the-black-file-matrix-reprogrammed.pdf`
+
+Backup preview file:
 
 - `downloads/the-black-file-preview.txt`
+
+PDF generator:
+
+- `scripts/build-black-file-pdf.js`
 
 ## 2. First automation
 
@@ -64,6 +72,7 @@ If the platform supports link-based tagging:
 - Clicks to `dark-psychology.html` -> `dark-psychology-interest`
 - Clicks to `public-record-dossiers.html` -> `public-record-interest`
 - Clicks to `dog-the-architect.html` -> `dog-interest`
+- Clicks to `downloads/the-black-file-matrix-reprogrammed.pdf` -> `black-file-download`
 
 ## 6. Built sequences
 
@@ -87,13 +96,15 @@ Branch sequences:
 - Clicks Dark Psychology shelf -> tag `dark-psychology-interest` -> send Dark Psychology follow-up sequence
 - Clicks Public Record shelf -> tag `public-record-interest` -> send Dossiers/Public Record follow-up sequence
 - Clicks D.O.G page -> tag `dog-interest` -> send D.O.G collector sequence
+- Downloads Black File PDF -> tag `black-file-download` if the platform supports file-click tracking
 
 ## 8. Current status
 
 - Black File page: built
-- Black File preview download: built
+- Black File branded PDF lead magnet: built
+- Black File PDF generator: built
+- Black File backup preview text: retained
 - Five-email welcome sequence: written
 - Four branch follow-up sequences: written
 - D.O.G collector hardback email sequence: written
 - Email platform connection: pending
-- Final polished Black File PDF: pending

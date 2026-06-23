@@ -1,0 +1,110 @@
+{
+  "brand": {
+    "name": "Matrix Reprogrammed",
+    "tagline": "The truth is not hidden. It is encoded.",
+    "primaryCta": "Download The Black File",
+    "blackFileUrl": "https://matrixreprogrammed.com/black-file.html",
+    "archiveUrl": "https://matrixreprogrammed.com/books.html",
+    "intelDeskUrl": "https://matrixreprogrammed.com/news.html"
+  },
+  "style": {
+    "video": "dark D.O.G manga dossier style, black/green/gold palette, Matrix rain, occult archive terminal, graphic-novel panels, dog guardian silhouette, declassified file texture, cinematic shadows, evidence labels, no cheap AI gloss",
+    "post": "dark, sharp, source-aware, evidence-labelled, cinematic, no unsupported claims"
+  },
+  "books": [
+    {
+      "key": "black-file",
+      "title": "The Black File",
+      "localUrl": "https://matrixreprogrammed.com/black-file.html",
+      "description": "A free 33-system gateway into symbols, intelligence, crime, media, money, war, psychology, institutions, ritual, surveillance, and consent.",
+      "keywords": ["black file", "hidden systems", "elite", "archive", "source", "matrix", "control", "signal"]
+    },
+    {
+      "key": "dog",
+      "title": "D.O.G The Architect",
+      "localUrl": "https://matrixreprogrammed.com/dog-the-architect.html",
+      "description": "The flagship masterwork: thirty-three gates through symbol, temple, mystery schools, AI, false light, hidden architecture, and the war over meaning.",
+      "keywords": ["dog", "symbol", "ritual", "masonic", "ai", "false light", "occult", "architect", "temple", "mystery"]
+    },
+    {
+      "key": "intelligence-dossiers",
+      "title": "The Intelligence Dossiers",
+      "localUrl": "https://matrixreprogrammed.com/intelligence-dossiers.html",
+      "description": "Public-record investigations into intelligence agencies, secrecy, surveillance, influence, covert action, contractors, and oversight failure.",
+      "keywords": ["cia", "fbi", "nsa", "gchq", "mi6", "mossad", "kgb", "fsb", "intelligence", "surveillance", "declassified", "archive", "agency"]
+    },
+    {
+      "key": "crime-dossiers",
+      "title": "The Crime Dossiers",
+      "localUrl": "https://matrixreprogrammed.com/crime-dossiers.html",
+      "description": "Cartels, mafia networks, laundering, underground finance, ports, corruption, organized crime, logistics, and crime-state overlap.",
+      "keywords": ["cartel", "mafia", "crime", "laundering", "sanctions", "trafficking", "ports", "corruption", "underground banking", "organized crime"]
+    },
+    {
+      "key": "masonic-symbols",
+      "title": "The Illustrated Guide to Masonic Symbols",
+      "localUrl": "https://matrixreprogrammed.com/book-illustrated-guide-masonic-symbols.html",
+      "amazonUs": "https://www.amazon.com/dp/B0GZBQBN1Z",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0GZBQBN1Z",
+      "description": "A visual bridge into Masonic symbols, hidden architecture, temple imagery, and the deeper grammar of meaning.",
+      "keywords": ["masonic", "freemason", "symbol", "temple", "ritual", "lodge", "degree", "geometry"]
+    },
+    {
+      "key": "degree-one",
+      "title": "Freemasons Degree 1, The Temple of Light",
+      "localUrl": "https://matrixreprogrammed.com/book-freemasons-degree-1.html",
+      "amazonUs": "https://www.amazon.com/dp/B0G1ZJZQTV",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0G1ZJZQTV",
+      "description": "The first symbolic door: initiation, hidden architecture, Apprentice awakening, temple light, and ritual structure.",
+      "keywords": ["freemason", "degree", "apprentice", "initiation", "temple", "masonic", "symbol"]
+    },
+    {
+      "key": "degree-three",
+      "title": "Freemasons Degree III, The Master Mason",
+      "localUrl": "https://matrixreprogrammed.com/book-freemasons-degree-3-master-mason.html",
+      "amazonUs": "https://www.amazon.com/dp/B0F6MKL729",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0F6MKL729",
+      "description": "The Vault of the Mind: death, lost word, recovery, raising, and the darker architecture of initiation.",
+      "keywords": ["master mason", "degree iii", "hiram", "lost word", "vault", "raising", "masonic"]
+    },
+    {
+      "key": "wwiii",
+      "title": "WHAT WWIII WILL REALLY LOOK LIKE",
+      "localUrl": "https://matrixreprogrammed.com/book-wwiii-will-really-look-like.html",
+      "amazonUs": "https://www.amazon.com/dp/B0GKYJLSN4",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0GKYJLSN4",
+      "description": "Modern war through sanctions, cyber pressure, proxy conflict, infrastructure stress, propaganda, and civilian system shock.",
+      "keywords": ["war", "wwiii", "ukraine", "iran", "russia", "china", "nato", "sanctions", "cyber", "proxy", "geopolitics"]
+    },
+    {
+      "key": "keep-calm",
+      "title": "KEEP CALM. DON’T PANIC.",
+      "localUrl": "https://matrixreprogrammed.com/book-keep-calm-dont-panic.html",
+      "amazonUs": "https://www.amazon.com/dp/B0GDVGVXC3",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0GDVGVXC3",
+      "description": "Survival psychology for staying functional when systems fail and crowds panic.",
+      "keywords": ["survival", "panic", "blackout", "collapse", "emergency", "preparedness", "system failure"]
+    },
+    {
+      "key": "manipulation-immunity",
+      "title": "MANIPULATION IMMUNITY",
+      "localUrl": "https://matrixreprogrammed.com/book-manipulation-immunity.html",
+      "amazonUs": "https://www.amazon.com/dp/B0G4H5V19Z",
+      "amazonUk": "https://www.amazon.co.uk/dp/B0G4H5V19Z",
+      "description": "Dark psychology defense, coercive influence, emotional control, narcissistic loops, and mental sovereignty.",
+      "keywords": ["psychology", "manipulation", "narcissist", "influence", "mind control", "propaganda", "emotional control"]
+    }
+  ],
+  "sourceFeeds": [
+    { "name": "CIA Reading Room", "label": "Declassified", "url": "https://www.cia.gov/readingroom/rss.xml", "weight": 9 },
+    { "name": "FBI Vault", "label": "Declassified", "url": "https://vault.fbi.gov/recently-added/RSS", "weight": 9 },
+    { "name": "DOJ News", "label": "Court Record", "url": "https://www.justice.gov/news/rss.xml", "weight": 8 },
+    { "name": "US Treasury Press Releases", "label": "Sanctions", "url": "https://home.treasury.gov/news/press-releases/rss", "weight": 8 },
+    { "name": "Europol News", "label": "Crime-State Overlap", "url": "https://www.europol.europa.eu/media-press/newsroom/rss.xml", "weight": 7 },
+    { "name": "UN News", "label": "War File", "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml", "weight": 5 },
+    { "name": "WikiLeaks", "label": "Archive Drop", "url": "https://wikileaks.org/feed.xml", "weight": 7 }
+  ],
+  "highPriorityTerms": [
+    "epstein", "maxwell", "declassified", "classified", "vault", "cia", "fbi", "nsa", "intelligence", "surveillance", "wikileaks", "archive", "court", "filing", "sanction", "cartel", "mafia", "laundering", "trafficking", "corruption", "war", "proxy", "ukraine", "russia", "china", "iran", "israel", "nato", "cyber", "censorship", "surveillance", "children", "missing"
+  ]
+}

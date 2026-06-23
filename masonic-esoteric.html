@@ -3,82 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masonic &amp; Esoteric Archive | Matrix Reprogrammed</title>
-  <meta name="description" content="Masonic and esoteric books from Matrix Reprogrammed: symbols, degrees, ancient mystery schools, ritual structure, and hidden traditions." />
-  <meta property="og:title" content="Masonic &amp; Esoteric Archive | Matrix Reprogrammed" />
-  <meta property="og:description" content="Masonic and esoteric books from Matrix Reprogrammed: symbols, degrees, ancient mystery schools, ritual structure, and hidden traditions." />
+  <title>Masonic & Esoteric Shelf | Matrix Reprogrammed</title>
+  <meta name="description" content="The Matrix Reprogrammed Masonic and Esoteric shelf: Freemasons Degree I, Degree III, Masonic Symbols, Masons in the United Nations, D.O.G The Architect, ritual structure, symbols, degrees, and hidden architecture." />
+  <meta property="og:title" content="Masonic & Esoteric Shelf | Matrix Reprogrammed" />
+  <meta property="og:description" content="Symbols, degrees, ritual architecture, Masonic dossiers, and D.O.G The Architect in one reader pathway." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<main class="wrap section">
-  <h1>MASONIC & ESOTERIC ARCHIVE</h1>
-  <p class="lead">Nothing in masonry begins with masonry. The archive follows older knowledge wrapped in ritual clothing: number, temple, degree, symbol, oath, craft, and ascent.</p>
-  <blockquote>Simply being inside a structure does not mean you understand the architecture.</blockquote>
-  <div class="grid">
-    <article class="card"><h3>Secret Degrees</h3><p>A 33-volume symbolic ladder through initiation, morality plays, hidden doctrine, and institutional structure.</p></article>
-    <article class="card"><h3>Symbol</h3><p>The hidden system behind Freemasonry: older religious, philosophical, and mystery-school knowledge rewrapped in lodge language.</p></article>
-    <article class="card"><h3>The Great Work</h3><p>Not just ritual. A symbolic process of building the human being into a temple capable of receiving light.</p></article>
-  </div>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="videos.html">Videos</a><a href="dog-the-architect.html">D.O.G</a><a href="intelligence-dossiers.html">Intelligence</a><a href="crime-dossiers.html">Crime</a><a href="masonic-esoteric.html">Masonic</a><a href="black-file.html">Black File</a><a href="transmissions.html">Rumble</a></nav></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">Shelf 01 · Symbols, Degrees, Ritual Architecture</div><h1>MASONIC & ESOTERIC<br>ARCHIVE</h1><p class="lead">Nothing in masonry begins with masonry. This shelf follows older knowledge wrapped in ritual clothing: number, temple, degree, symbol, oath, craft, ascent, institutional memory, and hidden architecture.</p><div class="cta-row"><a class="btn" href="book-illustrated-guide-masonic-symbols.html">Start With Symbols</a><a class="btn alt" href="book-freemasons-degree-1.html">Degree I</a><a class="btn alt" href="dog-the-architect.html">D.O.G</a></div></section>
+<section class="section wrap split"><div class="terminal">SHELF PATHWAY
+> Symbols teach the eye
+> Degree I opens the door
+> Degree III opens the vault
+> Public-record dossiers ask evidence questions
+> D.O.G turns the architecture into a full system</div><div class="card redline"><h2>Best Reading Order</h2><p><strong>Illustrated Symbols → Freemasons Degree I → Freemasons Degree III → Masons in the United Nations → D.O.G The Architect.</strong></p><p>This pathway turns curiosity about emblems into a full reader journey through ritual, symbol, institution, and hidden architecture.</p></div></section>
+<section class="section wrap grid">
+<article class="card book-card"><div><div class="pill">Visual bridge</div><h2>The Illustrated Guide to Masonic Symbols</h2><p>The cleanest symbol dictionary door: tools, floors, pillars, lights, temples, and the visual grammar of meaning.</p></div><div class="cta-row small"><a class="btn" href="book-illustrated-guide-masonic-symbols.html">Book Page</a></div></article>
+<article class="card book-card"><div><div class="pill">Degree ladder</div><h2>Freemasons Degree I</h2><p>The Apprentice awakening: initiation, darkness, light, preparation, and the first separation from the profane world.</p></div><div class="cta-row small"><a class="btn" href="book-freemasons-degree-1.html">Book Page</a></div></article>
+<article class="card book-card"><div><div class="pill">Degree ladder</div><h2>Freemasons Degree III</h2><p>The Master Mason: death, vault, lost word, recovery, raising, and the inner architecture of initiation.</p></div><div class="cta-row small"><a class="btn" href="book-freemasons-degree-3-master-mason.html">Book Page</a></div></article>
+<article class="card book-card"><div><div class="pill">Public record</div><h2>Masons in the United Nations</h2><p>A dossier-style bridge into public records, diplomacy, symbolism, global governance, and evidence boundaries.</p></div><div class="cta-row small"><a class="btn" href="book-masons-in-the-united-nations.html">Book Page</a></div></article>
+<article class="card book-card"><div><div class="pill">Flagship</div><h2>D.O.G The Architect</h2><p>The masterwork: thirty-three gates through symbol, temple, mystery schools, AI, source, false crown, and hidden architecture.</p></div><div class="cta-row small"><a class="btn" href="dog-the-architect.html">Enter D.O.G</a></div></article>
+<article class="card book-card"><div><div class="pill">Lead magnet</div><h2>The Black File</h2><p>The free gateway that turns symbol curiosity into the wider Matrix Reprogrammed archive.</p></div><div class="cta-row small"><a class="btn" href="black-file.html">Request Access</a></div></article>
+</section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Symbolic analysis, esoteric commentary, public-record investigation, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script></body></html>

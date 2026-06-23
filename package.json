@@ -1,0 +1,13 @@
+{
+  "name": "matrixreprogrammed-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js",
+    "audit": "node scripts/audit-site.js"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {}
+}

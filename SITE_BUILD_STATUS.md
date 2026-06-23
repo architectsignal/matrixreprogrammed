@@ -9,10 +9,19 @@ Domain connection can be handled at the end once the site machine is strong.
 
 - Homepage rebuilt as a brand/sales funnel.
 - Matrix rain preserved and moved into reusable `matrix.js`.
-- Shared premium dark styling added in `styles.css`.
+- Matrix rain upgraded with sharper glow, high-DPI canvas handling, smoother animation, gold signal flickers, and reduced-motion support.
+- Shared elite dark styling added in `styles.css`: premium glass panels, serif hero typography, pill navigation, stronger cards, better buttons, forms, mobile responsiveness, gold/green highlights, and system-wide visual consistency.
+- Old duplicate inline Matrix scripts removed from key legacy pages and replaced with the shared `matrix.js` engine.
 - Book archive upgraded with ASIN doors and CollectionPage schema.
+- Nine dedicated book landing pages created from top KDP priority titles.
+- Four reader pathway shelves created: Masonic & Esoteric, Survival & War, Dark Psychology, and Dossiers & Public Record.
 - D.O.G The Architect upgraded as the flagship premium occult masterwork page.
 - Black File upgraded as the lead-magnet and email-capture gateway.
+- Black File preview download added.
+- Black File welcome sequence written.
+- Four shelf branch email sequences written.
+- D.O.G collector hardback email sequence written.
+- Funnel master plan and internal `funnel-map.html` created.
 - Signal Intel Desk added for wars, declassified files, elite networks, court records, WikiLeaks/archive drops, sanctions, surveillance, censorship, organized crime/state overlap, and public-record corruption.
 - Human Cost evidence panel added with sourced/statistical framing and no fake live counter.
 - Signal Video Drops page added for future AI/Rumble/Facebook video infrastructure.
@@ -33,11 +42,15 @@ Domain connection can be handled at the end once the site machine is strong.
 - `intelligence-dossiers.html` — intelligence series page
 - `crime-dossiers.html` — crime series page
 - `masonic-esoteric.html` — masonic/esoteric series page
+- `survival-war.html` — survival and war shelf page
+- `dark-psychology.html` — dark psychology shelf page
+- `public-record-dossiers.html` — dossiers and public record shelf page
 - `codex.html` — symbolic codex page
 - `transmissions.html` — Rumble channel network / video pathway
 - `podcast.html` — audio pathway
 - `members.html` — membership/follow signal page
 - `contact.html` — contact page
+- `funnel-map.html` — internal noindex funnel review page
 
 ## Rumble Channels Added
 
@@ -49,13 +62,14 @@ Domain connection can be handled at the end once the site machine is strong.
 
 ## Next Best Upgrades
 
-1. Replace temporary ASIN labels with exact book titles and final Amazon links.
-2. Create individual landing pages for the strongest books.
-3. Add an actual Black File PDF download or email delivery mechanism.
+1. Create the polished final Black File PDF to replace the placeholder preview text file.
+2. Upgrade `news.html` into a true weekly/daily drop layout with archive cards and source slots.
+3. Add a reusable HTML/component generation system so future pages are easier to maintain.
 4. Connect Netlify Forms to an email platform.
 5. Build video automation using ElevenLabs API and GitHub Actions.
 6. Add Facebook/Rumble publishing only after account/API connection is verified.
 7. Add preview/deploy checks before domain connection.
+8. Add analytics and conversion tracking.
 
 ## Evidence Rules For Intel Desk
 

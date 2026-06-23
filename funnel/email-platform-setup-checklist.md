@@ -52,6 +52,8 @@ Sequence file:
 - `dark-psychology-interest`
 - `public-record-interest`
 - `dog-interest`
+- `collector-interest`
+- `premium-hardback-interest`
 
 ## 5. Link tracking logic
 
@@ -63,17 +65,18 @@ If the platform supports link-based tagging:
 - Clicks to `public-record-dossiers.html` -> `public-record-interest`
 - Clicks to `dog-the-architect.html` -> `dog-interest`
 
-## 6. Branch follow-up sequences
+## 6. Built sequences
 
-Built branch sequences:
+Core sequence:
+
+- `funnel/black-file-welcome-sequence.md`
+
+Branch sequences:
 
 - `funnel/masonic-esoteric-followup-sequence.md`
 - `funnel/survival-war-followup-sequence.md`
 - `funnel/dark-psychology-followup-sequence.md`
 - `funnel/public-record-dossiers-followup-sequence.md`
-
-Still to build:
-
 - `funnel/dog-collector-hardback-sequence.md`
 
 ## 7. Recommended automation map
@@ -83,7 +86,7 @@ Still to build:
 - Clicks Survival shelf -> tag `survival-war-interest` -> send Survival/War follow-up sequence
 - Clicks Dark Psychology shelf -> tag `dark-psychology-interest` -> send Dark Psychology follow-up sequence
 - Clicks Public Record shelf -> tag `public-record-interest` -> send Dossiers/Public Record follow-up sequence
-- Clicks D.O.G page -> tag `dog-interest` -> send D.O.G collector sequence once built
+- Clicks D.O.G page -> tag `dog-interest` -> send D.O.G collector sequence
 
 ## 8. Current status
 
@@ -91,6 +94,6 @@ Still to build:
 - Black File preview download: built
 - Five-email welcome sequence: written
 - Four branch follow-up sequences: written
+- D.O.G collector hardback email sequence: written
 - Email platform connection: pending
 - Final polished Black File PDF: pending
-- D.O.G collector hardback email sequence: pending

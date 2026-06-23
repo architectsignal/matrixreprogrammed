@@ -4,85 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Members | Matrix Reprogrammed</title>
-  <meta name="description" content="Matrix Reprogrammed member portal for restricted drops, Black File updates, reading orders, and archive transmissions." />
+  <meta name="description" content="Matrix Reprogrammed member portal for Black File updates, restricted drops, reading orders, launch alerts, and archive transmissions." />
   <meta property="og:title" content="Members | Matrix Reprogrammed" />
-  <meta property="og:description" content="Matrix Reprogrammed member portal for restricted drops, Black File updates, reading orders, and archive transmissions." />
+  <meta property="og:description" content="Black File updates, restricted drops, reading orders, launch alerts, and archive transmissions." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<main class="wrap section split">
-  <section>
-    <h1>MEMBERS</h1>
-    <p class="lead">Restricted access portal for Black File updates, private reading orders, launch codes, and archive transmissions.</p>
-  </section>
-  <section class="card">
-    <h2>Follow The Signal</h2>
-    <form name="members" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="members" />
-      <input name="email" type="email" placeholder="Email" />
-      <button class="btn" type="submit">Join The Signal</button>
-    </form>
-  </section>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="black-file.html">Black File</a><a href="news.html">Intel Desk</a><a href="members.html">Members</a><a href="contact.html">Contact</a></nav></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">Signal Access · Reader Pathways · Launch Alerts</div><h1>MEMBERS</h1><p class="lead">The future restricted-access portal for Black File updates, private reading orders, launch codes, weekly Intel Desk drops, collector alerts, and archive transmissions.</p><div class="cta-row"><a class="btn" href="black-file.html">Request Black File</a><a class="btn alt" href="books.html">Book Archive</a><a class="btn alt" href="funnel-map.html">Funnel Map</a></div></section>
+<section class="section wrap split"><div class="terminal">MEMBER ACCESS STATUS
+> Black File updates: ready
+> Email sequences: written
+> Shelf tags: ready
+> Weekly drops: pending functionality
+> Collector alerts: pending product links
+> Portal lock: future build</div><section class="card redline"><h2>Follow The Signal</h2><p>Join the update list for Black File drops, book launches, weekly Intel Desk recaps, and archive pathways.</p><form name="members" method="POST" data-netlify="true"><input type="hidden" name="form-name" value="members" /><input name="email" type="email" placeholder="Email" /><button class="btn" type="submit">Join The Signal</button></form><p class="warning">Form capture activates once deployed through Netlify Forms or connected to an email platform.</p></section></section>
+<section class="section wrap grid"><article class="card"><h2>What Members Get</h2><p>Black File updates, shelf reading orders, launch alerts, weekly signal notes, and future restricted drops.</p></article><article class="card"><h2>Best First Step</h2><p>Request the Black File first. That is the gateway file that segments readers into the right shelf path.</p><p><a class="btn" href="black-file.html">Open Black File</a></p></article><article class="card"><h2>Future Portal</h2><p>Later this page can become a login/member area, archive vault, or private transmission hub.</p></article></section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script></body></html>

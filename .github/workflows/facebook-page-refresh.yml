@@ -1,0 +1,40 @@
+name: Facebook Page Refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      facebook_mode:
+        description: "Facebook mode: live or dry-run"
+        required: false
+        default: "live"
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/facebook-page-refresh.yml'
+      - 'scripts/publish-facebook-page-update.js'
+      - 'social/facebook/page-update.json'
+
+permissions:
+  contents: read
+
+env:
+  FACEBOOK_PAGE_UPDATE_MODE: ${{ github.event.inputs.facebook_mode || 'live' }}
+
+jobs:
+  page-refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Publish Facebook Page update
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+        run: node scripts/publish-facebook-page-update.js

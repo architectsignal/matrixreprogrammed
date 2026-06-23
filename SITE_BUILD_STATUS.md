@@ -13,12 +13,17 @@ Domain connection can be handled at the end once the site machine is strong.
 - Matrix rain upgraded with sharper glow, high-DPI canvas handling, smoother animation, gold signal flickers, and reduced-motion support.
 - Shared elite dark styling added in `styles.css`: premium glass panels, serif hero typography, pill navigation, stronger cards, better buttons, forms, mobile responsiveness, gold/green highlights, and system-wide visual consistency.
 - Old duplicate inline Matrix scripts removed from key legacy pages and replaced with the shared `matrix.js` engine.
+- Public QA pressure pass completed across homepage, archive, Black File, Intel Desk, Video Drops, Rumble, Codex, Podcast, Members, Contact, shelf pages, legacy redirect, and key book landing pages.
+- Public author-facing/build-note copy removed: build-status language, form setup language, KDP extraction notes, placeholder language, internal funnel links, and marketing jargon such as lead-magnet wording.
+- `scripts/audit-site.js` added to check internal links/assets and banned public-facing build-note phrases.
+- Site QA GitHub Actions workflow added.
+- Netlify build now runs Black File PDF generation and the site audit before deploy.
 - Book archive upgraded with ASIN doors and CollectionPage schema.
-- Nine dedicated book landing pages created from top KDP priority titles.
+- Nine dedicated book landing pages created from priority archive titles.
 - Four reader pathway shelves created: Masonic & Esoteric, Survival & War, Dark Psychology, and Dossiers & Public Record.
 - D.O.G The Architect upgraded as the flagship premium occult masterwork page.
-- Black File upgraded as the lead-magnet and email-capture gateway.
-- Black File branded PDF lead magnet added and generated during Netlify deploy.
+- Black File upgraded as the gateway file and email-capture page.
+- Black File branded PDF added and generated during Netlify deploy.
 - Black File preview text retained as backup.
 - Black File welcome sequence written.
 - Four shelf branch email sequences written.
@@ -26,12 +31,12 @@ Domain connection can be handled at the end once the site machine is strong.
 - Funnel master plan and internal `funnel-map.html` created.
 - Signal Intel Desk added for wars, declassified files, elite networks, court records, WikiLeaks/archive drops, sanctions, surveillance, censorship, organized crime/state overlap, and public-record corruption.
 - Human Cost evidence panel added with sourced/statistical framing and no fake live counter.
-- Signal Video Drops page added for future AI/Rumble/Facebook video infrastructure.
+- Signal Video Drops page added for video dispatches, Rumble routes, source-led explainers, and book trailers.
 - Rumble Channel Network added with links for `VVaccines`, `Vcabal`, `VPlandemics`, `V5G`, and `V2030`.
 - ElevenLabs GitHub Actions voice-test workflow added.
 - `robots.txt` added.
 - `sitemap.xml` added.
-- `netlify.toml` added with static publish settings, security headers, clean redirects, and Black File PDF generation.
+- `netlify.toml` added with static publish settings, security headers, clean redirects, Black File PDF generation, and site audit.
 - Daily Signal Intel Desk automation scheduled.
 
 ## Current Core Pages
@@ -39,8 +44,8 @@ Domain connection can be handled at the end once the site machine is strong.
 - `index.html` — homepage / main funnel with Signal Gate welcome overlay
 - `books.html` — archive and Amazon ASIN doors
 - `news.html` — Signal Intel Desk
-- `videos.html` — future video drops infrastructure and Rumble channel routes
-- `black-file.html` — lead magnet gateway
+- `videos.html` — video drops and Rumble route page
+- `black-file.html` — gateway file and email capture page
 - `dog-the-architect.html` — premium flagship page
 - `intelligence-dossiers.html` — intelligence series page
 - `crime-dossiers.html` — crime series page
@@ -65,13 +70,14 @@ Domain connection can be handled at the end once the site machine is strong.
 
 ## Next Best Upgrades
 
-1. Upgrade `news.html` into a true weekly/daily drop layout with archive cards and source slots.
-2. Add a reusable HTML/component generation system so future pages are easier to maintain.
-3. Connect Netlify Forms to an email platform.
-4. Build video automation using ElevenLabs API and GitHub Actions.
-5. Add Facebook/Rumble publishing only after account/API connection is verified.
-6. Add preview/deploy checks before domain connection.
-7. Add analytics and conversion tracking.
+1. Run the Site QA workflow from GitHub Actions and review output.
+2. Upgrade `news.html` into a true weekly/daily drop layout with source cards and archive slots.
+3. Add a reusable HTML/component generation system so future pages are easier to maintain.
+4. Connect Netlify Forms to an email platform.
+5. Build video automation using ElevenLabs API and GitHub Actions.
+6. Add Facebook/Rumble publishing only after account/API connection is verified.
+7. Add preview/deploy checks before domain connection.
+8. Add analytics and conversion tracking.
 
 ## Evidence Rules For Intel Desk
 

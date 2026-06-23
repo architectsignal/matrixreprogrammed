@@ -6,6 +6,7 @@ on:
     paths:
       - "data/books.json"
       - "scripts/build-book-system.js"
+      - "scripts/build-homepage.js"
       - ".github/workflows/rebuild-book-system.yml"
 
 permissions:
@@ -28,11 +29,14 @@ jobs:
       - name: Generate book pages and search system
         run: node scripts/build-book-system.js
 
+      - name: Generate database-driven homepage
+        run: node scripts/build-homepage.js
+
       - name: Commit generated book system
         run: |
           git config user.name "matrix-reprogrammed-bot"
           git config user.email "actions@github.com"
-          git add book-*.html start-here.html search.html search.js search-index.json
+          git add index.html book-*.html start-here.html search.html search.js search-index.json
           if git diff --cached --quiet; then
             echo "No generated book system changes to commit."
           else

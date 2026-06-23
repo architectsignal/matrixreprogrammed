@@ -1,14 +1,17 @@
 const { getStore } = require('@netlify/blobs');
 
 const CATEGORIES = new Set(['Source Drop','Book Question','Intel Desk Tip','D.O.G Symbol Question','War File / Human Cost','Crime-State Overlap','Reader Review']);
-const BLOCKED = [
-  /\bkill\b/i,
+const HARD_BLOCKED = [
+  /\bi\s+will\s+harm\b/i,
+  /\bgoing\s+to\s+harm\b/i,
   /\bdoxx/i,
+  /\bhome\s+address\b/i,
   /\baddress\s+is\b/i,
   /\bphone\s+number\b/i,
-  /\bprivate victim\b/i,
-  /\bchild porn\b/i,
-  /\bcsam\b/i
+  /\bprivate\s+victim\b/i,
+  /\bcredit\s+card\s+number\b/i,
+  /\bsocial\s+security\s+number\b/i,
+  /\billegal\s+material\b/i
 ];
 
 function clean(value, max) {
@@ -48,7 +51,7 @@ exports.handler = async function(event) {
   if (body.length < 20) return json(400, { error: 'Message is too short.' });
 
   const combined = `${title} ${body}`;
-  if (BLOCKED.some(rx => rx.test(combined))) return json(400, { error: 'Submission needs safer wording before review.' });
+  if (HARD_BLOCKED.some(rx => rx.test(combined))) return json(400, { error: 'Blocked by the hard legal/safety floor.' });
 
   const post = {
     id: `sig_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`,
@@ -57,15 +60,16 @@ exports.handler = async function(event) {
     title,
     body,
     sourceUrl,
-    status: 'pending',
+    status: 'public',
     createdAt: new Date().toISOString(),
+    approvedAt: new Date().toISOString(),
     ua: clean(event.headers['user-agent'] || '', 200)
   };
 
   const store = getStore('matrix-forum');
-  const pending = await store.get('pending-posts.json', { type: 'json' }) || [];
-  pending.unshift(post);
-  await store.setJSON('pending-posts.json', pending.slice(0, 1000));
+  const approved = await store.get('approved-posts.json', { type: 'json' }) || [];
+  approved.unshift(post);
+  await store.setJSON('approved-posts.json', approved.slice(0, 500));
 
-  return json(202, { ok: true, status: 'pending_review', id: post.id });
+  return json(201, { ok: true, status: 'public', id: post.id });
 };

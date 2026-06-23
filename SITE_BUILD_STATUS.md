@@ -24,7 +24,8 @@ Domain connection can be handled at the end once the site machine is strong.
 - Generated book pages, Start Here, Search, search index, and Book Archive are all rebuilt from the book database.
 - Book archive includes unconfirmed ASIN doors as a temporary mapping section until exact final titles are confirmed.
 - Deep Site Pressure Test workflow added and triggered for live deploy verification.
+- Signal Board forum added with free-speech posting mode, report button, owner hide endpoint, and Netlify Blob storage health endpoint.
 
 ## Last maintenance trigger
 
-- 2026-06-23: Triggered Deep Site Pressure Test after adding live smoke/deep test workflows.
+- 2026-06-23: Triggered deploy after forum storage environment variable setup.

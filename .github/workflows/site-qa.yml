@@ -1,0 +1,36 @@
+name: Site QA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'netlify.toml'
+      - '.github/workflows/site-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate Black File PDF
+        run: node scripts/build-black-file-pdf.js
+
+      - name: Run site audit
+        run: node scripts/audit-site.js

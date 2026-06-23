@@ -1,0 +1,34 @@
+name: ElevenLabs Endpoint Discovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  ELEVENLABS_REQUEST_LOG_ENDPOINT: https://api.elevenlabs.io/v1/workspace/analytics/requests
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build safe endpoint summary
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: node scripts/query-elevenlabs-request-log.js
+
+      - name: Upload safe endpoint summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-endpoint-discovery
+          path: artifacts/elevenlabs-request-log/safe-summary.md
+          retention-days: 3

@@ -4,80 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Codex | Matrix Reprogrammed</title>
-  <meta name="description" content="The Matrix Reprogrammed codex collects symbolic teachings, hidden-system notes, reading orders, and archive fragments." />
+  <meta name="description" content="The Matrix Reprogrammed Codex: symbolic keys, reading orders, evidence boundaries, archive fragments, and hidden-system notes." />
   <meta property="og:title" content="Codex | Matrix Reprogrammed" />
-  <meta property="og:description" content="The Matrix Reprogrammed codex collects symbolic teachings, hidden-system notes, reading orders, and archive fragments." />
+  <meta property="og:description" content="Symbolic keys, reading orders, evidence boundaries, archive fragments, and hidden-system notes." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<canvas id="matrix"></canvas>
-<div class="signal-face"></div>
-<div class="veil"></div>
-<div class="page">
-<header class="wrap topbar">
-  <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
-  
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="books.html">Books</a>
-  <a href="dog-the-architect.html">D.O.G</a>
-  <a href="intelligence-dossiers.html">Intelligence</a>
-  <a href="crime-dossiers.html">Crime</a>
-  <a href="masonic-esoteric.html">Masonic</a>
-  <a href="codex.html">Codex</a>
-  <a href="transmissions.html">Transmissions</a>
-  <a href="podcast.html">Podcast</a>
-  <a href="members.html">Members</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<main class="wrap section">
-  <h1>CODEX</h1>
-  <p class="lead">Ancient truths, symbolic fragments, public-record dossiers, and forbidden-system notes will live here as the archive expands.</p>
-  <div class="grid">
-    <article class="card"><h3>Reading Order</h3><p>Begin with D.O.G The Architect, then cross into Intelligence Dossiers, Crime Dossiers, and Symbol.</p></article>
-    <article class="card"><h3>Symbol Keys</h3><p>Number, gate, crown, temple, dog, compass, flame, mirror, mask, stair, and false light.</p></article>
-    <article class="card"><h3>Evidence Boundary</h3><p>Separate documented fact, strong inference, allegation, speculation, and symbolic interpretation.</p></article>
-  </div>
-</main>
-
-<footer class="footer wrap">
-  <p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p>
-  <p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p>
-</footer>
-</div>
-
-<script>
-const canvas = document.getElementById('matrix');
-const ctx = canvas.getContext('2d');
-function sizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-sizeCanvas();
-const characters = "アァイィウヴエカガキクグケゲコゴサザシスセソタチッヂツテトナニヌネノハバパヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789DOGRITUALSIGNALARCHITECT";
-const fontSize = 14;
-let drops = [];
-function resetDrops(){
-  const columns = Math.floor(canvas.width / fontSize);
-  drops = new Array(columns).fill(1);
-}
-resetDrops();
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0,0,0,0.055)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle = "#00ff66";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = characters[Math.floor(Math.random() * characters.length)];
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-  }
-}
-setInterval(drawMatrix, 50);
-window.addEventListener("resize", () => { sizeCanvas(); resetDrops(); });
-</script>
-
-</body>
-</html>
+<canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">
+<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="masonic-esoteric.html">Masonic</a><a href="survival-war.html">Survival</a><a href="dark-psychology.html">Psychology</a><a href="public-record-dossiers.html">Dossiers</a><a href="black-file.html">Black File</a></nav></header>
+<main>
+<section class="hero wrap"><div class="eyebrow">Symbol Keys · Archive Fragments · Reading Orders</div><h1>THE CODEX</h1><p class="lead">The Codex is the reference chamber: symbolic fragments, hidden-system notes, reading orders, evidence boundaries, and recurring keys that connect D.O.G, the dossiers, the Intel Desk, and the book archive.</p><div class="cta-row"><a class="btn" href="books.html">Book Archive</a><a class="btn alt" href="dog-the-architect.html">D.O.G</a><a class="btn alt" href="black-file.html">Black File</a></div></section>
+<section class="section wrap split"><div class="terminal">CODEX INDEX
+> Number, gate, crown, temple, dog, compass, flame
+> Mirror, mask, stair, vault, word, false light
+> Source, evidence, inference, allegation, speculation
+> The archive is not a shelf. It is a system of doors.</div><div class="card redline"><h2>Function</h2><p>This page becomes the glossary and reference map for the whole brand. It holds the symbolic keys and evidence-language rules that keep the archive coherent as it grows.</p><p><a class="btn" href="funnel-map.html">Internal Funnel Map</a></p></div></section>
+<section class="section wrap grid"><article class="card"><h2>Reading Order</h2><p>Begin with the Black File, choose a shelf, then move into D.O.G, Intelligence Dossiers, Crime Dossiers, or the Masonic/esoteric pathway.</p></article><article class="card"><h2>Symbol Keys</h2><p>Number, gate, crown, temple, dog, compass, flame, mirror, mask, stair, vault, word, false light, and synthetic oracle.</p></article><article class="card"><h2>Evidence Boundary</h2><p>Separate documented fact, strong inference, allegation, speculation, symbolic interpretation, and fiction when the archive crosses into darker material.</p></article><article class="card"><h2>Archive Grammar</h2><p>Every page should lead somewhere: Black File, shelf, book page, Intel Desk, or Amazon. No dead curiosity. No floating signal.</p></article></section>
+</main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — decode the illusion, follow the signal.</p><p class="warning">Public-record investigation, symbolic analysis, esoteric commentary, fiction, speculation, and author interpretation are separated where needed.</p></footer></div><script src="matrix.js"></script></body></html>

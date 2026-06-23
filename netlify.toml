@@ -34,6 +34,16 @@
   status = 301
 
 [[redirects]]
+  from = "/forum"
+  to = "/forum.html"
+  status = 200
+
+[[redirects]]
+  from = "/signal-board"
+  to = "/forum.html"
+  status = 200
+
+[[redirects]]
   from = "/books"
   to = "/books.html"
   status = 200

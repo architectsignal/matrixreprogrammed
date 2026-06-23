@@ -1,0 +1,61 @@
+name: Daily Intel Drop
+
+on:
+  workflow_dispatch:
+    inputs:
+      facebook_mode:
+        description: "Facebook mode: live or dry-run"
+        required: false
+        default: "live"
+  schedule:
+    - cron: "15 7 * * *"
+
+permissions:
+  contents: write
+
+env:
+  FACEBOOK_POST_MODE: ${{ github.event.inputs.facebook_mode || 'live' }}
+
+jobs:
+  daily-drop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate daily Intel Drop
+        run: node scripts/intel-drop-engine.js
+
+      - name: Update Intel Desk page
+        run: node scripts/update-news-from-drop.js
+
+      - name: Generate Black File PDF
+        run: node scripts/build-black-file-pdf.js
+
+      - name: Run site audit
+        run: node scripts/audit-site.js
+
+      - name: Commit generated drop and site update
+        run: |
+          git config user.name "matrix-reprogrammed-bot"
+          git config user.email "actions@github.com"
+          git add data/latest-drop.json data/drops social/daily news.html downloads/the-black-file-matrix-reprogrammed.pdf
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Daily Intel Drop $(date -u +%F)"
+            git push
+          fi
+
+      - name: Publish Facebook post
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+        run: node scripts/publish-facebook-post.js

@@ -13,7 +13,7 @@
 
   function renderPost(post){
     const source = post.sourceUrl ? '<p class="source-list"><a href="' + esc(post.sourceUrl) + '" target="_blank" rel="noopener">Open source</a></p>' : '';
-    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title) + '</h3><p>' + esc(post.body) + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt)) + '</span></p></article>';
+    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title) + '</h3><p>' + esc(post.body) + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt)) + '</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report hard-floor violation</button></article>';
   }
 
   async function loadFeed(){
@@ -23,19 +23,42 @@
       const data = await res.json();
       const posts = Array.isArray(data.posts) ? data.posts : [];
       if (!posts.length) {
-        feed.innerHTML = '<article class="card redline"><h3>No approved signals yet</h3><p>The board is open. Submit a clean source, question, or reader note for review.</p></article>';
+        feed.innerHTML = '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Post a source, question, reader note, or human-cost update.</p></article>';
         return;
       }
       feed.innerHTML = posts.map(renderPost).join('');
     } catch (err) {
-      feed.innerHTML = '<article class="card redline"><h3>Signal feed offline</h3><p>Approved posts could not be loaded right now.</p></article>';
+      feed.innerHTML = '<article class="card redline"><h3>Signal feed offline</h3><p>Posts could not be loaded right now.</p></article>';
     }
+  }
+
+  async function reportPost(id){
+    const reason = prompt('Report reason: threats, doxxing, private victim names, explicit exploitation material, spam, or illegal content?');
+    if (!reason) return;
+    try {
+      await fetch('/.netlify/functions/report-forum-post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ id, reason })
+      });
+      alert('Report received. The post remains public unless removed after review.');
+    } catch (err) {
+      alert('Report could not be sent right now.');
+    }
+  }
+
+  if (feed) {
+    feed.addEventListener('click', function(event){
+      const button = event.target.closest('.report-signal');
+      if (!button) return;
+      reportPost(button.getAttribute('data-id'));
+    });
   }
 
   if (form) {
     form.addEventListener('submit', async function(event){
       event.preventDefault();
-      status.textContent = 'Submitting for review...';
+      status.textContent = 'Posting signal...';
       const payload = Object.fromEntries(new FormData(form).entries());
       try {
         const res = await fetch('/.netlify/functions/submit-forum-post', {
@@ -46,9 +69,10 @@
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Submission failed');
         form.reset();
-        status.textContent = 'Signal received. It will appear publicly only if approved.';
+        status.textContent = 'Signal posted. It is now live on the board.';
+        await loadFeed();
       } catch (err) {
-        status.textContent = err.message || 'Could not submit signal.';
+        status.textContent = err.message || 'Could not post signal.';
       }
     });
   }

@@ -2,6 +2,11 @@ name: Weekly D.O.G Video Package
 
 on:
   workflow_dispatch:
+    inputs:
+      facebook_video_mode:
+        description: "Facebook video mode: live or dry-run"
+        required: false
+        default: "live"
   schedule:
     - cron: "30 8 * * 1"
 
@@ -10,6 +15,7 @@ permissions:
 
 env:
   ELEVENLABS_MODEL_ID: ${{ secrets.ELEVENLABS_MODEL_ID }}
+  FACEBOOK_VIDEO_MODE: ${{ github.event.inputs.facebook_video_mode || 'live' }}
 
 jobs:
   weekly-video:
@@ -25,6 +31,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install video rendering tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg librsvg2-bin
+
       - name: Generate fresh Intel Drop first
         run: node scripts/intel-drop-engine.js
 
@@ -37,6 +48,9 @@ jobs:
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
         run: node scripts/generate-weekly-voiceover.js
 
+      - name: Render final weekly MP4
+        run: node scripts/render-weekly-mp4.js
+
       - name: Upload weekly video package artifact
         uses: actions/upload-artifact@v4
         with:
@@ -46,8 +60,17 @@ jobs:
             video-packages/**/package.json
             video-packages/**/narration.txt
             video-packages/**/poster.svg
+            video-packages/**/scene-*.svg
+            video-packages/**/scene-*.png
             video-packages/**/voiceover.mp3
+            video-packages/**/weekly-dog-transmission.mp4
           retention-days: 14
+
+      - name: Publish weekly Facebook video
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+        run: node scripts/publish-facebook-video.js
 
       - name: Commit weekly video package metadata
         run: |
@@ -57,6 +80,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No weekly package changes to commit."
           else
-            git commit -m "Weekly D.O.G video package $(date -u +%F)"
+            git commit -m "Weekly D.O.G video MP4 $(date -u +%F)"
             git push
           fi

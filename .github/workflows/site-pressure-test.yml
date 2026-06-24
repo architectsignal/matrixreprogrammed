@@ -1,0 +1,55 @@
+name: Site Pressure Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-and-pressure-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build full site and run pressure tests
+        run: npm run build
+
+      - name: Verify Phase 1 pages exist
+        run: |
+          test -f power-atlas.html
+          test -f evidence-vault.html
+          test -f evidence-policy.html
+          test -f network-maps.html
+          grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
+          grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
+          grep -q "DARK CLAIMS NEED CLEAN SOURCES" evidence-policy.html
+          grep -q "NO RED STRING WITHOUT LABELS" network-maps.html
+
+      - name: Verify Intel Desk generated output
+        run: |
+          grep -q "Latest 7 Days" news.html
+          grep -q "Human Cost" news.html
+          grep -q "Migration / Irregular Immigration" news.html
+          grep -q "Vaccines" news.html
+          grep -q "BULLETIN ARCHIVE" intel-archive.html
+
+      - name: Verify duplicate cleanup output
+        run: |
+          ! grep -q "Flagship Door" index.html
+          ! grep -q "Rumble Channel Routes" videos.html
+          ! grep -q "SIGNALS INCREASING RISK" timers.html
+          grep -q "Video Production Map" videos.html
+          grep -q "Showing the strongest entry points" search.html

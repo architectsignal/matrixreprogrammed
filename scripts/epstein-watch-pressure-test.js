@@ -1,3 +1,5 @@
+require('./ux-polish-pressure-test.js');
+
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();
@@ -37,4 +39,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked evidence-watch data, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked UX mission navigation, evidence-watch data, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');

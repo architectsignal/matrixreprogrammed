@@ -68,9 +68,9 @@ if (!netlify.includes('from = "/answer-engine"')) fail('netlify.toml missing /an
 if (!netlify.includes('from = "/ai-answers"')) fail('netlify.toml missing /ai-answers redirect');
 
 const cleanup = exists('scripts/cleanup-duplicates.js') ? read('scripts/cleanup-duplicates.js') : '';
-if (!cleanup.includes('phaseFiveFiles')) fail('cleanup script missing Phase 5 self-heal files');
+if (!cleanup.includes('phaseChecks')) fail('cleanup script missing unified phaseChecks self-heal structure');
+if (!cleanup.includes('answer-engine.html')) fail('cleanup script missing Phase 5 self-heal target');
 if (!cleanup.includes('build-phase5-ai-answer-engine.js')) fail('cleanup script missing Phase 5 builder fallback');
-if (!cleanup.includes('answer-engine.html')) fail('cleanup script master nav missing AI Answers link');
 if (!cleanup.includes('forum.html')) fail('cleanup script master nav missing Signal Board link');
 
 if (problems.length) {

@@ -1,0 +1,30 @@
+{
+  "updated": "2026-06-24T00:00:00.000Z",
+  "sourceConfigUpdated": "2026-06-24",
+  "status": "seeded",
+  "rules": [
+    "Prefer primary sources, court records, official releases, archives, and dated reporting.",
+    "Do not treat a news mention as proof of wrongdoing.",
+    "Every item must keep a source URL, source label, date, lane, and reader route.",
+    "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant."
+  ],
+  "lanes": [],
+  "feedResults": [],
+  "items": [
+    {
+      "id": "seed-epstein-watch",
+      "lane": "epstein-files",
+      "laneTitle": "Epstein Files And Court Records",
+      "sourceLabel": "Matrix Reprogrammed source lane",
+      "title": "Epstein Evidence Watch activated",
+      "url": "epstein-files.html",
+      "published": "2026-06-24T00:00:00.000Z",
+      "summary": "The Epstein lane is configured for source-watch updates, document routes, dated bulletins, video routes, opt-ins, offers, and book/store pathways.",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-black-file.html",
+      "offerRoute": "offer-starter-library.html",
+      "status": "seeded"
+    }
+  ]
+}

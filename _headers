@@ -1,0 +1,26 @@
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+
+/downloads/*.pdf
+  Content-Disposition: attachment
+  Content-Type: application/pdf
+
+/downloads/*.json
+  Content-Disposition: attachment
+  Content-Type: application/json
+
+/downloads/*.md
+  Content-Disposition: attachment
+  Content-Type: text/markdown
+
+/downloads/*.txt
+  Content-Disposition: attachment
+  Content-Type: text/plain
+
+/feeds/*.xml
+  Content-Type: application/xml
+
+/feeds/*.json
+  Content-Type: application/feed+json

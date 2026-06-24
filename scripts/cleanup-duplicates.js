@@ -59,6 +59,9 @@ function cleanupTimerRiskTerminal(html) {
     .replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>');
 }
 function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g, 'Video Production Map'); }
+function safeSearchJs() {
+  return `(function(){const input=document.getElementById('archive-search'),results=document.getElementById('search-results'),count=document.getElementById('search-count');if(!input||!results)return;function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}function render(items){count.textContent=items.length+' archive door'+(items.length===1?'':'s')+' shown';results.innerHTML=items.map(b=>'<article class="card"><span class="label">'+esc(b.category||'Archive')+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description||b.subtitle||'')+'</p><a class="btn" href="'+esc(b.url)+'">Open Door</a></article>').join('');}fetch('search-index.json').then(r=>r.json()).then(data=>{function run(){const q=input.value.trim().toLowerCase();render(!q?data:data.filter(b=>[b.title,b.subtitle,b.series,b.category,b.description,(b.keywords||[]).join(' ')].join(' ').toLowerCase().includes(q)));}input.addEventListener('input',run);if(input.value.trim())run();}).catch(()=>{});})();`;
+}
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {
@@ -81,4 +84,5 @@ if (fs.existsSync(searchFile) && fs.existsSync(indexFile)) {
   }
   write('search.html', replaceNav(html));
 }
+write('search.js', safeSearchJs());
 console.log(`Duplicate cleanup complete across ${htmlFiles.length} HTML files.`);

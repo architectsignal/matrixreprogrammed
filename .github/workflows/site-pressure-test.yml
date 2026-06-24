@@ -132,6 +132,23 @@ jobs:
           grep -q "conversion-funnel.html" search-index.json
           grep -q "conversion-funnel.html" llms.txt
 
+      - name: Verify Phase 8 Trust Center output
+        run: |
+          test -f data/trust-center.json
+          test -f trust-center.html
+          grep -q "TRUST CENTER" trust-center.html
+          grep -q "TRUST ENGINE STATUS" trust-center.html
+          test -f trust-privacy-policy.html
+          test -f trust-source-methodology.html
+          test -f trust-corrections-policy.html
+          test -f trust-association-boundary.html
+          grep -q "TRUST DISCIPLINE" trust-privacy-policy.html
+          grep -q "Association is not guilt" trust-association-boundary.html
+          grep -q "phase-eight-trust-engine" conversion-funnel.html
+          grep -q "phase-eight-trust-engine" black-file.html
+          grep -q "trust-center.html" search-index.json
+          grep -q "trust-center.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

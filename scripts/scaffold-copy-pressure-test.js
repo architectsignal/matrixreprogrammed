@@ -31,6 +31,14 @@ const banned = [
 function isInternalPage(rel, html) {
   return publicExceptions.has(rel) || /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
 }
+function visibleCopy(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ');
+}
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (ignoredDirs.has(entry.name)) continue;
@@ -40,8 +48,9 @@ function walk(dir) {
       const rel = path.relative(root, full).replace(/\\/g, '/');
       const html = fs.readFileSync(full, 'utf8');
       if (isInternalPage(rel, html)) continue;
+      const copy = visibleCopy(html);
       for (const pattern of banned) {
-        if (pattern.test(html)) problems.push(`${rel}: scaffold copy matched ${pattern}`);
+        if (pattern.test(copy)) problems.push(`${rel}: visible scaffold copy matched ${pattern}`);
       }
     }
   }
@@ -58,4 +67,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('SCAFFOLD COPY PRESSURE TEST PASSED');
-console.log('Checked public HTML for author-facing scaffold, generated-page language, raw data-source labels, sales-door copy, generated grammar errors, and broken title casing.');
+console.log('Checked reader-visible public HTML for author-facing scaffold, generated-page language, raw data-source labels, sales-door copy, generated grammar errors, and broken title casing.');

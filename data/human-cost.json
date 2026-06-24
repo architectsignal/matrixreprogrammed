@@ -1,0 +1,54 @@
+{
+  "updated": "2026-06-24",
+  "method": "Sourced, dated figures only. No fake live counters. Figures are category-specific and not interchangeable.",
+  "panels": [
+    {
+      "key": "conflict-global",
+      "title": "Global Conflict Snapshot",
+      "figure": "Source-led estimates only",
+      "status": "Watch",
+      "description": "Conflict deaths, civilian casualties, wounded, and displacement must be pulled from UN/OHCHR/OCHA, courts, commissions, humanitarian agencies, and major wire services where primary data is unavailable.",
+      "sourceLabel": "UN/OHCHR/OCHA / Reuters where primary unavailable"
+    },
+    {
+      "key": "displacement-global",
+      "title": "Global Displacement",
+      "figure": "UNHCR / IOM baseline",
+      "status": "Updated weekly",
+      "description": "Refugees, asylum seekers, internally displaced people, and stateless populations should be kept separate.",
+      "sourceLabel": "UNHCR Refugee Data Finder / IOM"
+    },
+    {
+      "key": "food-insecurity",
+      "title": "Famine / Food Insecurity",
+      "figure": "IPC / WFP classification",
+      "status": "Updated weekly",
+      "description": "IPC phases, famine warnings, acute food insecurity, siege conditions, and humanitarian access restrictions.",
+      "sourceLabel": "IPC / WFP"
+    },
+    {
+      "key": "migration-global",
+      "title": "Migration / Irregular Immigration",
+      "figure": "Encounters ≠ persons",
+      "status": "Updated weekly",
+      "description": "Border encounters, irregular crossings, asylum applications, removals, returns, departures, missing migrants, overstays, and estimated unauthorized populations are separate categories.",
+      "sourceLabel": "CBP / Frontex / Eurostat / IOM / UNHCR"
+    },
+    {
+      "key": "vaccine-compensation",
+      "title": "Vaccines: Damages & Compensation",
+      "figure": "Compensated claims only",
+      "status": "Updated weekly",
+      "description": "Adverse-event reports, compensated claims, pending claims, rejected claims, and causal findings must be separated.",
+      "sourceLabel": "HRSA VICP / CICP / UK VDPS / VAERS disclaimer"
+    },
+    {
+      "key": "child-exploitation",
+      "title": "Children / Exploitation",
+      "figure": "NCMEC 2025 baseline",
+      "status": "Updated weekly",
+      "description": "Missing-child support cases, resolved cases, CyberTipline reports, online enticement, trafficking cases, and law-enforcement records must not be mixed.",
+      "sourceLabel": "NCMEC / ICMEC / UNODC / Europol / Interpol"
+    }
+  ]
+}

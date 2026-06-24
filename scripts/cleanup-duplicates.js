@@ -18,7 +18,8 @@ const phaseChecks = [
   { files: ['schema-index.html', 'site-graph.json', 'claim-taxonomy.json', 'crawler-map.json'], script: 'build-phase13-schema-engine.js', label: 'Phase 13' },
   { files: ['download-center.html', 'downloads/dossier-pack-black-file-starter.json', 'downloads/dossier-pack-black-file-starter.md'], script: 'build-phase14-dossier-packs.js', label: 'Phase 14' },
   { files: ['feed-center.html', 'feeds/main-signal.xml', 'feeds/main-signal-atom.xml', 'feeds/main-signal.json'], script: 'build-phase15-feed-engine.js', label: 'Phase 15' },
-  { files: ['share-center.html', 'downloads/share-kit-black-file-starter.json', 'downloads/share-kit-black-file-starter.md', 'downloads/share-kit-black-file-starter.txt'], script: 'build-phase16-share-kits.js', label: 'Phase 16' }
+  { files: ['share-center.html', 'downloads/share-kit-black-file-starter.json', 'downloads/share-kit-black-file-starter.md', 'downloads/share-kit-black-file-starter.txt'], script: 'build-phase16-share-kits.js', label: 'Phase 16' },
+  { files: ['launch-room.html', 'downloads/campaign-black-file-launch.json', 'downloads/campaign-black-file-launch.md'], script: 'build-phase17-campaign-calendar.js', label: 'Phase 17' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -33,7 +34,7 @@ for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const navLinks = [
   ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'],
-  ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
+  ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
   ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'],
   ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],
   ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],

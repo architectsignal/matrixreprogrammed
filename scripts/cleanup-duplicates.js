@@ -42,6 +42,11 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
 function replaceNav(html) { return html.replace(/<nav class="nav">[\s\S]*?<\/nav>/g, canonicalNav); }
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
+function cleanupHomepage(html) {
+  return html
+    .replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '')
+    .replace(/Flagship Door/g, 'Primary Route');
+}
 function cleanupNewsDuplicates(html) {
   return html
     .replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '')
@@ -58,6 +63,7 @@ function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {
   let html = cleanEmptyPills(replaceNav(read(file)));
+  if (file === 'index.html') html = cleanupHomepage(html);
   if (file === 'news.html') html = cleanupNewsDuplicates(html);
   if (file === 'timers.html') html = cleanupTimerRiskTerminal(html);
   if (file === 'videos.html') html = cleanupVideoRoutes(html);

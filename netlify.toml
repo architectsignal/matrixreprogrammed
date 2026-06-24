@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js"
 
 [functions]
   directory = "netlify/functions"
@@ -47,6 +47,11 @@
   from = "/books"
   to = "/books.html"
   status = 200
+
+[[redirects]]
+  from = "/book-universe"
+  to = "/book-universe.html"
+  status = 301
 
 [[redirects]]
   from = "/power-atlas"

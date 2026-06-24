@@ -34,16 +34,23 @@ if (exists('data/live-intel-sources.json')) {
 if (exists('data/live-intel.json')) {
   const intel = JSON.parse(read('data/live-intel.json'));
   if (!Array.isArray(intel.items) || intel.items.length < 1) fail('data/live-intel.json expected at least one item or seed item');
+  for (const item of intel.items || []) {
+    for (const field of ['evidenceLevel', 'evidenceBoundary', 'whyItMatters', 'nextAction', 'videoHook', 'rumbleShortTitle', 'rumbleLongTitle', 'socialThread', 'optinRoute', 'offerRoute', 'bookRoute', 'storeRoute']) {
+      if (!item[field]) fail(`live intel item ${item.id || item.title || 'unknown'} missing ${field}`);
+    }
+  }
 }
 
-for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Updates', 'Epstein Files', 'Declassified', 'Books / Store', 'Rumble Channels']) {
+for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels']) {
   requireIncludes('live-intel.html', marker, marker);
 }
 for (const file of ['index.html', 'news.html', 'evidence-vault.html', 'epstein-files.html', 'videos.html', 'books.html']) {
   requireIncludes(file, 'live-intel-machine-route', 'Live Intel route patch');
 }
-requireIncludes('downloads/live-intel-latest.json', 'items', 'latest intel items');
+requireIncludes('downloads/live-intel-latest.json', 'rumbleShortTitle', 'latest intel video hook data');
+requireIncludes('downloads/live-intel-latest.json', 'optinRoute', 'latest intel opt-in route');
 requireIncludes('downloads/live-intel-latest.md', '# Live Intel Machine', 'latest intel markdown brief');
+requireIncludes('downloads/live-intel-latest.md', 'Video hook:', 'markdown video hook');
 requireIncludes('search-index.json', 'live-intel.html', 'search index route');
 requireIncludes('sitemap.xml', 'live-intel.html', 'sitemap route');
 requireIncludes('llms.txt', '/live-intel.html', 'llms route');
@@ -58,4 +65,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('LIVE INTEL PRESSURE TEST PASSED');
-console.log('Checked source lanes, updater, static hub, downloads, page patches, search/sitemap/llms, and scheduled workflow.');
+console.log('Checked source lanes, updater enrichment, static hub, downloads, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, and book/store routes.');

@@ -6,6 +6,7 @@ const phaseOneFiles = ['power-atlas.html', 'evidence-vault.html', 'evidence-poli
 const phaseTwoFiles = ['atlas-index.html'];
 const phaseThreeFiles = ['evidence-vault-index.html'];
 const phaseFourFiles = ['book-universe.html'];
+const phaseFiveFiles = ['answer-engine.html'];
 
 function runBuilderWhenMissing(requiredFiles, scriptName, label) {
   const missing = requiredFiles.some(file => !fs.existsSync(path.join(root, file)));
@@ -23,8 +24,9 @@ runBuilderWhenMissing(phaseOneFiles, 'build-phase1-structure.js', 'Phase 1');
 runBuilderWhenMissing(phaseTwoFiles, 'build-phase2-power-atlas.js', 'Phase 2');
 runBuilderWhenMissing(phaseThreeFiles, 'build-phase3-evidence-vault.js', 'Phase 3');
 runBuilderWhenMissing(phaseFourFiles, 'build-phase4-book-universe.js', 'Phase 4');
+runBuilderWhenMissing(phaseFiveFiles, 'build-phase5-ai-answer-engine.js', 'Phase 5');
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
-const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="book-universe.html">Book Universe</a><a href="power-atlas.html">Power Atlas</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
+const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="book-universe.html">Book Universe</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 
 function esc(s = '') {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

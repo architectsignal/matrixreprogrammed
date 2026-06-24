@@ -1,241 +1,37 @@
 const fs = require('fs');
 const path = require('path');
-
 const W = 612, H = 792, M = 54;
-const GREEN = [0, 1, 0.4], SOFT = [0.78, 1, 0.84], PALE = [0.92, 1, 0.94], GOLD = [0.86, 0.70, 0.34], DARK = [0.005, 0.015, 0.008], PANEL = [0.015, 0.045, 0.025], MUTED = [0.55, 0.78, 0.60];
-const outPath = path.join(process.cwd(), 'downloads', 'the-black-file-matrix-reprogrammed.pdf');
-
-const rgb = c => `${c[0].toFixed(3)} ${c[1].toFixed(3)} ${c[2].toFixed(3)}`;
-const esc = s => String(s).replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
-const text = (x, y, s, size = 10, font = 'F1', color = SOFT) => `BT /${font} ${size} Tf ${rgb(color)} rg ${x.toFixed(2)} ${y.toFixed(2)} Td (${esc(s)}) Tj ET\n`;
-const rect = (x, y, w, h, fill = null, stroke = null, lw = .7) => `${fill ? `${rgb(fill)} rg ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re f\n` : ''}${stroke ? `${lw.toFixed(2)} w ${rgb(stroke)} RG ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re S\n` : ''}`;
-const line = (x1, y1, x2, y2, color = GREEN, lw = .7) => `${lw.toFixed(2)} w ${rgb(color)} RG ${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S\n`;
-
-function wrap(s, max = 72) {
-  const words = String(s).split(/\s+/);
-  const lines = [];
-  let cur = '';
-  for (const w of words) {
-    if (!w) continue;
-    if ((cur + ' ' + w).trim().length > max) {
-      if (cur) lines.push(cur);
-      cur = w;
-    } else cur = (cur + ' ' + w).trim();
-  }
-  if (cur) lines.push(cur);
-  return lines;
-}
-
-function multi(x, y, s, size = 9.5, font = 'F1', color = SOFT, width = 72, leading = null) {
-  let o = '';
-  if (!leading) leading = size * 1.42;
-  for (const para of String(s).split('\n')) {
-    if (!para.trim()) { y -= leading; continue; }
-    for (const ln of wrap(para, width)) {
-      o += text(x, y, ln, size, font, color);
-      y -= leading;
-    }
-  }
-  return [o, y];
-}
-
-function frame(title, subtitle, pageNum) {
-  let c = '';
-  c += rect(0, 0, W, H, DARK);
-  for (let x = 18, i = 0; x < W; x += 54, i++) c += rect(x, 0, 1, H, [0, 0.08 + (i % 3) * 0.012, 0.035]);
-  c += rect(26, 24, W - 52, H - 48, null, [0, 0.42, 0.18], .85);
-  c += rect(36, 34, W - 72, H - 68, null, [0.44, 0.34, 0.13], .35);
-  c += line(M, H - 58, W - M, H - 58, GOLD, .9);
-  c += line(M, 54, W - M, 54, GREEN, .65);
-  c += text(M, H - 44, 'MATRIX REPROGRAMMED', 8.2, 'F2', GOLD);
-  c += text(W - 205, H - 44, 'THE BLACK FILE', 8.2, 'F2', GREEN);
-  if (title) {
-    c += text(M, H - 88, title.toUpperCase(), 18, 'F2', PALE);
-    c += line(M, H - 99, W - M, H - 99, GREEN, .55);
-  }
-  if (subtitle) c += text(M, H - 116, subtitle, 9.5, 'F1', GOLD);
-  if (pageNum) {
-    c += text(M, 34, 'THE TRUTH IS NOT HIDDEN. IT IS ENCODED.', 7.5, 'F2', MUTED);
-    c += text(W - 92, 34, String(pageNum).padStart(2, '0'), 8, 'F2', GOLD);
-  }
-  return c;
-}
-
-const pages = [];
-let c = '';
-c += rect(0, 0, W, H, DARK);
-c += rect(34, 34, W - 68, H - 68, null, GREEN, 1.1);
-c += rect(50, 50, W - 100, H - 100, null, GOLD, .55);
-c += rect(74, 160, W - 148, 420, [0, 0.025, 0.012], [0, 0.55, 0.22], .8);
-for (let x = 72, i = 0; x < W - 72; x += 28, i++) c += line(x, 92, x, H - 90, [0, 0.16 + (i % 4) * 0.025, 0.06], .35);
-c += text(92, 690, 'MATRIX REPROGRAMMED', 10, 'F2', GOLD);
-c += line(92, 674, W - 92, 674, GOLD, .8);
-c += text(92, 606, 'THE', 28, 'F2', GREEN);
-c += text(92, 548, 'BLACK FILE', 58, 'F2', PALE);
-c += text(96, 510, 'A 33-SYSTEM READER GATEWAY', 14, 'F2', GOLD);
-c += multi(96, 456, 'The world does not run on headlines. It runs on systems. This file is the first map: symbols, intelligence, crime, media, money, war, psychology, ritual, surveillance, institutions, and consent.', 11, 'F1', SOFT, 58)[0];
-c += rect(96, 242, 420, 88, [0, 0.035, 0.016], [0, 0.62, 0.25], .9);
-c += text(116, 300, 'ACCESS LEVEL: READER INITIATION', 12, 'F2', GREEN);
-c += text(116, 274, 'FUNCTION: TURN NOISE INTO STRUCTURE', 10, 'F1', GOLD);
-c += text(116, 250, 'RULE: SOURCE FIRST. CLAIM SECOND.', 10, 'F1', SOFT);
-c += text(92, 96, 'THE TRUTH IS NOT HIDDEN. IT IS ENCODED.', 10, 'F2', GREEN);
-pages.push(c);
-
-c = frame('Reader Briefing', 'Why this file exists', 2);
-c += rect(M, 160, W - 2 * M, 445, PANEL, [0, 0.45, 0.18], .7);
-c += multi(M + 24, 570, 'The Black File is not another pile of headlines. It is a map for seeing the systems behind the visible story. Most people collect fragments and drown in them. This file teaches the first discipline of Matrix Reprogrammed: pattern recognition.\n\nA story matters when it reveals structure. A court record matters when it exposes a route. A symbol matters when it repeats across institutions. A war story matters when it shows logistics, money, intelligence, propaganda, and public fear moving together.\n\nThe purpose is not panic. The purpose is literacy. Once a reader sees the structure, they can choose the correct door into the archive.', 11, 'F1', SOFT, 67)[0];
-c += text(M + 24, 210, 'CORE FORMULA', 12, 'F2', GOLD);
-c += text(M + 24, 184, 'TRAFFIC -> BLACK FILE -> SHELF -> BOOK PAGE -> AMAZON / KU / HARDBACK', 9, 'F2', GREEN);
-pages.push(c);
-
-c = frame('How To Use The File', 'Do not browse. Choose a door.', 3);
-c += rect(M, 142, W - 2 * M, 466, PANEL, [0, 0.45, 0.18], .7);
-['Read the 33 systems once without arguing with them.', 'Mark the systems you already see in current events.', 'Choose the shelf that matches your obsession.', 'Enter the first book page in that shelf.', 'Use the Intel Desk to connect live events to the archive.', 'Keep evidence boundaries: fact, inference, allegation, speculation.'].forEach((it, i) => {
-  const y = 560 - i * 54;
-  c += rect(M + 24, y - 9, 34, 24, [0, 0.08, 0.035], GOLD, .55);
-  c += text(M + 33, y - 2, String(i + 1).padStart(2, '0'), 9, 'F2', GOLD);
-  c += text(M + 70, y, it, 10.5, 'F1', SOFT);
-});
-c += text(M + 24, 190, 'If a story does not lead to a source, a shelf, a book, or a useful question, it is probably noise.', 10, 'F2', GREEN);
-pages.push(c);
-
-const systems = [
-  ['01', 'The Attention System', 'What captures attention becomes the first gate of control.'],
-  ['02', 'The Fear System', 'Fear compresses judgement and makes the public seek authority.'],
-  ['03', 'The Symbol System', 'Symbols compress doctrine, hierarchy, memory, and power into images.'],
-  ['04', 'The Money System', 'Money is permission, pressure, access, and memory.'],
-  ['05', 'The Intelligence System', 'Agencies, contractors, archives, secrecy, and oversight failure form a hidden state language.'],
-  ['06', 'The Crime-State Overlap', 'Organized crime scales through logistics, corruption, finance, and official blindness.'],
-  ['07', 'The Media Frame', 'The frame decides what the public sees before the argument begins.'],
-  ['08', 'The War Machine', 'War moves through weapons, banks, sanctions, logistics, propaganda, and fear.'],
-  ['09', 'The Surveillance Net', 'Collection turns private life into strategic material.'],
-  ['10', 'The Foundation Network', 'Philanthropy can fund culture, policy, research, narrative, and access.'],
-  ['11', 'The Ritual Layer', 'Ceremony teaches the body before doctrine reaches the mind.'],
-  ['12', 'The Education Gate', 'Education can open the world or define the allowed map.'],
-  ['13', 'The Legal Mask', 'Law can reveal truth, bury truth, or dress power in procedure.'],
-  ['14', 'The Corporate Shell', 'Companies can hold assets, distance actors, and transform liability into fog.'],
-  ['15', 'The Propaganda Weather', 'Propaganda works best when it feels like the atmosphere.'],
-  ['16', 'The Crisis Dialectic', 'Crisis creates the emotional conditions for pre-written solutions.'],
-  ['17', 'The Controlled Opposition Door', 'A false enemy can protect the real structure by absorbing dissent.'],
-  ['18', 'The Technocratic Priesthood', 'Technical language becomes priesthood when the public cannot audit it.'],
-  ['19', 'The Data Harvest', 'Data turns behavior into prediction, ranking, targeting, and control.'],
-  ['20', 'The Security State', 'Security expands fastest when fear is treated as consent.'],
-  ['21', 'The Philanthropy Shield', 'Good language can shield hard power from public suspicion.'],
-  ['22', 'The Occult Architecture', 'Older symbolic systems still echo in institutions, monuments, logos, and rituals.'],
-  ['23', 'The Social Credit Mind', 'The cage begins inside behavior long before it becomes policy.'],
-  ['24', 'The Financial Choke Point', 'Control the payment rails and you control what can move.'],
-  ['25', 'The Memory Hole', 'Forgetting is not absence. It can be engineered.'],
-  ['26', 'The Celebrity Veil', 'Fame redirects attention away from structure toward theatre.'],
-  ['27', 'The Public-Private Switch', 'Power moves when public authority and private infrastructure blur.'],
-  ['28', 'The Archive Drop', 'A release has timing, provenance, motive, and framing.'],
-  ['29', 'The Court Record', 'Court records show what can be said under pressure and procedure.'],
-  ['30', 'The Dossier Pattern', 'A dossier maps names, routes, institutions, timelines, and evidence boundaries.'],
-  ['31', 'The False Light', 'Not all illumination liberates. Some light makes the cage easier to navigate.'],
-  ['32', 'The Black File', 'The gateway file that turns curiosity into a structured archive path.'],
-  ['33', 'The Architect Signal', 'The reader stops collecting fragments and begins seeing design.']
-];
-
-for (let p = 0; p < 6; p++) {
-  const chunk = systems.slice(p * 6, p * 6 + 6);
-  if (!chunk.length) break;
-  c = frame('The 33 Systems', `Layer ${p + 1}: hidden architecture behind visible events`, 4 + p);
-  let y = 610;
-  for (const [num, name, desc] of chunk) {
-    c += rect(M, y - 58, W - 2 * M, 50, PANEL, [0, 0.34, 0.14], .45);
-    c += text(M + 14, y - 27, num, 20, 'F2', GOLD);
-    c += text(M + 60, y - 16, name.toUpperCase(), 10.2, 'F2', PALE);
-    c += multi(M + 60, y - 33, desc, 8.8, 'F1', SOFT, 62, 11)[0];
-    y -= 72;
-  }
-  pages.push(c);
-}
-
-c = frame('Choose Your Door', 'Four shelves. One archive.', 10);
-const paths = [
-  ['MASONIC & ESOTERIC', 'Symbols -> Degree I -> Degree III -> D.O.G The Architect', 'For readers who see symbols, ritual architecture, temples, degrees, sacred number, mystery schools, and hidden meaning.'],
-  ['SURVIVAL & WAR', 'Intel Desk -> WWIII -> KEEP CALM', 'For readers watching war, system failure, cyber pressure, shortages, blackouts, propaganda, and civilian stress.'],
-  ['DARK PSYCHOLOGY', 'Analyze Anyone -> Manipulation Immunity -> Mind Control', 'For readers studying behavior, manipulation defense, influence, narcissists, persuasion, emotional pressure, and mental sovereignty.'],
-  ['DOSSIERS & PUBLIC RECORD', 'Intel Desk -> Masons in the UN -> Intelligence -> Crime', 'For readers who want court records, declassified files, sanctions, agency archives, crime-state overlap, and evidence boundaries.']
-];
-let y = 590;
-for (const row of paths) {
-  c += rect(M, y - 86, W - 2 * M, 76, PANEL, row[0].includes('MASONIC') ? GOLD : [0, 0.45, 0.18], .7);
-  c += text(M + 20, y - 28, row[0], 12, 'F2', PALE);
-  c += text(M + 20, y - 50, row[1], 9, 'F2', GREEN);
-  c += multi(M + 20, y - 67, row[2], 8.7, 'F1', SOFT, 72, 10)[0];
-  y -= 105;
-}
-pages.push(c);
-
-c = frame('Evidence Boundary', 'The serious reader does not fake certainty.', 11);
-c += rect(M, 124, W - 2 * M, 510, PANEL, [0, 0.45, 0.18], .7);
-const labels = [
-  ['CONFIRMED', 'Directly supported by reliable public record, official documents, court filings, or primary source material.'],
-  ['STRONGLY DOCUMENTED', 'Supported by multiple credible sources or consistent official/public-record material.'],
-  ['INFERENCE', 'A careful connection drawn from documented facts, clearly marked as interpretation.'],
-  ['ALLEGATION', 'A claim made by a party, witness, source, or document, not treated as proven fact.'],
-  ['SPECULATION', 'A possibility or theory clearly labelled as such.'],
-  ['SYMBOLIC INTERPRETATION', 'Meaning analysis of images, rituals, architecture, numbers, or repeated motifs.']
-];
-y = 585;
-for (const [lab, desc] of labels) {
-  c += text(M + 24, y, lab, 10, 'F2', lab.startsWith('S') || lab === 'CONFIRMED' ? GOLD : GREEN);
-  c += multi(M + 180, y, desc, 8.8, 'F1', SOFT, 50, 11)[0];
-  y -= 68;
-}
-c += text(M + 24, 162, 'RULE: Evidence boundaries do not weaken the archive. They make it harder to dismiss.', 9, 'F2', PALE);
-pages.push(c);
-
-c = frame('The Flagship Door', 'D.O.G The Architect', 12);
-c += rect(M, 200, W - 2 * M, 390, PANEL, GOLD, .85);
-c += multi(M + 28, 545, 'D.O.G The Architect is the centre of the Matrix Reprogrammed machine. It is not just a book about symbols. It is a book about the architecture behind symbols. Thirty-three gates through mystery schools, temples, sacred number, myths, ritual structures, artificial intelligence, false light, body-as-temple doctrine, the lost Word, the false crown, the true crown, and the hidden war over meaning itself.', 11.3, 'F1', SOFT, 63, 16)[0];
-c += text(M + 28, 292, 'THE COLLECTOR PATH', 12, 'F2', GOLD);
-c += multi(M + 28, 266, 'Black File -> Masonic Shelf -> D.O.G Page -> Collector Sequence -> Premium Hardback / Masterwork', 10, 'F2', GREEN, 62)[0];
-pages.push(c);
-
-c = rect(0, 0, W, H, DARK);
-c += rect(40, 40, W - 80, H - 80, null, GREEN, 1.2);
-c += rect(60, 60, W - 120, H - 120, null, GOLD, .6);
-for (let x = 90; x < W - 90; x += 36) c += line(x, 90, x, H - 90, [0, 0.13, 0.055], .4);
-c += text(86, 642, 'FINAL SIGNAL', 16, 'F2', GOLD);
-c += text(86, 575, 'THE TRUTH IS NOT HIDDEN.', 32, 'F2', PALE);
-c += text(86, 526, 'IT IS ENCODED.', 44, 'F2', GREEN);
-c += multi(90, 444, 'Enter the archive. Choose the shelf. Follow the source. Read the system. Then return to the world with a different eye.', 13, 'F1', SOFT, 54, 18)[0];
-c += rect(90, 230, 432, 72, [0, 0.035, 0.016], [0, 0.55, 0.22], .8);
-c += text(112, 274, 'MATRIXREPROGRAMMED.COM', 14, 'F2', GOLD);
-c += text(112, 250, 'BOOKS  |  INTEL DESK  |  BLACK FILE  |  D.O.G', 9, 'F2', GREEN);
-c += text(90, 112, 'MATRIX REPROGRAMMED', 10, 'F2', GOLD);
-pages.push(c);
-
-function buildPdf(pageStreams) {
-  const objects = [];
-  const add = o => { objects.push(o); return objects.length; };
-  add('<< /Type /Catalog /Pages 2 0 R >>');
-  add('');
-  const f1 = add('<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>');
-  const f2 = add('<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>');
-  const f3 = add('<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic >>');
-  const pageIds = [];
-  pageStreams.forEach(content => {
-    const len = Buffer.byteLength(content, 'ascii');
-    const cid = add(`<< /Length ${len} >>\nstream\n${content}endstream`);
-    const pid = add(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R /F3 ${f3} 0 R >> >> /Contents ${cid} 0 R >>`);
-    pageIds.push(pid);
-  });
-  objects[1] = `<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map(id => `${id} 0 R`).join(' ')}] >>`;
-  let pdf = '%PDF-1.4\n';
-  const offsets = [0];
-  objects.forEach((obj, i) => {
-    offsets.push(Buffer.byteLength(pdf, 'ascii'));
-    pdf += `${i + 1} 0 obj\n${obj}\nendobj\n`;
-  });
-  const xref = Buffer.byteLength(pdf, 'ascii');
-  pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
-  offsets.slice(1).forEach(off => { pdf += `${String(off).padStart(10, '0')} 00000 n \n`; });
-  pdf += `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;
-  return pdf;
-}
-
-fs.mkdirSync(path.dirname(outPath), { recursive: true });
-fs.writeFileSync(outPath, buildPdf(pages), 'ascii');
-console.log(`Generated ${outPath} with ${pages.length} pages`);
+const RED=[1,.05,.12], GREEN=[0,1,.4], SOFT=[.82,1,.86], PALE=[.96,1,.97], GOLD=[.86,.70,.34], DARK=[.005,.012,.008], PANEL=[.025,.008,.01], MUTED=[.64,.78,.66];
+const root = process.cwd();
+const outPath = path.join(root, 'downloads', 'the-black-file-matrix-reprogrammed.pdf');
+const site='https://matrixreprogrammed.com';
+let books=[]; try{books=JSON.parse(fs.readFileSync(path.join(root,'data','books.json'),'utf8')).books||[]}catch(e){}
+const pick=keys=>keys.map(k=>books.find(b=>b.key===k)).filter(Boolean);
+const rgb=c=>`${c[0].toFixed(3)} ${c[1].toFixed(3)} ${c[2].toFixed(3)}`;
+const esc=s=>String(s||'').replace(/\\/g,'\\\\').replace(/\(/g,'\\(').replace(/\)/g,'\\)');
+const text=(x,y,s,size=10,font='F1',color=SOFT)=>`BT /${font} ${size} Tf ${rgb(color)} rg ${x.toFixed(2)} ${y.toFixed(2)} Td (${esc(s)}) Tj ET\n`;
+const rect=(x,y,w,h,fill=null,stroke=null,lw=.7)=>`${fill?`${rgb(fill)} rg ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re f\n`:''}${stroke?`${lw.toFixed(2)} w ${rgb(stroke)} RG ${x.toFixed(2)} ${y.toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re S\n`:''}`;
+const line=(x1,y1,x2,y2,color=GREEN,lw=.7)=>`${lw.toFixed(2)} w ${rgb(color)} RG ${x1.toFixed(2)} ${y1.toFixed(2)} m ${x2.toFixed(2)} ${y2.toFixed(2)} l S\n`;
+function wrap(s,max=72){const words=String(s||'').split(/\s+/);const out=[];let cur='';for(const w of words){if(!w)continue;if((cur+' '+w).trim().length>max){if(cur)out.push(cur);cur=w}else cur=(cur+' '+w).trim()}if(cur)out.push(cur);return out}
+function multi(x,y,s,size=9.2,font='F1',color=SOFT,width=72,leading=null){let o='';leading=leading||size*1.42;for(const para of String(s||'').split('\n')){if(!para.trim()){y-=leading;continue}for(const ln of wrap(para,width)){o+=text(x,y,ln,size,font,color);y-=leading}}return[o,y]}
+function frame(title,subtitle,pageNum){let c='';c+=rect(0,0,W,H,DARK);for(let x=18,i=0;x<W;x+=54,i++)c+=rect(x,0,1,H,[.08+(i%3)*.015,0,0.012]);c+=rect(26,24,W-52,H-48,null,RED,.85);c+=rect(36,34,W-72,H-68,null,GOLD,.35);c+=line(M,H-58,W-M,H-58,GOLD,.9);c+=line(M,54,W-M,54,RED,.65);c+=text(M,H-44,'MATRIX REPROGRAMMED',8.2,'F2',GOLD);c+=text(W-205,H-44,'THE BLACK FILE',8.2,'F2',RED);if(title){c+=text(M,H-88,title.toUpperCase(),18,'F2',PALE);c+=line(M,H-99,W-M,H-99,RED,.55)}if(subtitle)c+=text(M,H-116,subtitle,9.5,'F1',GOLD);if(pageNum){c+=text(M,34,'SOURCE FIRST. CLAIM SECOND. STRUCTURE ALWAYS.',7.5,'F2',MUTED);c+=text(W-92,34,String(pageNum).padStart(2,'0'),8,'F2',GOLD)}return c}
+const pages=[]; let c='';
+function push(title,subtitle,paras,extras=[]){let p=frame(title,subtitle,pages.length+1);let y=616;p+=rect(M,92,W-2*M,520,PANEL,[.45,.02,.04],.75);for(const para of paras){let r=multi(M+24,y,para,10.2,'F1',SOFT,66,14.4);p+=r[0];y=r[1]-12}for(const ex of extras){if(y<128){pages.push(p);p=frame(title,'continued',pages.length+1);y=616;p+=rect(M,92,W-2*M,520,PANEL,[.45,.02,.04],.75)}p+=text(M+24,y,ex[0],10.2,'F2',ex[2]||GOLD);p+=multi(M+190,y,ex[1],8.6,'F1',SOFT,48,11)[0];y-=54}pages.push(p)}
+// cover
+c+=rect(0,0,W,H,DARK);c+=rect(34,34,W-68,H-68,null,RED,1.1);c+=rect(50,50,W-100,H-100,null,GOLD,.55);c+=rect(74,150,W-148,430,[.03,0,.006],[.65,.02,.06],.8);for(let x=72,i=0;x<W-72;x+=28,i++)c+=line(x,92,x,H-90,[.18+(i%4)*.025,0,.018],.35);c+=text(92,690,'MATRIX REPROGRAMMED',10,'F2',GOLD);c+=line(92,674,W-92,674,GOLD,.8);c+=text(92,606,'THE',28,'F2',RED);c+=text(92,548,'BLACK FILE',58,'F2',PALE);c+=text(96,510,'EXPANDED READER GATEWAY',14,'F2',GOLD);c+=multi(96,456,'A practical map into the Matrix Reprogrammed archive: 33 systems, evidence rules, book paths, command centers, dashboards, and public-record lanes.',11,'F1',SOFT,58)[0];c+=rect(96,238,420,96,[.035,0,.006],[.75,.04,.08],.9);c+=text(116,304,'ACCESS LEVEL: READER INITIATION',12,'F2',RED);c+=text(116,278,'FUNCTION: TURN NOISE INTO STRUCTURE',10,'F1',GOLD);c+=text(116,254,'RULE: SOURCE FIRST. CLAIM SECOND.',10,'F1',SOFT);c+=text(92,96,'THE TRUTH IS NOT HIDDEN. IT IS ENCODED.',10,'F2',RED);pages.push(c);
+push('Reader Briefing','Why this file exists',[`The Black File is not a headline pile. It is a route-map. It shows how visible events connect to hidden systems: symbols, finance, intelligence, crime, media, war, migration, human cost, institutions, law, technology, archives, and psychology.`,`Use it as a gateway. When a story matters, it should lead somewhere: a source, a dashboard, a book page, an archive lane, or a better question.`],[['CORE URL',site],['DOWNLOAD PAGE',`${site}/black-file.html`],['BOOK ARCHIVE',`${site}/books.html`],['INTEL DESK',`${site}/news.html`]]);
+push('How To Use The Site','Choose a door, then go deeper',[`Start with the live hubs. The Intel Desk tracks source-led bulletins. The Epstein Command Center tracks file drops and document lanes. Human Cost panels track figures and estimate boundaries. The AI Answer Index gives search-friendly definitions.`,`Then open the book shelf connected to the signal you are already following.`],[['EPSTEIN COMMAND CENTER',`${site}/epstein-files.html`],['HUMAN COST DASHBOARD',`${site}/dashboard-human-cost.html`],['MIGRATION DASHBOARD',`${site}/dashboard-migration.html`],['BLACK FILE INDEX',`${site}/black-file-index.html`],['AI ANSWER INDEX',`${site}/answer-index.html`],['TIMERS',`${site}/timers.html`]]);
+const systems=[['01','Attention','What captures attention becomes the first gate of control.'],['02','Fear','Fear compresses judgement and makes the public seek authority.'],['03','Symbols','Symbols compress doctrine, hierarchy, memory, and power.'],['04','Money','Money is permission, pressure, access, and memory.'],['05','Intelligence','Agencies, contractors, secrecy, archives, and oversight failure form hidden state language.'],['06','Crime-State Overlap','Organized crime scales through logistics, corruption, finance, and official blindness.'],['07','Media Frame','The frame decides what the public sees before the argument begins.'],['08','War Machine','War moves through weapons, banks, sanctions, logistics, propaganda, and fear.'],['09','Surveillance','Collection turns private life into strategic material.'],['10','Philanthropy','Good language can shield hard power from public suspicion.'],['11','Ritual','Ceremony teaches the body before doctrine reaches the mind.'],['12','Education','Education can open the world or define the allowed map.'],['13','Law','Law can reveal truth, bury truth, or dress power in procedure.'],['14','Corporate Shells','Companies can hold assets, distance actors, and transform liability into fog.'],['15','Propaganda','Propaganda works best when it feels like the atmosphere.'],['16','Crisis Dialectic','Crisis creates emotional conditions for pre-written solutions.'],['17','Controlled Opposition','A false enemy can protect the real structure by absorbing dissent.'],['18','Technocracy','Technical language becomes priesthood when the public cannot audit it.'],['19','Data Harvest','Data turns behavior into prediction, ranking, targeting, and control.'],['20','Security State','Security expands fastest when fear is treated as consent.'],['21','Financial Choke Point','Control payment rails and you control what can move.'],['22','Occult Architecture','Older symbolic systems echo in institutions, monuments, logos, and rituals.'],['23','Social Credit Mind','The cage begins inside behavior before it becomes policy.'],['24','Human Cost','Numbers reveal what systems prefer to hide or politicize.'],['25','Migration Pressure','Movement, borders, asylum, returns, crime data, and labour systems must be separated.'],['26','Celebrity Veil','Fame redirects attention away from structure toward theatre.'],['27','Public-Private Switch','Power moves when public authority and private infrastructure blur.'],['28','Archive Drop','A release has timing, provenance, motive, and framing.'],['29','Court Record','Court records show what can be said under pressure and procedure.'],['30','Dossier Pattern','A dossier maps names, routes, institutions, timelines, and evidence boundaries.'],['31','False Light','Not all illumination liberates. Some light makes the cage easier to navigate.'],['32','Black File','The gateway file that turns curiosity into a structured archive path.'],['33','Architect Signal','The reader stops collecting fragments and begins seeing design.']];
+for(let i=0;i<systems.length;i+=6){let p=frame('The 33 Systems',`Layer ${Math.floor(i/6)+1}`,pages.length+1);let y=610;p+=rect(M,90,W-2*M,528,PANEL,[.45,.02,.04],.55);for(const [n,name,desc] of systems.slice(i,i+6)){p+=rect(M+18,y-50,W-2*M-36,44,[.04,0,.008],[.55,.02,.05],.45);p+=text(M+32,y-24,n,18,'F2',GOLD);p+=text(M+74,y-17,name.toUpperCase(),10.5,'F2',PALE);p+=multi(M+74,y-32,desc,8.6,'F1',SOFT,58,10)[0];y-=76}pages.push(p)}
+function bookPage(title,subtitle,bookKeys){let p=frame(title,subtitle,pages.length+1);let y=600;p+=rect(M,82,W-2*M,540,PANEL,[.45,.02,.04],.65);for(const b of pick(bookKeys)){p+=text(M+24,y,b.title.toUpperCase().slice(0,72),9.5,'F2',PALE);y-=15;p+=text(M+24,y,`PAGE: ${site}/${b.generatedUrl}`,8.2,'F1',GOLD);y-=13;if(b.amazonUs){p+=text(M+24,y,`AMAZON: ${b.amazonUs}`,8.2,'F1',RED);y-=13}p+=multi(M+24,y,b.description||b.subtitle||'',8.3,'F1',SOFT,66,10)[0];y-=42;if(y<125){pages.push(p);p=frame(title,'continued',pages.length+1);y=600;p+=rect(M,82,W-2*M,540,PANEL,[.45,.02,.04],.65)}}pages.push(p)}
+bookPage('Flagship Door','D.O.G, elite map, power overlap',['as-above-so-below','elite-toolkit','power-overlap','hegelian-crisis-dialectic']);
+bookPage('Intelligence Dossiers','Public record agency shelf',['cia','nsa','gchq','mi6','mossad','kgb','fsb','false-flags','blackwater']);
+bookPage('Crime Dossiers','Organized crime and state overlap',['albanian-mafia','albanian-mafia-operations','ndrangheta','ndrangheta-operations','cartels','triad','outlaws','ab-the-brand']);
+bookPage('Symbolic / Masonic Shelf','Ritual architecture and hidden orders',['symbol','masonic-architecture-33','degree-1','degree-31','degree-33','masons-and-money','masons-on-the-moon','masons-in-media']);
+bookPage('War / Survival / Psychology','Pressure, collapse, mind, survival',['wwiii','keep-calm','water','fire','drone-defence','automatic','how-to-read-people','spot-the-manipulator']);
+push('Evidence Boundary','The serious reader does not fake certainty',[`Matrix Reprogrammed separates record from claim. Association is not guilt. A name in a contact book is not proof of wrongdoing. A border encounter is not a unique person. A VAERS report is not proven causation. A wire story is not a court finding.`,`This discipline does not make the archive weaker. It makes it harder to dismiss.`],[['CONFIRMED','Official record, court filing, primary document, or verified public source.'],['CREDIBLE REPORTING','Reputable reporting with source trail, but not automatically proven in court.'],['DOCUMENTED ASSOCIATION','Contact, travel, employment, funding, meeting, or listing. Not proof of wrongdoing.'],['ESTIMATE','Modelled or reported figure with source/date boundaries.'],['ALLEGATION','A claim made by a party, witness, source, or document.'],['SYMBOLIC COMMENTARY','Interpretation of images, ritual, language, architecture, and repeated motifs.']]);
+push('Live Command Centers','Use these before social media noise',[`The site is being built as a source-led operating desk. Use these pages before trusting clips, screenshots, or viral claims.`],[['INTEL DESK',`${site}/news.html`],['EPSTEIN FILES',`${site}/epstein-files.html`],['DOCUMENT VAULT',`${site}/epstein-files.html#epstein-document-vault`],['HUMAN COST',`${site}/dashboard-human-cost.html`],['MIGRATION',`${site}/dashboard-migration.html`],['CONFLICT',`${site}/dashboard-conflict.html`],['AI ANSWERS',`${site}/answer-index.html`]]);
+push('Video / Social Search Routes','Discovery routes to connect later',[`Use these as discovery routes until official channel URLs are connected in the site data. Add exact Rumble, YouTube, Substack, X, Telegram, or mailing-list links once final accounts are confirmed.`],[['RUMBLE SEARCH','https://rumble.com/search/all?q=Matrix%20Reprogrammed'],['YOUTUBE SEARCH','https://www.youtube.com/results?search_query=Matrix+Reprogrammed'],['SITE SEARCH',`${site}/search.html`],['AMAZON AUTHOR SEARCH','https://www.amazon.com/s?k=Nicholas+Matthews+Matrix+Reprogrammed`],['BOOK ARCHIVE',`${site}/books.html`]]);
+push('Final Signal','Choose the door',[`The purpose of this file is not to make you believe everything. It is to stop you from looking at everything as isolated. The system is not one institution. It is the overlap: money, symbols, law, media, intelligence, crime, war, psychology, migration, human cost, archives, courts, and consent.`,`Enter the archive. Choose the shelf. Follow the source. Read the system. Then return to the world with a different eye.`],[['START',`${site}/black-file.html`],['ARCHIVE',`${site}/books.html`],['SIGNAL','THE TRUTH IS NOT HIDDEN. IT IS ENCODED.']]);
+function buildPdf(pageStreams){const objects=[];const add=o=>{objects.push(o);return objects.length};add('<< /Type /Catalog /Pages 2 0 R >>');add('');const f1=add('<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>');const f2=add('<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>');const pageIds=[];pageStreams.forEach(content=>{const len=Buffer.byteLength(content,'ascii');const cid=add(`<< /Length ${len} >>\nstream\n${content}endstream`);const pid=add(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R >> >> /Contents ${cid} 0 R >>`);pageIds.push(pid)});objects[1]=`<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map(id=>`${id} 0 R`).join(' ')}] >>`;let pdf='%PDF-1.4\n';const offsets=[0];objects.forEach((obj,i)=>{offsets.push(Buffer.byteLength(pdf,'ascii'));pdf+=`${i+1} 0 obj\n${obj}\nendobj\n`});const xref=Buffer.byteLength(pdf,'ascii');pdf+=`xref\n0 ${objects.length+1}\n0000000000 65535 f \n`;offsets.slice(1).forEach(off=>{pdf+=`${String(off).padStart(10,'0')} 00000 n \n`});pdf+=`trailer\n<< /Size ${objects.length+1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;return pdf}
+fs.mkdirSync(path.dirname(outPath),{recursive:true});fs.writeFileSync(outPath,buildPdf(pages),'ascii');console.log(`Generated ${outPath} with ${pages.length} pages`);

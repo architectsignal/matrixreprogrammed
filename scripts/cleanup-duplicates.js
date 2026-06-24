@@ -34,20 +34,67 @@ function runBuilderWhenMissing(check) {
 }
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
-const navLinks = [
-  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'], ['amazon-store-books.html', 'Amazon Store'], ['optin-center.html', 'Opt-in Center'], ['offer-center.html', 'Offer Center'],
-  ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
-  ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'],
-  ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],
-  ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],
-  ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'], ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
+const primaryNavLinks = [
+  ['index.html', 'Home'],
+  ['start-here.html', 'Start Here'],
+  ['black-file.html', 'Black File'],
+  ['books.html', 'Books'],
+  ['amazon-store-books.html', 'Amazon Store'],
+  ['optin-center.html', 'Free Briefs'],
+  ['offer-center.html', 'Offers'],
+  ['search.html', 'Search']
 ];
-const canonicalNav = `<nav class="nav">${navLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>`;
+const secondaryNavGroups = [
+  ['Reader Tools', [
+    ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe']
+  ]],
+  ['Evidence & Trust', [
+    ['trust-center.html', 'Trust Center'], ['evidence-vault.html', 'Evidence Vault'], ['evidence-vault-index.html', 'Source Index'], ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index']
+  ]],
+  ['Archive Systems', [
+    ['schema-index.html', 'Schema Index'], ['authority-hub.html', 'Authority Hub'], ['conversion-funnel.html', 'Funnels'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers']
+  ]],
+  ['Live Doors', [
+    ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['videos.html', 'Videos']
+  ]]
+];
+function navLink([href, label]) { return `<a href="${href}">${label}</a>`; }
+const secondaryNav = secondaryNavGroups.map(([title, links]) => `<div class="nav-group"><strong>${title}</strong>${links.map(navLink).join('')}</div>`).join('');
+const canonicalNav = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryNavLinks.map(navLink).join('')}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">${secondaryNav}</div></details></nav>`;
+
+const copyReplacements = [
+  ['Phase 19 Lead Magnet / Capture Engine', 'Free Briefs / Reader Capture'],
+  ['Phase 19 Lead Magnet', 'Free Brief'],
+  ['Phase 18 Offer Stack / Revenue Ladder Engine', 'Offer Center / Reading Routes'],
+  ['Phase 18 Offer Stack', 'Offer Route'],
+  ['Phase 17 Campaign Calendar / Launch Room Engine', 'Launch Room / Campaign Paths'],
+  ['Phase 17 Campaign Calendar', 'Campaign Calendar'],
+  ['Phase 16 Share Kit / Social Distribution Engine', 'Share Kits / Distribution Tools'],
+  ['Phase 16 Share Kit', 'Share Kit'],
+  ['Phase 15 Feed Discovery', 'Feed Center'],
+  ['Phase 14 Dossier Pack', 'Download Center'],
+  ['Phase 13 Schema Engine', 'Machine Index'],
+  ['Phase 12 Authority Cluster', 'Authority Hub'],
+  ['Phase 11 Freshness Monitor', 'Update Monitor'],
+  ['Phase 10 Reader Path Sales Ladder', 'Reader Paths'],
+  ['Phase 9 Content Distribution', 'Distribution Tools'],
+  ['Phase 8 Trust Center', 'Trust Center'],
+  ['Phase 7 Conversion Funnel', 'Conversion Funnel'],
+  ['Phase 6 Network Map', 'Network Map'],
+  ['Phase 5 AI Answer Engine', 'AI Answer Engine'],
+  ['Phase 4 Book Universe', 'Book Universe'],
+  ['Phase 3 Evidence Vault', 'Evidence Vault'],
+  ['Phase 2 Power Atlas', 'Power Atlas'],
+  ['Phase 1 structure pages', 'core structure pages'],
+  ['Phase 1 structure', 'core structure'],
+  ['This section is generated as a stable anchor for dashboard routing and source-led updates.', 'This route keeps the archive connected to source-led updates and reader navigation.']
+];
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
-function replaceNav(html) { return html.replace(/<nav class="nav">[\s\S]*?<\/nav>/g, canonicalNav); }
+function replaceNav(html) { return html.replace(/<nav class="nav[^"']*"[^>]*>[\s\S]*?<\/nav>/g, canonicalNav); }
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
+function cleanupImplementationCopy(html) { for (const [from, to] of copyReplacements) html = html.split(from).join(to); return html; }
 function cleanupHomepage(html) { return html.replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '').replace(/Flagship Door/g, 'Primary Route'); }
 function cleanupNewsDuplicates(html) { return html.replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '').replace(/<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>/g, '<span class="figure-caption">Dated sourced figure</span>'); }
 function cleanupTimerRiskTerminal(html) { return html.replace(/SIGNALS INCREASING RISK/g, 'Risk Signal Lane').replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>').replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>'); }
@@ -56,7 +103,7 @@ function safeSearchJs() { return `(function(){const input=document.getElementByI
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {
-  let html = cleanEmptyPills(replaceNav(read(file)));
+  let html = cleanupImplementationCopy(cleanEmptyPills(replaceNav(read(file))));
   if (file === 'index.html') html = cleanupHomepage(html);
   if (file === 'news.html') html = cleanupNewsDuplicates(html);
   if (file === 'timers.html') html = cleanupTimerRiskTerminal(html);
@@ -68,9 +115,9 @@ const indexFile = path.join(root, 'search-index.json');
 if (fs.existsSync(searchFile) && fs.existsSync(indexFile)) {
   const items = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
   const fallback = items.slice(0, 8).map(b => `<article class="card"><span class="label">${esc(b.category || 'Archive')}</span><h3>${esc(b.title)}</h3><p>${esc(b.description || b.subtitle || '')}</p><a class="btn" href="${esc(b.url)}">Open Door</a></article>`).join('');
-  let html = read('search.html');
+  let html = cleanupImplementationCopy(read('search.html'));
   if (!html.includes('Showing the strongest entry points')) html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${fallback}</div>`);
   write('search.html', replaceNav(html));
 }
 write('search.js', safeSearchJs());
-console.log(`Duplicate cleanup complete across ${htmlFiles.length} HTML files.`);
+console.log(`UX cleanup complete across ${htmlFiles.length} HTML files. Navigation shell, archive drawer, and public copy polished.`);

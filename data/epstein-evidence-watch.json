@@ -1,0 +1,116 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Dedicated Epstein Evidence Watch for Matrix Reprogrammed: official-source-first document tracking, dated bulletins, PDF/source routing, evidence boundaries, Rumble/video routes, opt-ins, offers, and books.",
+  "boundary": "This system tracks public records, source pages, court/declassification routes, news bulletins, and archive links. A named person appearing in a public record, flight log, contact book, civil filing, news article, or document set is not by itself proof of criminal conduct.",
+  "rules": [
+    "Official sources, court records, and primary documents outrank commentary.",
+    "Every bulletin must be dated and linked to a source route.",
+    "Every named association must preserve the association boundary.",
+    "The page should sell books and routes without inflating evidence strength.",
+    "PDF/source links should be treated as evidence doors, not as automatic claims.",
+    "If a live source cannot be checked during build, the site should still build and show the last configured route."
+  ],
+  "watchSources": [
+    {
+      "slug": "court-records",
+      "title": "Court Records And Civil Filings",
+      "type": "Primary record lane",
+      "sourceUrl": "https://www.courtlistener.com/?q=Epstein&type=r&order_by=score%20desc",
+      "route": "evidence-vault.html",
+      "use": "Track court filings, rulings, depositions, docket movement, and source documents.",
+      "priority": "high"
+    },
+    {
+      "slug": "doj-fbi",
+      "title": "DOJ / FBI Public Record Lane",
+      "type": "Government source lane",
+      "sourceUrl": "https://www.justice.gov/search?keys=Epstein",
+      "route": "evidence-vault-index.html",
+      "use": "Track official public statements, search pages, releases, and document references.",
+      "priority": "high"
+    },
+    {
+      "slug": "congress-oversight",
+      "title": "Congressional Oversight Lane",
+      "type": "Government oversight lane",
+      "sourceUrl": "https://oversight.house.gov/?s=Epstein",
+      "route": "news.html",
+      "use": "Track committee statements, letters, source releases, and public oversight movement.",
+      "priority": "high"
+    },
+    {
+      "slug": "archive-research",
+      "title": "Archive And Research Lane",
+      "type": "Archive source lane",
+      "sourceUrl": "https://archive.org/search?query=Epstein%20files",
+      "route": "download-center.html",
+      "use": "Track public archive mirrors, document sets, PDF collections, and preserved files.",
+      "priority": "medium"
+    },
+    {
+      "slug": "news-wire",
+      "title": "News Bulletin Lane",
+      "type": "News source lane",
+      "sourceUrl": "https://news.google.com/search?q=Epstein%20files",
+      "route": "news.html",
+      "use": "Track current reporting, new releases, corrections, and dated news items.",
+      "priority": "medium"
+    },
+    {
+      "slug": "video-channel",
+      "title": "Rumble / Video Route Lane",
+      "type": "Video distribution lane",
+      "sourceUrl": "videos.html",
+      "route": "videos.html",
+      "use": "Route document bulletins into explainers, shorts, long-form videos, and Rumble channel pathways.",
+      "priority": "medium"
+    }
+  ],
+  "bulletins": [
+    {
+      "slug": "epstein-source-boundary",
+      "title": "How To Read Epstein Files Without Losing The Evidence Boundary",
+      "date": "2026-06-24",
+      "label": "Evidence boundary",
+      "summary": "The Epstein archive must separate court records, official documents, allegations, associations, media claims, and commentary. The source route matters as much as the name.",
+      "sourceRoute": "trust-association-boundary.html",
+      "pdfRoute": "downloads/the-black-file-matrix-reprogrammed.pdf",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-black-file.html",
+      "offerRoute": "offer-starter-library.html"
+    },
+    {
+      "slug": "epstein-document-map",
+      "title": "The Epstein Document Map: Court Records, Archives, News, And Video Routes",
+      "date": "2026-06-24",
+      "label": "Document map",
+      "summary": "A useful Epstein section needs document lanes: court records, official source pages, public archive mirrors, dated news bulletins, downloads, and video explainers.",
+      "sourceRoute": "evidence-vault.html",
+      "pdfRoute": "downloads/the-black-file-matrix-reprogrammed.pdf",
+      "videoRoute": "videos.html",
+      "bookRoute": "black-file.html",
+      "offerRoute": "offer-starter-library.html"
+    },
+    {
+      "slug": "epstein-information-machine",
+      "title": "Build The Information Machine: Source Watch To Book Sale",
+      "date": "2026-06-24",
+      "label": "Revenue route",
+      "summary": "The working route is simple: source update, evidence boundary, bulletin, video, opt-in, offer, book page, Amazon store.",
+      "sourceRoute": "epstein-files.html",
+      "pdfRoute": "downloads/lead-magnet-black-file-brief.md",
+      "videoRoute": "videos.html",
+      "bookRoute": "amazon-store-books.html",
+      "offerRoute": "offer-starter-library.html"
+    }
+  ],
+  "moneyRoutes": {
+    "optin": "optin-black-file-brief.html",
+    "offer": "offer-starter-library.html",
+    "book": "book-black-file.html",
+    "store": "amazon-store-books.html",
+    "video": "videos.html",
+    "trust": "trust-association-boundary.html",
+    "evidence": "evidence-vault.html"
+  }
+}

@@ -74,7 +74,7 @@
       "answers": ["bilderberg-group", "world-economic-forum", "blackrock", "documented-association"],
       "relationships": [
         { "from": "Elite Event", "to": "Attendee", "type": "Documented association", "evidenceClass": "Documented Association", "meaning": "A verified attendance or contact line shows proximity, not wrongdoing." },
-        { "from": "Asset Manager", "to": "Portfolio Company", "type": "Financial record", "evidenceClass": "Confirmed Record", "meaning": "Ownership exposure must be separated from operational control." },
+        { "from": "Asset Manager", "to": "Portfolio Company", "type": "Confirmed record", "evidenceClass": "Confirmed Record", "meaning": "Ownership exposure must be separated from operational control." },
         { "from": "Policy Network", "to": "Government", "type": "Credible reporting", "evidenceClass": "Credible Reporting", "meaning": "Soft power and agenda-setting need careful source boundaries." }
       ]
     },

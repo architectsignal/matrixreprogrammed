@@ -13,22 +13,26 @@ requireFile('_redirects');
 requireFile('_headers');
 requireFile('CLOUDFLARE_PAGES_SETUP.md');
 requireFile('package.json');
+requireFile('wrangler.jsonc');
+requireFile('scripts/build-cloudflare-output.js');
 
 const redirects = exists('_redirects') ? read('_redirects') : '';
 for (const route of [
+  '/start-here /start-here.html 200',
   '/live-intel /live-intel.html 200',
-  '/epstein /epstein-files.html 301',
+  '/epstein /epstein-files.html 200',
   '/books /books.html 200',
   '/amazon-store /amazon-store-books.html 200',
-  '/rss /feeds/main-signal.xml 301',
-  '/download-center /download-center.html 301',
-  '/evidence-vault /evidence-vault.html 301',
-  '/search /search.html 301',
+  '/rss /feeds/main-signal.xml 200',
+  '/download-center /download-center.html 200',
+  '/evidence-vault /evidence-vault.html 200',
+  '/search /search.html 200',
   '/forum /forum.html 200',
-  '/power-atlas /power-atlas.html 301'
+  '/power-atlas /power-atlas.html 200'
 ]) {
-  if (!redirects.includes(route)) fail(`_redirects missing critical route: ${route}`);
+  if (!redirects.includes(route)) fail(`_redirects missing no-loop rewrite route: ${route}`);
 }
+if (/\.html\s+301/.test(redirects)) fail('_redirects still contains .html 301 redirects that can create Cloudflare loops');
 
 const headers = exists('_headers') ? read('_headers') : '';
 for (const marker of [
@@ -48,8 +52,11 @@ for (const marker of [
 }
 
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build command: `npm run build`', 'Cloudflare build command');
-requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build output directory: `.`', 'Cloudflare output directory');
+requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build output directory: `_site`', 'Cloudflare output directory');
+requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Deploy command: leave blank', 'Cloudflare blank deploy command');
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Node version: `22`', 'Cloudflare Node version');
+requireIncludes('wrangler.jsonc', '"directory": "_site"', 'Wrangler _site assets directory');
+requireIncludes('scripts/build-cloudflare-output.js', 'node_modules', 'Cloudflare output excludes node_modules');
 
 if (problems.length) {
   console.error('\nCLOUDFLARE PAGES PRESSURE TEST FAILED\n');
@@ -58,4 +65,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE PAGES PRESSURE TEST PASSED');
-console.log('Checked Cloudflare _redirects, _headers, setup guide, critical routes, download content types, and build instructions.');
+console.log('Checked Cloudflare _redirects no-loop rewrites, _headers, setup guide, _site Wrangler assets, critical routes, and download content types.');

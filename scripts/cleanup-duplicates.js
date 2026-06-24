@@ -17,7 +17,8 @@ const phaseChecks = [
   { files: ['authority-hub.html'], script: 'build-phase12-authority-clusters.js', label: 'Phase 12' },
   { files: ['schema-index.html', 'site-graph.json', 'claim-taxonomy.json', 'crawler-map.json'], script: 'build-phase13-schema-engine.js', label: 'Phase 13' },
   { files: ['download-center.html', 'downloads/dossier-pack-black-file-starter.json', 'downloads/dossier-pack-black-file-starter.md'], script: 'build-phase14-dossier-packs.js', label: 'Phase 14' },
-  { files: ['feed-center.html', 'feeds/main-signal.xml', 'feeds/main-signal-atom.xml', 'feeds/main-signal.json'], script: 'build-phase15-feed-engine.js', label: 'Phase 15' }
+  { files: ['feed-center.html', 'feeds/main-signal.xml', 'feeds/main-signal-atom.xml', 'feeds/main-signal.json'], script: 'build-phase15-feed-engine.js', label: 'Phase 15' },
+  { files: ['share-center.html', 'downloads/share-kit-black-file-starter.json', 'downloads/share-kit-black-file-starter.md', 'downloads/share-kit-black-file-starter.txt'], script: 'build-phase16-share-kits.js', label: 'Phase 16' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -32,13 +33,11 @@ for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const navLinks = [
   ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'],
-  ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
-  ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'],
-  ['conversion-funnel.html', 'Funnels'], ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'],
-  ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'], ['power-atlas.html', 'Power Atlas'],
-  ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],
-  ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'],
-  ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
+  ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
+  ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'],
+  ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],
+  ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],
+  ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'], ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
 ];
 const canonicalNav = `<nav class="nav">${navLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>`;
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -46,26 +45,11 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
 function replaceNav(html) { return html.replace(/<nav class="nav">[\s\S]*?<\/nav>/g, canonicalNav); }
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
-function cleanupHomepage(html) {
-  return html
-    .replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '')
-    .replace(/Flagship Door/g, 'Primary Route');
-}
-function cleanupNewsDuplicates(html) {
-  return html
-    .replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '')
-    .replace(/<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>/g, '<span class="figure-caption">Dated sourced figure</span>');
-}
-function cleanupTimerRiskTerminal(html) {
-  return html
-    .replace(/SIGNALS INCREASING RISK/g, 'Risk Signal Lane')
-    .replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>')
-    .replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>');
-}
+function cleanupHomepage(html) { return html.replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '').replace(/Flagship Door/g, 'Primary Route'); }
+function cleanupNewsDuplicates(html) { return html.replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '').replace(/<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>/g, '<span class="figure-caption">Dated sourced figure</span>'); }
+function cleanupTimerRiskTerminal(html) { return html.replace(/SIGNALS INCREASING RISK/g, 'Risk Signal Lane').replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>').replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>'); }
 function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g, 'Video Production Map'); }
-function safeSearchJs() {
-  return `(function(){const input=document.getElementById('archive-search'),results=document.getElementById('search-results'),count=document.getElementById('search-count');if(!input||!results)return;function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}function render(items){count.textContent=items.length+' archive door'+(items.length===1?'':'s')+' shown';results.innerHTML=items.map(b=>'<article class="card"><span class="label">'+esc(b.category||'Archive')+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description||b.subtitle||'')+'</p><a class="btn" href="'+esc(b.url)+'">Open Door</a></article>').join('');}fetch('search-index.json').then(r=>r.json()).then(data=>{function run(){const q=input.value.trim().toLowerCase();render(!q?data:data.filter(b=>[b.title,b.subtitle,b.series,b.category,b.description,(b.keywords||[]).join(' ')].join(' ').toLowerCase().includes(q)));}input.addEventListener('input',run);if(input.value.trim())run();}).catch(()=>{});})();`;
-}
+function safeSearchJs() { return `(function(){const input=document.getElementById('archive-search'),results=document.getElementById('search-results'),count=document.getElementById('search-count');if(!input||!results)return;function esc(s){return String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}function render(items){count.textContent=items.length+' archive door'+(items.length===1?'':'s')+' shown';results.innerHTML=items.map(b=>'<article class="card"><span class="label">'+esc(b.category||'Archive')+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description||b.subtitle||'')+'</p><a class="btn" href="'+esc(b.url)+'">Open Door</a></article>').join('');}fetch('search-index.json').then(r=>r.json()).then(data=>{function run(){const q=input.value.trim().toLowerCase();render(!q?data:data.filter(b=>[b.title,b.subtitle,b.series,b.category,b.description,(b.keywords||[]).join(' ')].join(' ').toLowerCase().includes(q)));}input.addEventListener('input',run);if(input.value.trim())run();}).catch(()=>{});})();`; }
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {
@@ -76,16 +60,13 @@ for (const file of htmlFiles) {
   if (file === 'videos.html') html = cleanupVideoRoutes(html);
   write(file, html);
 }
-
 const searchFile = path.join(root, 'search.html');
 const indexFile = path.join(root, 'search-index.json');
 if (fs.existsSync(searchFile) && fs.existsSync(indexFile)) {
   const items = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
   const fallback = items.slice(0, 8).map(b => `<article class="card"><span class="label">${esc(b.category || 'Archive')}</span><h3>${esc(b.title)}</h3><p>${esc(b.description || b.subtitle || '')}</p><a class="btn" href="${esc(b.url)}">Open Door</a></article>`).join('');
   let html = read('search.html');
-  if (!html.includes('Showing the strongest entry points')) {
-    html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${fallback}</div>`);
-  }
+  if (!html.includes('Showing the strongest entry points')) html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${fallback}</div>`);
   write('search.html', replaceNav(html));
 }
 write('search.js', safeSearchJs());

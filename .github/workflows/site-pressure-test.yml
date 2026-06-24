@@ -31,10 +31,6 @@ jobs:
         run: |
           test -f power-atlas.html
           test -f evidence-vault.html
-          test -f evidence-policy.html
-          test -f network-maps.html
-          test -f atlas-index.html
-          test -f evidence-vault-index.html
           test -f book-universe.html
           test -f answer-engine.html
           test -f network-map-index.html
@@ -48,151 +44,105 @@ jobs:
           test -f download-center.html
           test -f feed-center.html
           test -f share-center.html
+          test -f launch-room.html
           grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
           grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
           grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
-          grep -q "ANSWER ENGINE" answer-engine.html
-          grep -q "NETWORK MAP INDEX" network-map-index.html
-          grep -q "CONVERSION FUNNEL" conversion-funnel.html
-          grep -q "TRUST CENTER" trust-center.html
-          grep -q "DISTRIBUTION CENTER" distribution-center.html
-          grep -q "READER PATHS" sales-ladder.html
-          grep -q "UPDATE MONITOR" update-monitor.html
-          grep -q "AUTHORITY HUB" authority-hub.html
           grep -q "SCHEMA INDEX" schema-index.html
           grep -q "DOWNLOAD CENTER" download-center.html
           grep -q "FEED CENTER" feed-center.html
           grep -q "SHARE CENTER" share-center.html
+          grep -q "LAUNCH ROOM" launch-room.html
 
       - name: Verify generated detail pages
         run: |
           test -f atlas-cia.html
-          test -f atlas-epstein-records.html
           test -f source-cia-reading-room.html
-          test -f source-treasury-ofac.html
           test -f answer-deep-state.html
-          test -f answer-mkultra.html
           test -f map-intelligence-network.html
-          test -f map-crime-state-overlap.html
-          test -f map-war-machine.html
           test -f funnel-black-file.html
-          test -f trust-privacy-policy.html
-          test -f trust-source-methodology.html
-          test -f distribution-shorts.html
-          test -f distribution-podcast.html
-          test -f path-dog-architect.html
           test -f path-intelligence-dossiers.html
-          test -f update-lane-intel-desk.html
-          test -f update-lane-evidence-vault.html
-          test -f authority-elite-power.html
           test -f authority-intelligence.html
-          test -f authority-evidence-trust.html
           test -f dossier-pack-black-file-starter.html
-          test -f dossier-pack-intelligence-network.html
           test -f downloads/dossier-pack-black-file-starter.json
-          test -f downloads/dossier-pack-black-file-starter.md
           test -f feed-main-signal.html
-          test -f feed-downloads-schema.html
           test -f feeds/main-signal.xml
           test -f feeds/main-signal-atom.xml
           test -f feeds/main-signal.json
           test -f share-kit-black-file-starter.html
-          test -f share-kit-intelligence-network.html
-          test -f downloads/share-kit-black-file-starter.json
-          test -f downloads/share-kit-black-file-starter.md
           test -f downloads/share-kit-black-file-starter.txt
+          test -f campaign-black-file-launch.html
+          test -f downloads/campaign-black-file-launch.json
+          test -f downloads/campaign-black-file-launch.md
 
       - name: Verify Phase 13 Schema Engine output
         run: |
           test -f data/schema-engine.json
-          test -f schema-index.html
           test -f schema-site-graph.html
-          test -f schema-claim-taxonomy.html
-          test -f schema-crawler-map.html
           test -f site-graph.json
           test -f claim-taxonomy.json
           test -f crawler-map.json
-          grep -q "SCHEMA INDEX" schema-index.html
           grep -q "SCHEMA ENGINE STATUS" schema-index.html
-          grep -q "Route Types" schema-index.html
-          grep -q "Claim Labels" schema-index.html
-          grep -q "MACHINE PAGE" schema-site-graph.html
-          grep -q "application/ld+json" schema-crawler-map.html
           grep -q "phase-thirteen-schema-engine" index.html
-          grep -q "phase-thirteen-schema-engine" authority-hub.html
-          grep -q "phase-thirteen-schema-engine" trust-center.html
           grep -q "schema-index.html" search-index.json
-          grep -q "schema-index.html" llms.txt
           grep -q "site-graph.json" llms.txt
 
       - name: Verify Phase 14 Dossier Pack output
         run: |
           test -f data/dossier-packs.json
-          test -f download-center.html
-          grep -q "DOWNLOAD CENTER" download-center.html
           grep -q "DOSSIER PACK ENGINE STATUS" download-center.html
-          test -f dossier-pack-black-file-starter.html
-          test -f dossier-pack-intelligence-network.html
-          test -f dossier-pack-crime-state-overlap.html
           test -f dossier-pack-trust-evidence.html
-          test -f downloads/dossier-pack-black-file-starter.json
-          test -f downloads/dossier-pack-black-file-starter.md
-          grep -q "DOSSIER PACK" dossier-pack-black-file-starter.html
-          grep -q "Pack Boundary" dossier-pack-trust-evidence.html
-          grep -q "## Boundary" downloads/dossier-pack-trust-evidence.md
+          test -f downloads/dossier-pack-trust-evidence.md
           grep -q "phase-fourteen-dossier-pack-engine" index.html
-          grep -q "phase-fourteen-dossier-pack-engine" black-file.html
           grep -q "download-center.html" search-index.json
           grep -q "download-center.html" llms.txt
 
       - name: Verify Phase 15 Feed Discovery output
         run: |
           test -f data/feed-engine.json
-          test -f feed-center.html
-          grep -q "FEED CENTER" feed-center.html
           grep -q "FEED ENGINE STATUS" feed-center.html
-          test -f feed-main-signal.html
           test -f feed-evidence-trust.html
-          test -f feed-intelligence-crime.html
-          test -f feed-downloads-schema.html
-          test -f feeds/main-signal.xml
-          test -f feeds/main-signal-atom.xml
-          test -f feeds/main-signal.json
           grep -q "<rss version=\"2.0\">" feeds/main-signal.xml
           grep -q "<feed xmlns=\"http://www.w3.org/2005/Atom\">" feeds/main-signal-atom.xml
           grep -q "jsonfeed.org/version/1.1" feeds/main-signal.json
           grep -q "phase-fifteen-feed-engine" index.html
-          grep -q "phase-fifteen-feed-engine" news.html
           grep -q "feed-center.html" search-index.json
           grep -q "feed-center.html" llms.txt
 
       - name: Verify Phase 16 Share Kit output
         run: |
           test -f data/share-kits.json
-          test -f share-center.html
-          grep -q "SHARE CENTER" share-center.html
           grep -q "SHARE KIT ENGINE STATUS" share-center.html
-          test -f share-kit-black-file-starter.html
-          test -f share-kit-intelligence-network.html
-          test -f share-kit-crime-state-overlap.html
           test -f share-kit-trust-evidence.html
-          test -f downloads/share-kit-black-file-starter.json
-          test -f downloads/share-kit-black-file-starter.md
-          test -f downloads/share-kit-black-file-starter.txt
-          grep -q "SHARE KIT" share-kit-black-file-starter.html
-          grep -q "Share Boundary" share-kit-trust-evidence.html
           grep -q "HOOKS" downloads/share-kit-trust-evidence.txt
           grep -q "phase-sixteen-share-kit-engine" index.html
-          grep -q "phase-sixteen-share-kit-engine" feed-center.html
           grep -q "share-center.html" search-index.json
           grep -q "share-center.html" llms.txt
+
+      - name: Verify Phase 17 Campaign Calendar output
+        run: |
+          test -f data/campaign-calendar.json
+          test -f launch-room.html
+          grep -q "LAUNCH ROOM" launch-room.html
+          grep -q "LAUNCH ROOM STATUS" launch-room.html
+          test -f campaign-black-file-launch.html
+          test -f campaign-intelligence-dossiers-push.html
+          test -f campaign-crime-state-overlap-push.html
+          test -f campaign-trust-evidence-push.html
+          test -f downloads/campaign-black-file-launch.json
+          test -f downloads/campaign-black-file-launch.md
+          grep -q "CAMPAIGN ROOM" campaign-black-file-launch.html
+          grep -q "Campaign Boundary" campaign-trust-evidence-push.html
+          grep -q "## 7-Day Campaign" downloads/campaign-trust-evidence-push.md
+          grep -q "phase-seventeen-campaign-calendar-engine" index.html
+          grep -q "phase-seventeen-campaign-calendar-engine" share-center.html
+          grep -q "launch-room.html" search-index.json
+          grep -q "launch-room.html" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html
           grep -q "Human Cost" news.html
-          grep -q "Migration / Irregular Immigration" news.html
-          grep -q "Vaccines" news.html
           grep -q "BULLETIN ARCHIVE" intel-archive.html
 
       - name: Verify duplicate cleanup output

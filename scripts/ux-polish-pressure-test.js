@@ -12,6 +12,16 @@ function requireNotIncludes(file, text, label = text) { if (!exists(file)) retur
 function countPrimaryLinks(html) { const m = html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/); if (!m) return 0; return (m[1].match(/<a\s+/g) || []).length; }
 
 const corePages = ['index.html', 'start-here.html', 'books.html', 'black-file.html', 'offer-center.html', 'optin-center.html', 'search.html', 'news.html', 'videos.html'];
+const bannedReaderCopy = [
+  'Phase 19 Lead Magnet / Capture Engine',
+  'Phase 18 Offer Stack / Revenue Ladder Engine',
+  'Phase 17 Campaign Calendar / Launch Room Engine',
+  'This section is generated as a stable anchor',
+  'Use this page as a sales door and an archive route',
+  'The book sells the deep dive',
+  'sales door',
+  'book sells the deep dive'
+];
 for (const file of ['scripts/cleanup-duplicates.js', 'fixes.css', 'package.json', 'netlify.toml', ...corePages]) requireFile(file);
 
 for (const file of corePages) {
@@ -27,8 +37,8 @@ for (const file of corePages) {
   }
   const primaryCount = countPrimaryLinks(read(file));
   if (primaryCount > 8) fail(`${file}: primary nav has ${primaryCount} links; expected 8 or fewer`);
-  for (const phrase of ['Phase 19 Lead Magnet / Capture Engine', 'Phase 18 Offer Stack / Revenue Ladder Engine', 'Phase 17 Campaign Calendar / Launch Room Engine', 'This section is generated as a stable anchor']) {
-    requireNotIncludes(file, phrase, `public implementation copy: ${phrase}`);
+  for (const phrase of bannedReaderCopy) {
+    requireNotIncludes(file, phrase, `public implementation/sales scaffold copy: ${phrase}`);
   }
 }
 
@@ -40,6 +50,9 @@ for (const route of ['books.html', 'amazon-store-books.html', 'videos.html', 'ne
   if (!cleanup.includes(route)) fail(`cleanup-duplicates.js master nav missing ${route}`);
 }
 if (!cleanup.includes('cleanupImplementationCopy')) fail('cleanup-duplicates.js missing public copy scrubber');
+for (const phrase of ['Use this page as a sales door', 'The book sells the deep dive', 'Continue The Investigation']) {
+  if (!cleanup.includes(phrase)) fail(`cleanup-duplicates.js missing reader-copy scrub rule for ${phrase}`);
+}
 
 const fixes = read('fixes.css');
 for (const marker of ['.nav-shell', '.nav-primary', '.nav-more', '.nav-drawer', '.nav-group', '@media(max-width:820px)']) {

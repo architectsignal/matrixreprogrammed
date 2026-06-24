@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/build-phase6-network-maps.js && node scripts/build-phase7-conversion-funnel.js && node scripts/build-phase8-trust-center.js && node scripts/build-phase9-content-distribution.js && node scripts/build-phase10-sales-ladder.js && node scripts/build-phase11-update-monitor.js && node scripts/build-phase12-authority-clusters.js && node scripts/build-phase13-schema-engine.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js && node scripts/phase6-pressure-test.js && node scripts/phase7-pressure-test.js && node scripts/phase8-pressure-test.js && node scripts/phase9-pressure-test.js && node scripts/phase10-pressure-test.js && node scripts/phase11-pressure-test.js && node scripts/phase12-pressure-test.js && node scripts/phase13-pressure-test.js"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/build-phase6-network-maps.js && node scripts/build-phase7-conversion-funnel.js && node scripts/build-phase8-trust-center.js && node scripts/build-phase9-content-distribution.js && node scripts/build-phase10-sales-ladder.js && node scripts/build-phase11-update-monitor.js && node scripts/build-phase12-authority-clusters.js && node scripts/build-phase13-schema-engine.js && node scripts/build-phase14-dossier-packs.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js && node scripts/phase6-pressure-test.js && node scripts/phase7-pressure-test.js && node scripts/phase8-pressure-test.js && node scripts/phase9-pressure-test.js && node scripts/phase10-pressure-test.js && node scripts/phase11-pressure-test.js && node scripts/phase12-pressure-test.js && node scripts/phase13-pressure-test.js && node scripts/phase14-pressure-test.js"
 
 [functions]
   directory = "netlify/functions"
@@ -16,6 +16,18 @@
   for = "/downloads/*.pdf"
   [headers.values]
     Content-Type = "application/pdf"
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/downloads/*.md"
+  [headers.values]
+    Content-Type = "text/markdown"
     Content-Disposition = "attachment"
 
 [[redirects]]
@@ -51,6 +63,26 @@
 [[redirects]]
   from = "/book-universe"
   to = "/book-universe.html"
+  status = 301
+
+[[redirects]]
+  from = "/download-center"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/downloads-center"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/dossiers"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/dossier-packs"
+  to = "/download-center.html"
   status = 301
 
 [[redirects]]

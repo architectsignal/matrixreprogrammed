@@ -63,12 +63,21 @@ function hasAnchor(html, anchor) {
   return new RegExp(`\\sid=["']${safe}["']`, 'i').test(html) || new RegExp(`\\sname=["']${safe}["']`, 'i').test(html);
 }
 function requireFile(file) { if (!allFiles.has(file)) problems.push(`missing required core file: ${file}`); }
+function visibleCopy(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ');
+}
 
 for (const file of publicHtmlFiles) {
   const html = readHtml(file);
   const isInternalPage = publicExceptions.has(file) || /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
   if (!isInternalPage) {
-    for (const phrase of bannedPublicPhrases) if (phrase.test(html)) problems.push(`${file}: public-facing copy contains banned scaffold phrase: ${phrase}`);
+    const copy = visibleCopy(html);
+    for (const phrase of bannedPublicPhrases) if (phrase.test(copy)) problems.push(`${file}: public-facing copy contains banned scaffold phrase: ${phrase}`);
   }
   const attrRegex = /(?:href|src)=["']([^"']+)["']/gi;
   let match;

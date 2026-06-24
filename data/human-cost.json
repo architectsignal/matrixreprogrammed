@@ -1,54 +1,71 @@
 {
   "updated": "2026-06-24",
-  "method": "Sourced, dated figures only. No fake live counters. Figures are category-specific and not interchangeable.",
+  "checkedCadence": "Weekly source check; urgent changes can be added through the Signal Intel Desk daily task.",
+  "method": "Sourced, dated figures only. No fake live counters. Figures are category-specific and not interchangeable. When no reliable global total exists, the panel states that clearly rather than inventing one.",
   "panels": [
     {
       "key": "conflict-global",
       "title": "Global Conflict Snapshot",
-      "figure": "Source-led estimates only",
-      "status": "Watch",
-      "description": "Conflict deaths, civilian casualties, wounded, and displacement must be pulled from UN/OHCHR/OCHA, courts, commissions, humanitarian agencies, and major wire services where primary data is unavailable.",
-      "sourceLabel": "UN/OHCHR/OCHA / Reuters where primary unavailable"
+      "figure": "No single reliable global death total",
+      "status": "High-uncertainty estimate lane",
+      "description": "Conflict deaths and civilian casualties must be tracked by theater because Gaza, Ukraine, Sudan, Myanmar, Yemen, Congo, Syria, and other wars use different reporting systems, verification standards, and political definitions.",
+      "sourceLabel": "UN/OHCHR/OCHA / ICRC / Reuters where primary unavailable"
     },
     {
       "key": "displacement-global",
       "title": "Global Displacement",
-      "figure": "UNHCR / IOM baseline",
-      "status": "Updated weekly",
-      "description": "Refugees, asylum seekers, internally displaced people, and stateless populations should be kept separate.",
-      "sourceLabel": "UNHCR Refugee Data Finder / IOM"
+      "figure": "117.8M forcibly displaced",
+      "status": "UNHCR 2026 Global Trends baseline",
+      "description": "UNHCR's 2026 Global Trends reporting put forced displacement at about 117.8 million people in 2025, including refugees, asylum seekers, internally displaced people, and others needing protection. Keep refugees, IDPs, asylum seekers, and stateless people separate.",
+      "sourceLabel": "UNHCR Global Trends 2026 / AP summary"
     },
     {
       "key": "food-insecurity",
-      "title": "Famine / Food Insecurity",
-      "figure": "IPC / WFP classification",
-      "status": "Updated weekly",
-      "description": "IPC phases, famine warnings, acute food insecurity, siege conditions, and humanitarian access restrictions.",
-      "sourceLabel": "IPC / WFP"
+      "title": "Famine / Acute Food Insecurity",
+      "figure": "~266M facing high acute food insecurity",
+      "status": "FAO/WFP hotspot warning lane",
+      "description": "FAO and WFP warned in June 2026 that acute hunger may worsen in 13 hotspots from June to November 2026. IPC phases, famine warnings, siege conditions, and humanitarian access restrictions must be tracked separately.",
+      "sourceLabel": "FAO / WFP / IPC"
     },
     {
       "key": "migration-global",
       "title": "Migration / Irregular Immigration",
       "figure": "Encounters ≠ persons",
-      "status": "Updated weekly",
-      "description": "Border encounters, irregular crossings, asylum applications, removals, returns, departures, missing migrants, overstays, and estimated unauthorized populations are separate categories.",
+      "status": "Weekly migration-flow lane",
+      "description": "Border encounters, irregular crossings, asylum applications, removals, returns, departures, missing migrants, overstays, and estimated unauthorized populations are separate categories. Do not combine them into one illegal-immigration counter.",
       "sourceLabel": "CBP / Frontex / Eurostat / IOM / UNHCR"
+    },
+    {
+      "key": "migration-deaths",
+      "title": "Migration Deaths / Missing Migrants",
+      "figure": "800+ Central Med dead/missing Jan-mid-May 2026",
+      "status": "IOM / route-specific mortality lane",
+      "description": "Mediterranean and desert-route deaths are undercounted. AP reported IOM figures of more than 800 dead or missing on the Central Mediterranean route from January to mid-May 2026, plus continuing shipwreck incidents.",
+      "sourceLabel": "IOM Missing Migrants / AP"
     },
     {
       "key": "vaccine-compensation",
       "title": "Vaccines: Damages & Compensation",
-      "figure": "Compensated claims only",
-      "status": "Updated weekly",
-      "description": "Adverse-event reports, compensated claims, pending claims, rejected claims, and causal findings must be separated.",
+      "figure": "$4.6B+ VICP compensation by May 2023",
+      "status": "Compensation lane, not raw adverse-event lane",
+      "description": "Adverse-event reports, compensated claims, pending claims, rejected claims, and causal findings must be separated. VAERS reports are signals, not proof of causation. Use current HRSA monthly reports for live totals.",
       "sourceLabel": "HRSA VICP / CICP / UK VDPS / VAERS disclaimer"
     },
     {
       "key": "child-exploitation",
       "title": "Children / Exploitation",
-      "figure": "NCMEC 2025 baseline",
-      "status": "Updated weekly",
-      "description": "Missing-child support cases, resolved cases, CyberTipline reports, online enticement, trafficking cases, and law-enforcement records must not be mixed.",
+      "figure": "21.3M CyberTipline reports in 2025",
+      "status": "NCMEC 2025 baseline",
+      "description": "NCMEC reported 21.3 million CyberTipline reports in 2025, 32,167 missing-child cases supported, 29,013 resolved cases, and 1.4 million online enticement reports. These categories are not interchangeable.",
       "sourceLabel": "NCMEC / ICMEC / UNODC / Europol / Interpol"
+    },
+    {
+      "key": "medical-collapse",
+      "title": "Medical / System Failure",
+      "figure": "Theater-specific; no global live counter",
+      "status": "Healthcare pressure lane",
+      "description": "Hospital attacks, medicine shortages, blocked aid, disease outbreaks, healthcare worker deaths, excess mortality, and medical-system collapse should be tracked by conflict zone or country, not merged into a global claim.",
+      "sourceLabel": "WHO / OCHA / national health authorities / court records"
     }
   ]
 }

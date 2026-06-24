@@ -1,0 +1,84 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 11 Freshness / Update Monitor Engine for Matrix Reprogrammed. This data defines which systems need recurring review, which files they depend on, and what a clean update means.",
+  "rules": [
+    "Freshness is a trust signal.",
+    "Do not pretend static pages are live counters.",
+    "Every update lane must list its source data and output pages.",
+    "A stale page should route to the Trust Center or Evidence Vault rather than overclaiming.",
+    "Fast-moving lanes need clearer date labels than evergreen book pages.",
+    "Every update should preserve claim labels and evidence boundaries."
+  ],
+  "lanes": [
+    {
+      "slug": "intel-desk",
+      "title": "Intel Desk Freshness Lane",
+      "cadence": "Weekly or when major public-record changes occur",
+      "risk": "High freshness sensitivity",
+      "summary": "Tracks bulletins, archive updates, news routes, and current signal pages without pretending the site has real-time news automation.",
+      "dataFiles": ["data/bulletins.json", "data/human-cost.json"],
+      "outputPages": ["news.html", "intel-archive.html", "dashboard-human-cost.html", "dashboard-migration.html"],
+      "checks": ["Bulletins have dates", "Sources are present", "Human-cost panels remain dated", "No fake live counters"]
+    },
+    {
+      "slug": "evidence-vault",
+      "title": "Evidence Vault Freshness Lane",
+      "cadence": "Monthly or when new source lanes are added",
+      "risk": "High credibility sensitivity",
+      "summary": "Tracks source hierarchy, source cards, claim rules, source boundary language, and source-card links.",
+      "dataFiles": ["data/evidence-vault.json"],
+      "outputPages": ["evidence-vault.html", "evidence-vault-index.html", "evidence-policy.html"],
+      "checks": ["Source cards use HTTPS", "Evidence classes are declared", "Source boundaries remain visible", "Claim rules are present"]
+    },
+    {
+      "slug": "power-atlas",
+      "title": "Power Atlas Freshness Lane",
+      "cadence": "Monthly or when new nodes/relationships are added",
+      "risk": "High association-risk sensitivity",
+      "summary": "Tracks nodes, evidence classes, relationship types, and no-guilt association boundaries.",
+      "dataFiles": ["data/power-atlas.json"],
+      "outputPages": ["power-atlas.html", "atlas-index.html", "network-map-index.html"],
+      "checks": ["Relationship types are declared", "Evidence classes are declared", "Association is not guilt", "Source boundary exists on every node"]
+    },
+    {
+      "slug": "book-universe",
+      "title": "Book Universe Freshness Lane",
+      "cadence": "When books are added, renamed, unpublished, or repriced",
+      "risk": "Commercial route sensitivity",
+      "summary": "Tracks live book pages, reader routes, generated book pages, and Amazon/store routing.",
+      "dataFiles": ["data/books.json"],
+      "outputPages": ["books.html", "book-universe.html", "sales-ladder.html", "amazon-store-books.html"],
+      "checks": ["Live books generate pages", "Unpublished books do not generate sales routes", "Book Universe sections remain patched", "Reader paths have book routes"]
+    },
+    {
+      "slug": "answer-engine",
+      "title": "AI Answer Freshness Lane",
+      "cadence": "Monthly or when answer topics change",
+      "risk": "AI-search sensitivity",
+      "summary": "Tracks structured answer pages, FAQ schema, evidence boundaries, and AI-search summaries.",
+      "dataFiles": ["data/ai-answer-engine.json"],
+      "outputPages": ["answer-engine.html", "answer-index.html", "llms.txt"],
+      "checks": ["Answers include confirmed/disputed sections", "FAQ schema exists", "Short answers are not thin", "Routes connect to evidence and books"]
+    },
+    {
+      "slug": "funnels-trust",
+      "title": "Funnels / Trust Freshness Lane",
+      "cadence": "Monthly or when forms/routes change",
+      "risk": "Privacy and conversion sensitivity",
+      "summary": "Tracks forms, thank-you pages, privacy routes, Trust Center, corrections policy, and conversion claims.",
+      "dataFiles": ["data/conversion-funnel.json", "data/trust-center.json"],
+      "outputPages": ["conversion-funnel.html", "trust-center.html", "trust-privacy-policy.html", "black-file.html"],
+      "checks": ["Forms have Netlify attributes", "Forms have honeypot fields", "Privacy page exists", "No fake scarcity claims"]
+    },
+    {
+      "slug": "distribution-sales",
+      "title": "Distribution / Sales Freshness Lane",
+      "cadence": "Monthly or when marketing paths change",
+      "risk": "Growth-system sensitivity",
+      "summary": "Tracks content distribution formats, reader paths, sales ladder, and conversion routes.",
+      "dataFiles": ["data/content-distribution.json", "data/sales-ladder.json"],
+      "outputPages": ["distribution-center.html", "sales-ladder.html", "videos.html", "podcast.html"],
+      "checks": ["Formats have sample briefs", "Reader paths have free gateways", "Sales ladder does not promise income", "Distribution routes return to source pages"]
+    }
+  ]
+}

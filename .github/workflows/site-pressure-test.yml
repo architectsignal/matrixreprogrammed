@@ -186,6 +186,26 @@ jobs:
           grep -q "sales-ladder.html" search-index.json
           grep -q "sales-ladder.html" llms.txt
 
+      - name: Verify Phase 11 Update Monitor output
+        run: |
+          test -f data/update-monitor.json
+          test -f update-monitor.html
+          grep -q "UPDATE MONITOR" update-monitor.html
+          grep -q "UPDATE MONITOR STATUS" update-monitor.html
+          test -f update-lane-intel-desk.html
+          test -f update-lane-evidence-vault.html
+          test -f update-lane-power-atlas.html
+          test -f update-lane-book-universe.html
+          grep -q "FRESHNESS LANE" update-lane-intel-desk.html
+          grep -q "Source Data" update-lane-evidence-vault.html
+          grep -q "Output Pages" update-lane-book-universe.html
+          grep -q "phase-eleven-update-monitor" news.html
+          grep -q "phase-eleven-update-monitor" trust-center.html
+          grep -q "phase-eleven-update-monitor" evidence-vault.html
+          grep -q "phase-eleven-update-monitor" sales-ladder.html
+          grep -q "update-monitor.html" search-index.json
+          grep -q "update-monitor.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

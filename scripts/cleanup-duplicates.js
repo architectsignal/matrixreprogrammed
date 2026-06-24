@@ -4,6 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const phaseOneFiles = ['power-atlas.html', 'evidence-vault.html', 'evidence-policy.html', 'network-maps.html'];
 const phaseTwoFiles = ['atlas-index.html'];
+const phaseThreeFiles = ['evidence-vault-index.html'];
 
 function runBuilderWhenMissing(requiredFiles, scriptName, label) {
   const missing = requiredFiles.some(file => !fs.existsSync(path.join(root, file)));
@@ -19,8 +20,9 @@ function runBuilderWhenMissing(requiredFiles, scriptName, label) {
 
 runBuilderWhenMissing(phaseOneFiles, 'build-phase1-structure.js', 'Phase 1');
 runBuilderWhenMissing(phaseTwoFiles, 'build-phase2-power-atlas.js', 'Phase 2');
+runBuilderWhenMissing(phaseThreeFiles, 'build-phase3-evidence-vault.js', 'Phase 3');
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
-const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="power-atlas.html">Power Atlas</a><a href="atlas-index.html">Atlas Nodes</a><a href="evidence-vault.html">Evidence Vault</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
+const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="power-atlas.html">Power Atlas</a><a href="atlas-index.html">Atlas Nodes</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 
 function esc(s = '') {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

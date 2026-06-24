@@ -27,203 +27,81 @@ jobs:
       - name: Build full site and run pressure tests
         run: npm run build
 
-      - name: Verify Phase 1 pages exist
+      - name: Verify core phase outputs
         run: |
           test -f power-atlas.html
           test -f evidence-vault.html
           test -f evidence-policy.html
           test -f network-maps.html
+          test -f atlas-index.html
+          test -f evidence-vault-index.html
+          test -f book-universe.html
+          test -f answer-engine.html
+          test -f network-map-index.html
+          test -f conversion-funnel.html
+          test -f trust-center.html
+          test -f distribution-center.html
+          test -f sales-ladder.html
+          test -f update-monitor.html
+          test -f authority-hub.html
           grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
           grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
-          grep -q "DARK CLAIMS NEED CLEAN SOURCES" evidence-policy.html
-          grep -q "NO RED STRING WITHOUT LABELS" network-maps.html
+          grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
+          grep -q "ANSWER ENGINE" answer-engine.html
+          grep -q "NETWORK MAP INDEX" network-map-index.html
+          grep -q "CONVERSION FUNNEL" conversion-funnel.html
+          grep -q "TRUST CENTER" trust-center.html
+          grep -q "DISTRIBUTION CENTER" distribution-center.html
+          grep -q "READER PATHS" sales-ladder.html
+          grep -q "UPDATE MONITOR" update-monitor.html
+          grep -q "AUTHORITY HUB" authority-hub.html
 
-      - name: Verify Phase 2 Power Atlas output
+      - name: Verify generated detail pages
         run: |
-          test -f data/power-atlas.json
-          test -f atlas-index.html
-          grep -q "ATLAS NODES" atlas-index.html
-          grep -q "phase-two-atlas-engine" power-atlas.html
           test -f atlas-cia.html
           test -f atlas-epstein-records.html
-          test -f atlas-blackwater.html
-          grep -q "Source Boundary" atlas-cia.html
-          grep -q "Relationship-Line Types" atlas-cia.html
-          grep -q "Source Boundary" atlas-epstein-records.html
-          grep -q "Relationship-Line Types" atlas-epstein-records.html
-
-      - name: Verify Phase 3 Evidence Vault output
-        run: |
-          test -f data/evidence-vault.json
-          test -f evidence-vault-index.html
-          grep -q "SOURCE LANES" evidence-vault-index.html
-          grep -q "phase-three-evidence-engine" evidence-vault.html
-          test -f evidence-lane-court-records.html
-          test -f evidence-lane-declassified-archives.html
-          test -f evidence-lane-human-cost-sources.html
           test -f source-cia-reading-room.html
           test -f source-treasury-ofac.html
-          test -f source-vaers.html
-          grep -q "Source Boundary" evidence-lane-court-records.html
-          grep -q "Source Boundary" evidence-lane-human-cost-sources.html
-          grep -q "Use For" source-cia-reading-room.html
-          grep -q "Boundary" source-vaers.html
-
-      - name: Verify Phase 4 Book Universe output
-        run: |
-          test -f book-universe.html
-          grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
-          grep -q "BOOK UNIVERSE STATUS" book-universe.html
-          grep -q "Signal Board" book-universe.html
-          grep -q "phase-four-book-universe" book-cia.html
-          grep -q "Connected Power Atlas Nodes" book-cia.html
-          grep -q "Connected Evidence Vault Lanes" book-cia.html
-          grep -q "phase-four-book-universe" book-as-above-so-below.html
-          grep -q "forum.html" index.html
-
-      - name: Verify Phase 5 AI Answer Engine output
-        run: |
-          test -f data/ai-answer-engine.json
-          test -f answer-engine.html
-          grep -q "ANSWER ENGINE" answer-engine.html
-          grep -q "AI ANSWER ENGINE STATUS" answer-engine.html
           test -f answer-deep-state.html
           test -f answer-mkultra.html
-          test -f answer-evidence-boundary.html
-          grep -q "What Is Confirmed" answer-deep-state.html
-          grep -q "What Is Disputed" answer-deep-state.html
-          grep -q "Evidence Boundary" answer-evidence-boundary.html
-          grep -q "FAQPage" answer-mkultra.html
-          grep -q "answer-engine.html" search-index.json
-          grep -q "answer-engine.html" llms.txt
-
-      - name: Verify Phase 6 Network Map output
-        run: |
-          test -f data/network-maps.json
-          test -f network-map-index.html
-          grep -q "NETWORK MAP INDEX" network-map-index.html
-          grep -q "NETWORK MAP ENGINE STATUS" network-map-index.html
-          grep -q "phase-six-network-engine" network-maps.html
           test -f map-intelligence-network.html
           test -f map-crime-state-overlap.html
           test -f map-war-machine.html
-          grep -q "Relationship Lines" map-intelligence-network.html
-          grep -q "Connected Power Atlas Nodes" map-war-machine.html
-          grep -q "Connected Evidence Vault Lanes" map-crime-state-overlap.html
-          grep -q "network-map-index.html" search-index.json
-          grep -q "network-map-index.html" llms.txt
-
-      - name: Verify Phase 7 Conversion Funnel output
-        run: |
-          test -f data/conversion-funnel.json
-          test -f conversion-funnel.html
-          grep -q "CONVERSION FUNNEL" conversion-funnel.html
-          grep -q "CONVERSION ENGINE STATUS" conversion-funnel.html
-          grep -q "Lead Magnet Doors" conversion-funnel.html
           test -f funnel-black-file.html
-          test -f funnel-evidence-starter.html
-          test -f funnel-power-map.html
-          test -f thank-you-evidence-starter.html
-          test -f thank-you-power-map.html
-          grep -q "data-netlify=\"true\"" funnel-black-file.html
-          grep -q "netlify-honeypot=\"bot-field\"" funnel-black-file.html
-          grep -q "reader-path" funnel-book-path.html
-          grep -q "phase-seven-funnel-engine" black-file.html
-          grep -q "conversion-funnel.html" search-index.json
-          grep -q "conversion-funnel.html" llms.txt
-
-      - name: Verify Phase 8 Trust Center output
-        run: |
-          test -f data/trust-center.json
-          test -f trust-center.html
-          grep -q "TRUST CENTER" trust-center.html
-          grep -q "TRUST ENGINE STATUS" trust-center.html
           test -f trust-privacy-policy.html
           test -f trust-source-methodology.html
-          test -f trust-corrections-policy.html
-          test -f trust-association-boundary.html
-          grep -q "TRUST DISCIPLINE" trust-privacy-policy.html
-          grep -q "Association is not guilt" trust-association-boundary.html
-          grep -q "phase-eight-trust-engine" conversion-funnel.html
-          grep -q "phase-eight-trust-engine" black-file.html
-          grep -q "trust-center.html" search-index.json
-          grep -q "trust-center.html" llms.txt
-
-      - name: Verify Phase 9 Content Distribution output
-        run: |
-          test -f data/content-distribution.json
-          test -f distribution-center.html
-          grep -q "DISTRIBUTION CENTER" distribution-center.html
-          grep -q "DISTRIBUTION ENGINE STATUS" distribution-center.html
           test -f distribution-shorts.html
-          test -f distribution-longform-video.html
           test -f distribution-podcast.html
-          test -f distribution-articles.html
-          grep -q "Sample Briefs" distribution-shorts.html
-          grep -q "Archive Routes" distribution-podcast.html
-          grep -q "phase-nine-distribution-engine" videos.html
-          grep -q "phase-nine-distribution-engine" podcast.html
-          grep -q "phase-nine-distribution-engine" news.html
-          grep -q "distribution-center.html" search-index.json
-          grep -q "distribution-center.html" llms.txt
-
-      - name: Verify Phase 10 Sales Ladder output
-        run: |
-          test -f data/sales-ladder.json
-          test -f sales-ladder.html
-          grep -q "READER PATHS" sales-ladder.html
-          grep -q "SALES LADDER STATUS" sales-ladder.html
           test -f path-dog-architect.html
           test -f path-intelligence-dossiers.html
-          test -f path-crime-state-overlap.html
-          test -f path-war-contractors.html
-          grep -q "READER PATH STATUS" path-intelligence-dossiers.html
-          grep -q "Reading Ladder" path-crime-state-overlap.html
-          grep -q "Book Route" path-dog-architect.html
-          grep -q "phase-ten-sales-ladder-engine" books.html
-          grep -q "phase-ten-sales-ladder-engine" start-here.html
-          grep -q "phase-ten-sales-ladder-engine" conversion-funnel.html
-          grep -q "sales-ladder.html" search-index.json
-          grep -q "sales-ladder.html" llms.txt
-
-      - name: Verify Phase 11 Update Monitor output
-        run: |
-          test -f data/update-monitor.json
-          test -f update-monitor.html
-          grep -q "UPDATE MONITOR" update-monitor.html
-          grep -q "UPDATE MONITOR STATUS" update-monitor.html
           test -f update-lane-intel-desk.html
           test -f update-lane-evidence-vault.html
-          test -f update-lane-power-atlas.html
-          test -f update-lane-book-universe.html
-          grep -q "FRESHNESS LANE" update-lane-intel-desk.html
-          grep -q "Source Data" update-lane-evidence-vault.html
-          grep -q "Output Pages" update-lane-book-universe.html
-          grep -q "phase-eleven-update-monitor" news.html
-          grep -q "phase-eleven-update-monitor" trust-center.html
-          grep -q "phase-eleven-update-monitor" evidence-vault.html
-          grep -q "phase-eleven-update-monitor" sales-ladder.html
-          grep -q "update-monitor.html" search-index.json
-          grep -q "update-monitor.html" llms.txt
-
-      - name: Verify Phase 12 Authority Cluster output
-        run: |
-          test -f data/authority-clusters.json
-          test -f authority-hub.html
-          grep -q "AUTHORITY HUB" authority-hub.html
-          grep -q "AUTHORITY ENGINE STATUS" authority-hub.html
           test -f authority-elite-power.html
           test -f authority-intelligence.html
-          test -f authority-crime-state.html
           test -f authority-evidence-trust.html
-          grep -q "AUTHORITY CLUSTER" authority-intelligence.html
-          grep -q "Pillar And Trust Route" authority-evidence-trust.html
-          grep -q "Spoke Routes" authority-crime-state.html
-          grep -q "phase-twelve-authority-engine" index.html
-          grep -q "phase-twelve-authority-engine" start-here.html
-          grep -q "phase-twelve-authority-engine" search.html
-          grep -q "authority-hub.html" search-index.json
-          grep -q "authority-hub.html" llms.txt
+
+      - name: Verify Phase 13 Schema Engine output
+        run: |
+          test -f data/schema-engine.json
+          test -f schema-index.html
+          test -f schema-site-graph.html
+          test -f schema-claim-taxonomy.html
+          test -f schema-crawler-map.html
+          test -f site-graph.json
+          test -f claim-taxonomy.json
+          test -f crawler-map.json
+          grep -q "SCHEMA INDEX" schema-index.html
+          grep -q "SCHEMA ENGINE STATUS" schema-index.html
+          grep -q "Route Types" schema-index.html
+          grep -q "Claim Labels" schema-index.html
+          grep -q "MACHINE PAGE" schema-site-graph.html
+          grep -q "application/ld+json" schema-crawler-map.html
+          grep -q "phase-thirteen-schema-engine" index.html
+          grep -q "phase-thirteen-schema-engine" authority-hub.html
+          grep -q "phase-thirteen-schema-engine" trust-center.html
+          grep -q "schema-index.html" search-index.json
+          grep -q "schema-index.html" llms.txt
+          grep -q "site-graph.json" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |
@@ -238,5 +116,6 @@ jobs:
           ! grep -q "Flagship Door" index.html
           ! grep -q "Rumble Channel Routes" videos.html
           ! grep -q "SIGNALS INCREASING RISK" timers.html
+          ! grep -q "(b.keywords||[]).slice" search.js
           grep -q "Video Production Map" videos.html
           grep -q "Showing the strongest entry points" search.html

@@ -2,7 +2,7 @@ name: Live Intel Update
 
 on:
   schedule:
-    # Weekly automatic scan: Sunday 05:17 UTC. This commits data only when items change, which triggers one Netlify deploy.
+    # Weekly automatic scan: Sunday 05:17 UTC. Commits only when live intel or figure-freshness data meaningfully changes.
     - cron: '17 5 * * 0'
   workflow_dispatch:
 
@@ -27,6 +27,9 @@ jobs:
       - name: Build live intelligence hub
         run: node scripts/build-live-intel-machine.js
 
+      - name: Scan public pages for figure freshness
+        run: node scripts/update-site-freshness-report.js
+
       - name: Validate live intelligence machine
         run: node scripts/live-intel-pressure-test.js
 
@@ -34,10 +37,10 @@ jobs:
         run: |
           git config user.name "matrix-intel-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/live-intel.json
+          git add data/live-intel.json data/site-freshness-report.json downloads/site-freshness-report.md site-freshness-report.html
           if git diff --cached --quiet; then
-            echo "No live intel changes to commit."
+            echo "No weekly intelligence or freshness changes to commit."
           else
-            git commit -m "Update weekly live intelligence feed"
+            git commit -m "Update weekly live intelligence and freshness report"
             git push
           fi

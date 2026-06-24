@@ -57,4 +57,5 @@ function processHtml(file){
 
 walk(root);
 try { require('./build-watch-center'); } catch (err) { console.warn('Watch center enhancement skipped:', err.message); }
+try { require('./build-migration-crime-grid'); } catch (err) { console.warn('Migration crime grid skipped:', err.message); }
 console.log(`Analytics injection complete. Updated ${updated} HTML file(s). Hardened ${hardened} HTML file(s).`);

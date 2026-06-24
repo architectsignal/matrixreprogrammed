@@ -17,6 +17,8 @@ const banned = [
   /Search index:\s*active/i,
   /Reader paths:\s*active/i,
   /Risk timers:\s*active/i,
+  /THE Hegelian CRISIS DIALECTIC/,
+  /following the The /,
   /pending functionality/i,
   /awaiting API/i,
   /setup guide/i,
@@ -41,7 +43,7 @@ function walk(dir) {
 }
 walk(root);
 const cleanup = fs.existsSync(path.join(root, 'scripts', 'cleanup-duplicates.js')) ? fs.readFileSync(path.join(root, 'scripts', 'cleanup-duplicates.js'), 'utf8') : '';
-for (const expected of ['Database-driven archive', 'Source: data/books.json', 'Live generated pages', 'Black File funnel: active', 'Use this page as a sales door']) {
+for (const expected of ['Database-driven archive', 'Source: data/books.json', 'Live generated pages', 'Black File funnel: active', 'Use this page as a sales door', 'THE Hegelian CRISIS DIALECTIC', 'following the The ']) {
   if (!cleanup.includes(expected)) problems.push(`cleanup-duplicates.js missing scrub rule for ${expected}`);
 }
 if (problems.length) {
@@ -51,4 +53,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('SCAFFOLD COPY PRESSURE TEST PASSED');
-console.log('Checked all public HTML for author-facing scaffold, generated-page language, raw data-source labels, and sales-door copy.');
+console.log('Checked all public HTML for author-facing scaffold, generated-page language, raw data-source labels, sales-door copy, generated grammar errors, and broken title casing.');

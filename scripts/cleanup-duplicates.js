@@ -34,7 +34,7 @@ function runBuilderWhenMissing(check) {
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const navLinks = [
-  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'], ['offer-center.html', 'Offer Center'],
+  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'], ['amazon-store-books.html', 'Amazon Store'], ['offer-center.html', 'Offer Center'],
   ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
   ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'],
   ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],

@@ -149,6 +149,24 @@ jobs:
           grep -q "trust-center.html" search-index.json
           grep -q "trust-center.html" llms.txt
 
+      - name: Verify Phase 9 Content Distribution output
+        run: |
+          test -f data/content-distribution.json
+          test -f distribution-center.html
+          grep -q "DISTRIBUTION CENTER" distribution-center.html
+          grep -q "DISTRIBUTION ENGINE STATUS" distribution-center.html
+          test -f distribution-shorts.html
+          test -f distribution-longform-video.html
+          test -f distribution-podcast.html
+          test -f distribution-articles.html
+          grep -q "Sample Briefs" distribution-shorts.html
+          grep -q "Archive Routes" distribution-podcast.html
+          grep -q "phase-nine-distribution-engine" videos.html
+          grep -q "phase-nine-distribution-engine" podcast.html
+          grep -q "phase-nine-distribution-engine" news.html
+          grep -q "distribution-center.html" search-index.json
+          grep -q "distribution-center.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

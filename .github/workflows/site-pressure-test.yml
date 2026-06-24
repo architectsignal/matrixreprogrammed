@@ -46,6 +46,7 @@ jobs:
           test -f share-center.html
           test -f launch-room.html
           test -f offer-center.html
+          test -f optin-center.html
           grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
           grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
           grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
@@ -55,6 +56,7 @@ jobs:
           grep -q "SHARE CENTER" share-center.html
           grep -q "LAUNCH ROOM" launch-room.html
           grep -q "OFFER CENTER" offer-center.html
+          grep -q "OPT-IN CENTER" optin-center.html
 
       - name: Verify generated detail pages
         run: |
@@ -80,6 +82,9 @@ jobs:
           test -f offer-full-archive.html
           test -f downloads/offer-starter-library.json
           test -f downloads/offer-starter-library.md
+          test -f optin-black-file-brief.html
+          test -f downloads/lead-magnet-black-file-brief.json
+          test -f downloads/lead-magnet-black-file-brief.md
 
       - name: Verify Phase 13 Schema Engine output
         run: |
@@ -164,6 +169,26 @@ jobs:
           grep -q "phase-eighteen-offer-stack-engine" sales-ladder.html
           grep -q "offer-center.html" search-index.json
           grep -q "offer-center.html" llms.txt
+
+      - name: Verify Phase 19 Lead Magnet output
+        run: |
+          test -f data/lead-magnets.json
+          test -f optin-center.html
+          grep -q "OPT-IN CENTER" optin-center.html
+          grep -q "LEAD MAGNET ENGINE STATUS" optin-center.html
+          test -f optin-black-file-brief.html
+          test -f optin-dog-architect-initiation.html
+          test -f optin-intelligence-files-brief.html
+          test -f optin-full-archive-map.html
+          test -f downloads/lead-magnet-black-file-brief.json
+          test -f downloads/lead-magnet-black-file-brief.md
+          grep -q "OPT-IN ROOM" optin-black-file-brief.html
+          grep -q "data-netlify=\"true\"" optin-black-file-brief.html
+          grep -q "lead-black-file-brief" optin-black-file-brief.html
+          grep -q "phase-nineteen-lead-magnet-engine" index.html
+          grep -q "phase-nineteen-lead-magnet-engine" offer-center.html
+          grep -q "optin-center.html" search-index.json
+          grep -q "optin-center.html" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |

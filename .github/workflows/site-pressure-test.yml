@@ -44,6 +44,8 @@ jobs:
           test -f sales-ladder.html
           test -f update-monitor.html
           test -f authority-hub.html
+          test -f schema-index.html
+          test -f download-center.html
           grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
           grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
           grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
@@ -55,6 +57,8 @@ jobs:
           grep -q "READER PATHS" sales-ladder.html
           grep -q "UPDATE MONITOR" update-monitor.html
           grep -q "AUTHORITY HUB" authority-hub.html
+          grep -q "SCHEMA INDEX" schema-index.html
+          grep -q "DOWNLOAD CENTER" download-center.html
 
       - name: Verify generated detail pages
         run: |
@@ -79,6 +83,10 @@ jobs:
           test -f authority-elite-power.html
           test -f authority-intelligence.html
           test -f authority-evidence-trust.html
+          test -f dossier-pack-black-file-starter.html
+          test -f dossier-pack-intelligence-network.html
+          test -f downloads/dossier-pack-black-file-starter.json
+          test -f downloads/dossier-pack-black-file-starter.md
 
       - name: Verify Phase 13 Schema Engine output
         run: |
@@ -102,6 +110,26 @@ jobs:
           grep -q "schema-index.html" search-index.json
           grep -q "schema-index.html" llms.txt
           grep -q "site-graph.json" llms.txt
+
+      - name: Verify Phase 14 Dossier Pack output
+        run: |
+          test -f data/dossier-packs.json
+          test -f download-center.html
+          grep -q "DOWNLOAD CENTER" download-center.html
+          grep -q "DOSSIER PACK ENGINE STATUS" download-center.html
+          test -f dossier-pack-black-file-starter.html
+          test -f dossier-pack-intelligence-network.html
+          test -f dossier-pack-crime-state-overlap.html
+          test -f dossier-pack-trust-evidence.html
+          test -f downloads/dossier-pack-black-file-starter.json
+          test -f downloads/dossier-pack-black-file-starter.md
+          grep -q "DOSSIER PACK" dossier-pack-black-file-starter.html
+          grep -q "Pack Boundary" dossier-pack-trust-evidence.html
+          grep -q "## Boundary" downloads/dossier-pack-trust-evidence.md
+          grep -q "phase-fourteen-dossier-pack-engine" index.html
+          grep -q "phase-fourteen-dossier-pack-engine" black-file.html
+          grep -q "download-center.html" search-index.json
+          grep -q "download-center.html" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |

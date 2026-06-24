@@ -1,0 +1,87 @@
+{
+  "updated": "2026-06-24",
+  "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
+  "defaultAction": "flag-for-review",
+  "rules": [
+    {
+      "id": "live-intel-feed-items",
+      "label": "Live Intel feed-derived updates",
+      "filePatterns": ["live-intel.html", "downloads/live-intel-latest.json", "downloads/live-intel-latest.md"],
+      "figurePatterns": ["feeds", "items", "source lanes", "updates", "bulletins"],
+      "sourceType": "rss-feed-lane",
+      "sourceFiles": ["data/live-intel-sources.json", "data/live-intel.json"],
+      "updatePolicy": "auto-update-allowed",
+      "reviewNote": "Feed-derived counts may update weekly through the Live Intel Action because they come from the generated data object, not hand-written claims."
+    },
+    {
+      "id": "epstein-watch-counts",
+      "label": "Epstein source-watch lane and bulletin counts",
+      "filePatterns": ["epstein-files.html", "downloads/epstein-source-watch.json", "downloads/epstein-evidence-watch.md"],
+      "figurePatterns": ["source lanes", "bulletins", "sources"],
+      "sourceType": "site-owned-source-watch-data",
+      "sourceFiles": ["data/epstein-evidence-watch.json"],
+      "updatePolicy": "manual-review-before-public-claim",
+      "reviewNote": "Counts generated from the Epstein source-watch file can update, but claims about people or wrongdoing must remain evidence-boundary protected."
+    },
+    {
+      "id": "human-cost-dashboard",
+      "label": "Human Cost dashboard figures",
+      "filePatterns": ["news.html", "dashboard-human-cost.html"],
+      "figurePatterns": ["deaths", "claims", "cases", "%", "million", "billion"],
+      "sourceType": "external-statistical-source-required",
+      "sourceFiles": ["data/human-cost.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Human cost figures are high-risk. Update only when the source file contains a dated source label and the statistic is checked against the original public source."
+    },
+    {
+      "id": "migration-dashboard",
+      "label": "Migration and irregular immigration figures",
+      "filePatterns": ["news.html", "dashboard-migration.html", "migration"],
+      "figurePatterns": ["migrants", "refugees", "asylum", "border", "%", "million"],
+      "sourceType": "official-statistical-source-required",
+      "sourceFiles": ["data/migration*.json", "data/human-cost.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Migration figures must be tied to dated official datasets or named reports. Do not auto-rewrite from generic news snippets."
+    },
+    {
+      "id": "vaccine-claims-payouts",
+      "label": "Vaccine claims, payouts, and injury figures",
+      "filePatterns": ["news.html", "dashboard-human-cost.html", "vaccine", "vaccines"],
+      "figurePatterns": ["claims", "payouts", "injury", "death", "deaths", "%", "$", "€", "£"],
+      "sourceType": "official-compensation-or-regulatory-source-required",
+      "sourceFiles": ["data/human-cost.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Health-related figures are high-stakes. Flag weekly, but require official compensation/regulatory source review before publication changes."
+    },
+    {
+      "id": "book-counts-and-site-inventory",
+      "label": "Book, page, pack, feed, and generated inventory counts",
+      "filePatterns": ["books.html", "book-universe.html", "download-center.html", "feed-center.html", "share-center.html", "offer-center.html", "optin-center.html"],
+      "figurePatterns": ["books", "pages", "packs", "feeds", "offers", "briefs", "outputs"],
+      "sourceType": "site-generated-inventory",
+      "sourceFiles": ["data/books.json", "search-index.json"],
+      "updatePolicy": "auto-update-allowed",
+      "reviewNote": "Site inventory counts can update automatically because they are derived from generated site data."
+    },
+    {
+      "id": "crime-state-figures",
+      "label": "Crime, cartels, money laundering, and prosecution figures",
+      "filePatterns": ["crime", "cartel", "network", "source-", "evidence-lane"],
+      "figurePatterns": ["indictment", "arrests", "money", "$", "€", "£", "million", "billion", "claims", "cases"],
+      "sourceType": "court-or-official-release-required",
+      "sourceFiles": ["data/evidence-vault.json", "data/power-atlas.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+    },
+    {
+      "id": "static-historical-context",
+      "label": "Static historical publication years and archival dates",
+      "filePatterns": ["books.html", "book-", "source-", "trust-", "evidence-"],
+      "figurePatterns": ["18", "19", "20"],
+      "sourceType": "static-context",
+      "sourceFiles": [],
+      "updatePolicy": "do-not-auto-update",
+      "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+    }
+  ]
+}

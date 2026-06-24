@@ -65,6 +65,8 @@ const canonicalNav = `<nav class="nav nav-shell" aria-label="Primary navigation"
 const copyReplacements = [
   ['## Buy / Continue', '## Continue The Investigation'],
   ['Buy / Continue', 'Continue The Investigation'],
+  ['THE Hegelian CRISIS DIALECTIC', 'THE HEGELIAN CRISIS DIALECTIC'],
+  ['following the The ', 'following the '],
   ['Database-driven archive', 'Book Archive'],
   ['Database-driven Archive', 'Book Archive'],
   ['Source: data/books.json', 'Archive: Matrix Reprogrammed index'],

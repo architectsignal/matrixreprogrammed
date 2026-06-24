@@ -22,8 +22,11 @@ if (watch && !html.includes('id="epstein-deep-drop-feed"')) {
 if (docs && !html.includes('id="epstein-document-vault"')) {
   const items = Array.isArray(docs.documents) ? docs.documents : [];
   const cards = items.map(d => `<article class="vault-card"><span class="label">${esc(d.type||'Document')} · ${esc(d.evidenceClass||'Source')}</span><h3>${esc(d.title||'')}</h3><p>${esc(d.description||'')}</p><a class="btn" href="${esc(d.url||'#')}" target="${/^https?:/i.test(d.url||'')?'_blank':'_self'}" rel="noopener">${esc(d.button||'Open Source')}</a></article>`).join('');
-  const vault = `<section id="epstein-document-vault" class="section wrap"><h2>Document Vault</h2><p class="lead">Direct routes to source pages, official releases, archive indexes, file drops, exhibit searches, and public document lanes.</p><div class="vault-grid">${cards}</div></section>`;
+  const vault = `<section id="epstein-document-vault" class="section wrap"><h2>Document Vault</h2><p class="lead">Direct routes to source pages, official releases, archive indexes, file drops, exhibit searches, and public document lanes.</p><div id="black-book-boundary" class="card redline"><h3>Black Book Boundary</h3><p>This source lane treats address-directory material as a provenance and documented-association question. A listing is not proof of wrongdoing.</p></div><div class="vault-grid">${cards}</div></section>`;
   html = html.replace(/<section class="section wrap"><h2>Evidence Classification<\/h2>/, `${vault}<section class="section wrap"><h2>Evidence Classification</h2>`);
+}
+if (!html.includes('id="black-book-boundary"')) {
+  html = html.replace('</main>', `<section id="black-book-boundary" class="section wrap"><h2>Black Book Boundary</h2><p class="lead">Address-directory material is treated as a provenance and documented-association lane. A listing is not proof of wrongdoing.</p></section></main>`);
 }
 fs.writeFileSync(page, html);
 console.log('Command center enhanced');

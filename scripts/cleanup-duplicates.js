@@ -63,6 +63,17 @@ const secondaryNav = secondaryNavGroups.map(([title, links]) => `<div class="nav
 const canonicalNav = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryNavLinks.map(navLink).join('')}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">${secondaryNav}</div></details></nav>`;
 
 const copyReplacements = [
+  ['## Buy / Continue', '## Continue The Investigation'],
+  ['Buy / Continue', 'Continue The Investigation'],
+  ['Use this page as a sales door and an archive route. The book sells the deep dive; the atlas and vault prove the system around it.', 'Start with the book for the full investigation, then use the atlas and evidence vault to follow the source trail.'],
+  ['Use this page as a sales door and an archive route.', 'Use this page as a reader path into the book, the atlas, and the evidence vault.'],
+  ['The book sells the deep dive; the atlas and vault prove the system around it.', 'The book gives the full investigation; the atlas and vault help you trace the surrounding evidence.'],
+  ['sales door', 'reader path'],
+  ['Sales door', 'Reader path'],
+  ['archive route', 'archive pathway'],
+  ['Archive route', 'Archive pathway'],
+  ['the book sells the deep dive', 'the book gives the full investigation'],
+  ['The book sells the deep dive', 'The book gives the full investigation'],
   ['Phase 19 Lead Magnet / Capture Engine', 'Free Briefs / Reader Capture'],
   ['Phase 19 Lead Magnet', 'Free Brief'],
   ['Phase 18 Offer Stack / Revenue Ladder Engine', 'Offer Center / Reading Routes'],

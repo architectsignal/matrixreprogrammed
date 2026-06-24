@@ -9,7 +9,8 @@ const phaseChecks = [
   { files: ['book-universe.html'], script: 'build-phase4-book-universe.js', label: 'Phase 4' },
   { files: ['answer-engine.html'], script: 'build-phase5-ai-answer-engine.js', label: 'Phase 5' },
   { files: ['network-map-index.html'], script: 'build-phase6-network-maps.js', label: 'Phase 6' },
-  { files: ['conversion-funnel.html'], script: 'build-phase7-conversion-funnel.js', label: 'Phase 7' }
+  { files: ['conversion-funnel.html'], script: 'build-phase7-conversion-funnel.js', label: 'Phase 7' },
+  { files: ['trust-center.html'], script: 'build-phase8-trust-center.js', label: 'Phase 8' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -22,7 +23,7 @@ function runBuilderWhenMissing(check) {
 }
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
-const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="book-universe.html">Book Universe</a><a href="conversion-funnel.html">Funnels</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
+const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="book-universe.html">Book Universe</a><a href="conversion-funnel.html">Funnels</a><a href="trust-center.html">Trust Center</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
@@ -35,9 +36,7 @@ function cleanupHomepage(html) {
     .replace('Reader paths now map to live books.', 'Reader paths now branch without repeating the flagship.');
 }
 function cleanupTimers(html) { return html.replace(/<div class="terminal">SIGNALS INCREASING RISK[\s\S]*?Verified correction<\/div>/g, '<p><span class="pill">Unique signal lane</span></p>'); }
-function cleanupNews(html) {
-  return html.replace(/<div class="grid">\s*(?:<article class="card(?: redline)?"><span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>\s*)+<\/div>/g, '');
-}
+function cleanupNews(html) { return html.replace(/<div class="grid">\s*(?:<article class="card(?: redline)?"><span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>\s*)+<\/div>/g, ''); }
 function cleanupVideos(html) {
   if (!/Rumble Channel Routes/.test(html)) return html;
   return html.replace(/<section class="section wrap"><h2>Rumble Channel Routes<\/h2>[\s\S]*?<\/section>\s*<section class="section wrap split">/, '<section class="section wrap"><h2>Video Production Map</h2><p class="lead">This page covers formats and publishing rules only. The full channel directory lives on the Rumble network page.</p><div class="grid"><article class="card"><span class="label">Format</span><h3>60-Second Intel Drop</h3><p>Hook, source, evidence label, interpretation, and one archive path.</p></article><article class="card"><span class="label">Format</span><h3>3-Minute Dark Explainer</h3><p>A cinematic dossier breakdown for court files, releases, sanctions, war lanes, and public-record signals.</p></article><article class="card redline"><span class="label">Directory</span><h3>Rumble Channels</h3><p>Open the channel network when you need the external broadcast routes.</p><a class="btn" href="transmissions.html">Open Rumble Network</a></article></div></section><section class="section wrap split">');

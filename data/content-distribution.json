@@ -1,0 +1,92 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 9 Content Distribution Engine for Matrix Reprogrammed. This data turns archive material into reusable video, podcast, article, newsletter, and short-form briefing routes.",
+  "rules": [
+    "One archive source should become multiple distribution formats.",
+    "Every format must preserve evidence boundaries.",
+    "No clip should turn association into accusation.",
+    "Short-form hooks must route back to source pages, books, maps, answers, or the Trust Center.",
+    "Every script must include a source-bound next step.",
+    "Distribution pages must support human readers and AI crawlers."
+  ],
+  "formats": [
+    {
+      "slug": "shorts",
+      "title": "Short-Form Signal Scripts",
+      "label": "60-second video / reels / shorts",
+      "summary": "Fast source-bound scripts that open with a hard question, define the evidence label, and route viewers into the archive.",
+      "template": ["Hook", "Record", "Boundary", "Why it matters", "Archive route"],
+      "routes": ["answer-engine.html", "power-atlas.html", "evidence-vault.html", "trust-center.html"],
+      "sampleBriefs": [
+        { "title": "Documented Association Is Not Guilt", "source": "trust-association-boundary.html", "hook": "A name in a file is not a conviction. Here is how the archive separates contact from guilt." },
+        { "title": "What Was MKUltra?", "source": "answer-mkultra.html", "hook": "This is not folklore. MKUltra is a documented intelligence history — but that does not prove every modern claim attached to it." },
+        { "title": "How Power Maps Lie", "source": "network-map-index.html", "hook": "A line without a label is propaganda. A line with a source boundary becomes intelligence." }
+      ]
+    },
+    {
+      "slug": "longform-video",
+      "title": "Longform Dossier Videos",
+      "label": "8-20 minute video essays",
+      "summary": "Longer cinematic explainer structures for deep topics: intelligence, crime-state overlap, war machinery, elite access, symbols, medical power, and evidence boundaries.",
+      "template": ["Cold open", "Source stack", "Timeline", "Network map", "Evidence boundary", "Book route"],
+      "routes": ["network-map-index.html", "book-universe.html", "evidence-vault-index.html", "conversion-funnel.html"],
+      "sampleBriefs": [
+        { "title": "The War Machine Map", "source": "map-war-machine.html", "hook": "Follow the public-record route from war budgets to contractors, intelligence claims, procurement, and human cost." },
+        { "title": "The Crime-State Overlap", "source": "map-crime-state-overlap.html", "hook": "Organized crime is not just violence. It is logistics, ports, finance, corruption, and court records." },
+        { "title": "The Intelligence Network", "source": "map-intelligence-network.html", "hook": "Agencies, oversight, declassified files, and the line between history and speculation." }
+      ]
+    },
+    {
+      "slug": "podcast",
+      "title": "Podcast Episode Briefs",
+      "label": "Audio / interview / monologue format",
+      "summary": "Structured podcast outlines that turn answer pages, maps, and books into source-aware audio episodes.",
+      "template": ["Opening question", "Definitions", "Case files", "Disputed claims", "Reader route", "Next episode"],
+      "routes": ["podcast.html", "answer-engine.html", "trust-source-methodology.html", "book-universe.html"],
+      "sampleBriefs": [
+        { "title": "What Is The Deep State?", "source": "answer-deep-state.html", "hook": "Permanent institutions, contractors, agencies, and policy networks: what the phrase can mean without abusing it." },
+        { "title": "False Flags And Evidence Discipline", "source": "answer-false-flag.html", "hook": "The term is powerful, dangerous, and often misused. This episode separates concept from claim." },
+        { "title": "Bilderberg, WEF, And Elite Access", "source": "map-elite-access.html", "hook": "Influence is not the same as control. Attendance is not guilt. But access still matters." }
+      ]
+    },
+    {
+      "slug": "articles",
+      "title": "Article Expansion Briefs",
+      "label": "SEO article / AI-search page / archive essay",
+      "summary": "Article frameworks that expand source-bound archive pages into search-readable essays with clean claim labels.",
+      "template": ["Direct answer", "Confirmed record", "Disputed claims", "Evidence table", "Archive routes", "Book path"],
+      "routes": ["answer-engine.html", "trust-claim-labels.html", "evidence-vault.html", "search.html"],
+      "sampleBriefs": [
+        { "title": "What Is An Evidence Boundary?", "source": "answer-evidence-boundary.html", "hook": "The difference between what a source proves and what a reader infers." },
+        { "title": "What Is BlackRock?", "source": "answer-blackrock.html", "hook": "Asset management, ownership exposure, voting, advisory influence, and the difference between stake and control." },
+        { "title": "What Is CBDC Surveillance?", "source": "answer-cbdc-surveillance.html", "hook": "Programmable money, digital ID, compliance, and the evidence boundary around future-control claims." }
+      ]
+    },
+    {
+      "slug": "newsletter",
+      "title": "Newsletter Signal Briefs",
+      "label": "Email / weekly signal format",
+      "summary": "Recurring signal briefs that route readers from current bulletins into books, maps, source lanes, and trust pages.",
+      "template": ["This week’s signal", "What changed", "What is confirmed", "What is disputed", "Archive path", "Book route"],
+      "routes": ["news.html", "intel-archive.html", "conversion-funnel.html", "trust-center.html"],
+      "sampleBriefs": [
+        { "title": "Weekly Intelligence Signal", "source": "news.html", "hook": "A source-bound route through the latest Intel Desk bulletins and archive paths." },
+        { "title": "Human Cost Watch", "source": "dashboard-human-cost.html", "hook": "Human cost panels must be sourced, dated, and separated from fake counters." },
+        { "title": "Migration Signal", "source": "dashboard-migration.html", "hook": "Migration routes, crime overlap, policy pressure, and the danger of collapsing categories." }
+      ]
+    },
+    {
+      "slug": "social-threads",
+      "title": "Social Thread Briefs",
+      "label": "X / Threads / carousel format",
+      "summary": "Thread outlines that turn archive routes into evidence-aware public posts without overclaiming.",
+      "template": ["Claim", "Source label", "Why it matters", "Boundary", "Map route", "Book route"],
+      "routes": ["trust-center.html", "network-map-index.html", "book-universe.html", "black-file.html"],
+      "sampleBriefs": [
+        { "title": "Association Is Not Guilt", "source": "trust-association-boundary.html", "hook": "A thread on how to read names, photos, meetings, flights, and records without flattening categories." },
+        { "title": "Court Record Vs Claim", "source": "evidence-lane-court-records.html", "hook": "Legal filings, allegations, evidence, judgments, pleas, and settlements are not the same thing." },
+        { "title": "Source Hierarchy", "source": "evidence-vault-index.html", "hook": "A thread on why source type controls claim strength." }
+      ]
+    }
+  ]
+}

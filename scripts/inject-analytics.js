@@ -41,7 +41,10 @@ function processHtml(file){
   const before = html;
   html = ensureFixesCss(html);
   html = sanitizeCopy(html);
-  if (path.basename(file) === 'news.html') html = ensureAnchor(html, 'conflict-zones', 'Conflict Zones');
+  if (path.basename(file) === 'news.html') {
+    html = ensureAnchor(html, 'conflict-zones', 'Conflict Zones');
+    html = ensureAnchor(html, 'children-trafficking-missing', 'Children / Trafficking / Missing');
+  }
   if (!html.includes(scriptTag) && html.includes('</body>')) {
     html = html.replace('</body>', `${scriptTag}</body>`);
     updated += 1;
@@ -53,4 +56,5 @@ function processHtml(file){
 }
 
 walk(root);
+try { require('./build-watch-center'); } catch (err) { console.warn('Watch center enhancement skipped:', err.message); }
 console.log(`Analytics injection complete. Updated ${updated} HTML file(s). Hardened ${hardened} HTML file(s).`);

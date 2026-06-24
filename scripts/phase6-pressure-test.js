@@ -11,6 +11,7 @@ function requireFile(file) { if (!exists(file)) fail(`missing required file: ${f
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
 
 requireFile('data/network-maps.json');
+requireFile('data/power-atlas.json');
 requireFile('scripts/build-phase6-network-maps.js');
 requireFile('network-map-index.html');
 requireFile('network-maps.html');
@@ -21,10 +22,15 @@ requireFile('netlify.toml');
 requireFile('scripts/cleanup-duplicates.js');
 
 const data = exists('data/network-maps.json') ? json('data/network-maps.json') : { maps: [], lineRules: [] };
+const atlas = exists('data/power-atlas.json') ? json('data/power-atlas.json') : { evidenceClasses: [], relationshipTypes: [] };
+const relationshipSet = new Set(atlas.relationshipTypes || []);
+const evidenceSet = new Set(atlas.evidenceClasses || []);
 const maps = data.maps || [];
 const search = exists('search-index.json') ? json('search-index.json') : [];
 if (!Array.isArray(data.lineRules) || data.lineRules.length < 6) fail('data/network-maps.json expected at least 6 line rules');
 if (maps.length < 6) fail(`data/network-maps.json expected at least 6 maps, found ${maps.length}`);
+if (relationshipSet.size < 10) fail('data/power-atlas.json relationship registry too small for map validation');
+if (evidenceSet.size < 8) fail('data/power-atlas.json evidence class registry too small for map validation');
 
 requireIncludes('network-map-index.html', 'NETWORK MAP INDEX', 'Network Map Index hero');
 requireIncludes('network-map-index.html', 'NETWORK MAP ENGINE STATUS', 'Network Map status terminal');
@@ -45,6 +51,11 @@ for (const map of maps) {
   requireIncludes(file, 'AI Answer Routes', 'AI Answer Routes section');
   requireIncludes(file, 'Risk Boundary', 'Risk Boundary card');
   if (!Array.isArray(map.relationships) || map.relationships.length < 3) fail(`${map.slug}: expected at least 3 relationship lines`);
+  for (const rel of map.relationships || []) {
+    if (!relationshipSet.has(rel.type)) fail(`${map.slug}: relationship type is not declared: ${rel.type}`);
+    if (!evidenceSet.has(rel.evidenceClass)) fail(`${map.slug}: evidence class is not declared: ${rel.evidenceClass}`);
+    for (const field of ['from', 'to', 'type', 'evidenceClass', 'meaning']) if (!rel[field]) fail(`${map.slug}: relationship line missing ${field}`);
+  }
   if (!Array.isArray(map.atlasNodes) || !map.atlasNodes.length) fail(`${map.slug}: missing atlasNodes`);
   if (!Array.isArray(map.evidenceLanes) || !map.evidenceLanes.length) fail(`${map.slug}: missing evidenceLanes`);
   if (!Array.isArray(map.books) || !map.books.length) fail(`${map.slug}: missing books`);
@@ -80,4 +91,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 6 NETWORK MAP PRESSURE TEST PASSED');
-console.log(`Checked ${maps.length} network maps, relationship lines, map hub, search index, sitemap, llms.txt, redirects, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${maps.length} network maps, relationship taxonomy, relationship lines, map hub, search index, sitemap, llms.txt, redirects, Signal Board nav, and cleanup fallback.`);

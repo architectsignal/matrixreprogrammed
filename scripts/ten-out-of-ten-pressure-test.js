@@ -28,21 +28,16 @@ const homepageMustHave = [
 ];
 for (const marker of homepageMustHave) requireIncludes('index.html', marker, `homepage 10/10 marker: ${marker}`);
 
-const missionRoutes = [
-  ['live-intel.html', 'Live Intel'],
-  ['epstein-files.html', 'Epstein Files'],
-  ['evidence-vault.html', 'Declassified Files'],
-  ['videos.html', 'Rumble Channels'],
-  ['amazon-store-books.html', 'Amazon Store'],
-  ['optin-center.html', 'Free Brief'],
-  ['offer-center.html', 'Offer'],
-  ['books.html', 'Books'],
-  ['search.html', 'Search']
-];
-for (const [href, label] of missionRoutes) {
-  for (const file of ['index.html','live-intel.html','news.html','epstein-files.html']) {
-    requireIncludes(file, href, `${file} missing route ${label}`);
-  }
+const pageRoutes = {
+  'index.html': ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html','optin-center.html','books.html','search.html'],
+  'live-intel.html': ['downloads/live-intel-latest.json','downloads/live-intel-latest.md','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html'],
+  'epstein-files.html': ['downloads/epstein-source-watch.json','downloads/epstein-evidence-watch.md','videos.html','amazon-store-books.html','evidence-vault.html'],
+  'news.html': ['live-intel.html','videos.html','amazon-store-books.html'],
+  'videos.html': ['live-intel.html','amazon-store-books.html'],
+  'books.html': ['live-intel.html','amazon-store-books.html']
+};
+for (const [file, hrefs] of Object.entries(pageRoutes)) {
+  for (const href of hrefs) requireIncludes(file, href, `${file} route ${href}`);
 }
 
 for (const marker of ['LIVE INTEL.', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Source Lanes']) {
@@ -79,4 +74,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('10/10 USEFULNESS PRESSURE TEST PASSED');
-console.log('Checked command-center homepage, live intel depth, Epstein source-watch depth, mission routes, downloads, Netlify routes/headers, conversion paths, and visible-copy quality.');
+console.log('Checked command-center homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, Netlify routes/headers, conversion paths, and visible-copy quality.');

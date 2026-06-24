@@ -53,7 +53,7 @@ function cleanupTimerRiskTerminal(html) {
     .replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>')
     .replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>');
 }
-function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g, 'Broadcast Route Directory'); }
+function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g, 'Video Production Map'); }
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {

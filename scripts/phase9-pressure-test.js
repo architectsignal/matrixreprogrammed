@@ -44,11 +44,11 @@ for (const format of formats) {
   requireIncludes(file, 'DISTRIBUTION FORMAT', 'Distribution format terminal');
   requireIncludes(file, 'Template', 'Template section');
   requireIncludes(file, 'Sample Briefs', 'Sample Briefs section');
-  requireIncludes(file, 'Archive Routes', 'Archive Routes section');
-  requireIncludes(file, 'Trust Center', 'Trust route');
+  requireIncludes(file, 'Source Pathways', 'Source Pathways section');
+  requireIncludes(file, 'Trust Center', 'Trust pathway');
   if (!Array.isArray(format.template) || format.template.length < 5) fail(`${format.slug}: expected at least 5 template steps`);
   if (!Array.isArray(format.sampleBriefs) || format.sampleBriefs.length < 3) fail(`${format.slug}: expected at least 3 sample briefs`);
-  if (!Array.isArray(format.routes) || format.routes.length < 4) fail(`${format.slug}: expected at least 4 archive routes`);
+  if (!Array.isArray(format.routes) || format.routes.length < 4) fail(`${format.slug}: expected at least 4 source pathways`);
   if (!search.some(item => item.url === file)) fail(`search-index.json missing ${file}`);
   requireIncludes('sitemap.xml', `/${file}`, `${file} sitemap entry`);
 }
@@ -81,4 +81,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 9 CONTENT DISTRIBUTION PRESSURE TEST PASSED');
-console.log(`Checked ${formats.length} distribution formats, format pages, video/podcast/news patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${formats.length} distribution formats, source pathway sections, format pages, video/podcast/news patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);

@@ -4,3 +4,464 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/downloads/*.pdf"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "application/pdf"
+
+[[headers]]
+  for = "/downloads/*.json"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/downloads/*.md"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "text/markdown"
+
+[[headers]]
+  for = "/downloads/*.txt"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "text/plain"
+
+[[headers]]
+  for = "/feeds/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[headers]]
+  for = "/feeds/*.json"
+  [headers.values]
+    Content-Type = "application/feed+json"
+
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/start"
+  to = "/start-here.html"
+  status = 301
+
+[[redirects]]
+  from = "/search"
+  to = "/search.html"
+  status = 301
+
+[[redirects]]
+  from = "/forum"
+  to = "/forum.html"
+  status = 200
+
+[[redirects]]
+  from = "/signal-board"
+  to = "/forum.html"
+  status = 200
+
+[[redirects]]
+  from = "/books"
+  to = "/books.html"
+  status = 200
+
+[[redirects]]
+  from = "/amazon-store"
+  to = "/amazon-store-books.html"
+  status = 200
+
+[[redirects]]
+  from = "/book-universe"
+  to = "/book-universe.html"
+  status = 301
+
+[[redirects]]
+  from = "/live-intel"
+  to = "/live-intel.html"
+  status = 200
+
+[[redirects]]
+  from = "/intel-live"
+  to = "/live-intel.html"
+  status = 301
+
+[[redirects]]
+  from = "/optin-center"
+  to = "/optin-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/opt-in"
+  to = "/optin-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/lead-magnets"
+  to = "/optin-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/newsletter"
+  to = "/optin-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/offer-center"
+  to = "/offer-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/offers"
+  to = "/offer-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/book-offers"
+  to = "/offer-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/revenue-ladder"
+  to = "/offer-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/launch-room"
+  to = "/launch-room.html"
+  status = 301
+
+[[redirects]]
+  from = "/campaigns"
+  to = "/launch-room.html"
+  status = 301
+
+[[redirects]]
+  from = "/campaign-calendar"
+  to = "/launch-room.html"
+  status = 301
+
+[[redirects]]
+  from = "/launch-calendar"
+  to = "/launch-room.html"
+  status = 301
+
+[[redirects]]
+  from = "/share-center"
+  to = "/share-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/share-kits"
+  to = "/share-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/social-kits"
+  to = "/share-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/copy-kits"
+  to = "/share-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/feed-center"
+  to = "/feed-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/feeds"
+  to = "/feed-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/feeds/main-signal.xml"
+  status = 301
+
+[[redirects]]
+  from = "/atom"
+  to = "/feeds/main-signal-atom.xml"
+  status = 301
+
+[[redirects]]
+  from = "/json-feed"
+  to = "/feeds/main-signal.json"
+  status = 301
+
+[[redirects]]
+  from = "/download-center"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/downloads-center"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/dossiers"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/dossier-packs"
+  to = "/download-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/authority"
+  to = "/authority-hub.html"
+  status = 301
+
+[[redirects]]
+  from = "/authority-hub"
+  to = "/authority-hub.html"
+  status = 301
+
+[[redirects]]
+  from = "/topic-clusters"
+  to = "/authority-hub.html"
+  status = 301
+
+[[redirects]]
+  from = "/schema"
+  to = "/schema-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/schema-index"
+  to = "/schema-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/site-graph"
+  to = "/site-graph.json"
+  status = 301
+
+[[redirects]]
+  from = "/claim-taxonomy"
+  to = "/claim-taxonomy.json"
+  status = 301
+
+[[redirects]]
+  from = "/crawler-map"
+  to = "/crawler-map.json"
+  status = 301
+
+[[redirects]]
+  from = "/reader-paths"
+  to = "/sales-ladder.html"
+  status = 301
+
+[[redirects]]
+  from = "/sales-ladder"
+  to = "/sales-ladder.html"
+  status = 301
+
+[[redirects]]
+  from = "/start-reading"
+  to = "/sales-ladder.html"
+  status = 301
+
+[[redirects]]
+  from = "/update-monitor"
+  to = "/update-monitor.html"
+  status = 301
+
+[[redirects]]
+  from = "/freshness"
+  to = "/update-monitor.html"
+  status = 301
+
+[[redirects]]
+  from = "/site-updates"
+  to = "/update-monitor.html"
+  status = 301
+
+[[redirects]]
+  from = "/conversion-funnel"
+  to = "/conversion-funnel.html"
+  status = 301
+
+[[redirects]]
+  from = "/funnels"
+  to = "/conversion-funnel.html"
+  status = 301
+
+[[redirects]]
+  from = "/black-file-funnel"
+  to = "/funnel-black-file.html"
+  status = 301
+
+[[redirects]]
+  from = "/trust"
+  to = "/trust-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/trust-center"
+  to = "/trust-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/trust-privacy-policy.html"
+  status = 301
+
+[[redirects]]
+  from = "/corrections"
+  to = "/trust-corrections-policy.html"
+  status = 301
+
+[[redirects]]
+  from = "/source-methodology"
+  to = "/trust-source-methodology.html"
+  status = 301
+
+[[redirects]]
+  from = "/distribution"
+  to = "/distribution-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/distribution-center"
+  to = "/distribution-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/content-engine"
+  to = "/distribution-center.html"
+  status = 301
+
+[[redirects]]
+  from = "/answer-engine"
+  to = "/answer-engine.html"
+  status = 301
+
+[[redirects]]
+  from = "/ai-answers"
+  to = "/answer-engine.html"
+  status = 301
+
+[[redirects]]
+  from = "/power-atlas"
+  to = "/power-atlas.html"
+  status = 301
+
+[[redirects]]
+  from = "/atlas"
+  to = "/atlas-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/atlas-index"
+  to = "/atlas-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/network-maps"
+  to = "/network-maps.html"
+  status = 301
+
+[[redirects]]
+  from = "/network-map-index"
+  to = "/network-map-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/maps"
+  to = "/network-map-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/evidence-vault"
+  to = "/evidence-vault.html"
+  status = 301
+
+[[redirects]]
+  from = "/sources"
+  to = "/evidence-vault-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/source-index"
+  to = "/evidence-vault-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/evidence-vault-index"
+  to = "/evidence-vault-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/evidence-policy"
+  to = "/evidence-policy.html"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/news.html"
+  status = 200
+
+[[redirects]]
+  from = "/intel"
+  to = "/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/intel-archive"
+  to = "/intel-archive.html"
+  status = 301
+
+[[redirects]]
+  from = "/archive"
+  to = "/books.html"
+  status = 301
+
+[[redirects]]
+  from = "/blackfile"
+  to = "/black-file.html"
+  status = 301
+
+[[redirects]]
+  from = "/epstein"
+  to = "/epstein-files.html"
+  status = 301
+
+[[redirects]]
+  from = "/epstein-files"
+  to = "/epstein-files.html"
+  status = 301
+
+[[redirects]]
+  from = "/human-cost"
+  to = "/dashboard-human-cost.html"
+  status = 301
+
+[[redirects]]
+  from = "/migration"
+  to = "/dashboard-migration.html"
+  status = 301
+
+[[redirects]]
+  from = "/answers"
+  to = "/answer-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/timers"
+  to = "/timers.html"
+  status = 301

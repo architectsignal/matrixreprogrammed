@@ -123,6 +123,14 @@ async function fetchFeed(feed) {
   }
   return result;
 }
+function stableSignature(output) {
+  return JSON.stringify({
+    sourceConfigUpdated: output.sourceConfigUpdated,
+    lanes: (output.lanes || []).map(l => l.id),
+    feedResults: (output.feedResults || []).map(r => ({ lane: r.lane, label: r.label, status: r.status, statusCode: r.statusCode || null, error: r.error || '' })),
+    items: (output.items || []).map(item => ({ id: item.id, title: item.title, url: item.url, published: item.published, lane: item.lane }))
+  });
+}
 (async () => {
   const checkedAt = new Date().toISOString();
   const results = [];
@@ -148,6 +156,10 @@ async function fetchFeed(feed) {
     feedResults: results.map(r => ({ lane: r.feed.lane, label: r.feed.label, url: r.feed.url, status: r.status, statusCode: r.statusCode || null, error: r.error || '' })),
     items: items.length ? items : previousItems
   };
+  if (previous && stableSignature(previous) === stableSignature(output)) {
+    console.log(`Live Intel update checked: no meaningful changes across ${results.length} feeds.`);
+    process.exit(0);
+  }
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
   console.log(`Live Intel update complete: ${output.items.length} items available from ${results.length} feeds.`);
 })();

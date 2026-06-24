@@ -64,7 +64,8 @@ if (!netlify.includes('from = "/book-universe"')) fail('netlify.toml missing /bo
 if (!netlify.includes('from = "/forum"')) fail('netlify.toml missing /forum redirect');
 
 const cleanup = exists('scripts/cleanup-duplicates.js') ? read('scripts/cleanup-duplicates.js') : '';
-if (!cleanup.includes('phaseFourFiles')) fail('cleanup script missing Phase 4 self-heal files');
+if (!cleanup.includes('phaseChecks')) fail('cleanup script missing unified phaseChecks self-heal structure');
+if (!cleanup.includes('book-universe.html')) fail('cleanup script missing Phase 4 self-heal target');
 if (!cleanup.includes('build-phase4-book-universe.js')) fail('cleanup script missing Phase 4 builder fallback');
 if (!cleanup.includes('forum.html')) fail('cleanup script master nav missing Signal Board/forum link');
 

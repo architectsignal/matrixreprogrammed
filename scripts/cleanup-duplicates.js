@@ -13,12 +13,9 @@ function runBuilderWhenMissing(requiredFiles, scriptName, label) {
   const missing = requiredFiles.some(file => !fs.existsSync(path.join(root, file)));
   if (!missing) return;
   const builder = path.join(root, 'scripts', scriptName);
-  if (fs.existsSync(builder)) {
-    console.log(`${label} pages missing before cleanup. Running ${scriptName} first.`);
-    require(builder);
-    return;
-  }
-  throw new Error(`${label} pages missing and ${builder} was not found.`);
+  if (!fs.existsSync(builder)) throw new Error(`${label} pages missing and ${builder} was not found.`);
+  console.log(`${label} pages missing before cleanup. Running ${scriptName} first.`);
+  require(builder);
 }
 
 runBuilderWhenMissing(phaseOneFiles, 'build-phase1-structure.js', 'Phase 1');
@@ -27,6 +24,7 @@ runBuilderWhenMissing(phaseThreeFiles, 'build-phase3-evidence-vault.js', 'Phase 
 runBuilderWhenMissing(phaseFourFiles, 'build-phase4-book-universe.js', 'Phase 4');
 runBuilderWhenMissing(phaseFiveFiles, 'build-phase5-ai-answer-engine.js', 'Phase 5');
 runBuilderWhenMissing(phaseSixFiles, 'build-phase6-network-maps.js', 'Phase 6');
+
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="book-universe.html">Book Universe</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 

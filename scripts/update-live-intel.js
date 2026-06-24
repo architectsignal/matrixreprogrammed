@@ -27,7 +27,7 @@ function tag(block, name) {
   const match = block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`, 'i'));
   return match ? clean(match[1]) : '';
 }
-function compact(value = '', max = 210) {
+function compact(value = '', max = 240) {
   const s = clean(value);
   return s.length > max ? `${s.slice(0, max - 1).trim()}…` : s;
 }
@@ -57,6 +57,9 @@ function socialThread(title, lane, url) {
     `4/ Source: ${url}`
   ];
 }
+function routeFor(item, lane, field, fallback) {
+  return item[field] || lane[field] || fallback;
+}
 function enrich(item, lane) {
   return {
     ...item,
@@ -68,13 +71,17 @@ function enrich(item, lane) {
     rumbleShortTitle: item.rumbleShortTitle || shortTitle(item.title, lane),
     rumbleLongTitle: item.rumbleLongTitle || longTitle(item.title, lane),
     socialThread: item.socialThread || socialThread(item.title, lane, item.url),
-    optinRoute: item.optinRoute || 'optin-center.html',
-    storeRoute: item.storeRoute || 'amazon-store-books.html'
+    evidenceRoute: routeFor(item, lane, 'evidenceRoute', 'evidence-vault.html'),
+    videoRoute: routeFor(item, lane, 'videoRoute', 'videos.html'),
+    bookRoute: routeFor(item, lane, 'bookRoute', 'books.html'),
+    offerRoute: routeFor(item, lane, 'offerRoute', 'offer-center.html'),
+    optinRoute: item.optinRoute || lane.optinRoute || 'optin-center.html',
+    storeRoute: item.storeRoute || lane.storeRoute || 'amazon-store-books.html'
   };
 }
 function parseItems(xml, feed) {
   const blocks = [...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map(m => m[0]);
-  return blocks.slice(0, 8).map(block => {
+  return blocks.slice(0, 10).map(block => {
     const title = tag(block, 'title');
     const link = tag(block, 'link');
     const pubDate = tag(block, 'pubDate') || tag(block, 'updated') || new Date().toISOString();
@@ -93,6 +100,8 @@ function parseItems(xml, feed) {
       videoRoute: lane.videoRoute || 'videos.html',
       bookRoute: lane.bookRoute || 'books.html',
       offerRoute: lane.offerRoute || 'offer-center.html',
+      optinRoute: lane.optinRoute || 'optin-center.html',
+      storeRoute: lane.storeRoute || 'amazon-store-books.html',
       status: 'fetched'
     }, lane);
   }).filter(item => item.title && item.url);
@@ -124,7 +133,7 @@ async function fetchFeed(feed) {
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
-  }).sort((a, b) => new Date(b.published) - new Date(a.published)).slice(0, 60);
+  }).sort((a, b) => new Date(b.published) - new Date(a.published)).slice(0, 80);
   let previous = null;
   if (fs.existsSync(outPath)) {
     try { previous = JSON.parse(fs.readFileSync(outPath, 'utf8')); } catch (_) {}

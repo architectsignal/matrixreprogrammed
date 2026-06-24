@@ -21,7 +21,8 @@ const phaseChecks = [
   { files: ['share-center.html', 'downloads/share-kit-black-file-starter.json', 'downloads/share-kit-black-file-starter.md', 'downloads/share-kit-black-file-starter.txt'], script: 'build-phase16-share-kits.js', label: 'Phase 16' },
   { files: ['launch-room.html', 'downloads/campaign-black-file-launch.json', 'downloads/campaign-black-file-launch.md'], script: 'build-phase17-campaign-calendar.js', label: 'Phase 17' },
   { files: ['offer-center.html', 'downloads/offer-starter-library.json', 'downloads/offer-starter-library.md'], script: 'build-phase18-offer-stack.js', label: 'Phase 18' },
-  { files: ['optin-center.html', 'downloads/lead-magnet-black-file-brief.json', 'downloads/lead-magnet-black-file-brief.md'], script: 'build-phase19-lead-magnets.js', label: 'Phase 19' }
+  { files: ['optin-center.html', 'downloads/lead-magnet-black-file-brief.json', 'downloads/lead-magnet-black-file-brief.md'], script: 'build-phase19-lead-magnets.js', label: 'Phase 19' },
+  { files: ['live-intel.html', 'downloads/live-intel-latest.json', 'downloads/live-intel-latest.md'], script: 'build-live-intel-machine.js', label: 'Live Intel Machine' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -40,7 +41,7 @@ const primaryNavLinks = [
   ['amazon-store-books.html', 'Amazon Store'],
   ['power-atlas.html', 'Control System'],
   ['evidence-vault.html', 'Declassified Files'],
-  ['news.html', 'Live Intel'],
+  ['live-intel.html', 'Live Intel'],
   ['videos.html', 'Rumble Channels'],
   ['search.html', 'Search']
 ];
@@ -55,7 +56,7 @@ const secondaryNavGroups = [
     ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['authority-hub.html', 'Authority Hub'], ['answer-engine.html', 'AI Answers'], ['schema-index.html', 'Machine Index']
   ]],
   ['Freedom Ecosystem', [
-    ['news.html', 'Intel Desk'], ['videos.html', 'Rumble Channels'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor']
+    ['live-intel.html', 'Live Intel Machine'], ['news.html', 'Intel Desk'], ['videos.html', 'Rumble Channels'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor']
   ]]
 ];
 function navLink([href, label]) { return `<a href="${href}">${label}</a>`; }

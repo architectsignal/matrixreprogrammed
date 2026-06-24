@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js",
+    "build": "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js",
     "books": "node scripts/build-book-system.js",
     "home": "node scripts/build-homepage.js",
     "seo": "node scripts/build-seo-system.js",
     "intel": "node scripts/build-intel-desk.js",
+    "harden": "node scripts/harden-public-html.js",
     "audit": "node scripts/audit-site.js"
   },
   "dependencies": {

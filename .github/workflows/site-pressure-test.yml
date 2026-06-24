@@ -206,6 +206,25 @@ jobs:
           grep -q "update-monitor.html" search-index.json
           grep -q "update-monitor.html" llms.txt
 
+      - name: Verify Phase 12 Authority Cluster output
+        run: |
+          test -f data/authority-clusters.json
+          test -f authority-hub.html
+          grep -q "AUTHORITY HUB" authority-hub.html
+          grep -q "AUTHORITY ENGINE STATUS" authority-hub.html
+          test -f authority-elite-power.html
+          test -f authority-intelligence.html
+          test -f authority-crime-state.html
+          test -f authority-evidence-trust.html
+          grep -q "AUTHORITY CLUSTER" authority-intelligence.html
+          grep -q "Pillar And Trust Route" authority-evidence-trust.html
+          grep -q "Spoke Routes" authority-crime-state.html
+          grep -q "phase-twelve-authority-engine" index.html
+          grep -q "phase-twelve-authority-engine" start-here.html
+          grep -q "phase-twelve-authority-engine" search.html
+          grep -q "authority-hub.html" search-index.json
+          grep -q "authority-hub.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

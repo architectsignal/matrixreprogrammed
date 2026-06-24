@@ -8,8 +8,15 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg) { problems.push(msg); }
 function requireFile(file) { if (!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
-function requireNotIncludes(file, text, label = text) { if (!exists(file)) return; if (read(file).includes(text)) fail(`${file}: still contains ${label}`); }
 function countPrimaryLinks(html) { const m = html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/); if (!m) return 0; return (m[1].match(/<a\s+/g) || []).length; }
+function visibleCopy(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ');
+}
 
 const corePages = ['index.html', 'start-here.html', 'books.html', 'black-file.html', 'offer-center.html', 'optin-center.html', 'search.html', 'news.html', 'videos.html'];
 const bannedReaderCopy = [
@@ -35,10 +42,12 @@ for (const file of corePages) {
   for (const label of ['Opt-in Center', 'Offer Center', 'Signal Board']) {
     requireIncludes(file, label, `${label} secondary route`);
   }
-  const primaryCount = countPrimaryLinks(read(file));
+  const html = read(file);
+  const primaryCount = countPrimaryLinks(html);
   if (primaryCount > 8) fail(`${file}: primary nav has ${primaryCount} links; expected 8 or fewer`);
+  const copy = visibleCopy(html);
   for (const phrase of bannedReaderCopy) {
-    requireNotIncludes(file, phrase, `public implementation/sales scaffold copy: ${phrase}`);
+    if (copy.includes(phrase)) fail(`${file}: visible public implementation/sales scaffold copy: ${phrase}`);
   }
 }
 
@@ -73,4 +82,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('UX POLISH PRESSURE TEST PASSED');
-console.log('Checked mission-led primary nav, More drawer, route coverage, public copy scrub, responsive drawer CSS, and build wiring.');
+console.log('Checked mission-led primary nav, More drawer, route coverage, visible public copy scrub, responsive drawer CSS, and build wiring.');

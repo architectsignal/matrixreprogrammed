@@ -11,7 +11,7 @@ function requireIncludes(file, text, label = text) { if (!exists(file)) return; 
 function requireNotIncludes(file, text, label = text) { if (!exists(file)) return; if (read(file).includes(text)) fail(`${file}: still contains ${label}`); }
 function countPrimaryLinks(html) { const m = html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/); if (!m) return 0; return (m[1].match(/<a\s+/g) || []).length; }
 
-const corePages = ['index.html', 'start-here.html', 'books.html', 'black-file.html', 'offer-center.html', 'optin-center.html', 'search.html'];
+const corePages = ['index.html', 'start-here.html', 'books.html', 'black-file.html', 'offer-center.html', 'optin-center.html', 'search.html', 'news.html', 'videos.html'];
 for (const file of ['scripts/cleanup-duplicates.js', 'fixes.css', 'package.json', 'netlify.toml', ...corePages]) requireFile(file);
 
 for (const file of corePages) {
@@ -19,10 +19,12 @@ for (const file of corePages) {
   requireIncludes(file, 'nav-primary', 'primary navigation group');
   requireIncludes(file, 'nav-more', 'More navigation drawer');
   requireIncludes(file, '<summary>More</summary>', 'More drawer trigger');
-  requireIncludes(file, 'Amazon Store', 'Amazon Store route');
-  requireIncludes(file, 'Opt-in Center', 'Opt-in Center route');
-  requireIncludes(file, 'Offer Center', 'Offer Center route');
-  requireIncludes(file, 'Signal Board', 'Signal Board route');
+  for (const label of ['Books', 'Amazon Store', 'Control System', 'Declassified Files', 'Live Intel', 'Rumble Channels', 'Search']) {
+    requireIncludes(file, label, `${label} mission route`);
+  }
+  for (const label of ['Opt-in Center', 'Offer Center', 'Signal Board']) {
+    requireIncludes(file, label, `${label} secondary route`);
+  }
   const primaryCount = countPrimaryLinks(read(file));
   if (primaryCount > 8) fail(`${file}: primary nav has ${primaryCount} links; expected 8 or fewer`);
   for (const phrase of ['Phase 19 Lead Magnet / Capture Engine', 'Phase 18 Offer Stack / Revenue Ladder Engine', 'Phase 17 Campaign Calendar / Launch Room Engine', 'This section is generated as a stable anchor']) {
@@ -31,10 +33,10 @@ for (const file of corePages) {
 }
 
 const cleanup = read('scripts/cleanup-duplicates.js');
-for (const marker of ['nav-shell', 'nav-primary', 'nav-more', 'nav-drawer', 'Reader Tools', 'Evidence & Trust', 'Archive Systems', 'Live Doors']) {
+for (const marker of ['nav-shell', 'nav-primary', 'nav-more', 'nav-drawer', 'Sell / Capture', 'Evidence & Trust', 'Control Maps', 'Freedom Ecosystem']) {
   if (!cleanup.includes(marker)) fail(`cleanup-duplicates.js missing UX nav marker: ${marker}`);
 }
-for (const route of ['optin-center.html', 'offer-center.html', 'amazon-store-books.html', 'forum.html', 'power-atlas.html', 'evidence-vault.html']) {
+for (const route of ['books.html', 'amazon-store-books.html', 'videos.html', 'news.html', 'power-atlas.html', 'evidence-vault.html', 'optin-center.html', 'offer-center.html', 'forum.html']) {
   if (!cleanup.includes(route)) fail(`cleanup-duplicates.js master nav missing ${route}`);
 }
 if (!cleanup.includes('cleanupImplementationCopy')) fail('cleanup-duplicates.js missing public copy scrubber');
@@ -58,4 +60,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('UX POLISH PRESSURE TEST PASSED');
-console.log('Checked short primary nav, More drawer, master route coverage, public copy scrub, responsive drawer CSS, and build wiring.');
+console.log('Checked mission-led primary nav, More drawer, route coverage, public copy scrub, responsive drawer CSS, and build wiring.');

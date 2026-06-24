@@ -38,6 +38,20 @@ jobs:
           grep -q "DARK CLAIMS NEED CLEAN SOURCES" evidence-policy.html
           grep -q "NO RED STRING WITHOUT LABELS" network-maps.html
 
+      - name: Verify Phase 2 Power Atlas output
+        run: |
+          test -f data/power-atlas.json
+          test -f atlas-index.html
+          grep -q "ATLAS NODES" atlas-index.html
+          grep -q "phase-two-atlas-engine" power-atlas.html
+          test -f atlas-cia.html
+          test -f atlas-epstein-records.html
+          test -f atlas-blackwater.html
+          grep -q "Source Boundary" atlas-cia.html
+          grep -q "Relationship-Line Types" atlas-cia.html
+          grep -q "Source Boundary" atlas-epstein-records.html
+          grep -q "Relationship-Line Types" atlas-epstein-records.html
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

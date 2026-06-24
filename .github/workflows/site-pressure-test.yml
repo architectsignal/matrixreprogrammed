@@ -69,6 +69,18 @@ jobs:
           grep -q "Use For" source-cia-reading-room.html
           grep -q "Boundary" source-vaers.html
 
+      - name: Verify Phase 4 Book Universe output
+        run: |
+          test -f book-universe.html
+          grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
+          grep -q "BOOK UNIVERSE STATUS" book-universe.html
+          grep -q "Signal Board" book-universe.html
+          grep -q "phase-four-book-universe" book-cia.html
+          grep -q "Connected Power Atlas Nodes" book-cia.html
+          grep -q "Connected Evidence Vault Lanes" book-cia.html
+          grep -q "phase-four-book-universe" book-as-above-so-below.html
+          grep -q "forum.html" index.html
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

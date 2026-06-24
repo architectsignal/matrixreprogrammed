@@ -1,0 +1,19 @@
+/* Matrix Reprogrammed functionality/formatting hardening layer */
+*{min-width:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+a,.btn,.nav a,.source-list{overflow-wrap:anywhere;word-break:break-word}
+.card,.terminal,.news-item,.metric{overflow-wrap:anywhere;word-break:normal;max-width:100%}
+.card{overflow:visible}
+.terminal{overflow:auto;max-width:100%}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:24px 0 34px}
+.metric{border:1px solid rgba(0,255,102,.32);background:linear-gradient(180deg,rgba(5,18,10,.78),rgba(0,0,0,.74));padding:22px;border-radius:18px;box-shadow:0 18px 55px rgba(0,0,0,.55),0 0 22px rgba(0,255,102,.08);display:flex;flex-direction:column;gap:12px;min-height:190px}
+.metric strong{display:block;color:#f7fff9;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.45rem,3vw,2.45rem);line-height:1.05;text-shadow:0 0 18px rgba(0,255,102,.48);overflow-wrap:anywhere}
+.metric span{display:block;color:#cffff0;line-height:1.58;font-size:.96rem}
+.metric em{display:block;margin-top:10px;color:#f4d889;font-style:normal;font-family:'Courier New',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.news-item{border:1px solid rgba(0,255,102,.32);background:linear-gradient(180deg,rgba(5,18,10,.78),rgba(0,0,0,.74));padding:24px;border-radius:18px;margin:0 0 20px;box-shadow:0 18px 55px rgba(0,0,0,.55)}
+.news-item h3{font-family:'Courier New',monospace;color:#f7fff9;line-height:1.22;text-transform:uppercase;letter-spacing:.04em}
+.news-item p{line-height:1.68;color:#cffff0}
+.source-list{font-family:'Courier New',monospace;font-size:.86rem;line-height:1.7}
+.figure-block{position:relative;display:block;margin:0 0 14px;padding:14px 16px;border:1px solid rgba(244,216,137,.36);border-radius:14px;background:rgba(0,0,0,.35);color:#f7fff9;font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.3rem,2.7vw,2.15rem);line-height:1.08;text-shadow:0 0 16px rgba(244,216,137,.22);overflow-wrap:anywhere}
+.figure-caption{display:block;color:#f4d889;font-family:'Courier New',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+@media(max-width:820px){.split{grid-template-columns:1fr}.topbar{flex-direction:column}.brand{white-space:normal;text-align:center}.hero h1,h1{font-size:clamp(2.2rem,12vw,4.6rem);letter-spacing:.04em}.btn{width:100%;max-width:100%}.cta-row.small{justify-content:center}.metric{min-height:0}}

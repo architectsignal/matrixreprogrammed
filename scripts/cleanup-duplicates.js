@@ -72,11 +72,13 @@ const copyReplacements = [
   ['Source: data/books.json', 'Archive: Matrix Reprogrammed index'],
   ['Source: data/', 'Archive source: Matrix Reprogrammed'],
   ['Live generated pages', 'Available book pages'],
+  ['Generated pages', 'Available book pages'],
   ['generated pages', 'reader pages'],
   ['Search index: active', 'Search: ready'],
   ['Reader paths: active', 'Reader paths: open'],
   ['Risk timers: active', 'Risk timers: open'],
   ['Black File funnel: active', 'Black File path: open'],
+  ['Black File funnel', 'Black File path'],
   ['Use this page as a sales door and an archive route. The book sells the deep dive; the atlas and vault prove the system around it.', 'Start with the book for the full investigation, then use the atlas and evidence vault to follow the source trail.'],
   ['Use this page as a sales door and an archive route.', 'Use this page as a reader path into the book, the atlas, and the evidence vault.'],
   ['The book sells the deep dive; the atlas and vault prove the system around it.', 'The book gives the full investigation; the atlas and vault help you trace the surrounding evidence.'],
@@ -112,12 +114,27 @@ const copyReplacements = [
   ['Phase 1 structure', 'core structure'],
   ['This section is generated as a stable anchor for dashboard routing and source-led updates.', 'This route keeps the archive connected to source-led updates and reader navigation.']
 ];
+const regexReplacements = [
+  [/\bBlack File funnel\b/gi, 'Black File path'],
+  [/\bArchive route\b/gi, 'Archive pathway'],
+  [/\bgenerated pages\b/gi, 'reader pages'],
+  [/\bLive generated pages\b/gi, 'Available book pages'],
+  [/\bSearch index:\s*active\b/gi, 'Search: ready'],
+  [/\bReader paths:\s*active\b/gi, 'Reader paths: open'],
+  [/\bRisk timers:\s*active\b/gi, 'Risk timers: open'],
+  [/\bSource:\s*data\/books\.json\b/gi, 'Archive: Matrix Reprogrammed index'],
+  [/\bSource:\s*data\//gi, 'Archive source: Matrix Reprogrammed ']
+];
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
 function replaceNav(html) { return html.replace(/<nav class="nav[^"']*"[^>]*>[\s\S]*?<\/nav>/g, canonicalNav); }
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
-function cleanupImplementationCopy(html) { for (const [from, to] of copyReplacements) html = html.split(from).join(to); return html; }
+function cleanupImplementationCopy(html) {
+  for (const [from, to] of copyReplacements) html = html.split(from).join(to);
+  for (const [pattern, to] of regexReplacements) html = html.replace(pattern, to);
+  return html;
+}
 function cleanupHomepage(html) { return html.replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '').replace(/Flagship Door/g, 'Primary Route'); }
 function cleanupNewsDuplicates(html) { return html.replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '').replace(/<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>/g, '<span class="figure-caption">Dated sourced figure</span>'); }
 function cleanupTimerRiskTerminal(html) { return html.replace(/SIGNALS INCREASING RISK/g, 'Risk Signal Lane').replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>').replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>'); }

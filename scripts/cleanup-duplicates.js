@@ -20,7 +20,8 @@ const phaseChecks = [
   { files: ['feed-center.html', 'feeds/main-signal.xml', 'feeds/main-signal-atom.xml', 'feeds/main-signal.json'], script: 'build-phase15-feed-engine.js', label: 'Phase 15' },
   { files: ['share-center.html', 'downloads/share-kit-black-file-starter.json', 'downloads/share-kit-black-file-starter.md', 'downloads/share-kit-black-file-starter.txt'], script: 'build-phase16-share-kits.js', label: 'Phase 16' },
   { files: ['launch-room.html', 'downloads/campaign-black-file-launch.json', 'downloads/campaign-black-file-launch.md'], script: 'build-phase17-campaign-calendar.js', label: 'Phase 17' },
-  { files: ['offer-center.html', 'downloads/offer-starter-library.json', 'downloads/offer-starter-library.md'], script: 'build-phase18-offer-stack.js', label: 'Phase 18' }
+  { files: ['offer-center.html', 'downloads/offer-starter-library.json', 'downloads/offer-starter-library.md'], script: 'build-phase18-offer-stack.js', label: 'Phase 18' },
+  { files: ['optin-center.html', 'downloads/lead-magnet-black-file-brief.json', 'downloads/lead-magnet-black-file-brief.md'], script: 'build-phase19-lead-magnets.js', label: 'Phase 19' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -34,7 +35,7 @@ function runBuilderWhenMissing(check) {
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const navLinks = [
-  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'], ['amazon-store-books.html', 'Amazon Store'], ['offer-center.html', 'Offer Center'],
+  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'], ['amazon-store-books.html', 'Amazon Store'], ['optin-center.html', 'Opt-in Center'], ['offer-center.html', 'Offer Center'],
   ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['schema-index.html', 'Schema Index'],
   ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'],
   ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],

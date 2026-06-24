@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && (node scripts/audit-site.js || echo 'Site audit reported cleanup warnings; deploy continues during live polish.')"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js"
 
 [functions]
   directory = "netlify/functions"
@@ -76,4 +76,29 @@
 [[redirects]]
   from = "/blackfile"
   to = "/black-file.html"
+  status = 301
+
+[[redirects]]
+  from = "/epstein"
+  to = "/epstein-files.html"
+  status = 301
+
+[[redirects]]
+  from = "/human-cost"
+  to = "/dashboard-human-cost.html"
+  status = 301
+
+[[redirects]]
+  from = "/migration"
+  to = "/dashboard-migration.html"
+  status = 301
+
+[[redirects]]
+  from = "/answers"
+  to = "/answer-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/timers"
+  to = "/timers.html"
   status = 301

@@ -13,7 +13,8 @@ const phaseChecks = [
   { files: ['trust-center.html'], script: 'build-phase8-trust-center.js', label: 'Phase 8' },
   { files: ['distribution-center.html'], script: 'build-phase9-content-distribution.js', label: 'Phase 9' },
   { files: ['sales-ladder.html'], script: 'build-phase10-sales-ladder.js', label: 'Phase 10' },
-  { files: ['update-monitor.html'], script: 'build-phase11-update-monitor.js', label: 'Phase 11' }
+  { files: ['update-monitor.html'], script: 'build-phase11-update-monitor.js', label: 'Phase 11' },
+  { files: ['authority-hub.html'], script: 'build-phase12-authority-clusters.js', label: 'Phase 12' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -26,53 +27,34 @@ function runBuilderWhenMissing(check) {
 }
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
-const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="sales-ladder.html">Reader Paths</a><a href="book-universe.html">Book Universe</a><a href="conversion-funnel.html">Funnels</a><a href="trust-center.html">Trust Center</a><a href="distribution-center.html">Distribution</a><a href="update-monitor.html">Update Monitor</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
+const navLinks = [
+  ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'],
+  ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'],
+  ['conversion-funnel.html', 'Funnels'], ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'],
+  ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'], ['power-atlas.html', 'Power Atlas'],
+  ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],
+  ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'],
+  ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
+];
+const canonicalNav = `<nav class="nav">${navLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>`;
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
 function replaceNav(html) { return html.replace(/<nav class="nav">[\s\S]*?<\/nav>/g, canonicalNav); }
-function removeVisibleKeywordPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
-function cleanupHomepage(html) {
-  return html
-    .replace(/<article class="card book-card"><div><div class="pill">Flagship Door<\/div><h3>D\.O\.G The Architect[\s\S]*?<\/article>/g, '')
-    .replace(/<p><a class="btn" href="book-as-above-so-below\.html">D\.O\.G The Architect[\s\S]*?<\/a><\/p>/g, '')
-    .replace('Reader paths now map to live books.', 'Reader paths now branch without repeating the flagship.');
-}
-function cleanupTimers(html) { return html.replace(/<div class="terminal">SIGNALS INCREASING RISK[\s\S]*?Verified correction<\/div>/g, '<p><span class="pill">Unique signal lane</span></p>'); }
-function cleanupNews(html) { return html.replace(/<div class="grid">\s*(?:<article class="card(?: redline)?"><span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>\s*)+<\/div>/g, ''); }
-function cleanupVideos(html) {
-  if (!/Rumble Channel Routes/.test(html)) return html;
-  return html.replace(/<section class="section wrap"><h2>Rumble Channel Routes<\/h2>[\s\S]*?<\/section>\s*<section class="section wrap split">/, '<section class="section wrap"><h2>Video Production Map</h2><p class="lead">This page covers formats and publishing rules only. The full channel directory lives on the Rumble network page.</p><div class="grid"><article class="card"><span class="label">Format</span><h3>60-Second Intel Drop</h3><p>Hook, source, evidence label, interpretation, and one archive path.</p></article><article class="card"><span class="label">Format</span><h3>3-Minute Dark Explainer</h3><p>A cinematic dossier breakdown for court files, releases, sanctions, war lanes, and public-record signals.</p></article><article class="card redline"><span class="label">Directory</span><h3>Rumble Channels</h3><p>Open the channel network when you need the external broadcast routes.</p><a class="btn" href="transmissions.html">Open Rumble Network</a></article></div></section><section class="section wrap split">');
-}
-function strengthenSearchPage() {
-  const indexFile = path.join(root, 'search-index.json');
-  const searchFile = path.join(root, 'search.html');
-  if (!fs.existsSync(indexFile) || !fs.existsSync(searchFile)) return;
-  const items = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
-  const wanted = ['as-above-so-below', 'elite-toolkit', 'cia', 'albanian-mafia', 'symbol', 'wwiii', 'identity-trap', 'black-file'];
-  const fallback = wanted.map(key => items.find(item => item.key === key)).filter(Boolean);
-  const cards = fallback.map(b => `<article class="card"><span class="label">${esc(b.category)}</span><h3>${esc(b.title)}</h3><p>${esc(b.description)}</p><a class="btn" href="${esc(b.url)}">Open Door</a></article>`).join('');
-  let html = read('search.html');
-  html = html.replace('<p class="lead">Search by title, topic, series, category, or keyword.</p>', '<p class="lead">Search by title, topic, series, category, or keyword. Strong fallback doors are visible even before the live search loads.</p>');
-  html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${cards}</div>`);
-  write('search.html', replaceNav(removeVisibleKeywordPills(html)));
-}
-function rewriteSearchJs() {
-  const file = path.join(root, 'search.js');
-  if (!fs.existsSync(file)) return;
-  const js = `(function(){const input=document.getElementById('archive-search'),results=document.getElementById('search-results'),count=document.getElementById('search-count');if(!input||!results)return;function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}function render(items){count.textContent=items.length+' archive door'+(items.length===1?'':'s')+' shown';results.innerHTML=items.map(b=>'<article class="card"><span class="label">'+esc(b.category)+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description)+'</p><a class="btn" href="'+esc(b.url)+'">Open Door</a></article>').join('');}fetch('search-index.json').then(r=>r.json()).then(data=>{function run(){const q=input.value.trim().toLowerCase();render(!q?data:data.filter(b=>[b.title,b.subtitle,b.series,b.category,b.description,(b.keywords||[]).join(' ')].join(' ').toLowerCase().includes(q)));}input.addEventListener('input',run);if(input.value.trim())run();}).catch(()=>{});})();`;
-  fs.writeFileSync(file, js);
-}
+function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
-for (const file of htmlFiles) {
-  let html = replaceNav(removeVisibleKeywordPills(read(file)));
-  if (file === 'index.html') html = cleanupHomepage(html);
-  if (file === 'timers.html') html = cleanupTimers(html);
-  if (file === 'news.html') html = cleanupNews(html);
-  if (file === 'videos.html') html = cleanupVideos(html);
-  write(file, html);
+for (const file of htmlFiles) write(file, cleanEmptyPills(replaceNav(read(file))));
+
+const searchFile = path.join(root, 'search.html');
+const indexFile = path.join(root, 'search-index.json');
+if (fs.existsSync(searchFile) && fs.existsSync(indexFile)) {
+  const items = JSON.parse(fs.readFileSync(indexFile, 'utf8'));
+  const fallback = items.slice(0, 8).map(b => `<article class="card"><span class="label">${esc(b.category || 'Archive')}</span><h3>${esc(b.title)}</h3><p>${esc(b.description || b.subtitle || '')}</p><a class="btn" href="${esc(b.url)}">Open Door</a></article>`).join('');
+  let html = read('search.html');
+  if (!html.includes('Showing the strongest entry points')) {
+    html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${fallback}</div>`);
+  }
+  write('search.html', replaceNav(html));
 }
-strengthenSearchPage();
-rewriteSearchJs();
 console.log(`Duplicate cleanup complete across ${htmlFiles.length} HTML files.`);

@@ -1,0 +1,54 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 15 Feed / Crawl Discovery Engine for Matrix Reprogrammed. This data defines public feeds for readers, crawlers, AI search systems, and update discovery.",
+  "rules": [
+    "Feeds should help discovery without pretending static pages are live news.",
+    "Every feed item must point back to a human-readable route.",
+    "Machine feeds should preserve trust, evidence, and claim-boundary routes.",
+    "RSS, Atom, and JSON Feed outputs should be generated together.",
+    "Feed pages must route users back to the Download Center, Schema Index, Trust Center, and Update Monitor.",
+    "Feeds must not expose private or non-public user data."
+  ],
+  "feeds": [
+    {
+      "slug": "main-signal",
+      "title": "Matrix Reprogrammed Main Signal Feed",
+      "summary": "Primary discovery feed for new Matrix Reprogrammed hubs, dossier packs, schema outputs, and reader routes.",
+      "htmlRoute": "feed-main-signal.html",
+      "rssOutput": "feeds/main-signal.xml",
+      "jsonOutput": "feeds/main-signal.json",
+      "category": "Main Feed",
+      "routes": ["index.html", "start-here.html", "download-center.html", "schema-index.html", "authority-hub.html", "sales-ladder.html"]
+    },
+    {
+      "slug": "evidence-trust",
+      "title": "Evidence And Trust Feed",
+      "summary": "Discovery feed for trust policy, evidence lanes, source methodology, claim labels, and corrections routes.",
+      "htmlRoute": "feed-evidence-trust.html",
+      "rssOutput": "feeds/evidence-trust.xml",
+      "jsonOutput": "feeds/evidence-trust.json",
+      "category": "Trust Feed",
+      "routes": ["trust-center.html", "trust-source-methodology.html", "trust-claim-labels.html", "trust-corrections-policy.html", "evidence-vault.html", "evidence-vault-index.html"]
+    },
+    {
+      "slug": "intelligence-crime",
+      "title": "Intelligence And Crime Feed",
+      "summary": "Discovery feed for intelligence dossiers, crime-state overlap, network maps, public-record books, and source routes.",
+      "htmlRoute": "feed-intelligence-crime.html",
+      "rssOutput": "feeds/intelligence-crime.xml",
+      "jsonOutput": "feeds/intelligence-crime.json",
+      "category": "Dossier Feed",
+      "routes": ["map-intelligence-network.html", "map-crime-state-overlap.html", "book-cia.html", "book-nsa.html", "book-cartels.html", "book-albanian-mafia.html"]
+    },
+    {
+      "slug": "downloads-schema",
+      "title": "Downloads And Schema Feed",
+      "summary": "Discovery feed for dossier packs, machine-readable schema files, site graph, claim taxonomy, and crawler map outputs.",
+      "htmlRoute": "feed-downloads-schema.html",
+      "rssOutput": "feeds/downloads-schema.xml",
+      "jsonOutput": "feeds/downloads-schema.json",
+      "category": "Machine Feed",
+      "routes": ["download-center.html", "dossier-pack-black-file-starter.html", "dossier-pack-trust-evidence.html", "schema-index.html", "site-graph.json", "claim-taxonomy.json", "crawler-map.json"]
+    }
+  ]
+}

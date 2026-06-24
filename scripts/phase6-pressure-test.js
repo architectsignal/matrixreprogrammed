@@ -79,9 +79,9 @@ if (!netlify.includes('from = "/maps"')) fail('netlify.toml missing /maps redire
 if (!netlify.includes('from = "/network-map-index"')) fail('netlify.toml missing /network-map-index redirect');
 
 const cleanup = exists('scripts/cleanup-duplicates.js') ? read('scripts/cleanup-duplicates.js') : '';
-if (!cleanup.includes('phaseSixFiles')) fail('cleanup script missing Phase 6 self-heal files');
+if (!cleanup.includes('phaseChecks')) fail('cleanup script missing unified phaseChecks self-heal structure');
+if (!cleanup.includes('network-map-index.html')) fail('cleanup script missing Phase 6 self-heal target');
 if (!cleanup.includes('build-phase6-network-maps.js')) fail('cleanup script missing Phase 6 builder fallback');
-if (!cleanup.includes('network-map-index.html')) fail('cleanup script master nav missing Map Index link');
 if (!cleanup.includes('forum.html')) fail('cleanup script master nav missing Signal Board link');
 
 if (problems.length) {

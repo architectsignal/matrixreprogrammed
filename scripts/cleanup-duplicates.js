@@ -12,7 +12,8 @@ const phaseChecks = [
   { files: ['conversion-funnel.html'], script: 'build-phase7-conversion-funnel.js', label: 'Phase 7' },
   { files: ['trust-center.html'], script: 'build-phase8-trust-center.js', label: 'Phase 8' },
   { files: ['distribution-center.html'], script: 'build-phase9-content-distribution.js', label: 'Phase 9' },
-  { files: ['sales-ladder.html'], script: 'build-phase10-sales-ladder.js', label: 'Phase 10' }
+  { files: ['sales-ladder.html'], script: 'build-phase10-sales-ladder.js', label: 'Phase 10' },
+  { files: ['update-monitor.html'], script: 'build-phase11-update-monitor.js', label: 'Phase 11' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -25,7 +26,7 @@ function runBuilderWhenMissing(check) {
 }
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
-const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="sales-ladder.html">Reader Paths</a><a href="book-universe.html">Book Universe</a><a href="conversion-funnel.html">Funnels</a><a href="trust-center.html">Trust Center</a><a href="distribution-center.html">Distribution</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
+const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="books.html">Books</a><a href="sales-ladder.html">Reader Paths</a><a href="book-universe.html">Book Universe</a><a href="conversion-funnel.html">Funnels</a><a href="trust-center.html">Trust Center</a><a href="distribution-center.html">Distribution</a><a href="update-monitor.html">Update Monitor</a><a href="answer-engine.html">AI Answers</a><a href="power-atlas.html">Power Atlas</a><a href="network-maps.html">Network Maps</a><a href="network-map-index.html">Map Index</a><a href="evidence-vault.html">Evidence Vault</a><a href="evidence-vault-index.html">Source Index</a><a href="news.html">Intel Desk</a><a href="forum.html">Signal Board</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }

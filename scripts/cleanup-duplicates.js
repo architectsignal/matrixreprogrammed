@@ -2,6 +2,21 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+const phaseOneFiles = ['power-atlas.html', 'evidence-vault.html', 'evidence-policy.html', 'network-maps.html'];
+
+function ensurePhaseOneStructure() {
+  const missingPhaseOne = phaseOneFiles.some(file => !fs.existsSync(path.join(root, file)));
+  if (!missingPhaseOne) return;
+  const builder = path.join(root, 'scripts', 'build-phase1-structure.js');
+  if (fs.existsSync(builder)) {
+    console.log('Phase 1 pages missing before cleanup. Running build-phase1-structure.js first.');
+    require(builder);
+    return;
+  }
+  throw new Error(`Phase 1 pages missing and ${builder} was not found.`);
+}
+
+ensurePhaseOneStructure();
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 const canonicalNav = `<nav class="nav"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="power-atlas.html">Power Atlas</a><a href="evidence-vault.html">Evidence Vault</a><a href="books.html">Books</a><a href="news.html">Intel Desk</a><a href="search.html">Search</a><a href="timers.html">Timers</a><a href="videos.html">Videos</a><a href="black-file.html">Black File</a></nav>`;
 

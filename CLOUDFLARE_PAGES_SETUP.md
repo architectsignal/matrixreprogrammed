@@ -1,26 +1,48 @@
 # Cloudflare Pages Setup — Matrix Reprogrammed
 
-This repo is now prepared for Cloudflare Pages while keeping Netlify compatibility.
+This repo is prepared for Cloudflare Pages while keeping Netlify compatibility.
 
 ## Recommended Cloudflare Pages settings
 
-Use these settings when creating the Pages project:
+Use these settings when creating or editing the Pages project:
 
 - Project type: Pages
 - Connect to Git: `architectsignal/matrixreprogrammed`
 - Production branch: `main`
 - Framework preset: None / Static HTML
 - Build command: `npm run build`
-- Build output directory: `.`
+- Build output directory: `_site`
 - Root directory: `/`
 - Node version: `22`
+- Deploy command: leave blank / remove `npx wrangler deploy`
+
+## Why `_site` is required
+
+Cloudflare failed when `npx wrangler deploy` tried to upload the whole repository root. That included `node_modules/workerd/bin/workerd`, a 121 MiB binary, which exceeds Cloudflare's 25 MiB per-asset limit.
+
+The build now ends with:
+
+```bash
+node scripts/build-cloudflare-output.js
+```
+
+That script copies only deployable site files into `_site` and excludes:
+
+- `node_modules`
+- `.git`
+- `.github`
+- `scripts`
+- `netlify`
+- package/build tooling files
 
 ## Files added for Cloudflare
 
 - `_redirects` — Cloudflare route map converted from Netlify redirects.
 - `_headers` — Cloudflare headers for security and downloadable files.
+- `wrangler.jsonc` — fallback config pointing Wrangler assets at `_site`, not repo root.
+- `scripts/build-cloudflare-output.js` — creates the safe `_site` output folder.
 
-Cloudflare Pages reads these files from the published output directory. Because the site publishes from the repo root, they live in the repo root.
+Cloudflare Pages reads `_redirects` and `_headers` from the published output directory. The build output script copies them into `_site`.
 
 ## Weekly updates
 

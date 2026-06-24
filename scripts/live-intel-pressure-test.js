@@ -17,7 +17,9 @@ for (const file of [
   'live-intel.html',
   'downloads/live-intel-latest.json',
   'downloads/live-intel-latest.md',
-  '.github/workflows/live-intel-update.yml'
+  '.github/workflows/live-intel-update.yml',
+  'package.json',
+  'netlify.toml'
 ]) requireFile(file);
 
 if (exists('data/live-intel-sources.json')) {
@@ -57,6 +59,10 @@ requireIncludes('llms.txt', '/live-intel.html', 'llms route');
 requireIncludes('.github/workflows/live-intel-update.yml', 'cron', 'scheduled workflow');
 requireIncludes('.github/workflows/live-intel-update.yml', 'update-live-intel.js', 'scheduled updater script');
 requireIncludes('.github/workflows/live-intel-update.yml', 'contents: write', 'workflow write permission');
+requireIncludes('package.json', 'build-live-intel-machine.js', 'npm build Live Intel builder');
+requireIncludes('package.json', 'live-intel-pressure-test.js', 'npm build Live Intel pressure test');
+requireIncludes('netlify.toml', 'build-live-intel-machine.js', 'Netlify Live Intel builder');
+requireIncludes('netlify.toml', 'live-intel-pressure-test.js', 'Netlify Live Intel pressure test');
 
 if (problems.length) {
   console.error('\nLIVE INTEL PRESSURE TEST FAILED\n');
@@ -65,4 +71,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('LIVE INTEL PRESSURE TEST PASSED');
-console.log('Checked source lanes, updater enrichment, static hub, downloads, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, and book/store routes.');
+console.log('Checked source lanes, updater enrichment, static hub, downloads, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');

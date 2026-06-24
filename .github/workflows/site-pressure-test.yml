@@ -97,6 +97,22 @@ jobs:
           grep -q "answer-engine.html" search-index.json
           grep -q "answer-engine.html" llms.txt
 
+      - name: Verify Phase 6 Network Map output
+        run: |
+          test -f data/network-maps.json
+          test -f network-map-index.html
+          grep -q "NETWORK MAP INDEX" network-map-index.html
+          grep -q "NETWORK MAP ENGINE STATUS" network-map-index.html
+          grep -q "phase-six-network-engine" network-maps.html
+          test -f map-intelligence-network.html
+          test -f map-crime-state-overlap.html
+          test -f map-war-machine.html
+          grep -q "Relationship Lines" map-intelligence-network.html
+          grep -q "Connected Power Atlas Nodes" map-war-machine.html
+          grep -q "Connected Evidence Vault Lanes" map-crime-state-overlap.html
+          grep -q "network-map-index.html" search-index.json
+          grep -q "network-map-index.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

@@ -113,6 +113,25 @@ jobs:
           grep -q "network-map-index.html" search-index.json
           grep -q "network-map-index.html" llms.txt
 
+      - name: Verify Phase 7 Conversion Funnel output
+        run: |
+          test -f data/conversion-funnel.json
+          test -f conversion-funnel.html
+          grep -q "CONVERSION FUNNEL" conversion-funnel.html
+          grep -q "CONVERSION ENGINE STATUS" conversion-funnel.html
+          grep -q "Lead Magnet Doors" conversion-funnel.html
+          test -f funnel-black-file.html
+          test -f funnel-evidence-starter.html
+          test -f funnel-power-map.html
+          test -f thank-you-evidence-starter.html
+          test -f thank-you-power-map.html
+          grep -q "data-netlify=\"true\"" funnel-black-file.html
+          grep -q "netlify-honeypot=\"bot-field\"" funnel-black-file.html
+          grep -q "reader-path" funnel-book-path.html
+          grep -q "phase-seven-funnel-engine" black-file.html
+          grep -q "conversion-funnel.html" search-index.json
+          grep -q "conversion-funnel.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

@@ -36,14 +36,17 @@ jobs:
       - name: Validate live intelligence machine
         run: node scripts/live-intel-pressure-test.js
 
-      - name: Commit updated intelligence data
+      - name: Validate figure rule registry
+        run: node scripts/figure-source-rules-pressure-test.js
+
+      - name: Commit updated reports
         run: |
           git config user.name "matrix-intel-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/live-intel.json data/site-freshness-report.json data/site-quality-report.json downloads/site-freshness-report.md downloads/site-quality-report.md site-freshness-report.html site-quality-report.html
           if git diff --cached --quiet; then
-            echo "No weekly intelligence, freshness, or quality changes to commit."
+            echo "No weekly changes to commit."
           else
-            git commit -m "Update weekly live intelligence and site quality reports"
+            git commit -m "Update weekly site reports"
             git push
           fi

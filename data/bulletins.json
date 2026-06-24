@@ -1,0 +1,49 @@
+{
+  "updated": "2026-06-24",
+  "liveWindowDays": 7,
+  "bulletins": [
+    {
+      "id": "war-file-gaza-un-inquiry-2026-06-24",
+      "date": "2026-06-24",
+      "label": "War File",
+      "headline": "UN inquiry report on Gaza children enters the public-record lane",
+      "summary": "Reuters reported on a UN inquiry accusing Israeli authorities and security forces of deliberately targeting Palestinian children during the Gaza conflict. Israel rejected the report. The item remains a contested public international-record signal, not a settled court finding.",
+      "why": "Shows how alleged state violence, child casualties, international-law claims, evidentiary standards, and official rebuttals should be tracked separately.",
+      "path": "book-wwiii.html",
+      "pathLabel": "Reader Path: War File",
+      "sources": [
+        {"label": "Reuters report", "url": "https://www.reuters.com/world/middle-east/israel-targeted-gaza-children-resulting-genocide-un-inquiry-says-2026-06-23/"},
+        {"label": "UN Commission hub", "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-israel/index"}
+      ]
+    },
+    {
+      "id": "human-cost-panels-expanded-2026-06-24",
+      "date": "2026-06-24",
+      "label": "Human Cost",
+      "headline": "Human Cost Evidence Panels expanded",
+      "summary": "The Intel Desk now separates raw reports, official counts, compensated claims, estimates, and contested figures. Conflict-zone deaths, migration and irregular border flows, vaccine injury compensation, trafficking and exploitation, famine and displacement, and medical-system failure are handled as evidence categories, not viral counters.",
+      "why": "Human suffering becomes easier to ignore when numbers are hidden, politicised, or exaggerated. The desk shows dated figures with source boundaries.",
+      "path": "news.html#human-cost",
+      "pathLabel": "Open Human Cost",
+      "sources": [
+        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"},
+        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"}
+      ]
+    },
+    {
+      "id": "migration-panel-added-2026-06-24",
+      "date": "2026-06-24",
+      "label": "Migration Watch",
+      "headline": "Migration and irregular immigration panel added",
+      "summary": "The Intel Desk now separates border encounters, irregular crossings, asylum applications, removals, returns, departures, missing migrants, and unauthorized-population estimates. These categories are not interchangeable and should not be presented as a single illegal-immigration counter.",
+      "why": "Migration pressure affects elections, policing, labour markets, border policy, organised-crime routes, asylum systems, and social trust. The archive tracks the structure without collapsing different datasets into one number.",
+      "path": "news.html#migration",
+      "pathLabel": "Open Migration Panel",
+      "sources": [
+        {"label": "U.S. CBP statistics", "url": "https://www.cbp.gov/newsroom/stats"},
+        {"label": "Frontex migratory map", "url": "https://www.frontex.europa.eu/what-we-do/monitoring-and-risk-analysis/migratory-map/"},
+        {"label": "Eurostat asylum data", "url": "https://ec.europa.eu/eurostat/web/migration-asylum/asylum"}
+      ]
+    }
+  ]
+}

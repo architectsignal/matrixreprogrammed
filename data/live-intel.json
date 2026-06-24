@@ -6,7 +6,8 @@
     "Prefer primary sources, court records, official releases, archives, and dated reporting.",
     "Do not treat a news mention as proof of wrongdoing.",
     "Every item must keep a source URL, source label, date, lane, and reader route.",
-    "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant."
+    "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
+    "Every update should give the reader a next action: source, evidence, video, free brief, offer, or book."
   ],
   "lanes": [],
   "feedResults": [],
@@ -20,10 +21,25 @@
       "url": "epstein-files.html",
       "published": "2026-06-24T00:00:00.000Z",
       "summary": "The Epstein lane is configured for source-watch updates, document routes, dated bulletins, video routes, opt-ins, offers, and book/store pathways.",
+      "evidenceLevel": "Source-watch configured",
+      "evidenceBoundary": "A public-record association is not proof of wrongdoing. Follow the source route before sharing the claim.",
+      "whyItMatters": "This turns a high-interest public-record topic into a structured route: source first, evidence boundary second, reader action third.",
+      "nextAction": "Open the Epstein Files hub, check the source lanes, then route the reader into the free brief, video channel, and Black File book path.",
+      "videoHook": "The files are not useful because they are famous. They are useful when every name, document, and claim is tied to a source boundary.",
+      "rumbleShortTitle": "The Epstein Files Problem Nobody Explains",
+      "rumbleLongTitle": "How To Read Epstein Files Without Losing The Evidence Boundary",
+      "socialThread": [
+        "1/ The Epstein files are not a meme. They are a public-record maze.",
+        "2/ A name in a document is not proof of a crime. The source type matters.",
+        "3/ Court record, archive, news claim, commentary, and allegation are different evidence levels.",
+        "4/ Matrix Reprogrammed now routes each update into source lanes, video hooks, free briefs, and book paths."
+      ],
       "evidenceRoute": "evidence-vault.html",
       "videoRoute": "videos.html",
       "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html",
+      "optinRoute": "optin-black-file-brief.html",
+      "storeRoute": "amazon-store-books.html",
       "status": "seeded"
     }
   ]

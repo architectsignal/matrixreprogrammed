@@ -35,27 +35,27 @@ function runBuilderWhenMissing(check) {
 for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const primaryNavLinks = [
-  ['index.html', 'Home'],
   ['start-here.html', 'Start Here'],
-  ['black-file.html', 'Black File'],
   ['books.html', 'Books'],
   ['amazon-store-books.html', 'Amazon Store'],
-  ['optin-center.html', 'Free Briefs'],
-  ['offer-center.html', 'Offers'],
+  ['power-atlas.html', 'Control System'],
+  ['evidence-vault.html', 'Declassified Files'],
+  ['news.html', 'Live Intel'],
+  ['videos.html', 'Rumble Channels'],
   ['search.html', 'Search']
 ];
 const secondaryNavGroups = [
-  ['Reader Tools', [
-    ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center'], ['feed-center.html', 'Feed Center'], ['download-center.html', 'Download Center'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe']
+  ['Sell / Capture', [
+    ['optin-center.html', 'Opt-in Center'], ['offer-center.html', 'Offer Center'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center']
   ]],
   ['Evidence & Trust', [
-    ['trust-center.html', 'Trust Center'], ['evidence-vault.html', 'Evidence Vault'], ['evidence-vault-index.html', 'Source Index'], ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index']
+    ['trust-center.html', 'Trust Center'], ['evidence-vault-index.html', 'Source Index'], ['evidence-policy.html', 'Evidence Policy'], ['black-file.html', 'Black File'], ['download-center.html', 'Download Center'], ['feed-center.html', 'Feed Center']
   ]],
-  ['Archive Systems', [
-    ['schema-index.html', 'Schema Index'], ['authority-hub.html', 'Authority Hub'], ['conversion-funnel.html', 'Funnels'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers']
+  ['Control Maps', [
+    ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['authority-hub.html', 'Authority Hub'], ['answer-engine.html', 'AI Answers'], ['schema-index.html', 'Machine Index']
   ]],
-  ['Live Doors', [
-    ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['videos.html', 'Videos']
+  ['Freedom Ecosystem', [
+    ['news.html', 'Intel Desk'], ['videos.html', 'Rumble Channels'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor']
   ]]
 ];
 function navLink([href, label]) { return `<a href="${href}">${label}</a>`; }

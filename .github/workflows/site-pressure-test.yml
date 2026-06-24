@@ -52,6 +52,23 @@ jobs:
           grep -q "Source Boundary" atlas-epstein-records.html
           grep -q "Relationship-Line Types" atlas-epstein-records.html
 
+      - name: Verify Phase 3 Evidence Vault output
+        run: |
+          test -f data/evidence-vault.json
+          test -f evidence-vault-index.html
+          grep -q "SOURCE LANES" evidence-vault-index.html
+          grep -q "phase-three-evidence-engine" evidence-vault.html
+          test -f evidence-lane-court-records.html
+          test -f evidence-lane-declassified-archives.html
+          test -f evidence-lane-human-cost-sources.html
+          test -f source-cia-reading-room.html
+          test -f source-treasury-ofac.html
+          test -f source-vaers.html
+          grep -q "Source Boundary" evidence-lane-court-records.html
+          grep -q "Source Boundary" evidence-lane-human-cost-sources.html
+          grep -q "Use For" source-cia-reading-room.html
+          grep -q "Boundary" source-vaers.html
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

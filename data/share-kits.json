@@ -1,0 +1,176 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 16 Share Kit / Social Distribution Engine for Matrix Reprogrammed. This data defines copy-ready public share kits that route readers back to evidence, trust, feeds, downloads, books, and authority clusters.",
+  "rules": [
+    "Share kits must route back to source, trust, or evidence pages.",
+    "Hooks may be dramatic, but claims must remain bounded.",
+    "Every kit needs short copy, thread copy, video caption copy, and archive routes.",
+    "No share kit should imply guilt from association.",
+    "Share kits should create curiosity and send readers to the archive.",
+    "Outputs must be public, reusable, and free of private data."
+  ],
+  "kits": [
+    {
+      "slug": "black-file-starter",
+      "title": "Black File Starter Share Kit",
+      "label": "Starter share pack",
+      "summary": "Share-ready copy for introducing Matrix Reprogrammed, the Black File, evidence boundaries, and reader paths.",
+      "primaryRoute": "black-file.html",
+      "trustRoute": "trust-center.html",
+      "evidenceRoute": "evidence-vault.html",
+      "downloadRoute": "dossier-pack-black-file-starter.html",
+      "feedRoute": "feed-main-signal.html",
+      "hooks": [
+        "Before you believe the signal, learn how the archive labels proof.",
+        "The Black File is not a rumor board. It is a route map for claims, sources, and boundaries.",
+        "Start here if you want the system without losing the evidence trail."
+      ],
+      "shortPosts": [
+        "Matrix Reprogrammed is built around a simple rule: no dark claim without a source boundary. Start with the Black File and follow the evidence routes.",
+        "If the internet gives you noise, build a map. The Black File Starter Pack routes you through trust, evidence, books, and machine-readable indexes."
+      ],
+      "threadOutline": [
+        "Open with the problem: claims spread faster than evidence.",
+        "Define the archive: maps, books, source lanes, trust boundaries.",
+        "Explain the rule: association is not guilt.",
+        "Send readers to the Black File Starter Pack."
+      ],
+      "videoCaption": "A dark archive is useless without source discipline. Start with the Black File, then follow the evidence routes."
+    },
+    {
+      "slug": "intelligence-network",
+      "title": "Intelligence Network Share Kit",
+      "label": "Agency share pack",
+      "summary": "Share-ready copy for intelligence dossiers, declassified archives, surveillance, and oversight failures.",
+      "primaryRoute": "map-intelligence-network.html",
+      "trustRoute": "trust-source-methodology.html",
+      "evidenceRoute": "evidence-lane-declassified-archives.html",
+      "downloadRoute": "dossier-pack-intelligence-network.html",
+      "feedRoute": "feed-intelligence-crime.html",
+      "hooks": [
+        "The archive begins where the official record stops explaining itself.",
+        "Declassified does not mean simple. It means the public finally gets a document trail.",
+        "The intelligence map is not one agency. It is a network of powers, budgets, methods, and oversight gaps."
+      ],
+      "shortPosts": [
+        "The Intelligence Network Pack connects declassified archives, agency books, network maps, and evidence boundaries in one route.",
+        "Read the documents, then read the silence around them. Matrix Reprogrammed maps the agency system without flattening every claim into conspiracy."
+      ],
+      "threadOutline": [
+        "Start with declassified archives as the base layer.",
+        "Move to programs, oversight, and institutional memory.",
+        "Separate documented history from disputed modern claims.",
+        "Route readers to the intelligence map and pack."
+      ],
+      "videoCaption": "Declassified history is not dead history. It is the public record of how power learned to hide in process."
+    },
+    {
+      "slug": "crime-state-overlap",
+      "title": "Crime-State Overlap Share Kit",
+      "label": "Crime system share pack",
+      "summary": "Share-ready copy for cartels, mafia logistics, sanctions, court records, finance, and corruption overlap.",
+      "primaryRoute": "map-crime-state-overlap.html",
+      "trustRoute": "trust-association-boundary.html",
+      "evidenceRoute": "evidence-lane-court-records.html",
+      "downloadRoute": "dossier-pack-crime-state-overlap.html",
+      "feedRoute": "feed-intelligence-crime.html",
+      "hooks": [
+        "Organized crime is not just violence. It is logistics, finance, ports, companies, and silence.",
+        "Follow the money, then follow the paperwork.",
+        "The map is where street crime meets state failure."
+      ],
+      "shortPosts": [
+        "The Crime-State Overlap Pack maps court records, sanctions, ports, laundering, cartel routes, mafia structures, and corruption boundaries.",
+        "If you only watch the arrests, you miss the architecture. Crime networks survive through logistics and finance."
+      ],
+      "threadOutline": [
+        "Open with logistics over street violence.",
+        "Explain why court records and sanctions need different labels.",
+        "Show the archive routes: maps, books, evidence lanes.",
+        "Send readers to the crime-state pack."
+      ],
+      "videoCaption": "The real crime map is not a mugshot wall. It is finance, logistics, ports, corruption, and records."
+    },
+    {
+      "slug": "war-machine",
+      "title": "War Machine Share Kit",
+      "label": "War / contractor share pack",
+      "summary": "Share-ready copy for contractors, war budgets, procurement, human cost, and public-record conflict routes.",
+      "primaryRoute": "map-war-machine.html",
+      "trustRoute": "trust-association-boundary.html",
+      "evidenceRoute": "evidence-lane-human-cost-sources.html",
+      "downloadRoute": "dossier-pack-war-machine.html",
+      "feedRoute": "feed-main-signal.html",
+      "hooks": [
+        "War is not only fought. It is contracted, financed, narrated, and archived.",
+        "The machine has invoices before it has memorials.",
+        "Human cost must stay sourced, dated, and impossible to ignore."
+      ],
+      "shortPosts": [
+        "The War Machine Pack connects contractors, procurement, source lanes, human-cost dashboards, and public-record conflict routes.",
+        "If war is a machine, the archive has to map the parts: budgets, contractors, agencies, narratives, and bodies."
+      ],
+      "threadOutline": [
+        "Start with the machine: budgets, contracts, institutions.",
+        "Add human cost with dated source boundaries.",
+        "Separate contractor role from blanket accusation.",
+        "Route readers to the War Machine Pack."
+      ],
+      "videoCaption": "The war machine is not a metaphor. It is budgets, contracts, agencies, narratives, and human cost."
+    },
+    {
+      "slug": "symbolic-power",
+      "title": "Symbolic Power Share Kit",
+      "label": "D.O.G / symbols share pack",
+      "summary": "Share-ready copy for symbols, D.O.G reader routes, esoteric commentary, and evidence boundaries.",
+      "primaryRoute": "authority-symbolic-power.html",
+      "trustRoute": "trust-claim-labels.html",
+      "evidenceRoute": "answer-evidence-boundary.html",
+      "downloadRoute": "dossier-pack-symbolic-power.html",
+      "feedRoute": "feed-main-signal.html",
+      "hooks": [
+        "A symbol is a door. It is not automatically evidence of a crime.",
+        "The old language of power was architectural, ritual, and symbolic.",
+        "D.O.G is where the archive becomes initiation, but the claim boundary stays intact."
+      ],
+      "shortPosts": [
+        "The Symbolic Power Pack routes readers through D.O.G, Masonic architecture, symbol commentary, and evidence boundaries.",
+        "Symbols matter. But interpretation must be labeled. That is what separates a real archive from noise."
+      ],
+      "threadOutline": [
+        "Define symbols as language, not automatic proof.",
+        "Explain why claim labels matter more in esoteric topics.",
+        "Route readers to D.O.G and evidence-boundary pages.",
+        "End with the symbolic power pack."
+      ],
+      "videoCaption": "Symbols are not decoration. They are language. But language still needs a claim boundary."
+    },
+    {
+      "slug": "trust-evidence",
+      "title": "Trust And Evidence Share Kit",
+      "label": "Credibility share pack",
+      "summary": "Share-ready copy for source hierarchy, claim labels, corrections, privacy, and evidence boundaries.",
+      "primaryRoute": "trust-center.html",
+      "trustRoute": "trust-source-methodology.html",
+      "evidenceRoute": "evidence-vault-index.html",
+      "downloadRoute": "dossier-pack-trust-evidence.html",
+      "feedRoute": "feed-evidence-trust.html",
+      "hooks": [
+        "A correction is not weakness. It is how an archive becomes harder to break.",
+        "The claim label is the lock on the door.",
+        "If the source is weak, the claim must be weaker."
+      ],
+      "shortPosts": [
+        "Matrix Reprogrammed uses claim labels, evidence boundaries, source lanes, and corrections because dark topics need clean rules.",
+        "The Trust And Evidence Pack explains how the archive separates confirmed records, interpretation, disputed claims, and unsupported viral noise."
+      ],
+      "threadOutline": [
+        "Open with why trust matters in dark research.",
+        "Define source hierarchy and claim labels.",
+        "Explain corrections and association boundaries.",
+        "Send readers to the Trust And Evidence Pack."
+      ],
+      "videoCaption": "Dark research without source discipline becomes propaganda. The evidence boundary is the firewall."
+    }
+  ]
+}

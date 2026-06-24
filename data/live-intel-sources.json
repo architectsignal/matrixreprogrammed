@@ -1,0 +1,95 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, elite-control developments, declassified-file discovery, Epstein file monitoring, war/conflict routes, financial power, surveillance, and book/video conversion paths.",
+  "rules": [
+    "Prefer primary sources, court records, official releases, archives, and dated reporting.",
+    "Do not treat a news mention as proof of wrongdoing.",
+    "Every item must keep a source URL, source label, date, lane, and reader route.",
+    "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
+    "If a feed fails, preserve the page and show the last known source set rather than breaking the build."
+  ],
+  "lanes": [
+    {
+      "id": "epstein-files",
+      "title": "Epstein Files And Court Records",
+      "description": "Public-record updates, court filings, document releases, archive mirrors, oversight moves, and association-boundary briefings.",
+      "route": "epstein-files.html",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-black-file.html",
+      "offerRoute": "offer-starter-library.html",
+      "queries": ["Epstein files", "Epstein court records", "Epstein documents released"]
+    },
+    {
+      "id": "declassified-files",
+      "title": "Declassified Files And Public Archives",
+      "description": "Newly released files, FOIA material, archive releases, historical intelligence documents, and public-record research routes.",
+      "route": "evidence-vault.html",
+      "evidenceRoute": "evidence-vault-index.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "books.html",
+      "offerRoute": "download-center.html",
+      "queries": ["declassified files", "FOIA release intelligence", "National Archives declassified"]
+    },
+    {
+      "id": "control-system",
+      "title": "Elite Control Structure",
+      "description": "Institutional power, surveillance, central banking, policy networks, information control, NGOs, intelligence influence, and elite overlap mapping.",
+      "route": "power-atlas.html",
+      "evidenceRoute": "atlas-index.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-elite-toolkit.html",
+      "offerRoute": "offer-starter-library.html",
+      "queries": ["surveillance policy", "central bank digital currency", "elite networks investigation"]
+    },
+    {
+      "id": "war-machine",
+      "title": "War Machine And Intelligence State",
+      "description": "War, contractors, intelligence agencies, oversight failures, conflict narratives, military technology, and public-record power routes.",
+      "route": "dashboard-conflict.html",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-entry.html",
+      "queries": ["intelligence oversight", "defense contractor investigation", "war powers oversight"]
+    },
+    {
+      "id": "crime-state-overlap",
+      "title": "Crime State Overlap",
+      "description": "Organized crime, money laundering, trafficking routes, cartel logistics, state protection, and public-record criminal networks.",
+      "route": "crime-hub.html",
+      "evidenceRoute": "network-maps.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-crime-dossiers.html",
+      "offerRoute": "offer-crime-dossier-entry.html",
+      "queries": ["organized crime money laundering", "cartel network indictment", "state corruption organized crime"]
+    }
+  ],
+  "rssFeeds": [
+    {
+      "lane": "epstein-files",
+      "label": "Google News / Epstein files",
+      "url": "https://news.google.com/rss/search?q=Epstein%20files%20OR%20Epstein%20documents%20OR%20Epstein%20court%20records&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "declassified-files",
+      "label": "Google News / declassified files",
+      "url": "https://news.google.com/rss/search?q=declassified%20files%20OR%20FOIA%20release%20OR%20National%20Archives%20declassified&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "control-system",
+      "label": "Google News / control structure",
+      "url": "https://news.google.com/rss/search?q=surveillance%20policy%20OR%20CBDC%20OR%20digital%20ID%20OR%20elite%20networks&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "war-machine",
+      "label": "Google News / war machine",
+      "url": "https://news.google.com/rss/search?q=intelligence%20oversight%20OR%20defense%20contractor%20investigation%20OR%20war%20powers&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "crime-state-overlap",
+      "label": "Google News / crime state overlap",
+      "url": "https://news.google.com/rss/search?q=organized%20crime%20money%20laundering%20OR%20cartel%20indictment%20OR%20state%20corruption&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}

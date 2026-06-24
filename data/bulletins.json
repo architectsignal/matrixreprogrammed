@@ -1,6 +1,7 @@
 {
   "updated": "2026-06-24",
   "liveWindowDays": 7,
+  "rule": "Live bulletins are generated from this file. Older items remain in intel-archive.html so news never disappears without becoming archive structure.",
   "bulletins": [
     {
       "id": "war-file-gaza-un-inquiry-2026-06-24",
@@ -17,17 +18,31 @@
       ]
     },
     {
-      "id": "human-cost-panels-expanded-2026-06-24",
+      "id": "human-cost-displacement-1178m-2026-06-24",
       "date": "2026-06-24",
       "label": "Human Cost",
-      "headline": "Human Cost Evidence Panels expanded",
-      "summary": "The Intel Desk now separates raw reports, official counts, compensated claims, estimates, and contested figures. Conflict-zone deaths, migration and irregular border flows, vaccine injury compensation, trafficking and exploitation, famine and displacement, and medical-system failure are handled as evidence categories, not viral counters.",
-      "why": "Human suffering becomes easier to ignore when numbers are hidden, politicised, or exaggerated. The desk shows dated figures with source boundaries.",
-      "path": "news.html#human-cost",
-      "pathLabel": "Open Human Cost",
+      "headline": "Global displacement baseline set at 117.8 million people",
+      "summary": "UNHCR's 2026 Global Trends reporting placed forced displacement at roughly 117.8 million people in 2025. The Matrix Reprogrammed panel separates refugees, asylum seekers, internally displaced people, stateless people, and other protected populations rather than merging them into a single political slogan.",
+      "why": "Displacement is one of the clearest measures of system shock: war, failed states, border pressure, humanitarian collapse, and migration politics all converge here.",
+      "path": "dashboard-human-cost.html",
+      "pathLabel": "Open Human Cost Dashboard",
       "sources": [
         {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"},
-        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"}
+        {"label": "UNHCR Global Trends", "url": "https://www.unhcr.org/global-trends"}
+      ]
+    },
+    {
+      "id": "food-insecurity-hotspots-2026-06-24",
+      "date": "2026-06-24",
+      "label": "Famine Watch",
+      "headline": "FAO/WFP warn acute hunger may worsen across 13 hotspots",
+      "summary": "UN food-agency reporting warned that around 266 million people face high levels of acute food insecurity, with 13 hotspots at risk of worsening from June to November 2026. Conflict, economic shocks, weather, and funding shortages remain the central drivers.",
+      "why": "Food stress is a collapse indicator. It links war, debt, sanctions, migration, disease, state failure, and humanitarian access into one measurable pressure system.",
+      "path": "dashboard-human-cost.html",
+      "pathLabel": "Open Human Cost Dashboard",
+      "sources": [
+        {"label": "WFP", "url": "https://www.wfp.org/"},
+        {"label": "IPC", "url": "https://www.ipcinfo.org/"}
       ]
     },
     {
@@ -43,6 +58,34 @@
         {"label": "U.S. CBP statistics", "url": "https://www.cbp.gov/newsroom/stats"},
         {"label": "Frontex migratory map", "url": "https://www.frontex.europa.eu/what-we-do/monitoring-and-risk-analysis/migratory-map/"},
         {"label": "Eurostat asylum data", "url": "https://ec.europa.eu/eurostat/web/migration-asylum/asylum"}
+      ]
+    },
+    {
+      "id": "migration-deaths-central-med-2026-06-24",
+      "date": "2026-06-24",
+      "label": "Migration Watch",
+      "headline": "Central Mediterranean death and missing-migrant lane added",
+      "summary": "The migration panel now tracks deaths and disappearances separately from arrivals, encounters, asylum applications, and removals. Route-level mortality is undercounted and must be sourced from IOM Missing Migrants and reputable incident reporting.",
+      "why": "Border politics usually counts arrivals. Human cost also requires counting deaths, disappearances, exploitation, detention conditions, and smuggling-route risk.",
+      "path": "dashboard-migration.html",
+      "pathLabel": "Open Migration Dashboard",
+      "sources": [
+        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"},
+        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"}
+      ]
+    },
+    {
+      "id": "human-cost-panels-expanded-2026-06-24",
+      "date": "2026-06-24",
+      "label": "Human Cost",
+      "headline": "Human Cost Evidence Panels expanded",
+      "summary": "The Intel Desk now separates raw reports, official counts, compensated claims, estimates, and contested figures. Conflict-zone deaths, migration and irregular border flows, vaccine injury compensation, trafficking and exploitation, famine and displacement, and medical-system failure are handled as evidence categories, not viral counters.",
+      "why": "Human suffering becomes easier to ignore when numbers are hidden, politicised, or exaggerated. The desk shows dated figures with source boundaries.",
+      "path": "news.html#human-cost",
+      "pathLabel": "Open Human Cost",
+      "sources": [
+        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"},
+        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"}
       ]
     }
   ]

@@ -42,9 +42,27 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
 function replaceNav(html) { return html.replace(/<nav class="nav">[\s\S]*?<\/nav>/g, canonicalNav); }
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
+function cleanupNewsDuplicates(html) {
+  return html
+    .replace(/<article class="card(?: redline)?">\s*<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>[\s\S]*?<\/article>/g, '')
+    .replace(/<span class="figure-caption">Worldwide \/ latest sourced figure<\/span>/g, '<span class="figure-caption">Dated sourced figure</span>');
+}
+function cleanupTimerRiskTerminal(html) {
+  return html
+    .replace(/SIGNALS INCREASING RISK/g, 'Risk Signal Lane')
+    .replace(/<div class="terminal">\s*Risk Signal Lane[\s\S]*?Verified correction\s*<\/div>/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>')
+    .replace(/(?:<div class="terminal">\s*RISK SIGNAL LANE[\s\S]*?not a live counter\s*<\/div>\s*){2,}/g, '<div class="terminal">RISK SIGNAL LANE\n&gt; Dated signals only\n&gt; No repeated risk terminal\n&gt; Static page, not a live counter</div>');
+}
+function cleanupVideoRoutes(html) { return html.replace(/Rumble Channel Routes/g, 'Broadcast Route Directory'); }
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
-for (const file of htmlFiles) write(file, cleanEmptyPills(replaceNav(read(file))));
+for (const file of htmlFiles) {
+  let html = cleanEmptyPills(replaceNav(read(file)));
+  if (file === 'news.html') html = cleanupNewsDuplicates(html);
+  if (file === 'timers.html') html = cleanupTimerRiskTerminal(html);
+  if (file === 'videos.html') html = cleanupVideoRoutes(html);
+  write(file, html);
+}
 
 const searchFile = path.join(root, 'search.html');
 const indexFile = path.join(root, 'search-index.json');

@@ -68,7 +68,8 @@ const build = pkg.scripts && pkg.scripts.build || '';
 if (!build.includes('build-phase17-campaign-calendar.js')) fail('package.json build missing build-phase17-campaign-calendar.js');
 if (!build.includes('phase17-pressure-test.js')) fail('package.json build missing phase17-pressure-test.js');
 const netlify = exists('netlify.toml') ? read('netlify.toml') : '';
-if (!netlify.includes('npm run build')) fail('netlify.toml should run npm run build');
+if (!netlify.includes('npm run build') && !netlify.includes('build-phase17-campaign-calendar.js')) fail('netlify.toml missing Phase 17 build command');
+if (!netlify.includes('npm run build') && !netlify.includes('phase17-pressure-test.js')) fail('netlify.toml missing Phase 17 pressure test command');
 for (const route of ['from = "/launch-room"', 'from = "/campaigns"', 'from = "/campaign-calendar"', 'from = "/launch-calendar"']) {
   if (!netlify.includes(route)) fail(`netlify.toml missing ${route} redirect`);
 }

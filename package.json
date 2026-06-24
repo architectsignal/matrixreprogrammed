@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/build-phase6-network-maps.js && node scripts/build-phase7-conversion-funnel.js && node scripts/build-phase8-trust-center.js && node scripts/build-phase9-content-distribution.js && node scripts/build-phase10-sales-ladder.js && node scripts/build-phase11-update-monitor.js && node scripts/build-phase12-authority-clusters.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js && node scripts/phase6-pressure-test.js && node scripts/phase7-pressure-test.js && node scripts/phase8-pressure-test.js && node scripts/phase9-pressure-test.js && node scripts/phase10-pressure-test.js && node scripts/phase11-pressure-test.js && node scripts/phase12-pressure-test.js",
+    "build": "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/build-phase6-network-maps.js && node scripts/build-phase7-conversion-funnel.js && node scripts/build-phase8-trust-center.js && node scripts/build-phase9-content-distribution.js && node scripts/build-phase10-sales-ladder.js && node scripts/build-phase11-update-monitor.js && node scripts/build-phase12-authority-clusters.js && node scripts/build-phase13-schema-engine.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js && node scripts/phase6-pressure-test.js && node scripts/phase7-pressure-test.js && node scripts/phase8-pressure-test.js && node scripts/phase9-pressure-test.js && node scripts/phase10-pressure-test.js && node scripts/phase11-pressure-test.js && node scripts/phase12-pressure-test.js && node scripts/phase13-pressure-test.js",
     "books": "node scripts/build-book-system.js",
     "home": "node scripts/build-homepage.js",
     "seo": "node scripts/build-seo-system.js",
@@ -20,6 +20,7 @@
     "phase10": "node scripts/build-phase10-sales-ladder.js",
     "phase11": "node scripts/build-phase11-update-monitor.js",
     "phase12": "node scripts/build-phase12-authority-clusters.js",
+    "phase13": "node scripts/build-phase13-schema-engine.js",
     "cleanup": "node scripts/cleanup-duplicates.js",
     "watch": "node scripts/build-watch-center.js",
     "harden": "node scripts/harden-public-html.js",
@@ -33,7 +34,8 @@
     "pressure-test:phase9": "node scripts/phase9-pressure-test.js",
     "pressure-test:phase10": "node scripts/phase10-pressure-test.js",
     "pressure-test:phase11": "node scripts/phase11-pressure-test.js",
-    "pressure-test:phase12": "node scripts/phase12-pressure-test.js"
+    "pressure-test:phase12": "node scripts/phase12-pressure-test.js",
+    "pressure-test:phase13": "node scripts/phase13-pressure-test.js"
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0"

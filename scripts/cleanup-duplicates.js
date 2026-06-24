@@ -14,7 +14,8 @@ const phaseChecks = [
   { files: ['distribution-center.html'], script: 'build-phase9-content-distribution.js', label: 'Phase 9' },
   { files: ['sales-ladder.html'], script: 'build-phase10-sales-ladder.js', label: 'Phase 10' },
   { files: ['update-monitor.html'], script: 'build-phase11-update-monitor.js', label: 'Phase 11' },
-  { files: ['authority-hub.html'], script: 'build-phase12-authority-clusters.js', label: 'Phase 12' }
+  { files: ['authority-hub.html'], script: 'build-phase12-authority-clusters.js', label: 'Phase 12' },
+  { files: ['schema-index.html', 'site-graph.json', 'claim-taxonomy.json', 'crawler-map.json'], script: 'build-phase13-schema-engine.js', label: 'Phase 13' }
 ];
 
 function runBuilderWhenMissing(check) {
@@ -29,12 +30,12 @@ for (const check of phaseChecks) runBuilderWhenMissing(check);
 
 const navLinks = [
   ['index.html', 'Home'], ['start-here.html', 'Start Here'], ['books.html', 'Books'],
-  ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'],
-  ['conversion-funnel.html', 'Funnels'], ['trust-center.html', 'Trust Center'], ['distribution-center.html', 'Distribution'],
-  ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'], ['power-atlas.html', 'Power Atlas'],
-  ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['evidence-vault.html', 'Evidence Vault'],
-  ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'], ['forum.html', 'Signal Board'],
-  ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
+  ['schema-index.html', 'Schema Index'], ['authority-hub.html', 'Authority Hub'], ['sales-ladder.html', 'Reader Paths'],
+  ['book-universe.html', 'Book Universe'], ['conversion-funnel.html', 'Funnels'], ['trust-center.html', 'Trust Center'],
+  ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor'], ['answer-engine.html', 'AI Answers'],
+  ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'],
+  ['evidence-vault.html', 'Evidence Vault'], ['evidence-vault-index.html', 'Source Index'], ['news.html', 'Intel Desk'],
+  ['forum.html', 'Signal Board'], ['search.html', 'Search'], ['timers.html', 'Timers'], ['videos.html', 'Videos'], ['black-file.html', 'Black File']
 ];
 const canonicalNav = `<nav class="nav">${navLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}</nav>`;
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }

@@ -81,6 +81,22 @@ jobs:
           grep -q "phase-four-book-universe" book-as-above-so-below.html
           grep -q "forum.html" index.html
 
+      - name: Verify Phase 5 AI Answer Engine output
+        run: |
+          test -f data/ai-answer-engine.json
+          test -f answer-engine.html
+          grep -q "ANSWER ENGINE" answer-engine.html
+          grep -q "AI ANSWER ENGINE STATUS" answer-engine.html
+          test -f answer-deep-state.html
+          test -f answer-mkultra.html
+          test -f answer-evidence-boundary.html
+          grep -q "What Is Confirmed" answer-deep-state.html
+          grep -q "What Is Disputed" answer-deep-state.html
+          grep -q "Evidence Boundary" answer-evidence-boundary.html
+          grep -q "FAQPage" answer-mkultra.html
+          grep -q "answer-engine.html" search-index.json
+          grep -q "answer-engine.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

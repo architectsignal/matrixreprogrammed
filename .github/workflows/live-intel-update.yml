@@ -2,7 +2,7 @@ name: Live Intel Update
 
 on:
   schedule:
-    # Weekly automatic scan: Sunday 05:17 UTC. Commits only when live intel or figure-freshness data meaningfully changes.
+    # Weekly automatic scan: Sunday 05:17 UTC. Commits only when live intel, figure-freshness, or quality data meaningfully changes.
     - cron: '17 5 * * 0'
   workflow_dispatch:
 
@@ -30,6 +30,9 @@ jobs:
       - name: Scan public pages for figure freshness
         run: node scripts/update-site-freshness-report.js
 
+      - name: Scan public pages for usefulness and author-facing copy
+        run: node scripts/site-quality-report.js
+
       - name: Validate live intelligence machine
         run: node scripts/live-intel-pressure-test.js
 
@@ -37,10 +40,10 @@ jobs:
         run: |
           git config user.name "matrix-intel-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/live-intel.json data/site-freshness-report.json downloads/site-freshness-report.md site-freshness-report.html
+          git add data/live-intel.json data/site-freshness-report.json data/site-quality-report.json downloads/site-freshness-report.md downloads/site-quality-report.md site-freshness-report.html site-quality-report.html
           if git diff --cached --quiet; then
-            echo "No weekly intelligence or freshness changes to commit."
+            echo "No weekly intelligence, freshness, or quality changes to commit."
           else
-            git commit -m "Update weekly live intelligence and freshness report"
+            git commit -m "Update weekly live intelligence and site quality reports"
             git push
           fi

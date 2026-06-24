@@ -1,0 +1,116 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 6 Network Map Engine for Matrix Reprogrammed. This data defines relationship maps that connect Power Atlas nodes, Evidence Vault lanes, books, and AI answers without turning association into accusation.",
+  "lineRules": [
+    "Every line must say what it means.",
+    "A documented association is not proof of guilt.",
+    "A source lane is not a verdict.",
+    "Symbolic similarity remains commentary unless stronger evidence supports it.",
+    "Court records, declassified files, financial records, and datasets carry different evidential weight.",
+    "Map pages must route back to the Power Atlas and Evidence Vault."
+  ],
+  "maps": [
+    {
+      "slug": "intelligence-network",
+      "title": "Intelligence Network Map",
+      "subtitle": "Agencies, liaison systems, oversight, declassified records, and surveillance infrastructure.",
+      "summary": "A structured map lane connecting CIA, NSA, Five Eyes, declassified archives, intelligence oversight, and the Intelligence Dossiers.",
+      "primaryLayer": "Intelligence / Covert Power",
+      "riskBoundary": "Do not treat institutional liaison, shared mission, or declassified record presence as proof of illegal conduct. Strong claims need source-specific evidence.",
+      "atlasNodes": ["cia", "nsa", "five-eyes", "black-file"],
+      "evidenceLanes": ["declassified-archives", "intelligence-oversight", "court-records"],
+      "books": ["cia", "nsa", "gchq", "mi6", "elite-toolkit"],
+      "answers": ["deep-state", "mkultra", "operation-gladio", "project-paperclip"],
+      "relationships": [
+        { "from": "CIA", "to": "Declassified Archives", "type": "Declassified record", "evidenceClass": "Confirmed Record", "meaning": "Released records can support historical claims when read with context and date boundaries." },
+        { "from": "NSA", "to": "Five Eyes", "type": "Institutional alliance", "evidenceClass": "Confirmed Record", "meaning": "Signals-intelligence relationships are public-record alliance structures, not automatic proof of abuse." },
+        { "from": "Intelligence Oversight", "to": "CIA / NSA", "type": "Oversight record", "evidenceClass": "Confirmed Record", "meaning": "Oversight records define what was reviewed, contested, admitted, or limited by classification." }
+      ]
+    },
+    {
+      "slug": "crime-state-overlap",
+      "title": "Crime-State Overlap Map",
+      "subtitle": "Cartels, mafia systems, sanctions, ports, finance, corruption, and court records.",
+      "summary": "A map lane for organized crime as logistics, money, ports, underground banking, state penetration, violence, and public legal records.",
+      "primaryLayer": "Crime-State Overlap",
+      "riskBoundary": "Avoid operational detail that enables crime. Use court records, sanctions, regulator material, and credible reporting while separating allegation from adjudicated fact.",
+      "atlasNodes": ["cartels", "black-file"],
+      "evidenceLanes": ["court-records", "financial-records", "human-cost-sources"],
+      "books": ["cartels", "albanian-mafia", "ndrangheta", "triad", "power-overlap"],
+      "answers": ["documented-association", "evidence-boundary"],
+      "relationships": [
+        { "from": "Cartels", "to": "Financial Records", "type": "Sanctions record", "evidenceClass": "Confirmed Record", "meaning": "Sanctions and regulator records identify named targets and legal designations within their stated scope." },
+        { "from": "Crime Networks", "to": "Court Records", "type": "Court record", "evidenceClass": "Court Record", "meaning": "Legal filings and judgments must be separated into allegations, evidence, pleas, and findings." },
+        { "from": "Ports / Logistics", "to": "Human Cost", "type": "Human cost", "evidenceClass": "Credible Reporting", "meaning": "Violence, exploitation, addiction, migration, and corruption are consequence lanes, not decorative statistics." }
+      ]
+    },
+    {
+      "slug": "war-machine",
+      "title": "War Machine Map",
+      "subtitle": "Governments, contractors, weapons firms, intelligence claims, procurement, sanctions, and human cost.",
+      "summary": "A map lane for the self-reinforcing system of war budgets, contractors, procurement, narratives, intelligence claims, and civilian consequences.",
+      "primaryLayer": "War / Contractors / Intelligence",
+      "riskBoundary": "Contracts, lobbying, or influence are not proof of illegality. Separate procurement, policy advocacy, credible reporting, court records, and speculation.",
+      "atlasNodes": ["war-machine", "blackwater", "cia"],
+      "evidenceLanes": ["financial-records", "court-records", "human-cost-sources"],
+      "books": ["blackwater", "wwiii", "cia", "elite-toolkit"],
+      "answers": ["military-industrial-complex", "false-flag", "deep-state"],
+      "relationships": [
+        { "from": "War Machine", "to": "Financial Records", "type": "Contracted with", "evidenceClass": "Confirmed Record", "meaning": "Contracts and procurement show money flows within official records." },
+        { "from": "Blackwater", "to": "Court Records", "type": "Court record", "evidenceClass": "Court Record", "meaning": "Contractor controversies must be grounded in legal records, official reports, and credible reporting." },
+        { "from": "War", "to": "Human Cost Sources", "type": "Human cost", "evidenceClass": "Confirmed Record", "meaning": "Deaths, displacement, migration, and food stress must be sourced and dated." }
+      ]
+    },
+    {
+      "slug": "elite-access",
+      "title": "Elite Access Map",
+      "subtitle": "Conferences, finance, policy networks, documented association, and public/private influence.",
+      "summary": "A map lane for elite access systems such as meetings, conferences, asset managers, policy networks, and documented associations.",
+      "primaryLayer": "Elite Networks / Access Power",
+      "riskBoundary": "Attendance, contact, or association is not proof of command, control, guilt, or criminal intent. The line must stay labeled.",
+      "atlasNodes": ["black-file", "epstein-records", "war-machine", "medical-power"],
+      "evidenceLanes": ["financial-records", "court-records", "intelligence-oversight"],
+      "books": ["elite-toolkit", "power-overlap", "black-file"],
+      "answers": ["bilderberg-group", "world-economic-forum", "blackrock", "documented-association"],
+      "relationships": [
+        { "from": "Elite Event", "to": "Attendee", "type": "Documented association", "evidenceClass": "Documented Association", "meaning": "A verified attendance or contact line shows proximity, not wrongdoing." },
+        { "from": "Asset Manager", "to": "Portfolio Company", "type": "Financial record", "evidenceClass": "Confirmed Record", "meaning": "Ownership exposure must be separated from operational control." },
+        { "from": "Policy Network", "to": "Government", "type": "Credible reporting", "evidenceClass": "Credible Reporting", "meaning": "Soft power and agenda-setting need careful source boundaries." }
+      ]
+    },
+    {
+      "slug": "symbolic-power",
+      "title": "Symbolic Power Map",
+      "subtitle": "Freemasonry, ritual architecture, logos, patches, degrees, and interpretive boundaries.",
+      "summary": "A map lane for symbolic systems and esoteric commentary, connected to D.O.G, SYMBOL, Masonic books, and the evidence boundary that keeps symbolism from becoming unsupported accusation.",
+      "primaryLayer": "Secret Societies / Symbolic Power",
+      "riskBoundary": "A symbol is not proof of conspiracy. Public records and symbolic interpretation must remain visibly separated.",
+      "atlasNodes": ["freemasonry-symbols", "black-file"],
+      "evidenceLanes": ["symbolic-records", "court-records"],
+      "books": ["symbol", "as-above-so-below", "masonic-architecture-33", "degree-33"],
+      "answers": ["evidence-boundary", "documented-association"],
+      "relationships": [
+        { "from": "Symbol", "to": "Institution", "type": "Symbolic similarity only", "evidenceClass": "Symbolic Commentary", "meaning": "Similarity can support interpretation, not proof of coordination." },
+        { "from": "Public Member", "to": "Fraternal Body", "type": "Documented association", "evidenceClass": "Documented Association", "meaning": "Public membership claims require source checks and do not imply secret control." },
+        { "from": "Degree System", "to": "Book Route", "type": "Reader route", "evidenceClass": "Symbolic Commentary", "meaning": "Books route readers through interpretation and historical context." }
+      ]
+    },
+    {
+      "slug": "medical-policy-power",
+      "title": "Medical Policy Power Map",
+      "subtitle": "Public health, compensation systems, adverse-event boundaries, pharma damages, and policy power.",
+      "summary": "A map lane for medical institutions, compensation records, adverse-event reporting, pharmaceutical power, causation boundaries, and human cost.",
+      "primaryLayer": "Medicine / Policy / Human Cost",
+      "riskBoundary": "Adverse-event reports, compensation, settlements, proven causation, and official statistics are different categories and must not be merged.",
+      "atlasNodes": ["medical-power", "black-file"],
+      "evidenceLanes": ["human-cost-sources", "financial-records", "court-records"],
+      "books": ["medicine", "elite-toolkit", "power-overlap"],
+      "answers": ["evidence-boundary", "cbdc-surveillance"],
+      "relationships": [
+        { "from": "Adverse Event Report", "to": "Causation Claim", "type": "Causation warning", "evidenceClass": "Confirmed Record", "meaning": "A report is a signal, not proof of causation by itself." },
+        { "from": "Compensation Program", "to": "Financial Records", "type": "Compensation record", "evidenceClass": "Confirmed Record", "meaning": "Compensated claims must be separated from pending claims and reported events." },
+        { "from": "Medical Policy", "to": "Human Cost", "type": "Human cost", "evidenceClass": "Confirmed Record", "meaning": "Public-health claims require dated datasets and clear categories." }
+      ]
+    }
+  ]
+}

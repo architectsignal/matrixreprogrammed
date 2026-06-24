@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/cleanup-duplicates.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/cleanup-duplicates.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js"
 
 [functions]
   directory = "netlify/functions"
@@ -47,6 +47,26 @@
   from = "/books"
   to = "/books.html"
   status = 200
+
+[[redirects]]
+  from = "/power-atlas"
+  to = "/power-atlas.html"
+  status = 301
+
+[[redirects]]
+  from = "/evidence-vault"
+  to = "/evidence-vault.html"
+  status = 301
+
+[[redirects]]
+  from = "/evidence-policy"
+  to = "/evidence-policy.html"
+  status = 301
+
+[[redirects]]
+  from = "/network-maps"
+  to = "/network-maps.html"
+  status = 301
 
 [[redirects]]
   from = "/amazon-store"

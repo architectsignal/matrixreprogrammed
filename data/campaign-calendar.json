@@ -1,0 +1,146 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 17 Campaign Calendar / Launch Room Engine for Matrix Reprogrammed. This defines public campaign plans that connect books, share kits, feeds, downloads, trust pages, evidence pages, and reader paths into weekly launch pushes.",
+  "rules": [
+    "Campaigns must route back to trust and evidence pages.",
+    "Campaign copy should use share kits instead of unsupported claims.",
+    "Every campaign needs a primary route, share route, download route, feed route, trust route, evidence route, and reader path.",
+    "Campaign calendars are public planning assets, not promises of live posting or background automation.",
+    "Campaign plans should be reusable as weekly launch rooms.",
+    "No campaign file may contain private or non-public user data."
+  ],
+  "campaigns": [
+    {
+      "slug": "black-file-launch",
+      "title": "Black File Launch Campaign",
+      "label": "Week 1 launch room",
+      "summary": "A starter campaign that routes readers through the Black File, trust rules, evidence vault, share kit, feed, download pack, and reader paths.",
+      "primaryRoute": "black-file.html",
+      "shareRoute": "share-kit-black-file-starter.html",
+      "downloadRoute": "dossier-pack-black-file-starter.html",
+      "feedRoute": "feed-main-signal.html",
+      "trustRoute": "trust-center.html",
+      "evidenceRoute": "evidence-vault.html",
+      "readerPath": "sales-ladder.html",
+      "dailyPushes": [
+        "Day 1: introduce the Black File and the evidence-boundary rule.",
+        "Day 2: share the Starter Pack and route readers to trust-center.html.",
+        "Day 3: post a short hook from the Black File Starter Share Kit.",
+        "Day 4: route readers to the Evidence Vault and Schema Index.",
+        "Day 5: push the reader path and book universe.",
+        "Day 6: recap the strongest archive doors.",
+        "Day 7: invite readers to follow the Feed Center and Signal Board."
+      ]
+    },
+    {
+      "slug": "intelligence-dossiers-push",
+      "title": "Intelligence Dossiers Campaign",
+      "label": "Agency archive push",
+      "summary": "A campaign for CIA, NSA, declassified archives, surveillance, MKUltra, intelligence maps, and agency dossier reader paths.",
+      "primaryRoute": "map-intelligence-network.html",
+      "shareRoute": "share-kit-intelligence-network.html",
+      "downloadRoute": "dossier-pack-intelligence-network.html",
+      "feedRoute": "feed-intelligence-crime.html",
+      "trustRoute": "trust-source-methodology.html",
+      "evidenceRoute": "evidence-lane-declassified-archives.html",
+      "readerPath": "path-intelligence-dossiers.html",
+      "dailyPushes": [
+        "Day 1: open with declassified archives and source-methodology boundaries.",
+        "Day 2: route readers to the intelligence network map.",
+        "Day 3: share the MKUltra / deep-state answer pages with caution labels.",
+        "Day 4: push CIA and NSA book pages.",
+        "Day 5: release the intelligence dossier pack.",
+        "Day 6: post a short video caption from the share kit.",
+        "Day 7: recap the agency archive and reader path."
+      ]
+    },
+    {
+      "slug": "crime-state-overlap-push",
+      "title": "Crime-State Overlap Campaign",
+      "label": "Crime network push",
+      "summary": "A campaign for cartels, mafia logistics, sanctions, court records, laundering, corruption, and crime-state maps.",
+      "primaryRoute": "map-crime-state-overlap.html",
+      "shareRoute": "share-kit-crime-state-overlap.html",
+      "downloadRoute": "dossier-pack-crime-state-overlap.html",
+      "feedRoute": "feed-intelligence-crime.html",
+      "trustRoute": "trust-association-boundary.html",
+      "evidenceRoute": "evidence-lane-court-records.html",
+      "readerPath": "path-crime-state-overlap.html",
+      "dailyPushes": [
+        "Day 1: introduce logistics and finance as the hidden architecture of crime.",
+        "Day 2: explain court records versus sanctions.",
+        "Day 3: route readers to the crime-state map.",
+        "Day 4: push cartel, Albanian mafia, and Ndrangheta book doors.",
+        "Day 5: release the crime-state overlap pack.",
+        "Day 6: post a thread from the crime-state share kit.",
+        "Day 7: recap evidence lanes and reader path."
+      ]
+    },
+    {
+      "slug": "war-machine-push",
+      "title": "War Machine Campaign",
+      "label": "War and contractor push",
+      "summary": "A campaign for war contractors, procurement, human-cost source lanes, conflict routes, and public-record war machine mapping.",
+      "primaryRoute": "map-war-machine.html",
+      "shareRoute": "share-kit-war-machine.html",
+      "downloadRoute": "dossier-pack-war-machine.html",
+      "feedRoute": "feed-main-signal.html",
+      "trustRoute": "trust-association-boundary.html",
+      "evidenceRoute": "evidence-lane-human-cost-sources.html",
+      "readerPath": "path-war-contractors.html",
+      "dailyPushes": [
+        "Day 1: open with the machine: budgets, contracts, agencies, bodies.",
+        "Day 2: route readers to human-cost sources.",
+        "Day 3: push Blackwater and WWIII book pages.",
+        "Day 4: share the War Machine Pack.",
+        "Day 5: post a video caption from the share kit.",
+        "Day 6: route to the feed center and update monitor.",
+        "Day 7: recap the contractor reader path."
+      ]
+    },
+    {
+      "slug": "symbolic-power-push",
+      "title": "Symbolic Power Campaign",
+      "label": "D.O.G / esoteric push",
+      "summary": "A campaign for symbols, D.O.G, Masonic architecture, esoteric commentary, and evidence-bound interpretation.",
+      "primaryRoute": "authority-symbolic-power.html",
+      "shareRoute": "share-kit-symbolic-power.html",
+      "downloadRoute": "dossier-pack-symbolic-power.html",
+      "feedRoute": "feed-main-signal.html",
+      "trustRoute": "trust-claim-labels.html",
+      "evidenceRoute": "answer-evidence-boundary.html",
+      "readerPath": "path-dog-architect.html",
+      "dailyPushes": [
+        "Day 1: explain that symbols are language, not automatic proof.",
+        "Day 2: route readers to D.O.G and symbolic power authority pages.",
+        "Day 3: push the Symbolic Power Pack.",
+        "Day 4: share Masonic architecture and symbol book doors.",
+        "Day 5: post a short hook from the share kit.",
+        "Day 6: route readers to trust claim labels.",
+        "Day 7: recap the D.O.G reader path."
+      ]
+    },
+    {
+      "slug": "trust-evidence-push",
+      "title": "Trust And Evidence Campaign",
+      "label": "Credibility push",
+      "summary": "A campaign for source hierarchy, claim labels, corrections, association boundaries, evidence vault, schema index, and trust-center routes.",
+      "primaryRoute": "trust-center.html",
+      "shareRoute": "share-kit-trust-evidence.html",
+      "downloadRoute": "dossier-pack-trust-evidence.html",
+      "feedRoute": "feed-evidence-trust.html",
+      "trustRoute": "trust-source-methodology.html",
+      "evidenceRoute": "evidence-vault-index.html",
+      "readerPath": "path-evidence-trust.html",
+      "dailyPushes": [
+        "Day 1: explain why trust matters in dark research.",
+        "Day 2: publish the source hierarchy route.",
+        "Day 3: push claim labels and corrections policy.",
+        "Day 4: route readers to the Evidence Vault index.",
+        "Day 5: share the Trust And Evidence Pack.",
+        "Day 6: post the evidence-boundary video caption.",
+        "Day 7: recap schema, feeds, and reader path."
+      ]
+    }
+  ]
+}

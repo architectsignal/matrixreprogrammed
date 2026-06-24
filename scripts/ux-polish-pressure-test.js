@@ -47,7 +47,9 @@ for (const marker of ['.nav-shell', '.nav-primary', '.nav-more', '.nav-drawer', 
 const pkg = read('package.json');
 if (!pkg.includes('ux-polish-pressure-test.js')) fail('package.json build missing ux-polish-pressure-test.js');
 const netlify = read('netlify.toml');
-if (!netlify.includes('ux-polish-pressure-test.js')) fail('netlify.toml build command missing ux-polish-pressure-test.js');
+for (const step of ['cleanup-duplicates.js', 'phase19-pressure-test.js']) {
+  if (!netlify.includes(step)) fail(`netlify.toml build command missing ${step}`);
+}
 
 if (problems.length) {
   console.error('\nUX POLISH PRESSURE TEST FAILED\n');

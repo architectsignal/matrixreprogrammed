@@ -39,11 +39,17 @@ let atlasNodes = [];
 if (exists('data/power-atlas.json')) {
   const atlas = json('data/power-atlas.json');
   atlasNodes = atlas.nodes || [];
+  const evidenceSet = new Set(atlas.evidenceClasses || []);
+  const relationshipSet = new Set(atlas.relationshipTypes || []);
   if (atlasNodes.length < 10) problems.push(`data/power-atlas.json expected at least 10 atlas nodes, found ${atlasNodes.length}`);
   if (!Array.isArray(atlas.evidenceClasses) || atlas.evidenceClasses.length < 8) problems.push('data/power-atlas.json expected at least 8 evidence classes');
   if (!Array.isArray(atlas.relationshipTypes) || atlas.relationshipTypes.length < 10) problems.push('data/power-atlas.json expected at least 10 relationship types');
   for (const node of atlasNodes) {
     const file = `atlas-${node.slug}.html`;
+    if (!evidenceSet.has(node.evidenceClass)) problems.push(`atlas node ${node.slug} uses invalid evidenceClass: ${node.evidenceClass}`);
+    for (const type of node.relationshipTypes || []) {
+      if (!relationshipSet.has(type)) problems.push(`atlas node ${node.slug} uses undeclared relationship type: ${type}`);
+    }
     requireFile(file);
     requireIncludes(file, node.title, `atlas node title ${node.title}`);
     requireIncludes(file, 'Source Boundary', `source boundary on ${file}`);

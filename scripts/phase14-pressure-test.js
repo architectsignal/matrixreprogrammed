@@ -45,15 +45,15 @@ for (const pack of packs) {
   requireIncludes(htmlFile, pack.title, `pack title ${pack.title}`);
   requireIncludes(htmlFile, 'DOSSIER PACK', 'Dossier pack terminal');
   requireIncludes(htmlFile, 'Pack Boundary', 'Pack Boundary section');
-  requireIncludes(htmlFile, 'Core Routes', 'Core Routes section');
-  requireIncludes(htmlFile, 'Archive Routes', 'Archive Routes section');
+  requireIncludes(htmlFile, 'Core Pathways', 'Core Pathways section');
+  requireIncludes(htmlFile, 'Source Pathways', 'Source Pathways section');
   requireIncludes(htmlFile, 'Downloads', 'Downloads section');
   requireIncludes(htmlFile, jsonFile, 'JSON download link');
   requireIncludes(htmlFile, mdFile, 'Markdown download link');
-  if (!Array.isArray(pack.routes) || pack.routes.length < 6) fail(`${pack.slug}: expected at least 6 archive routes`);
+  if (!Array.isArray(pack.routes) || pack.routes.length < 6) fail(`${pack.slug}: expected at least 6 source pathways`);
   if (!Array.isArray(pack.takeaways) || pack.takeaways.length < 4) fail(`${pack.slug}: expected at least 4 takeaways`);
   const packData = json(jsonFile);
-  if (!packData.boundary || !packData.trustRoute || !packData.evidenceRoute) fail(`${jsonFile}: missing boundary/trust/evidence route`);
+  if (!packData.boundary || !packData.trustRoute || !packData.evidenceRoute) fail(`${jsonFile}: missing boundary/trust/evidence pathway`);
   requireIncludes(mdFile, '## Boundary', `${mdFile} boundary section`);
   if (!search.some(item => item.url === htmlFile)) fail(`search-index.json missing ${htmlFile}`);
   requireIncludes('sitemap.xml', `/${htmlFile}`, `${htmlFile} sitemap entry`);
@@ -91,4 +91,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 14 DOSSIER PACK PRESSURE TEST PASSED');
-console.log(`Checked ${packs.length} packs, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${packs.length} packs, source pathway sections, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);

@@ -167,6 +167,25 @@ jobs:
           grep -q "distribution-center.html" search-index.json
           grep -q "distribution-center.html" llms.txt
 
+      - name: Verify Phase 10 Sales Ladder output
+        run: |
+          test -f data/sales-ladder.json
+          test -f sales-ladder.html
+          grep -q "READER PATHS" sales-ladder.html
+          grep -q "SALES LADDER STATUS" sales-ladder.html
+          test -f path-dog-architect.html
+          test -f path-intelligence-dossiers.html
+          test -f path-crime-state-overlap.html
+          test -f path-war-contractors.html
+          grep -q "READER PATH STATUS" path-intelligence-dossiers.html
+          grep -q "Reading Ladder" path-crime-state-overlap.html
+          grep -q "Book Route" path-dog-architect.html
+          grep -q "phase-ten-sales-ladder-engine" books.html
+          grep -q "phase-ten-sales-ladder-engine" start-here.html
+          grep -q "phase-ten-sales-ladder-engine" conversion-funnel.html
+          grep -q "sales-ladder.html" search-index.json
+          grep -q "sales-ladder.html" llms.txt
+
       - name: Verify Intel Desk generated output
         run: |
           grep -q "Latest 7 Days" news.html

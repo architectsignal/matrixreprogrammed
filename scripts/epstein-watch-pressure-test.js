@@ -1,5 +1,6 @@
 require('./ux-polish-pressure-test.js');
 require('./scaffold-copy-pressure-test.js');
+require('./live-intel-pressure-test.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -40,4 +41,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked UX mission navigation, scaffold-copy scan, evidence-watch data, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel machine, evidence-watch data, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');

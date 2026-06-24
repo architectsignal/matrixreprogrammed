@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js"
+  command = "node scripts/build-book-system.js && node scripts/build-homepage.js && node scripts/build-seo-system.js && node scripts/build-intel-desk.js && node scripts/build-phase1-structure.js && node scripts/build-phase2-power-atlas.js && node scripts/build-phase3-evidence-vault.js && node scripts/build-phase4-book-universe.js && node scripts/build-phase5-ai-answer-engine.js && node scripts/build-phase6-network-maps.js && node scripts/cleanup-duplicates.js && node scripts/harden-public-html.js && node scripts/inject-analytics.js && node scripts/build-black-file-pdf.js && node scripts/audit-site.js && node scripts/pressure-test-site.js && node scripts/phase4-pressure-test.js && node scripts/phase5-pressure-test.js && node scripts/phase6-pressure-test.js"
 
 [functions]
   directory = "netlify/functions"
@@ -79,6 +79,21 @@
   status = 301
 
 [[redirects]]
+  from = "/network-maps"
+  to = "/network-maps.html"
+  status = 301
+
+[[redirects]]
+  from = "/network-map-index"
+  to = "/network-map-index.html"
+  status = 301
+
+[[redirects]]
+  from = "/maps"
+  to = "/network-map-index.html"
+  status = 301
+
+[[redirects]]
   from = "/evidence-vault"
   to = "/evidence-vault.html"
   status = 301
@@ -101,11 +116,6 @@
 [[redirects]]
   from = "/evidence-policy"
   to = "/evidence-policy.html"
-  status = 301
-
-[[redirects]]
-  from = "/network-maps"
-  to = "/network-maps.html"
   status = 301
 
 [[redirects]]

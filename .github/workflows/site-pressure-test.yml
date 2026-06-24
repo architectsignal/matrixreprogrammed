@@ -45,6 +45,7 @@ jobs:
           test -f feed-center.html
           test -f share-center.html
           test -f launch-room.html
+          test -f offer-center.html
           grep -q "THE PUBLIC-RECORD MAP OF HIDDEN POWER" power-atlas.html
           grep -q "SOURCES BEFORE SIGNALS" evidence-vault.html
           grep -q "BOOKS THAT ROUTE INTO THE MACHINE" book-universe.html
@@ -53,6 +54,7 @@ jobs:
           grep -q "FEED CENTER" feed-center.html
           grep -q "SHARE CENTER" share-center.html
           grep -q "LAUNCH ROOM" launch-room.html
+          grep -q "OFFER CENTER" offer-center.html
 
       - name: Verify generated detail pages
         run: |
@@ -74,6 +76,10 @@ jobs:
           test -f campaign-black-file-launch.html
           test -f downloads/campaign-black-file-launch.json
           test -f downloads/campaign-black-file-launch.md
+          test -f offer-starter-library.html
+          test -f offer-full-archive.html
+          test -f downloads/offer-starter-library.json
+          test -f downloads/offer-starter-library.md
 
       - name: Verify Phase 13 Schema Engine output
         run: |
@@ -138,6 +144,26 @@ jobs:
           grep -q "phase-seventeen-campaign-calendar-engine" share-center.html
           grep -q "launch-room.html" search-index.json
           grep -q "launch-room.html" llms.txt
+
+      - name: Verify Phase 18 Offer Stack output
+        run: |
+          test -f data/offer-stack.json
+          test -f offer-center.html
+          grep -q "OFFER CENTER" offer-center.html
+          grep -q "OFFER STACK STATUS" offer-center.html
+          test -f offer-starter-library.html
+          test -f offer-dog-architect-collector.html
+          test -f offer-intelligence-dossiers.html
+          test -f offer-full-archive.html
+          test -f downloads/offer-starter-library.json
+          test -f downloads/offer-starter-library.md
+          grep -q "OFFER ROOM" offer-starter-library.html
+          grep -q "Offer Boundary" offer-full-archive.html
+          grep -q "## Offer Steps" downloads/offer-full-archive.md
+          grep -q "phase-eighteen-offer-stack-engine" index.html
+          grep -q "phase-eighteen-offer-stack-engine" sales-ladder.html
+          grep -q "offer-center.html" search-index.json
+          grep -q "offer-center.html" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |

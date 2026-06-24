@@ -23,6 +23,12 @@ jobs:
       - name: Update live intelligence data
         run: node scripts/update-live-intel.js
 
+      - name: Build live intelligence hub
+        run: node scripts/build-live-intel-machine.js
+
+      - name: Validate live intelligence machine
+        run: node scripts/live-intel-pressure-test.js
+
       - name: Commit updated intelligence data
         run: |
           git config user.name "matrix-intel-bot"

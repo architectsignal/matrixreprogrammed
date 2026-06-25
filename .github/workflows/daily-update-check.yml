@@ -1,0 +1,76 @@
+name: Daily Update Check
+
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: daily-update-check
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  daily-check:
+    name: Daily news, Epstein, timers, and figures check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build daily Live Intel and Epstein lanes
+        run: |
+          node scripts/build-intel-desk.js
+          node scripts/build-live-intel-machine.js
+          node scripts/enhance-epstein-watch.js
+
+      - name: Patch timers and homepage alert gates
+        run: node scripts/patch-homepage-alerts.js
+
+      - name: Refresh figure and freshness reports
+        run: |
+          node scripts/update-site-freshness-report.js
+          node scripts/site-quality-report.js
+
+      - name: Daily pressure tests
+        run: |
+          node scripts/live-intel-pressure-test.js
+          node scripts/epstein-watch-pressure-test.js
+          node scripts/figure-source-rules-pressure-test.js
+          node scripts/migration-flow-test.js
+          node scripts/global-risk-clocks-test.js
+          node scripts/update-cadence-test.js
+
+      - name: Upload daily check artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-update-check-artifact
+          path: |
+            live-intel.html
+            intel-archive.html
+            epstein-files.html
+            timers.html
+            migration-flow.html
+            site-freshness-report.html
+            site-quality-report.html
+            data/update-cadence-policy.json
+            data/global-risk-clocks.json
+            data/migration-flow-panel.json
+            data/epstein-homepage-alerts.json
+            downloads/epstein-source-watch.json
+            downloads/epstein-source-watch.md
+          if-no-files-found: ignore
+          retention-days: 7

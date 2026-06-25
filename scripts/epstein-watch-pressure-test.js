@@ -20,8 +20,11 @@ for(const file of [
   'data/epstein-file-cockpit.json',
   'data/epstein-network-architecture.json',
   'data/epstein-evidence-ladder.json',
+  'data/epstein-timeline-map.json',
+  'data/live-intel-sources.json',
   'scripts/enhance-epstein-watch.js',
   'scripts/build-epstein-evidence-ladder.js',
+  'scripts/build-epstein-timeline-map.js',
   'epstein-files.html',
   'downloads/epstein-source-watch.json',
   'downloads/epstein-evidence-watch.md',
@@ -35,6 +38,8 @@ for(const file of [
   'downloads/epstein-network-architecture.md',
   'downloads/epstein-evidence-ladder.json',
   'downloads/epstein-evidence-ladder.md',
+  'downloads/epstein-timeline-map.json',
+  'downloads/epstein-timeline-map.md',
   'package.json',
   'netlify.toml'
 ]) requireFile(file);
@@ -93,6 +98,28 @@ if(exists('data/epstein-evidence-ladder.json')){
     for(const key of ['claimType','allowedLanguage','forbiddenShortcut']) if(!item[key]) fail(`claim classifier missing ${key}`);
   }
 }
+if(exists('data/epstein-timeline-map.json')){
+  const timeline = JSON.parse(read('data/epstein-timeline-map.json'));
+  if(!Array.isArray(timeline.items) || timeline.items.length < 10) fail('data/epstein-timeline-map.json expected at least 10 timeline items');
+  if(!Array.isArray(timeline.crossReferenceRules) || timeline.crossReferenceRules.length < 5) fail('data/epstein-timeline-map.json expected at least 5 cross-reference rules');
+  if(!String(timeline.boundary || '').includes('not a verdict')) fail('data/epstein-timeline-map.json expected not-a-verdict boundary');
+  if(!timeline.dailyUpdateIntegration || timeline.dailyUpdateIntegration.laneId !== 'epstein-files') fail('data/epstein-timeline-map.json expected daily update integration with epstein-files lane');
+  if(!Array.isArray(timeline.dailyUpdateIntegration.requiredSearchTerms) || !timeline.dailyUpdateIntegration.requiredSearchTerms.includes('Epstein timeline')) fail('data/epstein-timeline-map.json expected Epstein timeline daily search term');
+  for(const item of timeline.items || []){
+    for(const key of ['date','title','evidenceClass','recordSupports','openQuestions','sourceDoor']) if(!item[key]) fail(`timeline item missing ${key}`);
+    if(!Array.isArray(item.people) || item.people.length < 1) fail(`timeline item missing people/entities: ${item.title || 'unknown'}`);
+    if(!/^https?:\/\//.test(item.sourceDoor)) fail(`timeline source door must use absolute URL: ${item.title || 'unknown'}`);
+  }
+}
+if(exists('data/live-intel-sources.json')){
+  const live = JSON.parse(read('data/live-intel-sources.json'));
+  const epsteinLane = (live.lanes || []).find(lane => lane.id === 'epstein-files');
+  if(!epsteinLane) fail('live intel sources missing epstein-files lane');
+  if(epsteinLane && !String(epsteinLane.route || '').includes('#epstein-timeline-map')) fail('live intel Epstein lane must route to timeline map');
+  if(epsteinLane && !(epsteinLane.queries || []).includes('Epstein timeline')) fail('live intel Epstein lane missing Epstein timeline query');
+  if(!String(live.purpose || '').includes('Epstein timeline mapping')) fail('live intel purpose missing timeline mapping');
+  if(!String((live.rules || []).join(' ')).includes('timeline map')) fail('live intel rules missing timeline map integration');
+}
 
 requireIncludes('scripts/enhance-epstein-watch.js','networkMatrixFile','generator loads network matrix file');
 requireIncludes('scripts/enhance-epstein-watch.js','networkJsonOut','generator writes network JSON');
@@ -102,8 +129,14 @@ requireIncludes('scripts/enhance-epstein-watch.js','Speculation Quarantine','gen
 requireIncludes('scripts/build-epstein-evidence-ladder.js','epstein-evidence-ladder','Phase 5 builder renders ladder section');
 requireIncludes('scripts/build-epstein-evidence-ladder.js','Claim Classifier','Phase 5 builder renders claim classifier');
 requireIncludes('scripts/build-epstein-evidence-ladder.js','downloads/epstein-evidence-ladder.json','Phase 5 builder writes JSON download');
+requireIncludes('scripts/build-epstein-timeline-map.js','epstein-timeline-map','Phase 6 builder renders timeline section');
+requireIncludes('scripts/build-epstein-timeline-map.js','Chronological Case Board','Phase 6 builder renders case board');
+requireIncludes('scripts/build-epstein-timeline-map.js','downloads/epstein-timeline-map.json','Phase 6 builder writes JSON download');
+requireIncludes('scripts/build-epstein-timeline-map.js','Daily update lane','Phase 6 builder renders daily update lane');
 requireIncludes('package.json','build-epstein-evidence-ladder.js','npm build includes Phase 5 builder');
+requireIncludes('package.json','build-epstein-timeline-map.js','npm build includes Phase 6 builder');
 requireIncludes('netlify.toml','build-epstein-evidence-ladder.js','Netlify build includes Phase 5 builder');
+requireIncludes('netlify.toml','build-epstein-timeline-map.js','Netlify build includes Phase 6 builder');
 
 requireIncludes('epstein-files.html','epstein-watch-enhanced','enhanced watch section');
 requireIncludes('epstein-files.html','Source Watch / Freedom Intelligence Engine','source-watch heading');
@@ -133,6 +166,12 @@ requireIncludes('epstein-files.html','Evidence Strength Ladder','evidence ladder
 requireIncludes('epstein-files.html','Claim Classifier','claim classifier heading');
 requireIncludes('epstein-files.html','Forbidden shortcut','forbidden shortcut label');
 requireIncludes('epstein-files.html','Settlement / NDA = silence-management lane, not automatic admission','settlement boundary in classifier');
+requireIncludes('epstein-files.html','epstein-timeline-map','timeline map section');
+requireIncludes('epstein-files.html','Timeline + Cross-Reference Map','timeline heading');
+requireIncludes('epstein-files.html','Chronological Case Board','case board heading');
+requireIncludes('epstein-files.html','Cross-Reference Rules','cross-reference rules');
+requireIncludes('epstein-files.html','Daily update lane','daily update lane marker');
+requireIncludes('epstein-files.html','Sequence is not a verdict','timeline verdict boundary');
 requireIncludes('epstein-files.html','Evidence Boundary','evidence boundary marker');
 requireIncludes('epstein-files.html','Criminal finding only where court/plea/conviction supports it','criminal finding boundary');
 
@@ -150,6 +189,10 @@ requireIncludes('downloads/epstein-network-architecture.json','Legal Pressure / 
 requireIncludes('downloads/epstein-evidence-ladder.md','# Epstein Evidence Strength Ladder','evidence ladder markdown title');
 requireIncludes('downloads/epstein-evidence-ladder.json','Conviction / Plea / Court Finding','evidence ladder JSON conviction level');
 requireIncludes('downloads/epstein-evidence-ladder.json','Person named in file','claim classifier JSON named-person rule');
+requireIncludes('downloads/epstein-timeline-map.md','# Epstein Timeline + Cross-Reference Map','timeline markdown title');
+requireIncludes('downloads/epstein-timeline-map.json','Florida plea and conviction baseline','timeline JSON baseline');
+requireIncludes('downloads/epstein-timeline-map.json','dailyUpdateIntegration','timeline JSON daily update integration');
+requireIncludes('downloads/epstein-timeline-map.json','Maxwell habeas','timeline JSON Maxwell habeas lane');
 
 if(problems.length){
   console.error('\nEPSTEIN WATCH PRESSURE TEST FAILED\n');
@@ -158,4 +201,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, timeline map, daily-update integration, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and Netlify wiring.');

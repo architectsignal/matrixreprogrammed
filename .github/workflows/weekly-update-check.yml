@@ -1,0 +1,50 @@
+name: Weekly Full Update Check
+
+on:
+  schedule:
+    - cron: '43 4 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-update-check
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  weekly-check:
+    name: Weekly full ecosystem check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Full build and pressure tests
+        run: npm run build
+
+      - name: Weekly targeted checks
+        run: |
+          npm run pressure-test:atlas-layers
+          npm run pressure-test:migration-flow
+          npm run pressure-test:global-risk-clocks
+          node scripts/update-cadence-test.js
+
+      - name: Upload weekly build artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-full-site-build
+          path: _site
+          if-no-files-found: error
+          retention-days: 7

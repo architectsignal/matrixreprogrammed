@@ -14,11 +14,9 @@ const replacements = [
   [/\breader path\b/gi, 'next step'],
   [/\breader pathways\b/gi, 'reading routes'],
   [/\bsource pathway\b/gi, 'source trail'],
-  [/\bSource Pathways\b/g, 'Source Trails'],
-  [/\bSource Pathway\b/g, 'Source Trail'],
-  [/\barchive route\b/gi, 'source trail'],
-  [/\bArchive Routes\b/g, 'Source Trails'],
+  [/\bArchive Routes\b/g, 'Source Pathways'],
   [/\bArchive Route\b/g, 'Source Trail'],
+  [/\barchive route\b/gi, 'source trail'],
   [/\bsales door\b/gi, 'book entry point'],
   [/\bSales door\b/g, 'Book entry point'],
   [/\bDatabase-driven archive\b/gi, 'Book Archive'],
@@ -63,7 +61,7 @@ const replacements = [
   [/\bauthor-facing\b/gi, 'editorial'],
   [/\bChatGPT\b/g, 'Matrix Reprogrammed'],
   [/\bUse the books, free briefs, Rumble\/video routes, and Amazon store\b/gi, 'Use the books, free briefs, Rumble videos, and Amazon store'],
-  [/\bOpen the strongest related route for this page and continue the investigation from a clearer entry point\./gi, 'Start with the strongest related page, then move into the evidence, book, video, or free brief.']
+  [/\bOpen the strongest related route for this page and continue the investigation from a clearer entry point\.\b/gi, 'Start with the strongest related page, then move into the evidence, book, video, or free brief.']
 ];
 
 function visibleCopy(html) {
@@ -114,6 +112,10 @@ function softenJsonLinks(html) {
     return `<a ${attrs} class="machine-data-link">${newLabel}</a>`;
   });
 }
+function preserveDistributionMarkers(file, html) {
+  if (!/^distribution-[\w-]+\.html$/i.test(file)) return html;
+  return html.replace(/<h2>Source Trails<\/h2>/g, '<h2>Source Pathways</h2>').replace(/<h2>Source Trail<\/h2>/g, '<h2>Source Pathways</h2>');
+}
 
 let touched = 0;
 let enriched = 0;
@@ -124,6 +126,7 @@ for (const file of publicPages) {
   let html = fs.readFileSync(full, 'utf8');
   const before = html;
   for (const [from, to] of replacements) html = html.replace(from, to);
+  html = preserveDistributionMarkers(file, html);
   const beforeJson = html;
   html = softenJsonLinks(html);
   if (html !== beforeJson) jsonSoftened += 1;

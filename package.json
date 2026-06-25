@@ -10,6 +10,8 @@
     "update-freshness": "node scripts/update-site-freshness-report.js",
     "upgrade-usefulness": "node scripts/upgrade-public-usefulness.js",
     "quality-report": "node scripts/site-quality-report.js",
+    "atlas-layers": "node scripts/build-atlas-layers.js",
+    "pressure-test:atlas-layers": "node scripts/build-atlas-layers.js && node scripts/atlas-layers-test.js",
     "pressure-test:live-intel": "node scripts/live-intel-pressure-test.js",
     "pressure-test:figures": "node scripts/figure-source-rules-pressure-test.js",
     "pressure-test:cloudflare": "node scripts/cloudflare-pages-pressure-test.js",

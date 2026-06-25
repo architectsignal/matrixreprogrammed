@@ -1,7 +1,7 @@
 {
-  "updated": "2026-06-25T11:55:00Z",
-  "purpose": "Harmless deploy trigger marker for the latest upgraded Matrix Reprogrammed site.",
+  "updated": "2026-06-25T13:18:00Z",
+  "purpose": "Harmless deploy trigger marker for the forum API wiring and updated pressure test.",
   "expected": "Cloudflare Pages should build main with npm run build and publish _site.",
   "requiredConfig": "Cloudflare Pages build output = _site",
-  "upgradeCheck": "Homepage should show New Intelligence Tools and routes for timers, atlas-layers, migration-flow, forum, and epstein-files."
+  "upgradeCheck": "Homepage should show New Intelligence Tools and the Signal Board should call /api/forum."
 }

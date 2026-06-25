@@ -1,11 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "matrixreprogrammed1",
+  "main": "src/worker.js",
   "compatibility_date": "2026-06-24",
   "observability": {
     "enabled": true
   },
   "assets": {
+    "binding": "ASSETS",
     "directory": "_site"
   },
   "compatibility_flags": [

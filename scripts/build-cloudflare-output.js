@@ -7,10 +7,10 @@ const allowedExt = new Set([
   '.html', '.css', '.js', '.json', '.xml', '.txt', '.md', '.pdf', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico', '.gif', '.mp4', '.webm', '.woff', '.woff2'
 ]);
 const allowedRootFiles = new Set([
-  '_redirects', '_headers', 'robots.txt', 'llms.txt', 'sitemap.xml', 'site-graph.json', 'claim-taxonomy.json', 'crawler-map.json', 'search-index.json', 'sigil.png', 'matrix.js', 'styles.css', 'fixes.css'
+  '_headers', 'robots.txt', 'llms.txt', 'sitemap.xml', 'site-graph.json', 'claim-taxonomy.json', 'crawler-map.json', 'search-index.json', 'sigil.png', 'matrix.js', 'styles.css', 'fixes.css'
 ]);
 const blockedDirs = new Set(['.git', '.github', 'node_modules', 'scripts', 'netlify', '_site']);
-const blockedFiles = new Set(['package.json', 'package-lock.json', 'bun.lock', 'netlify.toml', 'wrangler.jsonc', 'CLOUDFLARE_PAGES_SETUP.md']);
+const blockedFiles = new Set(['_redirects', 'package.json', 'package-lock.json', 'bun.lock', 'netlify.toml', 'wrangler.jsonc', 'CLOUDFLARE_PAGES_SETUP.md']);
 const maxAssetBytes = 25 * 1024 * 1024;
 
 function rm(dir) {
@@ -68,12 +68,16 @@ for (const required of [
   'epstein-files.html', 'epstein-files',
   'live-intel.html', 'live-intel',
   'search.html', 'search',
-  '_redirects', '_headers'
+  '_headers'
 ]) {
   if (!fs.existsSync(path.join(out, required))) {
     console.error(`Cloudflare output failed: _site/${required} missing`);
     process.exit(1);
   }
+}
+if (fs.existsSync(path.join(out, '_redirects'))) {
+  console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets because Wrangler validates it before the Worker router can run.');
+  process.exit(1);
 }
 const count = [];
 (function countFiles(dir) {
@@ -83,4 +87,4 @@ const count = [];
     else count.push(full);
   }
 })(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless HTML assets.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including extensionless HTML assets.`);

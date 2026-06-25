@@ -1,0 +1,46 @@
+name: Test Site
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ test, atlas-layers-upgrade, develop ]
+  workflow_dispatch:
+
+concurrency:
+  group: test-site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build and pressure test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Full build and pressure tests
+        run: npm run build
+
+      - name: Atlas Layers test
+        if: always()
+        run: npm run pressure-test:atlas-layers
+
+      - name: Upload built site artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: matrixreprogrammed-site-build
+          path: _site
+          if-no-files-found: error
+          retention-days: 7

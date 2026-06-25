@@ -46,6 +46,7 @@
   [headers.values]
     Content-Type = "application/feed+json"
 
+# Required by phase pressure tests. Do not remove these redirects unless the matching tests are updated in the same commit.
 [[redirects]]
   from = "/home"
   to = "/index.html"
@@ -74,6 +75,11 @@
 [[redirects]]
   from = "/books"
   to = "/books.html"
+  status = 200
+
+[[redirects]]
+  from = "/book-universe"
+  to = "/book-universe.html"
   status = 200
 
 [[redirects]]

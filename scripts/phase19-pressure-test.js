@@ -11,6 +11,7 @@ function requireFile(file) { if (!exists(file)) fail(`missing required file: ${f
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
 
 requireFile('data/lead-magnets.json');
+requireFile('data/live-intel.json');
 requireFile('scripts/build-phase19-lead-magnets.js');
 requireFile('optin-center.html');
 requireFile('search-index.json');
@@ -20,20 +21,24 @@ requireFile('netlify.toml');
 requireFile('scripts/cleanup-duplicates.js');
 
 const data = exists('data/lead-magnets.json') ? json('data/lead-magnets.json') : { magnets: [], rules: [] };
+const liveIntel = exists('data/live-intel.json') ? json('data/live-intel.json') : { items: [] };
 const magnets = data.magnets || [];
 const search = exists('search-index.json') ? json('search-index.json') : [];
-if (!Array.isArray(data.rules) || data.rules.length < 6) fail('data/lead-magnets.json expected at least 6 capture rules');
+if (!Array.isArray(data.rules) || data.rules.length < 8) fail('data/lead-magnets.json expected at least 8 useful capture rules');
 if (magnets.length < 6) fail(`data/lead-magnets.json expected at least 6 lead magnets, found ${magnets.length}`);
+if (!Array.isArray(liveIntel.items) || liveIntel.items.length < 4) fail('data/live-intel.json expected at least 4 live-intel items for seven-day briefs');
 
 requireIncludes('optin-center.html', 'OPT-IN CENTER', 'Opt-in Center hero');
 requireIncludes('optin-center.html', 'LEAD MAGNET ENGINE STATUS', 'Lead Magnet status terminal');
-requireIncludes('optin-center.html', 'Opt-in Routes', 'Opt-in Routes section');
+requireIncludes('optin-center.html', 'Useful Free Briefs', 'Useful Free Briefs section');
+requireIncludes('optin-center.html', 'Seven-day windows: active', 'seven-day windows status');
 requireIncludes('optin-center.html', 'Capture Rules', 'Capture Rules section');
 requireIncludes('optin-center.html', 'Signal Board', 'Signal Board nav');
 requireIncludes('optin-center.html', 'Opt-in Center', 'Opt-in Center nav');
 requireIncludes('optin-center.html', 'Amazon Store', 'Amazon Store nav');
 for (const file of ['index.html','offer-center.html','launch-room.html','share-center.html','download-center.html','trust-center.html','black-file.html']) {
   requireIncludes(file, 'id="phase-nineteen-lead-magnet-engine"', `Phase 19 patch on ${file}`);
+  requireIncludes(file, 'Useful Free Briefs', `${file} useful free briefs language`);
 }
 
 for (const magnet of magnets) {
@@ -44,7 +49,12 @@ for (const magnet of magnets) {
   requireFile(jsonFile);
   requireFile(mdFile);
   requireIncludes(htmlFile, magnet.title, `lead magnet title ${magnet.title}`);
-  requireIncludes(htmlFile, 'OPT-IN ROOM', 'Opt-in room terminal');
+  requireIncludes(htmlFile, 'FREE BRIEF STATUS', 'Free brief status terminal');
+  requireIncludes(htmlFile, 'Last 7 Days Intelligence Window', 'seven-day intelligence window');
+  requireIncludes(htmlFile, 'Reader Outcome', 'reader outcome section');
+  requireIncludes(htmlFile, 'What You Will Learn', 'learning section');
+  requireIncludes(htmlFile, 'Practical Checklist', 'practical checklist section');
+  requireIncludes(htmlFile, 'Action Steps', 'action steps section');
   requireIncludes(htmlFile, 'data-netlify="true"', 'Netlify form marker');
   requireIncludes(htmlFile, `name="${magnet.formName}"`, `form name ${magnet.formName}`);
   requireIncludes(htmlFile, `value="${magnet.formName}"`, `hidden form-name ${magnet.formName}`);
@@ -53,10 +63,24 @@ for (const magnet of magnets) {
   requireIncludes(htmlFile, 'What This Brief Includes', 'deliverables section');
   requireIncludes(htmlFile, jsonFile, 'JSON brief link');
   requireIncludes(htmlFile, mdFile, 'Markdown brief link');
-  if (!Array.isArray(magnet.deliverables) || magnet.deliverables.length < 4) fail(`${magnet.slug}: expected at least 4 deliverables`);
+  if (!Array.isArray(magnet.deliverables) || magnet.deliverables.length < 6) fail(`${magnet.slug}: expected at least 6 useful deliverables`);
+  for (const key of ['readerOutcome','whatYouLearn','checklist','actionSteps','evidenceRoutes','nextBestStep']) {
+    if (!magnet[key]) fail(`${magnet.slug}: missing ${key}`);
+  }
+  if (!Array.isArray(magnet.whatYouLearn) || magnet.whatYouLearn.length < 4) fail(`${magnet.slug}: expected at least 4 whatYouLearn items`);
+  if (!Array.isArray(magnet.checklist) || magnet.checklist.length < 5) fail(`${magnet.slug}: expected at least 5 checklist items`);
+  if (!Array.isArray(magnet.actionSteps) || magnet.actionSteps.length < 4) fail(`${magnet.slug}: expected at least 4 action steps`);
+  if (!Array.isArray(magnet.evidenceRoutes) || magnet.evidenceRoutes.length < 4) fail(`${magnet.slug}: expected at least 4 evidence routes`);
   const magnetData = json(jsonFile);
   if (!magnetData.boundary || !magnetData.formName || !magnetData.trustRoute || !magnetData.privacyRoute || !magnetData.evidenceRoute || !magnetData.offerRoute) fail(`${jsonFile}: missing boundary/form/trust/privacy/evidence/offer route`);
+  if (!magnetData.readerOutcome || !Array.isArray(magnetData.whatYouLearn) || !Array.isArray(magnetData.checklist) || !Array.isArray(magnetData.actionSteps)) fail(`${jsonFile}: missing useful brief reader outcome/learning/checklist/action steps`);
+  if (!magnetData.sevenDayWindow || typeof magnetData.sevenDayWindow.itemCount !== 'number') fail(`${jsonFile}: missing sevenDayWindow metadata`);
   requireIncludes(mdFile, '## Boundary', `${mdFile} boundary section`);
+  requireIncludes(mdFile, '## Last 7 Days Intelligence Window', `${mdFile} seven-day window section`);
+  requireIncludes(mdFile, '## Reader Outcome', `${mdFile} reader outcome section`);
+  requireIncludes(mdFile, '## What You Will Learn', `${mdFile} learning section`);
+  requireIncludes(mdFile, '## Checklist', `${mdFile} checklist section`);
+  requireIncludes(mdFile, '## Action Steps', `${mdFile} action steps section`);
   requireIncludes(mdFile, '## Deliverables', `${mdFile} deliverables section`);
   if (!search.some(item => item.url === htmlFile)) fail(`search-index.json missing ${htmlFile}`);
   requireIncludes('sitemap.xml', `/${htmlFile}`, `${htmlFile} sitemap entry`);
@@ -92,4 +116,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 19 LEAD MAGNET PRESSURE TEST PASSED');
-console.log(`Checked ${magnets.length} lead magnets, opt-in pages, Netlify forms, JSON/Markdown briefs, page patches, sitemap, llms.txt, search index, redirects, Signal Board nav, Amazon Store nav, and cleanup fallback.`);
+console.log(`Checked ${magnets.length} useful free briefs, seven-day intelligence windows, reader outcomes, checklists, action steps, evidence routes, opt-in pages, Netlify forms, JSON/Markdown briefs, page patches, sitemap, llms.txt, search index, redirects, Signal Board nav, Amazon Store nav, and cleanup fallback.`);

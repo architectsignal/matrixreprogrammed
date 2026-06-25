@@ -1,0 +1,43 @@
+{
+  "updated": "2026-06-25",
+  "policy": "Daily lanes update news, Epstein bulletins, risk clocks, migration/stat figures, and figure-source reports. Weekly lanes refresh the wider site ecosystem, including Atlas, authority pages, sales paths, offers, lead magnets, feeds, packs, and long-form public pages.",
+  "daily": [
+    {
+      "lane": "News / Live Intel",
+      "scripts": ["node scripts/build-intel-desk.js", "node scripts/build-live-intel-machine.js", "node scripts/live-intel-pressure-test.js"],
+      "mustCheck": ["live-intel.html", "intel-archive.html", "data/live-intel-updates.json"]
+    },
+    {
+      "lane": "Epstein Bulletins",
+      "scripts": ["node scripts/enhance-epstein-watch.js", "node scripts/epstein-watch-pressure-test.js"],
+      "mustCheck": ["epstein-files.html", "downloads/epstein-source-watch.json", "downloads/epstein-source-watch.md"]
+    },
+    {
+      "lane": "Timers / Global Risk Clocks",
+      "scripts": ["node scripts/patch-homepage-alerts.js", "node scripts/global-risk-clocks-test.js"],
+      "mustCheck": ["timers.html", "data/global-risk-clocks.json", "data/epstein-homepage-alerts.json"]
+    },
+    {
+      "lane": "Stats / Figures",
+      "scripts": ["node scripts/update-site-freshness-report.js", "node scripts/figure-source-rules-pressure-test.js", "node scripts/migration-flow-test.js"],
+      "mustCheck": ["site-freshness-report.html", "data/migration-flow-panel.json", "data/migrant-sexual-offence-country.json"]
+    }
+  ],
+  "weekly": [
+    {
+      "lane": "Full Site Ecosystem",
+      "scripts": ["npm run build"],
+      "mustCheck": ["_site", "search-index.json", "sitemap.xml", "llms.txt"]
+    },
+    {
+      "lane": "Atlas / Entity System",
+      "scripts": ["node scripts/build-atlas-layers.js", "node scripts/atlas-layers-test.js"],
+      "mustCheck": ["atlas-layers.html", "data/atlas-layers.json"]
+    },
+    {
+      "lane": "Quality / Scaffold Copy",
+      "scripts": ["node scripts/site-quality-report.js", "node scripts/ux-polish-pressure-test.js", "node scripts/ten-out-of-ten-pressure-test.js"],
+      "mustCheck": ["site-quality-report.html", "data/site-quality-report.json"]
+    }
+  ]
+}

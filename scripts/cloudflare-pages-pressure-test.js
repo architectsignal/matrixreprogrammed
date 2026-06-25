@@ -56,7 +56,7 @@ requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build output directory: `_site`', 
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Deploy command: leave blank', 'Cloudflare blank deploy command');
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Node version: `22`', 'Cloudflare Node version');
 requireIncludes('wrangler.jsonc', '"directory": "_site"', 'Wrangler _site assets directory');
-for (const marker of ['node_modules', 'copyExtensionlessHtml', 'start-here', 'epstein-files', 'live-intel']) {
+for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'start-here', 'epstein-files', 'live-intel']) {
   requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
 }
 

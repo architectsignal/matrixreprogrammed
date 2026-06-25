@@ -37,15 +37,12 @@ function copyFile(src, dest, rel) {
   fs.copyFileSync(src, dest);
   return true;
 }
-function copyHtmlRouteVariants(src, rel) {
+function copyHtmlRouteVariant(src, rel) {
   if (!rel.endsWith('.html')) return;
-  if (rel === 'index.html') {
-    copyFile(src, path.join(out, 'index'), 'index');
-    return;
-  }
-  const noExt = rel.replace(/\.html$/i, '');
-  copyFile(src, path.join(out, noExt), noExt);
-  copyFile(src, path.join(out, noExt, 'index.html'), `${noExt}/index.html`);
+  const noExt = rel === 'index.html' ? 'index' : rel.replace(/\.html$/i, '');
+  const dest = path.join(out, noExt);
+  if (fs.existsSync(dest) && fs.statSync(dest).isDirectory()) return;
+  copyFile(src, dest, noExt);
 }
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -55,7 +52,7 @@ function walk(dir) {
     if (entry.isDirectory()) walk(full);
     else {
       const copied = copyFile(full, path.join(out, rel), rel);
-      if (copied) copyHtmlRouteVariants(full, rel);
+      if (copied) copyHtmlRouteVariant(full, rel);
     }
   }
 }
@@ -66,11 +63,11 @@ walk(root);
 
 for (const required of [
   'index.html', 'index',
-  'start-here.html', 'start-here', 'start-here/index.html',
-  'books.html', 'books', 'books/index.html',
-  'epstein-files.html', 'epstein-files', 'epstein-files/index.html',
-  'live-intel.html', 'live-intel', 'live-intel/index.html',
-  'search.html', 'search', 'search/index.html',
+  'start-here.html', 'start-here',
+  'books.html', 'books',
+  'epstein-files.html', 'epstein-files',
+  'live-intel.html', 'live-intel',
+  'search.html', 'search',
   '_redirects', '_headers'
 ]) {
   if (!fs.existsSync(path.join(out, required))) {
@@ -86,4 +83,4 @@ const count = [];
     else count.push(full);
   }
 })(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless and folder-index HTML assets.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless HTML assets.`);

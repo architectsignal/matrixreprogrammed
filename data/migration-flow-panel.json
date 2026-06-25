@@ -1,0 +1,65 @@
+{
+  "updated": "2026-06-25",
+  "title": "Migration / Irregular Immigration Flow Panel",
+  "summary": "Tracks migration and irregular or unauthorized border movement without pretending every dataset measures the same thing.",
+  "evidenceRule": "A border encounter, asylum application, removal, return, visa-overstay estimate, unauthorized-population estimate, and illegal-entry estimate are different categories. Encounters are not unique people. Nationality is not immigration status. Police suspects are not convictions.",
+  "flowPanels": [
+    {
+      "region": "United States",
+      "publicFigure": "FY2025 Southwest Border marker: about 237.5K apprehensions / encounters; 2023 unauthorized-population estimates range around 13.7M to 14.0M depending method.",
+      "categoryWarning": "Encounters are not people. Apprehensions, inadmissibles, removals, returns, asylum claims, visa overstays, and unauthorized-population estimates must be kept separate.",
+      "track": ["CBP encounters", "OFO inadmissibles", "ICE removals", "returns", "asylum claims", "visa overstay estimates", "unauthorized population estimates"],
+      "sourceLabel": "CBP / DHS / OHSS / Pew / MPI",
+      "sourceUrl": "https://www.cbp.gov/newsroom/stats",
+      "checked": "2026-06-25",
+      "confidence": "Medium: current public-record lane, categories not directly comparable"
+    },
+    {
+      "region": "European Union / UK",
+      "publicFigure": "EU external irregular-border detections: about 178K in 2025; UK small-boat arrivals: 41,472 in 2025; EU/UK asylum applications: about 770K in 2025 in public reporting.",
+      "categoryWarning": "Frontex detections are not unique people. Asylum applications, returns, removals, Channel crossings, overstays, and country-level flows are separate categories.",
+      "track": ["Frontex irregular border detections", "Eurostat asylum applications", "national returns/removals", "UK Channel crossings", "visa overstay estimates", "country-level flows"],
+      "sourceLabel": "Frontex / Eurostat / Home Office / Reuters / Guardian",
+      "sourceUrl": "https://www.frontex.europa.eu/what-we-do/monitoring-and-risk-analysis/migratory-map/",
+      "checked": "2026-06-25",
+      "confidence": "Medium: official source lanes identified, latest figures need weekly refresh"
+    },
+    {
+      "region": "Mediterranean / Africa",
+      "publicFigure": "Central Mediterranean dead/missing marker: 800+ reported dead or missing from January to mid-May 2026; more than 1,300 reported in 2025.",
+      "categoryWarning": "Deaths and missing persons are route-specific and undercounted. Desert routes and invisible shipwrecks are harder to verify.",
+      "track": ["Central Mediterranean deaths/missing", "North Africa departure routes", "Sahara/desert route estimates", "shipwreck reports", "IOM Missing Migrants updates"],
+      "sourceLabel": "IOM Missing Migrants / AP / humanitarian monitors",
+      "sourceUrl": "https://missingmigrants.iom.int/",
+      "checked": "2026-06-25",
+      "confidence": "Medium-low: official minimum counts; true toll likely higher"
+    },
+    {
+      "region": "Global Movement",
+      "publicFigure": "Global displacement marker: roughly 117M to 123.2M depending date and category; latest public reporting cites 117M displaced by war/persecution at mid-2025 and 123.2M forcibly displaced at end-2024.",
+      "categoryWarning": "Refugees, asylum seekers, internally displaced people, stateless people, returnees, irregular migrants, and unauthorized residents are different categories.",
+      "track": ["refugees", "asylum seekers", "internally displaced people", "returns", "departures", "stateless persons", "regional displacement flows"],
+      "sourceLabel": "UNHCR / IOM / Reuters / official humanitarian datasets",
+      "sourceUrl": "https://www.unhcr.org/global-trends",
+      "checked": "2026-06-25",
+      "confidence": "Medium: headline total changes by definition and date"
+    }
+  ],
+  "sexualAssaultCountryLane": {
+    "title": "Sexual Assault / Migrant-Status Data By Country",
+    "summary": "Country-by-country crime-data lane. Figures are source-split markers until an official country dataset gives a comparable number.",
+    "evidenceRule": "Do not infer immigration status from nationality. Do not treat police suspects as convictions. Do not turn individual cases into group guilt. Unknown-status cases remain unknown.",
+    "countries": [
+      {"country":"United Kingdom","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"ONS / Home Office / MoJ / police force data / courts","status":"Needs official source split"},
+      {"country":"France","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"SSMSI / Ministry of Interior / Justice Ministry / courts","status":"Needs official source split"},
+      {"country":"Germany","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"BKA PKS / Federal Interior Ministry / courts","status":"Official source lane identified"},
+      {"country":"Sweden","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"Brå / police / courts / statistics office","status":"Needs official source split"},
+      {"country":"Italy","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"ISTAT / Interior Ministry / Justice Ministry / courts","status":"Needs official source split"},
+      {"country":"Spain","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"INE / Interior Ministry / judiciary / police datasets","status":"Needs official source split"},
+      {"country":"Netherlands","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"CBS / police / Justice Ministry / courts","status":"Needs official source split"},
+      {"country":"Belgium","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"Statbel / federal police / justice records","status":"Needs official source split"},
+      {"country":"Austria","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"BMI crime statistics / courts / statistics office","status":"Official source lane identified"},
+      {"country":"United States","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"FBI NIBRS / BJS / DHS / state courts","status":"Needs official source split"}
+    ]
+  }
+}

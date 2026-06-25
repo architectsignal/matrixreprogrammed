@@ -7,7 +7,7 @@ const publicPages = fs.readdirSync(root).filter(file => file.endsWith('.html') &
 const checkedDate = '25 June 2026';
 
 const protectedMarkers = [
-  'READER PATH STATUS','SALES LADDER STATUS','READER PATHS','Reader Paths',
+  'READER PATH STATUS','SALES LADDER STATUS','READER PATHS','Reader Paths','Book Route','Book Routes',
   'UPDATE MONITOR STATUS','FRESHNESS LANE','UPDATE MONITOR',
   'AUTHORITY ENGINE STATUS','AUTHORITY CLUSTER','AUTHORITY HUB',
   'SCHEMA ENGINE STATUS','MACHINE PAGE','SCHEMA INDEX',

@@ -1,20 +1,22 @@
 {
-  "updated": "2026-06-24",
-  "purpose": "Phase 19 Lead Magnet / Capture Engine for Matrix Reprogrammed. This defines public opt-in routes that connect free briefs, Netlify forms, offer routes, campaigns, share kits, trust pages, evidence pages, and reader paths into email-capture journeys.",
+  "updated": "2026-06-25",
+  "purpose": "Phase 19 Lead Magnet / Capture Engine for Matrix Reprogrammed. This defines genuinely useful public opt-in routes that connect free briefs, evidence trails, trust pages, offers, campaigns, share kits, book routes, and reader outcomes into email-capture journeys.",
   "rules": [
     "Lead magnet pages must not make claims stronger than their linked evidence pages.",
     "Every opt-in page must include a trust route and privacy route.",
     "Every opt-in page must include a clear promise and a public route after signup.",
     "Lead magnets are public download assets, not private subscriber data.",
     "Netlify forms must use unique names for every lead magnet.",
-    "Capture pages should move readers from free value into offer and book routes without hiding source boundaries."
+    "Capture pages should move readers from free value into offer and book routes without hiding source boundaries.",
+    "Every free brief must give the reader a useful checklist, source path, reader outcome, and next action without requiring payment first.",
+    "Every free brief must explain what it helps the reader do, what evidence route to open next, and what paid route logically follows."
   ],
   "magnets": [
     {
       "slug": "black-file-brief",
       "title": "The Black File Starter Brief",
       "label": "Starter opt-in",
-      "summary": "A short entry brief for readers who want the Matrix Reprogrammed map, evidence boundary, Black File route, and first book path.",
+      "summary": "A practical entry brief for readers who want the Matrix Reprogrammed map, Epstein/elite-file evidence boundary, Black File route, and first book path without getting lost in the archive.",
       "formName": "lead-black-file-brief",
       "primaryRoute": "black-file.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -25,14 +27,36 @@
       "trustRoute": "trust-center.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "evidence-vault.html",
-      "promise": "Get the clean starting route into the archive without losing the source boundary.",
-      "deliverables": ["Black File starter route", "Evidence-boundary explanation", "Book universe entry path", "Offer-stack next step"]
+      "promise": "Get the clean starting route into the archive: what to open first, how to separate evidence from theory, and how to follow the Black File trail without losing the source boundary.",
+      "readerOutcome": "The reader leaves knowing where to start, which files matter first, what evidence class means, and which deeper book route to open next.",
+      "whatYouLearn": [
+        "The difference between a document trail, a public allegation, a court finding, a contact record, and speculation.",
+        "How to enter the Matrix Reprogrammed archive without bouncing between disconnected pages.",
+        "Which public pages lead to the Epstein Command Center, Evidence Vault, books, videos, and offers.",
+        "Why the Black File is the deeper reading route after the free public record path."
+      ],
+      "checklist": [
+        "Open the Evidence Vault first.",
+        "Read the Evidence Boundary before drawing conclusions.",
+        "Use the Epstein Command Center as the live case board.",
+        "Move from public records into the Black File only after the source route is clear.",
+        "Use the store/book route when you want the full dossier, not just the map."
+      ],
+      "actionSteps": [
+        "Open the Evidence Vault.",
+        "Read the Black File page.",
+        "Save the Command Center route.",
+        "Choose the starter-library offer if you want the full system path."
+      ],
+      "evidenceRoutes": ["evidence-vault.html", "epstein-files.html", "trust-center.html", "answer-evidence-boundary.html"],
+      "nextBestStep": "Read the Black File or enter the Starter Library offer.",
+      "deliverables": ["Black File starter route", "Evidence-boundary explanation", "Book universe entry path", "Offer-stack next step", "Reader checklist", "Evidence routes to open first"]
     },
     {
       "slug": "dog-architect-initiation",
       "title": "D.O.G Architect Initiation Brief",
       "label": "D.O.G opt-in",
-      "summary": "A symbolic reader brief for D.O.G The Architect, claim labels, symbolic power, and the collector-volume offer route.",
+      "summary": "A symbolic reader brief for D.O.G The Architect: how to read the collector-volume route, understand symbolic power, and avoid confusing esoteric interpretation with evidence claims.",
       "formName": "lead-dog-architect-initiation",
       "primaryRoute": "book-dog-the-architect.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -43,14 +67,36 @@
       "trustRoute": "trust-claim-labels.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "answer-evidence-boundary.html",
-      "promise": "Get the symbolic route into D.O.G without confusing interpretation for proof.",
-      "deliverables": ["D.O.G reading route", "Symbolic claim boundary", "Collector-offer path", "Esoteric evidence notes"]
+      "promise": "Get the D.O.G reading route: what the book is, how to read its symbolic architecture, what the plates mean, and where interpretation stops being proof.",
+      "readerOutcome": "The reader understands the D.O.G brand, collector-volume logic, symbolic reading method, and why the paid book is the deeper experience.",
+      "whatYouLearn": [
+        "How D.O.G The Architect fits inside the Matrix Reprogrammed book universe.",
+        "How to read symbolism, plate language, ritual architecture, and esoteric commentary responsibly.",
+        "Why claim labels matter when occult interpretation meets public history.",
+        "Where the collector offer, book page, and symbolic-power campaign connect."
+      ],
+      "checklist": [
+        "Open the D.O.G book page.",
+        "Read the claim-label boundary.",
+        "Separate symbolic meaning from factual allegation.",
+        "Use the collector offer if you want the full hardback/volume route.",
+        "Share only labelled symbolic analysis, not unsupported claims."
+      ],
+      "actionSteps": [
+        "Read the D.O.G book page.",
+        "Open the claim-label trust page.",
+        "Review the symbolic-power share kit.",
+        "Move into the collector offer."
+      ],
+      "evidenceRoutes": ["book-dog-the-architect.html", "trust-claim-labels.html", "answer-evidence-boundary.html", "book-universe.html"],
+      "nextBestStep": "Open the D.O.G Architect collector offer.",
+      "deliverables": ["D.O.G reading route", "Symbolic claim boundary", "Collector-offer path", "Esoteric evidence notes", "Plate/symbol reading checklist", "Book-universe next step"]
     },
     {
       "slug": "intelligence-files-brief",
       "title": "Intelligence Files Starter Brief",
       "label": "Agency opt-in",
-      "summary": "A declassified-history starter brief for readers entering the intelligence dossiers, agency maps, and source-methodology pages.",
+      "summary": "A declassified-history starter brief for readers entering the intelligence dossiers, agency maps, source-methodology pages, and public-record archive routes.",
       "formName": "lead-intelligence-files-brief",
       "primaryRoute": "book-intelligence-dossiers.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -61,14 +107,36 @@
       "trustRoute": "trust-source-methodology.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "evidence-lane-declassified-archives.html",
-      "promise": "Get the agency archive route with declassified-source boundaries intact.",
-      "deliverables": ["Agency reader path", "Declassified archive route", "Source hierarchy notes", "Intelligence offer path"]
+      "promise": "Get the agency archive route: how to enter declassified files, separate official record from inference, and move into the intelligence dossier reading path.",
+      "readerOutcome": "The reader can start researching agency files without treating every declassified fragment as a complete conclusion.",
+      "whatYouLearn": [
+        "Which archive routes matter first: declassified files, oversight records, agency releases, and public dockets.",
+        "How to separate source, inference, allegation, and conclusion.",
+        "How the Intelligence Dossiers series is organised as a reading path.",
+        "Why the source-methodology page is the safety rail for darker material."
+      ],
+      "checklist": [
+        "Open the declassified archive evidence lane.",
+        "Read the source-methodology page.",
+        "Pick one agency dossier first.",
+        "Map claim strength before sharing.",
+        "Use the Intelligence offer route for the complete path."
+      ],
+      "actionSteps": [
+        "Open the Intelligence Dossiers page.",
+        "Open the declassified archive lane.",
+        "Read the source-methodology page.",
+        "Move into the Intelligence Dossiers offer."
+      ],
+      "evidenceRoutes": ["evidence-lane-declassified-archives.html", "trust-source-methodology.html", "book-intelligence-dossiers.html", "evidence-vault.html"],
+      "nextBestStep": "Enter the Intelligence Dossiers offer path.",
+      "deliverables": ["Agency reader path", "Declassified archive route", "Source hierarchy notes", "Intelligence offer path", "Research checklist", "Claim-strength reminder"]
     },
     {
       "slug": "crime-network-brief",
       "title": "Crime Network Starter Brief",
       "label": "Crime dossier opt-in",
-      "summary": "A reader brief for organized crime, cartel logistics, court records, sanctions, and crime-state overlap routes.",
+      "summary": "A practical reader brief for organized crime, cartel logistics, court records, sanctions, laundering routes, and crime-state overlap pages.",
       "formName": "lead-crime-network-brief",
       "primaryRoute": "book-crime-dossiers.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -79,14 +147,36 @@
       "trustRoute": "trust-association-boundary.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "evidence-lane-court-records.html",
-      "promise": "Get the crime-network route while keeping association, indictment, sanction, and conviction boundaries clear.",
-      "deliverables": ["Crime dossier route", "Court-record boundary", "Crime-state map path", "Book-offer next step"]
+      "promise": "Get the crime-network route while keeping association, indictment, sanction, conviction, and speculation boundaries clear.",
+      "readerOutcome": "The reader knows how to follow crime-network records without turning association or investigation into automatic guilt.",
+      "whatYouLearn": [
+        "How court records, indictments, sanctions, convictions, and reporting differ.",
+        "How to follow logistics, laundering, state protection, and cartel/mafia overlap.",
+        "Which book path covers crime networks in greater depth.",
+        "Why association boundaries matter when names appear in criminal cases."
+      ],
+      "checklist": [
+        "Open the court-record evidence lane.",
+        "Check whether the record is charge, conviction, sanction, allegation, or association.",
+        "Map logistics, money, protection, and violence separately.",
+        "Open the Crime Dossiers page.",
+        "Move into the crime offer if you want the complete series route."
+      ],
+      "actionSteps": [
+        "Open the court-record lane.",
+        "Read the association-boundary page.",
+        "Open the Crime Dossiers page.",
+        "Enter the Crime Dossiers offer."
+      ],
+      "evidenceRoutes": ["evidence-lane-court-records.html", "trust-association-boundary.html", "book-crime-dossiers.html", "network-maps.html"],
+      "nextBestStep": "Read the Crime Dossiers route or open the Crime Dossier offer.",
+      "deliverables": ["Crime dossier route", "Court-record boundary", "Crime-state map path", "Book-offer next step", "Association-boundary checklist", "Money/logistics trail prompts"]
     },
     {
       "slug": "trust-evidence-checklist",
       "title": "Trust And Evidence Checklist",
       "label": "Credibility opt-in",
-      "summary": "A credibility checklist for source hierarchy, claim labels, corrections, association boundaries, and evidence-vault navigation.",
+      "summary": "A credibility checklist for source hierarchy, claim labels, corrections, association boundaries, evidence-vault navigation, and safe reading of darker public-record material.",
       "formName": "lead-trust-evidence-checklist",
       "primaryRoute": "trust-center.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -97,14 +187,36 @@
       "trustRoute": "trust-source-methodology.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "evidence-vault-index.html",
-      "promise": "Get the source-discipline checklist before entering the darker archive routes.",
-      "deliverables": ["Claim-label checklist", "Evidence-vault route", "Corrections policy route", "Trust-first offer path"]
+      "promise": "Get the source-discipline checklist before entering the darker archive routes: how to judge claim strength, source hierarchy, and association boundaries.",
+      "readerOutcome": "The reader can navigate controversial material without confusing source, theory, claim, and conclusion.",
+      "whatYouLearn": [
+        "The difference between primary source, public reporting, archive lead, claim, and speculation.",
+        "How corrections, privacy, and trust pages protect the reader and the site.",
+        "How to judge whether a page is making a claim or asking a research question.",
+        "Which evidence vault route to open when a number or allegation matters."
+      ],
+      "checklist": [
+        "Identify the claim type.",
+        "Find the strongest available source.",
+        "Check whether a person is central, peripheral, accused, convicted, or merely mentioned.",
+        "Use the corrections route if something needs review.",
+        "Do not share a claim stronger than the evidence route supports."
+      ],
+      "actionSteps": [
+        "Open the Trust Center.",
+        "Read the source-methodology page.",
+        "Open the Evidence Vault index.",
+        "Use the checklist before entering darker pages."
+      ],
+      "evidenceRoutes": ["trust-center.html", "trust-source-methodology.html", "evidence-vault-index.html", "trust-corrections.html"],
+      "nextBestStep": "Open the Trust Center before continuing into the darker archive.",
+      "deliverables": ["Claim-label checklist", "Evidence-vault route", "Corrections policy route", "Trust-first offer path", "Association-boundary test", "Source hierarchy card"]
     },
     {
       "slug": "full-archive-map",
       "title": "Full Archive Map",
       "label": "Full-system opt-in",
-      "summary": "A broad map for readers who want books, offers, launches, share kits, feeds, download packs, and evidence routes in one pathway.",
+      "summary": "A broad but useful map for readers who want books, offers, launches, share kits, feeds, download packs, evidence routes, and the full Matrix Reprogrammed reading order in one pathway.",
       "formName": "lead-full-archive-map",
       "primaryRoute": "book-universe.html",
       "thankYouRoute": "black-file-thank-you.html",
@@ -115,8 +227,30 @@
       "trustRoute": "trust-center.html",
       "privacyRoute": "trust-privacy-policy.html",
       "evidenceRoute": "evidence-vault.html",
-      "promise": "Get the full map of the Matrix Reprogrammed archive and the cleanest route through it.",
-      "deliverables": ["Full archive route", "Offer-stack route", "Launch-room route", "Book universe route"]
+      "promise": "Get the full map of the Matrix Reprogrammed archive: books, evidence lanes, free briefs, live intel, offers, and the cleanest route through them.",
+      "readerOutcome": "The reader gets a complete navigation map rather than a random pile of pages.",
+      "whatYouLearn": [
+        "Where to start if you are new to the site.",
+        "Which book series fits which interest: intelligence, crime, symbolic power, survival, trust, or Black File.",
+        "How free briefs, offers, downloads, videos, and live intel connect.",
+        "Which trust/evidence pages to check before entering controversial material."
+      ],
+      "checklist": [
+        "Start at the Book Universe.",
+        "Choose one reader path.",
+        "Open the Evidence Vault for source context.",
+        "Use the Launch Room for campaigns.",
+        "Use the Offer Center when ready to buy."
+      ],
+      "actionSteps": [
+        "Open the Book Universe.",
+        "Choose a reader path.",
+        "Save the Download Center.",
+        "Enter the Full Archive offer."
+      ],
+      "evidenceRoutes": ["book-universe.html", "evidence-vault.html", "download-center.html", "sales-ladder.html"],
+      "nextBestStep": "Open the Book Universe and choose the reader path that fits your interest.",
+      "deliverables": ["Full archive route", "Offer-stack route", "Launch-room route", "Book universe route", "Reader-path checklist", "Evidence/funnel navigation map"]
     }
   ]
 }

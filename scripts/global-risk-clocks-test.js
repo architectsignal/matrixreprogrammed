@@ -33,18 +33,21 @@ needText('scripts/patch-homepage-alerts.js', 'expiresAt');
 
 needFile('forum.html');
 needFile('forum.js');
+needFile('functions/api/forum.js');
 needFile('data/forum-seed.json');
 needText('forum.html', 'The Signal Board');
 needText('forum.html', 'signal-board-feed');
 needText('forum.html', 'signal-board-form');
 needText('forum.html', 'forum.js');
 needText('forum.js', 'data/forum-seed.json');
-needText('forum.js', 'Cloudflare static mode');
+needText('forum.js', "API_ROUTE = '/api/forum'");
 needText('forum.js', 'LOCAL_POSTS_KEY');
 needText('forum.js', 'loadStaticFeed');
-needText('forum.js', '/.netlify/functions/forum-feed');
-needText('forum.js', '/.netlify/functions/submit-forum-post');
-needText('forum.js', 'signal saved on this device');
+needText('forum.js', 'Forum API unavailable');
+needText('functions/api/forum.js', 'FORUM_POSTS');
+needText('functions/api/forum.js', "store.put('posts'");
+needText('functions/api/forum.js', "store.put('reports'");
+needText('functions/api/forum.js', 'Access-Control-Allow-Origin');
 
 const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/global-risk-clocks.json')) : {};
 if (!Array.isArray(data.clocks) || data.clocks.length !== 12) issues.push('global risk clocks must contain 12 clocks');

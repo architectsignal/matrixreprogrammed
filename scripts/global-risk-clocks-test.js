@@ -25,6 +25,22 @@ needText('timers.html', 'epstein-files.html');
 needText('timers.html', 'evidence-vault.html');
 needText('scripts/patch-homepage-alerts.js', 'Number(clock.score) >= 90');
 needText('scripts/patch-homepage-alerts.js', 'expiresAt');
+
+needFile('forum.html');
+needFile('forum.js');
+needFile('data/forum-seed.json');
+needText('forum.html', 'The Signal Board');
+needText('forum.html', 'signal-board-feed');
+needText('forum.html', 'signal-board-form');
+needText('forum.html', 'forum.js');
+needText('forum.js', 'data/forum-seed.json');
+needText('forum.js', 'Cloudflare static mode');
+needText('forum.js', 'LOCAL_POSTS_KEY');
+needText('forum.js', 'loadStaticFeed');
+needText('forum.js', '/.netlify/functions/forum-feed');
+needText('forum.js', '/.netlify/functions/submit-forum-post');
+needText('forum.js', 'signal saved on this device');
+
 const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/global-risk-clocks.json')) : {};
 if (!Array.isArray(data.clocks) || data.clocks.length !== 12) issues.push('global risk clocks must contain 12 clocks');
 for (const clock of data.clocks || []) {
@@ -33,9 +49,11 @@ for (const clock of data.clocks || []) {
 }
 const epstein = exists('data/epstein-homepage-alerts.json') ? JSON.parse(read('data/epstein-homepage-alerts.json')) : {};
 if (!Array.isArray(epstein.alerts)) issues.push('epstein homepage alerts must be an array');
+const seed = exists('data/forum-seed.json') ? JSON.parse(read('data/forum-seed.json')) : {};
+if (!Array.isArray(seed.posts) || seed.posts.length < 1) issues.push('forum seed needs at least one post');
 if (issues.length) {
-  console.error('GLOBAL RISK CLOCKS TEST FAILED');
+  console.error('GLOBAL RISK CLOCKS / FORUM CLOUDFLARE TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('GLOBAL RISK CLOCKS TEST PASSED');
+console.log('GLOBAL RISK CLOCKS / FORUM CLOUDFLARE TEST PASSED');

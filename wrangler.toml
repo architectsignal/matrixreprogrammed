@@ -13,7 +13,7 @@ binding = "ASSETS"
 run_worker_first = true
 
 # Public Signal Board storage.
-# Wrangler/Cloudflare Builds can auto-provision this KV namespace when no id is supplied.
-# If Cloudflare shows a generated namespace ID after deploy, we can pin it here later.
+# Cloudflare KV namespace title: matrixreprogrammed-forum-posts
 [[kv_namespaces]]
 binding = "FORUM_POSTS"
+id = "99996d87016d4285a833707cbda5232f"

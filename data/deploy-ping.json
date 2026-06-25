@@ -1,5 +1,6 @@
 {
-  "updated": "2026-06-25T00:00:00Z",
-  "purpose": "Harmless deploy trigger marker after enabling the guarded production deploy workflow.",
-  "expected": "Push commit message contains [deploy], so Deploy Production should run if GitHub Actions and secrets are enabled."
+  "updated": "2026-06-25T11:31:00Z",
+  "purpose": "Harmless deploy trigger marker after adding wrangler.toml with _site output directory.",
+  "expected": "Cloudflare should build a commit that includes wrangler.toml and use _site instead of dist.",
+  "requiredConfig": "wrangler.toml -> pages_build_output_dir = _site"
 }

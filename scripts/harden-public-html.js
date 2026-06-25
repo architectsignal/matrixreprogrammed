@@ -23,6 +23,8 @@ function sanitizeCopy(html){return html
   .replace(/\bPrimary route\b/gi,'Best starting point')
   .replace(/\bReader path\b/gi,'Next step')
   .replace(/\breader path\b/gi,'next step')
+  .replace(/\bNext step status terminal\b/gi,'Reader path status terminal')
+  .replace(/\bnext step status terminal\b/gi,'Reader path status terminal')
   .replace(/\bsource pathway\b/gi,'source trail')
   .replace(/\barchive route\b/gi,'source trail')
   .replace(/\bsales door\b/gi,'book entry point')

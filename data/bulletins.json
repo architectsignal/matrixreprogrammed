@@ -1,91 +1,131 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-25",
   "liveWindowDays": 7,
-  "rule": "Live bulletins are generated from this file. Older items remain in intel-archive.html so news never disappears without becoming archive structure.",
+  "rule": "Live bulletins are generated from this file. Older items remain in intel-archive.html so news never disappears without becoming archive structure. Every bulletin must preserve evidence boundaries and avoid unsupported accusations.",
   "bulletins": [
     {
-      "id": "war-file-gaza-un-inquiry-2026-06-24",
-      "date": "2026-06-24",
-      "label": "War File",
-      "headline": "UN inquiry report on Gaza children enters the public-record lane",
-      "summary": "Reuters reported on a UN inquiry accusing Israeli authorities and security forces of deliberately targeting Palestinian children during the Gaza conflict. Israel rejected the report. The item remains a contested public international-record signal, not a settled court finding.",
-      "why": "Shows how alleged state violence, child casualties, international-law claims, evidentiary standards, and official rebuttals should be tracked separately.",
-      "path": "book-wwiii.html",
-      "pathLabel": "Reader Path: War File",
+      "id": "epstein-maxwell-habeas-prosecutors-2026-06-25",
+      "date": "2026-06-25",
+      "label": "Epstein Watch",
+      "headline": "Maxwell files new Epstein-documents challenge; prosecutors oppose",
+      "summary": "Reuters reported that Ghislaine Maxwell filed a new habeas corpus petition arguing that newly released Epstein materials undermine her conviction. U.S. prosecutors rejected the claims as untimely or legally baseless. This is a live court-process signal, not proof that the underlying claims are correct.",
+      "why": "Keeps the Epstein lane focused on docket movement, legal arguments, prosecutorial responses, and evidence boundaries rather than viral name-list claims.",
+      "path": "epstein-files.html#epstein-watch-enhanced",
+      "pathLabel": "Open Epstein Watch",
       "sources": [
-        {"label": "Reuters report", "url": "https://www.reuters.com/world/middle-east/israel-targeted-gaza-children-resulting-genocide-un-inquiry-says-2026-06-23/"},
-        {"label": "UN Commission hub", "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-israel/index"}
+        {"label": "Reuters", "url": "https://www.reuters.com/legal/government/epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-conviction-us-2026-06-25/"},
+        {"label": "Court record lane", "url": "https://www.courtlistener.com/?q=Ghislaine%20Maxwell%20habeas%20Epstein&type=r&order_by=score%20desc"}
       ]
     },
     {
-      "id": "human-cost-displacement-1178m-2026-06-24",
-      "date": "2026-06-24",
-      "label": "Human Cost",
-      "headline": "Global displacement baseline set at 117.8 million people",
-      "summary": "UNHCR's 2026 Global Trends reporting placed forced displacement at roughly 117.8 million people in 2025. The Matrix Reprogrammed panel separates refugees, asylum seekers, internally displaced people, stateless people, and other protected populations rather than merging them into a single political slogan.",
-      "why": "Displacement is one of the clearest measures of system shock: war, failed states, border pressure, humanitarian collapse, and migration politics all converge here.",
+      "id": "epstein-house-oversight-groff-2026-06-25",
+      "date": "2026-06-25",
+      "label": "Epstein Watch",
+      "headline": "House Oversight testimony lane adds Epstein staff and scheduling context",
+      "summary": "The Wall Street Journal reported on testimony from Jeffrey Epstein's longtime executive assistant Lesley Groff before the House Oversight Committee. The testimony concerned scheduling, logistics, massage appointments, and claimed lack of knowledge. The association boundary remains essential: testimony and document mentions are not automatic findings of criminal conduct.",
+      "why": "The useful signal is operational structure: staff, scheduling, logistics, records, committee questioning, and where testimony conflicts with survivor or FBI-record claims.",
+      "path": "epstein-files.html#epstein-watch-enhanced",
+      "pathLabel": "Open Epstein Watch",
+      "sources": [
+        {"label": "Wall Street Journal", "url": "https://www.wsj.com/politics/see-what-jeffrey-epsteins-longtime-secretary-told-congress-08b93567"},
+        {"label": "House Oversight search", "url": "https://oversight.house.gov/?s=Epstein"}
+      ]
+    },
+    {
+      "id": "hormuz-shipments-ceasefire-risk-2026-06-25",
+      "date": "2026-06-25",
+      "label": "Energy Shock",
+      "headline": "Hormuz shipments rebound after ceasefire, but maritime risk stays live",
+      "summary": "Reuters reported crude shipments through the Strait of Hormuz reached their highest level since the Iran-war disruption began, while shipping traffic remains below normal and vessels continue avoiding central routes. Reports also flagged AIS disruption, route changes, and uncertainty over ceasefire durability.",
+      "why": "Hormuz remains a pressure point where war, energy prices, maritime insurance, sanctions, naval power, and global supply chains converge.",
+      "path": "timers.html",
+      "pathLabel": "Open Global Risk Clocks",
+      "sources": [
+        {"label": "Reuters", "url": "https://www.reuters.com/business/energy/crude-shipments-through-hormuz-highest-since-war-amid-concerns-over-iran-exit-2026-06-25/"},
+        {"label": "Guardian", "url": "https://www.theguardian.com/world/2026/jun/25/un-backed-plan-ships-trapped-strait-of-hormuz-rejected-iran"}
+      ]
+    },
+    {
+      "id": "ukraine-russia-40-day-pressure-campaign-2026-06-25",
+      "date": "2026-06-25",
+      "label": "War File",
+      "headline": "Ukraine announces 40-day campaign to pressure Russia through strikes",
+      "summary": "Reuters reported that President Volodymyr Zelenskiy approved a 40-day campaign intended to influence Russia to end the war, following consultations with Ukraine's security service. Related reporting described preemptive strikes against facilities used to support Russia's war effort.",
+      "why": "Shows the war moving deeper into infrastructure pressure, long-range targeting, energy disruption, air-defense redistribution, and escalation-risk management.",
+      "path": "dashboard-conflict.html",
+      "pathLabel": "Open Conflict Dashboard",
+      "sources": [
+        {"label": "Reuters campaign report", "url": "https://www.reuters.com/world/ukraines-zelenskiy-says-he-approved-40-day-campaign-influence-russia-end-war-2026-06-25/"},
+        {"label": "Reuters preemptive-strike report", "url": "https://www.reuters.com/world/ukraine-conduct-preemptive-attacks-facilities-russia-uses-war-zelenskiy-says-2026-06-25/"}
+      ]
+    },
+    {
+      "id": "iran-banking-cyberattack-2026-06-23",
+      "date": "2026-06-23",
+      "label": "Cyber Watch",
+      "headline": "Iran reports card-banking disruption after cyberattacks on major lenders",
+      "summary": "Reuters reported that Iran's state-owned Informatics Services Corporation said cyberattacks disrupted card-based banking services at three major banks, temporarily affecting ATM, mobile-banking, and point-of-sale services.",
+      "why": "Cyber shocks are no longer abstract: banking rails, payment systems, wartime attribution, and public trust can all become battlefield surfaces.",
+      "path": "timers.html",
+      "pathLabel": "Open Cyber Clock",
+      "sources": [
+        {"label": "Reuters", "url": "https://www.reuters.com/world/middle-east/iran-says-card-based-banking-hit-by-cyberattack-three-lenders-2026-06-23/"}
+      ]
+    },
+    {
+      "id": "libya-migrant-boat-dead-missing-2026-06-19",
+      "date": "2026-06-19",
+      "label": "Migration Watch",
+      "headline": "Libya-route shipwreck leaves 51 migrants dead or missing",
+      "summary": "AP reported that a migrant boat capsized off Libya's eastern coast, leaving 51 people dead or missing and 10 survivors. AP cited IOM figures that more than 800 migrants were reported dead or missing on the central Mediterranean route from January to mid-May 2026.",
+      "why": "Migration dashboards must track deaths and disappearances separately from arrivals, asylum applications, interceptions, and political rhetoric.",
+      "path": "dashboard-migration.html",
+      "pathLabel": "Open Migration Dashboard",
+      "sources": [
+        {"label": "AP", "url": "https://apnews.com/article/031dc7c8ed997565646a12593b1ec5ed"},
+        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"}
+      ]
+    },
+    {
+      "id": "food-insecurity-hotspots-2026-06-18",
+      "date": "2026-06-18",
+      "label": "Famine Watch",
+      "headline": "UN food agencies warn acute hunger may worsen across 13 hotspots",
+      "summary": "AP reported that FAO and WFP warned acute hunger may worsen in 13 hotspots from June to November 2026, with about 266 million people facing high levels of food insecurity. Conflict, economic shocks, climate events, and funding shortfalls remain central drivers.",
+      "why": "Food stress links war, debt, climate, migration, aid cuts, disease, sanctions, state failure, and social unrest into one measurable pressure system.",
       "path": "dashboard-human-cost.html",
       "pathLabel": "Open Human Cost Dashboard",
       "sources": [
-        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"},
+        {"label": "AP", "url": "https://apnews.com/article/a399839162c23531efc3e096d7d69b76"},
+        {"label": "WFP", "url": "https://www.wfp.org/"},
+        {"label": "FAO", "url": "https://www.fao.org/"}
+      ]
+    },
+    {
+      "id": "unhcr-global-displacement-2026-06-11",
+      "date": "2026-06-11",
+      "label": "Human Cost",
+      "headline": "UNHCR reports first displacement decline in a decade, but crisis remains massive",
+      "summary": "Reuters reported that forced displacement declined in 2025 for the first time in a decade, while the global refugee population remained around 41.6 million, including Palestinian refugees, and returns often occurred under fragile conditions.",
+      "why": "Displacement figures must separate refugees, asylum seekers, internally displaced people, returns, and fragile post-conflict movements rather than turning every number into a slogan.",
+      "path": "dashboard-human-cost.html",
+      "pathLabel": "Open Human Cost Dashboard",
+      "sources": [
+        {"label": "Reuters", "url": "https://www.reuters.com/world/unhcr-says-fewer-people-displaced-worldwide-2025-long-term-refugee-crisis-2026-06-11/"},
         {"label": "UNHCR Global Trends", "url": "https://www.unhcr.org/global-trends"}
       ]
     },
     {
-      "id": "food-insecurity-hotspots-2026-06-24",
-      "date": "2026-06-24",
-      "label": "Famine Watch",
-      "headline": "FAO/WFP warn acute hunger may worsen across 13 hotspots",
-      "summary": "UN food-agency reporting warned that around 266 million people face high levels of acute food insecurity, with 13 hotspots at risk of worsening from June to November 2026. Conflict, economic shocks, weather, and funding shortages remain the central drivers.",
-      "why": "Food stress is a collapse indicator. It links war, debt, sanctions, migration, disease, state failure, and humanitarian access into one measurable pressure system.",
-      "path": "dashboard-human-cost.html",
-      "pathLabel": "Open Human Cost Dashboard",
+      "id": "ai-frontier-model-review-meta-2026-06-23",
+      "date": "2026-06-23",
+      "label": "AI Watch",
+      "headline": "U.S. presses Meta to submit advanced AI models for government review",
+      "summary": "Reuters reported that the U.S. government is pressing Meta to join other major AI developers in voluntarily submitting advanced models for pre-release review of capabilities and vulnerabilities. The move is framed around national-security concerns including cyber and military risk.",
+      "why": "AI governance is becoming a national-security lane: model access, government review, military use, cyber risk, and corporate-state boundaries are converging.",
+      "path": "answer-engine.html",
+      "pathLabel": "Open AI Answer Engine",
       "sources": [
-        {"label": "WFP", "url": "https://www.wfp.org/"},
-        {"label": "IPC", "url": "https://www.ipcinfo.org/"}
-      ]
-    },
-    {
-      "id": "migration-panel-added-2026-06-24",
-      "date": "2026-06-24",
-      "label": "Migration Watch",
-      "headline": "Migration and irregular immigration panel added",
-      "summary": "The Intel Desk now separates border encounters, irregular crossings, asylum applications, removals, returns, departures, missing migrants, and unauthorized-population estimates. These categories are not interchangeable and should not be presented as a single illegal-immigration counter.",
-      "why": "Migration pressure affects elections, policing, labour markets, border policy, organised-crime routes, asylum systems, and social trust. The archive tracks the structure without collapsing different datasets into one number.",
-      "path": "news.html#migration",
-      "pathLabel": "Open Migration Panel",
-      "sources": [
-        {"label": "U.S. CBP statistics", "url": "https://www.cbp.gov/newsroom/stats"},
-        {"label": "Frontex migratory map", "url": "https://www.frontex.europa.eu/what-we-do/monitoring-and-risk-analysis/migratory-map/"},
-        {"label": "Eurostat asylum data", "url": "https://ec.europa.eu/eurostat/web/migration-asylum/asylum"}
-      ]
-    },
-    {
-      "id": "migration-deaths-central-med-2026-06-24",
-      "date": "2026-06-24",
-      "label": "Migration Watch",
-      "headline": "Central Mediterranean death and missing-migrant lane added",
-      "summary": "The migration panel now tracks deaths and disappearances separately from arrivals, encounters, asylum applications, and removals. Route-level mortality is undercounted and must be sourced from IOM Missing Migrants and reputable incident reporting.",
-      "why": "Border politics usually counts arrivals. Human cost also requires counting deaths, disappearances, exploitation, detention conditions, and smuggling-route risk.",
-      "path": "dashboard-migration.html",
-      "pathLabel": "Open Migration Dashboard",
-      "sources": [
-        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"},
-        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"}
-      ]
-    },
-    {
-      "id": "human-cost-panels-expanded-2026-06-24",
-      "date": "2026-06-24",
-      "label": "Human Cost",
-      "headline": "Human Cost Evidence Panels expanded",
-      "summary": "The Intel Desk now separates raw reports, official counts, compensated claims, estimates, and contested figures. Conflict-zone deaths, migration and irregular border flows, vaccine injury compensation, trafficking and exploitation, famine and displacement, and medical-system failure are handled as evidence categories, not viral counters.",
-      "why": "Human suffering becomes easier to ignore when numbers are hidden, politicised, or exaggerated. The desk shows dated figures with source boundaries.",
-      "path": "news.html#human-cost",
-      "pathLabel": "Open Human Cost",
-      "sources": [
-        {"label": "UNHCR statistics", "url": "https://www.unhcr.org/refugee-statistics/"},
-        {"label": "IOM Missing Migrants", "url": "https://missingmigrants.iom.int/"}
+        {"label": "Reuters", "url": "https://www.reuters.com/world/us/us-presses-meta-agree-ai-reviews-security-concerns-rise-nyt-reports-2026-06-23/"}
       ]
     }
   ]

@@ -17,7 +17,7 @@ const protectedMarkers = [
   'LAUNCH ROOM STATUS','CAMPAIGN ROOM','LAUNCH ROOM',
   'OFFER STACK STATUS','OFFER ROOM','OFFER CENTER',
   'LEAD MAGNET ENGINE STATUS','OPT-IN ROOM','OPT-IN CENTER',
-  'LIVE INTEL','LIVE INTEL STATUS','EPSTEIN WATCH','EPSTEIN EVIDENCE WATCH'
+  'LIVE INTEL','LIVE INTEL STATUS','EPSTEIN WATCH','EPSTEIN EVIDENCE WATCH','Source Watch JSON'
 ];
 function protectMarkers(html) {
   const saved = [];
@@ -128,7 +128,7 @@ function figureSourcePanel(file, html) {
 function softenJsonLinks(html) {
   return html.replace(/<a\b([^>]*?)href=["']([^"']+\.json)["']([^>]*)>(.*?)<\/a>/gi, (full, before, href, after, label) => {
     const cleanLabel = visibleCopy(label || '').trim();
-    const newLabel = /json|data|feed|report|download/i.test(cleanLabel) ? 'Machine-readable data' : cleanLabel;
+    const newLabel = href.includes('epstein-source-watch.json') ? 'Source Watch JSON' : (/json|data|feed|report|download/i.test(cleanLabel) ? 'Machine-readable data' : cleanLabel);
     const attrs = `${before}href="${href}"${after}`;
     if (/machine-data-link/.test(attrs)) return full.replace(/>.*?<\/a>/, `>${newLabel}</a>`);
     const classMatch = attrs.match(/class=["']([^"']*)["']/i);

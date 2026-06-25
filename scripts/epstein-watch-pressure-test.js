@@ -19,7 +19,9 @@ for(const file of [
   'data/epstein-people-index.json',
   'data/epstein-file-cockpit.json',
   'data/epstein-network-architecture.json',
+  'data/epstein-evidence-ladder.json',
   'scripts/enhance-epstein-watch.js',
+  'scripts/build-epstein-evidence-ladder.js',
   'epstein-files.html',
   'downloads/epstein-source-watch.json',
   'downloads/epstein-evidence-watch.md',
@@ -31,6 +33,8 @@ for(const file of [
   'downloads/epstein-file-cockpit.md',
   'downloads/epstein-network-architecture.json',
   'downloads/epstein-network-architecture.md',
+  'downloads/epstein-evidence-ladder.json',
+  'downloads/epstein-evidence-ladder.md',
   'package.json',
   'netlify.toml'
 ]) requireFile(file);
@@ -76,12 +80,30 @@ if(exists('data/epstein-network-architecture.json')){
     if(!Array.isArray(item.recordsNeeded) || item.recordsNeeded.length < 3) fail(`network architecture item missing records needed: ${item.title || 'unknown'}`);
   }
 }
+if(exists('data/epstein-evidence-ladder.json')){
+  const ladder = JSON.parse(read('data/epstein-evidence-ladder.json'));
+  if(!Array.isArray(ladder.levels) || ladder.levels.length < 8) fail('data/epstein-evidence-ladder.json expected at least 8 evidence levels');
+  if(!Array.isArray(ladder.claimClassifier) || ladder.claimClassifier.length < 7) fail('data/epstein-evidence-ladder.json expected at least 7 claim classifiers');
+  if(!String(ladder.boundary || '').includes('stronger the claim')) fail('data/epstein-evidence-ladder.json expected strong-claim boundary');
+  for(const item of ladder.levels || []){
+    for(const key of ['level','name','strength','claimAllowed','warning']) if(!item[key]) fail(`evidence ladder level missing ${key}`);
+    if(!Array.isArray(item.needs) || item.needs.length < 3) fail(`evidence ladder level missing needs: ${item.name || 'unknown'}`);
+  }
+  for(const item of ladder.claimClassifier || []){
+    for(const key of ['claimType','allowedLanguage','forbiddenShortcut']) if(!item[key]) fail(`claim classifier missing ${key}`);
+  }
+}
 
 requireIncludes('scripts/enhance-epstein-watch.js','networkMatrixFile','generator loads network matrix file');
 requireIncludes('scripts/enhance-epstein-watch.js','networkJsonOut','generator writes network JSON');
 requireIncludes('scripts/enhance-epstein-watch.js','networkMdOut','generator writes network markdown');
 requireIncludes('scripts/enhance-epstein-watch.js','epstein-network-architecture','generator renders network section');
 requireIncludes('scripts/enhance-epstein-watch.js','Speculation Quarantine','generator renders speculation quarantine');
+requireIncludes('scripts/build-epstein-evidence-ladder.js','epstein-evidence-ladder','Phase 5 builder renders ladder section');
+requireIncludes('scripts/build-epstein-evidence-ladder.js','Claim Classifier','Phase 5 builder renders claim classifier');
+requireIncludes('scripts/build-epstein-evidence-ladder.js','downloads/epstein-evidence-ladder.json','Phase 5 builder writes JSON download');
+requireIncludes('package.json','build-epstein-evidence-ladder.js','npm build includes Phase 5 builder');
+requireIncludes('netlify.toml','build-epstein-evidence-ladder.js','Netlify build includes Phase 5 builder');
 
 requireIncludes('epstein-files.html','epstein-watch-enhanced','enhanced watch section');
 requireIncludes('epstein-files.html','Source Watch / Freedom Intelligence Engine','source-watch heading');
@@ -106,6 +128,11 @@ requireIncludes('epstein-files.html','epstein-network-architecture','network arc
 requireIncludes('epstein-files.html','Network Architecture Matrix','network architecture heading');
 requireIncludes('epstein-files.html','Speculation Quarantine','speculation quarantine');
 requireIncludes('epstein-files.html','Network functions','network function count');
+requireIncludes('epstein-files.html','epstein-evidence-ladder','evidence ladder section');
+requireIncludes('epstein-files.html','Evidence Strength Ladder','evidence ladder heading');
+requireIncludes('epstein-files.html','Claim Classifier','claim classifier heading');
+requireIncludes('epstein-files.html','Forbidden shortcut','forbidden shortcut label');
+requireIncludes('epstein-files.html','Settlement / NDA = silence-management lane, not automatic admission','settlement boundary in classifier');
 requireIncludes('epstein-files.html','Evidence Boundary','evidence boundary marker');
 requireIncludes('epstein-files.html','Criminal finding only where court/plea/conviction supports it','criminal finding boundary');
 
@@ -120,8 +147,9 @@ requireIncludes('downloads/epstein-network-architecture.md','# Epstein Network A
 requireIncludes('downloads/epstein-network-architecture.json','Access Network','network architecture JSON access lane');
 requireIncludes('downloads/epstein-network-architecture.json','Speculation Quarantine','network architecture JSON speculation lane');
 requireIncludes('downloads/epstein-network-architecture.json','Legal Pressure / Silence Network','network architecture JSON legal/silence lane');
-requireIncludes('package.json','enhance-epstein-watch.js','npm build enhancer');
-requireIncludes('netlify.toml','enhance-epstein-watch.js','Netlify build enhancer');
+requireIncludes('downloads/epstein-evidence-ladder.md','# Epstein Evidence Strength Ladder','evidence ladder markdown title');
+requireIncludes('downloads/epstein-evidence-ladder.json','Conviction / Plea / Court Finding','evidence ladder JSON conviction level');
+requireIncludes('downloads/epstein-evidence-ladder.json','Person named in file','claim classifier JSON named-person rule');
 
 if(problems.length){
   console.error('\nEPSTEIN WATCH PRESSURE TEST FAILED\n');
@@ -130,4 +158,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and Netlify wiring.');

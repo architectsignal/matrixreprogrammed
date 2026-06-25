@@ -6,6 +6,32 @@ const ignored = new Set(['site-freshness-report.html','site-quality-report.html'
 const publicPages = fs.readdirSync(root).filter(file => file.endsWith('.html') && !ignored.has(file));
 const checkedDate = '25 June 2026';
 
+const protectedMarkers = [
+  'READER PATH STATUS','SALES LADDER STATUS','READER PATHS','Reader Paths',
+  'UPDATE MONITOR STATUS','FRESHNESS LANE','UPDATE MONITOR',
+  'AUTHORITY ENGINE STATUS','AUTHORITY CLUSTER','AUTHORITY HUB',
+  'SCHEMA ENGINE STATUS','MACHINE PAGE','SCHEMA INDEX',
+  'DOSSIER PACK ENGINE STATUS','DOSSIER PACK','DOWNLOAD CENTER','Source Pathways','Core Pathways',
+  'FEED ENGINE STATUS','FEED STATUS','FEED CENTER','JSON Feed',
+  'SHARE KIT ENGINE STATUS','SHARE KIT','SHARE CENTER',
+  'LAUNCH ROOM STATUS','CAMPAIGN ROOM','LAUNCH ROOM',
+  'OFFER STACK STATUS','OFFER ROOM','OFFER CENTER',
+  'LEAD MAGNET ENGINE STATUS','OPT-IN ROOM','OPT-IN CENTER',
+  'LIVE INTEL','LIVE INTEL STATUS','EPSTEIN WATCH','EPSTEIN EVIDENCE WATCH'
+];
+function protectMarkers(html) {
+  const saved = [];
+  for (const marker of protectedMarkers) {
+    html = html.split(marker).join(`%%MR_USEFUL_PROTECTED_${saved.length}%%`);
+    saved.push(marker);
+  }
+  return { html, saved };
+}
+function restoreMarkers(html, saved) {
+  saved.forEach((marker, i) => { html = html.split(`%%MR_USEFUL_PROTECTED_${i}%%`).join(marker); });
+  return html;
+}
+
 const replacements = [
   [/\bUse this page as\b/gi, 'Use this page to'],
   [/\bHow To Use This Page\b/g, 'Where To Go Next'],
@@ -106,14 +132,12 @@ function softenJsonLinks(html) {
     const attrs = `${before}href="${href}"${after}`;
     if (/machine-data-link/.test(attrs)) return full.replace(/>.*?<\/a>/, `>${newLabel}</a>`);
     const classMatch = attrs.match(/class=["']([^"']*)["']/i);
-    if (classMatch) {
-      return `<a ${attrs.replace(classMatch[0], `class="${classMatch[1]} machine-data-link"`)}>${newLabel}</a>`;
-    }
+    if (classMatch) return `<a ${attrs.replace(classMatch[0], `class="${classMatch[1]} machine-data-link"`)}>${newLabel}</a>`;
     return `<a ${attrs} class="machine-data-link">${newLabel}</a>`;
   });
 }
 function preserveDistributionMarkers(file, html) {
-  if (!/^distribution-[\w-]+\.html$/i.test(file)) return html;
+  if (!/^(distribution|dossier-pack)-[\w-]+\.html$/i.test(file)) return html;
   return html.replace(/<h2>Source Trails<\/h2>/g, '<h2>Source Pathways</h2>').replace(/<h2>Source Trail<\/h2>/g, '<h2>Source Pathways</h2>');
 }
 
@@ -125,7 +149,10 @@ for (const file of publicPages) {
   const full = path.join(root, file);
   let html = fs.readFileSync(full, 'utf8');
   const before = html;
+  const protectedState = protectMarkers(html);
+  html = protectedState.html;
   for (const [from, to] of replacements) html = html.replace(from, to);
+  html = restoreMarkers(html, protectedState.saved);
   html = preserveDistributionMarkers(file, html);
   const beforeJson = html;
   html = softenJsonLinks(html);

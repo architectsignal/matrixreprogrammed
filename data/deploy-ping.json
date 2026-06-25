@@ -1,0 +1,5 @@
+{
+  "updated": "2026-06-25T00:00:00Z",
+  "purpose": "Harmless deploy trigger marker after enabling the guarded production deploy workflow.",
+  "expected": "Push commit message contains [deploy], so Deploy Production should run if GitHub Actions and secrets are enabled."
+}

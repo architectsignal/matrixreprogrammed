@@ -68,6 +68,14 @@ for (const required of [
   'epstein-files.html', 'epstein-files',
   'live-intel.html', 'live-intel',
   'search.html', 'search',
+  'timers.html', 'timers',
+  'forum.html', 'forum',
+  'atlas-layers.html', 'atlas-layers',
+  'migration-flow.html', 'migration-flow',
+  'data/global-risk-clocks.json',
+  'data/atlas-layers.json',
+  'data/migration-flow-panel.json',
+  'data/forum-seed.json',
   '_headers'
 ]) {
   if (!fs.existsSync(path.join(out, required))) {
@@ -87,4 +95,4 @@ const count = [];
     else count.push(full);
   }
 })(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including extensionless HTML assets.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including upgraded intelligence tools and extensionless HTML assets.`);

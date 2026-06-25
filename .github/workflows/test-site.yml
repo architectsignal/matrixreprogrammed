@@ -11,6 +11,9 @@ concurrency:
   group: test-site-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   test:
     name: Build and pressure test
@@ -24,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
@@ -35,6 +38,14 @@ jobs:
       - name: Atlas Layers test
         if: always()
         run: npm run pressure-test:atlas-layers
+
+      - name: Migration Flow test
+        if: always()
+        run: npm run pressure-test:migration-flow
+
+      - name: Risk Clocks and Forum Cloudflare test
+        if: always()
+        run: npm run pressure-test:global-risk-clocks
 
       - name: Upload built site artifact
         if: success()

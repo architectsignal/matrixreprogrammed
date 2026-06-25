@@ -31,10 +31,20 @@ function copyFile(src, dest, rel) {
   const size = fs.statSync(src).size;
   if (size > maxAssetBytes) {
     console.warn(`Skipping oversized Cloudflare asset (${Math.round(size / 1024 / 1024)} MiB): ${rel}`);
-    return;
+    return false;
   }
   ensure(path.dirname(dest));
   fs.copyFileSync(src, dest);
+  return true;
+}
+function copyExtensionlessHtml(src, rel) {
+  if (!rel.endsWith('.html')) return;
+  if (rel === 'index.html') {
+    copyFile(src, path.join(out, 'index'), 'index');
+    return;
+  }
+  const noExt = rel.replace(/\.html$/i, '');
+  copyFile(src, path.join(out, noExt), noExt);
 }
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -42,7 +52,10 @@ function walk(dir) {
     const rel = path.relative(root, full).replace(/\\/g, '/');
     if (!shouldCopy(rel, entry)) continue;
     if (entry.isDirectory()) walk(full);
-    else copyFile(full, path.join(out, rel), rel);
+    else {
+      const copied = copyFile(full, path.join(out, rel), rel);
+      if (copied) copyExtensionlessHtml(full, rel);
+    }
   }
 }
 
@@ -50,17 +63,11 @@ rm(out);
 ensure(out);
 walk(root);
 
-if (!fs.existsSync(path.join(out, 'index.html'))) {
-  console.error('Cloudflare output failed: _site/index.html missing');
-  process.exit(1);
-}
-if (!fs.existsSync(path.join(out, '_redirects'))) {
-  console.error('Cloudflare output failed: _site/_redirects missing');
-  process.exit(1);
-}
-if (!fs.existsSync(path.join(out, '_headers'))) {
-  console.error('Cloudflare output failed: _site/_headers missing');
-  process.exit(1);
+for (const required of ['index.html', 'index', 'start-here.html', 'start-here', 'books.html', 'books', 'epstein-files.html', 'epstein-files', 'live-intel.html', 'live-intel', 'search.html', 'search', '_redirects', '_headers']) {
+  if (!fs.existsSync(path.join(out, required))) {
+    console.error(`Cloudflare output failed: _site/${required} missing`);
+    process.exit(1);
+  }
 }
 const count = [];
 (function countFiles(dir) {
@@ -70,4 +77,4 @@ const count = [];
     else count.push(full);
   }
 })(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless HTML assets.`);

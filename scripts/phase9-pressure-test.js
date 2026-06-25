@@ -9,6 +9,7 @@ function json(file) { return JSON.parse(read(file)); }
 function fail(msg) { problems.push(msg); }
 function requireFile(file) { if (!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function requireOneOf(file, texts, label) { if (!exists(file)) return; const body = read(file); if (!texts.some(text => body.includes(text))) fail(`${file}: missing ${label}`); }
 
 requireFile('data/content-distribution.json');
 requireFile('scripts/build-phase9-content-distribution.js');
@@ -44,11 +45,11 @@ for (const format of formats) {
   requireIncludes(file, 'DISTRIBUTION FORMAT', 'Distribution format terminal');
   requireIncludes(file, 'Template', 'Template section');
   requireIncludes(file, 'Sample Briefs', 'Sample Briefs section');
-  requireIncludes(file, 'Source Pathways', 'Source Pathways section');
+  requireOneOf(file, ['Source Trails', 'Source Pathways'], 'reader-facing source trail section');
   requireIncludes(file, 'Trust Center', 'Trust pathway');
   if (!Array.isArray(format.template) || format.template.length < 5) fail(`${format.slug}: expected at least 5 template steps`);
   if (!Array.isArray(format.sampleBriefs) || format.sampleBriefs.length < 3) fail(`${format.slug}: expected at least 3 sample briefs`);
-  if (!Array.isArray(format.routes) || format.routes.length < 4) fail(`${format.slug}: expected at least 4 source pathways`);
+  if (!Array.isArray(format.routes) || format.routes.length < 4) fail(`${format.slug}: expected at least 4 source trail entries`);
   if (!search.some(item => item.url === file)) fail(`search-index.json missing ${file}`);
   requireIncludes('sitemap.xml', `/${file}`, `${file} sitemap entry`);
 }
@@ -81,4 +82,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 9 CONTENT DISTRIBUTION PRESSURE TEST PASSED');
-console.log(`Checked ${formats.length} distribution formats, source pathway sections, format pages, video/podcast/news patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${formats.length} distribution formats, source trail sections, format pages, video/podcast/news patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);

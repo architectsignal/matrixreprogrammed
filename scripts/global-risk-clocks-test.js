@@ -7,6 +7,11 @@ const exists = name => fs.existsSync(file(name));
 const read = name => fs.readFileSync(file(name), 'utf8');
 function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
+function routeExists(route = '') {
+  const clean = String(route).split('#')[0].split('?')[0];
+  if (!clean || /^https?:\/\//i.test(clean)) return true;
+  return exists(clean);
+}
 
 needFile('data/global-risk-clocks.json');
 needFile('data/epstein-homepage-alerts.json');
@@ -45,6 +50,7 @@ const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/glob
 if (!Array.isArray(data.clocks) || data.clocks.length !== 12) issues.push('global risk clocks must contain 12 clocks');
 for (const clock of data.clocks || []) {
   if (!clock.title || typeof clock.score !== 'number' || !clock.nextRoute) issues.push('clock missing title score or nextRoute');
+  if (clock.nextRoute && !routeExists(clock.nextRoute)) issues.push(`${clock.title} route target missing: ${clock.nextRoute}`);
   if (clock.score >= 90 && clock.homepageEligible !== true) issues.push(`${clock.title} is 90+ but homepageEligible is not true`);
 }
 const epstein = exists('data/epstein-homepage-alerts.json') ? JSON.parse(read('data/epstein-homepage-alerts.json')) : {};

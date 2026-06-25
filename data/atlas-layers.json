@@ -1,13 +1,16 @@
 {
   "updated": "2026-06-25",
   "pageTitle": "Atlas Layers",
+  "pageSubtitle": "A living public-record map for entity pages, weekly source checks, and reader navigation.",
+  "entrySchema": ["name", "role", "why", "sourceLabel", "sourceUrl", "checked", "relationshipType", "evidenceClass", "updateRule"],
+  "boundary": "Atlas entries are navigation leads, not accusations. Every relationship must be labelled by evidence type.",
   "layers": [
-    {"slug":"people","title":"People","definition":"Public institutional actors and leadership figures.","entries":[]},
-    {"slug":"institutions","title":"Institutions","definition":"Agencies, banks, foundations, courts, universities, media groups, contractors, and standards bodies.","entries":[]},
-    {"slug":"operations","title":"Operations","definition":"Public investigations, trials, programs, sanctions, and policy lanes.","entries":[]},
-    {"slug":"money-flows","title":"Money Flows","definition":"Contracts, grants, donations, lobbying, fines, settlements, and public funding lanes.","entries":[]},
-    {"slug":"legal-records","title":"Legal Records","definition":"Court records, hearings, exhibits, judgments, official releases, and regulator findings.","entries":[]},
-    {"slug":"symbolic-layer","title":"Symbolic Layer","definition":"Public logos, patches, architecture, language systems, and symbolism.","entries":[]},
-    {"slug":"human-cost","title":"Human Cost","definition":"Public datasets showing the real-world impact of policy, war, finance, health, and institutional failure.","entries":[]}
+    {"slug":"people","title":"People","definition":"Public institutional actors and leadership figures.","updateRule":"Refresh official leadership and office pages weekly.","entries":[]},
+    {"slug":"institutions","title":"Institutions","definition":"Agencies, banks, foundations, courts, universities, media groups, contractors, and standards bodies.","updateRule":"Refresh official institution pages, reports, and leadership pages weekly.","entries":[]},
+    {"slug":"operations","title":"Operations","definition":"Public investigations, trials, programs, sanctions, and policy lanes.","updateRule":"Refresh public investigation, document release, court, policy, and sanctions lanes weekly.","entries":[]},
+    {"slug":"money-flows","title":"Money Flows","definition":"Contracts, grants, donations, lobbying, fines, settlements, and public funding lanes.","updateRule":"Refresh contract, grant, lobbying, regulator, and settlement lanes weekly.","entries":[]},
+    {"slug":"legal-records","title":"Legal Records","definition":"Court records, hearings, exhibits, judgments, official releases, and regulator findings.","updateRule":"Refresh court, hearing, regulator, archive, and release lanes weekly.","entries":[]},
+    {"slug":"symbolic-layer","title":"Symbolic Layer","definition":"Public logos, patches, architecture, language systems, and symbolism.","updateRule":"Refresh official visual records and keep interpretation clearly labelled.","entries":[]},
+    {"slug":"human-cost","title":"Human Cost","definition":"Public datasets showing the real-world impact of policy, war, finance, health, and institutional failure.","updateRule":"Refresh official public-impact datasets weekly and keep category boundaries visible.","entries":[]}
   ]
 }

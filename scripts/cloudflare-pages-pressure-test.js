@@ -14,6 +14,7 @@ requireFile('_headers');
 requireFile('CLOUDFLARE_PAGES_SETUP.md');
 requireFile('package.json');
 requireFile('wrangler.jsonc');
+requireFile('src/worker.js');
 requireFile('scripts/build-cloudflare-output.js');
 
 const redirects = exists('_redirects') ? read('_redirects') : '';
@@ -55,10 +56,11 @@ requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build command: `npm run build`', '
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Build output directory: `_site`', 'Cloudflare output directory');
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Deploy command: leave blank', 'Cloudflare blank deploy command');
 requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Node version: `22`', 'Cloudflare Node version');
+requireIncludes('wrangler.jsonc', '"main": "src/worker.js"', 'Wrangler worker router entrypoint');
+requireIncludes('wrangler.jsonc', '"binding": "ASSETS"', 'Wrangler ASSETS binding');
 requireIncludes('wrangler.jsonc', '"directory": "_site"', 'Wrangler _site assets directory');
-for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'start-here', 'epstein-files', 'live-intel']) {
-  requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
-}
+for (const marker of ['env.ASSETS.fetch', '.html', '/index.html']) requireIncludes('src/worker.js', marker, `Worker fallback marker ${marker}`);
+for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'start-here', 'epstein-files', 'live-intel']) requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
 
 if (problems.length) {
   console.error('\nCLOUDFLARE PAGES PRESSURE TEST FAILED\n');
@@ -67,4 +69,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE PAGES PRESSURE TEST PASSED');
-console.log('Checked Cloudflare no-loop rewrites, _headers, setup guide, _site Wrangler assets, extensionless HTML Worker assets, critical routes, and download content types.');
+console.log('Checked Cloudflare Worker router, ASSETS binding, no-loop rewrites, _headers, setup guide, _site assets, route fallbacks, and download content types.');

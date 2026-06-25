@@ -11,9 +11,11 @@
   const FEED_ROUTE = '/forum-feed';
   const SUBMIT_ROUTE = '/submit-forum-post';
   const REPORT_ROUTE = '/report-forum-post';
+  const HEALTH_ROUTE = '/forum-health';
   let fallbackMode = false;
+  let lastBackendError = '';
 
-  function esc(s){ return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function esc(s){ return String(s || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c])); }
   function when(value){ try { return new Date(value).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); } catch { return ''; } }
   function unlocked(){ try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; } }
   function localPosts(){ try { return JSON.parse(localStorage.getItem(LOCAL_POSTS_KEY) || '[]'); } catch { return []; } }
@@ -27,6 +29,10 @@
   }
   async function parse(res){ const text = await res.text(); try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; } }
   function listFrom(data){ return Array.isArray(data) ? data : (data && Array.isArray(data.posts) ? data.posts : []); }
+  function backendErrorLabel(prefix, err){
+    const detail = err && err.message ? err.message : String(err || 'backend request failed');
+    return prefix + ': ' + detail;
+  }
 
   function applyLock(){
     const ok = unlocked();
@@ -44,7 +50,8 @@
   }
 
   function fallbackNotice(){
-    return '<article class="card redline"><span class="label">Local fallback</span><h3>Board backend unavailable on this request</h3><p>The forum page still works. Public posting uses Cloudflare Pages Functions at /forum-feed and /submit-forum-post when the FORUM_POSTS KV binding is connected. If the backend is unavailable, posts are saved on this device.</p></article>';
+    const detail = lastBackendError ? '<p><strong>Backend detail:</strong> ' + esc(lastBackendError) + '</p>' : '';
+    return '<article class="card redline"><span class="label">Local fallback</span><h3>Board backend unavailable on this request</h3><p>The forum page still works, but public posting needs the Worker routes at /forum-feed and /submit-forum-post plus the FORUM_POSTS KV binding.</p>' + detail + '<p>Cloudflare test route: <a href="' + HEALTH_ROUTE + '" target="_blank" rel="noopener">/forum-health</a></p></article>';
   }
 
   async function loadFallback(){
@@ -65,12 +72,14 @@
     if (!feed) return;
     try {
       fallbackMode = false;
+      lastBackendError = '';
       const res = await fetch(FEED_ROUTE, { headers: { 'Accept': 'application/json' } });
       const data = await parse(res);
-      if (!res.ok) throw new Error(data.error || 'Feed failed');
+      if (!res.ok) throw new Error('GET ' + FEED_ROUTE + ' returned HTTP ' + res.status + ': ' + (data.error || 'feed failed'));
       const posts = listFrom(data);
       feed.innerHTML = posts.length ? posts.map(renderPost).join('') : '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Unlock a Signal Pass and post a source, question, reader note, or human-cost update.</p></article>';
-    } catch {
+    } catch (err) {
+      lastBackendError = backendErrorLabel('Feed route failed', err);
       await loadFallback();
     }
   }
@@ -90,11 +99,11 @@
         body: JSON.stringify({ id, reason })
       });
       const data = await parse(res);
-      if (!res.ok) throw new Error(data.error || 'Report failed');
+      if (!res.ok) throw new Error('POST ' + REPORT_ROUTE + ' returned HTTP ' + res.status + ': ' + (data.error || 'report failed'));
       alert('Report received.');
-    } catch {
+    } catch (err) {
       saveLocalReport({ id, reason, createdAt: new Date().toISOString() });
-      alert('Report saved on this device.');
+      alert(backendErrorLabel('Report route unavailable; report saved on this device', err));
     }
   }
 
@@ -128,18 +137,19 @@
         body: JSON.stringify(payload)
       });
       const data = await parse(res);
-      if (!res.ok) throw new Error(data.error || 'Post failed');
+      if (!res.ok) throw new Error('POST ' + SUBMIT_ROUTE + ' returned HTTP ' + res.status + ': ' + (data.error || 'post failed'));
       form.reset();
       status.textContent = 'Signal posted. It is now live on the board.';
       await loadFeed();
       applyLock();
-    } catch {
+    } catch (err) {
       const post = Object.assign({}, payload, { id: 'local-' + Date.now(), createdAt: new Date().toISOString(), localOnly: true });
       const posts = localPosts();
       posts.unshift(post);
       saveLocalPosts(posts);
       form.reset();
-      status.textContent = 'Forum backend unavailable: signal saved on this device. Add/check the FORUM_POSTS KV binding for public posting.';
+      lastBackendError = backendErrorLabel('Submit route failed', err);
+      status.textContent = lastBackendError + '. Signal saved on this device. Open /forum-health to check whether the latest Worker and FORUM_POSTS binding are live.';
       await loadFallback();
       applyLock();
     }

@@ -25,7 +25,7 @@ fs.writeFileSync(path.join(root, jsonOut), JSON.stringify(data, null, 2));
 fs.writeFileSync(path.join(root, mdOut), [
   '# Epstein Evidence Watch',
   '',
-  `Updated: ${data.updated || '2026-06-24'}`,
+  `Updated: ${data.updated || '2026-06-25'}`,
   '',
   '## Evidence Boundary',
   data.boundary || '',
@@ -46,13 +46,17 @@ fs.writeFileSync(path.join(root, mdOut), [
 const sourceCards = (data.watchSources || []).map(source => `<article class="card redline"><span class="label">${esc(source.type)} · ${esc(source.priority)}</span><h3>${esc(source.title)}</h3><p>${esc(source.use)}</p><div class="cta-row small"><a class="btn" href="${esc(source.sourceUrl)}">Open Source</a><a class="btn alt" href="${esc(source.route)}">Site Route</a></div></article>`).join('');
 const bulletinCards = (data.bulletins || []).map(item => `<article class="news-item"><span class="figure-caption">${esc(item.date)} · ${esc(item.label)}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p><div class="cta-row small"><a class="btn" href="${esc(item.sourceRoute)}">Source Route</a><a class="btn alt" href="${esc(item.videoRoute)}">Video Route</a><a class="btn alt" href="${esc(item.offerRoute)}">Book Route</a></div></article>`).join('');
 const routes = data.moneyRoutes || {};
+const evidenceBoundary = `<section id="epstein-evidence-boundary" class="section wrap"><h2>Evidence Boundary</h2><p class="lead">${esc(data.boundary || 'This hub tracks public records, court records, official releases, source pages, news bulletins, archive links, committee activity, and litigation movement. A named person appearing in a public record is not by itself proof of criminal conduct.')}</p><div class="terminal">EVIDENCE BOUNDARY\n&gt; Court record is not automatic guilt\n&gt; Testimony is not a final finding\n&gt; Association is not proof of criminal conduct\n&gt; Viral claims stay quarantined until sourced\n&gt; Public-record movement must be dated and linked</div></section>`;
 const section = `<section id="epstein-watch-enhanced" class="section wrap"><h2>Source Watch / Freedom Intelligence Engine</h2><p class="lead">This hub turns public-record updates into dated bulletins, source lanes, downloads, Rumble/video routes, free briefs, offers, book pages, and Amazon store paths.</p><div class="cta-row"><a class="btn" href="${jsonOut}">Source Watch JSON</a><a class="btn alt" href="${mdOut}">Markdown Brief</a><a class="btn alt" href="${esc(routes.video || 'videos.html')}">Rumble Channels</a><a class="btn alt" href="${esc(routes.store || 'amazon-store-books.html')}">Books / Store</a></div><div class="terminal">EPSTEIN WATCH STATUS\n&gt; Source lanes: ${(data.watchSources || []).length}\n&gt; Bulletins: ${(data.bulletins || []).length}\n&gt; Opt-in route: ${esc(routes.optin || 'optin-black-file-brief.html')}\n&gt; Offer route: ${esc(routes.offer || 'offer-starter-library.html')}\n&gt; Store route: ${esc(routes.store || 'amazon-store-books.html')}\n&gt; Video route: ${esc(routes.video || 'videos.html')}</div><h2>Document And Source Lanes</h2><div class="grid">${sourceCards}</div><h2>Latest Epstein Bulletins</h2>${bulletinCards}</section>`;
 
 let html = fs.readFileSync(pageFile, 'utf8');
+if (!html.includes('Evidence Boundary')) {
+  html = html.replace('</main>', `${evidenceBoundary}</main>`);
+}
 if (!html.includes('id="epstein-watch-enhanced"')) {
   html = html.replace('</main>', `${section}</main>`);
 }
 html = html.replace('A live public-record hub for Epstein file drops, elite connections, trafficking evidence, court records, Maxwell case materials, flight-log references, institutional failure, occult-symbolism claims, and evidence-boundary analysis.', 'A source-first public-record hub for document drops, court records, official releases, archive material, dated bulletins, Rumble/video routes, free briefs, offers, and book paths.');
 fs.writeFileSync(pageFile, html);
 
-console.log(`Enhanced Epstein Evidence Watch with ${(data.watchSources || []).length} source lanes, ${(data.bulletins || []).length} bulletins, and download outputs.`);
+console.log(`Enhanced Epstein Evidence Watch with ${(data.watchSources || []).length} source lanes, ${(data.bulletins || []).length} bulletins, Evidence Boundary marker, and download outputs.`);

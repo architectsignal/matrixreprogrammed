@@ -8,6 +8,7 @@
   const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
   const LOCAL_POSTS_KEY = 'matrix_signal_board_posts_v1';
   const LOCAL_REPORTS_KEY = 'matrix_signal_board_reports_v1';
+  const API_ROUTE = '/api/forum';
   let staticMode = false;
 
   function esc(s){
@@ -57,14 +58,20 @@
     try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; }
   }
 
+  function normalizePosts(data){
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.posts)) return data.posts;
+    return [];
+  }
+
   function renderPost(post){
     const source = post.sourceUrl ? '<p class="source-list"><a href="' + esc(post.sourceUrl) + '" target="_blank" rel="noopener">Open source</a></p>' : '';
     const local = post.localOnly ? ' <span class="pill">saved on this device</span>' : '';
-    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title) + '</h3><p>' + esc(post.body) + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt)) + '</span>' + local + '</p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report hard-floor violation</button></article>';
+    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + local + '</p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report hard-floor violation</button></article>';
   }
 
   function staticNotice(){
-    return '<article class="card redline"><span class="label">Cloudflare static mode</span><h3>Board backend not connected yet</h3><p>The forum page works on Cloudflare, but public posting needs a Worker/KV backend. Until that is connected, new posts are saved on this device and can be copied into an email/contact route.</p><div class="cta-row small"><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="live-intel.html">Live Intel</a></div></article>';
+    return '<article class="card redline"><span class="label">Local fallback</span><h3>Board backend unavailable on this request</h3><p>The forum page still works. Public posting uses the Cloudflare Pages API at /api/forum when the FORUM_POSTS KV binding is connected. If the API is unavailable, new posts are saved on this device.</p><div class="cta-row small"><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="live-intel.html">Live Intel</a></div></article>';
   }
 
   async function loadStaticFeed(){
@@ -89,10 +96,11 @@
   async function loadFeed(){
     if (!feed) return;
     try {
-      const res = await fetch('/.netlify/functions/forum-feed', { headers: { 'Accept': 'application/json' } });
+      staticMode = false;
+      const res = await fetch(API_ROUTE, { headers: { 'Accept': 'application/json' } });
       const data = await readResponse(res);
       if (!res.ok) throw new Error(data.error || ('Feed failed with HTTP ' + res.status));
-      const posts = Array.isArray(data.posts) ? data.posts : [];
+      const posts = normalizePosts(data);
       if (!posts.length) {
         feed.innerHTML = '<article class="card redline"><h3>No signals yet</h3><p>The board is open. Unlock a Signal Pass and post a source, question, reader note, or human-cost update.</p></article>';
         return;
@@ -112,10 +120,10 @@
       return;
     }
     try {
-      const res = await fetch('/.netlify/functions/report-forum-post', {
+      const res = await fetch(API_ROUTE, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ id, reason })
+        body: JSON.stringify({ action: 'report', id, reason })
       });
       const data = await readResponse(res);
       if (!res.ok) throw new Error(data.error || ('Report failed with HTTP ' + res.status));
@@ -160,7 +168,7 @@
         return;
       }
       try {
-        const res = await fetch('/.netlify/functions/submit-forum-post', {
+        const res = await fetch(API_ROUTE, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify(payload)
@@ -181,7 +189,7 @@
         posts.unshift(localPost);
         writeLocalPosts(posts);
         form.reset();
-        status.textContent = 'Cloudflare static mode: signal saved on this device. Public posting needs the Worker/KV backend.';
+        status.textContent = 'Forum API unavailable: signal saved on this device. Add/check the FORUM_POSTS KV binding for public posting.';
         await loadStaticFeed();
         applySignalPassState();
       }

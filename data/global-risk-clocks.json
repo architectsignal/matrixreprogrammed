@@ -1,21 +1,141 @@
 {
   "updated": "2026-06-25",
   "title": "Global Risk Clocks",
-  "summary": "Static speculative pressure scores for high-level risk lanes. These are not live counters, predictions, or claims of certainty.",
+  "summary": "Static speculative pressure scores for high-level risk lanes. These are not live counters, predictions, financial advice, medical advice, or claims of certainty.",
   "homepageRule": "Only clocks at 90 percent or above may surface on the homepage. Epstein alerts may surface only when active and before their expiry date.",
   "evidenceRule": "Use dated public signals only. Keep speculation labelled. Do not repeat the risk terminal across the page as if it is a live counter.",
   "clocks": [
-    {"slug":"wwiii-escalation","status":"Elevated","title":"WWIII Escalation Clock","score":72,"scoreLabel":"Speculative pressure score","window":"3–18 months","signals":"Ukraine, Gaza, Iran, Taiwan, Red Sea, nuclear rhetoric, sanctions, and alliance movement.","nextRoute":"live-intel.html","homepageEligible":false},
-    {"slug":"ai-breakout","status":"High","title":"AI Breakout Clock","score":81,"scoreLabel":"Speculative pressure score","window":"2–15 years","signals":"Autonomous agents, military AI, labor displacement, model jumps, and regulatory panic.","nextRoute":"answer-engine.html","homepageEligible":false},
-    {"slug":"surveillance-state","status":"Active","title":"Surveillance State Clock","score":87,"scoreLabel":"Speculative pressure score","window":"Already underway","signals":"Digital ID, facial recognition, censorship law, platform control, biometrics, and payment monitoring.","nextRoute":"surveillance-hub.html","homepageEligible":false},
-    {"slug":"financial-reset","status":"Elevated","title":"Financial Reset Clock","score":64,"scoreLabel":"Speculative pressure score","window":"6–36 months","signals":"Debt stress, bank instability, CBDC pilots, emergency central-bank action, gold movement, and bond pressure.","nextRoute":"power-atlas.html","homepageEligible":false},
-    {"slug":"cbdc-rollout","status":"Active","title":"CBDC Rollout Clock","score":76,"scoreLabel":"Speculative pressure score","window":"0–5 years","signals":"Central-bank pilots, digital ID pairing, programmable-money language, and payment rails.","nextRoute":"surveillance-hub.html","homepageEligible":false},
-    {"slug":"cyber-blackout","status":"Watch","title":"Cyber Blackout Clock","score":43,"scoreLabel":"Speculative pressure score","window":"1–5 years","signals":"Grid warnings, ransomware, banking outages, state-backed cyber alerts, and telecom fragility.","nextRoute":"live-intel.html","homepageEligible":false},
-    {"slug":"alien-disclosure","status":"Watch","title":"Alien Disclosure Clock","score":31,"scoreLabel":"Speculative pressure score","window":"1–10 years","signals":"UAP hearings, whistleblower claims, NASA/DoD statements, anomalous object reports, and scientific shifts.","nextRoute":"news.html","homepageEligible":false},
-    {"slug":"pandemic-biosecurity","status":"Watch","title":"Pandemic / Biosecurity Clock","score":29,"scoreLabel":"Speculative pressure score","window":"Unknown","signals":"WHO alerts, bird flu, lab-leak arguments, emergency planning, contracts, and biosecurity exercises.","nextRoute":"dashboard-human-cost.html","homepageEligible":false},
-    {"slug":"civil-unrest","status":"Elevated","title":"Civil Unrest Clock","score":61,"scoreLabel":"Speculative pressure score","window":"0–24 months","signals":"Elections, migration pressure, policing escalation, protests, censorship, and emergency laws.","nextRoute":"live-intel.html","homepageEligible":false},
-    {"slug":"food-system-stress","status":"Watch","title":"Food System Stress Clock","score":52,"scoreLabel":"Speculative pressure score","window":"1–3 years","signals":"Crop failure, fertilizer stress, export bans, livestock disease, water scarcity, and price shocks.","nextRoute":"dashboard-human-cost.html","homepageEligible":false},
-    {"slug":"energy-shock","status":"Elevated","title":"Energy Shock Clock","score":58,"scoreLabel":"Speculative pressure score","window":"6–24 months","signals":"Oil chokepoints, LNG stress, refinery outages, sanctions, grid strain, and Hormuz/Red Sea pressure.","nextRoute":"dashboard-conflict.html","homepageEligible":false},
-    {"slug":"machine-convergence","status":"Classified","title":"Machine Convergence","score":73,"scoreLabel":"Speculative pressure score","window":"7 years 4 months","signals":"Hidden composite index. No public explanation.","nextRoute":"black-file.html","homepageEligible":false}
+    {
+      "slug": "wwiii-escalation",
+      "status": "Elevated",
+      "title": "WWIII Escalation Clock",
+      "score": 78,
+      "scoreLabel": "Speculative pressure score",
+      "window": "3–18 months",
+      "signals": "Ukraine approved a new 40-day pressure campaign against Russian war-support facilities; Hormuz shipping has partially reopened but route risk and ceasefire fragility remain; Gaza, Iran, Lebanon, Red Sea, sanctions, and nuclear rhetoric stay active.",
+      "nextRoute": "live-intel.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "ai-breakout",
+      "status": "High",
+      "title": "AI Breakout Clock",
+      "score": 84,
+      "scoreLabel": "Speculative pressure score",
+      "window": "2–15 years",
+      "signals": "U.S. pressure for frontier-model government review, national-security model access, autonomous agents, military AI, cyber misuse, labor displacement, and regulation gaps keep the lane high.",
+      "nextRoute": "answer-engine.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "surveillance-state",
+      "status": "Active",
+      "title": "Surveillance State Clock",
+      "score": 88,
+      "scoreLabel": "Speculative pressure score",
+      "window": "Already underway",
+      "signals": "Digital ID rollout, biometric verification, facial recognition, AI-model review pathways, platform control, censorship law, payment monitoring, and state-security integration remain the active signal set.",
+      "nextRoute": "surveillance-hub.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "financial-reset",
+      "status": "Elevated",
+      "title": "Financial Reset Clock",
+      "score": 66,
+      "scoreLabel": "Speculative pressure score",
+      "window": "6–36 months",
+      "signals": "Debt stress, energy-route risk, cyber disruption to banking rails, CBDC pilots, gold movement, bank fragility, and emergency central-bank language keep the pressure elevated.",
+      "nextRoute": "power-atlas.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "cbdc-rollout",
+      "status": "Active",
+      "title": "CBDC Rollout Clock",
+      "score": 78,
+      "scoreLabel": "Speculative pressure score",
+      "window": "0–5 years",
+      "signals": "Central-bank pilots, digital ID pairing, programmable-money language, cross-border payment rails, wallet standards, and public/private identity infrastructure remain active.",
+      "nextRoute": "surveillance-hub.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "cyber-blackout",
+      "status": "Elevated",
+      "title": "Cyber Blackout Clock",
+      "score": 55,
+      "scoreLabel": "Speculative pressure score",
+      "window": "1–5 years",
+      "signals": "Iran reported card-banking disruption at three major lenders after cyberattacks; wider signals include ransomware, grid warnings, banking outages, state-backed cyber alerts, and telecom fragility.",
+      "nextRoute": "live-intel.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "alien-disclosure",
+      "status": "Watch",
+      "title": "Alien Disclosure Clock",
+      "score": 32,
+      "scoreLabel": "Speculative pressure score",
+      "window": "1–10 years",
+      "signals": "UAP hearings, whistleblower claims, NASA/DoD statements, anomalous-object reports, and scientific shifts remain watch-level rather than confirmed-disclosure signals.",
+      "nextRoute": "news.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "pandemic-biosecurity",
+      "status": "Watch",
+      "title": "Pandemic / Biosecurity Clock",
+      "score": 30,
+      "scoreLabel": "Speculative pressure score",
+      "window": "Unknown",
+      "signals": "WHO alerts, bird flu, lab-leak arguments, emergency planning, contracts, and biosecurity exercises remain watch-level; no current site signal warrants an escalation label.",
+      "nextRoute": "dashboard-human-cost.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "civil-unrest",
+      "status": "Elevated",
+      "title": "Civil Unrest Clock",
+      "score": 63,
+      "scoreLabel": "Speculative pressure score",
+      "window": "0–24 months",
+      "signals": "Elections, migration pressure, food and energy strain, policing escalation, speech controls, war protests, and emergency laws keep the civil-stability lane elevated.",
+      "nextRoute": "live-intel.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "food-system-stress",
+      "status": "Elevated",
+      "title": "Food System Stress Clock",
+      "score": 59,
+      "scoreLabel": "Speculative pressure score",
+      "window": "1–3 years",
+      "signals": "FAO/WFP warned acute hunger may worsen across 13 hotspots from June to November 2026; conflict, weather, aid funding, crop stress, water scarcity, and price shocks remain core signals.",
+      "nextRoute": "dashboard-human-cost.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "energy-shock",
+      "status": "Elevated",
+      "title": "Energy Shock Clock",
+      "score": 68,
+      "scoreLabel": "Speculative pressure score",
+      "window": "6–24 months",
+      "signals": "Hormuz crude shipments have rebounded after ceasefire movement, but traffic remains below normal and route risk persists; oil chokepoints, LNG stress, refinery attacks, sanctions, and grid strain remain active.",
+      "nextRoute": "dashboard-conflict.html",
+      "homepageEligible": false
+    },
+    {
+      "slug": "machine-convergence",
+      "status": "Classified",
+      "title": "Machine Convergence",
+      "score": 75,
+      "scoreLabel": "Speculative pressure score",
+      "window": "7 years 4 months",
+      "signals": "Hidden composite index: AI-state integration, surveillance rails, cyber dependency, payment systems, war automation, biometric identity, and platform control. No public certainty claim.",
+      "nextRoute": "black-file.html",
+      "homepageEligible": false
+    }
   ]
 }

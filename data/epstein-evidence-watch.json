@@ -1,13 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-25",
   "purpose": "Dedicated Epstein Evidence Watch for Matrix Reprogrammed: official-source-first document tracking, dated bulletins, PDF/source routing, evidence boundaries, Rumble/video routes, opt-ins, offers, and books.",
-  "boundary": "This system tracks public records, source pages, court/declassification routes, news bulletins, and archive links. A named person appearing in a public record, flight log, contact book, civil filing, news article, or document set is not by itself proof of criminal conduct.",
+  "boundary": "This system tracks public records, source pages, court/declassification routes, news bulletins, archive links, committee activity, and litigation movement. A named person appearing in a public record, flight log, contact book, civil filing, news article, testimony, or document set is not by itself proof of criminal conduct.",
   "rules": [
     "Official sources, court records, and primary documents outrank commentary.",
     "Every bulletin must be dated and linked to a source route.",
     "Every named association must preserve the association boundary.",
     "The page should sell books and routes without inflating evidence strength.",
     "PDF/source links should be treated as evidence doors, not as automatic claims.",
+    "Court petitions and testimony are claims or process records until a court, jury, agency, or committee finding says otherwise.",
     "If a live source cannot be checked during build, the site should still build and show the last configured route."
   ],
   "watchSources": [
@@ -17,7 +18,16 @@
       "type": "Primary record lane",
       "sourceUrl": "https://www.courtlistener.com/?q=Epstein&type=r&order_by=score%20desc",
       "route": "evidence-vault.html",
-      "use": "Track court filings, rulings, depositions, docket movement, and source documents.",
+      "use": "Track court filings, habeas petitions, rulings, depositions, docket movement, and source documents.",
+      "priority": "high"
+    },
+    {
+      "slug": "maxwell-litigation",
+      "title": "Maxwell Litigation / Habeas Lane",
+      "type": "Court-process lane",
+      "sourceUrl": "https://www.courtlistener.com/?q=Ghislaine%20Maxwell%20habeas%20Epstein&type=r&order_by=score%20desc",
+      "route": "epstein-files.html#epstein-watch-enhanced",
+      "use": "Track new legal challenges, prosecution responses, judicial rulings, and claims about document releases without treating filings as findings.",
       "priority": "high"
     },
     {
@@ -26,7 +36,7 @@
       "type": "Government source lane",
       "sourceUrl": "https://www.justice.gov/search?keys=Epstein",
       "route": "evidence-vault-index.html",
-      "use": "Track official public statements, search pages, releases, and document references.",
+      "use": "Track official public statements, search pages, releases, redactions, disclosures, and document references.",
       "priority": "high"
     },
     {
@@ -35,8 +45,17 @@
       "type": "Government oversight lane",
       "sourceUrl": "https://oversight.house.gov/?s=Epstein",
       "route": "news.html",
-      "use": "Track committee statements, letters, source releases, and public oversight movement.",
+      "use": "Track committee statements, interviews, letters, source releases, subpoenas, and public oversight movement.",
       "priority": "high"
+    },
+    {
+      "slug": "news-wire",
+      "title": "News Bulletin Lane",
+      "type": "News source lane",
+      "sourceUrl": "https://news.google.com/search?q=Epstein%20files",
+      "route": "news.html",
+      "use": "Track current reporting, new releases, corrections, litigation summaries, and dated news items.",
+      "priority": "medium"
     },
     {
       "slug": "archive-research",
@@ -45,15 +64,6 @@
       "sourceUrl": "https://archive.org/search?query=Epstein%20files",
       "route": "download-center.html",
       "use": "Track public archive mirrors, document sets, PDF collections, and preserved files.",
-      "priority": "medium"
-    },
-    {
-      "slug": "news-wire",
-      "title": "News Bulletin Lane",
-      "type": "News source lane",
-      "sourceUrl": "https://news.google.com/search?q=Epstein%20files",
-      "route": "news.html",
-      "use": "Track current reporting, new releases, corrections, and dated news items.",
       "priority": "medium"
     },
     {
@@ -68,39 +78,51 @@
   ],
   "bulletins": [
     {
-      "slug": "epstein-source-boundary",
-      "title": "How To Read Epstein Files Without Losing The Evidence Boundary",
-      "date": "2026-06-24",
-      "label": "Evidence boundary",
-      "summary": "The Epstein archive must separate court records, official documents, allegations, associations, media claims, and commentary. The source route matters as much as the name.",
-      "sourceRoute": "trust-association-boundary.html",
-      "pdfRoute": "downloads/the-black-file-matrix-reprogrammed.pdf",
+      "slug": "maxwell-habeas-prosecutors-oppose",
+      "title": "Maxwell files new Epstein-documents challenge; prosecutors oppose",
+      "date": "2026-06-25",
+      "label": "Court-process update",
+      "summary": "Reuters reported that Ghislaine Maxwell filed a new habeas corpus petition arguing that newly released Epstein documents undermine her conviction, while U.S. prosecutors rejected most arguments as untimely or legally baseless. Treat this as litigation movement, not a finding that the claims are true.",
+      "sourceRoute": "epstein-files.html#epstein-watch-enhanced",
+      "pdfRoute": "downloads/epstein-evidence-watch.md",
       "videoRoute": "videos.html",
       "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html"
     },
     {
-      "slug": "epstein-document-map",
-      "title": "The Epstein Document Map: Court Records, Archives, News, And Video Routes",
-      "date": "2026-06-24",
-      "label": "Document map",
-      "summary": "A useful Epstein section needs document lanes: court records, official source pages, public archive mirrors, dated news bulletins, downloads, and video explainers.",
-      "sourceRoute": "evidence-vault.html",
-      "pdfRoute": "downloads/the-black-file-matrix-reprogrammed.pdf",
+      "slug": "house-oversight-groff-testimony",
+      "title": "House Oversight testimony lane adds Epstein staff, scheduling, and logistics context",
+      "date": "2026-06-25",
+      "label": "Oversight update",
+      "summary": "The Wall Street Journal reported on House Oversight testimony from Epstein's longtime assistant Lesley Groff. The public-record value is structural: schedules, logistics, massage appointments, claimed knowledge boundaries, and committee questioning. Testimony must be separated from findings.",
+      "sourceRoute": "epstein-files.html#epstein-watch-enhanced",
+      "pdfRoute": "downloads/epstein-evidence-watch.md",
       "videoRoute": "videos.html",
-      "bookRoute": "black-file.html",
+      "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html"
     },
     {
-      "slug": "epstein-information-machine",
-      "title": "Build The Information Machine: Source Watch To Book Sale",
-      "date": "2026-06-24",
-      "label": "Revenue route",
-      "summary": "The working route is simple: source update, evidence boundary, bulletin, video, opt-in, offer, book page, Amazon store.",
-      "sourceRoute": "epstein-files.html",
-      "pdfRoute": "downloads/lead-magnet-black-file-brief.md",
+      "slug": "settlement-nda-oversight-lane",
+      "title": "Private settlements and NDAs move into the oversight question",
+      "date": "2026-06-25",
+      "label": "Evidence-boundary update",
+      "summary": "Business Insider reported that confidential pre-litigation settlements and non-disclosure agreements are part of the congressional oversight debate. Settlements are not automatic admissions of guilt, but they may affect what witnesses can say publicly unless subpoenaed or otherwise released.",
+      "sourceRoute": "trust-association-boundary.html",
+      "pdfRoute": "downloads/epstein-evidence-watch.md",
       "videoRoute": "videos.html",
-      "bookRoute": "amazon-store-books.html",
+      "bookRoute": "book-black-file.html",
+      "offerRoute": "offer-starter-library.html"
+    },
+    {
+      "slug": "doj-watchdog-compliance-review",
+      "title": "DOJ watchdog compliance review remains a core source lane",
+      "date": "2026-06-25",
+      "label": "Government oversight",
+      "summary": "AP reported earlier in 2026 that the Justice Department inspector general is reviewing compliance with the law requiring Epstein-file disclosures, including collection, redaction, and disclosure processes. This stays on the watch list because process errors can reshape what the public record actually shows.",
+      "sourceRoute": "evidence-vault.html",
+      "pdfRoute": "downloads/epstein-evidence-watch.md",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html"
     }
   ],

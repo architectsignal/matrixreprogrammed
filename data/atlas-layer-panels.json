@@ -1,0 +1,113 @@
+{
+  "updated": "2026-06-25",
+  "purpose": "Expanded visible panels for Atlas Layers. These are navigation and source-check lanes, not accusations.",
+  "panels": {
+    "people": {
+      "title": "People — current power-watch categories",
+      "summary": "Track living office-holders, institutional executives, public financiers, intelligence leaders, media owners, contractors, scientists, judges, lobbyists, and public influence operators by official role and source lane.",
+      "categories": ["Politicians", "Financiers", "Intelligence figures", "Media owners", "Contractors", "Scientists and AI leaders", "Judges", "Lobbyists", "Fixers and influence operators", "Public institutional actors"],
+      "lanes": [
+        {"label":"Politicians", "examples":"Presidents, prime ministers, EU commissioners, national-security ministers, sanctions officials, migration ministers.", "source":"Official government leadership pages", "update":"Weekly, or immediately after elections, appointments, resignations, sanctions, or cabinet changes."},
+        {"label":"Financiers", "examples":"Central-bank chairs, IMF and World Bank leadership, asset-management CEOs, sovereign wealth leadership, bank regulators.", "source":"Official central-bank, IMF, World Bank, SEC, and company leadership pages", "update":"Weekly; daily during financial-stability events."},
+        {"label":"Intelligence figures", "examples":"CIA, ODNI, MI6, GCHQ, NSA, defence-intelligence, oversight committee figures, declassification officials.", "source":"Official agency leadership pages and hearing records", "update":"Weekly; urgent after confirmation hearings or leadership changes."},
+        {"label":"Media owners", "examples":"Media-company owners, chairmen, CEOs, controlling shareholders, platform executives, public editor leadership.", "source":"Company leadership pages, filings, ownership disclosures", "update":"Weekly; update after mergers, succession, or filing changes."},
+        {"label":"Contractors", "examples":"Defence, surveillance, cyber, cloud, AI, logistics, border, health, and reconstruction contractors.", "source":"Company leadership pages, USAspending, EU tenders, investor filings", "update":"Weekly contract and leadership check."},
+        {"label":"Scientists and AI leaders", "examples":"AI lab executives, research chiefs, standards advisers, biosecurity advisers, health-agency scientists.", "source":"Company pages, government advisory rosters, NIST/WHO/OECD lanes", "update":"Weekly; urgent after model, standard, or emergency guidance releases."},
+        {"label":"Judges", "examples":"Supreme court, constitutional court, international court, appellate, tribunal, and judge-panel figures.", "source":"Court biography, docket, opinion, and hearing pages", "update":"Weekly during active court terms."},
+        {"label":"Lobbyists", "examples":"Registered lobbyists, lobbying firms, foreign agents, trade-association leadership, policy campaign operators.", "source":"LDA, FARA, EU Transparency Register, company disclosures", "update":"Weekly; quarterly reconciliation with filings."},
+        {"label":"Fixers and influence operators", "examples":"Only public-record roles: registered agents, public intermediaries, consultants, crisis-communications firms, legal representatives, donor-network organizers.", "source":"Court records, lobbying filings, FARA, public contracts, official disclosures", "update":"Weekly and always evidence-labelled."}
+      ]
+    },
+    "institutions": {
+      "title": "Institutions — source lanes to map",
+      "summary": "Track agencies, NGOs, banks, foundations, universities, media groups, courts, contractors, think tanks, and standards bodies as institutional source lanes.",
+      "categories": ["Agencies", "NGOs", "Banks", "Foundations", "Universities", "Media groups", "Courts", "Contractors", "Think tanks", "Standards bodies"],
+      "lanes": [
+        {"label":"Agencies", "examples":"CIA, NSA, ODNI, DHS, DoD, FDA, CDC, Home Office, Frontex, Europol.", "source":"Official agency pages, reports, reading rooms, inspector-general pages", "update":"Weekly; daily during emergency or release events."},
+        {"label":"NGOs", "examples":"Humanitarian groups, policy NGOs, rights groups, migration groups, health NGOs, open-government groups.", "source":"Official reports, annual reports, funding disclosures", "update":"Weekly source review."},
+        {"label":"Banks and central banks", "examples":"Federal Reserve, ECB, BIS, IMF, World Bank, major banks, development banks.", "source":"Official reports, financial statements, stress tests, lending reports", "update":"Weekly; daily during crisis."},
+        {"label":"Foundations", "examples":"Large philanthropic foundations, policy foundations, donor-advised vehicles, research funders.", "source":"Official grants databases, annual reports, tax filings where available", "update":"Weekly or quarterly depending on filing cadence."},
+        {"label":"Universities", "examples":"Research labs, AI centres, defence-funded research, public-health labs, policy schools.", "source":"University grant, lab, publication, and donor pages", "update":"Weekly where cited."},
+        {"label":"Media groups", "examples":"News agencies, broadcaster groups, platform companies, publisher groups, ownership structures.", "source":"Company pages, regulator filings, ownership disclosures", "update":"Weekly."},
+        {"label":"Courts", "examples":"Supreme courts, international courts, federal courts, tribunals, claims courts.", "source":"Court docket, opinion, order, and judgment pages", "update":"Weekly; daily during active case developments."},
+        {"label":"Contractors", "examples":"Defence, intelligence, cloud, AI, logistics, private security, medical, and emergency contractors.", "source":"Procurement portals, investor pages, contract notices", "update":"Weekly."},
+        {"label":"Think tanks and standards bodies", "examples":"RAND, Brookings, CSIS, Chatham House, NIST, ISO, IEEE, OECD, WEF.", "source":"Reports, standards, funder pages, event pages", "update":"Weekly."}
+      ]
+    },
+    "operations": {
+      "title": "Operations — live public-record lanes",
+      "summary": "Track wars, scandals, trials, covert-project allegations only where public records exist, sanctions, intelligence programs, procurement lanes, and public investigations.",
+      "categories": ["Wars", "Scandals", "Trials", "Covert projects", "Sanctions", "Intelligence programs", "Procurement lanes", "Public investigations"],
+      "lanes": [
+        {"label":"Wars", "examples":"Ukraine, Gaza, Red Sea, Iran-linked escalation, Taiwan Strait pressure, Sahel conflict, civil wars.", "source":"Official defence statements, UN OCHA, ICRC, court records, sanctions pages", "update":"Daily during active escalation; otherwise weekly."},
+        {"label":"Scandals", "examples":"Public-record scandals with court filings, regulator reports, settlement documents, oversight records.", "source":"Court dockets, regulator releases, committee reports", "update":"Weekly; urgent after filings/releases."},
+        {"label":"Trials", "examples":"Criminal trials, civil suits, depositions, exhibits, appeals, sentencing, settlement hearings.", "source":"Court dockets, official judgments, PACER/CourtListener where applicable", "update":"Weekly during active cases."},
+        {"label":"Covert-project records", "examples":"Only documented declassified programs, FOIA releases, reading-room files, inspector-general records, public admissions.", "source":"CIA Reading Room, National Archives, agency FOIA libraries", "update":"Weekly release scan."},
+        {"label":"Sanctions", "examples":"OFAC, EU, UK, UN sanctions, export controls, asset freezes, designations, licences.", "source":"Official sanctions lists and notices", "update":"Daily during crisis; otherwise weekly."},
+        {"label":"Intelligence programs", "examples":"Surveillance law, cybersecurity advisories, declassified capabilities, oversight hearings, inspector-general reports.", "source":"Agency reports, congressional hearings, court rulings", "update":"Weekly."},
+        {"label":"Procurement lanes", "examples":"Weapons systems, cloud contracts, AI contracts, border technology, medical purchasing, reconstruction contracts.", "source":"USAspending, EU tenders, procurement notices, company filings", "update":"Weekly."},
+        {"label":"Public investigations", "examples":"Congressional inquiries, public inquiries, inspector-general reviews, regulator investigations, watchdog reports.", "source":"Official inquiry and committee pages", "update":"Weekly; urgent after hearing or report release."}
+      ]
+    },
+    "money-flows": {
+      "title": "Money Flows — traceable public money lanes",
+      "summary": "Track donations, contracts, grants, lobbying, foundations, procurement, shell structures where records exist, settlements, fines, and compensation schemes.",
+      "categories": ["Donations", "Contracts", "Grants", "Lobbying", "Foundations", "Procurement", "Shell structures", "Settlements", "Fines", "Compensation schemes"],
+      "lanes": [
+        {"label":"Donations", "examples":"Campaign donations, PAC money, foundation gifts, university gifts, donor networks.", "source":"FEC, OpenSecrets, tax filings, foundation reports, university disclosures", "update":"Weekly or filing-cycle based."},
+        {"label":"Contracts", "examples":"Defence, intelligence, cyber, AI, healthcare, border, logistics, reconstruction, emergency purchasing.", "source":"USAspending, EU tenders, national procurement portals", "update":"Weekly."},
+        {"label":"Grants", "examples":"Research grants, development grants, NGO grants, public-health grants, education and technology grants.", "source":"Grants.gov, EU Funding & Tenders, World Bank projects, foundation databases", "update":"Weekly."},
+        {"label":"Lobbying", "examples":"Lobbying clients, firms, issue areas, bills, agencies contacted, foreign-principal filings.", "source":"LDA, FARA, EU Transparency Register", "update":"Weekly; quarterly reconciliation."},
+        {"label":"Foundations", "examples":"Large foundation grants, policy grants, health grants, media grants, academic grants.", "source":"Foundation annual reports, grants databases, tax filings", "update":"Weekly/quarterly."},
+        {"label":"Procurement", "examples":"Who buys, who receives, what category, which emergency authority, which framework contract.", "source":"Public procurement databases", "update":"Weekly."},
+        {"label":"Shell structures", "examples":"Only when court records, sanctions records, corporate registries, or regulator filings identify them.", "source":"Court exhibits, corporate registries, sanctions lists, regulator filings", "update":"Evidence-by-evidence only."},
+        {"label":"Settlements and fines", "examples":"DOJ, SEC, FTC, EU, CMA, court settlements, admissions, penalties, compensation funds.", "source":"Regulator and court releases", "update":"Weekly; urgent after major settlement."},
+        {"label":"Compensation schemes", "examples":"Vaccine compensation, disaster compensation, settlement funds, claims facilities, victim funds.", "source":"Official claims/compensation programs and court records", "update":"Weekly where figures are used."}
+      ]
+    },
+    "legal-records": {
+      "title": "Legal Records — evidence hierarchy lanes",
+      "summary": "Track indictments, civil suits, depositions, hearings, exhibits, judgments, congressional records, FOIA releases, and regulator findings with evidence labels.",
+      "categories": ["Indictments", "Civil suits", "Depositions", "Hearings", "Exhibits", "Judgments", "Congressional records", "FOIA releases", "Regulator findings"],
+      "lanes": [
+        {"label":"Indictments", "examples":"Charges, counts, defendants, prosecutors, alleged conduct, dates, case numbers.", "source":"Court dockets and DOJ releases", "update":"Weekly during active cases."},
+        {"label":"Civil suits", "examples":"Complaints, parties, allegations, responses, settlements, dismissals, judgments.", "source":"Court records, PACER, state courts, public dockets", "update":"Weekly."},
+        {"label":"Depositions and exhibits", "examples":"Transcript excerpts, exhibit numbers, admitted documents, sealed/unsealed status.", "source":"Court filings and exhibit lists", "update":"Weekly and never without source boundary."},
+        {"label":"Hearings", "examples":"Congressional hearings, public inquiries, oversight hearings, regulator testimony, court hearings.", "source":"Committee pages, transcripts, video, court minutes", "update":"Weekly; daily around major hearings."},
+        {"label":"Judgments", "examples":"Court orders, opinions, sentencing, injunctions, appellate rulings, tribunal judgments.", "source":"Court websites and official opinions", "update":"Weekly."},
+        {"label":"Congressional records", "examples":"Bills, reports, testimony, oversight findings, committee letters, subpoenas.", "source":"Congress.gov and committee pages", "update":"Weekly."},
+        {"label":"FOIA and declassification", "examples":"Released files, redactions, reading-room records, inspector-general reports.", "source":"FOIA libraries, agency reading rooms, National Archives", "update":"Weekly release scan."},
+        {"label":"Regulator findings", "examples":"SEC, FTC, DOJ, EU, CMA, data-protection authorities, audit bodies.", "source":"Official regulator releases and orders", "update":"Weekly."}
+      ]
+    },
+    "symbolic-layer": {
+      "title": "Symbolic Layer — public symbolism without overclaiming",
+      "summary": "Track mission patches, logos, ritual architecture, fraternal claims, occult aesthetics, language systems, and public symbolism as commentary lanes, not proof of conduct.",
+      "categories": ["Mission patches", "Logos", "Ritual architecture", "Fraternal claims", "Occult aesthetics", "Language systems", "Public symbolism"],
+      "lanes": [
+        {"label":"Mission patches", "examples":"NASA, NRO, military, intelligence, space, and classified-program public patches.", "source":"Official image libraries and agency media pages", "update":"Weekly when used."},
+        {"label":"Logos", "examples":"Agency seals, corporate marks, NGO marks, think-tank marks, institutional visual identity.", "source":"Official brand and media-kit pages", "update":"Weekly and interpretation-labelled."},
+        {"label":"Ritual architecture", "examples":"Courts, capitals, memorials, lodges, temples, monuments, ceremonial public spaces.", "source":"Official heritage, building, and institution pages", "update":"Weekly where cited."},
+        {"label":"Fraternal claims", "examples":"Only public lodge claims, official fraternal pages, public member lists, historical records.", "source":"Official fraternal/public archive pages", "update":"Weekly and never infer private membership."},
+        {"label":"Occult aesthetics", "examples":"Mythic names, esoteric imagery, alchemical language, Egyptian/solar/temple aesthetics, ceremonial design.", "source":"Official images plus labelled commentary", "update":"Weekly if used."},
+        {"label":"Language systems", "examples":"Resilience, security, emergency, transformation, misinformation, reform, trust, sustainability, risk.", "source":"Official speeches, reports, policy documents", "update":"Weekly."},
+        {"label":"Public symbolism", "examples":"Ceremonies, flags, seals, mottos, inscriptions, mythic references, public rituals.", "source":"Official public pages and archives", "update":"Weekly with clear boundary between fact and interpretation."}
+      ]
+    },
+    "human-cost": {
+      "title": "Human Cost — impact lanes and category boundaries",
+      "summary": "Track civilian casualties, migration, exploitation, vaccine compensation, displacement, food stress, medical collapse, and war effects with category definitions before figures.",
+      "categories": ["Civilian casualties", "Migration", "Exploitation", "Vaccine compensation", "Displacement", "Food stress", "Medical collapse", "War effects"],
+      "lanes": [
+        {"label":"Civilian casualties", "examples":"Deaths, injuries, missing, infrastructure destruction, undercount warnings, methodology differences.", "source":"UN OCHA, ICRC, official ministries, court and NGO datasets", "update":"Daily during active war; otherwise weekly."},
+        {"label":"Migration", "examples":"Border encounters, asylum applications, removals, returns, overstays, deaths/missing, displacement.", "source":"CBP/DHS, Frontex, Eurostat, Home Office, UNHCR, IOM", "update":"Weekly; daily during route emergencies."},
+        {"label":"Exploitation", "examples":"Forced labour, trafficking, child exploitation datasets, enforcement cases, support-service reports.", "source":"ILO, UNODC, courts, official enforcement pages", "update":"Weekly with victim-privacy boundary."},
+        {"label":"Vaccine compensation", "examples":"Claims, compensated cases, denied cases, pending claims, legal standards, causation boundaries.", "source":"Official compensation programs and court records", "update":"Weekly when figures are cited."},
+        {"label":"Displacement", "examples":"Refugees, IDPs, stateless persons, returns, shelter needs, route pressure.", "source":"UNHCR, IDMC, IOM", "update":"Weekly."},
+        {"label":"Food stress", "examples":"IPC phases, famine warnings, crop failure, price shocks, fertilizer pressure, aid-access disruption.", "source":"WFP, FAO, FEWS NET, IPC", "update":"Weekly; daily for famine escalation."},
+        {"label":"Medical collapse", "examples":"Hospital pressure, mortality, supply shortages, public-health alerts, preventable harm, emergency declarations.", "source":"WHO, national health agencies, AHRQ, official dashboards", "update":"Weekly or daily during emergency."},
+        {"label":"War effects", "examples":"Casualties, displacement, food stress, infrastructure damage, sanctions spillover, reconstruction cost, unexploded ordnance.", "source":"UN agencies, official defence/humanitarian pages, court records", "update":"Daily during active escalation; otherwise weekly."}
+      ]
+    }
+  }
+}

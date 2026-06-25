@@ -17,6 +17,7 @@ for(const file of [
   'data/epstein-evidence-watch.json',
   'data/epstein-email-signals.json',
   'data/epstein-people-index.json',
+  'data/epstein-file-cockpit.json',
   'scripts/enhance-epstein-watch.js',
   'epstein-files.html',
   'downloads/epstein-source-watch.json',
@@ -25,6 +26,8 @@ for(const file of [
   'downloads/epstein-email-signals.md',
   'downloads/epstein-people-index.json',
   'downloads/epstein-people-index.md',
+  'downloads/epstein-file-cockpit.json',
+  'downloads/epstein-file-cockpit.md',
   'package.json',
   'netlify.toml'
 ]) requireFile(file);
@@ -45,6 +48,11 @@ if(exists('data/epstein-people-index.json')){
   if(!Array.isArray(people.evidenceClasses) || people.evidenceClasses.length < 8) fail('data/epstein-people-index.json expected evidence class legend');
   if(!Array.isArray(people.people) || people.people.length < 10) fail('data/epstein-people-index.json expected at least 10 people/entity cards');
 }
+if(exists('data/epstein-file-cockpit.json')){
+  const cockpit = JSON.parse(read('data/epstein-file-cockpit.json'));
+  if(!Array.isArray(cockpit.doors) || cockpit.doors.length < 10) fail('data/epstein-file-cockpit.json expected at least 10 actual file doors');
+  if(!Array.isArray(cockpit.howToUse) || cockpit.howToUse.length < 5) fail('data/epstein-file-cockpit.json expected how-to-use rules');
+}
 
 requireIncludes('epstein-files.html','epstein-watch-enhanced','enhanced watch section');
 requireIncludes('epstein-files.html','Source Watch / Freedom Intelligence Engine','source-watch heading');
@@ -61,11 +69,17 @@ requireIncludes('epstein-files.html','People / Entity Tracker','people/entity he
 requireIncludes('epstein-files.html','Evidence Class Legend','evidence class legend');
 requireIncludes('epstein-files.html','What the record shows','record support labels');
 requireIncludes('epstein-files.html','Network Function Cards','network function cards');
+requireIncludes('epstein-files.html','epstein-file-cockpit','actual files cockpit section');
+requireIncludes('epstein-files.html','Actual Files Cockpit','actual files cockpit heading');
+requireIncludes('epstein-files.html','Open These File Doors First','file doors heading');
+requireIncludes('epstein-files.html','Open Actual Files','actual file buttons');
 requireIncludes('downloads/epstein-source-watch.json','watchSources','source watch JSON data');
 requireIncludes('downloads/epstein-evidence-watch.md','# Epstein Evidence Watch','markdown title');
 requireIncludes('downloads/epstein-evidence-watch.md','## Source Lanes','markdown source lanes');
 requireIncludes('downloads/epstein-email-signals.md','# Epstein Email Signal Map','email markdown title');
 requireIncludes('downloads/epstein-people-index.md','# Epstein People / Entity Tracker','people markdown title');
+requireIncludes('downloads/epstein-file-cockpit.md','# Epstein Actual Files Cockpit','cockpit markdown title');
+requireIncludes('downloads/epstein-file-cockpit.json','DOJ Epstein Disclosures','cockpit JSON DOJ door');
 requireIncludes('package.json','enhance-epstein-watch.js','npm build enhancer');
 requireIncludes('netlify.toml','enhance-epstein-watch.js','Netlify build enhancer');
 
@@ -76,4 +90,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, source lanes, bulletins, downloads, enhanced hub section, video/book routes, package wiring, and Netlify wiring.');

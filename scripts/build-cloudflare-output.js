@@ -37,7 +37,7 @@ function copyFile(src, dest, rel) {
   fs.copyFileSync(src, dest);
   return true;
 }
-function copyExtensionlessHtml(src, rel) {
+function copyHtmlRouteVariants(src, rel) {
   if (!rel.endsWith('.html')) return;
   if (rel === 'index.html') {
     copyFile(src, path.join(out, 'index'), 'index');
@@ -45,6 +45,7 @@ function copyExtensionlessHtml(src, rel) {
   }
   const noExt = rel.replace(/\.html$/i, '');
   copyFile(src, path.join(out, noExt), noExt);
+  copyFile(src, path.join(out, noExt, 'index.html'), `${noExt}/index.html`);
 }
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -54,7 +55,7 @@ function walk(dir) {
     if (entry.isDirectory()) walk(full);
     else {
       const copied = copyFile(full, path.join(out, rel), rel);
-      if (copied) copyExtensionlessHtml(full, rel);
+      if (copied) copyHtmlRouteVariants(full, rel);
     }
   }
 }
@@ -63,7 +64,15 @@ rm(out);
 ensure(out);
 walk(root);
 
-for (const required of ['index.html', 'index', 'start-here.html', 'start-here', 'books.html', 'books', 'epstein-files.html', 'epstein-files', 'live-intel.html', 'live-intel', 'search.html', 'search', '_redirects', '_headers']) {
+for (const required of [
+  'index.html', 'index',
+  'start-here.html', 'start-here', 'start-here/index.html',
+  'books.html', 'books', 'books/index.html',
+  'epstein-files.html', 'epstein-files', 'epstein-files/index.html',
+  'live-intel.html', 'live-intel', 'live-intel/index.html',
+  'search.html', 'search', 'search/index.html',
+  '_redirects', '_headers'
+]) {
   if (!fs.existsSync(path.join(out, required))) {
     console.error(`Cloudflare output failed: _site/${required} missing`);
     process.exit(1);
@@ -77,4 +86,4 @@ const count = [];
     else count.push(full);
   }
 })(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless HTML assets.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules, including extensionless and folder-index HTML assets.`);

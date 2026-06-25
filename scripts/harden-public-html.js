@@ -13,7 +13,7 @@ const protectedMarkers = [
   'AUTHORITY ENGINE STATUS','AUTHORITY CLUSTER','AUTHORITY HUB',
   'SCHEMA ENGINE STATUS','MACHINE PAGE','SCHEMA INDEX',
   'DOSSIER PACK ENGINE STATUS','DOSSIER PACK','DOWNLOAD CENTER','Source Pathways','Core Pathways',
-  'FEED ENGINE STATUS','FEED STATUS','FEED CENTER','JSON Feed',
+  'FEED ENGINE STATUS','FEED STATUS','FEED CENTER','JSON Feed','Source Watch JSON',
   'SHARE KIT ENGINE STATUS','SHARE KIT','SHARE CENTER',
   'LAUNCH ROOM STATUS','CAMPAIGN ROOM','LAUNCH ROOM',
   'OFFER STACK STATUS','OFFER ROOM','OFFER CENTER',
@@ -35,7 +35,7 @@ function restoreMarkers(html, saved) {
 }
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(ignored.has(entry.name))continue;const full=path.join(dir,entry.name);if(entry.isDirectory())walk(full);else if(entry.name.endsWith('.html'))htmlFiles.push(full);}}
 function ensureFixesCss(html){if(/href=["']fixes\.css["']/i.test(html))return html;return html.replace(/<link rel=["']stylesheet["'] href=["']styles\.css["']\s*\/?>/i, match => `${match}<link rel="stylesheet" href="fixes.css" />`);}
-function softenJsonLinks(html){return html.replace(/<a\b([^>]*?)href=["']([^"']+\.json)["']([^>]*)>(.*?)<\/a>/gi,(full,before,href,after,label)=>{const attrs=`${before}href="${href}"${after}`;const text='Machine-readable data';if(/machine-data-link/.test(attrs))return full.replace(/>.*?<\/a>/,`>${text}</a>`);const classMatch=attrs.match(/class=["']([^"']*)["']/i);if(classMatch)return `<a ${attrs.replace(classMatch[0],`class="${classMatch[1]} machine-data-link"`)}>${text}</a>`;return `<a ${attrs} class="machine-data-link">${text}</a>`;});}
+function softenJsonLinks(html, file){return html.replace(/<a\b([^>]*?)href=["']([^"']+\.json)["']([^>]*)>(.*?)<\/a>/gi,(full,before,href,after,label)=>{const attrs=`${before}href="${href}"${after}`;let text='Machine-readable data';if(path.basename(file)==='epstein-files.html' && href.includes('epstein-source-watch.json')) text='Source Watch JSON';if(/machine-data-link/.test(attrs))return full.replace(/>.*?<\/a>/,`>${text}</a>`);const classMatch=attrs.match(/class=["']([^"']*)["']/i);if(classMatch)return `<a ${attrs.replace(classMatch[0],`class="${classMatch[1]} machine-data-link"`)}>${text}</a>`;return `<a ${attrs} class="machine-data-link">${text}</a>`;});}
 function sanitizeCopy(html){const protectedState = protectMarkers(html);html = protectedState.html
   .replace(/ChatGPT search/gi,'AI search')
   .replace(/ChatGPT/gi,'AI systems')
@@ -62,7 +62,7 @@ function sanitizeCopy(html){const protectedState = protectMarkers(html);html = p
 }
 function ensureAnchor(html,id,label){const rx=new RegExp(`id=["']${id}["']`,'i');if(rx.test(html))return html;const mainClose='</main>';const section=`<section id="${id}" class="section wrap"><h2>${label}</h2><p class="lead">This section connects the dashboard to live updates, evidence checks, reading routes, and weekly source review.</p></section>`;return html.includes(mainClose)?html.replace(mainClose,section+mainClose):html+section;}
 walk(root);
-for(const file of htmlFiles){let html=fs.readFileSync(file,'utf8');const before=html;html=ensureFixesCss(html);html=sanitizeCopy(html);html=softenJsonLinks(html);if(path.basename(file)==='news.html')html=ensureAnchor(html,'conflict-zones','Conflict Zones');if(html!==before)fs.writeFileSync(file,html);}
+for(const file of htmlFiles){let html=fs.readFileSync(file,'utf8');const before=html;html=ensureFixesCss(html);html=sanitizeCopy(html);html=softenJsonLinks(html,file);if(path.basename(file)==='news.html')html=ensureAnchor(html,'conflict-zones','Conflict Zones');if(html!==before)fs.writeFileSync(file,html);}
 try { execFileSync('node', ['scripts/update-site-freshness-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Freshness report skipped: ${error.message}`); }
 try { execFileSync('node', ['scripts/site-quality-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Quality report skipped: ${error.message}`); }
 console.log(`Hardened ${htmlFiles.length} HTML files: fixes.css injected, public copy sanitized, protected phase markers preserved, JSON links softened, usefulness routes checked, and site reports generated.`);

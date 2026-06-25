@@ -6,6 +6,9 @@
   const passStatus = document.getElementById('signal-pass-status');
   const submitSection = document.getElementById('submit-signal');
   const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
+  const LOCAL_POSTS_KEY = 'matrix_signal_board_posts_v1';
+  const LOCAL_REPORTS_KEY = 'matrix_signal_board_reports_v1';
+  let staticMode = false;
 
   function esc(s){
     return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -17,6 +20,22 @@
 
   function hasSignalPass(){
     try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; }
+  }
+
+  function readLocalPosts(){
+    try { return JSON.parse(localStorage.getItem(LOCAL_POSTS_KEY) || '[]'); } catch { return []; }
+  }
+
+  function writeLocalPosts(posts){
+    try { localStorage.setItem(LOCAL_POSTS_KEY, JSON.stringify(posts.slice(0, 50))); } catch {}
+  }
+
+  function writeLocalReport(report){
+    try {
+      const reports = JSON.parse(localStorage.getItem(LOCAL_REPORTS_KEY) || '[]');
+      reports.unshift(report);
+      localStorage.setItem(LOCAL_REPORTS_KEY, JSON.stringify(reports.slice(0, 50)));
+    } catch {}
   }
 
   function applySignalPassState(){
@@ -40,7 +59,31 @@
 
   function renderPost(post){
     const source = post.sourceUrl ? '<p class="source-list"><a href="' + esc(post.sourceUrl) + '" target="_blank" rel="noopener">Open source</a></p>' : '';
-    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title) + '</h3><p>' + esc(post.body) + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt)) + '</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report hard-floor violation</button></article>';
+    const local = post.localOnly ? ' <span class="pill">saved on this device</span>' : '';
+    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title) + '</h3><p>' + esc(post.body) + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(shortDate(post.approvedAt || post.createdAt)) + '</span>' + local + '</p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report hard-floor violation</button></article>';
+  }
+
+  function staticNotice(){
+    return '<article class="card redline"><span class="label">Cloudflare static mode</span><h3>Board backend not connected yet</h3><p>The forum page works on Cloudflare, but public posting needs a Worker/KV backend. Until that is connected, new posts are saved on this device and can be copied into an email/contact route.</p><div class="cta-row small"><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="live-intel.html">Live Intel</a></div></article>';
+  }
+
+  async function loadStaticFeed(){
+    staticMode = true;
+    let seed = [];
+    try {
+      const res = await fetch('data/forum-seed.json', { headers: { 'Accept': 'application/json' } });
+      if (res.ok) {
+        const data = await res.json();
+        seed = Array.isArray(data.posts) ? data.posts : [];
+      }
+    } catch {}
+    const local = readLocalPosts();
+    const posts = local.concat(seed);
+    if (!posts.length) {
+      feed.innerHTML = staticNotice();
+      return;
+    }
+    feed.innerHTML = staticNotice() + posts.map(renderPost).join('');
   }
 
   async function loadFeed(){
@@ -56,13 +99,18 @@
       }
       feed.innerHTML = posts.map(renderPost).join('');
     } catch (err) {
-      feed.innerHTML = '<article class="card redline"><h3>Signal feed offline</h3><p>' + esc(err.message || 'Posts could not be loaded right now.') + '</p></article>';
+      await loadStaticFeed();
     }
   }
 
   async function reportPost(id){
     const reason = prompt('Report reason: hard-floor violation?');
     if (!reason) return;
+    if (staticMode) {
+      writeLocalReport({ id, reason, createdAt: new Date().toISOString() });
+      alert('Report saved on this device. Public moderation requires the Worker/KV backend.');
+      return;
+    }
     try {
       const res = await fetch('/.netlify/functions/report-forum-post', {
         method: 'POST',
@@ -73,7 +121,8 @@
       if (!res.ok) throw new Error(data.error || ('Report failed with HTTP ' + res.status));
       alert('Report received. The post remains public unless removed after review.');
     } catch (err) {
-      alert(err.message || 'Report could not be sent right now.');
+      writeLocalReport({ id, reason, createdAt: new Date().toISOString() });
+      alert('Report saved on this device. Public moderation backend is not available on this host yet.');
     }
   }
 
@@ -106,6 +155,10 @@
       status.textContent = 'Posting signal...';
       const payload = Object.fromEntries(new FormData(form).entries());
       payload.signalPass = 'local-unlocked';
+      if (payload.website) {
+        status.textContent = 'Spam trap triggered.';
+        return;
+      }
       try {
         const res = await fetch('/.netlify/functions/submit-forum-post', {
           method: 'POST',
@@ -119,7 +172,18 @@
         await loadFeed();
         applySignalPassState();
       } catch (err) {
-        status.textContent = err.message || 'Could not post signal.';
+        const localPost = Object.assign({}, payload, {
+          id: 'local-' + Date.now(),
+          createdAt: new Date().toISOString(),
+          localOnly: true
+        });
+        const posts = readLocalPosts();
+        posts.unshift(localPost);
+        writeLocalPosts(posts);
+        form.reset();
+        status.textContent = 'Cloudflare static mode: signal saved on this device. Public posting needs the Worker/KV backend.';
+        await loadStaticFeed();
+        applySignalPassState();
       }
     });
   }

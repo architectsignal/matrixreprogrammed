@@ -1,24 +1,25 @@
 {
-  "updated": "2026-06-24",
-  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, elite-control developments, declassified-file discovery, Epstein file monitoring, war/conflict routes, financial power, surveillance, and book/video conversion paths.",
+  "updated": "2026-06-25",
+  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, Epstein timeline mapping, court records, email releases, declassified-file discovery, elite-control developments, war/conflict routes, financial power, surveillance, and book/video conversion paths.",
   "rules": [
     "Prefer primary sources, court records, official releases, archives, and dated reporting.",
     "Do not treat a news mention as proof of wrongdoing.",
     "Every item must keep a source URL, source label, date, lane, and reader route.",
     "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
+    "Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, and network architecture matrix.",
     "If a feed fails, preserve the page and show the last known source set rather than breaking the build."
   ],
   "lanes": [
     {
       "id": "epstein-files",
-      "title": "Epstein Files And Court Records",
-      "description": "Public-record updates, court filings, document releases, archive mirrors, oversight moves, and association-boundary briefings.",
-      "route": "epstein-files.html",
-      "evidenceRoute": "evidence-vault.html",
+      "title": "Epstein Files, Timeline And Court Records",
+      "description": "Public-record updates, court filings, document releases, email-release reporting, archive mirrors, oversight moves, timeline changes, people/entity tracking, and association-boundary briefings.",
+      "route": "epstein-files.html#epstein-timeline-map",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
       "videoRoute": "videos.html",
       "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html",
-      "queries": ["Epstein files", "Epstein court records", "Epstein documents released"]
+      "queries": ["Epstein timeline", "Epstein court records", "Epstein emails", "Epstein documents", "Maxwell habeas", "House Oversight Epstein", "Epstein files released"]
     },
     {
       "id": "declassified-files",
@@ -68,8 +69,8 @@
   "rssFeeds": [
     {
       "lane": "epstein-files",
-      "label": "Google News / Epstein files",
-      "url": "https://news.google.com/rss/search?q=Epstein%20files%20OR%20Epstein%20documents%20OR%20Epstein%20court%20records&hl=en-US&gl=US&ceid=US:en"
+      "label": "Google News / Epstein timeline and files",
+      "url": "https://news.google.com/rss/search?q=Epstein%20timeline%20OR%20Epstein%20emails%20OR%20Epstein%20documents%20OR%20Epstein%20court%20records%20OR%20Maxwell%20habeas%20OR%20House%20Oversight%20Epstein&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "lane": "declassified-files",

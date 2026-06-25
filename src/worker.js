@@ -10,6 +10,7 @@ const routeAliases = {
   '/forum': '/forum.html',
   '/signal-board': '/forum.html',
   '/books': '/books.html',
+  '/deploy-status': '/deploy-status.html',
   '/live-intel': '/live-intel.html',
   '/epstein': '/epstein-files.html',
   '/evidence-vault': '/evidence-vault.html',

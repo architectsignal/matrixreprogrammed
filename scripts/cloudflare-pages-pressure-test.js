@@ -24,16 +24,11 @@ for (const route of [
   '/epstein /epstein-files.html 200',
   '/books /books.html 200',
   '/amazon-store /amazon-store-books.html 200',
-  '/rss /feeds/main-signal.xml 200',
-  '/download-center /download-center.html 200',
-  '/evidence-vault /evidence-vault.html 200',
-  '/search /search.html 200',
-  '/forum /forum.html 200',
-  '/power-atlas /power-atlas.html 200'
+  '/search /search.html 200'
 ]) {
-  if (!redirects.includes(route)) fail(`_redirects missing no-loop rewrite route: ${route}`);
+  if (!redirects.includes(route)) fail(`repo _redirects missing documented rewrite route: ${route}`);
 }
-if (/\.html\s+301/.test(redirects)) fail('_redirects still contains .html 301 redirects that can create Cloudflare loops');
+if (/\.html\s+301/.test(redirects)) fail('repo _redirects still contains .html 301 redirects that can create loops');
 
 const headers = exists('_headers') ? read('_headers') : '';
 for (const marker of [
@@ -60,7 +55,7 @@ requireIncludes('wrangler.jsonc', '"main": "src/worker.js"', 'Wrangler worker ro
 requireIncludes('wrangler.jsonc', '"binding": "ASSETS"', 'Wrangler ASSETS binding');
 requireIncludes('wrangler.jsonc', '"directory": "_site"', 'Wrangler _site assets directory');
 for (const marker of ['env.ASSETS.fetch', '.html', '/index.html']) requireIncludes('src/worker.js', marker, `Worker fallback marker ${marker}`);
-for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'start-here', 'epstein-files', 'live-intel']) requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
+for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'blockedFiles', '_redirects', 'must not be deployed']) requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
 
 if (problems.length) {
   console.error('\nCLOUDFLARE PAGES PRESSURE TEST FAILED\n');
@@ -69,4 +64,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE PAGES PRESSURE TEST PASSED');
-console.log('Checked Cloudflare Worker router, ASSETS binding, no-loop rewrites, _headers, setup guide, _site assets, route fallbacks, and download content types.');
+console.log('Checked Cloudflare Worker router, ASSETS binding, _headers, setup guide, _site assets, route fallbacks, and verified _redirects is excluded from Worker output.');

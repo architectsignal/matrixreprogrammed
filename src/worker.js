@@ -41,6 +41,21 @@ async function savePosts(env, posts) {
   });
 }
 
+function handleForumHealth(env) {
+  const hasForumPostsBinding = Boolean(env.FORUM_POSTS);
+  return json({
+    ok: hasForumPostsBinding,
+    worker: 'matrixreprogrammed',
+    backend: 'src/worker.js',
+    forumPostsBinding: hasForumPostsBinding ? 'connected' : 'missing',
+    kvBindingName: 'FORUM_POSTS',
+    expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
+    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post'],
+    deployedFrom: 'GitHub main',
+    updatedAt: '2026-06-25T00:00:00.000Z'
+  }, hasForumPostsBinding ? 200 : 503);
+}
+
 async function handleForumFeed(env) {
   const posts = await getPosts(env);
   if (!posts) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
@@ -93,6 +108,7 @@ export default {
     const url = new URL(request.url);
     const originalPath = url.pathname;
 
+    if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
     if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
     if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);

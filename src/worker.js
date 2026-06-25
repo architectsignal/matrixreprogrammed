@@ -3,6 +3,74 @@ const jsonHeaders = {
   'Cache-Control': 'no-store'
 };
 
+const routeAliases = {
+  '/home': '/index.html',
+  '/start': '/start-here.html',
+  '/search': '/search.html',
+  '/forum': '/forum.html',
+  '/signal-board': '/forum.html',
+  '/books': '/books.html',
+  '/live-intel': '/live-intel.html',
+  '/epstein': '/epstein-files.html',
+  '/evidence-vault': '/evidence-vault.html',
+  '/power-atlas': '/power-atlas.html',
+  '/book-universe': '/book-universe.html',
+  '/answer-engine': '/answer-engine.html',
+  '/ai-answers': '/answer-engine.html',
+  '/maps': '/network-map-index.html',
+  '/network-map-index': '/network-map-index.html',
+  '/conversion-funnel': '/conversion-funnel.html',
+  '/funnels': '/conversion-funnel.html',
+  '/black-file-funnel': '/black-file.html',
+  '/trust': '/trust-center.html',
+  '/trust-center': '/trust-center.html',
+  '/privacy': '/trust-privacy.html',
+  '/corrections': '/trust-corrections.html',
+  '/source-methodology': '/trust-source-methodology.html',
+  '/distribution': '/distribution-center.html',
+  '/distribution-center': '/distribution-center.html',
+  '/content-engine': '/distribution-center.html',
+  '/reader-paths': '/sales-ladder.html',
+  '/sales-ladder': '/sales-ladder.html',
+  '/start-reading': '/sales-ladder.html',
+  '/update-monitor': '/update-monitor.html',
+  '/freshness': '/update-monitor.html',
+  '/site-updates': '/update-monitor.html',
+  '/authority': '/authority-hub.html',
+  '/authority-hub': '/authority-hub.html',
+  '/topic-clusters': '/authority-hub.html',
+  '/schema': '/schema-index.html',
+  '/schema-index': '/schema-index.html',
+  '/site-graph': '/site-graph.json',
+  '/claim-taxonomy': '/claim-taxonomy.json',
+  '/crawler-map': '/crawler-map.json',
+  '/download-center': '/download-center.html',
+  '/dossiers': '/download-center.html',
+  '/dossier-packs': '/download-center.html',
+  '/feed-center': '/feed-center.html',
+  '/feeds': '/feed-center.html',
+  '/rss': '/feed-center.html',
+  '/atom': '/feed-center.html',
+  '/json-feed': '/feed-center.html',
+  '/share-center': '/share-center.html',
+  '/share-kits': '/share-center.html',
+  '/social-kits': '/share-center.html',
+  '/copy-kits': '/share-center.html',
+  '/launch-room': '/launch-room.html',
+  '/campaigns': '/launch-room.html',
+  '/campaign-calendar': '/launch-room.html',
+  '/launch-calendar': '/launch-room.html',
+  '/offer-center': '/offer-center.html',
+  '/offers': '/offer-center.html',
+  '/book-offers': '/offer-center.html',
+  '/revenue-ladder': '/offer-center.html',
+  '/optin-center': '/optin-center.html',
+  '/opt-in': '/optin-center.html',
+  '/lead-magnets': '/optin-center.html',
+  '/newsletter': '/optin-center.html',
+  '/amazon-store': '/amazon-store-books.html'
+};
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), { status, headers: jsonHeaders });
 }
@@ -51,6 +119,7 @@ function handleForumHealth(env) {
     kvBindingName: 'FORUM_POSTS',
     expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
     routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post'],
+    publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
     updatedAt: '2026-06-25T00:00:00.000Z'
   }, hasForumPostsBinding ? 200 : 503);
@@ -107,6 +176,8 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const originalPath = url.pathname;
+    const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
+    const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
@@ -119,22 +190,27 @@ export default {
       return env.ASSETS.fetch(new Request(nextUrl, request));
     };
 
-    let response = await tryAsset(originalPath);
+    let response = await tryAsset(routedPath);
     if (response.status !== 404) return response;
 
-    if (!originalPath.endsWith('/')) {
-      response = await tryAsset(`${originalPath}.html`);
-      if (response.status !== 404) return response;
-
-      response = await tryAsset(`${originalPath}/index.html`);
+    if (routedPath !== originalPath) {
+      response = await tryAsset(originalPath);
       if (response.status !== 404) return response;
     }
 
-    if (originalPath.endsWith('/')) {
-      response = await tryAsset(`${originalPath}index.html`);
+    if (!routedPath.endsWith('/')) {
+      response = await tryAsset(`${routedPath}.html`);
       if (response.status !== 404) return response;
 
-      const trimmed = originalPath.replace(/\/$/, '');
+      response = await tryAsset(`${routedPath}/index.html`);
+      if (response.status !== 404) return response;
+    }
+
+    if (routedPath.endsWith('/')) {
+      response = await tryAsset(`${routedPath}index.html`);
+      if (response.status !== 404) return response;
+
+      const trimmed = routedPath.replace(/\/$/, '');
       response = await tryAsset(`${trimmed}.html`);
       if (response.status !== 404) return response;
     }

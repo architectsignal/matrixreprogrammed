@@ -1,15 +1,38 @@
 {
-  "updated": "2026-06-25",
-  "policy": "Daily lanes update news, Epstein bulletins, risk clocks, migration/stat figures, and figure-source reports. Weekly lanes refresh the wider site ecosystem, including Atlas, authority pages, sales paths, offers, lead magnets, feeds, packs, and long-form public pages.",
+  "updated": "2026-06-26",
+  "policy": "The site now uses a three-layer freshness system: daily public-source refresh with commit/deploy trigger, daily pressure-test validation, and weekly full ecosystem rebuild. Daily jobs refresh news, Live Intel, Epstein bulletins, risk clocks, migration/stat figures, freshness reports, downloads, and source-watch outputs. Weekly jobs rebuild the wider site ecosystem, including Atlas, authority pages, sales paths, offers, lead magnets, feeds, packs, long-form public pages, sitemap, llms.txt, search index, and downloadable assets.",
+  "timezoneNote": "GitHub cron runs in UTC. France is UTC+2 during summer time and UTC+1 during winter time.",
+  "deploymentRule": "Daily and weekly refresh workflows commit only when public outputs actually change. Commit messages include [deploy] so the Cloudflare deploy chain can publish the refreshed site.",
+  "dailySchedule": {
+    "workflow": ".github/workflows/daily-update-check.yml",
+    "cronUtc": "17 4 * * *",
+    "franceSummerTime": "06:17 daily",
+    "franceWinterTime": "05:17 daily",
+    "purpose": "Fetch fresh public-source data, rebuild the site, run pressure tests, commit changed public outputs, and trigger deployment."
+  },
+  "dailyPressureSchedule": {
+    "workflow": ".github/workflows/site-pressure-test.yml",
+    "cronUtc": "17 5 * * *",
+    "franceSummerTime": "07:17 daily",
+    "franceWinterTime": "06:17 daily",
+    "purpose": "Run the daily full pressure-test window after the content refresh has had time to commit/deploy."
+  },
+  "weeklySchedule": {
+    "workflow": ".github/workflows/weekly-update-check.yml",
+    "cronUtc": "43 4 * * 1",
+    "franceSummerTime": "06:43 Monday",
+    "franceWinterTime": "05:43 Monday",
+    "purpose": "Run a full ecosystem rebuild, targeted deep checks, commit changed public outputs, and trigger deployment."
+  },
   "daily": [
     {
       "lane": "News / Live Intel",
-      "scripts": ["node scripts/build-intel-desk.js", "node scripts/build-live-intel-machine.js", "node scripts/live-intel-pressure-test.js"],
-      "mustCheck": ["live-intel.html", "intel-archive.html", "data/live-intel-updates.json"]
+      "scripts": ["node scripts/update-live-intel.js", "node scripts/update-seven-day-intel.js", "node scripts/build-intel-desk.js", "node scripts/build-live-intel-machine.js", "node scripts/live-intel-pressure-test.js"],
+      "mustCheck": ["live-intel.html", "intel-archive.html", "news.html", "data/live-intel.json", "downloads/live-intel-latest.json", "downloads/live-intel-latest.md", "downloads/seven-day-intel.json"]
     },
     {
       "lane": "Epstein Bulletins",
-      "scripts": ["node scripts/enhance-epstein-watch.js", "node scripts/epstein-watch-pressure-test.js"],
+      "scripts": ["node scripts/enhance-epstein-watch.js", "node scripts/build-epstein-evidence-ladder.js", "node scripts/build-epstein-timeline-map.js", "node scripts/epstein-watch-pressure-test.js"],
       "mustCheck": ["epstein-files.html", "downloads/epstein-source-watch.json", "downloads/epstein-source-watch.md"]
     },
     {
@@ -19,8 +42,8 @@
     },
     {
       "lane": "Stats / Figures",
-      "scripts": ["node scripts/update-site-freshness-report.js", "node scripts/figure-source-rules-pressure-test.js", "node scripts/migration-flow-test.js"],
-      "mustCheck": ["site-freshness-report.html", "data/migration-flow-panel.json", "data/migrant-sexual-offence-country.json"]
+      "scripts": ["node scripts/update-site-freshness-report.js", "node scripts/site-quality-report.js", "node scripts/figure-source-rules-pressure-test.js", "node scripts/migration-flow-test.js"],
+      "mustCheck": ["site-freshness-report.html", "site-quality-report.html", "data/migration-flow-panel.json", "data/site-freshness-report.json", "data/site-quality-report.json"]
     }
   ],
   "weekly": [
@@ -38,6 +61,18 @@
       "lane": "Quality / Scaffold Copy",
       "scripts": ["node scripts/site-quality-report.js", "node scripts/ux-polish-pressure-test.js", "node scripts/ten-out-of-ten-pressure-test.js"],
       "mustCheck": ["site-quality-report.html", "data/site-quality-report.json"]
+    },
+    {
+      "lane": "Commerce / Funnel System",
+      "scripts": ["node scripts/phase14-pressure-test.js", "node scripts/phase18-pressure-test.js", "node scripts/phase19-pressure-test.js"],
+      "mustCheck": ["download-center.html", "offer-center.html", "optin-center.html", "data/dossier-packs.json", "data/offer-stack.json", "data/lead-magnets.json"]
+    }
+  ],
+  "monthly": [
+    {
+      "lane": "Archive Audit / Stale Claims",
+      "scripts": ["npm run build", "node scripts/audit-site.js", "node scripts/site-quality-report.js", "node scripts/source-card-pressure-test.js", "node scripts/ten-out-of-ten-pressure-test.js"],
+      "mustCheck": ["site-quality-report.html", "site-freshness-report.html", "source-cards.html", "downloads/site-freshness-report.md"]
     }
   ]
 }

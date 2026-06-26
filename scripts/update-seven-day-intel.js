@@ -118,17 +118,23 @@ function itemFromRss(entry, feed, now) {
 }
 async function fetchFeed(feed, now) {
   if (!feed.url || typeof fetch !== 'function') return [];
-  const res = await fetch(feed.url, { headers: { 'User-Agent': 'MatrixReprogrammedBot/1.0' } });
-  if (!res.ok) throw new Error(`${feed.label || feed.lane} RSS returned ${res.status}`);
-  const xml = await res.text();
-  const entries = [...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map(m => m[0]);
-  const altEntries = entries.length ? entries : [...xml.matchAll(/<entry\b[\s\S]*?<\/entry>/gi)].map(m => m[0]);
-  const cutoff = sevenDaysAgo(now);
-  return altEntries.map(entry => itemFromRss(entry, feed, now)).filter(item => {
-    if (!item.title || !/^https?:\/\//i.test(item.url)) return false;
-    const d = new Date(item.published);
-    return d >= cutoff && d <= new Date(now.getTime() + 24 * 60 * 60 * 1000);
-  });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const res = await fetch(feed.url, { headers: { 'User-Agent': 'MatrixReprogrammedBot/1.0' }, signal: controller.signal });
+    if (!res.ok) throw new Error(`${feed.label || feed.lane} RSS returned ${res.status}`);
+    const xml = await res.text();
+    const entries = [...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map(m => m[0]);
+    const altEntries = entries.length ? entries : [...xml.matchAll(/<entry\b[\s\S]*?<\/entry>/gi)].map(m => m[0]);
+    const cutoff = sevenDaysAgo(now);
+    return altEntries.map(entry => itemFromRss(entry, feed, now)).filter(item => {
+      if (!item.title || !/^https?:\/\//i.test(item.url)) return false;
+      const d = new Date(item.published);
+      return d >= cutoff && d <= new Date(now.getTime() + 24 * 60 * 60 * 1000);
+    });
+  } finally {
+    clearTimeout(timer);
+  }
 }
 async function main() {
   const now = new Date();

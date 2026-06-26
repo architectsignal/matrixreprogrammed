@@ -67,13 +67,21 @@ if (exists('deploy-status.html')) {
   requireIncludes('deploy-status.html', 'FOLLOW THE FILES.', 'homepage proof marker');
   requireIncludes('deploy-status.html', '/epstein', 'Epstein alias proof');
   requireIncludes('deploy-status.html', 'forum.html', 'audit-safe Signal Board link');
+  requireIncludes('deploy-status.html', 'Required aliases:', 'visible required alias count');
   if (/href=["']forum-health["']/i.test(deployStatus)) fail('deploy-status.html must not link to dynamic forum-health as a static page');
 }
 if (exists('deploy-status.json')) {
   const status = JSON.parse(read('deploy-status.json'));
   if (!status.workerScript || status.workerScript !== 'src/worker.js') fail('deploy-status.json missing workerScript src/worker.js');
   if (!status.assetOutput || status.assetOutput !== '_site') fail('deploy-status.json missing assetOutput _site');
+  if (!Array.isArray(status.aliases) || status.aliases.length < Object.keys(requiredAliases).length) fail('deploy-status.json missing aliases array');
   if (!Array.isArray(status.requiredAliases) || status.requiredAliases.length < Object.keys(requiredAliases).length) fail('deploy-status.json missing required alias list');
+  for (const [from, to] of Object.entries(requiredAliases)) {
+    const alias = (status.aliases || []).find(item => item.route === from && item.target === to);
+    if (!alias) fail(`deploy-status.json aliases missing ${from} -> ${to}`);
+    if (alias && alias.present !== true) fail(`deploy-status.json alias not marked present: ${from} -> ${to}`);
+  }
+  if (!status.requiredAliasMap || Object.keys(status.requiredAliasMap).length < Object.keys(requiredAliases).length) fail('deploy-status.json missing requiredAliasMap');
   if (!status.liveProof || status.liveProof.forumHealthEndpoint !== '/forum-health') fail('deploy-status.json missing dynamic forum health endpoint note');
 }
 
@@ -87,4 +95,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status outputs, audit-safe forum link, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status alias arrays, audit-safe forum link, wrangler config, and npm build wiring.');

@@ -1,26 +1,26 @@
 {
-  "updated": "2026-06-27T00:15:00+02:00",
-  "purpose": "Deploy trigger after adding real root fallback pages for the Dark Speculation Lab and forum.",
+  "updated": "2026-06-27T00:30:00+02:00",
+  "purpose": "Deploy trigger after hiding the Dark Speculation Lab behind a single all-seeing-eye link at the bottom of the homepage.",
   "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
-  "criticalFix": "dark-speculation-lab.html and dark-speculation-forum.html now exist as real root files as well as generated build outputs, so Cloudflare can serve them even if the generator output is not picked up.",
+  "criticalFix": "The public entry to dark-speculation-lab.html is now the all-seeing eye at the bottom of index.html. Obvious Dark Lab / Drop Box nav labels are stripped by scripts/patch-homepage-speculation-eye.js during build.",
   "includedUpgrades": [
+    "all-seeing-eye homepage footer gate to dark-speculation-lab.html",
+    "dark-speculation-lab.html root fallback page",
+    "dark-speculation-forum.html root fallback page",
+    "obvious speculation nav links removed from fallback pages",
+    "speculation pages removed from visible search/sitemap/llms discovery during build",
     "branded PDF mini-book covers and table of contents",
-    "auto-updated download PDF index and flagship PDF collection",
-    "subject intelligence profile PDFs",
-    "subject intelligence HTML hubs",
-    "Dark Speculation Lab root fallback page",
-    "Dark Speculation forum root fallback page",
-    "weekly Dark Speculation update workflow",
+    "subject intelligence profile PDFs and HTML hubs",
     "source-card-index compatibility alias",
     "Link Audit builds generated site before auditing"
   ],
   "cloudflareExpected": [
     "npm run build",
+    "scripts/patch-homepage-speculation-eye.js runs after analytics injection",
     "build-cloudflare-output.js copies deployable files into _site",
     "wrangler deploy serves _site through src/worker.js",
-    "dark-speculation-lab.html should be available at /dark-speculation-lab.html",
-    "dark-speculation-forum.html should be available at /dark-speculation-forum.html"
+    "homepage bottom should show a single all-seeing eye link",
+    "dark-speculation-lab.html should still be available by direct URL"
   ],
-  "forumNote": "Forum page loads and has local fallback. Public shared posting requires Cloudflare Worker routes /forum-feed and /submit-forum-post plus FORUM_POSTS KV binding.",
   "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
 }

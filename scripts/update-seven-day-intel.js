@@ -44,6 +44,39 @@ function routeForLane(lane) {
   if (lane === 'crime-state-overlap') return 'network-maps.html';
   return 'live-intel.html';
 }
+function bookForLane(lane) {
+  if (lane === 'epstein-files') return 'book-black-file.html';
+  if (lane === 'declassified-files') return 'book-intelligence-dossiers.html';
+  if (lane === 'crime-state-overlap') return 'book-crime-dossiers.html';
+  if (lane === 'war-machine') return 'book-intelligence-dossiers.html';
+  return 'books.html';
+}
+function offerForLane(lane) {
+  if (lane === 'epstein-files') return 'offer-starter-library.html';
+  if (lane === 'crime-state-overlap') return 'offer-crime-dossiers.html';
+  if (lane === 'war-machine' || lane === 'declassified-files') return 'offer-intelligence-dossiers.html';
+  return 'offer-center.html';
+}
+function optinForLane(lane) {
+  if (lane === 'epstein-files') return 'optin-black-file-brief.html';
+  if (lane === 'declassified-files' || lane === 'war-machine') return 'optin-intelligence-files-brief.html';
+  if (lane === 'crime-state-overlap') return 'optin-crime-network-brief.html';
+  if (lane === 'control-system') return 'optin-full-archive-map.html';
+  return 'optin-center.html';
+}
+function makeVideoHook(title, lane) {
+  if (lane === 'epstein-files') return `New Epstein file lane: ${title}. The record matters, but the evidence class matters more.`;
+  if (lane === 'declassified-files') return `New archive lane: ${title}. A released file is the start of the investigation, not the final verdict.`;
+  if (lane === 'crime-state-overlap') return `New crime-network lane: ${title}. Separate indictment, conviction, sanction, reporting, and association.`;
+  return `New seven-day intelligence lane: ${title}. Open the source first, then follow the evidence route.`;
+}
+function makeSocialThread(title, lane) {
+  return [
+    `1/ Fresh ${lane || 'public-record'} lead: ${title}`,
+    '2/ Do not treat a headline as proof. First classify the source type and evidence level.',
+    '3/ Open the source, then use the evidence route, source card, free brief, and book path.'
+  ];
+}
 function itemFromRss(entry, feed, now) {
   const title = tag(entry, 'title');
   const rawLink = tag(entry, 'link') || tag(entry, 'guid');
@@ -53,6 +86,10 @@ function itemFromRss(entry, feed, now) {
   const safeDate = Number.isNaN(published.getTime()) ? now : published;
   const summary = tag(entry, 'description') || tag(entry, 'summary') || title;
   const lane = feed.lane || 'general';
+  const evidenceRoute = routeForLane(lane);
+  const bookRoute = bookForLane(lane);
+  const offerRoute = offerForLane(lane);
+  const optinRoute = optinForLane(lane);
   return {
     id: `${lane}-${safeDate.toISOString().slice(0,10)}-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0,70)}`,
     lane,
@@ -66,11 +103,15 @@ function itemFromRss(entry, feed, now) {
     evidenceBoundary: evidenceBoundaryForLane(lane),
     whyItMatters: 'This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.',
     nextAction: 'Open the source first, then follow the evidence route and only share the claim at the strength the record supports.',
-    evidenceRoute: routeForLane(lane),
+    videoHook: makeVideoHook(title, lane),
+    rumbleShortTitle: title.slice(0, 72),
+    rumbleLongTitle: `${feed.label || 'Seven-Day Intel'} — ${title}`.slice(0, 140),
+    socialThread: makeSocialThread(title, lane),
+    evidenceRoute,
     videoRoute: 'videos.html',
-    bookRoute: lane === 'epstein-files' ? 'book-black-file.html' : 'books.html',
-    offerRoute: lane === 'epstein-files' ? 'offer-starter-library.html' : 'offer-center.html',
-    optinRoute: lane === 'epstein-files' ? 'optin-black-file-brief.html' : 'optin-center.html',
+    bookRoute,
+    offerRoute,
+    optinRoute,
     storeRoute: 'amazon-store-books.html',
     status: 'rss-seven-day'
   };

@@ -61,16 +61,20 @@ if (exists('scripts/build-cloudflare-output.js')) {
 }
 
 if (exists('deploy-status.html')) {
+  const deployStatus = read('deploy-status.html');
   requireIncludes('deploy-status.html', 'DEPLOY STATUS.', 'deploy-status hero');
   requireIncludes('deploy-status.html', 'Cloudflare Deploy Verification', 'Cloudflare deploy verification label');
   requireIncludes('deploy-status.html', 'FOLLOW THE FILES.', 'homepage proof marker');
   requireIncludes('deploy-status.html', '/epstein', 'Epstein alias proof');
+  requireIncludes('deploy-status.html', 'forum.html', 'audit-safe Signal Board link');
+  if (/href=["']forum-health["']/i.test(deployStatus)) fail('deploy-status.html must not link to dynamic forum-health as a static page');
 }
 if (exists('deploy-status.json')) {
   const status = JSON.parse(read('deploy-status.json'));
   if (!status.workerScript || status.workerScript !== 'src/worker.js') fail('deploy-status.json missing workerScript src/worker.js');
   if (!status.assetOutput || status.assetOutput !== '_site') fail('deploy-status.json missing assetOutput _site');
   if (!Array.isArray(status.requiredAliases) || status.requiredAliases.length < Object.keys(requiredAliases).length) fail('deploy-status.json missing required alias list');
+  if (!status.liveProof || status.liveProof.forumHealthEndpoint !== '/forum-health') fail('deploy-status.json missing dynamic forum health endpoint note');
 }
 
 requireIncludes('package.json', 'build-deploy-status.js', 'deploy-status builder in npm build');
@@ -83,4 +87,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status outputs, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status outputs, audit-safe forum link, wrangler config, and npm build wiring.');

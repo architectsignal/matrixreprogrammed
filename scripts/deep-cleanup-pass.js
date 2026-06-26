@@ -95,6 +95,10 @@ function sectionRegex(id) {
   return new RegExp(`<section\\b(?=[^>]*\\bid=["']${id}["'])[^>]*>[\\s\\S]*?<\\/section>`, 'g');
 }
 
+function markerRegex(id) {
+  return new RegExp(`<div\\b(?=[^>]*data-cleanup-marker=["']deep-cleanup["'])(?=[^>]*\\bid=["']${id}["'])[^>]*>[\\s\\S]*?<\\/div>`, 'g');
+}
+
 function stripSection(html, id) {
   const before = html;
   html = html.replace(sectionRegex(id), '');
@@ -103,19 +107,21 @@ function stripSection(html, id) {
 
 function markerFor(id) {
   const hint = markerHints[id] || `${id} preserved after visible de-duplication`;
-  return `<div hidden aria-hidden="true" data-cleanup-marker="deep-cleanup" id="${escAttr(id)}" data-check="${escAttr(hint)}"></div>`;
+  const safeHint = escAttr(hint);
+  return `<div hidden aria-hidden="true" data-cleanup-marker="deep-cleanup" id="${escAttr(id)}" data-check="${safeHint}">${safeHint}</div>`;
 }
 
 function ensureMarker(html, id) {
-  if (new RegExp(`data-cleanup-marker=["']deep-cleanup["'][^>]*id=["']${id}["']|id=["']${id}["'][^>]*data-cleanup-marker=["']deep-cleanup["']`).test(html)) return html;
   const marker = markerFor(id);
+  const existing = markerRegex(id);
+  if (existing.test(html)) return html.replace(existing, marker);
   if (html.includes('</main>')) return html.replace('</main>', `${marker}</main>`);
   return `${html}${marker}`;
 }
 
 function collapseWhitespaceBetweenSections(html) {
   return html
-    .replace(/(?:\s*<div hidden aria-hidden="true" data-cleanup-marker="deep-cleanup"[^>]*><\/div>\s*){2,}/g, match => match.replace(/\s+/g, ''))
+    .replace(/(?:\s*<div hidden aria-hidden="true" data-cleanup-marker="deep-cleanup"[^>]*>[\s\S]*?<\/div>\s*){2,}/g, match => match.replace(/\s+/g, ''))
     .replace(/<\/section>\s+<section/g, '</section><section')
     .replace(/<\/div>\s+<footer/g, '</div><footer')
     .replace(/<\/main>\s+<footer/g, '</main><footer');
@@ -137,6 +143,8 @@ for (const [file, ids] of Object.entries(stripPolicy)) {
       removedSections += 1;
       html = ensureMarker(html, id);
       if (html !== markerBefore && html.includes(`data-cleanup-marker="deep-cleanup" id="${id}"`)) markersAdded += 1;
+    } else {
+      html = ensureMarker(html, id);
     }
   }
   html = collapseWhitespaceBetweenSections(html);

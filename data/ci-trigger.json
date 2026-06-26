@@ -1,9 +1,11 @@
 {
-  "updated": "2026-06-27T00:30:00+02:00",
-  "purpose": "Deploy trigger after hiding the Dark Speculation Lab behind a single all-seeing-eye link at the bottom of the homepage.",
+  "updated": "2026-06-27T00:45:00+02:00",
+  "purpose": "Deploy trigger after hiding visible compatibility marker text on the homepage.",
   "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
-  "criticalFix": "The public entry to dark-speculation-lab.html is now the all-seeing eye at the bottom of index.html. Obvious Dark Lab / Drop Box nav labels are stripped by scripts/patch-homepage-speculation-eye.js during build.",
+  "criticalFix": "Compatibility pressure-test markers that leaked as reader-visible text are now scrubbed from visible HTML and reinserted inside a hidden marker vault by scripts/hide-visible-compatibility-markers.js.",
   "includedUpgrades": [
+    "visible compatibility marker cleanup",
+    "hidden CI marker vault for preserved test strings",
     "all-seeing-eye homepage footer gate to dark-speculation-lab.html",
     "dark-speculation-lab.html root fallback page",
     "dark-speculation-forum.html root fallback page",
@@ -16,11 +18,10 @@
   ],
   "cloudflareExpected": [
     "npm run build",
-    "scripts/patch-homepage-speculation-eye.js runs after analytics injection",
+    "scripts/hide-visible-compatibility-markers.js runs after compatibility restore",
     "build-cloudflare-output.js copies deployable files into _site",
     "wrangler deploy serves _site through src/worker.js",
-    "homepage bottom should show a single all-seeing eye link",
-    "dark-speculation-lab.html should still be available by direct URL"
+    "homepage bottom should show normal footer plus one all-seeing eye, not raw marker text"
   ],
   "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
 }

@@ -24,7 +24,7 @@ requireFile('scripts/cleanup-duplicates.js');
 const data = exists('data/dossier-packs.json') ? json('data/dossier-packs.json') : { packs: [], rules: [] };
 const packs = data.packs || [];
 const search = exists('search-index.json') ? json('search-index.json') : [];
-if (!Array.isArray(data.rules) || data.rules.length < 6) fail('data/dossier-packs.json expected at least 6 pack rules');
+if (!Array.isArray(data.rules) || data.rules.length < 7) fail('data/dossier-packs.json expected at least 7 pack rules');
 if (packs.length < 6) fail(`data/dossier-packs.json expected at least 6 packs, found ${packs.length}`);
 
 requireIncludes('download-center.html', 'DOWNLOAD CENTER', 'Download Center hero');
@@ -37,7 +37,10 @@ requireIncludes('download-center.html', 'Forum Posts Export', 'Forum Posts Expor
 requireIncludes('download-center.html', 'downloads/forum-posts.json', 'Forum Posts JSON link');
 requireIncludes('download-center.html', 'downloads/forum-posts.md', 'Forum Posts Markdown link');
 requireIncludes('download-center.html', 'persistent Cloudflare KV', 'persistent KV copy');
+requireIncludes('download-center.html', 'latest intelligence windows', 'latest intelligence window copy');
+requireIncludes('download-center.html', 'relevant source files', 'relevant source files copy');
 requireIncludes('downloads/forum-posts.json', 'Cloudflare Worker /downloads/forum-posts.json reads FORUM_POSTS KV', 'dynamic JSON placeholder boundary');
+requireIncludes('downloads/forum-posts.json', '?pack=black-file-starter', 'forum posts pack-filter hint');
 requireIncludes('downloads/forum-posts.md', 'served dynamically from the persistent FORUM_POSTS KV namespace', 'dynamic Markdown placeholder boundary');
 for (const file of ['index.html','black-file.html','trust-center.html','evidence-vault.html','sales-ladder.html','schema-index.html']) {
   requireIncludes(file, 'id="phase-fourteen-dossier-pack-engine"', `Phase 14 patch on ${file}`);
@@ -54,16 +57,29 @@ for (const pack of packs) {
   requireIncludes(htmlFile, pack.title, `pack title ${pack.title}`);
   requireIncludes(htmlFile, 'DOSSIER PACK', 'Dossier pack terminal');
   requireIncludes(htmlFile, 'Pack Boundary', 'Pack Boundary section');
-  requireIncludes(htmlFile, 'Core Pathways', 'Core Pathways section');
+  requireIncludes(htmlFile, 'Latest Intelligence Window', 'Latest Intelligence Window section');
   requireIncludes(htmlFile, 'Source Pathways', 'Source Pathways section');
+  requireIncludes(htmlFile, 'Relevant Source Files', 'Relevant Source Files section');
+  requireIncludes(htmlFile, 'Core Pathways', 'Core Pathways section');
+  requireIncludes(htmlFile, 'Forum Posts For This Subject', 'subject forum posts section');
+  requireIncludes(htmlFile, `downloads/forum-posts.json?pack=${pack.slug}`, 'subject forum JSON route');
+  requireIncludes(htmlFile, `downloads/forum-posts.md?pack=${pack.slug}`, 'subject forum Markdown route');
   requireIncludes(htmlFile, 'Downloads', 'Downloads section');
   requireIncludes(htmlFile, jsonFile, 'JSON download link');
   requireIncludes(htmlFile, mdFile, 'Markdown download link');
+  if (!Array.isArray(pack.keywords) || pack.keywords.length < 6) fail(`${pack.slug}: expected at least 6 relevance keywords`);
   if (!Array.isArray(pack.routes) || pack.routes.length < 6) fail(`${pack.slug}: expected at least 6 source pathways`);
   if (!Array.isArray(pack.takeaways) || pack.takeaways.length < 4) fail(`${pack.slug}: expected at least 4 takeaways`);
   const packData = json(jsonFile);
   if (!packData.boundary || !packData.trustRoute || !packData.evidenceRoute) fail(`${jsonFile}: missing boundary/trust/evidence pathway`);
+  if (!packData.forumPostsRoute || !packData.forumPostsRoute.includes(`pack=${pack.slug}`)) fail(`${jsonFile}: missing subject forum posts route`);
+  if (!packData.liveIntelWindow || !Array.isArray(packData.liveIntelWindow.items)) fail(`${jsonFile}: missing liveIntelWindow items`);
+  if (!Array.isArray(packData.sourceFiles) || packData.sourceFiles.length < pack.routes.length) fail(`${jsonFile}: expected sourceFiles at least route count`);
+  if (!Array.isArray(packData.downloadIncludes) || !packData.downloadIncludes.includes('latest intelligence window')) fail(`${jsonFile}: missing latest-intel downloadIncludes marker`);
   requireIncludes(mdFile, '## Boundary', `${mdFile} boundary section`);
+  requireIncludes(mdFile, '## Latest Intelligence Window', `${mdFile} latest intelligence section`);
+  requireIncludes(mdFile, '## Source Pathways / Relevant Source Files', `${mdFile} source pathway section`);
+  requireIncludes(mdFile, '## Forum Posts Export', `${mdFile} forum export section`);
   if (!search.some(item => item.url === htmlFile)) fail(`search-index.json missing ${htmlFile}`);
   requireIncludes('sitemap.xml', `/${htmlFile}`, `${htmlFile} sitemap entry`);
   requireIncludes('llms.txt', `/${jsonFile}`, `${jsonFile} llms.txt entry`);
@@ -78,6 +94,7 @@ if (!search.some(item => item.url === 'downloads/forum-posts.json')) fail('searc
 
 const pkg = exists('package.json') ? json('package.json') : { scripts: {} };
 const build = pkg.scripts && pkg.scripts.build || '';
+if (!build.includes('update-seven-day-intel.js && node scripts/build-phase14-dossier-packs.js')) fail('package.json build must refresh seven-day intel before Phase 14 packs');
 if (!build.includes('build-phase14-dossier-packs.js')) fail('package.json build missing build-phase14-dossier-packs.js');
 if (!build.includes('phase14-pressure-test.js')) fail('package.json build missing phase14-pressure-test.js');
 const netlify = exists('netlify.toml') ? read('netlify.toml') : '';
@@ -103,4 +120,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 14 DOSSIER PACK PRESSURE TEST PASSED');
-console.log(`Checked ${packs.length} packs, forum post exports, source pathway sections, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${packs.length} packs, relevant intel windows, source files, subject forum exports, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);

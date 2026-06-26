@@ -5,6 +5,8 @@ const root = process.cwd();
 const sourcesPath = path.join(root, 'data', 'live-intel-sources.json');
 const livePath = path.join(root, 'data', 'live-intel.json');
 const downloadsDir = path.join(root, 'downloads');
+const sevenDayIntelDownloadRoute = 'downloads/seven-day-intel.json';
+const sevenDayIntelDownloadPath = path.join(root, sevenDayIntelDownloadRoute);
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
 
 function readJson(file, fallback) {
@@ -171,11 +173,11 @@ async function main() {
     items
   };
   writeJson(livePath, updated);
-  writeJson(path.join(downloadsDir, 'seven-day-intel.json'), updated);
-  console.log(`Seven-day intel updater complete: ${fetched.length} fetched, ${items.length} retained, ${errors.length} feed error(s).`);
+  writeJson(sevenDayIntelDownloadPath, updated);
+  console.log(`Seven-day intel updater complete: ${fetched.length} fetched, ${items.length} retained, ${errors.length} feed error(s). Export: ${sevenDayIntelDownloadRoute}`);
 }
 main().catch(err => {
   console.warn(`Seven-day intel updater failed safely: ${err.message}`);
   const existing = readJson(livePath, { updated: new Date().toISOString(), items: [] });
-  writeJson(path.join(downloadsDir, 'seven-day-intel.json'), existing);
+  writeJson(sevenDayIntelDownloadPath, existing);
 });

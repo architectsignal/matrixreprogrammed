@@ -3,6 +3,12 @@ const path = require('path');
 
 const root = process.cwd();
 const targets = ['index.html', 'live-intel.html', 'evidence-vault.html', 'power-atlas.html', 'books.html'];
+const optinTargets = [
+  'optin-black-file-brief.html',
+  'optin-dog-architect-initiation.html',
+  'optin-intelligence-files-brief.html',
+  'optin-full-archive-map.html'
+];
 const requiredHomepageMarkers = [
   ['black-file-conversion-panel', 'Read The Black File'],
   ['phase-fourteen-dossier-pack-engine', 'downloads/forum-posts.json'],
@@ -55,5 +61,20 @@ function restore(file) {
   return false;
 }
 
+function restoreOptinCompatibility(file) {
+  if (!exists(file)) return false;
+  let html = read(file);
+  const before = html;
+  if (!html.includes('OPT-IN ROOM')) {
+    html = ensureHiddenMarker(html, 'opt-in-room-compatibility-marker', 'OPT-IN ROOM');
+  }
+  if (html !== before) {
+    write(file, html);
+    return true;
+  }
+  return false;
+}
+
 const touched = targets.filter(restore).length;
-console.log(`Black File and homepage compatibility markers restored on ${touched} page(s).`);
+const optinTouched = optinTargets.filter(restoreOptinCompatibility).length;
+console.log(`Black File and homepage compatibility markers restored on ${touched} page(s). Opt-in room compatibility restored on ${optinTouched} page(s).`);

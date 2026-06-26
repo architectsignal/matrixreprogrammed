@@ -127,12 +127,54 @@ function writeBrandedPdf(outPath, doc = {}) {
   const pages = [];
   let page = '';
   let y = 0;
+  const generated = new Date().toISOString().slice(0, 10);
+  const sections = [
+    'What This File Is',
+    'Why This Matters',
+    'Evidence / Proof Routes',
+    'Main Players / Entities',
+    'What The Record Can Support',
+    'Speculation Boundary',
+    'Latest Intelligence Window',
+    'Related Matrix Reprogrammed Books',
+    'Reader Actions',
+    'Core Routes',
+    'Download Metadata'
+  ];
+  function background() {
+    let c = rect(0, 0, W, H, DARK);
+    for (let x = 18; x < W; x += 42) c += line(x, 28, x + 32, H - 28, [0.07, 0.0, 0.02], 0.24);
+    c += rect(24, 22, W - 48, H - 44, null, RED, 1.0);
+    c += rect(36, 34, W - 72, H - 68, null, GOLD, 0.42);
+    return c;
+  }
+  function coverPage() {
+    let c = background();
+    const title = ascii(doc.title || 'Matrix Reprogrammed Download').toUpperCase().slice(0, 100);
+    const label = ascii(doc.label || 'Public-Record Mini Book').toUpperCase().slice(0, 72);
+    c += text(M, H - 74, 'MATRIX REPROGRAMMED', 14, 'F2', GOLD);
+    c += text(M, H - 98, 'PUBLIC-RECORD MINI BOOK', 10, 'F2', RED);
+    c += line(M, H - 116, W - M, H - 116, GOLD, 0.8);
+    c += rect(M, 424, W - 2 * M, 160, PANEL, [0.48, 0.02, 0.04], 0.9);
+    let ty = 548;
+    for (const ln of wrap(title, 38).slice(0, 4)) { c += text(M + 26, ty, ln, 21, 'F2', SOFT); ty -= 28; }
+    c += text(M + 26, ty - 4, label, 9.8, 'F2', GOLD);
+    c += text(M + 26, ty - 24, 'Source first. Claim second. Speculation labelled.', 9.2, 'F1', MUTED);
+    const badges = ['AUTO-UPDATED FROM CURRENT SITE DATA', 'EVIDENCE BOUNDARY INCLUDED', 'MAIN PLAYERS / ENTITIES INCLUDED', 'RELATED BOOK PATH INCLUDED', 'READER ACTIONS INCLUDED'];
+    c += rect(M, 298, W - 2 * M, 96, null, GREEN, 0.3);
+    let by = 366;
+    for (const badge of badges) { c += text(M + 26, by, `> ${badge}`, 8.4, 'F2', GREEN); by -= 14; }
+    c += text(M, 222, 'WHAT THIS DOWNLOAD IS', 10.5, 'F2', GOLD);
+    let sy = 202;
+    for (const ln of wrap(doc.summary || 'A Matrix Reprogrammed branded briefing generated from current archive data, source routes, live-intel windows, related books, and evidence boundaries.', 72).slice(0, 8)) { c += text(M, sy, ln, 8.8, 'F1', SOFT); sy -= 12; }
+    c += line(M, 86, W - M, 86, RED, 0.7);
+    c += text(M, 66, `GENERATED: ${generated}`, 8.2, 'F2', MUTED);
+    c += text(W - 238, 66, 'REBUILT WHEN THE SITE BUILD RUNS', 8.2, 'F2', GOLD);
+    c += text(M, 44, SITE, 8.2, 'F1', MUTED);
+    return c;
+  }
   function frame(title, subtitle) {
-    let c = '';
-    c += rect(0, 0, W, H, DARK);
-    for (let x = 20; x < W; x += 46) c += line(x, 32, x + 26, H - 32, [0.08, 0.0, 0.02], 0.25);
-    c += rect(28, 26, W - 56, H - 52, null, RED, 0.9);
-    c += rect(40, 38, W - 80, H - 76, null, GOLD, 0.35);
+    let c = background();
     c += text(M, H - 44, 'MATRIX REPROGRAMMED', 8.5, 'F2', GOLD);
     c += text(W - 214, H - 44, 'BRANDED DOWNLOAD MINI BOOK', 8.2, 'F2', RED);
     c += line(M, H - 58, W - M, H - 58, GOLD, 0.7);
@@ -141,6 +183,27 @@ function writeBrandedPdf(outPath, doc = {}) {
     c += line(M, 54, W - M, 54, RED, 0.6);
     c += text(M, 34, 'AUTO-GENERATED FROM CURRENT SITE DATA', 7.5, 'F2', MUTED);
     c += text(W - 106, 34, String(pages.length + 1).padStart(2, '0'), 8, 'F2', GOLD);
+    return c;
+  }
+  function contentsPage() {
+    let c = frame('TABLE OF CONTENTS', ascii(doc.title || 'Matrix Reprogrammed Download').slice(0, 60));
+    c += rect(M, 82, W - 2 * M, 540, PANEL, [0.45, 0.02, 0.04], 0.65);
+    c += text(M + 22, 594, 'THIS MINI BOOK IS BUILT LIKE A READER ROUTE', 11, 'F2', GOLD);
+    let yy = 566;
+    for (const [i, item] of sections.entries()) {
+      c += text(M + 30, yy, `${String(i + 1).padStart(2, '0')}  ${item}`, 9.7, 'F2', i % 2 ? SOFT : GREEN);
+      yy -= 22;
+    }
+    c += line(M + 22, 312, W - M - 22, 312, RED, 0.45);
+    c += text(M + 22, 288, 'HOW TO READ IT', 10.5, 'F2', GOLD);
+    const notes = [
+      'Open the source routes before treating any claim as proven.',
+      'Use the speculation boundary to separate theory from record.',
+      'Follow the related books when the reader wants the full dossier.',
+      'This PDF is regenerated from the current archive whenever the site build runs.'
+    ];
+    yy = 264;
+    for (const note of notes) { c += text(M + 30, yy, `- ${note}`, 8.6, 'F1', SOFT); yy -= 16; }
     return c;
   }
   function newPage(title = doc.title, subtitle = doc.label) {
@@ -161,8 +224,11 @@ function writeBrandedPdf(outPath, doc = {}) {
     for (const item of list) addBullet(typeof item === 'string' ? item : [item.title, item.summary, item.route || item.url].filter(Boolean).join(' - '));
     y -= 8;
   }
+  pages.push(coverPage());
+  pages.push(contentsPage());
   page = '';
   newPage(doc.title || 'Matrix Reprogrammed Download', doc.label || 'Branded mini book');
+  addHeading('What this file is');
   addPara(doc.summary || 'A Matrix Reprogrammed branded briefing generated from current site data, source routes, live-intel windows, related books, and evidence boundaries.', 9.4);
   addSection('Why this matters', doc.why || []);
   addSection('Evidence / proof routes', doc.proofLinks || []);
@@ -170,10 +236,10 @@ function writeBrandedPdf(outPath, doc = {}) {
   addSection('What the record can support', doc.recordSupports || ['Source-linked facts, route maps, claim labels, dates, public records, official pages, court records, archive links, and clearly labelled analysis.']);
   addSection('Speculation boundary', doc.speculation || ['Speculation is allowed only when labelled. Association, contact, symbolism, reporting, or allegation does not equal proof of wrongdoing.']);
   addSection('Latest intelligence window', doc.liveIntel || [], 'No fresh matching live-intel item is attached yet. This PDF will update when matching live-intel data is available.');
-  addSection('Related books', (doc.relatedBooks || []).map(book => `${book.title} - ${book.generatedUrl ? routeUrl(book.generatedUrl) : ''}${book.amazonUs ? ` - Amazon: ${book.amazonUs}` : ''}`));
+  addSection('Related Matrix Reprogrammed books', (doc.relatedBooks || []).map(book => `${book.title} - ${book.generatedUrl ? routeUrl(book.generatedUrl) : ''}${book.amazonUs ? ` - Amazon: ${book.amazonUs}` : ''}`));
   addSection('Reader actions', doc.actions || []);
   addSection('Core routes', doc.routes || []);
-  addSection('Download metadata', [`Generated: ${new Date().toISOString().slice(0, 10)}`, `Canonical site: ${SITE}`, 'Build behaviour: regenerated whenever the site build runs after data/live-intel updates.']);
+  addSection('Download metadata', [`Generated: ${generated}`, `Canonical site: ${SITE}`, 'Build behaviour: regenerated whenever the site build runs after data/live-intel updates.']);
   if (page) pages.push(page);
   buildPdf(outPath, pages);
 }

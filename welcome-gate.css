@@ -123,7 +123,7 @@
   animation:gateBlink 1s steps(1,end) infinite;
 }
 .gate-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;min-width:0}
-.gate-skip{
+.gate-skip,.gate-voice{
   background:none;
   border:0;
   color:rgba(207,255,224,.72);
@@ -133,7 +133,20 @@
   cursor:pointer;
   padding:12px;
 }
-.gate-skip:hover,.gate-skip:focus-visible{color:#fff;outline:none}
+.gate-voice{
+  border:1px solid rgba(0,255,102,.32);
+  border-radius:999px;
+  background:rgba(0,255,102,.07);
+  color:#dffff0;
+  box-shadow:0 0 18px rgba(0,255,102,.10),inset 0 0 18px rgba(0,255,102,.04);
+}
+.gate-voice.is-speaking{
+  color:#fff;
+  border-color:rgba(244,216,137,.62);
+  background:rgba(244,216,137,.12);
+  box-shadow:0 0 22px rgba(244,216,137,.18),inset 0 0 18px rgba(244,216,137,.05);
+}
+.gate-skip:hover,.gate-skip:focus-visible,.gate-voice:hover,.gate-voice:focus-visible{color:#fff;outline:none}
 .gate-sigil{
   width:86px;
   height:86px;
@@ -177,7 +190,7 @@
   .gate-title span{font-size:clamp(1.55rem,7.65vw,2.42rem);letter-spacing:0;text-shadow:0 0 18px rgba(0,255,102,.78),0 0 50px rgba(0,255,102,.25)}
   .gate-terminal{text-align:left;font-size:.82rem;line-height:1.58;padding:16px;margin-bottom:20px}
   .gate-actions{gap:10px;margin-top:18px}
-  .gate-actions .btn,.gate-skip{width:100%;max-width:100%;white-space:normal;text-align:center}
+  .gate-actions .btn,.gate-skip,.gate-voice{width:100%;max-width:100%;white-space:normal;text-align:center}
   .gate-replay{width:42px;height:42px;right:12px;bottom:12px}
 }
 @media(max-width:380px){

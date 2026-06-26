@@ -53,7 +53,7 @@ for (const file of ['live-intel.html', 'downloads/live-intel-latest.md']) {
     forbidIncludes(file, forbidden, forbidden);
   }
 }
-for (const file of ['scripts/update-seven-day-intel.js', 'scripts/build-live-intel-machine.js']) {
+for (const file of ['scripts/update-live-intel.js', 'scripts/update-seven-day-intel.js', 'scripts/build-live-intel-machine.js']) {
   requireIncludes(file, 'decodeEntities', `${file} decodeEntities sanitizer`);
   requireIncludes(file, '<[^>]+>', `${file} tag stripper`);
   requireIncludes(file, '&lt;', `${file} encoded less-than handling`);

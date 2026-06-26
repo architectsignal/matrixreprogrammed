@@ -1,26 +1,33 @@
-name: Daily Update Check
+name: Daily Content Refresh
 
 on:
   schedule:
-    - cron: '17 5 * * *'
+    # Daily content refresh: 04:17 UTC = 06:17 France summer / 05:17 France winter.
+    # This runs before the 05:17 UTC pressure-test window.
+    - cron: '17 4 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: daily-update-check
+  group: daily-content-refresh
   cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
-  daily-check:
-    name: Daily news, Epstein, timers, and figures check
+  daily-refresh:
+    name: Daily source refresh, build, test, commit, and deploy trigger
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,46 +37,55 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build daily Live Intel and Epstein lanes
+      - name: Refresh public-source data before build
         run: |
+          node scripts/update-live-intel.js
+          node scripts/update-seven-day-intel.js
           node scripts/build-intel-desk.js
-          node scripts/build-live-intel-machine.js
           node scripts/enhance-epstein-watch.js
+          node scripts/build-epstein-evidence-ladder.js
+          node scripts/build-epstein-timeline-map.js
+          node scripts/patch-homepage-alerts.js
 
-      - name: Patch timers and homepage alert gates
-        run: node scripts/patch-homepage-alerts.js
+      - name: Build full site and run protected pressure tests
+        run: npm run build
 
-      - name: Refresh figure and freshness reports
+      - name: Commit daily public-content updates if changed
         run: |
-          node scripts/update-site-freshness-report.js
-          node scripts/site-quality-report.js
+          git config user.name "matrix-daily-update-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git status --short
+          git add -A data downloads feeds || true
+          git add -A live-intel.html intel-archive.html news.html epstein-files.html timers.html migration-flow.html site-freshness-report.html site-quality-report.html download-center.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt || true
+          if git diff --cached --quiet; then
+            echo "No daily public-content changes to commit."
+          else
+            git commit -m "Daily site intelligence refresh [deploy]"
+            git push
+          fi
 
-      - name: Daily pressure tests
-        run: |
-          node scripts/live-intel-pressure-test.js
-          node scripts/epstein-watch-pressure-test.js
-          node scripts/figure-source-rules-pressure-test.js
-          node scripts/migration-flow-test.js
-          node scripts/global-risk-clocks-test.js
-          node scripts/update-cadence-test.js
-
-      - name: Upload daily check artifact
+      - name: Upload daily refresh artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: daily-update-check-artifact
+          name: daily-content-refresh-artifact
           path: |
             live-intel.html
             intel-archive.html
             epstein-files.html
+            news.html
             timers.html
             migration-flow.html
             site-freshness-report.html
             site-quality-report.html
             data/update-cadence-policy.json
+            data/live-intel.json
             data/global-risk-clocks.json
             data/migration-flow-panel.json
             data/epstein-homepage-alerts.json
+            downloads/live-intel-latest.json
+            downloads/live-intel-latest.md
+            downloads/seven-day-intel.json
             downloads/epstein-source-watch.json
             downloads/epstein-source-watch.md
           if-no-files-found: ignore

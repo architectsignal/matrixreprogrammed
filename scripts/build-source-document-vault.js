@@ -95,3 +95,10 @@ patchSitemap();
 patchLlms();
 patchSearchIndex();
 console.log(`Source Document Vault built: ${doors.length} source doors, page patches, downloads, sitemap, llms, and search index.`);
+
+try {
+  require('./deep-cleanup-pass.js');
+} catch (err) {
+  console.error('Deep cleanup pass failed after Source Document Vault build.');
+  throw err;
+}

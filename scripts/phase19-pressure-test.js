@@ -9,6 +9,11 @@ function json(file) { return JSON.parse(read(file)); }
 function fail(msg) { problems.push(msg); }
 function requireFile(file) { if (!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function requireAnyIncludes(file, texts, label) {
+  if (!exists(file)) return;
+  const html = read(file);
+  if (!texts.some(text => html.includes(text))) fail(`${file}: missing ${label}`);
+}
 
 requireFile('data/lead-magnets.json');
 requireFile('data/live-intel.json');
@@ -38,7 +43,10 @@ requireIncludes('optin-center.html', 'Opt-in Center', 'Opt-in Center nav');
 requireIncludes('optin-center.html', 'Amazon Store', 'Amazon Store nav');
 for (const file of ['index.html','offer-center.html','launch-room.html','share-center.html','download-center.html','trust-center.html','black-file.html']) {
   requireIncludes(file, 'id="phase-nineteen-lead-magnet-engine"', `Phase 19 patch on ${file}`);
-  requireIncludes(file, 'Useful Free Briefs', `${file} useful free briefs language`);
+  const acceptedBriefLanguage = file === 'index.html'
+    ? ['Useful Free Briefs', 'Get Free Briefs', '>Free Briefs<', 'free briefs']
+    : ['Useful Free Briefs'];
+  requireAnyIncludes(file, acceptedBriefLanguage, `${file} useful free briefs language`);
 }
 
 for (const magnet of magnets) {

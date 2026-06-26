@@ -62,7 +62,19 @@ function buildMagnet(m) {
 }
 function patchFile(file, marker, section) { const p = path.join(root, file); if (!fs.existsSync(p)) return; let html = fs.readFileSync(p, 'utf8'); if (html.includes(marker)) return; html = html.replace('</main>', `${section}</main>`); fs.writeFileSync(p, html); }
 function addPagesToSitemap(files) { const p = path.join(root, 'sitemap.xml'); if (!fs.existsSync(p)) return; let xml = fs.readFileSync(p, 'utf8'); const add = files.filter(f => f.endsWith('.html') && !xml.includes(`/${f}</loc>`)).map(f => `  <url><loc>https://matrixreprogrammed.com/${f}</loc><lastmod>${esc(data.updated)}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>`).join('\n'); if (add) xml = xml.replace('</urlset>', `${add}\n</urlset>`); fs.writeFileSync(p, xml); }
-function patchLlms(files) { const p = path.join(root, 'llms.txt'); if (!fs.existsSync(p)) return; let llms = fs.readFileSync(p, 'utf8'); if (llms.includes('/optin-center.html')) return; fs.writeFileSync(p, `${llms.trim()}\n\nPhase 19 Lead Magnet / Capture Engine:\n- /optin-center.html: opt-in hub connecting useful free briefs, seven-day intelligence windows, Netlify forms, offers, campaigns, trust pages, privacy, and evidence lanes.\n${files.map(f => `- /${f}: generated opt-in route or downloadable lead-magnet brief.`).join('\n')}\n`); }
+function patchLlms(files) {
+  const p = path.join(root, 'llms.txt');
+  if (!fs.existsSync(p)) return;
+  let llms = fs.readFileSync(p, 'utf8');
+  const lines = [
+    'Phase 19 Lead Magnet / Capture Engine:',
+    '- /optin-center.html: opt-in hub connecting useful free briefs, seven-day intelligence windows, Netlify forms, offers, campaigns, trust pages, privacy, and evidence lanes.',
+    ...files.map(f => `- /${f}: generated opt-in route or downloadable lead-magnet brief.`)
+  ];
+  const missing = lines.filter(line => !llms.includes(line));
+  if (missing.length) llms = `${llms.trim()}\n\n${missing.join('\n')}\n`;
+  fs.writeFileSync(p, llms);
+}
 function patchSearchIndex(files) { const p = path.join(root, 'search-index.json'); if (!fs.existsSync(p)) return; const search = JSON.parse(fs.readFileSync(p, 'utf8')); const existing = new Set(search.map(i => i.url)); for (const m of data.magnets || []) { const url = `optin-${m.slug}.html`; if (!existing.has(url)) { search.push({ key: `optin-${m.slug}`, title: `${m.title} | Useful Free Brief`, subtitle: m.label, series: 'Lead Magnet Engine', category: 'Seven-Day Free Brief', url, description: m.summary, keywords: [m.title, m.label, m.summary, m.primaryRoute, m.offerRoute, m.formName, 'last seven days', 'free brief', 'live intel'] }); existing.add(url); } } if (!existing.has('optin-center.html')) search.push({ key: 'optin-center', title: 'Opt-in Center | Matrix Reprogrammed', subtitle: 'Useful Free Briefs', series: 'Lead Magnet Engine', category: 'Email Capture', url: 'optin-center.html', description: 'Lead magnet hub for useful Matrix Reprogrammed free briefs with seven-day intelligence windows and evidence routes.', keywords: ['optin center','lead magnet','email capture','free brief','newsletter','reader list','last seven days'] }); fs.writeFileSync(p, JSON.stringify(search, null, 2)); }
 const outputs = [];
 for (const m of data.magnets || []) outputs.push(...buildMagnet(m));

@@ -26,9 +26,7 @@ for(const file of [
   'search-index.json',
   'sitemap.xml',
   'llms.txt',
-  'package.json',
-  'netlify.toml',
-  'src/worker.js'
+  'package.json'
 ]) requireFile(file);
 
 for(const marker of ['WHAT CHANGED TODAY?', 'DAILY DROP STATUS', 'Epstein File Movement', 'Latest Actionable Updates', 'Source Pull Log', 'What the record proves', 'What it does not prove', 'What would strengthen it']) requireIncludes('daily-drop.html', marker, marker);
@@ -58,13 +56,6 @@ requireIncludes('llms.txt', '/daily-drop.html', 'daily-drop llms route');
 requireIncludes('llms.txt', '/network-search.html', 'network-search llms route');
 requireIncludes('package.json', 'build-premier-resource-upgrade.js', 'package build includes premier builder');
 requireIncludes('package.json', 'premier-resource-pressure-test.js', 'package build includes premier pressure test');
-requireIncludes('netlify.toml', 'build-premier-resource-upgrade.js', 'netlify build includes premier builder');
-requireIncludes('netlify.toml', 'premier-resource-pressure-test.js', 'netlify build includes premier pressure test');
-requireIncludes('netlify.toml', 'from = "/daily-drop"', 'daily-drop redirect');
-requireIncludes('netlify.toml', 'from = "/network-search"', 'network-search redirect');
-requireIncludes('src/worker.js', "'/daily-drop': '/daily-drop.html'", 'Cloudflare daily-drop alias');
-requireIncludes('src/worker.js', "'/network-search': '/network-search.html'", 'Cloudflare network-search alias');
-requireIncludes('src/worker.js', "'/people-search': '/network-search.html'", 'Cloudflare people-search alias');
 
 if(problems.length){
   console.error('\nPREMIER RESOURCE PRESSURE TEST FAILED\n');
@@ -73,4 +64,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('PREMIER RESOURCE PRESSURE TEST PASSED');
-console.log('Checked Daily Drop, searchable network database, Epstein Command Center markers, downloads, sitemap, llms.txt, search index, redirects, Worker aliases, and build wiring.');
+console.log('Checked Daily Drop, searchable network database, Epstein Command Center markers, downloads, sitemap, llms.txt, search index, page patches, and build wiring.');

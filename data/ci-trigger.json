@@ -1,7 +1,7 @@
 {
   "updated": "2026-06-26",
-  "purpose": "Harmless CI trigger after subject hub source-card route fix and Dark Speculation Lab wiring.",
-  "latestFixCommit": "7745920ed744681c1e2d2c8a21fa22a8c8ab5e60",
-  "fixedIssue": "subject-trust-evidence-method.html linked to missing source-card-index.html; corrected to source-cards.html.",
-  "expected": "Run Site QA and Site Pressure Test on the latest main branch state."
+  "purpose": "Harmless CI trigger after adding source-card-index.html compatibility alias for Site QA.",
+  "latestFixCommit": "d6767ac1dae3798d7810bc667886fad493d88e14",
+  "fixedIssue": "subject-trust-evidence-method.html linked to source-card-index.html; alias page now exists and redirects to source-cards.html.",
+  "expected": "Run Site QA and Site Pressure Test on the latest main branch state including the alias page."
 }

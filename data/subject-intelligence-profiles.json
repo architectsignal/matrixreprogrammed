@@ -1,0 +1,103 @@
+{
+  "updated": "2026-06-26",
+  "purpose": "Subject-level intelligence profiles used to generate distinct Matrix Reprogrammed branded PDF mini-books when the site build runs.",
+  "rules": [
+    "Each subject profile controls its own proof routes, main players/entities, speculation boundary, related books, reader action, and live-intel matching terms.",
+    "Subject PDFs are regenerated during the build from this profile file plus current live-intel and book data.",
+    "A subject PDF is an orientation asset, not a verdict. Evidence strength belongs to the linked source routes and trust/evidence pages.",
+    "New subjects can be added by appending a profile object with slug, title, summary, keywords, mainPlayers, proofRoutes, speculationBoundary, relatedBookKeywords, and actions."
+  ],
+  "subjects": [
+    {
+      "slug": "epstein-black-file",
+      "title": "Epstein / Black File Source Map",
+      "label": "Black File Subject Mini Book",
+      "summary": "A subject-specific public-record route through Epstein source doors, court records, file releases, named entities, claim boundaries, live updates, and the Matrix Reprogrammed Black File reading path.",
+      "keywords": ["epstein", "black file", "maxwell", "giuffre", "court", "source doors", "jmail", "house oversight", "doj", "files"],
+      "mainPlayers": ["Jeffrey Epstein", "Ghislaine Maxwell", "Virginia Giuffre", "House Oversight Committee", "Department of Justice", "CourtListener", "FBI Vault"],
+      "proofRoutes": ["epstein-files.html", "source-document-vault.html", "claim-classifier.html", "evidence-vault.html", "daily-drop.html", "book-black-file.html"],
+      "recordSupports": ["Public source routes, official disclosures, court docket pathways, source-door maps, claim classifiers, and dated live-intel items.", "The record can support source availability, document locations, timeline references, named-public-record entities, and evidence classification pathways."],
+      "speculationBoundary": ["Do not treat a name, contact, file hit, search result, symbol, or association as proof of guilt.", "Speculation must remain labelled and separated from court records, official releases, and sourced claims."],
+      "relatedBookKeywords": ["black file", "epstein", "elite", "intelligence", "hidden power"],
+      "actions": ["Open the source door before repeating the claim.", "Classify the claim before sharing a conclusion.", "Use the Black File route for the deeper reader path.", "Check the latest daily drop before publishing a video or post."]
+    },
+    {
+      "slug": "intelligence-network",
+      "title": "Intelligence Network Starter File",
+      "label": "Agency Network Subject Mini Book",
+      "summary": "A guided mini-book for the intelligence-dossier universe: agencies, source rooms, oversight failures, public archives, live-intel updates, related dossiers, and reader pathways into the wider control-machine map.",
+      "keywords": ["intelligence", "cia", "nsa", "mi6", "gchq", "mossad", "kgb", "fsb", "declassified", "oversight", "agency"],
+      "mainPlayers": ["CIA", "NSA", "GCHQ", "MI6", "Mossad", "KGB", "FSB", "FBI", "National Archives", "Congressional oversight bodies"],
+      "proofRoutes": ["authority-intelligence.html", "path-intelligence-dossiers.html", "atlas-cia.html", "source-cia-reading-room.html", "evidence-vault.html", "live-intel.html"],
+      "recordSupports": ["Public source rooms, declassified-document routes, agency history pages, oversight-route summaries, and live-intel signals.", "This profile supports agency mapping and source navigation, not unsourced claims of operational control."],
+      "speculationBoundary": ["Do not convert institutional proximity into proof of covert command.", "Keep confirmed public records separate from inference, network theory, and symbolic analysis."],
+      "relatedBookKeywords": ["CIA", "NSA", "GCHQ", "MI6", "Mossad", "KGB", "FSB", "intelligence dossiers"],
+      "actions": ["Start with the agency source room.", "Route through the intelligence reader path.", "Use the evidence vault before making a claim.", "Attach one related dossier book as the next reader action."]
+    },
+    {
+      "slug": "dog-architect",
+      "title": "D.O.G The Architect Initiation Map",
+      "label": "Symbolic Archive Subject Mini Book",
+      "summary": "A branded subject file for the D.O.G The Architect universe: initiation route, symbolic archive, reader pathway, related books, evidence boundary, and conversion path from free brief to collector reading.",
+      "keywords": ["dog", "architect", "symbol", "initiation", "occult", "freemasonry", "matrix", "builder", "hidden architecture"],
+      "mainPlayers": ["D.O.G The Architect", "the Reader", "the Builder", "the Guardian", "the False Crown", "the Hidden Architecture"],
+      "proofRoutes": ["optin-dog-architect-initiation.html", "offer-dog-architect-collector.html", "books.html", "amazon-store-books.html", "download-center.html", "trust-center.html"],
+      "recordSupports": ["This is a symbolic-reader route, not a public accusation file.", "The profile supports book navigation, symbolic positioning, reader journey, opt-in route, and collector offer path."],
+      "speculationBoundary": ["Symbolic interpretation is not the same as evidence of real-world wrongdoing.", "Keep fictional/esoteric reader journey language separate from public-record claims."],
+      "relatedBookKeywords": ["D.O.G", "Architect", "symbol", "hidden system", "freemasonry", "matrix"],
+      "actions": ["Send the reader to the D.O.G initiation brief.", "Offer the collector route after the free brief.", "Route serious readers to the related book pages.", "Preserve the distinction between symbolic reading and evidence claims."]
+    },
+    {
+      "slug": "crime-state-overlap",
+      "title": "Crime-State Overlap Brief",
+      "label": "Crime / Power Subject Mini Book",
+      "summary": "A public-record subject route into crime-state overlap: organized crime dossiers, sanctions, court routes, laundering patterns, intelligence overlap, evidence boundaries, and related Matrix Reprogrammed books.",
+      "keywords": ["crime", "mafia", "cartel", "ndrangheta", "albanian mafia", "laundering", "sanctions", "court", "state overlap", "organized crime"],
+      "mainPlayers": ["organized-crime networks", "cartel structures", "court systems", "sanctions authorities", "customs agencies", "financial-intelligence units", "public prosecutors"],
+      "proofRoutes": ["dossier-pack-crime-state-overlap.html", "evidence-vault.html", "sales-ladder.html", "books.html", "live-intel.html", "trust-center.html"],
+      "recordSupports": ["Court records, sanctions lists, public prosecutions, financial-route analysis, customs-source routes, and related crime dossier pathways.", "This profile supports overlap mapping while keeping allegation strength tied to public records."],
+      "speculationBoundary": ["Do not label a person or organization criminal without a source-supported legal basis.", "Separate public case records from pattern analysis and narrative inference."],
+      "relatedBookKeywords": ["cartels", "mafia", "crime", "Ndrangheta", "Albanian", "contractor", "blackwater"],
+      "actions": ["Open the dossier pack first.", "Check source strength before naming a player.", "Route readers to the crime-series book path.", "Use caution language around unproven overlap claims."]
+    },
+    {
+      "slug": "trust-evidence-method",
+      "title": "Trust & Evidence Method",
+      "label": "Evidence Method Subject Mini Book",
+      "summary": "A mini-book for readers who need the method before the claim: source hierarchy, evidence badges, claim classification, correction path, speculation boundary, and trust-center route.",
+      "keywords": ["trust", "evidence", "claim classifier", "source hierarchy", "corrections", "boundary", "method", "proof", "source card"],
+      "mainPlayers": ["reader", "source document", "claim classifier", "evidence badge", "trust center", "corrections route", "source card"],
+      "proofRoutes": ["trust-center.html", "claim-classifier.html", "evidence-vault.html", "source-document-vault.html", "source-card-index.html", "downloads/source-document-vault.json"],
+      "recordSupports": ["Methodology, evidence classification, source hierarchy, correction route, and claim-boundary language.", "This subject profile exists to stop unsupported claims from becoming reader-facing certainties."],
+      "speculationBoundary": ["Speculation must be labelled, bounded, and routed to the strongest available source trail.", "A weak source can start a question, but it cannot carry a strong claim."],
+      "relatedBookKeywords": ["evidence", "trust", "black file", "intelligence", "method"],
+      "actions": ["Classify the claim before publishing.", "Open the strongest source first.", "Add a correction path when new information changes the record.", "Use the trust page as the default boundary route."]
+    },
+    {
+      "slug": "nasa-hidden-architecture",
+      "title": "NASA Hidden Architecture File",
+      "label": "NASA / Space Symbolism Subject Mini Book",
+      "summary": "A subject profile for NASA-origin and symbolism research: public-record routes, historical players, Paperclip/JPL/NRO/CIA/DoD context, symbolism boundaries, related books, and clearly labelled speculative zones.",
+      "keywords": ["nasa", "paperclip", "jpl", "jack parsons", "disney", "nro", "cia", "dod", "space", "symbolism", "mission patches"],
+      "mainPlayers": ["NASA", "NACA", "Wernher von Braun", "Project Paperclip", "JPL", "Jack Parsons", "NRO", "Department of Defense", "CIA", "Walt Disney"],
+      "proofRoutes": ["books.html", "download-center.html", "source-document-vault.html", "evidence-vault.html", "trust-center.html", "live-intel.html"],
+      "recordSupports": ["Historical public records, agency-history routes, official archive links, book-path navigation, and symbol-analysis boundaries.", "The profile supports an investigation map; it does not prove occult control or covert agency coordination without source evidence."],
+      "speculationBoundary": ["Symbolism, patch design, esoteric parallels, and historical coincidence must be labelled as interpretation unless a source directly supports the claim.", "Separate public-record history from narrative speculation."],
+      "relatedBookKeywords": ["NASA", "moon", "space", "Paperclip", "JPL", "freemasonry", "symbol"],
+      "actions": ["Keep NASA origin claims tied to public-record sources.", "Label symbolism analysis as interpretation.", "Route readers to related books and source vault pages.", "Use trust/evidence pages for claim strength." ]
+    },
+    {
+      "slug": "freemasonry-symbol-system",
+      "title": "Freemasonry Symbol System Map",
+      "label": "Symbol / Fraternal System Subject Mini Book",
+      "summary": "A subject mini-book for Masonic-symbol-system research: older religious ideas, degree structure, symbolic language, infiltration examples, public-record caution, related books, and evidence/speculation boundaries.",
+      "keywords": ["freemasonry", "masonic", "symbol", "degree", "great work", "secret society", "ritual", "p2", "illuminati", "fraternal"],
+      "mainPlayers": ["Freemasonry", "Albert Pike", "Manly P. Hall", "ritual systems", "degree structure", "P2 Lodge", "fraternal networks", "symbol readers"],
+      "proofRoutes": ["books.html", "download-center.html", "trust-center.html", "evidence-vault.html", "source-document-vault.html", "amazon-store-books.html"],
+      "recordSupports": ["Book-path routing, symbol interpretation, historical-source routes, infiltration examples, public-record caution, and claim classification.", "The profile supports structured research; it does not treat ordinary membership as evidence of hidden control."],
+      "speculationBoundary": ["Do not turn Masonic membership into proof of conspiracy or wrongdoing.", "Separate ritual symbolism, historical influence, public-record infiltration cases, and speculative narrative."],
+      "relatedBookKeywords": ["Freemasonry", "Masonic", "Symbol", "degrees", "great work", "secret society"],
+      "actions": ["Define the symbol before interpreting it.", "Separate older-source influence from modern control claims.", "Use public infiltration examples carefully and specifically.", "Route readers to the relevant book page for the full treatment."]
+    }
+  ]
+}

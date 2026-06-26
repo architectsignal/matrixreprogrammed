@@ -15,13 +15,21 @@ on:
       - 'robots.txt'
       - 'netlify.toml'
       - '.github/workflows/site-qa.yml'
+      - '.github/workflows/daily-update-check.yml'
+      - '.github/workflows/weekly-update-check.yml'
+      - '.github/workflows/monthly-archive-audit.yml'
 
 permissions:
   contents: read
 
+concurrency:
+  group: site-qa-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,17 +39,11 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Generate book system
-        run: node scripts/build-book-system.js
+      - name: Install dependencies
+        run: npm install
 
-      - name: Generate homepage
-        run: node scripts/build-homepage.js
+      - name: Build complete site before audit
+        run: npm run build
 
-      - name: Inject analytics
-        run: node scripts/inject-analytics.js
-
-      - name: Generate Black File PDF
-        run: node scripts/build-black-file-pdf.js
-
-      - name: Run site audit report
-        run: node scripts/audit-site.js || echo "Site audit reported issues; build generation completed. Treat this as a cleanup report, not a deploy blocker during live polish."
+      - name: Run site audit report on built output
+        run: node scripts/audit-site.js

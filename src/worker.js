@@ -72,6 +72,15 @@ const routeAliases = {
   '/amazon-store': '/amazon-store-books.html'
 };
 
+const packTerms = {
+  'black-file-starter': ['black file', 'epstein', 'elite', 'evidence', 'settlement', 'nda', 'maxwell', 'giuffre', 'oversight', 'source', 'trust'],
+  'intelligence-network': ['intelligence', 'agency', 'surveillance', 'cia', 'nsa', 'declassified', 'mkultra', 'gladio', 'foia', 'oversight', 'archive'],
+  'crime-state-overlap': ['crime', 'cartel', 'mafia', 'ndrangheta', 'triad', 'court', 'sanctions', 'laundering', 'ports', 'corruption', 'logistics'],
+  'war-machine': ['war', 'contractor', 'blackwater', 'conflict', 'defense', 'procurement', 'sanctions', 'ukraine', 'iran', 'gaza', 'human cost', 'military'],
+  'symbolic-power': ['dog', 'architect', 'symbol', 'masonic', 'masonry', 'esoteric', 'occult', 'degree', 'architecture', 'cipher', 'plate'],
+  'trust-evidence': ['trust', 'evidence', 'claim', 'source', 'corrections', 'privacy', 'association', 'boundary', 'taxonomy', 'source card']
+};
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), { status, headers: jsonHeaders });
 }
@@ -126,6 +135,16 @@ function sortPosts(posts) {
   return posts
     .filter(Boolean)
     .sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
+}
+
+function filterPostsByPack(posts, pack) {
+  const terms = packTerms[pack] || [];
+  if (!pack || !terms.length) return { posts, terms, pack: pack || 'all', filtered: false };
+  const filtered = posts.filter(post => {
+    const hay = [post.title, post.body, post.category, post.sourceUrl].join(' ').toLowerCase();
+    return terms.some(term => hay.includes(term));
+  });
+  return { posts: filtered, terms, pack, filtered: true };
 }
 
 async function getIndexedPosts(env) {
@@ -202,10 +221,11 @@ async function savePostRecord(env, post) {
   return cleaned;
 }
 
-async function forumExport(env) {
+async function forumExport(env, pack = '') {
   const posts = await getPosts(env);
   if (!posts) return null;
   const stats = await getForumStats(env);
+  const selected = filterPostsByPack(posts, pack);
   return {
     ok: true,
     persistent: true,
@@ -214,15 +234,19 @@ async function forumExport(env) {
     indexSelfHealing: true,
     indexCount: stats.indexCount,
     storedPostCount: stats.storedPostCount,
-    count: posts.length,
+    count: selected.posts.length,
+    totalUnfilteredCount: posts.length,
+    pack: selected.pack,
+    packFiltered: selected.filtered,
+    packTerms: selected.terms,
     boundary: 'Public Signal Board posts are user-submitted public resources. They are not claims verified by Matrix Reprogrammed unless separately source-carded or cited.',
     routes: {
       forum: '/forum',
       feed: '/forum-feed',
-      json: '/downloads/forum-posts.json',
-      markdown: '/downloads/forum-posts.md'
+      json: selected.filtered ? `/downloads/forum-posts.json?pack=${selected.pack}` : '/downloads/forum-posts.json',
+      markdown: selected.filtered ? `/downloads/forum-posts.md?pack=${selected.pack}` : '/downloads/forum-posts.md'
     },
-    posts
+    posts: selected.posts
   };
 }
 
@@ -233,6 +257,8 @@ function postsMarkdown(data) {
     '',
     `Generated: ${data.generatedAt}`,
     `Source: ${data.source}`,
+    `Pack: ${data.pack}`,
+    `Filtered: ${data.packFiltered}`,
     `Posts: ${posts.length}`,
     '',
     '## Boundary',
@@ -240,6 +266,12 @@ function postsMarkdown(data) {
     data.boundary,
     ''
   ];
+  if (data.packFiltered) {
+    lines.push('## Pack Filter');
+    lines.push('');
+    lines.push(`Terms: ${(data.packTerms || []).join(', ')}`);
+    lines.push('');
+  }
   for (const post of posts) {
     lines.push(`## ${post.title}`);
     lines.push('');
@@ -254,16 +286,19 @@ function postsMarkdown(data) {
   return lines.join('\n');
 }
 
-async function handleForumPostsJson(env) {
-  const data = await forumExport(env);
+async function handleForumPostsJson(request, env) {
+  const url = new URL(request.url);
+  const data = await forumExport(env, cleanText(url.searchParams.get('pack') || '', 120));
   if (!data) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
   return json(data);
 }
 
-async function handleForumPostsMarkdown(env) {
-  const data = await forumExport(env);
+async function handleForumPostsMarkdown(request, env) {
+  const url = new URL(request.url);
+  const pack = cleanText(url.searchParams.get('pack') || '', 120);
+  const data = await forumExport(env, pack);
   if (!data) return markdown('# Forum Posts Export\n\nFORUM_POSTS KV binding missing.\n', 'forum-posts.md');
-  return markdown(postsMarkdown(data), 'forum-posts.md');
+  return markdown(postsMarkdown(data), pack ? `forum-posts-${pack}.md` : 'forum-posts.md');
 }
 
 async function handleForumHealth(env) {
@@ -281,7 +316,7 @@ async function handleForumHealth(env) {
     indexSelfHealing: Boolean(stats.indexSelfHealing),
     indexCount: stats.indexCount,
     storedPostCount: stats.storedPostCount,
-    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event', '/downloads/forum-posts.json', '/downloads/forum-posts.md'],
+    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event', '/downloads/forum-posts.json', '/downloads/forum-posts.md', '/downloads/forum-posts.json?pack=black-file-starter'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
     updatedAt: '2026-06-26T00:00:00.000Z'
@@ -367,8 +402,8 @@ export default {
     if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return new Response(null, { status: 204 });
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
-    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(env);
-    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(env);
+    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(request, env);
+    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(request, env);
     if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
     if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
     if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);

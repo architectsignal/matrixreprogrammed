@@ -76,6 +76,17 @@ function json(data, status = 200) {
   return new Response(JSON.stringify(data, null, 2), { status, headers: jsonHeaders });
 }
 
+function markdown(text, filename = 'forum-posts.md') {
+  return new Response(text, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Content-Disposition': `attachment; filename="${filename}"`,
+      'Cache-Control': 'no-store'
+    }
+  });
+}
+
 async function readBody(request) {
   try { return await request.json(); } catch { return {}; }
 }
@@ -191,6 +202,70 @@ async function savePostRecord(env, post) {
   return cleaned;
 }
 
+async function forumExport(env) {
+  const posts = await getPosts(env);
+  if (!posts) return null;
+  const stats = await getForumStats(env);
+  return {
+    ok: true,
+    persistent: true,
+    source: 'Cloudflare KV FORUM_POSTS',
+    generatedAt: new Date().toISOString(),
+    indexSelfHealing: true,
+    indexCount: stats.indexCount,
+    storedPostCount: stats.storedPostCount,
+    count: posts.length,
+    boundary: 'Public Signal Board posts are user-submitted public resources. They are not claims verified by Matrix Reprogrammed unless separately source-carded or cited.',
+    routes: {
+      forum: '/forum',
+      feed: '/forum-feed',
+      json: '/downloads/forum-posts.json',
+      markdown: '/downloads/forum-posts.md'
+    },
+    posts
+  };
+}
+
+function postsMarkdown(data) {
+  const posts = data.posts || [];
+  const lines = [
+    '# Matrix Reprogrammed Signal Board Posts',
+    '',
+    `Generated: ${data.generatedAt}`,
+    `Source: ${data.source}`,
+    `Posts: ${posts.length}`,
+    '',
+    '## Boundary',
+    '',
+    data.boundary,
+    ''
+  ];
+  for (const post of posts) {
+    lines.push(`## ${post.title}`);
+    lines.push('');
+    lines.push(`- Date: ${post.createdAt}`);
+    lines.push(`- Category: ${post.category}`);
+    lines.push(`- Name: ${post.name}`);
+    if (post.sourceUrl) lines.push(`- Source: ${post.sourceUrl}`);
+    lines.push('');
+    lines.push(post.body);
+    lines.push('');
+  }
+  return lines.join('\n');
+}
+
+async function handleForumPostsJson(env) {
+  const data = await forumExport(env);
+  if (!data) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
+  return json(data);
+}
+
+async function handleForumPostsMarkdown(env) {
+  const data = await forumExport(env);
+  if (!data) return markdown('# Forum Posts Export\n\nFORUM_POSTS KV binding missing.\n', 'forum-posts.md');
+  return markdown(postsMarkdown(data), 'forum-posts.md');
+}
+
 async function handleForumHealth(env) {
   const hasForumPostsBinding = Boolean(env.FORUM_POSTS);
   const stats = hasForumPostsBinding ? await getForumStats(env) : { ok: false, indexCount: 0, storedPostCount: 0 };
@@ -206,7 +281,7 @@ async function handleForumHealth(env) {
     indexSelfHealing: Boolean(stats.indexSelfHealing),
     indexCount: stats.indexCount,
     storedPostCount: stats.storedPostCount,
-    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event'],
+    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event', '/downloads/forum-posts.json', '/downloads/forum-posts.md'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
     updatedAt: '2026-06-26T00:00:00.000Z'
@@ -292,6 +367,8 @@ export default {
     if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return new Response(null, { status: 204 });
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
+    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(env);
+    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(env);
     if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
     if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
     if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);

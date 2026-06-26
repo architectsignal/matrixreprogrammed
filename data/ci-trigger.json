@@ -1,6 +1,7 @@
 {
-  "updated": "2026-06-27",
-  "purpose": "Final deploy trigger for all current Matrix Reprogrammed upgrades.",
+  "updated": "2026-06-27T00:00:00+02:00",
+  "purpose": "Force deploy trigger for all current Matrix Reprogrammed upgrades on the latest main branch.",
+  "deployIntent": "Build and deploy the complete upgraded site from current main.",
   "includedUpgrades": [
     "branded PDF mini-book covers and table of contents",
     "auto-updated download PDF index and flagship PDF collection",
@@ -11,12 +12,17 @@
     "source-card-index compatibility alias",
     "Link Audit now builds generated site before auditing"
   ],
-  "latestFixCommits": [
-    "fe6c68eaa26f4f7b21c81df3267c82465b4e7e39",
-    "9fb2f56ae3c3bacb34b2eadb40a40cf5eddcd264",
-    "d6767ac1dae3798d7810bc667886fad493d88e14",
-    "8f65f75e7b9c5706844c91df762efd7fd153da1a",
-    "782396756e28e6ddcd766f061e0869c995d436b2"
+  "expectedWorkflows": [
+    "Site QA",
+    "Site Pressure Test",
+    "Matrix Reprogrammed Link Audit",
+    "connected deploy provider"
   ],
-  "expected": "Trigger Site QA, Site Pressure Test, Matrix Reprogrammed Link Audit, and any connected deploy on the latest main branch state."
+  "knownGoodFixesIncluded": [
+    "source-card-index.html exists as a compatibility alias for source-cards.html",
+    "Trust/Evidence subject profile uses source-cards.html",
+    "Link Audit runs npm install and npm run build before node tools/link-audit.js",
+    "Dark Speculation Lab generator is wired into npm run build"
+  ],
+  "expected": "Fresh push should trigger all connected checks and deployment against the current main branch, not older queued commits."
 }

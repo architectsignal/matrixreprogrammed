@@ -48,8 +48,15 @@ if (exists('data/live-intel.json')) {
 for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels', 'HTML sanitizer: active']) {
   requireIncludes('live-intel.html', marker, marker);
 }
+
+// Real <a href="..."> tags are required for navigation and CTAs. Only escaped feed markup is reader-visible HTML leakage.
 for (const file of ['live-intel.html', 'downloads/live-intel-latest.md']) {
-  for (const forbidden of ['<a href=', '&lt;a href=', '<font ', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;']) {
+  for (const forbidden of ['&lt;a href=', '&lt;font ', '&lt;/a&gt;', '&lt;/font&gt;', '&nbsp;']) {
+    forbidIncludes(file, forbidden, forbidden);
+  }
+}
+for (const file of ['downloads/live-intel-latest.json']) {
+  for (const forbidden of ['<a href=', '<font ', '&lt;a href=', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;']) {
     forbidIncludes(file, forbidden, forbidden);
   }
 }
@@ -85,4 +92,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('LIVE INTEL PRESSURE TEST PASSED');
-console.log('Checked source lanes, updater enrichment, static hub, downloads, no raw RSS HTML leakage, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');
+console.log('Checked source lanes, updater enrichment, static hub, downloads, no reader-visible RSS HTML leakage, legitimate page links, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');

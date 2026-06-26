@@ -10,7 +10,7 @@ function requireFile(file){ if(!exists(file)) fail(`missing required file: ${fil
 function requireIncludes(file, text, label=text){ if(!exists(file)) return; if(!read(file).includes(text)) fail(`${file}: missing ${label}`); }
 function json(file){ return JSON.parse(read(file)); }
 
-for (const file of ['scripts/update-seven-day-intel.js','scripts/live-site-verification.js','analytics.js','data/live-intel.json','data/live-intel-sources.json','downloads/seven-day-intel.json','package.json']) requireFile(file);
+for (const file of ['scripts/update-seven-day-intel.js','scripts/live-site-verification.js','analytics.js','src/worker.js','data/live-intel.json','data/live-intel-sources.json','downloads/seven-day-intel.json','package.json']) requireFile(file);
 requireIncludes('scripts/update-seven-day-intel.js','Seven-day intel updater complete','seven-day updater completion log');
 requireIncludes('scripts/update-seven-day-intel.js','failed safely','fail-soft behavior');
 requireIncludes('scripts/update-seven-day-intel.js','evidenceBoundaryForLane','evidence boundary classification');
@@ -19,6 +19,11 @@ requireIncludes('scripts/live-site-verification.js','/deploy-status','deploy-sta
 requireIncludes('scripts/live-site-verification.js','/forum-health','forum-health live check');
 requireIncludes('scripts/live-site-verification.js','/source-cards.html','source-cards live check');
 requireIncludes('scripts/live-site-verification.js','EXPECTED_BUILD_SHA','expected SHA support');
+requireIncludes('analytics.js', "navigator.sendBeacon('/track-event'", 'analytics sends beacon to Cloudflare /track-event');
+requireIncludes('analytics.js', "fetch('/track-event'", 'analytics fetch fallback uses Cloudflare /track-event');
+requireIncludes('src/worker.js', 'handleTrackEvent', 'Worker track-event handler');
+requireIncludes('src/worker.js', "originalPath === '/track-event'", 'Worker /track-event route');
+requireIncludes('src/worker.js', 'analytics:${event.id}', 'Worker KV analytics storage key');
 for (const event of ['brief_open','brief_download','email_submit','black_file_click','amazon_click','rumble_click','epstein_source_click','source_card_click','evidence_route_click','forum_post_submit']) requireIncludes('analytics.js', event, `${event} analytics event`);
 if (exists('data/live-intel.json')) {
   const live = json('data/live-intel.json');
@@ -42,4 +47,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('INTEL + ANALYTICS PRESSURE TEST PASSED');
-console.log('Checked seven-day intel updater, live verifier, conversion event taxonomy, live-intel evidence fields, package wiring, and manual verify-live command.');
+console.log('Checked seven-day intel updater, live verifier, Cloudflare analytics endpoint, conversion event taxonomy, live-intel evidence fields, package wiring, and manual verify-live command.');

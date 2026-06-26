@@ -92,26 +92,108 @@ function makeId() {
   return `signal-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
 
-async function getPosts(env) {
-  if (!env.FORUM_POSTS) return null;
+function safePost(post) {
+  if (!post || typeof post !== 'object') return null;
+  const id = cleanText(post.id, 140);
+  const title = cleanText(post.title, 180);
+  const body = cleanText(post.body || post.message, 2200);
+  if (!id || !title || !body) return null;
+  return {
+    id,
+    title,
+    body,
+    category: cleanText(post.category || 'Signal', 80),
+    name: cleanText(post.name || 'Anonymous', 80),
+    sourceUrl: /^https?:\/\//i.test(String(post.sourceUrl || '')) ? cleanText(post.sourceUrl, 500) : '',
+    createdAt: post.createdAt || new Date().toISOString(),
+    approvedAt: post.approvedAt || post.createdAt || new Date().toISOString(),
+    status: cleanText(post.status || 'live', 40)
+  };
+}
+
+function sortPosts(posts) {
+  return posts
+    .filter(Boolean)
+    .sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
+}
+
+async function getIndexedPosts(env) {
   const raw = await env.FORUM_POSTS.get('posts:index');
   if (!raw) return [];
   try {
     const posts = JSON.parse(raw);
-    return Array.isArray(posts) ? posts : [];
+    return Array.isArray(posts) ? sortPosts(posts.map(safePost)) : [];
   } catch {
     return [];
   }
 }
 
+async function listStoredPosts(env, limit = 100) {
+  const posts = [];
+  let cursor;
+  do {
+    const listed = await env.FORUM_POSTS.list({ prefix: 'post:', limit: 100, cursor });
+    for (const key of listed.keys || []) {
+      if (posts.length >= limit) break;
+      try {
+        const raw = await env.FORUM_POSTS.get(key.name);
+        const post = safePost(JSON.parse(raw || 'null'));
+        if (post) posts.push(post);
+      } catch {}
+    }
+    cursor = listed.cursor;
+    if (listed.list_complete || posts.length >= limit) break;
+  } while (cursor);
+  return sortPosts(posts);
+}
+
+async function getForumStats(env) {
+  if (!env.FORUM_POSTS) return { ok: false, indexCount: 0, storedPostCount: 0 };
+  const indexed = await getIndexedPosts(env);
+  const storedList = await env.FORUM_POSTS.list({ prefix: 'post:', limit: 1000 });
+  return {
+    ok: true,
+    indexCount: indexed.length,
+    storedPostCount: (storedList.keys || []).length,
+    indexSelfHealing: true,
+    persistenceMode: 'Cloudflare KV FORUM_POSTS: posts:index plus durable post:* records'
+  };
+}
+
+async function getPosts(env) {
+  if (!env.FORUM_POSTS) return null;
+  const indexed = await getIndexedPosts(env);
+  const stored = await listStoredPosts(env, 100);
+  const byId = new Map();
+  for (const post of [...indexed, ...stored]) {
+    if (post && post.id) byId.set(post.id, post);
+  }
+  const merged = sortPosts([...byId.values()]).slice(0, 100);
+  if (merged.length && (stored.length !== indexed.length || merged.length !== indexed.length)) {
+    await savePosts(env, merged);
+  }
+  return merged;
+}
+
 async function savePosts(env, posts) {
-  await env.FORUM_POSTS.put('posts:index', JSON.stringify(posts.slice(0, 100)), {
-    metadata: { updatedAt: new Date().toISOString() }
+  const cleaned = sortPosts((posts || []).map(safePost)).slice(0, 100);
+  await env.FORUM_POSTS.put('posts:index', JSON.stringify(cleaned), {
+    metadata: { updatedAt: new Date().toISOString(), count: cleaned.length, selfHealing: true }
   });
 }
 
-function handleForumHealth(env) {
+async function savePostRecord(env, post) {
+  const cleaned = safePost(post);
+  if (!cleaned) return null;
+  await env.FORUM_POSTS.put(`post:${cleaned.id}`, JSON.stringify(cleaned), {
+    metadata: { createdAt: cleaned.createdAt, title: cleaned.title, status: cleaned.status }
+  });
+  return cleaned;
+}
+
+async function handleForumHealth(env) {
   const hasForumPostsBinding = Boolean(env.FORUM_POSTS);
+  const stats = hasForumPostsBinding ? await getForumStats(env) : { ok: false, indexCount: 0, storedPostCount: 0 };
   return json({
     ok: hasForumPostsBinding,
     worker: 'matrixreprogrammed',
@@ -119,6 +201,11 @@ function handleForumHealth(env) {
     forumPostsBinding: hasForumPostsBinding ? 'connected' : 'missing',
     kvBindingName: 'FORUM_POSTS',
     expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
+    expectedKvNamespaceId: '99996d87016d4285a833707cbda5232f',
+    persistence: stats.persistenceMode || 'missing binding',
+    indexSelfHealing: Boolean(stats.indexSelfHealing),
+    indexCount: stats.indexCount,
+    storedPostCount: stats.storedPostCount,
     routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
@@ -129,7 +216,7 @@ function handleForumHealth(env) {
 async function handleForumFeed(env) {
   const posts = await getPosts(env);
   if (!posts) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
-  return json({ ok: true, posts: posts.slice(0, 60) });
+  return json({ ok: true, persistent: true, source: 'Cloudflare KV FORUM_POSTS', selfHealingIndex: true, posts: posts.slice(0, 60) });
 }
 
 async function handleSubmitForumPost(request, env) {
@@ -141,7 +228,7 @@ async function handleSubmitForumPost(request, env) {
   if (title.length < 3 || message.length < 10) return json({ ok: false, error: 'Signal needs a title and a useful body.' }, 400);
   const sourceUrl = cleanText(body.sourceUrl || body.source || '', 500);
   const safeSource = /^https?:\/\//i.test(sourceUrl) ? sourceUrl : '';
-  const post = {
+  const post = await savePostRecord(env, {
     id: makeId(),
     title,
     body: message,
@@ -151,12 +238,11 @@ async function handleSubmitForumPost(request, env) {
     createdAt: new Date().toISOString(),
     approvedAt: new Date().toISOString(),
     status: 'live'
-  };
+  });
   const posts = await getPosts(env) || [];
-  posts.unshift(post);
+  if (!posts.some(item => item.id === post.id)) posts.unshift(post);
   await savePosts(env, posts);
-  await env.FORUM_POSTS.put(`post:${post.id}`, JSON.stringify(post));
-  return json({ ok: true, post });
+  return json({ ok: true, persistent: true, storage: 'Cloudflare KV FORUM_POSTS', post });
 }
 
 async function handleReportForumPost(request, env) {

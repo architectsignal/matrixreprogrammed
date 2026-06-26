@@ -27,10 +27,10 @@
     const payload = JSON.stringify({ name, route: currentRoute(), page: window.location.pathname || '/', title: document.title, at: new Date().toISOString(), ...(data || {}) });
     if (navigator.sendBeacon) {
       const blob = new Blob([payload], { type: 'application/json' });
-      navigator.sendBeacon('/.netlify/functions/track-event', blob);
+      navigator.sendBeacon('/track-event', blob);
       return;
     }
-    fetch('/.netlify/functions/track-event', {
+    fetch('/track-event', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: payload,

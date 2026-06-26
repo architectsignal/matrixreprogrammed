@@ -1,10 +1,11 @@
 {
-  "updated": "2026-06-24",
-  "purpose": "Phase 14 Dossier Pack / Download Center Engine for Matrix Reprogrammed. This data defines public briefing packs that bundle archive routes, evidence boundaries, trust pages, machine-readable files, and reader paths.",
+  "updated": "2026-06-26",
+  "purpose": "Phase 14 Dossier Pack / Download Center Engine for Matrix Reprogrammed. This data defines public briefing packs that bundle archive routes, evidence boundaries, trust pages, source files, latest intelligence windows, forum post exports, and reader paths.",
   "rules": [
     "A dossier pack is an orientation bundle, not proof of guilt.",
     "Every pack must include a trust route and an evidence route.",
     "Every pack must include a machine-readable JSON output and a human-readable markdown output.",
+    "Every pack must include subject-relevant source files, latest intelligence links, and a forum post export route.",
     "Pack summaries must preserve claim labels and source boundaries.",
     "Download routes should deepen reader understanding, not replace original source pages.",
     "No pack may contain private or non-public user data."
@@ -15,11 +16,12 @@
       "title": "Black File Starter Pack",
       "label": "Orientation pack",
       "summary": "A first-entry pack for readers who need the Matrix Reprogrammed map: Black File, trust rules, evidence boundaries, schema index, and reader paths.",
+      "keywords": ["black file", "epstein", "elite", "evidence", "settlement", "nda", "maxwell", "giuffre", "oversight", "source", "trust"],
       "trustRoute": "trust-center.html",
       "evidenceRoute": "evidence-vault.html",
       "readerPath": "sales-ladder.html",
       "machineRoute": "schema-index.html",
-      "routes": ["black-file.html", "trust-center.html", "evidence-vault.html", "authority-hub.html", "sales-ladder.html", "schema-index.html"],
+      "routes": ["black-file.html", "epstein-files.html", "source-cards.html", "trust-center.html", "evidence-vault.html", "authority-hub.html", "sales-ladder.html", "schema-index.html"],
       "takeaways": ["Start with orientation before accusation.", "Read claim labels before reading names.", "Use the evidence vault to separate source types.", "Use reader paths to choose the right book route."]
     },
     {
@@ -27,11 +29,12 @@
       "title": "Intelligence Network Pack",
       "label": "Agency / surveillance pack",
       "summary": "A briefing pack for agency history, surveillance, covert programs, declassified archives, and deep-state terminology.",
+      "keywords": ["intelligence", "agency", "surveillance", "cia", "nsa", "declassified", "mkultra", "gladio", "foia", "oversight", "archive"],
       "trustRoute": "trust-source-methodology.html",
       "evidenceRoute": "evidence-lane-declassified-archives.html",
       "readerPath": "path-intelligence-dossiers.html",
       "machineRoute": "authority-intelligence.html",
-      "routes": ["map-intelligence-network.html", "answer-deep-state.html", "answer-mkultra.html", "answer-operation-gladio.html", "book-cia.html", "book-nsa.html", "evidence-lane-declassified-archives.html"],
+      "routes": ["map-intelligence-network.html", "answer-deep-state.html", "answer-mkultra.html", "answer-operation-gladio.html", "book-cia.html", "book-nsa.html", "source-cards.html", "evidence-lane-declassified-archives.html"],
       "takeaways": ["Declassified records are powerful but limited.", "Historical programs do not prove every modern claim.", "Oversight failure and conspiracy claims must be separated.", "Agency books should be read in series order."]
     },
     {
@@ -39,11 +42,12 @@
       "title": "Crime-State Overlap Pack",
       "label": "Crime / corruption pack",
       "summary": "A briefing pack for cartels, mafia logistics, sanctions, court records, ports, laundering, and corruption overlap.",
+      "keywords": ["crime", "cartel", "mafia", "ndrangheta", "triad", "court", "sanctions", "laundering", "ports", "corruption", "logistics"],
       "trustRoute": "trust-association-boundary.html",
       "evidenceRoute": "evidence-lane-court-records.html",
       "readerPath": "path-crime-state-overlap.html",
       "machineRoute": "authority-crime-state.html",
-      "routes": ["map-crime-state-overlap.html", "book-cartels.html", "book-albanian-mafia.html", "book-ndrangheta.html", "book-triad.html", "evidence-lane-court-records.html", "evidence-lane-financial-records.html"],
+      "routes": ["map-crime-state-overlap.html", "book-cartels.html", "book-albanian-mafia.html", "book-ndrangheta.html", "book-triad.html", "source-cards.html", "evidence-lane-court-records.html", "evidence-lane-financial-records.html"],
       "takeaways": ["Court records need procedural context.", "Sanctions indicate government designation, not automatic conviction.", "Logistics and finance explain more than street violence.", "The reader path moves from map to books to evidence lanes."]
     },
     {
@@ -51,11 +55,12 @@
       "title": "War Machine Pack",
       "label": "War / contractors pack",
       "summary": "A briefing pack for contractors, war budgets, intelligence claims, procurement, sanctions, and human cost.",
+      "keywords": ["war", "contractor", "blackwater", "conflict", "defense", "procurement", "sanctions", "ukraine", "iran", "gaza", "human cost", "military"],
       "trustRoute": "trust-association-boundary.html",
       "evidenceRoute": "evidence-lane-human-cost-sources.html",
       "readerPath": "path-war-contractors.html",
       "machineRoute": "authority-war-machine.html",
-      "routes": ["map-war-machine.html", "book-blackwater.html", "book-wwiii.html", "dashboard-human-cost.html", "evidence-lane-human-cost-sources.html", "distribution-longform-video.html", "update-lane-intel-desk.html"],
+      "routes": ["map-war-machine.html", "book-blackwater.html", "book-wwiii.html", "dashboard-human-cost.html", "source-cards.html", "evidence-lane-human-cost-sources.html", "distribution-longform-video.html", "update-lane-intel-desk.html"],
       "takeaways": ["War claims need dated source lanes.", "Contractor relationships require role labels.", "Human cost figures must stay sourced and dated.", "Distribution formats should route viewers back to evidence."]
     },
     {
@@ -63,11 +68,12 @@
       "title": "Symbolic Power Pack",
       "label": "D.O.G / esoteric pack",
       "summary": "A briefing pack for symbols, esoteric interpretation, D.O.G routes, Masonic architecture, and evidence boundaries.",
+      "keywords": ["dog", "architect", "symbol", "masonic", "masonry", "esoteric", "occult", "degree", "architecture", "cipher", "plate"],
       "trustRoute": "trust-claim-labels.html",
       "evidenceRoute": "answer-evidence-boundary.html",
       "readerPath": "path-dog-architect.html",
       "machineRoute": "authority-symbolic-power.html",
-      "routes": ["map-symbolic-power.html", "book-symbol.html", "book-as-above-so-below.html", "book-masonic-architecture-33.html", "book-degree-33.html", "trust-editorial-standards.html", "answer-evidence-boundary.html"],
+      "routes": ["map-symbolic-power.html", "book-symbol.html", "book-as-above-so-below.html", "book-masonic-architecture-33.html", "book-degree-33.html", "source-cards.html", "trust-editorial-standards.html", "answer-evidence-boundary.html"],
       "takeaways": ["A symbol is not proof of a crime.", "Symbolic commentary must stay labeled.", "D.O.G readers should start with the path page.", "The book route carries the deeper symbolic structure."]
     },
     {
@@ -75,11 +81,12 @@
       "title": "Trust And Evidence Pack",
       "label": "Credibility pack",
       "summary": "A briefing pack for claim labels, source hierarchy, corrections, privacy, association boundaries, and machine-readable taxonomy.",
+      "keywords": ["trust", "evidence", "claim", "source", "corrections", "privacy", "association", "boundary", "taxonomy", "source card"],
       "trustRoute": "trust-center.html",
       "evidenceRoute": "evidence-vault-index.html",
       "readerPath": "path-evidence-trust.html",
       "machineRoute": "claim-taxonomy.json",
-      "routes": ["trust-center.html", "trust-source-methodology.html", "trust-claim-labels.html", "trust-corrections-policy.html", "evidence-vault-index.html", "claim-taxonomy.json", "crawler-map.json"],
+      "routes": ["trust-center.html", "trust-source-methodology.html", "trust-claim-labels.html", "trust-corrections.html", "source-cards.html", "evidence-vault-index.html", "claim-taxonomy.json", "crawler-map.json"],
       "takeaways": ["Corrections strengthen the archive.", "Association is not guilt.", "Claim labels control claim strength.", "Machine-readable taxonomy should reflect evidence boundaries."]
     }
   ]

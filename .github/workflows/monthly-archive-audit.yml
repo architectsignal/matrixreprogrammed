@@ -1,0 +1,79 @@
+name: Monthly Archive Audit
+
+on:
+  schedule:
+    # Monthly archive audit: first day of each month, 04:59 UTC = 06:59 France summer / 05:59 France winter.
+    - cron: '59 4 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monthly-archive-audit
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  monthly-audit:
+    name: Monthly stale-claim, source-card, and archive audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Full build before audit
+        run: npm run build
+
+      - name: Monthly archive audit checks
+        run: |
+          node scripts/audit-site.js
+          node scripts/update-site-freshness-report.js
+          node scripts/site-quality-report.js
+          node scripts/source-card-pressure-test.js
+          node scripts/ten-out-of-ten-pressure-test.js
+          node scripts/update-cadence-test.js
+
+      - name: Commit monthly audit outputs if changed
+        run: |
+          git config user.name "matrix-monthly-audit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git status --short
+          git add -A data downloads || true
+          git add -A site-freshness-report.html site-quality-report.html source-cards.html sitemap.xml llms.txt search-index.json || true
+          if git diff --cached --quiet; then
+            echo "No monthly audit changes to commit."
+          else
+            git commit -m "Monthly archive audit refresh [deploy]"
+            git push
+          fi
+
+      - name: Upload monthly audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monthly-archive-audit
+          path: |
+            site-freshness-report.html
+            site-quality-report.html
+            source-cards.html
+            data/site-freshness-report.json
+            data/site-quality-report.json
+            downloads/site-freshness-report.md
+            downloads/source-cards.json
+          if-no-files-found: ignore
+          retention-days: 30

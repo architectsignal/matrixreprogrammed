@@ -1,28 +1,26 @@
 {
-  "updated": "2026-06-27T00:00:00+02:00",
-  "purpose": "Force deploy trigger for all current Matrix Reprogrammed upgrades on the latest main branch.",
-  "deployIntent": "Build and deploy the complete upgraded site from current main.",
+  "updated": "2026-06-27T00:15:00+02:00",
+  "purpose": "Deploy trigger after adding real root fallback pages for the Dark Speculation Lab and forum.",
+  "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
+  "criticalFix": "dark-speculation-lab.html and dark-speculation-forum.html now exist as real root files as well as generated build outputs, so Cloudflare can serve them even if the generator output is not picked up.",
   "includedUpgrades": [
     "branded PDF mini-book covers and table of contents",
     "auto-updated download PDF index and flagship PDF collection",
     "subject intelligence profile PDFs",
     "subject intelligence HTML hubs",
-    "Dark Speculation Lab and reader drop box",
+    "Dark Speculation Lab root fallback page",
+    "Dark Speculation forum root fallback page",
     "weekly Dark Speculation update workflow",
     "source-card-index compatibility alias",
-    "Link Audit now builds generated site before auditing"
+    "Link Audit builds generated site before auditing"
   ],
-  "expectedWorkflows": [
-    "Site QA",
-    "Site Pressure Test",
-    "Matrix Reprogrammed Link Audit",
-    "connected deploy provider"
+  "cloudflareExpected": [
+    "npm run build",
+    "build-cloudflare-output.js copies deployable files into _site",
+    "wrangler deploy serves _site through src/worker.js",
+    "dark-speculation-lab.html should be available at /dark-speculation-lab.html",
+    "dark-speculation-forum.html should be available at /dark-speculation-forum.html"
   ],
-  "knownGoodFixesIncluded": [
-    "source-card-index.html exists as a compatibility alias for source-cards.html",
-    "Trust/Evidence subject profile uses source-cards.html",
-    "Link Audit runs npm install and npm run build before node tools/link-audit.js",
-    "Dark Speculation Lab generator is wired into npm run build"
-  ],
-  "expected": "Fresh push should trigger all connected checks and deployment against the current main branch, not older queued commits."
+  "forumNote": "Forum page loads and has local fallback. Public shared posting requires Cloudflare Worker routes /forum-feed and /submit-forum-post plus FORUM_POSTS KV binding.",
+  "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
 }

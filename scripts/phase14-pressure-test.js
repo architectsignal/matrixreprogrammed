@@ -13,6 +13,8 @@ function requireIncludes(file, text, label = text) { if (!exists(file)) return; 
 requireFile('data/dossier-packs.json');
 requireFile('scripts/build-phase14-dossier-packs.js');
 requireFile('download-center.html');
+requireFile('downloads/forum-posts.json');
+requireFile('downloads/forum-posts.md');
 requireFile('search-index.json');
 requireFile('sitemap.xml');
 requireFile('llms.txt');
@@ -31,8 +33,15 @@ requireIncludes('download-center.html', 'Dossier Packs', 'Dossier Packs section'
 requireIncludes('download-center.html', 'Pack Rules', 'Pack Rules section');
 requireIncludes('download-center.html', 'Signal Board', 'Signal Board nav');
 requireIncludes('download-center.html', 'Download Center', 'Download Center nav');
+requireIncludes('download-center.html', 'Forum Posts Export', 'Forum Posts Export card');
+requireIncludes('download-center.html', 'downloads/forum-posts.json', 'Forum Posts JSON link');
+requireIncludes('download-center.html', 'downloads/forum-posts.md', 'Forum Posts Markdown link');
+requireIncludes('download-center.html', 'persistent Cloudflare KV', 'persistent KV copy');
+requireIncludes('downloads/forum-posts.json', 'Cloudflare Worker /downloads/forum-posts.json reads FORUM_POSTS KV', 'dynamic JSON placeholder boundary');
+requireIncludes('downloads/forum-posts.md', 'served dynamically from the persistent FORUM_POSTS KV namespace', 'dynamic Markdown placeholder boundary');
 for (const file of ['index.html','black-file.html','trust-center.html','evidence-vault.html','sales-ladder.html','schema-index.html']) {
   requireIncludes(file, 'id="phase-fourteen-dossier-pack-engine"', `Phase 14 patch on ${file}`);
+  requireIncludes(file, 'downloads/forum-posts.json', `${file} forum posts export link`);
 }
 
 for (const pack of packs) {
@@ -62,7 +71,10 @@ for (const pack of packs) {
 
 requireIncludes('sitemap.xml', '/download-center.html', 'download-center sitemap entry');
 requireIncludes('llms.txt', '/download-center.html', 'download-center llms.txt entry');
+requireIncludes('llms.txt', '/downloads/forum-posts.json', 'forum-posts JSON llms.txt entry');
+requireIncludes('llms.txt', '/downloads/forum-posts.md', 'forum-posts Markdown llms.txt entry');
 if (!search.some(item => item.url === 'download-center.html')) fail('search-index.json missing download-center.html');
+if (!search.some(item => item.url === 'downloads/forum-posts.json')) fail('search-index.json missing downloads/forum-posts.json');
 
 const pkg = exists('package.json') ? json('package.json') : { scripts: {} };
 const build = pkg.scripts && pkg.scripts.build || '';
@@ -91,4 +103,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 14 DOSSIER PACK PRESSURE TEST PASSED');
-console.log(`Checked ${packs.length} packs, source pathway sections, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${packs.length} packs, forum post exports, source pathway sections, HTML pack pages, JSON/Markdown downloads, page patches, sitemap, llms.txt, search index, redirects, headers, Signal Board nav, and cleanup fallback.`);

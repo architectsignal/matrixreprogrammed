@@ -20,6 +20,8 @@ const requiredFiles = [
   'downloads/forum-posts.json',
   'downloads/forum-posts.md',
   'analytics.js',
+  'welcome-gate.js',
+  'welcome-gate.css',
   'package.json'
 ];
 requiredFiles.forEach(requireFile);
@@ -56,12 +58,31 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'handleForumPostsMarkdown', 'forum posts Markdown download handler');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.json'", 'dynamic forum posts JSON route');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.md'", 'dynamic forum posts Markdown route');
+  requireIncludes('src/worker.js', 'handleIntroVoice', 'ElevenLabs intro voice handler');
+  requireIncludes('src/worker.js', "originalPath === '/intro-voice'", 'intro voice route');
+  requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
+  requireIncludes('src/worker.js', 'ELEVENLABS_VOICE_ID', 'ElevenLabs voice id override');
+  requireIncludes('src/worker.js', 'https://api.elevenlabs.io/v1/text-to-speech/', 'ElevenLabs TTS endpoint');
+  requireIncludes('src/worker.js', 'xi-api-key', 'ElevenLabs API key header');
+  requireIncludes('src/worker.js', 'audio/mpeg', 'intro voice audio response');
   requireIncludes('src/worker.js', 'handleTrackEvent', 'analytics event handler');
   requireIncludes('src/worker.js', "originalPath === '/track-event'", 'Cloudflare track-event route');
   requireIncludes('src/worker.js', 'analytics:${event.id}', 'analytics KV event key');
   for (const [from, to] of Object.entries(requiredAliases)) {
     if (!worker.includes(`'${from}': '${to}'`)) fail(`src/worker.js missing Cloudflare alias ${from} -> ${to}`);
   }
+}
+
+if (exists('welcome-gate.js')) {
+  requireIncludes('welcome-gate.js', '/intro-voice', 'welcome gate intro voice endpoint call');
+  requireIncludes('welcome-gate.js', 'speechSynthesis', 'browser voice fallback');
+  requireIncludes('welcome-gate.js', 'data-gate-voice', 'voice intro button');
+  requireIncludes('welcome-gate.js', 'Voice Intro', 'Voice Intro label');
+  requireIncludes('welcome-gate.js', 'ElevenLabs Voice', 'ElevenLabs active label');
+}
+if (exists('welcome-gate.css')) {
+  requireIncludes('welcome-gate.css', '.gate-voice', 'gate voice button styles');
+  requireIncludes('welcome-gate.css', '.gate-voice.is-speaking', 'gate voice speaking state');
 }
 
 if (exists('analytics.js')) {
@@ -123,4 +144,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, analytics /track-event endpoint, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, ElevenLabs intro voice endpoint, analytics /track-event endpoint, wrangler config, and npm build wiring.');

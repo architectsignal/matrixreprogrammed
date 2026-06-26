@@ -15,15 +15,25 @@ function readJson(file, fallback) {
 function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
-function clean(value = '') {
+function decodeEntities(value = '') {
   return String(value)
     .replace(/<!\[CDATA\[|\]\]>/g, '')
-    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&#160;/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
     .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
+    .replace(/&gt;/g, '>');
+}
+function clean(value = '') {
+  return decodeEntities(value)
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\btarget\s*=\s*"?_blank"?/gi, ' ')
+    .replace(/\bfont\s+color\s*=\s*"?#[a-f0-9]+"?/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -156,7 +166,21 @@ async function main() {
   for (const item of [...fetched, ...(existing.items || [])]) {
     if (!item || !item.title) continue;
     const key = item.id || `${item.lane}-${item.title}-${item.published}`;
-    if (!byId.has(key)) byId.set(key, item);
+    const sanitized = {
+      ...item,
+      title: clean(item.title || ''),
+      summary: clean(item.summary || item.title || ''),
+      sourceLabel: clean(item.sourceLabel || ''),
+      laneTitle: clean(item.laneTitle || item.lane || ''),
+      evidenceBoundary: clean(item.evidenceBoundary || ''),
+      whyItMatters: clean(item.whyItMatters || ''),
+      nextAction: clean(item.nextAction || ''),
+      videoHook: clean(item.videoHook || ''),
+      rumbleShortTitle: clean(item.rumbleShortTitle || item.title || ''),
+      rumbleLongTitle: clean(item.rumbleLongTitle || item.title || ''),
+      socialThread: Array.isArray(item.socialThread) ? item.socialThread.map(line => clean(line)) : []
+    };
+    if (!byId.has(key)) byId.set(key, sanitized);
   }
   const items = [...byId.values()]
     .sort((a,b) => new Date(b.published || 0) - new Date(a.published || 0))
@@ -166,7 +190,7 @@ async function main() {
     updated: now.toISOString(),
     sourceConfigUpdated: sources.updated || existing.sourceConfigUpdated,
     status: fetched.length ? 'rss-seven-day-updated' : 'seeded-seven-day-window',
-    rules: Array.from(new Set([...(existing.rules || []), ...(sources.rules || []), 'Seven-day updater is fail-soft: feed errors preserve existing items rather than breaking deployment.'])),
+    rules: Array.from(new Set([...(existing.rules || []), ...(sources.rules || []), 'Seven-day updater is fail-soft: feed errors preserve existing items rather than breaking deployment.', 'RSS descriptions are decoded, stripped of HTML, and rendered as plain text only.'])),
     lanes: sources.lanes || existing.lanes || [],
     feedResults: fetched.map(item => ({ lane: item.lane, title: item.title, url: item.url, published: item.published })),
     feedErrors: errors,

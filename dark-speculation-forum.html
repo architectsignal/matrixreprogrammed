@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Speculation Forum | Matrix Reprogrammed</title>
+  <meta name="description" content="Reader drop box for dark speculation links, photo links, archive links, counter-sources, and claim classification." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="signal-face"></div>
+  <div class="veil"></div>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="dark-speculation-lab.html">Dark Lab</a>
+        <a href="dark-speculation-forum.html">Drop Box</a>
+        <a href="claim-classifier.html">Claim Classifier</a>
+        <a href="source-document-vault.html">Sources</a>
+        <a href="books.html">Books</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero wrap">
+        <div class="eyebrow">Dark Speculation Drop Box</div>
+        <h1>DROP THE LINK.<br />CLASSIFY THE CLAIM.<br />KEEP IT LEGAL.</h1>
+        <p class="lead">A reader board for dark speculation links, source trails, photos hosted elsewhere, videos, symbol questions, counter-sources, debunks, and public-record leads. For fun, but not lawless.</p>
+        <div class="cta-row">
+          <a class="btn" href="#submit-signal">Post A Lead</a>
+          <a class="btn alt" href="dark-speculation-lab.html">Dark Lab</a>
+          <a class="btn alt" href="claim-classifier.html">Claim Classifier</a>
+        </div>
+      </section>
+      <section class="section wrap split">
+        <div class="terminal">DARK DROP RULES\n&gt; Links only for photos/files\n&gt; No illegal material\n&gt; No private victim names\n&gt; No doxxing\n&gt; No graphic exploitation detail\n&gt; No direct accusations without sources\n&gt; Mark speculation as speculation\n&gt; Counter-sources welcome</div>
+        <aside class="card redline">
+          <h2>Signal Pass</h2>
+          <p>Posting uses the existing Signal Pass anti-spam gate. Reading is free. Payment does not buy agreement or approval.</p>
+          <div class="cta-row small">
+            <a class="btn" href="https://www.paypal.me/njmgroup/1" target="_blank" rel="noopener">Pay €1 Signal Pass</a>
+            <a class="btn alt" href="#submit-signal">Post After Unlock</a>
+          </div>
+        </aside>
+      </section>
+      <section id="signal-pass" class="section wrap split">
+        <div class="card redline">
+          <h2>Unlock Posting</h2>
+          <p>The drop box is free to read. Signal Pass adds friction against bots and spam.</p>
+          <p><a class="btn" href="https://www.paypal.me/njmgroup/1" target="_blank" rel="noopener">Pay €1 via PayPal</a></p>
+          <button class="btn alt" type="button" id="unlock-signal-pass">I’ve Paid — Unlock Posting</button>
+          <p class="form-status" id="signal-pass-status"></p>
+        </div>
+        <aside class="card">
+          <h2>Best Dark Leads</h2>
+          <p>Best posts include a source link, exact claim, evidence type, counter-source if available, and whether it is public record, symbolism, folklore, or speculation.</p>
+        </aside>
+      </section>
+      <section id="submit-signal" class="section wrap split signal-locked">
+        <div class="card redline">
+          <h2>Post A Dark Speculation Lead</h2>
+          <p class="signal-lock-message">Posting is locked until Signal Pass is unlocked on this device.</p>
+          <form id="signal-board-form">
+            <label>Category</label>
+            <select name="category" required>
+              <option value="Dark Speculation Link Drop">Dark Speculation Link Drop</option>
+              <option value="Dark Speculation Photo Link">Photo / Archive Link</option>
+              <option value="Occult Symbol Claim">Occult Symbol Claim</option>
+              <option value="Modern Slavery Source">Modern Slavery Source</option>
+              <option value="Blue Beam / UFO Claim">Blue Beam / UFO Claim</option>
+              <option value="Debunk / Counter-Source">Debunk / Counter-Source</option>
+            </select>
+            <label>Name or handle</label>
+            <input name="name" maxlength="80" placeholder="Anonymous / handle" />
+            <label>Title</label>
+            <input name="title" maxlength="140" required placeholder="Short claim or source title" />
+            <label>Source link / photo link / archive link</label>
+            <input name="sourceUrl" type="url" maxlength="500" placeholder="https://..." />
+            <label>Message</label>
+            <textarea name="body" maxlength="2400" required placeholder="Drop the claim, link, boundary, and why it matters. Keep it legal: no illegal content, private victim names, doxxing, graphic exploitation, or direct unsourced accusations."></textarea>
+            <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+            <button class="btn" type="submit">Post To The Dark Drop Box</button>
+            <p class="form-status" id="signal-form-status"></p>
+          </form>
+        </div>
+        <aside class="card">
+          <h2>Posting Boundary</h2>
+          <p>Post links, not illegal files. Do not upload or request exploitative material. Do not name private victims. Do not accuse real people without a source route.</p>
+        </aside>
+      </section>
+      <section id="board-feed" class="section wrap">
+        <h2>Dark Speculation Feed</h2>
+        <p class="lead">Posts appear publicly by default after Signal Pass unlock. Report threats, doxxing, private victim names, explicit exploitation material, spam, or illegal content.</p>
+        <div class="grid" id="signal-board-feed"><article class="card"><h3>Loading signals...</h3><p>The board is checking for posts.</p></article></div>
+      </section>
+    </main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — source first, claim second.</p><p class="warning">Dark Speculation Boundary: classified, not confirmed.</p></footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script src="forum.js"></script>
+</body>
+</html>

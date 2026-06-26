@@ -54,6 +54,7 @@ jobs:
         run: |
           node scripts/live-intel-pressure-test.js
           node scripts/epstein-watch-pressure-test.js
+          node scripts/premier-resource-pressure-test.js
           node scripts/figure-source-rules-pressure-test.js
           node scripts/migration-flow-test.js
           node scripts/global-risk-clocks-test.js
@@ -65,7 +66,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git status --short
           git add -A data downloads feeds || true
-          git add -A live-intel.html intel-archive.html news.html epstein-files.html timers.html migration-flow.html site-freshness-report.html site-quality-report.html download-center.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt || true
+          git add -A daily-drop.html network-search.html live-intel.html intel-archive.html news.html epstein-files.html timers.html migration-flow.html site-freshness-report.html site-quality-report.html download-center.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt || true
           if git diff --cached --quiet; then
             echo "No daily public-content changes to commit."
           else
@@ -79,6 +80,8 @@ jobs:
         with:
           name: daily-content-refresh-artifact
           path: |
+            daily-drop.html
+            network-search.html
             live-intel.html
             intel-archive.html
             epstein-files.html
@@ -92,6 +95,10 @@ jobs:
             data/global-risk-clocks.json
             data/migration-flow-panel.json
             data/epstein-homepage-alerts.json
+            downloads/daily-drop.json
+            downloads/daily-drop.md
+            downloads/network-search.json
+            downloads/network-search.md
             downloads/live-intel-latest.json
             downloads/live-intel-latest.md
             downloads/seven-day-intel.json

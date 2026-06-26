@@ -50,6 +50,15 @@ jobs:
       - name: Build full site and run protected pressure tests
         run: npm run build
 
+      - name: Daily targeted freshness guardrails
+        run: |
+          node scripts/live-intel-pressure-test.js
+          node scripts/epstein-watch-pressure-test.js
+          node scripts/figure-source-rules-pressure-test.js
+          node scripts/migration-flow-test.js
+          node scripts/global-risk-clocks-test.js
+          node scripts/update-cadence-test.js
+
       - name: Commit daily public-content updates if changed
         run: |
           git config user.name "matrix-daily-update-bot"

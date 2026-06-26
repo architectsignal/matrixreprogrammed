@@ -10,21 +10,30 @@ if (!fs.existsSync(sourcesPath)) {
 }
 const config = JSON.parse(fs.readFileSync(sourcesPath, 'utf8'));
 const lanes = new Map((config.lanes || []).map(lane => [lane.id, lane]));
-function clean(value = '') {
-  return String(value)
-    .replace(/<!\[CDATA\[/g, '')
-    .replace(/\]\]>/g, '')
-    .replace(/<[^>]+>/g, ' ')
+function decodeEntities(value = '') {
+  return String(value || '')
+    .replace(/<!\[CDATA\[|\]\]>/g, '')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&#160;/g, ' ')
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
     .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
+    .replace(/&gt;/g, '>');
+}
+function clean(value = '') {
+  return decodeEntities(value)
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\btarget\s*=\s*"?_blank"?/gi, ' ')
+    .replace(/\bfont\s+color\s*=\s*"?#[a-f0-9]+"?/gi, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
 function tag(block, name) {
-  const match = block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`, 'i'));
+  const match = block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\/${name}>`, 'i'));
   return match ? clean(match[1]) : '';
 }
 function compact(value = '', max = 240) {
@@ -46,15 +55,15 @@ function shortTitle(title, lane) {
 }
 function longTitle(title, lane) {
   const base = clean(title).replace(/\s+-\s+[^-]+$/, '');
-  return `What This Public-Record Update Reveals About ${lane.title || 'the Control System'}: ${base}`.slice(0, 140);
+  return `What This Public-Record Update Reveals About ${clean(lane.title || 'the Control System')}: ${base}`.slice(0, 140);
 }
 function socialThread(title, lane, url) {
   const base = clean(title).replace(/\s+-\s+[^-]+$/, '');
   return [
-    `1/ New ${lane.title || 'Live Intel'} update: ${base}`,
+    `1/ New ${clean(lane.title || 'Live Intel')} update: ${base}`,
     '2/ Treat the source as the starting point, not the conclusion.',
     '3/ Check the evidence route, then follow the video, free brief, and book path for context.',
-    `4/ Source: ${url}`
+    `4/ Source: ${clean(url)}`
   ];
 }
 function routeFor(item, lane, field, fallback) {
@@ -63,14 +72,20 @@ function routeFor(item, lane, field, fallback) {
 function enrich(item, lane) {
   return {
     ...item,
-    evidenceLevel: item.evidenceLevel || 'News/source-watch item',
-    evidenceBoundary: item.evidenceBoundary || 'A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.',
-    whyItMatters: item.whyItMatters || `This belongs in the ${lane.title || item.lane} lane because it may connect to a wider public-record structure worth tracking over time.`,
-    nextAction: item.nextAction || 'Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.',
-    videoHook: item.videoHook || hookFor(item.title, lane),
-    rumbleShortTitle: item.rumbleShortTitle || shortTitle(item.title, lane),
-    rumbleLongTitle: item.rumbleLongTitle || longTitle(item.title, lane),
-    socialThread: item.socialThread || socialThread(item.title, lane, item.url),
+    lane: clean(item.lane || lane.id || ''),
+    laneTitle: clean(item.laneTitle || lane.title || item.lane || ''),
+    sourceLabel: clean(item.sourceLabel || ''),
+    title: clean(item.title || ''),
+    url: clean(item.url || ''),
+    summary: compact(item.summary || item.title || ''),
+    evidenceLevel: clean(item.evidenceLevel || 'News/source-watch item'),
+    evidenceBoundary: clean(item.evidenceBoundary || 'A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.'),
+    whyItMatters: clean(item.whyItMatters || `This belongs in the ${lane.title || item.lane} lane because it may connect to a wider public-record structure worth tracking over time.`),
+    nextAction: clean(item.nextAction || 'Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.'),
+    videoHook: clean(item.videoHook || hookFor(item.title, lane)),
+    rumbleShortTitle: clean(item.rumbleShortTitle || shortTitle(item.title, lane)),
+    rumbleLongTitle: clean(item.rumbleLongTitle || longTitle(item.title, lane)),
+    socialThread: Array.isArray(item.socialThread) ? item.socialThread.map(clean) : socialThread(item.title, lane, item.url),
     evidenceRoute: routeFor(item, lane, 'evidenceRoute', 'evidence-vault.html'),
     videoRoute: routeFor(item, lane, 'videoRoute', 'videos.html'),
     bookRoute: routeFor(item, lane, 'bookRoute', 'books.html'),
@@ -151,7 +166,7 @@ function stableSignature(output) {
     updated: checkedAt,
     sourceConfigUpdated: config.updated,
     status: items.length ? 'updated' : 'no new items fetched',
-    rules: config.rules || [],
+    rules: [...(config.rules || []), 'RSS descriptions are decoded, stripped of HTML, and rendered as plain text only.'],
     lanes: config.lanes || [],
     feedResults: results.map(r => ({ lane: r.feed.lane, label: r.feed.label, url: r.feed.url, status: r.status, statusCode: r.statusCode || null, error: r.error || '' })),
     items: items.length ? items : previousItems
@@ -161,5 +176,5 @@ function stableSignature(output) {
     process.exit(0);
   }
   fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
-  console.log(`Live Intel update complete: ${output.items.length} items available from ${results.length} feeds.`);
+  console.log(`Live Intel update complete: ${output.items.length} items available from ${results.length} feeds. HTML stripped.`);
 })();

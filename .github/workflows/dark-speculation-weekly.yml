@@ -1,0 +1,39 @@
+name: Dark Speculation Weekly Update
+
+on:
+  schedule:
+    - cron: '33 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-dark-speculation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update seven-day intel and rebuild Dark Speculation Lab
+        run: npm run dark-speculation
+
+      - name: Commit updated Dark Speculation outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/live-intel.json downloads/dark-speculation-scan.json downloads/dark-speculation-scan.md dark-speculation-lab.html dark-speculation-forum.html search-index.json sitemap.xml llms.txt || true
+          if git diff --cached --quiet; then
+            echo "No dark speculation updates to commit."
+          else
+            git commit -m "Weekly Dark Speculation Lab update"
+            git push
+          fi

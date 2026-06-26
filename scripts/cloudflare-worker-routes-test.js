@@ -17,6 +17,8 @@ const requiredFiles = [
   'deploy-status.html',
   'deploy-status.json',
   'downloads/deploy-status.json',
+  'downloads/forum-posts.json',
+  'downloads/forum-posts.md',
   'analytics.js',
   'package.json'
 ];
@@ -45,6 +47,15 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch');
   requireIncludes('src/worker.js', '/forum-health', 'forum health endpoint');
   requireIncludes('src/worker.js', 'FORUM_POSTS', 'FORUM_POSTS KV binding usage');
+  requireIncludes('src/worker.js', 'posts:index', 'forum posts index key');
+  requireIncludes('src/worker.js', "prefix: 'post:'", 'durable forum post prefix scan');
+  requireIncludes('src/worker.js', 'listStoredPosts', 'forum post self-heal scanner');
+  requireIncludes('src/worker.js', 'savePostRecord', 'durable post record writer');
+  requireIncludes('src/worker.js', 'selfHealingIndex', 'forum self-healing index response');
+  requireIncludes('src/worker.js', 'handleForumPostsJson', 'forum posts JSON download handler');
+  requireIncludes('src/worker.js', 'handleForumPostsMarkdown', 'forum posts Markdown download handler');
+  requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.json'", 'dynamic forum posts JSON route');
+  requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.md'", 'dynamic forum posts Markdown route');
   requireIncludes('src/worker.js', 'handleTrackEvent', 'analytics event handler');
   requireIncludes('src/worker.js', "originalPath === '/track-event'", 'Cloudflare track-event route');
   requireIncludes('src/worker.js', 'analytics:${event.id}', 'analytics KV event key');
@@ -62,6 +73,14 @@ if (exists('wrangler.toml')) {
   requireIncludes('wrangler.toml', 'main = "src/worker.js"', 'Cloudflare worker entrypoint');
   requireIncludes('wrangler.toml', 'directory = "./_site"', 'Cloudflare asset directory');
   requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV binding');
+  requireIncludes('wrangler.toml', '99996d87016d4285a833707cbda5232f', 'persistent FORUM_POSTS namespace id');
+}
+
+if (exists('downloads/forum-posts.json')) {
+  requireIncludes('downloads/forum-posts.json', 'Cloudflare Worker /downloads/forum-posts.json reads FORUM_POSTS KV', 'audit-safe forum posts JSON placeholder');
+}
+if (exists('downloads/forum-posts.md')) {
+  requireIncludes('downloads/forum-posts.md', 'persistent FORUM_POSTS KV namespace', 'audit-safe forum posts Markdown placeholder');
 }
 
 if (exists('scripts/build-cloudflare-output.js')) {
@@ -104,4 +123,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status alias arrays, audit-safe forum link, analytics /track-event endpoint, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, analytics /track-event endpoint, wrangler config, and npm build wiring.');

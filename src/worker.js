@@ -119,10 +119,10 @@ function handleForumHealth(env) {
     forumPostsBinding: hasForumPostsBinding ? 'connected' : 'missing',
     kvBindingName: 'FORUM_POSTS',
     expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
-    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post'],
+    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
-    updatedAt: '2026-06-25T00:00:00.000Z'
+    updatedAt: '2026-06-26T00:00:00.000Z'
   }, hasForumPostsBinding ? 200 : 503);
 }
 
@@ -173,6 +173,29 @@ async function handleReportForumPost(request, env) {
   return json({ ok: true, reportId: report.id });
 }
 
+async function handleTrackEvent(request, env) {
+  const body = await readBody(request);
+  const event = {
+    id: makeId(),
+    name: cleanText(body.name || 'event', 80),
+    route: cleanText(body.route || '', 120),
+    page: cleanText(body.page || '', 240),
+    title: cleanText(body.title || '', 240),
+    href: cleanText(body.href || '', 500),
+    text: cleanText(body.text || '', 180),
+    host: cleanText(body.host || '', 180),
+    form: cleanText(body.form || '', 120),
+    createdAt: new Date().toISOString()
+  };
+  if (env.FORUM_POSTS) {
+    await env.FORUM_POSTS.put(`analytics:${event.id}`, JSON.stringify(event), {
+      expirationTtl: 60 * 60 * 24 * 45,
+      metadata: { name: event.name, route: event.route, page: event.page }
+    });
+  }
+  return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -180,10 +203,12 @@ export default {
     const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
     const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
+    if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return new Response(null, { status: 204 });
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
     if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
     if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
+    if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);
 
     const tryAsset = async (pathname) => {
       const nextUrl = new URL(request.url);

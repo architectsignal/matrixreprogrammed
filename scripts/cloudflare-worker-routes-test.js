@@ -17,6 +17,7 @@ const requiredFiles = [
   'deploy-status.html',
   'deploy-status.json',
   'downloads/deploy-status.json',
+  'analytics.js',
   'package.json'
 ];
 requiredFiles.forEach(requireFile);
@@ -44,9 +45,17 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch');
   requireIncludes('src/worker.js', '/forum-health', 'forum health endpoint');
   requireIncludes('src/worker.js', 'FORUM_POSTS', 'FORUM_POSTS KV binding usage');
+  requireIncludes('src/worker.js', 'handleTrackEvent', 'analytics event handler');
+  requireIncludes('src/worker.js', "originalPath === '/track-event'", 'Cloudflare track-event route');
+  requireIncludes('src/worker.js', 'analytics:${event.id}', 'analytics KV event key');
   for (const [from, to] of Object.entries(requiredAliases)) {
     if (!worker.includes(`'${from}': '${to}'`)) fail(`src/worker.js missing Cloudflare alias ${from} -> ${to}`);
   }
+}
+
+if (exists('analytics.js')) {
+  requireIncludes('analytics.js', "navigator.sendBeacon('/track-event'", 'analytics sendBeacon uses /track-event');
+  requireIncludes('analytics.js', "fetch('/track-event'", 'analytics fetch fallback uses /track-event');
 }
 
 if (exists('wrangler.toml')) {
@@ -95,4 +104,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status alias arrays, audit-safe forum link, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, FORUM_POSTS KV use, Cloudflare ASSETS routing, deploy-status alias arrays, audit-safe forum link, analytics /track-event endpoint, wrangler config, and npm build wiring.');

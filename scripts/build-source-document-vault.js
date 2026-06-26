@@ -102,3 +102,10 @@ try {
   console.error('Deep cleanup pass failed after Source Document Vault build.');
   throw err;
 }
+
+try {
+  require('./build-all-branded-download-pdfs.js');
+} catch (err) {
+  console.error('Branded download PDF index failed after Source Document Vault build.');
+  throw err;
+}

@@ -6,7 +6,11 @@ on:
       - "**.html"
       - "styles.css"
       - "matrix.js"
+      - "data/**"
+      - "scripts/**"
       - "tools/link-audit.js"
+      - "package.json"
+      - "package-lock.json"
       - ".github/workflows/link-audit.yml"
   workflow_dispatch:
 
@@ -16,5 +20,17 @@ jobs:
     steps:
       - name: Checkout site
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build generated site before audit
+        run: npm run build
+
       - name: Run internal link audit
         run: node tools/link-audit.js

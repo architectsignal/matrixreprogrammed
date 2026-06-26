@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "title": "Migration / Irregular Immigration Flow Panel",
-  "summary": "Tracks migration and irregular or unauthorized border movement without pretending every dataset measures the same thing.",
-  "evidenceRule": "A border encounter, asylum application, removal, return, visa-overstay estimate, unauthorized-population estimate, and illegal-entry estimate are different categories. Encounters are not unique people. Nationality is not immigration status. Police suspects are not convictions.",
+  "summary": "Tracks migration, irregular or unauthorized border movement, and crime-data source splits without pretending every dataset measures the same thing.",
+  "evidenceRule": "A border encounter, asylum application, removal, return, visa-overstay estimate, unauthorized-population estimate, and illegal-entry estimate are different categories. Encounters are not unique people. Nationality is not immigration status. Police suspects are not convictions. Total sexual-offence statistics exist in official national datasets, but the immigration-status split is usually separate, partial, or unavailable.",
   "flowPanels": [
     {
       "region": "United States",
@@ -46,20 +46,139 @@
     }
   ],
   "sexualAssaultCountryLane": {
-    "title": "Sexual Assault / Migrant-Status Data By Country",
-    "summary": "Country-by-country crime-data lane. Figures are source-split markers until an official country dataset gives a comparable number.",
-    "evidenceRule": "Do not infer immigration status from nationality. Do not treat police suspects as convictions. Do not turn individual cases into group guilt. Unknown-status cases remain unknown.",
+    "title": "Sexual Offence Statistics / Migrant-Status Split By Country",
+    "summary": "Every listed country has official sexual-offence or sexual-violence statistics. The missing piece is not the existence of sexual-assault figures; it is the clean split by immigration status, asylum status, irregular status, suspect stage, charge stage, and conviction stage.",
+    "euHeadline": "Eurostat 2024 EU marker: 256,302 police-recorded sexual violence offences, including 98,190 rape offences. These are police-recorded offences, not immigration-status splits.",
+    "evidenceRule": "Official sexual-offence totals exist. Do not infer immigration status from nationality. Do not treat police suspects as convictions. Do not turn individual cases into group guilt. Unknown-status cases remain unknown. Police-recorded offences, suspects, charges, prosecutions, convictions, prisoners, nationality, citizenship, foreign-born status, asylum status, and irregular status are different datasets.",
+    "statusLegend": [
+      "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+      "NATIONALITY / CITIZENSHIP SPLIT AVAILABLE OR PARTIAL",
+      "SUSPECT DATA ONLY — NOT CONVICTION",
+      "CONVICTION SPLIT NEEDS SEPARATE COURT SOURCE",
+      "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+      "ASYLUM / IRREGULAR-STATUS SPLIT NOT CLEAN"
+    ],
     "countries": [
-      {"country":"United Kingdom","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"ONS / Home Office / MoJ / police force data / courts","status":"Needs official source split"},
-      {"country":"France","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"SSMSI / Ministry of Interior / Justice Ministry / courts","status":"Needs official source split"},
-      {"country":"Germany","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"BKA PKS / Federal Interior Ministry / courts","status":"Official source lane identified"},
-      {"country":"Sweden","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"Brå / police / courts / statistics office","status":"Needs official source split"},
-      {"country":"Italy","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"ISTAT / Interior Ministry / Justice Ministry / courts","status":"Needs official source split"},
-      {"country":"Spain","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"INE / Interior Ministry / judiciary / police datasets","status":"Needs official source split"},
-      {"country":"Netherlands","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"CBS / police / Justice Ministry / courts","status":"Needs official source split"},
-      {"country":"Belgium","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"Statbel / federal police / justice records","status":"Needs official source split"},
-      {"country":"Austria","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"BMI crime statistics / courts / statistics office","status":"Official source lane identified"},
-      {"country":"United States","publicFigure":"EST. SOURCE-SPLIT","sourceLabel":"FBI NIBRS / BJS / DHS / state courts","status":"Needs official source split"}
+      {
+        "country": "United Kingdom",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "ONS / Home Office police recorded crime / MoJ courts",
+        "latestSourceStatus": "Official total sexual-offence and rape data available through national crime releases; migration-status split is not a single comparable official table.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "victim/survey lanes", "police recorded crime", "court/prosecution lanes"],
+        "missingSplits": ["irregular-status split", "visa-overstay split", "asylum-status split", "clean suspect-to-conviction immigration-status bridge"],
+        "sourceLabel": "ONS / Home Office / MoJ / police force data / courts",
+        "sourceUrl": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice",
+        "evidenceWarning": "Foreign national, foreign-born, suspect, charged, convicted, asylum seeker, and irregular migrant are separate categories."
+      },
+      {
+        "country": "France",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "SSMSI / Ministry of Interior / Justice Ministry / courts",
+        "latestSourceStatus": "Official sexual-violence and crime datasets exist; comparable migrant-status split needs separate verification by source table.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["police recorded sexual violence", "justice/court lanes", "victimization survey lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "conviction-by-immigration-status table"],
+        "sourceLabel": "SSMSI / Interior Ministry / Justice Ministry / courts",
+        "sourceUrl": "https://www.interieur.gouv.fr/Interstats",
+        "evidenceWarning": "Nationality or place of birth must not be presented as immigration status."
+      },
+      {
+        "country": "Germany",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "BKA Polizeiliche Kriminalstatistik / Federal Interior Ministry / courts",
+        "latestSourceStatus": "Official sexual-offence data and suspect-nationality lanes are stronger here, but suspect nationality is not conviction and not legal immigration status.",
+        "sourceSplitStatus": "NATIONALITY / CITIZENSHIP SPLIT AVAILABLE OR PARTIAL; SUSPECT DATA ONLY — NOT CONVICTION",
+        "availableSplits": ["sexual offence totals", "suspect data", "German / non-German suspect categories", "some immigration-context categories in official reporting"],
+        "missingSplits": ["clean conviction-by-irregular-status table", "clean asylum-status-to-conviction bridge"],
+        "sourceLabel": "BKA PKS / Federal Interior Ministry / courts",
+        "sourceUrl": "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/pks_node.html",
+        "evidenceWarning": "Non-German suspect does not mean illegal migrant; suspect does not mean convicted."
+      },
+      {
+        "country": "Sweden",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "Brå / police / courts / statistics office",
+        "latestSourceStatus": "Official sexual-offence statistics exist; migration-background studies and crime tables need careful separation from immigration status.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "reported crime", "court/conviction lanes", "selected background-study lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "visa-overstay split"],
+        "sourceLabel": "Brå / police / courts / statistics office",
+        "sourceUrl": "https://bra.se/statistik/kriminalstatistik.html",
+        "evidenceWarning": "Foreign background, country of birth, citizenship, and legal immigration status are not interchangeable."
+      },
+      {
+        "country": "Italy",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "ISTAT / Interior Ministry / Justice Ministry / courts",
+        "latestSourceStatus": "Official sexual-violence, police, and justice lanes exist; comparable migrant-status split needs exact source extraction.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "victimization/statistical lanes", "police/justice lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "clean conviction status split"],
+        "sourceLabel": "ISTAT / Interior Ministry / Justice Ministry / courts",
+        "sourceUrl": "https://www.istat.it/",
+        "evidenceWarning": "Non-citizen and unauthorized migrant are different categories."
+      },
+      {
+        "country": "Spain",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "INE / Interior Ministry / judiciary / police datasets",
+        "latestSourceStatus": "Official sexual-liberty offence and judicial/police lanes exist; immigration-status split needs exact official extraction.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "judicial lanes", "police lanes", "national statistical source lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "suspect-to-conviction immigration-status bridge"],
+        "sourceLabel": "INE / Interior Ministry / judiciary / police datasets",
+        "sourceUrl": "https://www.ine.es/",
+        "evidenceWarning": "Nationality and legal residence status cannot be merged without a source table."
+      },
+      {
+        "country": "Netherlands",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "CBS / police / Justice Ministry / courts",
+        "latestSourceStatus": "Official crime and justice statistics exist; migrant-status split for sexual offences needs exact table-level verification.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "police/court statistics", "CBS crime and justice lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "clean conviction-by-status table"],
+        "sourceLabel": "CBS / police / Justice Ministry / courts",
+        "sourceUrl": "https://www.cbs.nl/",
+        "evidenceWarning": "Migration background, citizenship, and immigration status must remain separate."
+      },
+      {
+        "country": "Belgium",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "Statbel / federal police / justice records",
+        "latestSourceStatus": "Official crime and justice lanes exist; migrant-status split needs exact source extraction and category labels.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN",
+        "availableSplits": ["offence totals", "federal police lanes", "justice/court lanes"],
+        "missingSplits": ["irregular-status split", "asylum-status split", "suspect-to-conviction status bridge"],
+        "sourceLabel": "Statbel / federal police / justice records",
+        "sourceUrl": "https://statbel.fgov.be/",
+        "evidenceWarning": "A police category cannot be turned into a legal immigration-status category without a source table."
+      },
+      {
+        "country": "Austria",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "BMI crime statistics / courts / statistics office",
+        "latestSourceStatus": "Official sexual-offence data and suspect-nationality lanes are stronger here, but suspect nationality is not conviction and not immigration status.",
+        "sourceSplitStatus": "NATIONALITY / CITIZENSHIP SPLIT AVAILABLE OR PARTIAL; SUSPECT DATA ONLY — NOT CONVICTION",
+        "availableSplits": ["offence totals", "suspect nationality/citizenship categories", "police crime statistics"],
+        "missingSplits": ["clean conviction-by-irregular-status table", "asylum-status conviction bridge"],
+        "sourceLabel": "BMI crime statistics / courts / statistics office",
+        "sourceUrl": "https://www.bmi.gv.at/508/Statistiken/",
+        "evidenceWarning": "Foreign suspect categories must not be read as illegal-entry categories."
+      },
+      {
+        "country": "United States",
+        "publicFigure": "OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE",
+        "officialStatsLane": "FBI NIBRS / BJS / DHS / state courts",
+        "latestSourceStatus": "Official rape/sexual-assault data exists across FBI/BJS and state systems; no clean national immigration-status conviction table covers all jurisdictions.",
+        "sourceSplitStatus": "IMMIGRATION-STATUS SPLIT NOT CLEAN; FEDERAL/STATE DATA FRAGMENTED",
+        "availableSplits": ["FBI offence lanes", "BJS victimization/justice lanes", "state court lanes", "DHS immigration lanes"],
+        "missingSplits": ["single national immigration-status split", "asylum-status split", "visa-overstay split", "state-to-federal conviction bridge"],
+        "sourceLabel": "FBI NIBRS / BJS / DHS / state courts",
+        "sourceUrl": "https://cde.ucr.cjis.gov/",
+        "evidenceWarning": "National crime data and immigration-status data sit in different systems; avoid merging them without a named official table."
+      }
     ]
   }
 }

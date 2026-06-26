@@ -8,11 +8,13 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg) { problems.push(msg); }
 function requireFile(file) { if (!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function forbidIncludes(file, text, label = text) { if (exists(file) && read(file).includes(text)) fail(`${file}: leaked ${label}`); }
 
 for (const file of [
   'data/live-intel-sources.json',
   'data/live-intel.json',
   'scripts/update-live-intel.js',
+  'scripts/update-seven-day-intel.js',
   'scripts/build-live-intel-machine.js',
   'live-intel.html',
   'downloads/live-intel-latest.json',
@@ -43,14 +45,26 @@ if (exists('data/live-intel.json')) {
   }
 }
 
-for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels']) {
+for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels', 'HTML sanitizer: active']) {
   requireIncludes('live-intel.html', marker, marker);
+}
+for (const file of ['live-intel.html', 'downloads/live-intel-latest.md']) {
+  for (const forbidden of ['<a href=', '&lt;a href=', '<font ', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;']) {
+    forbidIncludes(file, forbidden, forbidden);
+  }
+}
+for (const file of ['scripts/update-seven-day-intel.js', 'scripts/build-live-intel-machine.js']) {
+  requireIncludes(file, 'decodeEntities', `${file} decodeEntities sanitizer`);
+  requireIncludes(file, '<[^>]+>', `${file} tag stripper`);
+  requireIncludes(file, '&lt;', `${file} encoded less-than handling`);
+  requireIncludes(file, '&nbsp;', `${file} nbsp handling`);
 }
 for (const file of ['index.html', 'news.html', 'evidence-vault.html', 'epstein-files.html', 'videos.html', 'books.html']) {
   requireIncludes(file, 'live-intel-machine-route', 'Live Intel route patch');
 }
 requireIncludes('downloads/live-intel-latest.json', 'rumbleShortTitle', 'latest intel video hook data');
 requireIncludes('downloads/live-intel-latest.json', 'optinRoute', 'latest intel opt-in route');
+requireIncludes('downloads/live-intel-latest.json', 'htmlSanitized', 'latest intel sanitizer marker');
 requireIncludes('downloads/live-intel-latest.md', '# Live Intel Machine', 'latest intel markdown brief');
 requireIncludes('downloads/live-intel-latest.md', 'Video hook:', 'markdown video hook');
 requireIncludes('search-index.json', 'live-intel.html', 'search index route');
@@ -71,4 +85,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('LIVE INTEL PRESSURE TEST PASSED');
-console.log('Checked source lanes, updater enrichment, static hub, downloads, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');
+console.log('Checked source lanes, updater enrichment, static hub, downloads, no raw RSS HTML leakage, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');

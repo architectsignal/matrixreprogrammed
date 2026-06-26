@@ -1,7 +1,22 @@
 {
-  "updated": "2026-06-26",
-  "purpose": "Harmless CI trigger after adding source-card-index.html compatibility alias for Site QA.",
-  "latestFixCommit": "d6767ac1dae3798d7810bc667886fad493d88e14",
-  "fixedIssue": "subject-trust-evidence-method.html linked to source-card-index.html; alias page now exists and redirects to source-cards.html.",
-  "expected": "Run Site QA and Site Pressure Test on the latest main branch state including the alias page."
+  "updated": "2026-06-27",
+  "purpose": "Final deploy trigger for all current Matrix Reprogrammed upgrades.",
+  "includedUpgrades": [
+    "branded PDF mini-book covers and table of contents",
+    "auto-updated download PDF index and flagship PDF collection",
+    "subject intelligence profile PDFs",
+    "subject intelligence HTML hubs",
+    "Dark Speculation Lab and reader drop box",
+    "weekly Dark Speculation update workflow",
+    "source-card-index compatibility alias",
+    "Link Audit now builds generated site before auditing"
+  ],
+  "latestFixCommits": [
+    "fe6c68eaa26f4f7b21c81df3267c82465b4e7e39",
+    "9fb2f56ae3c3bacb34b2eadb40a40cf5eddcd264",
+    "d6767ac1dae3798d7810bc667886fad493d88e14",
+    "8f65f75e7b9c5706844c91df762efd7fd153da1a",
+    "782396756e28e6ddcd766f061e0869c995d436b2"
+  ],
+  "expected": "Trigger Site QA, Site Pressure Test, Matrix Reprogrammed Link Audit, and any connected deploy on the latest main branch state."
 }

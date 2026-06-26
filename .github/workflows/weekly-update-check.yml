@@ -1,26 +1,32 @@
-name: Weekly Full Update Check
+name: Weekly Full Site Refresh
 
 on:
   schedule:
+    # Weekly deep rebuild: Monday 04:43 UTC = 06:43 France summer / 05:43 France winter.
     - cron: '43 4 * * 1'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
-  group: weekly-update-check
+  group: weekly-full-site-refresh
   cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
-  weekly-check:
-    name: Weekly full ecosystem check
+  weekly-refresh:
+    name: Weekly full ecosystem refresh, pressure test, commit, and deploy trigger
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -39,6 +45,20 @@ jobs:
           npm run pressure-test:migration-flow
           npm run pressure-test:global-risk-clocks
           node scripts/update-cadence-test.js
+
+      - name: Commit weekly refreshed public outputs if changed
+        run: |
+          git config user.name "matrix-weekly-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git status --short
+          git add -A data downloads feeds || true
+          git add -A *.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt search.js styles.css fixes.css analytics.js || true
+          if git diff --cached --quiet; then
+            echo "No weekly public-output changes to commit."
+          else
+            git commit -m "Weekly full site refresh [deploy]"
+            git push
+          fi
 
       - name: Upload weekly build artifact
         if: success()

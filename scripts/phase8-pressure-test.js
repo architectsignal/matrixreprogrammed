@@ -13,6 +13,7 @@ function requireIncludes(file, text, label = text) { if (!exists(file)) return; 
 requireFile('data/trust-center.json');
 requireFile('scripts/build-phase8-trust-center.js');
 requireFile('trust-center.html');
+requireFile('trust-corrections.html');
 requireFile('conversion-funnel.html');
 requireFile('black-file.html');
 requireFile('search-index.json');
@@ -30,8 +31,12 @@ if (pages.length < 6) fail(`data/trust-center.json expected at least 6 trust pag
 requireIncludes('trust-center.html', 'TRUST CENTER', 'Trust Center hero');
 requireIncludes('trust-center.html', 'TRUST ENGINE STATUS', 'Trust Engine status terminal');
 requireIncludes('trust-center.html', 'Operating Principles', 'Operating Principles section');
+requireIncludes('trust-center.html', 'trust-corrections.html', 'audit-safe corrections route');
 requireIncludes('trust-center.html', 'Signal Board', 'Signal Board nav');
 requireIncludes('trust-center.html', 'Trust Center', 'Trust Center nav');
+requireIncludes('trust-corrections.html', 'Corrections', 'Corrections alias title');
+requireIncludes('trust-corrections.html', 'TRUST DISCIPLINE', 'Corrections alias trust discipline');
+requireIncludes('trust-corrections.html', 'Correction route', 'Corrections alias label');
 requireIncludes('conversion-funnel.html', 'id="phase-eight-trust-engine"', 'Phase 8 Trust patch on conversion funnel');
 requireIncludes('black-file.html', 'id="phase-eight-trust-engine"', 'Phase 8 Trust patch on Black File');
 
@@ -49,8 +54,10 @@ for (const page of pages) {
 }
 
 requireIncludes('sitemap.xml', '/trust-center.html', 'trust-center sitemap entry');
+requireIncludes('sitemap.xml', '/trust-corrections.html', 'trust-corrections sitemap entry');
 requireIncludes('llms.txt', '/trust-center.html', 'trust-center llms.txt entry');
 if (!search.some(item => item.url === 'trust-center.html')) fail('search-index.json missing trust-center.html');
+if (!search.some(item => item.url === 'trust-corrections.html')) fail('search-index.json missing trust-corrections.html');
 
 const pkg = exists('package.json') ? json('package.json') : { scripts: {} };
 const build = pkg.scripts && pkg.scripts.build || '';
@@ -76,4 +83,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('PHASE 8 TRUST CENTER PRESSURE TEST PASSED');
-console.log(`Checked ${pages.length} trust pages, Trust Center hub, Black File/funnel patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);
+console.log(`Checked ${pages.length} trust pages, Trust Center hub, corrections alias page, Black File/funnel patches, sitemap, llms.txt, search index, redirects, Signal Board nav, and cleanup fallback.`);

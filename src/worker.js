@@ -108,6 +108,47 @@ function cleanText(value, max = 1200) {
     .slice(0, max);
 }
 
+async function handleIntroVoice(request, env) {
+  if (!env.ELEVENLABS_API_KEY) {
+    return json({ ok: false, error: 'ELEVENLABS_API_KEY Cloudflare secret missing. Browser fallback voice can still be used.' }, 503);
+  }
+  const body = await readBody(request);
+  const text = cleanText(body.text || 'Welcome to Matrix Reprogrammed. Reality is edited. The headline is not the machine. The truth is not hidden. It is encoded.', 900);
+  if (text.length < 3) return json({ ok: false, error: 'No intro text provided.' }, 400);
+  const voiceId = cleanText(env.ELEVENLABS_VOICE_ID || 'JBFqnCBsd6RMkjVDRZzb', 120);
+  const modelId = cleanText(env.ELEVENLABS_MODEL_ID || 'eleven_multilingual_v2', 120);
+  const endpoint = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voiceId)}?output_format=mp3_44100_128`;
+  const eleven = await fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'xi-api-key': env.ELEVENLABS_API_KEY,
+      'Content-Type': 'application/json',
+      'Accept': 'audio/mpeg'
+    },
+    body: JSON.stringify({
+      text,
+      model_id: modelId,
+      voice_settings: {
+        stability: 0.42,
+        similarity_boost: 0.78,
+        style: 0.38,
+        use_speaker_boost: true
+      }
+    })
+  });
+  if (!eleven.ok) {
+    const details = await eleven.text().catch(() => 'ElevenLabs request failed');
+    return json({ ok: false, error: 'ElevenLabs request failed', status: eleven.status, details: cleanText(details, 500) }, 502);
+  }
+  return new Response(eleven.body, {
+    status: 200,
+    headers: {
+      'Content-Type': eleven.headers.get('content-type') || 'audio/mpeg',
+      'Cache-Control': 'no-store'
+    }
+  });
+}
+
 function makeId() {
   return `signal-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
@@ -316,7 +357,7 @@ async function handleForumHealth(env) {
     indexSelfHealing: Boolean(stats.indexSelfHealing),
     indexCount: stats.indexCount,
     storedPostCount: stats.storedPostCount,
-    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event', '/downloads/forum-posts.json', '/downloads/forum-posts.md', '/downloads/forum-posts.json?pack=black-file-starter'],
+    routes: ['/forum-feed', '/submit-forum-post', '/report-forum-post', '/track-event', '/intro-voice', '/downloads/forum-posts.json', '/downloads/forum-posts.md', '/downloads/forum-posts.json?pack=black-file-starter'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
     updatedAt: '2026-06-26T00:00:00.000Z'
@@ -399,7 +440,8 @@ export default {
     const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
     const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
-    if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return new Response(null, { status: 204 });
+    if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event' || originalPath === '/intro-voice')) return new Response(null, { status: 204 });
+    if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(env);
     if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(request, env);

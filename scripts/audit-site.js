@@ -1,11 +1,68 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
-const generatedAllowList = new Set(['downloads/the-black-file-matrix-reprogrammed.pdf']);
-const ignoredDirs = new Set(['.git', 'node_modules']);
+const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);
+const generatedAllowList = new Set([
+  'downloads/the-black-file-matrix-reprogrammed.pdf'
+]);
+const dynamicWorkerRoutes = new Set([
+  'forum-health', '/forum-health',
+  'forum-feed', '/forum-feed',
+  'forum-feed-main', '/forum-feed-main',
+  'forum-feed-speculation', '/forum-feed-speculation',
+  'forum-feed-epstein-alive', '/forum-feed-epstein-alive',
+  'submit-forum-post', '/submit-forum-post',
+  'submit-main-post', '/submit-main-post',
+  'submit-speculation-post', '/submit-speculation-post',
+  'submit-epstein-alive-post', '/submit-epstein-alive-post',
+  'report-forum-post', '/report-forum-post',
+  'report-main-post', '/report-main-post',
+  'report-speculation-post', '/report-speculation-post',
+  'report-epstein-alive-post', '/report-epstein-alive-post',
+  'track-event', '/track-event',
+  'intro-voice', '/intro-voice',
+  'downloads/forum-posts.json', '/downloads/forum-posts.json',
+  'downloads/forum-posts.md', '/downloads/forum-posts.md'
+]);
+
+const requiredCoreFiles = [
+  'index.html', 'styles.css', 'matrix.js', 'books.html', 'search.html', 'black-file.html', 'news.html', 'intel-archive.html', 'timers.html',
+  'epstein-files.html', 'black-file-index.html', 'answer-index.html', 'power-atlas.html', 'atlas-index.html', 'evidence-vault.html',
+  'evidence-vault-index.html', 'evidence-policy.html', 'network-maps.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'netlify.toml',
+  'data/bulletins.json', 'data/human-cost.json', 'data/power-atlas.json', 'data/evidence-vault.json',
+  'scripts/build-phase1-structure.js', 'scripts/build-phase2-power-atlas.js', 'scripts/build-phase3-evidence-vault.js',
+  'scripts/cleanup-duplicates.js', 'scripts/pressure-test-site.js'
+];
+
+function exists(name) { return fs.existsSync(path.join(root, name)); }
+function read(name) { return fs.readFileSync(path.join(root, name), 'utf8'); }
+function shouldBootstrap() {
+  const generatedCore = ['epstein-files.html', 'power-atlas.html', 'atlas-index.html', 'evidence-vault.html', 'evidence-vault-index.html'];
+  return generatedCore.some(file => !exists(file));
+}
+function bootstrapIfNeeded() {
+  if (!shouldBootstrap()) return;
+  if (process.env.MR_AUDIT_BOOTSTRAP === '1') {
+    console.error('SITE QA BOOTSTRAP REFUSED: generated core files are missing even inside bootstrap build.');
+    process.exit(1);
+  }
+  console.log('SITE QA BOOTSTRAP: generated core files are missing. Running npm run build before audit.');
+  execFileSync('npm', ['run', 'build'], {
+    cwd: root,
+    stdio: 'inherit',
+    env: { ...process.env, MR_AUDIT_BOOTSTRAP: '1' }
+  });
+  console.log('SITE QA BOOTSTRAP: generated site built. Running final audit pass.');
+}
+
+bootstrapIfNeeded();
+
 const publicHtmlFiles = [];
 const allFiles = new Set();
+const problems = [];
+const htmlCache = new Map();
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -20,6 +77,36 @@ function walk(dir) {
   }
 }
 walk(root);
+
+function readHtml(file) {
+  if (!htmlCache.has(file)) htmlCache.set(file, fs.readFileSync(path.join(root, file), 'utf8'));
+  return htmlCache.get(file);
+}
+function stripHashAndQuery(href) { return href.split('#')[0].split('?')[0].trim(); }
+function isExternalOrProtocol(href) { return /^(https?:|mailto:|tel:|javascript:|data:)/i.test(href) || href.startsWith('#') || href === ''; }
+function hasAnchor(html, anchor) {
+  if (!anchor) return true;
+  const safe = anchor.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`\\sid=["']${safe}["']`, 'i').test(html) || new RegExp(`\\sname=["']${safe}["']`, 'i').test(html);
+}
+function visibleCopy(html) {
+  return html
+    .replace(/<!--([\s\S]*?)-->/g, ' ')
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ');
+}
+function requireFile(file) { if (!allFiles.has(file)) problems.push(`missing required core file: ${file}`); }
+function needText(file, pattern, label) {
+  if (!allFiles.has(file)) return;
+  const html = readHtml(file);
+  const ok = pattern instanceof RegExp ? pattern.test(html) : html.includes(pattern);
+  if (!ok) problems.push(`${file}: missing ${label || pattern}`);
+}
+function isDynamicWorkerTarget(target) {
+  return dynamicWorkerRoutes.has(target) || dynamicWorkerRoutes.has(`/${target}`) || dynamicWorkerRoutes.has(target.replace(/^\//, ''));
+}
 
 const bannedPublicPhrases = [
   /ChatGPT/i,
@@ -52,32 +139,15 @@ const bannedPublicPhrases = [
   /Risk timers:\s*active/i
 ];
 const publicExceptions = new Set(['funnel-map.html']);
-const problems = [];
-const htmlCache = new Map();
-function readHtml(file) { if (!htmlCache.has(file)) htmlCache.set(file, fs.readFileSync(path.join(root, file), 'utf8')); return htmlCache.get(file); }
-function stripHashAndQuery(href) { return href.split('#')[0].split('?')[0].trim(); }
-function isExternalOrProtocol(href) { return /^(https?:|mailto:|tel:|javascript:|data:)/i.test(href) || href.startsWith('#') || href === ''; }
-function hasAnchor(html, anchor) {
-  if (!anchor) return true;
-  const safe = anchor.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`\\sid=["']${safe}["']`, 'i').test(html) || new RegExp(`\\sname=["']${safe}["']`, 'i').test(html);
-}
-function requireFile(file) { if (!allFiles.has(file)) problems.push(`missing required core file: ${file}`); }
-function visibleCopy(html) {
-  return html
-    .replace(/<!--[\s\S]*?-->/g, ' ')
-    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ');
-}
 
 for (const file of publicHtmlFiles) {
   const html = readHtml(file);
   const isInternalPage = publicExceptions.has(file) || /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
   if (!isInternalPage) {
     const copy = visibleCopy(html);
-    for (const phrase of bannedPublicPhrases) if (phrase.test(copy)) problems.push(`${file}: public-facing copy contains banned scaffold phrase: ${phrase}`);
+    for (const phrase of bannedPublicPhrases) {
+      if (phrase.test(copy)) problems.push(`${file}: public-facing copy contains banned scaffold phrase: ${phrase}`);
+    }
   }
   const attrRegex = /(?:href|src)=["']([^"']+)["']/gi;
   let match;
@@ -87,6 +157,7 @@ for (const file of publicHtmlFiles) {
     const [targetPart, anchor] = raw.split('#');
     const target = stripHashAndQuery(targetPart);
     if (!target) continue;
+    if (isDynamicWorkerTarget(target)) continue;
     const resolved = path.normalize(path.join(path.dirname(file), target)).replace(/\\/g, '/');
     if (resolved.startsWith('..')) { problems.push(`${file}: link escapes site root: ${raw}`); continue; }
     if (!allFiles.has(resolved) && !generatedAllowList.has(resolved)) { problems.push(`${file}: missing internal link/asset target: ${raw} -> ${resolved}`); continue; }
@@ -97,12 +168,11 @@ for (const file of publicHtmlFiles) {
   }
 }
 
-const requiredCoreFiles = ['index.html', 'styles.css', 'matrix.js', 'books.html', 'search.html', 'black-file.html', 'news.html', 'intel-archive.html', 'timers.html', 'epstein-files.html', 'black-file-index.html', 'answer-index.html', 'power-atlas.html', 'atlas-index.html', 'evidence-vault.html', 'evidence-vault-index.html', 'evidence-policy.html', 'network-maps.html', 'sitemap.xml', 'robots.txt', 'llms.txt', 'netlify.toml', 'data/bulletins.json', 'data/human-cost.json', 'data/power-atlas.json', 'data/evidence-vault.json', 'scripts/build-phase1-structure.js', 'scripts/build-phase2-power-atlas.js', 'scripts/build-phase3-evidence-vault.js', 'scripts/cleanup-duplicates.js', 'scripts/pressure-test-site.js'];
 requiredCoreFiles.forEach(requireFile);
 
 let atlasEvidenceClasses = new Set();
 if (allFiles.has('data/power-atlas.json')) {
-  const atlas = JSON.parse(fs.readFileSync(path.join(root, 'data/power-atlas.json'), 'utf8'));
+  const atlas = JSON.parse(read('data/power-atlas.json'));
   atlasEvidenceClasses = new Set(atlas.evidenceClasses || []);
   const relationshipSet = new Set(atlas.relationshipTypes || []);
   if (!Array.isArray(atlas.nodes) || atlas.nodes.length < 10) problems.push('data/power-atlas.json: expected at least 10 nodes');
@@ -123,7 +193,7 @@ if (allFiles.has('data/power-atlas.json')) {
 }
 
 if (allFiles.has('data/evidence-vault.json')) {
-  const vault = JSON.parse(fs.readFileSync(path.join(root, 'data/evidence-vault.json'), 'utf8'));
+  const vault = JSON.parse(read('data/evidence-vault.json'));
   const sourceHierarchySet = new Set(vault.sourceHierarchy || []);
   const lanes = vault.sourceLanes || [];
   const cards = vault.sourceCards || [];
@@ -160,7 +230,7 @@ if (allFiles.has('data/evidence-vault.json')) {
 }
 
 if (allFiles.has('data/bulletins.json')) {
-  const bulletins = JSON.parse(fs.readFileSync(path.join(root, 'data/bulletins.json'), 'utf8'));
+  const bulletins = JSON.parse(read('data/bulletins.json'));
   if (!Array.isArray(bulletins.bulletins) || bulletins.bulletins.length < 3) problems.push('data/bulletins.json: expected at least 3 bulletins');
   for (const b of bulletins.bulletins || []) {
     for (const field of ['id', 'date', 'label', 'headline', 'summary', 'why', 'path']) if (!b[field]) problems.push(`data/bulletins.json: bulletin missing ${field}`);
@@ -168,7 +238,7 @@ if (allFiles.has('data/bulletins.json')) {
   }
 }
 if (allFiles.has('data/human-cost.json')) {
-  const hc = JSON.parse(fs.readFileSync(path.join(root, 'data/human-cost.json'), 'utf8'));
+  const hc = JSON.parse(read('data/human-cost.json'));
   if (!Array.isArray(hc.panels) || hc.panels.length < 6) problems.push('data/human-cost.json: expected at least 6 human-cost panels');
   for (const p of hc.panels || []) for (const field of ['key', 'title', 'figure', 'status', 'description', 'sourceLabel']) if (!p[field]) problems.push(`data/human-cost.json: panel ${p.key || p.title || 'unknown'} missing ${field}`);
 }
@@ -198,8 +268,8 @@ for (const file of ['power-atlas.html', 'evidence-vault.html', 'evidence-policy.
     if (!/Power|Network|Vault|Policy/i.test(html)) problems.push(`${file}: missing Phase 1 structure language`);
   }
 }
-if (allFiles.has('power-atlas.html') && !readHtml('power-atlas.html').includes('id="phase-two-atlas-engine"')) problems.push('power-atlas.html: missing Phase 2 atlas engine section');
-if (allFiles.has('evidence-vault.html') && !readHtml('evidence-vault.html').includes('id="phase-three-evidence-engine"')) problems.push('evidence-vault.html: missing Phase 3 evidence engine section');
+needText('power-atlas.html', 'id="phase-two-atlas-engine"', 'Phase 2 atlas engine section');
+needText('evidence-vault.html', 'id="phase-three-evidence-engine"', 'Phase 3 evidence engine section');
 if (allFiles.has('atlas-index.html')) {
   const html = readHtml('atlas-index.html');
   if (!/ATLAS NODES/i.test(html)) problems.push('atlas-index.html: missing Atlas Nodes heading');
@@ -223,4 +293,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log(`SITE QA PASSED: ${publicHtmlFiles.length} HTML files checked.`);
-console.log('Internal links/assets passed. Intel Desk, archive, Human Cost panels, migration panel, Phase 1 structure, Phase 2 Power Atlas nodes, Phase 3 Evidence Vault lanes/source cards, duplicate cleanup, sitemap, llms, and data files passed.');
+console.log('Internal links/assets passed. Intel Desk, archive, Human Cost panels, migration panel, Phase 1 structure, Phase 2 Power Atlas nodes, Evidence Vault lanes/source cards, board split routes, dynamic Worker routes, sitemap, llms, and data files passed.');

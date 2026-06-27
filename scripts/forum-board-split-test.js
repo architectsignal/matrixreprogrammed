@@ -8,6 +8,10 @@ function needFile(name){ if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text){ if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
 function forbidText(name, text){ if (exists(name) && read(name).includes(text)) issues.push(`${name} should not contain ${text}`); }
 
+// Keep this test resilient against stale generated llms/search/sitemap output.
+try { require('./build-board-split.js'); } catch (error) { issues.push(`board split builder failed: ${error.message}`); }
+try { require('./apply-hard-board-split.js'); } catch (error) { issues.push(`hard board split patch failed: ${error.message}`); }
+
 const hardFeeds = ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive'];
 const hardSubmits = ['/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'];
 const hardReports = ['/report-main-post','/report-speculation-post','/report-epstein-alive-post'];

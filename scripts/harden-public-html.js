@@ -9,6 +9,7 @@ try { require('./upgrade-public-usefulness.js'); } catch (error) { console.warn(
 try { require('./build-board-split.js'); } catch (error) { console.warn(`Board split skipped: ${error.message}`); }
 try { require('./apply-hard-board-split.js'); } catch (error) { console.warn(`Hard board split skipped: ${error.message}`); }
 try { require('./build-newsletter-system.js'); } catch (error) { console.warn(`Newsletter system skipped: ${error.message}`); }
+try { require('./build-cloudflare-error-hardening.js'); } catch (error) { console.warn(`Cloudflare error hardening skipped: ${error.message}`); }
 
 const protectedMarkers = [
   'READER PATH STATUS','SALES LADDER STATUS','READER PATHS',
@@ -68,4 +69,4 @@ walk(root);
 for(const file of htmlFiles){let html=fs.readFileSync(file,'utf8');const before=html;html=ensureFixesCss(html);html=sanitizeCopy(html);html=softenJsonLinks(html);if(path.basename(file)==='news.html')html=ensureAnchor(html,'conflict-zones','Conflict Zones');if(html!==before)fs.writeFileSync(file,html);}
 try { execFileSync('node', ['scripts/update-site-freshness-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Freshness report skipped: ${error.message}`); }
 try { execFileSync('node', ['scripts/site-quality-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Quality report skipped: ${error.message}`); }
-console.log(`Hardened ${htmlFiles.length} HTML files: fixes.css injected, public copy sanitized, hard board split applied, Cloudflare newsletter capture applied, protected phase markers preserved, JSON links softened, usefulness routes checked, and site reports generated.`);
+console.log(`Hardened ${htmlFiles.length} HTML files: fixes.css injected, public copy sanitized, hard board split applied, Cloudflare newsletter capture applied, Cloudflare error hardening applied, protected phase markers preserved, JSON links softened, usefulness routes checked, and site reports generated.`);

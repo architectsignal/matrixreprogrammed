@@ -1,28 +1,28 @@
 {
-  "updated": "2026-06-27T01:20:00+02:00",
-  "purpose": "Deploy trigger after adding Epstein Sighting Watch to the Epstein Command Center.",
+  "updated": "2026-06-27T01:35:00+02:00",
+  "purpose": "Deploy and CI trigger after cleaning shared asset warnings in Matrix Reprogrammed Link Audit.",
   "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
-  "criticalFix": "Epstein Command Center now has a bounded sighting-claim tracking system: official status deceased, internet sightings unverified, evidence levels, weekly scan outputs, and a reader submission route.",
+  "criticalFix": "Link Audit warnings for standalone pages missing shared matrix.js or styles.css are addressed by scripts/ensure-shared-assets.js and npm run link-audit.",
   "includedUpgrades": [
-    "Epstein Sighting Watch dataset",
-    "epstein-sighting-watch.html generated page",
-    "epstein-sighting-submit.html generated submission route",
-    "downloads/epstein-sighting-watch.json",
-    "downloads/epstein-sighting-watch.md",
-    "data/epstein-sighting-scan.json",
+    "shared asset normalizer for all root HTML files",
+    "npm run link-audit now normalizes assets before node tools/link-audit.js",
+    "Matrix Reprogrammed Link Audit workflow now uses npm run link-audit",
+    "Epstein Sighting Watch dataset and generated pages",
     "Epstein Command Center Sighting Watch panel",
     "weekly Epstein Sighting Watch workflow",
-    "dedicated Google News/RSS scan feed for Epstein alive/sighting/lookalike/death-hoax claim traffic",
-    "official-status boundary and no-harassment/no-doxxing rules",
     "machine sharpening upgrade and hidden-eye speculation gate preserved"
+  ],
+  "expectedChecks": [
+    "book-masons-in-the-united-nations.html should receive styles.css and matrix.js after build",
+    "deploy-status.html should receive styles.css and matrix.js after build",
+    "source-cards.html should receive styles.css and matrix.js after build",
+    "Link Audit should no longer show shared asset warnings after npm run build + npm run link-audit"
   ],
   "cloudflareExpected": [
     "npm run build",
-    "scripts/build-epstein-sighting-watch.js runs after Dark Speculation builder",
-    "scripts/build-machine-sharpening-upgrade.js runs late in the build",
+    "scripts/ensure-shared-assets.js runs before final tests/output",
     "build-cloudflare-output.js copies deployable files into _site",
-    "wrangler deploy serves _site through src/worker.js",
-    "Epstein Command Center should include the Sighting Watch panel"
+    "wrangler deploy serves _site through src/worker.js"
   ],
-  "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
+  "expected": "Fresh push should trigger connected Cloudflare build/deploy and Matrix Reprogrammed Link Audit against current main."
 }

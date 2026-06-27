@@ -1,27 +1,28 @@
 {
-  "updated": "2026-06-27T01:00:00+02:00",
-  "purpose": "Deploy trigger after adding the machine sharpening upgrade: deploy health, cleaner homepage doors, and stronger reader conversion paths.",
+  "updated": "2026-06-27T01:20:00+02:00",
+  "purpose": "Deploy trigger after adding Epstein Sighting Watch to the Epstein Command Center.",
   "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
-  "criticalFix": "The site now has a late-stage machine sharpening builder that adds deploy-health.html, simplifies the homepage around three primary doors, preserves the hidden eye gate, and adds reader next-step panels to major conversion pages without removing the existing archive.",
+  "criticalFix": "Epstein Command Center now has a bounded sighting-claim tracking system: official status deceased, internet sightings unverified, evidence levels, weekly scan outputs, and a reader submission route.",
   "includedUpgrades": [
-    "deploy-health.html and downloads/deploy-health.json",
-    "homepage three-door entry: Black File, Evidence Vault, Books",
-    "reader money path panel on homepage",
-    "reader next-step panels on Black File, Epstein, Evidence Vault, Live Intel, Books, and Download Center",
-    "visible compatibility marker cleanup",
-    "hidden CI marker vault for preserved test strings",
-    "all-seeing-eye homepage footer gate to dark-speculation-lab.html",
-    "dark-speculation-lab.html root fallback page",
-    "dark-speculation-forum.html root fallback page",
-    "branded PDF mini-book covers and subject intelligence hubs"
+    "Epstein Sighting Watch dataset",
+    "epstein-sighting-watch.html generated page",
+    "epstein-sighting-submit.html generated submission route",
+    "downloads/epstein-sighting-watch.json",
+    "downloads/epstein-sighting-watch.md",
+    "data/epstein-sighting-scan.json",
+    "Epstein Command Center Sighting Watch panel",
+    "weekly Epstein Sighting Watch workflow",
+    "dedicated Google News/RSS scan feed for Epstein alive/sighting/lookalike/death-hoax claim traffic",
+    "official-status boundary and no-harassment/no-doxxing rules",
+    "machine sharpening upgrade and hidden-eye speculation gate preserved"
   ],
   "cloudflareExpected": [
     "npm run build",
-    "scripts/hide-visible-compatibility-markers.js runs after compatibility restore",
+    "scripts/build-epstein-sighting-watch.js runs after Dark Speculation builder",
     "scripts/build-machine-sharpening-upgrade.js runs late in the build",
     "build-cloudflare-output.js copies deployable files into _site",
     "wrangler deploy serves _site through src/worker.js",
-    "homepage should show the cleaner three-door entry and a single all-seeing-eye gate"
+    "Epstein Command Center should include the Sighting Watch panel"
   ],
   "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
 }

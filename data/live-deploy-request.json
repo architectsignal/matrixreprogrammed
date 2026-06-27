@@ -1,0 +1,15 @@
+{
+  "requestedAt": "2026-06-27T18:04:00Z",
+  "reason": "Live matrixreprogrammed.com is serving an old homepage and the Signal Boards are not available from the live domain. Trigger guarded Cloudflare production deploy.",
+  "expectedHomepageMarker": "FOLLOW THE FILES.",
+  "expectedBoards": [
+    "forum.html",
+    "dark-speculation-forum.html",
+    "epstein-alive-board.html"
+  ],
+  "expectedWorkerFeeds": [
+    "/forum-feed-main",
+    "/forum-feed-speculation",
+    "/forum-feed-epstein-alive"
+  ]
+}

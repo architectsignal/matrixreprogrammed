@@ -59,6 +59,7 @@ jobs:
 
       - name: Critical focused pressure tests after first build
         run: |
+          npm run pressure-test:ask-matrix
           npm run pressure-test:live-intel
           npm run pressure-test:migration-flow
           npm run pressure-test:epstein-watch
@@ -74,6 +75,7 @@ jobs:
 
       - name: Second critical focused pressure tests
         run: |
+          npm run pressure-test:ask-matrix
           npm run pressure-test:live-intel
           npm run pressure-test:migration-flow
           npm run pressure-test:epstein-watch

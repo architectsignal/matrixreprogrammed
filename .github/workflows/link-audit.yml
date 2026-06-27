@@ -33,4 +33,4 @@ jobs:
         run: npm run build
 
       - name: Run internal link audit
-        run: node tools/link-audit.js
+        run: npm run link-audit

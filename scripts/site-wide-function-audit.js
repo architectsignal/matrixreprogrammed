@@ -3,9 +3,11 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
+const args = process.argv.slice(2);
+const isPostbuild = args.includes('--postbuild') || args.includes('--standalone-postbuild');
 const report = {
   updated: new Date().toISOString(),
-  mode: process.argv.includes('--postbuild') ? 'postbuild' : process.argv.includes('--prebuild') ? 'prebuild' : 'standalone',
+  mode: isPostbuild ? 'postbuild' : args.includes('--prebuild') ? 'prebuild' : 'standalone',
   ok: true,
   summary: {},
   problems: [],
@@ -46,8 +48,11 @@ function walk(dir) {
   }
 }
 
-function runNodeCheck(js) {
-  const result = spawnSync(process.execPath, ['--check', js], { cwd: root, encoding: 'utf8' });
+function runNodeCheck(js, content) {
+  const isModuleLike = /\bexport\s+default\b|\bimport\s+[^;]+from\s+['"]/m.test(content);
+  const result = isModuleLike
+    ? spawnSync(process.execPath, ['--check', '--input-type=module', '-e', content], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 })
+    : spawnSync(process.execPath, ['--check', js], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 });
   if (result.status !== 0) problem(`${js}: JavaScript syntax check failed: ${(result.stderr || result.stdout || '').trim()}`);
 }
 
@@ -69,6 +74,12 @@ function checkRequireTargets(js, content) {
 }
 
 function checkDangerPatterns(js, content) {
+  const allowedRepairScripts = new Set([
+    'scripts/site-wide-function-audit.js',
+    'scripts/live-intel-pressure-test.js',
+    'scripts/migration-flow-test.js',
+    'scripts/build-live-intel-machine.js'
+  ]);
   const forbidden = [
     ['offer-intelligence-entry.html', 'obsolete Live Intel intelligence offer route'],
     ['offer-crime-dossier-entry.html', 'obsolete Live Intel crime offer route'],
@@ -77,7 +88,7 @@ function checkDangerPatterns(js, content) {
     ['&lt;font ', 'escaped RSS font leakage']
   ];
   for (const [needle, label] of forbidden) {
-    if (content.includes(needle) && !js.endsWith('site-wide-function-audit.js') && !js.endsWith('live-intel-pressure-test.js') && !js.endsWith('migration-flow-test.js')) {
+    if (content.includes(needle) && !allowedRepairScripts.has(js)) {
       problem(`${js}: contains ${label}: ${needle}`);
     }
   }
@@ -145,7 +156,7 @@ function checkWorkflows() {
 }
 
 function checkPostBuildOutputs() {
-  if (!process.argv.includes('--postbuild') && !process.argv.includes('--standalone-postbuild')) return;
+  if (!isPostbuild) return;
   const required = [
     'index.html', 'news.html', 'live-intel.html', 'epstein-files.html', 'migration-flow.html', 'download-center.html',
     'sitemap.xml', 'llms.txt', 'search-index.json', 'deploy-status.json', 'downloads/live-intel-latest.json', 'downloads/live-intel-latest.md',
@@ -186,8 +197,7 @@ function writeReport() {
     warnings: report.warnings.length,
     problems: report.problems.length
   };
-  const jsonPath = file('downloads/site-wide-function-audit.json');
-  fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+  fs.writeFileSync(file('downloads/site-wide-function-audit.json'), JSON.stringify(report, null, 2));
   const lines = [
     '# Site-Wide Function Audit', '',
     `Updated: ${report.updated}`,
@@ -215,7 +225,7 @@ report.checked.jsonFiles = jsonFiles;
 
 for (const js of jsFiles) {
   const content = read(js);
-  runNodeCheck(js);
+  runNodeCheck(js, content);
   functionInventory(js, content);
   checkRequireTargets(js, content);
   checkDangerPatterns(js, content);

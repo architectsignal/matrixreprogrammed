@@ -22,5 +22,9 @@ if (html.includes('id="migrant-sexual-offence-country"')) {
 } else {
   html += section;
 }
+html = html
+  .replace(/EST\.\s*SOURCE-SPLIT/gi, 'OFFICIAL SEXUAL-OFFENCE STATS AVAILABLE')
+  .replace(/Needs official source split/gi, 'Official sexual-offence stats available; clean immigration-status split still not available')
+  .replace(/Official source lane identified/gi, 'Official sexual-offence stats available; source lane identified');
 fs.writeFileSync(pagePath, html);
-console.log('Migration crime country grid enhanced from current migration-flow-panel data');
+console.log('Migration crime country grid enhanced from current migration-flow-panel data; deprecated source-split marker scrubbed.');

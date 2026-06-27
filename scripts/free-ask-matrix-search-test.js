@@ -14,19 +14,24 @@ needText('search.html', 'No paid AI');
 needText('search.html', 'search-index.json');
 needText('search.html', 'archive-search');
 needText('search.html', 'ask-answer');
+needText('search.html', 'id="phase-twelve-authority-engine"');
+needText('search.html', 'Authority Hub');
+needText('search.html', 'authority-evidence-trust.html');
 needText('search.js', 'ASK MATRIX ROUTE');
 needText('search.js', 'search-index.json');
 needText('search.js', 'Paid AI calls: none');
 needText('search.js', 'routeHints');
+needText('search.js', 'authority-hub.html');
 needText('scripts/build-free-ask-matrix-search.js', 'No paid AI');
 needText('scripts/build-free-ask-matrix-search.js', 'search-index.json');
+needText('scripts/build-free-ask-matrix-search.js', 'id="phase-twelve-authority-engine"');
 for (const name of ['search.html', 'search.js', 'scripts/build-free-ask-matrix-search.js']) {
   for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'autorag', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
 }
 if (exists('search-index.json')) {
   const index = JSON.parse(read('search-index.json'));
   if (!Array.isArray(index) || index.length < 20) issues.push('search-index.json should contain at least 20 routes');
-  for (const route of ['search.html', 'live-intel.html', 'epstein-files.html', 'news.html', 'migration-flow.html', 'evidence-vault.html', 'download-center.html', 'trust-center.html']) {
+  for (const route of ['search.html', 'authority-hub.html', 'live-intel.html', 'epstein-files.html', 'news.html', 'migration-flow.html', 'evidence-vault.html', 'download-center.html', 'trust-center.html']) {
     if (!index.some(item => item.url === route)) issues.push(`search-index.json missing route ${route}`);
   }
 }
@@ -36,4 +41,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FREE ASK MATRIX SEARCH TEST PASSED');
-console.log('Checked local-only Ask Matrix search, index routes, no paid AI/API calls, and required public markers.');
+console.log('Checked local-only Ask Matrix search, Phase 12 authority marker, index routes, no paid AI/API calls, and required public markers.');

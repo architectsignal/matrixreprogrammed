@@ -32,6 +32,9 @@ if (exists('data/live-intel-sources.json')) {
     for (const field of ['id', 'title', 'description', 'route', 'evidenceRoute', 'videoRoute', 'bookRoute', 'offerRoute']) {
       if (!lane[field]) fail(`live intel lane ${lane.id || 'unknown'} missing ${field}`);
     }
+    if (lane.offerRoute === 'offer-intelligence-entry.html' || lane.offerRoute === 'offer-crime-dossier-entry.html') {
+      fail(`live intel lane ${lane.id} uses obsolete offerRoute ${lane.offerRoute}`);
+    }
   }
 }
 
@@ -45,18 +48,18 @@ if (exists('data/live-intel.json')) {
   }
 }
 
-for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels', 'HTML sanitizer: active']) {
+for (const marker of ['LIVE INTEL.', 'LIVE INTEL STATUS', 'Source Lanes', 'Latest Actionable Updates', 'Evidence Level', 'Why It Matters', 'Next Action', 'VIDEO HOOK', 'Free Brief', 'Books / Store', 'Rumble Channels', 'HTML sanitizer: active', 'Route normalizer: active']) {
   requireIncludes('live-intel.html', marker, marker);
 }
 
 // Real <a href="..."> tags are required for navigation and CTAs. Only escaped feed markup is reader-visible HTML leakage.
 for (const file of ['live-intel.html', 'downloads/live-intel-latest.md']) {
-  for (const forbidden of ['&lt;a href=', '&lt;font ', '&lt;/a&gt;', '&lt;/font&gt;', '&nbsp;']) {
+  for (const forbidden of ['&lt;a href=', '&lt;font ', '&lt;/a&gt;', '&lt;/font&gt;', '&nbsp;', 'offer-intelligence-entry.html', 'offer-crime-dossier-entry.html']) {
     forbidIncludes(file, forbidden, forbidden);
   }
 }
 for (const file of ['downloads/live-intel-latest.json']) {
-  for (const forbidden of ['<a href=', '<font ', '&lt;a href=', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;']) {
+  for (const forbidden of ['<a href=', '<font ', '&lt;a href=', '&lt;font ', 'target="_blank"', '&nbsp;', '&lt;/a&gt;', '&lt;/font&gt;', 'offer-intelligence-entry.html', 'offer-crime-dossier-entry.html']) {
     forbidIncludes(file, forbidden, forbidden);
   }
 }
@@ -66,6 +69,9 @@ for (const file of ['scripts/update-live-intel.js', 'scripts/update-seven-day-in
   requireIncludes(file, '&lt;', `${file} encoded less-than handling`);
   requireIncludes(file, '&nbsp;', `${file} nbsp handling`);
 }
+requireIncludes('scripts/build-live-intel-machine.js', 'routeAliases', 'Live Intel route normalizer');
+requireIncludes('scripts/build-live-intel-machine.js', 'offer-intelligence-dossiers.html', 'valid intelligence offer route');
+requireIncludes('scripts/build-live-intel-machine.js', 'offer-crime-dossiers.html', 'valid crime offer route');
 for (const file of ['index.html', 'news.html', 'evidence-vault.html', 'epstein-files.html', 'videos.html', 'books.html']) {
   requireIncludes(file, 'live-intel-machine-route', 'Live Intel route patch');
 }
@@ -92,4 +98,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('LIVE INTEL PRESSURE TEST PASSED');
-console.log('Checked source lanes, updater enrichment, static hub, downloads, no reader-visible RSS HTML leakage, legitimate page links, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');
+console.log('Checked source lanes, updater enrichment, static hub, downloads, no reader-visible RSS HTML leakage, legitimate page links, route normalization, page patches, search/sitemap/llms, scheduled workflow, video hooks, opt-ins, offers, book/store routes, npm wiring, and Netlify wiring.');

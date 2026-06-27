@@ -1,0 +1,78 @@
+{
+  "updated": "2026-06-27",
+  "title": "Epstein Sighting Watch",
+  "subtitle": "Official status: deceased. Internet sighting claims: unverified.",
+  "officialBoundary": "The official record treats Jeffrey Epstein as deceased as of August 10, 2019. This watch does not claim he is alive. It tracks internet sightings, lookalike claims, fake-media claims, memes, and public speculation as claims only.",
+  "rules": [
+    "Official status remains deceased unless a public authority or primary record changes it.",
+    "A lookalike, screenshot, anonymous post, or viral video is not proof of identity.",
+    "Do not name, harass, dox, or accuse ordinary people who resemble Epstein.",
+    "Do not publish private addresses, private family details, or unverified personal identifiers.",
+    "Every item must be labelled as claim, sighting, lookalike, fake-media risk, debunk, or public-record relevance.",
+    "The ledger ranks source strength; it does not declare survival."
+  ],
+  "evidenceLevels": [
+    { "level": 0, "label": "Meme / joke", "meaning": "No evidentiary value." },
+    { "level": 1, "label": "Text claim only", "meaning": "Anonymous or unsupported statement." },
+    { "level": 2, "label": "Screenshot repost", "meaning": "Reposted claim with unclear origin or context." },
+    { "level": 3, "label": "Photo / video claim", "meaning": "Image or clip exists, but identity/geolocation/source chain not established." },
+    { "level": 4, "label": "Geolocated media claim", "meaning": "Image or clip has a location/date argument, still not proof of identity." },
+    { "level": 5, "label": "Named witness claim", "meaning": "A named person makes the claim; still needs corroboration." },
+    { "level": 6, "label": "Multiple independent sources", "meaning": "Multiple independent sources report the same claim; still not official proof." },
+    { "level": 7, "label": "Official/public-record relevance", "meaning": "A public authority, court record, or primary source creates a verifiable contradiction or update." }
+  ],
+  "scanQueries": [
+    "Jeffrey Epstein alive",
+    "Epstein alive sighting",
+    "Jeffrey Epstein seen",
+    "Epstein lookalike",
+    "Epstein fake death",
+    "Epstein body double",
+    "Epstein plastic surgery",
+    "Epstein still alive photo",
+    "Epstein seen in public",
+    "Epstein island sighting",
+    "Epstein prison video",
+    "Epstein death hoax",
+    "Epstein fake media AI image",
+    "Epstein facial recognition claim"
+  ],
+  "seedClaims": [
+    {
+      "id": "official-status-boundary",
+      "title": "Official status boundary",
+      "type": "official-record-boundary",
+      "locationClaim": "Federal custody / official record",
+      "evidenceLevel": 7,
+      "status": "official-status-deceased",
+      "summary": "The ledger begins from the official public record: Epstein is treated as deceased. Sightings are claim traffic unless primary records change the status.",
+      "likelyExplanation": "Official death record plus public distrust after custody failures creates ongoing survival rumours.",
+      "sourceType": "official/public-record boundary",
+      "risk": "low"
+    },
+    {
+      "id": "lookalike-claim-class",
+      "title": "Lookalike sighting claim class",
+      "type": "lookalike-risk",
+      "locationClaim": "Any public place",
+      "evidenceLevel": 3,
+      "status": "unverified-claim-class",
+      "summary": "Most viral sightings appear to be lookalike/photo claims without identity chain, geolocation, source custody, or official confirmation.",
+      "likelyExplanation": "Mistaken identity, visual similarity, cropped media, AI enhancement, or hoax framing.",
+      "sourceType": "internet sighting motif",
+      "risk": "high"
+    },
+    {
+      "id": "fake-media-claim-class",
+      "title": "AI / manipulated media claim class",
+      "type": "fake-media-risk",
+      "locationClaim": "Online image/video platforms",
+      "evidenceLevel": 2,
+      "status": "unverified-claim-class",
+      "summary": "Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.",
+      "likelyExplanation": "Synthetic image, altered image, old footage, compression artefact, or repost without origin.",
+      "sourceType": "fake-media risk class",
+      "risk": "high"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ const requiredFiles = [
   'scripts/build-cloudflare-output.js',
   'scripts/build-deploy-status.js',
   'scripts/build-board-split.js',
+  'scripts/apply-hard-board-split.js',
   'scripts/forum-board-split-test.js',
   'data/forum-board-split.json',
   'forum.html',
@@ -44,13 +45,26 @@ const requiredAliases = {
   '/opt-in': '/optin-center.html',
   '/rss': '/feed-center.html',
   '/forum': '/forum.html',
+  '/signal-board': '/forum.html',
   '/main-board': '/forum.html',
   '/speculation-board': '/dark-speculation-forum.html',
   '/dark-speculation-board': '/dark-speculation-forum.html',
   '/epstein-alive-board': '/epstein-alive-board.html',
   '/epstein-sighting-board': '/epstein-alive-board.html',
+  '/epstein-sightings-board': '/epstein-alive-board.html',
   '/amazon-store': '/amazon-store-books.html'
 };
+const hardBoardRoutes = [
+  '/forum-feed-main',
+  '/forum-feed-speculation',
+  '/forum-feed-epstein-alive',
+  '/submit-main-post',
+  '/submit-speculation-post',
+  '/submit-epstein-alive-post',
+  '/report-main-post',
+  '/report-speculation-post',
+  '/report-epstein-alive-post'
+];
 
 if (exists('src/worker.js')) {
   const worker = read('src/worker.js');
@@ -72,9 +86,8 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'boardLabels', 'board labels');
   requireIncludes('src/worker.js', 'boardAware: true', 'board aware health marker');
   requireIncludes('src/worker.js', 'filterPostsByBoard', 'board feed filter');
-  requireIncludes('src/worker.js', '/forum-feed?board=main', 'main board feed');
-  requireIncludes('src/worker.js', '/forum-feed?board=speculation', 'speculation board feed');
-  requireIncludes('src/worker.js', '/forum-feed?board=epstein-alive', 'sighting board feed');
+  requireIncludes('src/worker.js', 'boardFromRoutePath', 'hard board route resolver');
+  for (const route of hardBoardRoutes) requireIncludes('src/worker.js', route, `hard board route ${route}`);
   requireIncludes('src/worker.js', 'handleIntroVoice', 'ElevenLabs intro voice handler');
   requireIncludes('src/worker.js', "originalPath === '/intro-voice'", 'intro voice route');
   requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
@@ -93,7 +106,15 @@ if (exists('src/worker.js')) {
 if (exists('forum.html')) requireIncludes('forum.html', 'data-board="main"', 'main board marker');
 if (exists('dark-speculation-forum.html')) requireIncludes('dark-speculation-forum.html', 'data-board="speculation"', 'speculation board marker');
 if (exists('epstein-alive-board.html')) requireIncludes('epstein-alive-board.html', 'data-board="epstein-alive"', 'sighting board marker');
-if (exists('scripts/harden-public-html.js')) requireIncludes('scripts/harden-public-html.js', 'build-board-split.js', 'board split builder in hardening step');
+if (exists('scripts/harden-public-html.js')) {
+  requireIncludes('scripts/harden-public-html.js', 'build-board-split.js', 'board split builder in hardening step');
+  requireIncludes('scripts/harden-public-html.js', 'apply-hard-board-split.js', 'hard board split in hardening step');
+}
+if (exists('forum.js')) {
+  requireIncludes('forum.js', 'boardFromPath', 'frontend board from path fallback');
+  requireIncludes('forum.js', 'lockFormToBoard', 'frontend form board lock');
+  for (const route of hardBoardRoutes.slice(0, 6)) requireIncludes('forum.js', route, `frontend route ${route}`);
+}
 
 if (exists('welcome-gate.js')) {
   requireIncludes('welcome-gate.js', '/intro-voice', 'welcome gate intro voice endpoint call');
@@ -139,6 +160,7 @@ if (exists('deploy-status.html')) {
   requireIncludes('deploy-status.html', '/epstein', 'Epstein alias proof');
   requireIncludes('deploy-status.html', 'forum.html', 'audit-safe Signal Board link');
   requireIncludes('deploy-status.html', 'Required aliases:', 'visible required alias count');
+  requireIncludes('deploy-status.html', 'Hard Board Worker Endpoints', 'hard board endpoint panel');
   if (/href=["']forum-health["']/i.test(deployStatus)) fail('deploy-status.html must not link to dynamic forum-health as a static page');
 }
 if (exists('deploy-status.json')) {
@@ -153,7 +175,13 @@ if (exists('deploy-status.json')) {
     if (alias && alias.present !== true) fail(`deploy-status.json alias not marked present: ${from} -> ${to}`);
   }
   if (!status.requiredAliasMap || Object.keys(status.requiredAliasMap).length < Object.keys(requiredAliases).length) fail('deploy-status.json missing requiredAliasMap');
+  if (!Array.isArray(status.hardBoardRoutes) || status.hardBoardRoutes.length < hardBoardRoutes.length) fail('deploy-status.json missing hardBoardRoutes array');
+  for (const route of hardBoardRoutes) {
+    const found = (status.hardBoardRoutes || []).find(item => item.route === route && item.present === true);
+    if (!found) fail(`deploy-status.json hardBoardRoutes missing ${route}`);
+  }
   if (!status.liveProof || status.liveProof.forumHealthEndpoint !== '/forum-health') fail('deploy-status.json missing dynamic forum health endpoint note');
+  if (!status.liveProof || status.liveProof.speculationBoardFeed !== '/forum-feed-speculation') fail('deploy-status.json missing speculation board live proof');
 }
 
 requireIncludes('package.json', 'build-deploy-status.js', 'deploy-status builder in npm build');
@@ -167,4 +195,4 @@ if (problems.length) {
 }
 try { require('./forum-board-split-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, three-board Signal Board split, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, ElevenLabs intro voice endpoint, analytics /track-event endpoint, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, hard three-board Signal Board split, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, ElevenLabs intro voice endpoint, analytics /track-event endpoint, wrangler config, deploy-status aliases, and npm build wiring.');

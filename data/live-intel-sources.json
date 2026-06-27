@@ -1,25 +1,26 @@
 {
-  "updated": "2026-06-25",
-  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, Epstein timeline mapping, court records, email releases, declassified-file discovery, elite-control developments, war/conflict routes, financial power, surveillance, and book/video conversion paths.",
+  "updated": "2026-06-27",
+  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, Epstein timeline mapping, court records, email releases, declassified-file discovery, elite-control developments, war/conflict routes, financial power, surveillance, sighting-claim traffic, and book/video conversion paths.",
   "rules": [
     "Prefer primary sources, court records, official releases, archives, and dated reporting.",
     "Do not treat a news mention as proof of wrongdoing.",
     "Every item must keep a source URL, source label, date, lane, and reader route.",
     "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
-    "Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, and network architecture matrix.",
+    "Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, network architecture matrix, and sighting-claim ledger.",
+    "Epstein sighting or alive-claim traffic must be labelled as unverified unless there is an official or primary-source change.",
     "If a feed fails, preserve the page and show the last known source set rather than breaking the build."
   ],
   "lanes": [
     {
       "id": "epstein-files",
       "title": "Epstein Files, Timeline And Court Records",
-      "description": "Public-record updates, court filings, document releases, email-release reporting, archive mirrors, oversight moves, timeline changes, people/entity tracking, and association-boundary briefings.",
+      "description": "Public-record updates, court filings, document releases, email-release reporting, archive mirrors, oversight moves, timeline changes, people/entity tracking, sighting-claim traffic, and association-boundary briefings.",
       "route": "epstein-files.html#epstein-timeline-map",
       "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
       "videoRoute": "videos.html",
       "bookRoute": "book-black-file.html",
       "offerRoute": "offer-starter-library.html",
-      "queries": ["Epstein timeline", "Epstein court records", "Epstein emails", "Epstein documents", "Maxwell habeas", "House Oversight Epstein", "Epstein files released"]
+      "queries": ["Epstein timeline", "Epstein court records", "Epstein emails", "Epstein documents", "Maxwell habeas", "House Oversight Epstein", "Epstein files released", "Epstein alive", "Epstein sighting", "Epstein lookalike", "Epstein death hoax"]
     },
     {
       "id": "declassified-files",
@@ -71,6 +72,11 @@
       "lane": "epstein-files",
       "label": "Google News / Epstein timeline and files",
       "url": "https://news.google.com/rss/search?q=Epstein%20timeline%20OR%20Epstein%20emails%20OR%20Epstein%20documents%20OR%20Epstein%20court%20records%20OR%20Maxwell%20habeas%20OR%20House%20Oversight%20Epstein&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "epstein-files",
+      "label": "Google News / Epstein sighting and alive claims",
+      "url": "https://news.google.com/rss/search?q=%22Jeffrey%20Epstein%22%20%28alive%20OR%20sighting%20OR%20lookalike%20OR%20%22fake%20death%22%20OR%20%22death%20hoax%22%20OR%20%22body%20double%22%20OR%20%22still%20alive%22%20OR%20spotted%20OR%20seen%29&hl=en-US&gl=US&ceid=US:en"
     },
     {
       "lane": "declassified-files",

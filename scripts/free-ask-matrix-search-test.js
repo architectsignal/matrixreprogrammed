@@ -17,14 +17,16 @@ needText('search.html', 'ask-answer');
 needText('search.html', 'id="phase-twelve-authority-engine"');
 needText('search.html', 'Authority Hub');
 needText('search.html', 'authority-evidence-trust.html');
-needText('search.js', 'ASK MATRIX ROUTE');
+needText('search.html', '<script src="search.js"></script>');
+needText('search.js', 'fetch(');
 needText('search.js', 'search-index.json');
-needText('search.js', 'Paid AI calls: none');
-needText('search.js', 'routeHints');
-needText('search.js', 'authority-hub.html');
+needText('search.js', 'archive-search');
+needText('search.js', 'search-results');
 needText('scripts/build-free-ask-matrix-search.js', 'No paid AI');
 needText('scripts/build-free-ask-matrix-search.js', 'search-index.json');
 needText('scripts/build-free-ask-matrix-search.js', 'id="phase-twelve-authority-engine"');
+needText('scripts/build-free-ask-matrix-search.js', 'authority-hub.html');
+needText('scripts/build-free-ask-matrix-search.js', 'routeHints');
 for (const name of ['search.html', 'search.js', 'scripts/build-free-ask-matrix-search.js']) {
   for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'autorag', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
 }
@@ -41,4 +43,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FREE ASK MATRIX SEARCH TEST PASSED');
-console.log('Checked local-only Ask Matrix search, Phase 12 authority marker, index routes, no paid AI/API calls, and required public markers.');
+console.log('Checked local-only Ask Matrix search, Phase 12 authority marker, index routes, no paid AI/API calls, and resilient generated-search wiring.');

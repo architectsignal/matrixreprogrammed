@@ -33,7 +33,7 @@ function cacheHeadersForPath(pathname='') {
 }
 function hardenResponse(response, pathname='') {
   const headers = new Headers(response.headers);
-  if (!headers.has('Cache-Control') || /no-store/i.test(headers.get('Cache-Control') || '') === false) headers.set('Cache-Control', cacheHeadersForPath(pathname));
+  if (!headers.has('Cache-Control') || !/no-store/i.test(headers.get('Cache-Control') || '')) headers.set('Cache-Control', cacheHeadersForPath(pathname));
   headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
   headers.set('X-Content-Type-Options', 'nosniff');
   headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
@@ -41,7 +41,7 @@ function hardenResponse(response, pathname='') {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 function safeNotConfigured(name, extra = {}) {
-  return json({ ok: false, configured: false, error: `${name} not configured`, ...extra }, 200);
+  return json({ ok: false, configured: false, error: String(name || 'service') + ' not configured', ...extra }, 200);
 }
 `;
     w=w.replace('\nasync function handleIntroVoice',helpers+'\nasync function handleIntroVoice'); changed=true;

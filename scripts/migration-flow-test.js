@@ -11,6 +11,7 @@ function forbidText(name, text) { if (exists(name) && read(name).includes(text))
 
 needFile('data/migration-flow-panel.json');
 needFile('migration-flow.html');
+needFile('news.html');
 needText('migration-flow.html', 'MIGRATION FLOW PANEL.');
 needText('migration-flow.html', 'MIGRATION FLOW STATUS');
 needText('migration-flow.html', 'Encounters do not equal people');
@@ -40,6 +41,14 @@ if (!Array.isArray(data.sexualAssaultCountryLane && data.sexualAssaultCountryLan
 for (const region of ['United States','European Union / UK','Mediterranean / Africa','Global Movement']) {
   if (!data.flowPanels || !data.flowPanels.some(p => p.region === region)) issues.push(`missing region ${region}`);
 }
+for (const figure of ['237.5K FY2025 SW border marker', '178K EU detections', '41,472 UK small boats', '800+ dead/missing', '117M–123.2M displaced marker']) {
+  needText('news.html', figure);
+}
+needText('news.html', '256,302 sexual violence offences');
+needText('news.html', '98,190 rape offences');
+needText('news.html', '10 countries mapped');
+needText('news.html', 'Open full migration/source-split panel');
+forbidText('news.html', 'EST. SOURCE-SPLIT');
 for (const country of ['United Kingdom','France','Germany','Sweden','Italy','Spain','Netherlands','Belgium','Austria','United States']) {
   const entry = data.sexualAssaultCountryLane && data.sexualAssaultCountryLane.countries && data.sexualAssaultCountryLane.countries.find(c => c.country === country);
   if (!entry) issues.push(`missing country ${country}`);
@@ -49,6 +58,7 @@ for (const country of ['United Kingdom','France','Germany','Sweden','Italy','Spa
   if (entry && (!Array.isArray(entry.missingSplits) || entry.missingSplits.length < 3)) issues.push(`${country} missing missing split list`);
   if (entry && !entry.sourceUrl) issues.push(`${country} missing sourceUrl`);
   if (entry && !entry.evidenceWarning) issues.push(`${country} missing evidenceWarning`);
+  needText('news.html', country);
 }
 if (issues.length) {
   console.error('MIGRATION FLOW TEST FAILED');
@@ -56,4 +66,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('MIGRATION FLOW TEST PASSED');
-console.log('Checked migration flow categories, official sexual-offence availability, EU 2024 marker, country source split statuses, missing/available split lists, evidence warnings, and deprecated placeholder removal.');
+console.log('Checked migration flow categories, news-page migration figures, official sexual-offence availability, EU 2024 marker, country source split statuses, missing/available split lists, evidence warnings, and deprecated placeholder removal.');

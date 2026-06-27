@@ -1,0 +1,39 @@
+name: Epstein Sighting Watch Weekly Update
+
+on:
+  schedule:
+    - cron: '41 4 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-epstein-sighting-watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update seven-day intel and rebuild Epstein Sighting Watch
+        run: npm run epstein-sightings
+
+      - name: Commit updated Epstein Sighting Watch outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/live-intel.json data/epstein-sighting-scan.json downloads/seven-day-intel.json downloads/epstein-sighting-watch.json downloads/epstein-sighting-watch.md epstein-sighting-watch.html epstein-sighting-submit.html epstein-files.html search-index.json sitemap.xml llms.txt || true
+          if git diff --cached --quiet; then
+            echo "No Epstein Sighting Watch updates to commit."
+          else
+            git commit -m "Weekly Epstein Sighting Watch update"
+            git push
+          fi

@@ -8,7 +8,8 @@
     "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
     "Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, network architecture matrix, and sighting-claim ledger.",
     "Epstein sighting or alive-claim traffic must be labelled as unverified unless there is an official or primary-source change.",
-    "If a feed fails, preserve the page and show the last known source set rather than breaking the build."
+    "If a feed fails, preserve the page and show the last known source set rather than breaking the build.",
+    "Offer routes must resolve to existing generated pages before Live Intel is rendered."
   ],
   "lanes": [
     {
@@ -52,7 +53,7 @@
       "evidenceRoute": "evidence-vault.html",
       "videoRoute": "videos.html",
       "bookRoute": "book-intelligence-dossiers.html",
-      "offerRoute": "offer-intelligence-entry.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
       "queries": ["intelligence oversight", "defense contractor investigation", "war powers oversight"]
     },
     {
@@ -63,7 +64,7 @@
       "evidenceRoute": "network-maps.html",
       "videoRoute": "videos.html",
       "bookRoute": "book-crime-dossiers.html",
-      "offerRoute": "offer-crime-dossier-entry.html",
+      "offerRoute": "offer-crime-dossiers.html",
       "queries": ["organized crime money laundering", "cartel network indictment", "state corruption organized crime"]
     }
   ],

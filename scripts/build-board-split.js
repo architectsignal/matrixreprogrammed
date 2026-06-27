@@ -9,10 +9,11 @@ function write(name, value){ fs.writeFileSync(file(name), value); }
 function esc(s=''){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function ensureBodyBoard(html, board){ return html.replace('<body>', `<body data-board="${board}">`).replace(/<body data-board="[^"]*">/, `<body data-board="${board}">`); }
 function ensureFormBoard(html, board){
-  html = html.replace(/<form id="signal-board-form"(?![^>]*data-board=)/, `<form id="signal-board-form" data-board="${board}"`);
-  html = html.replace(/<form id="signal-board-form" data-board="[^"]*"/, `<form id="signal-board-form" data-board="${board}"`);
-  if (!html.includes(`name="board" value="${board}"`)) html = html.replace('<form id="signal-board-form"', `<form id="signal-board-form"><input type="hidden" name="board" value="${board}" />`).replace(`<form id="signal-board-form"><input type="hidden" name="board" value="${board}" /> data-board`, `<form id="signal-board-form" data-board`);
-  return html;
+  html = html.replace(/<input\s+type="hidden"\s+name="board"\s+value="[^"]*"\s*\/?>/gi, '');
+  return html.replace(/<form\s+id="signal-board-form"([^>]*)>/i, (full, attrs) => {
+    const cleaned = String(attrs || '').replace(/\sdata-board="[^"]*"/i, '').trim();
+    return `<form id="signal-board-form" data-board="${board}"${cleaned ? ' ' + cleaned : ''}><input type="hidden" name="board" value="${board}" />`;
+  });
 }
 function ensureBoardNav(html){
   const block = '<a href="forum.html">Main Board</a><a href="dark-speculation-forum.html">Speculation Board</a><a href="epstein-alive-board.html">Epstein Sighting Board</a>';

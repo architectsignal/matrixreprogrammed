@@ -65,8 +65,12 @@ if (exists('sitemap.xml')) {
 }
 if (exists('llms.txt')) {
   let txt = read('llms.txt');
-  const block = '\n\nSignal Board Split:\n- /forum.html: main Signal Board for general source drops and reader questions.\n- /dark-speculation-forum.html: separate Dark Speculation Board.\n- /epstein-alive-board.html: separate Epstein Sighting Board.\n- Worker feeds: /forum-feed?board=main, /forum-feed?board=speculation, /forum-feed?board=epstein-alive.\n';
-  if (!txt.includes('/epstein-alive-board.html')) write('llms.txt', `${txt.trim()}${block}`);
+  txt = txt.replace('/forum-feed?board=main', '/forum-feed-main')
+           .replace('/forum-feed?board=speculation', '/forum-feed-speculation')
+           .replace('/forum-feed?board=epstein-alive', '/forum-feed-epstein-alive');
+  const block = '\n\nSignal Board Split:\n- /forum.html: main Signal Board for general source drops and reader questions.\n- /dark-speculation-forum.html: separate Dark Speculation Board.\n- /epstein-alive-board.html: separate Epstein Sighting Board.\n- Worker feeds: /forum-feed-main, /forum-feed-speculation, /forum-feed-epstein-alive.\n- Worker submit routes: /submit-main-post, /submit-speculation-post, /submit-epstein-alive-post.\n';
+  if (!txt.includes('/forum-feed-epstein-alive')) txt = `${txt.trim()}${block}`;
+  write('llms.txt', txt);
 }
 if (exists('search-index.json')) {
   const index = JSON.parse(read('search-index.json'));
@@ -79,8 +83,8 @@ if (exists('search-index.json')) {
   write('search-index.json', JSON.stringify(index, null, 2));
 }
 write('data/forum-board-split.json', JSON.stringify({ updated: new Date().toISOString(), boards: [
-  { id:'main', title:'Main Signal Board', route:'forum.html', feed:'/forum-feed?board=main' },
-  { id:'speculation', title:'Dark Speculation Board', route:'dark-speculation-forum.html', feed:'/forum-feed?board=speculation' },
-  { id:'epstein-alive', title:'Epstein Sighting Board', route:'epstein-alive-board.html', feed:'/forum-feed?board=epstein-alive' }
+  { id:'main', title:'Main Signal Board', route:'forum.html', feed:'/forum-feed-main', submit:'/submit-main-post', report:'/report-main-post' },
+  { id:'speculation', title:'Dark Speculation Board', route:'dark-speculation-forum.html', feed:'/forum-feed-speculation', submit:'/submit-speculation-post', report:'/report-speculation-post' },
+  { id:'epstein-alive', title:'Epstein Sighting Board', route:'epstein-alive-board.html', feed:'/forum-feed-epstein-alive', submit:'/submit-epstein-alive-post', report:'/report-epstein-alive-post' }
 ]}, null, 2));
 console.log('Built three-board Signal Board split: main, speculation, epstein-alive.');

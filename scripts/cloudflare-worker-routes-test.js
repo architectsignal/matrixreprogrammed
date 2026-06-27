@@ -14,6 +14,12 @@ const requiredFiles = [
   'wrangler.toml',
   'scripts/build-cloudflare-output.js',
   'scripts/build-deploy-status.js',
+  'scripts/build-board-split.js',
+  'scripts/forum-board-split-test.js',
+  'data/forum-board-split.json',
+  'forum.html',
+  'dark-speculation-forum.html',
+  'epstein-alive-board.html',
   'deploy-status.html',
   'deploy-status.json',
   'downloads/deploy-status.json',
@@ -38,6 +44,11 @@ const requiredAliases = {
   '/opt-in': '/optin-center.html',
   '/rss': '/feed-center.html',
   '/forum': '/forum.html',
+  '/main-board': '/forum.html',
+  '/speculation-board': '/dark-speculation-forum.html',
+  '/dark-speculation-board': '/dark-speculation-forum.html',
+  '/epstein-alive-board': '/epstein-alive-board.html',
+  '/epstein-sighting-board': '/epstein-alive-board.html',
   '/amazon-store': '/amazon-store-books.html'
 };
 
@@ -58,6 +69,12 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'handleForumPostsMarkdown', 'forum posts Markdown download handler');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.json'", 'dynamic forum posts JSON route');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.md'", 'dynamic forum posts Markdown route');
+  requireIncludes('src/worker.js', 'boardLabels', 'board labels');
+  requireIncludes('src/worker.js', 'boardAware: true', 'board aware health marker');
+  requireIncludes('src/worker.js', 'filterPostsByBoard', 'board feed filter');
+  requireIncludes('src/worker.js', '/forum-feed?board=main', 'main board feed');
+  requireIncludes('src/worker.js', '/forum-feed?board=speculation', 'speculation board feed');
+  requireIncludes('src/worker.js', '/forum-feed?board=epstein-alive', 'sighting board feed');
   requireIncludes('src/worker.js', 'handleIntroVoice', 'ElevenLabs intro voice handler');
   requireIncludes('src/worker.js', "originalPath === '/intro-voice'", 'intro voice route');
   requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
@@ -72,6 +89,11 @@ if (exists('src/worker.js')) {
     if (!worker.includes(`'${from}': '${to}'`)) fail(`src/worker.js missing Cloudflare alias ${from} -> ${to}`);
   }
 }
+
+if (exists('forum.html')) requireIncludes('forum.html', 'data-board="main"', 'main board marker');
+if (exists('dark-speculation-forum.html')) requireIncludes('dark-speculation-forum.html', 'data-board="speculation"', 'speculation board marker');
+if (exists('epstein-alive-board.html')) requireIncludes('epstein-alive-board.html', 'data-board="epstein-alive"', 'sighting board marker');
+if (exists('scripts/harden-public-html.js')) requireIncludes('scripts/harden-public-html.js', 'build-board-split.js', 'board split builder in hardening step');
 
 if (exists('welcome-gate.js')) {
   requireIncludes('welcome-gate.js', '/intro-voice', 'welcome gate intro voice endpoint call');
@@ -143,5 +165,6 @@ if (problems.length) {
   console.error(`\n${problems.length} issue(s) found.\n`);
   process.exit(1);
 }
+try { require('./forum-board-split-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, ElevenLabs intro voice endpoint, analytics /track-event endpoint, wrangler config, and npm build wiring.');
+console.log('Checked Worker alias map, three-board Signal Board split, persistent FORUM_POSTS KV namespace, durable post:* scan, self-healing forum index, dynamic forum downloads, ElevenLabs intro voice endpoint, analytics /track-event endpoint, wrangler config, and npm build wiring.');

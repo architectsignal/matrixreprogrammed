@@ -1,27 +1,27 @@
 {
-  "updated": "2026-06-27T00:45:00+02:00",
-  "purpose": "Deploy trigger after hiding visible compatibility marker text on the homepage.",
+  "updated": "2026-06-27T01:00:00+02:00",
+  "purpose": "Deploy trigger after adding the machine sharpening upgrade: deploy health, cleaner homepage doors, and stronger reader conversion paths.",
   "deployIntent": "Build and deploy the complete upgraded Cloudflare site from current main.",
-  "criticalFix": "Compatibility pressure-test markers that leaked as reader-visible text are now scrubbed from visible HTML and reinserted inside a hidden marker vault by scripts/hide-visible-compatibility-markers.js.",
+  "criticalFix": "The site now has a late-stage machine sharpening builder that adds deploy-health.html, simplifies the homepage around three primary doors, preserves the hidden eye gate, and adds reader next-step panels to major conversion pages without removing the existing archive.",
   "includedUpgrades": [
+    "deploy-health.html and downloads/deploy-health.json",
+    "homepage three-door entry: Black File, Evidence Vault, Books",
+    "reader money path panel on homepage",
+    "reader next-step panels on Black File, Epstein, Evidence Vault, Live Intel, Books, and Download Center",
     "visible compatibility marker cleanup",
     "hidden CI marker vault for preserved test strings",
     "all-seeing-eye homepage footer gate to dark-speculation-lab.html",
     "dark-speculation-lab.html root fallback page",
     "dark-speculation-forum.html root fallback page",
-    "obvious speculation nav links removed from fallback pages",
-    "speculation pages removed from visible search/sitemap/llms discovery during build",
-    "branded PDF mini-book covers and table of contents",
-    "subject intelligence profile PDFs and HTML hubs",
-    "source-card-index compatibility alias",
-    "Link Audit builds generated site before auditing"
+    "branded PDF mini-book covers and subject intelligence hubs"
   ],
   "cloudflareExpected": [
     "npm run build",
     "scripts/hide-visible-compatibility-markers.js runs after compatibility restore",
+    "scripts/build-machine-sharpening-upgrade.js runs late in the build",
     "build-cloudflare-output.js copies deployable files into _site",
     "wrangler deploy serves _site through src/worker.js",
-    "homepage bottom should show normal footer plus one all-seeing eye, not raw marker text"
+    "homepage should show the cleaner three-door entry and a single all-seeing-eye gate"
   ],
   "expected": "Fresh push should trigger connected Cloudflare build/deploy against current main."
 }

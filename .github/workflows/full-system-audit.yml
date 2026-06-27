@@ -22,6 +22,8 @@ on:
 
 permissions:
   contents: read
+  issues: write
+  actions: read
 
 concurrency:
   group: full-system-audit-${{ github.ref }}
@@ -69,3 +71,37 @@ jobs:
             downloads/deploy-status.json
           if-no-files-found: ignore
           retention-days: 21
+
+      - name: Post audit report to GitHub issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const title = 'Full System Audit Report';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const mdPath = path.join(process.cwd(), 'downloads', 'full-system-audit.md');
+            const jsonPath = path.join(process.cwd(), 'downloads', 'full-system-audit.json');
+            let reportMd = fs.existsSync(mdPath) ? fs.readFileSync(mdPath, 'utf8') : '# Full System Audit\n\nReport file was not generated. Open the workflow logs.';
+            let status = '${{ job.status }}';
+            let summary = '';
+            if (fs.existsSync(jsonPath)) {
+              try {
+                const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+                status = data.ok ? 'PASS' : 'FAIL';
+                summary = `\n\n## Machine Summary\n\n- Status: ${status}\n- Commands: ${data.summary?.commandCount ?? 'unknown'}\n- Failed commands: ${data.summary?.failedCommands ?? 'unknown'}\n- Systems checked: ${data.summary?.systemCount ?? 'unknown'}\n- Failed systems: ${data.summary?.failedSystems ?? 'unknown'}\n`;
+              } catch {}
+            }
+            if (reportMd.length > 45000) reportMd = reportMd.slice(0, 45000) + '\n\n_Report truncated. Open the workflow artifact for the full report._';
+            const body = `# Latest Full System Audit\n\nStatus: **${status}**\n\nWorkflow run: ${runUrl}\n\nArtifacts: open the workflow run and download **full-system-audit-reports**.\n${summary}\n---\n\n${reportMd}`;
+            const search = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${title}"`
+            });
+            if (search.data.items.length) {
+              const issue_number = search.data.items[0].number;
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number, body });
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number, body: `Full System Audit finished with **${status}**.\n\nRun: ${runUrl}` });
+            } else {
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['full-system-audit'] });
+            }

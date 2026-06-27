@@ -1,0 +1,71 @@
+name: Full System Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs after the daily update and master-audit windows.
+    - cron: '47 10 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'src/**'
+      - 'data/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'wrangler.toml'
+      - 'netlify.toml'
+      - '**.html'
+      - '**.css'
+      - '**.js'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-system-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  full-system-audit:
+    name: Full build, double audit, subsystem pressure tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run full system audit
+        run: node scripts/full-system-audit.js
+
+      - name: Upload full system audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-system-audit-reports
+          path: |
+            downloads/full-system-audit.json
+            downloads/full-system-audit.md
+            downloads/site-wide-function-audit.json
+            downloads/site-wide-function-audit.md
+            site-quality-report.html
+            site-freshness-report.html
+            data/site-quality-report.json
+            data/site-freshness-report.json
+            deploy-status.json
+            downloads/deploy-status.json
+          if-no-files-found: ignore
+          retention-days: 21

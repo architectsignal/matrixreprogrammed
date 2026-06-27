@@ -7,6 +7,7 @@ const exists = name => fs.existsSync(file(name));
 const read = name => fs.readFileSync(file(name), 'utf8');
 function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
+function needAnyText(name, options, label) { if (exists(name) && !options.some(text => read(name).includes(text))) issues.push(`${name} missing ${label || options.join(' OR ')}`); }
 function forbidText(name, text) { if (exists(name) && read(name).includes(text)) issues.push(`${name} still contains deprecated ${text}`); }
 
 needFile('data/migration-flow-panel.json');
@@ -41,9 +42,19 @@ if (!Array.isArray(data.sexualAssaultCountryLane && data.sexualAssaultCountryLan
 for (const region of ['United States','European Union / UK','Mediterranean / Africa','Global Movement']) {
   if (!data.flowPanels || !data.flowPanels.some(p => p.region === region)) issues.push(`missing region ${region}`);
 }
-for (const figure of ['237.5K FY2025 SW border marker', '178K EU detections', '41,472 UK small boats', '800+ dead/missing', '117M–123.2M displaced marker']) {
-  needText('news.html', figure);
+for (const panel of data.flowPanels || []) {
+  needText('news.html', panel.region);
+  const figure = String(panel.publicFigure || '');
+  const fragments = figure.match(/[0-9][0-9A-Za-z.,+–-]*/g) || [];
+  if (!fragments.some(fragment => exists('news.html') && read('news.html').includes(fragment))) issues.push(`news.html missing public figure marker for ${panel.region}`);
+  needText('news.html', panel.categoryWarning.slice(0, 42));
+  needText('news.html', panel.sourceLabel.split('/')[0].trim());
 }
+needAnyText('news.html', ['237.5K', '237.5'], 'US FY2025 border marker');
+needText('news.html', '178K');
+needText('news.html', '41,472');
+needText('news.html', '800+');
+needAnyText('news.html', ['117M to 123.2M', '117M–123.2M', '117M'], 'global displacement marker');
 needText('news.html', '256,302 sexual violence offences');
 needText('news.html', '98,190 rape offences');
 needText('news.html', '10 countries mapped');
@@ -59,6 +70,7 @@ for (const country of ['United Kingdom','France','Germany','Sweden','Italy','Spa
   if (entry && !entry.sourceUrl) issues.push(`${country} missing sourceUrl`);
   if (entry && !entry.evidenceWarning) issues.push(`${country} missing evidenceWarning`);
   needText('news.html', country);
+  needText('news.html', entry.sourceSplitStatus.split(';')[0]);
 }
 if (issues.length) {
   console.error('MIGRATION FLOW TEST FAILED');

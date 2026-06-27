@@ -6,10 +6,38 @@ const htmlFiles = fs.readdirSync(root).filter((file) => file.endsWith('.html'));
 const fileSet = new Set(fs.readdirSync(root));
 const failures = [];
 const warnings = [];
+const dynamicWorkerRoutes = new Set([
+  'forum-health',
+  '/forum-health',
+  'forum-feed',
+  '/forum-feed',
+  'submit-forum-post',
+  '/submit-forum-post',
+  'report-forum-post',
+  '/report-forum-post',
+  'track-event',
+  '/track-event',
+  'intro-voice',
+  '/intro-voice',
+  'downloads/forum-posts.json',
+  '/downloads/forum-posts.json',
+  'downloads/forum-posts.md',
+  '/downloads/forum-posts.md',
+  'forum-posts.json',
+  '/forum-posts.json',
+  'forum-posts.md',
+  '/forum-posts.md'
+]);
+
+function normalizeTarget(target) {
+  return target.split('#')[0].split('?')[0].trim();
+}
 
 function existsLocal(target) {
-  const clean = target.split('#')[0].split('?')[0];
+  const clean = normalizeTarget(target);
   if (!clean || clean.startsWith('#')) return true;
+  if (dynamicWorkerRoutes.has(clean)) return true;
+  if (dynamicWorkerRoutes.has(clean.replace(/^\//, ''))) return true;
   if (clean.startsWith('/')) return fileSet.has(clean.replace(/^\//, ''));
   return fileSet.has(clean) || fs.existsSync(path.join(root, clean));
 }
@@ -63,4 +91,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Link audit passed for ${htmlFiles.length} HTML files.`);
+console.log(`Link audit passed for ${htmlFiles.length} HTML files. Dynamic Worker endpoints allowed: ${dynamicWorkerRoutes.size}.`);

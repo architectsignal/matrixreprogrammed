@@ -1,0 +1,99 @@
+name: Site-Wide Master Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'data/**'
+      - 'src/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'wrangler.toml'
+      - 'netlify.toml'
+      - '**.html'
+      - '**.css'
+      - '**.js'
+  schedule:
+    # Daily master audit after the daily refresh and normal pressure-test windows.
+    - cron: '17 10 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-wide-master-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  master-audit:
+    name: Build twice, audit twice, pressure-test critical routes
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Prebuild syntax, package, JSON, and workflow audit
+        run: npm run audit:master:prebuild
+
+      - name: First full build and pressure-test chain
+        run: npm run build
+
+      - name: First postbuild master audit
+        run: npm run audit:master:postbuild
+
+      - name: Critical focused pressure tests after first build
+        run: |
+          npm run pressure-test:live-intel
+          npm run pressure-test:migration-flow
+          npm run pressure-test:epstein-watch
+          npm run pressure-test:cloudflare
+          npm run pressure-test:ten
+          npm run pressure-test:intel-analytics
+
+      - name: Second full build to catch order-dependent overwrites
+        run: npm run build
+
+      - name: Second postbuild master audit
+        run: npm run audit:master:postbuild
+
+      - name: Second critical focused pressure tests
+        run: |
+          npm run pressure-test:live-intel
+          npm run pressure-test:migration-flow
+          npm run pressure-test:epstein-watch
+          npm run pressure-test:cloudflare
+          npm run pressure-test:ten
+          npm run pressure-test:intel-analytics
+
+      - name: Upload master audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-wide-master-audit-reports
+          path: |
+            downloads/site-wide-function-audit.json
+            downloads/site-wide-function-audit.md
+            site-quality-report.html
+            site-freshness-report.html
+            data/site-quality-report.json
+            data/site-freshness-report.json
+            deploy-status.json
+            downloads/deploy-status.json
+          if-no-files-found: ignore
+          retention-days: 14

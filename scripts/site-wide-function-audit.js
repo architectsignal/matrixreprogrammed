@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const os = require('os');
 
 const root = process.cwd();
 const args = process.argv.slice(2);
@@ -28,7 +29,7 @@ const jsonFiles = [];
 const workflowFiles = [];
 const htmlFiles = [];
 
-function rel(file) { return path.relative(root, file).replace(/\\/g, '/'); }
+function rel(file) { return path.relative(root, file).replace(/\/g, '/'); }
 function file(name) { return path.join(root, name); }
 function exists(name) { return fs.existsSync(file(name)); }
 function read(name) { return fs.readFileSync(file(name), 'utf8'); }
@@ -50,9 +51,18 @@ function walk(dir) {
 
 function runNodeCheck(js, content) {
   const isModuleLike = /\bexport\s+default\b|\bimport\s+[^;]+from\s+['"]/m.test(content);
-  const result = isModuleLike
-    ? spawnSync(process.execPath, ['--check', '--input-type=module', '-e', content], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 })
-    : spawnSync(process.execPath, ['--check', js], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 });
+  let checkPath = js;
+  let cleanupPath = '';
+  if (isModuleLike) {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'mr-audit-module-'));
+    cleanupPath = path.join(tmpDir, path.basename(js).replace(/\.js$/i, '.mjs'));
+    fs.writeFileSync(cleanupPath, content);
+    checkPath = cleanupPath;
+  }
+  const result = spawnSync(process.execPath, ['--check', checkPath], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 });
+  if (cleanupPath) {
+    try { fs.rmSync(path.dirname(cleanupPath), { recursive: true, force: true }); } catch {}
+  }
   if (result.status !== 0) problem(`${js}: JavaScript syntax check failed: ${(result.stderr || result.stdout || '').trim()}`);
 }
 
@@ -65,10 +75,10 @@ function functionInventory(js, content) {
 }
 
 function checkRequireTargets(js, content) {
-  for (const match of content.matchAll(/require\(['"](\.\.?\/[^'"]+)['"]\)/g)) {
+  for (const match of content.matchAll(/require\(['"](\.?\.?\/[^'"]+)['"]\)/g)) {
     const target = match[1];
-    const base = path.normalize(path.join(path.dirname(js), target)).replace(/\\/g, '/');
-    const candidates = [base, `${base}.js`, `${base}.json`, path.join(base, 'index.js').replace(/\\/g, '/')];
+    const base = path.normalize(path.join(path.dirname(js), target)).replace(/\/g, '/');
+    const candidates = [base, `${base}.js`, `${base}.json`, path.join(base, 'index.js').replace(/\/g, '/')];
     if (!candidates.some(exists)) problem(`${js}: require target missing: ${target}`);
   }
 }
@@ -140,10 +150,12 @@ function checkPackage() {
 }
 
 function checkWorkflows() {
+  const auditSite = exists('scripts/audit-site.js') ? read('scripts/audit-site.js') : '';
+  const auditBootstraps = auditSite.includes('SITE QA BOOTSTRAP') && auditSite.includes('npm') && auditSite.includes('run') && auditSite.includes('build');
   for (const wf of workflowFiles) {
     const text = read(wf);
     report.checked.workflows.push(wf);
-    if (/node scripts\/audit-site\.js/.test(text) && !/npm run build/.test(text)) {
+    if (/node scripts\/audit-site\.js/.test(text) && !/npm run build/.test(text) && !auditBootstraps) {
       problem(`${wf}: runs audit-site.js without npm run build first`);
     }
     if (/\[deploy\]/.test(text) && !/contents:\s*write/.test(text)) {

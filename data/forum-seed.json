@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-25",
-  "mode": "static-cloudflare-seed",
-  "notice": "Cloudflare static mode: public forum posts require a backend binding. Until a Cloudflare Worker/KV backend is connected, the board displays seed notices and stores new posts on the reader device.",
+  "updated": "2026-06-28",
+  "mode": "public-signal-seed",
+  "notice": "Public Signal Board starter post.",
   "posts": [
     {
-      "id": "seed-forum-cloudflare-mode",
-      "category": "Signal Board Status",
+      "id": "seed-forum-public-source-drop",
+      "category": "Source Drop",
       "name": "Matrix Reprogrammed",
-      "title": "Cloudflare Static Forum Mode",
-      "body": "The Signal Board is readable on Cloudflare. Posting uses local device storage until a Cloudflare Worker/KV backend is connected. Source drops can still be copied and sent through the contact or email route.",
+      "title": "Post a source, not a rumour",
+      "body": "Drop public links, documents, court records, archive pages, official releases, useful questions, or reader notes. Keep claims tied to sources and separate evidence from speculation.",
       "sourceUrl": "evidence-vault.html",
-      "createdAt": "2026-06-25T00:00:00Z"
+      "createdAt": "2026-06-28T00:00:00Z"
     }
   ]
 }

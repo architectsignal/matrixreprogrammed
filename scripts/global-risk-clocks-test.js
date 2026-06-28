@@ -10,6 +10,7 @@ function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
 function warnFile(name) { if (!exists(name)) forumWarnings.push(`missing ${name}`); }
 function warnText(name, text) { if (exists(name) && !read(name).includes(text)) forumWarnings.push(`${name} missing ${text}`); }
+function warnNoText(name, text) { if (exists(name) && read(name).includes(text)) forumWarnings.push(`${name} should not show internal copy: ${text}`); }
 function routeExists(route = '') {
   const clean = String(route).split('#')[0].split('?')[0];
   if (!clean || /^https?:\/\//i.test(clean)) return true;
@@ -58,7 +59,9 @@ warnText('forum.js', '/submit-speculation-post');
 warnText('forum.js', '/submit-epstein-alive-post');
 warnText('forum.js', 'LOCAL_POSTS_KEY');
 warnText('forum.js', 'loadFallback');
-warnText('forum.js', 'backend unavailable');
+warnText('forum.js', 'Signal Board is syncing');
+warnText('forum.js', 'pending sync');
+for (const phrase of ['backend unavailable','Backend detail','Cloudflare Static Forum Mode','saved on this device','Cloudflare test route']) warnNoText('forum.js', phrase);
 
 const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/global-risk-clocks.json')) : {};
 if (!Array.isArray(data.clocks) || data.clocks.length !== 12) issues.push('global risk clocks must contain 12 clocks');

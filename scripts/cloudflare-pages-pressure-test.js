@@ -16,6 +16,7 @@ requireFile('package.json');
 requireFile('wrangler.jsonc');
 requireFile('src/worker.js');
 requireFile('scripts/build-cloudflare-output.js');
+requireFile('scripts/patch-worker-pages-origin.js');
 
 const redirects = exists('_redirects') ? read('_redirects') : '';
 for (const route of [
@@ -32,9 +33,12 @@ if (/\.html\s+301/.test(redirects)) fail('repo _redirects still contains .html 3
 
 const headers = exists('_headers') ? read('_headers') : '';
 for (const marker of [
+  'Strict-Transport-Security',
   'Referrer-Policy: strict-origin-when-cross-origin',
   'X-Content-Type-Options: nosniff',
   'X-Frame-Options: SAMEORIGIN',
+  'max-age=31536000',
+  'immutable',
   '/downloads/*.pdf',
   'Content-Type: application/pdf',
   '/downloads/*.json',
@@ -54,7 +58,8 @@ requireIncludes('CLOUDFLARE_PAGES_SETUP.md', 'Node version: `22`', 'Cloudflare N
 requireIncludes('wrangler.jsonc', '"main": "src/worker.js"', 'Wrangler worker router entrypoint');
 requireIncludes('wrangler.jsonc', '"binding": "ASSETS"', 'Wrangler ASSETS binding');
 requireIncludes('wrangler.jsonc', '"directory": "_site"', 'Wrangler _site assets directory');
-for (const marker of ['env.ASSETS.fetch', '.html', '/index.html']) requireIncludes('src/worker.js', marker, `Worker fallback marker ${marker}`);
+for (const marker of ['PAGES_STATIC_ORIGIN', 'https://matrixreprogrammed.pages.dev', 'new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN)', 'cacheEverything', 'cacheTtlByStatus', '.html', '/index.html']) requireIncludes('src/worker.js', marker, `Worker Pages-origin proxy marker ${marker}`);
+if (read('src/worker.js').includes('env.ASSETS.fetch')) fail('src/worker.js still contains stale ASSETS fetch path');
 for (const marker of ['node_modules', 'copyHtmlRouteVariant', 'blockedFiles', '_redirects', 'must not be deployed']) requireIncludes('scripts/build-cloudflare-output.js', marker, `Cloudflare output builder marker ${marker}`);
 
 if (problems.length) {
@@ -64,4 +69,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE PAGES PRESSURE TEST PASSED');
-console.log('Checked Cloudflare Worker router, ASSETS binding, _headers, setup guide, _site assets, route fallbacks, and verified _redirects is excluded from Worker output.');
+console.log('Checked Cloudflare Pages setup, strong headers, Pages-origin Worker proxy, _site assets, and route fallbacks.');

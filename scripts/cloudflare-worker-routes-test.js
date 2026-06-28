@@ -8,9 +8,10 @@ function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg){ problems.push(msg); }
 function requireFile(file){ if(!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text){ if(!exists(file)) return; if(!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function forbidIncludes(file, text, label = text){ if(!exists(file)) return; if(read(file).includes(text)) fail(`${file}: should not contain ${label}`); }
 
 const requiredFiles = [
-  'src/worker.js','wrangler.toml','_headers','scripts/build-cloudflare-output.js','scripts/build-deploy-status.js','scripts/build-board-split.js','scripts/apply-hard-board-split.js','scripts/build-newsletter-system.js','scripts/newsletter-system-test.js','scripts/build-cloudflare-error-hardening.js','scripts/cloudflare-error-hardening-test.js','scripts/forum-board-split-test.js','data/forum-board-split.json','forum.html','dark-speculation-forum.html','epstein-alive-board.html','newsletter.html','newsletter.js','deploy-status.html','deploy-status.json','downloads/deploy-status.json','downloads/forum-posts.json','downloads/forum-posts.md','downloads/weekly-newsletter-latest.json','downloads/weekly-newsletter-latest.md','analytics.js','welcome-gate.js','welcome-gate.css','package.json'
+  'src/worker.js','wrangler.toml','_headers','scripts/build-cloudflare-output.js','scripts/build-deploy-status.js','scripts/build-board-split.js','scripts/apply-hard-board-split.js','scripts/patch-worker-pages-origin.js','scripts/build-newsletter-system.js','scripts/newsletter-system-test.js','scripts/build-cloudflare-error-hardening.js','scripts/cloudflare-error-hardening-test.js','scripts/forum-board-split-test.js','data/forum-board-split.json','forum.html','dark-speculation-forum.html','epstein-alive-board.html','newsletter.html','newsletter.js','deploy-status.html','deploy-status.json','downloads/deploy-status.json','downloads/forum-posts.json','downloads/forum-posts.md','downloads/weekly-newsletter-latest.json','downloads/weekly-newsletter-latest.md','analytics.js','welcome-gate.js','welcome-gate.css','package.json'
 ];
 requiredFiles.forEach(requireFile);
 
@@ -25,7 +26,11 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'const routeAliases = {', 'routeAliases map');
   requireIncludes('src/worker.js', 'routeAliases[originalPath]', 'original route alias lookup');
   requireIncludes('src/worker.js', 'routeAliases[normalizedPath]', 'normalized route alias lookup');
-  requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch');
+  requireIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'Pages static origin constant');
+  requireIncludes('src/worker.js', 'https://matrixreprogrammed.pages.dev', 'Pages static origin URL');
+  requireIncludes('src/worker.js', 'new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN)', 'Pages origin asset URL builder');
+  requireIncludes('src/worker.js', 'cacheEverything', 'Cloudflare edge cache for proxied Pages assets');
+  forbidIncludes('src/worker.js', 'env.ASSETS.fetch', 'empty standalone Worker ASSETS fetch');
   requireIncludes('src/worker.js', 'isHostileProbePath', 'hostile probe classifier');
   requireIncludes('src/worker.js', 'hardenResponse', 'cache/security response hardener');
   requireIncludes('src/worker.js', 'safeNotConfigured', 'safe configured-false response');
@@ -72,6 +77,7 @@ if (exists('newsletter.js')) { requireIncludes('newsletter.js', '/newsletter-sig
 if (exists('newsletter.html')) { requireIncludes('newsletter.html', 'Weekly Signal Drop', 'newsletter page copy'); requireIncludes('newsletter.html', 'newsletter.js', 'newsletter client script'); }
 if (exists('llms.txt')) requireIncludes('llms.txt', '/newsletter-signup', 'newsletter llms route');
 if (exists('wrangler.toml')) { requireIncludes('wrangler.toml', 'main = "src/worker.js"', 'Cloudflare worker entrypoint'); requireIncludes('wrangler.toml', 'directory = "./_site"', 'Cloudflare asset directory'); requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV binding'); requireIncludes('wrangler.toml', '99996d87016d4285a833707cbda5232f', 'persistent FORUM_POSTS namespace id'); }
+requireIncludes('package.json', 'patch-worker-pages-origin.js', 'Pages origin proxy patch in npm build');
 requireIncludes('package.json', 'build-deploy-status.js', 'deploy-status builder in npm build');
 requireIncludes('package.json', 'cloudflare-worker-routes-test.js', 'Cloudflare Worker route test in npm build');
 
@@ -80,4 +86,4 @@ try { require('./forum-board-split-test.js'); } catch (error) { console.error(er
 try { require('./newsletter-system-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 try { require('./cloudflare-error-hardening-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, hard three-board Signal Board split, Cloudflare newsletter capture, Cloudflare error hardening, persistent FORUM_POSTS KV namespace, dynamic forum/newsletter routes, ElevenLabs intro voice endpoint, analytics endpoint, wrangler config, deploy-status aliases, and npm build wiring.');
+console.log('Checked Worker alias map, Pages-origin static proxy, hard three-board Signal Board split, Cloudflare newsletter capture, Cloudflare error hardening, persistent FORUM_POSTS KV namespace, dynamic forum/newsletter routes, ElevenLabs intro voice endpoint, analytics endpoint, wrangler config, deploy-status aliases, and npm build wiring.');

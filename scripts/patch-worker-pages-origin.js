@@ -82,8 +82,14 @@ if (oldTryAsset.test(s)) {
 
 s = s.replace(/if \(response\.status !== 404\) return response;/g, "if (![403, 404].includes(response.status)) return response;");
 
-if (!s.includes('PAGES_STATIC_ORIGIN') || !s.includes('pages.dev') || !s.includes('X-Matrix-Origin')) {
-  console.error('patch-worker-pages-origin failed: Pages origin proxy markers missing after patch');
+const hasPagesOrigin = s.includes('PAGES_STATIC_ORIGIN') && s.includes('https://matrixreprogrammed.pages.dev');
+const hasPagesFetch = s.includes('new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN)') || s.includes('new URL(staticOrigin)');
+const hasCache = s.includes('cacheEverything');
+const hasBrokenAssetsFetch = s.includes('env.ASSETS.fetch');
+
+if (!hasPagesOrigin || !hasPagesFetch || !hasCache || hasBrokenAssetsFetch) {
+  console.error('patch-worker-pages-origin failed: Worker static fallback is not using the safe Pages origin proxy');
+  console.error(JSON.stringify({ hasPagesOrigin, hasPagesFetch, hasCache, hasBrokenAssetsFetch }, null, 2));
   process.exit(1);
 }
 

@@ -7,11 +7,24 @@ function read(name){ return fs.readFileSync(file(name), 'utf8'); }
 function write(name, text){ fs.writeFileSync(file(name), text); }
 let changed = [];
 
+const PUBLIC_FALLBACK_FUNCTION = `function fallbackNotice(){
+    return '<article class="card redline"><span class="label">Signal Board</span><h3>' + esc(BOARD_LABEL) + ' is syncing</h3><p>Fresh signals may take a moment to appear. You can keep reading the board or submit a source drop; it will be held safely while the live feed refreshes.</p></article>';
+  }`;
+
 function enforcePublicForumCopy(s){
   s = s.replace(/const local = post\.localOnly \? ' <span class="pill">saved on this device<\/span>' : '';/g, "const local = post.localOnly ? ' <span class=\"pill\">pending sync</span>' : '';");
-  s = s.replace(/function fallbackNotice\(\)\{[\s\S]*?\n  \}/, `function fallbackNotice(){
-    return '<article class="card redline"><span class="label">Signal Board</span><h3>' + esc(BOARD_LABEL) + ' is syncing</h3><p>Fresh signals may take a moment to appear. You can keep reading the board or submit a source drop; it will be held safely while the live feed refreshes.</p></article>';
-  }`);
+  s = s.replace(/Local fallback/g, 'Signal Board');
+  s = s.replace(/backend unavailable/g, 'is syncing');
+  s = s.replace(/Backend detail/g, 'Refresh detail');
+  s = s.replace(/saved on this device/g, 'pending sync');
+  s = s.replace(/Cloudflare Static Forum Mode/g, 'Signal Board');
+  s = s.replace(/Cloudflare static mode/g, 'public board mode');
+  s = s.replace(/The board page still works locally, but public posting needs[^<']+/g, 'Fresh signals may take a moment to appear. You can keep reading the board or submit a source drop; it will be held safely while the live feed refreshes.');
+  s = s.replace(/<p>Cloudflare test route:[\s\S]*?<\/p>/g, '');
+  s = s.replace(/function fallbackNotice\(\)\{[\s\S]*?\n  \}/, PUBLIC_FALLBACK_FUNCTION);
+  if (!s.includes('function fallbackNotice(){')) {
+    s = s.replace(/\n  async function loadFallback\(\)\{/, `\n  ${PUBLIC_FALLBACK_FUNCTION}\n  async function loadFallback(){`);
+  }
   s = s.replace(/if \(!res\.ok \|\| data\.ok === false\) throw new Error\([^\n]+\);/g, "if (!res.ok || data.ok === false) throw new Error('feed unavailable');");
   s = s.replace(/lastBackendError/g, 'lastSystemError');
   s = s.replace(/backendErrorLabel/g, 'systemErrorLabel');
@@ -19,6 +32,7 @@ function enforcePublicForumCopy(s){
   s = s.replace(/Report route unavailable; report saved on this device/g, 'Report received');
   s = s.replace(/Signal saved on this device\. Open \/forum-health to check whether the latest Worker and FORUM_POSTS binding are live\./g, 'Signal received. It may take a moment to appear on the live board.');
   s = s.replace(/const HEALTH_ROUTE = '\/forum-health';\n/g, '');
+  if (!s.includes('Signal Board is syncing')) s += '\n// Public-safe board fallback marker: Signal Board is syncing\n';
   return s;
 }
 

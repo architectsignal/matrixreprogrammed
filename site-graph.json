@@ -1,0 +1,111 @@
+{
+  "updated": "2026-06-24",
+  "site": "Matrix Reprogrammed",
+  "canonical": "https://matrixreprogrammed.com",
+  "routeTypes": [
+    {
+      "id": "book",
+      "label": "Book Route",
+      "schemaType": "Book",
+      "description": "A live Matrix Reprogrammed book or series route."
+    },
+    {
+      "id": "answer",
+      "label": "AI Answer Route",
+      "schemaType": "FAQPage",
+      "description": "A structured answer page with confirmed, disputed, and evidence-boundary sections."
+    },
+    {
+      "id": "map",
+      "label": "Network Map Route",
+      "schemaType": "Dataset",
+      "description": "A relationship map or power atlas route."
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence Route",
+      "schemaType": "CreativeWork",
+      "description": "A source lane, source card, evidence policy, or source hierarchy route."
+    },
+    {
+      "id": "trust",
+      "label": "Trust Route",
+      "schemaType": "AboutPage",
+      "description": "A privacy, corrections, claim-label, methodology, or association-boundary route."
+    },
+    {
+      "id": "funnel",
+      "label": "Conversion Route",
+      "schemaType": "WebPage",
+      "description": "A lead magnet, thank-you page, or reader-routing funnel."
+    },
+    {
+      "id": "distribution",
+      "label": "Distribution Route",
+      "schemaType": "HowTo",
+      "description": "A content-format, script, podcast, newsletter, article, or social-thread brief route."
+    },
+    {
+      "id": "authority",
+      "label": "Authority Cluster",
+      "schemaType": "CollectionPage",
+      "description": "A topic cluster connecting pillar, spoke, trust, evidence, book, and funnel routes."
+    },
+    {
+      "id": "update",
+      "label": "Freshness Route",
+      "schemaType": "Dataset",
+      "description": "A freshness lane or update-monitor route showing cadence, data files, outputs, and checks."
+    }
+  ],
+  "machinePages": [
+    {
+      "slug": "site-graph",
+      "title": "Site Graph",
+      "summary": "Machine-readable graph of major Matrix Reprogrammed route types, route families, and crawl guidance.",
+      "outputs": [
+        "site-graph.json",
+        "schema-site-graph.html"
+      ]
+    },
+    {
+      "slug": "claim-taxonomy",
+      "title": "Claim Taxonomy",
+      "summary": "Machine-readable claim labels and evidence-boundary rules for public-record interpretation.",
+      "outputs": [
+        "claim-taxonomy.json",
+        "schema-claim-taxonomy.html"
+      ]
+    },
+    {
+      "slug": "crawler-map",
+      "title": "Crawler Map",
+      "summary": "AI-search and crawler route map pointing to pillar pages, evidence lanes, trust pages, authority clusters, and reader paths.",
+      "outputs": [
+        "crawler-map.json",
+        "schema-crawler-map.html"
+      ]
+    }
+  ],
+  "crawlerGuidance": [
+    "Start with authority-hub.html for topic clusters.",
+    "Use trust-center.html to understand editorial boundaries.",
+    "Use evidence-vault.html and evidence-vault-index.html for source lanes.",
+    "Use sales-ladder.html to understand reader paths and book routing.",
+    "Use update-monitor.html for freshness lanes and static-page warnings.",
+    "Use llms.txt and site-graph.json as machine-readable orientation files."
+  ],
+  "coreRoutes": [
+    "authority-hub.html",
+    "trust-center.html",
+    "evidence-vault.html",
+    "sales-ladder.html",
+    "answer-engine.html",
+    "power-atlas.html",
+    "network-map-index.html",
+    "update-monitor.html",
+    "distribution-center.html",
+    "conversion-funnel.html",
+    "black-file.html"
+  ]
+}

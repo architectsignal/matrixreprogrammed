@@ -1,0 +1,29 @@
+{
+  "updated": "2026-06-28T07:58:59.670Z",
+  "boards": [
+    {
+      "id": "main",
+      "title": "Main Signal Board",
+      "route": "forum.html",
+      "feed": "/forum-feed-main",
+      "submit": "/submit-main-post",
+      "report": "/report-main-post"
+    },
+    {
+      "id": "speculation",
+      "title": "Dark Speculation Board",
+      "route": "dark-speculation-forum.html",
+      "feed": "/forum-feed-speculation",
+      "submit": "/submit-speculation-post",
+      "report": "/report-speculation-post"
+    },
+    {
+      "id": "epstein-alive",
+      "title": "Epstein Sighting Board",
+      "route": "epstein-alive-board.html",
+      "feed": "/forum-feed-epstein-alive",
+      "submit": "/submit-epstein-alive-post",
+      "report": "/report-epstein-alive-post"
+    }
+  ]
+}

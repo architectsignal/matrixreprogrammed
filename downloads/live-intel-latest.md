@@ -1,0 +1,662 @@
+# Live Intel Machine
+
+Updated: 2026-06-28T07:58:55.565Z
+
+## Rules
+- Prefer primary sources, court records, official releases, archives, and dated reporting.
+- Do not treat a news mention as proof of wrongdoing.
+- Every item must keep a source URL, source label, date, lane, and reader route.
+- Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.
+- Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, network architecture matrix, and sighting-claim ledger.
+- Epstein sighting or alive-claim traffic must be labelled as unverified unless there is an official or primary-source change.
+- If a feed fails, preserve the page and show the last known source set rather than breaking the build.
+- Offer routes must resolve to existing generated pages before Live Intel is rendered.
+
+## Lanes
+- Epstein Files, Timeline And Court Records: #
+- Declassified Files And Public Archives: evidence-vault.html
+- Elite Control Structure: power-atlas.html
+- War Machine And Intelligence State: dashboard-conflict.html
+- Crime State Overlap: crime-hub.html
+
+## Latest Items
+- 2026-06-27 — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
+  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan. The record matters, but the evidence class matters more.
+  - Short title: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest
+  - Longform title: Google News / Epstein timeline and files — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New archive lane: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1. A released file is the start of the investigation, not the final verdict.
+  - Short title: Moldova publishes declassified Soviet deportation lists from 1941 - Mold
+  - Longform title: Google News / declassified files — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Moldova publishes declassified Soviet deportation lists from 1941
+  - Short title: New Declassified File Route: Moldova publishes declassified Soviet deportation lists from 19
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Moldova publishes declassified Soviet deportation lists
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-06-27 — Billionaire Leon Black walks out of Epstein investigation hearing - BBC
+  - Source: https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Billionaire Leon Black walks out of Epstein investigation hearing - BBC. The record matters, but the evidence class matters more.
+  - Short title: Billionaire Leon Black walks out of Epstein investigation hearing - BBC
+  - Longform title: Google News / Epstein timeline and files — Billionaire Leon Black walks out of Epstein investigation hearing - BBC
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square. The record matters, but the evidence class matters more.
+  - Short title: Epstein's billionaire associate subpoenaed after refusing to answer over
+  - Longform title: Google News / Epstein timeline and files — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Cen
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee
+  - Short title: Epstein Files Update: Epstein's billionaire associate subpoenaed after refusing to answer ov
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Epstein's billionaire associate subpoenaed after ref
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown
+  - Source: https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown. The record matters, but the evidence class matters more.
+  - Short title: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - Th
+  - Longform title: Google News / Epstein timeline and files — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update. Open the source first, then follow the evidence route.
+  - Short title: Kenya considers linking national ID database to CCTV facial recognition
+  - Longform title: Google News / control structure — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-center.html
+- 2026-06-26 — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOcHdhOHF5ejVUVFdsOWFwRGZhM3d5S1lvUnljTEFlSTBFc1JFVVRTWkF1MXBFSTJmUlBDNURiN3FNQXJmVGRsOVFXRjMxNWlGZ2p0UEh3Nm12UTJTR0JXU3NLNkQtQ3J2NGFJTGl0c1dNMGdBQ01KNEpPb25uVXpHczZYX0k?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA. The record matters, but the evidence class matters more.
+  - Short title: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I
+  - Longform title: Google News / Epstein timeline and files — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOcHdhOHF5ejVUVFdsOWFwRGZhM3d5S1lvUnljTEFlSTBFc1JFVVRTWkF1MXBFSTJmUlBDNURiN3FNQXJmVGRsOVFXRjMxNWlGZ2p0UEh3Nm12UTJTR0JXU3NLNkQtQ3J2NGFJTGl0c1dNMGdBQ01KNEpPb25uVXpHczZYX0k?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde'
+  - Short title: Epstein Files Update: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll.
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Billionaire Leon Black defends $158M paid to Epstein
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider. The record matters, but the evidence class matters more.
+  - Short title: House committee subpoenas Leon Black in the middle of closed-door interv
+  - Longform title: Google News / Epstein timeline and files — House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News. The record matters, but the evidence class matters more.
+  - Short title: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to
+  - Longform title: Google News / Epstein timeline and files — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more re
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times
+  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeV9QV0pzT0tyN2llZ01rMERKRWRGcEVNWU9XdVNCR3hGaHlUUzViRnpfMUZYdXJ6RnI4ZzZrWEVxRUdQOHg0U2tRVlFhN3RFdjg0LXBsUHktN2RXZXg0RGtZSW1ta2NlRjQybDBYLXU1ZllMSUJHd1BnS0FsWVJ6OF9hc2JqZE1ITTFv?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times. The record matters, but the evidence class matters more.
+  - Short title: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusua
+  - Longform title: Google News / Epstein timeline and files — Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New Yo
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times
+  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeV9QV0pzT0tyN2llZ01rMERKRWRGcEVNWU9XdVNCR3hGaHlUUzViRnpfMUZYdXJ6RnI4ZzZrWEVxRUdQOHg0U2tRVlFhN3RFdjg0LXBsUHktN2RXZXg0RGtZSW1ta2NlRjQybDBYLXU1ZllMSUJHd1BnS0FsWVJ6OF9hc2JqZE1ITTFv?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation
+  - Short title: Epstein Files Update: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unus
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Congressional Panel Investigating Epstein Subpoenas
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: 5 Questions Keeping the Epstein Files Alive - Newsweek. The record matters, but the evidence class matters more.
+  - Short title: 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Longform title: Google News / Epstein timeline and files — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: 5 Questions Keeping the Epstein Files Alive
+  - Short title: Epstein Files Update: 5 Questions Keeping the Epstein Files Alive
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: 5 Questions Keeping the Epstein Files Alive
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arrow News - SAN - Unbiased. Straight Facts.
+  - Source: https://news.google.com/rss/articles/CBMinwFBVV95cUxNUnNUWFNNSWpIUTBfZUxwX1UwVlJPeDZRcU5ITVEyankwbkVsdVloNGpvU2N6cGc3Z083eHJhckRhZi1BU0UwWjRCM1V2QzhFZVo1WmtzVEZ4a1owY3RfX1U2RFBBRG5RNDRPTjRKWkRxakJESDVPWlFweEQ5RzBBU3lnemlHYWxFWElCOXZqbmltUVFJUGNzN3VNdHo3Z1E?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arrow News - SAN - Unbiased. Straight Facts.. The record matters, but the evidence class matters more.
+  - Short title: Judge says Blanche ‘conceded’ to violating law, orders Epstein files be
+  - Longform title: Google News / Epstein timeline and files — Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arr
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMijwFBVV95cUxQcFJkMFZab3pPMzE0NXRwNnZQY3VMRnVXUDlINXdIbzFFUFhySlNzUjhPTi1lYjZCY2I1UEhOb1hacnFoQUg1WklxUDBYNU1XRjBNQTJEOFVQV2ZTN0FMX2czOHE3RU5pUnYxY25Hb2dtOFBCTDc4ZW1OU1VMZ3VOc0wwbXU5cHVVLVdSTmhqbw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian. The record matters, but the evidence class matters more.
+  - Short title: Leon Black accused of stonewalling Congress as Epstein hearing ends abru
+  - Longform title: Google News / Epstein timeline and files — Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMijwFBVV95cUxQcFJkMFZab3pPMzE0NXRwNnZQY3VMRnVXUDlINXdIbzFFUFhySlNzUjhPTi1lYjZCY2I1UEhOb1hacnFoQUg1WklxUDBYNU1XRjBNQTJEOFVQV2ZTN0FMX2czOHE3RU5pUnYxY25Hb2dtOFBCTDc4ZW1OU1VMZ3VOc0wwbXU5cHVVLVdSTmhqbw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly
+  - Short title: Epstein Files Update: Leon Black accused of stonewalling Congress as Epstein hearing ends ab
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Leon Black accused of stonewalling Congress as Epste
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTE5sOXdTelVIRHM3Njl2OEtLbl9UWXBrM3JaRmNTU0VyNVY5Skc1a2NmMm1KUEZqUlY2OExJS0ZPMnZJTjVsYzdtTENGT0pudUJ5Y0N1VW0wQlJZVFA2RHliNzB6ajgtVkhscW03UlhJTFdUS0Via1ZWd3dHWXhDZmM?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News. The record matters, but the evidence class matters more.
+  - Short title: Billionaire Leon Black subpoenaed to return to House Epstein committee i
+  - Longform title: Google News / Epstein timeline and files — Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time unde
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek. The record matters, but the evidence class matters more.
+  - Short title: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells D
+  - Longform title: Google News / Epstein timeline and files — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News. The record matters, but the evidence class matters more.
+  - Short title: Judge orders DOJ to either unredact more Epstein files or explain why th
+  - Longform title: Google News / Epstein timeline and files — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out
+  - Short title: Epstein Files Update: Judge orders DOJ to either unredact more Epstein files or explain why
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Judge orders DOJ to either unredact more Epstein fil
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News. The record matters, but the evidence class matters more.
+  - Short title: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to
+  - Longform title: Google News / Epstein timeline and files — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction
+  - Short title: Epstein Files Update: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Lawmakers to question Leon Black about Epstein ties
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPRHdpYUVuMjl6N01QaEFJN1l5WmRVaUhvWDJ5T2FfaWJrTWxxdEJXM1l5cXZZbVlkWnNLODFtZnAzQ01ta3lOeUV3SUVMYjUtRXBwcjh6OEhvSGh2dzI3T1czMUp2RTNFNWFNM2ctbGJhN2JfOUp3T1otSGNXbzhabWl2SERTaEc4Q01FNC1uY1hiczFOa29r?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV. The record matters, but the evidence class matters more.
+  - Short title: Subramanyam says reflecting pool arrests outpace Epstein-linked cases -
+  - Longform title: Google News / Epstein timeline and files — Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington Examiner
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPM2pkTzVKc3FyREROcm9XOWYzRmhtNzdzS093Vl83ZHN3MmRFQTB1dmowSkFEb2VUMmpUM1hMUU1pdExWb2lNX0VHWGlCQzU0QXU2ZjBHOEo1TkhkRkxrbkxZdlduMl9JeF9mdGZXSFBuaXdWUl9uY0ZPUlpFWTBGQUoxZnpwa2htTFJhMHkwSTg1MkwxaXBLd3R2OVoyeUEwYXVCQ2kzdVN0U2lKT0M3T1Ffd1Y?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington Examiner. The record matters, but the evidence class matters more.
+  - Short title: Ghislaine Maxwell claims new evidence in Epstein files should erase her
+  - Longform title: Google News / Epstein timeline and files — Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington E
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
+  - Source: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent. The record matters, but the evidence class matters more.
+  - Short title: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail
+  - Longform title: Google News / Epstein timeline and files — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPS19MS0ZJenp6cUs5QU54QzdBbVNrX1ZjT1dIazRjT2tfbmdwVzlTZHdaalBIRFNhMTh4ZHdXdWU5N3hGbGVWQUFKc2xFUmUyMm9KZmR1X1c2T3BNM3c2TFEwNWdualBOOS1wM3J4cUY2MG9TNzFYeXdvemZVRnh4RFVmbTVmYzNFSWhRdXlKNVpTcEpvaWpiLXNJOUo4TzBLbkp2cTdicnJqN2tSYktoQzFNTHo?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief. Open the source first, then follow the evidence route.
+  - Short title: U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances
+  - Longform title: Google News / war machine — U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-25 — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNdU5ENExoeHh3b0ozTjVtQzFiZzFmOVhNdEthWUJOMkdWZjhoSkN6RzdNTmVrVlNsOUtyekxzLU5lemZCRHVSRVZ0LU1neGhQeXZyVXhCbWxVWTlqc2hCTFJ3M1NGNVYxMlhURnBZbkZaVGpqYkZzUFlYNUp1WEl1NzdCbFBIRXBEQmlPV1llUGktODhzejNnUTYzM2wtZw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.. The record matters, but the evidence class matters more.
+  - Short title: Ghislaine Maxwell says newly released Epstein files could overturn convi
+  - Longform title: Google News / Epstein timeline and files — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow Ne
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNdU5ENExoeHh3b0ozTjVtQzFiZzFmOVhNdEthWUJOMkdWZjhoSkN6RzdNTmVrVlNsOUtyekxzLU5lemZCRHVSRVZ0LU1neGhQeXZyVXhCbWxVWTlqc2hCTFJ3M1NGNVYxMlhURnBZbkZaVGpqYkZzUFlYNUp1WEl1NzdCbFBIRXBEQmlPV1llUGktODhzejNnUTYzM2wtZw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN
+  - Short title: Epstein Files Update: Ghislaine Maxwell says newly released Epstein files could overturn con
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Ghislaine Maxwell says newly released Epstein files
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — The secret settlements protecting Jeffrey Epstein's friends - Business Insider
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWWJKdnp1aGFOdFVnMnQwUVZwTEkwMlpOWS1zOXNtX0hMc1FoQzBHYVhLT1lVMUstdTZxeFk3blpubGd0cG45MkFRMmtQTENrcWlfcjVTcU1uRXY3SDdDZHE0bFBvc1QtU1JaQTNuSEFkNGVHUUtmX0dQV1d2TV9VTDhMT0J3QzQxSnk1elZoWUF0ZlV6cUVWRXhKdHNJLU1SWmJkY0Rzb01RQjA?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: The secret settlements protecting Jeffrey Epstein's friends - Business Insider. The record matters, but the evidence class matters more.
+  - Short title: The secret settlements protecting Jeffrey Epstein's friends - Business I
+  - Longform title: Google News / Epstein timeline and files — The secret settlements protecting Jeffrey Epstein's friends - Business Insider
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — The secret settlements protecting Jeffrey Epstein's friends - Business Insider
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWWJKdnp1aGFOdFVnMnQwUVZwTEkwMlpOWS1zOXNtX0hMc1FoQzBHYVhLT1lVMUstdTZxeFk3blpubGd0cG45MkFRMmtQTENrcWlfcjVTcU1uRXY3SDdDZHE0bFBvc1QtU1JaQTNuSEFkNGVHUUtmX0dQV1d2TV9VTDhMT0J3QzQxSnk1elZoWUF0ZlV6cUVWRXhKdHNJLU1SWmJkY0Rzb01RQjA?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: The secret settlements protecting Jeffrey Epstein's friends
+  - Short title: Epstein Files Update: The secret settlements protecting Jeffrey Epstein's friends
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: The secret settlements protecting Jeffrey Epstein's
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ
+  - Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPUFhWXzRZalVOZzE2ak4zYjVURmZqZ0RsYU5GMHhSWWNpajBFSUVONW96TVJiQXdDWUlsbVc2Z3FTT3NETzdTZFVONHE1ZHFMcDBsaUE1SUdPM0l0SkllRGRvQ244RFNNZWJIcXdPZnBQeGtlUm9La0ZlRDhQRnJkazRPYTdWSHAwQko1aWxiSmU1ZDV4S1VPel9ldndWSE9G?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ. The record matters, but the evidence class matters more.
+  - Short title: Maxwell challenges conviction as Gates testifies over Epstein ties - Ane
+  - Longform title: Google News / Epstein timeline and files — Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)
+  - Source: https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK). The record matters, but the evidence class matters more.
+  - Short title: Epstein associate Ghislaine Maxwell says new evidence undermines convict
+  - Longform title: Google News / Epstein sighting and alive claims — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutor
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)
+  - Source: https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree
+  - Short title: Epstein Files Update: Epstein associate Ghislaine Maxwell says new evidence undermines convi
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Epstein associate Ghislaine Maxwell says new evidenc
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-24 — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHl3T2lNS2tMZW05QmZGTmdvVW9lenJfb1RaUXFTWm9MWDlLc0w4RkVNSmtRM1oxbEUtME1iWVlaYVotTXI0eUxyU0VIeEFGYk5rUl9qU1dWOWZZUEljRWVwZjJqMVVoVHBTdVMyTXBtN182X0twTXc1emhBV2UyeElmUTg?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW. The record matters, but the evidence class matters more.
+  - Short title: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight
+  - Longform title: Google News / Epstein timeline and files — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-24 — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHl3T2lNS2tMZW05QmZGTmdvVW9lenJfb1RaUXFTWm9MWDlLc0w4RkVNSmtRM1oxbEUtME1iWVlaYVotTXI0eUxyU0VIeEFGYk5rUl9qU1dWOWZZUEljRWVwZjJqMVVoVHBTdVMyTXBtN182X0twTXc1emhBV2UyeElmUTg?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee
+  - Short title: Epstein Files Update: 9 takeaways from Bill Gates’ Epstein interview with the House Oversigh
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: 9 takeaways from Bill Gates’ Epstein interview with
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-24 — Bill Gates names three women he had affairs with in Epstein testimony about blackmail fears - The Independent
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxPVTJuYTRKSVJBUm9oTFN3ZVotOEdtckh2WTZrV2l3Tk1LSHhoZ1ZFSUVsWjNfR29jZzNCdkN6WnNNdEZfcDN1TGFyTS1pX01Tc3haLWpnR2h2dHVYQ0lTTWpnRnZPQTJydmJxeE9UVXVzMUR5bnNCSmZBWkNoTW9UektYaW1WVjNOUEhwc09TeHlod1pYWjVYcDhtckZEMHRtcTYyaXJqWlZmdVZ6Y1VTTVpIeUg5UlU?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Bill Gates names three women he had affairs with in Epstein testimony about blackmail fears - The Independent. The record matters, but the evidence class matters more.
+  - Short title: Bill Gates names three women he had affairs with in Epstein testimony ab
+  - Longform title: Google News / Epstein timeline and files — Bill Gates names three women he had affairs with in Epstein testimony about blackmail fears - The
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-23 — 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxOLVdoa3J5RzRHZDlnbnVUWWhfaXNXSFZUUkN6MDA0VTlOUDV6UDB1ZTNSY3g5Y3dob1hWTjB1alQ5eld3ZjEzN1dMOXpCcFRMUnh3Y1lqTFBRNENKOTZsakxGTlJEOEZsZm5LdEpCalJjX0RDWjRROGdnVkprb19kSHl3MnlrLVFJd2Fobkl1R0x0UHBNZ01nRjlEdnhXekV2ZXFv0gGoAUFVX3lxTE5kWWltOWVuUnluaGktcFo0VEp0c1RwR2hhNnNpcDZKQUhOMF9wcnVwNHA3Z09BQWQzZy1oSUdkXzJKSkRKanRaT1FXSTdoeThOVGhLY1JmZnR5WmRwR3BBQUFUdlhzdVUxN0EtdzZtdFJzUGliM1JBeXhtY0QzZWJkUnlVaER0VUtHM0I1czI4c1kxc1lkQ2lBV3FHQS0yTUxZOGtzX1RYbA?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
+  - Short title: 'I did not know': Former Epstein secretary Lesley Groff denies any aware
+  - Longform title: Google News / Epstein timeline and files — 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-23 — Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNX2VNQWVwSGlzS25JWm5RYURFNWtZUmRDWmNUXzhSQlc4UEI4R21SU2VqczdCeVRqcWMtaU5VRnZMTXpNcVZXaTVzX3RMNE1rSklKNHpUYzBSUmwwT1pXWTM1UzlMSWhnTzhuYTZmellaRWFZUDdwbWRRX09Wa0h2OHZOdXJrUFlibnJBTW5Tc0plTU5HNGRF?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times. The record matters, but the evidence class matters more.
+  - Short title: Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
+  - Longform title: Google News / Epstein timeline and files — Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-17 — State Digital Surveillance Risk Landscape - Recorded Future
+  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: State Digital Surveillance Risk Landscape
+  - Short title: Elite Control Update: State Digital Surveillance Risk Landscape
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: State Digital Surveillance Risk Landscape
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-10 — Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS
+  - Source: https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein
+  - Short title: Epstein Files Update: Key takeaways from Bill Gates' interview with House committee about hi
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Key takeaways from Bill Gates' interview with House
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-10 — Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News
+  - Short title: Epstein Files Update: Former Epstein executive secretary tells Oversight Committee he was a
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Former Epstein executive secretary tells Oversight C
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-09 — Jeffrey Epstein's former assistant Lesley Groff interviewed by House panel - CNBC
+  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZzBzN0tkZkhoMHY1dVF5cURQeThldS0xbUtRVmY3VzBjTTE1M0tSRWJpZHdKN1didWRtb3dDcDlLLWVkYzROVEVGejZnWFd0YWN0elRTZm5pWVk4ZEcxY1lZNTJzcG56ZVpacjNUelh0bC10dkVLOE14dHgzWFR3Y0lkRVlKWmVDSWZJ0gGQAUFVX3lxTE53a0Y4ZTNwX2R3VzQxQWx4NFlQbHBkMjUxRkp5NXA0MmFQd1c5MVU1cTdBVTh3T05nUmQ3WUh0REx1RGsyelcyamotMU9YQVVHWVhTUy01a2M1OWJZdmhrZGt2aE15YURGMWg5eGl5VjBoNEYtMnhSckxJNEx4c1AxV2txUjgybjZzVEtaNnhnUw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Jeffrey Epstein's former assistant Lesley Groff interviewed by House panel
+  - Short title: Epstein Files Update: Jeffrey Epstein's former assistant Lesley Groff interviewed by House p
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Jeffrey Epstein's former assistant Lesley Groff inte
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-09 — Alex Saab Profile - InSight Crime
+  - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFVHS0drbUZRQldmUUlwOERGUzlyaTFCeEJJZVFVWDY5X2kyTERZdW9fbUVRMGpJLUhpRENVWTdOVkN2RTZtNDRsbzRtNVRFR2kzazUwSzVqZF9qOEtvdTR5TUpBdnp5Z1k1blpwLWdOUW5RbW40?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Alex Saab Profile
+  - Short title: Crime-State Overlap Update: Alex Saab Profile
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: Alex Saab Profile
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-06-07 — Last Guard To See Jeffrey Epstein Alive Testifies He Received ‘Special Treatment’ In Jail - IMDb
+  - Source: https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBYkVER0kyX0g4aGVYeURzOWNqVU1FQkN4YTBEQjY0aHctTlhCN1hTM1JEclJyd1pKZGFFYnZYNHU2b0JSdXFZTmRIcy1QSi11OXZMU2VoRHJhaDRZZXowSg?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Last Guard To See Jeffrey Epstein Alive Testifies He Received ‘Special Treatment’ In Jail
+  - Short title: Epstein Files Update: Last Guard To See Jeffrey Epstein Alive Testifies He Received ‘Special
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Last Guard To See Jeffrey Epstein Alive Testifies He
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-06-04 — Is the U.S. Involved in Israel’s War on Lebanon? - The American Conservative
+  - Source: https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFM3eDRsd1ZnQWY0cTdVUWllckpoWEhEcnpTQzUzV2VTT1Y5VFpURjFwb2tQZzVvclZuaWF5MHR1RllDazNaRmZqNUpLb2M2T2VOeHZuZ2x5ZF9LNEJLLWxlVk9XZk4xM2FGWlNuU0dhbzZQM2sxR2FId2ZkcHhBQWtQTGhid2V4SmdqWkVRZw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Is the U.S. Involved in Israel’s War on Lebanon?
+  - Short title: War Machine Update: Is the U.S. Involved in Israel’s War on Lebanon?
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: Is the U.S. Involved in Israel’s War on Lebanon?
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-05-26 — The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime
+  - Source: https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmJvM3VfTTExanlweklIeEd2b3pJQTR5Nkc5ejRIWGFuWmN3b2pyOTB3MllBdjk1ZXZtRFRhOUNpME9fb3drRHlXZzVMQkVxR0tvVUUwMlJHSU5CUURZQUlpNUp6WWdNd0xrczdCRkZTZ0lwUXVpeUtjaTBBbDQ0Q3JOcVczbDZyX3lCMm5jNA?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: The Most Notorious Mexican Officials Accused of Organized Crime
+  - Short title: Crime-State Overlap Update: The Most Notorious Mexican Officials Accused of Organized Crime
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: The Most Notorious Mexican Officials Accused of Organized Crime
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-05-25 — Guyana to roll out AI-powered smart police stations and nationwide surveillance system by 2030 - Caribbean National Weekly
+  - Source: https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNlRpTGJkVVdRTHA5UlhWcVVEUnhNNWRJc1lEci0zMUIwNzJXOE8xc3lOWjhpYzdKdVBnQWJoV29Ec3NfTzA2MDNEOHBhbjRHb2tDVFdXSGxrc2Z2N2lNemtXRFBMUk1rU3I4ZGp1WGxBN1NKOW1BRU1ZcXhEQXpyUVFkam5yMW1ETlVBWm5MUi1MTDVQOGdKNVdCZHZaQVhnYjRVd2dOLUVFbTFEUGZGb2EtS2o2OERfVUw1MEdNSWNiam1SSkVZemNhem11cFlRM1JUZUM5SQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Guyana to roll out AI-powered smart police stations and nationwide surveillance system by 2030
+  - Short title: Elite Control Update: Guyana to roll out AI-powered smart police stations and nationwide sur
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Guyana to roll out AI-powered smart police stations and nationwide sur
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-05-19 — Cuba: Declassified Records on the Brothers to the Rescue Shootdown - National Security Archive
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYVI2S3NYMjFHbkRPSlF3Wm15Q0xGVUhRR1h0LUl1dGZHejdGa3RlclNGeTFLbjRhaFFRVWs3VHBwY0ZDUnJDN2cxM2loVkVmbjJyYzlvNXF0THAyM0JXYjFNMHNYbTNzRXcyUkFVWWRjUWVDRWNWaGdnVldvWVh4bC1FY1FmY0pZS3U5WEdqTzhqRm4tT3FDWk1jcnVnLWx1Y3lsVENWanhxZ1U?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Cuba: Declassified Records on the Brothers to the Rescue Shootdown
+  - Short title: New Declassified File Route: Cuba: Declassified Records on the Brothers to the Rescue Shootd
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Cuba: Declassified Records on the Brothers to the Rescu
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-05-15 — Who is Tova Noel, a former prison guard testifying in the Epstein investigation - PBS
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxON2tPTGlyN2pzclFZal83WlFJa1cyeXNVSWxMNGlXNktyZENVa2t1b1ZEZHZ2emtPWWw1WUlGVWp5Sk13dEdobW0wdTBQN2tLSkVVOVpPX2Q0XzZvUlNlVHBBSXhINE9NanBOU2FHTXJfX0ZIQUx3WjI3N2t0d05XelJqRTdfdU9KaTZReElwTDRZMFFmYktzSm9vZnc3VGpkSlkyVkpFRjZEVEtIYXdnT2VpUllfNGvSAbwBQVVfeXFMUG5DOWJjNTV1bTdTOFdielJuTmxsR2VHSExidXVfRzJ0b3BqV1lCMko1QmJteEpPd01STjZxcWJkampGeUNyNzY1LXNOQmFxX3NCYTJQbEtDYVZxY0RBUnZwd0RYWWVNYnB5bGZVcTUtV21BeTRQRFM5c29GQU82cFBnbUdWZ3dJYXkwRGZvbXhtZGNCZ1dmaTczTUlqU3psVzB1TlVMSDRILXZkRGlxNGNCUElNVVR0SFVzaWk?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Who is Tova Noel, a former prison guard testifying in the Epstein investigation
+  - Short title: Epstein Files Update: Who is Tova Noel, a former prison guard testifying in the Epstein inve
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Who is Tova Noel, a former prison guard testifying i
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-05-14 — King’s Speech Puts Cyber Resilience at Centre of UK Strategy - Cyber Magazine
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQR1lsek9Rbk1NbVhqNjFCSTJNUHpMWkZlTXlMZmVVSzJpSDZLVGJDS2RQRVZsSld1eG1MNTVNUzlsM0s3M1o2emFzOHBJNC15SklPY211U0hHXzg3dkpESW5EWG83cmpKZ3pZNjVfNVlDRnZublNFUlJadFpNQzZOZi1RY1Y?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: King’s Speech Puts Cyber Resilience at Centre of UK Strategy
+  - Short title: Elite Control Update: King’s Speech Puts Cyber Resilience at Centre of UK Strategy
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: King’s Speech Puts Cyber Resilience at Centre of UK Strategy
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-05-08 — Presidential Unsealing and Reporting System for UAP Encounters (PURSUE) - U.S. Department of War (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiPEFVX3lxTE81SlIyNXc5SFBlVkYwdDlFTjVWZnhwa0tpQThNZWZOQXZZVzY4YzdQWTJMVl91RnJ4Q2tNcw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Presidential Unsealing and Reporting System for UAP Encounters (PURSUE)
+  - Short title: New Declassified File Route: Presidential Unsealing and Reporting System for UAP Encounters
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Presidential Unsealing and Reporting System for UAP Enc
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-05-08 — Department of War Releases Unidentified Anomalous Phenomena Files in Historic Transparency Effort - U.S. Department of War (.gov)
+  - Source: https://news.google.com/rss/articles/CBMi1AFBVV95cUxPTDdDLVd6aTMzQlpCcndmNFRNTGpIcjFVYjRYUmMtRUdFY2E3c1dNdG5aaEhlSnBtNWJiQkRjcG5ISF9oNFdqcUxpTmRwT1dtTm40TnhQV1RzTmpoZVVaaktVUVAza2RFN20yaHlTelZhYjVhQ0Y0czhWNF9YQmpWazZiTk1hNGw5TnlGLUlvSENBck9hQ2RqVEhOb0U1T1BQR1haSVhhamozd1hyS3VfbnpBUzZEMUhaLWdUVnpXQUV6SlBzbWNVNWZsSkhZYmRPd0JLdQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Department of War Releases Unidentified Anomalous Phenomena Files in Historic Transparency Effort
+  - Short title: New Declassified File Route: Department of War Releases Unidentified Anomalous Phenomena Fil
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Department of War Releases Unidentified Anomalous Pheno
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-05-08 — Pentagon releases initial batch of declassified files detailing UFOs - CNN
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE9KWFVPTlkwWGhvRFBISU1GZ0xWdFByakx3Y2JaT2lkdFhIRGJxV3l0NjB1X3AwQURFNXo5Z1ZId1BkNzlUMVphUUN1cDctN29DVlVsN2Mxb3U2aGJybkY4bWZHQ05lT2hsNlV2VUlqRDJSV1N3R2NHZnhUQ0FnZw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Pentagon releases initial batch of declassified files detailing UFOs
+  - Short title: New Declassified File Route: Pentagon releases initial batch of declassified files detailing
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Pentagon releases initial batch of declassified files d
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-05-07 — US judge releases Jeffrey Epstein's purported suicide note - BBC
+  - Source: https://news.google.com/rss/articles/CBMiWkFVX3lxTE5KN09SdmJGa2duMkRJNXJBWXpvaDh2RU1ZSkZkM2VTSnNtRjM0YTJvTEZfYTc1MXVMYmhIQ29FNkxCVzYxT1ltT045dm91R3lUN2RCY1ZDd3p3UQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: US judge releases Jeffrey Epstein's purported suicide note
+  - Short title: Epstein Files Update: US judge releases Jeffrey Epstein's purported suicide note
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: US judge releases Jeffrey Epstein's purported suicid
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-05-07 — A 2026 Guide to Digital Security & Cybersecurity | Stay Safe Online - Security.org
+  - Source: https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GeW1UbmhCeGtpMHZpeDBXa1ZOc2hZUE51cW9kOE94LTJzcXVidkxOalh0dUxOOU9qVUd3WFo2eFBtM1ZmX19LRktBZXlKV3NfX3c?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: A 2026 Guide to Digital Security & Cybersecurity | Stay Safe Online
+  - Short title: Elite Control Update: A 2026 Guide to Digital Security & Cybersecurity | Stay Safe Online
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: A 2026 Guide to Digital Security & Cybersecurity | Stay Safe Online
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-04-24 — What Recent Wars Mean for U.S.-India Defense Cooperation - The Heritage Foundation
+  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxOVFIxdXZJcTVjQjF1R1dwaXp1REZnSG5WSFZtRHJIR1kwakVvckY2eEkzUDJXZ0tSQjdTRG4xRVNpdkxTMXRqVjgyOXhyYTY3NE9URW5DMWZIS280VjFqa2paZVRrQ1QwT3prTmZSVGhzU1I4NVhsX3p5YjcwNWttUXU1V1hXcERNYjBpWTFQcG9iNkpmb0dqT0Nn?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: What Recent Wars Mean for U.S.-India Defense Cooperation
+  - Short title: War Machine Update: What Recent Wars Mean for U.S.-India Defense Cooperation
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: What Recent Wars Mean for U.S.-India Defense Cooperation
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-04-23 — Legal experts skeptical of DOJ’s criminal case against Southern Poverty Law Center - Alabama Reflector
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNb0t1MC0taThjRFBNRVRNTEhuLXpabUxUV0xHeDNvRHF1WUhyd0c4d0dXMWx4dmhsVEQzUmZwSXg2dFdtb2V1TWdvTGJiektuYzZCZlY2Q2stdWI0Q19tSTVsM3EtRkJXQzlGcU84bFVGNXZvendfVHlZWDBPaHpIWkdBdTVkOVJYaC1ZdkZZaVJVSDFnbG9jbHd1RDRvSDlXREF2aWZMV0pZQWVyNjZIZE5NZEhsaHE0aDNvM05JMA?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Legal experts skeptical of DOJ’s criminal case against Southern Poverty Law Center
+  - Short title: Crime-State Overlap Update: Legal experts skeptical of DOJ’s criminal case against Southern
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: Legal experts skeptical of DOJ’s criminal case against Southern Poverty La
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-04-20 — Don't debate digital ID, trial it - the Isle of Wight could settle the argument - Computer Weekly
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxOYXlhX19vSTI4NWpyWDF0N1Mzci1iZzl2N0h0Y2I1UVNzX1pOd3JkVWo4bDMxZmdMdEpvY0Zjd3VrWHBmODNqVndpcGUyR1Z5VDRhUzV0WGRqVmNWdDRpZjVZdmRSdGJGUXZJSl9pY19oVENiWC1QX2RYQWQzZEpqRmlJU1dVODVDSm9vOEhuVmRxbjFPX1pERmt6Y2pyR0QwZUpNeEQzSm95STMyTndKQVJYUUs?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Don't debate digital ID, trial it - the Isle of Wight could settle the argument
+  - Short title: Elite Control Update: Don't debate digital ID, trial it - the Isle of Wight could settle the
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Don't debate digital ID, trial it - the Isle of Wight could settle the
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-04-01 — Penn State Approves Massive AI Surveillance Network Featuring Facial ID & Voice Monitoring - Onward State
+  - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxQekppWWpfY2VMa2wtdlBUV1A1dXNlSERXbUE3VFZweFlnTjREQlM4Q0MyWkQ3OWUtNHhlaVMyem9UUkpnSF83ZDhfUUthcjhjRml1VHBzUmxpWUJVeVY2RVlxYkY1WUdVeHR6NFhpcVJadW9ZS2NNaUtMLW0zc1BWMkdoSGtKYmhUVFl0TUhoS2t6Rk14ejFsWm5jZzZqNEJiMHk2WGhYeVJXSmQ4UVNZMWhfMFVwclFhaU5PTlFkUjd2X1FfSlZR?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Penn State Approves Massive AI Surveillance Network Featuring Facial ID & Voice Monitoring
+  - Short title: Elite Control Update: Penn State Approves Massive AI Surveillance Network Featuring Facial I
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Penn State Approves Massive AI Surveillance Network Featuring Facial I
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-03-30 — Papua New Guinea returns to the FATF grey list - Global Initiative against Transnational Organized Crime (GI-TOC)
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOc2RmWE53aGNJV1ZGTjhmTFVTZ0NDS1VpOThHSzJXdXduNGFibGlvbjFxMW1hbk1aSE9oWnppdzByazFfNFJseEQwWW5zenllQVpnY2dBc0NWOVFiS3ptQ0NBZnNUYkdhcU9DQlEwUmctQ18ydE5xSmhwN00xSW03dnB6VE1oSmFMYWxMbF95QWJ1YjZQMFE?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Papua New Guinea returns to the FATF grey list - Global Initiative against Transnational Organized Crime (GI-TOC)
+  - Short title: Crime-State Overlap Update: Papua New Guinea returns to the FATF grey list - Global Initiati
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: Papua New Guinea returns to the FATF grey list - Global Initiative against
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-03-25 — Unanswered questions about Epstein's final hours: A 'flash of orange,' a Google search, a makeshift noose - NBC News
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQNU1nMkpCR08wZXk0NVZtMl9sMU0yYVFTSzBvekNRZHR1eUczaW5qWTRQdkNsUWNoUS1UUlFueU83SU1BbGV5Ry1ralh4QU81QTdaS0pBU0lWYWY4S09oUW1UUTd1VDk1aTNrTnJ0NmlFU3Faa1JucklkbGRjVEVQNF9GcXBqdEN4X2E4ZTU0QWI2ZDhxWUVzS0NwVU1kbUVDNUpuQ1JBdWVVMVNVMW14azVMemhxVlU?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Unanswered questions about Epstein's final hours: A 'flash of orange,' a Google search, a makeshift noose
+  - Short title: Epstein Files Update: Unanswered questions about Epstein's final hours: A 'flash of orange,'
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Unanswered questions about Epstein's final hours: A
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-03-20 — 'I'm not Jeffrey Epstein': Viral Palm Beach lookalike speaks out - WPEC
+  - Source: https://news.google.com/rss/articles/CBMi_gJBVV95cUxPaWdGaHRMZFp2Rl9ZRmY4RG92MWpoTlpISWRwQjNsT0xWUksxV2E3dnlnMi1VQk92RWRQVjlxVURSQzhmZ2ZiT1lrT0hzeVpFbXV4MWV3SHNIUk5oQjlPYUZNRTctd3cwYzZobEhtRjBoWDBaOTgxS2xWWEhrTG5CMGRKVnN5X0tlRzY3VkY1dERPUG5rTzJTT29YV09ZN1hEVVMyZlo2anlua240TUZmbHN3QXBWeDN5QjR3N003WWU5UXFuaU9rby13WFZzWXNTa2Zfck1RblNzendSLUR2VmpLblFleTYyZ0dvMW94S2hGZnh3R1FGV2QtemdTWlA5YXl4UWRLaDlzV3EtUVJYMzlvZk9ybFh3Y2VUU2FSVEhuNDQ1VVpHeTZsSnFzQTgwVVhOOEd3czhfUXVNR1I5c01pT0pIMXppQkhaQ1k5eXFtTU5ocWl5bzZ5ODVVLVJuMnhqNi13VHVSY2ZSbm9oU0JiRk5NajNwNERyd1RB?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: 'I'm not Jeffrey Epstein': Viral Palm Beach lookalike speaks out
+  - Short title: Epstein Files Update: 'I'm not Jeffrey Epstein': Viral Palm Beach lookalike speaks out
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: 'I'm not Jeffrey Epstein': Viral Palm Beach lookalik
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-03-18 — How the military is using AI in war - CBS News
+  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxOZkszbHBCSUFTSnlNdTZjOUJsdjVlS3JYaXE3am1hR2VmMXJ3XzQ4SWxPam16djFzRUwtZ01qbGRKU3pjZjI3SlBTaWVlRnJhTHVZWEoxbkV2TFpfMHJYbFBQSGVUUVV0MUlQdkIzUEJnVEZIMFZ6VlE5RzliTFhmZkF30gGHAUFVX3lxTE1fdWNMaE4xYUVua3NERzFGVmNpSkFCUllZemJuVFhLRjM1dy1YQmFrcjNKX3c5dGVDZnJGZloxQmNybE1Kb1ExVm9VR19IUzk1LWFucFROVm9WYlFic2hBNGszZGhRRDJmbW01OXNXemhlaWpzYTVmTTE1dXlubEc5WmNkNnExZw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: How the military is using AI in war
+  - Short title: War Machine Update: How the military is using AI in war
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: How the military is using AI in war
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-03-15 — These aren’t AI firms, they’re defense contractors. We can’t let them hide behind their models | Avner Gvaryahu - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNejNwSWVRSDEwcmRMV1NteEg4UkFxdzlFTXZPNG5DSUpYLWNUNU5XSjJaNy1GTnZxWFppWDZ6aGMtMEpLdU5KODB2cUFVdkkwclhwXy0zLWZja2tOd3FDbDZDQ084d3lvMTNWQVFwTW0ybVRRNkIxRzFUY2lpSFd4SlVta2M4MVpWOGpDZmFndmNUNVNvNGc?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: These aren’t AI firms, they’re defense contractors. We can’t let them hide behind their models | Avner Gvaryahu
+  - Short title: War Machine Update: These aren’t AI firms, they’re defense contractors. We can’t let them hi
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: These aren’t AI firms, they’re defense contractors. We can’
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-03-13 — Five Years After Coup, Myanmar’s Digital Authoritarianism Enters New Phase - Tech Policy Press
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxPMTlPZ29WSkVVaWZWSGpOTF9xTDRaMHczOFhIY0V6NVA1bGtvVHlyakNGOVR2Z3VaN2J3UmxSdWdhMXlCVzVHYWM0Tkd1bF9RWVVFRURkYmRqdzB5R09qakJtLVV1cUZvSzllQ2wyRDZ6al9HN21DSTlieUl1QUdBR3ppLWQ0Y0p1ZjhiVy0zMnoyLXNDQjhFd1hRQ1diQQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Five Years After Coup, Myanmar’s Digital Authoritarianism Enters New Phase
+  - Short title: Elite Control Update: Five Years After Coup, Myanmar’s Digital Authoritarianism Enters New P
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Five Years After Coup, Myanmar’s Digital Authoritarianism Enters New P
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-03-12 — The Military’s Use of AI, Explained - Brennan Center for Justice
+  - Source: https://news.google.com/rss/articles/CBMiigFBVV95cUxQUXJnQjd0T1A5dHNxX1hBQVE4TGNjMFFRZVhhUHdBREo0by1FZVpVZlBkM3JwSXh0d0Y1RTJhZXBxS3NIVWRVNGVpOGh6SGc0Z0xOd1MwakxCRUVDSFlSVmpXOG9SeUItYVF4QTNPNTZQWmV3Y0RUN3hrLUJKUlNVWUlhMUhLOVpJb2c?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: The Military’s Use of AI, Explained
+  - Short title: War Machine Update: The Military’s Use of AI, Explained
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: The Military’s Use of AI, Explained
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-03-12 — Iran-linked hackers take aim at U.S. and other targets, raising risk of cyberattacks during war - PBS
+  - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPNUxtdDNSMXhULUtMOGk2U1J3YTEweVVscDdiVERJZ0JuV2h6VDJfUmk0RUZBa2FzZElrYXFxY3ByaGdwR29uVXNmdEQ3azRvRFdqRWdQdUw5UkFjSFN1V05veHlhS1pSXzVra3NqanpxcXlVQ2FXUmt0VGpHRVBQeVJzdGhpTkFJdGxLMmRaNGd1bXczV1I2dldDVVpmeU1fakF0aldaRUZlV0JuaHlxTUdYb2FKbElmcHNMR3dHZUFDSVMzU3VR0gHMAUFVX3lxTFBiVDBWSXBpRGlhdm1TQVYwLWFsc2hYYmJXOEU1NzdLM1hOUGtIWkgwMEVnbjlmZks0RGxBWVVtUjVVZl82VWdSMmlOQmE3bmtfeG5wMzlBblRCSk41Y2dCZGhjT2dTNGM3aUZiM0x3UHprbW83SDhUVlZudmxiVWd0YmplNTdYU0YtX1c0c3dDY0t2YmwwU0JXNl9WS0dFWHp5Sk5LVzdMelVuR1ZTWXFUS1NidmN2WWU4aVRUZmVFTEpSZUFKdGtpWEFETw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Iran-linked hackers take aim at U.S. and other targets, raising risk of cyberattacks during war
+  - Short title: War Machine Update: Iran-linked hackers take aim at U.S. and other targets, raising risk of
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: Iran-linked hackers take aim at U.S. and other targets, rai
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-03-04 — The Department of Defense’s Conflict With Anthropic and Deal With OpenAI Are a Call for Congress To Act - Center for American Progress
+  - Source: https://news.google.com/rss/articles/CBMi3AFBVV95cUxOUGZRODN2Q1lHY1hsWUt5d3RwM1pNb0d3c202Q2RXWTliMi1YZmh3OU1ySGtiRmsxbHdaSUY5ZzZSYV9kVFJxOGIwUGtLclV5QzhLRmVSWUN3am03OWJPaG9vM3B2OHpLMF9ZcGRMT2thTFJ0QVd4eW96RVdHNTJBS1VlZ19lcGlCSXhjMVIwZEJTRkJQMkx1dmc0cHBXclROOS1vVkRtQWhMWXc2RzF5LUhqenFaWmtWcWZDT2VhZVlrTzJhSjQxMzR5Z2xDbFZVaUxmTVItcllYcjBG?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: The Department of Defense’s Conflict With Anthropic and Deal With OpenAI Are a Call for Congress To Act
+  - Short title: War Machine Update: The Department of Defense’s Conflict With Anthropic and Deal With OpenAI
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: The Department of Defense’s Conflict With Anthropic and Dea
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-03-02 — What Hegseth’s “Supply Chain Risk” Designation of Anthropic Does and Doesn’t Mean - Just Security
+  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: What Hegseth’s “Supply Chain Risk” Designation of Anthropic Does and Doesn’t Mean
+  - Short title: War Machine Update: What Hegseth’s “Supply Chain Risk” Designation of Anthropic Does and Doe
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: What Hegseth’s “Supply Chain Risk” Designation of Anthropic
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-02-27 — OpenAI announces Pentagon deal after Trump bans Anthropic - NPR
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxQV3VfbEtjVnR3Qm9rX2NBcTlVdnV1ZnVETGVBYTJJTWNvRVFSMUxVenpmLXdtOE9QY0JWcUZQd3NOWHg2WVFDdnBEemZLN3liYXJKT19rTXZHQ1BFZVVFN3NNaVZ2NjJrT3E2ZXQ0czlpbExmbEhaQ0pTTDV3RS1QNWdNT3NLZXhNaF85eHNVXzNXbVpXRHc?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: OpenAI announces Pentagon deal after Trump bans Anthropic
+  - Short title: War Machine Update: OpenAI announces Pentagon deal after Trump bans Anthropic
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: OpenAI announces Pentagon deal after Trump bans Anthropic
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-02-26 — Idemia PS deal brings growing number of US mDLs to Trinsic’s digital identity network - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNkNVZGppbUdIOVBCUHNFY3ZsTGhuTVJzNWZzcWp5eTdBRkl4clB0azJSdTBuNnFueVg2eFA2WURkZE8wbzlXNTJBelE0UjE3SGhVdVhRRVZRZThiUXgyQmNVZWxINVpTUzhVMVV2T01acFFwU0Q1dG05RWxnWVR5VllJaWRtN1NLbjFYcHBhZlc0ZVR3ZDJ0TWltMkRGREJVb3A1dUgyVFd6RkZYRlZqU0t3bGxhazJPM1FYZmhHX00?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Idemia PS deal brings growing number of US mDLs to Trinsic’s digital identity network
+  - Short title: Elite Control Update: Idemia PS deal brings growing number of US mDLs to Trinsic’s digital i
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Idemia PS deal brings growing number of US mDLs to Trinsic’s digital i
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-02-23 — Taiwan's Martial Law-era archives fully declassified - Focus Taiwan
+  - Source: https://news.google.com/rss/articles/CBMiV0FVX3lxTE84X2l3SmxmNzZLZ0dvN0hjRUpNWWpONFUzcmJwUFcxSGFQMnZ1YzVVZHB5OXdXYWZSeGFNSjAzemFZa3dVVXdtcGN1UGMwdTdvV1E0UmllRQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Taiwan's Martial Law-era archives fully declassified
+  - Short title: New Declassified File Route: Taiwan's Martial Law-era archives fully declassified
+  - Longform title: What This Public-Record Update Reveals About Declassified Files And Public Archives: Taiwan's Martial Law-era archives fully declassified
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: download-center.html
+- 2026-02-23 — Mexico’s Long War: Drugs, Crime, and the Cartels - Council on Foreign Relations
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTE5sZ1VuRHE3U3phT1c0dHRqTkVqV19Zamp2YzB2bnZHR09keW9saWVpdl92NllpZFpPRDNzeEg5QUd2ME8yTDJKRDVieVlZSDB3YVJrZ0RGVnhCdFFTYXU1eE8yWjc3WVJueVpIM3RubWhqRExnSzYxSTA5OVg3MFE?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Mexico’s Long War: Drugs, Crime, and the Cartels
+  - Short title: Crime-State Overlap Update: Mexico’s Long War: Drugs, Crime, and the Cartels
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: Mexico’s Long War: Drugs, Crime, and the Cartels
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-02-17 — Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Midas’ Case - Organized Crime and Corruption Reporting Project | OCCRP
+  - Source: https://news.google.com/rss/articles/CBMirwFBVV95cUxPcllHS2JXUlJad09SaWF2SUZMdVVIckNBUTF3ZmF2OVZpb1dFQXlOeVpKNlV6NnhtUHBtbVduZGd0MFdGVjNCV2lCUVloWVlrbjAzWGVLenJJUnpYMDZIQ25jcF9nUEg4eGdSLTJDeW9uaEFReldMYkFZV0l5LXdsUHRuRDBMbkFjbnV2NzRCdm8xVEYwY0JELXFuVVF3dFIzNTR0V3hLOE9iX19WZG1J?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Midas’ Case
+  - Short title: Crime-State Overlap Update: Ukraine Charges Ex Energy Minister with Money Laundering in ‘Ope
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: Ukraine Charges Ex Energy Minister with Money Laundering in ‘Operation Mid
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-01-30 — Myanmar’s Digital Authoritarianism: Building a Surveillance State with Chinese Technology Transfers - fulcrum.sg
+  - Source: https://news.google.com/rss/articles/CBMiuAFBVV95cUxNOWZQNGNRczBvOVVQRklETGRBYi1SVllWRFlyUDNKenJ6ZU9SbTkyM1FWLUcwUTZXeEFZS2oyN0pNTVlSaUNlMEdWVkI2NjBGVXJYTnR1RndrYW42UVFzZ2tvcVFoS0s4dElTWHhYMGlTN05KUE0wUEwxX0N0THZTQzY4ZEE3M2w2d3dPZTl4OXVkZTFPaDhsc0thLWtONW0zWDY4YTU5ZUk0bVJCM2FraVNjczRZanht?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Myanmar’s Digital Authoritarianism: Building a Surveillance State with Chinese Technology Transfers
+  - Short title: Elite Control Update: Myanmar’s Digital Authoritarianism: Building a Surveillance State with
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: Myanmar’s Digital Authoritarianism: Building a Surveillance State with
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html
+- 2026-01-16 — This Week in DOW: Strengthening the Defense Industrial Base, JAGs Assist Immigration Missi - U.S. Department of War (.gov)
+  - Source: https://news.google.com/rss/articles/CBMi2gFBVV95cUxOZEtIZDJ0bHpqUjU1ZFNXMExfZjZjQnEwV194d0F2T0c1aDl0UXUtaUNodTlmUVFuT1NUTXNScDd1c0c0REp1VEkxbzNDQ0xMbTJPWFlsaDNfc3QtekhNN1BnMkVUa0NsVkNpUW5fQTE1WklqeWxZY0FMM2hCNjM4OWYzai1vbWdLZmJNaHREYWpJaV9kZFY2YU5MdU1DRWpHTnZYNm5sbUxSdThRZWlFSXdfUDZuaUZ2U1JXcUM1bHZnS0dyNGk2cG5iZ2ttTzFGZDhGWmxPS1l4QQ?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: This Week in DOW: Strengthening the Defense Industrial Base, JAGs Assist Immigration Missi
+  - Short title: War Machine Update: This Week in DOW: Strengthening the Defense Industrial Base, JAGs Assist
+  - Longform title: What This Public-Record Update Reveals About War Machine And Intelligence State: This Week in DOW: Strengthening the Defense Industrial Base
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-01-14 — UK Digital ID Scheme Faces Resistance Over Security Concerns - TechRepublic
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFBocWJtVno1TDc1QVZ4TnJybDBmcnZKSlRaRUNFdVhyNGdvdlhBUjNVS21ucGVZVm95bjNXbWxPZDh4bjYzVUk1VHpfOUVQaDdXbjlodTJFRkxfVTEzeF9sWXJrSGp4UUFXcjk0a0tNSC1FWnRBNnlWSkNHYTJ2dlU?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: UK Digital ID Scheme Faces Resistance Over Security Concerns
+  - Short title: Elite Control Update: UK Digital ID Scheme Faces Resistance Over Security Concerns
+  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: UK Digital ID Scheme Faces Resistance Over Security Concerns
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-starter-library.html

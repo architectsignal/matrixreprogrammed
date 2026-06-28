@@ -1,0 +1,400 @@
+{
+  "ok": true,
+  "buildSha": "856626cadc6867e5eb5965b05fef3f0c2a08fe66",
+  "buildShortSha": "856626cadc68",
+  "generatedAt": "2026-06-28T07:58:58.015Z",
+  "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
+  "buildCommand": "npm run build",
+  "workerScript": "src/worker.js",
+  "assetOutput": "_site",
+  "routeAliasCount": 104,
+  "aliasCount": 19,
+  "aliases": [
+    {
+      "route": "/deploy-status",
+      "target": "/deploy-status.html",
+      "present": true
+    },
+    {
+      "route": "/epstein",
+      "target": "/epstein-files.html",
+      "present": true
+    },
+    {
+      "route": "/live-intel",
+      "target": "/live-intel.html",
+      "present": true
+    },
+    {
+      "route": "/evidence-vault",
+      "target": "/evidence-vault.html",
+      "present": true
+    },
+    {
+      "route": "/power-atlas",
+      "target": "/power-atlas.html",
+      "present": true
+    },
+    {
+      "route": "/book-universe",
+      "target": "/book-universe.html",
+      "present": true
+    },
+    {
+      "route": "/answer-engine",
+      "target": "/answer-engine.html",
+      "present": true
+    },
+    {
+      "route": "/offer-center",
+      "target": "/offer-center.html",
+      "present": true
+    },
+    {
+      "route": "/opt-in",
+      "target": "/optin-center.html",
+      "present": true
+    },
+    {
+      "route": "/rss",
+      "target": "/feed-center.html",
+      "present": true
+    },
+    {
+      "route": "/forum",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/signal-board",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/main-board",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/speculation-board",
+      "target": "/dark-speculation-forum.html",
+      "present": true
+    },
+    {
+      "route": "/dark-speculation-board",
+      "target": "/dark-speculation-forum.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-alive-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-sighting-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-sightings-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/amazon-store",
+      "target": "/amazon-store-books.html",
+      "present": true
+    }
+  ],
+  "requiredAliases": [
+    {
+      "route": "/deploy-status",
+      "target": "/deploy-status.html",
+      "present": true
+    },
+    {
+      "route": "/epstein",
+      "target": "/epstein-files.html",
+      "present": true
+    },
+    {
+      "route": "/live-intel",
+      "target": "/live-intel.html",
+      "present": true
+    },
+    {
+      "route": "/evidence-vault",
+      "target": "/evidence-vault.html",
+      "present": true
+    },
+    {
+      "route": "/power-atlas",
+      "target": "/power-atlas.html",
+      "present": true
+    },
+    {
+      "route": "/book-universe",
+      "target": "/book-universe.html",
+      "present": true
+    },
+    {
+      "route": "/answer-engine",
+      "target": "/answer-engine.html",
+      "present": true
+    },
+    {
+      "route": "/offer-center",
+      "target": "/offer-center.html",
+      "present": true
+    },
+    {
+      "route": "/opt-in",
+      "target": "/optin-center.html",
+      "present": true
+    },
+    {
+      "route": "/rss",
+      "target": "/feed-center.html",
+      "present": true
+    },
+    {
+      "route": "/forum",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/signal-board",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/main-board",
+      "target": "/forum.html",
+      "present": true
+    },
+    {
+      "route": "/speculation-board",
+      "target": "/dark-speculation-forum.html",
+      "present": true
+    },
+    {
+      "route": "/dark-speculation-board",
+      "target": "/dark-speculation-forum.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-alive-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-sighting-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/epstein-sightings-board",
+      "target": "/epstein-alive-board.html",
+      "present": true
+    },
+    {
+      "route": "/amazon-store",
+      "target": "/amazon-store-books.html",
+      "present": true
+    }
+  ],
+  "requiredAliasMap": {
+    "/deploy-status": "/deploy-status.html",
+    "/epstein": "/epstein-files.html",
+    "/live-intel": "/live-intel.html",
+    "/evidence-vault": "/evidence-vault.html",
+    "/power-atlas": "/power-atlas.html",
+    "/book-universe": "/book-universe.html",
+    "/answer-engine": "/answer-engine.html",
+    "/offer-center": "/offer-center.html",
+    "/opt-in": "/optin-center.html",
+    "/rss": "/feed-center.html",
+    "/forum": "/forum.html",
+    "/signal-board": "/forum.html",
+    "/main-board": "/forum.html",
+    "/speculation-board": "/dark-speculation-forum.html",
+    "/dark-speculation-board": "/dark-speculation-forum.html",
+    "/epstein-alive-board": "/epstein-alive-board.html",
+    "/epstein-sighting-board": "/epstein-alive-board.html",
+    "/epstein-sightings-board": "/epstein-alive-board.html",
+    "/amazon-store": "/amazon-store-books.html"
+  },
+  "hardBoardRoutes": [
+    {
+      "route": "/forum-feed-main",
+      "present": true
+    },
+    {
+      "route": "/forum-feed-speculation",
+      "present": true
+    },
+    {
+      "route": "/forum-feed-epstein-alive",
+      "present": true
+    },
+    {
+      "route": "/submit-main-post",
+      "present": true
+    },
+    {
+      "route": "/submit-speculation-post",
+      "present": true
+    },
+    {
+      "route": "/submit-epstein-alive-post",
+      "present": true
+    },
+    {
+      "route": "/report-main-post",
+      "present": true
+    },
+    {
+      "route": "/report-speculation-post",
+      "present": true
+    },
+    {
+      "route": "/report-epstein-alive-post",
+      "present": true
+    }
+  ],
+  "modules": [
+    {
+      "name": "Homepage",
+      "file": "index.html",
+      "marker": "FOLLOW THE FILES.",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "dc92d5dd6b1c44b7"
+    },
+    {
+      "name": "Live Intel",
+      "file": "live-intel.html",
+      "marker": "Latest Actionable Updates",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "e0d5e998dc8b2ef1"
+    },
+    {
+      "name": "Epstein Command Center",
+      "file": "epstein-files.html",
+      "marker": "Evidence Boundary",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Epstein People Tracker",
+      "file": "epstein-files.html",
+      "marker": "People / Entity Tracker",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Epstein Timeline Map",
+      "file": "epstein-files.html",
+      "marker": "Timeline + Cross-Reference Map",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Epstein Evidence Ladder",
+      "file": "epstein-files.html",
+      "marker": "Evidence Strength Ladder",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Actual Files Cockpit",
+      "file": "epstein-files.html",
+      "marker": "Actual Files Cockpit",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Network Architecture Matrix",
+      "file": "epstein-files.html",
+      "marker": "Network Architecture Matrix",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "c815c458aed376c7"
+    },
+    {
+      "name": "Main Signal Board",
+      "file": "forum.html",
+      "marker": "data-board=\"main\"",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "e62babf95f756735"
+    },
+    {
+      "name": "Dark Speculation Board",
+      "file": "dark-speculation-forum.html",
+      "marker": "data-board=\"speculation\"",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "1958a8723c61093f"
+    },
+    {
+      "name": "Epstein Sighting Board",
+      "file": "epstein-alive-board.html",
+      "marker": "data-board=\"epstein-alive\"",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "64a77786d14b19c5"
+    },
+    {
+      "name": "Forum Worker",
+      "file": "src/worker.js",
+      "marker": "FORUM_POSTS",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "ac97b528f5bfc829"
+    },
+    {
+      "name": "Hard Board Routes",
+      "file": "src/worker.js",
+      "marker": "/forum-feed-speculation",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "ac97b528f5bfc829"
+    },
+    {
+      "name": "Cloudflare Output Builder",
+      "file": "scripts/build-cloudflare-output.js",
+      "marker": "_site",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "7ccd695f49dfd840"
+    }
+  ],
+  "hashes": {
+    "worker": "ac97b528f5bfc829",
+    "package": "7a9c044d76ca677e",
+    "epsteinFiles": "c815c458aed376c7",
+    "liveIntel": "e0d5e998dc8b2ef1"
+  },
+  "pressureTests": {
+    "packageIncludesBuild": true,
+    "cloudflareRoutesTest": true,
+    "tenOutOfTenTest": true,
+    "epsteinWatchTest": true
+  },
+  "liveProof": {
+    "homepageExpectedMarker": "FOLLOW THE FILES.",
+    "epsteinExpectedMarker": "THE EPSTEIN FILES COMMAND CENTER / Evidence Boundary layer",
+    "forumHealthEndpoint": "/forum-health",
+    "mainBoardFeed": "/forum-feed-main",
+    "speculationBoardFeed": "/forum-feed-speculation",
+    "epsteinSightingBoardFeed": "/forum-feed-epstein-alive",
+    "cacheNote": "If this page shows the latest build but the homepage looks old, purge Cloudflare cache."
+  }
+}

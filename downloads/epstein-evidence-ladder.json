@@ -1,0 +1,155 @@
+{
+  "updated": "2026-06-25",
+  "purpose": "Phase 5 Evidence Strength Ladder and Claim Classifier for the Epstein Command Center. This makes public-facing evidence stronger by showing readers exactly how much weight each record type carries.",
+  "boundary": "The stronger the claim, the stronger the required evidence. Conviction, plea, court finding, authenticated exhibit, sworn testimony, email record, flight/contact record, settlement, news report, and speculation are not the same evidentiary weight.",
+  "levels": [
+    {
+      "level": "Level 1",
+      "name": "Conviction / Plea / Court Finding",
+      "strength": "Highest public-record weight",
+      "claimAllowed": "The site may state the finding precisely and link to the legal record.",
+      "needs": [
+        "court record",
+        "judgment",
+        "plea",
+        "sentencing record",
+        "authenticated legal source"
+      ],
+      "warning": "Do not extend the finding beyond the named person, charge, count, court, and date."
+    },
+    {
+      "level": "Level 2",
+      "name": "Authenticated Exhibit / Official Disclosure",
+      "strength": "Very strong document weight",
+      "claimAllowed": "The site may state that the document exists, what it says, and where it came from.",
+      "needs": [
+        "official release",
+        "court exhibit",
+        "committee release",
+        "agency publication",
+        "stable source link"
+      ],
+      "warning": "The document proves the record item; interpretation still needs context."
+    },
+    {
+      "level": "Level 3",
+      "name": "Sworn Testimony / Deposition / Congressional Testimony",
+      "strength": "Strong claim record",
+      "claimAllowed": "The site may state that a person testified, alleged, denied, or described something under a formal process.",
+      "needs": [
+        "transcript",
+        "deposition",
+        "sworn filing",
+        "committee record",
+        "court citation"
+      ],
+      "warning": "Sworn testimony is evidence, not automatic final truth unless adopted by a court or finding."
+    },
+    {
+      "level": "Level 4",
+      "name": "Email / Schedule / Ledger / Contact Record",
+      "strength": "Strong network-trail weight",
+      "claimAllowed": "The site may state that a communication, scheduling item, payment trail, or contact record exists and classify its network function.",
+      "needs": [
+        "email archive",
+        "schedule",
+        "ledger",
+        "contact book",
+        "metadata/context"
+      ],
+      "warning": "Contact proves contact. It does not automatically prove motive, knowledge, or criminal conduct."
+    },
+    {
+      "level": "Level 5",
+      "name": "Flight / Visitor / Property / Logistics Record",
+      "strength": "Strong presence/logistics trail",
+      "claimAllowed": "The site may state a recorded travel, property, visitor, or logistics trail and ask what it connects to.",
+      "needs": [
+        "flight log",
+        "visitor record",
+        "property record",
+        "staff testimony",
+        "date and location context"
+      ],
+      "warning": "Presence is not automatic participation. Tie it to dates, context, and other records."
+    },
+    {
+      "level": "Level 6",
+      "name": "Settlement / NDA / Legal Threat / Sealed-Record Lane",
+      "strength": "Silence-management weight",
+      "claimAllowed": "The site may state that a settlement, NDA, sealing fight, or legal-pressure event exists and explain why it affects public knowledge.",
+      "needs": [
+        "court docket",
+        "settlement reporting",
+        "motion to seal",
+        "subpoena record",
+        "public legal statement"
+      ],
+      "warning": "Settlement is not automatic admission unless the record says so."
+    },
+    {
+      "level": "Level 7",
+      "name": "Reputable Reporting / Named Source Summary",
+      "strength": "Useful but secondary weight",
+      "claimAllowed": "The site may summarize what a reputable outlet reported and link to it while seeking the underlying file.",
+      "needs": [
+        "named publication",
+        "date",
+        "author/outlet",
+        "source description",
+        "corroboration path"
+      ],
+      "warning": "Reporting is not the same as the underlying document. Use it as a route into the record."
+    },
+    {
+      "level": "Level 8",
+      "name": "Open Question / Pattern Signal / Speculation Quarantine",
+      "strength": "Question only",
+      "claimAllowed": "The site may ask a labelled question if it names the triggering record and what would confirm or falsify the theory.",
+      "needs": [
+        "triggering record",
+        "missing evidence list",
+        "confirmation standard",
+        "falsification condition"
+      ],
+      "warning": "Never write speculation as fact. Never add a name without a record."
+    }
+  ],
+  "claimClassifier": [
+    {
+      "claimType": "Person named in file",
+      "allowedLanguage": "The file names this person or entity in this record context.",
+      "forbiddenShortcut": "Named in file = guilty"
+    },
+    {
+      "claimType": "Contact or correspondence",
+      "allowedLanguage": "The record supports contact, communication, or relationship-frequency analysis.",
+      "forbiddenShortcut": "Contact = knowledge of crimes"
+    },
+    {
+      "claimType": "Presence or travel",
+      "allowedLanguage": "The record supports a presence/logistics trail that must be cross-checked against date, place, witness, and purpose.",
+      "forbiddenShortcut": "Presence = participation"
+    },
+    {
+      "claimType": "Money or philanthropy",
+      "allowedLanguage": "The record supports a money, access, legitimacy, consulting, donation, or reputation-laundering question.",
+      "forbiddenShortcut": "Payment = criminal guilt"
+    },
+    {
+      "claimType": "Settlement or NDA",
+      "allowedLanguage": "The record supports a silence-management, legal-pressure, or private-resolution question.",
+      "forbiddenShortcut": "Settlement = admission"
+    },
+    {
+      "claimType": "Contradiction",
+      "allowedLanguage": "The record conflicts with a public statement or creates a credibility-pressure lane.",
+      "forbiddenShortcut": "Contradiction = proof of underlying allegation"
+    },
+    {
+      "claimType": "Conviction or court finding",
+      "allowedLanguage": "The site may state the conviction or finding exactly as the court record supports it.",
+      "forbiddenShortcut": "One person’s conviction = everyone around them is guilty"
+    }
+  ]
+}

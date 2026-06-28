@@ -1,0 +1,123 @@
+{
+  "updated": "2026-06-28T07:58:56.516Z",
+  "purpose": "Public evidence-badge and claim-classifier system for Matrix Reprogrammed. It tells readers what a record proves, what it does not prove, and what source would strengthen a claim.",
+  "rule": "Source first. Evidence class second. Claim strength third. Network interpretation last.",
+  "badges": [
+    {
+      "label": "Court Record",
+      "strength": "High",
+      "proves": "A filing, order, docket, exhibit, testimony transcript, judgment, plea, or court-managed document exists.",
+      "doesNotProve": "It does not automatically prove every allegation inside the filing unless the court found it, the party admitted it, or the record independently supports it.",
+      "strengthensWith": "Ruling, exhibit, sworn transcript, plea, verdict, authenticated docket entry."
+    },
+    {
+      "label": "Official Source",
+      "strength": "High",
+      "proves": "A government, regulator, court, agency, committee, or official dataset published the material.",
+      "doesNotProve": "It may still need context, date, definitions, limitations, redactions, and category separation.",
+      "strengthensWith": "Original publication page, dataset notes, definitions, release memo, archive capture."
+    },
+    {
+      "label": "Declassified Archive",
+      "strength": "Medium / High",
+      "proves": "A released file, FOIA record, archive item, or historical government document exists.",
+      "doesNotProve": "It does not automatically prove present-day claims or the full surrounding context.",
+      "strengthensWith": "File date, agency origin, release package, related files, independent corroboration."
+    },
+    {
+      "label": "Email / Message Record",
+      "strength": "Medium / High",
+      "proves": "A correspondence record, message thread, sender/recipient/date/context trail, or archive result exists.",
+      "doesNotProve": "It does not automatically prove the truth of statements made inside the message.",
+      "strengthensWith": "Authenticated archive, full thread, metadata, attachments, matching public records."
+    },
+    {
+      "label": "Flight / Log / Contact Record",
+      "strength": "Medium",
+      "proves": "A name, trip, contact, phone-book entry, schedule, log, or proximity record exists.",
+      "doesNotProve": "It does not prove criminal conduct, knowledge, intent, or participation by itself.",
+      "strengthensWith": "Multiple records, testimony, date alignment, corroborating emails, court exhibits."
+    },
+    {
+      "label": "Sworn Claim",
+      "strength": "Medium",
+      "proves": "A person made a claim under oath or in a legal setting.",
+      "doesNotProve": "A sworn claim is not the same as a court finding or conviction.",
+      "strengthensWith": "Corroborating documents, cross-examination, court acceptance, supporting exhibits."
+    },
+    {
+      "label": "Settlement / NDA",
+      "strength": "Medium",
+      "proves": "A private legal resolution, silence agreement, or civil compromise exists or is credibly reported.",
+      "doesNotProve": "It is not an admission unless the settlement says it is.",
+      "strengthensWith": "Settlement text, court filings, party statements, payment terms, related testimony."
+    },
+    {
+      "label": "Financial / Access Record",
+      "strength": "Medium",
+      "proves": "Money, payments, donations, employment, advisory access, institutional access, or financial proximity exists.",
+      "doesNotProve": "Money or access is not automatic proof of sex-crime participation or operational knowledge.",
+      "strengthensWith": "Invoices, bank records, filings, internal reviews, testimony, contemporaneous correspondence."
+    },
+    {
+      "label": "Credible Reporting / News Lead",
+      "strength": "Lead",
+      "proves": "A reputable outlet has reported a claim, source trail, legal update, or document lead.",
+      "doesNotProve": "Reporting is a lead unless backed by primary documents, direct evidence, or court findings.",
+      "strengthensWith": "Primary records, multiple independent outlets, linked documents, named on-record sources."
+    },
+    {
+      "label": "Interpretive / Symbolic Claim",
+      "strength": "Interpretation",
+      "proves": "An interpretation, pattern, symbolic reading, or analytical argument has been made.",
+      "doesNotProve": "It does not prove criminal conduct or conspiracy by itself.",
+      "strengthensWith": "Primary text, historical source, doctrinal source, direct admission, external corroboration."
+    },
+    {
+      "label": "Speculation Quarantine",
+      "strength": "Quarantined",
+      "proves": "A hypothesis exists but does not yet have enough evidence to publish as a claim.",
+      "doesNotProve": "It proves nothing beyond a research lead.",
+      "strengthensWith": "Primary records, named sources, court documents, official releases, authenticated archives."
+    },
+    {
+      "label": "Unsupported / Rejected",
+      "strength": "Rejected",
+      "proves": "The claim lacks sufficient sourcing or violates the site evidence boundary.",
+      "doesNotProve": "It should not be promoted as fact.",
+      "strengthensWith": "A real public source trail before publication."
+    }
+  ],
+  "sourceHierarchy": [
+    "Primary Source",
+    "Court Record",
+    "Official Dataset",
+    "Regulator / Sanctions Record",
+    "Declassified Archive",
+    "Parliamentary / Congressional Record",
+    "Credible Reporting",
+    "Interpretive Commentary"
+  ],
+  "claimRules": [
+    "Association is not guilt.",
+    "A name in a record is not proof of wrongdoing.",
+    "A symbol is not proof of conspiracy.",
+    "An adverse-event report is not proof of causation.",
+    "A relationship line must say what it means.",
+    "Unsupported viral claims are quarantined or rejected.",
+    "Victim privacy overrides spectacle.",
+    "Corrections strengthen the archive."
+  ],
+  "peopleEvidenceClasses": [
+    "Convicted / admitted record",
+    "Court record",
+    "Sworn claim",
+    "Email record",
+    "Flight/log/contact record",
+    "Financial/access record",
+    "Contradiction lane",
+    "Settlement/NDA lane",
+    "Media/reputation-management lane",
+    "Peripheral mention"
+  ]
+}

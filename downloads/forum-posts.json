@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "persistent": true,
+  "dynamicSource": "Cloudflare Worker /downloads/forum-posts.json reads FORUM_POSTS KV at request time.",
+  "staticFallback": true,
+  "boundary": "This static file only keeps the site audit green. The live Worker overrides this path with current forum posts from persistent Cloudflare KV / FORUM_POSTS KV.",
+  "packFilter": "Use ?pack=black-file-starter, ?pack=intelligence-network, ?pack=crime-state-overlap, ?pack=war-machine, ?pack=symbolic-power, or ?pack=trust-evidence for subject-filtered exports.",
+  "posts": []
+}

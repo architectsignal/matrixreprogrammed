@@ -1,0 +1,101 @@
+{
+  "ok": false,
+  "buildSha": "856626cadc6867e5eb5965b05fef3f0c2a08fe66",
+  "buildShortSha": "856626cadc68",
+  "generatedAt": "2026-06-28T07:58:59.396Z",
+  "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
+  "routeToCheck": "https://matrixreprogrammed.com/deploy-health.html",
+  "homepageShouldContain": [
+    "machine-three-doors",
+    "all-seeing-eye-gate"
+  ],
+  "homepageShouldNotContain": [
+    "preservedaftervisiblede-duplication",
+    "new-intelligence-toolspreserved",
+    "reader-usefulness-routepreserved"
+  ],
+  "markerLeak": true,
+  "checks": [
+    {
+      "name": "Homepage",
+      "route": "/",
+      "file": "index.html",
+      "marker": "machine-three-doors",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "5d48ec749a83281f"
+    },
+    {
+      "name": "All-seeing eye gate",
+      "route": "/",
+      "file": "index.html",
+      "marker": "all-seeing-eye-gate",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "5d48ec749a83281f"
+    },
+    {
+      "name": "Dark Speculation Lab",
+      "route": "/dark-speculation-lab.html",
+      "file": "dark-speculation-lab.html",
+      "marker": "CLASSIFIED, NOT CONFIRMED",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "61ac519b12815252"
+    },
+    {
+      "name": "Dark Speculation Forum",
+      "route": "/dark-speculation-forum.html",
+      "file": "dark-speculation-forum.html",
+      "marker": "DROP THE LINK",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "34210d70fbc129a7"
+    },
+    {
+      "name": "Evidence Vault",
+      "route": "/evidence-vault.html",
+      "file": "evidence-vault.html",
+      "marker": "Evidence",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "89ca5c22f20d6657"
+    },
+    {
+      "name": "Books",
+      "route": "/books.html",
+      "file": "books.html",
+      "marker": "Books",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "0816b026790d6cf0"
+    },
+    {
+      "name": "Download Center",
+      "route": "/download-center.html",
+      "file": "download-center.html",
+      "marker": "DOWNLOAD",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "515cd4e5f05ea4c2"
+    },
+    {
+      "name": "Forum Worker",
+      "route": "/forum-health",
+      "file": "src/worker.js",
+      "marker": "FORUM_POSTS",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "ac97b528f5bfc829"
+    },
+    {
+      "name": "Cloudflare Assets",
+      "route": "/deploy-status",
+      "file": "scripts/build-cloudflare-output.js",
+      "marker": "_site",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "7ccd695f49dfd840"
+    }
+  ]
+}

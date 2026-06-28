@@ -1,0 +1,170 @@
+{
+  "updated": "2026-06-25",
+  "purpose": "Phase 4 Network Architecture Matrix for the Epstein Command Center. This layer explains the functions visible in the records: access, logistics, money, reputation repair, legal pressure, silence, media leverage, institutional proximity, and uncertainty control.",
+  "boundary": "This matrix exposes network function, not automatic criminal guilt. A record can prove contact, money, travel, scheduling, testimony, contradiction, settlement, or institutional access. Criminal attribution requires conviction, plea, court finding, authenticated exhibit, admission, or clearly supported legal record.",
+  "speculationRule": "Speculation is allowed only as a labelled question. It must state what record triggered the question, what is missing, and what would confirm or falsify the theory.",
+  "functions": [
+    {
+      "title": "Access Network",
+      "evidenceClass": "Documented association / contact / invitation / meeting trail",
+      "whatToTrack": "Who had access, who introduced whom, who kept contact after conviction, who appears across emails, schedules, court filings, visitor records, or public reporting.",
+      "redFlags": [
+        "Repeated contact after conviction",
+        "Private access without clear professional purpose",
+        "Cross-over between politics, finance, academia, media, royalty, science, and philanthropy",
+        "Contradictions between records and public statements"
+      ],
+      "recordsNeeded": [
+        "Emails",
+        "contact books",
+        "visitor logs",
+        "flight logs",
+        "schedules",
+        "court exhibits",
+        "testimony"
+      ]
+    },
+    {
+      "title": "Logistics Network",
+      "evidenceClass": "Scheduling / travel / staff / property record",
+      "whatToTrack": "Who arranged travel, rooms, appointments, massage schedules, errands, accommodation, flights, and property access.",
+      "redFlags": [
+        "Staff repeatedly handling sensitive appointments",
+        "Travel and accommodation around vulnerable persons",
+        "Records that connect names, dates, properties, and assistants",
+        "Denials of knowledge that require cross-checking"
+      ],
+      "recordsNeeded": [
+        "Staff testimony",
+        "schedules",
+        "travel records",
+        "flight logs",
+        "property records",
+        "emails",
+        "phone records where public"
+      ]
+    },
+    {
+      "title": "Money / Legitimacy Network",
+      "evidenceClass": "Financial / philanthropy / consulting / institution record",
+      "whatToTrack": "Payments, charitable introductions, institutional donations, consulting claims, science or academic access, foundations, wealth managers, and reputation-building transactions.",
+      "redFlags": [
+        "Large unexplained payments",
+        "Philanthropy used as access cover",
+        "Post-conviction legitimacy building",
+        "Institutions accepting access or money despite known risk"
+      ],
+      "recordsNeeded": [
+        "SEC filings",
+        "court records",
+        "institutional reports",
+        "tax/charity disclosures where public",
+        "news investigations",
+        "settlement records"
+      ]
+    },
+    {
+      "title": "Reputation Repair Network",
+      "evidenceClass": "Media / public-relations / academic / philanthropy lane",
+      "whatToTrack": "How Epstein or connected figures sought prestige, intellectual cover, media framing, elite introductions, charitable association, and public rehabilitation.",
+      "redFlags": [
+        "Post-conviction elite events",
+        "Reputation-sensitive email strategy",
+        "Academic or science access used for legitimacy",
+        "Public statements contradicted by records"
+      ],
+      "recordsNeeded": [
+        "emails",
+        "media reports",
+        "institutional statements",
+        "academic records",
+        "event records",
+        "public interviews"
+      ]
+    },
+    {
+      "title": "Legal Pressure / Silence Network",
+      "evidenceClass": "Court / settlement / NDA / litigation lane",
+      "whatToTrack": "Settlements, NDAs, threat letters, sealed records, delayed disclosures, legal denials, retractions, discovery fights, and subpoena boundaries.",
+      "redFlags": [
+        "Private settlements that restrict testimony",
+        "Sealed or heavily redacted material",
+        "Claims resolved without public fact-finding",
+        "Witnesses needing subpoenas to speak freely"
+      ],
+      "recordsNeeded": [
+        "court dockets",
+        "settlement reporting",
+        "motions to seal/unseal",
+        "committee subpoenas",
+        "deposition excerpts",
+        "public legal statements"
+      ]
+    },
+    {
+      "title": "Media / Political Leverage Network",
+      "evidenceClass": "Email / strategy / public denial / timing lane",
+      "whatToTrack": "Emails or reporting showing how Epstein-related information could become political leverage, reputation leverage, debate-stage risk, or media framing.",
+      "redFlags": [
+        "Timing around elections or public scandals",
+        "Private emails discussing how a public figure should respond",
+        "Journalists or advisers acting as narrative brokers",
+        "Claims used as leverage without court finding"
+      ],
+      "recordsNeeded": [
+        "emails",
+        "public reporting",
+        "campaign/public statements",
+        "court filings",
+        "committee releases"
+      ]
+    },
+    {
+      "title": "Institutional Failure Network",
+      "evidenceClass": "Oversight / law-enforcement / institutional review lane",
+      "whatToTrack": "Missed warnings, weak prosecutions, plea deals, institutional tolerance, poor victim protection, delayed disclosure, and failures by law enforcement, universities, charities, banks, or powerful institutions.",
+      "redFlags": [
+        "Known offender retains access",
+        "Institution benefits from association",
+        "Victim reports not acted on",
+        "Delayed disclosures",
+        "Public trust damaged by redactions or secrecy"
+      ],
+      "recordsNeeded": [
+        "inspector general records",
+        "court files",
+        "institutional reviews",
+        "committee records",
+        "survivor testimony",
+        "agency releases"
+      ]
+    },
+    {
+      "title": "Speculation Quarantine",
+      "evidenceClass": "Labelled theory / open question only",
+      "whatToTrack": "Questions raised by record patterns that are not yet proved: intelligence-adjacent access, possible leverage operations, unexplained money flows, protected networks, or coordinated silence.",
+      "redFlags": [
+        "Theory presented as fact",
+        "Names added without a record",
+        "Screenshots without source",
+        "Viral lists without document links",
+        "Association turned into guilt"
+      ],
+      "recordsNeeded": [
+        "triggering record",
+        "missing record list",
+        "confirming evidence standard",
+        "falsification condition",
+        "source link"
+      ]
+    }
+  ],
+  "readerMethod": [
+    "Start with the file or court record.",
+    "Classify the evidence before naming the implication.",
+    "Map the function: access, logistics, money, reputation, law, silence, media, institution, or open question.",
+    "Look for repeated appearances across independent records.",
+    "Show the boundary on every claim.",
+    "Turn open questions into research tasks, not fake conclusions."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "updated": "2026-06-25",
+  "purpose": "Phase 3 Actual Files Cockpit for the Epstein Command Center. This data powers direct public-facing links to the file routes readers should open first: official disclosures, congressional records, court records, searchable email archives, and supporting archive/search lanes.",
+  "boundary": "A document route is a starting point, not a conclusion. Readers should open the file, identify the record type, check the date, read the context, and classify what it supports before drawing a conclusion.",
+  "doors": [
+    {
+      "title": "DOJ Epstein Disclosures",
+      "evidenceClass": "Official disclosure route",
+      "url": "https://www.justice.gov/epstein/doj-disclosures",
+      "use": "Open the official DOJ disclosure route for government-published Epstein material, redactions, indexes, and release notes.",
+      "bestFor": "Official file releases, redaction context, government-published source material."
+    },
+    {
+      "title": "House Oversight Epstein Records",
+      "evidenceClass": "Congressional record route",
+      "url": "https://oversight.house.gov/?s=Epstein",
+      "use": "Open the congressional oversight lane for statements, witness testimony, release announcements, subpoenas, and committee framing.",
+      "bestFor": "Committee releases, testimony, public letters, oversight movement."
+    },
+    {
+      "title": "CourtListener Epstein Dockets",
+      "evidenceClass": "Court record route",
+      "url": "https://www.courtlistener.com/?q=Epstein&type=r&order_by=score%20desc",
+      "use": "Search court records, filings, motions, civil suits, rulings, habeas arguments, Maxwell-related litigation, and related docket material.",
+      "bestFor": "Court records, exhibits, litigation timelines, filings and rulings."
+    },
+    {
+      "title": "Jmail Epstein Email Search",
+      "evidenceClass": "Email archive route",
+      "url": "https://jmail.world",
+      "use": "Search the email-style archive by name, topic, sender, recipient, and date. Treat search results as document leads and verify context.",
+      "bestFor": "Email trails, correspondence patterns, relationship-frequency signals."
+    },
+    {
+      "title": "WikiLeaks Search: Epstein",
+      "evidenceClass": "Search lead route",
+      "url": "https://search.wikileaks.org/?query=Epstein",
+      "use": "Search public archive material for Epstein-related references. Treat results as leads and corroborate before using them as claims.",
+      "bestFor": "Auxiliary search leads, cross-reference terms, archive discovery."
+    },
+    {
+      "title": "FBI Vault Search",
+      "evidenceClass": "Law-enforcement archive route",
+      "url": "https://vault.fbi.gov/",
+      "use": "Search the FBI public vault for released files, historic records, FOIA material, and related investigative records.",
+      "bestFor": "Released law-enforcement files and archive trails."
+    },
+    {
+      "title": "CIA Reading Room",
+      "evidenceClass": "Declassified archive route",
+      "url": "https://www.cia.gov/readingroom/",
+      "use": "Search declassified CIA reading-room material where intelligence-history context is relevant.",
+      "bestFor": "Declassified archive searches and intelligence-history context."
+    },
+    {
+      "title": "National Archives Catalog",
+      "evidenceClass": "Archive route",
+      "url": "https://catalog.archives.gov/",
+      "use": "Search U.S. archival records, agency material, photographs, legal records, and historical files.",
+      "bestFor": "Government archive context and historical record searches."
+    },
+    {
+      "title": "SEC EDGAR",
+      "evidenceClass": "Financial record route",
+      "url": "https://www.sec.gov/edgar/search/",
+      "use": "Search corporate filings, directors, funds, entities, securities records, and financial relationships that may help map money or institutional access.",
+      "bestFor": "Corporate and financial trail research."
+    },
+    {
+      "title": "FARA Records",
+      "evidenceClass": "Influence-record route",
+      "url": "https://efile.fara.gov/ords/fara/f?p=1381:1",
+      "use": "Search foreign-agent registration records, lobbying, representation, and influence disclosures.",
+      "bestFor": "Lobbying, foreign-agent, and influence-network context."
+    },
+    {
+      "title": "OpenSecrets",
+      "evidenceClass": "Political-money research route",
+      "url": "https://www.opensecrets.org/",
+      "use": "Search campaign finance, donors, PACs, lobbying, and political-money patterns.",
+      "bestFor": "Political money and lobbying trails."
+    },
+    {
+      "title": "ICIJ Offshore Leaks Database",
+      "evidenceClass": "Offshore-entity search route",
+      "url": "https://offshoreleaks.icij.org/",
+      "use": "Search offshore entities, intermediaries, and company links. Treat results as leads requiring context and verification.",
+      "bestFor": "Entity leads, offshore structures, intermediary searches."
+    }
+  ],
+  "howToUse": [
+    "Start with the official disclosure or court record where possible.",
+    "Search names across email, court, oversight, and financial routes separately.",
+    "Record the document type before interpreting the meaning.",
+    "Separate contact, claim, sworn testimony, settlement, and conviction.",
+    "Use repeated appearance across independent routes as a stronger network signal.",
+    "Never turn a search result into a criminal finding without court-grade support."
+  ]
+}

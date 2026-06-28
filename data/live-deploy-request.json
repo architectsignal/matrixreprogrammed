@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-06-27T18:14:00Z",
-  "reason": "Force a clean Cloudflare production deploy after adding Pages fallback and making hard Signal Board routes permanent.",
+  "requestedAt": "2026-06-28T18:03:00+02:00",
+  "reason": "Retry Cloudflare production deploy after CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN were confirmed visible in GitHub repository secrets.",
   "expectedHomepageMarker": "FOLLOW THE FILES.",
   "expectedBoards": [
     "forum.html",
@@ -16,5 +16,9 @@
     "/submit-main-post",
     "/submit-speculation-post",
     "/submit-epstein-alive-post"
+  ],
+  "secretsConfirmedVisible": [
+    "CLOUDFLARE_ACCOUNT_ID",
+    "CLOUDFLARE_API_TOKEN"
   ]
 }

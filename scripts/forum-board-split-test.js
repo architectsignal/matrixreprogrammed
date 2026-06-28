@@ -15,6 +15,21 @@ try { require('./apply-hard-board-split.js'); } catch (error) { issues.push(`har
 const hardFeeds = ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive'];
 const hardSubmits = ['/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'];
 const hardReports = ['/report-main-post','/report-speculation-post','/report-epstein-alive-post'];
+const publicFiles = ['forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html','data/forum-seed.json'];
+const bannedPublicCopy = [
+  'Local fallback',
+  'backend unavailable',
+  'Backend detail',
+  'FORUM_POSTS KV binding missing',
+  'FORUM_POSTS KV binding',
+  'Worker routes',
+  'Cloudflare Static Forum Mode',
+  'Cloudflare static mode',
+  'saved on this device',
+  'Open /forum-health',
+  'Cloudflare test route',
+  '/forum-feed and /submit-forum-post'
+];
 
 for (const file of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js','src/worker.js','data/forum-board-split.json','scripts/build-board-split.js','scripts/apply-hard-board-split.js']) needFile(file);
 needText('forum.html', 'data-board="main"');
@@ -32,6 +47,8 @@ needText('forum.js', 'boardFromPath');
 needText('forum.js', 'lockFormToBoard');
 needText('forum.js', 'payload.board = BOARD');
 needText('forum.js', 'matrix_signal_board_posts_v2_');
+needText('forum.js', 'pending sync');
+needText('forum.js', 'Signal Board is syncing');
 for (const route of [...hardFeeds, ...hardSubmits, ...hardReports]) needText('forum.js', route);
 needText('src/worker.js', 'boardLabels');
 needText('src/worker.js', 'normalizeBoard');
@@ -45,6 +62,7 @@ needText('src/worker.js', "'/epstein-alive-board': '/epstein-alive-board.html'")
 needText('search-index.json', 'epstein-alive-board.html');
 needText('sitemap.xml', 'epstein-alive-board.html');
 needText('llms.txt', '/forum-feed-epstein-alive');
+for (const file of publicFiles) for (const phrase of bannedPublicCopy) forbidText(file, phrase);
 forbidText('forum.html', 'data-board="speculation"');
 forbidText('forum.html', 'data-board="epstein-alive"');
 if (exists('data/forum-board-split.json')) {
@@ -58,4 +76,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FORUM BOARD SPLIT TEST PASSED');
-console.log('Checked three board pages, hard board frontend routes, hard Worker feed/storage endpoints, aliases, sitemap, llms, and search index.');
+console.log('Checked three board pages, hard board frontend routes, hard Worker feed/storage endpoints, aliases, sitemap, llms, search index, and no internal fallback copy in public board UI.');

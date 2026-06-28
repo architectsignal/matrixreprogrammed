@@ -2,8 +2,16 @@
   "name": "matrixreprogrammed",
   "main": "src/worker.js",
   "compatibility_date": "2026-06-28",
+  "keep_vars": true,
   "assets": {
     "binding": "ASSETS",
-    "directory": "_site"
-  }
+    "directory": "_site",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "FORUM_POSTS",
+      "id": "99996d87016d4285a833707cbda5232f"
+    }
+  ]
 }

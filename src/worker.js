@@ -1,3 +1,5 @@
+const PAGES_STATIC_ORIGIN = 'https://matrixreprogrammed.pages.dev';
+
 const jsonHeaders = {
   'Content-Type': 'application/json; charset=utf-8',
   'Cache-Control': 'no-store'
@@ -76,7 +78,7 @@ const routeAliases = {
   '/optin-center': '/optin-center.html',
   '/opt-in': '/optin-center.html',
   '/lead-magnets': '/optin-center.html',
-  '/newsletter': '/optin-center.html',
+  '/newsletter': '/newsletter.html',
   '/amazon-store': '/amazon-store-books.html'
 };
 
@@ -521,34 +523,40 @@ export default {
     if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);
 
     const tryAsset = async (pathname) => {
-      const nextUrl = new URL(request.url);
-      nextUrl.pathname = pathname;
-      return env.ASSETS.fetch(new Request(nextUrl, request));
+      const assetUrl = new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN);
+      assetUrl.search = url.search;
+      const originRequest = new Request(assetUrl.toString(), request);
+      return fetch(originRequest, {
+        cf: {
+          cacheEverything: request.method === 'GET',
+          cacheTtlByStatus: { '200-299': 300, '404': 60, '500-599': 0 }
+        }
+      });
     };
 
     let response = await tryAsset(routedPath);
-    if (response.status !== 404) return response;
+    if (![403, 404].includes(response.status)) return response;
 
     if (routedPath !== originalPath) {
       response = await tryAsset(originalPath);
-      if (response.status !== 404) return response;
+      if (![403, 404].includes(response.status)) return response;
     }
 
     if (!routedPath.endsWith('/')) {
       response = await tryAsset(`${routedPath}.html`);
-      if (response.status !== 404) return response;
+      if (![403, 404].includes(response.status)) return response;
 
       response = await tryAsset(`${routedPath}/index.html`);
-      if (response.status !== 404) return response;
+      if (![403, 404].includes(response.status)) return response;
     }
 
     if (routedPath.endsWith('/')) {
       response = await tryAsset(`${routedPath}index.html`);
-      if (response.status !== 404) return response;
+      if (![403, 404].includes(response.status)) return response;
 
       const trimmed = routedPath.replace(/\/$/, '');
       response = await tryAsset(`${trimmed}.html`);
-      if (response.status !== 404) return response;
+      if (![403, 404].includes(response.status)) return response;
     }
 
     return tryAsset('/404.html');

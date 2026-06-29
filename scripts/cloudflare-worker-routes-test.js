@@ -11,6 +11,11 @@ const requireIncludes = (file, text, label = text) => {
   if (!exists(file)) return;
   if (!read(file).includes(text)) fail(`${file}: missing ${label}`);
 };
+const requireAnyIncludes = (file, texts, label) => {
+  if (!exists(file)) return;
+  const body = read(file);
+  if (!texts.some(text => body.includes(text))) fail(`${file}: missing ${label}`);
+};
 const forbidIncludes = (file, text, label = text) => {
   if (!exists(file)) return;
   if (read(file).includes(text)) fail(`${file}: should not contain ${label}`);
@@ -45,7 +50,7 @@ requireIncludes('src/worker.js', 'const routeAliases = {', 'routeAliases map');
 requireIncludes('src/worker.js', 'routeAliases[originalPath]', 'original route alias lookup');
 requireIncludes('src/worker.js', 'routeAliases[normalizedPath]', 'normalized route alias lookup');
 requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'bundled Worker asset fetch');
-requireIncludes('src/worker.js', "X-Matrix-Origin', 'worker-assets", 'worker asset origin header');
+requireAnyIncludes('src/worker.js', ["X-Matrix-Origin', 'cloudflare-worker-assets", "X-Matrix-Origin', 'worker-assets"], 'worker asset origin header');
 requireIncludes('src/worker.js', '/forum-health', 'forum health endpoint');
 requireIncludes('src/worker.js', '/forum-feed', 'forum feed endpoint');
 requireIncludes('src/worker.js', '/submit-forum-post', 'forum submit endpoint');

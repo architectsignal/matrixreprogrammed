@@ -16,6 +16,21 @@ function read(name) { return fs.readFileSync(p(name), 'utf8'); }
 function rel(full) { return path.relative(root, full).split(path.sep).join('/'); }
 function fail(msg) { problems.push(msg); }
 function warn(msg) { warnings.push(msg); }
+function runNodeScript(script, args = []) {
+  const res = spawnSync(process.execPath, [script, ...args], { cwd: root, encoding: 'utf8', maxBuffer: 1024 * 1024 * 6 });
+  if (res.status !== 0) {
+    fail(`${script} failed while preparing audit: ${(res.stderr || res.stdout || '').trim().slice(-1200)}`);
+  }
+  return res.status === 0;
+}
+function ensurePostbuildOutput() {
+  if (mode !== 'postbuild') return;
+  if (exists('_site/index.html')) return;
+  if (exists('scripts/repair-generated-site-artifacts.js')) runNodeScript('scripts/repair-generated-site-artifacts.js');
+  if (exists('scripts/repair-search-system.js')) runNodeScript('scripts/repair-search-system.js');
+  if (exists('scripts/patch-worker-pages-origin.js')) runNodeScript('scripts/patch-worker-pages-origin.js');
+  if (exists('scripts/build-cloudflare-output.js')) runNodeScript('scripts/build-cloudflare-output.js');
+}
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -92,6 +107,7 @@ function checkPostbuild() {
   needFile('downloads/seven-day-intel.json');
 }
 
+ensurePostbuildOutput();
 walk(root);
 for (const f of checked.js) checkJs(f);
 for (const f of checked.json) checkJson(f);

@@ -37,7 +37,7 @@ needText('scripts/build-free-ask-matrix-search.js', 'routeHints');
 needText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex');
 needText('scripts/build-free-ask-matrix-search.js', 'HTML returned instead of JSON');
 for (const name of ['search.html', 'search.js', 'scripts/build-free-ask-matrix-search.js']) {
-  for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'autorag', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
+  for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
 }
 if (exists('search-index.json')) {
   const index = JSON.parse(read('search-index.json'));

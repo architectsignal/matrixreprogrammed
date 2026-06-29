@@ -64,6 +64,12 @@ if (exists('forum.js')) {
   needText('forum.js', '/forum-feed-epstein-alive', 'frontend epstein feed');
   needText('forum.js', '/submit-main-post', 'frontend main submit');
   needText('forum.js', '/report-main-post', 'frontend report route');
+  needText('forum.js', 'postLive', 'frontend live post helper');
+  needText('forum.js', 'syncPendingLocalPosts', 'frontend local retry sync');
+  needText('forum.js', 'Not posted live yet', 'honest live-post failure message');
+  needText('forum.js', 'not live yet', 'local-only marker');
+  needText('forum.js', "cache:'no-store'", 'forum no-store fetches');
+  forbidText('forum.js', 'Signal received. It may take a moment to appear on the live board.', 'misleading local-only post success');
 }
 
 // Downloads / machine-readable resources
@@ -115,4 +121,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log('Checked Ask Matrix search, Worker routes, forum forms, downloads, deploy health, JSON feeds, _site output, critical scripts, and navigation harmony.');
+console.log('Checked Ask Matrix search, Worker routes, forum forms, honest live-post behavior, local retry sync, downloads, deploy health, JSON feeds, _site output, critical scripts, and navigation harmony.');

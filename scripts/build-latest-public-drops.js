@@ -18,7 +18,33 @@ function activeDrops(data) {
     if (!Number.isFinite(d.getTime())) return true;
     const age = (now.getTime() - d.getTime()) / 86400000;
     return age >= -1 && age <= max;
-  });
+  }).map(completeDrop);
+}
+function completeDrop(drop = {}) {
+  const laneTitle = drop.laneTitle || drop.lane || 'Public-source lane';
+  const source = drop.url || 'source route pending';
+  return {
+    ...drop,
+    evidenceLevel: drop.evidenceLevel || 'Public-source lead',
+    evidenceBoundary: drop.evidenceBoundary || 'A source lead is not proof. Open the source and classify the evidence before upgrading any claim.',
+    whyItMatters: drop.whyItMatters || `This belongs in the ${laneTitle} lane because it may connect to a wider public-record structure worth tracking over time.`,
+    nextAction: drop.nextAction || 'Open the source, follow the evidence route, and only share the claim at the strength the record supports.',
+    videoHook: drop.videoHook || `New public-source drop in the ${laneTitle} lane: ${drop.title || 'untitled source lead'}. Source first, claim second.`,
+    rumbleShortTitle: drop.rumbleShortTitle || String(drop.title || 'Latest public-source drop').slice(0, 72),
+    rumbleLongTitle: drop.rumbleLongTitle || `${laneTitle} — ${drop.title || 'Latest public-source drop'}`.slice(0, 140),
+    socialThread: Array.isArray(drop.socialThread) && drop.socialThread.length ? drop.socialThread : [
+      `1/ New ${laneTitle} update: ${drop.title || 'public-source drop'}`,
+      '2/ Treat the source as the starting point, not the conclusion.',
+      '3/ Classify the evidence level, then follow the route into Live Intel, timers, and the source vault.',
+      `4/ Source: ${source}`
+    ],
+    optinRoute: drop.optinRoute || 'optin-center.html',
+    offerRoute: drop.offerRoute || 'offer-center.html',
+    bookRoute: drop.bookRoute || 'books.html',
+    storeRoute: drop.storeRoute || 'amazon-store-books.html',
+    videoRoute: drop.videoRoute || 'videos.html',
+    evidenceRoute: drop.evidenceRoute || 'evidence-vault.html'
+  };
 }
 function card(drop) {
   return `<article class="news-item"><span class="figure-caption">${esc(String(drop.published || '').slice(0,10))} · ${esc(drop.laneTitle || drop.lane)} · ${esc(drop.sourceLabel)}</span><h3>${esc(drop.title)}</h3><p>${esc(drop.summary)}</p><div class="grid"><div class="card"><span class="label">Evidence Class</span><h3>${esc(drop.evidenceLevel)}</h3><p>${esc(drop.evidenceBoundary)}</p></div><div class="card"><span class="label">Why It Matters</span><h3>Public-Record Route</h3><p>${esc(drop.whyItMatters)}</p></div><div class="card"><span class="label">Next Action</span><h3>Watch Point</h3><p>${esc(drop.nextAction)}</p></div></div><div class="terminal">LATEST DROP\n&gt; ${esc(drop.videoHook)}\n&gt; Timer links: ${esc((drop.timerLinks || []).join(' · ') || 'none')}\n&gt; Source requirement: ${esc(drop.sourceRequirement || 'source-linked record')}</div><div class="cta-row small"><a class="btn" href="${esc(drop.url)}">Open Source</a><a class="btn alt" href="${esc(drop.evidenceRoute || 'evidence-vault.html')}">Evidence Route</a><a class="btn alt" href="${esc(drop.videoRoute || 'videos.html')}">Video Hook</a><a class="btn alt" href="${esc(drop.optinRoute || 'optin-center.html')}">Free Brief</a></div></article>`;
@@ -38,7 +64,7 @@ function upsertSection(file, id, title, lead, drops) {
 function mergeLiveIntel(data, drops) {
   const live = readJson('data/live-intel.json', { items: [], rules: [], lanes: [] });
   const byId = new Map();
-  for (const item of drops) byId.set(item.id, { ...item, status: 'curated-latest-public-drop' });
+  for (const item of drops) byId.set(item.id, { ...completeDrop(item), status: 'curated-latest-public-drop' });
   for (const item of live.items || []) byId.set(item.id || `${item.title}-${item.published}`, item);
   live.updated = data.updated;
   live.status = 'updated-with-latest-public-drops';

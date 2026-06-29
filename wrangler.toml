@@ -1,11 +1,16 @@
 # Cloudflare Workers deployment configuration
-# Production deploy path: Cloudflare Workers Builds runs `npm run build` then `npx wrangler deploy`.
-# The build command creates the static site in _site; src/worker.js handles backend routes.
+# Production deploy path: GitHub Actions runs npm run build then npx wrangler deploy.
+# The build command creates the static site in _site; src/worker.js handles backend routes and bundled assets.
 
 name = "matrixreprogrammed"
 main = "src/worker.js"
 compatibility_date = "2026-06-25"
 keep_vars = true
+
+routes = [
+  { pattern = "matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" },
+  { pattern = "www.matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" }
+]
 
 [assets]
 directory = "./_site"

@@ -2,6 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+
+try {
+  const expansionScript = path.join(root, 'scripts', 'build-dark-speculation-expansion.js');
+  const expansionData = path.join(root, 'data', 'dark-speculation-expansion.json');
+  const speculationPage = path.join(root, 'dark-speculation-lab.html');
+  if (fs.existsSync(expansionScript) && fs.existsSync(expansionData) && fs.existsSync(speculationPage)) {
+    require(expansionScript);
+  }
+} catch (error) {
+  console.warn(`Deep speculation dossier render skipped: ${error.message}`);
+}
+
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 
 function ensureStyles(html) {

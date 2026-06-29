@@ -1,8 +1,7 @@
-const PAGES_STATIC_ORIGIN = 'https://matrixreprogrammed.pages.dev';
-
 const jsonHeaders = {
   'Content-Type': 'application/json; charset=utf-8',
-  'Cache-Control': 'no-store'
+  'Cache-Control': 'no-store',
+  'X-Matrix-Origin': 'cloudflare-worker-api'
 };
 
 const routeAliases = {
@@ -10,21 +9,33 @@ const routeAliases = {
   '/start': '/start-here.html',
   '/search': '/search.html',
   '/ask-matrix': '/search.html',
+  '/matrix-brain': '/site-intelligence-core.html',
+  '/brain': '/site-intelligence-core.html',
+  '/site-intelligence-core': '/site-intelligence-core.html',
+  '/control-system-tracker': '/control-system-tracker.html',
+  '/control-tracker': '/control-system-tracker.html',
+  '/timers': '/timers.html',
+  '/risk-timers': '/timers.html',
   '/forum': '/forum.html',
   '/signal-board': '/forum.html',
   '/main-board': '/forum.html',
   '/speculation-board': '/dark-speculation-forum.html',
   '/dark-speculation-board': '/dark-speculation-forum.html',
   '/dark-speculation-dropbox': '/dark-speculation-forum.html',
+  '/dark-speculation-lab': '/dark-speculation-lab.html',
   '/epstein-alive-board': '/epstein-alive-board.html',
   '/epstein-sighting-board': '/epstein-alive-board.html',
   '/epstein-sightings-board': '/epstein-alive-board.html',
+  '/epstein': '/epstein-files.html',
+  '/epstein-files': '/epstein-files.html',
   '/books': '/books.html',
   '/deploy-status': '/deploy-status.html',
   '/live-intel': '/live-intel.html',
-  '/epstein': '/epstein-files.html',
   '/evidence-vault': '/evidence-vault.html',
+  '/source-document-vault': '/source-document-vault.html',
+  '/claim-classifier': '/claim-classifier.html',
   '/power-atlas': '/power-atlas.html',
+  '/atlas-index': '/atlas-index.html',
   '/book-universe': '/book-universe.html',
   '/answer-engine': '/answer-engine.html',
   '/ai-answers': '/answer-engine.html',
@@ -107,8 +118,20 @@ function markdown(text, filename = 'forum-posts.md') {
     headers: {
       'Content-Type': 'text/markdown; charset=utf-8',
       'Content-Disposition': `attachment; filename="${filename}"`,
-      'Cache-Control': 'no-store'
+      'Cache-Control': 'no-store',
+      'X-Matrix-Origin': 'cloudflare-worker-api'
     }
+  });
+}
+
+function withAssetHeaders(response) {
+  const headers = new Headers(response.headers);
+  headers.set('X-Matrix-Origin', 'cloudflare-worker-assets');
+  headers.set('X-Matrix-Worker', 'matrixreprogrammed');
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
   });
 }
 
@@ -154,47 +177,6 @@ function filterPostsByBoard(posts = [], board = 'main') {
   return posts.filter(post => normalizeBoard(post.board || inferBoardFromPost(post)) === normalized);
 }
 
-async function handleIntroVoice(request, env) {
-  if (!env.ELEVENLABS_API_KEY) {
-    return json({ ok: false, error: 'ELEVENLABS_API_KEY Cloudflare secret missing. Browser fallback voice can still be used.' }, 503);
-  }
-  const body = await readBody(request);
-  const text = cleanText(body.text || 'Welcome to Matrix Reprogrammed. Reality is edited. The headline is not the machine. The truth is not hidden. It is encoded.', 900);
-  if (text.length < 3) return json({ ok: false, error: 'No intro text provided.' }, 400);
-  const voiceId = cleanText(env.ELEVENLABS_VOICE_ID || 'JBFqnCBsd6RMkjVDRZzb', 120);
-  const modelId = cleanText(env.ELEVENLABS_MODEL_ID || 'eleven_multilingual_v2', 120);
-  const endpoint = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voiceId)}?output_format=mp3_44100_128`;
-  const eleven = await fetch(endpoint, {
-    method: 'POST',
-    headers: {
-      'xi-api-key': env.ELEVENLABS_API_KEY,
-      'Content-Type': 'application/json',
-      'Accept': 'audio/mpeg'
-    },
-    body: JSON.stringify({
-      text,
-      model_id: modelId,
-      voice_settings: {
-        stability: 0.42,
-        similarity_boost: 0.78,
-        style: 0.38,
-        use_speaker_boost: true
-      }
-    })
-  });
-  if (!eleven.ok) {
-    const details = await eleven.text().catch(() => 'ElevenLabs request failed');
-    return json({ ok: false, error: 'ElevenLabs request failed', status: eleven.status, details: cleanText(details, 500) }, 502);
-  }
-  return new Response(eleven.body, {
-    status: 200,
-    headers: {
-      'Content-Type': eleven.headers.get('content-type') || 'audio/mpeg',
-      'Cache-Control': 'no-store'
-    }
-  });
-}
-
 function makeId() {
   return `signal-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 }
@@ -221,9 +203,7 @@ function safePost(post) {
 }
 
 function sortPosts(posts) {
-  return posts
-    .filter(Boolean)
-    .sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
+  return posts.filter(Boolean).sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
 }
 
 function filterPostsByPack(posts, pack) {
@@ -266,37 +246,6 @@ async function listStoredPosts(env, limit = 100) {
   return sortPosts(posts);
 }
 
-async function getForumStats(env) {
-  if (!env.FORUM_POSTS) return { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]) };
-  const indexed = await getIndexedPosts(env);
-  const storedList = await env.FORUM_POSTS.list({ prefix: 'post:', limit: 1000 });
-  return {
-    ok: true,
-    indexCount: indexed.length,
-    storedPostCount: (storedList.keys || []).length,
-    boardCounts: boardCounts(indexed),
-    boardLabels,
-    indexSelfHealing: true,
-    persistenceMode: 'Cloudflare KV FORUM_POSTS: posts:index plus durable post:* records, board-aware filtering active'
-  };
-}
-
-async function getPosts(env, board = 'all') {
-  if (!env.FORUM_POSTS) return null;
-  const indexed = await getIndexedPosts(env);
-  const stored = await listStoredPosts(env, 100);
-  const byId = new Map();
-  for (const post of [...indexed, ...stored]) {
-    if (post && post.id) byId.set(post.id, post);
-  }
-  const merged = sortPosts([...byId.values()]).slice(0, 100);
-  if (merged.length && (stored.length !== indexed.length || merged.length !== indexed.length)) {
-    await savePosts(env, merged);
-  }
-  if (board === 'all') return merged;
-  return filterPostsByBoard(merged, board);
-}
-
 async function savePosts(env, posts) {
   const cleaned = sortPosts((posts || []).map(safePost)).slice(0, 100);
   await env.FORUM_POSTS.put('posts:index', JSON.stringify(cleaned), {
@@ -311,6 +260,33 @@ async function savePostRecord(env, post) {
     metadata: { createdAt: cleaned.createdAt, title: cleaned.title, status: cleaned.status, board: cleaned.board }
   });
   return cleaned;
+}
+
+async function getPosts(env, board = 'all') {
+  if (!env.FORUM_POSTS) return null;
+  const indexed = await getIndexedPosts(env);
+  const stored = await listStoredPosts(env, 100);
+  const byId = new Map();
+  for (const post of [...indexed, ...stored]) if (post && post.id) byId.set(post.id, post);
+  const merged = sortPosts([...byId.values()]).slice(0, 100);
+  if (merged.length && (stored.length !== indexed.length || merged.length !== indexed.length)) await savePosts(env, merged);
+  if (board === 'all') return merged;
+  return filterPostsByBoard(merged, board);
+}
+
+async function getForumStats(env) {
+  if (!env.FORUM_POSTS) return { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]) };
+  const indexed = await getIndexedPosts(env);
+  const storedList = await env.FORUM_POSTS.list({ prefix: 'post:', limit: 1000 });
+  return {
+    ok: true,
+    indexCount: indexed.length,
+    storedPostCount: (storedList.keys || []).length,
+    boardCounts: boardCounts(indexed),
+    boardLabels,
+    indexSelfHealing: true,
+    persistenceMode: 'Cloudflare KV FORUM_POSTS: posts:index plus durable post:* records, board-aware filtering active'
+  };
 }
 
 async function forumExport(env, pack = '', board = 'all') {
@@ -366,24 +342,31 @@ function postsMarkdown(data) {
     ''
   ];
   if (data.packFiltered) {
-    lines.push('## Pack Filter');
-    lines.push('');
-    lines.push(`Terms: ${(data.packTerms || []).join(', ')}`);
-    lines.push('');
+    lines.push('## Pack Filter', '', `Terms: ${(data.packTerms || []).join(', ')}`, '');
   }
   for (const post of posts) {
-    lines.push(`## ${post.title}`);
-    lines.push('');
-    lines.push(`- Date: ${post.createdAt}`);
-    lines.push(`- Board: ${boardLabels[post.board] || post.board || 'Main Signal Board'}`);
-    lines.push(`- Category: ${post.category}`);
-    lines.push(`- Name: ${post.name}`);
+    lines.push(`## ${post.title}`, '', `- Date: ${post.createdAt}`, `- Board: ${boardLabels[post.board] || post.board || 'Main Signal Board'}`, `- Category: ${post.category}`, `- Name: ${post.name}`);
     if (post.sourceUrl) lines.push(`- Source: ${post.sourceUrl}`);
-    lines.push('');
-    lines.push(post.body);
-    lines.push('');
+    lines.push('', post.body, '');
   }
   return lines.join('\n');
+}
+
+async function handleIntroVoice(request, env) {
+  if (!env.ELEVENLABS_API_KEY) return json({ ok: false, error: 'ELEVENLABS_API_KEY Cloudflare secret missing. Browser fallback voice can still be used.' }, 503);
+  const body = await readBody(request);
+  const text = cleanText(body.text || 'Welcome to Matrix Reprogrammed. Reality is edited. The headline is not the machine. The truth is not hidden. It is encoded.', 900);
+  if (text.length < 3) return json({ ok: false, error: 'No intro text provided.' }, 400);
+  const voiceId = cleanText(env.ELEVENLABS_VOICE_ID || 'JBFqnCBsd6RMkjVDRZzb', 120);
+  const modelId = cleanText(env.ELEVENLABS_MODEL_ID || 'eleven_multilingual_v2', 120);
+  const endpoint = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voiceId)}?output_format=mp3_44100_128`;
+  const eleven = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'xi-api-key': env.ELEVENLABS_API_KEY, 'Content-Type': 'application/json', 'Accept': 'audio/mpeg' },
+    body: JSON.stringify({ text, model_id: modelId, voice_settings: { stability: 0.42, similarity_boost: 0.78, style: 0.38, use_speaker_boost: true } })
+  });
+  if (!eleven.ok) return json({ ok: false, error: 'ElevenLabs request failed', status: eleven.status, details: cleanText(await eleven.text().catch(() => ''), 500) }, 502);
+  return new Response(eleven.body, { status: 200, headers: { 'Content-Type': eleven.headers.get('content-type') || 'audio/mpeg', 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api' } });
 }
 
 async function handleForumPostsJson(request, env) {
@@ -411,6 +394,8 @@ async function handleForumHealth(env) {
     ok: hasForumPostsBinding,
     worker: 'matrixreprogrammed',
     backend: 'src/worker.js',
+    assetBinding: Boolean(env.ASSETS),
+    assetMode: 'Cloudflare bundled ASSETS binding first, no Pages origin fallback',
     forumPostsBinding: hasForumPostsBinding ? 'connected' : 'missing',
     kvBindingName: 'FORUM_POSTS',
     expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
@@ -422,10 +407,9 @@ async function handleForumHealth(env) {
     boardAware: true,
     boardLabels,
     boardCounts: stats.boardCounts,
-    routes: ['/forum-feed?board=main', '/forum-feed?board=speculation', '/forum-feed?board=epstein-alive', '/submit-forum-post', '/report-forum-post', '/track-event', '/intro-voice', '/downloads/forum-posts.json?board=main', '/downloads/forum-posts.json?board=speculation', '/downloads/forum-posts.json?board=epstein-alive'],
     publicRouteAliases: Object.keys(routeAliases).length,
     deployedFrom: 'GitHub main',
-    updatedAt: '2026-06-27T00:00:00.000Z'
+    updatedAt: '2026-06-29T00:00:00.000Z'
   }, hasForumPostsBinding ? 200 : 503);
 }
 
@@ -447,7 +431,6 @@ async function handleSubmitForumPost(request, env) {
   const message = cleanText(body.body || body.message, 1800);
   if (title.length < 3 || message.length < 10) return json({ ok: false, error: 'Signal needs a title and a useful body.' }, 400);
   const sourceUrl = cleanText(body.sourceUrl || body.source || '', 500);
-  const safeSource = /^https?:\/\//i.test(sourceUrl) ? sourceUrl : '';
   const post = await savePostRecord(env, {
     id: makeId(),
     board,
@@ -455,7 +438,7 @@ async function handleSubmitForumPost(request, env) {
     body: message,
     category: cleanText(body.category || 'Signal', 80),
     name: cleanText(body.name || 'Anonymous', 80),
-    sourceUrl: safeSource,
+    sourceUrl: /^https?:\/\//i.test(sourceUrl) ? sourceUrl : '',
     createdAt: new Date().toISOString(),
     approvedAt: new Date().toISOString(),
     status: 'live'
@@ -470,13 +453,7 @@ async function handleReportForumPost(request, env) {
   if (!env.FORUM_POSTS) return json({ ok: false, error: 'FORUM_POSTS KV binding missing' }, 503);
   const body = await readBody(request);
   const board = normalizeBoard(body.board || 'main');
-  const report = {
-    id: makeId(),
-    board,
-    postId: cleanText(body.id || body.postId, 120),
-    reason: cleanText(body.reason, 1000),
-    createdAt: new Date().toISOString()
-  };
+  const report = { id: makeId(), board, postId: cleanText(body.id || body.postId, 120), reason: cleanText(body.reason, 1000), createdAt: new Date().toISOString() };
   if (!report.postId || !report.reason) return json({ ok: false, error: 'Report needs a post id and reason.' }, 400);
   await env.FORUM_POSTS.put(`report:${report.id}`, JSON.stringify(report), { metadata: { board, postId: report.postId } });
   return json({ ok: true, reportId: report.id, board });
@@ -497,12 +474,18 @@ async function handleTrackEvent(request, env) {
     createdAt: new Date().toISOString()
   };
   if (env.FORUM_POSTS) {
-    await env.FORUM_POSTS.put(`analytics:${event.id}`, JSON.stringify(event), {
-      expirationTtl: 60 * 60 * 24 * 45,
-      metadata: { name: event.name, route: event.route, page: event.page }
-    });
+    await env.FORUM_POSTS.put(`analytics:${event.id}`, JSON.stringify(event), { expirationTtl: 60 * 60 * 24 * 45, metadata: { name: event.name, route: event.route, page: event.page } });
   }
-  return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
+  return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api' } });
+}
+
+async function serveAsset(request, env, url, pathname) {
+  if (!env.ASSETS) return json({ ok: false, error: 'ASSETS binding missing', pathname }, 503);
+  const assetUrl = new URL(request.url);
+  assetUrl.pathname = pathname;
+  assetUrl.search = url.search;
+  const response = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+  return withAssetHeaders(response);
 }
 
 export default {
@@ -512,7 +495,7 @@ export default {
     const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
     const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
-    if (request.method === 'OPTIONS' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event' || originalPath === '/intro-voice')) return new Response(null, { status: 204 });
+    if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath)) return new Response(null, { status: 204 });
     if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);
     if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
     if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(request, env);
@@ -522,43 +505,27 @@ export default {
     if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
     if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);
 
-    const tryAsset = async (pathname) => {
-      const assetUrl = new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN);
-      assetUrl.search = url.search;
-      const originRequest = new Request(assetUrl.toString(), request);
-      return fetch(originRequest, {
-        cf: {
-          cacheEverything: request.method === 'GET',
-          cacheTtlByStatus: { '200-299': 300, '404': 60, '500-599': 0 }
-        }
-      });
-    };
-
-    let response = await tryAsset(routedPath);
-    if (![403, 404].includes(response.status)) return response;
-
-    if (routedPath !== originalPath) {
-      response = await tryAsset(originalPath);
-      if (![403, 404].includes(response.status)) return response;
-    }
-
+    const candidates = [];
+    const add = value => { if (value && !candidates.includes(value)) candidates.push(value); };
+    add(routedPath);
+    add(originalPath);
+    if (routedPath === '/' || originalPath === '/') add('/index.html');
     if (!routedPath.endsWith('/')) {
-      response = await tryAsset(`${routedPath}.html`);
-      if (![403, 404].includes(response.status)) return response;
-
-      response = await tryAsset(`${routedPath}/index.html`);
-      if (![403, 404].includes(response.status)) return response;
+      add(`${routedPath}.html`);
+      add(`${routedPath}/index.html`);
     }
-
     if (routedPath.endsWith('/')) {
-      response = await tryAsset(`${routedPath}index.html`);
-      if (![403, 404].includes(response.status)) return response;
+      add(`${routedPath}index.html`);
+      add(`${routedPath.replace(/\/$/, '')}.html`);
+    }
+    add('/404.html');
 
-      const trimmed = routedPath.replace(/\/$/, '');
-      response = await tryAsset(`${trimmed}.html`);
+    let lastResponse;
+    for (const candidate of candidates) {
+      const response = await serveAsset(request, env, url, candidate);
+      lastResponse = response;
       if (![403, 404].includes(response.status)) return response;
     }
-
-    return tryAsset('/404.html');
+    return lastResponse || json({ ok: false, error: 'No asset response available' }, 404);
   }
 };

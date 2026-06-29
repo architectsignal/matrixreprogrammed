@@ -3,16 +3,21 @@ const path = require('path');
 
 const root = process.cwd();
 
-try {
-  const expansionScript = path.join(root, 'scripts', 'build-dark-speculation-expansion.js');
-  const expansionData = path.join(root, 'data', 'dark-speculation-expansion.json');
-  const speculationPage = path.join(root, 'dark-speculation-lab.html');
-  if (fs.existsSync(expansionScript) && fs.existsSync(expansionData) && fs.existsSync(speculationPage)) {
-    require(expansionScript);
+function runOptional(label, script, requiredFiles = []) {
+  try {
+    const scriptPath = path.join(root, 'scripts', script);
+    if (!fs.existsSync(scriptPath)) return;
+    for (const file of requiredFiles) {
+      if (!fs.existsSync(path.join(root, file))) return;
+    }
+    require(scriptPath);
+  } catch (error) {
+    console.warn(`${label} skipped: ${error.message}`);
   }
-} catch (error) {
-  console.warn(`Deep speculation dossier render skipped: ${error.message}`);
 }
+
+runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
+runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-expansion.json', 'dark-speculation-lab.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 

@@ -57,15 +57,26 @@ jobs:
       - name: First postbuild master audit
         run: npm run audit:master:postbuild
 
-      - name: Critical focused pressure tests after first build
-        run: |
-          npm run pressure-test:ask-matrix
-          npm run pressure-test:live-intel
-          npm run pressure-test:migration-flow
-          npm run pressure-test:epstein-watch
-          npm run pressure-test:cloudflare
-          npm run pressure-test:ten
-          npm run pressure-test:intel-analytics
+      - name: Ask Matrix focused pressure test
+        run: npm run pressure-test:ask-matrix
+
+      - name: Live Intel focused pressure test
+        run: npm run pressure-test:live-intel
+
+      - name: Migration Flow focused pressure test
+        run: npm run pressure-test:migration-flow
+
+      - name: Epstein Watch focused pressure test
+        run: npm run pressure-test:epstein-watch
+
+      - name: Cloudflare Worker focused pressure test
+        run: npm run pressure-test:cloudflare
+
+      - name: Ten Out Of Ten focused pressure test
+        run: npm run pressure-test:ten
+
+      - name: Intel Analytics focused pressure test
+        run: npm run pressure-test:intel-analytics
 
       - name: Second full build to catch order-dependent overwrites
         run: npm run build
@@ -73,15 +84,26 @@ jobs:
       - name: Second postbuild master audit
         run: npm run audit:master:postbuild
 
-      - name: Second critical focused pressure tests
-        run: |
-          npm run pressure-test:ask-matrix
-          npm run pressure-test:live-intel
-          npm run pressure-test:migration-flow
-          npm run pressure-test:epstein-watch
-          npm run pressure-test:cloudflare
-          npm run pressure-test:ten
-          npm run pressure-test:intel-analytics
+      - name: Second Ask Matrix focused pressure test
+        run: npm run pressure-test:ask-matrix
+
+      - name: Second Live Intel focused pressure test
+        run: npm run pressure-test:live-intel
+
+      - name: Second Migration Flow focused pressure test
+        run: npm run pressure-test:migration-flow
+
+      - name: Second Epstein Watch focused pressure test
+        run: npm run pressure-test:epstein-watch
+
+      - name: Second Cloudflare Worker focused pressure test
+        run: npm run pressure-test:cloudflare
+
+      - name: Second Ten Out Of Ten focused pressure test
+        run: npm run pressure-test:ten
+
+      - name: Second Intel Analytics focused pressure test
+        run: npm run pressure-test:intel-analytics
 
       - name: Upload master audit reports
         if: always()

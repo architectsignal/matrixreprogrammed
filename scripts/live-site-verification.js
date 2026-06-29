@@ -5,6 +5,7 @@ const root = process.cwd();
 const base = process.env.SITE_URL || 'https://matrixreprogrammed.com';
 const expectedSha = process.env.EXPECTED_BUILD_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.CF_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const required = [
+  { path: '/', marker: 'FOLLOW THE FILES.', forbidden: ['rogue broadcast node inside the simulation'], maxCounts: [{ text: 'Open Source Trail', max: 1 }] },
   { path: '/deploy-status', marker: 'DEPLOY STATUS.' },
   { path: '/deploy-status.json', json: true, marker: 'aliases' },
   { path: '/epstein', marker: 'THE EPSTEIN FILES COMMAND CENTER' },
@@ -12,19 +13,45 @@ const required = [
   { path: '/optin-black-file-brief.html', marker: 'Last 7 Days Intelligence Window' },
   { path: '/source-cards.html', marker: 'SOURCE CARDS.' },
   { path: '/trust-corrections.html', marker: 'Corrections' },
+  { path: '/search', marker: 'SEARCH THE SIGNAL.' },
   { path: '/forum-health', json: true, marker: 'forumPostsBinding' }
 ];
 function ok(status){ return status >= 200 && status < 400; }
+function countText(text, needle) {
+  if (!needle) return 0;
+  return text.split(needle).length - 1;
+}
 async function check(item) {
   const url = new URL(item.path, base).href;
-  const res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/1.0' } });
+  const res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/2.0' } });
   const text = await res.text();
-  const result = { path: item.path, url, status: res.status, ok: ok(res.status), marker: item.marker, markerPresent: text.includes(item.marker) };
+  const result = {
+    path: item.path,
+    url,
+    status: res.status,
+    ok: ok(res.status),
+    marker: item.marker,
+    markerPresent: text.includes(item.marker),
+    origin: res.headers.get('x-matrix-origin') || null,
+    cacheControl: res.headers.get('cache-control') || null
+  };
   if (item.json) {
     try { result.json = JSON.parse(text); } catch (err) { result.jsonError = err.message; }
   }
-  if (!result.ok) result.error = `HTTP ${res.status}`;
-  if (!result.markerPresent) result.error = `${result.error ? result.error + '; ' : ''}missing marker ${item.marker}`;
+  if (item.forbidden) {
+    result.forbiddenHits = item.forbidden.filter(value => text.includes(value));
+  }
+  if (item.maxCounts) {
+    result.counts = item.maxCounts.map(rule => ({ text: rule.text, count: countText(text, rule.text), max: rule.max }));
+  }
+  const errors = [];
+  if (!result.ok) errors.push(`HTTP ${res.status}`);
+  if (!result.markerPresent) errors.push(`missing marker ${item.marker}`);
+  if (result.forbiddenHits && result.forbiddenHits.length) errors.push(`stale forbidden text present: ${result.forbiddenHits.join(', ')}`);
+  if (result.counts) {
+    for (const count of result.counts) if (count.count > count.max) errors.push(`duplicate marker ${count.text}: ${count.count} > ${count.max}`);
+  }
+  if (errors.length) result.error = errors.join('; ');
   return result;
 }
 async function main(){
@@ -39,7 +66,7 @@ async function main(){
   const liveSha = statusJson && (statusJson.json.buildSha || statusJson.json.buildShortSha || '');
   const shaMatches = expectedSha ? String(liveSha || '').startsWith(String(expectedSha).slice(0, 12)) || String(expectedSha).startsWith(String(liveSha || '').slice(0, 12)) : null;
   const report = {
-    ok: results.every(r => r.ok && r.markerPresent) && (shaMatches !== false),
+    ok: results.every(r => r.ok && r.markerPresent && !r.error) && (shaMatches !== false),
     checkedAt,
     base,
     expectedSha: expectedSha || null,

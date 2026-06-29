@@ -1,0 +1,78 @@
+{
+  "updated": "2026-06-29",
+  "title": "Policy Convergence Timer Map",
+  "purpose": "Connects policy-convergence tracker lanes to Global Risk Clock lanes so new records, mandates, pilots, procurement, laws, and integrations can update the correct timers.",
+  "boundary": "Timer movement is an editorial pressure signal, not a prediction or claim of certainty. Every timer update should be linked to a source class, evidence level, date, actor, jurisdiction, and record boundary.",
+  "evidenceLevels": {
+    "1": "Mention / speech / paper / lead",
+    "2": "Pilot / sandbox / memorandum / grant",
+    "3": "Procurement / vendor / contract / implementation plan",
+    "4": "Mandate / law / treaty / institutional requirement",
+    "5": "Integration across two or more systems",
+    "6": "Lock-in where opt-out becomes difficult"
+  },
+  "mappings": [
+    {
+      "trackerLane": "agenda-2030-and-global-standards",
+      "clockSlugs": ["machine-convergence", "surveillance-state", "cbdc-rollout"],
+      "timerTrigger": "Global standards, treaties, model laws, funding conditions, or procurement rules begin routing into domestic mandates.",
+      "escalationRule": "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule."
+    },
+    {
+      "trackerLane": "digital-id",
+      "clockSlugs": ["surveillance-state", "cbdc-rollout", "machine-convergence"],
+      "timerTrigger": "Digital identity becomes mandatory, biometric, cross-border, or linked to money, travel, benefits, health, age verification, or online access.",
+      "escalationRule": "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems."
+    },
+    {
+      "trackerLane": "programmable-money",
+      "clockSlugs": ["cbdc-rollout", "financial-reset", "machine-convergence"],
+      "timerTrigger": "CBDC, tokenized deposits, programmable compliance, cash restrictions, or identity-linked wallets move from papers into pilots, contracts, or mandates.",
+      "escalationRule": "Escalate on procurement, legal mandate, banking rollout, wallet identity requirement, transaction restriction, or cross-border integration."
+    },
+    {
+      "trackerLane": "security-and-war-powers",
+      "clockSlugs": ["wwiii-escalation", "cyber-blackout", "surveillance-state", "civil-unrest"],
+      "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+      "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict."
+    },
+    {
+      "trackerLane": "speech-and-platform-governance",
+      "clockSlugs": ["surveillance-state", "civil-unrest", "machine-convergence"],
+      "timerTrigger": "Speech, search, payment, advertising, or platform access becomes governed by state-linked or public-private enforcement systems.",
+      "escalationRule": "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging."
+    },
+    {
+      "trackerLane": "health-and-biosecurity",
+      "clockSlugs": ["pandemic-biosecurity", "surveillance-state", "machine-convergence"],
+      "timerTrigger": "Health governance connects to identity, travel, work, emergency law, procurement, digital records, or speech policy.",
+      "escalationRule": "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets."
+    },
+    {
+      "trackerLane": "climate-energy-and-carbon",
+      "clockSlugs": ["energy-shock", "financial-reset", "food-system-stress", "machine-convergence"],
+      "timerTrigger": "Climate or energy policy moves into carbon accounts, smart-meter enforcement, mobility restrictions, food/farm controls, ESG finance, or emergency powers.",
+      "escalationRule": "Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use."
+    },
+    {
+      "trackerLane": "migration-borders-and-population-systems",
+      "clockSlugs": ["civil-unrest", "surveillance-state", "machine-convergence"],
+      "timerTrigger": "Migration, border, biometric, NGO-state, housing, labor, or digital travel systems become integrated with identity and security infrastructure.",
+      "escalationRule": "Escalate when border biometrics become national identity rails, emergency contracts expand, or security narratives drive domestic powers."
+    },
+    {
+      "trackerLane": "food-water-land-and-supply-chains",
+      "clockSlugs": ["food-system-stress", "energy-shock", "financial-reset"],
+      "timerTrigger": "Food, water, land, seed, farm, fertilizer, traceability, rationing, or supply-chain rules become centralized through corporate-state policy networks.",
+      "escalationRule": "Escalate when rules pressure local production, mandate traceability, concentrate ownership, or link food access to identity, carbon, or finance systems."
+    }
+  ],
+  "timerUpdateMethod": [
+    "Classify the found item by tracker lane.",
+    "Classify evidence level from 1 to 6.",
+    "Attach source link, actor, date, jurisdiction, and record boundary.",
+    "Update linked clock notes and nextRoute to control-system-tracker.html when relevant.",
+    "Only raise homepageEligible when score is 90 or above and the signal is time-sensitive.",
+    "Never update a timer from rumor alone. Use rumor only as an open-source lead."
+  ]
+}

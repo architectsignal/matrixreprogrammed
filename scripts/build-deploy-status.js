@@ -1,10 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const downloadsDir = path.join(root, 'downloads');
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
+
+const anchorRepairScript = path.join(root, 'scripts', 'repair-anchor-aliases.js');
+if (fs.existsSync(anchorRepairScript) && process.env.MATRIX_SKIP_ANCHOR_ALIAS_REPAIR !== '1') {
+  execFileSync(process.execPath, [anchorRepairScript], { cwd: root, stdio: 'inherit' });
+}
 
 function read(file) {
   const full = path.join(root, file);

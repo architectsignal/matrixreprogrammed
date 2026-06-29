@@ -57,12 +57,12 @@ jobs:
         run: |
           git config user.name "matrix-reprogrammed-bot"
           git config user.email "actions@github.com"
-          git add data/latest-drop.json data/drops social/daily news.html intel-archive.html downloads/the-black-file-matrix-reprogrammed.pdf search.html search.js search-index.json deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json
+          git add data/latest-drop.json data/drops social/daily news.html intel-archive.html downloads/the-black-file-matrix-reprogrammed.pdf search.html search.js search-index.json deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json || true
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else
             git commit -m "Daily Intel Drop $(date -u +%F) [deploy]"
-            git push
+            git push || (git pull --rebase origin main && git push)
           fi
 
       - name: Advisory site audit

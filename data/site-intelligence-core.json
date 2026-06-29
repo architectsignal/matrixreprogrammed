@@ -14,7 +14,9 @@
       "its risk timers",
       "its evidence classes",
       "its speculation boundaries",
+      "its maintenance policy",
       "its source gaps",
+      "its stale data",
       "its next upgrade priorities"
     ],
     "whatItMustNeverClaim": [
@@ -27,6 +29,7 @@
     "visibleOutputs": [
       "brain status page",
       "public tracker graph",
+      "transparent maintenance report",
       "missing-source report",
       "stale-data report",
       "evidence-gap list",
@@ -52,7 +55,9 @@
     {"id":"epstein-targets","file":"data/epstein-research-targets.json","route":"epstein-files.html","role":"controlled expansion queue for names, institutions, money lanes, logistics and legal/prosecution nodes"},
     {"id":"dark-speculation","file":"data/dark-speculation-claims.json","route":"dark-speculation-lab.html","role":"dark claim motifs, categorized and labelled as speculation, public-record-adjacent, unsupported, or debunk lanes"},
     {"id":"dark-dossiers","file":"data/dark-speculation-expansion.json","route":"dark-speculation-lab.html#dark-speculation-deep-dossiers","role":"deep speculation dossiers with softened claim-history wording and evidence-upgrade paths"},
-    {"id":"live-intel","file":"data/live-intel-sources.json","route":"live-intel.html","role":"source lanes and update rules for live public-record monitoring"}
+    {"id":"live-intel","file":"data/live-intel-sources.json","route":"live-intel.html","role":"source lanes and update rules for live public-record monitoring"},
+    {"id":"anti-corruption-charter","file":"data/public-interest-anti-corruption-charter.json","route":"downloads/transparent-maintenance-report.md","role":"public-interest mission charter for exposing wrongdoing and protecting victims through evidence-first investigation"},
+    {"id":"transparent-maintenance","file":"data/transparent-maintenance-policy.json","route":"downloads/transparent-maintenance-report.md","role":"visible scheduled maintenance rules, allowed maintenance, blocked maintenance, speculation labels, and public change-log discipline"}
   ],
   "signalClasses": [
     {"id":"record","label":"Public record", "meaning":"Court, law, official release, hearing, filing, contract, budget, treaty, or documented source item."},
@@ -68,6 +73,8 @@
     "downloads/site-intelligence-core.json",
     "downloads/site-intelligence-core.md",
     "downloads/site-intelligence-graph.json",
+    "downloads/transparent-maintenance-report.json",
+    "downloads/transparent-maintenance-report.md",
     "control-system-tracker.html",
     "timers.html",
     "dark-speculation-lab.html",

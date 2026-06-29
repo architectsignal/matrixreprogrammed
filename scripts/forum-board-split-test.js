@@ -8,27 +8,24 @@ function needFile(name){ if (!exists(name)) issues.push(`missing ${name}`); }
 function needText(name, text){ if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
 function forbidText(name, text){ if (exists(name) && read(name).includes(text)) issues.push(`${name} should not contain ${text}`); }
 
-// Keep this test resilient against stale generated llms/search/sitemap output.
 try { require('./build-board-split.js'); } catch (error) { issues.push(`board split builder failed: ${error.message}`); }
-try { require('./apply-hard-board-split.js'); } catch (error) { issues.push(`hard board split patch failed: ${error.message}`); }
+try { require('./apply-hard-board-split.js'); } catch (error) { issues.push(`hard board split persistence guard failed: ${error.message}`); }
 
 const hardFeeds = ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive'];
 const hardSubmits = ['/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'];
 const hardReports = ['/report-main-post','/report-speculation-post','/report-epstein-alive-post'];
-const publicFiles = ['forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html','data/forum-seed.json'];
+const publicFiles = ['forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html'];
 const bannedPublicCopy = [
   'Local fallback',
-  'backend unavailable',
-  'Backend detail',
-  'FORUM_POSTS KV binding missing',
-  'FORUM_POSTS KV binding',
-  'Worker routes',
-  'Cloudflare Static Forum Mode',
-  'Cloudflare static mode',
   'saved on this device',
-  'Open /forum-health',
-  'Cloudflare test route',
-  '/forum-feed and /submit-forum-post'
+  'pending sync',
+  'Signal Board is syncing',
+  'Signal received. It may take a moment to appear on the live board.',
+  'Not posted live yet. Saved only on this device',
+  'matrix_signal_board_posts_v2_',
+  'saveLocalPosts',
+  'syncPendingLocalPosts',
+  'localOnly'
 ];
 
 for (const file of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html','forum.js','src/worker.js','data/forum-board-split.json','scripts/build-board-split.js','scripts/apply-hard-board-split.js']) needFile(file);
@@ -46,16 +43,18 @@ needText('forum.js', 'const BOARD');
 needText('forum.js', 'boardFromPath');
 needText('forum.js', 'lockFormToBoard');
 needText('forum.js', 'payload.board = BOARD');
-needText('forum.js', 'matrix_signal_board_posts_v2_');
-needText('forum.js', 'pending sync');
-needText('forum.js', 'Signal Board is syncing');
+needText('forum.js', 'persistent !== true');
+needText('forum.js', 'Posts are not saved in this browser');
+needText('forum.js', 'Signal posted live and saved persistently');
 for (const route of [...hardFeeds, ...hardSubmits, ...hardReports]) needText('forum.js', route);
 needText('src/worker.js', 'boardLabels');
 needText('src/worker.js', 'normalizeBoard');
 needText('src/worker.js', 'inferBoardFromPost');
 needText('src/worker.js', 'filterPostsByBoard');
 needText('src/worker.js', 'boardAware: true');
-needText('src/worker.js', 'boardFromRoutePath');
+needText('src/worker.js', 'hardBoardRouteMap');
+needText('src/worker.js', 'Cloudflare KV FORUM_POSTS');
+needText('src/worker.js', 'persistent: true');
 for (const route of [...hardFeeds, ...hardSubmits, ...hardReports]) needText('src/worker.js', route);
 needText('src/worker.js', "'/speculation-board': '/dark-speculation-forum.html'");
 needText('src/worker.js', "'/epstein-alive-board': '/epstein-alive-board.html'");
@@ -76,4 +75,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FORUM BOARD SPLIT TEST PASSED');
-console.log('Checked three board pages, hard board frontend routes, hard Worker feed/storage endpoints, aliases, sitemap, llms, search index, and no internal fallback copy in public board UI.');
+console.log('Checked three board pages, hard board frontend routes, hard Worker feed/storage endpoints, aliases, sitemap, llms, search index, and KV-only persistence with no local browser posting.');

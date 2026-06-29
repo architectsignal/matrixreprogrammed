@@ -43,6 +43,9 @@ jobs:
       - name: Public content scrub
         run: node scripts/public-content-scrub-test.js
 
+      - name: Matrix Brain health gate
+        run: node scripts/matrix-brain-health-test.js
+
       - name: Control system health gate
         run: node scripts/control-system-health-test.js
 
@@ -54,6 +57,9 @@ jobs:
           path: |
             downloads/transparent-maintenance-report.json
             downloads/transparent-maintenance-report.md
+            downloads/site-intelligence-core.json
+            downloads/site-intelligence-core.md
+            downloads/site-intelligence-graph.json
             public-content-scrub-report.json
             site-brain-health-report.json
             downloads/site-wide-function-audit.json
@@ -66,7 +72,7 @@ jobs:
         run: |
           git config user.name "matrix-maintenance-bot"
           git config user.email "actions@github.com"
-          git add downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html || true
+          git add downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html || true
           if git diff --cached --quiet; then
             echo "No generated maintenance changes to commit."
           else

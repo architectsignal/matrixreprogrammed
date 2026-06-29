@@ -1,17 +1,39 @@
 {
-  "updated": "2026-06-25",
-  "policy": "Only high-value Epstein public-record developments may surface on the homepage, and only for a limited time. Alerts must have a source route, evidence class, checked date, and expiry date.",
+  "updated": "2026-06-29",
+  "policy": "Only high-value Epstein public-record developments may surface on the homepage, and only for a limited time. Alerts must have a source route, evidence class, checked date, and expiry date. A name, contact, settlement, filing, or redaction dispute is not proof of criminal conduct.",
   "alerts": [
     {
-      "id": "maxwell-habeas-prosecutors-oppose-2026-06-25",
+      "id": "epstein-doj-unredaction-deadline-2026-07-02",
       "active": true,
-      "title": "Epstein Watch: Maxwell files new challenge; prosecutors oppose",
-      "summary": "A new Reuters-reported Maxwell habeas filing tied to released Epstein materials is now tracked as a court-process update. This is litigation movement, not a finding that the claims are true.",
-      "evidenceClass": "Court-process update / public reporting",
-      "route": "epstein-files.html#epstein-watch-enhanced",
-      "sourceRoute": "epstein-files.html#epstein-watch-enhanced",
+      "title": "Judge orders DOJ to release more Epstein records or justify redactions by July 2",
+      "summary": "A federal judge reportedly ordered DOJ to release less-redacted Epstein-related records or explain by July 2 why material should remain sealed. This is a disclosure-process lane, not a finding about the contents.",
+      "evidenceClass": "Court-process / disclosure-order watch",
+      "route": "epstein-files.html#latest-public-drops-epstein",
+      "sourceRoute": "https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order",
+      "checkedAt": "2026-06-26",
+      "expiresAt": "2026-07-03"
+    },
+    {
+      "id": "maxwell-habeas-new-evidence-prosecutors-oppose-2026-06-25",
+      "active": true,
+      "title": "Maxwell habeas petition claims new Epstein-file evidence; prosecutors reject arguments",
+      "summary": "Ghislaine Maxwell filed a habeas petition claiming new Epstein-file material undermines her conviction; U.S. prosecutors reportedly rejected her claims as untimely or legally baseless.",
+      "evidenceClass": "Court-process update / litigation claim and government response",
+      "route": "epstein-files.html#latest-public-drops-epstein",
+      "sourceRoute": "https://www.reuters.com/legal/government/epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-conviction-us-2026-06-25/",
       "checkedAt": "2026-06-25",
       "expiresAt": "2026-07-02"
+    },
+    {
+      "id": "epstein-nda-settlement-protection-lane-2026-06-26",
+      "active": true,
+      "title": "Epstein settlement and NDA lane moves into oversight focus",
+      "summary": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt.",
+      "evidenceClass": "Reported oversight / settlement-document lane",
+      "route": "epstein-files.html#latest-public-drops-epstein",
+      "sourceRoute": "https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6",
+      "checkedAt": "2026-06-26",
+      "expiresAt": "2026-07-03"
     }
   ]
 }

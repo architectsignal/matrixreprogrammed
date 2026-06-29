@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "buildSha": "856626cadc6867e5eb5965b05fef3f0c2a08fe66",
-  "buildShortSha": "856626cadc68",
-  "generatedAt": "2026-06-28T07:58:58.015Z",
+  "buildSha": "2e780eac49928c3a128dc1f8e37cecfbb696d05c",
+  "buildShortSha": "2e780eac4992",
+  "generatedAt": "2026-06-29T09:11:41.647Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
-  "routeAliasCount": 104,
+  "routeAliasCount": 113,
   "aliasCount": 19,
   "aliases": [
     {
@@ -269,7 +269,7 @@
       "marker": "FOLLOW THE FILES.",
       "exists": true,
       "markerPresent": true,
-      "hash": "dc92d5dd6b1c44b7"
+      "hash": "4dcb528aa88a664b"
     },
     {
       "name": "Live Intel",
@@ -277,7 +277,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "e0d5e998dc8b2ef1"
+      "hash": "84843cca8bfa3fb9"
     },
     {
       "name": "Epstein Command Center",
@@ -285,7 +285,7 @@
       "marker": "Evidence Boundary",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Epstein People Tracker",
@@ -293,7 +293,7 @@
       "marker": "People / Entity Tracker",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Epstein Timeline Map",
@@ -301,7 +301,7 @@
       "marker": "Timeline + Cross-Reference Map",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Epstein Evidence Ladder",
@@ -309,7 +309,7 @@
       "marker": "Evidence Strength Ladder",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Actual Files Cockpit",
@@ -317,7 +317,7 @@
       "marker": "Actual Files Cockpit",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Network Architecture Matrix",
@@ -325,7 +325,7 @@
       "marker": "Network Architecture Matrix",
       "exists": true,
       "markerPresent": true,
-      "hash": "c815c458aed376c7"
+      "hash": "a285a731129c4873"
     },
     {
       "name": "Main Signal Board",
@@ -357,7 +357,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "ac97b528f5bfc829"
+      "hash": "91f92ab93f0cb7cd"
     },
     {
       "name": "Hard Board Routes",
@@ -365,7 +365,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "ac97b528f5bfc829"
+      "hash": "91f92ab93f0cb7cd"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -377,10 +377,10 @@
     }
   ],
   "hashes": {
-    "worker": "ac97b528f5bfc829",
-    "package": "7a9c044d76ca677e",
-    "epsteinFiles": "c815c458aed376c7",
-    "liveIntel": "e0d5e998dc8b2ef1"
+    "worker": "91f92ab93f0cb7cd",
+    "package": "f7f4b0f11603db3d",
+    "epsteinFiles": "a285a731129c4873",
+    "liveIntel": "84843cca8bfa3fb9"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

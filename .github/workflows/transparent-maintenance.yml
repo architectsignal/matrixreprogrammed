@@ -4,6 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '23 7 * * *'
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/update-triggers/transparent-maintenance.txt'
+      - '.github/update-triggers/all-auto-updates.txt'
 
 permissions:
   contents: write
@@ -36,6 +41,12 @@ jobs:
 
       - name: Build site and generated trackers
         run: npm run build
+
+      - name: Repair generated artifacts before reports
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/repair-generated-site-artifacts.js
+          node scripts/ensure-shared-assets.js
 
       - name: Generate transparent maintenance report
         run: node scripts/build-transparent-maintenance-report.js
@@ -72,7 +83,7 @@ jobs:
         run: |
           git config user.name "matrix-maintenance-bot"
           git config user.email "actions@github.com"
-          git add downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html || true
+          git add downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json search.html search.js llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json || true
           if git diff --cached --quiet; then
             echo "No generated maintenance changes to commit."
           else

@@ -358,6 +358,21 @@
     ]
   },
   {
+    "title": "Books",
+    "category": "Books",
+    "url": "books.html",
+    "description": "Matrix Reprogrammed book universe, reader paths, D.O.G The Architect, intelligence dossiers, crime dossiers, and public-record books.",
+    "keywords": [
+      "books",
+      "book universe",
+      "reader paths",
+      "dog",
+      "architect",
+      "intelligence dossiers",
+      "crime dossiers"
+    ]
+  },
+  {
     "key": "atlas-cartels",
     "title": "Cartel Power Systems | Power Atlas",
     "subtitle": "Crime-State Overlap",
@@ -437,6 +452,25 @@
       "Confirmed Record",
       "CIA, covert action history, intelligence oversight, declassified-source tracing.",
       "declassified-archives"
+    ]
+  },
+  {
+    "key": "claim-classifier",
+    "title": "Claim Classifier",
+    "subtitle": "Evidence badges and claim-strength rules",
+    "series": "Matrix Reprogrammed",
+    "category": "Evidence System",
+    "url": "claim-classifier.html",
+    "description": "Public evidence-badge system for court records, official sources, emails, contact logs, settlements, sworn claims, reporting, interpretation, speculation, and unsupported claims.",
+    "keywords": [
+      "claim classifier",
+      "evidence badges",
+      "court record",
+      "official source",
+      "settlement",
+      "email record",
+      "source boundary",
+      "speculation quarantine"
     ]
   },
   {
@@ -613,6 +647,23 @@
       "book-crime-dossiers.html",
       "network-maps.html",
       "branded pdf mini book"
+    ]
+  },
+  {
+    "key": "subject-crime-state-overlap",
+    "title": "Crime-State Overlap Brief",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-crime-state-overlap.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Crime-State Overlap Brief.",
+    "keywords": [
+      "Crime-State Overlap Brief",
+      "crime-state-overlap",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
     ]
   },
   {
@@ -852,6 +903,56 @@
     ]
   },
   {
+    "key": "subject-dog-architect",
+    "title": "D.O.G The Architect Initiation Map",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-dog-architect.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for D.O.G The Architect Initiation Map.",
+    "keywords": [
+      "D.O.G The Architect Initiation Map",
+      "dog-architect",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
+    ]
+  },
+  {
+    "key": "daily-drop-room",
+    "title": "Daily Drop Room",
+    "subtitle": "What changed today",
+    "series": "Matrix Reprogrammed",
+    "category": "Daily Intelligence",
+    "url": "daily-drop.html",
+    "description": "Daily public-record source-watch room for Epstein files, elite networks, evidence boundaries, and reader routes.",
+    "keywords": [
+      "daily drop",
+      "Epstein files",
+      "live intel",
+      "public records",
+      "source watch",
+      "elite wrongdoing",
+      "evidence boundary"
+    ]
+  },
+  {
+    "key": "dark-speculation-board",
+    "title": "Dark Speculation Board",
+    "subtitle": "Separate speculation feed",
+    "series": "Signal Board",
+    "category": "Forum",
+    "url": "dark-speculation-forum.html",
+    "description": "Separate board for speculation links, claim motifs, counter-sources, and source trails.",
+    "keywords": [
+      "dark speculation",
+      "speculation board",
+      "claim motifs",
+      "counter sources"
+    ]
+  },
+  {
     "key": "evidence-lane-declassified-archives",
     "title": "Declassified Archives | Evidence Vault",
     "subtitle": "Declassified Archive",
@@ -921,6 +1022,23 @@
       "ritual",
       "secret society",
       "esoteric"
+    ]
+  },
+  {
+    "key": "deploy-health",
+    "title": "Deploy Health",
+    "subtitle": "Cloudflare and route health",
+    "series": "Site Health",
+    "category": "Admin",
+    "url": "deploy-health.html",
+    "description": "Checks the build state, Cloudflare output, homepage markers, hidden eye gate, forum health, and conversion route status.",
+    "keywords": [
+      "deploy",
+      "cloudflare",
+      "health",
+      "status",
+      "homepage",
+      "routes"
     ]
   },
   {
@@ -1113,6 +1231,23 @@
     ]
   },
   {
+    "key": "subject-epstein-black-file",
+    "title": "Epstein / Black File Source Map",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-epstein-black-file.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Epstein / Black File Source Map.",
+    "keywords": [
+      "Epstein / Black File Source Map",
+      "epstein-black-file",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
+    ]
+  },
+  {
     "key": "epstein-command-center",
     "title": "Epstein Files Command Center",
     "subtitle": "Evidence ladder, timeline, people/entity tracking, and public files.",
@@ -1150,6 +1285,41 @@
       "Sworn claim",
       "Disputed claim",
       "Reader route"
+    ]
+  },
+  {
+    "key": "epstein-sighting-board",
+    "title": "Epstein Sighting Board",
+    "subtitle": "Separate Epstein sighting claim feed",
+    "series": "Epstein Files",
+    "category": "Forum",
+    "url": "epstein-alive-board.html",
+    "description": "Separate board for Epstein alive, sighting, lookalike, fake-media, and debunk claims with an official-status boundary.",
+    "keywords": [
+      "epstein",
+      "sighting",
+      "alive claim",
+      "lookalike",
+      "debunk",
+      "board"
+    ]
+  },
+  {
+    "key": "epstein-sighting-watch",
+    "title": "Epstein Sighting Watch",
+    "subtitle": "Official status deceased / sighting claims unverified",
+    "series": "Epstein Files",
+    "category": "Tracker",
+    "url": "epstein-sighting-watch.html",
+    "description": "Tracks claims that Epstein is still alive as unverified sightings, lookalikes, fake media, and debunks with evidence levels.",
+    "keywords": [
+      "epstein",
+      "alive",
+      "sighting",
+      "lookalike",
+      "death hoax",
+      "fake media",
+      "claim classifier"
     ]
   },
   {
@@ -1412,6 +1582,23 @@
     ]
   },
   {
+    "key": "subject-freemasonry-symbol-system",
+    "title": "Freemasonry Symbol System Map",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-freemasonry-symbol-system.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Freemasonry Symbol System Map.",
+    "keywords": [
+      "Freemasonry Symbol System Map",
+      "freemasonry-symbol-system",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
+    ]
+  },
+  {
     "key": "degree-1",
     "title": "Freemasons Degree 1, The Temple of Light",
     "subtitle": "The hidden architecture of initiation: Book I — The Apprentice Awakens",
@@ -1626,6 +1813,23 @@
       "Sources are present",
       "Human-cost panels remain dated",
       "No fake live counters"
+    ]
+  },
+  {
+    "key": "intel-vault",
+    "title": "Intel Vault",
+    "subtitle": "Expired daily-update archive",
+    "series": "Live Intel",
+    "category": "Archive",
+    "url": "intel-vault.html",
+    "description": "Archive of expired seven-day intelligence cards preserved as historical source leads.",
+    "keywords": [
+      "intel vault",
+      "archive",
+      "expired updates",
+      "daily updates",
+      "source leads",
+      "Epstein File Watch"
     ]
   },
   {
@@ -1872,6 +2076,23 @@
     ]
   },
   {
+    "key": "subject-intelligence-network",
+    "title": "Intelligence Network Starter File",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-intelligence-network.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Intelligence Network Starter File.",
+    "keywords": [
+      "Intelligence Network Starter File",
+      "intelligence-network",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
+    ]
+  },
+  {
     "key": "evidence-lane-intelligence-oversight",
     "title": "Intelligence Oversight | Evidence Vault",
     "subtitle": "Parliamentary / Congressional Record",
@@ -1920,6 +2141,23 @@
       "prepper",
       "collapse",
       "doctrine"
+    ]
+  },
+  {
+    "key": "latest-public-drops",
+    "title": "Latest Public Drops",
+    "subtitle": "Curated current source leads",
+    "series": "Live Intel",
+    "category": "Source Watch",
+    "url": "downloads/latest-public-drops.json",
+    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
+    "keywords": [
+      "latest drops",
+      "Epstein",
+      "digital euro",
+      "digital ID",
+      "AI cyber",
+      "timers"
     ]
   },
   {
@@ -1996,6 +2234,22 @@
       "book-universe.html",
       "evidence-vault-index.html",
       "conversion-funnel.html"
+    ]
+  },
+  {
+    "key": "main-signal-board",
+    "title": "Main Signal Board",
+    "subtitle": "Clean general source-drop board",
+    "series": "Signal Board",
+    "category": "Forum",
+    "url": "forum.html",
+    "description": "Main Signal Board for general source drops, reader questions, books, intelligence, crime-state overlap, war files, and human-cost updates.",
+    "keywords": [
+      "signal board",
+      "forum",
+      "source drops",
+      "reader questions",
+      "main board"
     ]
   },
   {
@@ -2395,6 +2649,24 @@
     ]
   },
   {
+    "key": "site-intelligence-core",
+    "title": "Matrix Brain",
+    "subtitle": "Public intelligence console",
+    "series": "Matrix Brain",
+    "category": "Evidence Engine",
+    "url": "site-intelligence-core.html",
+    "description": "Public intelligence console that classifies site signals and routes users to tracker evidence.",
+    "keywords": [
+      "matrix brain",
+      "public records",
+      "evidence classifier",
+      "policy convergence",
+      "epstein tracker",
+      "dark speculation",
+      "timers"
+    ]
+  },
+  {
     "key": "feed-main-signal",
     "title": "Matrix Reprogrammed Main Signal Feed | Feed",
     "subtitle": "Main Feed",
@@ -2525,6 +2797,23 @@
     ]
   },
   {
+    "key": "subject-nasa-hidden-architecture",
+    "title": "NASA Hidden Architecture File",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-nasa-hidden-architecture.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for NASA Hidden Architecture File.",
+    "keywords": [
+      "NASA Hidden Architecture File",
+      "nasa-hidden-architecture",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
+    ]
+  },
+  {
     "key": "atlas-nsa",
     "title": "National Security Agency | Power Atlas",
     "subtitle": "Signals Intelligence / Surveillance",
@@ -2558,6 +2847,24 @@
       "relationship lines",
       "Power Atlas",
       "Evidence Vault"
+    ]
+  },
+  {
+    "key": "network-search",
+    "title": "Network Search",
+    "subtitle": "People entities records boundaries",
+    "series": "Matrix Reprogrammed",
+    "category": "Network Database",
+    "url": "network-search.html",
+    "description": "Searchable people/entity database with evidence classes, public-record functions, and source buttons.",
+    "keywords": [
+      "network search",
+      "people tracker",
+      "Epstein",
+      "entity database",
+      "evidence class",
+      "public records",
+      "source buttons"
     ]
   },
   {
@@ -2925,6 +3232,25 @@
     ]
   },
   {
+    "key": "source-document-vault",
+    "title": "Source Document Vault",
+    "subtitle": "Actual files first",
+    "series": "Matrix Reprogrammed",
+    "category": "Evidence System",
+    "url": "source-document-vault.html",
+    "description": "Actual-files-first source vault for official disclosures, court records, archives, financial routes, influence records, and evidence classification.",
+    "keywords": [
+      "source document vault",
+      "actual files",
+      "official disclosures",
+      "court records",
+      "Epstein files",
+      "archives",
+      "financial records",
+      "source doors"
+    ]
+  },
+  {
     "key": "trust-source-methodology",
     "title": "Source Methodology | Trust Center",
     "subtitle": "How the archive reads sources",
@@ -3008,6 +3334,38 @@
       "influence",
       "self change",
       "manipulation defense"
+    ]
+  },
+  {
+    "key": "subject-index",
+    "title": "Subject Intelligence Hubs",
+    "subtitle": "Generated public-record subject routes",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-index.html",
+    "description": "Crawlable index of Matrix Reprogrammed subject hubs linked to branded PDF mini-books.",
+    "keywords": [
+      "subject hubs",
+      "subject intelligence",
+      "pdf mini books",
+      "proof routes",
+      "evidence boundaries"
+    ]
+  },
+  {
+    "key": "epstein-sighting-submit",
+    "title": "Submit Epstein Sighting Claim",
+    "subtitle": "Reader source drop",
+    "series": "Epstein Files",
+    "category": "Forum",
+    "url": "epstein-sighting-submit.html",
+    "description": "Submit unverified Epstein sighting, lookalike, AI/fake-media, or debunk links to the signal board.",
+    "keywords": [
+      "epstein",
+      "sighting",
+      "submit",
+      "forum",
+      "signal board"
     ]
   },
   {
@@ -3675,6 +4033,23 @@
       "Credible reporting",
       "Human cost",
       "Reader route"
+    ]
+  },
+  {
+    "key": "subject-trust-evidence-method",
+    "title": "Trust & Evidence Method",
+    "subtitle": "Subject Intelligence Hub",
+    "series": "Subject Intelligence",
+    "category": "Subject Hubs",
+    "url": "subject-trust-evidence-method.html",
+    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Trust & Evidence Method.",
+    "keywords": [
+      "Trust & Evidence Method",
+      "trust-evidence-method",
+      "subject hub",
+      "subject pdf",
+      "proof routes",
+      "evidence boundary"
     ]
   },
   {
@@ -4407,366 +4782,6 @@
       "prepper",
       "collapse",
       "doctrine"
-    ]
-  },
-  {
-    "key": "daily-drop-room",
-    "title": "Daily Drop Room",
-    "subtitle": "What changed today",
-    "series": "Matrix Reprogrammed",
-    "category": "Daily Intelligence",
-    "url": "daily-drop.html",
-    "description": "Daily public-record source-watch room for Epstein files, elite networks, evidence boundaries, and reader routes.",
-    "keywords": [
-      "daily drop",
-      "Epstein files",
-      "live intel",
-      "public records",
-      "source watch",
-      "elite wrongdoing",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "network-search",
-    "title": "Network Search",
-    "subtitle": "People entities records boundaries",
-    "series": "Matrix Reprogrammed",
-    "category": "Network Database",
-    "url": "network-search.html",
-    "description": "Searchable people/entity database with evidence classes, public-record functions, and source buttons.",
-    "keywords": [
-      "network search",
-      "people tracker",
-      "Epstein",
-      "entity database",
-      "evidence class",
-      "public records",
-      "source buttons"
-    ]
-  },
-  {
-    "key": "claim-classifier",
-    "title": "Claim Classifier",
-    "subtitle": "Evidence badges and claim-strength rules",
-    "series": "Matrix Reprogrammed",
-    "category": "Evidence System",
-    "url": "claim-classifier.html",
-    "description": "Public evidence-badge system for court records, official sources, emails, contact logs, settlements, sworn claims, reporting, interpretation, speculation, and unsupported claims.",
-    "keywords": [
-      "claim classifier",
-      "evidence badges",
-      "court record",
-      "official source",
-      "settlement",
-      "email record",
-      "source boundary",
-      "speculation quarantine"
-    ]
-  },
-  {
-    "key": "source-document-vault",
-    "title": "Source Document Vault",
-    "subtitle": "Actual files first",
-    "series": "Matrix Reprogrammed",
-    "category": "Evidence System",
-    "url": "source-document-vault.html",
-    "description": "Actual-files-first source vault for official disclosures, court records, archives, financial routes, influence records, and evidence classification.",
-    "keywords": [
-      "source document vault",
-      "actual files",
-      "official disclosures",
-      "court records",
-      "Epstein files",
-      "archives",
-      "financial records",
-      "source doors"
-    ]
-  },
-  {
-    "key": "subject-index",
-    "title": "Subject Intelligence Hubs",
-    "subtitle": "Generated public-record subject routes",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-index.html",
-    "description": "Crawlable index of Matrix Reprogrammed subject hubs linked to branded PDF mini-books.",
-    "keywords": [
-      "subject hubs",
-      "subject intelligence",
-      "pdf mini books",
-      "proof routes",
-      "evidence boundaries"
-    ]
-  },
-  {
-    "key": "subject-epstein-black-file",
-    "title": "Epstein / Black File Source Map",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-epstein-black-file.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Epstein / Black File Source Map.",
-    "keywords": [
-      "Epstein / Black File Source Map",
-      "epstein-black-file",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-intelligence-network",
-    "title": "Intelligence Network Starter File",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-intelligence-network.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Intelligence Network Starter File.",
-    "keywords": [
-      "Intelligence Network Starter File",
-      "intelligence-network",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-dog-architect",
-    "title": "D.O.G The Architect Initiation Map",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-dog-architect.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for D.O.G The Architect Initiation Map.",
-    "keywords": [
-      "D.O.G The Architect Initiation Map",
-      "dog-architect",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-crime-state-overlap",
-    "title": "Crime-State Overlap Brief",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-crime-state-overlap.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Crime-State Overlap Brief.",
-    "keywords": [
-      "Crime-State Overlap Brief",
-      "crime-state-overlap",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-trust-evidence-method",
-    "title": "Trust & Evidence Method",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-trust-evidence-method.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Trust & Evidence Method.",
-    "keywords": [
-      "Trust & Evidence Method",
-      "trust-evidence-method",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-nasa-hidden-architecture",
-    "title": "NASA Hidden Architecture File",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-nasa-hidden-architecture.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for NASA Hidden Architecture File.",
-    "keywords": [
-      "NASA Hidden Architecture File",
-      "nasa-hidden-architecture",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "subject-freemasonry-symbol-system",
-    "title": "Freemasonry Symbol System Map",
-    "subtitle": "Subject Intelligence Hub",
-    "series": "Subject Intelligence",
-    "category": "Subject Hubs",
-    "url": "subject-freemasonry-symbol-system.html",
-    "description": "Subject hub with PDF, proof routes, boundaries, related books, and reader actions for Freemasonry Symbol System Map.",
-    "keywords": [
-      "Freemasonry Symbol System Map",
-      "freemasonry-symbol-system",
-      "subject hub",
-      "subject pdf",
-      "proof routes",
-      "evidence boundary"
-    ]
-  },
-  {
-    "key": "epstein-sighting-watch",
-    "title": "Epstein Sighting Watch",
-    "subtitle": "Official status deceased / sighting claims unverified",
-    "series": "Epstein Files",
-    "category": "Tracker",
-    "url": "epstein-sighting-watch.html",
-    "description": "Tracks claims that Epstein is still alive as unverified sightings, lookalikes, fake media, and debunks with evidence levels.",
-    "keywords": [
-      "epstein",
-      "alive",
-      "sighting",
-      "lookalike",
-      "death hoax",
-      "fake media",
-      "claim classifier"
-    ]
-  },
-  {
-    "key": "epstein-sighting-submit",
-    "title": "Submit Epstein Sighting Claim",
-    "subtitle": "Reader source drop",
-    "series": "Epstein Files",
-    "category": "Forum",
-    "url": "epstein-sighting-submit.html",
-    "description": "Submit unverified Epstein sighting, lookalike, AI/fake-media, or debunk links to the signal board.",
-    "keywords": [
-      "epstein",
-      "sighting",
-      "submit",
-      "forum",
-      "signal board"
-    ]
-  },
-  {
-    "key": "main-signal-board",
-    "title": "Main Signal Board",
-    "subtitle": "Clean general source-drop board",
-    "series": "Signal Board",
-    "category": "Forum",
-    "url": "forum.html",
-    "description": "Main Signal Board for general source drops, reader questions, books, intelligence, crime-state overlap, war files, and human-cost updates.",
-    "keywords": [
-      "signal board",
-      "forum",
-      "source drops",
-      "reader questions",
-      "main board"
-    ]
-  },
-  {
-    "key": "epstein-sighting-board",
-    "title": "Epstein Sighting Board",
-    "subtitle": "Separate Epstein sighting claim feed",
-    "series": "Epstein Files",
-    "category": "Forum",
-    "url": "epstein-alive-board.html",
-    "description": "Separate board for Epstein alive, sighting, lookalike, fake-media, and debunk claims with an official-status boundary.",
-    "keywords": [
-      "epstein",
-      "sighting",
-      "alive claim",
-      "lookalike",
-      "debunk",
-      "board"
-    ]
-  },
-  {
-    "key": "deploy-health",
-    "title": "Deploy Health",
-    "subtitle": "Cloudflare and route health",
-    "series": "Site Health",
-    "category": "Admin",
-    "url": "deploy-health.html",
-    "description": "Checks the build state, Cloudflare output, homepage markers, hidden eye gate, forum health, and conversion route status.",
-    "keywords": [
-      "deploy",
-      "cloudflare",
-      "health",
-      "status",
-      "homepage",
-      "routes"
-    ]
-  },
-  {
-    "key": "site-intelligence-core",
-    "title": "Matrix Brain",
-    "subtitle": "Public intelligence console",
-    "series": "Matrix Brain",
-    "category": "Evidence Engine",
-    "url": "site-intelligence-core.html",
-    "description": "Public intelligence console that classifies site signals and routes users to tracker evidence.",
-    "keywords": [
-      "matrix brain",
-      "public records",
-      "evidence classifier",
-      "policy convergence",
-      "epstein tracker",
-      "dark speculation",
-      "timers"
-    ]
-  },
-  {
-    "key": "latest-public-drops",
-    "title": "Latest Public Drops",
-    "subtitle": "Curated current source leads",
-    "series": "Live Intel",
-    "category": "Source Watch",
-    "url": "downloads/latest-public-drops.json",
-    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
-    "keywords": [
-      "latest drops",
-      "Epstein",
-      "digital euro",
-      "digital ID",
-      "AI cyber",
-      "timers"
-    ]
-  },
-  {
-    "key": "intel-vault",
-    "title": "Intel Vault",
-    "subtitle": "Expired daily-update archive",
-    "series": "Live Intel",
-    "category": "Archive",
-    "url": "intel-vault.html",
-    "description": "Archive of expired seven-day intelligence cards preserved as historical source leads.",
-    "keywords": [
-      "intel vault",
-      "archive",
-      "expired updates",
-      "daily updates",
-      "source leads",
-      "Epstein File Watch"
-    ]
-  },
-  {
-    "key": "dark-speculation-board",
-    "title": "Dark Speculation Board",
-    "subtitle": "Separate speculation feed",
-    "series": "Signal Board",
-    "category": "Forum",
-    "url": "dark-speculation-forum.html",
-    "description": "Separate board for speculation links, claim motifs, counter-sources, and source trails.",
-    "keywords": [
-      "dark speculation",
-      "speculation board",
-      "claim motifs",
-      "counter sources"
     ]
   }
 ]

@@ -1,0 +1,51 @@
+{
+  "updated": "2026-06-29T23:08:26.547Z",
+  "mission": "Expose wrongdoing. Help humanity. Follow the documents. Map the system.",
+  "visibilityRule": "Every automated maintenance run must be visible through a workflow log, generated report, artifact, commit message, issue, or public change log.",
+  "counts": {
+    "policyLanes": 9,
+    "timerMappings": 9,
+    "riskClocks": 12,
+    "darkClaims": 49,
+    "deepDossiers": 5,
+    "epsteinTargets": 8,
+    "missingFiles": 0,
+    "staleTrackers": 0
+  },
+  "missing": [],
+  "stale": [],
+  "routeChecks": [
+    {
+      "route": "control-system-tracker.html",
+      "hasBoundary": true,
+      "hasEvidenceLanguage": true,
+      "hasTrackerLinks": true
+    },
+    {
+      "route": "timers.html",
+      "hasBoundary": true,
+      "hasEvidenceLanguage": true,
+      "hasTrackerLinks": true
+    },
+    {
+      "route": "epstein-files.html",
+      "hasBoundary": true,
+      "hasEvidenceLanguage": true,
+      "hasTrackerLinks": true
+    },
+    {
+      "route": "dark-speculation-lab.html",
+      "hasBoundary": true,
+      "hasEvidenceLanguage": true,
+      "hasTrackerLinks": true
+    }
+  ],
+  "recommendations": [
+    "No critical maintenance gaps found. Continue source expansion and live verification."
+  ],
+  "boundaries": {
+    "speculation": "Speculation is allowed when clearly labelled as speculation, hypothesis, motif, claim-history, open question or debunk lane. It must not be framed as proven fact unless source-grade records support it.",
+    "maintenance": "Every automated maintenance run must be visible through a workflow log, generated report, artifact, commit message, issue, or public change log.",
+    "evidence": "The core tracks public records, policy moves, mandates, pilots, contracts, court records, official releases, corporate filings, source-linked reporting, and clearly labelled speculation. It does not treat association, rumour, symbolism, or internet lore as proof."
+  }
+}

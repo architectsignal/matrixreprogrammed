@@ -60,7 +60,7 @@ jobs:
             echo "No generated maintenance changes to commit."
           else
             git commit -m "Transparent scheduled maintenance report [deploy]"
-            git push
+            git push || (git pull --rebase origin main && git push)
           fi
 
       - name: Public content scrub

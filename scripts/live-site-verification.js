@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const base = process.env.SITE_URL || 'https://matrixreprogrammed.com';
+const base = process.env.SITE_URL || 'https://www.matrixreprogrammed.com';
+const expectedHost = new URL(base).host;
 const expectedSha = process.env.EXPECTED_BUILD_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.CF_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const required = [
   { path: '/', marker: 'FOLLOW THE FILES.', forbidden: ['rogue broadcast node inside the simulation'], maxCounts: [{ text: 'Open Source Trail', max: 1 }] },
@@ -23,16 +24,23 @@ function countText(text, needle) {
 }
 async function check(item) {
   const url = new URL(item.path, base).href;
-  const res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/2.0' } });
+  const res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/3.0' }, redirect: 'follow' });
   const text = await res.text();
+  const finalUrl = res.url || url;
+  const finalHost = new URL(finalUrl).host;
   const result = {
     path: item.path,
     url,
+    finalUrl,
+    requestedHost: expectedHost,
+    finalHost,
+    canonicalHostMatched: finalHost === expectedHost,
     status: res.status,
     ok: ok(res.status),
     marker: item.marker,
     markerPresent: text.includes(item.marker),
     origin: res.headers.get('x-matrix-origin') || null,
+    worker: res.headers.get('x-matrix-worker') || null,
     cacheControl: res.headers.get('cache-control') || null
   };
   if (item.json) {
@@ -46,6 +54,8 @@ async function check(item) {
   }
   const errors = [];
   if (!result.ok) errors.push(`HTTP ${res.status}`);
+  if (!result.canonicalHostMatched) errors.push(`canonical host mismatch: requested ${expectedHost}, final ${finalHost}`);
+  if (!result.origin) errors.push('missing x-matrix-origin Worker header');
   if (!result.markerPresent) errors.push(`missing marker ${item.marker}`);
   if (result.forbiddenHits && result.forbiddenHits.length) errors.push(`stale forbidden text present: ${result.forbiddenHits.join(', ')}`);
   if (result.counts) {
@@ -69,6 +79,7 @@ async function main(){
     ok: results.every(r => r.ok && r.markerPresent && !r.error) && (shaMatches !== false),
     checkedAt,
     base,
+    expectedHost,
     expectedSha: expectedSha || null,
     liveSha: liveSha || null,
     shaMatches,

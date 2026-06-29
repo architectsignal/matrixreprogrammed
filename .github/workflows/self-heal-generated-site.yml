@@ -53,6 +53,9 @@ jobs:
       - name: First full rebuild
         run: npm run build
 
+      - name: First generated artifact repair
+        run: npm run repair-generated
+
       - name: First postbuild master audit
         run: npm run audit:master:postbuild
 
@@ -72,6 +75,9 @@ jobs:
       - name: Second full rebuild to catch order-dependent overwrites
         run: npm run build
 
+      - name: Second generated artifact repair
+        run: npm run repair-generated
+
       - name: Second postbuild master audit
         run: npm run audit:master:postbuild
 
@@ -86,7 +92,7 @@ jobs:
           git config user.name "matrix-self-heal-bot"
           git config user.email "actions@users.noreply.github.com"
           git status --short
-          git add -A *.html *.css *.js sitemap.xml robots.txt llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json deploy-status.json || true
+          git add -A *.html *.css *.js sitemap.xml robots.txt llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json deploy-status.json deploy-health.json || true
           git add -A data downloads feeds _site || true
           if git diff --cached --quiet; then
             echo "No regenerated output changes to commit."
@@ -108,6 +114,9 @@ jobs:
             data/site-quality-report.json
             data/site-freshness-report.json
             deploy-status.json
+            deploy-health.json
             downloads/deploy-status.json
+            downloads/deploy-health.json
+            downloads/generated-site-repair-report.json
           if-no-files-found: ignore
           retention-days: 14

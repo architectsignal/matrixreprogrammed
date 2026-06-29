@@ -64,6 +64,34 @@ const resilientSearchJs = String.raw`(function(){
 })();
 `;
 
+const requiredIndexRoutes = [
+  { title:'Books', category:'Books', url:'books.html', description:'Matrix Reprogrammed book universe, reader paths, D.O.G The Architect, intelligence dossiers, crime dossiers, and public-record books.', keywords:['books','book universe','reader paths','dog','architect','intelligence dossiers','crime dossiers'] },
+  { title:'Ask Matrix Search', category:'Search / Free Tool', url:'search.html', description:'Free local site search and answer routing over Matrix Reprogrammed pages.', keywords:['search','ask matrix','local search'] },
+  { title:'Live Intel', category:'Current Updates', url:'live-intel.html', description:'Current Matrix Reprogrammed intel stream and source lanes.', keywords:['live intel','updates','source lanes'] },
+  { title:'Epstein Files Command Center', category:'Public Record / Evidence', url:'epstein-files.html', description:'Epstein command center, evidence ladder, people tracker, timeline, and public files.', keywords:['epstein','files','maxwell','evidence'] },
+  { title:'Evidence Vault', category:'Evidence', url:'evidence-vault.html', description:'Evidence vault, source hierarchy, claim classes, and public-record paths.', keywords:['evidence','source cards','records'] },
+  { title:'Download Center', category:'Free Resources', url:'download-center.html', description:'Free downloadable briefs, packs, exports, and machine-readable resources.', keywords:['downloads','free briefs','packs'] },
+  { title:'Trust Center', category:'Credibility', url:'trust-center.html', description:'Trust rules, corrections, source methodology, and evidence boundaries.', keywords:['trust','corrections','methodology'] },
+  { title:'Authority Hub', category:'SEO / AI Search', url:'authority-hub.html', description:'Authority hub, topic clusters, internal links, and AI-search discovery.', keywords:['authority','seo','topic clusters'] }
+];
+
+if (exists('search-index.json')) {
+  let index;
+  try { index = JSON.parse(read('search-index.json')); } catch { index = []; }
+  if (!Array.isArray(index)) index = [];
+  const byUrl = new Map(index.filter(item => item && item.url).map(item => [item.url, item]));
+  for (const route of requiredIndexRoutes) {
+    if (!byUrl.has(route.url)) {
+      byUrl.set(route.url, route);
+      repairs.push(`search-index-route:${route.url}`);
+    }
+  }
+  write('search-index.json', JSON.stringify([...byUrl.values()].sort((a,b)=>String(a.title||'').localeCompare(String(b.title||''))), null, 2));
+} else {
+  write('search-index.json', JSON.stringify(requiredIndexRoutes, null, 2));
+  repairs.push('search-index-created');
+}
+
 if (exists('search.html')) {
   let html = read('search.html');
   const before = html;

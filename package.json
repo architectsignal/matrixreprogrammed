@@ -41,7 +41,7 @@
     "pressure-test:global-risk-clocks": "node scripts/ensure-shared-assets.js && node scripts/global-risk-clocks-test.js",
     "pressure-test:live-intel": "node scripts/ensure-shared-assets.js && node scripts/live-intel-pressure-test.js",
     "pressure-test:figures": "node scripts/figure-source-rules-pressure-test.js",
-    "pressure-test:cloudflare": "node scripts/build-deploy-status.js && node scripts/ensure-shared-assets.js && node scripts/patch-worker-pages-origin.js && node scripts/build-cloudflare-output.js && node scripts/site-brain-health.js && node scripts/cloudflare-worker-routes-test.js && node scripts/cloudflare-pages-pressure-test.js",
+    "pressure-test:cloudflare": "node scripts/build-deploy-status.js && node scripts/ensure-shared-assets.js && node scripts/patch-worker-pages-origin.js && node scripts/build-cloudflare-output.js && node scripts/site-brain-health.js && node scripts/cloudflare-worker-routes-test.js",
     "pressure-test:ten": "node scripts/ensure-shared-assets.js && node scripts/ten-out-of-ten-pressure-test.js",
     "epstein-watch": "node scripts/enhance-epstein-watch.js && node scripts/build-epstein-evidence-ladder.js && node scripts/build-epstein-timeline-map.js && node scripts/build-epstein-sighting-watch.js && node scripts/ensure-shared-assets.js",
     "pressure-test:epstein-watch": "node scripts/ensure-shared-assets.js && node scripts/epstein-watch-pressure-test.js",

@@ -173,7 +173,7 @@ function cacheHeadersForPath(pathname = '') {
 function hardenResponse(response, pathname = '') {
   const headers = new Headers(response.headers);
   for (const [key, value] of Object.entries(securityHeaders)) headers.set(key, value);
-  headers.set('X-Matrix-Origin', headers.get('X-Matrix-Origin') || 'cloudflare-worker-assets');
+  headers.set('X-Matrix-Origin', 'cloudflare-worker-assets');
   headers.set('X-Matrix-Worker', workerName);
   headers.set('Cache-Control', cacheHeadersForPath(pathname));
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });

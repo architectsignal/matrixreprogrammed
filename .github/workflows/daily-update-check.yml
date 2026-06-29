@@ -41,6 +41,7 @@ jobs:
         run: |
           node scripts/update-live-intel.js
           node scripts/update-seven-day-intel.js
+          node scripts/build-intel-vault.js
           node scripts/build-intel-desk.js
           node scripts/enhance-epstein-watch.js
           node scripts/build-epstein-evidence-ladder.js
@@ -68,7 +69,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git status --short
           git add -A data downloads feeds || true
-          git add -A source-document-vault.html claim-classifier.html daily-drop.html network-search.html live-intel.html intel-archive.html news.html epstein-files.html timers.html migration-flow.html site-freshness-report.html site-quality-report.html download-center.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt || true
+          git add -A source-document-vault.html claim-classifier.html daily-drop.html network-search.html live-intel.html intel-vault.html intel-archive.html news.html epstein-files.html timers.html migration-flow.html site-freshness-report.html site-quality-report.html download-center.html sitemap.xml llms.txt search-index.json site-graph.json claim-taxonomy.json crawler-map.json robots.txt || true
           if git diff --cached --quiet; then
             echo "No daily public-content changes to commit."
           else
@@ -87,6 +88,7 @@ jobs:
             daily-drop.html
             network-search.html
             live-intel.html
+            intel-vault.html
             intel-archive.html
             epstein-files.html
             news.html
@@ -96,6 +98,7 @@ jobs:
             site-quality-report.html
             data/update-cadence-policy.json
             data/live-intel.json
+            data/intel-vault.json
             data/global-risk-clocks.json
             data/migration-flow-panel.json
             data/epstein-homepage-alerts.json
@@ -110,6 +113,8 @@ jobs:
             downloads/live-intel-latest.json
             downloads/live-intel-latest.md
             downloads/seven-day-intel.json
+            downloads/intel-vault.json
+            downloads/intel-vault.md
             downloads/epstein-source-watch.json
             downloads/epstein-source-watch.md
           if-no-files-found: ignore

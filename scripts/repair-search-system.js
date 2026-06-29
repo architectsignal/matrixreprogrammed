@@ -9,7 +9,7 @@ function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
 function write(name, value){ fs.writeFileSync(fp(name), value); }
 function replaceAllText(value, from, to){ return value.split(from).join(to); }
 
-const resilientSearchJs = `(function(){
+const resilientSearchJs = String.raw`(function(){
   const input=document.getElementById('archive-search');
   const results=document.getElementById('search-results');
   const count=document.getElementById('search-count');

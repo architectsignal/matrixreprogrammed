@@ -25,7 +25,7 @@ jobs:
   deploy:
     name: Guarded Cloudflare production deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') }}
 
     steps:
@@ -87,5 +87,22 @@ jobs:
           SITE_URL: https://matrixreprogrammed.com
           EXPECTED_BUILD_SHA: ${{ github.sha }}
         run: |
-          sleep 10
-          npm run verify-live
+          set -o pipefail
+          for attempt in 1 2 3 4 5 6; do
+            echo "Live verification attempt $attempt of 6"
+            if npm run verify-live; then
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "::error::Live Cloudflare verification failed after retries. See live-site-verification-report.json artifact."
+          exit 1
+
+      - name: Upload live verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-site-verification-report
+          path: live-site-verification-report.json
+          if-no-files-found: ignore
+          retention-days: 14

@@ -1,7 +1,20 @@
+const workerName = 'matrixreprogrammed';
+const updatedAt = '2026-06-29T00:00:00.000Z';
+
+const securityHeaders = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+};
+
 const jsonHeaders = {
+  ...securityHeaders,
   'Content-Type': 'application/json; charset=utf-8',
   'Cache-Control': 'no-store',
-  'X-Matrix-Origin': 'cloudflare-worker-api'
+  'X-Matrix-Origin': 'cloudflare-worker-api',
+  'X-Matrix-Worker': workerName
 };
 
 const routeAliases = {
@@ -31,6 +44,7 @@ const routeAliases = {
   '/books': '/books.html',
   '/deploy-status': '/deploy-status.html',
   '/live-intel': '/live-intel.html',
+  '/intel-desk': '/news.html',
   '/evidence-vault': '/evidence-vault.html',
   '/source-document-vault': '/source-document-vault.html',
   '/claim-classifier': '/claim-classifier.html',
@@ -39,6 +53,17 @@ const routeAliases = {
   '/book-universe': '/book-universe.html',
   '/answer-engine': '/answer-engine.html',
   '/ai-answers': '/answer-engine.html',
+  '/black-file-index': '/black-file-index.html',
+  '/answer-index': '/answer-index.html',
+  '/evidence-vault-index': '/evidence-vault-index.html',
+  '/secret-societies-hub': '/authority-secret-societies.html',
+  '/intelligence-hub': '/authority-intelligence-network.html',
+  '/crime-hub': '/authority-crime-state-overlap.html',
+  '/war-conflict-hub': '/authority-war-machine.html',
+  '/dashboard-human-cost': '/news.html',
+  '/dashboard-conflict': '/news.html',
+  '/dashboard-economy': '/news.html',
+  '/migration': '/migration-flow.html',
   '/maps': '/network-map-index.html',
   '/network-map-index': '/network-map-index.html',
   '/conversion-funnel': '/conversion-funnel.html',
@@ -93,6 +118,18 @@ const routeAliases = {
   '/amazon-store': '/amazon-store-books.html'
 };
 
+const hardBoardRouteMap = {
+  '/forum-feed-main': { type: 'feed', board: 'main' },
+  '/forum-feed-speculation': { type: 'feed', board: 'speculation' },
+  '/forum-feed-epstein-alive': { type: 'feed', board: 'epstein-alive' },
+  '/submit-main-post': { type: 'submit', board: 'main' },
+  '/submit-speculation-post': { type: 'submit', board: 'speculation' },
+  '/submit-epstein-alive-post': { type: 'submit', board: 'epstein-alive' },
+  '/report-main-post': { type: 'report', board: 'main' },
+  '/report-speculation-post': { type: 'report', board: 'speculation' },
+  '/report-epstein-alive-post': { type: 'report', board: 'epstein-alive' }
+};
+
 const boardLabels = {
   main: 'Main Signal Board',
   speculation: 'Dark Speculation Board',
@@ -116,23 +153,42 @@ function markdown(text, filename = 'forum-posts.md') {
   return new Response(text, {
     status: 200,
     headers: {
+      ...securityHeaders,
       'Content-Type': 'text/markdown; charset=utf-8',
       'Content-Disposition': `attachment; filename="${filename}"`,
       'Cache-Control': 'no-store',
-      'X-Matrix-Origin': 'cloudflare-worker-api'
+      'X-Matrix-Origin': 'cloudflare-worker-api',
+      'X-Matrix-Worker': workerName
     }
   });
 }
 
-function withAssetHeaders(response) {
+function cacheHeadersForPath(pathname = '') {
+  if (pathname === '/' || pathname.endsWith('.html') || !/\.[a-z0-9]{2,8}$/i.test(pathname)) return 'no-store, must-revalidate';
+  if (/\.(?:js|css|png|jpg|jpeg|webp|gif|svg|ico|woff2?)$/i.test(pathname)) return 'public, max-age=31536000, immutable';
+  if (/\.(?:json|xml|txt|md|pdf)$/i.test(pathname)) return 'public, max-age=300, must-revalidate';
+  return 'public, max-age=3600, must-revalidate';
+}
+
+function hardenResponse(response, pathname = '') {
   const headers = new Headers(response.headers);
-  headers.set('X-Matrix-Origin', 'cloudflare-worker-assets');
-  headers.set('X-Matrix-Worker', 'matrixreprogrammed');
-  return new Response(response.body, {
-    status: response.status,
-    statusText: response.statusText,
-    headers
-  });
+  for (const [key, value] of Object.entries(securityHeaders)) headers.set(key, value);
+  headers.set('X-Matrix-Origin', headers.get('X-Matrix-Origin') || 'cloudflare-worker-assets');
+  headers.set('X-Matrix-Worker', workerName);
+  headers.set('Cache-Control', cacheHeadersForPath(pathname));
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
+function safeNotConfigured(name, detail = '') {
+  return json({ ok: false, configured: false, error: `${name} not configured`, detail, worker: workerName, handled: 'safeNotConfigured' }, 503);
+}
+
+function isHostileProbePath(pathname = '') {
+  return /(?:\.env|wp-admin|wp-login|xmlrpc\.php|\.git|phpinfo|id_rsa|config\.php|vendor\/phpunit|eval-stdin|boaform|cgi-bin|\.aws|server-status)/i.test(pathname);
+}
+
+function methodAllowed(request, methods = ['GET', 'HEAD']) {
+  return methods.includes(request.method);
 }
 
 async function readBody(request) {
@@ -275,7 +331,7 @@ async function getPosts(env, board = 'all') {
 }
 
 async function getForumStats(env) {
-  if (!env.FORUM_POSTS) return { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]) };
+  if (!env.FORUM_POSTS) return { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]), persistenceMode: 'missing binding' };
   const indexed = await getIndexedPosts(env);
   const storedList = await env.FORUM_POSTS.list({ prefix: 'post:', limit: 1000 });
   return {
@@ -341,9 +397,7 @@ function postsMarkdown(data) {
     data.boundary,
     ''
   ];
-  if (data.packFiltered) {
-    lines.push('## Pack Filter', '', `Terms: ${(data.packTerms || []).join(', ')}`, '');
-  }
+  if (data.packFiltered) lines.push('## Pack Filter', '', `Terms: ${(data.packTerms || []).join(', ')}`, '');
   for (const post of posts) {
     lines.push(`## ${post.title}`, '', `- Date: ${post.createdAt}`, `- Board: ${boardLabels[post.board] || post.board || 'Main Signal Board'}`, `- Category: ${post.category}`, `- Name: ${post.name}`);
     if (post.sourceUrl) lines.push(`- Source: ${post.sourceUrl}`);
@@ -353,7 +407,7 @@ function postsMarkdown(data) {
 }
 
 async function handleIntroVoice(request, env) {
-  if (!env.ELEVENLABS_API_KEY) return json({ ok: false, error: 'ELEVENLABS_API_KEY Cloudflare secret missing. Browser fallback voice can still be used.' }, 503);
+  if (!env.ELEVENLABS_API_KEY) return safeNotConfigured('ELEVENLABS_API_KEY Cloudflare secret', 'Browser fallback voice can still be used.');
   const body = await readBody(request);
   const text = cleanText(body.text || 'Welcome to Matrix Reprogrammed. Reality is edited. The headline is not the machine. The truth is not hidden. It is encoded.', 900);
   if (text.length < 3) return json({ ok: false, error: 'No intro text provided.' }, 400);
@@ -366,21 +420,21 @@ async function handleIntroVoice(request, env) {
     body: JSON.stringify({ text, model_id: modelId, voice_settings: { stability: 0.42, similarity_boost: 0.78, style: 0.38, use_speaker_boost: true } })
   });
   if (!eleven.ok) return json({ ok: false, error: 'ElevenLabs request failed', status: eleven.status, details: cleanText(await eleven.text().catch(() => ''), 500) }, 502);
-  return new Response(eleven.body, { status: 200, headers: { 'Content-Type': eleven.headers.get('content-type') || 'audio/mpeg', 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api' } });
+  return new Response(eleven.body, { status: 200, headers: { ...securityHeaders, 'Content-Type': eleven.headers.get('content-type') || 'audio/mpeg', 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api', 'X-Matrix-Worker': workerName } });
 }
 
-async function handleForumPostsJson(request, env) {
+async function handleForumPostsJson(request, env, forcedBoard = '') {
   const url = new URL(request.url);
-  const board = cleanText(url.searchParams.get('board') || 'all', 80);
+  const board = cleanText(forcedBoard || url.searchParams.get('board') || 'all', 80);
   const data = await forumExport(env, cleanText(url.searchParams.get('pack') || '', 120), board);
-  if (!data) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
+  if (!data) return json({ ok: true, configured: false, error: 'FORUM_POSTS KV binding missing', posts: [], worker: workerName, board }, 200);
   return json(data);
 }
 
-async function handleForumPostsMarkdown(request, env) {
+async function handleForumPostsMarkdown(request, env, forcedBoard = '') {
   const url = new URL(request.url);
   const pack = cleanText(url.searchParams.get('pack') || '', 120);
-  const board = cleanText(url.searchParams.get('board') || 'all', 80);
+  const board = cleanText(forcedBoard || url.searchParams.get('board') || 'all', 80);
   const data = await forumExport(env, pack, board);
   if (!data) return markdown('# Forum Posts Export\n\nFORUM_POSTS KV binding missing.\n', 'forum-posts.md');
   const suffix = [board && board !== 'all' ? normalizeBoard(board) : '', pack].filter(Boolean).join('-');
@@ -389,14 +443,15 @@ async function handleForumPostsMarkdown(request, env) {
 
 async function handleForumHealth(env) {
   const hasForumPostsBinding = Boolean(env.FORUM_POSTS);
-  const stats = hasForumPostsBinding ? await getForumStats(env) : { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]) };
+  const stats = hasForumPostsBinding ? await getForumStats(env) : { ok: false, indexCount: 0, storedPostCount: 0, boardCounts: boardCounts([]), persistenceMode: 'missing binding' };
   return json({
-    ok: hasForumPostsBinding,
-    worker: 'matrixreprogrammed',
+    ok: true,
+    worker: workerName,
     backend: 'src/worker.js',
     assetBinding: Boolean(env.ASSETS),
     assetMode: 'Cloudflare bundled ASSETS binding first, no Pages origin fallback',
     forumPostsBinding: hasForumPostsBinding ? 'connected' : 'missing',
+    bindingHealthy: hasForumPostsBinding,
     kvBindingName: 'FORUM_POSTS',
     expectedKvNamespaceTitle: 'matrixreprogrammed-forum-posts',
     expectedKvNamespaceId: '99996d87016d4285a833707cbda5232f',
@@ -408,25 +463,26 @@ async function handleForumHealth(env) {
     boardLabels,
     boardCounts: stats.boardCounts,
     publicRouteAliases: Object.keys(routeAliases).length,
+    hardBoardRoutes: Object.keys(hardBoardRouteMap),
     deployedFrom: 'GitHub main',
-    updatedAt: '2026-06-29T00:00:00.000Z'
-  }, hasForumPostsBinding ? 200 : 503);
+    updatedAt
+  }, 200);
 }
 
-async function handleForumFeed(request, env) {
+async function handleForumFeed(request, env, forcedBoard = '') {
   const url = new URL(request.url);
-  const board = cleanText(url.searchParams.get('board') || 'main', 80);
+  const board = cleanText(forcedBoard || url.searchParams.get('board') || 'main', 80);
   const posts = await getPosts(env, board);
-  if (!posts) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);
   const normalizedBoard = normalizeBoard(board);
+  if (!posts) return json({ ok: true, configured: false, error: 'FORUM_POSTS KV binding missing', posts: [], board: normalizedBoard, boardLabel: boardLabels[normalizedBoard], worker: workerName }, 200);
   return json({ ok: true, persistent: true, source: 'Cloudflare KV FORUM_POSTS', board: normalizedBoard, boardLabel: boardLabels[normalizedBoard], selfHealingIndex: true, posts: posts.slice(0, 60) });
 }
 
-async function handleSubmitForumPost(request, env) {
-  if (!env.FORUM_POSTS) return json({ ok: false, error: 'FORUM_POSTS KV binding missing' }, 503);
+async function handleSubmitForumPost(request, env, forcedBoard = '') {
+  if (!env.FORUM_POSTS) return safeNotConfigured('FORUM_POSTS KV binding');
   const body = await readBody(request);
   if (body.website) return json({ ok: false, error: 'Spam trap triggered' }, 400);
-  const board = normalizeBoard(body.board || inferBoardFromPost(body));
+  const board = normalizeBoard(forcedBoard || body.board || inferBoardFromPost(body));
   const title = cleanText(body.title, 140);
   const message = cleanText(body.body || body.message, 1800);
   if (title.length < 3 || message.length < 10) return json({ ok: false, error: 'Signal needs a title and a useful body.' }, 400);
@@ -449,10 +505,10 @@ async function handleSubmitForumPost(request, env) {
   return json({ ok: true, persistent: true, storage: 'Cloudflare KV FORUM_POSTS', board, boardLabel: boardLabels[board], post });
 }
 
-async function handleReportForumPost(request, env) {
-  if (!env.FORUM_POSTS) return json({ ok: false, error: 'FORUM_POSTS KV binding missing' }, 503);
+async function handleReportForumPost(request, env, forcedBoard = '') {
+  if (!env.FORUM_POSTS) return safeNotConfigured('FORUM_POSTS KV binding');
   const body = await readBody(request);
-  const board = normalizeBoard(body.board || 'main');
+  const board = normalizeBoard(forcedBoard || body.board || 'main');
   const report = { id: makeId(), board, postId: cleanText(body.id || body.postId, 120), reason: cleanText(body.reason, 1000), createdAt: new Date().toISOString() };
   if (!report.postId || !report.reason) return json({ ok: false, error: 'Report needs a post id and reason.' }, 400);
   await env.FORUM_POSTS.put(`report:${report.id}`, JSON.stringify(report), { metadata: { board, postId: report.postId } });
@@ -473,59 +529,72 @@ async function handleTrackEvent(request, env) {
     form: cleanText(body.form || '', 120),
     createdAt: new Date().toISOString()
   };
-  if (env.FORUM_POSTS) {
-    await env.FORUM_POSTS.put(`analytics:${event.id}`, JSON.stringify(event), { expirationTtl: 60 * 60 * 24 * 45, metadata: { name: event.name, route: event.route, page: event.page } });
-  }
-  return new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api' } });
+  if (env.FORUM_POSTS) await env.FORUM_POSTS.put(`analytics:${event.id}`, JSON.stringify(event), { expirationTtl: 60 * 60 * 24 * 45, metadata: { name: event.name, route: event.route, page: event.page } });
+  return new Response(null, { status: 204, headers: { ...securityHeaders, 'Cache-Control': 'no-store', 'X-Matrix-Origin': 'cloudflare-worker-api', 'X-Matrix-Worker': workerName } });
 }
 
 async function serveAsset(request, env, url, pathname) {
-  if (!env.ASSETS) return json({ ok: false, error: 'ASSETS binding missing', pathname }, 503);
+  if (!methodAllowed(request)) return json({ ok: false, error: 'Method not allowed for static asset route', method: request.method, pathname }, 405);
+  if (!env.ASSETS || typeof env.ASSETS.fetch !== 'function') return safeNotConfigured('ASSETS binding', pathname);
   const assetUrl = new URL(request.url);
   assetUrl.pathname = pathname;
   assetUrl.search = url.search;
   const response = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
-  return withAssetHeaders(response);
+  return hardenResponse(response, pathname);
+}
+
+function assetCandidates(originalPath, routedPath) {
+  const candidates = [];
+  const add = value => { if (value && !candidates.includes(value)) candidates.push(value); };
+  add(routedPath);
+  add(originalPath);
+  if (routedPath === '/' || originalPath === '/') add('/index.html');
+  if (!routedPath.endsWith('/')) {
+    add(`${routedPath}.html`);
+    add(`${routedPath}/index.html`);
+  }
+  if (routedPath.endsWith('/')) {
+    add(`${routedPath}index.html`);
+    add(`${routedPath.replace(/\/$/, '')}.html`);
+  }
+  add('/404.html');
+  return candidates;
 }
 
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-    const originalPath = url.pathname;
-    const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
-    const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
+    try {
+      const url = new URL(request.url);
+      const originalPath = url.pathname;
+      const normalizedPath = originalPath.length > 1 ? originalPath.replace(/\/+$/, '') : originalPath;
+      const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
-    if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath)) return new Response(null, { status: 204 });
-    if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);
-    if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
-    if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(request, env);
-    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(request, env);
-    if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(request, env);
-    if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
-    if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
-    if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);
+      if (isHostileProbePath(originalPath)) return json({ ok: false, error: 'Rejected hostile probe path', path: originalPath }, 404);
+      if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath)) return new Response(null, { status: 204, headers: { ...securityHeaders, 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS', 'Access-Control-Allow-Headers': 'content-type' } });
 
-    const candidates = [];
-    const add = value => { if (value && !candidates.includes(value)) candidates.push(value); };
-    add(routedPath);
-    add(originalPath);
-    if (routedPath === '/' || originalPath === '/') add('/index.html');
-    if (!routedPath.endsWith('/')) {
-      add(`${routedPath}.html`);
-      add(`${routedPath}/index.html`);
-    }
-    if (routedPath.endsWith('/')) {
-      add(`${routedPath}index.html`);
-      add(`${routedPath.replace(/\/$/, '')}.html`);
-    }
-    add('/404.html');
+      if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);
+      if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
+      if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(request, env);
+      if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(request, env);
+      if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(request, env);
+      if (request.method === 'POST' && originalPath === '/submit-forum-post') return handleSubmitForumPost(request, env);
+      if (request.method === 'POST' && originalPath === '/report-forum-post') return handleReportForumPost(request, env);
+      if (request.method === 'POST' && (originalPath === '/track-event' || originalPath === '/.netlify/functions/track-event')) return handleTrackEvent(request, env);
 
-    let lastResponse;
-    for (const candidate of candidates) {
-      const response = await serveAsset(request, env, url, candidate);
-      lastResponse = response;
-      if (![403, 404].includes(response.status)) return response;
+      const hardRoute = hardBoardRouteMap[originalPath] || hardBoardRouteMap[normalizedPath];
+      if (hardRoute && request.method === 'GET' && hardRoute.type === 'feed') return handleForumFeed(request, env, hardRoute.board);
+      if (hardRoute && request.method === 'POST' && hardRoute.type === 'submit') return handleSubmitForumPost(request, env, hardRoute.board);
+      if (hardRoute && request.method === 'POST' && hardRoute.type === 'report') return handleReportForumPost(request, env, hardRoute.board);
+
+      let lastResponse;
+      for (const candidate of assetCandidates(originalPath, routedPath)) {
+        const response = await serveAsset(request, env, url, candidate);
+        lastResponse = response;
+        if (response.status !== 404) return response;
+      }
+      return lastResponse || json({ ok: false, error: 'No asset response available' }, 404);
+    } catch (err) {
+      return json({ ok: false, error: 'Worker handled failure safely', message: cleanText(err && err.message, 500), worker: workerName }, 500);
     }
-    return lastResponse || json({ ok: false, error: 'No asset response available' }, 404);
   }
 };

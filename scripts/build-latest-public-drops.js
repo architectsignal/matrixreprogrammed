@@ -79,6 +79,7 @@ function mergeTimers(data, drops) {
     if (clock.slug === 'cbdc-rollout') clock.score = Math.max(clock.score || 0, 82);
     if (clock.slug === 'surveillance-state') clock.score = Math.max(clock.score || 0, 90);
     if (clock.slug === 'machine-convergence') clock.score = Math.max(clock.score || 0, 78);
+    if (Number(clock.score) >= 90) clock.homepageEligible = true;
     clock.signals = `${clock.signals || ''} Latest public drops: ${linked.map(drop => `${String(drop.published || '').slice(0,10)} ${drop.title}`).join(' | ')}`.slice(0, 900);
   }
   clocks.updated = data.updated;

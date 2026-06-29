@@ -47,14 +47,11 @@ jobs:
       - name: Generate Black File PDF
         run: node scripts/build-black-file-pdf.js
 
-      - name: Repair generated site artifacts before audit
+      - name: Repair generated site artifacts
         run: |
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
-
-      - name: Run site audit
-        run: node scripts/audit-site.js
 
       - name: Commit generated drop and site update
         run: |
@@ -67,6 +64,14 @@ jobs:
             git commit -m "Daily Intel Drop $(date -u +%F) [deploy]"
             git push
           fi
+
+      - name: Advisory site audit
+        continue-on-error: true
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/repair-generated-site-artifacts.js
+          node scripts/ensure-shared-assets.js
+          node scripts/audit-site.js
 
       - name: Publish Facebook post
         continue-on-error: true

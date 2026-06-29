@@ -12,8 +12,20 @@ if (!fs.existsSync(workerPath)) {
 let s = fs.readFileSync(workerPath, 'utf8');
 const before = s;
 
+function isCleanWorker(text) {
+  const hasAssets = text.includes('env.ASSETS.fetch');
+  const hasPages = /PAGES_STATIC_ORIGIN|matrixreprogrammed\.pages\.dev|STATIC_ORIGIN \|\|/i.test(text);
+  return hasAssets && !hasPages;
+}
+
 s = s.replace(/^const PAGES_STATIC_ORIGIN = ['"]https:\/\/matrixreprogrammed\.pages\.dev['"];\n\n?/m, '');
 s = s.replace("'/newsletter': '/optin-center.html',", "'/newsletter': '/newsletter.html',");
+
+if (isCleanWorker(s)) {
+  if (s !== before) fs.writeFileSync(workerPath, s);
+  console.log('Worker static routing already uses bundled Cloudflare assets.');
+  process.exit(0);
+}
 
 const replacement = `const tryAsset = async (pathname) => {
       if (!env.ASSETS || typeof env.ASSETS.fetch !== 'function') {
@@ -46,16 +58,16 @@ const replacement = `const tryAsset = async (pathname) => {
 
 const block = /const tryAsset = async \(pathname\) => \{[\s\S]*?\n    \};\n\n    let response = await tryAsset\(routedPath\);/;
 if (!block.test(s)) {
-  console.error('Worker patch failed: tryAsset block not found');
+  console.error('Worker patch failed: tryAsset block not found and Worker is not already clean');
+  console.error(JSON.stringify({ clean: isCleanWorker(s), hasAssets: s.includes('env.ASSETS.fetch'), hasPages: /PAGES_STATIC_ORIGIN|matrixreprogrammed\.pages\.dev|STATIC_ORIGIN \|\|/i.test(s) }, null, 2));
   process.exit(1);
 }
+
 s = s.replace(block, `${replacement}\n\n    let response = await tryAsset(routedPath);`);
 
-const hasAssets = s.includes('env.ASSETS.fetch');
-const hasPages = /PAGES_STATIC_ORIGIN|matrixreprogrammed\.pages\.dev|STATIC_ORIGIN \|\|/i.test(s);
-if (!hasAssets || hasPages) {
+if (!isCleanWorker(s)) {
   console.error('Worker patch failed: bundled asset routing not clean');
-  console.error(JSON.stringify({ hasAssets, hasPages }, null, 2));
+  console.error(JSON.stringify({ hasAssets: s.includes('env.ASSETS.fetch'), hasPages: /PAGES_STATIC_ORIGIN|matrixreprogrammed\.pages\.dev|STATIC_ORIGIN \|\|/i.test(s) }, null, 2));
   process.exit(1);
 }
 

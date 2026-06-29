@@ -1,0 +1,123 @@
+{
+  "updated": "2026-06-29",
+  "title": "Public Policy Convergence Tracker",
+  "subtitle": "Identity, Money, Governance, Security, Energy, Health, Food, Speech",
+  "purpose": "A public-record tracker for policies, mandates, standards, pilots, contracts, treaties, and institutions that centralise identity, money, movement, speech, security, health, energy, land, food, and governance.",
+  "boundary": "This tracker follows public records and institutional actions. It does not claim secret coordination. Each item must be linked to an actor, date, jurisdiction, source class, evidence level, and plain-language boundary.",
+  "sourceHierarchy": [
+    "Law, regulation, treaty, court order, or official policy document",
+    "Government procurement, public contract, budget, hearing, or committee record",
+    "Central bank, BIS, IMF, World Bank, OECD, G20, or official monetary document",
+    "Corporate filing, annual report, procurement notice, or investor disclosure",
+    "NGO, foundation, standards-body, or public-private partnership document",
+    "Major dated reporting that links to source documents",
+    "Open-source lead requiring verification"
+  ],
+  "signalLevels": [
+    {"level":1,"name":"Mention","meaning":"The topic appears in a source and is tracked as a lead."},
+    {"level":2,"name":"Pilot","meaning":"A sandbox, trial, grant, or memorandum exists."},
+    {"level":3,"name":"Procurement","meaning":"Money, vendors, standards, or implementation plans are visible."},
+    {"level":4,"name":"Mandate","meaning":"A rule, law, treaty, or institutional requirement exists."},
+    {"level":5,"name":"Integration","meaning":"Two or more systems connect, such as identity, money, health, travel, speech, policing, or AI."},
+    {"level":6,"name":"Lock-in","meaning":"Opt-out becomes difficult because services, travel, work, money, or compliance depend on the system."}
+  ],
+  "lanes": [
+    {
+      "id":"agenda-2030-and-global-standards",
+      "title":"Agenda 2030 / Global Standards / Policy Harmonisation",
+      "plainEnglish":"Track how broad international goals, standards, treaties, model laws, funding conditions, and public-private partnerships become domestic policy.",
+      "track":["UN Agenda 2030 references","SDG-aligned national plans","model laws","treaties","soft-law frameworks","public-private partnerships","funding conditions","standards embedded into procurement"],
+      "actors":["UN bodies","WHO","World Bank","IMF","OECD","G20","EU","national governments","standards bodies","foundations"],
+      "watchFor":["soft law becoming hard law","global standards entering local procurement","unelected bodies shaping domestic policy","funding conditions attached to reforms"],
+      "readerQuestion":"Are national policies being aligned through global standards without clear democratic oversight?"
+    },
+    {
+      "id":"digital-id",
+      "title":"Digital ID / Biometrics / Identity Wallets",
+      "plainEnglish":"Track when identity becomes the gate to banking, travel, health records, government services, age verification, work, benefits, or online access.",
+      "track":["digital identity laws","mobile identity wallets","biometric databases","age-verification systems","travel identity systems","health credential reuse","vendor contracts","cross-border interoperability"],
+      "actors":["national ID offices","EU digital identity bodies","World Bank identity programs","banks","travel bodies","identity vendors","payment networks"],
+      "watchFor":["mandatory wallet language","biometric enrolment expansion","ID required for online services","ID linked to benefits or bank access","cross-border interoperability"],
+      "readerQuestion":"Is identity becoming a master permission key?"
+    },
+    {
+      "id":"programmable-money",
+      "title":"CBDC / Tokenized Money / Programmable Finance",
+      "plainEnglish":"Track when money becomes programmable, identity-linked, surveilled, restricted, or routed through central-bank and compliance rails.",
+      "track":["CBDC pilots","tokenized deposits","central bank papers","BIS projects","cash restriction policy","debanking cases","stablecoin regulation","payment-system standards"],
+      "actors":["BIS","central banks","IMF","World Bank","commercial banks","payment processors","fintech vendors","finance ministries"],
+      "watchFor":["wallet identity requirements","transaction limits","expiry or purpose restrictions","programmable compliance","cash restrictions","financial access tied to compliance"],
+      "readerQuestion":"Is money becoming a permission layer?"
+    },
+    {
+      "id":"security-and-war-powers",
+      "title":"War / Security / Emergency Powers",
+      "plainEnglish":"Track when war, cyber threats, terror threats, pandemics, climate emergencies, migration crises, or energy shocks expand permanent security powers.",
+      "track":["defense spending","emergency laws","cybersecurity mandates","dual-use technology","contractor awards","civil-defense messaging","domestic surveillance powers"],
+      "actors":["defense ministries","NATO-style bodies","intelligence agencies","cyber agencies","security contractors","think tanks","interior ministries"],
+      "watchFor":["temporary emergency powers renewed","contractors embedded in civilian systems","foreign threat used for domestic surveillance","war narrative tied to speech restrictions"],
+      "readerQuestion":"Is crisis converting civilian life into permanent security architecture?"
+    },
+    {
+      "id":"speech-and-platform-governance",
+      "title":"Speech / Platforms / Search / Payment Access",
+      "plainEnglish":"Track rules and partnerships that shape what can be posted, searched, ranked, monetised, advertised, or paid for online.",
+      "track":["online safety laws","trusted flagger programs","platform moderation rules","search ranking changes","advertiser blacklists","payment access rules","NGO grants","election or crisis integrity partnerships"],
+      "actors":["platforms","government agencies","NGOs","academic centers","advertising bodies","payment processors","security agencies"],
+      "watchFor":["state requests routed through third parties","speech categories expanding during crises","payment or search suppression","opaque enforcement","political selectivity"],
+      "readerQuestion":"Is speech control being routed through platform and payment infrastructure?"
+    },
+    {
+      "id":"health-and-biosecurity",
+      "title":"Health Governance / Biosecurity / Emergency Health Powers",
+      "plainEnglish":"Track when health systems connect to identity, travel, work, emergency law, procurement, data systems, and speech policy.",
+      "track":["WHO frameworks","health emergency laws","digital health records","health credentials","biosecurity funding","procurement contracts","public-private health programs"],
+      "actors":["WHO","health ministries","CDC-style agencies","pharma companies","Gavi/CEPI-style networks","foundations","digital health vendors"],
+      "watchFor":["health status tied to travel or work","emergency rules without sunset","health data linked to digital ID","liability shields","public-private speech programs"],
+      "readerQuestion":"Is public health becoming a governance operating system?"
+    },
+    {
+      "id":"climate-energy-and-carbon",
+      "title":"Climate / Energy / Carbon / Mobility",
+      "plainEnglish":"Track when climate and energy policy move into travel limits, energy rationing, consumption scoring, land controls, ESG finance, carbon markets, food policy, and mobility rules.",
+      "track":["carbon markets","ESG rules","smart meters","mobility restrictions","vehicle restrictions","farm policy","energy rationing","climate finance"],
+      "actors":["UN climate bodies","national regulators","central banks","asset managers","energy companies","municipal governments","climate NGOs"],
+      "watchFor":["carbon account language","smart-meter enforcement","mobility restriction pilots","ESG financing pressure","food or farm restrictions","climate emergency powers"],
+      "readerQuestion":"Are energy and climate systems becoming a behaviour-management layer?"
+    },
+    {
+      "id":"migration-borders-and-population-systems",
+      "title":"Migration / Borders / Biometric Travel",
+      "plainEnglish":"Track how border systems, biometrics, digital identity, international law, NGOs, labour markets, housing pressure, and security narratives reshape movement and citizenship.",
+      "track":["border biometrics","asylum systems","NGO funding","digital travel credentials","labour migration frameworks","security incidents","housing contracts","remittance/payment rails"],
+      "actors":["IOM","UNHCR","border agencies","interior ministries","NGOs","labour ministries","payment networks"],
+      "watchFor":["biometric border expansion","NGO-state logistics chains","emergency housing contracts","digital travel credential integration","security incidents used for broad powers"],
+      "readerQuestion":"Is movement being managed through identity, biometric, and security infrastructure?"
+    },
+    {
+      "id":"food-water-land-and-supply-chains",
+      "title":"Food / Water / Land / Supply Chains",
+      "plainEnglish":"Track when farms, land, water, seed, fertilizer, meat, logistics, food standards, and supply chains concentrate into corporate-state policy networks.",
+      "track":["land acquisition","water rights","seed and fertilizer rules","farm restrictions","food security programs","supply-chain tracing","lab-food policy","corporate consolidation"],
+      "actors":["food agencies","farm ministries","agribusiness","asset managers","foundations","food-tech firms","water utilities"],
+      "watchFor":["small-farm pressure","centralised traceability mandates","water privatisation","land-use restrictions","food rationing narratives","lab-food subsidies"],
+      "readerQuestion":"Are food and land systems becoming control infrastructure instead of local resilience?"
+    }
+  ],
+  "crossLinks": [
+    {"from":"digital-id","to":"programmable-money","meaning":"Identity wallet becomes payment or bank gate"},
+    {"from":"digital-id","to":"health-and-biosecurity","meaning":"Health credential becomes identity credential"},
+    {"from":"security-and-war-powers","to":"speech-and-platform-governance","meaning":"Security narrative drives speech rules"},
+    {"from":"climate-energy-and-carbon","to":"programmable-money","meaning":"Carbon or energy rules can become payment or consumption restrictions"},
+    {"from":"migration-borders-and-population-systems","to":"digital-id","meaning":"Border biometrics become identity rails"},
+    {"from":"food-water-land-and-supply-chains","to":"climate-energy-and-carbon","meaning":"Climate policy reshapes farming, land, food and water"},
+    {"from":"agenda-2030-and-global-standards","to":"all","meaning":"Global standards can route into domestic mandates, procurement, and funding rules"}
+  ],
+  "readerMethod": [
+    "Find the lane before drawing conclusions.",
+    "Attach actor, date, jurisdiction, source class, signal level, and boundary.",
+    "A speech is level 1, a pilot is level 2, a contract is level 3, a mandate is level 4, integration is level 5, lock-in is level 6.",
+    "When three or more lanes converge around one actor, law, platform, crisis, or institution, flag it as a convergence event.",
+    "Track institutions, offices, corporations, laws, money, contracts, and named public actors; do not blame populations."
+  ]
+}

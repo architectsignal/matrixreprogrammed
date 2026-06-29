@@ -75,12 +75,12 @@ jobs:
         run: |
           git config user.name "matrix-reprogrammed-bot"
           git config user.email "actions@github.com"
-          git add data/latest-drop.json data/latest-video-package.json data/drops social/daily video-packages
+          git add data/latest-drop.json data/latest-video-package.json data/drops social/daily video-packages || true
           if git diff --cached --quiet; then
             echo "No weekly package changes to commit."
           else
             git commit -m "Weekly D.O.G video MP4 $(date -u +%F) [deploy]"
-            git push
+            git push || (git pull --rebase origin main && git push)
           fi
 
       - name: Publish weekly Facebook video

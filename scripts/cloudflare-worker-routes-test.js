@@ -26,11 +26,12 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'const routeAliases = {', 'routeAliases map');
   requireIncludes('src/worker.js', 'routeAliases[originalPath]', 'original route alias lookup');
   requireIncludes('src/worker.js', 'routeAliases[normalizedPath]', 'normalized route alias lookup');
-  requireIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'Pages static origin constant');
-  requireIncludes('src/worker.js', 'https://matrixreprogrammed.pages.dev', 'Pages static origin URL');
-  requireIncludes('src/worker.js', 'new URL(pathname, env.STATIC_ORIGIN || PAGES_STATIC_ORIGIN)', 'Pages origin asset URL builder');
-  requireIncludes('src/worker.js', 'cacheEverything', 'Cloudflare edge cache for proxied Pages assets');
-  forbidIncludes('src/worker.js', 'env.ASSETS.fetch', 'empty standalone Worker ASSETS fetch');
+  requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'bundled Cloudflare Worker asset fetch');
+  requireIncludes('src/worker.js', "X-Matrix-Origin', 'worker-assets", 'worker asset origin header');
+  forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
+  forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
+  forbidIncludes('src/worker.js', 'STATIC_ORIGIN ||', 'runtime Pages origin override');
+  forbidIncludes('src/worker.js', 'cacheEverything', 'Pages-origin fetch caching path');
   requireIncludes('src/worker.js', 'isHostileProbePath', 'hostile probe classifier');
   requireIncludes('src/worker.js', 'hardenResponse', 'cache/security response hardener');
   requireIncludes('src/worker.js', 'safeNotConfigured', 'safe configured-false response');
@@ -43,7 +44,7 @@ if (exists('src/worker.js')) {
   requireIncludes('src/worker.js', 'savePostRecord', 'durable post record writer');
   requireIncludes('src/worker.js', 'selfHealingIndex', 'forum self-healing index response');
   requireIncludes('src/worker.js', 'handleForumPostsJson', 'forum posts JSON download handler');
-  requireIncludes('src/worker.js', 'handleForumPostsMarkdown', 'forum posts Markdown download handler');
+  requireIncludes('src/worker.js', 'handleForumPostsMarkdown', 'forum posts Markdown route');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.json'", 'dynamic forum posts JSON route');
   requireIncludes('src/worker.js', "originalPath === '/downloads/forum-posts.md'", 'dynamic forum posts Markdown route');
   requireIncludes('src/worker.js', 'boardLabels', 'board labels');
@@ -77,7 +78,7 @@ if (exists('newsletter.js')) { requireIncludes('newsletter.js', '/newsletter-sig
 if (exists('newsletter.html')) { requireIncludes('newsletter.html', 'Weekly Signal Drop', 'newsletter page copy'); requireIncludes('newsletter.html', 'newsletter.js', 'newsletter client script'); }
 if (exists('llms.txt')) requireIncludes('llms.txt', '/newsletter-signup', 'newsletter llms route');
 if (exists('wrangler.toml')) { requireIncludes('wrangler.toml', 'main = "src/worker.js"', 'Cloudflare worker entrypoint'); requireIncludes('wrangler.toml', 'directory = "./_site"', 'Cloudflare asset directory'); requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV binding'); requireIncludes('wrangler.toml', '99996d87016d4285a833707cbda5232f', 'persistent FORUM_POSTS namespace id'); }
-requireIncludes('package.json', 'patch-worker-pages-origin.js', 'Pages origin proxy patch in npm build');
+requireIncludes('package.json', 'patch-worker-pages-origin.js', 'Worker asset patch in npm build');
 requireIncludes('package.json', 'build-deploy-status.js', 'deploy-status builder in npm build');
 requireIncludes('package.json', 'cloudflare-worker-routes-test.js', 'Cloudflare Worker route test in npm build');
 
@@ -86,4 +87,4 @@ try { require('./forum-board-split-test.js'); } catch (error) { console.error(er
 try { require('./newsletter-system-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 try { require('./cloudflare-error-hardening-test.js'); } catch (error) { console.error(error.message); process.exit(1); }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker alias map, Pages-origin static proxy, hard three-board Signal Board split, Cloudflare newsletter capture, Cloudflare error hardening, persistent FORUM_POSTS KV namespace, dynamic forum/newsletter routes, ElevenLabs intro voice endpoint, analytics endpoint, wrangler config, deploy-status aliases, and npm build wiring.');
+console.log('Checked bundled Worker asset serving, route aliases, hard Signal Board split, newsletter capture, Cloudflare error hardening, persistent FORUM_POSTS KV namespace, dynamic forum/newsletter routes, ElevenLabs intro voice endpoint, analytics endpoint, wrangler config, deploy-status aliases, and npm build wiring.');

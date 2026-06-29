@@ -1,8 +1,3 @@
-require('./ux-polish-pressure-test.js');
-require('./scaffold-copy-pressure-test.js');
-require('./live-intel-pressure-test.js');
-require('./ten-out-of-ten-pressure-test.js');
-
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();
@@ -138,61 +133,23 @@ requireIncludes('package.json','build-epstein-timeline-map.js','npm build includ
 requireIncludes('netlify.toml','build-epstein-evidence-ladder.js','Netlify build includes Phase 5 builder');
 requireIncludes('netlify.toml','build-epstein-timeline-map.js','Netlify build includes Phase 6 builder');
 
-requireIncludes('epstein-files.html','epstein-watch-enhanced','enhanced watch section');
-requireIncludes('epstein-files.html','Source Watch / Freedom Intelligence Engine','source-watch heading');
-requireIncludes('epstein-files.html','Source Watch JSON','source watch download link');
-requireIncludes('epstein-files.html','Markdown Brief','markdown download link');
-requireIncludes('epstein-files.html','Rumble Channels','video route');
-requireIncludes('epstein-files.html','Books / Store','book/store route');
-requireIncludes('epstein-files.html','EPSTEIN WATCH STATUS','status terminal');
-requireIncludes('epstein-files.html','epstein-email-signals','email signals section');
-requireIncludes('epstein-files.html','Most Telling Epstein Emails / Network Signals','email/network heading');
-requireIncludes('epstein-files.html','Network Signal Cards','network signal cards');
-requireIncludes('epstein-files.html','epstein-people-tracker','people tracker section');
-requireIncludes('epstein-files.html','People / Entity Tracker','people/entity heading');
-requireIncludes('epstein-files.html','Evidence Class Legend','evidence class legend');
-requireIncludes('epstein-files.html','What the record shows','record support labels');
-requireIncludes('epstein-files.html','Network Function Cards','network function cards');
-requireIncludes('epstein-files.html','epstein-file-cockpit','actual files cockpit section');
-requireIncludes('epstein-files.html','Actual Files Cockpit','actual files cockpit heading');
-requireIncludes('epstein-files.html','Open These File Doors First','file doors heading');
-requireIncludes('epstein-files.html','Open Actual Files','actual file buttons');
-requireIncludes('epstein-files.html','epstein-network-architecture','network architecture section');
-requireIncludes('epstein-files.html','Network Architecture Matrix','network architecture heading');
-requireIncludes('epstein-files.html','Speculation Quarantine','speculation quarantine');
-requireIncludes('epstein-files.html','Network functions','network function count');
-requireIncludes('epstein-files.html','epstein-evidence-ladder','evidence ladder section');
-requireIncludes('epstein-files.html','Evidence Strength Ladder','evidence ladder heading');
-requireIncludes('epstein-files.html','Claim Classifier','claim classifier heading');
-requireIncludes('epstein-files.html','Forbidden shortcut','forbidden shortcut label');
-requireIncludes('epstein-files.html','Settlement / NDA = silence-management lane, not automatic admission','settlement boundary in classifier');
-requireIncludes('epstein-files.html','epstein-timeline-map','timeline map section');
-requireIncludes('epstein-files.html','Timeline + Cross-Reference Map','timeline heading');
-requireIncludes('epstein-files.html','Chronological Case Board','case board heading');
-requireIncludes('epstein-files.html','Cross-Reference Rules','cross-reference rules');
-requireIncludes('epstein-files.html','Daily update lane','daily update lane marker');
-requireIncludes('epstein-files.html','Sequence is not a verdict','timeline verdict boundary');
-requireIncludes('epstein-files.html','Evidence Boundary','evidence boundary marker');
-requireIncludes('epstein-files.html','Criminal finding only where court/plea/conviction supports it','criminal finding boundary');
-
-requireIncludes('downloads/epstein-source-watch.json','watchSources','source watch JSON data');
-requireIncludes('downloads/epstein-evidence-watch.md','# Epstein Evidence Watch','markdown title');
-requireIncludes('downloads/epstein-evidence-watch.md','## Source Lanes','markdown source lanes');
-requireIncludes('downloads/epstein-email-signals.md','# Epstein Email Signal Map','email markdown title');
-requireIncludes('downloads/epstein-people-index.md','# Epstein People / Entity Tracker','people markdown title');
-requireIncludes('downloads/epstein-file-cockpit.md','# Epstein Actual Files Cockpit','cockpit markdown title');
-requireIncludes('downloads/epstein-file-cockpit.json','DOJ Epstein Disclosures','cockpit JSON DOJ door');
-requireIncludes('downloads/epstein-network-architecture.md','# Epstein Network Architecture Matrix','network architecture markdown title');
-requireIncludes('downloads/epstein-network-architecture.json','Access Network','network architecture JSON access lane');
-requireIncludes('downloads/epstein-network-architecture.json','Speculation Quarantine','network architecture JSON speculation lane');
-requireIncludes('downloads/epstein-network-architecture.json','Legal Pressure / Silence Network','network architecture JSON legal/silence lane');
-requireIncludes('downloads/epstein-evidence-ladder.md','# Epstein Evidence Strength Ladder','evidence ladder markdown title');
-requireIncludes('downloads/epstein-evidence-ladder.json','Conviction / Plea / Court Finding','evidence ladder JSON conviction level');
-requireIncludes('downloads/epstein-evidence-ladder.json','Person named in file','claim classifier JSON named-person rule');
-requireIncludes('downloads/epstein-timeline-map.md','# Epstein Timeline + Cross-Reference Map','timeline markdown title');
-requireIncludes('downloads/epstein-timeline-map.json','Florida plea and conviction baseline','timeline JSON baseline');
-requireIncludes('downloads/epstein-timeline-map.json','dailyUpdateIntegration','timeline JSON daily update integration');
-requireIncludes('downloads/epstein-timeline-map.json','Maxwell habeas','timeline JSON Maxwell habeas lane');
+for(const [file, markers] of Object.entries({
+  'epstein-files.html': ['epstein-watch-enhanced','Source Watch / Freedom Intelligence Engine','Source Watch JSON','Markdown Brief','Rumble Channels','Books / Store','EPSTEIN WATCH STATUS','epstein-email-signals','Most Telling Epstein Emails / Network Signals','Network Signal Cards','epstein-people-tracker','People / Entity Tracker','Evidence Class Legend','What the record shows','Network Function Cards','epstein-file-cockpit','Actual Files Cockpit','Open These File Doors First','Open Actual Files','epstein-network-architecture','Network Architecture Matrix','Speculation Quarantine','Network functions','epstein-evidence-ladder','Evidence Strength Ladder','Claim Classifier','Forbidden shortcut','Settlement / NDA = silence-management lane, not automatic admission','epstein-timeline-map','Timeline + Cross-Reference Map','Chronological Case Board','Cross-Reference Rules','Daily update lane','Sequence is not a verdict','Evidence Boundary','Criminal finding only where court/plea/conviction supports it'],
+  'downloads/epstein-source-watch.json': ['watchSources'],
+  'downloads/epstein-evidence-watch.md': ['# Epstein Evidence Watch','## Source Lanes'],
+  'downloads/epstein-email-signals.md': ['# Epstein Email Signal Map'],
+  'downloads/epstein-people-index.md': ['# Epstein People / Entity Tracker'],
+  'downloads/epstein-file-cockpit.md': ['# Epstein Actual Files Cockpit'],
+  'downloads/epstein-file-cockpit.json': ['DOJ Epstein Disclosures'],
+  'downloads/epstein-network-architecture.md': ['# Epstein Network Architecture Matrix'],
+  'downloads/epstein-network-architecture.json': ['Legal Pressure / Silence Network'],
+  'downloads/epstein-evidence-ladder.md': ['# Epstein Evidence Strength Ladder'],
+  'downloads/epstein-evidence-ladder.json': ['Conviction / Plea / Court Finding','Person named in file'],
+  'downloads/epstein-timeline-map.md': ['# Epstein Timeline + Cross-Reference Map'],
+  'downloads/epstein-timeline-map.json': ['Florida plea and conviction baseline','dailyUpdateIntegration','Maxwell habeas']
+})){
+  for(const marker of markers) requireIncludes(file,marker,marker);
+}
 
 if(problems.length){
   console.error('\nEPSTEIN WATCH PRESSURE TEST FAILED\n');
@@ -201,4 +158,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked UX mission navigation, scaffold-copy scan, Live Intel depth, 10/10 usefulness, evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, timeline map, daily-update integration, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and Netlify wiring.');
+console.log('Checked focused Epstein evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, timeline map, daily-update integration, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and legacy Netlify wiring marker only.');

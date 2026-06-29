@@ -27,8 +27,9 @@
   ];
   function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
   function words(q){return String(q||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w=>w.length>1&&!stop.has(w));}
-  function hay(item){return [item.title,item.subtitle,item.series,item.category,item.description,Array.isArray(item.keywords)?item.keywords.join(' '):item.keywords].join(' ').toLowerCase();}
-  function score(item,tokens,q){const h=hay(item);let s=0;if(!tokens.length)return 1;for(const t of tokens){if(String(item.title||'').toLowerCase().includes(t))s+=10;if(String(item.category||'').toLowerCase().includes(t))s+=5;if(String(item.series||'').toLowerCase().includes(t))s+=4;if(String((item.keywords||[])).toLowerCase().includes(t))s+=7;if(h.includes(t))s+=2;}if(q&&h.includes(q.toLowerCase()))s+=14;return s;}
+  function keys(item){return Array.isArray(item&&item.keywords)?item.keywords:[];}
+  function hay(item){return [item.title,item.subtitle,item.series,item.category,item.description,keys(item).join(' ')].join(' ').toLowerCase();}
+  function score(item,tokens,q){const h=hay(item);let s=0;if(!tokens.length)return 1;for(const t of tokens){if(String(item.title||'').toLowerCase().includes(t))s+=10;if(String(item.category||'').toLowerCase().includes(t))s+=5;if(String(item.series||'').toLowerCase().includes(t))s+=4;if(keys(item).join(' ').toLowerCase().includes(t))s+=7;if(h.includes(t))s+=2;}if(q&&h.includes(q.toLowerCase()))s+=14;return s;}
   function bestHint(tokens){let best=null;for(const h of routeHints){const s=h.terms.reduce((n,t)=>n+(tokens.includes(t)?1:0),0);if(s&&(!best||s>best.score))best={...h,score:s};}return best;}
   function normalizeIndex(data){
     if(!Array.isArray(data))return fallbackIndex;
@@ -45,7 +46,7 @@
     if(!ranked.length){
       results.innerHTML='<article class="card redline"><h3>No direct route found</h3><p>Try Epstein, migration, declassified, crime, D.O.G, downloads, authority, evidence, books, or live intel.</p></article>';
     }else{
-      results.innerHTML=ranked.map(b=>'<article class="card"><span class="label">'+esc(b.category||'Route')+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description||b.subtitle||'Open this route for deeper context.')+'</p><p>'+((b.keywords||[]).slice(0,8).map(k=>'<span class="pill">'+esc(k)+'</span>').join(''))+'</p><div class="cta-row small"><a class="btn" href="'+esc(b.url)+'">Open Route</a><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="download-center.html">Downloads</a></div></article>').join('');
+      results.innerHTML=ranked.map(b=>{const visibleKeywords=keys(b).slice(0,8);return '<article class="card"><span class="label">'+esc(b.category||'Route')+'</span><h3>'+esc(b.title)+'</h3><p>'+esc(b.description||b.subtitle||'Open this route for deeper context.')+'</p><p>'+visibleKeywords.map(k=>'<span class="pill">'+esc(k)+'</span>').join('')+'</p><div class="cta-row small"><a class="btn" href="'+esc(b.url)+'">Open Route</a><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="download-center.html">Downloads</a></div></article>';}).join('');
     }
     const top=ranked[0];
     const hint=bestHint(tokens);
@@ -68,7 +69,7 @@
     setStatus('ASK MATRIX STATUS\n> Fallback mode: active\n> search-index.json could not be loaded cleanly\n> Reason: '+String(reason||'unknown').slice(0,120)+'\n> Core routes still available');
   }
   fetch('/search-index.json',{cache:'no-store',headers:{'Accept':'application/json'}})
-    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);const type=r.headers.get('content-type')||'';return r.text().then(text=>{if(/^\s*</.test(text))throw new Error('HTML returned instead of JSON');try{return JSON.parse(text);}catch(e){throw new Error('Invalid JSON');}});})
+    .then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.text().then(text=>{if(/^\s*</.test(text))throw new Error('HTML returned instead of JSON');try{return JSON.parse(text);}catch(e){throw new Error('Invalid JSON');}});})
     .then(data=>init(data,'search-index.json'))
     .catch(err=>failSafe(err&&err.message));
 })();

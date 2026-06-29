@@ -25,7 +25,7 @@ needText('search.js', 'fallbackIndex');
 needText('search.js', 'HTML returned instead of JSON');
 needText('search.js', 'Invalid JSON');
 needText('search.js', 'failSafe');
-needText('search.js', 'data-search-ready');
+needText('search.js', 'searchReady');
 needText('search.js', 'archive-search');
 needText('search.js', 'search-results');
 needText('search.js', 'ask-shortcuts');
@@ -34,6 +34,8 @@ needText('scripts/build-free-ask-matrix-search.js', 'search-index.json');
 needText('scripts/build-free-ask-matrix-search.js', 'id="phase-twelve-authority-engine"');
 needText('scripts/build-free-ask-matrix-search.js', 'authority-hub.html');
 needText('scripts/build-free-ask-matrix-search.js', 'routeHints');
+needText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex');
+needText('scripts/build-free-ask-matrix-search.js', 'HTML returned instead of JSON');
 for (const name of ['search.html', 'search.js', 'scripts/build-free-ask-matrix-search.js']) {
   for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'autorag', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
 }

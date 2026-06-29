@@ -1,4 +1,4 @@
-Triggered all auto-update workflows from current KV-only forum main.
-Triggered at: 2026-06-30T08:40:00+02:00
+Triggered all auto-update workflows from current maintenance-safe KV-only forum main.
+Triggered at: 2026-06-30T08:52:00+02:00
 Includes: Daily Intel Drop, Transparent Maintenance, Weekly D.O.G Video Package.
-Purpose: final pass after removing local browser forum fallback from board split repair/test and enforcing Cloudflare KV persistence across all three forums.
+Purpose: final pass after resilient commit/rebase handling for Daily Intel, Transparent Maintenance, and Weekly D.O.G, plus Cloudflare KV-only persistence across all three forums.

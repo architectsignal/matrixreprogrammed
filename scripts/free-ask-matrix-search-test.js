@@ -19,9 +19,16 @@ needText('search.html', 'Authority Hub');
 needText('search.html', 'authority-evidence-trust.html');
 needText('search.html', '<script src="search.js"></script>');
 needText('search.js', 'fetch(');
-needText('search.js', 'search-index.json');
+needText('search.js', '/search-index.json');
+needText('search.js', "cache:'no-store'");
+needText('search.js', 'fallbackIndex');
+needText('search.js', 'HTML returned instead of JSON');
+needText('search.js', 'Invalid JSON');
+needText('search.js', 'failSafe');
+needText('search.js', 'data-search-ready');
 needText('search.js', 'archive-search');
 needText('search.js', 'search-results');
+needText('search.js', 'ask-shortcuts');
 needText('scripts/build-free-ask-matrix-search.js', 'No paid AI');
 needText('scripts/build-free-ask-matrix-search.js', 'search-index.json');
 needText('scripts/build-free-ask-matrix-search.js', 'id="phase-twelve-authority-engine"');
@@ -36,6 +43,10 @@ if (exists('search-index.json')) {
   for (const route of ['search.html', 'authority-hub.html', 'live-intel.html', 'epstein-files.html', 'news.html', 'migration-flow.html', 'evidence-vault.html', 'download-center.html', 'trust-center.html']) {
     if (!index.some(item => item.url === route)) issues.push(`search-index.json missing route ${route}`);
   }
+  for (const item of index) {
+    if (!item.title || !item.url) issues.push('search-index.json contains route without title/url');
+    if (item.url && /^https?:\/\//i.test(item.url)) issues.push(`search-index.json should use local route, not external URL: ${item.url}`);
+  }
 }
 if (issues.length) {
   console.error('FREE ASK MATRIX SEARCH TEST FAILED');
@@ -43,4 +54,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('FREE ASK MATRIX SEARCH TEST PASSED');
-console.log('Checked local-only Ask Matrix search, Phase 12 authority marker, index routes, no paid AI/API calls, and resilient generated-search wiring.');
+console.log('Checked resilient local Ask Matrix search, no-store JSON fetch, fallback mode, shortcuts, index routes, no paid AI/API calls, and generated-search wiring.');

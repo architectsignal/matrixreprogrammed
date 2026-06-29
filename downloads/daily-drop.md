@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-06-29T09:11:39.711Z
+Updated: 2026-06-29T09:19:02.091Z
 
 ## Status
 
@@ -25,7 +25,7 @@ Updated: 2026-06-29T09:11:39.711Z
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+  - Source: https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
 - 2026-06-27 — Billionaire Leon Black walks out of Epstein investigation hearing - BBC

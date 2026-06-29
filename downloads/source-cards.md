@@ -36,7 +36,7 @@ Reusable claim/source/evidence-boundary cards.
 
 - Date: 2026-06-27
 - Evidence class: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+- Source: https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5
 - Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.

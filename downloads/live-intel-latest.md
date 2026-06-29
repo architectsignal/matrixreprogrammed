@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-06-29T09:11:38.477Z
+Updated: 2026-06-29T09:18:58.329Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -45,7 +45,7 @@ Updated: 2026-06-29T09:11:38.477Z
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+  - Source: https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New archive lane: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1. A released file is the start of the investigation, not the final verdict.
   - Short title: Moldova publishes declassified Soviet deportation lists from 1941 - Mold

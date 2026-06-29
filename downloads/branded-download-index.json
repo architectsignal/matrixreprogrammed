@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T09:11:39.971Z",
+  "updated": "2026-06-29T09:19:02.317Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 66,
+  "count": 72,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -127,6 +127,12 @@
   ],
   "pdfs": [
     {
+      "file": "downloads/anchor-alias-repair-report.pdf",
+      "title": "Anchor Alias Repair Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/campaign-black-file-launch.pdf",
       "title": "Black File Launch Campaign",
       "reused": true,
@@ -175,21 +181,27 @@
       "kind": "download"
     },
     {
+      "file": "downloads/dark-speculation-deep-dossiers.pdf",
+      "title": "Dark Speculation Deep Dossiers",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/dark-speculation-scan.pdf",
       "title": "Dark Speculation Weekly Scan",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/deploy-health.pdf",
       "title": "Deploy Health",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/deploy-status.pdf",
       "title": "Deploy Status",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -259,6 +271,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/epstein-network-deep-dive.pdf",
+      "title": "Epstein Network Deep Dive Matrix",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/epstein-people-index.pdf",
       "title": "Epstein People / Entity Tracker",
       "reused": true,
@@ -267,7 +285,7 @@
     {
       "file": "downloads/epstein-sighting-watch.pdf",
       "title": "Epstein Sighting Watch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -291,12 +309,18 @@
     {
       "file": "downloads/global-risk-clocks-linked.pdf",
       "title": "Global Risk Clocks",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/intel-vault.pdf",
       "title": "Intel Vault",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/latest-public-drops.pdf",
+      "title": "Latest Public-Source Drops",
       "reused": false,
       "kind": "download"
     },
@@ -387,13 +411,13 @@
     {
       "file": "downloads/policy-convergence-timer-map.pdf",
       "title": "Policy Convergence Timer Map",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/policy-convergence-tracker.pdf",
       "title": "Public Policy Convergence Tracker",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -441,13 +465,25 @@
     {
       "file": "downloads/site-freshness-report.pdf",
       "title": "Site Freshness Report",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/site-intelligence-core.pdf",
+      "title": "Matrix Intelligence Core",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/site-intelligence-graph.pdf",
+      "title": "Site Intelligence Graph",
       "reused": false,
       "kind": "download"
     },
     {
       "file": "downloads/site-quality-report.pdf",
       "title": "Site Quality Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -497,7 +533,7 @@
     {
       "file": "downloads/subject-hub-index.pdf",
       "title": "Subject Hub Index",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -533,7 +569,7 @@
     {
       "file": "downloads/weekly-newsletter-latest.pdf",
       "title": "Matrix Reprogrammed Weekly Signal Drop",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     }
   ]

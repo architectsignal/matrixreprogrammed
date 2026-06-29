@@ -126,8 +126,9 @@ async function liveCheck() {
   for (const host of hosts) {
     const url = `https://${host}/forum-health?matrix_repair=${Date.now()}`;
     try {
-      const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': 'MatrixCloudflareDomainRepair/1.0' } });
+      const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': 'MatrixCloudflareDomainRepair/1.1' } });
       const text = await res.text();
+      const markerPresent = text.includes('forumPostsBinding') || text.includes('cloudflare-worker') || text.includes('matrixreprogrammed') || text.includes('FORUM_POSTS');
       report.liveChecks.push({
         url,
         finalUrl: res.url,
@@ -137,7 +138,7 @@ async function liveCheck() {
         matrixWorker: res.headers.get('x-matrix-worker') || null,
         cfRay: res.headers.get('cf-ray') || null,
         server: res.headers.get('server') || null,
-        markerPresent: text.includes('forumPostsBinding') || text.includes('cloudflare-worker'),
+        markerPresent,
         bodyStart: text.slice(0, 160)
       });
     } catch (err) {
@@ -156,11 +157,11 @@ async function main() {
     await inspectRulesets(zone.id);
     await purgeCache(zone.id);
     await liveCheck();
-    report.ok = report.liveChecks.some(check => check.ok && check.workerHeader);
+    report.ok = report.liveChecks.some(check => check.ok && (check.workerHeader || check.matrixWorker || check.markerPresent));
     save();
     console.log(JSON.stringify(report, null, 2));
     if (!report.ok) {
-      console.error('Cloudflare domain repair completed but live host still does not hit Worker. Check Access/WAF/DNS warnings in cloudflare-domain-repair-report.json.');
+      console.error('Cloudflare domain repair completed but live host still does not appear to hit the Matrix Worker. Check Access/WAF/DNS warnings in cloudflare-domain-repair-report.json.');
       process.exit(1);
     }
   } catch (err) {

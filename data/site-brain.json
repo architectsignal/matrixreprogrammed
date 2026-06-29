@@ -1,0 +1,77 @@
+{
+  "name": "Matrix Reprogrammed Site Brain",
+  "version": 1,
+  "canonicalHost": "matrixreprogrammed.com",
+  "productionUrl": "https://matrixreprogrammed.com",
+  "cloudflare": {
+    "productionHost": "matrixreprogrammed.com",
+    "workerName": "matrixreprogrammed",
+    "assetDirectory": "_site",
+    "assetBinding": "ASSETS",
+    "kvBindings": ["FORUM_POSTS"],
+    "forbiddenOrigins": [
+      "matrixreprogrammed.pages.dev",
+      "PAGES_STATIC_ORIGIN",
+      "STATIC_ORIGIN ||"
+    ]
+  },
+  "freshness": {
+    "homepageCurrentMarker": "FOLLOW THE FILES.",
+    "forbiddenStaleText": [
+      "rogue broadcast node inside the simulation",
+      "Matrix Reprogrammed is a rogue broadcast node inside the simulation"
+    ],
+    "duplicateGuards": [
+      { "text": "Open Source Trail", "max": 1 },
+      { "text": "FOLLOW THE FILES.", "max": 1 },
+      { "text": "Request The Black File", "max": 3 }
+    ]
+  },
+  "criticalRoutes": [
+    { "path": "/", "marker": "FOLLOW THE FILES.", "type": "html" },
+    { "path": "/search", "marker": "SEARCH THE SIGNAL.", "type": "html" },
+    { "path": "/books", "marker": "Books", "type": "html" },
+    { "path": "/live-intel", "marker": "Live Intel", "type": "html" },
+    { "path": "/epstein-files", "marker": "EPSTEIN", "type": "html" },
+    { "path": "/forum", "marker": "Signal Board", "type": "html" },
+    { "path": "/deploy-status", "marker": "DEPLOY STATUS.", "type": "html" },
+    { "path": "/deploy-status.json", "marker": "aliases", "type": "json" },
+    { "path": "/forum-health", "marker": "forumPostsBinding", "type": "json", "allow503": true }
+  ],
+  "buildGuards": {
+    "requiredFiles": [
+      "index.html",
+      "search.html",
+      "books.html",
+      "live-intel.html",
+      "epstein-files.html",
+      "forum.html",
+      "deploy-status.html",
+      "deploy-status.json",
+      "wrangler.toml",
+      "src/worker.js",
+      "scripts/patch-worker-pages-origin.js",
+      "scripts/build-cloudflare-output.js",
+      "scripts/live-site-verification.js"
+    ],
+    "requiredOutputRoutes": [
+      "_site/index.html",
+      "_site/index",
+      "_site/search.html",
+      "_site/search",
+      "_site/books.html",
+      "_site/books",
+      "_site/live-intel.html",
+      "_site/live-intel",
+      "_site/epstein-files.html",
+      "_site/epstein-files",
+      "_site/forum.html",
+      "_site/forum",
+      "_site/deploy-status.html",
+      "_site/deploy-status"
+    ],
+    "forbiddenOutputFiles": [
+      "_site/_redirects"
+    ]
+  }
+}

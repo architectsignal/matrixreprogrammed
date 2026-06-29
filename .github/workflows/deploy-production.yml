@@ -25,8 +25,8 @@ jobs:
   deploy:
     name: Guarded Cloudflare production deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[deploy]')) }}
+    timeout-minutes: 25
+    if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') }}
 
     steps:
       - name: Checkout
@@ -52,6 +52,9 @@ jobs:
       - name: Risk Clocks and Forum Cloudflare test
         run: npm run pressure-test:global-risk-clocks
 
+      - name: Cloudflare Worker asset route test
+        run: npm run pressure-test:cloudflare
+
       - name: Update cadence audit
         run: node scripts/update-cadence-test.js
 
@@ -70,16 +73,19 @@ jobs:
           fi
           echo "Cloudflare secrets present."
 
-      - name: Deploy to Cloudflare Workers or Pages fallback
+      - name: Deploy to Cloudflare Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -o pipefail
-          echo "Trying Cloudflare Workers deploy for matrixreprogrammed..."
-          if npx wrangler deploy; then
-            echo "Cloudflare Workers deploy succeeded."
-            exit 0
-          fi
-          echo "Workers deploy failed. Trying Cloudflare Pages fallback to project matrixreprogrammed..."
-          npx wrangler pages deploy _site --project-name matrixreprogrammed --branch main
+          echo "Deploying Cloudflare Worker with bundled _site assets for matrixreprogrammed..."
+          npx wrangler deploy
+
+      - name: Verify live Cloudflare site
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_BUILD_SHA: ${{ github.sha }}
+        run: |
+          sleep 10
+          npm run verify-live

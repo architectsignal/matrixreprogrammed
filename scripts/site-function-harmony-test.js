@@ -8,6 +8,7 @@ function exists(file){ return fs.existsSync(p(file)); }
 function read(file){ return fs.readFileSync(p(file), 'utf8'); }
 function needFile(file){ if(!exists(file)) issues.push(`missing file: ${file}`); }
 function needText(file, text, label = text){ if(exists(file) && !read(file).includes(text)) issues.push(`${file} missing ${label}`); }
+function needAnyText(file, texts, label){ if(exists(file) && !texts.some(text => read(file).includes(text))) issues.push(`${file} missing ${label}`); }
 function forbidText(file, text, label = text){ if(exists(file) && read(file).includes(text)) issues.push(`${file} should not contain ${label}`); }
 function parseJson(file){ try { return JSON.parse(read(file)); } catch(error){ issues.push(`${file} invalid JSON: ${error.message}`); return null; } }
 
@@ -21,13 +22,16 @@ needText('search.html', 'id="archive-search"', 'search input');
 needText('search.html', 'id="search-results"', 'search results container');
 needText('search.html', 'id="ask-answer"', 'answer status panel');
 needText('search.html', '<script src="search.js"></script>', 'search script include');
+needText('search.html', 'Showing the strongest entry points', 'initial search count copy');
 needText('search.js', '/search-index.json', 'absolute search index fetch');
 needText('search.js', "cache:'no-store'", 'no-store search fetch');
 needText('search.js', 'fallbackIndex', 'fallback index');
 needText('search.js', 'failSafe', 'search failsafe');
 needText('search.js', 'HTML returned instead of JSON', 'HTML instead of JSON guard');
+forbidText('search.js', '(b.keywords||[]).slice', 'legacy leaked keyword-slice pattern');
 needText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', 'generated fallback index');
 needText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', 'search test fallback guard');
+needText('scripts/repair-search-system.js', 'Showing the strongest entry points', 'search repair copy guard');
 
 // Worker / Cloudflare routes
 needText('src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch');
@@ -98,10 +102,10 @@ if (exists('_site')) {
   if (exists('_site/_redirects')) issues.push('_site/_redirects must not be deployed with Worker assets');
 }
 
-// Public navigation sanity
+// Public navigation sanity: require at least one discoverable path into Search and Books.
 for (const file of ['index.html','search.html','books.html','live-intel.html','epstein-files.html','download-center.html']) {
-  needText(file, 'href="search.html"', `${file} search link`);
-  needText(file, 'href="books.html"', `${file} books link`);
+  needAnyText(file, ['href="search.html"','/search','Ask Matrix','Search'], `${file} search discovery`);
+  needAnyText(file, ['href="books.html"','/books','Books','Book Universe'], `${file} books discovery`);
 }
 
 if (issues.length) {

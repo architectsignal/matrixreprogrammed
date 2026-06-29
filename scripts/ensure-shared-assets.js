@@ -17,6 +17,7 @@ function runOptional(label, script, requiredFiles = []) {
 }
 
 runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
+runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
 runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.json']);
 runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-expansion.json', 'dark-speculation-lab.html']);
 

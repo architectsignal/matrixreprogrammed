@@ -1,3 +1,5 @@
+require('./build-epstein-deep-dive.js');
+
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();
@@ -16,10 +18,12 @@ for(const file of [
   'data/epstein-network-architecture.json',
   'data/epstein-evidence-ladder.json',
   'data/epstein-timeline-map.json',
+  'data/epstein-network-deep-dive.json',
   'data/live-intel-sources.json',
   'scripts/enhance-epstein-watch.js',
   'scripts/build-epstein-evidence-ladder.js',
   'scripts/build-epstein-timeline-map.js',
+  'scripts/build-epstein-deep-dive.js',
   'epstein-files.html',
   'downloads/epstein-source-watch.json',
   'downloads/epstein-evidence-watch.md',
@@ -31,6 +35,8 @@ for(const file of [
   'downloads/epstein-file-cockpit.md',
   'downloads/epstein-network-architecture.json',
   'downloads/epstein-network-architecture.md',
+  'downloads/epstein-network-deep-dive.json',
+  'downloads/epstein-network-deep-dive.md',
   'downloads/epstein-evidence-ladder.json',
   'downloads/epstein-evidence-ladder.md',
   'downloads/epstein-timeline-map.json',
@@ -80,6 +86,20 @@ if(exists('data/epstein-network-architecture.json')){
     if(!Array.isArray(item.recordsNeeded) || item.recordsNeeded.length < 3) fail(`network architecture item missing records needed: ${item.title || 'unknown'}`);
   }
 }
+if(exists('data/epstein-network-deep-dive.json')){
+  const deep = JSON.parse(read('data/epstein-network-deep-dive.json'));
+  if(!String(deep.boundary || '').includes('not proof of criminal conduct')) fail('deep dive matrix must include association-not-guilt boundary');
+  if(!Array.isArray(deep.sourceHierarchy) || deep.sourceHierarchy.length < 6) fail('deep dive matrix expected at least 6 source hierarchy levels');
+  if(!Array.isArray(deep.locations) || deep.locations.length < 6) fail('deep dive matrix expected at least 6 location/private aviation corridors');
+  if(!Array.isArray(deep.networkLanes) || deep.networkLanes.length < 5) fail('deep dive matrix expected at least 5 institution/money/logistics lanes');
+  if(!Array.isArray(deep.peopleToAddOrDeepen) || deep.peopleToAddOrDeepen.length < 8) fail('deep dive matrix expected at least 8 people/entity targets');
+  if(!Array.isArray(deep.dateAnchors) || deep.dateAnchors.length < 6) fail('deep dive matrix expected at least 6 date anchors');
+  if(!Array.isArray(deep.privateJetTrackerRules) || deep.privateJetTrackerRules.length < 5) fail('deep dive matrix expected private jet tracker rules');
+  if(!Array.isArray(deep.deepStateFramingRules) || deep.deepStateFramingRules.length < 3) fail('deep dive matrix expected institutional-overlap framing rules');
+  for(const name of ['Bill Clinton','Donald Trump','Peter Thiel','Steve Bannon','Kathryn Ruemmler','Matthew Menchel']){
+    if(!(deep.peopleToAddOrDeepen || []).some(item => item.name === name)) fail(`deep dive people target missing ${name}`);
+  }
+}
 if(exists('data/epstein-evidence-ladder.json')){
   const ladder = JSON.parse(read('data/epstein-evidence-ladder.json'));
   if(!Array.isArray(ladder.levels) || ladder.levels.length < 8) fail('data/epstein-evidence-ladder.json expected at least 8 evidence levels');
@@ -121,6 +141,9 @@ requireIncludes('scripts/enhance-epstein-watch.js','networkJsonOut','generator w
 requireIncludes('scripts/enhance-epstein-watch.js','networkMdOut','generator writes network markdown');
 requireIncludes('scripts/enhance-epstein-watch.js','epstein-network-architecture','generator renders network section');
 requireIncludes('scripts/enhance-epstein-watch.js','Speculation Quarantine','generator renders speculation quarantine');
+requireIncludes('scripts/build-epstein-deep-dive.js','epstein-deep-dive-matrix','deep dive builder renders matrix section');
+requireIncludes('scripts/build-epstein-deep-dive.js','private aviation','deep dive builder renders aviation language');
+requireIncludes('scripts/build-epstein-deep-dive.js','Institution / money / logistics lane','deep dive builder renders institution/money lanes');
 requireIncludes('scripts/build-epstein-evidence-ladder.js','epstein-evidence-ladder','Phase 5 builder renders ladder section');
 requireIncludes('scripts/build-epstein-evidence-ladder.js','Claim Classifier','Phase 5 builder renders claim classifier');
 requireIncludes('scripts/build-epstein-evidence-ladder.js','downloads/epstein-evidence-ladder.json','Phase 5 builder writes JSON download');
@@ -134,7 +157,7 @@ requireIncludes('netlify.toml','build-epstein-evidence-ladder.js','Netlify build
 requireIncludes('netlify.toml','build-epstein-timeline-map.js','Netlify build includes Phase 6 builder');
 
 for(const [file, markers] of Object.entries({
-  'epstein-files.html': ['epstein-watch-enhanced','Source Watch / Freedom Intelligence Engine','Source Watch JSON','Markdown Brief','Rumble Channels','Books / Store','EPSTEIN WATCH STATUS','epstein-email-signals','Most Telling Epstein Emails / Network Signals','Network Signal Cards','epstein-people-tracker','People / Entity Tracker','Evidence Class Legend','What the record shows','Network Function Cards','epstein-file-cockpit','Actual Files Cockpit','Open These File Doors First','Open Actual Files','epstein-network-architecture','Network Architecture Matrix','Speculation Quarantine','Network functions','epstein-evidence-ladder','Evidence Strength Ladder','Claim Classifier','Forbidden shortcut','Settlement / NDA = silence-management lane, not automatic admission','epstein-timeline-map','Timeline + Cross-Reference Map','Chronological Case Board','Cross-Reference Rules','Daily update lane','Sequence is not a verdict','Evidence Boundary','Criminal finding only where court/plea/conviction supports it'],
+  'epstein-files.html': ['epstein-watch-enhanced','Source Watch / Freedom Intelligence Engine','Source Watch JSON','Markdown Brief','Rumble Channels','Books / Store','EPSTEIN WATCH STATUS','epstein-email-signals','Most Telling Epstein Emails / Network Signals','Network Signal Cards','epstein-people-tracker','People / Entity Tracker','Evidence Class Legend','What the record shows','Network Function Cards','epstein-file-cockpit','Actual Files Cockpit','Open These File Doors First','Open Actual Files','epstein-network-architecture','Network Architecture Matrix','Speculation Quarantine','Network functions','epstein-evidence-ladder','Evidence Strength Ladder','Claim Classifier','Forbidden shortcut','Settlement / NDA = silence-management lane, not automatic admission','epstein-timeline-map','Timeline + Cross-Reference Map','Chronological Case Board','Cross-Reference Rules','Daily update lane','Sequence is not a verdict','Evidence Boundary','Criminal finding only where court/plea/conviction supports it','epstein-deep-dive-matrix','Deep Dive Tracker: People, Flights, Locations, Money, Institutions','Private Jet Tracker Rules','Deep-State / Institutional Overlap Framing'],
   'downloads/epstein-source-watch.json': ['watchSources'],
   'downloads/epstein-evidence-watch.md': ['# Epstein Evidence Watch','## Source Lanes'],
   'downloads/epstein-email-signals.md': ['# Epstein Email Signal Map'],
@@ -143,6 +166,8 @@ for(const [file, markers] of Object.entries({
   'downloads/epstein-file-cockpit.json': ['DOJ Epstein Disclosures'],
   'downloads/epstein-network-architecture.md': ['# Epstein Network Architecture Matrix'],
   'downloads/epstein-network-architecture.json': ['Legal Pressure / Silence Network'],
+  'downloads/epstein-network-deep-dive.md': ['# Epstein Network Deep Dive Matrix','## People To Add Or Deepen','## Private Jet Tracker Rules','Bill Clinton','Donald Trump'],
+  'downloads/epstein-network-deep-dive.json': ['Epstein Network Deep Dive Matrix','privateJetTrackerRules','deepStateFramingRules','Bill Clinton','Donald Trump'],
   'downloads/epstein-evidence-ladder.md': ['# Epstein Evidence Strength Ladder'],
   'downloads/epstein-evidence-ladder.json': ['Conviction / Plea / Court Finding','Person named in file'],
   'downloads/epstein-timeline-map.md': ['# Epstein Timeline + Cross-Reference Map'],
@@ -158,4 +183,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EPSTEIN WATCH PRESSURE TEST PASSED');
-console.log('Checked focused Epstein evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, evidence ladder, claim classifier, timeline map, daily-update integration, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and legacy Netlify wiring marker only.');
+console.log('Checked focused Epstein evidence-watch data, email signals, people tracker, actual files cockpit, network architecture matrix, deep-dive people/date/flight/location/money/institution tracker, evidence ladder, claim classifier, timeline map, daily-update integration, source lanes, bulletins, downloads, enhanced hub section, evidence boundaries, video/book routes, package wiring, and legacy Netlify wiring marker only.');

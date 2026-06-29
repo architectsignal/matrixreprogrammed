@@ -1,4 +1,4 @@
-Triggered all auto-update workflows from current persistent-forum main.
-Triggered at: 2026-06-30T08:30:00+02:00
+Triggered all auto-update workflows from current KV-only forum main.
+Triggered at: 2026-06-30T08:40:00+02:00
 Includes: Daily Intel Drop, Transparent Maintenance, Weekly D.O.G Video Package.
-Purpose: final pass after Cloudflare-KV-only Signal Board persistence and resilient update commit fixes.
+Purpose: final pass after removing local browser forum fallback from board split repair/test and enforcing Cloudflare KV persistence across all three forums.

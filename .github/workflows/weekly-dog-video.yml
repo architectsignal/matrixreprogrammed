@@ -9,6 +9,11 @@ on:
         default: "live"
   schedule:
     - cron: "30 8 * * 1"
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/update-triggers/weekly-dog-video.txt'
+      - '.github/update-triggers/all-auto-updates.txt'
 
 permissions:
   contents: write
@@ -66,12 +71,6 @@ jobs:
             video-packages/**/weekly-dog-transmission.mp4
           retention-days: 14
 
-      - name: Publish weekly Facebook video
-        env:
-          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
-          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-        run: node scripts/publish-facebook-video.js
-
       - name: Commit weekly video package metadata
         run: |
           git config user.name "matrix-reprogrammed-bot"
@@ -80,6 +79,13 @@ jobs:
           if git diff --cached --quiet; then
             echo "No weekly package changes to commit."
           else
-            git commit -m "Weekly D.O.G video MP4 $(date -u +%F)"
+            git commit -m "Weekly D.O.G video MP4 $(date -u +%F) [deploy]"
             git push
           fi
+
+      - name: Publish weekly Facebook video
+        continue-on-error: true
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+        run: node scripts/publish-facebook-video.js

@@ -1,0 +1,54 @@
+name: Cloudflare Domain Repair
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/cloudflare-domain-repair.js'
+      - '.github/workflows/cloudflare-domain-repair.yml'
+      - 'wrangler.toml'
+      - 'src/worker.js'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: cloudflare-domain-repair
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  repair:
+    name: Repair and diagnose public Cloudflare domain routing
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run Cloudflare domain repair
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_NAME: matrixreprogrammed.com
+          CLOUDFLARE_WORKER_NAME: matrixreprogrammed
+        run: node scripts/cloudflare-domain-repair.js
+
+      - name: Upload domain repair report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-domain-repair-report
+          path: cloudflare-domain-repair-report.json
+          if-no-files-found: ignore
+          retention-days: 14

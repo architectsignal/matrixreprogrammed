@@ -43,10 +43,14 @@ needText('src/worker.js', '/forum-feed-speculation', 'speculation hard board rou
 needText('src/worker.js', '/forum-feed-epstein-alive', 'epstein alive hard board route');
 needText('src/worker.js', '/downloads/forum-posts.json', 'forum JSON export');
 needText('src/worker.js', '/downloads/forum-posts.md', 'forum Markdown export');
-needText('src/worker.js', '/submit-forum-post', 'forum submit endpoint');
-needText('src/worker.js', '/report-forum-post', 'forum report endpoint');
-needText('src/worker.js', '/intro-voice', 'intro voice endpoint');
-needText('src/worker.js', '/track-event', 'analytics endpoint');
+needText('src/worker.js', '/submit-main-post', 'main persistent submit endpoint');
+needText('src/worker.js', '/submit-speculation-post', 'speculation persistent submit endpoint');
+needText('src/worker.js', '/submit-epstein-alive-post', 'epstein alive persistent submit endpoint');
+needText('src/worker.js', '/report-main-post', 'main persistent report endpoint');
+needText('src/worker.js', '/report-speculation-post', 'speculation persistent report endpoint');
+needText('src/worker.js', '/report-epstein-alive-post', 'epstein alive persistent report endpoint');
+needText('src/worker.js', 'Cloudflare KV FORUM_POSTS', 'KV persistence wording');
+needText('src/worker.js', 'persistent: true', 'persistent response marker');
 needText('src/worker.js', 'safeNotConfigured', 'safe missing binding response');
 needText('src/worker.js', 'isHostileProbePath', 'hostile probe guard');
 needText('src/worker.js', 'Worker handled failure safely', 'safe catch response');
@@ -63,12 +67,20 @@ if (exists('forum.js')) {
   needText('forum.js', '/forum-feed-speculation', 'frontend speculation feed');
   needText('forum.js', '/forum-feed-epstein-alive', 'frontend epstein feed');
   needText('forum.js', '/submit-main-post', 'frontend main submit');
-  needText('forum.js', '/report-main-post', 'frontend report route');
+  needText('forum.js', '/submit-speculation-post', 'frontend speculation submit');
+  needText('forum.js', '/submit-epstein-alive-post', 'frontend epstein alive submit');
+  needText('forum.js', '/report-main-post', 'frontend main report route');
+  needText('forum.js', '/report-speculation-post', 'frontend speculation report route');
+  needText('forum.js', '/report-epstein-alive-post', 'frontend epstein alive report route');
   needText('forum.js', 'postLive', 'frontend live post helper');
-  needText('forum.js', 'syncPendingLocalPosts', 'frontend local retry sync');
-  needText('forum.js', 'Not posted live yet', 'honest live-post failure message');
-  needText('forum.js', 'not live yet', 'local-only marker');
+  needText('forum.js', 'persistent !== true', 'frontend refuses non-persistent save');
+  needText('forum.js', 'Posts are not saved in this browser', 'no browser-only save warning');
+  needText('forum.js', 'Signal posted live and saved persistently', 'persistent success message');
   needText('forum.js', "cache:'no-store'", 'forum no-store fetches');
+  forbidText('forum.js', 'saveLocalPosts', 'browser-only post persistence');
+  forbidText('forum.js', 'syncPendingLocalPosts', 'local retry sync');
+  forbidText('forum.js', 'localOnly', 'local-only marker');
+  forbidText('forum.js', 'Not posted live yet. Saved only on this device', 'non-persistent save message');
   forbidText('forum.js', 'Signal received. It may take a moment to appear on the live board.', 'misleading local-only post success');
 }
 
@@ -121,4 +133,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log('Checked Ask Matrix search, Worker routes, forum forms, honest live-post behavior, local retry sync, downloads, deploy health, JSON feeds, _site output, critical scripts, and navigation harmony.');
+console.log('Checked Ask Matrix search, Worker routes, three persistent Signal Boards, Cloudflare KV-only posting, downloads, deploy health, JSON feeds, _site output, critical scripts, and navigation harmony.');

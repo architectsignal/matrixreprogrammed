@@ -13,6 +13,9 @@ needFile('.github/workflows/test-site.yml');
 needFile('.github/workflows/deploy-production.yml');
 needFile('.github/workflows/daily-update-check.yml');
 needFile('.github/workflows/weekly-update-check.yml');
+needFile('scripts/update-live-intel.js');
+needFile('scripts/update-seven-day-intel.js');
+needFile('scripts/build-intel-vault.js');
 
 const policy = exists('data/update-cadence-policy.json') ? JSON.parse(read('data/update-cadence-policy.json')) : {};
 if (!Array.isArray(policy.daily) || policy.daily.length < 4) issues.push('daily cadence must include news, epstein, timers, and figures');
@@ -26,13 +29,29 @@ for (const lane of policy.weekly || []) {
 }
 const dailyWorkflow = exists('.github/workflows/daily-update-check.yml') ? read('.github/workflows/daily-update-check.yml') : '';
 needText('.github/workflows/daily-update-check.yml', 'cron:');
+needText('.github/workflows/daily-update-check.yml', 'update-live-intel.js');
+needText('.github/workflows/daily-update-check.yml', 'update-seven-day-intel.js');
+needText('.github/workflows/daily-update-check.yml', 'build-intel-vault.js');
 needText('.github/workflows/daily-update-check.yml', 'build-intel-desk.js');
 needText('.github/workflows/daily-update-check.yml', 'enhance-epstein-watch.js');
 needText('.github/workflows/daily-update-check.yml', 'patch-homepage-alerts.js');
 needText('.github/workflows/daily-update-check.yml', 'figure-source-rules-pressure-test.js');
 needText('.github/workflows/daily-update-check.yml', 'migration-flow-test.js');
 needText('.github/workflows/daily-update-check.yml', 'global-risk-clocks-test.js');
+needText('.github/workflows/daily-update-check.yml', 'intel-vault.html');
+needText('.github/workflows/daily-update-check.yml', 'downloads/intel-vault.json');
 if (/wrangler deploy|deploy-production/i.test(dailyWorkflow)) issues.push('daily update check must not deploy');
+
+needText('scripts/update-live-intel.js', 'ACTIVE_WINDOW_DAYS');
+needText('scripts/update-live-intel.js', 'archivedPreviousItems');
+needText('scripts/update-live-intel.js', 'Active Live Intel cards only show items published inside the active window');
+needText('scripts/update-seven-day-intel.js', 'ACTIVE_WINDOW_DAYS');
+needText('scripts/update-seven-day-intel.js', 'data/intel-vault.json');
+needText('scripts/update-seven-day-intel.js', 'Expired daily cards move');
+needText('scripts/build-intel-vault.js', '0–7 days: Live Intel');
+needText('scripts/build-intel-vault.js', '8+ days: Intel Vault');
+needText('scripts/ensure-shared-assets.js', 'build-intel-vault.js');
+
 const weeklyWorkflow = exists('.github/workflows/weekly-update-check.yml') ? read('.github/workflows/weekly-update-check.yml') : '';
 needText('.github/workflows/weekly-update-check.yml', 'cron:');
 needText('.github/workflows/weekly-update-check.yml', 'npm run build');

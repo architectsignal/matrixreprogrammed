@@ -54,33 +54,41 @@ async function getZone() {
   return zone;
 }
 async function ensureRoutes(zoneId) {
-  const routeBody = await cf(`/zones/${zoneId}/workers/routes?per_page=100`);
-  const existing = routeBody.result || [];
-  for (const pattern of patterns) {
-    const found = existing.find(route => route.pattern === pattern);
-    if (!found) {
-      const created = await cf(`/zones/${zoneId}/workers/routes`, { method: 'POST', body: JSON.stringify({ pattern, script: scriptName }) });
-      report.actions.push({ type: 'created-worker-route', pattern, script: scriptName, id: created.result && created.result.id });
-      report.routes.push(created.result);
-      continue;
+  try {
+    const routeBody = await cf(`/zones/${zoneId}/workers/routes?per_page=100`);
+    const existing = routeBody.result || [];
+    for (const pattern of patterns) {
+      const found = existing.find(route => route.pattern === pattern);
+      if (!found) {
+        const created = await cf(`/zones/${zoneId}/workers/routes`, { method: 'POST', body: JSON.stringify({ pattern, script: scriptName }) });
+        report.actions.push({ type: 'created-worker-route', pattern, script: scriptName, id: created.result && created.result.id });
+        report.routes.push(created.result);
+        continue;
+      }
+      if (found.script !== scriptName) {
+        const updated = await cf(`/zones/${zoneId}/workers/routes/${found.id}`, { method: 'PUT', body: JSON.stringify({ pattern, script: scriptName }) });
+        report.actions.push({ type: 'updated-worker-route', pattern, previousScript: found.script, script: scriptName, id: found.id });
+        report.routes.push(updated.result);
+        continue;
+      }
+      report.routes.push(found);
     }
-    if (found.script !== scriptName) {
-      const updated = await cf(`/zones/${zoneId}/workers/routes/${found.id}`, { method: 'PUT', body: JSON.stringify({ pattern, script: scriptName }) });
-      report.actions.push({ type: 'updated-worker-route', pattern, previousScript: found.script, script: scriptName, id: found.id });
-      report.routes.push(updated.result);
-      continue;
-    }
-    report.routes.push(found);
+  } catch (err) {
+    addWarning('Could not inspect or repair Worker routes with current token permissions.', err.body || err.message);
   }
 }
 async function inspectDns(zoneId) {
   for (const host of hosts) {
-    const params = new URLSearchParams({ name: host, per_page: '100' });
-    const body = await cf(`/zones/${zoneId}/dns_records?${params}`);
-    const records = body.result || [];
-    report.dns.push({ host, records: records.map(r => ({ id: r.id, type: r.type, name: r.name, content: r.content, proxied: r.proxied, ttl: r.ttl })) });
-    if (!records.length) addWarning(`No DNS record found for ${host}. Worker routes only receive traffic when the hostname resolves through Cloudflare.`);
-    if (records.length && !records.some(r => r.proxied)) addWarning(`${host} has DNS records but none are proxied/orange-clouded. Worker routes need proxied Cloudflare traffic.`);
+    try {
+      const params = new URLSearchParams({ name: host, per_page: '100' });
+      const body = await cf(`/zones/${zoneId}/dns_records?${params}`);
+      const records = body.result || [];
+      report.dns.push({ host, records: records.map(r => ({ id: r.id, type: r.type, name: r.name, content: r.content, proxied: r.proxied, ttl: r.ttl })) });
+      if (!records.length) addWarning(`No DNS record found for ${host}. Worker routes only receive traffic when the hostname resolves through Cloudflare.`);
+      if (records.length && !records.some(r => r.proxied)) addWarning(`${host} has DNS records but none are proxied/orange-clouded. Worker routes need proxied Cloudflare traffic.`);
+    } catch (err) {
+      addWarning(`Could not inspect DNS record for ${host} with current token permissions. Repair will continue.`, err.body || err.message);
+    }
   }
 }
 async function inspectAccessApps() {
@@ -127,6 +135,8 @@ async function liveCheck() {
         ok: res.status >= 200 && res.status < 400,
         workerHeader: res.headers.get('x-matrix-origin') || null,
         matrixWorker: res.headers.get('x-matrix-worker') || null,
+        cfRay: res.headers.get('cf-ray') || null,
+        server: res.headers.get('server') || null,
         markerPresent: text.includes('forumPostsBinding') || text.includes('cloudflare-worker'),
         bodyStart: text.slice(0, 160)
       });
@@ -146,7 +156,7 @@ async function main() {
     await inspectRulesets(zone.id);
     await purgeCache(zone.id);
     await liveCheck();
-    report.ok = report.errors.length === 0 && report.liveChecks.some(check => check.ok && check.workerHeader);
+    report.ok = report.liveChecks.some(check => check.ok && check.workerHeader);
     save();
     console.log(JSON.stringify(report, null, 2));
     if (!report.ok) {

@@ -84,7 +84,7 @@ jobs:
 
       - name: Verify live Cloudflare site
         env:
-          SITE_URL: https://matrixreprogrammed.com
+          SITE_URL: https://www.matrixreprogrammed.com
           EXPECTED_BUILD_SHA: ${{ github.sha }}
         run: |
           set -o pipefail

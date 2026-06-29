@@ -39,6 +39,7 @@
   function unlocked(){ try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; } }
   function localPosts(){ try { return JSON.parse(localStorage.getItem(LOCAL_POSTS_KEY) || '[]'); } catch { return []; } }
   function saveLocalPosts(posts){ try { localStorage.setItem(LOCAL_POSTS_KEY, JSON.stringify(posts.slice(0, 50))); } catch {} }
+  function clearLocalPost(id){ saveLocalPosts(localPosts().filter(post => post.id !== id)); }
   function saveLocalReport(report){ try { const reports = JSON.parse(localStorage.getItem(LOCAL_REPORTS_KEY) || '[]'); reports.unshift(report); localStorage.setItem(LOCAL_REPORTS_KEY, JSON.stringify(reports.slice(0, 50))); } catch {} }
   async function parse(res){ const text = await res.text(); try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; } }
   function listFrom(data){ return Array.isArray(data) ? data : (data && Array.isArray(data.posts) ? data.posts : []); }
@@ -61,18 +62,41 @@
   }
   function renderPost(post){
     const source = post.sourceUrl ? '<p class="source-list"><a href="' + esc(post.sourceUrl) + '" target="_blank" rel="noopener">Open source</a></p>' : '';
-    const local = post.localOnly ? ' <span class="pill">pending sync</span>' : '';
+    const local = post.localOnly ? ' <span class="pill">not live yet</span>' : '';
     const board = post.board ? ' <span class="pill">' + esc(BOARD_LABELS[post.board] || post.board) + '</span>' : '';
     return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + local + '</p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
   }
   function fallbackNotice(){
-    return '<article class="card redline"><span class="label">Signal Board</span><h3>' + esc(BOARD_LABEL) + ' is syncing</h3><p>Fresh signals may take a moment to appear. You can keep reading the board or submit a source drop; it will be held safely while the live feed refreshes.</p></article>';
+    const detail = lastSystemError ? '<p><strong>Live sync detail:</strong> ' + esc(lastSystemError) + '</p>' : '';
+    return '<article class="card redline"><span class="label">Signal Board</span><h3>' + esc(BOARD_LABEL) + ' live sync is delayed</h3><p>Anything marked <strong>not live yet</strong> is saved only on this device until the Worker accepts it. Keep this page open or return later and it will retry.</p>' + detail + '</article>';
   }
   function postBelongsHere(post){ const board = String(post.board || 'main'); if (board === BOARD) return true; if (BOARD === 'main' && board !== 'speculation' && board !== 'epstein-alive') return true; return false; }
+  async function postLive(payload){
+    const res = await fetch(SUBMIT_ROUTE, { method:'POST', cache:'no-store', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify(payload) });
+    const data = await parse(res);
+    if (!res.ok || data.ok === false || !data.post || !data.post.id) throw new Error((data && data.error) || ('post failed HTTP ' + res.status));
+    return data.post;
+  }
+  async function syncPendingLocalPosts(){
+    const pending = localPosts().filter(postBelongsHere).filter(post => post.localOnly);
+    if (!pending.length) return 0;
+    let synced = 0;
+    for (const pendingPost of pending.slice().reverse()) {
+      try {
+        await postLive(Object.assign({}, pendingPost, { id: undefined, localOnly: undefined, createdAt: undefined, approvedAt: undefined }));
+        clearLocalPost(pendingPost.id);
+        synced += 1;
+      } catch (err) {
+        lastSystemError = systemErrorLabel('Pending post still not live', err);
+        break;
+      }
+    }
+    return synced;
+  }
   async function loadFallback(){
     fallbackMode = true;
     let seed = [];
-    try { const res = await fetch('data/forum-seed.json', { headers: { 'Accept': 'application/json' } }); if (res.ok) { const data = await res.json(); seed = Array.isArray(data.posts) ? data.posts.filter(postBelongsHere) : []; } } catch {}
+    try { const res = await fetch('data/forum-seed.json', { cache:'no-store', headers: { 'Accept': 'application/json' } }); if (res.ok) { const data = await res.json(); seed = Array.isArray(data.posts) ? data.posts.filter(postBelongsHere) : []; } } catch {}
     const posts = localPosts().concat(seed).filter(postBelongsHere);
     feed.innerHTML = fallbackNotice() + (posts.length ? posts.map(renderPost).join('') : '');
   }
@@ -81,19 +105,19 @@
     lockFormToBoard();
     try {
       fallbackMode = false;
-      lastSystemError = '';
-      const res = await fetch(FEED_ROUTE, { headers: { 'Accept': 'application/json' } });
+      await syncPendingLocalPosts();
+      const res = await fetch(FEED_ROUTE + '?t=' + Date.now(), { cache:'no-store', headers: { 'Accept': 'application/json' } });
       const data = await parse(res);
-      if (!res.ok || data.ok === false) throw new Error('feed unavailable');
+      if (!res.ok || data.ok === false) throw new Error((data && data.error) || 'feed unavailable');
       const posts = listFrom(data).filter(postBelongsHere);
       feed.innerHTML = posts.length ? posts.map(renderPost).join('') : '<article class="card redline"><h3>No signals yet</h3><p>' + esc(BOARD_LABEL) + ' is open. Unlock a Signal Pass and post a source, question, reader note, or public-record lead.</p></article>';
     } catch (err) { lastSystemError = systemErrorLabel('Feed refresh delayed', err); await loadFallback(); }
   }
   async function reportPost(id){
     const reason = prompt('Report reason:'); if (!reason) return;
-    if (fallbackMode) { saveLocalReport({ id, board: BOARD, reason, createdAt: new Date().toISOString() }); alert('Report received.'); return; }
-    try { const res = await fetch(REPORT_ROUTE, { method:'POST', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify({ id, board: BOARD, reason }) }); const data = await parse(res); if (!res.ok || data.ok === false) throw new Error('report unavailable'); alert('Report received.'); }
-    catch (err) { saveLocalReport({ id, board: BOARD, reason, createdAt: new Date().toISOString() }); alert('Report received.'); }
+    if (fallbackMode) { saveLocalReport({ id, board: BOARD, reason, createdAt: new Date().toISOString() }); alert('Report saved on this device. Live reporting is delayed.'); return; }
+    try { const res = await fetch(REPORT_ROUTE, { method:'POST', cache:'no-store', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify({ id, board: BOARD, reason }) }); const data = await parse(res); if (!res.ok || data.ok === false) throw new Error('report unavailable'); alert('Report received.'); }
+    catch (err) { saveLocalReport({ id, board: BOARD, reason, createdAt: new Date().toISOString() }); alert('Report saved on this device. Live reporting is delayed.'); }
   }
   if (unlockButton) unlockButton.addEventListener('click', function(){ try { localStorage.setItem(PASS_KEY, 'yes'); } catch {} applyLock(); if (status) status.textContent = 'Signal Pass unlocked. You can now post to ' + BOARD_LABEL + '.'; if (submitSection) submitSection.scrollIntoView({ behavior:'smooth', block:'start' }); });
   if (feed) feed.addEventListener('click', function(event){ const button = event.target.closest('.report-signal'); if (button) reportPost(button.getAttribute('data-id')); });
@@ -103,9 +127,26 @@
     if (!unlocked()) { status.textContent = 'Unlock Signal Pass before posting.'; const gate = document.getElementById('signal-pass'); if (gate) gate.scrollIntoView({ behavior:'smooth', block:'start' }); return; }
     const payload = Object.fromEntries(new FormData(form).entries()); payload.board = BOARD;
     if (payload.website) { status.textContent = 'Spam trap triggered.'; return; }
-    status.textContent = 'Posting to ' + BOARD_LABEL + '...';
-    try { const res = await fetch(SUBMIT_ROUTE, { method:'POST', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify(payload) }); const data = await parse(res); if (!res.ok || data.ok === false) throw new Error('post unavailable'); form.reset(); lockFormToBoard(); status.textContent = 'Signal posted. It is now live on ' + BOARD_LABEL + '.'; await loadFeed(); applyLock(); }
-    catch (err) { const post = Object.assign({}, payload, { id:'local-' + Date.now(), board: BOARD, createdAt: new Date().toISOString(), localOnly:true }); const posts = localPosts(); posts.unshift(post); saveLocalPosts(posts); form.reset(); lockFormToBoard(); lastSystemError = systemErrorLabel('Post sync delayed', err); status.textContent = 'Signal received. It may take a moment to appear on the live board.'; await loadFallback(); applyLock(); }
+    status.textContent = 'Posting to ' + BOARD_LABEL + ' live feed...';
+    try {
+      const livePost = await postLive(payload);
+      form.reset();
+      lockFormToBoard();
+      status.textContent = 'Signal posted live on ' + BOARD_LABEL + '.';
+      if (feed) feed.innerHTML = renderPost(livePost) + (feed.innerHTML || '');
+      await loadFeed();
+      applyLock();
+    }
+    catch (err) {
+      const post = Object.assign({}, payload, { id:'local-' + Date.now(), board: BOARD, createdAt: new Date().toISOString(), localOnly:true });
+      const posts = localPosts(); posts.unshift(post); saveLocalPosts(posts);
+      form.reset();
+      lockFormToBoard();
+      lastSystemError = systemErrorLabel('Live post failed', err);
+      status.textContent = 'Not posted live yet. Saved only on this device and will retry when the live board is reachable.';
+      await loadFallback();
+      applyLock();
+    }
   });
   lockFormToBoard();
   applyLock();

@@ -20,6 +20,15 @@ function patchText(file, marker, block) {
   if (text.includes(marker)) return;
   write(file, `${text.trim()}\n${block}\n`);
 }
+function patchLiveIntel(vault) {
+  const full = path.join(root, 'live-intel.html');
+  if (!fs.existsSync(full)) return;
+  let html = fs.readFileSync(full, 'utf8');
+  if (html.includes('id="intel-vault-route"')) return;
+  const section = `<section id="intel-vault-route" class="section wrap split"><div><h2>Intel Vault</h2><p class="lead">Daily update cards expire out of Live Intel after seven days. Older cards are preserved in the Intel Vault as historical source leads, not current alerts.</p><div class="cta-row"><a class="btn" href="intel-vault.html">Open Intel Vault</a><a class="btn alt" href="downloads/intel-vault.json">Vault JSON</a><a class="btn alt" href="downloads/intel-vault.md">Vault Markdown</a></div></div><aside class="card redline"><h3>Freshness Rule</h3><p><strong>0–7 days:</strong> Live Intel. <strong>8+ days:</strong> Intel Vault. Re-check the source before treating an archived card as current.</p><p><strong>Archived items:</strong> ${esc((vault.items || []).length)}</p></aside></section>`;
+  html = html.replace('</main>', `${section}</main>`);
+  fs.writeFileSync(full, html);
+}
 
 const vault = readJson('data/intel-vault.json', {
   updated: new Date().toISOString(),
@@ -75,5 +84,6 @@ if (fs.existsSync(sitemapPath)) {
   }
 }
 
+patchLiveIntel(vault);
 patchText('llms.txt', '/intel-vault.html', '\nIntel Vault:\n- /intel-vault.html: archive of expired seven-day intelligence cards. Old daily updates move here after seven days and must not be displayed as current alerts.\n- /downloads/intel-vault.json: machine-readable archived public-source leads.');
 console.log(`Built Intel Vault with ${items.length} archived item(s).`);

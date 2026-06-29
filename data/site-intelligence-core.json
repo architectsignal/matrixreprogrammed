@@ -5,6 +5,34 @@
   "mission": "Expose wrongdoing, help humanity, update the site, classify the evidence, connect the trackers, and map concentrated power through public records.",
   "publicMissionLine": "Expose wrongdoing. Help humanity. Follow the documents. Map the system.",
   "boundary": "The core tracks public records, policy moves, mandates, pilots, contracts, court records, official releases, corporate filings, source-linked reporting, and clearly labelled speculation. It does not treat association, rumour, symbolism, or internet lore as proof.",
+  "selfAwarenessModel": {
+    "publicDescription": "Operational self-awareness, not consciousness. The site can describe its mission, list its trackers, identify missing files, flag stale data, show failed checks, expose evidence gaps, and recommend the next upgrade path.",
+    "whatItKnows": [
+      "its mission",
+      "its tracker files",
+      "its public routes",
+      "its risk timers",
+      "its evidence classes",
+      "its speculation boundaries",
+      "its source gaps",
+      "its next upgrade priorities"
+    ],
+    "whatItMustNeverClaim": [
+      "real consciousness",
+      "secret authority",
+      "certainty without records",
+      "guilt by association",
+      "private knowledge not backed by public sources"
+    ],
+    "visibleOutputs": [
+      "brain status page",
+      "public tracker graph",
+      "missing-source report",
+      "stale-data report",
+      "evidence-gap list",
+      "next-upgrade queue"
+    ]
+  },
   "rules": [
     "Expose wrongdoing, not innocent people.",
     "Source first, claim second.",

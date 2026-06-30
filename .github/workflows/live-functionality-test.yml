@@ -1,0 +1,55 @@
+name: Live Functionality Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      post_tests:
+        description: "Submit synthetic persistent posts to all three boards: true or false"
+        required: false
+        default: "true"
+  workflow_run:
+    workflows:
+      - Deploy Production
+    types:
+      - completed
+  schedule:
+    - cron: "45 7 * * *"
+
+permissions:
+  contents: read
+
+env:
+  LIVE_SITE_BASE: https://www.matrixreprogrammed.com
+  LIVE_FUNCTIONALITY_POST_TESTS: ${{ github.event.inputs.post_tests || 'true' }}
+
+jobs:
+  live-functionality:
+    name: Public live functionality probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run live functionality test
+        run: node scripts/live-functionality-test.js
+
+      - name: Upload live functionality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-functionality-test-report
+          path: |
+            downloads/live-functionality-test-report.json
+            downloads/live-functionality-test-report.md
+          if-no-files-found: warn
+          retention-days: 14

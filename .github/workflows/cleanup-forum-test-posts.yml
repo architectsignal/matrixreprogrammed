@@ -1,0 +1,43 @@
+name: Cleanup Forum Test Posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 3 * * *'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  cleanup:
+    name: Remove test/demo/sample posts from public forum KV
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Cleanup test posts from Cloudflare KV
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          FORUM_POSTS_KV_ID: 99996d87016d4285a833707cbda5232f
+        run: node scripts/cleanup-forum-test-posts.js
+
+      - name: Upload cleanup report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forum-test-post-cleanup-report
+          path: forum-test-post-cleanup-report.json
+          if-no-files-found: ignore
+          retention-days: 14

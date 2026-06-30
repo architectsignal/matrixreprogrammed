@@ -46,12 +46,17 @@ jobs:
       - name: Build generated site
         run: npm run build
 
-      - name: Patch mission-critical generated outputs
-        run: |
-          node scripts/patch-worker-newsletter-system.js
-          node scripts/patch-newsletter-capture-ui.js
-          node scripts/archive-intel-drops-to-vault.js
-          node scripts/brand-downloads-audit.js
+      - name: Repatch newsletter Worker after build
+        run: node scripts/patch-worker-newsletter-system.js
+
+      - name: Patch newsletter capture UI
+        run: node scripts/patch-newsletter-capture-ui.js
+
+      - name: Archive old Intel updates to vault
+        run: node scripts/archive-intel-drops-to-vault.js
+
+      - name: Audit branded downloads
+        run: node scripts/brand-downloads-audit.js
 
       - name: Mission-critical growth gate
         run: node scripts/mission-critical-growth-test.js

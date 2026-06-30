@@ -164,7 +164,7 @@ jobs:
       - name: Verify Phase 19 Lead Magnet output
         run: |
           test -f data/lead-magnets.json
-          grep -q "OPT-IN ENGINE STATUS" optin-center.html
+          grep -q "LEAD MAGNET ENGINE STATUS" optin-center.html
           test -f optin-trust-evidence-checklist.html
           test -f downloads/lead-magnet-trust-evidence-checklist.json
           grep -q "phase-nineteen-lead-magnet-engine" index.html

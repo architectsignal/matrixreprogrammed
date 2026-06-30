@@ -30,6 +30,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -52,16 +55,31 @@ jobs:
         run: node scripts/build-transparent-maintenance-report.js
 
       - name: Commit generated maintenance outputs
+        continue-on-error: true
         run: |
+          set +e
           git config user.name "matrix-maintenance-bot"
           git config user.email "actions@github.com"
           git add downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json search.html search.js llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json || true
           if git diff --cached --quiet; then
             echo "No generated maintenance changes to commit."
-          else
-            git commit -m "Transparent scheduled maintenance report [deploy]"
-            git push || (git pull --rebase origin main && git push)
+            exit 0
           fi
+          git commit -m "Transparent scheduled maintenance report [deploy]"
+          commit_status=$?
+          if [ "$commit_status" -ne 0 ]; then
+            echo "Maintenance commit failed but reports were uploaded as artifacts. Continuing so maintenance does not block production."
+            exit 0
+          fi
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "Push failed on attempt $attempt. Rebasing against latest main and retrying."
+            git fetch origin main || true
+            git pull --rebase --autostash origin main || { git rebase --abort || true; git reset --hard HEAD || true; }
+            sleep 2
+          done
+          echo "Maintenance push could not be completed after retries. Reports remain available in workflow artifacts. Continuing."
+          exit 0
 
       - name: Public content scrub
         continue-on-error: true

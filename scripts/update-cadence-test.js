@@ -6,62 +6,45 @@ const file = name => path.join(root, name);
 const exists = name => fs.existsSync(file(name));
 const read = name => fs.readFileSync(file(name), 'utf8');
 function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
-function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
+function needText(name, text, label = text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${label}`); }
+function forbidText(name, text, label = text) { if (exists(name) && read(name).includes(text)) issues.push(`${name} should not contain ${label}`); }
 
-needFile('data/update-cadence-policy.json');
-needFile('.github/workflows/test-site.yml');
-needFile('.github/workflows/deploy-production.yml');
-needFile('.github/workflows/daily-update-check.yml');
-needFile('.github/workflows/weekly-update-check.yml');
-needFile('scripts/update-live-intel.js');
-needFile('scripts/update-seven-day-intel.js');
-needFile('scripts/build-intel-vault.js');
+needFile('.github/workflows/auto-update-orchestrator.yml');
+needText('.github/workflows/auto-update-orchestrator.yml', 'cron: "20 7 * * *"', 'daily orchestrator schedule');
+needText('.github/workflows/auto-update-orchestrator.yml', 'Generate Daily Intel updates and vault old updates', 'daily update step');
+needText('.github/workflows/auto-update-orchestrator.yml', 'archive-intel-drops-to-vault.js', 'old updates to vault step');
+needText('.github/workflows/auto-update-orchestrator.yml', 'brand-downloads-audit.js', 'download quality step');
+needText('.github/workflows/auto-update-orchestrator.yml', 'mission-critical-growth-test.js', 'mission-critical gate');
+needText('.github/workflows/auto-update-orchestrator.yml', 'Commit all generated automatic updates once', 'single commit path');
 
-const policy = exists('data/update-cadence-policy.json') ? JSON.parse(read('data/update-cadence-policy.json')) : {};
-if (!Array.isArray(policy.daily) || policy.daily.length < 4) issues.push('daily cadence must include news, epstein, timers, and figures');
-if (!Array.isArray(policy.weekly) || policy.weekly.length < 3) issues.push('weekly cadence must include full site, atlas, and quality');
-for (const lane of policy.daily || []) {
-  if (!lane.lane || !Array.isArray(lane.scripts) || !Array.isArray(lane.mustCheck)) issues.push('daily lane missing lane/scripts/mustCheck');
-  for (const target of lane.mustCheck || []) if (!target.endsWith('.json') && !target.endsWith('.md') && target !== '_site') needFile(target);
+for (const workflow of ['daily-intel-drop.yml', 'transparent-maintenance.yml', 'weekly-dog-video.yml', 'self-heal-generated-site.yml']) {
+  needFile(`.github/workflows/${workflow}`);
+  needText(`.github/workflows/${workflow}`, 'workflow_dispatch:', `${workflow} manual backup dispatch`);
+  forbidText(`.github/workflows/${workflow}`, 'schedule:', `${workflow} automatic schedule`);
 }
-for (const lane of policy.weekly || []) {
-  if (!lane.lane || !Array.isArray(lane.scripts) || !Array.isArray(lane.mustCheck)) issues.push('weekly lane missing lane/scripts/mustCheck');
-}
-const dailyWorkflow = exists('.github/workflows/daily-update-check.yml') ? read('.github/workflows/daily-update-check.yml') : '';
-needText('.github/workflows/daily-update-check.yml', 'cron:');
-needText('.github/workflows/daily-update-check.yml', 'update-live-intel.js');
-needText('.github/workflows/daily-update-check.yml', 'update-seven-day-intel.js');
-needText('.github/workflows/daily-update-check.yml', 'build-intel-vault.js');
-needText('.github/workflows/daily-update-check.yml', 'build-intel-desk.js');
-needText('.github/workflows/daily-update-check.yml', 'enhance-epstein-watch.js');
-needText('.github/workflows/daily-update-check.yml', 'patch-homepage-alerts.js');
-needText('.github/workflows/daily-update-check.yml', 'figure-source-rules-pressure-test.js');
-needText('.github/workflows/daily-update-check.yml', 'migration-flow-test.js');
-needText('.github/workflows/daily-update-check.yml', 'global-risk-clocks-test.js');
-needText('.github/workflows/daily-update-check.yml', 'intel-vault.html');
-needText('.github/workflows/daily-update-check.yml', 'downloads/intel-vault.json');
-if (/wrangler deploy|deploy-production/i.test(dailyWorkflow)) issues.push('daily update check must not deploy');
 
-needText('scripts/update-live-intel.js', 'ACTIVE_WINDOW_DAYS');
-needText('scripts/update-live-intel.js', 'archivedPreviousItems');
-needText('scripts/update-live-intel.js', 'Active Live Intel cards only show items published inside the active window');
-needText('scripts/update-seven-day-intel.js', 'ACTIVE_WINDOW_DAYS');
-needText('scripts/update-seven-day-intel.js', 'data/intel-vault.json');
-needText('scripts/update-seven-day-intel.js', 'Expired daily cards move');
-needText('scripts/build-intel-vault.js', '0–7 days: Live Intel');
-needText('scripts/build-intel-vault.js', '8+ days: Intel Vault');
-needText('scripts/ensure-shared-assets.js', 'build-intel-vault.js');
+needFile('scripts/intel-drop-engine.js');
+needFile('scripts/update-news-from-drop.js');
+needFile('scripts/build-intel-archive-page.js');
+needFile('scripts/archive-intel-drops-to-vault.js');
+needFile('scripts/patch-worker-newsletter-system.js');
+needFile('scripts/brand-downloads-audit.js');
+needFile('scripts/mission-critical-growth-test.js');
+needFile('.github/workflows/weekly-newsletter-send.yml');
+needFile('.github/workflows/live-functionality-test.yml');
+needText('scripts/update-news-from-drop.js', 'liveWindowDays = 7', '7-day live desk window');
+needText('scripts/build-intel-archive-page.js', 'Older source-led drops are stored here', 'archive promise');
+needText('scripts/archive-intel-drops-to-vault.js', '8+ days moves to vault', 'vault rule');
+needText('scripts/patch-worker-newsletter-system.js', 'handleSubscribeNewsletter', 'newsletter capture handler');
+needText('scripts/patch-worker-newsletter-system.js', 'handleSendWeeklyNewsletter', 'weekly newsletter send handler');
+needText('.github/workflows/weekly-newsletter-send.yml', 'cron: "10 8 * * 1"', 'weekly newsletter cron');
+needText('scripts/live-functionality-test.js', '/subscribe-newsletter', 'live newsletter subscribe test');
+needText('scripts/live-functionality-test.js', '/newsletter-health', 'live newsletter health test');
 
-const weeklyWorkflow = exists('.github/workflows/weekly-update-check.yml') ? read('.github/workflows/weekly-update-check.yml') : '';
-needText('.github/workflows/weekly-update-check.yml', 'cron:');
-needText('.github/workflows/weekly-update-check.yml', 'npm run build');
-needText('.github/workflows/weekly-update-check.yml', 'pressure-test:atlas-layers');
-needText('.github/workflows/weekly-update-check.yml', 'pressure-test:migration-flow');
-needText('.github/workflows/weekly-update-check.yml', 'pressure-test:global-risk-clocks');
-if (/wrangler deploy|deploy-production/i.test(weeklyWorkflow)) issues.push('weekly update check must not deploy');
 if (issues.length) {
   console.error('UPDATE CADENCE TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
 console.log('UPDATE CADENCE TEST PASSED');
+console.log('Daily updates run through one orchestrator, old updates vault, newsletter capture/send are wired, and legacy update workflows are manual backups.');

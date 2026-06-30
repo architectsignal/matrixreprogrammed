@@ -1,0 +1,33 @@
+name: Weekly Newsletter Send
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "10 8 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: weekly-newsletter-send
+  cancel-in-progress: false
+
+jobs:
+  send-newsletter:
+    name: Send Matrix weekly signal to subscribers
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Send weekly newsletter through live Worker
+        env:
+          NEWSLETTER_ADMIN_TOKEN: ${{ secrets.NEWSLETTER_ADMIN_TOKEN }}
+        run: |
+          if [ -z "$NEWSLETTER_ADMIN_TOKEN" ]; then
+            echo "::error::NEWSLETTER_ADMIN_TOKEN GitHub secret is missing. Add the same value to GitHub Actions and Cloudflare Worker secrets."
+            exit 1
+          fi
+          curl --fail-with-body -X POST "https://www.matrixreprogrammed.com/send-weekly-newsletter" \
+            -H "x-newsletter-admin-token: $NEWSLETTER_ADMIN_TOKEN" \
+            -H "accept: application/json" \
+            -H "content-type: application/json" \
+            --data '{"source":"github-weekly-newsletter-send"}'

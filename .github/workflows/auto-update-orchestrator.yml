@@ -64,25 +64,35 @@ jobs:
             echo "Weekly video tools not needed today."
           fi
 
-      - name: Generate Daily Intel updates and vault old updates
+      - name: Generate Daily Intel updates
         run: |
           node scripts/intel-drop-engine.js
           node scripts/update-news-from-drop.js
           node scripts/build-intel-archive-page.js
-          node scripts/archive-intel-drops-to-vault.js
           node scripts/build-black-file-pdf.js
 
-      - name: Generate Transparent Maintenance updates
+      - name: Build Intel Drop Vault
+        run: node scripts/archive-intel-drops-to-vault.js
+
+      - name: Build generated site
+        run: npm run build
+
+      - name: Patch newsletter Worker and capture UI
         run: |
-          npm run build
           node scripts/patch-worker-newsletter-system.js
           node scripts/patch-newsletter-capture-ui.js
-          node scripts/archive-intel-drops-to-vault.js
-          node scripts/brand-downloads-audit.js
+
+      - name: Audit branded downloads
+        run: node scripts/brand-downloads-audit.js
+
+      - name: Repair generated artifacts
+        run: |
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
-          node scripts/build-transparent-maintenance-report.js
+
+      - name: Generate Transparent Maintenance report
+        run: node scripts/build-transparent-maintenance-report.js
 
       - name: Generate Weekly D.O.G package when due
         env:
@@ -100,7 +110,7 @@ jobs:
             echo "Weekly D.O.G video package not due today."
           fi
 
-      - name: Final repair and full audit
+      - name: Final mission-critical audit
         run: |
           node scripts/patch-worker-newsletter-system.js
           node scripts/patch-newsletter-capture-ui.js

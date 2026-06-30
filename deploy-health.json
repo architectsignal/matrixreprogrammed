@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "1f0d1b0d29ec403b31e65d709ad8d68515b70873",
-  "buildShortSha": "1f0d1b0d29ec",
-  "generatedAt": "2026-06-30T00:09:08.730Z",
+  "buildSha": "400daa1ff35aecb547c8ffa874a91aa3ed60600b",
+  "buildShortSha": "400daa1ff35a",
+  "generatedAt": "2026-06-30T00:16:28.049Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -22,19 +22,19 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "92ba2c4f5da260c6"
+      "hash": "2e7d9f8dd812693a"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "92ba2c4f5da260c6"
+      "hash": "2e7d9f8dd812693a"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "21c6c18cbdb57f00"
+      "hash": "50ca960fbd7bd489"
     },
     {
       "name": "Dark Speculation Forum",
@@ -58,13 +58,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "feafc3bdd2c34246"
+      "hash": "065c0c1a70f83e1d"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "70fec7c1c793e32d"
+      "hash": "6998e59123b8f5e3"
     },
     {
       "name": "Cloudflare Assets",

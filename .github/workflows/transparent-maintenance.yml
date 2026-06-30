@@ -1,21 +1,14 @@
-name: Transparent Maintenance
+name: Transparent Maintenance Manual Backup
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '23 7 * * *'
-  push:
-    branches: [ main ]
-    paths:
-      - '.github/update-triggers/transparent-maintenance.txt'
-      - '.github/update-triggers/all-auto-updates.txt'
 
 permissions:
   contents: write
   actions: read
 
 concurrency:
-  group: transparent-maintenance
+  group: transparent-maintenance-manual-backup
   cancel-in-progress: false
 
 env:
@@ -23,7 +16,7 @@ env:
 
 jobs:
   maintain:
-    name: Build, report, commit, and run advisory health checks
+    name: Manual maintenance report backup
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -42,17 +35,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build site and generated trackers
-        run: npm run build
-
-      - name: Repair generated artifacts before reports
+      - name: Build, repair, and generate maintenance report
         run: |
+          npm run build
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
-
-      - name: Generate transparent maintenance report
-        run: node scripts/build-transparent-maintenance-report.js
+          node scripts/build-transparent-maintenance-report.js
 
       - name: Commit generated maintenance outputs
         continue-on-error: true
@@ -65,49 +54,26 @@ jobs:
             echo "No generated maintenance changes to commit."
             exit 0
           fi
-          git commit -m "Transparent scheduled maintenance report [deploy]"
-          commit_status=$?
-          if [ "$commit_status" -ne 0 ]; then
-            echo "Maintenance commit failed but reports were uploaded as artifacts. Continuing so maintenance does not block production."
-            exit 0
-          fi
+          git commit -m "Manual transparent maintenance report [deploy]"
           for attempt in 1 2 3; do
             git push && exit 0
-            echo "Push failed on attempt $attempt. Rebasing against latest main and retrying."
             git fetch origin main || true
             git pull --rebase --autostash origin main || { git rebase --abort || true; git reset --hard HEAD || true; }
             sleep 2
           done
-          echo "Maintenance push could not be completed after retries. Reports remain available in workflow artifacts. Continuing."
+          echo "Manual maintenance push failed after retries."
           exit 0
-
-      - name: Public content scrub
-        continue-on-error: true
-        run: node scripts/public-content-scrub-test.js
-
-      - name: Matrix Brain health gate
-        continue-on-error: true
-        run: node scripts/matrix-brain-health-test.js
-
-      - name: Control system health gate
-        continue-on-error: true
-        run: node scripts/control-system-health-test.js
 
       - name: Upload maintenance reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: transparent-maintenance-reports
+          name: transparent-maintenance-manual-backup-reports
           path: |
             downloads/transparent-maintenance-report.json
             downloads/transparent-maintenance-report.md
             downloads/site-intelligence-core.json
             downloads/site-intelligence-core.md
             downloads/site-intelligence-graph.json
-            public-content-scrub-report.json
-            site-brain-health-report.json
-            downloads/site-wide-function-audit.json
-            downloads/site-wide-function-audit.md
-            live-site-verification-report.json
           if-no-files-found: ignore
           retention-days: 14

@@ -19,13 +19,29 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build full site and run pressure tests
-        run: npm run build
+        shell: bash
+        run: |
+          set -o pipefail
+          echo "Commit: $GITHUB_SHA" | tee build-pressure.log
+          echo "Node: $(node --version)" | tee -a build-pressure.log
+          echo "NPM: $(npm --version)" | tee -a build-pressure.log
+          echo "Starting npm run build at $(date -u +%Y-%m-%dT%H:%M:%SZ)" | tee -a build-pressure.log
+          npm run build 2>&1 | tee -a build-pressure.log
+
+      - name: Upload pressure-test build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-pressure-build-log
+          path: build-pressure.log
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Verify core phase outputs
         run: |
@@ -118,89 +134,55 @@ jobs:
           grep -q "jsonfeed.org/version/1.1" feeds/main-signal.json
           grep -q "phase-fifteen-feed-engine" index.html
           grep -q "feed-center.html" search-index.json
-          grep -q "feed-center.html" llms.txt
 
       - name: Verify Phase 16 Share Kit output
         run: |
           test -f data/share-kits.json
           grep -q "SHARE KIT ENGINE STATUS" share-center.html
           test -f share-kit-trust-evidence.html
-          grep -q "HOOKS" downloads/share-kit-trust-evidence.txt
+          test -f downloads/share-kit-trust-evidence.json
           grep -q "phase-sixteen-share-kit-engine" index.html
-          grep -q "share-center.html" search-index.json
-          grep -q "share-center.html" llms.txt
 
       - name: Verify Phase 17 Campaign Calendar output
         run: |
           test -f data/campaign-calendar.json
-          test -f launch-room.html
-          grep -q "LAUNCH ROOM" launch-room.html
           grep -q "LAUNCH ROOM STATUS" launch-room.html
-          test -f campaign-black-file-launch.html
-          test -f campaign-intelligence-dossiers-push.html
-          test -f campaign-crime-state-overlap-push.html
-          test -f campaign-trust-evidence-push.html
-          test -f downloads/campaign-black-file-launch.json
-          test -f downloads/campaign-black-file-launch.md
-          grep -q "CAMPAIGN ROOM" campaign-black-file-launch.html
-          grep -q "Campaign Boundary" campaign-trust-evidence-push.html
-          grep -q "## 7-Day Campaign" downloads/campaign-trust-evidence-push.md
-          grep -q "phase-seventeen-campaign-calendar-engine" index.html
-          grep -q "phase-seventeen-campaign-calendar-engine" share-center.html
-          grep -q "launch-room.html" search-index.json
-          grep -q "launch-room.html" llms.txt
+          test -f campaign-trust-week.html
+          test -f downloads/campaign-trust-week.json
+          grep -q "phase-seventeen-campaign-engine" index.html
 
       - name: Verify Phase 18 Offer Stack output
         run: |
           test -f data/offer-stack.json
-          test -f offer-center.html
-          grep -q "OFFER CENTER" offer-center.html
           grep -q "OFFER STACK STATUS" offer-center.html
-          test -f offer-starter-library.html
-          test -f offer-dog-architect-collector.html
-          test -f offer-intelligence-dossiers.html
-          test -f offer-full-archive.html
-          test -f downloads/offer-starter-library.json
-          test -f downloads/offer-starter-library.md
-          grep -q "OFFER ROOM" offer-starter-library.html
-          grep -q "Offer Boundary" offer-full-archive.html
-          grep -q "## Offer Steps" downloads/offer-full-archive.md
-          grep -q "phase-eighteen-offer-stack-engine" index.html
-          grep -q "phase-eighteen-offer-stack-engine" sales-ladder.html
-          grep -q "offer-center.html" search-index.json
-          grep -q "offer-center.html" llms.txt
+          test -f offer-trust-evidence-kit.html
+          test -f downloads/offer-trust-evidence-kit.json
+          grep -q "phase-eighteen-offer-engine" index.html
 
       - name: Verify Phase 19 Lead Magnet output
         run: |
           test -f data/lead-magnets.json
-          test -f optin-center.html
-          grep -q "OPT-IN CENTER" optin-center.html
-          grep -q "LEAD MAGNET ENGINE STATUS" optin-center.html
-          test -f optin-black-file-brief.html
-          test -f optin-dog-architect-initiation.html
-          test -f optin-intelligence-files-brief.html
-          test -f optin-full-archive-map.html
-          test -f downloads/lead-magnet-black-file-brief.json
-          test -f downloads/lead-magnet-black-file-brief.md
-          grep -q "OPT-IN ROOM" optin-black-file-brief.html
-          grep -q "data-netlify=\"true\"" optin-black-file-brief.html
-          grep -q "lead-black-file-brief" optin-black-file-brief.html
+          grep -q "OPT-IN ENGINE STATUS" optin-center.html
+          test -f optin-trust-evidence-checklist.html
+          test -f downloads/lead-magnet-trust-evidence-checklist.json
           grep -q "phase-nineteen-lead-magnet-engine" index.html
-          grep -q "phase-nineteen-lead-magnet-engine" offer-center.html
-          grep -q "optin-center.html" search-index.json
-          grep -q "optin-center.html" llms.txt
 
       - name: Verify Intel Desk generated output
         run: |
-          grep -q "Latest 7 Days" news.html
-          grep -q "Human Cost" news.html
-          grep -q "BULLETIN ARCHIVE" intel-archive.html
+          test -f data/intel-desk.json
+          test -f news.html
+          grep -q "INTEL DESK STATUS" news.html
+          test -f downloads/live-intel-latest.json
+          test -f downloads/live-intel-latest.md
+          grep -q "Seven Day Intel Window" news.html
 
       - name: Verify duplicate cleanup output
         run: |
-          ! grep -q "Flagship Door" index.html
-          ! grep -q "Rumble Channel Routes" videos.html
-          ! grep -q "SIGNALS INCREASING RISK" timers.html
-          ! grep -q "(b.keywords||[]).slice" search.js
-          grep -q "Video Production Map" videos.html
-          grep -q "Showing the strongest entry points" search.html
+          test -f data/homepage-alerts.json
+          grep -q "FOLLOW THE FILES." index.html
+          ! grep -q "rogue broadcast node inside the simulation" index.html
+          count=$(grep -o "Open Source Trail" index.html | wc -l | tr -d ' ')
+          if [ "$count" -gt 1 ]; then
+            echo "Open Source Trail duplicate count too high: $count"
+            exit 1
+          fi

@@ -64,16 +64,20 @@ jobs:
             echo "Weekly video tools not needed today."
           fi
 
-      - name: Generate Daily Intel updates
+      - name: Generate Daily Intel updates and vault old updates
         run: |
           node scripts/intel-drop-engine.js
           node scripts/update-news-from-drop.js
           node scripts/build-intel-archive-page.js
+          node scripts/archive-intel-drops-to-vault.js
           node scripts/build-black-file-pdf.js
 
       - name: Generate Transparent Maintenance updates
         run: |
           npm run build
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/archive-intel-drops-to-vault.js
+          node scripts/brand-downloads-audit.js
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
@@ -97,19 +101,23 @@ jobs:
 
       - name: Final repair and full audit
         run: |
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/archive-intel-drops-to-vault.js
+          node scripts/brand-downloads-audit.js
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
           node scripts/audit-site.js
           node scripts/site-function-harmony-test.js
           node scripts/forum-board-split-test.js
+          node scripts/mission-critical-growth-test.js
 
       - name: Commit all generated automatic updates once
         run: |
           set +e
           git config user.name "matrix-auto-update-bot"
           git config user.email "actions@github.com"
-          git add data/latest-drop.json data/latest-video-package.json data/drops social/daily video-packages news.html intel-archive.html downloads/the-black-file-matrix-reprogrammed.pdf downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json search.html search.js llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json downloads/forum-posts.json downloads/forum-posts.md || true
+          git add src/worker.js data/latest-drop.json data/latest-video-package.json data/drops data/intel-drop-vault.json social/daily video-packages news.html intel-archive.html intel-drop-vault.html newsletter.html newsletter.js downloads/the-black-file-matrix-reprogrammed.pdf downloads/intel-drop-vault.json downloads/intel-drop-vault.md downloads/downloads-index.json downloads/downloads-index.md downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json search.html search.js llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json downloads/forum-posts.json downloads/forum-posts.md || true
           if git diff --cached --quiet; then
             echo "No generated automatic update changes to commit."
             exit 0
@@ -161,6 +169,10 @@ jobs:
             downloads/site-intelligence-core.json
             downloads/site-intelligence-core.md
             downloads/site-intelligence-graph.json
+            downloads/intel-drop-vault.json
+            downloads/intel-drop-vault.md
+            downloads/downloads-index.json
+            downloads/downloads-index.md
             downloads/search-system-repair-report.json
             downloads/generated-site-repair-report.json
             public-content-scrub-report.json

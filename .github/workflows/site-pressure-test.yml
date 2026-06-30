@@ -147,8 +147,8 @@ jobs:
         run: |
           test -f data/campaign-calendar.json
           grep -q "LAUNCH ROOM STATUS" launch-room.html
-          test -f campaign-trust-week.html
-          test -f downloads/campaign-trust-week.json
+          test -f campaign-trust-evidence-push.html
+          test -f downloads/campaign-trust-evidence-push.json
           grep -q "phase-seventeen-campaign-engine" index.html
 
       - name: Verify Phase 18 Offer Stack output

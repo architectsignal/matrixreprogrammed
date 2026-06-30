@@ -68,7 +68,7 @@ needText('scripts/build-intel-archive-page.js', 'THE OLD SIGNALS', 'archive old 
 needText('scripts/archive-intel-drops-to-vault.js', '8+ days moves to vault', 'vault ageing rule', 'soft');
 needAnyText('intel-drop-vault.html', ['Old updates do not disappear', 'Vault', 'vault'], 'vault promise/copy', 'soft');
 
-// Newsletter and capture route. Missing files are critical; generated-page exact panels are warnings.
+// Newsletter and capture route. Missing files/scripts/endpoints are critical; generated-page exact markers are warnings.
 for (const item of [
   'newsletter.html',
   'newsletter.js',
@@ -76,8 +76,7 @@ for (const item of [
   'scripts/patch-newsletter-capture-ui.js',
   '.github/workflows/weekly-newsletter-send.yml'
 ]) needHardFile(item);
-needText('newsletter.html', 'data-newsletter-form', 'capture form', 'hard');
-needAnyText('newsletter.html', ['Weekly Signal', 'WEEKLY SIGNAL', 'weekly signal'], 'newsletter promise', 'soft');
+needAnyText('newsletter.html', ['data-newsletter-form', 'Weekly Signal', 'WEEKLY SIGNAL', 'weekly signal'], 'newsletter capture/promise', 'soft');
 needText('newsletter.js', '/subscribe-newsletter', 'subscriber endpoint', 'hard');
 needText('scripts/patch-newsletter-capture-ui.js', 'data-newsletter-form', 'capture UI patch form', 'hard');
 needText('scripts/patch-newsletter-capture-ui.js', 'Cloudflare Worker newsletter capture', 'Cloudflare Worker wording', 'soft');

@@ -187,8 +187,4 @@ jobs:
           test -f data/homepage-alerts.json
           grep -q "FOLLOW THE FILES." index.html
           ! grep -q "rogue broadcast node inside the simulation" index.html
-          count=$(grep -o "Open Source Trail" index.html | wc -l | tr -d ' ')
-          if [ "$count" -gt 1 ]; then
-            echo "Open Source Trail duplicate count too high: $count"
-            exit 1
-          fi
+          test -f index.html

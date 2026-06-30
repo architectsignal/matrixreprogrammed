@@ -45,6 +45,7 @@ jobs:
           node scripts/patch-worker-newsletter-system.js
           npm run build
           node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-newsletter-capture-ui.js
           node scripts/archive-intel-drops-to-vault.js
           node scripts/brand-downloads-audit.js
           node scripts/mission-critical-growth-test.js
@@ -61,6 +62,7 @@ jobs:
       - name: Cloudflare Worker asset route test
         run: |
           node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-newsletter-capture-ui.js
           npm run pressure-test:cloudflare
 
       - name: Update cadence audit

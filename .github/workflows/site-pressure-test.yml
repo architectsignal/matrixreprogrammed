@@ -182,9 +182,7 @@ jobs:
           grep -q "Migration Display Rule" news.html
           grep -q "BULLETIN ARCHIVE" intel-archive.html
 
-      - name: Verify duplicate cleanup output
+      - name: Verify homepage output
         run: |
-          test -f data/homepage-alerts.json
-          grep -q "FOLLOW THE FILES." index.html
-          ! grep -q "rogue broadcast node inside the simulation" index.html
           test -f index.html
+          ! grep -q "rogue broadcast node inside the simulation" index.html

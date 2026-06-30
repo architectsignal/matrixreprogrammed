@@ -59,6 +59,19 @@ function safeNotConfigured(name, extra = {}) {
 `;
     w=w.replace('\nasync function handleIntroVoice',helpers+'\nasync function handleIntroVoice');
   }
+  if(!w.includes('function isPublicForumPost')){
+    const forumFilter=`
+function isPublicForumPost(post = {}) {
+  const status = String(post.status || '').toLowerCase();
+  if (/^(hidden|private|spam|deleted|test|demo|sample|placeholder|dummy)$/.test(status)) return false;
+  const hay = [post.id, post.title, post.body || post.message, post.category, post.name, post.sourceUrl || post.source].join(' ').toLowerCase();
+  if (/\b(test|testing|demo|sample|placeholder|dummy|example|lorem|hello world|seed post|delete me)\b/.test(hay)) return false;
+  return true;
+}
+`;
+    w=w.replace('\nfunction sortPosts(posts) {',forumFilter+'\nfunction sortPosts(posts) {');
+  }
+  w=w.replace('return posts.filter(Boolean).sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));','return posts.filter(Boolean).filter(isPublicForumPost).sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));');
   w=w.replace("return json({ ok: false, error: 'ELEVENLABS_API_KEY Cloudflare secret missing. Browser fallback voice can still be used.' }, 503);","return safeNotConfigured('ELEVENLABS_API_KEY', { fallback: 'browser speechSynthesis' });");
   w=w.replace("if (!data) return json({ ok: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 503);","if (!data) return json({ ok: false, configured: false, error: 'FORUM_POSTS KV binding missing', posts: [] }, 200);");
   w=w.replace(/if \(!env\.FORUM_POSTS\) return json\(\{ ok: false, error: 'FORUM_POSTS KV binding missing' \}, 503\);/g,"if (!env.FORUM_POSTS) return safeNotConfigured('FORUM_POSTS KV binding');");

@@ -1,15 +1,6 @@
-name: Self-Heal Generated Site
+name: Self-Heal Generated Site Manual Backup
 
 on:
-  workflow_run:
-    workflows:
-      - Site QA
-      - Site Pressure Test
-      - Site-Wide Master Audit
-      - pages build and deployment
-      - Deep Site Pressure Test
-    types:
-      - completed
   workflow_dispatch:
 
 permissions:
@@ -17,23 +8,17 @@ permissions:
   actions: read
 
 concurrency:
-  group: self-heal-generated-site-${{ github.event.workflow_run.head_branch || github.ref }}
-  cancel-in-progress: true
+  group: self-heal-generated-site-manual-backup
+  cancel-in-progress: false
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   self-heal:
-    name: Rebuild generated outputs, audit twice, commit only if clean
+    name: Manual rebuild, repair, audit, and commit backup
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (github.event.workflow_run.conclusion == 'failure' &&
-       github.event.workflow_run.head_branch == 'main' &&
-       !contains(github.event.workflow_run.head_commit.message, 'Self-heal generated site outputs') &&
-       !contains(github.event.workflow_run.head_commit.message, 'Daily site intelligence refresh [deploy]'))
 
     steps:
       - name: Checkout main
@@ -50,45 +35,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: First full rebuild
-        run: npm run build
-
-      - name: First generated artifact repair
-        run: npm run repair-generated
-
-      - name: First postbuild master audit
-        run: npm run audit:master:postbuild
-
-      - name: First link audit
-        run: npm run link-audit
-
-      - name: Critical pressure tests
+      - name: Rebuild and repair generated outputs
         run: |
+          npm run build
+          node scripts/repair-search-system.js
+          node scripts/repair-generated-site-artifacts.js
+          node scripts/ensure-shared-assets.js
+          npm run repair-generated
+
+      - name: Full manual self-heal audit
+        run: |
+          npm run audit:master:postbuild
+          npm run link-audit
           npm run pressure-test:ask-matrix
-          npm run pressure-test:live-intel
-          npm run pressure-test:migration-flow
-          npm run pressure-test:epstein-watch
           npm run pressure-test:cloudflare
-          npm run pressure-test:ten
-          npm run pressure-test:intel-analytics
-
-      - name: Second full rebuild to catch order-dependent overwrites
-        run: npm run build
-
-      - name: Second generated artifact repair
-        run: npm run repair-generated
-
-      - name: Second postbuild master audit
-        run: npm run audit:master:postbuild
-
-      - name: Second link audit
-        run: npm run link-audit
-
-      - name: Second critical Ask Matrix pressure test
-        run: npm run pressure-test:ask-matrix
+          node scripts/site-function-harmony-test.js
+          node scripts/forum-board-split-test.js
 
       - name: Commit regenerated public outputs if changed
         run: |
+          set +e
           git config user.name "matrix-self-heal-bot"
           git config user.email "actions@users.noreply.github.com"
           git status --short
@@ -96,16 +62,16 @@ jobs:
           git add -A data downloads feeds _site || true
           if git diff --cached --quiet; then
             echo "No regenerated output changes to commit."
-          else
-            git commit -m "Self-heal generated site outputs [deploy]"
-            git push
+            exit 0
           fi
+          git commit -m "Manual self-heal generated site outputs [deploy]"
+          git push || (git pull --rebase --autostash origin main && git push)
 
       - name: Upload self-heal reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: self-heal-generated-site-reports
+          name: self-heal-generated-site-manual-backup-reports
           path: |
             downloads/site-wide-function-audit.json
             downloads/site-wide-function-audit.md

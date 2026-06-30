@@ -171,12 +171,16 @@ jobs:
 
       - name: Verify Intel Desk generated output
         run: |
-          test -f data/intel-desk.json
+          test -f data/bulletins.json
+          test -f data/human-cost.json
+          test -f data/migration-flow-panel.json
           test -f news.html
-          grep -q "INTEL DESK STATUS" news.html
-          test -f downloads/live-intel-latest.json
-          test -f downloads/live-intel-latest.md
-          grep -q "Seven Day Intel Window" news.html
+          test -f intel-archive.html
+          grep -q "Signal Intel Desk" news.html
+          grep -q "Latest 7 Days" news.html
+          grep -q "Human Cost Evidence Panels" news.html
+          grep -q "Migration Display Rule" news.html
+          grep -q "BULLETIN ARCHIVE" intel-archive.html
 
       - name: Verify duplicate cleanup output
         run: |

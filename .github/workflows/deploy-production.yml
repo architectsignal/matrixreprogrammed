@@ -41,7 +41,13 @@ jobs:
         run: npm install
 
       - name: Build and pressure test before deploy
-        run: npm run build
+        run: |
+          node scripts/patch-worker-newsletter-system.js
+          npm run build
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/archive-intel-drops-to-vault.js
+          node scripts/brand-downloads-audit.js
+          node scripts/mission-critical-growth-test.js
 
       - name: Atlas Layers test
         run: npm run pressure-test:atlas-layers
@@ -53,7 +59,9 @@ jobs:
         run: npm run pressure-test:global-risk-clocks
 
       - name: Cloudflare Worker asset route test
-        run: npm run pressure-test:cloudflare
+        run: |
+          node scripts/patch-worker-newsletter-system.js
+          npm run pressure-test:cloudflare
 
       - name: Update cadence audit
         run: node scripts/update-cadence-test.js
@@ -115,5 +123,9 @@ jobs:
             cloudflare-deploy-proof-report.json
             cloudflare-domain-repair-report.json
             live-site-verification-report.json
+            downloads/intel-drop-vault.json
+            downloads/intel-drop-vault.md
+            downloads/downloads-index.json
+            downloads/downloads-index.md
           if-no-files-found: ignore
           retention-days: 14

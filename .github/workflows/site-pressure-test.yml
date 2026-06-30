@@ -155,9 +155,11 @@ jobs:
         run: |
           test -f data/offer-stack.json
           grep -q "OFFER STACK STATUS" offer-center.html
+          test -f offer-trust-before-darkness.html
+          test -f downloads/offer-trust-before-darkness.json
           test -f offer-trust-evidence-kit.html
           test -f downloads/offer-trust-evidence-kit.json
-          grep -q "phase-eighteen-offer-engine" index.html
+          grep -q "phase-eighteen-offer-stack-engine" index.html
 
       - name: Verify Phase 19 Lead Magnet output
         run: |

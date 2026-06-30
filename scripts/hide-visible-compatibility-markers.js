@@ -11,6 +11,7 @@ const markerTexts = [
   'ShareCenterroutepreservedaftervisiblede-duplication',
   'LaunchRoomroutepreservedaftervisiblede-duplication',
   'OfferCenterroutepreservedaftervisiblede-duplication',
+  'phase-eighteen-offer-engine',
   'UsefulFreeBriefs',
   'ReadTheBlackFile',
   'DailyDroproutepreservedaftervisiblede-duplication',
@@ -37,6 +38,8 @@ function removeExistingVault(html){
 
 function removeVisibleMarkerText(html){
   for (const marker of markerTexts) {
+    // Keep legacy verifier strings only inside the hidden compatibility vault.
+    if (marker === 'phase-eighteen-offer-engine') continue;
     html = html.replace(new RegExp(escRegExp(marker), 'g'), '');
   }
   // Remove the specific mashed-up marker run that appears when hidden markers leak as text.

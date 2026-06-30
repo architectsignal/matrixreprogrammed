@@ -40,15 +40,21 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and pressure test before deploy
+      - name: Patch newsletter Worker before build
+        run: node scripts/patch-worker-newsletter-system.js
+
+      - name: Build generated site
+        run: npm run build
+
+      - name: Patch mission-critical generated outputs
         run: |
-          node scripts/patch-worker-newsletter-system.js
-          npm run build
           node scripts/patch-worker-newsletter-system.js
           node scripts/patch-newsletter-capture-ui.js
           node scripts/archive-intel-drops-to-vault.js
           node scripts/brand-downloads-audit.js
-          node scripts/mission-critical-growth-test.js
+
+      - name: Mission-critical growth gate
+        run: node scripts/mission-critical-growth-test.js
 
       - name: Atlas Layers test
         run: npm run pressure-test:atlas-layers

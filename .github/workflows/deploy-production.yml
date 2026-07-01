@@ -98,10 +98,15 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
         run: |
           set -o pipefail
-          echo "Deploying Cloudflare Worker with bundled _site assets for matrixreprogrammed..."
-          npx wrangler deploy
+          mkdir -p downloads
+          echo "Deploying Cloudflare Worker with bundled _site assets for matrixreprogrammed..." | tee downloads/wrangler-deploy.log
+          npx --yes wrangler@latest deploy 2>&1 | tee -a downloads/wrangler-deploy.log
+          status=${PIPESTATUS[0]}
+          echo "Wrangler exit status: $status" | tee -a downloads/wrangler-deploy.log
+          exit "$status"
 
       - name: Cloudflare deployment proof
         env:
@@ -133,6 +138,7 @@ jobs:
         with:
           name: deployment-proof-and-live-reports
           path: |
+            downloads/wrangler-deploy.log
             cloudflare-deploy-proof-report.json
             cloudflare-domain-repair-report.json
             live-site-verification-report.json
@@ -140,5 +146,9 @@ jobs:
             downloads/intel-drop-vault.md
             downloads/downloads-index.json
             downloads/downloads-index.md
+            downloads/update-cadence-report.json
+            downloads/update-cadence-report.md
+            downloads/mission-critical-growth-report.json
+            downloads/mission-critical-growth-report.md
           if-no-files-found: ignore
           retention-days: 14

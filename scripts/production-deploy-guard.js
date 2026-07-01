@@ -15,6 +15,7 @@ function needFile(file) { if (!exists(file)) issues.push(`missing source file: $
 function needSiteFile(file) { if (!siteExists(file)) issues.push(`missing built asset: _site/${file}`); }
 function needText(file, text, label = text) { if (exists(file) && !read(file).includes(text)) issues.push(`${file} missing ${label}`); }
 function needSiteText(file, text, label = text) { if (siteExists(file) && !siteRead(file).includes(text)) issues.push(`_site/${file} missing ${label}`); }
+function forbidText(file, text, label = text) { if (exists(file) && read(file).includes(text)) issues.push(`${file} still contains ${label}`); }
 function forbidSiteText(file, text, label = text) { if (siteExists(file) && siteRead(file).includes(text)) issues.push(`_site/${file} still contains ${label}`); }
 function parseJson(file) {
   try { return JSON.parse(siteRead(file)); }
@@ -52,12 +53,25 @@ for (const file of [
   'deploy-health'
 ]) needSiteFile(file);
 
-for (const file of ['index.html', 'amazon-store-books.html', 'books.html', 'search.html', 'deploy-health.html']) {
-  forbidSiteText(file, 'preservedaftervisiblede-duplication', 'legacy compatibility marker leak');
-  forbidSiteText(file, 'new-intelligence-toolspreserved', 'legacy intelligence marker leak');
-  forbidSiteText(file, 'reader-usefulness-routepreserved', 'legacy reader marker leak');
+const publicPagesToCheck = ['index.html', 'amazon-store-books.html', 'books.html', 'search.html', 'deploy-health.html'];
+const markerLeaks = [
+  ['preservedaftervisiblede-duplication', 'legacy compatibility marker leak'],
+  ['new-intelligence-toolspreserved', 'legacy intelligence marker leak'],
+  ['reader-usefulness-routepreserved', 'legacy reader marker leak']
+];
+
+// Check raw root files too. This protects hosts that publish the repository root instead of rebuilt _site output.
+for (const file of publicPagesToCheck) {
+  for (const [text, label] of markerLeaks) forbidText(file, text, label);
 }
 
+for (const file of publicPagesToCheck) {
+  for (const [text, label] of markerLeaks) forbidSiteText(file, text, label);
+}
+
+needText('index.html', 'FOLLOW THE FILES', 'root homepage hero');
+needText('index.html', 'READ THE SYSTEM', 'root homepage hero');
+needText('amazon-store-books.html', 'Store Titles', 'root Amazon store section');
 needSiteText('index.html', 'FOLLOW THE FILES', 'homepage hero');
 needSiteText('index.html', 'READ THE SYSTEM', 'homepage hero');
 needSiteText('amazon-store-books.html', 'Store Titles', 'Amazon store section');
@@ -117,4 +131,4 @@ if (issues.length) {
 }
 
 console.log('PRODUCTION DEPLOY GUARD PASSED');
-console.log('Checked clean public pages, Amazon store fallback/data, Cloudflare _site output, Worker asset mode, and forum KV persistence routes.');
+console.log('Checked clean root pages, clean built pages, Amazon store fallback/data, Cloudflare _site output, Worker asset mode, and forum KV persistence routes.');

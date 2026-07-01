@@ -1,17 +1,17 @@
 const fs = require('fs');
 const path = require('path');
+
 const workerPath = path.join(process.cwd(), 'src', 'worker.js');
 let source = fs.readFileSync(workerPath, 'utf8');
 const marker = 'MATRIX NEWSLETTER SYSTEM';
-if (source.includes(marker)) {
-  console.log('Newsletter Worker system already present.');
-  process.exit(0);
-}
+
+const hasNewsletterFunctions = /(?:async\s+function\s+handleSubscribeNewsletter|async\s+function\s+handleNewsletterHealth|function\s+validEmail|const\s+handleNewsletterHealth)/.test(source);
+const hasNewsletterRoutes = source.includes("originalPath === '/subscribe-newsletter'") && source.includes("originalPath === '/newsletter-health'");
 
 const functions = `
 // MATRIX NEWSLETTER SYSTEM
 function validEmail(value = '') {
-  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(String(value || '').trim());
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim());
 }
 
 function subscriberKey(email = '') {
@@ -118,7 +118,7 @@ function newsletterText(drop, baseUrl) {
       'Download Center: ' + baseUrl + '/download-center.html',
       '',
       'Boundary: source first, claim second, pattern last.'
-    ].join('\\n'),
+    ].join('\n'),
     html: '<h1>Matrix Reprogrammed Weekly Signal</h1>' +
       '<p><strong>Date:</strong> ' + date + '</p>' +
       '<p><strong>Evidence label:</strong> ' + label + '</p>' +
@@ -156,7 +156,7 @@ async function handleSendWeeklyNewsletter(request, env) {
   for (const subscriber of subscribers) {
     const unsubscribe = baseUrl + '/unsubscribe-newsletter?email=' + encodeURIComponent(subscriber.email);
     const html = letter.html + '<p style="font-size:12px;color:#777">Unsubscribe: <a href="' + unsubscribe + '">' + unsubscribe + '</a></p>';
-    const text = letter.text + '\\n\\nUnsubscribe: ' + unsubscribe;
+    const text = letter.text + '\n\nUnsubscribe: ' + unsubscribe;
     const result = await sendResendEmail(env, from, subscriber.email, letter.subject, html, text);
     results.push({ email: subscriber.email, ok: result.ok, status: result.status });
   }
@@ -189,8 +189,32 @@ async function handleNewsletterHealth(env) {
 }
 `;
 
-source = source.replace('async function handleTrackEvent(request, env) {', functions + '\nasync function handleTrackEvent(request, env) {');
-source = source.replace("if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath))", "if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice', '/subscribe-newsletter', '/send-weekly-newsletter'].includes(originalPath))");
-source = source.replace("if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);", "if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);\n      if (request.method === 'POST' && originalPath === '/subscribe-newsletter') return handleSubscribeNewsletter(request, env);\n      if (request.method === 'GET' && originalPath === '/newsletter-health') return handleNewsletterHealth(env);\n      if (request.method === 'GET' && originalPath === '/unsubscribe-newsletter') return handleUnsubscribeNewsletter(request, env);\n      if (request.method === 'POST' && originalPath === '/send-weekly-newsletter') return handleSendWeeklyNewsletter(request, env);");
+if (!hasNewsletterFunctions && !source.includes(marker)) {
+  const insertBefore = 'async function handleTrackEvent(request, env) {';
+  if (!source.includes(insertBefore)) {
+    throw new Error('Could not find handleTrackEvent insertion point in src/worker.js');
+  }
+  source = source.replace(insertBefore, functions + '\n' + insertBefore);
+} else {
+  console.log('Newsletter Worker functions already present; skipping function injection.');
+}
+
+const baseOptions = "if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath))";
+const newsletterOptions = "if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice', '/subscribe-newsletter', '/send-weekly-newsletter'].includes(originalPath))";
+if (source.includes(baseOptions)) {
+  source = source.replace(baseOptions, newsletterOptions);
+}
+
+const introRoute = "if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);";
+const newsletterRouteBlock = "if (request.method === 'POST' && originalPath === '/subscribe-newsletter') return handleSubscribeNewsletter(request, env);\n      if (request.method === 'GET' && originalPath === '/newsletter-health') return handleNewsletterHealth(env);\n      if (request.method === 'GET' && originalPath === '/unsubscribe-newsletter') return handleUnsubscribeNewsletter(request, env);\n      if (request.method === 'POST' && originalPath === '/send-weekly-newsletter') return handleSendWeeklyNewsletter(request, env);";
+if (!hasNewsletterRoutes) {
+  if (!source.includes(introRoute)) {
+    throw new Error('Could not find intro-voice route insertion point in src/worker.js');
+  }
+  source = source.replace(introRoute, introRoute + '\n      ' + newsletterRouteBlock);
+} else {
+  console.log('Newsletter Worker routes already present; skipping route injection.');
+}
+
 fs.writeFileSync(workerPath, source);
-console.log('Patched Worker with persistent newsletter capture and weekly send endpoints.');
+console.log('Patched Worker with idempotent persistent newsletter capture and weekly send endpoints.');

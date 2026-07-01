@@ -5,6 +5,72 @@ const workerPath = path.join(process.cwd(), 'src', 'worker.js');
 let source = fs.readFileSync(workerPath, 'utf8');
 const marker = 'MATRIX NEWSLETTER SYSTEM';
 
+function findFunctionEnd(text, openBraceIndex) {
+  let depth = 0;
+  let quote = null;
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  for (let i = openBraceIndex; i < text.length; i += 1) {
+    const ch = text[i];
+    const next = text[i + 1];
+    if (lineComment) {
+      if (ch === '\n') lineComment = false;
+      continue;
+    }
+    if (blockComment) {
+      if (ch === '*' && next === '/') { blockComment = false; i += 1; }
+      continue;
+    }
+    if (quote) {
+      if (escaped) { escaped = false; continue; }
+      if (ch === '\\') { escaped = true; continue; }
+      if (ch === quote) quote = null;
+      continue;
+    }
+    if (ch === '/' && next === '/') { lineComment = true; i += 1; continue; }
+    if (ch === '/' && next === '*') { blockComment = true; i += 1; continue; }
+    if (ch === '"' || ch === "'" || ch === '`') { quote = ch; continue; }
+    if (ch === '{') depth += 1;
+    if (ch === '}') {
+      depth -= 1;
+      if (depth === 0) return i + 1;
+    }
+  }
+  return -1;
+}
+
+function removeDuplicateFunctionDeclarations(text, name) {
+  const pattern = new RegExp(`(?:async\\s+)?function\\s+${name}\\s*\\(`, 'g');
+  const ranges = [];
+  let match;
+  while ((match = pattern.exec(text))) {
+    const open = text.indexOf('{', match.index);
+    if (open === -1) continue;
+    const end = findFunctionEnd(text, open);
+    if (end === -1) continue;
+    ranges.push({ start: match.index, end });
+  }
+  if (ranges.length <= 1) return text;
+  let out = text;
+  for (const range of ranges.slice(1).reverse()) {
+    let start = range.start;
+    while (start > 0 && /[ \t]/.test(out[start - 1])) start -= 1;
+    if (start > 0 && out[start - 1] === '\n') start -= 1;
+    let end = range.end;
+    while (end < out.length && /[ \t]/.test(out[end])) end += 1;
+    if (out[end] === '\n') end += 1;
+    out = out.slice(0, start) + out.slice(end);
+  }
+  return out;
+}
+
+function normaliseWorker(text) {
+  return removeDuplicateFunctionDeclarations(text, 'handleNewsletterHealth');
+}
+
+source = normaliseWorker(source);
+
 const hasNewsletterFunctions = /(?:async\s+function\s+handleSubscribeNewsletter|async\s+function\s+handleNewsletterHealth|function\s+validEmail|const\s+handleNewsletterHealth)/.test(source);
 const hasNewsletterRoutes = source.includes("originalPath === '/subscribe-newsletter'") && source.includes("originalPath === '/newsletter-health'");
 
@@ -216,5 +282,6 @@ if (!hasNewsletterRoutes) {
   console.log('Newsletter Worker routes already present; skipping route injection.');
 }
 
+source = normaliseWorker(source);
 fs.writeFileSync(workerPath, source);
-console.log('Patched Worker with idempotent persistent newsletter capture and weekly send endpoints.');
+console.log('Patched Worker with idempotent persistent newsletter capture and weekly send endpoints; duplicate newsletter health handlers removed if found.');

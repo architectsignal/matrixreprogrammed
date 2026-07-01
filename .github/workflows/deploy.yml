@@ -1,34 +1,57 @@
-name: Cloudflare Pages Deployment Guard
+name: Matrix Reprogrammed Production Deploy
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
+concurrency:
+  group: matrixreprogrammed-production
+  cancel-in-progress: false
+
 jobs:
-  explain-native-pages-deploy:
-    name: Use Cloudflare Pages native deployment
+  build-guard-deploy:
+    name: Build, guard, and deploy Worker assets
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
     steps:
-      - name: Deployment guard
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build site and Worker assets
+        run: npm run build
+
+      - name: Production deploy guard
+        run: node scripts/production-deploy-guard.js
+
+      - name: Confirm Cloudflare token is configured
         env:
-          CLOUDFLARE_DEPLOY_HOOK_URL: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
-          echo "Cloudflare Pages native Git integration is the production deploy path."
-          echo "This workflow intentionally does not call deploy hooks on push."
-          echo "Reason: the previous hook target used Workers Builds and caused a bad deploy command."
-          if [ -n "$CLOUDFLARE_DEPLOY_HOOK_URL" ]; then
-            case "$CLOUDFLARE_DEPLOY_HOOK_URL" in
-              *"/workers/builds/deploy_hooks/"*)
-                echo "Secret CLOUDFLARE_DEPLOY_HOOK_URL appears to be a Workers Builds hook, not a Pages hook. Do not use it for Pages deployment."
-                exit 1
-                ;;
-              *"/pages/projects/"*)
-                echo "Secret appears to be a Cloudflare Pages hook. Manual hook usage may be safe."
-                ;;
-              *)
-                echo "Secret is set, but it does not look like a standard Cloudflare Pages deploy hook."
-                exit 1
-                ;;
-            esac
-          else
-            echo "No deploy hook secret set. Native Cloudflare Pages Git deployment should still run from main pushes."
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "CLOUDFLARE_API_TOKEN secret is missing. Build and guards passed, but deployment is blocked."
+            exit 1
           fi
+          echo "Cloudflare API token is configured."
+
+      - name: Deploy to Cloudflare Workers with bundled _site assets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler@latest deploy
+
+      - name: Deployment summary
+        run: |
+          echo "Production deployment completed."
+          echo "Built _site assets, verified no marker leak, verified Amazon fallback, and verified FORUM_POSTS routes before deploy."

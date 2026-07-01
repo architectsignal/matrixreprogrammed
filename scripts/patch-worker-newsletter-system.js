@@ -8,7 +8,7 @@ const marker = 'MATRIX NEWSLETTER SYSTEM';
 const hasNewsletterFunctions = /(?:async\s+function\s+handleSubscribeNewsletter|async\s+function\s+handleNewsletterHealth|function\s+validEmail|const\s+handleNewsletterHealth)/.test(source);
 const hasNewsletterRoutes = source.includes("originalPath === '/subscribe-newsletter'") && source.includes("originalPath === '/newsletter-health'");
 
-const functions = `
+const functions = String.raw`
 // MATRIX NEWSLETTER SYSTEM
 function validEmail(value = '') {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim());

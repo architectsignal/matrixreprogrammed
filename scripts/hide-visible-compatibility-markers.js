@@ -55,7 +55,8 @@ function safeCompatibilityBlock(){
 function removeExistingVault(html){
   return html
     .replace(/\s*<div\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/div>/gi, '')
-    .replace(/\s*<script\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '');
+    .replace(/\s*<script\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/\s*<div\b(?=[^>]*\bclass=["'][^"']*\bcompatibility-markers\b[^"']*["'])[^>]*>[\s\S]*?<\/div>/gi, '');
 }
 
 function removeVisibleMarkerText(html){

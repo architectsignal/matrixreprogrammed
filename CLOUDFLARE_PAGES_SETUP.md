@@ -1,26 +1,46 @@
-# Cloudflare Pages Setup — Matrix Reprogrammed
+# Cloudflare Deployment Setup — Matrix Reprogrammed
 
-This repo is prepared for Cloudflare Pages while keeping Netlify compatibility.
+This repo is configured for the production path that preserves the persistent Signal Board:
 
-## Recommended Cloudflare Pages settings
+- Cloudflare Worker: `src/worker.js`
+- Bundled static assets: `_site`
+- KV persistence binding: `FORUM_POSTS`
+- Production workflow: `.github/workflows/deploy.yml`
 
-Use these settings when creating or editing the Pages project:
+## Production path
 
-- Project type: Pages
-- Connect to Git: `architectsignal/matrixreprogrammed`
-- Production branch: `main`
-- Framework preset: None / Static HTML
-- Build command: `npm run build`
-- Build output directory: `_site`
-- Root directory: `/`
-- Node version: `22`
-- Deploy command: leave blank / remove `npx wrangler deploy`
+Use the guarded GitHub Actions deployment path:
+
+1. Push to `main`.
+2. GitHub Actions runs `npm install --no-audit --no-fund`.
+3. GitHub Actions runs `npm run build`.
+4. The build creates `_site` with deployable public assets only.
+5. GitHub Actions runs `node scripts/production-deploy-guard.js`.
+6. If guards pass, GitHub Actions runs `npx wrangler@latest deploy`.
+
+Required GitHub repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID` if your Cloudflare account setup requires it
+
+The deploy workflow intentionally fails if the Cloudflare API token is missing. A silent non-deploy is worse than a loud failed deploy.
+
+## Forum persistence boundary
+
+The forum must remain on Worker + KV, not a static-only Pages deploy.
+
+Required persistence pieces:
+
+- `wrangler.toml` keeps `binding = "FORUM_POSTS"`.
+- `wrangler.toml` points assets to `./_site`.
+- `src/worker.js` handles `/forum-health`, `/forum-feed-main`, `/forum-feed-speculation`, `/forum-feed-epstein-alive`, `/submit-main-post`, `/submit-speculation-post`, `/submit-epstein-alive-post`, report routes, and forum JSON/Markdown exports.
+- `forum.js` refuses non-persistent saves.
+
+Do not replace the Worker deployment with a static-only Pages deployment unless the forum persistence architecture is rebuilt first.
 
 ## Why `_site` is required
 
-Cloudflare failed when `npx wrangler deploy` tried to upload the whole repository root. That included `node_modules/workerd/bin/workerd`, a 121 MiB binary, which exceeds Cloudflare's 25 MiB per-asset limit.
-
-The build now ends with:
+Cloudflare failed when deploy tooling tried to upload the whole repository root. That included large tooling files and non-public source folders. The safe build ends with:
 
 ```bash
 node scripts/build-cloudflare-output.js
@@ -35,39 +55,23 @@ That script copies only deployable site files into `_site` and excludes:
 - `netlify`
 - package/build tooling files
 
-## Files added for Cloudflare
+## Guarded deploy checks
 
-- `_redirects` — Cloudflare route map converted from Netlify redirects.
-- `_headers` — Cloudflare headers for security and downloadable files.
-- `wrangler.jsonc` — fallback config pointing Wrangler assets at `_site`, not repo root.
-- `scripts/build-cloudflare-output.js` — creates the safe `_site` output folder.
+`node scripts/production-deploy-guard.js` blocks deployment if any of these fail:
 
-Cloudflare Pages reads `_redirects` and `_headers` from the published output directory. The build output script copies them into `_site`.
+- homepage or Amazon Store still leak old compatibility marker text
+- Amazon Store fallback catalogue is missing
+- Amazon catalogue JSON is missing or too small
+- `_site` deploy output is incomplete
+- Worker-first asset mode is missing
+- `FORUM_POSTS` KV binding is missing
+- persistent forum feed/submit/report routes are missing
+- `_site/_redirects` is present, which breaks Worker asset deployment validation
 
-## Weekly updates
+## Netlify compatibility
 
-The weekly Live Intel workflow remains in GitHub Actions. The intended flow is:
-
-1. GitHub Action scans weekly.
-2. It updates `data/live-intel.json` only if meaningful items change.
-3. It commits changed data/reports.
-4. Cloudflare Pages rebuilds from GitHub.
-
-This avoids constant deploys.
-
-## Migration checklist
-
-After connecting Cloudflare Pages:
-
-1. Confirm the Pages deploy succeeds.
-2. Open `/live-intel`, `/epstein`, `/books`, `/amazon-store`, `/rss`, `/download-center`, `/evidence-vault`, and `/search`.
-3. Confirm JSON/Markdown/PDF downloads keep the correct content type.
-4. Add the custom domain in Cloudflare Pages.
-5. Keep Netlify as backup until Cloudflare has passed a full smoke test.
-
-## Important boundaries
+Netlify files may remain as backup, but production for the live forum-backed site should be Worker + assets + KV.
 
 - Netlify uses `netlify.toml`.
-- Cloudflare Pages uses `_redirects` and `_headers`.
-- Keep both while running both platforms.
+- Cloudflare Worker deployment uses `wrangler.toml` and `_site`.
 - Do not put Cloudflare API tokens directly into this repo.

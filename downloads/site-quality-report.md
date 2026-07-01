@@ -2,11 +2,11 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 313
+Scanned pages: 318
 Weak pages: 11
 
 ## Weakest Pages
-- 45/100 — book-masons-in-the-united-nations.html: Thin copy: 12 visible words; Missing evidence route; Missing Rumble/video route; Missing free brief/opt-in route
+- 37/100 — book-masons-in-the-united-nations.html: Thin copy: 27 visible words; Missing evidence route; Missing Rumble/video route; Missing free brief/opt-in route
 - 45/100 — newsletter.html: Thin copy: 67 visible words; Missing evidence route; Missing book/store route; Missing Rumble/video route
 - 68/100 — claim-classifier.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — dark-speculation-forum.html: Missing evidence route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
@@ -33,6 +33,7 @@ Weak pages: 11
 - 84/100 — authority-war-machine.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — deploy-status.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — distribution-articles.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — distribution-longform-video.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — distribution-newsletter.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
@@ -60,12 +61,11 @@ Weak pages: 11
 - 84/100 — sales-ladder.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — schema-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — search.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — source-card-index.html: Thin copy: 140 visible words; Intel/evidence page missing Live Intel route
+- 84/100 — source-card-index.html: Thin copy: 155 visible words; Intel/evidence page missing Live Intel route
 - 84/100 — source-cards.html: Missing Rumble/video route; Intel/evidence page missing Live Intel route
 - 84/100 — start-here.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — trust-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — update-monitor.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 92/100 — amazon-store-books.html: Visible scaffold/internal copy: /Reader path/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

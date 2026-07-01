@@ -1,10 +1,11 @@
 {
-  "updated": "2026-06-29",
+  "updated": "2026-07-01",
   "mode": "public-signal-seed",
-  "notice": "Public Signal Board starter post.",
+  "notice": "Public Signal Board starter post. Live posting requires Cloudflare KV persistence.",
   "posts": [
     {
       "id": "seed-forum-public-source-drop",
+      "board": "main",
       "category": "Source Drop",
       "name": "Matrix Reprogrammed",
       "title": "Post a source, not a rumour",

@@ -1,9 +1,20 @@
 {
-  "updated": "2026-06-26",
-  "liveIntelUpdated": "2026-06-29T09:18:58.329Z",
+  "updated": "2026-06-30",
+  "weeklyCadence": {
+    "label": "Weekly Pack Refresh",
+    "rule": "Every pack must be rebuilt weekly from latest-public-drops, live-intel, intel-vault, source files, book routes, and filtered forum exports. Active news links must stay source-labelled and expired links must move to the vault.",
+    "freshWindowDays": 7,
+    "archiveRoute": "intel-vault.html",
+    "latestDropsRoute": "downloads/latest-public-drops.json"
+  },
+  "liveIntelUpdated": "2026-07-01T08:32:52.326Z",
+  "latestDropsUpdated": "2026-06-29T08:05:00.000Z",
+  "intelVaultUpdated": "2026-07-01T08:32:52.326Z",
   "title": "Symbolic Power Pack",
   "label": "D.O.G / esoteric pack",
-  "summary": "A briefing pack for symbols, esoteric interpretation, D.O.G routes, Masonic architecture, and evidence boundaries.",
+  "summary": "A briefing pack for symbols, esoteric interpretation, D.O.G routes, Masonic architecture, occult motifs, dark speculation boundaries, and evidence discipline.",
+  "weeklyMission": "Track symbolic and esoteric narratives without confusing symbol reading with proof: symbols, ritual claims, elite aesthetics, media motifs, and D.O.G book routes.",
+  "brandLine": "Symbols matter. But a symbol is not a court record.",
   "boundary": "A dossier pack is an orientation bundle. It does not prove guilt, causation, intent, control, or criminal conduct.",
   "brandedPdfRoute": "downloads/dossier-pack-symbolic-power.pdf",
   "relevanceKeywords": [
@@ -17,7 +28,50 @@
     "degree",
     "architecture",
     "cipher",
-    "plate"
+    "plate",
+    "ritual",
+    "blue beam",
+    "adrenochrome",
+    "pizzagate"
+  ],
+  "subjectMap": [
+    "symbolic interpretation",
+    "Masonic architecture",
+    "D.O.G routes",
+    "occult motif lanes",
+    "dark speculation",
+    "claim labels",
+    "evidence boundary"
+  ],
+  "weeklyWatch": [
+    "symbolic/occult media claims",
+    "dark speculation drops",
+    "claim-history updates",
+    "debunk/counter-source releases",
+    "new D.O.G book routes",
+    "forum source drops"
+  ],
+  "evidenceUpgradePath": [
+    "primary text",
+    "dated public source",
+    "archive image with provenance",
+    "court or official record",
+    "reputable counter-source",
+    "claim classifier result"
+  ],
+  "contentAngles": [
+    "Symbol vs source",
+    "Claim-history vs proof",
+    "D.O.G path into books",
+    "How dark speculation stays legally safe"
+  ],
+  "bookRoutes": [
+    "book-symbol.html",
+    "book-as-above-so-below.html",
+    "book-masonic-architecture-33.html",
+    "book-degree-33.html",
+    "books.html",
+    "amazon-store-books.html"
   ],
   "trustRoute": "trust-claim-labels.html",
   "evidenceRoute": "answer-evidence-boundary.html",
@@ -26,28 +80,28 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=symbolic-power",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=symbolic-power",
   "liveIntelWindow": {
-    "updated": "2026-06-29T09:18:58.329Z",
-    "itemCount": 8,
+    "updated": "2026-07-01T08:32:52.326Z",
+    "itemCount": 12,
     "items": [
       {
-        "id": "epstein-files-2026-06-28-maxwell-says-archives-prove-her-conviction-was-built-on-a-lie-the-mary",
+        "id": "epstein-files-2026-06-30-doug-band-former-aide-to-bill-clinton-repeatedly-tells-panel-he-cannot",
         "lane": "epstein-files",
         "laneTitle": "Google News / Epstein timeline and files",
         "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
-        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWU8waTFzVThGcThkX1ZXTjBJdDRmemhxSHlKWmc0VlBGODk1bUhLSndvRE55YmsyQklKM1F1Rnk4b01pQm84NVZzSXZBbXRDOWgyZTlDdTlzMVZfa1ZXUDNsSmJ3T0FFSzJ5SHZINElJTktmbkhzZHpNX3c0TVpKWEI4eEIyLTZQSE4zMW1jQU94R2xETGhmSVAwejBYN0Fjak9TTjZOajk3YzBRcF9NNHVFY2FNbHBLei1Cb1J0UnlFMExIdWhQc2dneGpBdU9CTUlUaC15R0cxaVBWcjByc3pxZ091WVlZaE1mQUVfX2N2YzluYkdz?oc=5",
-        "published": "2026-06-28T22:00:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie The Mary Sue",
+        "title": "Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5",
+        "published": "2026-06-30T19:12:53.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources ABC News - Breaking News, Latest News and Videos",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
+        "videoHook": "New Epstein file lane: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with",
         "socialThread": [
-          "1/ Fresh epstein-files lead: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
+          "1/ Fresh epstein-files lead: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -57,27 +111,289 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
-        "id": "epstein-files-2026-06-27-new-emails-claim-sarah-ferguson-visited-jeffrey-epstein-in-jail-numero",
+        "id": "epstein-files-2026-06-30-doug-band-former-aide-to-bill-clinton-to-be-questioned-about-clinton-s",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5",
+        "published": "2026-06-30T15:40:24.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein Rural Radio Network",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-25-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
+        "published": "2026-06-25T23:09:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out CBS News",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Judge orders DOJ to either unredact more Epstein files or explain why th",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-25-rep-tom-emmer-highlights-house-oversight-work-unless-it-involves-epste",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5",
+        "published": "2026-06-25T17:57:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein Civic Media",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Rep. Tom Emmer highlights House Oversight work, unless it involves Epste",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-04-bondi-invoked-privilege-declined-to-answer-questions-about-interaction",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein files - ABC News - Breaking News, Latest News and Videos",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRmcybHZxZkVSQndxMEhGMUZtZFc0Y3hIZ3FudGtaTlkxcXFZbWtySkxpbC1LNTdCQ1E2RHZzdi1Oc0ZKOW84bXBjNGRYZHNacnJIa0pkSDhINU5QTFR3OXhDSjJlcWhpMnNnZkpJMmNYbU5vQlpaZlJvc09fWHMtMHIyUkNfcE5ad04tSVcyN3VoSE1OUHV6RmE3RmNpWUtwNVNXSVB4VEJyd05ZLURIWlVlekFYdlHSAbwBQVVfeXFMTTJLNWV5WkhvRmRUN3MwQmJFVjZMcUhhdlZidFdXV2xaNHNBZjlEM0lXRDQ1b3hrb3kxTll3ZmFZNWp6YzBPMjdXNGlrTE1KQkYxNHdtS1g1U0ItYUI5WEQ1NW1qUV96b2NpNU00cy11LWVxVlBkOWVVNTJnemk2RGdURGRIRnBxaWRKLXB6NUw1d0ozb3lYeGdpODkyZnlaa1lVb0NjemdscFNsZnlIcXNuZGhWUVE0VGhVRDg?oc=5",
+        "published": "2026-06-04T07:00:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein files ABC News - Breaking News, Latest News and Videos",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein files - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Bondi invoked privilege, declined to answer questions about interactions",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein files - ABC News - Breaking News, Latest News and Videos",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-07-01T08:32:52.326Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
+      },
+      {
+        "id": "epstein-files-2026-06-04-house-oversight-releases-transcribed-interview-with-epstein-s-former-a",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRjZjb1RtWUJlNE1tZ0ltODgySDF2aHNmS2F6ZlZuSFZaaF84UjA5cW1ZWUFIaGdXbVQ5bGU1WFRWbzBWdE8zMW5YMkJSaTVPbUNfeWpSU1V3WWN0aG9lLUpZZUtva1BTRUNiVERVdy13SUJLOU1RQzA3Tmk0OVRLR1FRQlBCd0VVSGZUWm1KWXhwUVJCejI5WXQtX0NGQlBVZlA4?oc=5",
+        "published": "2026-06-04T07:00:00.000Z",
+        "fetchedAt": "2026-06-29T09:18:58.329Z",
+        "summary": "House Oversight releases transcribed interview with Epstein’s former assistant MS NOW",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "House Oversight releases transcribed interview with Epstein’s former ass",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-06-29T09:18:58.329Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
+      },
+      {
+        "id": "epstein-files-2026-07-01-former-clinton-aide-appears-before-house-panel-in-epstein-investigatio",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5",
+        "published": "2026-07-01T04:51:33.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Former Clinton aide appears before House panel in Epstein investigation Scripps News",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Former Clinton aide appears before House panel in Epstein investigation - Scripps News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Former Clinton aide appears before House panel in Epstein investigation",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-30-what-the-epstein-files-say-about-former-bill-clinton-aide-doug-band-ne",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5",
+        "published": "2026-06-30T20:41:52.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "What the Epstein files say about former Bill Clinton aide Doug Band NewsNation",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "What the Epstein files say about former Bill Clinton aide Doug Band - Ne",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-30-longtime-clinton-aide-walks-back-claim-former-president-visited-epstei",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI",
+        "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5",
+        "published": "2026-06-30T16:53:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Longtime Clinton aide walks back claim former president visited Epstein",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZ",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-30-new-mexico-panel-releases-subpoena-for-sc-records-on-jeffrey-epstein-i",
         "lane": "epstein-files",
         "laneTitle": "Google News / Epstein sighting and alive claims",
         "sourceLabel": "Google News / Epstein sighting and alive claims",
-        "title": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUppX2loVjJieGdzcmN2X3psVG5aUVpSRjFUVE5QLTE1OUdMNmpSVHVkSDBhMUVRcUpBeW10MmRpTTlxM29lY3NEMmU0clRGUjYxMEtKYXRCZ0I0SjFWT3JOYlJ2VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5",
-        "published": "2026-06-27T19:28:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times SheKnows",
+        "title": "New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5",
+        "published": "2026-06-30T15:25:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations Post and Courier",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous",
-        "rumbleLongTitle": "Google News / Epstein sighting and alive claims — New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
+        "videoHook": "New Epstein file lane: New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "New Mexico panel releases subpoena for SC records on Jeffrey Epstein inv",
+        "rumbleLongTitle": "Google News / Epstein sighting and alive claims — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post",
         "socialThread": [
-          "1/ Fresh epstein-files lead: New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
+          "1/ Fresh epstein-files lead: New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -87,27 +403,29 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
-        "id": "epstein-files-2026-06-27-why-did-billionaire-leon-black-walk-out-of-the-epstein-hearing-latest-",
+        "id": "epstein-files-2026-06-30-clinton-confidant-who-called-maxwell-his-lover-grilled-by-congress-ove",
         "lane": "epstein-files",
         "laneTitle": "Google News / Epstein timeline and files",
         "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5",
-        "published": "2026-06-27T19:21:27.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Why did billionaire Leon Black walk out of the Epstein hearing? Latest news from Azerbaijan",
+        "title": "Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5",
+        "published": "2026-06-30T10:00:15.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties Fox News",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
+        "videoHook": "New Epstein file lane: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Clinton confidant who called Maxwell his 'lover' grilled by Congress ove",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News",
         "socialThread": [
-          "1/ Fresh epstein-files lead: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
+          "1/ Fresh epstein-files lead: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -117,67 +435,9 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "declassified-files-2026-06-27-moldova-publishes-declassified-soviet-deportation-lists-from-1941-mold",
-        "lane": "declassified-files",
-        "laneTitle": "Google News / declassified files",
-        "sourceLabel": "Google News / declassified files",
-        "title": "Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-        "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5",
-        "published": "2026-06-27T17:40:21.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1",
-        "evidenceLevel": "Seven-day public-record lead",
-        "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New archive lane: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1. A released file is the start of the investigation, not the final verdict.",
-        "rumbleShortTitle": "Moldova publishes declassified Soviet deportation lists from 1941 - Mold",
-        "rumbleLongTitle": "Google News / declassified files — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-        "socialThread": [
-          "1/ Fresh declassified-files lead: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-27-billionaire-leon-black-walks-out-of-epstein-investigation-hearing-bbc",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5",
-        "published": "2026-06-27T03:00:04.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Billionaire Leon Black walks out of Epstein investigation hearing BBC",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Billionaire Leon Black walks out of Epstein investigation hearing - BBC. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
@@ -187,7 +447,7 @@
         "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
         "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
         "published": "2026-06-26T21:00:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
         "summary": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee The Center Square",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
@@ -207,67 +467,9 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-26-who-are-the-25-men-hiding-behind-secret-epstein-victim-settlements-the",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5",
-        "published": "2026-06-26T20:41:17.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? The Epstein Files by Julie K. Brown",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - Th",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "control-system-2026-06-26-kenya-considers-linking-national-id-database-to-cctv-facial-recognitio",
-        "lane": "control-system",
-        "laneTitle": "Google News / control structure",
-        "sourceLabel": "Google News / control structure",
-        "title": "Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5",
-        "published": "2026-06-26T19:59:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Kenya considers linking national ID database to CCTV facial recognition network Biometric Update",
-        "evidenceLevel": "Seven-day public-record lead",
-        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New seven-day intelligence lane: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update. Open the source first, then follow the evidence route.",
-        "rumbleShortTitle": "Kenya considers linking national ID database to CCTV facial recognition",
-        "rumbleLongTitle": "Google News / control structure — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
-        "socialThread": [
-          "1/ Fresh control-system lead: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "control-system-tracker.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "books.html",
-        "offerRoute": "offer-center.html",
-        "optinRoute": "optin-full-archive-map.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       }
     ]
   },
@@ -305,7 +507,7 @@
     {
       "title": "trust editorial standards",
       "route": "trust-editorial-standards.html",
-      "kind": "Source route"
+      "kind": "Trust route"
     },
     {
       "title": "answer evidence boundary",
@@ -313,44 +515,104 @@
       "kind": "Evidence route"
     },
     {
-      "title": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
-      "route": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWU8waTFzVThGcThkX1ZXTjBJdDRmemhxSHlKWmc0VlBGODk1bUhLSndvRE55YmsyQklKM1F1Rnk4b01pQm84NVZzSXZBbXRDOWgyZTlDdTlzMVZfa1ZXUDNsSmJ3T0FFSzJ5SHZINElJTktmbkhzZHpNX3c0TVpKWEI4eEIyLTZQSE4zMW1jQU94R2xETGhmSVAwejBYN0Fjak9TTjZOajk3YzBRcF9NNHVFY2FNbHBLei1Cb1J0UnlFMExIdWhQc2dneGpBdU9CTUlUaC15R0cxaVBWcjByc3pxZ091WVlZaE1mQUVfX2N2YzluYkdz?oc=5",
+      "title": "dark speculation lab",
+      "route": "dark-speculation-lab.html",
+      "kind": "Source route"
+    },
+    {
+      "title": "claim classifier",
+      "route": "claim-classifier.html",
+      "kind": "Source route"
+    },
+    {
+      "title": "book symbol",
+      "route": "book-symbol.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book as above so below",
+      "route": "book-as-above-so-below.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book masonic architecture 33",
+      "route": "book-masonic-architecture-33.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book degree 33",
+      "route": "book-degree-33.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "books",
+      "route": "books.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "amazon store books",
+      "route": "amazon-store-books.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos",
+      "route": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5",
       "kind": "Google News / Epstein timeline and files"
     },
     {
-      "title": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-      "route": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUppX2loVjJieGdzcmN2X3psVG5aUVpSRjFUVE5QLTE1OUdMNmpSVHVkSDBhMUVRcUpBeW10MmRpTTlxM29lY3NEMmU0clRGUjYxMEtKYXRCZ0I0SjFWT3JOYlJ2VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5",
+      "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+      "route": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
+      "route": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media",
+      "route": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Bondi invoked privilege, declined to answer questions about interactions with Trump about Epstein files - ABC News - Breaking News, Latest News and Videos",
+      "route": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRmcybHZxZkVSQndxMEhGMUZtZFc0Y3hIZ3FudGtaTlkxcXFZbWtySkxpbC1LNTdCQ1E2RHZzdi1Oc0ZKOW84bXBjNGRYZHNacnJIa0pkSDhINU5QTFR3OXhDSjJlcWhpMnNnZkpJMmNYbU5vQlpaZlJvc09fWHMtMHIyUkNfcE5ad04tSVcyN3VoSE1OUHV6RmE3RmNpWUtwNVNXSVB4VEJyd05ZLURIWlVlekFYdlHSAbwBQVVfeXFMTTJLNWV5WkhvRmRUN3MwQmJFVjZMcUhhdlZidFdXV2xaNHNBZjlEM0lXRDQ1b3hrb3kxTll3ZmFZNWp6YzBPMjdXNGlrTE1KQkYxNHdtS1g1U0ItYUI5WEQ1NW1qUV96b2NpNU00cy11LWVxVlBkOWVVNTJnemk2RGdURGRIRnBxaWRKLXB6NUw1d0ozb3lYeGdpODkyZnlaa1lVb0NjemdscFNsZnlIcXNuZGhWUVE0VGhVRDg?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW",
+      "route": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRjZjb1RtWUJlNE1tZ0ltODgySDF2aHNmS2F6ZlZuSFZaaF84UjA5cW1ZWUFIaGdXbVQ5bGU1WFRWbzBWdE8zMW5YMkJSaTVPbUNfeWpSU1V3WWN0aG9lLUpZZUtva1BTRUNiVERVdy13SUJLOU1RQzA3Tmk0OVRLR1FRQlBCd0VVSGZUWm1KWXhwUVJCejI5WXQtX0NGQlBVZlA4?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+      "route": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation",
+      "route": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI",
+      "route": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier",
+      "route": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5",
       "kind": "Google News / Epstein sighting and alive claims"
     },
     {
-      "title": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
-      "route": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-      "route": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5",
-      "kind": "Google News / declassified files"
-    },
-    {
-      "title": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-      "route": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5",
+      "title": "Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News",
+      "route": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5",
       "kind": "Google News / Epstein timeline and files"
     },
     {
       "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
       "route": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
       "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-      "route": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
-      "route": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5",
-      "kind": "Google News / control structure"
     }
   ],
   "routes": [
@@ -361,13 +623,16 @@
     "book-degree-33.html",
     "source-cards.html",
     "trust-editorial-standards.html",
-    "answer-evidence-boundary.html"
+    "answer-evidence-boundary.html",
+    "dark-speculation-lab.html",
+    "claim-classifier.html"
   ],
   "takeaways": [
     "A symbol is not proof of a crime.",
     "Symbolic commentary must stay labeled.",
     "D.O.G readers should start with the path page.",
-    "The book route carries the deeper symbolic structure."
+    "The book route carries the deeper symbolic structure.",
+    "Extreme claims must stay in claim-history, motif, hypothesis, or debunk lane unless records upgrade them."
   ],
   "downloadIncludes": [
     "branded PDF mini book",
@@ -376,7 +641,9 @@
     "reader path",
     "source files",
     "latest intelligence window",
+    "weekly source watch",
     "forum posts export",
-    "book/store route"
+    "book/store route",
+    "evidence upgrade path"
   ]
 }

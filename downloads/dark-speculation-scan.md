@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-06-29T09:19:02.408Z
+Updated: 2026-07-01T08:32:54.255Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -22,7 +22,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Global Governance
 - Label: control-system hypothesis
-- Matches: 1
+- Matches: 3
 - Boundary: International cooperation is not automatically world government. Track enforceability, funding conditions, domestic mandates, and loss of local opt-out.
 
 ## Digital ID as the permission layer
@@ -43,7 +43,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Climate
 - Label: control-system hypothesis
-- Matches: 1
+- Matches: 4
 - Boundary: Climate policy critique is not proof of planned imprisonment. Track mandates, enforcement, financial pressure, opt-out and mobility restrictions.
 
 ## War and crisis as control-system accelerator
@@ -71,14 +71,14 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Elite / Ritual / Child-Harm
 - Label: unsupported extreme allegation
-- Matches: 4
+- Matches: 7
 - Boundary: Do not treat rumour, symbol, or association as evidence of child harm.
 
 ## Elites eating children
 
 - Category: Elite / Ritual / Child-Harm
 - Label: internet mythology
-- Matches: 6
+- Matches: 7
 - Boundary: Extreme internet horror motif unless case-specific evidence exists.
 
 ## Adrenochrome harvesting
@@ -120,7 +120,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 0
+- Matches: 7
 - Boundary: Do not convert ancient-name symbolism into factual accusation.
 
 ## Saturn worship / black cube control system
@@ -197,21 +197,21 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Mind Control
 - Label: internet mythology
-- Matches: 1
+- Matches: 3
 - Boundary: Requires careful sourcing; do not present internet lore as confirmed.
 
 ## Predictive programming
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 2
+- Matches: 1
 - Boundary: Fiction resembling events does not prove foreknowledge.
 
 ## Music industry occult programming
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 2
+- Matches: 4
 - Boundary: Aesthetic symbolism is not proof of ritual control.
 
 ## Social media as behavioural control grid
@@ -225,21 +225,21 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Tech / Psyops
 - Label: internet mythology
-- Matches: 2
+- Matches: 3
 - Boundary: Patents or concepts do not prove mass deployment.
 
 ## Project Blue Beam fake alien invasion
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 2
+- Matches: 1
 - Boundary: Track as a classic narrative unless direct documents are found.
 
 ## Fake messiah hologram event
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 4
+- Matches: 6
 - Boundary: Do not present as planned event without primary evidence.
 
 ## Staged UFO disclosure as control event
@@ -281,7 +281,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Modern Slavery
 - Label: case-specific evidence required
-- Matches: 6
+- Matches: 8
 - Boundary: Needs case-level sources and careful language.
 
 ## Population reduction agendas

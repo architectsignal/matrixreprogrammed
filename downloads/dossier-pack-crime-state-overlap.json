@@ -1,9 +1,20 @@
 {
-  "updated": "2026-06-26",
-  "liveIntelUpdated": "2026-06-29T09:18:58.329Z",
+  "updated": "2026-06-30",
+  "weeklyCadence": {
+    "label": "Weekly Pack Refresh",
+    "rule": "Every pack must be rebuilt weekly from latest-public-drops, live-intel, intel-vault, source files, book routes, and filtered forum exports. Active news links must stay source-labelled and expired links must move to the vault.",
+    "freshWindowDays": 7,
+    "archiveRoute": "intel-vault.html",
+    "latestDropsRoute": "downloads/latest-public-drops.json"
+  },
+  "liveIntelUpdated": "2026-07-01T08:32:52.326Z",
+  "latestDropsUpdated": "2026-06-29T08:05:00.000Z",
+  "intelVaultUpdated": "2026-07-01T08:32:52.326Z",
   "title": "Crime-State Overlap Pack",
   "label": "Crime / corruption pack",
-  "summary": "A briefing pack for cartels, mafia logistics, sanctions, court records, ports, laundering, and corruption overlap.",
+  "summary": "A briefing pack for cartels, mafia logistics, sanctions, court records, ports, laundering, banks, shell companies, and corruption overlap.",
+  "weeklyMission": "Track the public-record overlap between crime networks, logistics, finance, sanctions, public contracts, port corridors, and institutional failure.",
+  "brandLine": "Follow logistics and money. Street violence is only the visible surface.",
   "boundary": "A dossier pack is an orientation bundle. It does not prove guilt, causation, intent, control, or criminal conduct.",
   "brandedPdfRoute": "downloads/dossier-pack-crime-state-overlap.pdf",
   "relevanceKeywords": [
@@ -17,7 +28,51 @@
     "laundering",
     "ports",
     "corruption",
-    "logistics"
+    "logistics",
+    "banking",
+    "shell company",
+    "customs"
+  ],
+  "subjectMap": [
+    "court records",
+    "sanctions",
+    "ports and logistics",
+    "laundering",
+    "public contract exposure",
+    "financial institutions",
+    "crime-state boundary"
+  ],
+  "weeklyWatch": [
+    "indictments",
+    "sanctions designations",
+    "port seizures",
+    "banking settlements",
+    "customs cases",
+    "procurement scandal",
+    "asset forfeiture"
+  ],
+  "evidenceUpgradePath": [
+    "indictment",
+    "conviction",
+    "sanctions notice",
+    "court exhibit",
+    "asset forfeiture filing",
+    "bank settlement",
+    "public procurement record"
+  ],
+  "contentAngles": [
+    "Logistics before headlines",
+    "Indictment vs conviction",
+    "How money moves",
+    "Which crime dossier explains the system?"
+  ],
+  "bookRoutes": [
+    "book-cartels.html",
+    "book-albanian-mafia.html",
+    "book-ndrangheta.html",
+    "book-triad.html",
+    "books.html",
+    "amazon-store-books.html"
   ],
   "trustRoute": "trust-association-boundary.html",
   "evidenceRoute": "evidence-lane-court-records.html",
@@ -26,28 +81,162 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=crime-state-overlap",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=crime-state-overlap",
   "liveIntelWindow": {
-    "updated": "2026-06-29T09:18:58.329Z",
-    "itemCount": 8,
+    "updated": "2026-07-01T08:32:52.326Z",
+    "itemCount": 12,
     "items": [
       {
-        "id": "epstein-files-2026-06-28-maxwell-says-archives-prove-her-conviction-was-built-on-a-lie-the-mary",
+        "id": "crime-state-overlap-2026-06-26-cartels-law-enforcement-and-counternarcotics-dr-john-p-sullivan-of-sma",
+        "lane": "crime-state-overlap",
+        "laneTitle": "Google News / crime state overlap",
+        "sourceLabel": "Google News / crime state overlap",
+        "title": "Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5",
+        "published": "2026-06-26T09:34:08.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal Small Wars Journal",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New crime-network lane: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal. Separate indictment, conviction, sanction, reporting, and association.",
+        "rumbleShortTitle": "Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of",
+        "rumbleLongTitle": "Google News / crime state overlap — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars",
+        "socialThread": [
+          "1/ Fresh crime-state-overlap lead: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "network-maps.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-crime-dossiers.html",
+        "offerRoute": "offer-crime-dossiers.html",
+        "optinRoute": "optin-crime-network-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "crime-state-overlap-2026-06-09-alex-saab-profile-insight-crime",
+        "lane": "crime-state-overlap",
+        "laneTitle": "Google News / crime state overlap",
+        "sourceLabel": "Google News / crime state overlap",
+        "title": "Alex Saab Profile - InSight Crime",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFVHS0drbUZRQldmUUlwOERGUzlyaTFCeEJJZVFVWDY5X2kyTERZdW9fbUVRMGpJLUhpRENVWTdOVkN2RTZtNDRsbzRtNVRFR2kzazUwSzVqZF9qOEtvdTR5TUpBdnp5Z1k1blpwLWdOUW5RbW40?oc=5",
+        "published": "2026-06-09T07:00:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Alex Saab Profile InSight Crime",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New crime-network lane: Alex Saab Profile - InSight Crime. Separate indictment, conviction, sanction, reporting, and association.",
+        "rumbleShortTitle": "Alex Saab Profile - InSight Crime",
+        "rumbleLongTitle": "Google News / crime state overlap — Alex Saab Profile - InSight Crime",
+        "socialThread": [
+          "1/ Fresh crime-state-overlap lead: Alex Saab Profile - InSight Crime",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "network-maps.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-crime-dossiers.html",
+        "offerRoute": "offer-crime-dossiers.html",
+        "optinRoute": "optin-crime-network-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-07-01T08:32:52.326Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
+      },
+      {
+        "id": "crime-state-overlap-2026-05-28-task-force-investigation-prompts-indictment-of-five-suspected-human-tr",
+        "lane": "crime-state-overlap",
+        "laneTitle": "Google News / crime state overlap",
+        "sourceLabel": "Google News / crime state overlap",
+        "title": "Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers - Ohio Attorney General (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRGxSVmplSDAwdy00bkU5aUtvc0VQcXZhVW1wd1hFaE9uQTlZdU1KNmNMc0tUTXlVRWNfc0s1RkZwZGc4M1JyYUlZZWlOd2t4UHZhSVBmWXN1N1JlUFJZcHVDZE9wNGgzXzNDZkN0aFJZb0JUd0NYNy1vYlBBWDZtOXBHem5PeHQxNzZBZldJU25IUlRVQnV1WUFGY2ZrTnNWNVoxVjVYZ21GM1c2dHEyTHlQMEhYZw?oc=5",
+        "published": "2026-05-28T07:00:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers Ohio Attorney General (.gov)",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New crime-network lane: Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers - Ohio Attorney General (.gov). Separate indictment, conviction, sanction, reporting, and association.",
+        "rumbleShortTitle": "Task Force Investigation Prompts Indictment of Five Suspected Human Traf",
+        "rumbleLongTitle": "Google News / crime state overlap — Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers - Ohio Attorney General",
+        "socialThread": [
+          "1/ Fresh crime-state-overlap lead: Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers - Ohio Attorney General (.gov)",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "network-maps.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-crime-dossiers.html",
+        "offerRoute": "offer-crime-dossiers.html",
+        "optinRoute": "optin-crime-network-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-07-01T08:32:52.326Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
+      },
+      {
+        "id": "crime-state-overlap-2026-05-26-the-most-notorious-mexican-officials-accused-of-organized-crime-insigh",
+        "lane": "crime-state-overlap",
+        "laneTitle": "Google News / crime state overlap",
+        "sourceLabel": "Google News / crime state overlap",
+        "title": "The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmJvM3VfTTExanlweklIeEd2b3pJQTR5Nkc5ejRIWGFuWmN3b2pyOTB3MllBdjk1ZXZtRFRhOUNpME9fb3drRHlXZzVMQkVxR0tvVUUwMlJHSU5CUURZQUlpNUp6WWdNd0xrczdCRkZTZ0lwUXVpeUtjaTBBbDQ0Q3JOcVczbDZyX3lCMm5jNA?oc=5",
+        "published": "2026-05-26T07:00:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "The Most Notorious Mexican Officials Accused of Organized Crime InSight Crime",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New crime-network lane: The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime. Separate indictment, conviction, sanction, reporting, and association.",
+        "rumbleShortTitle": "The Most Notorious Mexican Officials Accused of Organized Crime - InSigh",
+        "rumbleLongTitle": "Google News / crime state overlap — The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime",
+        "socialThread": [
+          "1/ Fresh crime-state-overlap lead: The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "network-maps.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-crime-dossiers.html",
+        "offerRoute": "offer-crime-dossiers.html",
+        "optinRoute": "optin-crime-network-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-07-01T08:32:52.326Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
+      },
+      {
+        "id": "epstein-files-2026-06-25-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
         "lane": "epstein-files",
         "laneTitle": "Google News / Epstein timeline and files",
         "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
-        "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWU8waTFzVThGcThkX1ZXTjBJdDRmemhxSHlKWmc0VlBGODk1bUhLSndvRE55YmsyQklKM1F1Rnk4b01pQm84NVZzSXZBbXRDOWgyZTlDdTlzMVZfa1ZXUDNsSmJ3T0FFSzJ5SHZINElJTktmbkhzZHpNX3c0TVpKWEI4eEIyLTZQSE4zMW1jQU94R2xETGhmSVAwejBYN0Fjak9TTjZOajk3YzBRcF9NNHVFY2FNbHBLei1Cb1J0UnlFMExIdWhQc2dneGpBdU9CTUlUaC15R0cxaVBWcjByc3pxZ091WVlZaE1mQUVfX2N2YzluYkdz?oc=5",
-        "published": "2026-06-28T22:00:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie The Mary Sue",
+        "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
+        "published": "2026-06-25T23:09:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out CBS News",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
+        "videoHook": "New Epstein file lane: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Judge orders DOJ to either unredact more Epstein files or explain why th",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out",
         "socialThread": [
-          "1/ Fresh epstein-files lead: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
+          "1/ Fresh epstein-files lead: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -57,57 +246,29 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
-        "id": "epstein-files-2026-06-27-new-emails-claim-sarah-ferguson-visited-jeffrey-epstein-in-jail-numero",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein sighting and alive claims",
-        "sourceLabel": "Google News / Epstein sighting and alive claims",
-        "title": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUppX2loVjJieGdzcmN2X3psVG5aUVpSRjFUVE5QLTE1OUdMNmpSVHVkSDBhMUVRcUpBeW10MmRpTTlxM29lY3NEMmU0clRGUjYxMEtKYXRCZ0I0SjFWT3JOYlJ2VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5",
-        "published": "2026-06-27T19:28:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times SheKnows",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous",
-        "rumbleLongTitle": "Google News / Epstein sighting and alive claims — New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-27-why-did-billionaire-leon-black-walk-out-of-the-epstein-hearing-latest-",
+        "id": "epstein-files-2026-07-01-former-clinton-aide-appears-before-house-panel-in-epstein-investigatio",
         "lane": "epstein-files",
         "laneTitle": "Google News / Epstein timeline and files",
         "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5",
-        "published": "2026-06-27T19:21:27.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Why did billionaire Leon Black walk out of the Epstein hearing? Latest news from Azerbaijan",
+        "title": "Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5",
+        "published": "2026-07-01T04:51:33.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Former Clinton aide appears before House panel in Epstein investigation Scripps News",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
+        "videoHook": "New Epstein file lane: Former Clinton aide appears before House panel in Epstein investigation - Scripps News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Former Clinton aide appears before House panel in Epstein investigation",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
         "socialThread": [
-          "1/ Fresh epstein-files lead: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
+          "1/ Fresh epstein-files lead: Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -117,7 +278,73 @@
         "offerRoute": "offer-starter-library.html",
         "optinRoute": "optin-black-file-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "control-system-2026-06-30-ice-biometrics-underpin-broader-surveillance-network-report-argues-bio",
+        "lane": "control-system",
+        "laneTitle": "Google News / control structure",
+        "sourceLabel": "Google News / control structure",
+        "title": "ICE biometrics underpin broader surveillance network, report argues - Biometric Update",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5",
+        "published": "2026-06-30T19:04:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "ICE biometrics underpin broader surveillance network, report argues Biometric Update",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New seven-day intelligence lane: ICE biometrics underpin broader surveillance network, report argues - Biometric Update. Open the source first, then follow the evidence route.",
+        "rumbleShortTitle": "ICE biometrics underpin broader surveillance network, report argues - Bi",
+        "rumbleLongTitle": "Google News / control structure — ICE biometrics underpin broader surveillance network, report argues - Biometric Update",
+        "socialThread": [
+          "1/ Fresh control-system lead: ICE biometrics underpin broader surveillance network, report argues - Biometric Update",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "control-system-tracker.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "books.html",
+        "offerRoute": "offer-center.html",
+        "optinRoute": "optin-full-archive-map.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-30-doug-band-former-aide-to-bill-clinton-to-be-questioned-about-clinton-s",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5",
+        "published": "2026-06-30T15:40:24.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein Rural Radio Network",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "declassified-files-2026-06-27-moldova-publishes-declassified-soviet-deportation-lists-from-1941-mold",
@@ -125,9 +352,9 @@
         "laneTitle": "Google News / declassified files",
         "sourceLabel": "Google News / declassified files",
         "title": "Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-        "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5",
         "published": "2026-06-27T17:40:21.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
         "summary": "Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -147,97 +374,9 @@
         "offerRoute": "offer-intelligence-dossiers.html",
         "optinRoute": "optin-intelligence-files-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-27-billionaire-leon-black-walks-out-of-epstein-investigation-hearing-bbc",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5",
-        "published": "2026-06-27T03:00:04.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Billionaire Leon Black walks out of Epstein investigation hearing BBC",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Billionaire Leon Black walks out of Epstein investigation hearing - BBC. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
-        "published": "2026-06-26T21:00:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee The Center Square",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Epstein's billionaire associate subpoenaed after refusing to answer over",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Cen",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
-      },
-      {
-        "id": "epstein-files-2026-06-26-who-are-the-25-men-hiding-behind-secret-epstein-victim-settlements-the",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5",
-        "published": "2026-06-26T20:41:17.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
-        "summary": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? The Epstein Files by Julie K. Brown",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - Th",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "control-system-2026-06-26-kenya-considers-linking-national-id-database-to-cctv-facial-recognitio",
@@ -247,7 +386,7 @@
         "title": "Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
         "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5",
         "published": "2026-06-26T19:59:00.000Z",
-        "fetchedAt": "2026-06-29T09:18:58.329Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
         "summary": "Kenya considers linking national ID database to CCTV facial recognition network Biometric Update",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
@@ -267,7 +406,73 @@
         "offerRoute": "offer-center.html",
         "optinRoute": "optin-full-archive-map.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day"
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-26-leon-black-tells-house-panel-epstein-duped-him-as-judge-orders-doj-to-",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News",
+        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5",
+        "published": "2026-06-26T17:21:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records Spectrum News",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more re",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "epstein-files-2026-06-25-release-unredacted-epstein-files-or-explain-why-you-can-t-judge-tells-",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein timeline and files",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5",
+        "published": "2026-06-25T23:44:00.000Z",
+        "fetchedAt": "2026-07-01T08:32:52.326Z",
+        "summary": "Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ Newsweek",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek. The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells D",
+        "rumbleLongTitle": "Google News / Epstein timeline and files — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-seven-day",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       }
     ]
   },
@@ -313,44 +518,99 @@
       "kind": "Evidence route"
     },
     {
-      "title": "Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue",
-      "route": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWU8waTFzVThGcThkX1ZXTjBJdDRmemhxSHlKWmc0VlBGODk1bUhLSndvRE55YmsyQklKM1F1Rnk4b01pQm84NVZzSXZBbXRDOWgyZTlDdTlzMVZfa1ZXUDNsSmJ3T0FFSzJ5SHZINElJTktmbkhzZHpNX3c0TVpKWEI4eEIyLTZQSE4zMW1jQU94R2xETGhmSVAwejBYN0Fjak9TTjZOajk3YzBRcF9NNHVFY2FNbHBLei1Cb1J0UnlFMExIdWhQc2dneGpBdU9CTUlUaC15R0cxaVBWcjByc3pxZ091WVlZaE1mQUVfX2N2YzluYkdz?oc=5",
+      "title": "network search",
+      "route": "network-search.html",
+      "kind": "Source route"
+    },
+    {
+      "title": "book cartels",
+      "route": "book-cartels.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book albanian mafia",
+      "route": "book-albanian-mafia.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book ndrangheta",
+      "route": "book-ndrangheta.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "book triad",
+      "route": "book-triad.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "books",
+      "route": "books.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "amazon store books",
+      "route": "amazon-store-books.html",
+      "kind": "Book route"
+    },
+    {
+      "title": "Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal",
+      "route": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5",
+      "kind": "Google News / crime state overlap"
+    },
+    {
+      "title": "Alex Saab Profile - InSight Crime",
+      "route": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFVHS0drbUZRQldmUUlwOERGUzlyaTFCeEJJZVFVWDY5X2kyTERZdW9fbUVRMGpJLUhpRENVWTdOVkN2RTZtNDRsbzRtNVRFR2kzazUwSzVqZF9qOEtvdTR5TUpBdnp5Z1k1blpwLWdOUW5RbW40?oc=5",
+      "kind": "Google News / crime state overlap"
+    },
+    {
+      "title": "Task Force Investigation Prompts Indictment of Five Suspected Human Traffickers - Ohio Attorney General (.gov)",
+      "route": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRGxSVmplSDAwdy00bkU5aUtvc0VQcXZhVW1wd1hFaE9uQTlZdU1KNmNMc0tUTXlVRWNfc0s1RkZwZGc4M1JyYUlZZWlOd2t4UHZhSVBmWXN1N1JlUFJZcHVDZE9wNGgzXzNDZkN0aFJZb0JUd0NYNy1vYlBBWDZtOXBHem5PeHQxNzZBZldJU25IUlRVQnV1WUFGY2ZrTnNWNVoxVjVYZ21GM1c2dHEyTHlQMEhYZw?oc=5",
+      "kind": "Google News / crime state overlap"
+    },
+    {
+      "title": "The Most Notorious Mexican Officials Accused of Organized Crime - InSight Crime",
+      "route": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZmJvM3VfTTExanlweklIeEd2b3pJQTR5Nkc5ejRIWGFuWmN3b2pyOTB3MllBdjk1ZXZtRFRhOUNpME9fb3drRHlXZzVMQkVxR0tvVUUwMlJHSU5CUURZQUlpNUp6WWdNd0xrczdCRkZTZ0lwUXVpeUtjaTBBbDQ0Q3JOcVczbDZyX3lCMm5jNA?oc=5",
+      "kind": "Google News / crime state overlap"
+    },
+    {
+      "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
+      "route": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
       "kind": "Google News / Epstein timeline and files"
     },
     {
-      "title": "New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows",
-      "route": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUppX2loVjJieGdzcmN2X3psVG5aUVpSRjFUVE5QLTE1OUdMNmpSVHVkSDBhMUVRcUpBeW10MmRpTTlxM29lY3NEMmU0clRGUjYxMEtKYXRCZ0I0SjFWT3JOYlJ2VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5",
-      "kind": "Google News / Epstein sighting and alive claims"
+      "title": "Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
+      "route": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5",
+      "kind": "Google News / Epstein timeline and files"
     },
     {
-      "title": "Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan",
-      "route": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5",
+      "title": "ICE biometrics underpin broader surveillance network, report argues - Biometric Update",
+      "route": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5",
+      "kind": "Google News / control structure"
+    },
+    {
+      "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
+      "route": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5",
       "kind": "Google News / Epstein timeline and files"
     },
     {
       "title": "Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",
-      "route": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5",
+      "route": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5",
       "kind": "Google News / declassified files"
-    },
-    {
-      "title": "Billionaire Leon Black walks out of Epstein investigation hearing - BBC",
-      "route": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
-      "route": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown",
-      "route": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5",
-      "kind": "Google News / Epstein timeline and files"
     },
     {
       "title": "Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update",
       "route": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5",
       "kind": "Google News / control structure"
+    },
+    {
+      "title": "Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News",
+      "route": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5",
+      "kind": "Google News / Epstein timeline and files"
+    },
+    {
+      "title": "Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek",
+      "route": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5",
+      "kind": "Google News / Epstein timeline and files"
     }
   ],
   "routes": [
@@ -361,13 +621,15 @@
     "book-triad.html",
     "source-cards.html",
     "evidence-lane-court-records.html",
-    "evidence-lane-financial-records.html"
+    "evidence-lane-financial-records.html",
+    "network-search.html"
   ],
   "takeaways": [
     "Court records need procedural context.",
     "Sanctions indicate government designation, not automatic conviction.",
     "Logistics and finance explain more than street violence.",
-    "The reader path moves from map to books to evidence lanes."
+    "The reader path moves from map to books to evidence lanes.",
+    "Corruption is a system of permissions, blind spots, and incentives."
   ],
   "downloadIncludes": [
     "branded PDF mini book",
@@ -376,7 +638,9 @@
     "reader path",
     "source files",
     "latest intelligence window",
+    "weekly source watch",
     "forum posts export",
-    "book/store route"
+    "book/store route",
+    "evidence upgrade path"
   ]
 }

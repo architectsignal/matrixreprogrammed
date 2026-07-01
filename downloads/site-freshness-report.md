@@ -3,26 +3,31 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 313
-Flagged pages: 291
-High priority pages: 239
-Medium priority pages: 51
-Pages with missing rules: 18
+Scanned pages: 318
+Flagged pages: 295
+High priority pages: 242
+Medium priority pages: 52
+Pages with missing rules: 23
 Auto-update eligible figures: 1
 Manual-review figures: 27
-Missing-rule figures: 45
+Missing-rule figures: 42
 
 ## High Priority Pages
-- live-intel.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
-- daily-drop.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- intel-vault.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - news.html: 27 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 - dark-speculation-forum.html: 2 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
-- dossier-pack-symbolic-power.html: 2 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 - forum.html: 2 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
+- intel-vault.html: 2 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 - power-atlas.html: 2 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 - authority-hub.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- daily-drop.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-black-file-starter.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-crime-state-overlap.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-intelligence-network.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-trust-evidence.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
+- dossier-pack-war-machine.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
 - epstein-alive-board.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
 - epstein-files.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
 - epstein-sighting-submit.html: 1 figure/stat markers; 1 missing rules. Add figure-source rules before automatic replacement.
@@ -38,23 +43,23 @@ Missing-rule figures: 45
 - answer-blackrock.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
 - answer-cartels.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
 - answer-cbdc-surveillance.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
-- answer-cia.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
-- answer-deep-state.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
-- answer-documented-association.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
-- answer-dog-the-architect.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
-- answer-engine.html: 0 figure/stat markers; 0 missing rules. No obvious dynamic figures detected.
 
 ## Missing Source Rules
-- live-intel.html: 12 figure(s) need source rules.
-- daily-drop.html: 6 figure(s) need source rules.
+- dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
+- live-intel.html: 6 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
-- intel-vault.html: 4 figure(s) need source rules.
 - news.html: 2 figure(s) need source rules.
 - dark-speculation-forum.html: 2 figure(s) need source rules.
-- dossier-pack-symbolic-power.html: 2 figure(s) need source rules.
 - forum.html: 2 figure(s) need source rules.
+- intel-vault.html: 2 figure(s) need source rules.
 - power-atlas.html: 2 figure(s) need source rules.
 - authority-hub.html: 1 figure(s) need source rules.
+- daily-drop.html: 1 figure(s) need source rules.
+- dossier-pack-black-file-starter.html: 1 figure(s) need source rules.
+- dossier-pack-crime-state-overlap.html: 1 figure(s) need source rules.
+- dossier-pack-intelligence-network.html: 1 figure(s) need source rules.
+- dossier-pack-trust-evidence.html: 1 figure(s) need source rules.
+- dossier-pack-war-machine.html: 1 figure(s) need source rules.
 - epstein-alive-board.html: 1 figure(s) need source rules.
 - epstein-files.html: 1 figure(s) need source rules.
 - epstein-sighting-submit.html: 1 figure(s) need source rules.

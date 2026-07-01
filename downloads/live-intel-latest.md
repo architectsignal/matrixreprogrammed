@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-06-29T09:18:58.329Z
+Updated: 2026-07-01T08:32:52.326Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -20,12 +20,92 @@ Updated: 2026-06-29T09:18:58.329Z
 - Crime State Overlap: crime-hub.html
 
 ## Latest Items
-- 2026-06-28 — Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue
-  - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxOWU8waTFzVThGcThkX1ZXTjBJdDRmemhxSHlKWmc0VlBGODk1bUhLSndvRE55YmsyQklKM1F1Rnk4b01pQm84NVZzSXZBbXRDOWgyZTlDdTlzMVZfa1ZXUDNsSmJ3T0FFSzJ5SHZINElJTktmbkhzZHpNX3c0TVpKWEI4eEIyLTZQSE4zMW1jQU94R2xETGhmSVAwejBYN0Fjak9TTjZOajk3YzBRcF9NNHVFY2FNbHBLei1Cb1J0UnlFMExIdWhQc2dneGpBdU9CTUlUaC15R0cxaVBWcjByc3pxZ091WVlZaE1mQUVfX2N2YzluYkdz?oc=5
+- 2026-07-01 — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
+  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke. Open the source first, then follow the evidence route.
+  - Short title: What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streaml
+  - Longform title: Google News / control structure — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-center.html
+- 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
+  - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
   - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue. The record matters, but the evidence class matters more.
-  - Short title: Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary
-  - Longform title: Google News / Epstein timeline and files — Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The Mary Sue
+  - Video hook: New Epstein file lane: Former Clinton aide appears before House panel in Epstein investigation - Scripps News. The record matters, but the evidence class matters more.
+  - Short title: Former Clinton aide appears before House panel in Epstein investigation
+  - Longform title: Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation. The record matters, but the evidence class matters more.
+  - Short title: What the Epstein files say about former Bill Clinton aide Doug Band - Ne
+  - Longform title: Google News / Epstein timeline and files — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
+  - Short title: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot
+  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: ICE biometrics underpin broader surveillance network, report argues - Biometric Update. Open the source first, then follow the evidence route.
+  - Short title: ICE biometrics underpin broader surveillance network, report argues - Bi
+  - Longform title: Google News / control structure — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-center.html
+- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: AWS is investing billions to put AI into production for the public sector - About Amazon. Open the source first, then follow the evidence route.
+  - Short title: AWS is investing billions to put AI into production for the public secto
+  - Longform title: Google News / war machine — AWS is investing billions to put AI into production for the public sector - About Amazon
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-30 — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
+  - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI. The record matters, but the evidence class matters more.
+  - Short title: Longtime Clinton aide walks back claim former president visited Epstein
+  - Longform title: Google News / Epstein timeline and files — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZ
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
+  - Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network. The record matters, but the evidence class matters more.
+  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s
+  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
+  - Source: https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier. The record matters, but the evidence class matters more.
+  - Short title: New Mexico panel releases subpoena for SC records on Jeffrey Epstein inv
+  - Longform title: Google News / Epstein sighting and alive claims — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian. The record matters, but the evidence class matters more.
+  - Short title: Alleged Epstein victim and Trump accuser living in fear of retaliation,
+  - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guard
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News. The record matters, but the evidence class matters more.
+  - Short title: Clinton confidant who called Maxwell his 'lover' grilled by Congress ove
+  - Longform title: Google News / Epstein timeline and files — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-27 — New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows
@@ -45,7 +125,7 @@ Updated: 2026-06-29T09:18:58.329Z
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-  - Source: https://news.google.com/rss/articles/CBMiQEFVX3lxTE9HSFo1MVR5b09xQzlWLVhfN2dicG5OTno3bmFNUnBqWHlrRjBDNUdydGZLN002MFlPb0dLMTlMQ0s?oc=5
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New archive lane: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1. A released file is the start of the investigation, not the final verdict.
   - Short title: Moldova publishes declassified Soviet deportation lists from 1941 - Mold
@@ -66,14 +146,6 @@ Updated: 2026-06-29T09:18:58.329Z
   - Video hook: New Epstein file lane: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square. The record matters, but the evidence class matters more.
   - Short title: Epstein's billionaire associate subpoenaed after refusing to answer over
   - Longform title: Google News / Epstein timeline and files — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Cen
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-26 — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown
-  - Source: https://news.google.com/rss/articles/CBMieEFVX3lxTFBTY2swLUtoRjZLRFA3dC1jR3c4dEtxUlRzZ1pzNDB3azNnWmtjSWF2a0J6R3R3cUV5NkJCSlZnMVBua0dINjM0WnZiMGM0M1dUQ1VlMmtqNW1tbUstQjNTMjMyNThZWXhlcXVmV1NvdmhackozQkJWXw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie K. Brown. The record matters, but the evidence class matters more.
-  - Short title: Who are the 25 men hiding behind Secret Epstein Victim Settlements? - Th
-  - Longform title: Google News / Epstein timeline and files — Who are the 25 men hiding behind Secret Epstein Victim Settlements? - The Epstein Files by Julie
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-26 — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
@@ -156,6 +228,14 @@ Updated: 2026-06-29T09:18:58.329Z
   - Longform title: Google News / Epstein timeline and files — Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time unde
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
+  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New crime-network lane: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal. Separate indictment, conviction, sanction, reporting, and association.
+  - Short title: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of
+  - Longform title: Google News / crime state overlap — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-crime-dossiers.html
 - 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
   - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -180,14 +260,6 @@ Updated: 2026-06-29T09:18:58.329Z
   - Longform title: Google News / Epstein timeline and files — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-25 — Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPRHdpYUVuMjl6N01QaEFJN1l5WmRVaUhvWDJ5T2FfaWJrTWxxdEJXM1l5cXZZbVlkWnNLODFtZnAzQ01ta3lOeUV3SUVMYjUtRXBwcjh6OEhvSGh2dzI3T1czMUp2RTNFNWFNM2ctbGJhN2JfOUp3T1otSGNXbzhabWl2SERTaEc4Q01FNC1uY1hiczFOa29r?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV. The record matters, but the evidence class matters more.
-  - Short title: Subramanyam says reflecting pool arrests outpace Epstein-linked cases -
-  - Longform title: Google News / Epstein timeline and files — Subramanyam says reflecting pool arrests outpace Epstein-linked cases - Diya TV
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-25 — Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington Examiner
   - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPM2pkTzVKc3FyREROcm9XOWYzRmhtNzdzS093Vl83ZHN3MmRFQTB1dmowSkFEb2VUMmpUM1hMUU1pdExWb2lNX0VHWGlCQzU0QXU2ZjBHOEo1TkhkRkxrbkxZdlduMl9JeF9mdGZXSFBuaXdWUl9uY0ZPUlpFWTBGQUoxZnpwa2htTFJhMHkwSTg1MkwxaXBLd3R2OVoyeUEwYXVCQ2kzdVN0U2lKT0M3T1Ffd1Y?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -204,28 +276,20 @@ Updated: 2026-06-29T09:18:58.329Z
   - Longform title: Google News / Epstein timeline and files — Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-25 — U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief
-  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPS19MS0ZJenp6cUs5QU54QzdBbVNrX1ZjT1dIazRjT2tfbmdwVzlTZHdaalBIRFNhMTh4ZHdXdWU5N3hGbGVWQUFKc2xFUmUyMm9KZmR1X1c2T3BNM3c2TFEwNWdualBOOS1wM3J4cUY2MG9TNzFYeXdvemZVRnh4RFVmbTVmYzNFSWhRdXlKNVpTcEpvaWpiLXNJOUo4TzBLbkp2cTdicnJqN2tSYktoQzFNTHo?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief. Open the source first, then follow the evidence route.
-  - Short title: U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances
-  - Longform title: Google News / war machine — U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—Here’s What We Know - The Debrief
+- 2026-06-25 — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
+  - Source: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent. The record matters, but the evidence class matters more.
+  - Short title: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail
+  - Longform title: Google News / Epstein timeline and files — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
+  - Offer: offer-starter-library.html
 - 2026-06-25 — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNdU5ENExoeHh3b0ozTjVtQzFiZzFmOVhNdEthWUJOMkdWZjhoSkN6RzdNTmVrVlNsOUtyekxzLU5lemZCRHVSRVZ0LU1neGhQeXZyVXhCbWxVWTlqc2hCTFJ3M1NGNVYxMlhURnBZbkZaVGpqYkZzUFlYNUp1WEl1NzdCbFBIRXBEQmlPV1llUGktODhzejNnUTYzM2wtZw?oc=5
   - Evidence: Seven-day public-record/news lead
   - Video hook: New Epstein file lane: Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.. The record matters, but the evidence class matters more.
   - Short title: Ghislaine Maxwell says newly released Epstein files could overturn convi
   - Longform title: Google News / Epstein timeline and files — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow Ne
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-25 — The secret settlements protecting Jeffrey Epstein’s friends - Politico
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOQURIS1BhQTkyU3NPeENlTDQ3S1F2cUN3Q2ZhRzZwUjZTRndxRmYyRFJRSzJEQXI0UFpqOGtiN0VjOFdjc0JMcTVFZlVCSkxiNVUxczNnWl9PY3F0NjE4eUtXdDNNa3lmTXJpZV9YcXBqUEt1MFZKaVdKQnpwZGJEYTN4bm41SWlycFpjTzg0VERxbjVOaV9z?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: The secret settlements protecting Jeffrey Epstein’s friends - Politico. The record matters, but the evidence class matters more.
-  - Short title: The secret settlements protecting Jeffrey Epstein’s friends - Politico
-  - Longform title: Google News / Epstein timeline and files — The secret settlements protecting Jeffrey Epstein’s friends - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-25 — Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ
@@ -250,21 +314,5 @@ Updated: 2026-06-29T09:18:58.329Z
   - Video hook: New Epstein file lane: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW. The record matters, but the evidence class matters more.
   - Short title: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight
   - Longform title: Google News / Epstein timeline and files — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-23 — 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxOLVdoa3J5RzRHZDlnbnVUWWhfaXNXSFZUUkN6MDA0VTlOUDV6UDB1ZTNSY3g5Y3dob1hWTjB1alQ5eld3ZjEzN1dMOXpCcFRMUnh3Y1lqTFBRNENKOTZsakxGTlJEOEZsZm5LdEpCalJjX0RDWjRROGdnVkprb19kSHl3MnlrLVFJd2Fobkl1R0x0UHBNZ01nRjlEdnhXekV2ZXFv0gGoAUFVX3lxTE5kWWltOWVuUnluaGktcFo0VEp0c1RwR2hhNnNpcDZKQUhOMF9wcnVwNHA3Z09BQWQzZy1oSUdkXzJKSkRKanRaT1FXSTdoeThOVGhLY1JmZnR5WmRwR3BBQUFUdlhzdVUxN0EtdzZtdFJzUGliM1JBeXhtY0QzZWJkUnlVaER0VUtHM0I1czI4c1kxc1lkQ2lBV3FHQS0yTUxZOGtzX1RYbA?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
-  - Short title: 'I did not know': Former Epstein secretary Lesley Groff denies any aware
-  - Longform title: Google News / Epstein timeline and files — 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-23 — Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxNX2VNQWVwSGlzS25JWm5RYURFNWtZUmRDWmNUXzhSQlc4UEI4R21SU2VqczdCeVRqcWMtaU5VRnZMTXpNcVZXaTVzX3RMNE1rSklKNHpUYzBSUmwwT1pXWTM1UzlMSWhnTzhuYTZmellaRWFZUDdwbWRRX09Wa0h2OHZOdXJrUFlibnJBTW5Tc0plTU5HNGRF?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times. The record matters, but the evidence class matters more.
-  - Short title: Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
-  - Longform title: Google News / Epstein timeline and files — Searching for Clues in Jeffrey Epstein’s Boyhood - The New York Times
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html

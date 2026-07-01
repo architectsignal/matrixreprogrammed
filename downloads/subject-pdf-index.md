@@ -1,6 +1,6 @@
 # Subject PDF Index
 
-Updated: 2026-06-29T09:19:02.309Z
+Updated: 2026-07-01T08:32:54.115Z
 
 Each subject PDF is distinct. It is generated from the matching subject profile, current live-intel, related book data, proof routes, main players/entities, reader actions, and speculation boundaries.
 

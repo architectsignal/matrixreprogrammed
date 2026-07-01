@@ -3,67 +3,115 @@
   "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
   "sourceRulesUpdated": "2026-06-24",
   "sourceRuleCount": 8,
-  "scannedPages": 313,
-  "flaggedPages": 291,
-  "highPriorityPages": 239,
-  "mediumPriorityPages": 51,
-  "pagesWithMissingRules": 18,
+  "scannedPages": 318,
+  "flaggedPages": 295,
+  "highPriorityPages": 242,
+  "mediumPriorityPages": 52,
+  "pagesWithMissingRules": 23,
   "autoUpdateEligibleFigures": 1,
   "manualReviewFigures": 27,
-  "missingRuleFigures": 45,
+  "missingRuleFigures": 42,
   "pages": [
+    {
+      "file": "dossier-pack-symbolic-power.html",
+      "priority": "High",
+      "figureCount": 7,
+      "missingRuleCount": 7,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "33 book",
+          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-c",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-cards.html Trust route trust editorial standards trust-edito",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book lin",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book link amazon store books amazon-store-books.html Google News /",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "5 Book",
+          "context": "0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5 Book Routes Book / Store Route book symbol book-symbol.html Book / Store Route book as above so below book-as-abov",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "s above so below book-as-above-so-below.html Book / Store Route book masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books b",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books books.html Book / Store Route amazon store books amazon-store-books.h",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, to be questioned abo"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-25 · Google News / Epstein timeline and files Judge orders DOJ to either unredact more Epstein files or ex"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-25 · Google News / Epstein timeline and files Rep. Tom Emmer highlights House Oversight work, unless it in"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-04 · Google News / Epstein timeline and files Bondi invoked privilege, declined to answer questions about"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-04 · Google News / Epstein timeline and files House Oversight releases transcribed interview with Epstein’"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
     {
       "file": "live-intel.html",
       "priority": "High",
-      "figureCount": 12,
-      "missingRuleCount": 12,
+      "figureCount": 6,
+      "missingRuleCount": 6,
       "autoAllowedCount": 0,
       "manualReviewCount": 0,
       "staticCount": 0,
       "percentages": [],
       "money": [
-        {
-          "value": "$158",
-          "context": "eline and files · Google News / Epstein timeline and files Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Eps",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "aid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' KCRA Evidence Level Seven-day public-record/news lead A",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "he record supports. VIDEO HOOK &gt; New Epstein file lane: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA. The record matters, but the evidence class matt",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "matters, but the evidence class matters more. &gt; Short: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I &gt; Longform: Google News / Epstein timeline and files — Billionaire Leo",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "&gt; Longform: Google News / Epstein timeline and files — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Open Source Evidence Route Video Hook Free Brief",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "Social thread / caption copy 1/ Fresh epstein-files lead: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA 2/ Do not treat a headline as proof. First class",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
         {
           "value": "$158",
           "context": "eline and files · Google News / Epstein timeline and files Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Eps",
@@ -111,111 +159,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-06-29T09:11:38.477Z &gt; Source lanes: 5 &gt; Items available: 31 &gt; Evidence route: evidence-vault.html &g"
+          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-07-01T08:32:52.326Z &gt; Source lanes: 5 &gt; Items available: 37 &gt; Evidence route: evidence-vault.html &g"
         },
         {
           "value": "2026",
-          "context": "ideo hook, free brief, offer, and book path for deeper context. Latest Actionable Updates 2026-06-28 · Google News / Epstein timeline and files · Google News / Epstein timeline and files Maxwell Says Arch"
+          "context": "ideo hook, free brief, offer, and book path for deeper context. Latest Actionable Updates 2026-07-01 · Google News / control structure · Google News / control structure What Exactly Is Corporate Digital P"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-27 · Google News / Epstein sighting and alive claims · Google News / Epstein sighting and alive claims New"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-01 · Google News / Epstein timeline and files · Google News / Epstein timeline and files Former Clinton ai"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-27 · Google News / Epstein timeline and files · Google News / Epstein timeline and files Why did billionai"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-30 · Google News / Epstein timeline and files · Google News / Epstein timeline and files What the Epstein"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-27 · Google News / declassified files · Google News / declassified files Moldova publishes declassified So"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence Level Seven-"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "daily-drop.html",
-      "priority": "High",
-      "figureCount": 6,
-      "missingRuleCount": 6,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$158",
-          "context": "oute 2026-06-26 · Google News / Epstein timeline and files Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Eps",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "aid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' KCRA What the record proves Seven-day public-record/new",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "A What the record proves Seven-day public-record/news lead Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' KCRA What it does not prove Boundary A fresh news or ar",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "eline and files · Google News / Epstein timeline and files Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Eps",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$158",
-          "context": "aid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' KCRA Seven-day public-record/news lead Google News / Ep",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [
-        {
-          "value": "12 source",
-          "context": "essional oversight, news bulletins, archives, and video routes stay active. Archive depth 12 source cards The Evidence Vault routes claims through court records, official datasets, archives, regulators, oversi",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-06-29T09:11:39.711Z &gt; Live Intel updated: 2026-06-29T09:11:38.477Z &gt; Items available: 31 &gt; Epstein l"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-30 · Google News / Epstein timeline and files · Google News / Epstein timeline and files Doug Band, former"
         },
         {
           "value": "2026",
-          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-06-29T09:11:39.711Z &gt; Live Intel updated: 2026-06-29T09:11:38.477Z &gt; Items available: 31 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/ent"
-        },
-        {
-          "value": "2026",
-          "context": "t Current Epstein-linked updates and source-watch items with visible evidence boundaries. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-27 · Google News / Epstein timeline and files Billionaire Leon Black walks out of Epstein investigation he"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-06-30 · Google News / control structure · Google News / control structure ICE biometrics underpin broader sur"
         }
       ],
       "needsSourceRule": true,
@@ -286,75 +250,6 @@
         {
           "value": "2026",
           "context": "lic trust can all become battlefield surfaces. Reuters Open Cyber Clock Migration Watch · 2026-06-19 Libya-route shipwreck leaves 51 migrants dead or missing AP reported that a migrant boat capsized off L"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "intel-vault.html",
-      "priority": "High",
-      "figureCount": 4,
-      "missingRuleCount": 4,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "€5.9",
-          "context": "29 · Google News / crime state overlap Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud and Organized Crime - The Hacker News Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud a",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€5.9",
-          "context": "and Organized Crime - The Hacker News Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud and Organized Crime The Hacker News Archive Reason expired-after-7-day-window Archived items are prese",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$25,000",
-          "context": "Live Intel 2025-11-10 · archived 2026-06-29 · Google News / control structure Apply Now: $25,000 to Combat Africa’s Digital Rights Crisis - ICTworks Apply Now: $25,000 to Combat Africa’s Digital Rights Cris",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$25,000",
-          "context": "ructure Apply Now: $25,000 to Combat Africa’s Digital Rights Crisis - ICTworks Apply Now: $25,000 to Combat Africa’s Digital Rights Crisis ICTworks Archive Reason expired-after-7-day-window Archived items ar",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "/ crime state overlap Vault Lane 40 Google News / war machine Archived Daily Update Cards 2026-06-19 · archived 2026-06-29 · Google News / Epstein timeline and files What's missing from the Epstein files?"
-        },
-        {
-          "value": "2026",
-          "context": "Vault Lane 40 Google News / war machine Archived Daily Update Cards 2026-06-19 · archived 2026-06-29 · Google News / Epstein timeline and files What's missing from the Epstein files? Questions persist abo"
-        },
-        {
-          "value": "2026",
-          "context": "ntact records, settlements, and commentary. Open Source Evidence Route Current Live Intel 2026-06-17 · archived 2026-06-29 · Google News / control structure State Digital Surveillance Risk Landscape - Rec"
-        },
-        {
-          "value": "2026",
-          "context": "ents, and commentary. Open Source Evidence Route Current Live Intel 2026-06-17 · archived 2026-06-29 · Google News / control structure State Digital Surveillance Risk Landscape - Recorded Future State Dig"
-        },
-        {
-          "value": "2026",
-          "context": "a claim stronger than the record supports. Open Source Evidence Route Current Live Intel 2026-06-16 · archived 2026-06-29 · Google News / declassified files Pentagon releases 72 UFO files: Military repor"
-        },
-        {
-          "value": "2026",
-          "context": "the record supports. Open Source Evidence Route Current Live Intel 2026-06-16 · archived 2026-06-29 · Google News / declassified files Pentagon releases 72 UFO files: Military reports reveal new sighting"
         }
       ],
       "needsSourceRule": true,
@@ -953,61 +848,6 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "dossier-pack-symbolic-power.html",
-      "priority": "High",
-      "figureCount": 2,
-      "missingRuleCount": 2,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [
-        {
-          "value": "33 book",
-          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-c",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-cards.html document link trust editorial standards trust-edi",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
       "file": "forum.html",
       "priority": "High",
       "figureCount": 2,
@@ -1037,6 +877,61 @@
         {
           "value": "2026",
           "context": "The board is checking for posts. Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "intel-vault.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "€5.9",
+          "context": "01 · Google News / crime state overlap Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud and Organized Crime - The Hacker News Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud a",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€5.9",
+          "context": "and Organized Crime - The Hacker News Europol Arrests 34 Black Axe Members in Spain Over €5.9M Fraud and Organized Crime The Hacker News Archive Reason expired-after-7-day-window Archived items are prese",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "/ crime state overlap Vault Lane 38 Google News / war machine Archived Daily Update Cards 2026-06-23 · archived 2026-07-01 · Google News / Epstein timeline and files Searching for Clues in Jeffrey Epstein"
+        },
+        {
+          "value": "2026",
+          "context": "Vault Lane 38 Google News / war machine Archived Daily Update Cards 2026-06-23 · archived 2026-07-01 · Google News / Epstein timeline and files Searching for Clues in Jeffrey Epstein’s Boyhood - The New Y"
+        },
+        {
+          "value": "2026",
+          "context": "ntact records, settlements, and commentary. Open Source Evidence Route Current Live Intel 2026-06-23 · archived 2026-07-01 · Google News / Epstein timeline and files 'I did not know': Former Epstein secre"
+        },
+        {
+          "value": "2026",
+          "context": "ents, and commentary. Open Source Evidence Route Current Live Intel 2026-06-23 · archived 2026-07-01 · Google News / Epstein timeline and files 'I did not know': Former Epstein secretary Lesley Groff deni"
+        },
+        {
+          "value": "2026",
+          "context": "ntact records, settlements, and commentary. Open Source Evidence Route Current Live Intel 2026-06-19 · archived 2026-07-01 · Google News / Epstein timeline and files What's missing from the Epstein files?"
+        },
+        {
+          "value": "2026",
+          "context": "ents, and commentary. Open Source Evidence Route Current Live Intel 2026-06-19 · archived 2026-07-01 · Google News / Epstein timeline and files What's missing from the Epstein files? Questions persist abo"
         }
       ],
       "needsSourceRule": true,
@@ -1121,6 +1016,294 @@
         {
           "value": "2026",
           "context": "Center RSS Machine-readable data Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "daily-drop.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "12 source",
+          "context": "essional oversight, news bulletins, archives, and video routes stay active. Archive depth 12 source cards The Evidence Vault routes claims through court records, official datasets, archives, regulators, oversi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-07-01T08:32:53.908Z &gt; Live Intel updated: 2026-07-01T08:32:52.326Z &gt; Items available: 37 &gt; Epstein l"
+        },
+        {
+          "value": "2026",
+          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-07-01T08:32:53.908Z &gt; Live Intel updated: 2026-07-01T08:32:52.326Z &gt; Items available: 37 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/ent"
+        },
+        {
+          "value": "2026",
+          "context": "t Current Epstein-linked updates and source-watch items with visible evidence boundaries. 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-06-30 · Google News / Epstein timeline and files Longtime Clinton aide walks back claim former president visi"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "dossier-pack-black-file-starter.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "5 Book",
+          "context": "VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5 Book Routes Book / Store Route black file black-file.html Book / Store Route book black file book-black-file.html",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-19 · Google News / Epstein timeline and files What's missing from the Epstein files? Questions persist abo"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-05-22 · Google News / Epstein timeline and files Former Epstein assistant Sarah Kellen testified before the H"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-24 · Google News / Epstein timeline and files 9 takeaways from Bill Gates’ Epstein interview with the Hous"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-04 · Google News / Epstein timeline and files House Oversight releases transcribed interview with Epstein’"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "dossier-pack-crime-state-overlap.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "5 Book",
+          "context": "UzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5 Book Routes Book / Store Route book cartels book-cartels.html Book / Store Route book albanian mafia book-albanian",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-26 · Google News / crime state overlap Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sulliva"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-09 · Google News / crime state overlap Alex Saab Profile - InSight Crime Alex Saab Profile InSight Crime E"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-05-28 · Google News / crime state overlap Task Force Investigation Prompts Indictment of Five Suspected Human"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-05-26 · Google News / crime state overlap The Most Notorious Mexican Officials Accused of Organized Crime - I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-25 · Google News / Epstein timeline and files Judge orders DOJ to either unredact more Epstein files or ex"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "dossier-pack-intelligence-network.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "5 Book",
+          "context": "lBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5 Book Routes Book / Store Route book cia book-cia.html Book / Store Route book nsa book-nsa.html Book / Store Route",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-22 · Guardian / Five Eyes warning report Five Eyes warns frontier AI cyber-attack capability could arrive"
+        },
+        {
+          "value": "2026",
+          "context": "restrictions, or confirmed capability disclosures. Open Source Evidence Route Book Route 2026-06-27 · Wired Pentagon looks into Dialog data exposure involving national-security officials Reporting says a"
+        },
+        {
+          "value": "2026",
+          "context": "ected-role disclosure, and follow-up risk findings. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein sighting and alive claims New Mexico panel releases subpoena for SC records on"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-29 · Reuters Israel cyber chief says Iranian cyber incidents surged in June 2026 Israel's cyber chief repo"
+        },
+        {
+          "value": "2026",
+          "context": "Route 2026-06-29 · Reuters Israel cyber chief says Iranian cyber incidents surged in June 2026 Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditio"
+        },
+        {
+          "value": "2026",
+          "context": "ne 2026 Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditions, while critical infrastructure had not been compromised. Evidence: Official cyber-th"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "dossier-pack-trust-evidence.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "5 Book",
+          "context": "VVxMTd6bkNnb0hpaG13MTNORWJPQnhJdUFXVzlnZ3I1azZhaHNwRTNBY0M0TmJjbGxTanpDUU5PMVdwYzZYSlI?oc=5 Book Routes Book / Store Route trust center trust-center.html Book / Store Route source cards source-cards.html Bo",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-01 · Google News / control structure From Coercion to Code: Iran’s Digital Security Transformation - Middl"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-26 · Google News / control structure Kenya considers linking national ID database to CCTV facial recogniti"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-17 · Google News / control structure State Digital Surveillance Risk Landscape - Recorded Future State Dig"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-05-25 · Google News / control structure Guyana to roll out AI-powered smart police stations and nationwide su"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "dossier-pack-war-machine.html",
+      "priority": "High",
+      "figureCount": 1,
+      "missingRuleCount": 1,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "5 Book",
+          "context": "kJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5 Book Routes Book / Store Route book blackwater book-blackwater.html Book / Store Route book wwiii book-wwiii.html",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-29 · Reuters Israel cyber chief says Iranian cyber incidents surged in June 2026 Israel's cyber chief repo"
+        },
+        {
+          "value": "2026",
+          "context": "pack. 2026-06-29 · Reuters Israel cyber chief says Iranian cyber incidents surged in June 2026 Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditio"
+        },
+        {
+          "value": "2026",
+          "context": "ne 2026 Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditions, while critical infrastructure had not been compromised. Evidence: Official cyber-th"
+        },
+        {
+          "value": "2026",
+          "context": "unting firms, and public-sector incident reporting. Open Source Evidence Route Book Route 2026-06-22 · Guardian / Five Eyes warning report Five Eyes warns frontier AI cyber-attack capability could arrive"
+        },
+        {
+          "value": "2026",
+          "context": "restrictions, or confirmed capability disclosures. Open Source Evidence Route Book Route 2026-05-21 · Google News / war machine One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors T"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Wired Pentagon looks into Dialog data exposure involving national-security officials Reporting says a"
         }
       ],
       "needsSourceRule": true,
@@ -1394,27 +1577,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "linked record supports, what it does not prove, and where to go next. Latest Source Cards 2026-06-28 · Court finding / conviction lane Maxwell Says Archives Prove Her Conviction Was Built on a Lie - The M"
+          "context": "linked record supports, what it does not prove, and where to go next. Latest Source Cards 2026-07-01 · Seven-day public-record lead What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streaml"
         },
         {
           "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-27 · Court finding / conviction lane New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numer"
+          "context": "ot share a claim stronger than the record supports. Open Source Evidence Route Book Route 2026-07-01 · Court finding / conviction lane Former Clinton aide appears before House panel in Epstein investigati"
         },
         {
           "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-27 · Court finding / conviction lane Why did billionaire Leon Black walk out of the Epstein hearing? - Lat"
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-30 · Court finding / conviction lane What the Epstein files say about former Bill Clinton aide Doug Band -"
         },
         {
           "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-27 · Seven-day public-record lead Moldova publishes declassified Soviet deportation lists from 1941 - Mold"
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-30 · Court finding / conviction lane Doug Band, former aide to Bill Clinton, repeatedly tells panel he can"
         },
         {
-          "value": "1941",
-          "context": "Seven-day public-record lead Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 What the record suppo"
+          "value": "2026",
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-06-30 · Seven-day public-record lead ICE biometrics underpin broader surveillance network, report argues - Bi"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 What the record supports: This item is fresh enough to appear in the seven-day intelligence window"
+          "value": "2026",
+          "context": "ot share a claim stronger than the record supports. Open Source Evidence Route Book Route 2026-06-30 · Seven-day public-record lead AWS is investing billions to put AI into production for the public secto"
         }
       ],
       "needsSourceRule": false,
@@ -3349,7 +3532,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Starter Offer Full Archive Offer Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "Archive Offer Trust Evidence Kit Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -3454,7 +3637,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-06-29T09:11:39.750Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
+          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-07-01T08:32:53.949Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
         },
         {
           "value": "2026",
@@ -3644,6 +3827,50 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "deploy-health.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "Machine-readable data Forum Health DEPLOY HEALTH &gt; Build: 1a5575c86d54 &gt; Generated: 2026-07-01T08:32:54.157Z &gt; Target: Cloudflare Worker / _site assets &gt; Homepage marker leak: NO &gt; Overall:"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "deploy-status.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "-readable data Open Main Board DEPLOY STATUS &gt; Build SHA: 4978274de5e6 &gt; Generated: 2026-06-29T09:19:03.862Z &gt; Target: Cloudflare Worker / _site assets &gt; Worker aliases: 113 &gt; Required alia"
+        },
+        {
+          "value": "2026",
+          "context": "eservedaftervisiblede-duplication Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "distribution-articles.html",
       "priority": "High",
       "figureCount": 0,
@@ -3778,206 +4005,6 @@
         {
           "value": "2026",
           "context": "ap index book universe black file Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "dossier-pack-black-file-starter.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "dossier-pack-crime-state-overlap.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "dossier-pack-intelligence-network.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "dossier-pack-trust-evidence.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "dossier-pack-war-machine.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ched live-intel items, source links, evidence boundaries, and next actions for this pack. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
         }
       ],
       "needsSourceRule": false,
@@ -4285,8 +4312,28 @@
       "crisisFigures": [],
       "dates": [
         {
+          "value": "2030",
+          "context": "curity integration remain the active signal set. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Eme"
+        },
+        {
           "value": "2026",
-          "context": "e and active high-value Epstein public-record alerts appear here. Epstein Watch · expires 2026-07-02 Epstein Watch: Maxwell files new challenge; prosecutors oppose A new Reuters-reported Maxwell habeas fi"
+          "context": "/ Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-06-26 Judge orders DOJ to release more Epstein records or justify redactions by July 2 | 2026-06-22 Five Eyes"
+        },
+        {
+          "value": "2026",
+          "context": "-06-26 Judge orders DOJ to release more Epstein records or justify redactions by July 2 | 2026-06-22 Five Eyes warns frontier AI cyber-attack capability could arrive within months | 2026-06-27 Pentagon lo"
+        },
+        {
+          "value": "2026",
+          "context": "26-06-22 Five Eyes warns frontier AI cyber-attack capability could arrive within months | 2026-06-27 Pentagon looks into Dialog data exposure involving national-security officials | 2026-06-23 Digital eur"
+        },
+        {
+          "value": "2026",
+          "context": "26-06-27 Pentagon looks into Dialog data exposure involving national-security officials | 2026-06-23 Digital euro clears key European Parliament hurdle Latest public dr Open Risk Lane Epstein Watch · expi"
+        },
+        {
+          "value": "2026",
+          "context": "rs key European Parliament hurdle Latest public dr Open Risk Lane Epstein Watch · expires 2026-07-03 Judge orders DOJ to release more Epstein records or justify redactions by July 2 A federal judge report"
         }
       ],
       "needsSourceRule": false,
@@ -4589,27 +4636,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -4649,27 +4696,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -4689,27 +4736,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -4729,27 +4776,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -4769,27 +4816,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -4809,27 +4856,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         },
         {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Evidence boundary: A released file is a source fragment. It needs date, origin, context, and corrob"
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         }
       ],
       "needsSourceRule": false,
@@ -5029,7 +5076,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Starter Offer Full Archive Offer Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "Archive Offer Trust Evidence Kit Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -5196,6 +5243,26 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "site-intelligence-core.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "er. Type a signal to classify it. Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "source-cbp-statistics.html",
       "priority": "High",
       "figureCount": 0,
@@ -5224,7 +5291,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-06-29T09:11:39.790Z &gt; Source doors: 24 &gt; Epstein actual-file doors: 12 &gt; Evidence Vault cards import"
+          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-07-01T08:32:53.988Z &gt; Source doors: 24 &gt; Epstein actual-file doors: 12 &gt; Evidence Vault cards import"
         },
         {
           "value": "2026",
@@ -5388,7 +5455,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "lic case records from pattern analysis and narrative inference. Latest Live-Intel Matches 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
+          "context": "lic case records from pattern analysis and narrative inference. Latest Live-Intel Matches 2026-06-26 · Google News / crime state overlap Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sulliva"
+        },
+        {
+          "value": "2026",
+          "context": "allegation, indictment, conviction, and association separate. Open Source Evidence Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
+        },
+        {
+          "value": "2026",
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
         },
         {
           "value": "1941",
@@ -5400,15 +5475,7 @@
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-25 · Google News / war machine U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—He"
-        },
-        {
-          "value": "2026",
-          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-25 · Google News / Epstein sighting and alive claims Epstein associate Ghislaine Maxwell says new evidence"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-25 · Google News / Epstein sighting and alive claims Epstein associate Ghislaine Maxwell says new evidence"
         }
       ],
       "needsSourceRule": false,
@@ -5428,7 +5495,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ric reader journey language separate from public-record claims. Latest Live-Intel Matches 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
+          "context": "ric reader journey language separate from public-record claims. Latest Live-Intel Matches 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
         },
         {
           "value": "2026",
@@ -5436,19 +5507,15 @@
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein timeline and files Why did billionaire Leon Black walk out of the Epstein heari"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein timeline and files Billionaire Leon Black walks out of Epstein investigation he"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, repeatedly tells pan"
         }
       ],
       "needsSourceRule": false,
@@ -5468,7 +5535,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ated from court records, official releases, and sourced claims. Latest Live-Intel Matches 2026-06-26 · Google News / Epstein timeline and files House committee subpoenas Leon Black in the middle of closed"
+          "context": "ated from court records, official releases, and sourced claims. Latest Live-Intel Matches 2026-06-30 · Google News / Epstein sighting and alive claims New Mexico panel releases subpoena for SC records on"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files House committee subpoenas Leon Black in the middle of closed"
         },
         {
           "value": "2026",
@@ -5485,10 +5556,6 @@
         {
           "value": "2026",
           "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Billionaire Leon Black subpoenaed to return to House Epstein"
         }
       ],
       "needsSourceRule": false,
@@ -5508,27 +5575,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "e, public-record infiltration cases, and speculative narrative. Latest Live-Intel Matches 2026-06-26 · Google News / control structure Kenya considers linking national ID database to CCTV facial recogniti"
+          "context": "e, public-record infiltration cases, and speculative narrative. Latest Live-Intel Matches 2026-06-30 · Google News / control structure ICE biometrics underpin broader surveillance network, report argues -"
         },
         {
           "value": "2026",
-          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
-        },
-        {
-          "value": "1941",
-          "context": "le News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released"
-        },
-        {
-          "value": "1941",
-          "context": "lists from 1941 - Moldova 1 Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1 Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration b"
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-26 · Google News / control structure Kenya considers linking national ID database to CCTV facial recogniti"
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-07-01 · Google News / control structure What Exactly Is Corporate Digital Privacy Evolving Toward Now? - stre"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Who are the 25 men hiding behind Secret Epstein Victim Settl"
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
+        },
+        {
+          "value": "2026",
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, to be questioned abo"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / declassified files Moldova publishes declassified Soviet deportation lists from 1941 -"
         }
       ],
       "needsSourceRule": false,
@@ -5580,15 +5647,15 @@
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-25 · Google News / war machine U.S. Tests Directed-Energy Weapon as Golden Dome Missile Shield Advances—He"
+          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-30 · Google News / war machine AWS is investing billions to put AI into production for the public sector -"
         },
         {
           "value": "2026",
-          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-26 · Google News / control structure Kenya considers linking national ID database to CCTV facial recogniti"
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Doug Band, former aide to Bill Clinton, to be questioned abo"
         },
         {
           "value": "2026",
-          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / control structure Kenya considers linking national ID database to CCTV facial recogniti"
         }
       ],
       "needsSourceRule": false,
@@ -5620,15 +5687,15 @@
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-30 · Google News / Epstein sighting and alive claims New Mexico panel releases subpoena for SC records on"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
         },
         {
           "value": "2026",
           "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files 5 Questions Keeping the Epstein Files Alive - Newsweek 5 Que"
         }
       ],
       "needsSourceRule": false,
@@ -5660,15 +5727,15 @@
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
+          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-28 · Google News / Epstein timeline and files Maxwell Says Archives Prove Her Conviction Was Built on a Li"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-26 · Google News / Epstein timeline and files Epstein's billionaire associate subpoenaed after refusing to"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-27 · Google News / Epstein sighting and alive claims New Emails Claim Sarah Ferguson Visited Jeffrey Epste"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files What the Epstein files say about former Bill Clinton aide Do"
         }
       ],
       "needsSourceRule": false,
@@ -5718,11 +5785,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "1–3 years FAO/WFP warned acute hunger may worsen across 13 hotspots from June to November 2026; conflict, weather, aid funding, crop stress, water scarcity, and price shocks remain core signals. RISK SIGN"
+          "context": "Policy convergence tracker lanes: War / Security / Emergency Powers. Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Isr"
         },
         {
           "value": "2026",
-          "context": "90% or above only Open Next Step Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "t public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest pu"
+        },
+        {
+          "value": "2026",
+          "context": "Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Isr"
+        },
+        {
+          "value": "2026",
+          "context": "t public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest pu"
+        },
+        {
+          "value": "2026",
+          "context": "Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Isr"
+        },
+        {
+          "value": "2026",
+          "context": "t public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest public drops: 2026-06-29 Israel cyber chief says Iranian cyber incidents surged in June 2026 Latest pu"
         }
       ],
       "needsSourceRule": false,
@@ -6482,6 +6565,21 @@
     },
     {
       "file": "offer-intelligence-dossiers.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "religious-path.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-01T08:32:52.326Z
+Updated: 2026-07-01T08:47:00.211Z
 Items: 12
 
 - 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
@@ -61,11 +61,6 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-- 2026-05-21 — One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St.
-  - Source: https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
   - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
   - Evidence: Data-exposure / private-network security lane
@@ -111,6 +106,11 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-05-29 — Who’s Really Calling the Shots in Washington? - CounterPunch.org
+  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNUWoydVNBQWR4OHRPRmZhcVRjd3habDVETTRhX2N2TDNZTXF5UzFhRy13UHJUM09TQmhOUHhMMmxhaDRWS3AxRnp5dUVrQmg5OUY0US1aYU9LdjVJVEptMm9YQUdXZDdZcm4wZlZYTDZmSlZWaVJ6TjFfbFFZeXRSUmZxTE80Ujk2cGo1Rw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -131,7 +131,6 @@ Items: 12
 - Book route: amazon store books — amazon-store-books.html
 - Reuters: Israel cyber chief says Iranian cyber incidents surged in June 2026 — https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- Google News / war machine: One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St. — https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
 - Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
 - Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
 - Google News / declassified files: Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
@@ -141,6 +140,7 @@ Items: 12
 - Google News / war machine: Is the U.S. Involved in Israel’s War on Lebanon? - The American Conservative — https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFM3eDRsd1ZnQWY0cTdVUWllckpoWEhEcnpTQzUzV2VTT1Y5VFpURjFwb2tQZzVvclZuaWF5MHR1RllDazNaRmZqNUpLb2M2T2VOeHZuZ2x5ZF9LNEJLLWxlVk9XZk4xM2FGWlNuU0dhbzZQM2sxR2FId2ZkcHhBQWtQTGhid2V4SmdqWkVRZw?oc=5
 - Google News / control structure: From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum — https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
 - Google News / war machine: The Permanent War Government: Who’s really calling the shots in Washington? - Augusta Free Press — https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDVXR3lxWmI1NmFUbTdYNG1yM0IxZzN3SE1Od1FVTnNhdFdyR2Z1a3RPeTNYTzRpdm9NcTU2Z19xaHA4amFxVm1uS2RzYUY1ODFiT1I4S1ZxbDYtcUhwSEZ6bi1sYlFtbUJaakJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5
+- Google News / war machine: Who’s Really Calling the Shots in Washington? - CounterPunch.org — https://news.google.com/rss/articles/CBMijAFBVV95cUxNUWoydVNBQWR4OHRPRmZhcVRjd3habDVETTRhX2N2TDNZTXF5UzFhRy13UHJUM09TQmhOUHhMMmxhaDRWS3AxRnp5dUVrQmg5OUY0US1aYU9LdjVJVEptMm9YQUdXZDdZcm4wZlZYTDZmSlZWaVJ6TjFfbFFZeXRSUmZxTE80Ujk2cGo1Rw?oc=5
 
 ## Book Routes
 

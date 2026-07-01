@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T08:32:54.123Z",
+  "updated": "2026-07-01T08:47:04.338Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 76,
+  "count": 77,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -309,7 +309,7 @@
     {
       "file": "downloads/generated-site-repair-report.pdf",
       "title": "Generated Site Repair Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -417,7 +417,7 @@
     {
       "file": "downloads/offer-trust-evidence-kit.pdf",
       "title": "Trust And Evidence Kit Offer",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -435,7 +435,7 @@
     {
       "file": "downloads/search-system-repair-report.pdf",
       "title": "Search System Repair Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -587,6 +587,12 @@
     {
       "file": "downloads/transparent-maintenance-report.pdf",
       "title": "Transparent Maintenance Report",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/update-cadence-report.pdf",
+      "title": "Update Cadence Report",
       "reused": false,
       "kind": "download"
     },

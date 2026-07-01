@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-01T08:32:54.255Z
+Updated: 2026-07-01T08:47:04.473Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 

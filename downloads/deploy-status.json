@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "1a5575c86d547894d0258c50d8607fd1edc68ab5",
-  "buildShortSha": "1a5575c86d54",
-  "generatedAt": "2026-07-01T08:32:55.890Z",
+  "buildSha": "061e1d2201c2dd45bc82db97ab97510e6ff7b89e",
+  "buildShortSha": "061e1d2201c2",
+  "generatedAt": "2026-07-01T08:47:05.975Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -277,7 +277,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "bc0b6a2f91b4e941"
+      "hash": "762fc6484c5d83d4"
     },
     {
       "name": "Epstein Command Center",
@@ -380,7 +380,7 @@
     "worker": "aa7341db7fae7672",
     "package": "eb6a74918f6dcc1b",
     "epsteinFiles": "a4a5486f0111815b",
-    "liveIntel": "bc0b6a2f91b4e941"
+    "liveIntel": "762fc6484c5d83d4"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

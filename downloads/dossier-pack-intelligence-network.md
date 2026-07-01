@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-01T08:32:52.326Z
+Updated: 2026-07-01T08:47:00.211Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -106,10 +106,10 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-05-21 — One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St.
-  - Source: https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-06-30 — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
+  - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -140,7 +140,7 @@ Items: 12
 - Google News / Epstein sighting and alive claims: Jeffrey Epstein's Death: Mystery Deepens Around Orange Figure Near His Jail Cell - TMZ — https://news.google.com/rss/articles/CBMiogFBVV95cUxNYUt5MGI1Wm9leW5PSjFaYWRMZ3BPTlIzTXE0anIyelhZV0V2WUg0eGI2cHFfZkgzZzlZSC05eHU3U01lQzE0ekc3U0IzLUFtY1pCOEtjNEE5ZWF0c2FKRmxYbHlsQzdmZ0ZUT1hsOV84bHFPN3Q5SEtmTEhTbVF4VWRidE00Z3RmWC1rOWdfQjVBMjZUNTF3ZnV6ZlQ0d0l4QVE?oc=5
 - Google News / Epstein timeline and files: House Oversight releases transcribed interview with Epstein’s former assistant - MS NOW — https://news.google.com/rss/articles/CBMiowFBVV95cUxQRjZjb1RtWUJlNE1tZ0ltODgySDF2aHNmS2F6ZlZuSFZaaF84UjA5cW1ZWUFIaGdXbVQ5bGU1WFRWbzBWdE8zMW5YMkJSaTVPbUNfeWpSU1V3WWN0aG9lLUpZZUtva1BTRUNiVERVdy13SUJLOU1RQzA3Tmk0OVRLR1FRQlBCd0VVSGZUWm1KWXhwUVJCejI5WXQtX0NGQlBVZlA4?oc=5
 - Google News / Epstein sighting and alive claims: Bondi refuses to answer Trump questions in Epstein probe - Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMihwFBVV95cUxOWTdUTnBtUEV4SjNrNG80cnhYUnAtYVJlNVlHTnBSNUZSbV9HejIySzVWWFJfWDc2R0ZIWkRnS3JIcU4zbll2cWx5WElxdmtwblB2TUNndlJaOWJYMXZGaG85NUxtQzlHRFNEd0dUMVJPUDc4R0Y0SlFSbmlqa2xCTkVZMGtGWGc?oc=5
-- Google News / war machine: One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St. — https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
+- Google News / Epstein timeline and files: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI — https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
 
 ## Book Routes
 

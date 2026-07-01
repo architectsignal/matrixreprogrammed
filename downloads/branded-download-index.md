@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-01T08:32:54.123Z
+Updated: 2026-07-01T08:47:04.338Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -59,7 +59,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
 - Forum Posts Export: downloads/forum-posts.pdf (custom PDF preserved)
-- Generated Site Repair Report: downloads/generated-site-repair-report.pdf
+- Generated Site Repair Report: downloads/generated-site-repair-report.pdf (custom PDF preserved)
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf (custom PDF preserved)
 - Intel Vault: downloads/intel-vault.pdf (custom PDF preserved)
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf (custom PDF preserved)
@@ -77,10 +77,10 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Dossiers Offer: downloads/offer-intelligence-dossiers.pdf (custom PDF preserved)
 - Starter Library Offer: downloads/offer-starter-library.pdf (custom PDF preserved)
 - Trust Before Darkness Offer: downloads/offer-trust-before-darkness.pdf (custom PDF preserved)
-- Trust And Evidence Kit Offer: downloads/offer-trust-evidence-kit.pdf
+- Trust And Evidence Kit Offer: downloads/offer-trust-evidence-kit.pdf (custom PDF preserved)
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
-- Search System Repair Report: downloads/search-system-repair-report.pdf
+- Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
 - Seven Day Intel: downloads/seven-day-intel.pdf (custom PDF preserved)
 - Black File Starter Share Kit: downloads/share-kit-black-file-starter.pdf (custom PDF preserved)
 - Crime-State Overlap Share Kit: downloads/share-kit-crime-state-overlap.pdf (custom PDF preserved)
@@ -103,5 +103,6 @@ Every listed PDF is generated from the current site data at build time. The prem
 - NASA Hidden Architecture File: downloads/subject-nasa-hidden-architecture.pdf
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
-- Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf
+- Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
+- Update Cadence Report: downloads/update-cadence-report.pdf
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf (custom PDF preserved)

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-01T08:32:52.326Z
+Updated: 2026-07-01T08:47:00.211Z
 Items: 12
 
 - 2026-07-01 — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
@@ -86,11 +86,6 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-05-21 — One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St.
-  - Source: https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-11 — Democrats to call on Vance to testify to House committee over Epstein files | JD Vance - The Guardian
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -110,6 +105,11 @@ Items: 12
   - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZkVua1JXT3RyWUFrUjZwS3ZoSkVvczhock1wQ1lfQnhkQWNkeVhTQ3VXY0o2NmtySHZqV1l1T2FEMmlmUWJmXy0wZUV6RlFiRUlJa2hVV3BtWWYwdkJwYlEtT1lfLVRDSi1FcnlpZmpSUUswZmJCcXlQdWNDUjNBOTVnWkJseTJFS1I4R0U0c2EzTHREdlQ5TFNBVXFCclBYeVFFZXU2bjdwdGPSAbABQVVfeXFMTTllNUVtNEp4eU4ydHV1QWJYMnVSb0tYT3FaOS1mVlY2TE5BUlpuNk51NXY0by1WTDVyWnNHdWdDU010WnJzTkVBeTRIZFVPc3RnY1BZVlE0Unp0dUoxWDBoT3FvZzdEWkQ5amltSGlZVVVxMTd6bkNnb0hpaG13MTNORWJPQnhJdUFXVzlnZ3I1azZhaHNwRTNBY0M0TmJjbGxTanpDUU5PMVdwYzZYSlI?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-01 — The Permanent War Government: Who’s really calling the shots in Washington? - Augusta Free Press
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDVXR3lxWmI1NmFUbTdYNG1yM0IxZzN3SE1Od1FVTnNhdFdyR2Z1a3RPeTNYTzRpdm9NcTU2Z19xaHA4amFxVm1uS2RzYUY1ODFiT1I4S1ZxbDYtcUhwSEZ6bi1sYlFtbUJaakJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -136,11 +136,11 @@ Items: 12
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
 - Google News / control structure: Guyana to roll out AI-powered smart police stations and nationwide surveillance system by 2030 - Caribbean National Weekly — https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNlRpTGJkVVdRTHA5UlhWcVVEUnhNNWRJc1lEci0zMUIwNzJXOE8xc3lOWjhpYzdKdVBnQWJoV29Ec3NfTzA2MDNEOHBhbjRHb2tDVFdXSGxrc2Z2N2lNemtXRFBMUk1rU3I4ZGp1WGxBN1NKOW1BRU1ZcXhEQXpyUVFkam5yMW1ETlVBWm5MUi1MTDVQOGdKNVdCZHZaQVhnYjRVd2dOLUVFbTFEUGZGb2EtS2o2OERfVUw1MEdNSWNiam1SSkVZemNhem11cFlRM1JUZUM5SQ?oc=5
 - Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-- Google News / war machine: One-Fifth of SpaceX Revenue Comes From Uncle Sam: The Defense Contractors That Should Worry - 24/7 Wall St. — https://news.google.com/rss/articles/CBMizwFBVV95cUxPc1kzUVMyTWZGUFBxcmpRRlRpYXRSVkYwWGYtWmxqZ05HcDdhOG1jNEFnSk5UWnI2ZGlIQ1pUb01kSFpRdVNsVm5rcFc2Ny1HaW9FZnFweWdwTEs2bHRhTGJTaFVTeWtybWZydldRbE9kUktPVDR1bG5SUGVfUkt2NUc1d0pDdWIyd3NFRHpPSlBfN1dkd0F1aUxqOVI1VWV0QW9RS1BTdUw0bElhQWlqRFFZdDZXNnJXRUdaWU11SHRreDcwSUhpVXJKdU1qZDg?oc=5
 - Google News / Epstein timeline and files: Democrats to call on Vance to testify to House committee over Epstein files | JD Vance - The Guardian — https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells US House ‘I have never victimized anyone’ in Epstein testimony - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNaWpGR1luRUZpVHdCYzlYTEJWZVpVSFhBUzlLdnFIREtQRUZOc1ZTQndnem12cE43elNxeGpIOTFWdk5fQkpfRmktTnczZFNYN0o4X0lCb0NKdmdFcnRRZUxsRko3bmtRNDBhQk4yWWlabnE5akxmS2ZaOXAtanF5eFpuWXBuRi1JY2ZkcA?oc=5
 - Google News / war machine: Is the U.S. Involved in Israel’s War on Lebanon? - The American Conservative — https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFM3eDRsd1ZnQWY0cTdVUWllckpoWEhEcnpTQzUzV2VTT1Y5VFpURjFwb2tQZzVvclZuaWF5MHR1RllDazNaRmZqNUpLb2M2T2VOeHZuZ2x5ZF9LNEJLLWxlVk9XZk4xM2FGWlNuU0dhbzZQM2sxR2FId2ZkcHhBQWtQTGhid2V4SmdqWkVRZw?oc=5
 - Google News / Epstein timeline and files: Oversight Democrats demand Comer arrange interviews with Blanche, Patel in Epstein probe - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZkVua1JXT3RyWUFrUjZwS3ZoSkVvczhock1wQ1lfQnhkQWNkeVhTQ3VXY0o2NmtySHZqV1l1T2FEMmlmUWJmXy0wZUV6RlFiRUlJa2hVV3BtWWYwdkJwYlEtT1lfLVRDSi1FcnlpZmpSUUswZmJCcXlQdWNDUjNBOTVnWkJseTJFS1I4R0U0c2EzTHREdlQ5TFNBVXFCclBYeVFFZXU2bjdwdGPSAbABQVVfeXFMTTllNUVtNEp4eU4ydHV1QWJYMnVSb0tYT3FaOS1mVlY2TE5BUlpuNk51NXY0by1WTDVyWnNHdWdDU010WnJzTkVBeTRIZFVPc3RnY1BZVlE0Unp0dUoxWDBoT3FvZzdEWkQ5amltSGlZVVVxMTd6bkNnb0hpaG13MTNORWJPQnhJdUFXVzlnZ3I1azZhaHNwRTNBY0M0TmJjbGxTanpDUU5PMVdwYzZYSlI?oc=5
+- Google News / war machine: The Permanent War Government: Who’s really calling the shots in Washington? - Augusta Free Press — https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDVXR3lxWmI1NmFUbTdYNG1yM0IxZzN3SE1Od1FVTnNhdFdyR2Z1a3RPeTNYTzRpdm9NcTU2Z19xaHA4amFxVm1uS2RzYUY1ODFiT1I4S1ZxbDYtcUhwSEZ6bi1sYlFtbUJaakJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5
 
 ## Book Routes
 

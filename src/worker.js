@@ -18,6 +18,20 @@ const jsonHeaders = {
 };
 
 const routeAliases = {
+  '/intel-vault': '/intel-vault.html',
+  '/source-cards': '/source-cards.html',
+  '/network-search': '/network-search.html',
+  '/daily-drop': '/daily-drop.html',
+  '/the-black-file': '/black-file.html',
+  '/black-file-pdf': '/downloads/the-black-file-matrix-reprogrammed.pdf',
+  '/blackfile': '/black-file.html',
+  '/migration-flow-panel': '/migration-flow.html',
+  '/vaccines': '/news.html',
+  '/human-cost': '/news.html',
+  '/surveillance-hub': '/authority-intelligence-network.html',
+  '/network-map': '/network-maps.html',
+  '/network-maps': '/network-maps.html',
+  '/evidence-policy': '/evidence-policy.html',
   '/home': '/index.html',
   '/start': '/start-here.html',
   '/search': '/search.html',
@@ -258,8 +272,16 @@ function safePost(post) {
   };
 }
 
+function isPublicForumPost(post = {}) {
+  const status = String(post.status || '').toLowerCase();
+  if (/^(hidden|private|spam|deleted|test|demo|sample|placeholder|dummy)$/.test(status)) return false;
+  const hay = [post.id, post.title, post.body || post.message, post.category, post.name, post.sourceUrl || post.source].join(' ').toLowerCase();
+  if (/(test|testing|demo|sample|placeholder|dummy|example|lorem|hello world|seed post|delete me)/.test(hay)) return false;
+  return true;
+}
+
 function sortPosts(posts) {
-  return posts.filter(Boolean).sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
+  return posts.filter(Boolean).filter(isPublicForumPost).sort((a, b) => new Date(b.createdAt || b.approvedAt || 0) - new Date(a.createdAt || a.approvedAt || 0));
 }
 
 function filterPostsByPack(posts, pack) {
@@ -561,6 +583,16 @@ function assetCandidates(originalPath, routedPath) {
   return candidates;
 }
 
+function cleanEmail(value=''){return String(value||'').trim().toLowerCase().slice(0,180)}
+function isEmail(value=''){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value||''))}
+async function hashText(value){const data=new TextEncoder().encode(value);const digest=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('')}
+async function getNewsletterIndex(env){if(!env.FORUM_POSTS)return[];try{const raw=await env.FORUM_POSTS.get('newsletter:index');const arr=JSON.parse(raw||'[]');return Array.isArray(arr)?arr:[]}catch{return[]}}
+async function saveNewsletterIndex(env,index){await env.FORUM_POSTS.put('newsletter:index',JSON.stringify(index.slice(0,10000)),{metadata:{updatedAt:new Date().toISOString(),count:index.length}})}
+async function handleNewsletterSignup(request,env){if(!env.FORUM_POSTS)return json({ok:false,error:'FORUM_POSTS KV binding missing'},503);const body=await readBody(request);const email=cleanEmail(body.email);if(!isEmail(email))return json({ok:false,error:'Valid email required'},400);const id=await hashText(email);const now=new Date().toISOString();const subscriber={id,email,name:cleanText(body.name||'',120),source:cleanText(body.source||'',180),path:cleanText(body.path||'',180),interest:cleanText(body.interest||'Matrix Reprogrammed weekly signal drop',400),consent:Boolean(body.consent!==false),createdAt:now,updatedAt:now,status:'subscribed'};await env.FORUM_POSTS.put('newsletter:subscriber:'+id,JSON.stringify(subscriber),{metadata:{emailHash:id,status:'subscribed',createdAt:now}});const index=await getNewsletterIndex(env);if(!index.some(x=>x.id===id))index.unshift({id,email,name:subscriber.name,path:subscriber.path,createdAt:now,status:'subscribed'});else{const row=index.find(x=>x.id===id);row.email=email;row.name=subscriber.name||row.name;row.status='subscribed';row.updatedAt=now}await saveNewsletterIndex(env,index);return json({ok:true,subscriberId:id,status:'subscribed',message:'Saved. Weekly Signal Drop enabled.',downloadUrl:'/downloads/the-black-file-matrix-reprogrammed.pdf'})}
+async function handleNewsletterHealth(env){const index=env.FORUM_POSTS?await getNewsletterIndex(env):[];return json({ok:Boolean(env.FORUM_POSTS),storage:'Cloudflare KV FORUM_POSTS',subscribers:index.length,digest:'/downloads/weekly-newsletter-latest.json',signup:'/newsletter-signup',weekly:'/newsletter-send-weekly',updatedAt:new Date().toISOString()},env.FORUM_POSTS?200:503)}
+async function handleNewsletterSubscribers(request,env){const token=(request.headers.get('x-admin-token')||new URL(request.url).searchParams.get('token')||'');if(!env.NEWSLETTER_ADMIN_TOKEN||token!==env.NEWSLETTER_ADMIN_TOKEN)return json({ok:false,error:'Admin token required'},403);const index=env.FORUM_POSTS?await getNewsletterIndex(env):[];return json({ok:true,count:index.length,subscribers:index})}
+async function handleNewsletterSendWeekly(request,env){const token=(request.headers.get('x-admin-token')||new URL(request.url).searchParams.get('token')||'');if(env.NEWSLETTER_ADMIN_TOKEN&&token!==env.NEWSLETTER_ADMIN_TOKEN)return json({ok:false,error:'Admin token required'},403);const index=env.FORUM_POSTS?await getNewsletterIndex(env):[];return json({ok:true,mode:env.RESEND_API_KEY?'send-ready':'preview-only',subscribers:index.length,message:'Subscribers are stored in Cloudflare KV. Add RESEND_API_KEY or another email-provider secret to activate bulk sending.',digest:'/downloads/weekly-newsletter-latest.json'})}
+
 export default {
   async fetch(request, env) {
     try {
@@ -570,10 +602,18 @@ export default {
       const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;
 
       if (isHostileProbePath(originalPath)) return json({ ok: false, error: 'Rejected hostile probe path', path: originalPath }, 404);
-      if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice'].includes(originalPath)) return new Response(null, { status: 204, headers: { ...securityHeaders, 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS', 'Access-Control-Allow-Headers': 'content-type' } });
+      if (request.method === 'OPTIONS' && ['/track-event', '/.netlify/functions/track-event', '/intro-voice', '/subscribe-newsletter', '/send-weekly-newsletter'].includes(originalPath)) return new Response(null, { status: 204, headers: { ...securityHeaders, 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS', 'Access-Control-Allow-Headers': 'content-type' } });
 
       if (request.method === 'POST' && originalPath === '/intro-voice') return handleIntroVoice(request, env);
+      if (request.method === 'POST' && originalPath === '/subscribe-newsletter') return handleSubscribeNewsletter(request, env);
+      if (request.method === 'GET' && originalPath === '/newsletter-health') return handleNewsletterHealth(env);
+      if (request.method === 'GET' && originalPath === '/unsubscribe-newsletter') return handleUnsubscribeNewsletter(request, env);
+      if (request.method === 'POST' && originalPath === '/send-weekly-newsletter') return handleSendWeeklyNewsletter(request, env);
       if (request.method === 'GET' && originalPath === '/forum-health') return handleForumHealth(env);
+    if (request.method === 'POST' && originalPath === '/newsletter-signup') return handleNewsletterSignup(request, env);
+    if (request.method === 'GET' && originalPath === '/newsletter-health') return handleNewsletterHealth(env);
+    if (request.method === 'GET' && originalPath === '/newsletter-subscribers.json') return handleNewsletterSubscribers(request, env);
+    if (request.method === 'POST' && originalPath === '/newsletter-send-weekly') return handleNewsletterSendWeekly(request, env);
       if (request.method === 'GET' && originalPath === '/forum-feed') return handleForumFeed(request, env);
       if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.json' || originalPath === '/forum-posts.json')) return handleForumPostsJson(request, env);
       if (request.method === 'GET' && (originalPath === '/downloads/forum-posts.md' || originalPath === '/forum-posts.md')) return handleForumPostsMarkdown(request, env);

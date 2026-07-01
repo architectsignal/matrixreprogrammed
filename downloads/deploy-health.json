@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "061e1d2201c2dd45bc82db97ab97510e6ff7b89e",
-  "buildShortSha": "061e1d2201c2",
-  "generatedAt": "2026-07-01T08:47:08.108Z",
+  "buildSha": "e6c17e50734f38d833a9d87d23f95e1102029021",
+  "buildShortSha": "e6c17e50734f",
+  "generatedAt": "2026-07-01T10:51:10.106Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -22,13 +22,13 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "5b6cceba22fc9385"
+      "hash": "1eff64c64dde210e"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "5b6cceba22fc9385"
+      "hash": "1eff64c64dde210e"
     },
     {
       "name": "Dark Speculation Lab",
@@ -58,13 +58,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "98fbfe156c653fa6"
+      "hash": "597199adc0b623c4"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "aa7341db7fae7672"
+      "hash": "ffd3f024ec44202f"
     },
     {
       "name": "Cloudflare Assets",

@@ -1,38 +1,9 @@
 (function(){
-  const forms = Array.from(document.querySelectorAll('[data-newsletter-form]'));
-  const statusNodes = new Map();
-  function esc(value){ return String(value || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c])); }
-  async function parse(res){ const text = await res.text(); try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; } }
-  function statusFor(form){
-    let node = form.querySelector('[data-newsletter-status]');
-    if (!node) {
-      node = document.createElement('p');
-      node.className = 'warning';
-      node.setAttribute('data-newsletter-status', '');
-      form.appendChild(node);
-    }
-    statusNodes.set(form, node);
-    return node;
-  }
-  async function submit(form){
-    const status = statusFor(form);
-    const payload = Object.fromEntries(new FormData(form).entries());
-    payload.source = payload.source || form.getAttribute('data-source') || location.pathname;
-    payload.tags = payload.tags || form.getAttribute('data-tags') || 'weekly,live-intel,black-file';
-    payload.consentText = 'I agree to receive the Matrix Reprogrammed weekly signal newsletter and understand I can unsubscribe.';
-    status.textContent = 'Saving your email to the persistent newsletter list...';
-    try {
-      const res = await fetch('/subscribe-newsletter', { method:'POST', cache:'no-store', headers:{ 'Content-Type':'application/json', 'Accept':'application/json' }, body: JSON.stringify(payload) });
-      const data = await parse(res);
-      if (!res.ok || data.ok === false || data.persistent !== true) throw new Error(data.error || 'subscription was not saved persistently');
-      form.reset();
-      status.innerHTML = 'Subscribed. Your weekly Matrix Reprogrammed signal is saved persistently. Open the <a href="download-center.html">Download Center</a> or <a href="live-intel.html">Live Intel</a> next.';
-    } catch (error) {
-      status.innerHTML = 'Subscription not saved yet: ' + esc(error.message || error) + '. Try again or check <a href="/newsletter-health">newsletter health</a>.';
-    }
-  }
-  forms.forEach(form => {
-    statusFor(form);
-    form.addEventListener('submit', event => { event.preventDefault(); submit(form); });
-  });
+  function context(form){return [document.title,location.pathname,form.getAttribute('name'),form.id,form.className,form.textContent].join(' ').toLowerCase()}
+  function emailInput(form){return form.querySelector('input[type="email"],input[name="email"],input[name="Email"]')}
+  function status(form){let s=form.querySelector('.form-status,.newsletter-status');if(!s){s=document.createElement('p');s.className='form-status newsletter-status';form.appendChild(s)}return s}
+  function shouldCapture(form){const email=emailInput(form);if(!email)return false;const hay=context(form);return /newsletter|black file|opt.?in|lead magnet|weekly|digest|brief|request|get the file|download|signal path/.test(hay)}
+  async function submit(form,event){event.preventDefault();const email=emailInput(form);const s=status(form);const body={email:email.value,name:(form.querySelector('[name="name"],[name="Name"]')||{}).value||'',source:document.title,path:location.pathname,interest:context(form).slice(0,300),consent:true};if(!body.email||!/@/.test(body.email)){s.textContent='Enter a valid email first.';return}s.textContent='Saving your email and opening the file...';try{const res=await fetch('/newsletter-signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await res.json();if(!data.ok)throw new Error(data.error||'Signup failed');s.textContent='Saved. Weekly Signal Drop enabled. Opening the file now.';if(data.downloadUrl)setTimeout(()=>{location.href=data.downloadUrl},500)}catch(err){s.textContent='Email capture failed. Use the direct download and try again later.'}}
+  function boot(){document.querySelectorAll('form').forEach(form=>{if(!shouldCapture(form)||form.dataset.newsletterCapture==='active')return;form.dataset.newsletterCapture='active';form.addEventListener('submit',submit.bind(null,form));});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();

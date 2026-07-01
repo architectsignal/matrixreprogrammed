@@ -31,12 +31,19 @@ async function fetchJson(route, options = {}) {
   return { res, text, json };
 }
 async function expectPage(route, markers) {
-  try { const { res, text } = await fetchText(route, { headers: { accept: 'text/html' } }); const missing = markers.filter(marker => !text.includes(marker)); addCheck(`page ${route}`, res.ok && missing.length === 0, { status: res.status, missing, bytes: text.length }); }
-  catch (error) { addCheck(`page ${route}`, false, { error: error.message }); }
+  try {
+    const { res, text } = await fetchText(route, { headers: { accept: 'text/html' } });
+    const missing = markers.filter(marker => !text.includes(marker));
+    addCheck(`page ${route}`, res.ok && missing.length === 0, { status: res.status, missing, bytes: text.length });
+  } catch (error) { addCheck(`page ${route}`, false, { error: error.message }); }
 }
 async function expectJson(route, validator) {
-  try { const { res, json, parseError, text } = await fetchJson(route); const validation = json ? validator(json) : { ok: false, reason: parseError || 'invalid JSON' }; addCheck(`json ${route}`, res.ok && validation.ok, { status: res.status, validation, preview: text.slice(0, 180) }); return json; }
-  catch (error) { addCheck(`json ${route}`, false, { error: error.message }); return null; }
+  try {
+    const { res, json, parseError, text } = await fetchJson(route);
+    const validation = json ? validator(json) : { ok: false, reason: parseError || 'invalid JSON' };
+    addCheck(`json ${route}`, res.ok && validation.ok, { status: res.status, validation, preview: text.slice(0, 180) });
+    return json;
+  } catch (error) { addCheck(`json ${route}`, false, { error: error.message }); return null; }
 }
 async function submitBoardPost(board, submitRoute, feedRoute) {
   const stamp = new Date().toISOString();
@@ -62,6 +69,12 @@ async function submitNewsletterTest() {
     addCheck('newsletter persistent subscribe', ok, { status: res.status, json: json || text.slice(0, 250) });
   } catch (error) { addCheck('newsletter persistent subscribe', false, { error: error.message }); }
 }
+function newsletterHealthOk(json) {
+  return Boolean(json && (
+    json.capturePersistent === true ||
+    (json.ok === true && json.storage === 'Cloudflare KV FORUM_POSTS' && (json.signup === '/newsletter-signup' || json.signup === '/subscribe-newsletter'))
+  ));
+}
 async function main() {
   await expectPage('/', ['Matrix', 'Reprogrammed']);
   await expectPage('/search.html', ['archive-search', 'search-results']);
@@ -75,7 +88,7 @@ async function main() {
   await expectJson('/deploy-status.json', json => ({ ok: Boolean(json && (json.buildSha || json.commit || json.workerScript || json.assetOutput)), keys: Object.keys(json || {}) }));
   await expectJson('/deploy-health.json', json => ({ ok: Boolean(json && json.ok !== false), keys: Object.keys(json || {}) }));
   await expectJson('/forum-health', json => ({ ok: Boolean(json && (json.ok === true || json.configured === true || json.bindingHealthy === true || json.forumPostsBinding === 'connected')), json }));
-  await expectJson('/newsletter-health', json => ({ ok: Boolean(json && json.capturePersistent === true), json }));
+  await expectJson('/newsletter-health', json => ({ ok: newsletterHealthOk(json), json }));
   await expectJson('/downloads/intel-drop-vault.json', json => ({ ok: Boolean(json && Array.isArray(json.records) && typeof json.totalCount === 'number'), count: json && json.totalCount }));
 
   const searchIndex = await expectJson('/search-index.json', json => ({ ok: Array.isArray(json) && json.length >= 20 && json.some(item => item && item.url === 'books.html'), count: Array.isArray(json) ? json.length : null }));

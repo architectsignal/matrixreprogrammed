@@ -9,6 +9,7 @@ on:
         default: "true"
   workflow_run:
     workflows:
+      - Matrix Reprogrammed Production Deploy
       - Deploy Production
     types:
       - completed

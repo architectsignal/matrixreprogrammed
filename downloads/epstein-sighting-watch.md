@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-01T08:47:04.520Z
+Generated: 2026-07-02T07:45:18.191Z
 
 ## Official Boundary
 
@@ -49,6 +49,36 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
+### Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQQWlxWktRQjk1aWpmWTdRTVB3S2VJZDQwYnFkdDlCN21FUldHb0NraC1LN0NfSkNpbnRJQ2ZvcDRRbk1fZnBYeHhrN25ncUVDanBFRVVyWHU2cG5LblpWNkRiVzdCVGFPcHlYU19pTExLUFNMd3laNzQ1Q19fNWJadmc3WUwyQV9qTzYzU1BvMkpObWZ0aExkRQ?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Timeline: Bill Clinton's interactions with Jeffrey Epstein ABC News - Breaking News, Latest News and Videos
+
+### Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News - Breaking News, Latest News and Videos
+- Type: debunk/fake-media-risk
+- Status: unverified-claim
+- Evidence level: 3
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMingFBVV95cUxPM0Z4WFBMVnlUUzRrOGFJT2dSNGw5YUtTNDk1cjg1cFdiX1p2R1JtQkgxWGZ3d2pfdVVRbGFjTFNuWGhfVXdOaThwRncxaGtEaEMzNGVSUlJ0cWtBLV91YXp2MFhHdFV5d1hMUDlPWnhUdHY4cC1NRmdWdHl2cmFWeW1JR002c09rcVNyd2VVY0xhSVlLdjZTdUN2XzZUd9IBowFBVV95cUxPdi1uX1V1ZEo1Z3hfb1dUYnk4STFPeXYxMXRzOFJrZFFQb3VkcjBodDRWT1lWR3RhUmRaQWNsOVJCa1Vyelh4YmctRTRTVms1OFgtMm1Rdi1pVnFIemw2UVQ2bTV5QnFCN1lVR1VoQTFnUlVqTFIwcDA4Nk10ZkZEZEhuOXZiSTY1bkw3akN1UXBYOUpKc0R4RWl6MVpBOXlXZ2RJ?oc=5
+- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
+
+Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls ABC News - Breaking News, Latest News and Videos
+
+### Clinton confidant walks back Epstein Island claim in House testimony - Washington Times
+- Type: debunk/fake-media-risk
+- Status: unverified-claim
+- Evidence level: 4
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQNXJpWEVCaUZGWGNaeElmeHAtMEZ2T3hJUnBKN0FOeFVTR2FUTzk2dndCZlFoZnloR2RGWHQ1M1ZNUDdDejhpUWxyXzRkbHpZUG1MVkFjRnJETDVVWmpuQWh2QTZCNkZEZThvZXNIZnhJbkQyMGQtcENqMnRPN1FPSjFjb1R5aFRwMi00ZXljU2pDNmpSRlM3Q3ZCVHhENk9HZGRyUFJ6bS1kYXo2bjBMUG5lTm9SalU?oc=5
+- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
+
+Clinton confidant walks back Epstein Island claim in House testimony Washington Times
+
 ### Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
 - Type: debunk/fake-media-risk
 - Status: unverified-claim
@@ -88,23 +118,3 @@ New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigati
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times SheKnows
-
-### 5 Questions Keeping the Epstein Files Alive - Newsweek
-- Type: survival-claim
-- Status: unverified-claim
-- Evidence level: 1
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
-- Likely explanation: Low evidence signal: meme, repost, anonymous text, or screenshot without source custody.
-
-5 Questions Keeping the Epstein Files Alive Newsweek
-
-### Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)
-- Type: debunk/fake-media-risk
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
-
-Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree The Standard (HK)

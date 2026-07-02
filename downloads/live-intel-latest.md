@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-01T08:47:00.211Z
+Updated: 2026-07-02T07:45:16.182Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -20,20 +20,52 @@ Updated: 2026-07-01T08:47:00.211Z
 - Crime State Overlap: crime-hub.html
 
 ## Latest Items
-- 2026-07-01 — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke. Open the source first, then follow the evidence route.
-  - Short title: What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streaml
-  - Longform title: Google News / control structure — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
+- 2026-07-02 — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online. The record matters, but the evidence class matters more.
+  - Short title: Democratic congressman asks the CFPB to investigate ‘rent now, pay later
+  - Longform title: Google News / Epstein timeline and files — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Heral
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-center.html
+  - Offer: offer-starter-library.html
+- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS. The record matters, but the evidence class matters more.
+  - Short title: James Comer Says Oversight Will Hold Public Hearings on Epstein - News o
+  - Longform title: Google News / Epstein timeline and files — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOT
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-01 — Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQQWlxWktRQjk1aWpmWTdRTVB3S2VJZDQwYnFkdDlCN21FUldHb0NraC1LN0NfSkNpbnRJQ2ZvcDRRbk1fZnBYeHhrN25ncUVDanBFRVVyWHU2cG5LblpWNkRiVzdCVGFPcHlYU19pTExLUFNMd3laNzQ1Q19fNWJadmc3WUwyQV9qTzYzU1BvMkpObWZ0aExkRQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
+  - Short title: Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News -
+  - Longform title: Google News / Epstein sighting and alive claims — Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Lat
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-01 — Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxPM0Z4WFBMVnlUUzRrOGFJT2dSNGw5YUtTNDk1cjg1cFdiX1p2R1JtQkgxWGZ3d2pfdVVRbGFjTFNuWGhfVXdOaThwRncxaGtEaEMzNGVSUlJ0cWtBLV91YXp2MFhHdFV5d1hMUDlPWnhUdHY4cC1NRmdWdHl2cmFWeW1JR002c09rcVNyd2VVY0xhSVlLdjZTdUN2XzZUd9IBowFBVV95cUxPdi1uX1V1ZEo1Z3hfb1dUYnk4STFPeXYxMXRzOFJrZFFQb3VkcjBodDRWT1lWR3RhUmRaQWNsOVJCa1Vyelh4YmctRTRTVms1OFgtMm1Rdi1pVnFIemw2UVQ2bTV5QnFCN1lVR1VoQTFnUlVqTFIwcDA4Nk10ZkZEZEhuOXZiSTY1bkw3akN1UXBYOUpKc0R4RWl6MVpBOXlXZ2RJ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
+  - Short title: Bill Clinton, in deposition, said he never saw Epstein sexually abuse wo
+  - Longform title: Google News / Epstein timeline and files — Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News -
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
   - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
   - Evidence: Seven-day public-record/news lead
   - Video hook: New Epstein file lane: Former Clinton aide appears before House panel in Epstein investigation - Scripps News. The record matters, but the evidence class matters more.
   - Short title: Former Clinton aide appears before House panel in Epstein investigation
   - Longform title: Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Clinton confidant walks back Epstein Island claim in House testimony - Washington Times
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQNXJpWEVCaUZGWGNaeElmeHAtMEZ2T3hJUnBKN0FOeFVTR2FUTzk2dndCZlFoZnloR2RGWHQ1M1ZNUDdDejhpUWxyXzRkbHpZUG1MVkFjRnJETDVVWmpuQWh2QTZCNkZEZThvZXNIZnhJbkQyMGQtcENqMnRPN1FPSjFjb1R5aFRwMi00ZXljU2pDNmpSRlM3Q3ZCVHhENk9HZGRyUFJ6bS1kYXo2bjBMUG5lTm9SalU?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Clinton confidant walks back Epstein Island claim in House testimony - Washington Times. The record matters, but the evidence class matters more.
+  - Short title: Clinton confidant walks back Epstein Island claim in House testimony - W
+  - Longform title: Google News / Epstein timeline and files — Clinton confidant walks back Epstein Island claim in House testimony - Washington Times
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-30 — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
@@ -60,28 +92,12 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / control structure — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-center.html
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: AWS is investing billions to put AI into production for the public sector - About Amazon. Open the source first, then follow the evidence route.
-  - Short title: AWS is investing billions to put AI into production for the public secto
-  - Longform title: Google News / war machine — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
 - 2026-06-30 — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
   - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
   - Evidence: Seven-day public-record/news lead
   - Video hook: New Epstein file lane: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI. The record matters, but the evidence class matters more.
   - Short title: Longtime Clinton aide walks back claim former president visited Epstein
   - Longform title: Google News / Epstein timeline and files — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZ
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
-  - Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network. The record matters, but the evidence class matters more.
-  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s
-  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-30 — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
@@ -100,12 +116,36 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guard
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - MyCentralOregon.com
+  - Source: https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSzU2NUl1b2x0UmFGSmQxV0YxSWMwY1dwUG5IaGdMSEpqMV9mZXg5b3pkQUlJRlFiZ3NINzdfOHpRMXZwd1A3MFRscmRRS1RhM0hEVzEyTHduUFNtb3Y1QWtFR0ZuZ1QwaVJSaTAwZlhRRnBjSGlQSWQ2bF9sY0hGNko2UUROelIzMXNmNmhxWk1WSTZIZktNQWpGdW5XWEM0c2hPeldfdDMxSmxEeW5HRzVZem41Z1FHellwMkZTUjhxQTBGTHhKMC0tNFlLTW9XUnV1LVNR?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - MyCentralOregon.com. The record matters, but the evidence class matters more.
+  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s
+  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
   - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
   - Evidence: Seven-day public-record/news lead
   - Video hook: New Epstein file lane: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News. The record matters, but the evidence class matters more.
   - Short title: Clinton confidant who called Maxwell his 'lover' grilled by Congress ove
   - Longform title: Google News / Epstein timeline and files — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-29 — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
+  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New archive lane: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive. A released file is the start of the investigation, not the final verdict.
+  - Short title: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not C
+  - Longform title: Google News / declassified files — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Sec
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica. The record matters, but the evidence class matters more.
+  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
+  - Longform title: Google News / Epstein timeline and files — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-27 — New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows
@@ -148,6 +188,14 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / Epstein timeline and files — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Cen
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New seven-day intelligence lane: Major UK banks back reusable digital ID network for financial services - Biometric Update. Open the source first, then follow the evidence route.
+  - Short title: Major UK banks back reusable digital ID network for financial services -
+  - Longform title: Google News / control structure — Major UK banks back reusable digital ID network for financial services - Biometric Update
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-center.html
 - 2026-06-26 — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
   - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
   - Evidence: Seven-day public-record lead
@@ -156,14 +204,6 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / control structure — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-center.html
-- 2026-06-26 — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOcHdhOHF5ejVUVFdsOWFwRGZhM3d5S1lvUnljTEFlSTBFc1JFVVRTWkF1MXBFSTJmUlBDNURiN3FNQXJmVGRsOVFXRjMxNWlGZ2p0UEh3Nm12UTJTR0JXU3NLNkQtQ3J2NGFJTGl0c1dNMGdBQ01KNEpPb25uVXpHczZYX0k?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA. The record matters, but the evidence class matters more.
-  - Short title: Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I
-  - Longform title: Google News / Epstein timeline and files — Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-26 — House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider
   - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -180,36 +220,12 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / Epstein timeline and files — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more re
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-26 — House panel subpoenas Leon Black, escalating tactics in Epstein investigation - Politico
-  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxNQ1pZWTBlQkZOYS0tVEhxQ0s3Smlma0RWNHBOaVBnRVdMSGZpZlpxZk5Pazkya2RmWEJqWFMtUXdRZ1FpRHN2S2piWDllMFNkNFF5QzZ6bloxQ1Q5d0tfb2hmTlhFc3cwUEZSRW9HemZ6VDFhRnZFR3R5cEVNd1Eza0xmMWdqOWlWQVYtVTYtT1lXd01JRUpmOEd3?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: House panel subpoenas Leon Black, escalating tactics in Epstein investigation - Politico. The record matters, but the evidence class matters more.
-  - Short title: House panel subpoenas Leon Black, escalating tactics in Epstein investig
-  - Longform title: Google News / Epstein timeline and files — House panel subpoenas Leon Black, escalating tactics in Epstein investigation - Politico
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-26 — Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times
   - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeV9QV0pzT0tyN2llZ01rMERKRWRGcEVNWU9XdVNCR3hGaHlUUzViRnpfMUZYdXJ6RnI4ZzZrWEVxRUdQOHg0U2tRVlFhN3RFdjg0LXBsUHktN2RXZXg0RGtZSW1ta2NlRjQybDBYLXU1ZllMSUJHd1BnS0FsWVJ6OF9hc2JqZE1ITTFv?oc=5
   - Evidence: Seven-day public-record/news lead
   - Video hook: New Epstein file lane: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times. The record matters, but the evidence class matters more.
   - Short title: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusua
   - Longform title: Google News / Epstein timeline and files — Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New Yo
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
-  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: 5 Questions Keeping the Epstein Files Alive - Newsweek. The record matters, but the evidence class matters more.
-  - Short title: 5 Questions Keeping the Epstein Files Alive - Newsweek
-  - Longform title: Google News / Epstein timeline and files — 5 Questions Keeping the Epstein Files Alive - Newsweek
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-26 — Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arrow News - SAN - Unbiased. Straight Facts.
-  - Source: https://news.google.com/rss/articles/CBMinwFBVV95cUxNUnNUWFNNSWpIUTBfZUxwX1UwVlJPeDZRcU5ITVEyankwbkVsdVloNGpvU2N6cGc3Z083eHJhckRhZi1BU0UwWjRCM1V2QzhFZVo1WmtzVEZ4a1owY3RfX1U2RFBBRG5RNDRPTjRKWkRxakJESDVPWlFweEQ5RzBBU3lnemlHYWxFWElCOXZqbmltUVFJUGNzN3VNdHo3Z1E?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arrow News - SAN - Unbiased. Straight Facts.. The record matters, but the evidence class matters more.
-  - Short title: Judge says Blanche ‘conceded’ to violating law, orders Epstein files be
-  - Longform title: Google News / Epstein timeline and files — Judge says Blanche ‘conceded’ to violating law, orders Epstein files be unredacted - Straight Arr
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-06-26 — Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian
@@ -236,14 +252,6 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / crime state overlap — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-crime-dossiers.html
-- 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
-  - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek. The record matters, but the evidence class matters more.
-  - Short title: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells D
-  - Longform title: Google News / Epstein timeline and files — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -260,14 +268,6 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / Epstein timeline and files — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-25 — Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington Examiner
-  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPM2pkTzVKc3FyREROcm9XOWYzRmhtNzdzS093Vl83ZHN3MmRFQTB1dmowSkFEb2VUMmpUM1hMUU1pdExWb2lNX0VHWGlCQzU0QXU2ZjBHOEo1TkhkRkxrbkxZdlduMl9JeF9mdGZXSFBuaXdWUl9uY0ZPUlpFWTBGQUoxZnpwa2htTFJhMHkwSTg1MkwxaXBLd3R2OVoyeUEwYXVCQ2kzdVN0U2lKT0M3T1Ffd1Y?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington Examiner. The record matters, but the evidence class matters more.
-  - Short title: Ghislaine Maxwell claims new evidence in Epstein files should erase her
-  - Longform title: Google News / Epstein timeline and files — Ghislaine Maxwell claims new evidence in Epstein files should erase her conviction - Washington E
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-25 — Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media
   - Source: https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -276,43 +276,11 @@ Updated: 2026-07-01T08:47:00.211Z
   - Longform title: Google News / Epstein timeline and files — Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-25 — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
-  - Source: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
+- 2026-06-25 — The secret settlements protecting Jeffrey Epstein’s friends - Politico
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOQURIS1BhQTkyU3NPeENlTDQ3S1F2cUN3Q2ZhRzZwUjZTRndxRmYyRFJRSzJEQXI0UFpqOGtiN0VjOFdjc0JMcTVFZlVCSkxiNVUxczNnWl9PY3F0NjE4eUtXdDNNa3lmTXJpZV9YcXBqUEt1MFZKaVdKQnpwZGJEYTN4bm41SWlycFpjTzg0VERxbjVOaV9z?oc=5
   - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent. The record matters, but the evidence class matters more.
-  - Short title: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail
-  - Longform title: Google News / Epstein timeline and files — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-25 — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNdU5ENExoeHh3b0ozTjVtQzFiZzFmOVhNdEthWUJOMkdWZjhoSkN6RzdNTmVrVlNsOUtyekxzLU5lemZCRHVSRVZ0LU1neGhQeXZyVXhCbWxVWTlqc2hCTFJ3M1NGNVYxMlhURnBZbkZaVGpqYkZzUFlYNUp1WEl1NzdCbFBIRXBEQmlPV1llUGktODhzejNnUTYzM2wtZw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow News - SAN - Unbiased. Straight Facts.. The record matters, but the evidence class matters more.
-  - Short title: Ghislaine Maxwell says newly released Epstein files could overturn convi
-  - Longform title: Google News / Epstein timeline and files — Ghislaine Maxwell says newly released Epstein files could overturn conviction - Straight Arrow Ne
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-25 — Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ
-  - Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPUFhWXzRZalVOZzE2ak4zYjVURmZqZ0RsYU5GMHhSWWNpajBFSUVONW96TVJiQXdDWUlsbVc2Z3FTT3NETzdTZFVONHE1ZHFMcDBsaUE1SUdPM0l0SkllRGRvQ244RFNNZWJIcXdPZnBQeGtlUm9La0ZlRDhQRnJkazRPYTdWSHAwQko1aWxiSmU1ZDV4S1VPel9ldndWSE9G?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ. The record matters, but the evidence class matters more.
-  - Short title: Maxwell challenges conviction as Gates testifies over Epstein ties - Ane
-  - Longform title: Google News / Epstein timeline and files — Maxwell challenges conviction as Gates testifies over Epstein ties - AnewZ
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-25 — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)
-  - Source: https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK). The record matters, but the evidence class matters more.
-  - Short title: Epstein associate Ghislaine Maxwell says new evidence undermines convict
-  - Longform title: Google News / Epstein sighting and alive claims — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutor
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-24 — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOUHl3T2lNS2tMZW05QmZGTmdvVW9lenJfb1RaUXFTWm9MWDlLc0w4RkVNSmtRM1oxbEUtME1iWVlaYVotTXI0eUxyU0VIeEFGYk5rUl9qU1dWOWZZUEljRWVwZjJqMVVoVHBTdVMyTXBtN182X0twTXc1emhBV2UyeElmUTg?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW. The record matters, but the evidence class matters more.
-  - Short title: 9 takeaways from Bill Gates’ Epstein interview with the House Oversight
-  - Longform title: Google News / Epstein timeline and files — 9 takeaways from Bill Gates’ Epstein interview with the House Oversight Committee - MS NOW
+  - Video hook: New Epstein file lane: The secret settlements protecting Jeffrey Epstein’s friends - Politico. The record matters, but the evidence class matters more.
+  - Short title: The secret settlements protecting Jeffrey Epstein’s friends - Politico
+  - Longform title: Google News / Epstein timeline and files — The secret settlements protecting Jeffrey Epstein’s friends - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html

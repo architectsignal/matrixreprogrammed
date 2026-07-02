@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-01T08:47:04.904Z
+Generated: 2026-07-02T07:45:18.620Z
 
 ## Open Routes
 
@@ -11,16 +11,36 @@ Generated: 2026-07-01T08:47:04.904Z
 
 ## Latest Drops
 
-### What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
-- Lane: Google News / control structure
-- Date: 2026-07-01T05:45:05.000Z
-- Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
-What Exactly Is Corporate Digital Privacy Evolving Toward Now? streamlinefeed.co.ke
+### Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-07-02T01:32:05.000Z
+- Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
+Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies Times Herald Online
+### James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-07-01T15:38:19.000Z
+- Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+James Comer Says Oversight Will Hold Public Hearings on Epstein News of the United States - NOTUS
+### Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+- Lane: Google News / Epstein sighting and alive claims
+- Date: 2026-07-01T05:56:41.000Z
+- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQQWlxWktRQjk1aWpmWTdRTVB3S2VJZDQwYnFkdDlCN21FUldHb0NraC1LN0NfSkNpbnRJQ2ZvcDRRbk1fZnBYeHhrN25ncUVDanBFRVVyWHU2cG5LblpWNkRiVzdCVGFPcHlYU19pTExLUFNMd3laNzQ1Q19fNWJadmc3WUwyQV9qTzYzU1BvMkpObWZ0aExkRQ?oc=5
+Timeline: Bill Clinton's interactions with Jeffrey Epstein ABC News - Breaking News, Latest News and Videos
+### Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News - Breaking News, Latest News and Videos
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-07-01T05:44:23.000Z
+- Source: https://news.google.com/rss/articles/CBMingFBVV95cUxPM0Z4WFBMVnlUUzRrOGFJT2dSNGw5YUtTNDk1cjg1cFdiX1p2R1JtQkgxWGZ3d2pfdVVRbGFjTFNuWGhfVXdOaThwRncxaGtEaEMzNGVSUlJ0cWtBLV91YXp2MFhHdFV5d1hMUDlPWnhUdHY4cC1NRmdWdHl2cmFWeW1JR002c09rcVNyd2VVY0xhSVlLdjZTdUN2XzZUd9IBowFBVV95cUxPdi1uX1V1ZEo1Z3hfb1dUYnk4STFPeXYxMXRzOFJrZFFQb3VkcjBodDRWT1lWR3RhUmRaQWNsOVJCa1Vyelh4YmctRTRTVms1OFgtMm1Rdi1pVnFIemw2UVQ2bTV5QnFCN1lVR1VoQTFnUlVqTFIwcDA4Nk10ZkZEZEhuOXZiSTY1bkw3akN1UXBYOUpKc0R4RWl6MVpBOXlXZ2RJ?oc=5
+Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls ABC News - Breaking News, Latest News and Videos
 ### Former Clinton aide appears before House panel in Epstein investigation - Scripps News
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-07-01T04:51:33.000Z
 - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
 Former Clinton aide appears before House panel in Epstein investigation Scripps News
+### Clinton confidant walks back Epstein Island claim in House testimony - Washington Times
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-06-30T20:52:36.000Z
+- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQNXJpWEVCaUZGWGNaeElmeHAtMEZ2T3hJUnBKN0FOeFVTR2FUTzk2dndCZlFoZnloR2RGWHQ1M1ZNUDdDejhpUWxyXzRkbHpZUG1MVkFjRnJETDVVWmpuQWh2QTZCNkZEZThvZXNIZnhJbkQyMGQtcENqMnRPN1FPSjFjb1R5aFRwMi00ZXljU2pDNmpSRlM3Q3ZCVHhENk9HZGRyUFJ6bS1kYXo2bjBMUG5lTm9SalU?oc=5
+Clinton confidant walks back Epstein Island claim in House testimony Washington Times
 ### What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-06-30T20:41:52.000Z
@@ -36,21 +56,11 @@ Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall 
 - Date: 2026-06-30T19:04:00.000Z
 - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
 ICE biometrics underpin broader surveillance network, report argues Biometric Update
-### AWS is investing billions to put AI into production for the public sector - About Amazon
-- Lane: Google News / war machine
-- Date: 2026-06-30T17:48:21.000Z
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-AWS is investing billions to put AI into production for the public sector About Amazon
 ### Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-06-30T16:53:00.000Z
 - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
 Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI
-### Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T15:40:24.000Z
-- Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
-Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein Rural Radio Network
 ### New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
 - Lane: Google News / Epstein sighting and alive claims
 - Date: 2026-06-30T15:25:00.000Z
@@ -61,11 +71,26 @@ New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigati
 - Date: 2026-06-30T15:24:00.000Z
 - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
 Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says The Guardian
+### Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - MyCentralOregon.com
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-06-30T14:07:37.000Z
+- Source: https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSzU2NUl1b2x0UmFGSmQxV0YxSWMwY1dwUG5IaGdMSEpqMV9mZXg5b3pkQUlJRlFiZ3NINzdfOHpRMXZwd1A3MFRscmRRS1RhM0hEVzEyTHduUFNtb3Y1QWtFR0ZuZ1QwaVJSaTAwZlhRRnBjSGlQSWQ2bF9sY0hGNko2UUROelIzMXNmNmhxWk1WSTZIZktNQWpGdW5XWEM0c2hPeldfdDMxSmxEeW5HRzVZem41Z1FHellwMkZTUjhxQTBGTHhKMC0tNFlLTW9XUnV1LVNR?oc=5
+Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein MyCentralOregon.com
 ### Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-06-30T10:00:15.000Z
 - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
 Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties Fox News
+### MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
+- Lane: Google News / declassified files
+- Date: 2026-06-29T12:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
+MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories National Security Archive
+### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-06-29T05:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
 ### New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows
 - Lane: Google News / Epstein sighting and alive claims
 - Date: 2026-06-27T19:28:00.000Z
@@ -86,28 +111,3 @@ Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1
 - Date: 2026-06-27T03:00:04.000Z
 - Source: https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5
 Billionaire Leon Black walks out of Epstein investigation hearing BBC
-### Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-26T21:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
-Epstein's billionaire associate subpoenaed after refusing to answer oversight committee The Center Square
-### Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
-- Lane: Google News / control structure
-- Date: 2026-06-26T19:59:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
-Kenya considers linking national ID database to CCTV facial recognition network Biometric Update
-### Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' - KCRA
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-26T18:55:00.000Z
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOcHdhOHF5ejVUVFdsOWFwRGZhM3d5S1lvUnljTEFlSTBFc1JFVVRTWkF1MXBFSTJmUlBDNURiN3FNQXJmVGRsOVFXRjMxNWlGZ2p0UEh3Nm12UTJTR0JXU3NLNkQtQ3J2NGFJTGl0c1dNMGdBQ01KNEpPb25uVXpHczZYX0k?oc=5
-Billionaire Leon Black defends $158M paid to Epstein: 'I knew Jekyll. I didn't know Hyde' KCRA
-### House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-26T18:33:00.000Z
-- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
-House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein Business Insider
-### Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-26T17:21:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
-Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records Spectrum News

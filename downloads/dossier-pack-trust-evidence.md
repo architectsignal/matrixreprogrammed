@@ -48,14 +48,9 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-01T08:47:00.211Z
+Updated: 2026-07-02T07:45:16.182Z
 Items: 12
 
-- 2026-07-01 — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-01 — From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum
   - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
   - Evidence: Seven-day public-record lead
@@ -63,6 +58,11 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-30 — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -76,15 +76,15 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-05-25 — Guyana to roll out AI-powered smart police stations and nationwide surveillance system by 2030 - Caribbean National Weekly
-  - Source: https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNlRpTGJkVVdRTHA5UlhWcVVEUnhNNWRJc1lEci0zMUIwNzJXOE8xc3lOWjhpYzdKdVBnQWJoV29Ec3NfTzA2MDNEOHBhbjRHb2tDVFdXSGxrc2Z2N2lNemtXRFBMUk1rU3I4ZGp1WGxBN1NKOW1BRU1ZcXhEQXpyUVFkam5yMW1ETlVBWm5MUi1MTDVQOGdKNVdCZHZaQVhnYjRVd2dOLUVFbTFEUGZGb2EtS2o2OERfVUw1MEdNSWNiam1SSkVZemNhem11cFlRM1JUZUM5SQ?oc=5
+- 2026-06-29 — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
+  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
   - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
+- 2026-06-17 — Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP
+  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
   - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-11 — Democrats to call on Vance to testify to House committee over Epstein files | JD Vance - The Guardian
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
@@ -129,13 +129,13 @@ Items: 12
 - Source route: claim classifier — claim-classifier.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- Google News / control structure: What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke — https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
 - Google News / control structure: From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum — https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
 - Google News / control structure: ICE biometrics underpin broader surveillance network, report argues - Biometric Update — https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
+- Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
 - Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
-- Google News / control structure: Guyana to roll out AI-powered smart police stations and nationwide surveillance system by 2030 - Caribbean National Weekly — https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNlRpTGJkVVdRTHA5UlhWcVVEUnhNNWRJc1lEci0zMUIwNzJXOE8xc3lOWjhpYzdKdVBnQWJoV29Ec3NfTzA2MDNEOHBhbjRHb2tDVFdXSGxrc2Z2N2lNemtXRFBMUk1rU3I4ZGp1WGxBN1NKOW1BRU1ZcXhEQXpyUVFkam5yMW1ETlVBWm5MUi1MTDVQOGdKNVdCZHZaQVhnYjRVd2dOLUVFbTFEUGZGb2EtS2o2OERfVUw1MEdNSWNiam1SSkVZemNhem11cFlRM1JUZUM5SQ?oc=5
-- Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
+- Google News / declassified files: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive — https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
+- Google News / crime state overlap: Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP — https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
 - Google News / Epstein timeline and files: Democrats to call on Vance to testify to House committee over Epstein files | JD Vance - The Guardian — https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells US House ‘I have never victimized anyone’ in Epstein testimony - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNaWpGR1luRUZpVHdCYzlYTEJWZVpVSFhBUzlLdnFIREtQRUZOc1ZTQndnem12cE43elNxeGpIOTFWdk5fQkpfRmktTnczZFNYN0o4X0lCb0NKdmdFcnRRZUxsRko3bmtRNDBhQk4yWWlabnE5akxmS2ZaOXAtanF5eFpuWXBuRi1JY2ZkcA?oc=5
 - Google News / war machine: Is the U.S. Involved in Israel’s War on Lebanon? - The American Conservative — https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFM3eDRsd1ZnQWY0cTdVUWllckpoWEhEcnpTQzUzV2VTT1Y5VFpURjFwb2tQZzVvclZuaWF5MHR1RllDazNaRmZqNUpLb2M2T2VOeHZuZ2x5ZF9LNEJLLWxlVk9XZk4xM2FGWlNuU0dhbzZQM2sxR2FId2ZkcHhBQWtQTGhid2V4SmdqWkVRZw?oc=5

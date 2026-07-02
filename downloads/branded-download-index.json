@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T08:47:04.338Z",
+  "updated": "2026-07-02T07:45:18.004Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 77,
+  "count": 81,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -241,6 +241,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/downloads-index.pdf",
+      "title": "Matrix Reprogrammed Download Index",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/epstein-email-signals.pdf",
       "title": "Epstein Email Signal Map",
       "reused": true,
@@ -301,6 +307,18 @@
       "kind": "download"
     },
     {
+      "file": "downloads/follow-the-money-tracking-manual.pdf",
+      "title": "Follow The Money Tracking Manual",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/follow-the-money-watch.pdf",
+      "title": "Follow The Money Watch",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/forum-posts.pdf",
       "title": "Forum Posts Export",
       "reused": true,
@@ -316,6 +334,12 @@
       "file": "downloads/global-risk-clocks-linked.pdf",
       "title": "Global Risk Clocks",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/intel-drop-vault.pdf",
+      "title": "Matrix Reprogrammed Intel Drop Vault",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -593,7 +617,7 @@
     {
       "file": "downloads/update-cadence-report.pdf",
       "title": "Update Cadence Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {

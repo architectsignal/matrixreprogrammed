@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-01T08:47:04.144Z
+Updated: 2026-07-02T07:45:17.763Z
 
 ## Status
 
-- Live Intel items: 37
+- Live Intel items: 33
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -12,12 +12,28 @@ Updated: 2026-07-01T08:47:04.144Z
 
 ## Latest Items
 
-- 2026-07-01 — What Exactly Is Corporate Digital Privacy Evolving Toward Now? - streamlinefeed.co.ke
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNVEoxMG9TNWxsRVRwakFPSDd5aXB6VnhtWTAtaTBRTGxqWWdLSHV2RllRU0w2VnIzVDI5blRFQkY1bE84dTVyUG1rUEVCRzBvdmt1bktyNmNCMjUtYnluNzhGdlR0aF9VRTBZMnlFX09UMW02X29aSzI1VkthbnhwcVByUVlDMWhaVlhQeWZiVjlDSjRwSlRpeUpiSQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-02 — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-01 — Timeline: Bill Clinton's interactions with Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQQWlxWktRQjk1aWpmWTdRTVB3S2VJZDQwYnFkdDlCN21FUldHb0NraC1LN0NfSkNpbnRJQ2ZvcDRRbk1fZnBYeHhrN25ncUVDanBFRVVyWHU2cG5LblpWNkRiVzdCVGFPcHlYU19pTExLUFNMd3laNzQ1Q19fNWJadmc3WUwyQV9qTzYzU1BvMkpObWZ0aExkRQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-01 — Bill Clinton, in deposition, said he never saw Epstein sexually abuse women or girls - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxPM0Z4WFBMVnlUUzRrOGFJT2dSNGw5YUtTNDk1cjg1cFdiX1p2R1JtQkgxWGZ3d2pfdVVRbGFjTFNuWGhfVXdOaThwRncxaGtEaEMzNGVSUlJ0cWtBLV91YXp2MFhHdFV5d1hMUDlPWnhUdHY4cC1NRmdWdHl2cmFWeW1JR002c09rcVNyd2VVY0xhSVlLdjZTdUN2XzZUd9IBowFBVV95cUxPdi1uX1V1ZEo1Z3hfb1dUYnk4STFPeXYxMXRzOFJrZFFQb3VkcjBodDRWT1lWR3RhUmRaQWNsOVJCa1Vyelh4YmctRTRTVms1OFgtMm1Rdi1pVnFIemw2UVQ2bTV5QnFCN1lVR1VoQTFnUlVqTFIwcDA4Nk10ZkZEZEhuOXZiSTY1bkw3akN1UXBYOUpKc0R4RWl6MVpBOXlXZ2RJ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
   - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-06-30 — Clinton confidant walks back Epstein Island claim in House testimony - Washington Times
+  - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQNXJpWEVCaUZGWGNaeElmeHAtMEZ2T3hJUnBKN0FOeFVTR2FUTzk2dndCZlFoZnloR2RGWHQ1M1ZNUDdDejhpUWxyXzRkbHpZUG1MVkFjRnJETDVVWmpuQWh2QTZCNkZEZThvZXNIZnhJbkQyMGQtcENqMnRPN1FPSjFjb1R5aFRwMi00ZXljU2pDNmpSRlM3Q3ZCVHhENk9HZGRyUFJ6bS1kYXo2bjBMUG5lTm9SalU?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-06-30 — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
@@ -32,16 +48,8 @@ Updated: 2026-07-01T08:47:04.144Z
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 - 2026-06-30 — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
   - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
-  - Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-06-30 — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
@@ -52,19 +60,11 @@ Updated: 2026-07-01T08:47:04.144Z
   - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - MyCentralOregon.com
+  - Source: https://news.google.com/rss/articles/CBMi1gFBVV95cUxPSzU2NUl1b2x0UmFGSmQxV0YxSWMwY1dwUG5IaGdMSEpqMV9mZXg5b3pkQUlJRlFiZ3NINzdfOHpRMXZwd1A3MFRscmRRS1RhM0hEVzEyTHduUFNtb3Y1QWtFR0ZuZ1QwaVJSaTAwZlhRRnBjSGlQSWQ2bF9sY0hGNko2UUROelIzMXNmNmhxWk1WSTZIZktNQWpGdW5XWEM0c2hPeldfdDMxSmxEeW5HRzVZem41Z1FHellwMkZTUjhxQTBGTHhKMC0tNFlLTW9XUnV1LVNR?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
   - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-06-27 — New Emails Claim Sarah Ferguson Visited Jeffrey Epstein in Jail Numerous Times - SheKnows
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxQZUppX2loVjJieGdzcmN2X3psVG5aUVpSRjFUVE5QLTE1OUdMNmpSVHVkSDBhMUVRcUpBeW10MmRpTTlxM29lY3NEMmU0clRGUjYxMEtKYXRCZ0I0SjFWT3JOYlJ2VXQ4T292aTB4OW1ncVh4UDA4V0RnUDdWNW9oNmUzVE5GWVR1djdIVmFUZGtBUnVvakxGS2Z6VW5kaHUyT1kyRQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-06-27 — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
-  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-01T08:47:00.211Z
+Updated: 2026-07-02T07:45:16.182Z
 Items: 12
 
 - 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
@@ -66,11 +66,6 @@ Items: 12
   - Evidence: Data-exposure / private-network security lane
   - Boundary: A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.
   - Next: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-16 — Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
   - Evidence: Seven-day public-record lead
@@ -81,6 +76,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -88,6 +88,11 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-16 — Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au
   - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-10 — Lawmakers once saw Bill Gates as a benevolent innovator. After Epstein, they aren’t sure. - Politico
+  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxQZHdweW9BMjNMa3JIOWZPZWxsVGtwUGFMYkhXbWthZjFNWVBUa0dsdVN4UVNxZ211TWxWbkFhM05TSUhIS3FVTVNXRDRXQmhkRmttbTZWR3BhLXVSWjZMOHJxM2ZzRWlVSVpmLW9HY0xqTGlkd19sVElDRTVqbENEbXRqZTJfbGlBUDFPMQ?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -103,11 +108,6 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-01 — The Permanent War Government: Who’s really calling the shots in Washington? - Augusta Free Press
   - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDVXR3lxWmI1NmFUbTdYNG1yM0IxZzN3SE1Od1FVTnNhdFdyR2Z1a3RPeTNYTzRpdm9NcTU2Z19xaHA4amFxVm1uS2RzYUY1ODFiT1I4S1ZxbDYtcUhwSEZ6bi1sYlFtbUJaakJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-05-29 — Who’s Really Calling the Shots in Washington? - CounterPunch.org
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNUWoydVNBQWR4OHRPRmZhcVRjd3habDVETTRhX2N2TDNZTXF5UzFhRy13UHJUM09TQmhOUHhMMmxhaDRWS3AxRnp5dUVrQmg5OUY0US1aYU9LdjVJVEptMm9YQUdXZDdZcm4wZlZYTDZmSlZWaVJ6TjFfbFFZeXRSUmZxTE80Ujk2cGo1Rw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -132,15 +132,15 @@ Items: 12
 - Reuters: Israel cyber chief says Iranian cyber incidents surged in June 2026 — https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
 - Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
-- Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
 - Google News / declassified files: Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
 - Google News / Epstein timeline and files: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI — https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
+- Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au — https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
+- Google News / Epstein sighting and alive claims: Lawmakers once saw Bill Gates as a benevolent innovator. After Epstein, they aren’t sure. - Politico — https://news.google.com/rss/articles/CBMijAFBVV95cUxQZHdweW9BMjNMa3JIOWZPZWxsVGtwUGFMYkhXbWthZjFNWVBUa0dsdVN4UVNxZ211TWxWbkFhM05TSUhIS3FVTVNXRDRXQmhkRmttbTZWR3BhLXVSWjZMOHJxM2ZzRWlVSVpmLW9HY0xqTGlkd19sVElDRTVqbENEbXRqZTJfbGlBUDFPMQ?oc=5
 - Google News / war machine: Is the U.S. Involved in Israel’s War on Lebanon? - The American Conservative — https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFM3eDRsd1ZnQWY0cTdVUWllckpoWEhEcnpTQzUzV2VTT1Y5VFpURjFwb2tQZzVvclZuaWF5MHR1RllDazNaRmZqNUpLb2M2T2VOeHZuZ2x5ZF9LNEJLLWxlVk9XZk4xM2FGWlNuU0dhbzZQM2sxR2FId2ZkcHhBQWtQTGhid2V4SmdqWkVRZw?oc=5
 - Google News / control structure: From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum — https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5
 - Google News / war machine: The Permanent War Government: Who’s really calling the shots in Washington? - Augusta Free Press — https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbDVXR3lxWmI1NmFUbTdYNG1yM0IxZzN3SE1Od1FVTnNhdFdyR2Z1a3RPeTNYTzRpdm9NcTU2Z19xaHA4amFxVm1uS2RzYUY1ODFiT1I4S1ZxbDYtcUhwSEZ6bi1sYlFtbUJaakJXWldySW9JZ3NfU21IRk5MQTJDUU5KZS1pZ2RkR2FFM2x5UjRkRGJKamdXT2NibFdYUTJiRHJSNWpESXJubUE?oc=5
-- Google News / war machine: Who’s Really Calling the Shots in Washington? - CounterPunch.org — https://news.google.com/rss/articles/CBMijAFBVV95cUxNUWoydVNBQWR4OHRPRmZhcVRjd3habDVETTRhX2N2TDNZTXF5UzFhRy13UHJUM09TQmhOUHhMMmxhaDRWS3AxRnp5dUVrQmg5OUY0US1aYU9LdjVJVEptMm9YQUdXZDdZcm4wZlZYTDZmSlZWaVJ6TjFfbFFZeXRSUmZxTE80Ujk2cGo1Rw?oc=5
 
 ## Book Routes
 

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-01T08:47:04.338Z
+Updated: 2026-07-02T07:45:18.004Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -48,6 +48,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Symbolic Power Pack: downloads/dossier-pack-symbolic-power.pdf (custom PDF preserved)
 - Trust And Evidence Pack: downloads/dossier-pack-trust-evidence.pdf (custom PDF preserved)
 - War Machine Pack: downloads/dossier-pack-war-machine.pdf (custom PDF preserved)
+- Matrix Reprogrammed Download Index: downloads/downloads-index.pdf
 - Epstein Email Signal Map: downloads/epstein-email-signals.pdf (custom PDF preserved)
 - Epstein Evidence Strength Ladder: downloads/epstein-evidence-ladder.pdf (custom PDF preserved)
 - Epstein Evidence Watch: downloads/epstein-evidence-watch.pdf (custom PDF preserved)
@@ -58,9 +59,12 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Epstein Sighting Watch: downloads/epstein-sighting-watch.pdf (custom PDF preserved)
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
+- Follow The Money Tracking Manual: downloads/follow-the-money-tracking-manual.pdf
+- Follow The Money Watch: downloads/follow-the-money-watch.pdf
 - Forum Posts Export: downloads/forum-posts.pdf (custom PDF preserved)
 - Generated Site Repair Report: downloads/generated-site-repair-report.pdf (custom PDF preserved)
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf (custom PDF preserved)
+- Matrix Reprogrammed Intel Drop Vault: downloads/intel-drop-vault.pdf
 - Intel Vault: downloads/intel-vault.pdf (custom PDF preserved)
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf (custom PDF preserved)
 - The Black File Starter Brief: downloads/lead-magnet-black-file-brief.pdf (custom PDF preserved)
@@ -104,5 +108,5 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
 - Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
-- Update Cadence Report: downloads/update-cadence-report.pdf
+- Update Cadence Report: downloads/update-cadence-report.pdf (custom PDF preserved)
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf (custom PDF preserved)

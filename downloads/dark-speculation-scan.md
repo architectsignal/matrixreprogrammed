@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-01T08:47:04.473Z
+Updated: 2026-07-02T07:45:18.143Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -71,14 +71,14 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Elite / Ritual / Child-Harm
 - Label: unsupported extreme allegation
-- Matches: 7
+- Matches: 5
 - Boundary: Do not treat rumour, symbol, or association as evidence of child harm.
 
 ## Elites eating children
 
 - Category: Elite / Ritual / Child-Harm
 - Label: internet mythology
-- Matches: 7
+- Matches: 5
 - Boundary: Extreme internet horror motif unless case-specific evidence exists.
 
 ## Adrenochrome harvesting
@@ -120,7 +120,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 7
+- Matches: 8
 - Boundary: Do not convert ancient-name symbolism into factual accusation.
 
 ## Saturn worship / black cube control system
@@ -197,7 +197,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Mind Control
 - Label: internet mythology
-- Matches: 3
+- Matches: 4
 - Boundary: Requires careful sourcing; do not present internet lore as confirmed.
 
 ## Predictive programming
@@ -232,14 +232,14 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 1
+- Matches: 2
 - Boundary: Track as a classic narrative unless direct documents are found.
 
 ## Fake messiah hologram event
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 6
+- Matches: 3
 - Boundary: Do not present as planned event without primary evidence.
 
 ## Staged UFO disclosure as control event
@@ -281,7 +281,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Modern Slavery
 - Label: case-specific evidence required
-- Matches: 8
+- Matches: 7
 - Boundary: Needs case-level sources and careful language.
 
 ## Population reduction agendas
@@ -330,7 +330,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Hidden History
 - Label: internet mythology
-- Matches: 0
+- Matches: 1
 - Boundary: Requires verifiable archaeology, not screenshots or recycled images.
 
 ## Vatican hidden history vaults

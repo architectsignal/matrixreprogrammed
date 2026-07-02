@@ -1,9 +1,16 @@
 {
-  "updated": "2026-06-25",
-  "purpose": "Phase 4 Network Architecture Matrix for the Epstein Command Center. This layer explains the functions visible in the records: access, logistics, money, reputation repair, legal pressure, silence, media leverage, institutional proximity, and uncertainty control.",
-  "boundary": "This matrix exposes network function, not automatic criminal guilt. A record can prove contact, money, travel, scheduling, testimony, contradiction, settlement, or institutional access. Criminal attribution requires conviction, plea, court finding, authenticated exhibit, admission, or clearly supported legal record.",
+  "updated": "2026-07-02",
+  "purpose": "Phase 4 Network Architecture Matrix for the Epstein Command Center. This layer explains the functions visible in the records: access, logistics, money, reputation repair, legal pressure, silence, media leverage, institutional proximity, uncertainty control, and the EFTA01104262 capital-class wealth map.",
+  "boundary": "This matrix exposes network function, not automatic criminal guilt. A record can prove contact, money, travel, scheduling, testimony, contradiction, settlement, map-node appearance, or institutional access. Criminal attribution requires conviction, plea, court finding, authenticated exhibit, admission, or clearly supported legal record.",
   "speculationRule": "Speculation is allowed only as a labelled question. It must state what record triggered the question, what is missing, and what would confirm or falsify the theory.",
   "functions": [
+    {
+      "title": "Capital Class / Billionaire Tracker",
+      "evidenceClass": "Source map / public-record wealth lane",
+      "whatToTrack": "Names and institutions appearing on EFTA01104262/EFTA01104263, plus independent records for net worth, investments, company filings, foundations, political money, property/entity leads, and public aircraft/company-aircraft references.",
+      "redFlags": ["Map label treated as guilt", "Net worth displayed without date/source", "Private addresses or family data published", "Real-time movement tracking", "Single-source relationship lines treated as confirmed"],
+      "recordsNeeded": ["Source map", "SEC EDGAR", "Form ADV", "foundation/990 records", "OpenSecrets", "court records", "official disclosures", "reputable reporting", "public corporate-aircraft/registry records"]
+    },
     {
       "title": "Access Network",
       "evidenceClass": "Documented association / contact / invitation / meeting trail",
@@ -14,8 +21,8 @@
     {
       "title": "Logistics Network",
       "evidenceClass": "Scheduling / travel / staff / property record",
-      "whatToTrack": "Who arranged travel, rooms, appointments, massage schedules, errands, accommodation, flights, and property access.",
-      "redFlags": ["Staff repeatedly handling sensitive appointments", "Travel and accommodation around vulnerable persons", "Records that connect names, dates, properties, and assistants", "Denials of knowledge that require cross-checking"],
+      "whatToTrack": "Who arranged travel, rooms, appointments, errands, accommodation, flights, and property access.",
+      "redFlags": ["Staff repeatedly handling sensitive appointments", "Records that connect names, dates, properties, and assistants", "Denials of knowledge that require cross-checking"],
       "recordsNeeded": ["Staff testimony", "schedules", "travel records", "flight logs", "property records", "emails", "phone records where public"]
     },
     {
@@ -64,7 +71,7 @@
   "readerMethod": [
     "Start with the file or court record.",
     "Classify the evidence before naming the implication.",
-    "Map the function: access, logistics, money, reputation, law, silence, media, institution, or open question.",
+    "Map the function: access, logistics, money, reputation, law, silence, media, institution, capital-class wealth route, or open question.",
     "Look for repeated appearances across independent records.",
     "Show the boundary on every claim.",
     "Turn open questions into research tasks, not fake conclusions."

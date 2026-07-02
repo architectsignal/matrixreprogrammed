@@ -66,12 +66,26 @@ function removeDuplicateFunctionDeclarations(text, name) {
 }
 
 function normaliseWorker(text) {
-  return removeDuplicateFunctionDeclarations(text, 'handleNewsletterHealth');
+  return [
+    'handleSubscribeNewsletter',
+    'handleUnsubscribeNewsletter',
+    'handleSendWeeklyNewsletter',
+    'handleNewsletterHealth'
+  ].reduce((current, name) => removeDuplicateFunctionDeclarations(current, name), text);
 }
 
 source = normaliseWorker(source);
 
-const hasNewsletterFunctions = /(?:async\s+function\s+handleSubscribeNewsletter|async\s+function\s+handleNewsletterHealth|function\s+validEmail|const\s+handleNewsletterHealth)/.test(source);
+const requiredNewsletterFragments = [
+  'function validEmail',
+  'function subscriberKey',
+  'async function getSubscribers',
+  'async function handleSubscribeNewsletter',
+  'async function handleUnsubscribeNewsletter',
+  'async function handleSendWeeklyNewsletter',
+  'async function handleNewsletterHealth'
+];
+const hasNewsletterFunctions = requiredNewsletterFragments.every(fragment => source.includes(fragment));
 const hasNewsletterRoutes = source.includes("originalPath === '/subscribe-newsletter'") && source.includes("originalPath === '/newsletter-health'");
 
 const functions = String.raw`
@@ -255,7 +269,7 @@ async function handleNewsletterHealth(env) {
 }
 `;
 
-if (!hasNewsletterFunctions && !source.includes(marker)) {
+if (!hasNewsletterFunctions) {
   const insertBefore = 'async function handleTrackEvent(request, env) {';
   if (!source.includes(insertBefore)) {
     throw new Error('Could not find handleTrackEvent insertion point in src/worker.js');
@@ -284,4 +298,4 @@ if (!hasNewsletterRoutes) {
 
 source = normaliseWorker(source);
 fs.writeFileSync(workerPath, source);
-console.log('Patched Worker with idempotent persistent newsletter capture and weekly send endpoints; duplicate newsletter health handlers removed if found.');
+console.log('Patched Worker with idempotent persistent newsletter capture and weekly send endpoints; missing handlers restored and duplicate newsletter handlers removed if found.');

@@ -1,0 +1,188 @@
+{
+  "updated": "2026-07-02",
+  "title": "Follow The Money Watch",
+  "description": "Daily-updated Matrix Reprogrammed watch system for contracts, billionaires, contractors, AI surveillance, asset managers, foundations, NGOs, lobbying, and revolving-door power.",
+  "evidenceBoundary": "A record means a source trail exists. It does not imply wrongdoing. Separate confirmed contracts, public filings, reported allegations, commentary, and speculation.",
+  "sourceDiscipline": [
+    "Government procurement portals and award notices",
+    "Company SEC filings, annual reports, investor releases, and earnings transcripts",
+    "Lobbying disclosures, FEC records, OpenSecrets, and parliamentary registers",
+    "Court records, sanctions notices, regulator actions, and settlement documents",
+    "Forbes/Bloomberg billionaire indexes for wealth snapshots, treated as estimates not cash holdings",
+    "Credible journalism used only when primary records are unavailable or when controversy/public reaction is the topic"
+  ],
+  "dailyUpdateSchema": {
+    "fields": ["date", "watchLane", "entity", "event", "moneyValue", "sourceType", "sourceUrl", "people", "counterparties", "riskTags", "evidenceGrade", "readerRoute"],
+    "evidenceGrades": ["A: official filing/contract", "B: court/regulator/parliament record", "C: credible reporting", "D: commentary/analysis", "X: unsupported or rejected"]
+  },
+  "watchLanes": [
+    {
+      "id": "palantir-watch",
+      "title": "Palantir Watch",
+      "url": "palantir-watch.html",
+      "mission": "Track Palantir contracts, government customers, defence/AI/data systems, key people, investors, lobbying, criticism, and follow-the-money links.",
+      "priority": "high",
+      "updateCadence": "daily",
+      "tags": ["Palantir", "AI", "defence", "government contracts", "surveillance", "health data", "Maven", "NHS", "US Army"]
+    },
+    {
+      "id": "billionaire-watch",
+      "title": "Billionaire Watch",
+      "url": "billionaire-watch.html",
+      "mission": "Track major billionaires, wealth movements, political gravity, foundations, media ownership, AI/defence/pharma/space investments, and public-policy influence.",
+      "priority": "high",
+      "updateCadence": "daily",
+      "tags": ["billionaires", "wealth", "ownership", "foundations", "political donations", "media", "AI", "defence"]
+    },
+    {
+      "id": "contractor-watch",
+      "title": "Contractor Watch",
+      "url": "follow-the-money.html#contractor-watch",
+      "mission": "Track defence, intelligence, logistics, security, health, and outsourcing contractors that turn public money into private control infrastructure.",
+      "priority": "high",
+      "updateCadence": "daily",
+      "tags": ["contractors", "defence", "intelligence", "outsourcing", "procurement"]
+    },
+    {
+      "id": "ai-surveillance-watch",
+      "title": "AI Surveillance Watch",
+      "url": "follow-the-money.html#ai-surveillance-watch",
+      "mission": "Track AI systems used in policing, borders, war, health data, benefits systems, schools, media monitoring, and financial risk scoring.",
+      "priority": "high",
+      "updateCadence": "daily",
+      "tags": ["AI", "surveillance", "policing", "borders", "biometrics", "data brokers"]
+    },
+    {
+      "id": "asset-manager-watch",
+      "title": "Asset Manager Watch",
+      "url": "follow-the-money.html#asset-manager-watch",
+      "mission": "Track BlackRock, Vanguard, State Street, private equity, sovereign wealth funds, and ownership overlap across defence, media, pharma, housing, and tech.",
+      "priority": "medium",
+      "updateCadence": "daily",
+      "tags": ["asset managers", "ownership", "BlackRock", "Vanguard", "State Street", "private equity"]
+    },
+    {
+      "id": "foundation-ngo-watch",
+      "title": "Foundation / NGO Watch",
+      "url": "follow-the-money.html#foundation-ngo-watch",
+      "mission": "Track billionaire foundations, public-private partnerships, health, education, digital ID, climate, censorship/disinformation projects, and influence routes.",
+      "priority": "medium",
+      "updateCadence": "daily",
+      "tags": ["foundations", "NGOs", "public-private partnerships", "global health", "digital ID", "education"]
+    },
+    {
+      "id": "revolving-door-watch",
+      "title": "Revolving Door Watch",
+      "url": "follow-the-money.html#revolving-door-watch",
+      "mission": "Track people moving between government, intelligence, defence contractors, banks, Big Tech, media, think tanks, NGOs, and pharma.",
+      "priority": "medium",
+      "updateCadence": "daily",
+      "tags": ["revolving door", "lobbying", "public office", "consultants", "advisers"]
+    }
+  ],
+  "palantirSeedRecords": [
+    {
+      "date": "2025-07-31",
+      "entity": "Palantir Technologies / U.S. Army",
+      "event": "U.S. Army enterprise agreement consolidating software procurement, with a potential ceiling of up to $10 billion over ten years.",
+      "moneyValue": "up to $10 billion",
+      "sourceType": "credible reporting / contract announcement coverage",
+      "sourceUrl": "https://www.reuters.com/business/us-army-pools-contracts-into-up-10-billion-palantir-deal-2025-07-31/",
+      "people": ["Alex Karp", "U.S. Army procurement leadership"],
+      "counterparties": ["U.S. Army", "Department of Defense"],
+      "riskTags": ["defence AI", "vendor consolidation", "enterprise lock-in", "wartime data systems"],
+      "evidenceGrade": "C"
+    },
+    {
+      "date": "2026-04-22",
+      "entity": "Palantir Technologies / USDA",
+      "event": "USDA and Palantir signed a software Blanket Purchase Agreement tied to farmer-service modernization and the National Farm Security Action Plan.",
+      "moneyValue": "$300 million BPA",
+      "sourceType": "credible reporting / agency-company announcement coverage",
+      "sourceUrl": "https://www.reuters.com/business/usda-palantir-sign-300-million-software-purchase-agreement-2026-04-22/",
+      "people": ["USDA CIO Sam Berry"],
+      "counterparties": ["U.S. Department of Agriculture"],
+      "riskTags": ["food supply", "farmland security", "federal data integration", "One Farmer One File"],
+      "evidenceGrade": "C"
+    },
+    {
+      "date": "2024-05-29",
+      "entity": "Palantir Technologies / Department of Defense",
+      "event": "Pentagon award for Maven Smart System prototype work to help identify points of interest from multiple data streams.",
+      "moneyValue": "$480 million",
+      "sourceType": "credible reporting / defence award coverage",
+      "sourceUrl": "https://www.reuters.com/technology/palantir-wins-480-million-us-army-deal-maven-prototype-2024-05-29/",
+      "people": ["Department of Defense", "Palantir defence leadership"],
+      "counterparties": ["Department of Defense", "U.S. Army"],
+      "riskTags": ["Maven", "military intelligence", "targeting support", "AI battlefield software"],
+      "evidenceGrade": "C"
+    },
+    {
+      "date": "2023-11-21",
+      "entity": "Palantir Technologies / NHS England",
+      "event": "NHS Federated Data Platform award to a Palantir-led group; this remains politically sensitive and is tracked as a health-data sovereignty issue.",
+      "moneyValue": "£330 million",
+      "sourceType": "contract record plus public controversy coverage",
+      "sourceUrl": "https://www.theguardian.com/technology/2026/mar/12/palantirs-nhs-england-contract-opens-door-to-government-abuse-of-power-health-bosses-told",
+      "people": ["NHS England", "Palantir UK leadership", "civil liberties and health campaign groups"],
+      "counterparties": ["NHS England", "Accenture", "PwC", "Federated Data Platform partners"],
+      "riskTags": ["health data", "public trust", "vendor lock-in", "data sovereignty", "patient privacy"],
+      "evidenceGrade": "C"
+    },
+    {
+      "date": "2026-05-04",
+      "entity": "Palantir Technologies",
+      "event": "Palantir raised 2026 revenue forecast after strong U.S. government and commercial demand; U.S. government revenue was reported as sharply higher in Q1.",
+      "moneyValue": "2026 forecast around $7.65B-$7.66B; Q1 revenue $1.63B reported by Reuters",
+      "sourceType": "earnings coverage / company results reporting",
+      "sourceUrl": "https://www.reuters.com/business/palantir-tops-first-quarter-revenue-estimates-strong-us-government-demand-2026-05-04/",
+      "people": ["Alex Karp", "David Glazer", "Shyam Sankar"],
+      "counterparties": ["U.S. government", "commercial AI customers"],
+      "riskTags": ["AI demand", "government revenue", "commercial revenue", "valuation pressure"],
+      "evidenceGrade": "C"
+    }
+  ],
+  "palantirPeople": [
+    {"name": "Alex Karp", "role": "CEO", "watchReason": "Public face of Palantir strategy, defence-government posture, and public controversy responses."},
+    {"name": "Peter Thiel", "role": "Co-founder / chairman", "watchReason": "Founder-capital, political-network, Silicon Valley and national-security overlap."},
+    {"name": "Stephen Cohen", "role": "Co-founder / president", "watchReason": "Company leadership and platform strategy."},
+    {"name": "Joe Lonsdale", "role": "Co-founder", "watchReason": "Venture, policy, AI and political-network overlap."},
+    {"name": "Shyam Sankar", "role": "CTO", "watchReason": "AI, defence and technical implementation voice."},
+    {"name": "David Glazer", "role": "CFO", "watchReason": "Revenue, margin, forecast and investor-signal tracking."}
+  ],
+  "billionaireWatchFields": [
+    "Name and primary source of wealth",
+    "Daily net-worth movement and wealth-estimate source",
+    "Public holdings and controlling stakes",
+    "AI, defence, surveillance, space, pharma, media, banking, energy and housing exposure",
+    "Political donations, PACs, lobbying links, adviser roles and public-policy interventions",
+    "Foundations, NGOs, universities, think tanks and public-private partnerships",
+    "Court/regulator/sanctions risk and public controversies",
+    "Countries, governments and agencies they are meeting or funding",
+    "Matrix Reprogrammed route: book, dossier, evidence vault, public source, or video angle"
+  ],
+  "billionaireSeedWatchlist": [
+    {"name": "Elon Musk", "primarySource": "Tesla, SpaceX, xAI and related companies", "watchTags": ["space", "AI", "defence", "satellites", "social media", "government contracts"]},
+    {"name": "Larry Page", "primarySource": "Alphabet / Google", "watchTags": ["AI", "search", "data", "health tech", "flying vehicles"]},
+    {"name": "Sergey Brin", "primarySource": "Alphabet / Google", "watchTags": ["AI", "search", "data", "defence-adjacent tech"]},
+    {"name": "Jeff Bezos", "primarySource": "Amazon, AWS, Blue Origin", "watchTags": ["cloud", "space", "media", "defence cloud", "logistics"]},
+    {"name": "Mark Zuckerberg", "primarySource": "Meta Platforms", "watchTags": ["social media", "AI", "VR", "content moderation", "political influence"]},
+    {"name": "Larry Ellison", "primarySource": "Oracle", "watchTags": ["cloud", "databases", "health data", "government systems"]},
+    {"name": "Jensen Huang", "primarySource": "Nvidia", "watchTags": ["AI chips", "data centres", "defence compute", "market power"]},
+    {"name": "Bernard Arnault", "primarySource": "LVMH", "watchTags": ["luxury", "media", "European influence", "family ownership"]},
+    {"name": "Warren Buffett", "primarySource": "Berkshire Hathaway", "watchTags": ["insurance", "rail", "energy", "banking", "long-term ownership"]},
+    {"name": "Amancio Ortega", "primarySource": "Inditex / real estate", "watchTags": ["retail", "real estate", "European wealth"]}
+  ],
+  "sourceLinks": [
+    {"label": "Reuters — U.S. Army / Palantir $10B enterprise agreement", "url": "https://www.reuters.com/business/us-army-pools-contracts-into-up-10-billion-palantir-deal-2025-07-31/"},
+    {"label": "Reuters — USDA / Palantir $300M BPA", "url": "https://www.reuters.com/business/usda-palantir-sign-300-million-software-purchase-agreement-2026-04-22/"},
+    {"label": "Reuters — Pentagon Maven Smart System award", "url": "https://www.reuters.com/technology/palantir-wins-480-million-us-army-deal-maven-prototype-2024-05-29/"},
+    {"label": "Reuters — Palantir Q1 2026 results and forecast", "url": "https://www.reuters.com/business/palantir-tops-first-quarter-revenue-estimates-strong-us-government-demand-2026-05-04/"},
+    {"label": "Guardian — NHS FDP public concern coverage", "url": "https://www.theguardian.com/technology/2026/mar/12/palantirs-nhs-england-contract-opens-door-to-government-abuse-of-power-health-bosses-told"},
+    {"label": "Forbes — real-time billionaires list", "url": "https://www.forbes.com/real-time-billionaires/"},
+    {"label": "Bloomberg Billionaires Index", "url": "https://www.bloomberg.com/billionaires/"},
+    {"label": "OpenSecrets lobbying and revolving door database", "url": "https://www.opensecrets.org/"},
+    {"label": "USAspending federal awards search", "url": "https://www.usaspending.gov/"},
+    {"label": "UK Contracts Finder", "url": "https://www.contractsfinder.service.gov.uk/"}
+  ]
+}

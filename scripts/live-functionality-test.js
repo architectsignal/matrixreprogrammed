@@ -15,6 +15,7 @@ function addCheck(name, ok, details = {}) {
   if (!item.ok) console.log(JSON.stringify(details, null, 2));
 }
 
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 function url(route) { return `${BASE}${route.startsWith('/') ? route : '/' + route}`; }
 async function fetchText(route, options = {}) {
   const controller = new AbortController();
@@ -45,19 +46,31 @@ async function expectJson(route, validator) {
     return json;
   } catch (error) { addCheck(`json ${route}`, false, { error: error.message }); return null; }
 }
+async function feedContainsPost(feedRoute, board, postId) {
+  let last = { status: 0, postCount: 0, attempt: 0 };
+  const attempts = Number(process.env.LIVE_FUNCTIONALITY_FEED_RETRIES || 6);
+  const waitMs = Number(process.env.LIVE_FUNCTIONALITY_FEED_RETRY_MS || 1200);
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const feed = await fetchJson(`${feedRoute}?t=${Date.now()}&attempt=${attempt}`);
+    const posts = feed.json && Array.isArray(feed.json.posts) ? feed.json.posts : (Array.isArray(feed.json) ? feed.json : []);
+    const found = posts.some(item => item && item.id === postId && item.board === board);
+    last = { status: feed.res.status, postCount: posts.length, attempt, found };
+    if (feed.res.ok && found) return { ok: true, details: last };
+    if (attempt < attempts) await sleep(waitMs);
+  }
+  return { ok: false, details: last };
+}
 async function submitBoardPost(board, submitRoute, feedRoute) {
   const stamp = new Date().toISOString();
-  const payload = { board, name: 'Matrix Synthetic Test', category: 'System Test', title: `Synthetic live persistence test ${stamp}`, body: `Automated live functionality test for ${board}. This confirms Cloudflare Worker submit, KV persistence, and feed retrieval.`, sourceUrl: '/deploy-status.json', website: '' };
+  const payload = { board, name: 'Matrix Synthetic Check', category: 'System Check', title: `Synthetic live persistence check ${stamp}`, body: `Automated live functionality check for ${board}. This confirms Cloudflare Worker submit, KV persistence, and feed retrieval.`, sourceUrl: '/deploy-status.json', website: '' };
   try {
     const { res, json, text } = await fetchJson(submitRoute, { method: 'POST', headers: { 'content-type': 'application/json', accept: 'application/json' }, body: JSON.stringify(payload) });
     const post = json && json.post;
     const submitOk = res.ok && json && json.ok === true && json.persistent === true && post && post.id && post.board === board;
     addCheck(`forum submit ${board}`, submitOk, { status: res.status, json: json || text.slice(0, 250) });
     if (!submitOk || !post) return;
-    const feed = await fetchJson(`${feedRoute}?t=${Date.now()}`);
-    const posts = feed.json && Array.isArray(feed.json.posts) ? feed.json.posts : (Array.isArray(feed.json) ? feed.json : []);
-    const found = posts.some(item => item && item.id === post.id && item.board === board);
-    addCheck(`forum feed contains submitted ${board}`, feed.res.ok && found, { status: feed.res.status, submittedId: post.id, postCount: posts.length });
+    const check = await feedContainsPost(feedRoute, board, post.id);
+    addCheck(`forum feed contains submitted ${board}`, check.ok, { ...check.details, submittedId: post.id, retryAware: true });
   } catch (error) { addCheck(`forum submit ${board}`, false, { error: error.message }); }
 }
 async function submitNewsletterTest() {

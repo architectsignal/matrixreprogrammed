@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "e6c17e50734f38d833a9d87d23f95e1102029021",
-  "buildShortSha": "e6c17e50734f",
-  "generatedAt": "2026-07-01T10:51:06.895Z",
+  "buildSha": "02eed8c07c794c7799eff34c3428ccfafcd5ef36",
+  "buildShortSha": "02eed8c07c79",
+  "generatedAt": "2026-07-02T10:16:38.145Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -277,7 +277,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "a3649f1b95fde152"
+      "hash": "20b6c6b7a34dc768"
     },
     {
       "name": "Epstein Command Center",
@@ -357,7 +357,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "aa7341db7fae7672"
+      "hash": "ffd3f024ec44202f"
     },
     {
       "name": "Hard Board Routes",
@@ -365,7 +365,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "aa7341db7fae7672"
+      "hash": "ffd3f024ec44202f"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -377,10 +377,10 @@
     }
   ],
   "hashes": {
-    "worker": "aa7341db7fae7672",
+    "worker": "ffd3f024ec44202f",
     "package": "eb6a74918f6dcc1b",
     "epsteinFiles": "a4a5486f0111815b",
-    "liveIntel": "a3649f1b95fde152"
+    "liveIntel": "20b6c6b7a34dc768"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const downloadsDir = path.join(root, 'downloads');
@@ -26,6 +27,12 @@ function esc(value) { return String(value || '').replace(/&/g, '&amp;').replace(
 const buildSha = envCommit();
 const generatedAt = new Date().toISOString();
 const repairs = [];
+
+const secFeedScript = path.join(root, 'scripts', 'build-sec-filing-feed.js');
+if (fs.existsSync(secFeedScript) && process.env.SKIP_SEC_FILING_FEED !== '1') {
+  const result = spawnSync(process.execPath, [secFeedScript], { cwd: root, stdio: 'pipe', encoding: 'utf8' });
+  repairs.push({ type: 'sec-filing-feed', status: result.status === 0 ? 'ok' : 'failed', stdout: String(result.stdout || '').slice(0, 500), stderr: String(result.stderr || '').slice(0, 500) });
+}
 
 let home = read('index.html');
 if (home) {
@@ -58,6 +65,7 @@ const modules = [
   { name: 'Evidence Vault', route: '/evidence-vault.html', file: 'evidence-vault.html', hash: hash('evidence-vault.html') },
   { name: 'Books', route: '/books.html', file: 'books.html', hash: hash('books.html') },
   { name: 'Download Center', route: '/download-center.html', file: 'download-center.html', hash: hash('download-center.html') },
+  { name: 'SEC Filing Feed', route: '/sec-filing-feed.html', file: 'sec-filing-feed.html', hash: hash('sec-filing-feed.html') },
   { name: 'Forum Worker', route: '/forum-health', file: 'src/worker.js', hash: hash('src/worker.js') },
   { name: 'Cloudflare Assets', route: '/deploy-status', file: 'scripts/build-cloudflare-output.js', hash: hash('scripts/build-cloudflare-output.js') }
 ];
@@ -71,7 +79,7 @@ const health = {
   workerScript: 'src/worker.js',
   assetOutput: '_site',
   homepageExpectedMarker: 'FOLLOW THE FILES.',
-  routes: ['/','/forum-health','/deploy-status','/deploy-status.json','/search','/books','/live-intel','/epstein-files'],
+  routes: ['/','/forum-health','/deploy-status','/deploy-status.json','/search','/books','/live-intel','/epstein-files','/sec-filing-feed.html'],
   modules,
   repairs
 };
@@ -79,7 +87,7 @@ write('deploy-health.json', JSON.stringify(health, null, 2));
 write('downloads/deploy-health.json', JSON.stringify(health, null, 2));
 repairs.push({ type: 'deploy-health-json', files: ['deploy-health.json', 'downloads/deploy-health.json'] });
 
-const healthHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Deploy Health | Matrix Reprogrammed</title><meta name="description" content="Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, PDFs, and reader conversion routes." /><link rel="stylesheet" href="styles.css" /></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="deploy-status.html">Deploy Status</a><a href="live-intel.html">Live Intel</a><a href="books.html">Books</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Cloudflare Health Check</div><h1>DEPLOY HEALTH.</h1><p class="lead">This page shows whether the live build should contain the simplified homepage, hidden eye gate, speculation fallbacks, forum routes, and reader conversion paths.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="downloads/deploy-health.json">Download Health</a><a class="btn alt" href="forum-health">Forum Health</a></div></section><section class="section wrap split"><div class="terminal">DEPLOY HEALTH\n&gt; Build: ${esc(short(buildSha))}\n&gt; Generated: ${esc(generatedAt)}\n&gt; Target: Cloudflare Worker / _site assets\n&gt; Homepage marker leak: NO\n&gt; Overall: READY</div><aside class="card redline"><h2>What to check live</h2><p>Open the homepage. It should show the cleaner entry and one hidden all-seeing-eye link at the bottom. It should not show raw compatibility marker text.</p><a class="btn" href="index.html">Open Homepage</a></aside></section><section class="section wrap"><h2>Module Checks</h2><div class="grid">${modules.map(item => `<article class="card redline"><span class="label">Ready</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p></article>`).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — deploy health ${esc(short(buildSha))}</p></footer></div><script src="matrix.js"></script></body></html>`;
+const healthHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Deploy Health | Matrix Reprogrammed</title><meta name="description" content="Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, PDFs, and reader conversion routes." /><link rel="stylesheet" href="styles.css" /></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="deploy-status.html">Deploy Status</a><a href="sec-filing-feed.html">SEC Filing Feed</a><a href="live-intel.html">Live Intel</a><a href="books.html">Books</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Cloudflare Health Check</div><h1>DEPLOY HEALTH.</h1><p class="lead">This page shows whether the live build should contain the simplified homepage, hidden eye gate, speculation fallbacks, forum routes, SEC filing feed, and reader conversion paths.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="downloads/deploy-health.json">Download Health</a><a class="btn alt" href="forum-health">Forum Health</a></div></section><section class="section wrap split"><div class="terminal">DEPLOY HEALTH\n&gt; Build: ${esc(short(buildSha))}\n&gt; Generated: ${esc(generatedAt)}\n&gt; Target: Cloudflare Worker / _site assets\n&gt; SEC feed: ${hash('sec-filing-feed.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Overall: READY</div><aside class="card redline"><h2>What to check live</h2><p>Open the homepage and the SEC Filing Feed. The feed may show live metadata or a safe fallback if the SEC endpoint is unavailable during build.</p><a class="btn" href="index.html">Open Homepage</a><a class="btn alt" href="sec-filing-feed.html">Open SEC Feed</a></aside></section><section class="section wrap"><h2>Module Checks</h2><div class="grid">${modules.map(item => `<article class="card redline"><span class="label">Ready</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p></article>`).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — deploy health ${esc(short(buildSha))}</p></footer></div><script src="matrix.js"></script></body></html>`;
 write('deploy-health.html', healthHtml);
 repairs.push({ type: 'deploy-health-html', file: 'deploy-health.html' });
 

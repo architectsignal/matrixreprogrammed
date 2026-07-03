@@ -43,6 +43,13 @@ if (home) {
   }
 }
 
+let blackFiles = read('black-files.html');
+if (blackFiles && blackFiles.includes('forEach(x=>series(wrap,s))')) {
+  blackFiles = blackFiles.replace('forEach(x=>series(wrap,s))', 'forEach(x=>series(wrap,x))');
+  write('black-files.html', blackFiles);
+  repairs.push({ type: 'black-files-render-callback', file: 'black-files.html' });
+}
+
 const modules = [
   { name: 'Homepage', route: '/', file: 'index.html', hash: hash('index.html') },
   { name: 'All-seeing eye gate', route: '/', file: 'index.html', hash: hash('index.html') },

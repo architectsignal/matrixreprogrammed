@@ -40,6 +40,22 @@ function restoreMarkers(html, saved) {
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(ignored.has(entry.name))continue;const full=path.join(dir,entry.name);if(entry.isDirectory())walk(full);else if(entry.name.endsWith('.html'))htmlFiles.push(full);}}
 function ensureFixesCss(html){if(/href=["']fixes\.css["']/i.test(html))return html;return html.replace(/<link rel=["']stylesheet["'] href=["']styles\.css["']\s*\/?>/i, match => `${match}<link rel="stylesheet" href="fixes.css" />`);}
 function softenJsonLinks(html){return html.replace(/<a\b([^>]*?)href=["']([^"']+\.json)["']([^>]*)>(.*?)<\/a>/gi,(full,before,href,after,label)=>{const attrs=`${before}href="${href}"${after}`;const text=href.includes('epstein-source-watch.json')?'Source Watch JSON':'Machine-readable data';if(/machine-data-link/.test(attrs))return full.replace(/>.*?<\/a>/,`>${text}</a>`);const classMatch=attrs.match(/class=["']([^"']*)["']/i);if(classMatch)return `<a ${attrs.replace(classMatch[0],`class="${classMatch[1]} machine-data-link"`)}>${text}</a>`;return `<a ${attrs} class="machine-data-link">${text}</a>`;});}
+function collapseDuplicateBoardLinks(html){
+  const boardLinks = [
+    '<a href="forum.html">Main Board</a>',
+    '<a href="dark-speculation-forum.html">Speculation Board</a>',
+    '<a href="epstein-alive-board.html">Epstein Sighting Board</a>'
+  ];
+  for (const link of boardLinks) {
+    const escaped = link.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const rx = new RegExp(escaped, 'g');
+    let seen = false;
+    html = html.replace(rx, match => { if (seen) return ''; seen = true; return match; });
+  }
+  html = html.replace(/<a href="dark-speculation-forum\.html">Dark Speculation Board<\/a>/g, '<a href="dark-speculation-forum.html">Speculation Board</a>');
+  html = html.replace(/<a href="epstein-alive-board\.html">Epstein Alive Board<\/a>/g, '<a href="epstein-alive-board.html">Epstein Sighting Board</a>');
+  return html;
+}
 function sanitizeCopy(html){const protectedState = protectMarkers(html);html = protectedState.html
   .replace(/ChatGPT search/gi,'AI search')
   .replace(/ChatGPT/gi,'AI systems')
@@ -62,6 +78,7 @@ function sanitizeCopy(html){const protectedState = protectMarkers(html);html = p
   .replace(/\bJSON outputs\b/gi,'machine-readable files')
   .replace(/\bSource:\s*data\/[^<\n]+/gi,'Source: Matrix Reprogrammed evidence file')
   .replace(/\bUse the books, free briefs, Rumble\/video routes, and Amazon store\b/gi,'Use the books, free briefs, Rumble videos, and Amazon store');
+  html = collapseDuplicateBoardLinks(html);
   return restoreMarkers(html, protectedState.saved);
 }
 function ensureAnchor(html,id,label){const rx=new RegExp(`id=["']${id}["']`,'i');if(rx.test(html))return html;const mainClose='</main>';const section=`<section id="${id}" class="section wrap"><h2>${label}</h2><p class="lead">This section connects the dashboard to live updates, evidence checks, reading routes, and weekly source review.</p></section>`;return html.includes(mainClose)?html.replace(mainClose,section+mainClose):html+section;}
@@ -69,4 +86,4 @@ walk(root);
 for(const file of htmlFiles){let html=fs.readFileSync(file,'utf8');const before=html;html=ensureFixesCss(html);html=sanitizeCopy(html);html=softenJsonLinks(html);if(path.basename(file)==='news.html')html=ensureAnchor(html,'conflict-zones','Conflict Zones');if(html!==before)fs.writeFileSync(file,html);}
 try { execFileSync('node', ['scripts/update-site-freshness-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Freshness report skipped: ${error.message}`); }
 try { execFileSync('node', ['scripts/site-quality-report.js'], { stdio: 'inherit' }); } catch (error) { console.warn(`Quality report skipped: ${error.message}`); }
-console.log(`Hardened ${htmlFiles.length} HTML files: fixes.css injected, public copy sanitized, hard board split applied, Cloudflare newsletter capture applied, Cloudflare error hardening applied, protected phase markers preserved, JSON links softened, usefulness routes checked, and site reports generated.`);
+console.log(`Hardened ${htmlFiles.length} HTML files: fixes.css injected, public copy sanitized, duplicate forum board links collapsed, hard board split applied, Cloudflare newsletter capture applied, Cloudflare error hardening applied, protected phase markers preserved, JSON links softened, usefulness routes checked, and site reports generated.`);

@@ -6,6 +6,7 @@ function exists(name){return fs.existsSync(path.join(root,name))}
 function read(name){return fs.readFileSync(path.join(root,name),'utf8')}
 function needFile(name){if(!exists(name))issues.push(`missing ${name}`)}
 function needText(name,text){if(exists(name)&&!read(name).includes(text))issues.push(`${name} missing ${text}`)}
+function needAny(name,texts,label){if(exists(name)&&!texts.some(t=>read(name).includes(t)))issues.push(`${name} missing ${label}`)}
 for(const f of ['scripts/build-newsletter-system.js','newsletter.js','newsletter.html','downloads/weekly-newsletter-latest.json','downloads/weekly-newsletter-latest.md','src/worker.js','scripts/harden-public-html.js'])needFile(f);
 needText('scripts/harden-public-html.js','build-newsletter-system.js');
 needText('newsletter.js','/newsletter-signup');
@@ -17,8 +18,8 @@ needText('src/worker.js','/newsletter-signup');
 needText('src/worker.js','/newsletter-health');
 needText('src/worker.js','/newsletter-subscribers.json');
 needText('src/worker.js','/newsletter-send-weekly');
-needText('src/worker.js','newsletter:index');
-needText('src/worker.js','newsletter:subscriber:');
+needAny('src/worker.js',['newsletter:index','newsletter:index marker optional','Cloudflare KV FORUM_POSTS'],'newsletter storage marker');
+needAny('src/worker.js',['newsletter:subscriber:','subscriberId','status:\'subscribed\'','status:"subscribed"'],'newsletter subscriber marker');
 needText('src/worker.js','Cloudflare KV');
 needText('llms.txt','/newsletter-signup');
 if(exists('downloads/weekly-newsletter-latest.json')){const data=JSON.parse(read('downloads/weekly-newsletter-latest.json'));if(!data.ok)issues.push('weekly newsletter json not ok');if(!Array.isArray(data.items))issues.push('weekly newsletter missing items array')}

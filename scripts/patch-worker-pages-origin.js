@@ -60,10 +60,80 @@ function patchNewsletterWorkerHandlers(text) {
   return text.replace(anchor, blocks.join('\n') + '\n' + anchor);
 }
 
+function patchForumPublicFiltering(text) {
+  if (text.includes('function isSyntheticForumPost(post)')) return text;
+
+  const anchor = 'function makeId() { return `signal-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`; }';
+  if (!text.includes(anchor)) {
+    console.error('Worker patch failed: forum makeId anchor not found');
+    process.exit(1);
+  }
+
+  const helpers = `${anchor}
+
+function isSyntheticForumPost(post) {
+  if (!post || typeof post !== 'object') return true;
+  const blob = [post.id, post.title, post.body, post.message, post.category, post.name, post.status, post.sourceUrl, post.source]
+    .map(value => String(value || '').toLowerCase())
+    .join(' ');
+  if (/\b(synthetic check|synthetic post|smoke test|health check|demo post|fixture post|qa post|seed post|system check|generated check)\b/i.test(blob)) return true;
+  if (/^(synthetic|demo|qa|fixture|seed|smoke|health-check|system-check)[:_-]/i.test(String(post.id || ''))) return true;
+  if (/^(synthetic|demo|qa|fixture|seed|smoke|health-check|system-check)$/i.test(String(post.status || ''))) return true;
+  if (/^(synthetic|demo|qa|fixture|seed|smoke|health-check|system-check)$/i.test(String(post.category || ''))) return true;
+  if (/^(matrix qa|matrix bot|system check|demo user|synthetic user)$/i.test(String(post.name || ''))) return true;
+  return false;
+}
+
+function publicForumPosts(posts = []) {
+  return sortPosts((posts || []).filter(post => post && post.status === 'live' && !isSyntheticForumPost(post)));
+}`;
+  text = text.replace(anchor, helpers);
+
+  text = text.replace(
+    "async function getPosts(env, board = 'all') {\n  const posts = await getForumIndex(env);\n  return board === 'all' ? posts : filterPostsByBoard(posts, board);\n}",
+    "async function getPosts(env, board = 'all') {\n  const posts = publicForumPosts(await getForumIndex(env));\n  return board === 'all' ? posts : filterPostsByBoard(posts, board);\n}"
+  );
+
+  text = text.replace(
+    "const posts = await getForumIndex(env);\n  return json({\n    ok: true,",
+    "const storedPosts = await getForumIndex(env);\n  const posts = publicForumPosts(storedPosts);\n  return json({\n    ok: true,"
+  );
+  text = text.replace("indexCount: posts.length,", "indexCount: storedPosts.length,");
+  text = text.replace("storedPostCount: posts.length,", "storedPostCount: storedPosts.length,");
+  text = text.replace("boardCounts: boardCounts(posts),", "boardCounts: boardCounts(posts),\n    publicPostCount: posts.length,\n    syntheticHidden: Math.max(0, storedPosts.length - posts.length),");
+
+  text = text.replace(
+    "return { ok: true, persistent: true, source: 'Cloudflare KV FORUM_POSTS', generatedAt: new Date().toISOString(), board: normalizedBoard, boardLabel: normalizedBoard === 'all' ? 'All Boards' : boardLabels[normalizedBoard], boardCounts: boardCounts(await getForumIndex(env)), count: posts.length, posts: posts.slice(0, 60), boundary: 'Public Signal Board posts are user-submitted public resources. They are not claims verified by Matrix Reprogrammed unless separately source-carded or cited.' };",
+    "const publicIndex = publicForumPosts(await getForumIndex(env));\n  return { ok: true, persistent: true, source: 'Cloudflare KV FORUM_POSTS', generatedAt: new Date().toISOString(), board: normalizedBoard, boardLabel: normalizedBoard === 'all' ? 'All Boards' : boardLabels[normalizedBoard], boardCounts: boardCounts(publicIndex), count: posts.length, posts: posts.slice(0, 60), syntheticHidden: Math.max(0, (await getForumIndex(env)).length - publicIndex.length), boundary: 'Public Signal Board posts are user-submitted public resources. Synthetic QA/demo/check records are hidden from public feeds. Posts are not claims verified by Matrix Reprogrammed unless separately source-carded or cited.' };"
+  );
+
+  return text;
+}
+
+function patchPredictionAliases(text) {
+  const aliases = {
+    "'/prediction-engine': '/prediction-engine.html'": "  '/prediction-engine': '/prediction-engine.html',",
+    "'/probability-lab': '/probability-lab.html'": "  '/probability-lab': '/probability-lab.html',",
+    "'/probability-snapshot': '/probability-snapshot.html'": "  '/probability-snapshot': '/probability-snapshot.html',",
+    "'/trigger-watchtower': '/trigger-watchtower.html'": "  '/trigger-watchtower': '/trigger-watchtower.html',",
+    "'/billionaire-watch': '/billionaire-watch.html'": "  '/billionaire-watch': '/billionaire-watch.html',",
+    "'/review-lanes': '/review-lanes.html'": "  '/review-lanes': '/review-lanes.html',",
+    "'/system-feed-index': '/system-feed-index.html'": "  '/system-feed-index': '/system-feed-index.html'"
+  };
+  let insert = '';
+  for (const [marker, line] of Object.entries(aliases)) {
+    if (!text.includes(marker)) insert += line + '\n';
+  }
+  if (insert) text = text.replace("  '/amazon-store': '/amazon-store-books.html'", insert + "  '/amazon-store': '/amazon-store-books.html'");
+  return text;
+}
+
 patchNewsletterFormMarker();
 s = s.replace(/^const PAGES_STATIC_ORIGIN = ['"]https:\/\/matrixreprogrammed\.pages\.dev['"];\n\n?/m, '');
 s = s.replace("'/newsletter': '/optin-center.html',", "'/newsletter': '/newsletter.html',");
 s = patchNewsletterWorkerHandlers(s);
+s = patchForumPublicFiltering(s);
+s = patchPredictionAliases(s);
 
 if (isCleanWorker(s)) {
   if (s !== before) fs.writeFileSync(workerPath, s);
@@ -117,7 +187,7 @@ if (!isCleanWorker(s)) {
 
 if (s !== before) {
   fs.writeFileSync(workerPath, s);
-  console.log('Worker static routing now uses bundled Cloudflare assets.');
+  console.log('Worker static routing now uses bundled Cloudflare assets and public forum filtering.');
 } else {
   console.log('Worker static routing already uses bundled Cloudflare assets.');
 }

@@ -1,14 +1,27 @@
 # Matrix Reprogrammed Intel Drop Vault
 
-Generated: 2026-07-02T10:16:41.112Z
+Generated: 2026-07-03T10:12:40.702Z
 Live window: 7 days
-Total drops: 5
-Live-window drops: 5
+Total drops: 6
+Live-window drops: 6
 Vaulted old drops: 0
 
 ## Boundary
 
 Old updates do not vanish. They leave the live desk and become source-trail vault records.
+
+## Expanding areas under Israeli control in Gaza increase risks to civilians, UN warns
+
+- Date: 2026-07-03
+- Status: live-window
+- Category: War File
+- Evidence label: War File
+- Source: UN News
+- Source link: https://news.un.org/feed/view/en/story/2026/07/1167852
+- Reader path: WHAT WWIII WILL REALLY LOOK LIKE
+- Archive file: data/drops/2026-07-03-expanding-areas-under-israeli-control-in-gaza-increase-risks-to-civilians-un-warns.json
+
+Source first, claim second, pattern last. A saved update is a route into evidence, not a final conclusion.
 
 ## Expanding areas under Israeli control in Gaza increase risks to civilians, UN warns
 

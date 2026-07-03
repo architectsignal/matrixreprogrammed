@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "02eed8c07c794c7799eff34c3428ccfafcd5ef36",
-  "buildShortSha": "02eed8c07c79",
-  "generatedAt": "2026-07-02T10:16:41.221Z",
+  "buildSha": "530c107f9d878c2681516be6411e31585664cbb3",
+  "buildShortSha": "530c107f9d87",
+  "generatedAt": "2026-07-03T10:12:40.807Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -15,32 +15,35 @@
     "/search",
     "/books",
     "/live-intel",
-    "/epstein-files"
+    "/epstein-files",
+    "/sec-filing-feed.html",
+    "/probability-lab.html",
+    "/probability-snapshot.html"
   ],
   "modules": [
     {
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "1eff64c64dde210e"
+      "hash": "0e94e9822a00aef3"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "1eff64c64dde210e"
+      "hash": "0e94e9822a00aef3"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "93bb70d60ffc73ba"
+      "hash": "79a0403708f9f4ee"
     },
     {
       "name": "Dark Speculation Forum",
       "route": "/dark-speculation-forum.html",
       "file": "dark-speculation-forum.html",
-      "hash": "7313112e89cfc476"
+      "hash": "5b678499dd9646ba"
     },
     {
       "name": "Evidence Vault",
@@ -58,20 +61,51 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "e48e7d1a5ecdb306"
+      "hash": "3e34e64f73a6ead1"
+    },
+    {
+      "name": "SEC Filing Feed",
+      "route": "/sec-filing-feed.html",
+      "file": "sec-filing-feed.html",
+      "hash": "eb9fa3c1f5999efe"
+    },
+    {
+      "name": "Probability Lab",
+      "route": "/probability-lab.html",
+      "file": "probability-lab.html",
+      "hash": "2f13b3ecb933f5c9"
+    },
+    {
+      "name": "Probability Snapshot",
+      "route": "/probability-snapshot.html",
+      "file": "probability-snapshot.html",
+      "hash": "4fb7470510bbef68"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "ffd3f024ec44202f"
+      "hash": "bfe09f7c473a00a8"
     },
     {
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "7ccd695f49dfd840"
+      "hash": "3c527d043a0a207f"
     }
   ],
-  "repairs": []
+  "repairs": [
+    {
+      "type": "sec-filing-feed",
+      "status": "ok",
+      "stdout": "SEC filing feed generated: 9/9\n",
+      "stderr": ""
+    },
+    {
+      "type": "probability-snapshot",
+      "status": "ok",
+      "stdout": "Probability snapshot generated: 14 scenarios, 20 signals.\n",
+      "stderr": ""
+    }
+  ]
 }

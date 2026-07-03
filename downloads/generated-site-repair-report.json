@@ -1,7 +1,19 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-02T10:16:41.221Z",
+  "generatedAt": "2026-07-03T10:12:40.807Z",
   "repairs": [
+    {
+      "type": "sec-filing-feed",
+      "status": "ok",
+      "stdout": "SEC filing feed generated: 9/9\n",
+      "stderr": ""
+    },
+    {
+      "type": "probability-snapshot",
+      "status": "ok",
+      "stdout": "Probability snapshot generated: 14 scenarios, 20 signals.\n",
+      "stderr": ""
+    },
     {
       "type": "deploy-health-json",
       "files": [

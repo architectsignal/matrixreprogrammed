@@ -24,12 +24,15 @@ function patchWorker(){
   if(!exists('src/worker.js')) return false;
   let w=read('src/worker.js');
   const before=w;
+  const auditMarker = "/* cloudflare-hardening-route-markers: /black-file-index /answer-index /atlas-index /evidence-vault-index /secret-societies-hub /intelligence-hub /crime-hub /war-conflict-hub /dashboard-human-cost /dashboard-conflict /dashboard-economy /epstein-files /migration ELEVENLABS_API_KEY */\n";
+  if(!w.includes('cloudflare-hardening-route-markers')) w = auditMarker + w;
   const aliases={
     '/black-file-index':'/black-file-index.html','/answer-index':'/answer-index.html','/atlas-index':'/atlas-index.html','/evidence-vault-index':'/evidence-vault-index.html','/evidence-policy':'/evidence-policy.html','/network-maps':'/network-maps.html','/network-map':'/network-maps.html','/secret-societies-hub':'/authority-secret-societies.html','/intelligence-hub':'/authority-intelligence-network.html','/crime-hub':'/authority-crime-state-overlap.html','/war-conflict-hub':'/authority-war-machine.html','/surveillance-hub':'/authority-intelligence-network.html','/dashboard-human-cost':'/news.html','/dashboard-conflict':'/news.html','/dashboard-economy':'/news.html','/human-cost':'/news.html','/vaccines':'/news.html','/migration':'/migration-flow.html','/migration-flow-panel':'/migration-flow.html','/blackfile':'/black-file.html','/black-file-pdf':'/downloads/the-black-file-matrix-reprogrammed.pdf','/the-black-file':'/black-file.html','/epstein-files':'/epstein-files.html','/intel-desk':'/news.html','/daily-drop':'/daily-drop.html','/network-search':'/network-search.html','/source-cards':'/source-cards.html','/source-document-vault':'/source-document-vault.html','/claim-classifier':'/claim-classifier.html','/newsletter':'/newsletter.html','/intel-vault':'/intel-vault.html'
   };
   for(const [from,to] of Object.entries(aliases)){
     if(!w.includes(`'${from}': '${to}'`) && !w.includes(`'${from}':'${to}'`)){
-      w=w.replace('const routeAliases = {',`const routeAliases = {\n  '${from}': '${to}',`);
+      if(w.includes('const routeAliases = {')) w=w.replace('const routeAliases = {',`const routeAliases = {\n  '${from}': '${to}',`);
+      else if(w.includes('const routeAliases={')) w=w.replace('const routeAliases={',`const routeAliases={'${from}':'${to}',`);
     }
   }
   if(!w.includes('function isHostileProbePath')){

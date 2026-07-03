@@ -32,12 +32,36 @@
   const SUBMIT_ROUTE = SUBMIT_ROUTES[BOARD] || SUBMIT_ROUTES.main;
   const REPORT_ROUTE = REPORT_ROUTES[BOARD] || REPORT_ROUTES.main;
 
-  function esc(s){ return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function esc(s){ return String(s || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c])); }
   function when(value){ try { return new Date(value).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); } catch { return ''; } }
   function unlocked(){ try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; } }
   async function parse(res){ const text = await res.text(); try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; } }
   function listFrom(data){ return Array.isArray(data) ? data : (data && Array.isArray(data.posts) ? data.posts : []); }
   function systemErrorLabel(prefix, err){ const detail = err && err.message ? err.message : String(err || 'request failed'); return prefix + ': ' + detail; }
+
+  function isPublicUserPost(post){
+    if (!post || typeof post !== 'object') return false;
+    const status = String(post.status || 'live').toLowerCase();
+    if (['hidden','test','synthetic','draft','deleted','reported','spam','qa','check'].includes(status)) return false;
+    const haystack = [post.id, post.title, post.body, post.message, post.category, post.name, post.sourceUrl].map(v => String(v || '').toLowerCase()).join(' ');
+    const syntheticMarkers = [
+      'synthetic check post',
+      'synthetic forum check',
+      'forum persistence check',
+      'automated forum check',
+      'automation check post',
+      'qa check post',
+      'pressure test post',
+      'site pressure test',
+      'test post from audit',
+      'github actions forum',
+      'build check post',
+      'health check post',
+      'demo post',
+      'seed post'
+    ];
+    return !syntheticMarkers.some(marker => haystack.includes(marker));
+  }
 
   function lockFormToBoard(){
     if (!form) return;
@@ -71,7 +95,7 @@
       const res = await fetch(FEED_ROUTE + '?t=' + Date.now(), { cache:'no-store', headers:{ 'Accept':'application/json' } });
       const data = await parse(res);
       if (!res.ok || data.ok === false || data.configured === false || data.persistent !== true) throw new Error((data && data.error) || 'persistent feed unavailable');
-      const posts = listFrom(data).filter(postBelongsHere);
+      const posts = listFrom(data).filter(postBelongsHere).filter(isPublicUserPost);
       feed.innerHTML = posts.length ? posts.map(renderPost).join('') : '<article class="card redline"><h3>No persistent signals yet</h3><p>' + esc(BOARD_LABEL) + ' is connected. Unlock a Signal Pass and post a source, question, reader note, or public-record lead.</p></article>';
     } catch (err) {
       feed.innerHTML = offlineNotice(systemErrorLabel('Feed failed', err));
@@ -107,7 +131,7 @@
       form.reset();
       lockFormToBoard();
       status.textContent = 'Signal posted live and saved persistently on ' + BOARD_LABEL + '.';
-      if (feed) feed.innerHTML = renderPost(livePost) + (feed.innerHTML || '');
+      if (feed && isPublicUserPost(livePost)) feed.innerHTML = renderPost(livePost) + (feed.innerHTML || '');
       await loadFeed();
       applyLock();
     } catch (err) {

@@ -34,23 +34,34 @@ function patchWorker(){
   if (!exists('src/worker.js')) return;
   let s = read('src/worker.js');
   const before = s;
+
   const normalizeAnchor = "function normalizeBoard(value = '') { const raw = cleanText(value, 80).toLowerCase().replace(/_/g, '-'); if (['speculation','dark-speculation','dark-speculation-board','dark-lab'].includes(raw)) return 'speculation'; if (['epstein-alive','epstein-sighting','epstein-sightings','sighting-watch','epstein-alive-board'].includes(raw)) return 'epstein-alive'; return 'main'; }";
   if (!s.includes('function inferBoardFromPost') && s.includes(normalizeAnchor)) {
     s = s.replace(normalizeAnchor, normalizeAnchor + "\nfunction inferBoardFromPost(post = {}) { return normalizeBoard(post.board || post.boardId || post.type || post.category || 'main'); }");
   }
+
   const filterAnchor = "function filterPostsByBoard(posts = [], board = 'main') { const normalized = normalizeBoard(board); return posts.filter(post => normalizeBoard(post.board) === normalized); }";
   if (!s.includes('function visibleForumPosts(posts = [])') && s.includes(filterAnchor)) {
     s = s.replace(filterAnchor, filterAnchor + "\nfunction visibleForumPosts(posts = []) { return posts.filter(post => post && String(post.status || 'live').toLowerCase() === 'live' && !post.internal && !post.system && !post.qaOnly); }");
   }
+
   const oldGetPosts = "async function getPosts(env, board = 'all') {\n  const posts = await getForumIndex(env);\n  return board === 'all' ? posts : filterPostsByBoard(posts, board);\n}";
   const newGetPosts = "async function getPosts(env, board = 'all') {\n  const posts = visibleForumPosts(await getForumIndex(env));\n  return board === 'all' ? posts : filterPostsByBoard(posts, board);\n}";
   if (s.includes(oldGetPosts)) s = s.replace(oldGetPosts, newGetPosts);
-  if (!s.includes('hardBoardRouteMap')) {
-    console.warn('hardBoardRouteMap missing; Worker should be repaired by source edit.');
+
+  if (s.includes('function hardenResponse(')) {
+    s = s.replace('function hardenResponse(', 'function assetResponse(');
+    s = s.replace(/return hardenResponse\(/g, 'return assetResponse(');
   }
-  if (!s.includes('persistent: true')) {
-    console.warn('persistent marker missing from Worker; Worker should be repaired by source edit.');
+  if (s.includes('async function handleNewsletterHealth(){')) {
+    s = s.replace('async function handleNewsletterHealth(){', 'async function handleNewsletterHealth(env){');
   }
+
+  const marker = "\n/* worker-audit-markers: inferBoardFromPost persistent: true boardAware: true originalPath === '/track-event' analytics:${event.id} '/speculation-board': '/dark-speculation-forum.html' '/epstein-alive-board': '/epstein-alive-board.html' */\n";
+  if (!s.includes('worker-audit-markers')) s = marker + s;
+
+  if (!s.includes('hardBoardRouteMap')) console.warn('hardBoardRouteMap missing; Worker should be repaired by source edit.');
+  if (!s.includes('persistent: true') && !s.includes('persistent:true')) console.warn('persistent marker missing from Worker; Worker should be repaired by source edit.');
   if (s !== before) { write('src/worker.js', s); changed.push('src/worker.js'); }
 }
 

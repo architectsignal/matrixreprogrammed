@@ -28,7 +28,7 @@ function patchWorker(){
     '/black-file-index':'/black-file-index.html','/answer-index':'/answer-index.html','/atlas-index':'/atlas-index.html','/evidence-vault-index':'/evidence-vault-index.html','/evidence-policy':'/evidence-policy.html','/network-maps':'/network-maps.html','/network-map':'/network-maps.html','/secret-societies-hub':'/authority-secret-societies.html','/intelligence-hub':'/authority-intelligence-network.html','/crime-hub':'/authority-crime-state-overlap.html','/war-conflict-hub':'/authority-war-machine.html','/surveillance-hub':'/authority-intelligence-network.html','/dashboard-human-cost':'/news.html','/dashboard-conflict':'/news.html','/dashboard-economy':'/news.html','/human-cost':'/news.html','/vaccines':'/news.html','/migration':'/migration-flow.html','/migration-flow-panel':'/migration-flow.html','/blackfile':'/black-file.html','/black-file-pdf':'/downloads/the-black-file-matrix-reprogrammed.pdf','/the-black-file':'/black-file.html','/epstein-files':'/epstein-files.html','/intel-desk':'/news.html','/daily-drop':'/daily-drop.html','/network-search':'/network-search.html','/source-cards':'/source-cards.html','/source-document-vault':'/source-document-vault.html','/claim-classifier':'/claim-classifier.html','/newsletter':'/newsletter.html','/intel-vault':'/intel-vault.html'
   };
   for(const [from,to] of Object.entries(aliases)){
-    if(!w.includes(`'${from}': '${to}'`)){
+    if(!w.includes(`'${from}': '${to}'`) && !w.includes(`'${from}':'${to}'`)){
       w=w.replace('const routeAliases = {',`const routeAliases = {\n  '${from}': '${to}',`);
     }
   }
@@ -44,7 +44,7 @@ function cacheHeadersForPath(pathname='') {
   if (/\.html$/.test(p) || !p.includes('.')) return 'public, max-age=300, stale-while-revalidate=3600';
   return 'public, max-age=600, stale-while-revalidate=3600';
 }
-function hardenResponse(response, pathname='') {
+const hardenResponse = (response, pathname='') => {
   const headers = new Headers(response.headers);
   if (!headers.has('Cache-Control') || !/no-store/i.test(headers.get('Cache-Control') || '')) headers.set('Cache-Control', cacheHeadersForPath(pathname));
   headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
@@ -52,7 +52,7 @@ function hardenResponse(response, pathname='') {
   headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   headers.set('X-Frame-Options', 'SAMEORIGIN');
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
-}
+};
 function safeNotConfigured(name, extra = {}) {
   return json({ ok: false, configured: false, error: String(name || 'service') + ' not configured', ...extra }, 200);
 }
@@ -80,18 +80,14 @@ function isPublicForumPost(post = {}) {
     w=w.replace("const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;","const routedPath = routeAliases[originalPath] || routeAliases[normalizedPath] || originalPath;\n\n    if (isHostileProbePath(originalPath)) return new Response('Not found', { status: 404, headers: { 'Cache-Control': 'public, max-age=3600', 'X-Robots-Tag': 'noindex, nofollow' } });");
   }
   w=w.replace('return withAssetHeaders(response);','return hardenResponse(withAssetHeaders(response), pathname);');
-
   if(!w.includes('catch (error)') && w.includes('async fetch(request, env) {\n    const url = new URL(request.url);')){
     const open="async fetch(request, env) {\n    const url = new URL(request.url);";
     const close="    return lastResponse || json({ ok: false, error: 'No asset response available' }, 404);\n  }\n};";
     if(w.includes(open) && w.includes(close)){
       w=w.replace(open,"async fetch(request, env) {\n    try {\n    const url = new URL(request.url);");
       w=w.replace(close,"    return lastResponse || json({ ok: false, error: 'No asset response available' }, 404);\n    } catch (error) {\n      return json({ ok: false, error: 'Worker handled failure safely', detail: cleanText(error && error.message, 300) }, 200);\n    }\n  }\n};");
-    } else {
-      console.warn('Worker fetch wrapper skipped: current Worker shape did not match safe wrapper markers.');
-    }
+    } else console.warn('Worker fetch wrapper skipped: current Worker shape did not match safe wrapper markers.');
   }
-
   if(w!==before){
     if(!syntaxOk(w)) return false;
     write('src/worker.js',w);

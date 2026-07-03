@@ -41,19 +41,20 @@ function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
 function ensureFixesCss(html){if(/href=["']fixes\.css["']/i.test(html))return html;return html.replace(/<link rel=["']stylesheet["'] href=["']styles\.css["']\s*\/?>/i, match => `${match}<link rel="stylesheet" href="fixes.css" />`);}
 function softenJsonLinks(html){return html.replace(/<a\b([^>]*?)href=["']([^"']+\.json)["']([^>]*)>(.*?)<\/a>/gi,(full,before,href,after,label)=>{const attrs=`${before}href="${href}"${after}`;const text=href.includes('epstein-source-watch.json')?'Source Watch JSON':'Machine-readable data';if(/machine-data-link/.test(attrs))return full.replace(/>.*?<\/a>/,`>${text}</a>`);const classMatch=attrs.match(/class=["']([^"']*)["']/i);if(classMatch)return `<a ${attrs.replace(classMatch[0],`class="${classMatch[1]} machine-data-link"`)}>${text}</a>`;return `<a ${attrs} class="machine-data-link">${text}</a>`;});}
 function collapseDuplicateBoardLinks(html){
+  html = html.split('<a href="dark-speculation-forum.html">Dark Speculation Board</a>').join('<a href="dark-speculation-forum.html">Speculation Board</a>');
+  html = html.split('<a href="epstein-alive-board.html">Epstein Alive Board</a>').join('<a href="epstein-alive-board.html">Epstein Sighting Board</a>');
   const boardLinks = [
     '<a href="forum.html">Main Board</a>',
     '<a href="dark-speculation-forum.html">Speculation Board</a>',
     '<a href="epstein-alive-board.html">Epstein Sighting Board</a>'
   ];
   for (const link of boardLinks) {
-    const escaped = link.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const rx = new RegExp(escaped, 'g');
-    let seen = false;
-    html = html.replace(rx, match => { if (seen) return ''; seen = true; return match; });
+    const first = html.indexOf(link);
+    if (first === -1) continue;
+    const before = html.slice(0, first + link.length);
+    const after = html.slice(first + link.length).split(link).join('');
+    html = before + after;
   }
-  html = html.replace(/<a href="dark-speculation-forum\.html">Dark Speculation Board<\/a>/g, '<a href="dark-speculation-forum.html">Speculation Board</a>');
-  html = html.replace(/<a href="epstein-alive-board\.html">Epstein Alive Board<\/a>/g, '<a href="epstein-alive-board.html">Epstein Sighting Board</a>');
   return html;
 }
 function sanitizeCopy(html){const protectedState = protectMarkers(html);html = protectedState.html

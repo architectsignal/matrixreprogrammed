@@ -62,6 +62,11 @@ function safeNotConfigured(name, extra = {}) {
 `;
     w=w.replace('\nasync function handleIntroVoice',helpers+'\nasync function handleIntroVoice');
   }
+  if(w.includes('function cacheHeadersForPath') && !w.includes('hardenResponse')){
+    const hardenCompat="\nconst hardenResponse = (response, pathname='') => assetResponse(response, pathname);\n";
+    if(w.includes('\nfunction safeNotConfigured')) w=w.replace('\nfunction safeNotConfigured',hardenCompat+'\nfunction safeNotConfigured');
+    else w += hardenCompat;
+  }
   if(!w.includes('function isPublicForumPost')){
     const forumFilter=`
 function isPublicForumPost(post = {}) {

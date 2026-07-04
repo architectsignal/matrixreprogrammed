@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-c';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-d';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -16,13 +16,13 @@ function ensureText(file, marker, addition){
   write(file, text + addition);
   repairs.push('patched:' + file + ':' + marker);
 }
-function ensureSearchRoute(url, title, category){
+function ensureSearchRoute(url, title, category, description, keywords, layer){
   if (!exists('search-index.json')) return;
   let index;
   try { index = JSON.parse(read('search-index.json')); } catch { index = []; }
   if (!Array.isArray(index)) index = [];
   if (!index.some(item => item && item.url === url)) {
-    index.push({ url, title, category, layer: 'information-narrative', description: 'Machine-readable Signal Board export route.', keywords: ['forum','signal board','export','posts','machine data'], priority: 76, sourceType: 'json-feed' });
+    index.push({ url, title, category, layer: layer || 'information-narrative', description: description || 'Machine-readable Matrix Reprogrammed route.', keywords: keywords || ['machine data'], priority: 76, sourceType: url.endsWith('.html') ? 'html' : 'json-feed' });
     write('search-index.json', JSON.stringify(index, null, 2));
     repairs.push('search-route:' + url);
   }
@@ -40,14 +40,19 @@ if (fs.existsSync(builder)) {
   }
 }
 
-ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data');
-ensureSearchRoute('downloads/forum-posts.md', 'Forum Posts Export Markdown', 'Downloads');
+ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
+ensureSearchRoute('downloads/forum-posts.md', 'Forum Posts Export Markdown', 'Downloads', 'Signal Board export download route.', ['forum','signal board','download'], 'information-narrative');
+ensureSearchRoute('public-record-intake.html', 'Public Record Intake', 'Machine Feeds', 'Source-first public-record intake layer for policy, filings, courts, contracts, lobbying, sanctions, procurement and registries.', ['public records','intake','official APIs','filings','contracts','courts','policy','machine feed'], 'disclosure-black-files');
+ensureSearchRoute('data/public-record-intake.json', 'Public Record Intake JSON', 'Machine Data', 'Machine-readable source intake manifest.', ['public records','source manifest','API feeds','evidence ladder'], 'disclosure-black-files');
+ensureSearchRoute('data/machine-feed-queue.json', 'Machine Feed Queue JSON', 'Machine Data', 'Daily pull order for source-first intelligence feeds.', ['feed queue','daily pull','machine brain','records'], 'information-narrative');
+ensureSearchRoute('downloads/public-record-intake.md', 'Public Record Intake Download', 'Downloads', 'Downloadable public-record intake manifest.', ['download','public records','source routes'], 'disclosure-black-files');
 ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
 ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
 ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');
 ensureText('robots.txt', 'search-index.json', '\nAllow: /search-index.json\n');
 ensureText('llms.txt', 'Ask Matrix Search', '\n- Ask Matrix Search: /search.html\n');
 ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed-epstein-alive\n');
+ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /public-record-intake.html\n');
 
 const js = exists('search.js') ? read('search.js') : '';
 const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];

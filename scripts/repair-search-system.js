@@ -4,6 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
+const REPAIR_VERSION = 'search-v2-final-guard-2026-07-04';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -29,6 +30,7 @@ function rebuildSearchV2(reason){
   const result = spawnSync(process.execPath, [builder], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
   repairs.push({
     type: 'search-v2-regenerated',
+    version: REPAIR_VERSION,
     reason,
     status: result.status === 0 ? 'ok' : 'failed',
     stdout: String(result.stdout || '').slice(0, 500),
@@ -113,5 +115,5 @@ if (stillMissing.length) {
   process.exit(1);
 }
 
-write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 final compatibility repair and overwrite guard' }, null, 2));
+write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 final compatibility repair and overwrite guard', version: REPAIR_VERSION }, null, 2));
 console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 final guard passed.');

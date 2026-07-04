@@ -2,13 +2,21 @@ name: Machine Feed Runner
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/machine-feed.yml'
+      - 'scripts/fetch-public-record-feeds.js'
+      - 'scripts/patch-brain-with-record-events.js'
+      - 'scripts/repair-search-system.js'
   schedule:
     - cron: '17 */6 * * *'
 
 permissions:
   contents: write
 
-group: machine-feed-runner
+concurrency:
+  group: machine-feed-runner
+  cancel-in-progress: false
 
 jobs:
   feed-machine:

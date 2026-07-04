@@ -9,9 +9,7 @@ function inject(html, marker, block, beforeNeedle) {
   const start = `<!-- ${marker}:start -->`;
   const end = `<!-- ${marker}:end -->`;
   const wrapped = `${start}${block}${end}`;
-  if (html.includes(start) && html.includes(end)) {
-    return html.replace(new RegExp(`${start}[\\s\\S]*?${end}`), wrapped);
-  }
+  if (html.includes(start) && html.includes(end)) return html.replace(new RegExp(`${start}[\\s\\S]*?${end}`), wrapped);
   if (html.includes(beforeNeedle)) return html.replace(beforeNeedle, wrapped + beforeNeedle);
   return html + wrapped;
 }
@@ -33,6 +31,7 @@ const brainPanel = `<section class="section wrap" id="living-brain-pulse"><h2>Li
 const intelligencePanel = `<section class="section wrap" id="machine-intelligence-entry"><div class="eyebrow">Change Detection</div><h2>MACHINE INTELLIGENCE.</h2><p class="lead">Record movement, entity relationship candidates and evidence-grade changes now feed the machine as a separate intelligence layer.</p><div class="cta-row"><a class="btn" href="machine-intelligence.html">Open Machine Intelligence</a><a class="btn alt" href="data/change-detection.json">Change Detection</a><a class="btn alt" href="data/entity-relationship-scores.json">Relationship Scores</a></div></section>`;
 const entityBriefPanel = `<section class="section wrap" id="entity-daily-briefs-entry"><div class="eyebrow">Entity Briefing Factory</div><h2>ENTITY DAILY BRIEFS.</h2><p class="lead">Every tracked person, institution, company, agency and control-structure contributor can now receive a user-friendly brief: at a glance, what changed, why it matters, evidence grade, source routes, missing records and watch next.</p><div class="cta-row"><a class="btn" href="entity-daily-briefs.html">Open Entity Briefs</a><a class="btn alt" href="data/entity-daily-briefs.json">Briefs JSON</a><a class="btn alt" href="downloads/entity-daily-briefs.md">Download Briefs</a></div></section>`;
 const reviewPanel = `<section class="section wrap" id="entity-record-review-entry"><div class="eyebrow">Entity Record Review</div><h2>ENTITY RECORD REVIEW.</h2><p class="lead">Tracked entities are reviewed for source-graded legal records, sanctions, fines, conflicts, contract concentration, disclosure gaps, relationship candidates and missing-record triggers.</p><div class="cta-row"><a class="btn" href="entity-exposure-index.html">Open Record Review</a><a class="btn alt" href="data/entity-exposure-index.json">Review JSON</a><a class="btn alt" href="downloads/entity-exposure-index.md">Download Review</a></div></section>`;
+const contractorPanel = `<section class="section wrap" id="private-contractor-intelligence-entry"><div class="eyebrow">Private Contractor Intelligence</div><h2>PRIVATE CONTRACTOR TRACKER.</h2><p class="lead">Private military, security, intelligence, logistics, surveillance and government-platform contractors now receive their own briefs: lineage, main players, contracts, public-money routes, legal records, ownership changes, relationship candidates and missing records.</p><div class="cta-row"><a class="btn" href="private-contractor-tracker.html">Open Contractor Tracker</a><a class="btn alt" href="data/private-contractor-intelligence.json">Contractor JSON</a><a class="btn alt" href="downloads/private-contractor-intelligence.md">Download Brief</a></div></section>`;
 for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html', 'search.html']) {
   if (!exists(file)) continue;
   let html = read(file);
@@ -42,6 +41,7 @@ for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html',
     html = inject(html, 'machine-intelligence-entry', intelligencePanel, '</main>');
     html = inject(html, 'entity-daily-briefs-entry', entityBriefPanel, '</main>');
     html = inject(html, 'entity-record-review-entry', reviewPanel, '</main>');
+    html = inject(html, 'private-contractor-intelligence-entry', contractorPanel, '</main>');
   }
   if (file === 'search.html') html = inject(html, 'search-mission-panel', controlPanel, '</main>');
   html = ensureScript(html, 'living-pulse.js');
@@ -53,7 +53,8 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     runNodeScript('scripts/patch-brain-with-record-events.js');
     runNodeScript('scripts/build-change-detection-engine.js');
     runNodeScript('scripts/build-entity-daily-briefs.js');
-    runNodeScript('scripts/build-entity-' + 'exposure-index.js');
+    runNodeScript('scripts/build-entity-record-review.js');
+    runNodeScript('scripts/build-private-contractor-intelligence.js');
     runNodeScript('scripts/machine-feed-runner-test.js');
     runNodeScript('scripts/change-detection-engine-test.js');
     runNodeScript('scripts/entity-daily-briefs-test.js');
@@ -61,4 +62,4 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     console.warn(`Machine intelligence integration warning: ${error.message}`);
   }
 }
-console.log('Living control interface built: control map linked, brain pulse injected, Machine Feed Runner, Change Detection, Entity Briefs and Record Review integrated.');
+console.log('Living control interface built: control map linked, brain pulse injected, entity briefs, record review and private contractor intelligence integrated.');

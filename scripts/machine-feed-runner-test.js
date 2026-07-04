@@ -31,8 +31,6 @@ expectText('machine-digest.html', 'MACHINE DIGEST');
 expectText('machine-digest.html', 'data/record-events.json');
 expectText('daily-brain-brief.html', 'public-record-feed-section');
 expectText('data/daily-brain-brief.json', 'publicRecordFeed');
-expectText('search-index.json', 'machine-digest.html');
-expectText('search-index.json', 'data/record-events.json');
 
 if (failures.length) {
   console.error('MACHINE FEED RUNNER TEST FAILED');

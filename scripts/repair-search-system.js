@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-e';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-f';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -51,6 +51,9 @@ ensureSearchRoute('data/record-events.json', 'Record Events JSON', 'Machine Data
 ensureSearchRoute('data/entity-observations.json', 'Entity Observations JSON', 'Machine Data', 'Entity candidates detected from public-record pulls.', ['entity observations','people','institutions','companies'], 'elite-networks');
 ensureSearchRoute('data/source-pulls/source-pull-index.json', 'Source Pull Index JSON', 'Machine Data', 'Index of public-record feed pulls attempted by the Machine Feed Runner.', ['source pulls','public APIs','feed runner'], 'disclosure-black-files');
 ensureSearchRoute('downloads/machine-digest.md', 'Machine Digest Download', 'Downloads', 'Markdown digest of pulled records and entity observations.', ['machine digest','download','record events'], 'information-narrative');
+ensureSearchRoute('private-contractor-tracker.html', 'Private Contractor Tracker', 'Contractor Intelligence', 'Tracks contractor lineages, main players, contracts, public-money routes, legal records, ownership changes and missing records.', ['private contractors','Blackwater','Constellis','Erik Prince','contracts','USAspending','security contractor','military contractor'], 'security-emergency');
+ensureSearchRoute('data/private-contractor-intelligence.json', 'Private Contractor Intelligence JSON', 'Machine Data', 'Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.', ['private contractor intelligence','contractor profiles','main players','contractor score'], 'security-emergency');
+ensureSearchRoute('downloads/private-contractor-intelligence.md', 'Private Contractor Intelligence Download', 'Downloads', 'Downloadable contractor intelligence brief.', ['contractor intelligence','download','Blackwater','Constellis'], 'security-emergency');
 ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
 ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
 ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');
@@ -59,6 +62,7 @@ ensureText('llms.txt', 'Ask Matrix Search', '\n- Ask Matrix Search: /search.html
 ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed-epstein-alive\n');
 ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /public-record-intake.html\n');
 ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
+ensureText('llms.txt', 'Private Contractor Tracker', '\n- Private Contractor Tracker: /private-contractor-tracker.html\n- Private Contractor Intelligence JSON: /data/private-contractor-intelligence.json\n');
 
 const js = exists('search.js') ? read('search.js') : '';
 const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];

@@ -18,8 +18,8 @@ if (exists('data/entity-daily-briefs.json')) {
   if (!String(data.boundary || '').includes('source review')) failures.push('brief data missing source review boundary');
 }
 text('entity-daily-briefs.html', 'ENTITY DAILY BRIEFS');
-text('entity-daily-briefs.html', 'At a glance');
-text('downloads/entity-daily-briefs.md', 'Entity Daily Briefs');
+text('entity-daily-briefs.html', 'Plain-English briefs');
+text('downloads/entity-daily-briefs.md', 'At a glance:');
 if (failures.length) {
   console.error('ENTITY DAILY BRIEFS TEST FAILED');
   for (const f of failures) console.error('- ' + f);

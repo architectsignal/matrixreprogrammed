@@ -1,0 +1,957 @@
+{
+  "updated": "2026-07-04T16:47:44.036Z",
+  "runner_version": "machine-feed-runner-2026-07-04-b",
+  "title": "Entity Observations",
+  "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
+  "observations": [
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p505244-1",
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p181587-3",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p507508-5",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 3,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13602-1",
+        "federal-register-policy-2026-10817-5",
+        "federal-register-policy-2025-19787-6"
+      ],
+      "last_seen": "2025-11-05"
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "count": 3,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13602-1",
+        "federal-register-policy-2025-19787-6"
+      ],
+      "last_seen": "2025-11-05"
+    },
+    {
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-4",
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-3",
+        "courtlistener-court-records-10882239-4"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-3",
+        "courtlistener-court-records-10882239-4"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13057-2"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "nuclear-regulatory-commission",
+      "name": "Nuclear Regulatory Commission",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12989-3"
+      ],
+      "last_seen": "2026-06-26"
+    },
+    {
+      "id": "federal-procurement-policy-office",
+      "name": "Federal Procurement Policy Office",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-4"
+      ],
+      "last_seen": "2026-06-23"
+    },
+    {
+      "id": "defense-department",
+      "name": "Defense Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-4"
+      ],
+      "last_seen": "2026-06-23"
+    },
+    {
+      "id": "general-services-administration",
+      "name": "General Services Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-4"
+      ],
+      "last_seen": "2026-06-23"
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-4"
+      ],
+      "last_seen": "2026-06-23"
+    },
+    {
+      "id": "agriculture-department",
+      "name": "Agriculture Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "state-department",
+      "name": "State Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "agency-for-international-development",
+      "name": "Agency for International Development",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "veterans-affairs-department",
+      "name": "Veterans Affairs Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "energy-department",
+      "name": "Energy Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "treasury-department",
+      "name": "Treasury Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-10817-5"
+      ],
+      "last_seen": "2026-05-29"
+    },
+    {
+      "id": "nvidia-corp",
+      "name": "NVIDIA CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001045810-1"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "nvda",
+      "name": "NVDA",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001045810-1"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "alphabet-inc",
+      "name": "Alphabet Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-2"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "googl",
+      "name": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-2"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "microsoft-corp",
+      "name": "MICROSOFT CORP",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000789019-4"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "msft",
+      "name": "MSFT",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000789019-4"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "amazon-com-inc",
+      "name": "AMAZON COM INC",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001018724-5"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "amzn",
+      "name": "AMZN",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001018724-5"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "broadcom-inc",
+      "name": "Broadcom Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001730168-6"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "avgo",
+      "name": "AVGO",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001730168-6"
+      ],
+      "last_seen": "2026-07-04"
+    },
+    {
+      "id": "matter-of-pagliughi",
+      "name": "Matter of Pagliughi",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "2024-07773",
+      "name": "2024-07773",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "biddle-v-biddle",
+      "name": "Biddle v. Biddle",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "court-of-appeals-of-north-carolina",
+      "name": "Court of Appeals of North Carolina",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "25-581",
+      "name": "25-581",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "trump-v-barbara-revisions-7-01-26",
+      "name": "Trump v. Barbara Revisions: 7/01/26",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-3"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "trump-v-barbara",
+      "name": "Trump v. Barbara",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10882239-4"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "khan-v-jewish-women-international",
+      "name": "Khan v. Jewish Women International",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10881616-5"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "connecticut-appellate-court",
+      "name": "Connecticut Appellate Court",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10881616-5"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "ac48383",
+      "name": "AC48383",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10881616-5"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "accountability-now-usa-v-griess",
+      "name": "Accountability Now USA v. Griess",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "district-court-district-of-columbia",
+      "name": "District Court, District of Columbia",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "civil-action-no-2026-1385",
+      "name": "Civil Action No. 2026-1385",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "republic-of-rwanda",
+      "name": "Republic of Rwanda",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p505244-1"
+      ],
+      "last_seen": "2024-12-20T00:00:00Z"
+    },
+    {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p176429-2"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p181587-3"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "kingdom-of-morocco",
+      "name": "Kingdom of Morocco",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p181587-3"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "name": "Ministry of Health and Family Welfare",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p180283-4"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p507508-5"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "name": "Finance Division, Ministry of Finance",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    }
+  ]
+}

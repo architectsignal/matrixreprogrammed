@@ -1,5 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-04T06:35:00.115Z",
-  "repairs": []
+  "generatedAt": "2026-07-04T16:48:04.671Z",
+  "repairs": [
+    "rebuilt-search-v2",
+    "search-route:downloads/forum-posts.json",
+    "search-route:downloads/forum-posts.md",
+    "search-route:data/public-record-intake.json",
+    "search-route:data/machine-feed-queue.json",
+    "search-route:downloads/public-record-intake.md",
+    "search-route:data/record-events.json",
+    "search-route:data/entity-observations.json",
+    "search-route:data/source-pulls/source-pull-index.json",
+    "search-route:downloads/machine-digest.md",
+    "patched:search.js:fallbackIndex",
+    "patched:scripts/build-free-ask-matrix-search.js:fallbackIndex",
+    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex",
+    "patched:llms.txt:Public Record Intake",
+    "patched:llms.txt:Machine Digest"
+  ],
+  "mode": "minimal safe Search V2 repair",
+  "version": "minimal-search-repair-2026-07-04-e"
 }

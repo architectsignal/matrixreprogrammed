@@ -1,0 +1,703 @@
+{
+  "updated": "2026-07-04T16:47:44.036Z",
+  "runner_version": "machine-feed-runner-2026-07-04-b",
+  "lane": "federal-register-policy",
+  "name": "Federal Register latest policy records",
+  "ok": true,
+  "status": 200,
+  "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=10&order=newest&conditions%5Bterm%5D=digital%20identity%20OR%20emergency%20OR%20surveillance%20OR%20bank",
+  "source_type": "rule_or_notice",
+  "evidence_grade": "documented association",
+  "itemCount": 6,
+  "raw": {
+    "description": "Documents matching 'digital identity OR emergency OR surveillance OR bank'",
+    "count": 180,
+    "total_pages": 18,
+    "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=digital+identity+OR+emergency+OR+surveillance+OR+bank&format=json&order=newest&page=2&per_page=10",
+    "results": [
+      {
+        "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "type": "Proposed Rule",
+        "abstract": "This proposed rule would set forth routine updates to the Medicare home health payment rates in accordance with existing statutory and regulatory requirements. In addition, this proposed rule discusses the behavior adjustment and proposes a temporary behavior adjustment and proposes to recalibrate the case-mix weights and update the functional impairment levels; comorbidity subgroups; and low- utilization payment adjustment (LUPA) thresholds for CY 2027. Additionally, this proposed rule discusses the provision of home health palliative care services and includes a request for information (RFI) on a home health specific wage index. This rule would also propose changes to the Home Health Quality Reporting Program (HH QRP) and summarizes potential initiatives to improve alignment between the HH QRP and expanded Home Health Value Based Purchasing (HHVBP) Model. Lastly, the rule would--clarify the application of the DMEPOS face-to- face encounter requirements for the replacement of DMEPOS items; make changes to the provider and supplier enrollment requirements; make changes regarding DME benefit expansion for infusion pumps and drugs; and discuss collection of information requirement changes regarding the DMEPOS Competitive Bidding Program (CBP) country of origin.",
+        "document_number": "2026-13602",
+        "html_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13602.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-13602.pdf?1782936912",
+        "publication_date": "2026-07-06",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          }
+        ],
+        "excerpts": "providers to ensure that it repays all debts before they are sent to Treasury. \n (o) Revoked Under Different Name or <span class=\"match\">Identity</span> \n CMS under § 424.535(a)(18) may revoke a provider that is currently revoked under a different name, numerical identifier, or business <span class=\"match\">identity</span>, and the applicable reenrollment bar period under § 424.535(c) has not expired. The objective is to prevent situations where a revoked provider changes its <span class=\"match\">identity</span> in order to re-enter Medicare and thus circumvent its existing bar on reenrollment. Such conduct is not only dishonest"
+      },
+      {
+        "title": "Alien Registration Form and Evidence of Registration",
+        "type": "Rule",
+        "abstract": "On March 12, 2025, DHS issued an interim final rule (IFR) with request for comments amending DHS regulations to designate a new registration form for aliens to comply with statutory alien registration and fingerprinting provisions. Unregistered aliens may use this general registration form to satisfy their statutory obligations. This final rule responds to public comments, amends DHS regulations to adjust the lists of forms and processes that may serve as registration forms and evidence of alien registration, and seeks comments on other potential changes to the regulations relating to alien registration and fingerprinting.",
+        "document_number": "2026-13057",
+        "html_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-06-29/pdf/2026-13057.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-13057.pdf?1782418509",
+        "publication_date": "2026-06-29",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          }
+        ],
+        "excerpts": "normalization of mass <span class=\"match\">surveillance</span> for one group sets a dangerous precedent, potentially paving the way for broader erosions of privacy and civil rights for all individuals. A commenter stated that the IFR gives the Secretary of Homeland Security unchecked discretionary power to monitor, register, and remove immigrants and thus, was “a sweeping revision of prior powers to the Secretary.” \n Commenters expressed reservations about the implications of <span class=\"match\">surveillance</span> by law enforcement. For example, a commenter wrote that <span class=\"match\">surveillance</span> measures weaken the"
+      },
+      {
+        "title": "Modernizing Security Requirements",
+        "type": "Proposed Rule",
+        "abstract": "The U.S. Nuclear Regulatory Commission (NRC) is proposing to revise its regulations to modernize security and fitness-for-duty requirements to enhance efficiency, consistent with Executive Order 14300, \"Ordering the Reform of the Nuclear Regulatory Commission.\" The proposed revisions are intended to reduce regulatory burden, where appropriate, while continuing to provide reasonable assurance that safety and security will be adequately maintained at NRC-licensed facilities.",
+        "document_number": "2026-12989",
+        "html_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-06-26/pdf/2026-12989.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-12989.pdf?1782391523",
+        "publication_date": "2026-06-26",
+        "agencies": [
+          {
+            "raw_name": "NUCLEAR REGULATORY COMMISSION",
+            "name": "Nuclear Regulatory Commission",
+            "id": 383,
+            "url": "https://www.federalregister.gov/agencies/nuclear-regulatory-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/383",
+            "parent_id": null,
+            "slug": "nuclear-regulatory-commission"
+          }
+        ],
+        "excerpts": "assurance that <span class=\"match\">digital</span> computer and communication systems and networks are adequately protected against cyberattacks that are capable of causing the following consequences: \n (1) Adversely impacting the safety, security, and <span class=\"match\">emergency</span> preparedness functions performed by <span class=\"match\">digital</span> assets that prevent a postulated fission product release resulting in offsite doses exceeding the values in § 50.34(a)(1)(ii)(D), § 52.47(a)(2)(iv), or § 53.210 of this chapter, as applicable. \n (2) Adversely impacting the security functions performed by <span class=\"match\">digital</span> assets necessary"
+      },
+      {
+        "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+        "type": "Proposed Rule",
+        "abstract": "OFPP, DoD, GSA, and NASA (collectively referred to as the Federal Acquisition Regulatory Council or FAR Council) are proposing to amend the Federal Acquisition Regulation (FAR) to implement Executive Order (E.O.) 14275, Restoring Common Sense to Federal Procurement. The E.O. directs the elimination of excessive acquisition regulations to stop the inefficient use of American taxpayer dollars. The FAR Council is issuing twelve proposed rules that collectively will streamline the FAR in its entirety. This rule proposes revisions to FAR parts 1, 2, 4, 33, 39, 40, 52, and 53.",
+        "document_number": "2026-12559",
+        "html_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-06-23/pdf/2026-12559.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-12559.pdf?1782132314",
+        "publication_date": "2026-06-23",
+        "agencies": [
+          {
+            "raw_name": "OFFICE OF MANAGEMENT AND BUDGET",
+            "name": "Management and Budget Office",
+            "id": 280,
+            "url": "https://www.federalregister.gov/agencies/management-and-budget-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/280",
+            "parent_id": null,
+            "slug": "management-and-budget-office"
+          },
+          {
+            "raw_name": "Office of Federal Procurement Policy",
+            "name": "Federal Procurement Policy Office",
+            "id": 184,
+            "url": "https://www.federalregister.gov/agencies/federal-procurement-policy-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/184",
+            "parent_id": 280,
+            "slug": "federal-procurement-policy-office"
+          },
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "GENERAL SERVICES ADMINISTRATION",
+            "name": "General Services Administration",
+            "id": 210,
+            "url": "https://www.federalregister.gov/agencies/general-services-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/210",
+            "parent_id": null,
+            "slug": "general-services-administration"
+          },
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          }
+        ],
+        "excerpts": "physical security <span class=\"match\">surveillance</span> of critical infrastructure, and other national security purposes, video <span class=\"match\">surveillance</span> equipment and telecommunications equipment produced by Hytera Communications Corporation, Hangzhou Hikvision <span class=\"match\">Digital</span> Technology Company, or Dahua Technology Company (or any subsidiary or affiliate of such entities); \n (3) Telecommunications services or video <span class=\"match\">surveillance</span> services provided by such entities or using such equipment; or \n (4) Telecommunications equipment, telecommunications services, video <span class=\"match\">surveillance</span> equipment, or video"
+      },
+      {
+        "title": "Regulation for Federal Financial Assistance",
+        "type": "Proposed Rule",
+        "abstract": "The Office of Management and Budget (OMB) proposes to revise the Guidance for Federal Financial Assistance to improve government- wide policies and requirements related to the management of grants, cooperative agreements, and other forms of assistance. OMB is proposing revisions that would improve transparency, accountability, and oversight for Federal awards across the Federal Government. This includes ensuring that American tax dollars are not wasted or misused, activities performed under Federal awards are consistent with law and policy, and recipients are held accountable when they fail to meet relevant standards. The revisions also aim to ensure that basic American principles of equality and equal opportunity are upheld throughout all stages of the award making process and that unlawful discrimination is no longer permitted. Proposed changes also include providing further clarification on the regulatory status of the OMB requirements and on the process for future updates to the government- wide requirements. Finally, OMB also proposes changes to reduce recipient burden. The listed Federal grant-making agencies propose conforming changes to their respective adopting regulations, or, in the case of some agencies and other entities, establishing new adopting regulations or policies. The proposed changes reflect the administration's commitment to transparency, accountability, and proper oversight for the Federal grantmaking process. The proposed regulations seek to ensure that American tax dollars are ultimately used to serve the needs of the American public.",
+        "document_number": "2026-10817",
+        "html_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-05-29/pdf/2026-10817.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-10817.pdf?1779984020",
+        "publication_date": "2026-05-29",
+        "agencies": [
+          {
+            "raw_name": "OFFICE OF MANAGEMENT AND BUDGET",
+            "name": "Management and Budget Office",
+            "id": 280,
+            "url": "https://www.federalregister.gov/agencies/management-and-budget-office",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/280",
+            "parent_id": null,
+            "slug": "management-and-budget-office"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF AGRICULTURE",
+            "name": "Agriculture Department",
+            "id": 12,
+            "url": "https://www.federalregister.gov/agencies/agriculture-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/12",
+            "parent_id": null,
+            "slug": "agriculture-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF STATE",
+            "name": "State Department",
+            "id": 476,
+            "url": "https://www.federalregister.gov/agencies/state-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/476",
+            "parent_id": null,
+            "slug": "state-department"
+          },
+          {
+            "raw_name": "Agency for International Development",
+            "name": "Agency for International Development",
+            "id": 6,
+            "url": "https://www.federalregister.gov/agencies/agency-for-international-development",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/6",
+            "parent_id": null,
+            "slug": "agency-for-international-development"
+          },
+          {
+            "raw_name": "DEPARTMENT OF VETERANS AFFAIRS",
+            "name": "Veterans Affairs Department",
+            "id": 520,
+            "url": "https://www.federalregister.gov/agencies/veterans-affairs-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/520",
+            "parent_id": null,
+            "slug": "veterans-affairs-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF ENERGY",
+            "name": "Energy Department",
+            "id": 136,
+            "url": "https://www.federalregister.gov/agencies/energy-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+            "parent_id": null,
+            "slug": "energy-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF THE TREASURY",
+            "name": "Treasury Department",
+            "id": 497,
+            "url": "https://www.federalregister.gov/agencies/treasury-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/497",
+            "parent_id": null,
+            "slug": "treasury-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF DEFENSE",
+            "name": "Defense Department",
+            "id": 103,
+            "url": "https://www.federalregister.gov/agencies/defense-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/103",
+            "parent_id": null,
+            "slug": "defense-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF TRANSPORTATION",
+            "name": "Transportation Department",
+            "id": 492,
+            "url": "https://www.federalregister.gov/agencies/transportation-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/492",
+            "parent_id": null,
+            "slug": "transportation-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF COMMERCE",
+            "name": "Commerce Department",
+            "id": 54,
+            "url": "https://www.federalregister.gov/agencies/commerce-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+            "parent_id": null,
+            "slug": "commerce-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF THE INTERIOR",
+            "name": "Interior Department",
+            "id": 253,
+            "url": "https://www.federalregister.gov/agencies/interior-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/253",
+            "parent_id": null,
+            "slug": "interior-department"
+          },
+          {
+            "raw_name": "ENVIRONMENTAL PROTECTION AGENCY",
+            "name": "Environmental Protection Agency",
+            "id": 145,
+            "url": "https://www.federalregister.gov/agencies/environmental-protection-agency",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/145",
+            "parent_id": null,
+            "slug": "environmental-protection-agency"
+          },
+          {
+            "raw_name": "U.S. INTERNATIONAL DEVELOPMENT FINANCE CORPORATION",
+            "name": "U.S. International Development Finance Corporation",
+            "id": 606,
+            "url": "https://www.federalregister.gov/agencies/u-s-international-development-finance-corporation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/606",
+            "parent_id": null,
+            "slug": "u-s-international-development-finance-corporation"
+          },
+          {
+            "raw_name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+            "name": "National Aeronautics and Space Administration",
+            "id": 301,
+            "url": "https://www.federalregister.gov/agencies/national-aeronautics-and-space-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/301",
+            "parent_id": null,
+            "slug": "national-aeronautics-and-space-administration"
+          },
+          {
+            "raw_name": "U.S. Agency for Global Media",
+            "name": "United States Agency for Global Media",
+            "id": 608,
+            "url": "https://www.federalregister.gov/agencies/united-states-agency-for-global-media",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/608",
+            "parent_id": null,
+            "slug": "united-states-agency-for-global-media"
+          },
+          {
+            "raw_name": "NUCLEAR REGULATORY COMMISSION",
+            "name": "Nuclear Regulatory Commission",
+            "id": 383,
+            "url": "https://www.federalregister.gov/agencies/nuclear-regulatory-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/383",
+            "parent_id": null,
+            "slug": "nuclear-regulatory-commission"
+          },
+          {
+            "raw_name": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+            "name": "Corporation for National and Community Service",
+            "id": 91,
+            "url": "https://www.federalregister.gov/agencies/corporation-for-national-and-community-service",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/91",
+            "parent_id": null,
+            "slug": "corporation-for-national-and-community-service"
+          },
+          {
+            "raw_name": "Social Security Administration",
+            "name": "Social Security Administration",
+            "id": 470,
+            "url": "https://www.federalregister.gov/agencies/social-security-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/470",
+            "parent_id": null,
+            "slug": "social-security-administration"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+            "name": "Housing and Urban Development Department",
+            "id": 228,
+            "url": "https://www.federalregister.gov/agencies/housing-and-urban-development-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/228",
+            "parent_id": null,
+            "slug": "housing-and-urban-development-department"
+          },
+          {
+            "raw_name": "NATIONAL SCIENCE FOUNDATION",
+            "name": "National Science Foundation",
+            "id": 366,
+            "url": "https://www.federalregister.gov/agencies/national-science-foundation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/366",
+            "parent_id": null,
+            "slug": "national-science-foundation"
+          },
+          {
+            "raw_name": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+            "name": "National Archives and Records Administration",
+            "id": 304,
+            "url": "https://www.federalregister.gov/agencies/national-archives-and-records-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/304",
+            "parent_id": null,
+            "slug": "national-archives-and-records-administration"
+          },
+          {
+            "raw_name": "SMALL BUSINESS ADMINISTRATION",
+            "name": "Small Business Administration",
+            "id": 468,
+            "url": "https://www.federalregister.gov/agencies/small-business-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/468",
+            "parent_id": null,
+            "slug": "small-business-administration"
+          },
+          {
+            "raw_name": "DEPARTMENT OF JUSTICE",
+            "name": "Justice Department",
+            "id": 268,
+            "url": "https://www.federalregister.gov/agencies/justice-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/268",
+            "parent_id": null,
+            "slug": "justice-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF LABOR",
+            "name": "Labor Department",
+            "id": 271,
+            "url": "https://www.federalregister.gov/agencies/labor-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/271",
+            "parent_id": null,
+            "slug": "labor-department"
+          },
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          },
+          {
+            "raw_name": "NATIONAL FOUNDATION ON THE ARTS AND THE HUMANITIES",
+            "name": "National Foundation on the Arts and the Humanities",
+            "id": 342,
+            "url": "https://www.federalregister.gov/agencies/national-foundation-on-the-arts-and-the-humanities",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/342",
+            "parent_id": null,
+            "slug": "national-foundation-on-the-arts-and-the-humanities"
+          },
+          {
+            "raw_name": "Institute of Museum and Library Services",
+            "name": "Institute of Museum and Library Services",
+            "id": 591,
+            "url": "https://www.federalregister.gov/agencies/institute-of-museum-and-library-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/591",
+            "parent_id": 342,
+            "slug": "institute-of-museum-and-library-services"
+          },
+          {
+            "raw_name": "NATIONAL ENDOWMENT FOR THE ARTS",
+            "name": "National Endowment for the Arts",
+            "id": 588,
+            "url": "https://www.federalregister.gov/agencies/national-endowment-for-the-arts",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/588",
+            "parent_id": 342,
+            "slug": "national-endowment-for-the-arts"
+          },
+          {
+            "raw_name": "National Endowment for the Humanities",
+            "name": "National Endowment for the Humanities",
+            "id": 589,
+            "url": "https://www.federalregister.gov/agencies/national-endowment-for-the-humanities",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/589",
+            "parent_id": 342,
+            "slug": "national-endowment-for-the-humanities"
+          },
+          {
+            "raw_name": "DEPARTMENT OF EDUCATION",
+            "name": "Education Department",
+            "id": 126,
+            "url": "https://www.federalregister.gov/agencies/education-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/126",
+            "parent_id": null,
+            "slug": "education-department"
+          },
+          {
+            "raw_name": "EXPORT IMPORT BANK",
+            "name": "Export-Import Bank",
+            "id": 151,
+            "url": "https://www.federalregister.gov/agencies/export-import-bank",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/151",
+            "parent_id": null,
+            "slug": "export-import-bank"
+          },
+          {
+            "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+            "name": "Executive Office of the President",
+            "id": 538,
+            "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+            "parent_id": null,
+            "slug": "executive-office-of-the-president"
+          },
+          {
+            "raw_name": "OFFICE OF NATIONAL DRUG CONTROL POLICY",
+            "name": "Office of National Drug Control Policy",
+            "id": 390,
+            "url": "https://www.federalregister.gov/agencies/office-of-national-drug-control-policy",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/390",
+            "parent_id": 538,
+            "slug": "office-of-national-drug-control-policy"
+          },
+          {
+            "raw_name": "PEACE CORPS",
+            "name": "Peace Corps",
+            "id": 403,
+            "url": "https://www.federalregister.gov/agencies/peace-corps",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/403",
+            "parent_id": null,
+            "slug": "peace-corps"
+          },
+          {
+            "raw_name": "ELECTION ASSISTANCE COMMISSION",
+            "name": "Election Assistance Commission",
+            "id": 127,
+            "url": "https://www.federalregister.gov/agencies/election-assistance-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/127",
+            "parent_id": null,
+            "slug": "election-assistance-commission"
+          },
+          {
+            "raw_name": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+            "name": "Gulf Coast Ecosystem Restoration Council",
+            "id": 583,
+            "url": "https://www.federalregister.gov/agencies/gulf-coast-ecosystem-restoration-council",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/583",
+            "parent_id": null,
+            "slug": "gulf-coast-ecosystem-restoration-council"
+          },
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          },
+          {
+            "raw_name": "CONSUMER PRODUCT SAFETY COMMISSION",
+            "name": "Consumer Product Safety Commission",
+            "id": 84,
+            "url": "https://www.federalregister.gov/agencies/consumer-product-safety-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/84",
+            "parent_id": null,
+            "slug": "consumer-product-safety-commission"
+          },
+          {
+            "raw_name": "Delta Regional Authority",
+            "name": "Delta Regional Authority",
+            "id": 624,
+            "url": "https://www.federalregister.gov/agencies/delta-regional-authority",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/624",
+            "parent_id": null,
+            "slug": "delta-regional-authority"
+          },
+          {
+            "raw_name": "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+            "name": "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+            "id": 621,
+            "url": "https://www.federalregister.gov/agencies/appraisal-subcommittee-of-the-federal-financial-institutions-examination-council",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/621",
+            "parent_id": null,
+            "slug": "appraisal-subcommittee-of-the-federal-financial-institutions-examination-council"
+          },
+          {
+            "raw_name": "MARINE MAMMAL COMMISSION",
+            "name": "Marine Mammal Commission",
+            "id": 281,
+            "url": "https://www.federalregister.gov/agencies/marine-mammal-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/281",
+            "parent_id": null,
+            "slug": "marine-mammal-commission"
+          },
+          {
+            "raw_name": "Millennium Challenge Corporation",
+            "name": "Millennium Challenge Corporation",
+            "id": 287,
+            "url": "https://www.federalregister.gov/agencies/millennium-challenge-corporation",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/287",
+            "parent_id": null,
+            "slug": "millennium-challenge-corporation"
+          },
+          {
+            "raw_name": "NATIONAL CREDIT UNION ADMINISTRATION",
+            "name": "National Credit Union Administration",
+            "id": 335,
+            "url": "https://www.federalregister.gov/agencies/national-credit-union-administration",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/335",
+            "parent_id": null,
+            "slug": "national-credit-union-administration"
+          }
+        ],
+        "excerpts": "of Government facilities, physical security <span class=\"match\">surveillance</span> of critical infrastructure, and other national security purposes, video <span class=\"match\">surveillance</span> and telecommunications equipment produced by Hytera Communications Corporation, Hangzhou Hikvision <span class=\"match\">Digital</span> Technology Company, or Dahua Technology Company (or any subsidiary or affiliate of such entities); \n (iii) Telecommunications or video <span class=\"match\">surveillance</span> services provided by such entities or using such equipment; and \n (iv) Telecommunications or video <span class=\"match\">surveillance</span> equipment or services produced or provided"
+      },
+      {
+        "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+        "type": "Rule",
+        "abstract": "This major final rule addresses: changes to the physician fee schedule (PFS); other changes to Medicare Part B payment policies to ensure that payment systems are updated to reflect changes in medical practice, relative value of services, and changes in the statute; codification of establishment of new policies for: the Medicare Prescription Drug Inflation Rebate Program under the Inflation Reduction Act of 2022; the Ambulatory Specialty Model; updates to the Medicare Diabetes Prevention Program expanded model; updates to drugs and biological products paid under Part B; Medicare Shared Savings Program requirements; updates to the Quality Payment Program; updates to policies for Rural Health Clinics and Federally Qualified Health Centers; update to the Ambulance Fee Schedule regulations; codification of the Inflation Reduction Act and Consolidated Appropriations Act, 2023 provisions; updates to the Medicare Promoting Interoperability Program.",
+        "document_number": "2025-19787",
+        "html_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-11-05/pdf/2025-19787.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-19787.pdf?1761945018",
+        "publication_date": "2025-11-05",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          }
+        ],
+        "excerpts": "See \n Administration for Strategic Preparedness &amp; Response website, Declarations of a Public Health <span class=\"match\">Emergency</span> web page, at \n https://aspr.hhs.gov/legal/PHE/pages/default.aspx \n (listing declarations of a public health <span class=\"match\">emergency</span>, among other information). \n See also \n U.S. Department of Health and Human Services website, COVID-19 Public Health <span class=\"match\">Emergency</span> web page, available at \n https://www.hhs.gov/coronavirus/covid-19-public-health-<span class=\"match\">emergency</span>/index.html \n .\n \n \n To ensure that the ACO continues to satisfy Shared Savings Program requirements, CMS"
+      },
+      {
+        "title": "Promoting the Integrity and Security of Telecommunications Certification Bodies, Measurement Facilities, and the Equipment Authorization Program",
+        "type": "Rule",
+        "abstract": "In this document, the Federal Communications Commission (Commission or FCC) requires all recognized telecommunication certification bodies (TCBs), test labs, and laboratory accreditation bodies to certify to the Commission that they are not owned by, controlled by, or subject to the direction of a prohibited entity and to report all equity or voting interests of 5% or greater by any entity. The FCC also amends it rules to state that it will not recognize--and will revoke any existing recognition of--any TCB, test lab, or laboratory accreditation body that fails to provide, or that provides a false or inaccurate, certification; or that fails to provide, or provides false or inaccurate, information regarding equity or voting interests of 5% or greater. The FCC prohibits recognition of any TCB, test lab, or laboratory accreditation body owned by, controlled by, or subject to the direction of a prohibited entity, and prohibits such TCBs, test labs, and laboratory accreditation bodies from participating in the Commission's equipment authorization program, not only with regard to the equipment certification process but also the Supplier's Declaration of Conformity (SDoC) process.",
+        "document_number": "2025-14970",
+        "html_url": "https://www.federalregister.gov/documents/2025/08/07/2025-14970/promoting-the-integrity-and-security-of-telecommunications-certification-bodies-measurement",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-08-07/pdf/2025-14970.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-14970.pdf?1754484348",
+        "publication_date": "2025-08-07",
+        "agencies": [
+          {
+            "raw_name": "FEDERAL COMMUNICATIONS COMMISSION",
+            "name": "Federal Communications Commission",
+            "id": 161,
+            "url": "https://www.federalregister.gov/agencies/federal-communications-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/161",
+            "parent_id": null,
+            "slug": "federal-communications-commission"
+          }
+        ],
+        "excerpts": "NPRM Proposals \n \n TCB Post-market <span class=\"match\">surveillance</span>. \n In the \n EA Integrity NPRM, \n the Commission invited comment on whether to revise the post-market <span class=\"match\">surveillance</span> rules, policies, or guidance to require <span class=\"match\">surveillance</span> of authorized equipment for compliance relating to the prohibition on authorization of “covered” equipment. In particular, the Commission sought comment on reasonable practices TCBs could implement to identify erroneous authorizations of “covered” equipment, whether to change the post-market <span class=\"match\">surveillance</span> requirements to require that TCBs"
+      },
+      {
+        "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2026 Rates; Changes to the FY 2025 IPPS Rates Due to Court Decision; Requirements for Quality Programs; and Other Policy Changes; Health Data, Technology, and Interoperability: Electronic Prescribing, Real-Time Prescription Benefit and Electronic Prior Authorization",
+        "type": "Rule",
+        "abstract": "This final rule revises the Medicare hospital inpatient prospective payment systems (IPPS) for operating and capital-related costs of acute care hospitals; makes changes relating to Medicare graduate medical education (GME) for teaching hospitals; updates the payment policies and the annual payment rates for the Medicare prospective payment system (PPS) for inpatient hospital services provided by long-term care hospitals (LTCHs); updates and makes changes to requirements for certain quality programs; and makes other policy- related changes. We are also finalizing the provisions of the interim final action with comment period regarding the changes to the FY 2025 IPPS rates due to the court decision in Bridgeport Hosp. v. Becerra. Lastly, it finalizes certain updates to the ONC Health Information Technology (IT) Certification Program.",
+        "document_number": "2025-14681",
+        "html_url": "https://www.federalregister.gov/documents/2025/08/04/2025-14681/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-08-04/pdf/2025-14681.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-14681.pdf?1753992911",
+        "publication_date": "2025-08-04",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          },
+          {
+            "raw_name": "Office of the Secretary"
+          }
+        ],
+        "excerpts": "(NHSN) is leading the development of fully electronic and automated <span class=\"match\">digital</span> quality measures for patient safety and public health <span class=\"match\">surveillance</span>, preparedness, and response.\n 239 \n \n We are working together with NHSN to explore a modernized approach for reporting quality measures to CMS via the NHSN data pipeline. There are currently nine <span class=\"match\">digital</span> quality measures reported to NHSN that are used in CMS programs.\n 240 \n \n CMS and CDC are working together to transition to fully automated <span class=\"match\">digital</span> quality measures using a two-pronged approach: (1) Develop new"
+      },
+      {
+        "title": "Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing of Amendment No. 1 to a Proposed Rule Change To Amend NYSE Arca Rule 8.500-E (Trust Units) and To List and Trade Shares of the Bitwise 10 Crypto Index ETF Under Amended NYSE Arca Rule 8.500-E",
+        "type": "Notice",
+        "abstract": null,
+        "document_number": "2025-13804",
+        "html_url": "https://www.federalregister.gov/documents/2025/07/23/2025-13804/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-of-amendment-no-1-to-a-proposed-rule",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-07-23/pdf/2025-13804.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-13804.pdf?1753188308",
+        "publication_date": "2025-07-23",
+        "agencies": [
+          {
+            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+            "name": "Securities and Exchange Commission",
+            "id": 466,
+            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+            "parent_id": null,
+            "slug": "securities-and-exchange-commission"
+          }
+        ],
+        "excerpts": "• The <span class=\"match\">digital</span> asset must be freely traded \n 25 \n \n and can be freely held for the foreseeable future;\n \n \n \n 25 \n  The Committee considers assets to be freely traded if they may be traded by U.S. investors and do not have trading restrictions at Eligible <span class=\"match\">Digital</span> Asset Trading Platforms.\n \n \n \n • The <span class=\"match\">digital</span> asset must trade on an Eligible <span class=\"match\">Digital</span> Asset Trading Platform, without withdrawal issues specific to that <span class=\"match\">digital</span> asset; \n 26 \n \n \n \n \n 26 \n  For example, <span class=\"match\">digital</span> asset trading platforms have previously suspended withdrawals in <span class=\"match\">digital</span> assets"
+      },
+      {
+        "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+        "type": "Proposed Rule",
+        "abstract": "This major proposed rule addresses: changes to the physician fee schedule (PFS); other changes to Medicare Part B payment policies to ensure that payment systems are updated to reflect changes in medical practice, relative value of services, and changes in the statute; codification of establishment of new policies for: the Medicare Prescription Drug Inflation Rebate Program under the Inflation Reduction Act of 2022; the Ambulatory Specialty Model; updates to the Medicare Diabetes Prevention Program expanded model; updates to drugs and biological products paid under Part B; Medicare Shared Savings Program requirements; updates to the Quality Payment Program; updates to policies for Rural Health Clinics and Federally Qualified Health Centers update to the Ambulance Fee Schedule regulations; codification of the Inflation Reduction Act and Consolidated Appropriations Act, 2023 provisions; updates to the Medicare Promoting Interoperability Program.",
+        "document_number": "2025-13271",
+        "html_url": "https://www.federalregister.gov/documents/2025/07/16/2025-13271/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-07-16/pdf/2025-13271.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-13271.pdf?1752524111",
+        "publication_date": "2025-07-16",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          }
+        ],
+        "excerpts": " \n See \n Administration for Strategic Preparedness &amp; Response website, Declarations of a Public Health <span class=\"match\">Emergency</span> webpage, at https://aspr.hhs.gov/legal/PHE/pages/default.aspx (listing declarations of a public health <span class=\"match\">emergency</span>, among other information). \n See also \n U.S. Department of Health and Human Services website, COVID-19 Public Health <span class=\"match\">Emergency</span> webpage, available at https://www.hhs.gov/coronavirus/covid-19-public-health-<span class=\"match\">emergency</span>/index.html.\n \n \n To ensure that the ACO continues to satisfy Shared Savings Program requirements, CMS monitors"
+      }
+    ]
+  },
+  "error": null
+}

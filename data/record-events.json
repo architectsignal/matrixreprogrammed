@@ -1,0 +1,984 @@
+{
+  "updated": "2026-07-04T16:47:44.036Z",
+  "runner_version": "machine-feed-runner-2026-07-04-b",
+  "title": "Public Record Events",
+  "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
+  "boundary": "Events must keep evidence grades. News signals are not findings.",
+  "pullSummary": [
+    {
+      "lane": "federal-register-policy",
+      "name": "Federal Register latest policy records",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/federal-register-latest.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "sec-edgar-filings",
+      "name": "SEC EDGAR company tickers snapshot",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/sec-edgar-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "name": "CourtListener court record signal",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/courtlistener-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "usaspending-contracts",
+      "name": "USAspending public awards signal",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/usaspending-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "lane": "ofac-sanctions",
+      "name": "OFAC sanctions CSV snapshot",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/ofac-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "lane": "world-bank-projects",
+      "name": "World Bank project search",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/worldbank-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "news-signal-not-evidence",
+      "name": "GDELT early warning signal",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/news-signal-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    }
+  ],
+  "events": [
+    {
+      "id": "federal-register-policy-2026-13602-1",
+      "date": "2026-07-06",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "institution_names": [
+        "Health and Human Services Department"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "source_record_id": "2026-13602",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-13057-2",
+      "date": "2026-06-29",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Homeland Security Department"
+      ],
+      "institution_names": [
+        "Homeland Security Department"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "source_record_id": "2026-13057",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-12989-3",
+      "date": "2026-06-26",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Nuclear Regulatory Commission"
+      ],
+      "institution_names": [
+        "Nuclear Regulatory Commission"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+      "source_record_id": "2026-12989",
+      "summary": "Modernizing Security Requirements",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-12559-4",
+      "date": "2026-06-23",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ],
+      "institution_names": [
+        "Defense Department"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "source_record_id": "2026-12559",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-10817-5",
+      "date": "2026-05-29",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Management and Budget Office",
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department",
+        "Labor Department",
+        "Homeland Security Department",
+        "National Foundation on the Arts and the Humanities",
+        "Institute of Museum and Library Services",
+        "National Endowment for the Arts",
+        "National Endowment for the Humanities",
+        "Education Department",
+        "Export-Import Bank",
+        "Executive Office of the President",
+        "Office of National Drug Control Policy",
+        "Peace Corps",
+        "Election Assistance Commission",
+        "Gulf Coast Ecosystem Restoration Council",
+        "Federal Communications Commission",
+        "Consumer Product Safety Commission",
+        "Delta Regional Authority",
+        "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+        "Marine Mammal Commission",
+        "Millennium Challenge Corporation",
+        "National Credit Union Administration"
+      ],
+      "institution_names": [
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "Justice Department",
+        "Labor Department",
+        "Homeland Security Department",
+        "National Foundation on the Arts and the Humanities",
+        "Education Department",
+        "Export-Import Bank",
+        "Peace Corps",
+        "Election Assistance Commission",
+        "Federal Communications Commission",
+        "Consumer Product Safety Commission",
+        "Marine Mammal Commission",
+        "Millennium Challenge Corporation"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "source_record_id": "2026-10817",
+      "summary": "Regulation for Federal Financial Assistance",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2025-19787-6",
+      "date": "2025-11-05",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "institution_names": [
+        "Health and Human Services Department"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+      "source_record_id": "2025-19787",
+      "summary": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0001045810-1",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "NVIDIA CORP",
+        "NVDA"
+      ],
+      "institution_names": [
+        "NVIDIA CORP"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0001045810",
+      "summary": "NVIDIA CORP (NVDA)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0001652044-2",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ],
+      "institution_names": [
+        "Alphabet Inc."
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0001652044",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-3",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "Apple Inc.",
+        "AAPL"
+      ],
+      "institution_names": [
+        "Apple Inc."
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0000320193",
+      "summary": "Apple Inc. (AAPL)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0000789019-4",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "MICROSOFT CORP",
+        "MSFT"
+      ],
+      "institution_names": [
+        "MICROSOFT CORP"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0000789019",
+      "summary": "MICROSOFT CORP (MSFT)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0001018724-5",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "AMAZON COM INC",
+        "AMZN"
+      ],
+      "institution_names": [
+        "AMAZON COM INC"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0001018724",
+      "summary": "AMAZON COM INC (AMZN)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "sec-edgar-filings-cik0001730168-6",
+      "date": "2026-07-04",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "sec-edgar-filings",
+      "source_name": "SEC EDGAR company tickers snapshot",
+      "entity_names": [
+        "Broadcom Inc.",
+        "AVGO"
+      ],
+      "institution_names": [
+        "Broadcom Inc."
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "record_type": "company_registry_snapshot",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_record_id": "CIK0001730168",
+      "summary": "Broadcom Inc. (AVGO)",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10883674-1",
+      "date": "2026-07-01",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
+      ],
+      "institution_names": [
+        "Appellate Division of the Supreme Court of the State of New York"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "source_record_id": 10883674,
+      "summary": "Matter of Pagliughi",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10883331-2",
+      "date": "2026-07-01",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ],
+      "institution_names": [
+        "Court of Appeals of North Carolina"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "source_record_id": 10883331,
+      "summary": "Biddle v. Biddle",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10883542-3",
+      "date": "2026-06-30",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Trump v. Barbara Revisions: 7/01/26",
+        "Supreme Court of the United States",
+        "25-365"
+      ],
+      "institution_names": [
+        "Supreme Court of the United States"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+      "source_record_id": 10883542,
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10882239-4",
+      "date": "2026-06-30",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Trump v. Barbara",
+        "Supreme Court of the United States",
+        "25-365"
+      ],
+      "institution_names": [
+        "Supreme Court of the United States"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+      "source_record_id": 10882239,
+      "summary": "Trump v. Barbara",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10881616-5",
+      "date": "2026-06-30",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383"
+      ],
+      "institution_names": [
+        "Connecticut Appellate Court"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+      "source_record_id": 10881616,
+      "summary": "Khan v. Jewish Women International",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10883004-6",
+      "date": "2026-06-29",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Accountability Now USA v. Griess",
+        "District Court, District of Columbia",
+        "Civil Action No. 2026-1385"
+      ],
+      "institution_names": [
+        "District Court, District of Columbia"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+      "source_record_id": 10883004,
+      "summary": "Accountability Now USA v. Griess",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p505244-1",
+      "date": "2024-12-20T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Republic of Rwanda",
+        "[object Object]"
+      ],
+      "institution_names": [],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P505244",
+      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p176429-2",
+      "date": "2024-12-19T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Chattogram Water Supply and Sewerage Authority",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ],
+      "institution_names": [],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P176429",
+      "summary": "Chattogram Water Supply Improvement Project",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p181587-3",
+      "date": "2024-12-19T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+        "Kingdom of Morocco",
+        "[object Object]"
+      ],
+      "institution_names": [
+        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)"
+      ],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P181587",
+      "summary": "Transforming Agri-food Systems in Morocco",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p180283-4",
+      "date": "2024-12-19T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Ministry of Health and Family Welfare",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ],
+      "institution_names": [
+        "Ministry of Health and Family Welfare"
+      ],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P180283",
+      "summary": "Health, Nutrition and Population Sector Development Program",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p507508-5",
+      "date": "2024-12-19T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Republic of India",
+        "[object Object]"
+      ],
+      "institution_names": [],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P507508",
+      "summary": "Amaravati Integrated Urban Development Program",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "world-bank-projects-p180439-6",
+      "date": "2024-12-19T00:00:00Z",
+      "pulled_at": "2026-07-04T16:47:44.036Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "world-bank-projects",
+      "source_name": "World Bank project search",
+      "entity_names": [
+        "Finance Division, Ministry of Finance",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ],
+      "institution_names": [
+        "Finance Division, Ministry of Finance"
+      ],
+      "control_layers": [
+        "development_finance",
+        "infrastructure",
+        "global_money"
+      ],
+      "record_type": "global_project_record",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_record_id": "P180439",
+      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "control-structure",
+        "power-entities",
+        "global-risk-clocks"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    }
+  ]
+}

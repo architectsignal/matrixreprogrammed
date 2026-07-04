@@ -1,0 +1,14 @@
+{
+  "updated": "2026-07-04T16:47:44.036Z",
+  "runner_version": "machine-feed-runner-2026-07-04-b",
+  "lane": "news-signal-not-evidence",
+  "name": "GDELT early warning signal",
+  "ok": false,
+  "status": 0,
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%22digital%20ID%22%20OR%20%22central%20bank%22%20OR%20%22sealed%20records%22&mode=artlist&format=json&maxrecords=10&sort=hybridrel",
+  "source_type": "news_signal",
+  "evidence_grade": "signal only",
+  "itemCount": 0,
+  "raw": null,
+  "error": "This operation was aborted"
+}

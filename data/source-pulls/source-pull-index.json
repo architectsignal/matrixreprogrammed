@@ -1,0 +1,69 @@
+{
+  "updated": "2026-07-04T16:47:44.036Z",
+  "runner_version": "machine-feed-runner-2026-07-04-b",
+  "pulls": [
+    {
+      "lane": "federal-register-policy",
+      "name": "Federal Register latest policy records",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/federal-register-latest.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "sec-edgar-filings",
+      "name": "SEC EDGAR company tickers snapshot",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/sec-edgar-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "name": "CourtListener court record signal",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/courtlistener-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "usaspending-contracts",
+      "name": "USAspending public awards signal",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/usaspending-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "lane": "ofac-sanctions",
+      "name": "OFAC sanctions CSV snapshot",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/ofac-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    },
+    {
+      "lane": "world-bank-projects",
+      "name": "World Bank project search",
+      "ok": true,
+      "status": 200,
+      "output": "data/source-pulls/worldbank-watch.json",
+      "itemCount": 6,
+      "error": null
+    },
+    {
+      "lane": "news-signal-not-evidence",
+      "name": "GDELT early warning signal",
+      "ok": false,
+      "status": 0,
+      "output": "data/source-pulls/news-signal-watch.json",
+      "itemCount": 0,
+      "error": "This operation was aborted"
+    }
+  ]
+}

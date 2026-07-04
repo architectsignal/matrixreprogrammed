@@ -144,6 +144,54 @@
     {
       "section": "Policy Systems",
       "record": "access terms"
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "federal-register-policy",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+    },
+    {
+      "section": "sec-edgar-filings",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
     }
   ],
   "priorityPages": [
@@ -165,7 +213,322 @@
     "Any digital identity, wallet, payment or public-service access rule changing from optional to mandatory.",
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
-    "Any speculation claim that gains an original source, metadata, official record or credible counter-source."
+    "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
-  "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change."
+  "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
+  "publicRecordFeed": {
+    "updated": "2026-07-04T16:47:44.036Z",
+    "eventCount": 24,
+    "feedCount": 7,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 52,
+    "digestRoute": "machine-digest.html",
+    "recordEventsRoute": "data/record-events.json",
+    "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
+  },
+  "topRecordEvents": [
+    {
+      "id": "federal-register-policy-2026-13602-1",
+      "date": "2026-07-06",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2026-13057-2",
+      "date": "2026-06-29",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2026-12989-3",
+      "date": "2026-06-26",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Modernizing Security Requirements",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2026-12559-4",
+      "date": "2026-06-23",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2026-10817-5",
+      "date": "2026-05-29",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Regulation for Federal Financial Assistance",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2025-19787-6",
+      "date": "2025-11-05",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+      "source_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0001045810-1",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0001652044-2",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-3",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0000789019-4",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "MICROSOFT CORP (MSFT)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0001018724-5",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "AMAZON COM INC (AMZN)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
+      "id": "sec-edgar-filings-cik0001730168-6",
+      "date": "2026-07-04",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Broadcom Inc. (AVGO)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    }
+  ],
+  "entityObservationSignals": [
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ]
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 3,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "count": 3,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ]
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "nuclear-regulatory-commission",
+      "name": "Nuclear Regulatory Commission",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "federal-procurement-policy-office",
+      "name": "Federal Procurement Policy Office",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "defense-department",
+      "name": "Defense Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "general-services-administration",
+      "name": "General Services Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    }
+  ]
 }

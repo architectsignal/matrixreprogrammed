@@ -1,0 +1,56 @@
+{
+  "updated": "2026-06-29",
+  "title": "Public Interest Anti-Corruption Charter",
+  "mission": "Expose wrongdoing, help humanity, protect victims, follow the documents, and map concentrated power for the public good.",
+  "publicLine": "A lawful public-interest resource for exposing corruption, institutional abuse, secrecy, trafficking networks, financial influence, policy capture, and power concentration through evidence, not noise.",
+  "principles": [
+    "Expose wrongdoing, not innocent people.",
+    "Protect victims, witnesses, children, private citizens, and vulnerable people.",
+    "Follow documents, dates, money, institutions, contracts, court records, public filings, policy mandates, and source-linked reporting.",
+    "Separate fact, allegation, pattern, hypothesis, speculation, and debunked claim.",
+    "Use strong public-interest wording without turning association, rumour, symbolism, or internet lore into proof.",
+    "Track corruption as systems: incentives, institutions, money routes, legal failures, secrecy, procurement, regulation, influence, and enforcement gaps.",
+    "Make the site useful to ordinary people: explain what happened, who benefits, what records exist, what is missing, and what to watch next."
+  ],
+  "corruptionLanes": [
+    {
+      "id": "public-office-and-policy-capture",
+      "title": "Public Office / Policy Capture",
+      "tracks": ["mandates", "lobbying", "revolving door", "public-private partnerships", "procurement", "committee decisions", "regulatory capture"]
+    },
+    {
+      "id": "money-and-banking-power",
+      "title": "Money / Banking / Financial Influence",
+      "tracks": ["banking access", "debanking", "CBDC/tokenized money", "settlements", "donor networks", "asset managers", "central-bank policy", "financial restrictions"]
+    },
+    {
+      "id": "trafficking-and-exploitation-networks",
+      "title": "Trafficking / Exploitation / Protection Failures",
+      "tracks": ["court records", "flight logs", "property networks", "staff testimony", "institutional failures", "sealed records", "victim protection gaps"]
+    },
+    {
+      "id": "security-and-war-profiteering",
+      "title": "Security / War / Contractor Power",
+      "tracks": ["war spending", "cyber powers", "emergency laws", "defense contractors", "surveillance procurement", "intelligence-adjacent contracts"]
+    },
+    {
+      "id": "speech-and-information-control",
+      "title": "Speech / Information / Platform Control",
+      "tracks": ["online safety law", "trusted flaggers", "NGO-state partnerships", "search suppression", "payment censorship", "advertiser pressure"]
+    },
+    {
+      "id": "global-governance-and-sovereignty-drift",
+      "title": "Global Governance / Sovereignty Drift",
+      "tracks": ["Agenda 2030 references", "treaty drift", "model laws", "global standards", "funding conditions", "domestic mandate adoption"]
+    }
+  ],
+  "readerPromise": "The site will not ask the reader to believe first. It will show the lane, the record, the evidence class, the boundary, and the next source route.",
+  "hardBoundaries": [
+    "No illegal material.",
+    "No private victim identities.",
+    "No doxxing.",
+    "No graphic exploitation detail.",
+    "No direct accusation against private people without source-grade evidence.",
+    "No blaming populations, races, religions, or ordinary groups for institutional wrongdoing."
+  ]
+}

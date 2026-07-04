@@ -1,0 +1,159 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 5 AI Answer Engine for Matrix Reprogrammed. Structured Q&A nodes for AI search, human search, evidence boundaries, and routing into books, Power Atlas, Evidence Vault, and Black File.",
+  "rules": [
+    "Answer the direct question first.",
+    "Separate confirmed records from claims, interpretation, and speculation.",
+    "Route every answer into at least one deeper archive path.",
+    "Association is not guilt.",
+    "Symbolism is commentary unless a source supports a stronger claim.",
+    "A dataset category must not be merged with another category.",
+    "The answer page should be useful to humans and machine crawlers."
+  ],
+  "answers": [
+    {
+      "slug": "deep-state",
+      "question": "What is the deep state?",
+      "shortAnswer": "The deep state is a contested phrase used to describe durable power structures inside or around government that can persist beyond elections: agencies, bureaucracies, contractors, courts, finance, intelligence, law, media, and policy networks. Matrix Reprogrammed treats the phrase carefully: confirmed institutions and public records are separated from unsupported claims.",
+      "confirmed": "Permanent institutions, agencies, contractors, courts, regulators, security structures, procurement systems, and classified programs can outlast elected governments.",
+      "disputed": "Claims of hidden coordination need evidence, not just suspicion or institutional continuity.",
+      "whyItMatters": "It gives readers a language for durable institutional power without turning every institution into a conspiracy claim.",
+      "boundary": "Use public records, oversight reports, contracts, court records, declassified files, and named source lanes. Do not treat institutional continuity as proof of criminal conspiracy.",
+      "atlasNodes": ["cia", "nsa", "five-eyes", "black-file"],
+      "evidenceLanes": ["intelligence-oversight", "declassified-archives", "financial-records"],
+      "books": ["elite-toolkit", "power-overlap", "cia", "law"]
+    },
+    {
+      "slug": "military-industrial-complex",
+      "question": "What is the military-industrial complex?",
+      "shortAnswer": "The military-industrial complex is the network of state defence institutions, weapons firms, contractors, lobbyists, think tanks, procurement systems, media narratives, and geopolitical policy incentives that can make war planning and weapons spending self-reinforcing.",
+      "confirmed": "Defence procurement, contractor influence, lobbying, revolving-door employment, war budgets, and public contracts are visible public-record lanes.",
+      "disputed": "Specific claims of engineered wars or covert coordination need case-specific evidence.",
+      "whyItMatters": "It connects war, money, policy, contractors, intelligence claims, public fear, and human cost.",
+      "boundary": "Contracts and influence are not proof of illegal conduct by themselves. Strong claims need court records, official findings, or reliable investigations.",
+      "atlasNodes": ["war-machine", "blackwater", "cia"],
+      "evidenceLanes": ["financial-records", "court-records", "human-cost-sources"],
+      "books": ["blackwater", "wwiii", "elite-toolkit", "power-overlap"]
+    },
+    {
+      "slug": "mkultra",
+      "question": "What was MKUltra?",
+      "shortAnswer": "MKUltra was a CIA mind-control and behavioral research program involving drugs, interrogation, psychology, secrecy, and abuse. It is a documented public-record topic and a central case study in oversight failure.",
+      "confirmed": "MKUltra existed and has been discussed through official investigations, released documents, and historical records.",
+      "disputed": "Modern claims that invoke MKUltra need source-specific evidence and should not be treated as confirmed just because the original program existed.",
+      "whyItMatters": "It shows how intelligence, medicine, psychology, consent, secrecy, and human experimentation can overlap.",
+      "boundary": "Use declassified files, official inquiries, court records, and credible histories. Separate documented program history from modern viral claims.",
+      "atlasNodes": ["cia", "medical-power", "black-file"],
+      "evidenceLanes": ["declassified-archives", "intelligence-oversight", "court-records"],
+      "books": ["cia", "mind-control-seven-days", "dark-arts-codex", "power-overlap"]
+    },
+    {
+      "slug": "operation-gladio",
+      "question": "What was Operation Gladio?",
+      "shortAnswer": "Operation Gladio refers to the best-known branch of NATO-linked stay-behind networks in Cold War Europe. The broader topic involves clandestine resistance networks, intelligence oversight, state secrecy, and claims about domestic manipulation.",
+      "confirmed": "Stay-behind networks and official investigations in parts of Europe are documented public-record topics.",
+      "disputed": "Specific allegations about false flags, political violence, or intelligence control must be handled case by case.",
+      "whyItMatters": "It is one of the clearest historical lanes where state secrecy, intelligence networks, and public democracy collide.",
+      "boundary": "Use parliamentary records, court records, official inquiries, declassified material, and careful country-specific sourcing.",
+      "atlasNodes": ["cia", "five-eyes", "war-machine"],
+      "evidenceLanes": ["intelligence-oversight", "declassified-archives", "court-records"],
+      "books": ["cia", "false-flags", "elite-toolkit"]
+    },
+    {
+      "slug": "project-paperclip",
+      "question": "What was Project Paperclip?",
+      "shortAnswer": "Project Paperclip was the post-World War II U.S. program that brought German scientists, engineers, and technical specialists into American projects. Matrix Reprogrammed treats it as a public-record origin lane for aerospace, weapons, intelligence, and Cold War science questions.",
+      "confirmed": "The program, personnel transfers, and Cold War technical recruitment are documented historical topics.",
+      "disputed": "Claims that every later institution is secretly controlled by Paperclip personnel require evidence and should not be asserted broadly.",
+      "whyItMatters": "It connects war, science, aerospace, intelligence, ethics, classified research, and institutional origin stories.",
+      "boundary": "Use archival records, government histories, biographies, and declassified material. Separate documented recruitment from symbolic or speculative claims.",
+      "atlasNodes": ["cia", "war-machine", "black-file"],
+      "evidenceLanes": ["declassified-archives", "intelligence-oversight"],
+      "books": ["cia", "wwiii", "elite-toolkit"]
+    },
+    {
+      "slug": "bilderberg-group",
+      "question": "What is the Bilderberg Group?",
+      "shortAnswer": "The Bilderberg Group is a private annual conference involving political, business, academic, media, finance, and policy figures. Matrix Reprogrammed treats it as an elite-access and policy-network topic, not automatic proof of secret rule.",
+      "confirmed": "The conference exists, attendee lists and meeting themes have been publicly discussed, and it attracts influential people.",
+      "disputed": "Claims that the group directly controls world events require evidence beyond attendance and secrecy.",
+      "whyItMatters": "It shows how informal elite networks can sit beside formal democratic institutions.",
+      "boundary": "Attendance is documented association, not guilt or proof of command. Claims require source-specific support.",
+      "atlasNodes": ["black-file", "epstein-records"],
+      "evidenceLanes": ["financial-records", "court-records"],
+      "books": ["elite-toolkit", "power-overlap", "black-file"]
+    },
+    {
+      "slug": "world-economic-forum",
+      "question": "What is the World Economic Forum?",
+      "shortAnswer": "The World Economic Forum is a public-private convening organization known for Davos, corporate-government policy discussion, and global agenda themes. Matrix Reprogrammed treats it as a policy-network node with visible source material and disputed interpretations.",
+      "confirmed": "The WEF publishes reports, hosts events, convenes leaders, and promotes public-private policy discussions.",
+      "disputed": "Claims that it commands governments or secretly controls events require evidence and should not be inferred from attendance alone.",
+      "whyItMatters": "It is a key example of soft power: agenda-setting, elite access, public-private policy language, and reputational authority.",
+      "boundary": "Use published reports, public attendee material, policy documents, and financial records. Separate influence from control.",
+      "atlasNodes": ["black-file", "war-machine", "medical-power"],
+      "evidenceLanes": ["financial-records", "human-cost-sources"],
+      "books": ["elite-toolkit", "power-overlap", "law"]
+    },
+    {
+      "slug": "blackrock",
+      "question": "What is BlackRock?",
+      "shortAnswer": "BlackRock is one of the world’s largest asset managers. Matrix Reprogrammed treats it as a financial-power node: ownership exposure, asset management, index funds, advisory roles, risk systems, and institutional influence.",
+      "confirmed": "Large asset managers hold stakes across many companies through funds and client assets, and their public filings can be tracked.",
+      "disputed": "Owning shares through funds is not the same as direct control of every company. Claims need careful distinction.",
+      "whyItMatters": "It helps readers understand how ownership, voting, passive funds, advisory work, and institutional finance shape modern power.",
+      "boundary": "Use filings, annual reports, regulatory records, and credible financial analysis. Separate ownership exposure from operational control.",
+      "atlasNodes": ["black-file", "war-machine", "medical-power"],
+      "evidenceLanes": ["financial-records"],
+      "books": ["elite-toolkit", "power-overlap", "black-file"]
+    },
+    {
+      "slug": "cbdc-surveillance",
+      "question": "What is CBDC surveillance?",
+      "shortAnswer": "CBDC surveillance is the concern that central-bank digital currencies could combine programmable money, identity systems, transaction monitoring, policy controls, and financial access into a more trackable payment architecture.",
+      "confirmed": "CBDC research, pilots, digital ID discussions, and payment-system modernization are public policy topics.",
+      "disputed": "Specific claims about future control features need official documents or technical design evidence.",
+      "whyItMatters": "Money, identity, censorship, compliance, welfare systems, and banking access can become one control surface.",
+      "boundary": "Separate actual CBDC designs, pilot proposals, policy papers, speculation, and fictional worst-case scenarios.",
+      "atlasNodes": ["nsa", "black-file", "medical-power"],
+      "evidenceLanes": ["financial-records", "intelligence-oversight"],
+      "books": ["law", "elite-toolkit", "power-overlap"]
+    },
+    {
+      "slug": "documented-association",
+      "question": "What does documented association mean?",
+      "shortAnswer": "Documented association means a person, institution, or entity appears in a record in a way that shows contact, proximity, employment, travel, meeting, donation, board role, photograph, correspondence, or shared network. It is not proof of wrongdoing.",
+      "confirmed": "Records can show contact, travel, employment, donations, shared institutions, meetings, or correspondence.",
+      "disputed": "A documented association does not prove knowledge, guilt, participation, control, or criminal intent.",
+      "whyItMatters": "It protects the archive from turning names in records into unsupported accusations.",
+      "boundary": "Use this label when a connection is real but does not prove misconduct.",
+      "atlasNodes": ["epstein-records", "freemasonry-symbols", "black-file"],
+      "evidenceLanes": ["court-records", "financial-records"],
+      "books": ["power-overlap", "elite-toolkit", "black-file"]
+    },
+    {
+      "slug": "evidence-boundary",
+      "question": "What is an evidence boundary?",
+      "shortAnswer": "An evidence boundary is the line between what a source actually proves and what a reader might infer from it. Matrix Reprogrammed uses evidence boundaries to separate records, allegations, estimates, associations, compensation, causation, and symbolic commentary.",
+      "confirmed": "Different source types prove different things. Court records, official datasets, declassified files, credible reporting, and symbolic commentary do not carry the same evidential weight.",
+      "disputed": "The biggest risk is inflating a weak source into a strong claim.",
+      "whyItMatters": "It lets the site go dark and deep without becoming reckless.",
+      "boundary": "Every strong claim must inherit the evidence class of the source that supports it.",
+      "atlasNodes": ["black-file", "epstein-records", "medical-power"],
+      "evidenceLanes": ["court-records", "declassified-archives", "human-cost-sources"],
+      "books": ["black-file", "elite-toolkit", "power-overlap"]
+    },
+    {
+      "slug": "false-flag",
+      "question": "What is a false flag?",
+      "shortAnswer": "A false flag is an operation or event made to appear as though it was carried out by someone other than the real actor. Matrix Reprogrammed treats false-flag claims as high-risk claims that require strong evidence.",
+      "confirmed": "The concept exists historically and in military/intelligence terminology.",
+      "disputed": "Specific claims that modern events are false flags require case-specific evidence and should not be asserted from suspicion alone.",
+      "whyItMatters": "The term is powerful but easily abused. Evidence discipline is essential.",
+      "boundary": "Use court records, admissions, declassified files, official inquiries, or strong investigations before making a false-flag claim.",
+      "atlasNodes": ["cia", "war-machine", "black-file"],
+      "evidenceLanes": ["declassified-archives", "court-records", "intelligence-oversight"],
+      "books": ["false-flags", "cia", "elite-toolkit"]
+    }
+  ]
+}

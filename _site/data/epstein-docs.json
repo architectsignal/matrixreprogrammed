@@ -1,0 +1,86 @@
+{
+  "updated": "2026-06-24",
+  "policy": "Document Vault links should point to official court, government, congressional, archive, or reputable public-interest source pages. Do not republish private addresses, personal phone numbers, private emails, private victim details, or raw contact-book data. If a contact book or address book is discussed, link to a lawful source page or redacted/public exhibit page and explain privacy boundaries.",
+  "documents": [
+    {
+      "title": "Epstein Files Command Center Document Vault",
+      "type": "Vault Index",
+      "evidenceClass": "Source index",
+      "description": "Central route for court filings, official releases, archive pages, exhibit references, deposition records, flight-log references, institutional records, and public reporting connected to Epstein and Maxwell matters.",
+      "url": "epstein-files.html",
+      "button": "Open Vault"
+    },
+    {
+      "title": "CourtListener / RECAP Epstein Search",
+      "type": "Court Records",
+      "evidenceClass": "Court docket search",
+      "description": "Searchable public court-record index for Epstein-related dockets, filings, opinions, exhibits, and case movement. Use docket entries and filed PDFs rather than screenshots or social posts.",
+      "url": "https://www.courtlistener.com/?q=Jeffrey%20Epstein&type=r",
+      "button": "Search Court Records"
+    },
+    {
+      "title": "CourtListener / RECAP Maxwell Search",
+      "type": "Court Records",
+      "evidenceClass": "Court docket search",
+      "description": "Searchable public court-record index for Ghislaine Maxwell-related filings, appeals, docket entries, and exhibit references.",
+      "url": "https://www.courtlistener.com/?q=Ghislaine%20Maxwell&type=r",
+      "button": "Search Maxwell Records"
+    },
+    {
+      "title": "FBI Vault: Jeffrey Epstein",
+      "type": "Government Archive",
+      "evidenceClass": "Official file portal",
+      "description": "Official FBI Vault search route for released Epstein-related Bureau files. Use this for released records and file references, not rumor summaries.",
+      "url": "https://vault.fbi.gov/search?SearchableText=Jeffrey+Epstein",
+      "button": "Open FBI Vault Search"
+    },
+    {
+      "title": "DOJ / U.S. Attorney Public Releases Search",
+      "type": "Government Releases",
+      "evidenceClass": "Official release search",
+      "description": "Official DOJ search route for Epstein, Maxwell, prosecutions, appeals, victim notifications, and related public releases.",
+      "url": "https://www.justice.gov/search?keys=Jeffrey%20Epstein",
+      "button": "Search DOJ"
+    },
+    {
+      "title": "Congress.gov Epstein Search",
+      "type": "Congressional Records",
+      "evidenceClass": "Congressional search",
+      "description": "Congressional records search route for Epstein-related letters, hearings, subpoenas, requests, and oversight references.",
+      "url": "https://www.congress.gov/search?q=%7B%22search%22%3A%22Jeffrey+Epstein%22%7D",
+      "button": "Search Congress"
+    },
+    {
+      "title": "Internet Archive: Epstein Public-Record Search",
+      "type": "Archive Search",
+      "evidenceClass": "Archive material",
+      "description": "Archive search route for public-record collections, scanned material, and file mirrors. Verify provenance before treating any item as evidence.",
+      "url": "https://archive.org/search?query=Jeffrey%20Epstein",
+      "button": "Search Archive"
+    },
+    {
+      "title": "Epstein Black Book / Address Book Boundary",
+      "type": "Address Book / Contact Book",
+      "evidenceClass": "Privacy-boundary lane",
+      "description": "The Command Center may discuss the existence, provenance, and public-record significance of Epstein address-book material, but does not republish private addresses, phone numbers, private emails, or raw contact data. Being listed in an address book is not proof of wrongdoing.",
+      "url": "epstein-files.html#black-book-boundary",
+      "button": "Read Boundary Note"
+    },
+    {
+      "title": "Maxwell Trial / Exhibit Search Route",
+      "type": "Trial Exhibits",
+      "evidenceClass": "Court exhibit lane",
+      "description": "Use court dockets, trial exhibit references, appeal filings, and reputable court-record repositories to locate Maxwell trial exhibits and deposition materials. Classify every document before using it.",
+      "url": "https://www.courtlistener.com/?q=Ghislaine%20Maxwell%20exhibit&type=r",
+      "button": "Search Exhibits"
+    },
+    {
+      "title": "Flight Logs / Travel Records Search Route",
+      "type": "Travel Records",
+      "evidenceClass": "Documented association lane",
+      "description": "Flight logs and travel references may show association or travel context, but they do not automatically prove criminal conduct. Use court-filed exhibits and source provenance.",
+      "url": "https://www.courtlistener.com/?q=Epstein%20flight%20logs&type=r",
+      "button": "Search Flight Logs"
+    }
+  ]
+}

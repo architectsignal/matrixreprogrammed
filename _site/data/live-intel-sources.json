@@ -1,0 +1,103 @@
+{
+  "updated": "2026-06-27",
+  "purpose": "Matrix Reprogrammed live intelligence source lanes for public-record updates, Epstein timeline mapping, court records, email releases, declassified-file discovery, elite-control developments, war/conflict routes, financial power, surveillance, sighting-claim traffic, and book/video conversion paths.",
+  "rules": [
+    "Prefer primary sources, court records, official releases, archives, and dated reporting.",
+    "Do not treat a news mention as proof of wrongdoing.",
+    "Every item must keep a source URL, source label, date, lane, and reader route.",
+    "Every update should connect to evidence, video, opt-in, offer, and book/store routes where relevant.",
+    "Epstein updates should be cross-checked against the timeline map, people tracker, evidence ladder, actual files cockpit, network architecture matrix, and sighting-claim ledger.",
+    "Epstein sighting or alive-claim traffic must be labelled as unverified unless there is an official or primary-source change.",
+    "If a feed fails, preserve the page and show the last known source set rather than breaking the build.",
+    "Offer routes must resolve to existing generated pages before Live Intel is rendered."
+  ],
+  "lanes": [
+    {
+      "id": "epstein-files",
+      "title": "Epstein Files, Timeline And Court Records",
+      "description": "Public-record updates, court filings, document releases, email-release reporting, archive mirrors, oversight moves, timeline changes, people/entity tracking, sighting-claim traffic, and association-boundary briefings.",
+      "route": "epstein-files.html#epstein-timeline-map",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-black-file.html",
+      "offerRoute": "offer-starter-library.html",
+      "queries": ["Epstein timeline", "Epstein court records", "Epstein emails", "Epstein documents", "Maxwell habeas", "House Oversight Epstein", "Epstein files released", "Epstein alive", "Epstein sighting", "Epstein lookalike", "Epstein death hoax"]
+    },
+    {
+      "id": "declassified-files",
+      "title": "Declassified Files And Public Archives",
+      "description": "Newly released files, FOIA material, archive releases, historical intelligence documents, and public-record research routes.",
+      "route": "evidence-vault.html",
+      "evidenceRoute": "evidence-vault-index.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "books.html",
+      "offerRoute": "download-center.html",
+      "queries": ["declassified files", "FOIA release intelligence", "National Archives declassified"]
+    },
+    {
+      "id": "control-system",
+      "title": "Elite Control Structure",
+      "description": "Institutional power, surveillance, central banking, policy networks, information control, NGOs, intelligence influence, and elite overlap mapping.",
+      "route": "power-atlas.html",
+      "evidenceRoute": "atlas-index.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-elite-toolkit.html",
+      "offerRoute": "offer-starter-library.html",
+      "queries": ["surveillance policy", "central bank digital currency", "elite networks investigation"]
+    },
+    {
+      "id": "war-machine",
+      "title": "War Machine And Intelligence State",
+      "description": "War, contractors, intelligence agencies, oversight failures, conflict narratives, military technology, and public-record power routes.",
+      "route": "dashboard-conflict.html",
+      "evidenceRoute": "evidence-vault.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-intelligence-dossiers.html",
+      "offerRoute": "offer-intelligence-dossiers.html",
+      "queries": ["intelligence oversight", "defense contractor investigation", "war powers oversight"]
+    },
+    {
+      "id": "crime-state-overlap",
+      "title": "Crime State Overlap",
+      "description": "Organized crime, money laundering, trafficking routes, cartel logistics, state protection, and public-record criminal networks.",
+      "route": "crime-hub.html",
+      "evidenceRoute": "network-maps.html",
+      "videoRoute": "videos.html",
+      "bookRoute": "book-crime-dossiers.html",
+      "offerRoute": "offer-crime-dossiers.html",
+      "queries": ["organized crime money laundering", "cartel network indictment", "state corruption organized crime"]
+    }
+  ],
+  "rssFeeds": [
+    {
+      "lane": "epstein-files",
+      "label": "Google News / Epstein timeline and files",
+      "url": "https://news.google.com/rss/search?q=Epstein%20timeline%20OR%20Epstein%20emails%20OR%20Epstein%20documents%20OR%20Epstein%20court%20records%20OR%20Maxwell%20habeas%20OR%20House%20Oversight%20Epstein&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "epstein-files",
+      "label": "Google News / Epstein sighting and alive claims",
+      "url": "https://news.google.com/rss/search?q=%22Jeffrey%20Epstein%22%20%28alive%20OR%20sighting%20OR%20lookalike%20OR%20%22fake%20death%22%20OR%20%22death%20hoax%22%20OR%20%22body%20double%22%20OR%20%22still%20alive%22%20OR%20spotted%20OR%20seen%29&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "declassified-files",
+      "label": "Google News / declassified files",
+      "url": "https://news.google.com/rss/search?q=declassified%20files%20OR%20FOIA%20release%20OR%20National%20Archives%20declassified&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "control-system",
+      "label": "Google News / control structure",
+      "url": "https://news.google.com/rss/search?q=surveillance%20policy%20OR%20CBDC%20OR%20digital%20ID%20OR%20elite%20networks&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "war-machine",
+      "label": "Google News / war machine",
+      "url": "https://news.google.com/rss/search?q=intelligence%20oversight%20OR%20defense%20contractor%20investigation%20OR%20war%20powers&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+      "lane": "crime-state-overlap",
+      "label": "Google News / crime state overlap",
+      "url": "https://news.google.com/rss/search?q=organized%20crime%20money%20laundering%20OR%20cartel%20indictment%20OR%20state%20corruption&hl=en-US&gl=US&ceid=US:en"
+    }
+  ]
+}

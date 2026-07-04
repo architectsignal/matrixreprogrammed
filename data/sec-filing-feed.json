@@ -1,0 +1,183 @@
+{
+  "updated": "2026-07-04T06:34:58.292Z",
+  "title": "SEC Filing Feed",
+  "boundary": "This feed captures official SEC filing metadata only. It does not verify narrative content until the selected annual filing is reviewed and classified.",
+  "cards": [
+    {
+      "id": "SEC-001",
+      "status": "annual filing metadata captured",
+      "name": "Tesla, Inc.",
+      "cik": "0001318605",
+      "symbol": "TSLA",
+      "dossier": "dossier-elon-musk.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001318605.json",
+      "latestAnnual": {
+        "form": "10-K/A",
+        "filingDate": "2026-04-30",
+        "reportDate": "2025-12-31",
+        "accessionNumber": "0001104659-26-053166",
+        "primaryDocument": "tm2611837d1_10ka.htm",
+        "primaryDocDescription": "FORM 10-K/A"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1318605/000110465926053166/",
+      "nextAction": "Review tm2611837d1_10ka.htm"
+    },
+    {
+      "id": "SEC-002",
+      "status": "annual filing metadata captured",
+      "name": "ORACLE CORP",
+      "cik": "0001341439",
+      "symbol": "ORCL",
+      "dossier": "dossier-larry-ellison.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001341439.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-06-22",
+        "reportDate": "2026-05-31",
+        "accessionNumber": "0001193125-26-277521",
+        "primaryDocument": "orcl-20260531.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/",
+      "nextAction": "Review orcl-20260531.htm"
+    },
+    {
+      "id": "SEC-003",
+      "status": "annual filing metadata captured",
+      "name": "MICROSOFT CORP",
+      "cik": "0000789019",
+      "symbol": "MSFT",
+      "dossier": "dossier-satya-nadella.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2025-07-30",
+        "reportDate": "2025-06-30",
+        "accessionNumber": "0000950170-25-100235",
+        "primaryDocument": "msft-20250630.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/",
+      "nextAction": "Review msft-20250630.htm"
+    },
+    {
+      "id": "SEC-004",
+      "status": "annual filing metadata captured",
+      "name": "Alphabet Inc.",
+      "cik": "0001652044",
+      "symbol": "GOOGL",
+      "dossier": "dossier-sundar-pichai.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001652044.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-02-05",
+        "reportDate": "2025-12-31",
+        "accessionNumber": "0001652044-26-000018",
+        "primaryDocument": "goog-20251231.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+      "nextAction": "Review goog-20251231.htm"
+    },
+    {
+      "id": "SEC-005",
+      "status": "annual filing metadata captured",
+      "name": "Meta Platforms, Inc.",
+      "cik": "0001326801",
+      "symbol": "META",
+      "dossier": "dossier-mark-zuckerberg.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-01-29",
+        "reportDate": "2025-12-31",
+        "accessionNumber": "0001628280-26-003942",
+        "primaryDocument": "meta-20251231.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+      "nextAction": "Review meta-20251231.htm"
+    },
+    {
+      "id": "SEC-006",
+      "status": "annual filing metadata captured",
+      "name": "AMAZON COM INC",
+      "cik": "0001018724",
+      "symbol": "AMZN",
+      "dossier": "dossier-jeff-bezos.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-02-06",
+        "reportDate": "2025-12-31",
+        "accessionNumber": "0001018724-26-000004",
+        "primaryDocument": "amzn-20251231.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/",
+      "nextAction": "Review amzn-20251231.htm"
+    },
+    {
+      "id": "SEC-007",
+      "status": "annual filing metadata captured",
+      "name": "NVIDIA CORP",
+      "cik": "0001045810",
+      "symbol": "NVDA",
+      "dossier": "dossier-jensen-huang.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001045810.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-02-25",
+        "reportDate": "2026-01-25",
+        "accessionNumber": "0001045810-26-000021",
+        "primaryDocument": "nvda-20260125.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/",
+      "nextAction": "Review nvda-20260125.htm"
+    },
+    {
+      "id": "SEC-008",
+      "status": "annual filing metadata captured",
+      "name": "Palantir Technologies Inc.",
+      "cik": "0001321655",
+      "symbol": "PLTR",
+      "dossier": "dossier-alex-karp.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001321655.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2026-02-17",
+        "reportDate": "2025-12-31",
+        "accessionNumber": "0001321655-26-000011",
+        "primaryDocument": "pltr-20251231.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/",
+      "nextAction": "Review pltr-20251231.htm"
+    },
+    {
+      "id": "SEC-009",
+      "status": "annual filing metadata captured",
+      "name": "BlackRock Finance, Inc.",
+      "cik": "0001364742",
+      "symbol": "BLK",
+      "dossier": "dossier-larry-fink.html",
+      "submissionsUrl": "https://data.sec.gov/submissions/CIK0001364742.json",
+      "latestAnnual": {
+        "form": "10-K",
+        "filingDate": "2024-02-23",
+        "reportDate": "2023-12-31",
+        "accessionNumber": "0000950170-24-019271",
+        "primaryDocument": "blk-20231231.htm",
+        "primaryDocDescription": "10-K"
+      },
+      "archiveUrl": "https://www.sec.gov/Archives/edgar/data/1364742/000095017024019271/",
+      "nextAction": "Review blk-20231231.htm"
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "captured": 9,
+    "failed": 0
+  }
+}

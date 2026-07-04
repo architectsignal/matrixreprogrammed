@@ -1,0 +1,51 @@
+{
+  "updated": "2026-06-23",
+  "rule": "Use sourced, dated figures only. Do not display fake live counters or unverifiable worldwide totals. Mark disputed or ministry-reported figures clearly.",
+  "zones": [
+    {
+      "zone": "Gaza / Israel-Palestine war",
+      "label": "War File",
+      "headlineMetric": "73,000+ Palestinian deaths reported since October 2023; 1,200+ Israelis killed in the October 2023 attacks and war context",
+      "detail": "Reuters reported in June 2026 that more than 73,000 Palestinians and 1,200 Israelis had died since the war began, citing health officials and official figures. Figures are politically contested and should be carried as reported/attributed, not as a live verified counter.",
+      "sourceName": "Reuters",
+      "sourceDate": "2026-06-20",
+      "sourceUrl": "https://www.reuters.com/world/middle-east/israeli-fire-kills-five-people-gaza-including-child-medics-say-2026-06-20/"
+    },
+    {
+      "zone": "Sudan",
+      "label": "Atrocity Watch",
+      "headlineMetric": "59,000+ war deaths reported; 1,000+ civilians killed by drone strikes in Jan-May 2026",
+      "detail": "AP reported that the conflict has claimed at least 59,000 lives and that UN High Commissioner Volker Turk said drone strikes killed more than 1,000 civilians in the first five months of 2026. Figures remain conservative and incomplete in active war conditions.",
+      "sourceName": "AP / UN human rights reporting",
+      "sourceDate": "2026-06-16",
+      "sourceUrl": "https://apnews.com/article/88f883750a3846c237fa3a62add55d7f"
+    },
+    {
+      "zone": "Democratic Republic of Congo / Eastern DRC",
+      "label": "Conflict + Outbreak Overlap",
+      "headlineMetric": "40+ killed in recent ADF village attacks; Ebola deaths reached 254+ in conflict-displacement conditions",
+      "detail": "AP reported at least 40 killed in ADF-linked attacks in eastern Congo in May 2026. Reuters reported more than 1,000 confirmed Ebola cases and at least 254 deaths by 22 June 2026, including spread into displacement camps. The panel treats DRC as conflict plus disease-overlap because displacement and insecurity intensify mortality.",
+      "sourceName": "AP / Reuters",
+      "sourceDate": "2026-06-22",
+      "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/congo-says-confirmed-ebola-cases-rise-over-1000-2026-06-22/"
+    },
+    {
+      "zone": "Ukraine",
+      "label": "Civilian Harm Monitor",
+      "headlineMetric": "2,514 civilians killed and 12,142 injured in 2025, UN monitor reported",
+      "detail": "Reuters reported the UN Human Rights Monitoring Mission figure for 2025 civilian casualties, noting a 31% rise from 2024 and that real totals are likely higher. Use confirmed civilian figures only and avoid military-casualty speculation.",
+      "sourceName": "Reuters / UN Human Rights Monitoring Mission in Ukraine",
+      "sourceDate": "2026-01-12",
+      "sourceUrl": "https://www.reuters.com/world/civilian-casualties-ukraine-up-sharply-2025-un-monitor-says-2026-01-12/"
+    },
+    {
+      "zone": "Niger / Sahel watch",
+      "label": "Sahel Conflict Watch",
+      "headlineMetric": "11 soldiers and 2 civilians killed in Niamey airport attack; 22 attackers killed",
+      "detail": "AP reported a June 2026 attack on Niger's main airport, showing continued Sahel instability. Use as a watch item rather than a cumulative death counter.",
+      "sourceName": "AP",
+      "sourceDate": "2026-06-18",
+      "sourceUrl": "https://apnews.com/article/003a2a17abee25dfa748cb339554d40a"
+    }
+  ]
+}

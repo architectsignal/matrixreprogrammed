@@ -1,0 +1,173 @@
+{
+  "updated": "2026-06-29",
+  "title": "Matrix Intelligence Core",
+  "nickname": "Positronic Brain",
+  "mission": "Expose wrongdoing, help humanity, update the site, classify the evidence, connect the trackers, and map concentrated power through public records.",
+  "publicMissionLine": "Expose wrongdoing. Help humanity. Follow the documents. Map the system.",
+  "boundary": "The core tracks public records, policy moves, mandates, pilots, contracts, court records, official releases, corporate filings, source-linked reporting, and clearly labelled speculation. It does not treat association, rumour, symbolism, or internet lore as proof.",
+  "selfAwarenessModel": {
+    "publicDescription": "Operational self-awareness, not consciousness. The site can describe its mission, list its trackers, identify missing files, flag stale data, show failed checks, expose evidence gaps, and recommend the next upgrade path.",
+    "whatItKnows": [
+      "its mission",
+      "its tracker files",
+      "its public routes",
+      "its risk timers",
+      "its evidence classes",
+      "its speculation boundaries",
+      "its maintenance policy",
+      "its source gaps",
+      "its stale data",
+      "its next upgrade priorities"
+    ],
+    "whatItMustNeverClaim": [
+      "real consciousness",
+      "secret authority",
+      "certainty without records",
+      "guilt by association",
+      "private knowledge not backed by public sources"
+    ],
+    "visibleOutputs": [
+      "brain status page",
+      "public tracker graph",
+      "transparent maintenance report",
+      "missing-source report",
+      "stale-data report",
+      "evidence-gap list",
+      "next-upgrade queue"
+    ]
+  },
+  "rules": [
+    "Expose wrongdoing, not innocent people.",
+    "Source first, claim second.",
+    "Every signal needs actor, date, jurisdiction, source class, evidence level, and boundary.",
+    "Separate fact, allegation, pattern, hypothesis, speculation, and debunk lane.",
+    "When systems connect, show the convergence link instead of making unsupported leaps.",
+    "Use safe wording publicly: institutional convergence, policy drift, power concentration, mandate lane, source gap, open question.",
+    "Expose patterns hard, but do not weaken the site with unsupported legal claims.",
+    "Never publish private victim identities, illegal material, doxxing, graphic exploitation, or direct accusations without source-grade evidence."
+  ],
+  "sourceFiles": [
+    {
+      "id": "policy-convergence",
+      "file": "data/policy-convergence-tracker.json",
+      "route": "control-system-tracker.html",
+      "role": "tracks public policies, mandates, Agenda 2030/global standards, digital ID, programmable money, war/security powers, speech governance, health, climate, migration and food systems"
+    },
+    {
+      "id": "timer-map",
+      "file": "data/policy-convergence-timer-map.json",
+      "route": "timers.html",
+      "role": "maps tracker lanes into global risk clocks so timers move when records escalate from mention to pilot, procurement, mandate, integration or lock-in"
+    },
+    {
+      "id": "risk-clocks",
+      "file": "data/global-risk-clocks.json",
+      "route": "timers.html",
+      "role": "public risk clocks for war, surveillance, CBDC, financial reset, biosecurity, civil unrest, food, energy and machine convergence"
+    },
+    {
+      "id": "epstein-people",
+      "file": "data/epstein-people-index.json",
+      "route": "epstein-files.html",
+      "role": "public-record people/entity tracker with boundaries"
+    },
+    {
+      "id": "epstein-deep-dive",
+      "file": "data/epstein-network-deep-dive.json",
+      "route": "epstein-files.html#epstein-deep-dive-matrix",
+      "role": "people, dates, private aviation, locations, money, institutions and source doors for Epstein public-record research"
+    },
+    {
+      "id": "epstein-targets",
+      "file": "data/epstein-research-targets.json",
+      "route": "epstein-files.html",
+      "role": "controlled expansion queue for names, institutions, money lanes, logistics and legal/prosecution nodes"
+    },
+    {
+      "id": "dark-speculation",
+      "file": "data/dark-speculation-claims.json",
+      "route": "dark-speculation-lab.html",
+      "role": "dark claim motifs, categorized and labelled as speculation, public-record-adjacent, unsupported, or debunk lanes"
+    },
+    {
+      "id": "dark-dossiers",
+      "file": "data/dark-speculation-expansion.json",
+      "route": "dark-speculation-lab.html#dark-speculation-deep-dossiers",
+      "role": "deep speculation dossiers with softened claim-history wording and evidence-upgrade paths"
+    },
+    {
+      "id": "live-intel",
+      "file": "data/live-intel-sources.json",
+      "route": "live-intel.html",
+      "role": "source lanes and update rules for live public-record monitoring"
+    },
+    {
+      "id": "anti-corruption-charter",
+      "file": "data/public-interest-anti-corruption-charter.json",
+      "route": "downloads/transparent-maintenance-report.md",
+      "role": "public-interest mission charter for exposing wrongdoing and protecting victims through evidence-first investigation"
+    },
+    {
+      "id": "transparent-maintenance",
+      "file": "data/transparent-maintenance-policy.json",
+      "route": "downloads/transparent-maintenance-report.md",
+      "role": "visible scheduled maintenance rules, allowed maintenance, blocked maintenance, speculation labels, and public change-log discipline"
+    }
+  ],
+  "signalClasses": [
+    {
+      "id": "record",
+      "label": "Public record",
+      "meaning": "Court, law, official release, hearing, filing, contract, budget, treaty, or documented source item."
+    },
+    {
+      "id": "reported",
+      "label": "Reported record",
+      "meaning": "Dated reporting that points to documents, named sources, or official statements."
+    },
+    {
+      "id": "pattern",
+      "label": "Pattern",
+      "meaning": "Multiple source-linked events showing a repeated institutional direction."
+    },
+    {
+      "id": "convergence",
+      "label": "Convergence",
+      "meaning": "Two or more systems connect, such as identity plus money, health, speech, travel, policing, AI, or energy."
+    },
+    {
+      "id": "hypothesis",
+      "label": "Hypothesis",
+      "meaning": "A structured question built from records, not a verdict."
+    },
+    {
+      "id": "speculation",
+      "label": "Speculation",
+      "meaning": "Motif, internet claim, symbolic reading, or open-source lead requiring stronger evidence."
+    },
+    {
+      "id": "debunk",
+      "label": "Debunk lane",
+      "meaning": "Claim-history and counter-source tracking for claims with weak, false, or unsupported source chains."
+    }
+  ],
+  "brainOutputs": [
+    "site-intelligence-core.html",
+    "downloads/site-intelligence-core.json",
+    "downloads/site-intelligence-core.md",
+    "downloads/site-intelligence-graph.json",
+    "downloads/transparent-maintenance-report.json",
+    "downloads/transparent-maintenance-report.md",
+    "control-system-tracker.html",
+    "timers.html",
+    "dark-speculation-lab.html",
+    "epstein-files.html"
+  ],
+  "nextEvolution": [
+    "Add a source-ingestion queue that stores every found item as actor/date/jurisdiction/source/evidence level.",
+    "Add entity pages for institutions, banks, NGOs, agencies, foundations, contractors and standards bodies.",
+    "Add convergence scores that rise when multiple lanes point to one actor, law, vendor, crisis or institution.",
+    "Add a human-readable weekly intelligence brief generated from the graph.",
+    "Add a public change log showing which tracker moved and why."
+  ]
+}

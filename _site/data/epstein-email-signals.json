@@ -1,0 +1,147 @@
+{
+  "updated": "2026-06-25",
+  "purpose": "Most telling Epstein email and testimony signals for the Command Center. These are public-record or reported-document signals, sorted by what the record supports and what it does not prove.",
+  "boundary": "If an email is in the files, the email itself is a supported record item. What it proves depends on the content: contact, scheduling, reputational management, legal strategy, claimed knowledge, financial leverage, or allegation. A mention is not automatic proof of a crime by every named person.",
+  "primaryResearchRoutes": [
+    {
+      "title": "Jmail / Epstein email archive",
+      "url": "https://jmail.world",
+      "use": "Search email-style archive of Epstein document releases where available. Use for names, terms, dates, senders, recipients, and thread reconstruction."
+    },
+    {
+      "title": "DOJ Epstein disclosures",
+      "url": "https://www.justice.gov/epstein/doj-disclosures",
+      "use": "Official DOJ release lane under the Epstein Files Transparency Act. Use for government-published datasets, redactions, and source files."
+    },
+    {
+      "title": "House Oversight Epstein search",
+      "url": "https://oversight.house.gov/?s=Epstein",
+      "use": "Congressional release, testimony, subpoena, and oversight lane. Use for estate documents, staff testimony, committee claims, and hearings."
+    },
+    {
+      "title": "CourtListener Epstein record search",
+      "url": "https://www.courtlistener.com/?q=Epstein&type=r&order_by=score%20desc",
+      "use": "Court record lane for filings, dockets, rulings, exhibits, motions, habeas claims, civil suits, and appeals."
+    },
+    {
+      "title": "WikiLeaks search: Epstein",
+      "url": "https://search.wikileaks.org/?query=Epstein",
+      "use": "Auxiliary leak-search lane. Treat as a lead index only; confirm with primary documents or reputable reporting before making claims."
+    }
+  ],
+  "signals": [
+    {
+      "rank": 1,
+      "title": "Epstein/Wolff email: claimed Trump knowledge lane",
+      "date": "2019 email, released/reported 2025",
+      "people": ["Jeffrey Epstein", "Michael Wolff", "Donald Trump", "Ghislaine Maxwell"],
+      "recordType": "Estate email / congressional release / reported document",
+      "whatItSupports": "The released email record reportedly contains Epstein claiming Trump knew 'about the girls' and asked Maxwell to stop. This supports a documented Epstein claim and a public-record question about knowledge and narrative management.",
+      "whatItDoesNotProve": "It does not, by itself, prove Trump committed a crime or that Epstein's claim was true. Trump has denied wrongdoing and the claim must be cross-checked against testimony, victim statements, flight records, visitor logs, and court findings.",
+      "whyItMatters": "It is one of the clearest examples of the email files moving from mere contact into alleged knowledge and reputational leverage.",
+      "links": [
+        {"label": "Reuters report", "url": "https://www.reuters.com/world/us/house-democrats-release-epstein-papers-saying-trump-knew-about-girls-2025-11-12/"},
+        {"label": "Jmail search", "url": "https://jmail.world"},
+        {"label": "House Oversight search", "url": "https://oversight.house.gov/?s=Epstein"}
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Epstein/Maxwell email: 'dog that hasn't barked' / victim-presence lane",
+      "date": "2011 email, released/reported 2025",
+      "people": ["Jeffrey Epstein", "Ghislaine Maxwell", "Donald Trump", "Virginia Giuffre"],
+      "recordType": "Estate email / congressional release / reported document",
+      "whatItSupports": "The email reportedly shows Epstein telling Maxwell that Trump had spent time at Epstein's house with a victim whose name was redacted in the release and later publicly identified by officials/reporting as Virginia Giuffre. It supports an association and claimed-presence signal.",
+      "whatItDoesNotProve": "It does not automatically prove criminal conduct by Trump. The evidentiary question is whether other records corroborate the meaning, date, location, and context of the claimed presence.",
+      "whyItMatters": "It links the command center's people-tracking system to dates, locations, victims/witnesses, redactions, and later official explanations of redacted names.",
+      "links": [
+        {"label": "Reuters overview", "url": "https://www.reuters.com/world/us/house-democrats-release-epstein-papers-saying-trump-knew-about-girls-2025-11-12/"},
+        {"label": "Time explainer", "url": "https://time.com/7333327/new-jeffrey-epstein-emails-allege-trump-aware-of-conduct/"}
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Michael Wolff media-strategy thread",
+      "date": "2015 email thread, released/reported 2025",
+      "people": ["Jeffrey Epstein", "Michael Wolff", "Donald Trump"],
+      "recordType": "Email thread / political-media strategy signal",
+      "whatItSupports": "The reported email thread shows Epstein and Wolff discussing how Trump might handle debate-stage questions about Epstein, making the thread a media-leverage and narrative-management record.",
+      "whatItDoesNotProve": "It does not prove the underlying allegations in the conversation. It proves that Epstein's circle understood the relationship as politically sensitive and usable as leverage.",
+      "whyItMatters": "This is a network-function email: it shows how knowledge, access, journalists, candidates, and reputational risk can operate as a control system.",
+      "links": [
+        {"label": "Guardian key takeaways", "url": "https://www.theguardian.com/us-news/2025/nov/13/epstein-files-key-takeaways"},
+        {"label": "Time named-emails overview", "url": "https://time.com/7333585/epstein-files-people-named-emails-house-oversight-committee/"}
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Prince Andrew / Maxwell email contact after claimed separation",
+      "date": "2011 email material, reported 2025",
+      "people": ["Andrew Mountbatten-Windsor", "Ghislaine Maxwell", "Jeffrey Epstein", "Virginia Giuffre"],
+      "recordType": "Email thread / contradiction lane",
+      "whatItSupports": "Reporting on the files says emails showed Andrew remained in contact with Epstein/Maxwell after he publicly suggested ties had ended, and that email material discussed the disputed Andrew-Giuffre-Maxwell photo.",
+      "whatItDoesNotProve": "Email contact does not itself prove every abuse allegation; it supports contradiction, timeline, and credibility questions about prior public statements.",
+      "whyItMatters": "This is a high-value contradiction lane: public denial versus email trail, photo authentication, and later institutional consequences.",
+      "links": [
+        {"label": "Guardian key takeaways", "url": "https://www.theguardian.com/us-news/2025/nov/13/epstein-files-key-takeaways"},
+        {"label": "Guardian later file report", "url": "https://www.theguardian.com/us-news/2025/dec/23/latest-epstein-files-andrew-asking-ghislaine-maxwell-inappropriate-friends"}
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Larry Summers email lane: elite counsel after conviction",
+      "date": "Email correspondence reported 2025",
+      "people": ["Jeffrey Epstein", "Larry Summers"],
+      "recordType": "Email correspondence / elite-access lane",
+      "whatItSupports": "The released email correspondence reportedly shows continued elite access, political commentary, and personal advice exchanges involving Epstein after his conviction.",
+      "whatItDoesNotProve": "It does not prove Summers participated in Epstein's crimes. It supports questions about elite normalization, reputation laundering, and post-conviction access.",
+      "whyItMatters": "The purpose of the command center is not only to identify crimes; it is to map how a convicted sex offender retained access to high-status networks.",
+      "links": [
+        {"label": "Time named-emails overview", "url": "https://time.com/7333585/epstein-files-people-named-emails-house-oversight-committee/"},
+        {"label": "Jmail search", "url": "https://jmail.world"}
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Bill Gates / philanthropy / leverage lane",
+      "date": "Congressional testimony and file reporting, 2026",
+      "people": ["Bill Gates", "Jeffrey Epstein", "Mila Antonova", "Karima Nigmatulina", "Boris Nikolic"],
+      "recordType": "Oversight testimony / email-reference / leverage signal",
+      "whatItSupports": "Recent reporting says Gates testified that Epstein presented himself as a philanthropic intermediary and may have attempted to exert leverage using knowledge of extramarital affairs and financial requests.",
+      "whatItDoesNotProve": "It does not prove Gates was involved in Epstein's sexual crimes. Gates has denied involvement and described his contact as philanthropy-related.",
+      "whyItMatters": "This is a blackmail-architecture lane: reputation, philanthropy, access, money flows, private knowledge, and elite vulnerability.",
+      "links": [
+        {"label": "Business Insider Gates report", "url": "https://www.businessinsider.com/bill-gates-jeffrey-epstein-congress-billionaire-connections-2026-6"},
+        {"label": "House Oversight search", "url": "https://oversight.house.gov/?s=Epstein"}
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Lesley Groff testimony: scheduling, massages, photos, logistics",
+      "date": "House Oversight testimony reported 2026",
+      "people": ["Lesley Groff", "Jeffrey Epstein", "Ghislaine Maxwell"],
+      "recordType": "Congressional testimony / operational logistics lane",
+      "whatItSupports": "Groff reportedly testified about scheduling massages, travel, accommodations, errands, and forwarded images while denying knowledge of criminal conduct or victim status.",
+      "whatItDoesNotProve": "The testimony does not settle what Groff knew; it creates a cross-check lane against survivor claims, FBI findings, schedules, emails, photos, and travel records.",
+      "whyItMatters": "Operational staff records can reveal how the machine worked even where senior figures deny knowledge.",
+      "links": [
+        {"label": "WSJ testimony report", "url": "https://www.wsj.com/arts-culture/books/see-what-jeffrey-epsteins-longtime-secretary-told-congress-08b93567"},
+        {"label": "House Oversight search", "url": "https://oversight.house.gov/?s=Epstein"}
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Private settlements / NDA suppression lane",
+      "date": "Oversight reporting, 2026",
+      "people": ["Jeffrey Epstein", "Ghislaine Maxwell", "Brad Edwards", "named associates in related filings/reporting"],
+      "recordType": "Court/oversight/reporting lane",
+      "whatItSupports": "Reporting indicates confidential settlements and NDAs are part of the oversight question and may affect whether victims or witnesses can speak publicly without subpoena protection.",
+      "whatItDoesNotProve": "A settlement is not automatic admission of guilt. It supports a suppression-and-access question: what remains hidden because testimony was privatized.",
+      "whyItMatters": "If the command center is exposing the network, NDAs and settlements are as important as emails because they explain why parts of the record stay buried.",
+      "links": [
+        {"label": "Business Insider settlements report", "url": "https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6"},
+        {"label": "CourtListener Epstein search", "url": "https://www.courtlistener.com/?q=Epstein%20settlement%20NDA&type=r&order_by=score%20desc"}
+      ]
+    }
+  ]
+}

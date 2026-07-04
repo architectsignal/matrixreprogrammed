@@ -1,0 +1,24 @@
+{
+  "requestedAt": "2026-06-28T18:03:00+02:00",
+  "reason": "Retry Cloudflare production deploy after CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN were confirmed visible in GitHub repository secrets.",
+  "expectedHomepageMarker": "FOLLOW THE FILES.",
+  "expectedBoards": [
+    "forum.html",
+    "dark-speculation-forum.html",
+    "epstein-alive-board.html"
+  ],
+  "expectedWorkerFeeds": [
+    "/forum-feed-main",
+    "/forum-feed-speculation",
+    "/forum-feed-epstein-alive"
+  ],
+  "expectedSubmitRoutes": [
+    "/submit-main-post",
+    "/submit-speculation-post",
+    "/submit-epstein-alive-post"
+  ],
+  "secretsConfirmedVisible": [
+    "CLOUDFLARE_ACCOUNT_ID",
+    "CLOUDFLARE_API_TOKEN"
+  ]
+}

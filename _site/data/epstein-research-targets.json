@@ -1,0 +1,146 @@
+{
+  "updated": "2026-06-29",
+  "title": "Epstein Public-Record Research Target Queue",
+  "purpose": "A controlled expansion queue for people, entities, institutions, banks, properties, aircraft/logistics nodes, media nodes, legal/prosecutorial nodes, and political/intelligence-adjacent overlap. This is not an accusation list. It is a research map that requires source class, boundary language, and record links before claims are made.",
+  "boundary": "Inclusion means the person/entity has been publicly discussed, named, reported, litigated, connected through records, or is relevant to a public-record research lane. Inclusion does not mean guilt, criminal conduct, knowledge, or participation. Every item must be evidence-classified before publication.",
+  "categories": [
+    {
+      "id": "political-public-figures",
+      "title": "Political / Public Figures",
+      "trackingQuestion": "Which public officials, former officials, political advisors, donors, family networks, and political operators appear in court files, emails, flight/contact records, disclosure fights, or reputation-management narratives?",
+      "targets": [
+        "Bill Clinton",
+        "Donald Trump",
+        "Hillary Clinton",
+        "Doug Band",
+        "Bill Richardson",
+        "George Mitchell",
+        "Prince Andrew / Andrew Mountbatten-Windsor",
+        "Ehud Barak",
+        "Vitaly Churkin",
+        "Maxim Churkin"
+      ],
+      "requiredRecords": ["flight logs", "emails", "contact books", "calendar entries", "court filings", "public denials", "official role dates", "disclosure/redaction disputes"],
+      "boundary": "Political proximity can show access, leverage, contradiction, or disclosure stakes. It is not automatic proof of criminal conduct."
+    },
+    {
+      "id": "finance-banking-money",
+      "title": "Finance / Banking / Money Trail",
+      "trackingQuestion": "Which banks, executives, funds, donors, payment channels, advisers, tax structures, and settlement/NDA channels helped normalize, move, hide, or explain Epstein money?",
+      "targets": [
+        "Leslie Wexner",
+        "Leon Black",
+        "Glenn Dubin",
+        "Eva Andersson-Dubin",
+        "JPMorgan Chase",
+        "Jes Staley",
+        "Deutsche Bank",
+        "Apollo Global Management",
+        "Wexner Foundation / family office references",
+        "Epstein estate",
+        "confidential settlement/NDA channels"
+      ],
+      "requiredRecords": ["bank filings", "court settlements", "payment records", "institutional reviews", "SEC/company records", "lawsuits", "estate releases"],
+      "boundary": "Money flow and settlements are powerful research evidence but must be separated from admissions, denials, and court findings."
+    },
+    {
+      "id": "operations-logistics-staff",
+      "title": "Operations / Logistics / Staff",
+      "trackingQuestion": "Who handled scheduling, massage appointments, flight logistics, household operations, property access, staff communication, and document trails?",
+      "targets": [
+        "Ghislaine Maxwell",
+        "Sarah Kellen",
+        "Lesley Groff",
+        "Nadia Marcinkova",
+        "Adriana Ross",
+        "Jean-Luc Brunel",
+        "pilots named in flight logs",
+        "property staff",
+        "household assistants",
+        "security staff"
+      ],
+      "requiredRecords": ["staff testimony", "flight logs", "scheduling records", "phone messages", "emails", "property records", "court testimony"],
+      "boundary": "Operational involvement has different evidence classes. Separate convicted conduct, testimony, employment role, denial, and alleged conduct."
+    },
+    {
+      "id": "media-reputation-narrative",
+      "title": "Media / Reputation / Narrative Management",
+      "trackingQuestion": "Which journalists, authors, publicists, publishers, lawyers, and strategists appear in image management, press strategy, book/interview strategy, or public denial/attack cycles?",
+      "targets": [
+        "Michael Wolff",
+        "Steve Bannon",
+        "Landon Thomas Jr.",
+        "Peggy Siegal",
+        "Alan Dershowitz",
+        "David Boies",
+        "Brad Edwards",
+        "media outlets tied to document-release narratives",
+        "public-relations intermediaries"
+      ],
+      "requiredRecords": ["emails", "interview records", "public statements", "litigation filings", "retractions", "settlements", "timed releases"],
+      "boundary": "Narrative management may expose leverage and image repair. It is not by itself evidence of Epstein crimes."
+    },
+    {
+      "id": "academic-science-philanthropy",
+      "title": "Academic / Science / Philanthropy Access",
+      "trackingQuestion": "Which universities, scientists, philanthropists, foundations, donors, and policy-intellectual networks provided legitimacy, meetings, access, donations, or reputation laundering?",
+      "targets": [
+        "Bill Gates",
+        "Larry Summers",
+        "MIT Media Lab",
+        "Harvard-linked networks",
+        "Nicholas Negroponte",
+        "Noam Chomsky",
+        "Leon Botstein",
+        "Martin Nowak",
+        "science/philanthropy intermediaries"
+      ],
+      "requiredRecords": ["donation records", "emails", "institutional reviews", "meeting references", "public denials", "foundation records"],
+      "boundary": "Academic or philanthropy contact can show legitimacy laundering, not automatic criminality."
+    },
+    {
+      "id": "legal-prosecution-state",
+      "title": "Legal / Prosecution / State Power",
+      "trackingQuestion": "Which prosecutors, judges, attorneys, agencies, jail officials, oversight bodies, and disclosure authorities shaped the plea deal, custody, redactions, subpoenas, releases, and secrecy?",
+      "targets": [
+        "Alexander Acosta",
+        "Matthew Menchel",
+        "SDNY prosecution teams",
+        "DOJ officials involved in disclosure/redaction",
+        "Bureau of Prisons officials",
+        "Judge Emmet Sullivan",
+        "House Oversight Committee",
+        "FBI records custodians",
+        "FOIA litigants"
+      ],
+      "requiredRecords": ["NPA documents", "judicial orders", "redaction logs", "FOIA filings", "custody records", "prosecution memos", "hearing transcripts"],
+      "boundary": "Institutional failure, prosecutorial discretion, and secrecy are not the same thing. The site must classify what the record supports."
+    },
+    {
+      "id": "aviation-property-corridors",
+      "title": "Aviation / Property / Corridor Nodes",
+      "trackingQuestion": "Which aircraft, tail numbers, pilots, passenger records, properties, routes, islands, ranches, apartments, and arrival/departure patterns line up with people and dates?",
+      "targets": [
+        "Boeing 727 / Lolita Express references",
+        "Gulfstream records where sourced",
+        "Teterboro Airport",
+        "West Palm Beach Airport",
+        "St Thomas / USVI corridor",
+        "Little St James",
+        "Palm Beach residence",
+        "New York mansion",
+        "Zorro Ranch",
+        "Paris apartment"
+      ],
+      "requiredRecords": ["flight logs", "tail numbers", "passenger names as written", "property records", "staff testimony", "arrival/departure dates", "court exhibits"],
+      "boundary": "A flight or property visit is a logistics record. It proves a recorded movement or proximity, not motive or guilt."
+    }
+  ],
+  "publicationRules": [
+    "Every target must display evidenceClass before appearing as a public card.",
+    "Every target must include a boundary line separating record, allegation, denial, settlement, and court finding.",
+    "Every target must link to at least one source door before being promoted from queue to public card.",
+    "Use the term institutional overlap rather than unsupported deep-state conclusion unless a primary record supports a specific institutional role.",
+    "Do not publish victim-identifying private details beyond already-public court/reporting context."
+  ]
+}

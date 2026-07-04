@@ -1,206 +1,282 @@
 {
-  "ok": false,
-  "buildSha": "530c107f9d878c2681516be6411e31585664cbb3",
-  "buildShortSha": "530c107f9d87",
-  "generatedAt": "2026-07-03T10:12:33.823Z",
+  "ok": true,
+  "buildSha": "1db6ee3eec1e9bd09d30179616edc885a678980c",
+  "buildShortSha": "1db6ee3eec1e",
+  "generatedAt": "2026-07-04T06:34:53.034Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
-  "routeAliasCount": 55,
+  "routeAliasCount": 62,
   "aliasCount": 19,
   "aliases": [
     {
       "route": "/deploy-status",
       "target": "/deploy-status.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein",
       "target": "/epstein-files.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/live-intel",
       "target": "/live-intel.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/evidence-vault",
       "target": "/evidence-vault.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/power-atlas",
       "target": "/power-atlas.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/book-universe",
       "target": "/book-universe.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/answer-engine",
       "target": "/answer-engine.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/offer-center",
       "target": "/offer-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/opt-in",
       "target": "/optin-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/rss",
       "target": "/feed-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/forum",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/signal-board",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/main-board",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/speculation-board",
       "target": "/dark-speculation-forum.html",
-      "present": true
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/dark-speculation-board",
       "target": "/dark-speculation-forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-alive-board",
       "target": "/epstein-alive-board.html",
-      "present": true
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-sighting-board",
       "target": "/epstein-alive-board.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-sightings-board",
       "target": "/epstein-alive-board.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/amazon-store",
       "target": "/amazon-store-books.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     }
   ],
   "requiredAliases": [
     {
       "route": "/deploy-status",
       "target": "/deploy-status.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein",
       "target": "/epstein-files.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/live-intel",
       "target": "/live-intel.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/evidence-vault",
       "target": "/evidence-vault.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/power-atlas",
       "target": "/power-atlas.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/book-universe",
       "target": "/book-universe.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/answer-engine",
       "target": "/answer-engine.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/offer-center",
       "target": "/offer-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/opt-in",
       "target": "/optin-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/rss",
       "target": "/feed-center.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/forum",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/signal-board",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/main-board",
       "target": "/forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/speculation-board",
       "target": "/dark-speculation-forum.html",
-      "present": true
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/dark-speculation-board",
       "target": "/dark-speculation-forum.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-alive-board",
       "target": "/epstein-alive-board.html",
-      "present": true
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-sighting-board",
       "target": "/epstein-alive-board.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/epstein-sightings-board",
       "target": "/epstein-alive-board.html",
-      "present": false
+      "present": true,
+      "explicitAlias": false,
+      "extensionlessFallback": true
     },
     {
       "route": "/amazon-store",
       "target": "/amazon-store-books.html",
-      "present": false
+      "present": true,
+      "explicitAlias": true,
+      "extensionlessFallback": true
     }
   ],
   "requiredAliasMap": {
@@ -269,7 +345,7 @@
       "marker": "FOLLOW THE FILES.",
       "exists": true,
       "markerPresent": true,
-      "hash": "8843420bbc99779b"
+      "hash": "d2196d0ffe215bf8"
     },
     {
       "name": "Live Intel",
@@ -277,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "21adbd754e91ce0f"
+      "hash": "c857898a8f8f9dd0"
     },
     {
       "name": "Epstein Command Center",
@@ -285,7 +361,7 @@
       "marker": "Evidence Boundary",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Epstein People Tracker",
@@ -293,7 +369,7 @@
       "marker": "People / Entity Tracker",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Epstein Timeline Map",
@@ -301,7 +377,7 @@
       "marker": "Timeline + Cross-Reference Map",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Epstein Evidence Ladder",
@@ -309,7 +385,7 @@
       "marker": "Evidence Strength Ladder",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Actual Files Cockpit",
@@ -317,7 +393,7 @@
       "marker": "Actual Files Cockpit",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Network Architecture Matrix",
@@ -325,7 +401,7 @@
       "marker": "Network Architecture Matrix",
       "exists": true,
       "markerPresent": true,
-      "hash": "7c4d9590d9164b95"
+      "hash": "2e6f172e6e23062f"
     },
     {
       "name": "Main Signal Board",
@@ -333,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "57a403418fec0b9b"
+      "hash": "c5d79fffb5c1d3db"
     },
     {
       "name": "Dark Speculation Board",
@@ -349,7 +425,7 @@
       "marker": "data-board=\"epstein-alive\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "64a77786d14b19c5"
+      "hash": "b44122b1bf8c8b55"
     },
     {
       "name": "Forum Worker",
@@ -357,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "6408bf0b68f94fe1"
+      "hash": "a27d1833f255d3cd"
     },
     {
       "name": "Hard Board Routes",
@@ -365,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "6408bf0b68f94fe1"
+      "hash": "a27d1833f255d3cd"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -377,10 +453,10 @@
     }
   ],
   "hashes": {
-    "worker": "6408bf0b68f94fe1",
-    "package": "eb6a74918f6dcc1b",
-    "epsteinFiles": "7c4d9590d9164b95",
-    "liveIntel": "21adbd754e91ce0f"
+    "worker": "a27d1833f255d3cd",
+    "package": "233b3b98d76e055e",
+    "epsteinFiles": "2e6f172e6e23062f",
+    "liveIntel": "c857898a8f8f9dd0"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

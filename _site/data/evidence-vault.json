@@ -1,0 +1,208 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 3 Evidence Vault data model for Matrix Reprogrammed. This file defines source lanes, source cards, claim boundaries, correction rules, and public-record source discipline.",
+  "sourceHierarchy": [
+    "Primary Source",
+    "Court Record",
+    "Official Dataset",
+    "Regulator / Sanctions Record",
+    "Declassified Archive",
+    "Parliamentary / Congressional Record",
+    "Credible Reporting",
+    "Interpretive Commentary"
+  ],
+  "claimRules": [
+    "Association is not guilt.",
+    "A name in a record is not proof of wrongdoing.",
+    "A symbol is not proof of conspiracy.",
+    "An adverse-event report is not proof of causation.",
+    "A relationship line must say what it means.",
+    "Unsupported viral claims are quarantined or rejected.",
+    "Victim privacy overrides spectacle.",
+    "Corrections strengthen the archive."
+  ],
+  "sourceLanes": [
+    {
+      "slug": "court-records",
+      "title": "Court Records",
+      "sourceType": "Court Record",
+      "evidenceClass": "Court Record",
+      "summary": "Dockets, filings, exhibits, indictments, judgments, depositions, settlements, transcripts, and public legal records.",
+      "boundary": "A filing can contain allegations, denials, exhibits, sworn claims, and adjudicated findings. Do not collapse them into the same proof category.",
+      "relatedAtlasNodes": ["epstein-records", "blackwater", "cartels"],
+      "relatedPages": ["evidence-policy.html", "network-maps.html", "epstein-files.html"]
+    },
+    {
+      "slug": "declassified-archives",
+      "title": "Declassified Archives",
+      "sourceType": "Declassified Archive",
+      "evidenceClass": "Confirmed Record",
+      "summary": "Agency reading rooms, national archives, historic releases, FOIA libraries, and public declassification collections.",
+      "boundary": "A declassified document proves the document exists and says what it says. It still needs context, date, classification history, and provenance.",
+      "relatedAtlasNodes": ["cia", "nsa", "five-eyes"],
+      "relatedPages": ["intelligence-hub.html", "power-atlas.html", "intel-archive.html"]
+    },
+    {
+      "slug": "financial-records",
+      "title": "Financial Records",
+      "sourceType": "Regulator / Sanctions Record",
+      "evidenceClass": "Confirmed Record",
+      "summary": "Sanctions, regulator actions, contracts, procurement, lobbying, settlements, fines, grants, and compensation schemes.",
+      "boundary": "A payment, contract, fine, grant, or sanction is a public-record signal. It must not be inflated into a claim beyond what the record supports.",
+      "relatedAtlasNodes": ["cartels", "war-machine", "medical-power"],
+      "relatedPages": ["dashboard-human-cost.html", "war-conflict-hub.html", "crime-hub.html"]
+    },
+    {
+      "slug": "human-cost-sources",
+      "title": "Human Cost Sources",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "summary": "Conflict deaths, displacement, migration categories, missing migrants, food insecurity, compensation totals, and public-health data boundaries.",
+      "boundary": "Do not merge incompatible datasets. An encounter, death estimate, asylum application, compensated claim, report, and proven causation are different categories.",
+      "relatedAtlasNodes": ["war-machine", "medical-power", "cartels"],
+      "relatedPages": ["news.html#human-cost", "dashboard-human-cost.html", "dashboard-migration.html"]
+    },
+    {
+      "slug": "symbolic-records",
+      "title": "Symbolic / Fraternal Records",
+      "sourceType": "Interpretive Commentary",
+      "evidenceClass": "Symbolic Commentary",
+      "summary": "Public lodge material, architecture, mission patches, logos, ritual language, degree systems, symbolism, and esoteric interpretation.",
+      "boundary": "Symbolic similarity is not proof of conspiracy. Public records and interpretation must stay separated.",
+      "relatedAtlasNodes": ["freemasonry-symbols", "black-file"],
+      "relatedPages": ["secret-societies-hub.html", "book-symbol.html", "book-as-above-so-below.html"]
+    },
+    {
+      "slug": "intelligence-oversight",
+      "title": "Intelligence Oversight",
+      "sourceType": "Parliamentary / Congressional Record",
+      "evidenceClass": "Confirmed Record",
+      "summary": "Congressional hearings, parliamentary committees, inspector-general reports, official reviews, and oversight failure records.",
+      "boundary": "Oversight records are powerful but bounded. Separate proven findings, committee conclusions, minority views, allegations, and political framing.",
+      "relatedAtlasNodes": ["cia", "nsa", "five-eyes"],
+      "relatedPages": ["intelligence-hub.html", "evidence-policy.html", "news.html"]
+    }
+  ],
+  "sourceCards": [
+    {
+      "slug": "cia-reading-room",
+      "title": "CIA CREST / Reading Room",
+      "sourceType": "Declassified Archive",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.cia.gov/readingroom/",
+      "description": "CIA public reading room and declassified document search lane.",
+      "useFor": "CIA, covert action history, intelligence oversight, declassified-source tracing.",
+      "relatedLane": "declassified-archives"
+    },
+    {
+      "slug": "fbi-vault",
+      "title": "FBI Vault",
+      "sourceType": "Declassified Archive",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://vault.fbi.gov/",
+      "description": "FBI public document library for historic files and released records.",
+      "useFor": "Organized crime, intelligence history, public-record dossiers, source verification.",
+      "relatedLane": "declassified-archives"
+    },
+    {
+      "slug": "national-archives",
+      "title": "U.S. National Archives",
+      "sourceType": "Declassified Archive",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.archives.gov/",
+      "description": "National archival records, historical government material, and public collections.",
+      "useFor": "Historic state records, declassification context, provenance checks.",
+      "relatedLane": "declassified-archives"
+    },
+    {
+      "slug": "treasury-ofac",
+      "title": "U.S. Treasury OFAC Sanctions",
+      "sourceType": "Regulator / Sanctions Record",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://ofac.treasury.gov/",
+      "description": "Sanctions records for individuals, entities, networks, vessels, companies, and jurisdictions.",
+      "useFor": "Cartels, underground finance, state-linked networks, procurement and sanctions mapping.",
+      "relatedLane": "financial-records"
+    },
+    {
+      "slug": "justice-department",
+      "title": "U.S. Department of Justice",
+      "sourceType": "Court Record",
+      "evidenceClass": "Court Record",
+      "url": "https://www.justice.gov/",
+      "description": "Official DOJ releases, indictments, case announcements, plea records, and enforcement updates.",
+      "useFor": "Cartels, organized crime, corruption cases, contractor cases, public-record legal summaries.",
+      "relatedLane": "court-records"
+    },
+    {
+      "slug": "cbp-statistics",
+      "title": "U.S. Customs and Border Protection Statistics",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.cbp.gov/newsroom/stats",
+      "description": "Border encounter and enforcement statistics with category boundaries.",
+      "useFor": "Migration flow analysis, border-contact categories, dataset distinction warnings.",
+      "relatedLane": "human-cost-sources"
+    },
+    {
+      "slug": "frontex-map",
+      "title": "Frontex Migratory Map",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.frontex.europa.eu/what-we-do/monitoring-and-risk-analysis/migratory-map/",
+      "description": "European irregular border-crossing route statistics and risk-analysis map.",
+      "useFor": "EU migration, route-specific irregular crossing categories, border pressure analysis.",
+      "relatedLane": "human-cost-sources"
+    },
+    {
+      "slug": "unhcr-statistics",
+      "title": "UNHCR Refugee Statistics",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.unhcr.org/refugee-statistics/",
+      "description": "Refugees, asylum seekers, displaced people, and forced-displacement statistics.",
+      "useFor": "Human cost, displacement, war consequences, asylum category boundaries.",
+      "relatedLane": "human-cost-sources"
+    },
+    {
+      "slug": "iom-missing-migrants",
+      "title": "IOM Missing Migrants Project",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://missingmigrants.iom.int/",
+      "description": "Route-specific migrant deaths and missing-persons data with undercount warnings.",
+      "useFor": "Migration human cost, route-level risk, missing migrants, dataset limits.",
+      "relatedLane": "human-cost-sources"
+    },
+    {
+      "slug": "vaers",
+      "title": "VAERS Data",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://vaers.hhs.gov/data.html",
+      "description": "U.S. vaccine adverse-event reporting system with explicit causation limitation.",
+      "useFor": "Medical power analysis, adverse-event signal boundaries, causation warnings.",
+      "relatedLane": "human-cost-sources"
+    },
+    {
+      "slug": "hrsa-vicp",
+      "title": "HRSA Vaccine Injury Compensation Program",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.hrsa.gov/vaccine-compensation",
+      "description": "Official VICP compensation program information and reporting route.",
+      "useFor": "Vaccine compensation, paid claims, injury table boundaries, medical power source discipline.",
+      "relatedLane": "financial-records"
+    },
+    {
+      "slug": "hrsa-cicp",
+      "title": "HRSA Countermeasures Injury Compensation Program",
+      "sourceType": "Official Dataset",
+      "evidenceClass": "Confirmed Record",
+      "url": "https://www.hrsa.gov/cicp",
+      "description": "Official CICP countermeasure injury compensation information.",
+      "useFor": "COVID countermeasure claims, paid/pending claim distinction, compensation boundary.",
+      "relatedLane": "financial-records"
+    }
+  ]
+}

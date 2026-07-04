@@ -1,0 +1,77 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 12 Authority / Internal Link Engine for Matrix Reprogrammed. This data creates topic clusters, pillar pages, spoke routes, and source-bound internal linking paths for SEO and AI-search discovery.",
+  "rules": [
+    "Every cluster needs one pillar route and multiple spoke routes.",
+    "Internal links should guide readers, not keyword-stuff pages.",
+    "AI-search pages need evidence, trust, maps, books, and funnel routes nearby.",
+    "Cluster pages must route to the Trust Center and Evidence Vault.",
+    "No cluster should turn symbolic commentary into factual accusation.",
+    "Authority is built by structure, source discipline, and clean navigation."
+  ],
+  "clusters": [
+    {
+      "slug": "elite-power",
+      "title": "Elite Power Cluster",
+      "searchIntent": "Who holds power, how influence works, and how to separate access from guilt.",
+      "pillar": "power-atlas.html",
+      "trustRoute": "trust-association-boundary.html",
+      "spokes": ["atlas-index.html", "map-elite-access.html", "answer-bilderberg-group.html", "answer-world-economic-forum.html", "answer-blackrock.html", "book-elite-toolkit.html", "sales-ladder.html"],
+      "questions": ["What is elite access?", "When does association matter?", "What does ownership prove?", "How does influence differ from control?"]
+    },
+    {
+      "slug": "intelligence",
+      "title": "Intelligence / Surveillance Cluster",
+      "searchIntent": "Agencies, surveillance, covert history, oversight, declassified records, and deep-state claims.",
+      "pillar": "map-intelligence-network.html",
+      "trustRoute": "trust-source-methodology.html",
+      "spokes": ["answer-deep-state.html", "answer-mkultra.html", "answer-operation-gladio.html", "answer-project-paperclip.html", "book-cia.html", "book-nsa.html", "evidence-lane-declassified-archives.html"],
+      "questions": ["What is the deep state?", "What is documented about MKUltra?", "How should declassified archives be read?", "Where does speculation begin?"]
+    },
+    {
+      "slug": "crime-state",
+      "title": "Crime-State Overlap Cluster",
+      "searchIntent": "Cartels, mafia systems, sanctions, court records, underground banking, logistics, and corruption overlap.",
+      "pillar": "map-crime-state-overlap.html",
+      "trustRoute": "evidence-lane-court-records.html",
+      "spokes": ["book-cartels.html", "book-albanian-mafia.html", "book-ndrangheta.html", "book-triad.html", "evidence-lane-financial-records.html", "answer-documented-association.html", "path-crime-state-overlap.html"],
+      "questions": ["How do crime networks use finance?", "What do sanctions prove?", "What does a court record prove?", "Where does corruption overlap with state power?"]
+    },
+    {
+      "slug": "war-machine",
+      "title": "War Machine Cluster",
+      "searchIntent": "War, contractors, procurement, intelligence claims, sanctions, and human cost.",
+      "pillar": "map-war-machine.html",
+      "trustRoute": "trust-association-boundary.html",
+      "spokes": ["book-blackwater.html", "book-wwiii.html", "dashboard-human-cost.html", "evidence-lane-human-cost-sources.html", "distribution-longform-video.html", "path-war-contractors.html", "answer-false-flag.html"],
+      "questions": ["What is the war machine?", "How do contractors fit into conflict?", "What does procurement prove?", "How should human-cost figures be sourced?"]
+    },
+    {
+      "slug": "symbolic-power",
+      "title": "Symbolic Power Cluster",
+      "searchIntent": "Freemasonry, symbols, ritual architecture, esoteric interpretation, and evidence boundaries.",
+      "pillar": "map-symbolic-power.html",
+      "trustRoute": "trust-claim-labels.html",
+      "spokes": ["book-symbol.html", "book-as-above-so-below.html", "book-masonic-architecture-33.html", "book-degree-33.html", "answer-evidence-boundary.html", "trust-editorial-standards.html", "path-dog-architect.html"],
+      "questions": ["What can symbols prove?", "When is symbolism commentary?", "How does esoteric interpretation differ from evidence?", "Where should D.O.G readers start?"]
+    },
+    {
+      "slug": "evidence-trust",
+      "title": "Evidence / Trust Cluster",
+      "searchIntent": "Source methodology, claim labels, corrections, privacy, evidence classes, and public-record discipline.",
+      "pillar": "trust-center.html",
+      "trustRoute": "evidence-vault.html",
+      "spokes": ["trust-source-methodology.html", "trust-claim-labels.html", "trust-corrections-policy.html", "trust-privacy-policy.html", "evidence-vault-index.html", "answer-evidence-boundary.html", "path-evidence-trust.html"],
+      "questions": ["What is an evidence boundary?", "How are claims labeled?", "How are corrections handled?", "What does a source actually prove?"]
+    },
+    {
+      "slug": "growth-system",
+      "title": "Growth / Distribution Cluster",
+      "searchIntent": "Reader paths, funnels, lead magnets, distribution formats, update monitoring, and content systems.",
+      "pillar": "sales-ladder.html",
+      "trustRoute": "trust-center.html",
+      "spokes": ["conversion-funnel.html", "distribution-center.html", "update-monitor.html", "funnel-black-file.html", "distribution-shorts.html", "distribution-podcast.html", "black-file.html"],
+      "questions": ["Where should a new reader start?", "Which book path fits the reader?", "How does the archive become content?", "How does the site stay fresh?"]
+    }
+  ]
+}

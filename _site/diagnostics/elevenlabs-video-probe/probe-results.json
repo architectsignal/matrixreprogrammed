@@ -1,0 +1,114 @@
+[
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/videos",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/videos",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/image-to-video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/image-to-video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/image-to-video/generate",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/image-to-video/generate",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/text-to-video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/text-to-video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/generation/video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/generation/video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/studio/video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/studio/video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/creative/video",
+    "method": "OPTIONS",
+    "status": 200,
+    "contentType": "application/json",
+    "bodyPreview": "{\"status\":\"ok\"}"
+  },
+  {
+    "endpoint": "https://api.elevenlabs.io/v1/creative/video",
+    "method": "GET",
+    "status": 404,
+    "contentType": "application/json",
+    "bodyPreview": "{\"detail\":\"Not Found\"}"
+  }
+]

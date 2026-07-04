@@ -1,0 +1,79 @@
+{
+  "updated": "2026-06-24",
+  "purpose": "Phase 7 Conversion Funnel Engine for Matrix Reprogrammed. This data defines lead magnets, opt-in doors, thank-you routes, reader segmentation, and the Black File sales ladder.",
+  "rules": [
+    "Every high-intent visitor needs a next action.",
+    "Books sell the deep dive; lead magnets capture the reader path.",
+    "Forms must work without JavaScript.",
+    "Every funnel page must route into books, Power Atlas, Evidence Vault, AI Answers, Network Maps, and Black File.",
+    "No fake scarcity, fake counters, or unverifiable promises.",
+    "The lead magnet must make the archive easier to enter."
+  ],
+  "funnels": [
+    {
+      "slug": "black-file",
+      "title": "The Black File",
+      "tagline": "The 33-system gateway into Matrix Reprogrammed.",
+      "audience": "New readers who need the master map before choosing a book.",
+      "promise": "A free gateway file and route-map through symbols, intelligence, crime-state overlap, war, media, money, psychology, human cost, and hidden architecture.",
+      "formName": "black-file-request",
+      "primaryCta": "Open The Black File",
+      "thankYouPage": "black-file-thank-you.html",
+      "download": "downloads/the-black-file-matrix-reprogrammed.pdf",
+      "routes": ["black-file.html", "book-universe.html", "power-atlas.html", "evidence-vault.html", "network-map-index.html"],
+      "books": ["black-file", "elite-toolkit", "power-overlap", "as-above-so-below"]
+    },
+    {
+      "slug": "evidence-starter",
+      "title": "Evidence Starter Pack",
+      "tagline": "Learn how to separate record, claim, association, and interpretation.",
+      "audience": "Readers arriving from controversial topics who need source discipline before going deeper.",
+      "promise": "A clean starting route through evidence classes, source lanes, court records, declassified archives, documented association, and unsupported claims.",
+      "formName": "evidence-starter-request",
+      "primaryCta": "Get The Evidence Starter Pack",
+      "thankYouPage": "thank-you-evidence-starter.html",
+      "download": "",
+      "routes": ["evidence-vault.html", "evidence-vault-index.html", "evidence-policy.html", "answer-evidence-boundary.html", "answer-documented-association.html"],
+      "books": ["elite-toolkit", "power-overlap", "black-file"]
+    },
+    {
+      "slug": "power-map",
+      "title": "Power Map Field Guide",
+      "tagline": "Trace the system without turning lines into accusations.",
+      "audience": "Readers who want maps: intelligence, war, crime, elite access, symbolism, and medical-policy power.",
+      "promise": "A route through labeled relationship lines, risk boundaries, Atlas nodes, Evidence Vault lanes, and Network Map rules.",
+      "formName": "power-map-request",
+      "primaryCta": "Get The Power Map Guide",
+      "thankYouPage": "thank-you-power-map.html",
+      "download": "",
+      "routes": ["network-map-index.html", "network-maps.html", "power-atlas.html", "atlas-index.html", "answer-deep-state.html"],
+      "books": ["elite-toolkit", "cia", "blackwater", "cartels"]
+    },
+    {
+      "slug": "intel-weekly",
+      "title": "Intel Weekly Signal",
+      "tagline": "Weekly source-bound signals from the archive.",
+      "audience": "Readers who want recurring updates and current routes into the archive.",
+      "promise": "A weekly-style signal route into the Intel Desk, bulletins, human-cost panels, migration panels, timers, and new dossier paths.",
+      "formName": "intel-weekly-request",
+      "primaryCta": "Join The Weekly Signal",
+      "thankYouPage": "thank-you-intel-weekly.html",
+      "download": "",
+      "routes": ["news.html", "intel-archive.html", "timers.html", "dashboard-human-cost.html", "dashboard-migration.html"],
+      "books": ["wwiii", "blackwater", "cartels", "keep-calm"]
+    },
+    {
+      "slug": "book-path",
+      "title": "Choose Your Book Path",
+      "tagline": "Find the correct Matrix Reprogrammed book sequence.",
+      "audience": "Visitors who are interested but overwhelmed by the size of the archive.",
+      "promise": "A simple segmentation route into D.O.G, Intelligence Dossiers, Crime Dossiers, War, Psychology, Evidence, and Black File paths.",
+      "formName": "book-path-request",
+      "primaryCta": "Find My Book Path",
+      "thankYouPage": "thank-you-book-path.html",
+      "download": "",
+      "routes": ["book-universe.html", "books.html", "start-here.html", "search.html", "black-file.html"],
+      "books": ["as-above-so-below", "cia", "cartels", "identity-trap", "black-file"]
+    }
+  ]
+}

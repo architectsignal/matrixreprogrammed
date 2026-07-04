@@ -1,0 +1,11 @@
+{
+  "triggeredAt": "2026-06-25T23:59:00+02:00",
+  "purpose": "Trigger Cloudflare deployment from GitHub main after route, Worker alias, Epstein Command Center, live-intel, phase redirect, and pressure-test fixes.",
+  "expectedBuildCommand": "npm run build",
+  "deploymentTarget": "Cloudflare Workers / Pages static output via wrangler",
+  "notes": [
+    "Cloudflare should auto-build from this commit on main.",
+    "netlify.toml remains a legacy test manifest only.",
+    "src/worker.js now contains Cloudflare-native public route aliases."
+  ]
+}

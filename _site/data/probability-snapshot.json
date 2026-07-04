@@ -1,0 +1,1134 @@
+{
+  "updated": "2026-07-04T06:34:59.635Z",
+  "title": "Probability Snapshot",
+  "purpose": "Computed scenario snapshot from multiple scenario feeds plus weighted signal feeds.",
+  "boundary": "This snapshot is a forecast model, not a fact claim. Probabilities are provisional and must change when records or signals change.",
+  "inputFiles": [
+    "data/probability-lab-core.json",
+    "data/probability-scenarios-batch-002.json",
+    "data/probability-scenarios-batch-003.json",
+    "data/probability-signal-feed-001.json",
+    "data/probability-signal-feed-002.json",
+    "data/probability-signal-feed-003.json"
+  ],
+  "scenarios": [
+    {
+      "scenarioId": "SCN-001",
+      "title": "AI infrastructure becomes the main power-competition layer",
+      "topic": "AI and compute",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 72,
+      "computedProbability": 79,
+      "probabilityDelta": 7,
+      "band": "probable direction",
+      "confidence": "medium",
+      "status": "watching",
+      "supportSignalCount": 5,
+      "totalSignalWeight": 12,
+      "scenarioSourceFile": "data/probability-lab-core.json",
+      "signals": [
+        {
+          "signalId": "SIG-001",
+          "title": "SEC filing routes established for major technology and finance targets",
+          "weight": 3,
+          "impact": 2,
+          "lane": "public filings",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-005",
+          "title": "Power targets are grouped by infrastructure layer",
+          "weight": 2,
+          "impact": 2,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-006",
+          "title": "OpenAI policy route exists but private deployment records remain missing",
+          "weight": 2,
+          "impact": 1,
+          "lane": "AI policy",
+          "sourceStatus": "route verified / content pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-014",
+          "title": "SEC filing feed automation added",
+          "weight": 3,
+          "impact": 1,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-016",
+          "title": "Billionaire Watch core connects wealth sources to infrastructure layers",
+          "weight": 2,
+          "impact": 1,
+          "lane": "billionaire watch",
+          "sourceStatus": "tracker live",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "AI compute demand",
+        "data-center buildout",
+        "cloud-AI partnerships",
+        "chip supply constraints"
+      ],
+      "counterSignals": [
+        "regulatory limits",
+        "energy constraints",
+        "market correction",
+        "public backlash"
+      ],
+      "triggerEvents": [
+        "major public-sector AI contract",
+        "new export restriction",
+        "large data-center financing announcement",
+        "major regulator action"
+      ],
+      "recordsNeeded": [
+        "SEC filing sections",
+        "public contracts",
+        "regulator records",
+        "energy/data-center records"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-002",
+      "title": "Public services become more dependent on private cloud and software platforms",
+      "topic": "public services software",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 68,
+      "computedProbability": 77,
+      "probabilityDelta": 9,
+      "band": "probable direction",
+      "confidence": "medium",
+      "status": "watching",
+      "supportSignalCount": 4,
+      "totalSignalWeight": 9,
+      "scenarioSourceFile": "data/probability-lab-core.json",
+      "signals": [
+        {
+          "signalId": "SIG-001",
+          "title": "SEC filing routes established for major technology and finance targets",
+          "weight": 3,
+          "impact": 2,
+          "lane": "public filings",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-005",
+          "title": "Power targets are grouped by infrastructure layer",
+          "weight": 2,
+          "impact": 2,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-007",
+          "title": "USAspending route added for public contract searches",
+          "weight": 2,
+          "impact": 3,
+          "lane": "public contracts",
+          "sourceStatus": "route verified / search pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-018",
+          "title": "Public service systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public service systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "public-sector procurement routes",
+        "cloud adoption",
+        "agency software contracts",
+        "identity and workflow systems"
+      ],
+      "counterSignals": [
+        "sovereign cloud moves",
+        "procurement restrictions",
+        "data-localization rules",
+        "public-sector open-source alternatives"
+      ],
+      "triggerEvents": [
+        "new large public-cloud contract",
+        "privacy-impact assessment release",
+        "audit report",
+        "procurement challenge"
+      ],
+      "recordsNeeded": [
+        "USAspending search results",
+        "privacy impact assessments",
+        "agency contracts",
+        "audit reports"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-003",
+      "title": "Information discovery shifts from search/social feeds toward AI answer systems",
+      "topic": "platforms",
+      "timeHorizon": "1-3 years",
+      "baseProbability": 64,
+      "computedProbability": 71,
+      "probabilityDelta": 7,
+      "band": "probable direction",
+      "confidence": "medium",
+      "status": "watching",
+      "supportSignalCount": 4,
+      "totalSignalWeight": 8,
+      "scenarioSourceFile": "data/probability-lab-core.json",
+      "signals": [
+        {
+          "signalId": "SIG-005",
+          "title": "Power targets are grouped by infrastructure layer",
+          "weight": 2,
+          "impact": 2,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-006",
+          "title": "OpenAI policy route exists but private deployment records remain missing",
+          "weight": 2,
+          "impact": 1,
+          "lane": "AI policy",
+          "sourceStatus": "route verified / content pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-012",
+          "title": "Platform and policy routes exist for information visibility checks",
+          "weight": 2,
+          "impact": 2,
+          "lane": "platforms",
+          "sourceStatus": "route verified",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-019",
+          "title": "Media and values systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "media and values systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "AI answer engine adoption",
+        "search integration",
+        "platform AI assistants",
+        "publisher traffic pressure"
+      ],
+      "counterSignals": [
+        "user trust issues",
+        "legal challenges",
+        "publisher licensing disputes",
+        "model quality failures"
+      ],
+      "triggerEvents": [
+        "major search interface change",
+        "publisher lawsuit outcome",
+        "new AI browser or assistant adoption milestone",
+        "regulator inquiry"
+      ],
+      "recordsNeeded": [
+        "platform policy pages",
+        "transparency reports",
+        "publisher agreements",
+        "regulator records"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-004",
+      "title": "Missing records become the main investigation map",
+      "topic": "evidence operations",
+      "timeHorizon": "90 days-1 year",
+      "baseProbability": 78,
+      "computedProbability": 95,
+      "probabilityDelta": 17,
+      "band": "strongly indicated",
+      "confidence": "high",
+      "status": "watching",
+      "supportSignalCount": 8,
+      "totalSignalWeight": 23,
+      "scenarioSourceFile": "data/probability-lab-core.json",
+      "signals": [
+        {
+          "signalId": "SIG-001",
+          "title": "SEC filing routes established for major technology and finance targets",
+          "weight": 3,
+          "impact": 3,
+          "lane": "public filings",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-002",
+          "title": "SEC filing metadata feed added to build process",
+          "weight": 3,
+          "impact": 4,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-003",
+          "title": "Record intake queue defines first 12 verification tasks",
+          "weight": 3,
+          "impact": 4,
+          "lane": "evidence operations",
+          "sourceStatus": "task queue",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-004",
+          "title": "Source route cards define what records can and cannot prove",
+          "weight": 3,
+          "impact": 3,
+          "lane": "source discipline",
+          "sourceStatus": "source route cards",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-007",
+          "title": "USAspending route added for public contract searches",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public contracts",
+          "sourceStatus": "route verified / search pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-008",
+          "title": "DOJ Epstein disclosure route added as critical file-level review task",
+          "weight": 3,
+          "impact": 3,
+          "lane": "official disclosures",
+          "sourceStatus": "route verified / file review pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-013",
+          "title": "Preliminary VRC batch separates support from limits",
+          "weight": 3,
+          "impact": 3,
+          "lane": "evidence discipline",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-014",
+          "title": "SEC filing feed automation added",
+          "weight": 3,
+          "impact": 3,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        }
+      ],
+      "supportingSignals": [
+        "missing-files board",
+        "source route queue",
+        "preliminary VRC batch",
+        "record intake queue"
+      ],
+      "counterSignals": [
+        "records become available quickly",
+        "source routes fail",
+        "manual review bottleneck"
+      ],
+      "triggerEvents": [
+        "new disclosure release",
+        "FOIA response",
+        "court docket update",
+        "verified record card batch"
+      ],
+      "recordsNeeded": [
+        "disclosure indexes",
+        "court records",
+        "FOIA routes",
+        "verified record cards"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-005",
+      "title": "AI systems become normal in public-service workflows",
+      "topic": "AI public services",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 66,
+      "computedProbability": 70,
+      "probabilityDelta": 4,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 2,
+      "totalSignalWeight": 4,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-009",
+          "title": "Public-contract route exists for public-service technology checks",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public procurement",
+          "sourceStatus": "route verified",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-018",
+          "title": "Public service systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public service systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "public-sector software adoption",
+        "cloud procurement",
+        "AI assistant integration",
+        "budget pressure for automation"
+      ],
+      "counterSignals": [
+        "privacy challenges",
+        "legal restrictions",
+        "failed deployments",
+        "public-sector resistance"
+      ],
+      "triggerEvents": [
+        "large agency AI procurement",
+        "privacy impact assessment mentioning AI workflow",
+        "audit report on AI use",
+        "regulator restriction"
+      ],
+      "recordsNeeded": [
+        "public contracts",
+        "privacy impact assessments",
+        "agency AI policy pages",
+        "audit reports"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-006",
+      "title": "Digital identity and payment rails become more linked to access control",
+      "topic": "identity and payments",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 58,
+      "computedProbability": 62,
+      "probabilityDelta": 4,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 2,
+      "totalSignalWeight": 4,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-010",
+          "title": "Systems category map includes cloud, identity, finance, platforms and public services software",
+          "weight": 2,
+          "impact": 2,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-017",
+          "title": "Money systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "money systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "digital wallet adoption",
+        "banking compliance pressure",
+        "fraud-prevention systems",
+        "public-service login systems"
+      ],
+      "counterSignals": [
+        "cash protection laws",
+        "privacy-preserving identity standards",
+        "public resistance",
+        "fragmented jurisdictions"
+      ],
+      "triggerEvents": [
+        "new digital identity mandate",
+        "major payment access policy change",
+        "public wallet rollout",
+        "court challenge"
+      ],
+      "recordsNeeded": [
+        "policy documents",
+        "banking rules",
+        "payment-platform terms",
+        "public-service identity records"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-007",
+      "title": "Geopolitical stress increases demand for monitoring and resilience systems",
+      "topic": "geopolitical risk",
+      "timeHorizon": "30 days-3 years",
+      "baseProbability": 61,
+      "computedProbability": 63,
+      "probabilityDelta": 2,
+      "band": "probable direction",
+      "confidence": "low",
+      "status": "watching",
+      "supportSignalCount": 1,
+      "totalSignalWeight": 2,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-009",
+          "title": "Public-contract route exists for public-service technology checks",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public procurement",
+          "sourceStatus": "route verified",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        }
+      ],
+      "supportingSignals": [
+        "cybersecurity spending",
+        "border/security technology",
+        "supply-chain risk tools",
+        "defence technology procurement"
+      ],
+      "counterSignals": [
+        "de-escalation agreements",
+        "budget cuts",
+        "public oversight pressure",
+        "procurement pauses"
+      ],
+      "triggerEvents": [
+        "major cyber incident",
+        "new emergency procurement",
+        "defence technology contract",
+        "security legislation"
+      ],
+      "recordsNeeded": [
+        "public contracts",
+        "government notices",
+        "cybersecurity advisories",
+        "budget documents"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-008",
+      "title": "Financial stress accelerates risk scoring and compliance automation",
+      "topic": "finance and risk",
+      "timeHorizon": "90 days-3 years",
+      "baseProbability": 57,
+      "computedProbability": 61,
+      "probabilityDelta": 4,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 3,
+      "totalSignalWeight": 7,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-010",
+          "title": "Systems category map includes cloud, identity, finance, platforms and public services software",
+          "weight": 2,
+          "impact": 1,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-014",
+          "title": "SEC filing feed automation added",
+          "weight": 3,
+          "impact": 1,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-017",
+          "title": "Money systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "money systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "fraud pressure",
+        "AML/KYC expansion",
+        "credit risk automation",
+        "market volatility"
+      ],
+      "counterSignals": [
+        "regulatory rollback",
+        "consumer protection actions",
+        "competition from privacy-first tools",
+        "stable market conditions"
+      ],
+      "triggerEvents": [
+        "banking stress event",
+        "new AML/KYC rule",
+        "major payment-platform policy update",
+        "regulator enforcement action"
+      ],
+      "recordsNeeded": [
+        "regulator records",
+        "bank filings",
+        "payment terms",
+        "risk-platform disclosures"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-009",
+      "title": "Major disclosure releases produce institution-level fallout before person-level clarity",
+      "topic": "disclosure events",
+      "timeHorizon": "30 days-2 years",
+      "baseProbability": 62,
+      "computedProbability": 66,
+      "probabilityDelta": 4,
+      "band": "probable direction",
+      "confidence": "low",
+      "status": "watching",
+      "supportSignalCount": 1,
+      "totalSignalWeight": 3,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-011",
+          "title": "Record intake queue includes official disclosure and court/source route work",
+          "weight": 3,
+          "impact": 4,
+          "lane": "disclosure operations",
+          "sourceStatus": "task queue",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        }
+      ],
+      "supportingSignals": [
+        "official disclosure routes",
+        "court records",
+        "missing-file pressure board",
+        "public response gaps"
+      ],
+      "counterSignals": [
+        "redactions",
+        "sealed records",
+        "low-quality viral claims",
+        "slow manual review"
+      ],
+      "triggerEvents": [
+        "new official release",
+        "court docket update",
+        "settlement disclosure",
+        "public response by named institution"
+      ],
+      "recordsNeeded": [
+        "official disclosure files",
+        "court orders",
+        "public responses",
+        "counter-sources"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-010",
+      "title": "Platform visibility becomes a central political and commercial battleground",
+      "topic": "platform visibility",
+      "timeHorizon": "90 days-3 years",
+      "baseProbability": 69,
+      "computedProbability": 76,
+      "probabilityDelta": 7,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 3,
+      "totalSignalWeight": 6,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-010",
+          "title": "Systems category map includes cloud, identity, finance, platforms and public services software",
+          "weight": 2,
+          "impact": 2,
+          "lane": "systems map",
+          "sourceStatus": "category map",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-012",
+          "title": "Platform and policy routes exist for information visibility checks",
+          "weight": 2,
+          "impact": 3,
+          "lane": "platforms",
+          "sourceStatus": "route verified",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-019",
+          "title": "Media and values systems review lane created",
+          "weight": 2,
+          "impact": 2,
+          "lane": "media and values systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "AI answer adoption",
+        "search ranking disputes",
+        "social platform moderation disputes",
+        "publisher traffic pressure"
+      ],
+      "counterSignals": [
+        "regulatory transparency rules",
+        "open-web alternatives",
+        "publisher licensing deals",
+        "user migration"
+      ],
+      "triggerEvents": [
+        "major platform policy change",
+        "search/AI ranking lawsuit",
+        "transparency report shift",
+        "publisher coalition action"
+      ],
+      "recordsNeeded": [
+        "transparency reports",
+        "policy pages",
+        "court records",
+        "publisher agreements"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-011",
+      "title": "Institutional trust shock increases demand for independent verification systems",
+      "topic": "trust and verification",
+      "timeHorizon": "90 days-5 years",
+      "baseProbability": 73,
+      "computedProbability": 82,
+      "probabilityDelta": 9,
+      "band": "strongly indicated",
+      "confidence": "medium",
+      "status": "watching",
+      "supportSignalCount": 4,
+      "totalSignalWeight": 10,
+      "scenarioSourceFile": "data/probability-scenarios-batch-002.json",
+      "signals": [
+        {
+          "signalId": "SIG-011",
+          "title": "Record intake queue includes official disclosure and court/source route work",
+          "weight": 3,
+          "impact": 2,
+          "lane": "disclosure operations",
+          "sourceStatus": "task queue",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-013",
+          "title": "Preliminary VRC batch separates support from limits",
+          "weight": 3,
+          "impact": 3,
+          "lane": "evidence discipline",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-015",
+          "title": "Probability update log established",
+          "weight": 2,
+          "impact": 2,
+          "lane": "forecast governance",
+          "sourceStatus": "update log",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-020",
+          "title": "Billionaire watch links individual targets to prediction scenarios",
+          "weight": 2,
+          "impact": 2,
+          "lane": "forecast linkage",
+          "sourceStatus": "tracker link",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "declining trust indicators",
+        "record gaps",
+        "AI misinformation pressure",
+        "source-verification demand"
+      ],
+      "counterSignals": [
+        "institutional reforms",
+        "transparent releases",
+        "credible audits",
+        "public confidence recovery"
+      ],
+      "triggerEvents": [
+        "major correction scandal",
+        "high-profile disclosure",
+        "audit failure",
+        "new transparency standard"
+      ],
+      "recordsNeeded": [
+        "audit reports",
+        "transparency datasets",
+        "correction logs",
+        "public trust surveys"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-012",
+      "title": "Payment systems become more interoperable and compliance-driven",
+      "topic": "money systems",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 59,
+      "computedProbability": 62,
+      "probabilityDelta": 3,
+      "band": "probable direction",
+      "confidence": "low",
+      "status": "watching",
+      "supportSignalCount": 1,
+      "totalSignalWeight": 2,
+      "scenarioSourceFile": "data/probability-scenarios-batch-003.json",
+      "signals": [
+        {
+          "signalId": "SIG-017",
+          "title": "Money systems review lane created",
+          "weight": 2,
+          "impact": 3,
+          "lane": "money systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "wallet growth",
+        "stablecoin policy work",
+        "bank compliance automation",
+        "digital identity links"
+      ],
+      "counterSignals": [
+        "cash protection rules",
+        "privacy-preserving payment tools",
+        "jurisdiction fragmentation",
+        "consumer resistance"
+      ],
+      "triggerEvents": [
+        "new payment rule",
+        "major wallet rollout",
+        "stablecoin legislation",
+        "central bank pilot expansion"
+      ],
+      "recordsNeeded": [
+        "bank filings",
+        "regulator rules",
+        "payment platform terms",
+        "central bank records"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-013",
+      "title": "Public services rely more on shared private infrastructure",
+      "topic": "public service systems",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 67,
+      "computedProbability": 73,
+      "probabilityDelta": 6,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 3,
+      "totalSignalWeight": 6,
+      "scenarioSourceFile": "data/probability-scenarios-batch-003.json",
+      "signals": [
+        {
+          "signalId": "SIG-016",
+          "title": "Billionaire Watch core connects wealth sources to infrastructure layers",
+          "weight": 2,
+          "impact": 2,
+          "lane": "billionaire watch",
+          "sourceStatus": "tracker live",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        },
+        {
+          "signalId": "SIG-018",
+          "title": "Public service systems review lane created",
+          "weight": 2,
+          "impact": 3,
+          "lane": "public service systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        },
+        {
+          "signalId": "SIG-020",
+          "title": "Billionaire watch links individual targets to prediction scenarios",
+          "weight": 2,
+          "impact": 1,
+          "lane": "forecast linkage",
+          "sourceStatus": "tracker link",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "public cloud contracts",
+        "software procurement",
+        "identity services",
+        "AI workflow adoption"
+      ],
+      "counterSignals": [
+        "sovereign cloud alternatives",
+        "procurement restrictions",
+        "data localization",
+        "public-sector open-source alternatives"
+      ],
+      "triggerEvents": [
+        "large cloud contract",
+        "identity service rollout",
+        "AI procurement record",
+        "privacy assessment release"
+      ],
+      "recordsNeeded": [
+        "public contracts",
+        "privacy assessments",
+        "agency policy records",
+        "standards documents"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    {
+      "scenarioId": "SCN-014",
+      "title": "Platform and institutional messaging becomes more aligned around trust and safety language",
+      "topic": "media and values systems",
+      "timeHorizon": "1-5 years",
+      "baseProbability": 63,
+      "computedProbability": 68,
+      "probabilityDelta": 5,
+      "band": "probable direction",
+      "confidence": "low-medium",
+      "status": "watching",
+      "supportSignalCount": 3,
+      "totalSignalWeight": 6,
+      "scenarioSourceFile": "data/probability-scenarios-batch-003.json",
+      "signals": [
+        {
+          "signalId": "SIG-016",
+          "title": "Billionaire Watch core connects wealth sources to infrastructure layers",
+          "weight": 2,
+          "impact": 1,
+          "lane": "billionaire watch",
+          "sourceStatus": "tracker live",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        },
+        {
+          "signalId": "SIG-019",
+          "title": "Media and values systems review lane created",
+          "weight": 2,
+          "impact": 3,
+          "lane": "media and values systems",
+          "sourceStatus": "review lane",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        },
+        {
+          "signalId": "SIG-020",
+          "title": "Billionaire watch links individual targets to prediction scenarios",
+          "weight": 2,
+          "impact": 1,
+          "lane": "forecast linkage",
+          "sourceStatus": "tracker link",
+          "sourceFile": "data/probability-signal-feed-003.json"
+        }
+      ],
+      "supportingSignals": [
+        "platform policy overlap",
+        "AI answer policy growth",
+        "foundation and NGO records",
+        "education and media alignment signals"
+      ],
+      "counterSignals": [
+        "platform divergence",
+        "open-source alternatives",
+        "public backlash",
+        "regulator pushback"
+      ],
+      "triggerEvents": [
+        "major platform policy alignment",
+        "foundation grant pattern appears",
+        "AI answer policy update",
+        "education or NGO framework rollout"
+      ],
+      "recordsNeeded": [
+        "platform reports",
+        "AI policy pages",
+        "grant filings",
+        "education records",
+        "public statements and counter-sources"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    }
+  ],
+  "summary": {
+    "scenarioCount": 14,
+    "signalCount": 20,
+    "averageProbability": 72,
+    "highestScenario": {
+      "scenarioId": "SCN-004",
+      "title": "Missing records become the main investigation map",
+      "topic": "evidence operations",
+      "timeHorizon": "90 days-1 year",
+      "baseProbability": 78,
+      "computedProbability": 95,
+      "probabilityDelta": 17,
+      "band": "strongly indicated",
+      "confidence": "high",
+      "status": "watching",
+      "supportSignalCount": 8,
+      "totalSignalWeight": 23,
+      "scenarioSourceFile": "data/probability-lab-core.json",
+      "signals": [
+        {
+          "signalId": "SIG-001",
+          "title": "SEC filing routes established for major technology and finance targets",
+          "weight": 3,
+          "impact": 3,
+          "lane": "public filings",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-002",
+          "title": "SEC filing metadata feed added to build process",
+          "weight": 3,
+          "impact": 4,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-003",
+          "title": "Record intake queue defines first 12 verification tasks",
+          "weight": 3,
+          "impact": 4,
+          "lane": "evidence operations",
+          "sourceStatus": "task queue",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-004",
+          "title": "Source route cards define what records can and cannot prove",
+          "weight": 3,
+          "impact": 3,
+          "lane": "source discipline",
+          "sourceStatus": "source route cards",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-007",
+          "title": "USAspending route added for public contract searches",
+          "weight": 2,
+          "impact": 2,
+          "lane": "public contracts",
+          "sourceStatus": "route verified / search pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-008",
+          "title": "DOJ Epstein disclosure route added as critical file-level review task",
+          "weight": 3,
+          "impact": 3,
+          "lane": "official disclosures",
+          "sourceStatus": "route verified / file review pending",
+          "sourceFile": "data/probability-signal-feed-001.json"
+        },
+        {
+          "signalId": "SIG-013",
+          "title": "Preliminary VRC batch separates support from limits",
+          "weight": 3,
+          "impact": 3,
+          "lane": "evidence discipline",
+          "sourceStatus": "preliminary VRC",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        },
+        {
+          "signalId": "SIG-014",
+          "title": "SEC filing feed automation added",
+          "weight": 3,
+          "impact": 3,
+          "lane": "automation",
+          "sourceStatus": "build pipeline",
+          "sourceFile": "data/probability-signal-feed-002.json"
+        }
+      ],
+      "supportingSignals": [
+        "missing-files board",
+        "source route queue",
+        "preliminary VRC batch",
+        "record intake queue"
+      ],
+      "counterSignals": [
+        "records become available quickly",
+        "source routes fail",
+        "manual review bottleneck"
+      ],
+      "triggerEvents": [
+        "new disclosure release",
+        "FOIA response",
+        "court docket update",
+        "verified record card batch"
+      ],
+      "recordsNeeded": [
+        "disclosure indexes",
+        "court records",
+        "FOIA routes",
+        "verified record cards"
+      ],
+      "lastComputed": "2026-07-04T06:34:59.635Z",
+      "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+    },
+    "updated": "2026-07-04T06:34:59.635Z"
+  }
+}

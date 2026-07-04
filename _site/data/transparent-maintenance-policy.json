@@ -1,0 +1,38 @@
+{
+  "updated": "2026-06-29",
+  "title": "Transparent Scheduled Maintenance Policy",
+  "purpose": "Let the site keep itself useful through visible GitHub workflows, logs, reports, generated pages, public artifacts and clear evidence boundaries.",
+  "mission": "Expose wrongdoing, help humanity, classify evidence, connect trackers, and map concentrated power through public records and clearly labelled speculation.",
+  "visibilityRule": "Every automated maintenance run must be visible through a workflow log, generated report, artifact, commit message, issue, or public change log.",
+  "allowedMaintenance": [
+    "Generate public reports from tracker data already in the repository.",
+    "Refresh dashboards from public JSON sources.",
+    "Rebuild pages from existing data files.",
+    "Run content scrubbers that remove author-facing notes, placeholders and chat markers.",
+    "Run link audits, route audits, freshness checks and duplicate checks.",
+    "Update timer notes when linked tracker lanes change evidence level.",
+    "Create or update downloadable JSON and Markdown briefs.",
+    "Commit generated reports with a clear message when outputs change."
+  ],
+  "blockedMaintenance": [
+    "Hidden changes.",
+    "Unlogged changes.",
+    "Publishing private victim identities or illegal material.",
+    "Turning speculation into fact.",
+    "Making direct accusations against private people without source-grade evidence.",
+    "Accessing protected sources without authorization.",
+    "Removing logs or reports to hide mistakes."
+  ],
+  "speculationRule": "Speculation is allowed when clearly labelled as speculation, hypothesis, motif, claim-history, open question or debunk lane. It must not be framed as proven fact unless source-grade records support it.",
+  "changeLogRule": "Each maintenance run should produce a report showing what it checked, what changed, what failed, and what should be improved next.",
+  "upgradePriorityOrder": [
+    "Fix broken deploys and broken routes.",
+    "Remove author-facing or machine-facing text from public pages.",
+    "Update stale trackers and timers.",
+    "Add missing evidence boundaries.",
+    "Connect isolated pages into the tracker graph.",
+    "Add source links and downloadable briefs.",
+    "Improve search and user navigation.",
+    "Expand speculation pages with labels and safe wording."
+  ]
+}

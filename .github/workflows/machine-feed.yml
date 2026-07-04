@@ -16,6 +16,7 @@ on:
       - 'scripts/private-contractor-intelligence-test.js'
       - 'scripts/build-master-brief-engine.js'
       - 'scripts/master-brief-engine-test.js'
+      - 'scripts/repair-nested-brief-links.js'
       - 'scripts/repair-search-system.js'
   schedule:
     - cron: '17 */6 * * *'
@@ -56,6 +57,7 @@ jobs:
           node scripts/build-entity-record-review.js
           node scripts/build-private-contractor-intelligence.js
           node scripts/build-master-brief-engine.js
+          node scripts/repair-nested-brief-links.js
           node scripts/repair-search-system.js
           node scripts/machine-feed-runner-test.js
           node scripts/change-detection-engine-test.js

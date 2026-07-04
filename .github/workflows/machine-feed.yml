@@ -11,6 +11,7 @@ on:
       - 'scripts/change-detection-engine-test.js'
       - 'scripts/build-entity-daily-briefs.js'
       - 'scripts/entity-daily-briefs-test.js'
+      - 'scripts/build-entity-record-review.js'
       - 'scripts/repair-search-system.js'
   schedule:
     - cron: '17 */6 * * *'
@@ -48,6 +49,7 @@ jobs:
           node scripts/patch-brain-with-record-events.js
           node scripts/build-change-detection-engine.js
           node scripts/build-entity-daily-briefs.js
+          node scripts/build-entity-record-review.js
           node scripts/repair-search-system.js
           node scripts/machine-feed-runner-test.js
           node scripts/change-detection-engine-test.js
@@ -57,30 +59,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/record-events.json \
-                  data/entity-observations.json \
-                  data/change-detection.json \
-                  data/entity-relationship-scores.json \
-                  data/entity-daily-briefs.json \
-                  data/machine-state/ \
-                  data/source-pulls/ \
-                  machine-digest.html \
-                  machine-intelligence.html \
-                  entity-daily-briefs.html \
-                  entity-briefs/ \
-                  downloads/machine-digest.md \
-                  downloads/machine-intelligence.md \
-                  downloads/entity-daily-briefs.md \
-                  data/daily-brain-brief.json \
-                  daily-brain-brief.html \
-                  downloads/daily-brain-brief.md \
-                  search-index.json \
-                  llms.txt \
-                  robots.txt \
-                  downloads/search-system-repair-report.json
+          git add .
           if git diff --cached --quiet; then
             echo "No machine-feed changes to commit."
           else
-            git commit -m "Feed machine with latest public records, change detection and entity briefs"
+            git commit -m "Feed machine with latest public records and entity record review"
             git push
           fi

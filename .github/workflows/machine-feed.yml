@@ -9,6 +9,8 @@ on:
       - 'scripts/patch-brain-with-record-events.js'
       - 'scripts/build-change-detection-engine.js'
       - 'scripts/change-detection-engine-test.js'
+      - 'scripts/build-entity-daily-briefs.js'
+      - 'scripts/entity-daily-briefs-test.js'
       - 'scripts/repair-search-system.js'
   schedule:
     - cron: '17 */6 * * *'
@@ -45,9 +47,11 @@ jobs:
           node scripts/fetch-public-record-feeds.js
           node scripts/patch-brain-with-record-events.js
           node scripts/build-change-detection-engine.js
+          node scripts/build-entity-daily-briefs.js
           node scripts/repair-search-system.js
           node scripts/machine-feed-runner-test.js
           node scripts/change-detection-engine-test.js
+          node scripts/entity-daily-briefs-test.js
 
       - name: Commit machine feed outputs
         run: |
@@ -57,12 +61,16 @@ jobs:
                   data/entity-observations.json \
                   data/change-detection.json \
                   data/entity-relationship-scores.json \
+                  data/entity-daily-briefs.json \
                   data/machine-state/ \
                   data/source-pulls/ \
                   machine-digest.html \
                   machine-intelligence.html \
+                  entity-daily-briefs.html \
+                  entity-briefs/ \
                   downloads/machine-digest.md \
                   downloads/machine-intelligence.md \
+                  downloads/entity-daily-briefs.md \
                   data/daily-brain-brief.json \
                   daily-brain-brief.html \
                   downloads/daily-brain-brief.md \
@@ -73,6 +81,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No machine-feed changes to commit."
           else
-            git commit -m "Feed machine with latest public records and change detection"
+            git commit -m "Feed machine with latest public records, change detection and entity briefs"
             git push
           fi

@@ -1,0 +1,61 @@
+name: Machine Feed Runner
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+group: machine-feed-runner
+
+jobs:
+  feed-machine:
+    name: Pull public-record feeds and commit machine outputs
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Pull public-record feeds
+        env:
+          MATRIX_FEED_TIMEOUT_MS: '4500'
+          MATRIX_FEED_MAX_EVENTS: '6'
+          MATRIX_FEED_USER_AGENT: 'MatrixReprogrammedPublicRecordBot/1.0 contact: public-record-intake'
+        run: |
+          node scripts/fetch-public-record-feeds.js
+          node scripts/patch-brain-with-record-events.js
+          node scripts/repair-search-system.js
+          node scripts/machine-feed-runner-test.js
+
+      - name: Commit machine feed outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/record-events.json \
+                  data/entity-observations.json \
+                  data/source-pulls/ \
+                  machine-digest.html \
+                  downloads/machine-digest.md \
+                  data/daily-brain-brief.json \
+                  daily-brain-brief.html \
+                  downloads/daily-brain-brief.md \
+                  search-index.json \
+                  llms.txt \
+                  robots.txt \
+                  downloads/search-system-repair-report.json
+          if git diff --cached --quiet; then
+            echo "No machine-feed changes to commit."
+          else
+            git commit -m "Feed machine with latest public records"
+            git push
+          fi

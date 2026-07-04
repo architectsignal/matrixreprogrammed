@@ -1,0 +1,156 @@
+{
+  "updated": "2026-07-04",
+  "title": "Public Record Intake Manifest",
+  "mission": "Feed Matrix Reprogrammed with source-first public records, not unsupported claims. Each lane tells the machine where to look, what record type matters, what control layer it touches, and what evidence grade it can support.",
+  "boundary": "A feed route is not proof by itself. The machine must keep records, allegations, hypotheses, and unsupported claims separate.",
+  "evidence_ladder": [
+    "proven / convicted",
+    "charged / sued",
+    "documented association",
+    "public-record conflict",
+    "credible allegation",
+    "hypothesis",
+    "unsupported claim"
+  ],
+  "intake_lanes": [
+    {
+      "id": "federal-register-policy",
+      "name": "Federal Register policy and rulemaking feed",
+      "control_layers": ["policy", "emergency_power", "identity_access", "security"],
+      "source_type": "official government API",
+      "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
+      "machine_use": "Track proposed rules, final rules, agency notices, emergency powers, identity systems, financial rules, security policy, health policy and disclosure notices.",
+      "record_tests": ["agency", "publication_date", "document_number", "type", "citation", "official_pdf_url"],
+      "watch_queries": ["digital identity", "biometric", "emergency", "surveillance", "financial institution", "gold", "sanctions", "public health", "cybersecurity"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "sec-edgar-filings",
+      "name": "SEC EDGAR filings and company facts",
+      "control_layers": ["money", "companies", "ownership", "risk_disclosure", "infrastructure"],
+      "source_type": "official government API",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "machine_use": "Track company filings, ownership disclosures, risk factors, contracts, subsidiaries, executive changes, material events, and XBRL facts.",
+      "record_tests": ["CIK", "accession_number", "form", "filing_date", "company_name", "ticker", "item_type"],
+      "watch_queries": ["AI infrastructure", "data center", "government contract", "cybersecurity incident", "material agreement", "related party", "beneficial ownership"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "courtlistener-court-records",
+      "name": "CourtListener / Free Law legal records",
+      "control_layers": ["courts", "litigation", "disclosure", "conflicts", "people"],
+      "source_type": "legal records API / bulk data route",
+      "source_url": "https://www.courtlistener.com/help/api/",
+      "machine_use": "Track lawsuits, opinions, dockets, legal parties, judicial records, public conflicts and follow-up record requests.",
+      "record_tests": ["court", "docket_number", "case_name", "date_filed", "party", "document_url", "opinion_id"],
+      "watch_queries": ["Epstein", "sealed", "sanctions", "racketeering", "fraud", "conflict of interest", "public records", "FOIA"],
+      "evidence_grade_supported": "charged / sued"
+    },
+    {
+      "id": "usaspending-contracts",
+      "name": "USAspending federal awards and contracts",
+      "control_layers": ["money", "contractors", "public_private", "security", "health", "technology"],
+      "source_type": "official government spending API",
+      "source_url": "https://api.usaspending.gov/docs/",
+      "machine_use": "Track contracts, grants, recipients, award amounts, agencies, subcontracting routes, emergency spending and public-private control routes.",
+      "record_tests": ["award_id", "recipient", "agency", "amount", "award_type", "period_of_performance", "place_of_performance"],
+      "watch_queries": ["biometric", "digital identity", "surveillance", "AI", "cloud", "vaccine", "migration", "emergency", "border", "cyber"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "regulations-dockets",
+      "name": "Regulations.gov dockets and comments",
+      "control_layers": ["policy", "lobbying", "public_comments", "agency_capture"],
+      "source_type": "official rulemaking docket route",
+      "source_url": "https://open.gsa.gov/api/regulationsgov/",
+      "machine_use": "Track comments, supporting documents, agency dockets, influence campaigns and public-private policy pressure.",
+      "record_tests": ["docket_id", "agency", "comment_id", "document_type", "posted_date", "submitter"],
+      "watch_queries": ["identity", "payment", "health data", "surveillance", "AI", "bank", "climate", "emergency"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "fec-political-money",
+      "name": "FEC campaign finance data",
+      "control_layers": ["political_money", "influence", "donors", "committees"],
+      "source_type": "official government API",
+      "source_url": "https://api.open.fec.gov/developers/",
+      "machine_use": "Track donors, committees, independent expenditures, candidate funding routes and political money patterns.",
+      "record_tests": ["committee_id", "candidate_id", "contributor_name", "amount", "date", "expenditure_type"],
+      "watch_queries": ["technology", "defense", "bank", "pharma", "AI", "surveillance", "crypto", "foundation"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "lobbying-disclosure",
+      "name": "US Senate lobbying disclosure data",
+      "control_layers": ["lobbying", "policy", "corporate_influence", "public_private"],
+      "source_type": "official disclosure route",
+      "source_url": "https://lda.senate.gov/system/public/",
+      "machine_use": "Track lobbying clients, registrants, policy issues, spending totals and policy pressure routes.",
+      "record_tests": ["client", "registrant", "issue_code", "amount", "filing_period", "lobbyists"],
+      "watch_queries": ["digital identity", "AI", "banking", "public health", "defense", "migration", "data privacy"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "ofac-sanctions",
+      "name": "OFAC sanctions list data",
+      "control_layers": ["sanctions", "money", "entities", "security"],
+      "source_type": "official sanctions data",
+      "source_url": "https://ofac.treasury.gov/sanctions-list-service",
+      "machine_use": "Track sanctioned entities, aliases, programs, jurisdictions, identifiers and money-control routes.",
+      "record_tests": ["name", "alias", "program", "identifier", "address", "list_date"],
+      "watch_queries": ["bank", "oligarch", "cartel", "crypto", "shipping", "arms", "intelligence"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "eu-tenders-contracts",
+      "name": "EU TED public procurement notices",
+      "control_layers": ["contracts", "public_private", "europe", "infrastructure", "security"],
+      "source_type": "official EU procurement route",
+      "source_url": "https://ted.europa.eu/en/",
+      "machine_use": "Track EU tenders, awards, contractors, public infrastructure, health procurement, border systems, digital ID and surveillance contracts.",
+      "record_tests": ["buyer", "supplier", "contract_value", "notice_type", "publication_date", "CPV", "country"],
+      "watch_queries": ["biometric", "border", "surveillance", "digital identity", "cloud", "AI", "security", "health"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "uk-companies-house",
+      "name": "UK Companies House company filings",
+      "control_layers": ["companies", "directors", "ownership", "filings", "networks"],
+      "source_type": "official company registry route",
+      "source_url": "https://developer.company-information.service.gov.uk/",
+      "machine_use": "Track companies, directors, persons with significant control, filings, incorporations, dissolutions and network routes.",
+      "record_tests": ["company_number", "company_name", "officer", "PSC", "filing_date", "status"],
+      "watch_queries": ["foundation", "security", "media", "consulting", "technology", "offshore", "intelligence"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "world-bank-projects",
+      "name": "World Bank projects and procurement",
+      "control_layers": ["development_finance", "NGOs", "infrastructure", "policy", "global_money"],
+      "source_type": "international public data route",
+      "source_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview",
+      "machine_use": "Track development finance, projects, procurement, policy programs, NGOs, contractors and institutional money routes.",
+      "record_tests": ["project_id", "country", "sector", "commitment_amount", "borrower", "implementing_agency"],
+      "watch_queries": ["digital ID", "health", "climate", "migration", "governance", "surveillance", "payment systems"],
+      "evidence_grade_supported": "documented association"
+    },
+    {
+      "id": "news-signal-not-evidence",
+      "name": "News signal intake - not evidence by itself",
+      "control_layers": ["narrative", "early_warning", "media"],
+      "source_type": "signal only",
+      "source_url": "https://www.gdeltproject.org/",
+      "machine_use": "Detect patterns, headlines and narrative shifts. This lane can trigger record searches but cannot prove claims by itself.",
+      "record_tests": ["source", "date", "headline", "event_theme", "linked_primary_record"],
+      "watch_queries": ["redaction", "sealed", "contract", "emergency", "digital ID", "sanctions", "gold", "central bank", "Epstein"],
+      "evidence_grade_supported": "signal only"
+    }
+  ],
+  "machine_tasks": [
+    "For every live-intel drop, attach at least one source lane and one missing-record question.",
+    "For every person or institution, attach a filings route, court route, contract route, policy route, or registry route where possible.",
+    "For every claim, assign the evidence ladder before showing it as a finding.",
+    "For every news signal, search for the primary record before upgrading the evidence grade.",
+    "For every clock movement, name the record that would confirm or reduce the risk score."
+  ]
+}

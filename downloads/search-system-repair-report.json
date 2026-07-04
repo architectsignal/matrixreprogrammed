@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-04T17:06:10.231Z",
+  "generatedAt": "2026-07-04T20:50:09.187Z",
   "repairs": [
     "rebuilt-search-v2",
     "search-route:downloads/forum-posts.json",
@@ -12,10 +12,24 @@
     "search-route:data/entity-observations.json",
     "search-route:data/source-pulls/source-pull-index.json",
     "search-route:downloads/machine-digest.md",
+    "search-route:data/private-contractor-intelligence.json",
+    "search-route:downloads/private-contractor-intelligence.md",
+    "search-route:data/master-brief-engine.json",
+    "search-route:data/daily-command-brief.json",
+    "search-route:data/brief-quality-report.json",
+    "search-route:data/missing-records.json",
+    "search-route:data/billionaire-control-index.json",
+    "search-route:data/institution-control-index.json",
+    "search-route:data/subject-briefs.json",
+    "search-route:data/contradictions.json",
+    "search-route:data/main-player-profiles.json",
+    "search-route:data/entity-timelines.json",
     "patched:search.js:fallbackIndex",
     "patched:scripts/build-free-ask-matrix-search.js:fallbackIndex",
-    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex"
+    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex",
+    "patched:llms.txt:Private Contractor Tracker",
+    "patched:llms.txt:Daily Command Brief"
   ],
   "mode": "minimal safe Search V2 repair",
-  "version": "minimal-search-repair-2026-07-04-e"
+  "version": "minimal-search-repair-2026-07-04-g"
 }

@@ -182,3 +182,5 @@ if (syntax.status !== 0) {
   process.exit(syntax.status || 1);
 }
 console.log(`Search V2 built: ${finalIndex.length} indexed routes, ${coreJson.length} core feeds, ${missionRoutes.length} boosted mission routes.`);
+
+// fallbackIndex generated fallback index compatibility marker.

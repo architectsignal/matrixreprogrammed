@@ -215,11 +215,12 @@
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-04T17:05:55.193Z",
+    "updated": "2026-07-04T20:49:55.579Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -533,8 +534,8 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-04T17:06:09.856Z",
-    "newRecordCount": 24,
+    "updated": "2026-07-04T20:50:08.415Z",
+    "newRecordCount": 0,
     "changedRecordCount": 0,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 111,
@@ -544,54 +545,52 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh"
-    },
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Alien Registration Form and Evidence of Registration",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration"
-    },
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Modernizing Security Requirements",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements"
-    },
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33"
-    },
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Regulation for Federal Financial Assistance",
-      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
-    },
-    {
-      "lane": "federal-register-policy",
-      "grade": "documented association",
-      "summary": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
-      "source_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other"
-    },
-    {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    }
-  ]
+  "topChangeSignals": [],
+  "privateContractorIntelligence": {
+    "updated": "2026-07-04T20:50:08.559Z",
+    "profileCount": 7,
+    "route": "private-contractor-tracker.html",
+    "json": "data/private-contractor-intelligence.json",
+    "topProfiles": [
+      {
+        "name": "Blackwater / Xe / Academi / Constellis lineage",
+        "score": 42,
+        "level": "active contractor watch"
+      },
+      {
+        "name": "DynCorp / Amentum lineage",
+        "score": 32,
+        "level": "active contractor watch"
+      },
+      {
+        "name": "CACI International",
+        "score": 28,
+        "level": "seed contractor profile"
+      },
+      {
+        "name": "Booz Allen Hamilton",
+        "score": 28,
+        "level": "seed contractor profile"
+      },
+      {
+        "name": "Palantir government platforms",
+        "score": 34,
+        "level": "active contractor watch"
+      }
+    ],
+    "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
+  },
+  "masterBriefEngine": {
+    "updated": "2026-07-04T20:50:08.600Z",
+    "route": "daily-command-brief.html",
+    "briefQualityRoute": "brief-quality-report.html",
+    "missingRecordsRoute": "daily-missing-records.html",
+    "billionaireTrackerRoute": "billionaire-control-tracker.html",
+    "institutionTrackerRoute": "institution-control-tracker.html",
+    "subjectBriefsRoute": "subject-briefs.html",
+    "contradictionWatchRoute": "contradiction-watch.html",
+    "mainPlayersRoute": "main-player-profiles.html",
+    "entityTimelinesRoute": "entity-timelines.html",
+    "boundary": "Master brief engine adds readable command intelligence without replacing source review."
+  }
 }

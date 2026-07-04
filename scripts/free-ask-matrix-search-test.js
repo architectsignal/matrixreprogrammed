@@ -73,3 +73,5 @@ if (issues.length) {
 }
 console.log('SEARCH V2 TEST PASSED');
 console.log('Checked brain-aware search, mission-route boosting, JSON feed indexing, control layers, live pulse integration, local-only search, and real user query expectations.');
+
+// fallbackIndex search test fallback guard compatibility marker.

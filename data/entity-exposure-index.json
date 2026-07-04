@@ -1,0 +1,4046 @@
+{
+  "updated": "2026-07-04T20:50:08.504Z",
+  "title": "Entity Exposure Index",
+  "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
+  "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
+  "profiles": [
+    {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "exposure_score": 368,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "25-365",
+          "score": 20,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Trump v. Barbara Revisions: 7/01/26",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Trump v. Barbara",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Supreme Court of the United States across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Supreme Court of the United States."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Supreme Court of the United States deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "exposure_score": 358,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Supreme Court of the United States",
+          "score": 20,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Trump v. Barbara Revisions: 7/01/26",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Trump v. Barbara",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 25-365 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 25-365."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "25-365 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "exposure_score": 269,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People's Republic of Bangladesh",
+          "score": 27,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Republic of Rwanda",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Chattogram Water Supply and Sewerage Authority",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Kingdom of Morocco",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Ministry of Health and Family Welfare",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Republic of India",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Finance Division, Ministry of Finance",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch [object Object] across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving [object Object]."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "[object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Matter of Pagliughi",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2024-07773",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Appellate Division of the Supreme Court of the State of New York."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "connecticut-appellate-court",
+      "name": "Connecticut Appellate Court",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Khan v. Jewish Women International",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "AC48383",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Connecticut Appellate Court across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Connecticut Appellate Court."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Connecticut Appellate Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "court-of-appeals-of-north-carolina",
+      "name": "Court of Appeals of North Carolina",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Biddle v. Biddle",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "25-581",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Court of Appeals of North Carolina across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Court of Appeals of North Carolina."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "district-court-district-of-columbia",
+      "name": "District Court, District of Columbia",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Accountability Now USA v. Griess",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Civil Action No. 2026-1385",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch District Court, District of Columbia across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving District Court, District of Columbia."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "District Court, District of Columbia deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "exposure_score": 184,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Centers for Medicare & Medicaid Services",
+          "score": 18,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Health and Human Services Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Health and Human Services Department."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "2024-07773",
+      "name": "2024-07773",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Matter of Pagliughi",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 2024-07773 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 2024-07773."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "25-581",
+      "name": "25-581",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Biddle v. Biddle",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Court of Appeals of North Carolina",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 25-581 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 25-581."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "ac48383",
+      "name": "AC48383",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Khan v. Jewish Women International",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Connecticut Appellate Court",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch AC48383 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving AC48383."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "AC48383 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "accountability-now-usa-v-griess",
+      "name": "Accountability Now USA v. Griess",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "District Court, District of Columbia",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Civil Action No. 2026-1385",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Accountability Now USA v. Griess across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Accountability Now USA v. Griess."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Accountability Now USA v. Griess deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "biddle-v-biddle",
+      "name": "Biddle v. Biddle",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Court of Appeals of North Carolina",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "25-581",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Biddle v. Biddle across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Biddle v. Biddle."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "civil-action-no-2026-1385",
+      "name": "Civil Action No. 2026-1385",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Accountability Now USA v. Griess",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "District Court, District of Columbia",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Civil Action No. 2026-1385 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Civil Action No. 2026-1385."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Civil Action No. 2026-1385 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "khan-v-jewish-women-international",
+      "name": "Khan v. Jewish Women International",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Connecticut Appellate Court",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "AC48383",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Khan v. Jewish Women International across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Khan v. Jewish Women International."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Khan v. Jewish Women International deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "matter-of-pagliughi",
+      "name": "Matter of Pagliughi",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2024-07773",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Matter of Pagliughi across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Matter of Pagliughi."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "trump-v-barbara",
+      "name": "Trump v. Barbara",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Supreme Court of the United States",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "25-365",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Trump v. Barbara across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Trump v. Barbara."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Trump v. Barbara deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "trump-v-barbara-revisions-7-01-26",
+      "name": "Trump v. Barbara Revisions: 7/01/26",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Supreme Court of the United States",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "25-365",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Trump v. Barbara Revisions: 7/01/26 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Trump v. Barbara Revisions: 7/01/26."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Trump v. Barbara Revisions: 7/01/26 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "defense-department",
+      "name": "Defense Department",
+      "exposure_score": 154,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 18,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Defense Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Defense Department."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
+      "exposure_score": 154,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Defense Department",
+          "score": 18,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Management and Budget Office across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Management and Budget Office."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "exposure_score": 149,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "[object Object]",
+          "score": 27,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Chattogram Water Supply and Sewerage Authority",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Ministry of Health and Family Welfare",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Finance Division, Ministry of Finance",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch People's Republic of Bangladesh across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving People's Republic of Bangladesh."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "People's Republic of Bangladesh deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "exposure_score": 100,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch National Aeronautics and Space Administration across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving National Aeronautics and Space Administration."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "agency-for-international-development",
+      "name": "Agency for International Development",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Agency for International Development across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Agency for International Development."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Agency for International Development deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "agriculture-department",
+      "name": "Agriculture Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Agriculture Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Agriculture Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Agriculture Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "commerce-department",
+      "name": "Commerce Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Commerce Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Commerce Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "energy-department",
+      "name": "Energy Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Energy Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Energy Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Energy Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "interior-department",
+      "name": "Interior Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Interior Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Interior Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "state-department",
+      "name": "State Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch State Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving State Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "State Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "transportation-department",
+      "name": "Transportation Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Transportation Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Transportation Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "treasury-department",
+      "name": "Treasury Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Veterans Affairs Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Treasury Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Treasury Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Treasury Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "veterans-affairs-department",
+      "name": "Veterans Affairs Department",
+      "exposure_score": 95,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Health and Human Services Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agriculture Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "State Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Agency for International Development",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Energy Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Treasury Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Transportation Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Commerce Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Interior Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Veterans Affairs Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Veterans Affairs Department."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Veterans Affairs Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "exposure_score": 89,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Health and Human Services Department",
+          "score": 18,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Centers for Medicare & Medicaid Services across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Centers for Medicare & Medicaid Services."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Centers for Medicare & Medicaid Services deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "federal-procurement-policy-office",
+      "name": "Federal Procurement Policy Office",
+      "exposure_score": 79,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "Contract, procurement or public-money concentration",
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "Contract, procurement or public-money concentration",
+          "matched_terms": [
+            "procurement"
+          ]
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Federal Procurement Policy Office across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Federal Procurement Policy Office."
+      ],
+      "exposure_level": "high public-record exposure",
+      "public_reading": "Federal Procurement Policy Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "general-services-administration",
+      "name": "General Services Administration",
+      "exposure_score": 60,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch General Services Administration across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving General Services Administration."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "General Services Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "exposure_score": 50,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People's Republic of Bangladesh",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Chattogram Water Supply and Sewerage Authority."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Chattogram Water Supply and Sewerage Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "name": "Finance Division, Ministry of Finance",
+      "exposure_score": 50,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People's Republic of Bangladesh",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Finance Division, Ministry of Finance across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Finance Division, Ministry of Finance."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Finance Division, Ministry of Finance deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "kingdom-of-morocco",
+      "name": "Kingdom of Morocco",
+      "exposure_score": 50,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Kingdom of Morocco across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Kingdom of Morocco."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Kingdom of Morocco deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "exposure_score": 50,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Kingdom of Morocco",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "name": "Ministry of Health and Family Welfare",
+      "exposure_score": 50,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People's Republic of Bangladesh",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Ministry of Health and Family Welfare across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Ministry of Health and Family Welfare."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Ministry of Health and Family Welfare deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Apple Inc. (AAPL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Apple Inc. (AAPL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Apple Inc.",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch AAPL across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving AAPL."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "AAPL deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "alphabet-inc",
+      "name": "Alphabet Inc.",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Alphabet Inc. (GOOGL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Alphabet Inc. (GOOGL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "GOOGL",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Alphabet Inc. across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving Alphabet Inc.."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Alphabet Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "amazon-com-inc",
+      "name": "AMAZON COM INC",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "AMAZON COM INC (AMZN)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "AMAZON COM INC (AMZN)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "AMZN",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch AMAZON COM INC across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving AMAZON COM INC."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "AMAZON COM INC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "amzn",
+      "name": "AMZN",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "AMAZON COM INC (AMZN)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "AMAZON COM INC (AMZN)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "AMAZON COM INC",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch AMZN across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving AMZN."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "AMZN deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Apple Inc. (AAPL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Apple Inc. (AAPL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "AAPL",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Apple Inc. across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving Apple Inc.."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Apple Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "avgo",
+      "name": "AVGO",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Broadcom Inc. (AVGO)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Broadcom Inc. (AVGO)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Broadcom Inc.",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch AVGO across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving AVGO."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "AVGO deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "broadcom-inc",
+      "name": "Broadcom Inc.",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Broadcom Inc. (AVGO)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Broadcom Inc. (AVGO)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "AVGO",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Broadcom Inc. across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving Broadcom Inc.."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Broadcom Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "googl",
+      "name": "GOOGL",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Alphabet Inc. (GOOGL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Alphabet Inc. (GOOGL)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Alphabet Inc.",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch GOOGL across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving GOOGL."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "GOOGL deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "microsoft-corp",
+      "name": "MICROSOFT CORP",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "MICROSOFT CORP (MSFT)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "MICROSOFT CORP (MSFT)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "MSFT",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch MICROSOFT CORP across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving MICROSOFT CORP."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "MICROSOFT CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "msft",
+      "name": "MSFT",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "MICROSOFT CORP (MSFT)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "MICROSOFT CORP (MSFT)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "MICROSOFT CORP",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch MSFT across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving MSFT."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "MSFT deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "nvda",
+      "name": "NVDA",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "NVIDIA CORP (NVDA)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "NVIDIA CORP (NVDA)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "NVIDIA CORP",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch NVDA across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving NVDA."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "NVDA deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "nvidia-corp",
+      "name": "NVIDIA CORP",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "NVIDIA CORP (NVDA)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "NVIDIA CORP (NVDA)",
+          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "sec-edgar-filings",
+          "record_type": "company_registry_snapshot",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "NVDA",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch NVIDIA CORP across sec-edgar-filings.",
+        "Check whether new sec-edgar-filings records repeat this name.",
+        "Watch sec-edgar-filings for follow-up records involving NVIDIA CORP."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "NVIDIA CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Republic of India across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Republic of India."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Republic of India deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "republic-of-rwanda",
+      "name": "Republic of Rwanda",
+      "exposure_score": 45,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Republic of Rwanda across world-bank-projects.",
+        "Check whether new world-bank-projects records repeat this name.",
+        "Watch world-bank-projects for follow-up records involving Republic of Rwanda."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Republic of Rwanda deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "environmental-protection-agency",
+      "name": "Environmental Protection Agency",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Environmental Protection Agency."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Environmental Protection Agency deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Homeland Security Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Homeland Security Department."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Homeland Security Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "nuclear-regulatory-commission",
+      "name": "Nuclear Regulatory Commission",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Nuclear Regulatory Commission across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving Nuclear Regulatory Commission."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "u-s-international-development-finance-corporation",
+      "name": "U.S. International Development Finance Corporation",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving U.S. International Development Finance Corporation."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "U.S. International Development Finance Corporation deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "united-states-agency-for-global-media",
+      "name": "United States Agency for Global Media",
+      "exposure_score": 40,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route"
+      ],
+      "records": [
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "matched_terms": []
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Check whether new federal-register-policy records repeat this name.",
+        "Watch federal-register-policy for follow-up records involving United States Agency for Global Media."
+      ],
+      "exposure_level": "moderate public-record exposure",
+      "public_reading": "United States Agency for Global Media deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    }
+  ]
+}

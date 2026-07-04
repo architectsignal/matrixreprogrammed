@@ -1,39 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-07-04T17:06:09.856Z
+Updated: 2026-07-04T20:50:08.415Z
 
 Current records: 24
-Previous records: 0
-New records: 24
+Previous records: 24
+New records: 0
 Changed records: 0
 Relationship candidates: 111
 
 ## New Records
 
-- documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
-- documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
-- documented association: Modernizing Security Requirements — federal-register-policy — https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements
-- documented association: Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 — federal-register-policy — https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33
-- documented association: Regulation for Federal Financial Assistance — federal-register-policy — https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance
-- documented association: Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program — federal-register-policy — https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other
-- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
-- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
-- charged / sued: Trump v. Barbara Revisions: 7/01/26 — courtlistener-court-records — https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/
-- charged / sued: Trump v. Barbara — courtlistener-court-records — https://www.courtlistener.com/opinion/10882239/trump-v-barbara/
-- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/
-- charged / sued: Accountability Now USA v. Griess — courtlistener-court-records — https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/
-- documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Health, Nutrition and Population Sector Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Amaravati Integrated Urban Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
-- documented association: Second Bangladesh Green and Climate Resilient Development Credit — world-bank-projects — https://search.worldbank.org/api/v2/projects
 
 ## Relationship Candidates
 

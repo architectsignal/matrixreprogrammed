@@ -1,0 +1,732 @@
+{
+  "updated": "2026-07-04T20:50:08.559Z",
+  "title": "Private Contractor Intelligence",
+  "purpose": "Track private military, security, intelligence, logistics, surveillance and government-platform contractors through public records, contracts, legal routes, ownership changes, main players, relationship candidates and missing records.",
+  "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt.",
+  "sourceRoutes": [
+    {
+      "label": "USAspending awards",
+      "url": "https://www.usaspending.gov/search",
+      "use": "federal awards, recipients, agencies and award values"
+    },
+    {
+      "label": "SEC EDGAR filings",
+      "url": "https://www.sec.gov/edgar/search/",
+      "use": "public company filings, risk factors, subsidiaries and material events"
+    },
+    {
+      "label": "SAM.gov",
+      "url": "https://sam.gov/",
+      "use": "contract opportunities, entity registrations and exclusions where available"
+    },
+    {
+      "label": "CourtListener",
+      "url": "https://www.courtlistener.com/",
+      "use": "court records, opinions, dockets and named parties"
+    },
+    {
+      "label": "OFAC sanctions",
+      "url": "https://ofac.treasury.gov/sanctions-list-service",
+      "use": "sanctions list checks and aliases"
+    },
+    {
+      "label": "Justice Department releases",
+      "url": "https://www.justice.gov/news",
+      "use": "official legal and enforcement releases"
+    },
+    {
+      "label": "Inspector General route",
+      "url": "https://www.oversight.gov/",
+      "use": "audit, investigation and oversight reports"
+    },
+    {
+      "label": "Public Record Intake",
+      "url": "public-record-intake.html",
+      "use": "machine source-lane rules and evidence ladder"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "blackwater-constellis-lineage",
+      "name": "Blackwater / Xe / Academi / Constellis lineage",
+      "aliases": [
+        "Blackwater",
+        "Blackwater USA",
+        "Blackwater Worldwide",
+        "Xe Services",
+        "Academi",
+        "Constellis",
+        "Triple Canopy",
+        "Centerra"
+      ],
+      "category": "private security / military contractor lineage",
+      "main_players": [
+        {
+          "name": "Erik Prince",
+          "role": "Blackwater founder / former owner route",
+          "boundary": "Track through public records, books, hearings, filings, contracts and court records only."
+        },
+        {
+          "name": "Constellis",
+          "role": "current corporate lineage route",
+          "boundary": "Track company records, contracts, subsidiaries and ownership changes."
+        },
+        {
+          "name": "Triple Canopy",
+          "role": "related contractor lineage / Constellis family route",
+          "boundary": "Track awards, contracts and corporate lineage."
+        }
+      ],
+      "control_layers": [
+        "war",
+        "security",
+        "contractors",
+        "public-private power",
+        "intelligence-adjacent systems"
+      ],
+      "watch_terms": [
+        "blackwater",
+        "xe services",
+        "academi",
+        "constellis",
+        "triple canopy",
+        "centerra",
+        "erik prince"
+      ],
+      "record_routes_needed": [
+        "USAspending awards",
+        "Court records",
+        "Congressional hearing material",
+        "SEC or corporate records where available",
+        "Sanctions / debarment checks",
+        "News signals verified against primary records"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 42,
+      "contractor_level": "active contractor watch",
+      "missing_records": [
+        "USAspending awards",
+        "Court records",
+        "Congressional hearing material",
+        "SEC or corporate records where available",
+        "Sanctions / debarment checks",
+        "News signals verified against primary records"
+      ],
+      "watch_next": [
+        "Search new awards for Blackwater.",
+        "Check court and oversight routes for Blackwater / Xe / Academi / Constellis lineage.",
+        "Update main-player links for Blackwater / Xe / Academi / Constellis lineage.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "dyncorp-amentum-lineage",
+      "name": "DynCorp / Amentum lineage",
+      "aliases": [
+        "DynCorp",
+        "DynCorp International",
+        "Amentum"
+      ],
+      "category": "defense services / logistics / support contractor",
+      "main_players": [
+        {
+          "name": "DynCorp International",
+          "role": "historic contractor route",
+          "boundary": "Track through contracts, court records, audits and corporate transactions."
+        },
+        {
+          "name": "Amentum",
+          "role": "current corporate route after acquisition lineage",
+          "boundary": "Track contracts, awards and corporate filings."
+        }
+      ],
+      "control_layers": [
+        "war",
+        "logistics",
+        "contractors",
+        "public money"
+      ],
+      "watch_terms": [
+        "dyncorp",
+        "amentum"
+      ],
+      "record_routes_needed": [
+        "USAspending awards",
+        "Court records",
+        "Inspector General reports",
+        "Corporate transaction records"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 32,
+      "contractor_level": "active contractor watch",
+      "missing_records": [
+        "USAspending awards",
+        "Court records",
+        "Inspector General reports",
+        "Corporate transaction records"
+      ],
+      "watch_next": [
+        "Search new awards for DynCorp.",
+        "Check court and oversight routes for DynCorp / Amentum lineage.",
+        "Update main-player links for DynCorp / Amentum lineage.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "caci-intelligence-contractor",
+      "name": "CACI International",
+      "aliases": [
+        "CACI",
+        "CACI International"
+      ],
+      "category": "defense / intelligence / technology contractor",
+      "main_players": [
+        {
+          "name": "CACI International",
+          "role": "contractor entity route",
+          "boundary": "Track contracts, filings, court records and public awards."
+        }
+      ],
+      "control_layers": [
+        "intelligence",
+        "defense technology",
+        "surveillance",
+        "public money"
+      ],
+      "watch_terms": [
+        "caci",
+        "caci international"
+      ],
+      "record_routes_needed": [
+        "SEC filings",
+        "USAspending awards",
+        "Court records",
+        "Contract notices"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 28,
+      "contractor_level": "seed contractor profile",
+      "missing_records": [
+        "SEC filings",
+        "USAspending awards",
+        "Court records",
+        "Contract notices"
+      ],
+      "watch_next": [
+        "Search new awards for CACI.",
+        "Check court and oversight routes for CACI International.",
+        "Update main-player links for CACI International.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "booz-allen-intelligence-contractor",
+      "name": "Booz Allen Hamilton",
+      "aliases": [
+        "Booz Allen",
+        "Booz Allen Hamilton",
+        "BAH"
+      ],
+      "category": "consulting / intelligence / technology contractor",
+      "main_players": [
+        {
+          "name": "Booz Allen Hamilton",
+          "role": "contractor entity route",
+          "boundary": "Track filings, awards, lobbying and public contracts."
+        }
+      ],
+      "control_layers": [
+        "intelligence",
+        "consulting",
+        "AI/data",
+        "public money"
+      ],
+      "watch_terms": [
+        "booz allen",
+        "booz allen hamilton"
+      ],
+      "record_routes_needed": [
+        "SEC filings",
+        "USAspending awards",
+        "Lobbying records",
+        "Court records"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 28,
+      "contractor_level": "seed contractor profile",
+      "missing_records": [
+        "SEC filings",
+        "USAspending awards",
+        "Lobbying records",
+        "Court records"
+      ],
+      "watch_next": [
+        "Search new awards for Booz Allen.",
+        "Check court and oversight routes for Booz Allen Hamilton.",
+        "Update main-player links for Booz Allen Hamilton.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "palantir-government-platforms",
+      "name": "Palantir government platforms",
+      "aliases": [
+        "Palantir",
+        "Palantir Technologies"
+      ],
+      "category": "data / analytics / government platform contractor",
+      "main_players": [
+        {
+          "name": "Palantir Technologies",
+          "role": "platform contractor entity route",
+          "boundary": "Track public contracts, filings, procurement and government deployment records."
+        }
+      ],
+      "control_layers": [
+        "AI/data",
+        "surveillance",
+        "security",
+        "health data",
+        "border systems"
+      ],
+      "watch_terms": [
+        "palantir",
+        "palantir technologies"
+      ],
+      "record_routes_needed": [
+        "SEC filings",
+        "USAspending awards",
+        "Procurement notices",
+        "Court records",
+        "Policy documents"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 34,
+      "contractor_level": "active contractor watch",
+      "missing_records": [
+        "SEC filings",
+        "USAspending awards",
+        "Procurement notices",
+        "Court records",
+        "Policy documents"
+      ],
+      "watch_next": [
+        "Search new awards for Palantir.",
+        "Check court and oversight routes for Palantir government platforms.",
+        "Update main-player links for Palantir government platforms.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "g4s-allied-security-lineage",
+      "name": "G4S / Allied Universal security lineage",
+      "aliases": [
+        "G4S",
+        "Allied Universal"
+      ],
+      "category": "private security / detention / facilities contractor route",
+      "main_players": [
+        {
+          "name": "G4S / Allied Universal",
+          "role": "security contractor route",
+          "boundary": "Track contracts, facility roles, legal records and procurement routes."
+        }
+      ],
+      "control_layers": [
+        "security",
+        "detention",
+        "facilities",
+        "public-private power"
+      ],
+      "watch_terms": [
+        "g4s",
+        "allied universal"
+      ],
+      "record_routes_needed": [
+        "Procurement records",
+        "Court records",
+        "Regulatory records",
+        "Public contract routes"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 28,
+      "contractor_level": "seed contractor profile",
+      "missing_records": [
+        "Procurement records",
+        "Court records",
+        "Regulatory records",
+        "Public contract routes"
+      ],
+      "watch_next": [
+        "Search new awards for G4S.",
+        "Check court and oversight routes for G4S / Allied Universal security lineage.",
+        "Update main-player links for G4S / Allied Universal security lineage.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    },
+    {
+      "id": "leidos-saic-lineage",
+      "name": "SAIC / Leidos lineage",
+      "aliases": [
+        "SAIC",
+        "Leidos",
+        "Science Applications International Corporation"
+      ],
+      "category": "defense / intelligence / systems contractor lineage",
+      "main_players": [
+        {
+          "name": "SAIC / Leidos",
+          "role": "defense and intelligence systems route",
+          "boundary": "Track contracts, filings, corporate split lineage and public awards."
+        }
+      ],
+      "control_layers": [
+        "defense",
+        "intelligence",
+        "technology",
+        "public money"
+      ],
+      "watch_terms": [
+        "saic",
+        "leidos",
+        "science applications international"
+      ],
+      "record_routes_needed": [
+        "SEC filings",
+        "USAspending awards",
+        "Contract notices",
+        "Court records"
+      ],
+      "updated": "2026-07-04T20:50:08.559Z",
+      "source_routes": [
+        {
+          "label": "USAspending awards",
+          "url": "https://www.usaspending.gov/search",
+          "use": "federal awards, recipients, agencies and award values"
+        },
+        {
+          "label": "SEC EDGAR filings",
+          "url": "https://www.sec.gov/edgar/search/",
+          "use": "public company filings, risk factors, subsidiaries and material events"
+        },
+        {
+          "label": "SAM.gov",
+          "url": "https://sam.gov/",
+          "use": "contract opportunities, entity registrations and exclusions where available"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "use": "court records, opinions, dockets and named parties"
+        },
+        {
+          "label": "OFAC sanctions",
+          "url": "https://ofac.treasury.gov/sanctions-list-service",
+          "use": "sanctions list checks and aliases"
+        },
+        {
+          "label": "Justice Department releases",
+          "url": "https://www.justice.gov/news",
+          "use": "official legal and enforcement releases"
+        },
+        {
+          "label": "Inspector General route",
+          "url": "https://www.oversight.gov/",
+          "use": "audit, investigation and oversight reports"
+        },
+        {
+          "label": "Public Record Intake",
+          "url": "public-record-intake.html",
+          "use": "machine source-lane rules and evidence ladder"
+        }
+      ],
+      "related_records": [],
+      "relationship_candidates": [],
+      "contractor_score": 28,
+      "contractor_level": "seed contractor profile",
+      "missing_records": [
+        "SEC filings",
+        "USAspending awards",
+        "Contract notices",
+        "Court records"
+      ],
+      "watch_next": [
+        "Search new awards for SAIC.",
+        "Check court and oversight routes for SAIC / Leidos lineage.",
+        "Update main-player links for SAIC / Leidos lineage.",
+        "Compare contracts, subsidiaries and ownership changes."
+      ],
+      "boundary": "Contractor score is a public-record triage score. It is not a verdict or accusation."
+    }
+  ]
+}

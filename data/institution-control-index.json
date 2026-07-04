@@ -1,0 +1,706 @@
+{
+  "updated": "2026-07-04T20:50:08.600Z",
+  "title": "Institution Control Tracker",
+  "boundary": "Institution profiles describe public-record routes, partnerships and missing documents.",
+  "profiles": [
+    {
+      "id": "world-economic-forum",
+      "name": "World Economic Forum",
+      "kind": "policy network",
+      "control_layers": [
+        "public-private-contracts",
+        "foundations-ngos",
+        "media-narrative"
+      ],
+      "routes": [
+        "public-private partnerships",
+        "policy convening",
+        "corporate membership"
+      ],
+      "control_layer_scores": {
+        "media-narrative": 20,
+        "foundations-ngos": 20,
+        "public-private-contracts": 20
+      },
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "world-health-organization",
+      "name": "World Health Organization",
+      "kind": "global health institution",
+      "control_layers": [
+        "health",
+        "public-private-contracts",
+        "foundations-ngos"
+      ],
+      "routes": [
+        "health policy",
+        "emergency guidance",
+        "member-state route"
+      ],
+      "control_layer_scores": {
+        "health": 20,
+        "foundations-ngos": 20,
+        "public-private-contracts": 20
+      },
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "world-bank",
+      "name": "World Bank",
+      "kind": "development finance institution",
+      "control_layers": [
+        "money",
+        "foundations-ngos",
+        "public-private-contracts"
+      ],
+      "routes": [
+        "development finance",
+        "projects",
+        "procurement"
+      ],
+      "control_layer_scores": {
+        "money": 20,
+        "foundations-ngos": 20,
+        "public-private-contracts": 20
+      },
+      "control_score": 100,
+      "level": "elite priority",
+      "latest_records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association"
+        },
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        }
+      ],
+      "relationship_candidates": [
+        {
+          "id": "object-object__people-s-republic-of-bangladesh",
+          "from": "People's Republic of Bangladesh",
+          "to": "[object Object]",
+          "count": 3,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2",
+            "world-bank-projects-p180283-4",
+            "world-bank-projects-p180439-6"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 27,
+          "grade": "candidate",
+          "relationship_type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Federal Procurement Policy Office",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__federal-procurement-policy-office",
+          "from": "Federal Procurement Policy Office",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__general-services-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "object-object__republic-of-rwanda",
+          "from": "Republic of Rwanda",
+          "to": "[object Object]",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p505244-1"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
+          "from": "Chattogram Water Supply and Sewerage Authority",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "chattogram-water-supply-and-sewerage-authority__object-object",
+          "from": "Chattogram Water Supply and Sewerage Authority",
+          "to": "[object Object]",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "international-monetary-fund",
+      "name": "International Monetary Fund",
+      "kind": "monetary institution",
+      "control_layers": [
+        "money",
+        "banking",
+        "policy"
+      ],
+      "routes": [
+        "financial surveillance",
+        "conditionality",
+        "country programs"
+      ],
+      "control_layer_scores": {
+        "money": 20,
+        "banking": 20
+      },
+      "control_score": 40,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "federal-reserve",
+      "name": "Federal Reserve",
+      "kind": "central bank",
+      "control_layers": [
+        "money",
+        "banking",
+        "gold-reserves"
+      ],
+      "routes": [
+        "monetary policy",
+        "bank regulation",
+        "reserve system"
+      ],
+      "control_layer_scores": {
+        "money": 20,
+        "banking": 20,
+        "gold-reserves": 20
+      },
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "european-commission",
+      "name": "European Commission",
+      "kind": "supranational policy body",
+      "control_layers": [
+        "identity-access",
+        "migration",
+        "public-private-contracts"
+      ],
+      "routes": [
+        "regulation",
+        "procurement",
+        "digital policy"
+      ],
+      "control_layer_scores": {
+        "identity-access": 20,
+        "migration": 20,
+        "public-private-contracts": 20
+      },
+      "control_score": 88,
+      "level": "elite priority",
+      "latest_records": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association"
+        }
+      ],
+      "relationship_candidates": [
+        {
+          "id": "federal-procurement-policy-office__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Federal Procurement Policy Office",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__federal-procurement-policy-office",
+          "from": "Federal Procurement Policy Office",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__general-services-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "nato",
+      "name": "NATO",
+      "kind": "security alliance",
+      "control_layers": [
+        "security",
+        "war",
+        "public-private-contracts"
+      ],
+      "routes": [
+        "defense policy",
+        "contractor ecosystem",
+        "member-state procurement"
+      ],
+      "control_layer_scores": {
+        "security": 20,
+        "war": 20,
+        "public-private-contracts": 20
+      },
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    },
+    {
+      "id": "united-nations",
+      "name": "United Nations",
+      "kind": "global institution",
+      "control_layers": [
+        "foundations-ngos",
+        "migration",
+        "health",
+        "education"
+      ],
+      "routes": [
+        "agencies",
+        "programs",
+        "global policy"
+      ],
+      "control_layer_scores": {
+        "health": 20,
+        "migration": 20,
+        "education": 20,
+        "foundations-ngos": 20
+      },
+      "control_score": 84,
+      "level": "high priority",
+      "latest_records": [
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association"
+        }
+      ],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch_next": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "boundary": "Institution profile tracks public-record power routes and missing records."
+    }
+  ]
+}

@@ -1,0 +1,2264 @@
+{
+  "updated": "2026-07-04T20:50:08.600Z",
+  "title": "Subject Brief Engine",
+  "boundary": "Subject pages group records by control topic with evidence grades.",
+  "subjects": [
+    {
+      "id": "digital-id-access",
+      "name": "Digital ID and access systems",
+      "control_layers": [
+        "identity-access",
+        "ai-data",
+        "public-private-contracts"
+      ],
+      "latest_records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        }
+      ],
+      "top_entities": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services",
+        "Homeland Security Department",
+        "Nuclear Regulatory Commission",
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "United States Agency for Global Media",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation"
+      ],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "private-contractor-power",
+      "name": "Private contractor power",
+      "control_layers": [
+        "security",
+        "war",
+        "public-private-contracts"
+      ],
+      "latest_records": [
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        }
+      ],
+      "top_entities": [
+        "Homeland Security Department",
+        "Nuclear Regulatory Commission",
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration",
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "United States Agency for Global Media",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration"
+      ],
+      "relationship_candidates": [
+        {
+          "id": "defense-department__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Defense Department",
+          "count": 2,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4",
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 18,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__federal-procurement-policy-office",
+          "from": "Federal Procurement Policy Office",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__general-services-administration",
+          "from": "Defense Department",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__national-aeronautics-and-space-administration",
+          "from": "Defense Department",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agriculture-department__defense-department",
+          "from": "Agriculture Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__state-department",
+          "from": "State Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agency-for-international-development__defense-department",
+          "from": "Agency for International Development",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__energy-department",
+          "from": "Energy Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__treasury-department",
+          "from": "Treasury Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__transportation-department",
+          "from": "Defense Department",
+          "to": "Transportation Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "ai-surveillance-data",
+      "name": "AI, surveillance and data systems",
+      "control_layers": [
+        "ai-data",
+        "security",
+        "identity-access"
+      ],
+      "latest_records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        }
+      ],
+      "top_entities": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services",
+        "Management and Budget Office",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department"
+      ],
+      "relationship_candidates": [
+        {
+          "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Centers for Medicare & Medicaid Services",
+          "count": 2,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-13602-1",
+            "federal-register-policy-2025-19787-6"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 18,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "management-and-budget-office__veterans-affairs-department",
+          "from": "Management and Budget Office",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__veterans-affairs-department",
+          "from": "Health and Human Services Department",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agriculture-department__veterans-affairs-department",
+          "from": "Agriculture Department",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "state-department__veterans-affairs-department",
+          "from": "State Department",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agency-for-international-development__veterans-affairs-department",
+          "from": "Agency for International Development",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "energy-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Energy Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "treasury-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "transportation-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Transportation Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "commerce-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Commerce Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "interior-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Interior Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "banking-payment-rails",
+      "name": "Banking and payment rails",
+      "control_layers": [
+        "money",
+        "banking",
+        "identity-access"
+      ],
+      "latest_records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        }
+      ],
+      "top_entities": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services",
+        "Management and Budget Office",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department"
+      ],
+      "relationship_candidates": [
+        {
+          "id": "object-object__people-s-republic-of-bangladesh",
+          "from": "People's Republic of Bangladesh",
+          "to": "[object Object]",
+          "count": 3,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2",
+            "world-bank-projects-p180283-4",
+            "world-bank-projects-p180439-6"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 27,
+          "grade": "candidate",
+          "relationship_type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "management-and-budget-office__treasury-department",
+          "from": "Management and Budget Office",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__treasury-department",
+          "from": "Health and Human Services Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agriculture-department__treasury-department",
+          "from": "Agriculture Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "state-department__treasury-department",
+          "from": "State Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agency-for-international-development__treasury-department",
+          "from": "Agency for International Development",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "treasury-department__veterans-affairs-department",
+          "from": "Veterans Affairs Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "energy-department__treasury-department",
+          "from": "Energy Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__treasury-department",
+          "from": "Treasury Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "transportation-department__treasury-department",
+          "from": "Treasury Department",
+          "to": "Transportation Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "commerce-department__treasury-department",
+          "from": "Treasury Department",
+          "to": "Commerce Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "interior-department__treasury-department",
+          "from": "Treasury Department",
+          "to": "Interior Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "public-health-data",
+      "name": "Health data and emergency systems",
+      "control_layers": [
+        "health",
+        "identity-access",
+        "public-private-contracts"
+      ],
+      "latest_records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "lane": "world-bank-projects"
+        }
+      ],
+      "top_entities": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services",
+        "Homeland Security Department",
+        "Nuclear Regulatory Commission",
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "United States Agency for Global Media",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation"
+      ],
+      "relationship_candidates": [
+        {
+          "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Centers for Medicare & Medicaid Services",
+          "count": 2,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-13602-1",
+            "federal-register-policy-2025-19787-6"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 18,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Health and Human Services Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agriculture-department__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Agriculture Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__state-department",
+          "from": "Health and Human Services Department",
+          "to": "State Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "agency-for-international-development__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Agency for International Development",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__veterans-affairs-department",
+          "from": "Health and Human Services Department",
+          "to": "Veterans Affairs Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "energy-department__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Energy Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__treasury-department",
+          "from": "Health and Human Services Department",
+          "to": "Treasury Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__transportation-department",
+          "from": "Health and Human Services Department",
+          "to": "Transportation Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "commerce-department__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Commerce Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__interior-department",
+          "from": "Health and Human Services Department",
+          "to": "Interior Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "disclosure-gaps",
+      "name": "Disclosure gaps and missing files",
+      "control_layers": [
+        "disclosure-gaps",
+        "courts-law"
+      ],
+      "latest_records": [
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        }
+      ],
+      "top_entities": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773",
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581",
+        "Trump v. Barbara Revisions: 7/01/26",
+        "Supreme Court of the United States",
+        "25-365",
+        "Trump v. Barbara",
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383",
+        "Accountability Now USA v. Griess",
+        "District Court, District of Columbia",
+        "Civil Action No. 2026-1385"
+      ],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "foundation-ngo-policy",
+      "name": "Foundation and NGO policy influence",
+      "control_layers": [
+        "foundations-ngos",
+        "education",
+        "health"
+      ],
+      "latest_records": [
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Modernizing Security Requirements",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Regulation for Federal Financial Assistance",
+          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
+          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        }
+      ],
+      "top_entities": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services",
+        "Homeland Security Department",
+        "Nuclear Regulatory Commission",
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "United States Agency for Global Media",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation"
+      ],
+      "relationship_candidates": [
+        {
+          "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
+          "from": "Health and Human Services Department",
+          "to": "Centers for Medicare & Medicaid Services",
+          "count": 2,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-13602-1",
+            "federal-register-policy-2025-19787-6"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 18,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Defense Department",
+          "count": 2,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4",
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 18,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Federal Procurement Policy Office",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "general-services-administration__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "management-and-budget-office__national-aeronautics-and-space-administration",
+          "from": "Management and Budget Office",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__federal-procurement-policy-office",
+          "from": "Federal Procurement Policy Office",
+          "to": "Defense Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__general-services-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
+          "from": "Federal Procurement Policy Office",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__general-services-administration",
+          "from": "Defense Department",
+          "to": "General Services Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "defense-department__national-aeronautics-and-space-administration",
+          "from": "Defense Department",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "general-services-administration__national-aeronautics-and-space-administration",
+          "from": "General Services Administration",
+          "to": "National Aeronautics and Space Administration",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-12559-4"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "health-and-human-services-department__management-and-budget-office",
+          "from": "Management and Budget Office",
+          "to": "Health and Human Services Department",
+          "count": 1,
+          "lanes": [
+            "federal-register-policy"
+          ],
+          "record_types": [
+            "rule_or_notice"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "federal-register-policy-2026-10817-5"
+          ],
+          "control_layers": [
+            "policy",
+            "emergency_power",
+            "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    },
+    {
+      "id": "gold-reserve-custody",
+      "name": "Gold, reserve and custody systems",
+      "control_layers": [
+        "gold-reserves",
+        "banking",
+        "money"
+      ],
+      "latest_records": [],
+      "top_entities": [],
+      "relationship_candidates": [],
+      "missing_records": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch_next": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "boundary": "Subject briefs collect signals and records by topic; they do not prove a claim by themselves."
+    }
+  ]
+}

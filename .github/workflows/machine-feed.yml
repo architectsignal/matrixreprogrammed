@@ -12,6 +12,8 @@ on:
       - 'scripts/build-entity-daily-briefs.js'
       - 'scripts/entity-daily-briefs-test.js'
       - 'scripts/build-entity-record-review.js'
+      - 'scripts/build-private-contractor-intelligence.js'
+      - 'scripts/private-contractor-intelligence-test.js'
       - 'scripts/repair-search-system.js'
   schedule:
     - cron: '17 */6 * * *'
@@ -50,10 +52,12 @@ jobs:
           node scripts/build-change-detection-engine.js
           node scripts/build-entity-daily-briefs.js
           node scripts/build-entity-record-review.js
+          node scripts/build-private-contractor-intelligence.js
           node scripts/repair-search-system.js
           node scripts/machine-feed-runner-test.js
           node scripts/change-detection-engine-test.js
           node scripts/entity-daily-briefs-test.js
+          node scripts/private-contractor-intelligence-test.js
 
       - name: Commit machine feed outputs
         run: |
@@ -63,6 +67,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No machine-feed changes to commit."
           else
-            git commit -m "Feed machine with latest public records and entity record review"
+            git commit -m "Feed machine with latest records and private contractor intelligence"
             git push
           fi

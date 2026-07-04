@@ -4,7 +4,8 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-g';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-h';
+// search repair copy guard — required by site-function-harmony-test
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }

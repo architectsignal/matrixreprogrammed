@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-b';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-c';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -15,6 +15,17 @@ function ensureText(file, marker, addition){
   if (text.includes(marker)) return;
   write(file, text + addition);
   repairs.push('patched:' + file + ':' + marker);
+}
+function ensureSearchRoute(url, title, category){
+  if (!exists('search-index.json')) return;
+  let index;
+  try { index = JSON.parse(read('search-index.json')); } catch { index = []; }
+  if (!Array.isArray(index)) index = [];
+  if (!index.some(item => item && item.url === url)) {
+    index.push({ url, title, category, layer: 'information-narrative', description: 'Machine-readable Signal Board export route.', keywords: ['forum','signal board','export','posts','machine data'], priority: 76, sourceType: 'json-feed' });
+    write('search-index.json', JSON.stringify(index, null, 2));
+    repairs.push('search-route:' + url);
+  }
 }
 
 // Showing the strongest entry points — required search repair copy guard.
@@ -29,6 +40,8 @@ if (fs.existsSync(builder)) {
   }
 }
 
+ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data');
+ensureSearchRoute('downloads/forum-posts.md', 'Forum Posts Export Markdown', 'Downloads');
 ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
 ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
 ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');

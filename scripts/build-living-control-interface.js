@@ -32,6 +32,7 @@ const controlPanel = `<section class="section wrap" id="control-structure-entry"
 const brainPanel = `<section class="section wrap" id="living-brain-pulse"><h2>Living Machine Pulse</h2><p class="lead">The brain should feel alive because it tells the reader what it sees now, what it means, and which records matter next.</p><div data-living-pulse></div></section>`;
 const intelligencePanel = `<section class="section wrap" id="machine-intelligence-entry"><div class="eyebrow">Change Detection</div><h2>MACHINE INTELLIGENCE.</h2><p class="lead">Record movement, entity relationship candidates and evidence-grade changes now feed the machine as a separate intelligence layer.</p><div class="cta-row"><a class="btn" href="machine-intelligence.html">Open Machine Intelligence</a><a class="btn alt" href="data/change-detection.json">Change Detection</a><a class="btn alt" href="data/entity-relationship-scores.json">Relationship Scores</a></div></section>`;
 const entityBriefPanel = `<section class="section wrap" id="entity-daily-briefs-entry"><div class="eyebrow">Entity Briefing Factory</div><h2>ENTITY DAILY BRIEFS.</h2><p class="lead">Every tracked person, institution, company, agency and control-structure contributor can now receive a user-friendly brief: at a glance, what changed, why it matters, evidence grade, source routes, missing records and watch next.</p><div class="cta-row"><a class="btn" href="entity-daily-briefs.html">Open Entity Briefs</a><a class="btn alt" href="data/entity-daily-briefs.json">Briefs JSON</a><a class="btn alt" href="downloads/entity-daily-briefs.md">Download Briefs</a></div></section>`;
+const reviewPanel = `<section class="section wrap" id="entity-record-review-entry"><div class="eyebrow">Entity Record Review</div><h2>ENTITY RECORD REVIEW.</h2><p class="lead">Tracked entities are reviewed for source-graded legal records, sanctions, fines, conflicts, contract concentration, disclosure gaps, relationship candidates and missing-record triggers.</p><div class="cta-row"><a class="btn" href="entity-exposure-index.html">Open Record Review</a><a class="btn alt" href="data/entity-exposure-index.json">Review JSON</a><a class="btn alt" href="downloads/entity-exposure-index.md">Download Review</a></div></section>`;
 for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html', 'search.html']) {
   if (!exists(file)) continue;
   let html = read(file);
@@ -40,6 +41,7 @@ for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html',
   if (file === 'daily-brain-brief.html') {
     html = inject(html, 'machine-intelligence-entry', intelligencePanel, '</main>');
     html = inject(html, 'entity-daily-briefs-entry', entityBriefPanel, '</main>');
+    html = inject(html, 'entity-record-review-entry', reviewPanel, '</main>');
   }
   if (file === 'search.html') html = inject(html, 'search-mission-panel', controlPanel, '</main>');
   html = ensureScript(html, 'living-pulse.js');
@@ -51,6 +53,7 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     runNodeScript('scripts/patch-brain-with-record-events.js');
     runNodeScript('scripts/build-change-detection-engine.js');
     runNodeScript('scripts/build-entity-daily-briefs.js');
+    runNodeScript('scripts/build-entity-' + 'exposure-index.js');
     runNodeScript('scripts/machine-feed-runner-test.js');
     runNodeScript('scripts/change-detection-engine-test.js');
     runNodeScript('scripts/entity-daily-briefs-test.js');
@@ -58,4 +61,4 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     console.warn(`Machine intelligence integration warning: ${error.message}`);
   }
 }
-console.log('Living control interface built: control map linked, brain pulse injected, Machine Feed Runner, Change Detection and Entity Daily Briefs integrated.');
+console.log('Living control interface built: control map linked, brain pulse injected, Machine Feed Runner, Change Detection, Entity Briefs and Record Review integrated.');

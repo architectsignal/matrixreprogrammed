@@ -4,6 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-b';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -51,5 +52,5 @@ if (syntax.status !== 0) {
 }
 
 fs.mkdirSync(fp('downloads'), { recursive: true });
-write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'minimal safe Search V2 repair' }, null, 2));
+write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'minimal safe Search V2 repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
 console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 final guard passed.');

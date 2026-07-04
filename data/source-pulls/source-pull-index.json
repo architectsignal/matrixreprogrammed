@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T16:47:44.036Z",
+  "updated": "2026-07-04T17:05:55.193Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "pulls": [
     {
@@ -33,10 +33,10 @@
       "lane": "usaspending-contracts",
       "name": "USAspending public awards signal",
       "ok": false,
-      "status": 0,
+      "status": 422,
       "output": "data/source-pulls/usaspending-watch.json",
       "itemCount": 0,
-      "error": "This operation was aborted"
+      "error": null
     },
     {
       "lane": "ofac-sanctions",

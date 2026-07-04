@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-04T16:48:04.671Z",
+  "generatedAt": "2026-07-04T17:06:10.231Z",
   "repairs": [
     "rebuilt-search-v2",
     "search-route:downloads/forum-posts.json",
@@ -14,9 +14,7 @@
     "search-route:downloads/machine-digest.md",
     "patched:search.js:fallbackIndex",
     "patched:scripts/build-free-ask-matrix-search.js:fallbackIndex",
-    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex",
-    "patched:llms.txt:Public Record Intake",
-    "patched:llms.txt:Machine Digest"
+    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex"
   ],
   "mode": "minimal safe Search V2 repair",
   "version": "minimal-search-repair-2026-07-04-e"

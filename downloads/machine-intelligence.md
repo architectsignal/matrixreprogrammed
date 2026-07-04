@@ -1,14 +1,14 @@
-# Machine Digest
+# Machine Intelligence
 
-Updated: 2026-07-04T17:05:55.193Z
-Runner: machine-feed-runner-2026-07-04-b
+Updated: 2026-07-04T17:06:09.856Z
 
-Feed lanes attempted: 7
-Feeds reached: 4
-Normalized events: 24
-Entity observations: 52
+Current records: 24
+Previous records: 0
+New records: 24
+Changed records: 0
+Relationship candidates: 111
 
-## Latest Events
+## New Records
 
 - documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
 - documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
@@ -35,35 +35,35 @@ Entity observations: 52
 - documented association: Amaravati Integrated Urban Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Second Bangladesh Green and Climate Resilient Development Credit — world-bank-projects — https://search.worldbank.org/api/v2/projects
 
-## Entity Observations
+## Relationship Candidates
 
-- [object Object]: 6 mention(s), lanes: world-bank-projects
-- Health and Human Services Department: 3 mention(s), lanes: federal-register-policy
-- People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
-- Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
-- Management and Budget Office: 2 mention(s), lanes: federal-register-policy
-- Supreme Court of the United States: 2 mention(s), lanes: courtlistener-court-records
-- 25-365: 2 mention(s), lanes: courtlistener-court-records
-- Homeland Security Department: 1 mention(s), lanes: federal-register-policy
-- Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
-- Federal Procurement Policy Office: 1 mention(s), lanes: federal-register-policy
-- Defense Department: 1 mention(s), lanes: federal-register-policy
-- General Services Administration: 1 mention(s), lanes: federal-register-policy
-- National Aeronautics and Space Administration: 1 mention(s), lanes: federal-register-policy
-- Agriculture Department: 1 mention(s), lanes: federal-register-policy
-- State Department: 1 mention(s), lanes: federal-register-policy
-- Agency for International Development: 1 mention(s), lanes: federal-register-policy
-- Veterans Affairs Department: 1 mention(s), lanes: federal-register-policy
-- Energy Department: 1 mention(s), lanes: federal-register-policy
-- Treasury Department: 1 mention(s), lanes: federal-register-policy
-- NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
-- NVDA: 1 mention(s), lanes: sec-edgar-filings
-- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
-- GOOGL: 1 mention(s), lanes: sec-edgar-filings
-- Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
-- AAPL: 1 mention(s), lanes: sec-edgar-filings
-- MICROSOFT CORP: 1 mention(s), lanes: sec-edgar-filings
-- MSFT: 1 mention(s), lanes: sec-edgar-filings
-- AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings
-- AMZN: 1 mention(s), lanes: sec-edgar-filings
-- Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
+- Score 27: People's Republic of Bangladesh ↔ [object Object] — repeated public-record co-occurrence
+- Score 20: Supreme Court of the United States ↔ 25-365 — repeated public-record co-occurrence
+- Score 18: Health and Human Services Department ↔ Centers for Medicare & Medicaid Services — public-record co-occurrence
+- Score 18: Management and Budget Office ↔ Defense Department — public-record co-occurrence
+- Score 10: Matter of Pagliughi ↔ Appellate Division of the Supreme Court of the State of New York — public-record co-occurrence
+- Score 10: Matter of Pagliughi ↔ 2024-07773 — public-record co-occurrence
+- Score 10: Appellate Division of the Supreme Court of the State of New York ↔ 2024-07773 — public-record co-occurrence
+- Score 10: Biddle v. Biddle ↔ Court of Appeals of North Carolina — public-record co-occurrence
+- Score 10: Biddle v. Biddle ↔ 25-581 — public-record co-occurrence
+- Score 10: Court of Appeals of North Carolina ↔ 25-581 — public-record co-occurrence
+- Score 10: Trump v. Barbara Revisions: 7/01/26 ↔ Supreme Court of the United States — public-record co-occurrence
+- Score 10: Trump v. Barbara Revisions: 7/01/26 ↔ 25-365 — public-record co-occurrence
+- Score 10: Trump v. Barbara ↔ Supreme Court of the United States — public-record co-occurrence
+- Score 10: Trump v. Barbara ↔ 25-365 — public-record co-occurrence
+- Score 10: Khan v. Jewish Women International ↔ Connecticut Appellate Court — public-record co-occurrence
+- Score 10: Khan v. Jewish Women International ↔ AC48383 — public-record co-occurrence
+- Score 10: Connecticut Appellate Court ↔ AC48383 — public-record co-occurrence
+- Score 10: Accountability Now USA v. Griess ↔ District Court, District of Columbia — public-record co-occurrence
+- Score 10: Accountability Now USA v. Griess ↔ Civil Action No. 2026-1385 — public-record co-occurrence
+- Score 10: District Court, District of Columbia ↔ Civil Action No. 2026-1385 — public-record co-occurrence
+- Score 9: Management and Budget Office ↔ Federal Procurement Policy Office — weak co-occurrence signal
+- Score 9: Management and Budget Office ↔ General Services Administration — weak co-occurrence signal
+- Score 9: Management and Budget Office ↔ National Aeronautics and Space Administration — weak co-occurrence signal
+- Score 9: Federal Procurement Policy Office ↔ Defense Department — weak co-occurrence signal
+- Score 9: Federal Procurement Policy Office ↔ General Services Administration — weak co-occurrence signal
+- Score 9: Federal Procurement Policy Office ↔ National Aeronautics and Space Administration — weak co-occurrence signal
+- Score 9: Defense Department ↔ General Services Administration — weak co-occurrence signal
+- Score 9: Defense Department ↔ National Aeronautics and Space Administration — weak co-occurrence signal
+- Score 9: General Services Administration ↔ National Aeronautics and Space Administration — weak co-occurrence signal
+- Score 9: Management and Budget Office ↔ Health and Human Services Department — weak co-occurrence signal

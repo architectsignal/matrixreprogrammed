@@ -56,6 +56,7 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     runNodeScript('scripts/build-entity-record-review.js');
     runNodeScript('scripts/build-private-contractor-intelligence.js');
     runNodeScript('scripts/build-master-brief-engine.js');
+    runNodeScript('scripts/repair-nested-brief-links.js');
     runNodeScript('scripts/machine-feed-runner-test.js');
     runNodeScript('scripts/change-detection-engine-test.js');
     runNodeScript('scripts/entity-daily-briefs-test.js');

@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const REPAIR_VERSION = 'search-v2-final-guard-2026-07-04-c';
+const REPAIR_VERSION = 'search-v2-final-guard-2026-07-04-d';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -17,6 +17,34 @@ const SEARCH_V2_REQUIRED = [
   'control-structure.html',
   'evidence-vault.html'
 ];
+
+const primaryNavLinks = [
+  ['start-here.html', 'Start Here'],
+  ['books.html', 'Books'],
+  ['amazon-store-books.html', 'Amazon Store'],
+  ['power-atlas.html', 'Control System'],
+  ['evidence-vault.html', 'Declassified Files'],
+  ['live-intel.html', 'Live Intel'],
+  ['videos.html', 'Rumble Channels'],
+  ['search.html', 'Search']
+];
+const secondaryNavGroups = [
+  ['Sell / Capture', [
+    ['optin-center.html', 'Opt-in Center'], ['offer-center.html', 'Offer Center'], ['sales-ladder.html', 'Reader Paths'], ['book-universe.html', 'Book Universe'], ['launch-room.html', 'Launch Room'], ['share-center.html', 'Share Center']
+  ]],
+  ['Evidence & Trust', [
+    ['trust-center.html', 'Trust Center'], ['evidence-vault-index.html', 'Source Index'], ['evidence-policy.html', 'Evidence Policy'], ['black-file.html', 'Black File'], ['download-center.html', 'Download Center'], ['feed-center.html', 'Feed Center']
+  ]],
+  ['Control Maps', [
+    ['power-atlas.html', 'Power Atlas'], ['network-maps.html', 'Network Maps'], ['network-map-index.html', 'Map Index'], ['authority-hub.html', 'Authority Hub'], ['answer-engine.html', 'AI Answers'], ['schema-index.html', 'Machine Index']
+  ]],
+  ['Freedom Ecosystem', [
+    ['live-intel.html', 'Live Intel Machine'], ['news.html', 'Intel Desk'], ['videos.html', 'Rumble Channels'], ['forum.html', 'Signal Board'], ['timers.html', 'Timers'], ['distribution-center.html', 'Distribution'], ['update-monitor.html', 'Update Monitor']
+  ]]
+];
+function navLink(pair){ return '<a href="' + pair[0] + '">' + pair[1] + '</a>'; }
+const secondaryNav = secondaryNavGroups.map(group => '<div class="nav-group"><strong>' + group[0] + '</strong>' + group[1].map(navLink).join('') + '</div>').join('');
+const canonicalNav = '<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">' + primaryNavLinks.map(navLink).join('') + '</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">' + secondaryNav + '</div></details></nav>';
 
 function searchV2Missing(){
   if (!exists('search.js')) return SEARCH_V2_REQUIRED.slice();
@@ -112,6 +140,9 @@ if (exists('search-index.json')) {
 if (exists('search.html')) {
   let html = read('search.html');
   const before = html;
+  if (html.includes('nav-shell')) html = html.replace(/<nav class="nav nav-shell"[\s\S]*?<\/nav>/, canonicalNav);
+  else if (html.includes('</nav>')) html = html.replace(/<nav class="nav[^"']*"[^>]*>[\s\S]*?<\/nav>/, canonicalNav);
+  else html = html.replace('</header>', canonicalNav + '</header>');
   if (!html.includes('Showing the strongest entry points')) {
     html = html.replace('Loading brain-aware index...', 'Showing the strongest entry points. Type above to filter the full archive.');
     if (!html.includes('Showing the strongest entry points') && html.includes('id="search-results"')) {
@@ -131,7 +162,7 @@ if (exists('search.html')) {
     repairs.push('authority-anchor');
   }
   if (!html.includes('<script src="search.js"></script>') && html.includes('</body>')) { html = html.replace('</body>', '<script src="search.js"></script></body>'); repairs.push('script-link'); }
-  if (html !== before) write('search.html', html);
+  if (html !== before) { repairs.push('search-polished-nav-shell'); write('search.html', html); }
 }
 
 fs.mkdirSync(fp('downloads'), { recursive: true });

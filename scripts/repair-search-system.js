@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-d';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-e';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -46,6 +46,11 @@ ensureSearchRoute('public-record-intake.html', 'Public Record Intake', 'Machine 
 ensureSearchRoute('data/public-record-intake.json', 'Public Record Intake JSON', 'Machine Data', 'Machine-readable source intake manifest.', ['public records','source manifest','API feeds','evidence ladder'], 'disclosure-black-files');
 ensureSearchRoute('data/machine-feed-queue.json', 'Machine Feed Queue JSON', 'Machine Data', 'Daily pull order for source-first intelligence feeds.', ['feed queue','daily pull','machine brain','records'], 'information-narrative');
 ensureSearchRoute('downloads/public-record-intake.md', 'Public Record Intake Download', 'Downloads', 'Downloadable public-record intake manifest.', ['download','public records','source routes'], 'disclosure-black-files');
+ensureSearchRoute('machine-digest.html', 'Machine Digest', 'Machine Feeds', 'Latest public-record pulls, normalized events and entity observations.', ['machine digest','public record pulls','record events','entity observations'], 'information-narrative');
+ensureSearchRoute('data/record-events.json', 'Record Events JSON', 'Machine Data', 'Normalized public-record events produced by the Machine Feed Runner.', ['record events','machine feed','evidence grade','source pulls'], 'information-narrative');
+ensureSearchRoute('data/entity-observations.json', 'Entity Observations JSON', 'Machine Data', 'Entity candidates detected from public-record pulls.', ['entity observations','people','institutions','companies'], 'elite-networks');
+ensureSearchRoute('data/source-pulls/source-pull-index.json', 'Source Pull Index JSON', 'Machine Data', 'Index of public-record feed pulls attempted by the Machine Feed Runner.', ['source pulls','public APIs','feed runner'], 'disclosure-black-files');
+ensureSearchRoute('downloads/machine-digest.md', 'Machine Digest Download', 'Downloads', 'Markdown digest of pulled records and entity observations.', ['machine digest','download','record events'], 'information-narrative');
 ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
 ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
 ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');
@@ -53,6 +58,7 @@ ensureText('robots.txt', 'search-index.json', '\nAllow: /search-index.json\n');
 ensureText('llms.txt', 'Ask Matrix Search', '\n- Ask Matrix Search: /search.html\n');
 ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed-epstein-alive\n');
 ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /public-record-intake.html\n');
+ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
 
 const js = exists('search.js') ? read('search.js') : '';
 const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];

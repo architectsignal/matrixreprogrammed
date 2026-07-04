@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const root = process.cwd();
 function exists(p) { return fs.existsSync(path.join(root, p)); }
 function read(p) { return fs.readFileSync(path.join(root, p), 'utf8'); }
@@ -18,6 +19,15 @@ function ensureScript(html, src) {
   if (html.includes(`src="${src}"`) || html.includes(`src='${src}'`)) return html;
   return html.replace('</body>', `<script src="${src}"></script></body>`);
 }
+function runNodeScript(script) {
+  const full = path.join(root, script);
+  if (!fs.existsSync(full)) return { skipped: true };
+  const result = spawnSync(process.execPath, [full], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${script} failed with ${result.status}`);
+  return { ok: true };
+}
 const controlPanel = `<section class="section wrap" id="control-structure-entry"><div class="eyebrow">Main Mission</div><h2>EXPOSE THE CONTROL STRUCTURE.</h2><p class="lead">Start with the rails ordinary life depends on: money, identity, information, emergency power, infrastructure, elite networks, and missing records.</p><div class="grid"><article class="card redline"><span class="label">MAP</span><h3>Control Structure Map</h3><p>The intuitive seven-layer route through the whole site.</p><a class="btn" href="control-structure.html">Open Control Map</a></article><article class="card redline"><span class="label">BRAIN</span><h3>Daily Brain Brief</h3><p>What the machine concludes today, what changed, and what records matter.</p><a class="btn alt" href="daily-brain-brief.html">Open Daily Brief</a></article><article class="card redline"><span class="label">SOURCE</span><h3>Evidence Vault</h3><p>Check the source route before accepting any claim.</p><a class="btn alt" href="evidence-vault.html">Open Evidence</a></article></div><div data-living-pulse></div></section>`;
 const brainPanel = `<section class="section wrap" id="living-brain-pulse"><h2>Living Machine Pulse</h2><p class="lead">The brain should feel alive because it tells the reader what it sees now, what it means, and which records matter next.</p><div data-living-pulse></div></section>`;
 for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html', 'search.html']) {
@@ -29,4 +39,13 @@ for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html',
   html = ensureScript(html, 'living-pulse.js');
   write(file, html);
 }
-console.log('Living control interface built: control map linked, brain pulse injected, living-pulse.js attached.');
+if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
+  try {
+    runNodeScript('scripts/fetch-public-record-feeds.js');
+    runNodeScript('scripts/patch-brain-with-record-events.js');
+    runNodeScript('scripts/machine-feed-runner-test.js');
+  } catch (error) {
+    console.warn(`Machine Feed Runner integration warning: ${error.message}`);
+  }
+}
+console.log('Living control interface built: control map linked, brain pulse injected, living-pulse.js attached, Machine Feed Runner integrated.');

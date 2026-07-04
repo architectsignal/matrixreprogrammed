@@ -18,6 +18,8 @@ const coreRoutes = [
   ['speculation-review.html','Speculation Review','Review'],
   ['books.html','Books','Books'],
   ['newsletter.html','Newsletter','Free Brief'],
+  ['downloads/forum-posts.json','Forum Posts Export','Machine Data'],
+  ['downloads/forum-posts.md','Forum Posts Markdown','Download'],
   ['data/daily-brain-brief.json','Daily Brain Brief JSON','Machine Data'],
   ['data/control-structure-core.json','Control Structure Core JSON','Machine Data']
 ];

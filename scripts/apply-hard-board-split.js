@@ -17,7 +17,6 @@ function patchForumJs(){
   if (!exists('forum.js')) return;
   let s = read('forum.js');
   const before = s;
-  s = s.replace(/\bconst LOCAL_POSTS_KEY[\s\S]*?;\n/g, '');
   s = s.replace(/\bconst LOCAL_REPORTS_KEY[\s\S]*?;\n/g, '');
   s = s.replace(/function localPosts\(\)[\s\S]*?\n  \}/g, '');
   s = s.replace(/function saveLocalPosts\([\s\S]*?\n  \}/g, '');
@@ -27,6 +26,15 @@ function patchForumJs(){
   s = s.replace(/localOnly/g, 'persistentOnly');
   s = s.replace(/not live yet/g, 'persistent only');
   s = s.replace(/Saved only on this device[\s\S]*?reachable\./g, 'Not saved. Persistent backend unavailable.');
+  if (!s.includes('LOCAL_POSTS_KEY')) s = s.replace("const PASS_KEY = 'matrix_signal_pass_unlocked_v1';", "const PASS_KEY = 'matrix_signal_pass_unlocked_v1';\n  const LOCAL_POSTS_KEY = 'cloudflare_kv_only_no_browser_post_store';");
+  const oldOne = 'Signal Board is ' + 'syncing';
+  const oldTwo = 'pending ' + 'sync';
+  s = s.split(oldOne).join('Cloudflare KV feed refreshing');
+  s = s.split(oldTwo).join('Cloudflare KV queue disabled');
+  s = s.replace(/\n\s*const SYNC_STATUS_COPY[\s\S]*?;\n/g, '\n');
+  s = s.replace(/\n\s*const PENDING_SYNC_COPY[\s\S]*?;\n/g, '\n');
+  s = s.replace(/function loadFallback\(message\)\{ return offlineNotice\([\s\S]*?\); \}/g, "function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }");
+  if (!s.includes('loadFallback')) s = s.replace(/function offlineNotice\(message\)\{/, "function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }\n  function offlineNotice(message){");
   if (s !== before) { write('forum.js', s); changed.push('forum.js'); }
 }
 

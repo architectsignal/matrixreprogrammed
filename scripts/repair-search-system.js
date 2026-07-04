@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-f';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-04-g';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -28,7 +28,6 @@ function ensureSearchRoute(url, title, category, description, keywords, layer){
   }
 }
 
-// Showing the strongest entry points — required search repair copy guard.
 const builder = fp('scripts/build-free-ask-matrix-search.js');
 if (fs.existsSync(builder)) {
   const result = spawnSync(process.execPath, [builder], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
@@ -54,6 +53,28 @@ ensureSearchRoute('downloads/machine-digest.md', 'Machine Digest Download', 'Dow
 ensureSearchRoute('private-contractor-tracker.html', 'Private Contractor Tracker', 'Contractor Intelligence', 'Tracks contractor lineages, main players, contracts, public-money routes, legal records, ownership changes and missing records.', ['private contractors','Blackwater','Constellis','Erik Prince','contracts','USAspending','security contractor','military contractor'], 'security-emergency');
 ensureSearchRoute('data/private-contractor-intelligence.json', 'Private Contractor Intelligence JSON', 'Machine Data', 'Machine-readable contractor profiles, lineages, main players, source routes, records and watch triggers.', ['private contractor intelligence','contractor profiles','main players','contractor score'], 'security-emergency');
 ensureSearchRoute('downloads/private-contractor-intelligence.md', 'Private Contractor Intelligence Download', 'Downloads', 'Downloadable contractor intelligence brief.', ['contractor intelligence','download','Blackwater','Constellis'], 'security-emergency');
+const masterRoutes = [
+  ['daily-command-brief.html','Daily Command Brief','Master Briefs','Top movements, entity changes, contractor signals, elite-network watch seeds, missing records and review prompts.'],
+  ['brief-quality-report.html','Brief Quality Report','Master Briefs','Scores entity briefs by source strength, relationship depth, missing-record pressure and reader clarity.'],
+  ['daily-missing-records.html','Daily Missing Records','Master Briefs','Machine-readable missing-record watch queue.'],
+  ['billionaire-control-tracker.html','Billionaire Control Tracker','Master Briefs','Elite-network watch seeds with control-layer scores, ecosystems, record routes and missing records.'],
+  ['institution-control-tracker.html','Institution Control Tracker','Master Briefs','Institution profiles for public-record power routes and missing documents.'],
+  ['subject-briefs.html','Subject Briefs','Master Briefs','Control-topic briefs for digital ID, contractors, AI/data, banking rails, health systems, disclosure gaps and policy routes.'],
+  ['contradiction-watch.html','Contradiction Watch','Master Briefs','Mixed-grade and cross-lane review prompts requiring counter-sources or primary records.'],
+  ['main-player-profiles.html','Main Player Profiles','Master Briefs','Profiles for main players, founders, executives, company roles and watch routes.'],
+  ['entity-timelines.html','Entity Timelines','Master Briefs','Entity timelines generated from source routes and change records.'],
+  ['data/master-brief-engine.json','Master Brief Engine JSON','Machine Data','Machine-readable output index for the master brief layer.'],
+  ['data/daily-command-brief.json','Daily Command Brief JSON','Machine Data','Machine-readable daily command brief.'],
+  ['data/brief-quality-report.json','Brief Quality JSON','Machine Data','Machine-readable brief quality scores.'],
+  ['data/missing-records.json','Missing Records JSON','Machine Data','Machine-readable missing-record queue.'],
+  ['data/billionaire-control-index.json','Billionaire Control JSON','Machine Data','Machine-readable elite-network watch seed profiles.'],
+  ['data/institution-control-index.json','Institution Control JSON','Machine Data','Machine-readable institution profiles.'],
+  ['data/subject-briefs.json','Subject Briefs JSON','Machine Data','Machine-readable subject briefs.'],
+  ['data/contradictions.json','Contradictions JSON','Machine Data','Machine-readable contradiction watch.'],
+  ['data/main-player-profiles.json','Main Players JSON','Machine Data','Machine-readable main player profiles.'],
+  ['data/entity-timelines.json','Entity Timelines JSON','Machine Data','Machine-readable entity timelines.']
+];
+for (const [url,title,category,description] of masterRoutes) ensureSearchRoute(url, title, category, description, ['master brief','daily command','brief quality','missing records','billionaire tracker','institution tracker','subject brief','timeline'], 'information-narrative');
 ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
 ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
 ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');
@@ -63,6 +84,7 @@ ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed
 ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /public-record-intake.html\n');
 ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
 ensureText('llms.txt', 'Private Contractor Tracker', '\n- Private Contractor Tracker: /private-contractor-tracker.html\n- Private Contractor Intelligence JSON: /data/private-contractor-intelligence.json\n');
+ensureText('llms.txt', 'Daily Command Brief', '\n- Daily Command Brief: /daily-command-brief.html\n- Brief Quality: /brief-quality-report.html\n- Missing Records: /daily-missing-records.html\n- Billionaire Control Tracker: /billionaire-control-tracker.html\n- Institution Control Tracker: /institution-control-tracker.html\n- Subject Briefs: /subject-briefs.html\n- Contradiction Watch: /contradiction-watch.html\n');
 
 const js = exists('search.js') ? read('search.js') : '';
 const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];
@@ -78,7 +100,6 @@ if (syntax.status !== 0) {
   console.error(syntax.stderr || syntax.stdout || 'node --check failed');
   process.exit(syntax.status || 1);
 }
-
 fs.mkdirSync(fp('downloads'), { recursive: true });
 write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'minimal safe Search V2 repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
 console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 final guard passed.');

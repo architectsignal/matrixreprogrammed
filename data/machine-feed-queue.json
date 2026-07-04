@@ -1,0 +1,64 @@
+{
+  "updated": "2026-07-04",
+  "title": "Machine Feed Queue",
+  "purpose": "Operational queue for feeding Matrix Reprogrammed with source-first records. This queue tells the machine what to pull, how to grade it, and where it should flow next.",
+  "status": "active-seed",
+  "rules": [
+    "Primary record beats article summary.",
+    "News is a signal, not proof.",
+    "Every entity link needs a record route.",
+    "Every missing record becomes a watch trigger.",
+    "Every claim receives an evidence grade before publication."
+  ],
+  "daily_pull_order": [
+    {
+      "order": 1,
+      "lane": "policy and emergency power",
+      "feeds": ["federal-register-policy", "regulations-dockets"],
+      "send_to": ["daily-brain-brief", "global-risk-clocks", "control-structure", "search-index"],
+      "questions": ["What rule changed?", "Which agency moved?", "What record is missing?", "Does this affect identity, money, health, security or emergency power?"]
+    },
+    {
+      "order": 2,
+      "lane": "money, companies and contracts",
+      "feeds": ["sec-edgar-filings", "usaspending-contracts", "eu-tenders-contracts", "uk-companies-house"],
+      "send_to": ["power-entities", "evidence-vault", "outcome-briefings", "search-index"],
+      "questions": ["Who received money?", "Who owns or controls the entity?", "What contract or filing proves the link?", "Which contractor repeats across lanes?"]
+    },
+    {
+      "order": 3,
+      "lane": "courts, disclosure and sanctions",
+      "feeds": ["courtlistener-court-records", "ofac-sanctions"],
+      "send_to": ["evidence-vault", "epstein-files", "record-intake-queue", "black-file"],
+      "questions": ["What case or record changed?", "What was sealed or unsealed?", "Which named party appears?", "What is the evidence grade?"]
+    },
+    {
+      "order": 4,
+      "lane": "political money and lobbying",
+      "feeds": ["fec-political-money", "lobbying-disclosure"],
+      "send_to": ["power-atlas", "power-entities", "daily-brain-brief", "evidence-vault"],
+      "questions": ["Who funded whom?", "What issue was lobbied?", "Which company or foundation overlaps with policy movement?", "What date ties the route together?"]
+    },
+    {
+      "order": 5,
+      "lane": "global institutional money",
+      "feeds": ["world-bank-projects"],
+      "send_to": ["control-structure", "power-entities", "global-risk-clocks"],
+      "questions": ["Which project moved?", "Which country, sector and implementing agency?", "Which contractor or NGO appears?", "What policy route is attached?"]
+    },
+    {
+      "order": 6,
+      "lane": "narrative early warning",
+      "feeds": ["news-signal-not-evidence"],
+      "send_to": ["live-intel", "daily-brain-brief"],
+      "questions": ["What is the signal?", "Which primary record must be found?", "Is this repeated across sources?", "Does it remain hypothesis only?"]
+    }
+  ],
+  "next_build_targets": [
+    "Create automated fetchers for feeds that do not require API keys.",
+    "Attach person and institution names to entity files.",
+    "Add relationship scoring from contracts, filings, dockets and registry records.",
+    "Create weekly Machine Digest pages from the queue.",
+    "Keep the final audit passing after each feed expansion."
+  ]
+}

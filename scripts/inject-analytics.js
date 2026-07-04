@@ -3,9 +3,17 @@ const path = require('path');
 
 const root = process.cwd();
 const ignoredDirs = new Set(['.git', 'node_modules']);
-const scriptTag = '<script src="analytics.js"></script>';
 let updated = 0;
 let hardened = 0;
+
+function relativePrefix(file){
+  const rel = path.relative(root, path.dirname(file));
+  if (!rel || rel === '.') return '';
+  const depth = rel.split(path.sep).filter(Boolean).length;
+  return '../'.repeat(depth);
+}
+function analyticsTag(file){ return `<script src="${relativePrefix(file)}analytics.js"></script>`; }
+function hasAnalytics(html){ return /<script[^>]+src=["'][^"']*analytics\.js["'][^>]*><\/script>/i.test(html); }
 
 function walk(dir){
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -17,7 +25,7 @@ function walk(dir){
 }
 
 function ensureFixesCss(html){
-  if (/href=["']fixes\.css["']/i.test(html)) return html;
+  if (/href=["'][^"']*fixes\.css["']/i.test(html)) return html;
   return html.replace(/<link rel=["']stylesheet["'] href=["']styles\.css["']\s*\/?>/i, m => `${m}<link rel="stylesheet" href="fixes.css" />`);
 }
 
@@ -45,8 +53,8 @@ function processHtml(file){
     html = ensureAnchor(html, 'conflict-zones', 'Conflict Zones');
     html = ensureAnchor(html, 'children-trafficking-missing', 'Children / Trafficking / Missing');
   }
-  if (!html.includes(scriptTag) && html.includes('</body>')) {
-    html = html.replace('</body>', `${scriptTag}</body>`);
+  if (!hasAnalytics(html) && html.includes('</body>')) {
+    html = html.replace('</body>', `${analyticsTag(file)}</body>`);
     updated += 1;
   }
   if (html !== before) {

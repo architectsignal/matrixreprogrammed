@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const REPAIR_VERSION = 'search-v2-final-guard-2026-07-04-b';
+const REPAIR_VERSION = 'search-v2-final-guard-2026-07-04-c';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -51,7 +51,7 @@ function writeSafeSearchClient(reason){
     'if(!input||!results)return;',
     'const stop=new Set("the,and,for,with,what,where,when,why,how,does,into,from,that,this,show,about,latest,update,updates,are,all,site,page,pages,tell,me".split(","));',
     'const layerMap={"money-reserves":["gold","reserve","custody","vault","central","bank","money","payment","cbdc","wallet","debt"],"identity-access":["identity","digital","access","wallet","login","agenda","2030","sdg","mandatory"],"information-narrative":["brain","brief","narrative","media","censorship","search","source","document"],"security-emergency":["security","emergency","surveillance","border","intelligence","cyber","war"],"elite-networks":["elite","billionaire","foundation","institution","wef","blackrock","control","power"],"disclosure-black-files":["epstein","disclosure","redaction","withheld","sealed","court","file","records"],"speculation-review":["speculation","claim","frazzledrip","clinton","metadata","counter","source"]};',
-    'function esc(s){return String(s||"").replace(/[&<>\\"\\']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\\\"":"&quot;","\\\'":"&#39;"}[c]||c;});}',
+    'function esc(s){return String(s||"").replace(/[&<>]/g,function(c){return c==="&"?"&amp;":c==="<"?"&lt;":"&gt;";});}',
     'function words(q){return String(q||"").toLowerCase().replace(/[^a-z0-9]+/g," ").split(/\\s+/).filter(function(w){return w.length>1&&!stop.has(w);});}',
     'function keys(i){return Array.isArray(i.keywords)?i.keywords:String(i.keywords||"").split(/[, ]+/).filter(Boolean);}',
     'function hay(i){return [i.title,i.category,i.layer,i.description,keys(i).join(" ")].join(" ").toLowerCase();}',

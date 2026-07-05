@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-04T20:50:09.187Z",
+  "generatedAt": "2026-07-05T04:19:25.605Z",
   "repairs": [
     "rebuilt-search-v2",
     "search-route:downloads/forum-posts.json",
@@ -24,12 +24,8 @@
     "search-route:data/contradictions.json",
     "search-route:data/main-player-profiles.json",
     "search-route:data/entity-timelines.json",
-    "patched:search.js:fallbackIndex",
-    "patched:scripts/build-free-ask-matrix-search.js:fallbackIndex",
-    "patched:scripts/free-ask-matrix-search-test.js:fallbackIndex",
-    "patched:llms.txt:Private Contractor Tracker",
-    "patched:llms.txt:Daily Command Brief"
+    "patched:search.js:fallbackIndex"
   ],
   "mode": "minimal safe Search V2 repair",
-  "version": "minimal-search-repair-2026-07-04-g"
+  "version": "minimal-search-repair-2026-07-04-i"
 }

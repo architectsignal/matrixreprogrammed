@@ -83,6 +83,12 @@ for (const file of files) {
   if (/epstein|speculation|dark|sighting|alive/i.test(name)) html = insertBottom(html, review(file));
   if (html !== before) { fs.writeFileSync(file, html); touched++; }
 }
+try {
+  const repair = path.join(root, 'scripts', 'repair-generated-reader-pages.js');
+  if (fs.existsSync(repair)) require(repair);
+} catch (error) {
+  console.warn('Generated reader page repair skipped: ' + error.message);
+}
 const report = { ok: true, generatedAt: new Date().toISOString(), filesScanned: files.length, filesTouched: touched, mission: 'Preserve depth while improving the reader path.' };
 write('downloads/reader-experience-governor-report.json', JSON.stringify(report, null, 2));
 write('downloads/reader-experience-governor-report.md', `# Reader Experience Governor\n\nGenerated: ${report.generatedAt}\n\nFiles scanned: ${report.filesScanned}\n\nFiles touched: ${report.filesTouched}\n\nMission: ${report.mission}\n`);

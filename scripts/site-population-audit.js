@@ -2,6 +2,7 @@ const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
 const ignore=new Set(['.git','node_modules','_site']);
+const workerRoutes=new Set(['forum-health','deploy-status','search','forum-feed-main','forum-feed-speculation','forum-feed-epstein-alive','submit-forum-post','submit-speculation-post','submit-epstein-alive-post']);
 function walk(dir,out=[]){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(ignore.has(e.name))continue;const f=path.join(dir,e.name);if(e.isDirectory())walk(f,out);else if(e.isFile()&&e.name.endsWith('.html'))out.push(f)}return out}
 function rel(f){return path.relative(root,f).replace(/\\/g,'/')}
 function text(s){return String(s).replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim()}
@@ -10,7 +11,7 @@ for(const f of files){const h=fs.readFileSync(f,'utf8');const r=rel(f);const t=t
  if(words<80&&!/thank|redirect|alias|feed|json/i.test(r))weak.push({file:r,words});
  if(links.length<2&&!/thank|redirect|alias|feed|json/i.test(r))dead.push({file:r,links:links.length});
  if(/Not yet recorded|No current item recorded|undefined|null|null\/|TODO|coming soon/i.test(h))placeholders.push({file:r});
- for(const link of links){const clean=link.split('#')[0].split('?')[0];if(!clean||/^\//.test(clean))continue;const target=path.normalize(path.join(path.dirname(f),clean));if(!fs.existsSync(target))bad.push({file:r,link})}
+ for(const link of links){const clean=link.split('#')[0].split('?')[0];if(!clean||/^\//.test(clean))continue;if(workerRoutes.has(clean))continue;const target=path.normalize(path.join(path.dirname(f),clean));if(!fs.existsSync(target))bad.push({file:r,link})}
 }
 const report={ok:bad.length===0,updated:new Date().toISOString(),htmlFiles:files.length,weak:weak.slice(0,200),dead:dead.slice(0,200),placeholders:placeholders.slice(0,200),badLinks:bad.slice(0,200),counts:{weak:weak.length,dead:dead.length,placeholders:placeholders.length,badLinks:bad.length}};
 fs.mkdirSync(path.join(root,'downloads'),{recursive:true});

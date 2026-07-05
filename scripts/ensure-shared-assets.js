@@ -29,6 +29,7 @@ runOptional('Advanced Site Brain', 'build-advanced-site-brain.js', ['index.html'
 runOptional('Tracker Page Completion', 'build-tracker-page-completion.js', ['data/billionaire-control-index.json']);
 runOptional('Clock Wall', 'build-clock-wall.js', ['data/global-risk-clocks.json']);
 runOptional('Site Relationship Map', 'build-site-relationship-map.js', ['index.html']);
+runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

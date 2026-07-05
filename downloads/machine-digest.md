@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-05T09:22:25.068Z
+Updated: 2026-07-05T14:08:30.142Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 3
-Normalized events: 18
-Entity observations: 36
+Feeds reached: 4
+Normalized events: 24
+Entity observations: 52
 
 ## Latest Events
 
@@ -22,6 +22,12 @@ Entity observations: 36
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
+- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
+- charged / sued: Trump v. Barbara Revisions: 7/01/26 — courtlistener-court-records — https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/
+- charged / sued: Trump v. Barbara — courtlistener-court-records — https://www.courtlistener.com/opinion/10882239/trump-v-barbara/
+- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/
+- charged / sued: Accountability Now USA v. Griess — courtlistener-court-records — https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/
 - documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
@@ -36,6 +42,8 @@ Entity observations: 36
 - People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
 - Management and Budget Office: 2 mention(s), lanes: federal-register-policy
+- Supreme Court of the United States: 2 mention(s), lanes: courtlistener-court-records
+- 25-365: 2 mention(s), lanes: courtlistener-court-records
 - Homeland Security Department: 1 mention(s), lanes: federal-register-policy
 - Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
 - Federal Procurement Policy Office: 1 mention(s), lanes: federal-register-policy
@@ -59,5 +67,3 @@ Entity observations: 36
 - AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
-- AVGO: 1 mention(s), lanes: sec-edgar-filings
-- Republic of Rwanda: 1 mention(s), lanes: world-bank-projects

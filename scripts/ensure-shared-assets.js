@@ -20,6 +20,7 @@ runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intellig
 runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
 runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.json']);
 runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-expansion.json', 'dark-speculation-lab.html']);
+runOptional('Big Three Asset Manager Tracker', 'build-big-three-asset-managers.js', ['index.html']);
 runOptional('Elite Report Writer', 'build-elite-report-writer.js', ['index.html']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 

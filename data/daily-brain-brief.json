@@ -217,15 +217,16 @@
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-05T04:19:12.688Z",
-    "eventCount": 24,
+    "updated": "2026-07-05T09:22:25.068Z",
+    "eventCount": 18,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 52,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 36,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -457,28 +458,6 @@
       ]
     },
     {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -532,14 +511,36 @@
       "record_types": [
         "rule_or_notice"
       ]
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "agriculture-department",
+      "name": "Agriculture Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-05T04:19:24.841Z",
+    "updated": "2026-07-05T09:22:44.141Z",
     "newRecordCount": 0,
-    "changedRecordCount": 6,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 111,
+    "changedRecordCount": 0,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 94,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -548,7 +549,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-05T04:19:24.990Z",
+    "updated": "2026-07-05T09:22:44.277Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -582,7 +583,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-05T04:19:25.028Z",
+    "updated": "2026-07-05T09:22:44.313Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

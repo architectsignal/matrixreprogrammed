@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T04:19:12.688Z",
+  "updated": "2026-07-05T09:22:25.068Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "pulls": [
     {
@@ -23,11 +23,11 @@
     {
       "lane": "courtlistener-court-records",
       "name": "CourtListener court record signal",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/courtlistener-watch.json",
-      "itemCount": 6,
-      "error": null
+      "itemCount": 0,
+      "error": "This operation was aborted"
     },
     {
       "lane": "usaspending-contracts",

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-05T04:19:25.605Z",
+  "generatedAt": "2026-07-05T09:22:44.906Z",
   "repairs": [
     "rebuilt-search-v2",
     "search-route:downloads/forum-posts.json",
@@ -14,6 +14,12 @@
     "search-route:downloads/machine-digest.md",
     "search-route:data/private-contractor-intelligence.json",
     "search-route:downloads/private-contractor-intelligence.md",
+    "search-route:elite-reports.html",
+    "search-route:reports/daily-revelation-report.html",
+    "search-route:reports/missing-records-report.html",
+    "search-route:reports/contradiction-watch-report.html",
+    "search-route:data/elite-reports.json",
+    "search-route:downloads/elite-reports.md",
     "search-route:data/master-brief-engine.json",
     "search-route:data/daily-command-brief.json",
     "search-route:data/brief-quality-report.json",
@@ -27,5 +33,5 @@
     "patched:search.js:fallbackIndex"
   ],
   "mode": "minimal safe Search V2 repair",
-  "version": "minimal-search-repair-2026-07-04-i"
+  "version": "minimal-search-repair-2026-07-05-elite-reports"
 }

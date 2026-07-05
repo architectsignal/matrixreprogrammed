@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T04:19:12.688Z",
+  "updated": "2026-07-05T09:22:25.068Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -26,11 +26,11 @@
     {
       "lane": "courtlistener-court-records",
       "name": "CourtListener court record signal",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/courtlistener-watch.json",
-      "itemCount": 6,
-      "error": null
+      "itemCount": 0,
+      "error": "This operation was aborted"
     },
     {
       "lane": "usaspending-contracts",
@@ -73,7 +73,7 @@
     {
       "id": "federal-register-policy-2026-13602-1",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -108,7 +108,7 @@
     {
       "id": "federal-register-policy-2026-13057-2",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -142,7 +142,7 @@
     {
       "id": "federal-register-policy-2026-12989-3",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -176,7 +176,7 @@
     {
       "id": "federal-register-policy-2026-12559-4",
       "date": "2026-06-23",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -214,7 +214,7 @@
     {
       "id": "federal-register-policy-2026-10817-5",
       "date": "2026-05-29",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -320,7 +320,7 @@
     {
       "id": "federal-register-policy-2025-19787-6",
       "date": "2025-11-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -355,7 +355,7 @@
     {
       "id": "sec-edgar-filings-cik0001045810-1",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -390,7 +390,7 @@
     {
       "id": "sec-edgar-filings-cik0001652044-2",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -425,7 +425,7 @@
     {
       "id": "sec-edgar-filings-cik0000320193-3",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -460,7 +460,7 @@
     {
       "id": "sec-edgar-filings-cik0000789019-4",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -495,7 +495,7 @@
     {
       "id": "sec-edgar-filings-cik0001018724-5",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -530,7 +530,7 @@
     {
       "id": "sec-edgar-filings-cik0001730168-6",
       "date": "2026-07-05",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -563,225 +563,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10883674-1",
-      "date": "2026-07-01",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Matter of Pagliughi",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-07773"
-      ],
-      "institution_names": [
-        "Appellate Division of the Supreme Court of the State of New York"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-      "source_record_id": 10883674,
-      "summary": "Matter of Pagliughi",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883331-2",
-      "date": "2026-07-01",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ],
-      "institution_names": [
-        "Court of Appeals of North Carolina"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-      "source_record_id": 10883331,
-      "summary": "Biddle v. Biddle",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883542-3",
-      "date": "2026-06-30",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Supreme Court of the United States",
-        "25-365"
-      ],
-      "institution_names": [
-        "Supreme Court of the United States"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-      "source_record_id": 10883542,
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10882239-4",
-      "date": "2026-06-30",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Trump v. Barbara",
-        "Supreme Court of the United States",
-        "25-365"
-      ],
-      "institution_names": [
-        "Supreme Court of the United States"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-      "source_record_id": 10882239,
-      "summary": "Trump v. Barbara",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10881616-5",
-      "date": "2026-06-30",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Khan v. Jewish Women International",
-        "Connecticut Appellate Court",
-        "AC48383"
-      ],
-      "institution_names": [
-        "Connecticut Appellate Court"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
-      "source_record_id": 10881616,
-      "summary": "Khan v. Jewish Women International",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883004-6",
-      "date": "2026-06-29",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Accountability Now USA v. Griess",
-        "District Court, District of Columbia",
-        "Civil Action No. 2026-1385"
-      ],
-      "institution_names": [
-        "District Court, District of Columbia"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
-      "source_record_id": 10883004,
-      "summary": "Accountability Now USA v. Griess",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
       "id": "world-bank-projects-p505244-1",
       "date": "2024-12-20T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -813,7 +597,7 @@
     {
       "id": "world-bank-projects-p176429-2",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -846,7 +630,7 @@
     {
       "id": "world-bank-projects-p181587-3",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -881,7 +665,7 @@
     {
       "id": "world-bank-projects-p180283-4",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -916,7 +700,7 @@
     {
       "id": "world-bank-projects-p507508-5",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -948,7 +732,7 @@
     {
       "id": "world-bank-projects-p180439-6",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-05T04:19:12.688Z",
+      "pulled_at": "2026-07-05T09:22:25.068Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",

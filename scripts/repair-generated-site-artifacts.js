@@ -36,6 +36,7 @@ const repairs = [];
 
 runRepairScript('sec-filing-feed', 'scripts/build-sec-filing-feed.js', 'SKIP_SEC_FILING_FEED');
 runRepairScript('probability-snapshot', 'scripts/build-probability-snapshot.js', 'SKIP_PROBABILITY_SNAPSHOT');
+runRepairScript('reader-page-repair', 'scripts/repair-generated-reader-pages.js', 'SKIP_READER_PAGE_REPAIR');
 
 let home = read('index.html');
 if (home) {

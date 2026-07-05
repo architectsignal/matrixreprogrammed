@@ -19,10 +19,11 @@ function runOptional(label, script, requiredFiles = []) {
 runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
 runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
 runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.json']);
-runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-expansion.json', 'dark-speculation-lab.html']);
+runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-lab.html']);
 runOptional('Big Three Asset Manager Tracker', 'build-big-three-asset-managers.js', ['index.html']);
 runOptional('Big Three Search Routes', 'patch-big-three-search-routes.js', ['big-three-asset-managers.html']);
 runOptional('Elite Report Writer', 'build-elite-report-writer.js', ['index.html']);
+runOptional('Advanced Site Brain', 'build-advanced-site-brain.js', ['index.html']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

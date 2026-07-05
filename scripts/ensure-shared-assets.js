@@ -24,6 +24,7 @@ runOptional('Big Three Asset Manager Tracker', 'build-big-three-asset-managers.j
 runOptional('Big Three Search Routes', 'patch-big-three-search-routes.js', ['big-three-asset-managers.html']);
 runOptional('Elite Report Writer', 'build-elite-report-writer.js', ['index.html']);
 runOptional('Advanced Site Brain', 'build-advanced-site-brain.js', ['index.html']);
+runOptional('Clock Wall', 'build-clock-wall.js', ['data/global-risk-clocks.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

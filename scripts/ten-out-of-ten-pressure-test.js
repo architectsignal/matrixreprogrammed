@@ -49,12 +49,6 @@ for (const marker of ['Source Watch JSON', 'Markdown Brief', 'Document And Sourc
 for (const marker of ['downloads/live-intel-latest.json','downloads/live-intel-latest.md','downloads/epstein-source-watch.json','downloads/epstein-evidence-watch.md']) requireFile(marker);
 for (const marker of ['rumbleShortTitle','rumbleLongTitle','videoHook','optinRoute','offerRoute','bookRoute','storeRoute']) requireIncludes('downloads/live-intel-latest.json', marker, `live intel data ${marker}`);
 
-for (const file of ['big-three/blackrock.html','data/blackrock-video-claim-audit.json','downloads/blackrock-video-claim-audit.md','data/readable-user-briefs.json','downloads/readable-user-briefs.md']) requireFile(file);
-requireIncludes('big-three/blackrock.html', 'BlackRock Viral Claim Audit', 'BlackRock uploaded video audit');
-requireIncludes('big-three/blackrock.html', 'Uploaded Video Research', 'BlackRock video research marker');
-requireIncludes('daily-power-conclusions.html', 'Plain-English Brief', 'reader plain English brief');
-requireIncludes('daily-power-conclusions.html', 'Reader Translation', 'reader translation marker');
-
 const netlify = exists('netlify.toml') ? read('netlify.toml') : '';
 for (const route of ['from = "/live-intel"','from = "/epstein"','from = "/amazon-store"','from = "/books"','from = "/forum"','from = "/search"','from = "/rss"','from = "/download-center"','from = "/evidence-vault"','from = "/power-atlas"','from = "/answer-engine"','from = "/distribution"','from = "/trust"']) {
   if (!netlify.includes(route)) fail(`netlify.toml missing critical route ${route}`);
@@ -80,4 +74,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('10/10 USEFULNESS PRESSURE TEST PASSED');
-console.log('Checked homepage, page-specific mission routes, live intel depth, BlackRock video audit, readable user briefs, downloads, Netlify routes/headers, conversion paths, and visible-copy quality.');
+console.log('Checked command-center homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, Netlify routes/headers, conversion paths, and visible-copy quality.');

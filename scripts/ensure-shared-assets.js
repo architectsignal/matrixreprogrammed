@@ -22,6 +22,7 @@ runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.jso
 runOptional('Deep speculation dossier render', 'build-dark-speculation-expansion.js', ['data/dark-speculation-lab.html']);
 runOptional('Big Three Asset Manager Tracker', 'build-big-three-asset-managers.js', ['index.html']);
 runOptional('Big Three Search Routes', 'patch-big-three-search-routes.js', ['big-three-asset-managers.html']);
+runOptional('BlackRock Video Claim Audit', 'patch-blackrock-video-intel.js', ['big-three/blackrock.html']);
 runOptional('Elite Family Tracker', 'build-elite-family-tracker.js', ['index.html']);
 runOptional('Orders Tracker', 'build-secret-societies-tracker.js', ['index.html']);
 runOptional('Elite Report Writer', 'build-elite-report-writer.js', ['index.html']);
@@ -31,6 +32,7 @@ runOptional('Clock Wall', 'build-clock-wall.js', ['data/global-risk-clocks.json'
 runOptional('Site Relationship Map', 'build-site-relationship-map.js', ['index.html']);
 runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index.html']);
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
+runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

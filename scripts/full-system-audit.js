@@ -80,15 +80,11 @@ function needText(file, text, label = text) {
   return ok;
 }
 
-// 1. Full build generates every page and runs the normal pressure chain.
 run('Full build and normal pressure chain', 'npm', ['run', 'build']);
-
-// 2. Repeat the high-value audits after build so late overwrites are caught.
 run('Postbuild site-wide function audit', 'node', ['scripts/site-wide-function-audit.js', '--postbuild']);
 run('Static site QA audit', 'node', ['scripts/audit-site.js']);
 run('Static link audit', 'node', ['tools/link-audit.js']);
 
-// 3. Focused critical subsystem tests. These catch the exact systems that have broken before.
 const focused = [
   ['Ask Matrix free/local search', ['scripts/free-ask-matrix-search-test.js']],
   ['Forum three-board split', ['scripts/forum-board-split-test.js']],
@@ -99,6 +95,7 @@ const focused = [
   ['Cloudflare Worker routes', ['scripts/cloudflare-worker-routes-test.js']],
   ['Intel analytics / daily drops', ['scripts/intel-analytics-pressure-test.js']],
   ['Ten out of ten usefulness', ['scripts/ten-out-of-ten-pressure-test.js']],
+  ['Deep Intel Feed Matrix', ['scripts/deep-intel-feed-matrix-test.js']],
   ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
   ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
   ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
@@ -108,13 +105,11 @@ const focused = [
 ];
 for (const [label, args] of focused) run(label, 'node', args);
 
-// 4. Second build and a smaller final pass catch order-dependent overwrites.
 run('Second full build for overwrite detection', 'npm', ['run', 'build']);
 run('Final site QA audit', 'node', ['scripts/audit-site.js']);
 run('Final Cloudflare route audit', 'node', ['scripts/cloudflare-worker-routes-test.js']);
 run('Final Ask Matrix audit', 'node', ['scripts/free-ask-matrix-search-test.js']);
 
-// 5. Report concrete system markers.
 const htmlCount = countFiles('.html');
 const jsCount = countFiles('.js');
 const jsonCount = countFiles('.json');
@@ -142,6 +137,7 @@ const checks = [
   ['Migration numeric marker', 'news.html', '237.5K'],
   ['Power Atlas', 'power-atlas.html', 'phase-two-atlas-engine'],
   ['Evidence Vault', 'evidence-vault.html', 'phase-three-evidence-engine'],
+  ['Deep Intel Feed', 'deep-intel-feed.html', 'DEEP INTEL FEED MATRIX.'],
   ['Power Structure Map', 'power-structure-map.html', 'POWER MAP.'],
   ['Evidence Graph', 'evidence-graph.html', 'Top evidence-weighted nodes'],
   ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
@@ -160,6 +156,8 @@ for (const file of [
   'downloads/deploy-status.json',
   'data/forum-board-split.json',
   'downloads/seven-day-intel.json',
+  'data/deep-intel-feed-matrix.json',
+  'downloads/deep-intel-feed-matrix.md',
   'data/evidence-weighted-relationship-graph.json',
   'data/daily-power-conclusions.json',
   'downloads/mission-intelligence-10.md',

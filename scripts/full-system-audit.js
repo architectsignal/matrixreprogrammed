@@ -99,6 +99,7 @@ const focused = [
   ['Cloudflare Worker routes', ['scripts/cloudflare-worker-routes-test.js']],
   ['Intel analytics / daily drops', ['scripts/intel-analytics-pressure-test.js']],
   ['Ten out of ten usefulness', ['scripts/ten-out-of-ten-pressure-test.js']],
+  ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
   ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
   ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
   ['Evidence badges', ['scripts/evidence-badge-pressure-test.js']],
@@ -141,6 +142,9 @@ const checks = [
   ['Migration numeric marker', 'news.html', '237.5K'],
   ['Power Atlas', 'power-atlas.html', 'phase-two-atlas-engine'],
   ['Evidence Vault', 'evidence-vault.html', 'phase-three-evidence-engine'],
+  ['Power Structure Map', 'power-structure-map.html', 'POWER MAP.'],
+  ['Evidence Graph', 'evidence-graph.html', 'Top evidence-weighted nodes'],
+  ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
   ['Download Center', 'download-center.html', 'Dossier Packs'],
   ['Deploy status', 'deploy-status.json', 'hardBoardRoutes'],
   ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.']
@@ -156,6 +160,9 @@ for (const file of [
   'downloads/deploy-status.json',
   'data/forum-board-split.json',
   'downloads/seven-day-intel.json',
+  'data/evidence-weighted-relationship-graph.json',
+  'data/daily-power-conclusions.json',
+  'downloads/mission-intelligence-10.md',
   'downloads/the-black-file-matrix-reprogrammed.pdf'
 ]) needFile(file);
 

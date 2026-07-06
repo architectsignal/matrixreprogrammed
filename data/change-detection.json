@@ -1,13 +1,12 @@
 {
-  "updated": "2026-07-05T19:41:50.234Z",
+  "updated": "2026-07-06T04:38:19.980Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-05T14:08:44.509Z",
-  "currentRecordCount": 18,
-  "previousRecordCount": 24,
-  "newRecords": [],
-  "removedRecords": [
+  "previousUpdated": "2026-07-05T19:41:50.234Z",
+  "currentRecordCount": 24,
+  "previousRecordCount": 18,
+  "newRecords": [
     {
       "key": "courtlistener-court-records-10883674-1",
       "hash": "f95a37eb5eb447bc",
@@ -93,9 +92,276 @@
       ]
     }
   ],
-  "changedRecords": [],
+  "removedRecords": [],
+  "changedRecords": [
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001045810-1",
+        "hash": "6f5963b654b8bbab",
+        "summary": "NVIDIA CORP (NVDA)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "NVIDIA CORP",
+          "NVDA"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001045810-1",
+        "hash": "4a2df26be12cc991",
+        "summary": "NVIDIA CORP (NVDA)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "NVIDIA CORP",
+          "NVDA"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001652044-2",
+        "hash": "06330f3bd5554ea7",
+        "summary": "Alphabet Inc. (GOOGL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "Alphabet Inc.",
+          "GOOGL"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001652044-2",
+        "hash": "6125ae774c32408f",
+        "summary": "Alphabet Inc. (GOOGL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "Alphabet Inc.",
+          "GOOGL"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0000320193-3",
+        "hash": "918c3bd57581989d",
+        "summary": "Apple Inc. (AAPL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "Apple Inc.",
+          "AAPL"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0000320193-3",
+        "hash": "814ac4def8fdf42e",
+        "summary": "Apple Inc. (AAPL)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "Apple Inc.",
+          "AAPL"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0000789019-4",
+        "hash": "0610fd2a30e491c1",
+        "summary": "MICROSOFT CORP (MSFT)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "MICROSOFT CORP",
+          "MSFT"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0000789019-4",
+        "hash": "e67750be34713b0d",
+        "summary": "MICROSOFT CORP (MSFT)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "MICROSOFT CORP",
+          "MSFT"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001018724-5",
+        "hash": "366cc460f3725795",
+        "summary": "AMAZON COM INC (AMZN)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "AMAZON COM INC",
+          "AMZN"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001018724-5",
+        "hash": "4f03670eda69ce10",
+        "summary": "AMAZON COM INC (AMZN)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "AMAZON COM INC",
+          "AMZN"
+        ]
+      }
+    },
+    {
+      "before": {
+        "key": "sec-edgar-filings-cik0001730168-6",
+        "hash": "0ea92e0799c5a9cd",
+        "summary": "Broadcom Inc. (AVGO)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-05",
+        "names": [
+          "Broadcom Inc.",
+          "AVGO"
+        ]
+      },
+      "after": {
+        "key": "sec-edgar-filings-cik0001730168-6",
+        "hash": "d57e59b806bc4efa",
+        "summary": "Broadcom Inc. (AVGO)",
+        "source_lane": "sec-edgar-filings",
+        "evidence_grade": "documented association",
+        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+        "date": "2026-07-06",
+        "names": [
+          "Broadcom Inc.",
+          "AVGO"
+        ]
+      }
+    }
+  ],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
+  "clockTriggers": [
+    {
+      "id": "courtlistener-court-records-10883674-1",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "id": "courtlistener-court-records-10883331-2",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    },
+    {
+      "id": "courtlistener-court-records-10883542-3",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
+    },
+    {
+      "id": "courtlistener-court-records-10882239-4",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Trump v. Barbara",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
+    },
+    {
+      "id": "courtlistener-court-records-10881616-5",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Khan v. Jewish Women International",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/"
+    },
+    {
+      "id": "courtlistener-court-records-10883004-6",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Accountability Now USA v. Griess",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001045810-1",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001652044-2",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-3",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000789019-4",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "MICROSOFT CORP (MSFT)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001018724-5",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "AMAZON COM INC (AMZN)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001730168-6",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Broadcom Inc. (AVGO)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    }
+  ],
   "repeatedEntities": [
     {
       "id": "object-object",
@@ -197,6 +463,44 @@
         "federal-register-policy-2026-10817-5"
       ],
       "last_seen": "2026-05-29"
+    },
+    {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-3",
+        "courtlistener-court-records-10882239-4"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-3",
+        "courtlistener-court-records-10882239-4"
+      ],
+      "last_seen": "2026-06-30"
     }
   ]
 }

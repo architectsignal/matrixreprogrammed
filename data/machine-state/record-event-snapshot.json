@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T19:41:50.234Z",
+  "updated": "2026-07-06T04:38:19.980Z",
   "records": [
     {
       "key": "federal-register-policy-2026-13602-1",
@@ -124,12 +124,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001045810-1",
-      "hash": "6f5963b654b8bbab",
+      "hash": "4a2df26be12cc991",
       "summary": "NVIDIA CORP (NVDA)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "NVIDIA CORP",
         "NVDA"
@@ -137,12 +137,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001652044-2",
-      "hash": "06330f3bd5554ea7",
+      "hash": "6125ae774c32408f",
       "summary": "Alphabet Inc. (GOOGL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "Alphabet Inc.",
         "GOOGL"
@@ -150,12 +150,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000320193-3",
-      "hash": "918c3bd57581989d",
+      "hash": "814ac4def8fdf42e",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "Apple Inc.",
         "AAPL"
@@ -163,12 +163,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000789019-4",
-      "hash": "0610fd2a30e491c1",
+      "hash": "e67750be34713b0d",
       "summary": "MICROSOFT CORP (MSFT)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "MICROSOFT CORP",
         "MSFT"
@@ -176,12 +176,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001018724-5",
-      "hash": "366cc460f3725795",
+      "hash": "4f03670eda69ce10",
       "summary": "AMAZON COM INC (AMZN)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "AMAZON COM INC",
         "AMZN"
@@ -189,15 +189,99 @@
     },
     {
       "key": "sec-edgar-filings-cik0001730168-6",
-      "hash": "0ea92e0799c5a9cd",
+      "hash": "d57e59b806bc4efa",
       "summary": "Broadcom Inc. (AVGO)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-05",
+      "date": "2026-07-06",
       "names": [
         "Broadcom Inc.",
         "AVGO"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883674-1",
+      "hash": "f95a37eb5eb447bc",
+      "summary": "Matter of Pagliughi",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "date": "2026-07-01",
+      "names": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883331-2",
+      "hash": "b39adcd19b344458",
+      "summary": "Biddle v. Biddle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "date": "2026-07-01",
+      "names": [
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883542-3",
+      "hash": "804de5848f56977d",
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+      "date": "2026-06-30",
+      "names": [
+        "Trump v. Barbara Revisions: 7/01/26",
+        "Supreme Court of the United States",
+        "25-365"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10882239-4",
+      "hash": "f14b8750e842ae78",
+      "summary": "Trump v. Barbara",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+      "date": "2026-06-30",
+      "names": [
+        "Trump v. Barbara",
+        "Supreme Court of the United States",
+        "25-365"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10881616-5",
+      "hash": "76d76a3a8318f4e9",
+      "summary": "Khan v. Jewish Women International",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+      "date": "2026-06-30",
+      "names": [
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883004-6",
+      "hash": "f2fe2069019ad13b",
+      "summary": "Accountability Now USA v. Griess",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+      "date": "2026-06-29",
+      "names": [
+        "Accountability Now USA v. Griess",
+        "District Court, District of Columbia",
+        "Civil Action No. 2026-1385"
       ]
     },
     {

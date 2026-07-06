@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T19:41:50.408Z",
+  "updated": "2026-07-06T04:38:20.149Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -1749,8 +1749,62 @@
         "disclosure-gaps",
         "courts-law"
       ],
-      "latest_records": [],
-      "top_entities": [],
+      "latest_records": [
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Trump v. Barbara Revisions: 7/01/26",
+          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Trump v. Barbara",
+          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Khan v. Jewish Women International",
+          "url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Accountability Now USA v. Griess",
+          "url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        }
+      ],
+      "top_entities": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773",
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581",
+        "Trump v. Barbara Revisions: 7/01/26",
+        "Supreme Court of the United States",
+        "25-365",
+        "Trump v. Barbara",
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383",
+        "Accountability Now USA v. Griess",
+        "District Court, District of Columbia",
+        "Civil Action No. 2026-1385"
+      ],
       "relationship_candidates": [],
       "missing_records": [
         "Primary record route",

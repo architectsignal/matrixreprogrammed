@@ -33,6 +33,7 @@ runOptional('Site Relationship Map', 'build-site-relationship-map.js', ['index.h
 runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index.html']);
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
+runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

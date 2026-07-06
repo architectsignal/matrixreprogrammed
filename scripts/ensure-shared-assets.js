@@ -34,6 +34,7 @@ runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
+runOptional('Deep Daily Briefs And Map', 'build-deep-daily-briefs-and-map.js', ['data/daily-power-conclusions.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
@@ -68,5 +69,6 @@ for (const file of files) {
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);
 runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
+runOptional('Deep Daily Briefs And Map Test', 'deep-daily-briefs-and-map-test.js', ['daily-brief-master.html']);
 
 console.log(`Shared asset normalizer complete: ${touched} HTML file(s) patched.`);

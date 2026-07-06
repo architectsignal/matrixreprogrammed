@@ -32,6 +32,7 @@ runOptional('Clock Wall', 'build-clock-wall.js', ['data/global-risk-clocks.json'
 runOptional('Site Relationship Map', 'build-site-relationship-map.js', ['index.html']);
 runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index.html']);
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
+runOptional('Top 52 Power Deck', 'build-top-52-power-deck.js', ['data/evidence-weighted-relationship-graph.json']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
 runOptional('Mission Source Priority Index', 'build-mission-source-priority-index.js', ['data/deep-intel-feed-matrix.json']);
@@ -74,6 +75,7 @@ for (const file of files) {
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);
 runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
+runOptional('Top 52 Power Deck Test', 'top-52-power-deck-test.js', ['top-52-power-deck.html']);
 runOptional('Deep Daily Briefs And Map Test', 'deep-daily-briefs-and-map-test.js', ['daily-brief-master.html']);
 runOptional('Mission Source Priority Index Test', 'mission-source-priority-index-test.js', ['mission-source-priority.html']);
 runOptional('Atlas Lane Dossiers Test', 'atlas-lane-dossiers-test.js', ['data/atlas-lane-dossiers.json']);

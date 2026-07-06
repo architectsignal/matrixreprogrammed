@@ -46,6 +46,7 @@ runOptional('Atlas Lane Populations', 'build-atlas-lane-populations.js', ['data/
 runOptional('Logo Symbolism Dossiers', 'build-logo-symbolism-dossiers.js', ['atlas-lanes/logos.html']);
 runOptional('Atlas Lane Link Repair', 'repair-atlas-lane-population-links.js', ['data/atlas-lane-populations.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
+runOptional('Homepage Power Deck Link Final', 'patch-homepage-power-deck-link.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 

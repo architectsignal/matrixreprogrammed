@@ -450,15 +450,16 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-06T08:02:29.087Z",
-    "eventCount": 24,
+    "updated": "2026-07-06T11:02:04.224Z",
+    "eventCount": 18,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 52,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 36,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -690,28 +691,6 @@
       ]
     },
     {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -765,14 +744,36 @@
       "record_types": [
         "rule_or_notice"
       ]
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "agriculture-department",
+      "name": "Agriculture Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-06T08:02:45.870Z",
+    "updated": "2026-07-06T11:02:25.900Z",
     "newRecordCount": 0,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 111,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 94,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -781,7 +782,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-06T08:02:46.022Z",
+    "updated": "2026-07-06T11:02:26.039Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -815,7 +816,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-06T08:02:46.062Z",
+    "updated": "2026-07-06T11:02:26.074Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

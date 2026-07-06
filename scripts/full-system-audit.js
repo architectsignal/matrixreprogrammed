@@ -99,6 +99,7 @@ const focused = [
   ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
   ['Top 52 Power Deck', ['scripts/top-52-power-deck-test.js']],
   ['Top 52 Phase 3 Visuals', ['scripts/top-52-phase3-visuals-test.js']],
+  ['Top 52 Phase 4 Art Studio', ['scripts/top-52-art-studio-test.js']],
   ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
   ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
   ['Evidence badges', ['scripts/evidence-badge-pressure-test.js']],
@@ -145,6 +146,7 @@ const checks = [
   ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
   ['Top 52 Power Deck', 'top-52-power-deck.html', 'TOP 52 POWER DECK.'],
   ['Top 52 Phase 3 Visuals', 'top-52-power-deck.html', 'Phase 3 Visual System'],
+  ['Top 52 Art Studio', 'top-52-art-studio.html', 'TOP 52 ART STUDIO.'],
   ['Download Center', 'download-center.html', 'Dossier Packs'],
   ['Deploy status', 'deploy-status.json', 'hardBoardRoutes'],
   ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.']
@@ -168,6 +170,8 @@ for (const file of [
   'downloads/top-52-power-deck.md',
   'data/top-52-card-art-manifest.json',
   'downloads/top-52-card-art-manifest.md',
+  'data/top-52-art-studio.json',
+  'downloads/top-52-art-style-bible.md',
   'top-52-phase3.css',
   'downloads/mission-intelligence-10.md',
   'downloads/the-black-file-matrix-reprogrammed.pdf'

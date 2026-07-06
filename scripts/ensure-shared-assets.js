@@ -67,5 +67,6 @@ for (const file of files) {
 
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);
+runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
 
 console.log(`Shared asset normalizer complete: ${touched} HTML file(s) patched.`);

@@ -97,6 +97,7 @@ const focused = [
   ['Ten out of ten usefulness', ['scripts/ten-out-of-ten-pressure-test.js']],
   ['Deep Intel Feed Matrix', ['scripts/deep-intel-feed-matrix-test.js']],
   ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
+  ['Top 52 Power Deck', ['scripts/top-52-power-deck-test.js']],
   ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
   ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
   ['Evidence badges', ['scripts/evidence-badge-pressure-test.js']],
@@ -141,6 +142,7 @@ const checks = [
   ['Power Structure Map', 'power-structure-map.html', 'POWER MAP.'],
   ['Evidence Graph', 'evidence-graph.html', 'Top evidence-weighted nodes'],
   ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
+  ['Top 52 Power Deck', 'top-52-power-deck.html', 'TOP 52 POWER DECK.'],
   ['Download Center', 'download-center.html', 'Dossier Packs'],
   ['Deploy status', 'deploy-status.json', 'hardBoardRoutes'],
   ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.']
@@ -160,6 +162,8 @@ for (const file of [
   'downloads/deep-intel-feed-matrix.md',
   'data/evidence-weighted-relationship-graph.json',
   'data/daily-power-conclusions.json',
+  'data/top-52-power-deck.json',
+  'downloads/top-52-power-deck.md',
   'downloads/mission-intelligence-10.md',
   'downloads/the-black-file-matrix-reprogrammed.pdf'
 ]) needFile(file);

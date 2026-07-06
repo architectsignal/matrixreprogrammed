@@ -37,6 +37,7 @@ runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js',
 runOptional('Mission Source Priority Index', 'build-mission-source-priority-index.js', ['data/deep-intel-feed-matrix.json']);
 runOptional('Deep Daily Briefs And Map', 'build-deep-daily-briefs-and-map.js', ['data/daily-power-conclusions.json']);
 runOptional('Atlas Lane Dossiers', 'build-atlas-lane-dossiers.js', ['power-atlas.html']);
+runOptional('Atlas Lane Populations', 'build-atlas-lane-populations.js', ['data/atlas-lane-dossiers.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
@@ -74,5 +75,6 @@ runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.
 runOptional('Deep Daily Briefs And Map Test', 'deep-daily-briefs-and-map-test.js', ['daily-brief-master.html']);
 runOptional('Mission Source Priority Index Test', 'mission-source-priority-index-test.js', ['mission-source-priority.html']);
 runOptional('Atlas Lane Dossiers Test', 'atlas-lane-dossiers-test.js', ['data/atlas-lane-dossiers.json']);
+runOptional('Atlas Lane Populations Test', 'atlas-lane-populations-test.js', ['data/atlas-lane-populations.json']);
 
 console.log(`Shared asset normalizer complete: ${touched} HTML file(s) patched.`);

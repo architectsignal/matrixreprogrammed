@@ -38,6 +38,7 @@ runOptional('Mission Source Priority Index', 'build-mission-source-priority-inde
 runOptional('Deep Daily Briefs And Map', 'build-deep-daily-briefs-and-map.js', ['data/daily-power-conclusions.json']);
 runOptional('Atlas Lane Dossiers', 'build-atlas-lane-dossiers.js', ['power-atlas.html']);
 runOptional('Atlas Lane Populations', 'build-atlas-lane-populations.js', ['data/atlas-lane-dossiers.json']);
+runOptional('Atlas Lane Link Repair', 'repair-atlas-lane-population-links.js', ['data/atlas-lane-populations.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));

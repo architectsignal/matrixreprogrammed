@@ -98,6 +98,7 @@ const focused = [
   ['Deep Intel Feed Matrix', ['scripts/deep-intel-feed-matrix-test.js']],
   ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
   ['Top 52 Power Deck', ['scripts/top-52-power-deck-test.js']],
+  ['Top 52 Phase 3 Visuals', ['scripts/top-52-phase3-visuals-test.js']],
   ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
   ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
   ['Evidence badges', ['scripts/evidence-badge-pressure-test.js']],
@@ -143,6 +144,7 @@ const checks = [
   ['Evidence Graph', 'evidence-graph.html', 'Top evidence-weighted nodes'],
   ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
   ['Top 52 Power Deck', 'top-52-power-deck.html', 'TOP 52 POWER DECK.'],
+  ['Top 52 Phase 3 Visuals', 'top-52-power-deck.html', 'Phase 3 Visual System'],
   ['Download Center', 'download-center.html', 'Dossier Packs'],
   ['Deploy status', 'deploy-status.json', 'hardBoardRoutes'],
   ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.']
@@ -164,6 +166,9 @@ for (const file of [
   'data/daily-power-conclusions.json',
   'data/top-52-power-deck.json',
   'downloads/top-52-power-deck.md',
+  'data/top-52-card-art-manifest.json',
+  'downloads/top-52-card-art-manifest.md',
+  'top-52-phase3.css',
   'downloads/mission-intelligence-10.md',
   'downloads/the-black-file-matrix-reprogrammed.pdf'
 ]) needFile(file);

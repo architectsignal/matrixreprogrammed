@@ -5,7 +5,7 @@ const fp=p=>path.join(root,p);
 const ex=p=>fs.existsSync(fp(p));
 const rd=p=>fs.readFileSync(fp(p),'utf8');
 const wr=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};
-const js=(p,f)=>{try{return ex(p)?JSON.parse(rd(p)):f)}catch{return f}};
+const js=(p,f)=>{try{return ex(p)?JSON.parse(rd(p)):f}catch{return f}};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const data=js('data/top-52-power-deck.json',{deck:[],suits:[]});
 const deck=Array.isArray(data.deck)?data.deck:[];

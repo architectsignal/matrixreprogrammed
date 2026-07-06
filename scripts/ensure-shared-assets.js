@@ -35,6 +35,7 @@ runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['in
 runOptional('Top 52 Power Deck', 'build-top-52-power-deck.js', ['data/evidence-weighted-relationship-graph.json']);
 runOptional('Top 52 Phase 3 Visuals', 'build-top-52-phase3-visuals.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Phase 4 Art Studio', 'build-top-52-art-studio.js', ['data/top-52-power-deck.json']);
+runOptional('Homepage Power Deck Link', 'patch-homepage-power-deck-link.js', ['index.html']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
 runOptional('Mission Source Priority Index', 'build-mission-source-priority-index.js', ['data/deep-intel-feed-matrix.json']);

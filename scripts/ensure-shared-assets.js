@@ -34,6 +34,7 @@ runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
 runOptional('Top 52 Power Deck', 'build-top-52-power-deck.js', ['data/evidence-weighted-relationship-graph.json']);
 runOptional('Top 52 Phase 3 Visuals', 'build-top-52-phase3-visuals.js', ['data/top-52-power-deck.json']);
+runOptional('Top 52 Phase 4 Art Studio', 'build-top-52-art-studio.js', ['data/top-52-power-deck.json']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
 runOptional('Mission Source Priority Index', 'build-mission-source-priority-index.js', ['data/deep-intel-feed-matrix.json']);
@@ -78,6 +79,7 @@ runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['b
 runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
 runOptional('Top 52 Power Deck Test', 'top-52-power-deck-test.js', ['top-52-power-deck.html']);
 runOptional('Top 52 Phase 3 Visuals Test', 'top-52-phase3-visuals-test.js', ['top-52-power-deck.html']);
+runOptional('Top 52 Phase 4 Art Studio Test', 'top-52-art-studio-test.js', ['top-52-art-studio.html']);
 runOptional('Deep Daily Briefs And Map Test', 'deep-daily-briefs-and-map-test.js', ['daily-brief-master.html']);
 runOptional('Mission Source Priority Index Test', 'mission-source-priority-index-test.js', ['mission-source-priority.html']);
 runOptional('Atlas Lane Dossiers Test', 'atlas-lane-dossiers-test.js', ['data/atlas-lane-dossiers.json']);

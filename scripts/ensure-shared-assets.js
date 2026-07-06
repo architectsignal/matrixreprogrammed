@@ -33,6 +33,7 @@ runOptional('Site Relationship Map', 'build-site-relationship-map.js', ['index.h
 runOptional('Deep Intel Feed Matrix', 'build-deep-intel-feed-matrix.js', ['index.html']);
 runOptional('Mission Intelligence Ten', 'build-mission-intelligence-10.js', ['index.html']);
 runOptional('Top 52 Power Deck', 'build-top-52-power-deck.js', ['data/evidence-weighted-relationship-graph.json']);
+runOptional('Top 52 Influence Profiles', 'patch-top-52-influence-profiles.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Phase 3 Visuals', 'build-top-52-phase3-visuals.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Compatibility Marker', 'patch-top-52-compat-marker.js', ['top-52-power-deck.html']);
 runOptional('Top 52 Phase 4 Art Studio', 'build-top-52-art-studio.js', ['data/top-52-power-deck.json']);

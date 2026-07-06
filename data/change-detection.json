@@ -1,12 +1,66 @@
 {
-  "updated": "2026-07-06T15:54:36.303Z",
+  "updated": "2026-07-06T20:14:18.373Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-06T11:02:25.900Z",
-  "currentRecordCount": 24,
-  "previousRecordCount": 18,
+  "previousUpdated": "2026-07-06T15:54:36.303Z",
+  "currentRecordCount": 18,
+  "previousRecordCount": 24,
   "newRecords": [
+    {
+      "key": "sec-edgar-filings-cik0000320193-2",
+      "hash": "814ac4def8fdf42e",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-06",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0001652044-3",
+      "hash": "6125ae774c32408f",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-06",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ]
+    }
+  ],
+  "removedRecords": [
+    {
+      "key": "sec-edgar-filings-cik0001652044-2",
+      "hash": "6125ae774c32408f",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-06",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-3",
+      "hash": "814ac4def8fdf42e",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-06",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    },
     {
       "key": "courtlistener-court-records-10883674-1",
       "hash": "f95a37eb5eb447bc",
@@ -92,57 +146,24 @@
       ]
     }
   ],
-  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
   "clockTriggers": [
     {
-      "id": "courtlistener-court-records-10883674-1",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+      "id": "sec-edgar-filings-cik0000320193-2",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     },
     {
-      "id": "courtlistener-court-records-10883331-2",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Biddle v. Biddle",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
-    },
-    {
-      "id": "courtlistener-court-records-10914068-3",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Khan v. Jewish Women International",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
-    },
-    {
-      "id": "courtlistener-court-records-10883542-4",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
-    },
-    {
-      "id": "courtlistener-court-records-10882239-5",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Trump v. Barbara",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
-    },
-    {
-      "id": "courtlistener-court-records-10883004-6",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Accountability Now USA v. Griess",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/"
+      "id": "sec-edgar-filings-cik0001652044-3",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     }
   ],
   "repeatedEntities": [
@@ -246,44 +267,6 @@
         "federal-register-policy-2026-10817-5"
       ],
       "last_seen": "2026-05-29"
-    },
-    {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-4",
-        "courtlistener-court-records-10882239-5"
-      ],
-      "last_seen": "2026-06-30"
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-4",
-        "courtlistener-court-records-10882239-5"
-      ],
-      "last_seen": "2026-06-30"
     }
   ]
 }

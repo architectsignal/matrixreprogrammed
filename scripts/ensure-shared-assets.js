@@ -83,6 +83,7 @@ runOptional('Site Population Audit', 'site-population-audit.js', ['index.html'])
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);
 runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
 runOptional('Top 52 Power Deck Test', 'top-52-power-deck-test.js', ['top-52-power-deck.html']);
+runOptional('Top 52 People Only Test', 'top-52-people-only-test.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Phase 3 Visuals Test', 'top-52-phase3-visuals-test.js', ['top-52-power-deck.html']);
 runOptional('Top 52 Phase 4 Art Studio Test', 'top-52-art-studio-test.js', ['top-52-art-studio.html']);
 runOptional('Top 52 Batch 1 Art Queue Test', 'top-52-batch1-art-queue-test.js', ['top-52-batch1-art-queue.html']);

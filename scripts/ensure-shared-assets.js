@@ -38,6 +38,7 @@ runOptional('Top 52 Phase 3 Visuals', 'build-top-52-phase3-visuals.js', ['data/t
 runOptional('Top 52 Compatibility Marker', 'patch-top-52-compat-marker.js', ['top-52-power-deck.html']);
 runOptional('Top 52 Phase 4 Art Studio', 'build-top-52-art-studio.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Batch 1 Art Queue', 'build-top-52-batch1-art-queue.js', ['data/top-52-power-deck.json']);
+runOptional('Top 52 Generated Card Art Install', 'install-generated-card-art.js', ['data/top-52-power-deck.json']);
 runOptional('Homepage Power Deck Link', 'patch-homepage-power-deck-link.js', ['index.html']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
 runOptional('Convergence Control Lenses', 'patch-convergence-control-lenses.js', ['daily-power-conclusions.html']);
@@ -88,7 +89,7 @@ runOptional('Top 52 Phase 3 Visuals Test', 'top-52-phase3-visuals-test.js', ['to
 runOptional('Top 52 Phase 4 Art Studio Test', 'top-52-art-studio-test.js', ['top-52-art-studio.html']);
 runOptional('Top 52 Batch 1 Art Queue Test', 'top-52-batch1-art-queue-test.js', ['top-52-batch1-art-queue.html']);
 runOptional('Deep Daily Briefs And Map Test', 'deep-daily-briefs-and-map-test.js', ['daily-brief-master.html']);
-runOptional('Mission Source Priority Index Test', 'mission-source-priority-index-test.js', ['mission-source-priority.html']);
+runOptional('Mission Source Priority Index Test', 'mission-source-priority-test.js', ['mission-source-priority.html']);
 runOptional('Atlas Lane Dossiers Test', 'atlas-lane-dossiers-test.js', ['data/atlas-lane-dossiers.json']);
 runOptional('Atlas Lane Populations Test', 'atlas-lane-populations-test.js', ['data/atlas-lane-populations.json']);
 runOptional('Logo Symbolism Dossiers Test', 'logo-symbolism-dossiers-test.js', ['data/logo-symbolism-dossiers.json']);

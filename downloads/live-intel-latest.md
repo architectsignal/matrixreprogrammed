@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-04T06:34:45.472Z
+Updated: 2026-07-06T08:02:25.608Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -28,12 +28,12 @@ Updated: 2026-07-04T06:34:45.472Z
   - Longform title: Google News / control structure — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-center.html
-- 2026-07-02 — Epstein probe hones in on billionaire kryptonite: non-disclosure agreements - epsteincoverup.us
-  - Source: https://news.google.com/rss/articles/CBMiYEFVX3lxTE84UlNHclBNdTRLLTdIc0p5d0lVUGNRclpQTDdzSkpDS0N5dUlNYTZkUm1mZjEyX21Ucm51NzZWY2FTUUJpMkhTYkpCSW5KcHRHY25WVnBwR2xrdEtVM09VNw?oc=5
+- 2026-07-03 — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
   - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Epstein probe hones in on billionaire kryptonite: non-disclosure agreements - epsteincoverup.us. The record matters, but the evidence class matters more.
-  - Short title: Epstein probe hones in on billionaire kryptonite: non-disclosure agreeme
-  - Longform title: Google News / Epstein timeline and files — Epstein probe hones in on billionaire kryptonite: non-disclosure agreements - epsteincoverup.us
+  - Video hook: New Epstein file lane: DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
+  - Short title: DOJ declines to turn over additional Epstein files, says redactions were
+  - Longform title: Google News / Epstein timeline and files — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News -
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-02 — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
@@ -44,6 +44,22 @@ Updated: 2026-07-04T06:34:45.472Z
   - Longform title: Google News / Epstein timeline and files — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Heral
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-02 — Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post
+  - Source: https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZnJNZ1lrdV9DOUNPMnotdC1LTkxEWnJTMGMwSVNkcmRvamczXzZFaXA4ZTRkQ3d0dVVfcmpGZEdPRjl4cW95TXZSSU40ZW5KNHJ3TVRVVzlXT3RqeEhxYmFmTkw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post. The record matters, but the evidence class matters more.
+  - Short title: Alleged Epstein victim who accused Donald Trump of sexual assault fears
+  - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusal
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Video hook: New Epstein file lane: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS. The record matters, but the evidence class matters more.
+  - Short title: James Comer Says Oversight Will Hold Public Hearings on Epstein - News o
+  - Longform title: Google News / Epstein timeline and files — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOT
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
   - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -52,14 +68,6 @@ Updated: 2026-07-04T06:34:45.472Z
   - Longform title: Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New crime-network lane: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post. Separate indictment, conviction, sanction, reporting, and association.
-  - Short title: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, co
-  - Longform title: Google News / crime state overlap — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Fe
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-crime-dossiers.html
 - 2026-06-30 — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -108,14 +116,6 @@ Updated: 2026-07-04T06:34:45.472Z
   - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-06-30 — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
-  - Source: https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier. The record matters, but the evidence class matters more.
-  - Short title: New Mexico panel releases subpoena for SC records on Jeffrey Epstein inv
-  - Longform title: Google News / Epstein sighting and alive claims — New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
   - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -138,29 +138,5 @@ Updated: 2026-07-04T06:34:45.472Z
   - Video hook: New archive lane: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive. A released file is the start of the investigation, not the final verdict.
   - Short title: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not C
   - Longform title: Google News / declassified files — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Sec
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica. The record matters, but the evidence class matters more.
-  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
-  - Longform title: Google News / Epstein timeline and files — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-27 — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
-  - Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan. The record matters, but the evidence class matters more.
-  - Short title: Why did billionaire Leon Black walk out of the Epstein hearing? - Latest
-  - Longform title: Google News / Epstein timeline and files — Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New archive lane: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1. A released file is the start of the investigation, not the final verdict.
-  - Short title: Moldova publishes declassified Soviet deportation lists from 1941 - Mold
-  - Longform title: Google News / declassified files — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-intelligence-dossiers.html

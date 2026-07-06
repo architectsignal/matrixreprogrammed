@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-04T06:34:51.708Z
+Generated: 2026-07-06T08:02:49.772Z
 
 ## Open Routes
 
@@ -16,26 +16,31 @@ Generated: 2026-07-04T06:34:51.708Z
 - Date: 2026-07-03T22:07:45.000Z
 - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
 Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki Qoo10.co.id
-### Epstein probe hones in on billionaire kryptonite: non-disclosure agreements - epsteincoverup.us
+### DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
 - Lane: Google News / Epstein timeline and files
-- Date: 2026-07-02T20:51:01.000Z
-- Source: https://news.google.com/rss/articles/CBMiYEFVX3lxTE84UlNHclBNdTRLLTdIc0p5d0lVUGNRclpQTDdzSkpDS0N5dUlNYTZkUm1mZjEyX21Ucm51NzZWY2FTUUJpMkhTYkpCSW5KcHRHY25WVnBwR2xrdEtVM09VNw?oc=5
-Epstein probe hones in on billionaire kryptonite: non-disclosure agreements epsteincoverup.us
+- Date: 2026-07-03T03:54:25.000Z
+- Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
+DOJ declines to turn over additional Epstein files, says redactions were appropriate ABC News - Breaking News, Latest News and Videos
 ### Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-07-02T01:32:05.000Z
 - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
 Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies Times Herald Online
+### Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-07-02T00:21:07.000Z
+- Source: https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZnJNZ1lrdV9DOUNPMnotdC1LTkxEWnJTMGMwSVNkcmRvamczXzZFaXA4ZTRkQ3d0dVVfcmpGZEdPRjl4cW95TXZSSU40ZW5KNHJ3TVRVVzlXT3RqeEhxYmFmTkw?oc=5
+Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation The Jerusalem Post
+### James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+- Lane: Google News / Epstein timeline and files
+- Date: 2026-07-01T15:38:19.000Z
+- Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+James Comer Says Oversight Will Hold Public Hearings on Epstein News of the United States - NOTUS
 ### Former Clinton aide appears before House panel in Epstein investigation - Scripps News
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-07-01T04:51:33.000Z
 - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
 Former Clinton aide appears before House panel in Epstein investigation Scripps News
-### ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-- Lane: Google News / crime state overlap
-- Date: 2026-06-30T22:24:00.000Z
-- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post
 ### What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-06-30T20:41:52.000Z
@@ -66,11 +71,6 @@ Longtime Clinton aide walks back claim former president visited Epstein island, 
 - Date: 2026-06-30T15:40:24.000Z
 - Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
 Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein Rural Radio Network
-### New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
-- Lane: Google News / Epstein sighting and alive claims
-- Date: 2026-06-30T15:25:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5
-New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations Post and Courier
 ### Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
 - Lane: Google News / Epstein timeline and files
 - Date: 2026-06-30T15:24:00.000Z
@@ -86,18 +86,3 @@ Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstei
 - Date: 2026-06-29T12:00:00.000Z
 - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
 MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories National Security Archive
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-29T05:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-### Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-27T19:21:27.000Z
-- Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5
-Why did billionaire Leon Black walk out of the Epstein hearing? Latest news from Azerbaijan
-### Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-- Lane: Google News / declassified files
-- Date: 2026-06-27T17:40:21.000Z
-- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
-Moldova publishes declassified Soviet deportation lists from 1941 Moldova 1

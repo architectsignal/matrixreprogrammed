@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 387
+Scanned pages: 405
 Weak pages: 10
 
 ## Weakest Pages
@@ -59,13 +59,13 @@ Weak pages: 10
 - 84/100 — power-atlas.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — sales-ladder.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — schema-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — search.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — source-card-index.html: Thin copy: 155 visible words; Intel/evidence page missing Live Intel route
+- 84/100 — source-card-index.html: Thin copy: 140 visible words; Intel/evidence page missing Live Intel route
 - 84/100 — source-cards.html: Missing Rumble/video route; Intel/evidence page missing Live Intel route
 - 84/100 — start-here.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — system-feed-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /generated output/i
 - 84/100 — trust-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — update-monitor.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 92/100 — agenda-2030.html: Visible scaffold/internal copy: /Reader path/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

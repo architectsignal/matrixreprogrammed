@@ -1,6 +1,6 @@
 # Auto Evidence Pipeline Report
 
-Updated: 2026-07-04T06:34:44.514Z
+Updated: 2026-07-06T08:02:24.373Z
 
 Boundary: Automation scans public index pages and PDF identifiers only. It does not bypass age verification, publish private victim identifiers, read inaccessible gated PDFs, or assert wrongdoing without verified record cards.
 
@@ -10,7 +10,7 @@ Boundary: Automation scans public index pages and PDF identifiers only. It does 
 - Reachable sources: 5
 - Failed sources: 0
 - Total unique PDF IDs indexed: 200
-- New PDF IDs since previous run: 200
+- New PDF IDs since previous run: 0
 
 ## Sources
 
@@ -20,7 +20,7 @@ Boundary: Automation scans public index pages and PDF identifiers only. It does 
 - URL: https://www.justice.gov/epstein/doj-disclosures/court-records-united-states-v-epstein-no-119-cr-00490-sdny-2019
 - OK: true
 - PDF IDs indexed: 50
-- New PDF IDs: 50
+- New PDF IDs: 0
 - Evidence grade: A for official index route; C for PDF content until reviewed
 - Record shows: Official source index was reachable and PDF identifiers were extracted where present.
 - Record does not show: This automated scan does not read gated PDF contents, identify private victims, verify allegations, or infer wrongdoing.
@@ -33,7 +33,7 @@ Boundary: Automation scans public index pages and PDF identifiers only. It does 
 - URL: https://www.justice.gov/epstein/doj-disclosures/court-records-united-states-v-maxwell-no-120-cr-00330-sdny-2020
 - OK: true
 - PDF IDs indexed: 50
-- New PDF IDs: 50
+- New PDF IDs: 0
 - Evidence grade: A for official index route; C for PDF content until reviewed
 - Record shows: Official source index was reachable and PDF identifiers were extracted where present.
 - Record does not show: This automated scan does not read gated PDF contents, identify private victims, verify allegations, or infer wrongdoing.
@@ -46,7 +46,7 @@ Boundary: Automation scans public index pages and PDF identifiers only. It does 
 - URL: https://www.justice.gov/epstein/doj-disclosures/court-records-government-united-states-virgin-islands-v-jpmorgan-chase-bank-na-no-122-cv-10904-sdny-2022
 - OK: true
 - PDF IDs indexed: 50
-- New PDF IDs: 50
+- New PDF IDs: 0
 - Evidence grade: A for official index route; C for PDF content until reviewed
 - Record shows: Official source index was reachable and PDF identifiers were extracted where present.
 - Record does not show: This automated scan does not read gated PDF contents, identify private victims, verify allegations, or infer wrongdoing.
@@ -59,7 +59,7 @@ Boundary: Automation scans public index pages and PDF identifiers only. It does 
 - URL: https://www.justice.gov/epstein/doj-disclosures/data-set-9-files
 - OK: true
 - PDF IDs indexed: 50
-- New PDF IDs: 50
+- New PDF IDs: 0
 - Evidence grade: A for official index route; C for PDF content until reviewed
 - Record shows: Official source index was reachable and PDF identifiers were extracted where present.
 - Record does not show: This automated scan does not read gated PDF contents, identify private victims, verify allegations, or infer wrongdoing.

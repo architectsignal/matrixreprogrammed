@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.253Z",
+  "title": "BlackRock Viral Video Claim Audit",
+  "boundary": "Uploaded videos are treated as leads. Claims are upgraded only through filings, official records, court records, annual reports, ownership data and proxy-voting records.",
+  "videoFindings": [
+    {
+      "id": "video-one",
+      "visibleClaim": "Screenshots show BlackRock, Vanguard, State Street and other institutions appearing repeatedly in public-company holder tables. The video then moves into Bank of America and A. P. Giannini history.",
+      "recordTreatment": "This is a real research lane about common ownership, index funds and proxy voting. It is not proof that BlackRock secretly owns or controls every company."
+    },
+    {
+      "id": "video-two",
+      "visibleClaim": "An AI-style explainer frames old families, policy groups, secret societies and institutions as layered control systems.",
+      "recordTreatment": "This belongs in the power-map layer as a claim-routing prompt. It needs specific source records before it can become a factual claim."
+    }
+  ],
+  "verifiedCore": [
+    "BlackRock is one of the world’s largest asset managers and reported roughly $11.6T AUM at the end of 2024; later reports place it higher, so every quoted figure needs date/version control.",
+    "BlackRock often appears as a top holder because funds and ETFs hold shares on behalf of clients. The key distinction is beneficial ownership versus voting/stewardship influence.",
+    "BlackRock, Vanguard and State Street create common-ownership concentration across many listed companies. This is a serious structural question even when no wrongdoing is alleged.",
+    "A. P. Giannini founded the Bank of Italy, which became Bank of America. The 1906 earthquake story is a banking-history route, not proof of a BlackRock control chain.",
+    "The most important evidence routes are 13F holdings, 13D/13G beneficial ownership, N-PX proxy votes, Form ADV, annual reports, litigation, lobbying and public mandate records."
+  ],
+  "readerTranslation": [
+    "Do not read the screenshots as “BlackRock owns everything.” Read them as “index money causes the same asset managers to appear across many companies.”",
+    "The real power question is not just share ownership. It is voting rights, proxy policy, fund mandates, pension mandates, stewardship, Aladdin technology, private-market expansion and government-adjacent work.",
+    "The strongest BlackRock brief should ask: who owns the shares, who votes them, who sets the policy, who benefits from the mandate, and what record proves it?"
+  ],
+  "watchNext": [
+    "Parse latest BLK 10-K and 10-Q for AUM, risk factors, acquisitions and client mix.",
+    "Parse latest BlackRock 13F and compare top holdings against Vanguard and State Street.",
+    "Build N-PX voting summary: how often BlackRock votes with management, against management and on climate/social/governance proposals.",
+    "Add public mandate table for pensions, sovereign institutions, state funds and central-bank-adjacent work where records exist.",
+    "Separate viral claims into proven, partly supported, unproven and false/misleading buckets."
+  ],
+  "sourceRoutes": [
+    "BlackRock annual reports and investor relations",
+    "SEC EDGAR: 10-K, 10-Q, 13F, 13D/13G, 8-K",
+    "N-PX proxy voting records",
+    "Form ADV adviser records",
+    "Reuters / major finance reporting for date-specific AUM snapshots",
+    "Bank of America historical material on A. P. Giannini",
+    "public pension and procurement databases"
+  ]
+}

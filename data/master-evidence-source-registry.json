@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.312Z",
+  "title": "Master Evidence Source Registry",
+  "boundary": "This registry lists priority public-record and document lanes. It is not a claim that every source has already been ingested. Each lane is a route for verification, contradiction checks and missing-record upgrades.",
+  "lanes": [
+    {
+      "id": "government-records",
+      "title": "Government records",
+      "weight": 100,
+      "use": "Primary source lane for laws, contracts, official reports, hearings, sanctions, procurement and agency records.",
+      "examples": [
+        "SEC EDGAR filings",
+        "USAspending and SAM.gov contract records",
+        "Federal Register and legislation records",
+        "Treasury / OFAC sanctions releases",
+        "Justice Department and court records",
+        "UK Companies House and charity registers",
+        "EU transparency and EUR-Lex records",
+        "UN / WHO / IMF / World Bank / BIS public documents"
+      ]
+    },
+    {
+      "id": "court-and-legal-records",
+      "title": "Court and legal records",
+      "weight": 98,
+      "use": "Upgrade claims through complaints, judgments, indictments, settlement records, docket entries and sworn exhibits.",
+      "examples": [
+        "federal and state court dockets",
+        "court exhibits",
+        "settlement agreements",
+        "deposition references",
+        "criminal indictments",
+        "regulatory enforcement actions"
+      ]
+    },
+    {
+      "id": "finance-and-ownership-records",
+      "title": "Finance and ownership records",
+      "weight": 96,
+      "use": "Track money, voting power, mandates, holdings, proxy votes, funds, custody and beneficial ownership.",
+      "examples": [
+        "13F holdings",
+        "13D / 13G beneficial ownership",
+        "N-PX proxy voting",
+        "Form ADV",
+        "10-K / 10-Q annual and quarterly reports",
+        "pension mandate records",
+        "central-bank and BIS publications"
+      ]
+    },
+    {
+      "id": "contractor-records",
+      "title": "Contractor records",
+      "weight": 95,
+      "use": "Track operational power through awards, vendors, services, executives, legal cases, task orders and public money.",
+      "examples": [
+        "procurement awards",
+        "agency vendor lists",
+        "defense and security contracts",
+        "consulting awards",
+        "logistics and intelligence-support records",
+        "audit reports"
+      ]
+    },
+    {
+      "id": "media-and-wire-records",
+      "title": "Media and wire-source lane",
+      "weight": 72,
+      "use": "Use major media for discovery, timelines and corroboration, but upgrade only with primary records where possible.",
+      "examples": [
+        "Reuters",
+        "Associated Press",
+        "BBC",
+        "Financial Times",
+        "Wall Street Journal",
+        "major court and finance reporting",
+        "investigative outlets with documents"
+      ]
+    },
+    {
+      "id": "document-archive-lane",
+      "title": "Document archive / WikiLeaks-style lane",
+      "weight": 70,
+      "use": "Use document dumps as leads requiring authentication, context, cross-checks and primary-record confirmation.",
+      "examples": [
+        "published document sets",
+        "emails and cables where verifiable",
+        "metadata checks",
+        "cross-referenced official records",
+        "redaction/context review"
+      ]
+    },
+    {
+      "id": "epstein-record-lane",
+      "title": "Epstein files and related court record lane",
+      "weight": 88,
+      "use": "Treat Epstein-related records as court/source lanes: docket documents, depositions, exhibits, official releases and named-record trails, not rumor.",
+      "examples": [
+        "court dockets",
+        "released exhibits",
+        "official document releases",
+        "deposition references",
+        "USVI / bank litigation records where public",
+        "flight-log and address-book claims only with source boundaries"
+      ]
+    },
+    {
+      "id": "missing-records",
+      "title": "Missing-record queue",
+      "weight": 99,
+      "use": "The most important daily research tool. Every strong claim should name the next record that would prove, weaken or falsify it.",
+      "examples": [
+        "unreleased contracts",
+        "unparsed filings",
+        "sealed or missing exhibits",
+        "uncited claims",
+        "board overlap tables",
+        "proxy-vote summaries"
+      ]
+    }
+  ]
+}

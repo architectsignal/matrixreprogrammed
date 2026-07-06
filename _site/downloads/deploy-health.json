@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "1db6ee3eec1e9bd09d30179616edc885a678980c",
-  "buildShortSha": "1db6ee3eec1e",
-  "generatedAt": "2026-07-04T06:34:58.267Z",
+  "buildSha": "d422053d8ea8da282be574c9aa3b86babc854b7a",
+  "buildShortSha": "d422053d8ea8",
+  "generatedAt": "2026-07-06T08:02:57.994Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -25,61 +25,61 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "c4cbd6fa3a92e6ee"
+      "hash": "bd7a449301200800"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "c4cbd6fa3a92e6ee"
+      "hash": "bd7a449301200800"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "81b2a025ec1cbed3"
+      "hash": "7f64ec9b9c903dfd"
     },
     {
       "name": "Dark Speculation Forum",
       "route": "/dark-speculation-forum.html",
       "file": "dark-speculation-forum.html",
-      "hash": "5b678499dd9646ba"
+      "hash": "b9d0545ecea15fcb"
     },
     {
       "name": "Evidence Vault",
       "route": "/evidence-vault.html",
       "file": "evidence-vault.html",
-      "hash": "4c6dbf33e1c69195"
+      "hash": "946acf57f6ad8347"
     },
     {
       "name": "Books",
       "route": "/books.html",
       "file": "books.html",
-      "hash": "e6623346946ac9b9"
+      "hash": "09d8aff847db3e82"
     },
     {
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "53bba9a03e724878"
+      "hash": "531d400e15ef58d8"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "64410327425e23b4"
+      "hash": "6652d7be1fc59fe7"
     },
     {
       "name": "Probability Lab",
       "route": "/probability-lab.html",
       "file": "probability-lab.html",
-      "hash": "2f13b3ecb933f5c9"
+      "hash": "3c27097205b6872c"
     },
     {
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "d70aa3437cce8129"
+      "hash": "3fe8a2203d8e0542"
     },
     {
       "name": "Forum Worker",
@@ -105,6 +105,12 @@
       "type": "probability-snapshot",
       "status": "ok",
       "stdout": "Probability snapshot generated: 14 scenarios, 20 signals.\n",
+      "stderr": ""
+    },
+    {
+      "type": "reader-page-repair",
+      "status": "ok",
+      "stdout": "Generated reader page repair complete: 0 files.\n",
       "stderr": ""
     }
   ]

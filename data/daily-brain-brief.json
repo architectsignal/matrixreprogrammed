@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T06:34:48.495Z",
+  "updated": "2026-07-06T08:02:29.058Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -7,11 +7,21 @@
     "conclusionCount": 5,
     "outcomeBriefCount": 5,
     "signalCount": 5,
-    "scenarioCount": 0,
+    "scenarioCount": 14,
     "policyLaneCount": 8,
     "worldGoldTonnes": 36535.4,
-    "highestScenario": null,
-    "biggestMover": null
+    "highestScenario": {
+      "id": "SCN-004",
+      "title": "Missing records become the main investigation map",
+      "probability": 95,
+      "band": "strongly indicated"
+    },
+    "biggestMover": {
+      "id": "SCN-004",
+      "title": "Missing records become the main investigation map",
+      "delta": 17,
+      "probability": 95
+    }
   },
   "topConclusions": [
     "Disclosure pressure is a top exposure lane because withheld records reveal the structure of protection and omission.",
@@ -94,8 +104,234 @@
       "why": "The site separates historical name claims from current institutional power claims and requires records before upgrades."
     }
   ],
-  "biggestProbabilityMovement": null,
-  "highestProbabilityScenario": null,
+  "biggestProbabilityMovement": {
+    "scenarioId": "SCN-004",
+    "title": "Missing records become the main investigation map",
+    "topic": "evidence operations",
+    "timeHorizon": "90 days-1 year",
+    "baseProbability": 78,
+    "computedProbability": 95,
+    "probabilityDelta": 17,
+    "band": "strongly indicated",
+    "confidence": "high",
+    "status": "watching",
+    "supportSignalCount": 8,
+    "totalSignalWeight": 23,
+    "scenarioSourceFile": "data/probability-lab-core.json",
+    "signals": [
+      {
+        "signalId": "SIG-001",
+        "title": "SEC filing routes established for major technology and finance targets",
+        "weight": 3,
+        "impact": 3,
+        "lane": "public filings",
+        "sourceStatus": "preliminary VRC",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-002",
+        "title": "SEC filing metadata feed added to build process",
+        "weight": 3,
+        "impact": 4,
+        "lane": "automation",
+        "sourceStatus": "build pipeline",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-003",
+        "title": "Record intake queue defines first 12 verification tasks",
+        "weight": 3,
+        "impact": 4,
+        "lane": "evidence operations",
+        "sourceStatus": "task queue",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-004",
+        "title": "Source route cards define what records can and cannot prove",
+        "weight": 3,
+        "impact": 3,
+        "lane": "source discipline",
+        "sourceStatus": "source route cards",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-007",
+        "title": "USAspending route added for public contract searches",
+        "weight": 2,
+        "impact": 2,
+        "lane": "public contracts",
+        "sourceStatus": "route verified / search pending",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-008",
+        "title": "DOJ Epstein disclosure route added as critical file-level review task",
+        "weight": 3,
+        "impact": 3,
+        "lane": "official disclosures",
+        "sourceStatus": "route verified / file review pending",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-013",
+        "title": "Preliminary VRC batch separates support from limits",
+        "weight": 3,
+        "impact": 3,
+        "lane": "evidence discipline",
+        "sourceStatus": "preliminary VRC",
+        "sourceFile": "data/probability-signal-feed-002.json"
+      },
+      {
+        "signalId": "SIG-014",
+        "title": "SEC filing feed automation added",
+        "weight": 3,
+        "impact": 3,
+        "lane": "automation",
+        "sourceStatus": "build pipeline",
+        "sourceFile": "data/probability-signal-feed-002.json"
+      }
+    ],
+    "supportingSignals": [
+      "missing-files board",
+      "source route queue",
+      "preliminary VRC batch",
+      "record intake queue"
+    ],
+    "counterSignals": [
+      "records become available quickly",
+      "source routes fail",
+      "manual review bottleneck"
+    ],
+    "triggerEvents": [
+      "new disclosure release",
+      "FOIA response",
+      "court docket update",
+      "verified record card batch"
+    ],
+    "recordsNeeded": [
+      "disclosure indexes",
+      "court records",
+      "FOIA routes",
+      "verified record cards"
+    ],
+    "lastComputed": "2026-07-04T06:34:59.635Z",
+    "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+  },
+  "highestProbabilityScenario": {
+    "scenarioId": "SCN-004",
+    "title": "Missing records become the main investigation map",
+    "topic": "evidence operations",
+    "timeHorizon": "90 days-1 year",
+    "baseProbability": 78,
+    "computedProbability": 95,
+    "probabilityDelta": 17,
+    "band": "strongly indicated",
+    "confidence": "high",
+    "status": "watching",
+    "supportSignalCount": 8,
+    "totalSignalWeight": 23,
+    "scenarioSourceFile": "data/probability-lab-core.json",
+    "signals": [
+      {
+        "signalId": "SIG-001",
+        "title": "SEC filing routes established for major technology and finance targets",
+        "weight": 3,
+        "impact": 3,
+        "lane": "public filings",
+        "sourceStatus": "preliminary VRC",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-002",
+        "title": "SEC filing metadata feed added to build process",
+        "weight": 3,
+        "impact": 4,
+        "lane": "automation",
+        "sourceStatus": "build pipeline",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-003",
+        "title": "Record intake queue defines first 12 verification tasks",
+        "weight": 3,
+        "impact": 4,
+        "lane": "evidence operations",
+        "sourceStatus": "task queue",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-004",
+        "title": "Source route cards define what records can and cannot prove",
+        "weight": 3,
+        "impact": 3,
+        "lane": "source discipline",
+        "sourceStatus": "source route cards",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-007",
+        "title": "USAspending route added for public contract searches",
+        "weight": 2,
+        "impact": 2,
+        "lane": "public contracts",
+        "sourceStatus": "route verified / search pending",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-008",
+        "title": "DOJ Epstein disclosure route added as critical file-level review task",
+        "weight": 3,
+        "impact": 3,
+        "lane": "official disclosures",
+        "sourceStatus": "route verified / file review pending",
+        "sourceFile": "data/probability-signal-feed-001.json"
+      },
+      {
+        "signalId": "SIG-013",
+        "title": "Preliminary VRC batch separates support from limits",
+        "weight": 3,
+        "impact": 3,
+        "lane": "evidence discipline",
+        "sourceStatus": "preliminary VRC",
+        "sourceFile": "data/probability-signal-feed-002.json"
+      },
+      {
+        "signalId": "SIG-014",
+        "title": "SEC filing feed automation added",
+        "weight": 3,
+        "impact": 3,
+        "lane": "automation",
+        "sourceStatus": "build pipeline",
+        "sourceFile": "data/probability-signal-feed-002.json"
+      }
+    ],
+    "supportingSignals": [
+      "missing-files board",
+      "source route queue",
+      "preliminary VRC batch",
+      "record intake queue"
+    ],
+    "counterSignals": [
+      "records become available quickly",
+      "source routes fail",
+      "manual review bottleneck"
+    ],
+    "triggerEvents": [
+      "new disclosure release",
+      "FOIA response",
+      "court docket update",
+      "verified record card batch"
+    ],
+    "recordsNeeded": [
+      "disclosure indexes",
+      "court records",
+      "FOIA routes",
+      "verified record cards"
+    ],
+    "lastComputed": "2026-07-04T06:34:59.635Z",
+    "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
+  },
   "missingRecords": [
     {
       "section": "Disclosure Watch",
@@ -214,17 +450,11 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
-    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-06T04:38:05.153Z",
+    "updated": "2026-07-06T08:02:29.087Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -538,9 +768,9 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-06T04:38:19.980Z",
-    "newRecordCount": 6,
-    "changedRecordCount": 6,
+    "updated": "2026-07-06T08:02:45.870Z",
+    "newRecordCount": 0,
+    "changedRecordCount": 0,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 111,
     "evidenceUpgradeCount": 0,
@@ -549,46 +779,9 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Biddle v. Biddle",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Trump v. Barbara",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Khan v. Jewish Women International",
-      "source_url": "https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Accountability Now USA v. Griess",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/"
-    }
-  ],
+  "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-06T04:38:20.113Z",
+    "updated": "2026-07-06T08:02:46.022Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -622,7 +815,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-06T04:38:20.149Z",
+    "updated": "2026-07-06T08:02:46.062Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

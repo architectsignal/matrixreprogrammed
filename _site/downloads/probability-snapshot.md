@@ -1,6 +1,6 @@
 # Probability Snapshot
 
-Updated: 2026-07-04T06:34:59.635Z
+Updated: 2026-07-06T08:02:58.940Z
 
 This snapshot is a forecast model, not a fact claim. Probabilities are provisional and must change when records or signals change.
 

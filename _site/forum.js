@@ -11,6 +11,8 @@
   const SUBMIT_ROUTES = { main: '/submit-main-post', speculation: '/submit-speculation-post', 'epstein-alive': '/submit-epstein-alive-post' };
   const REPORT_ROUTES = { main: '/report-main-post', speculation: '/report-speculation-post', 'epstein-alive': '/report-epstein-alive-post' };
   const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
+  const LOCAL_POSTS_KEY = 'cloudflare_kv_only_no_browser_post_store';
+  function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }
 
   function boardFromPath(){
     const p = String(location.pathname || '').toLowerCase();
@@ -32,7 +34,7 @@
   const SUBMIT_ROUTE = SUBMIT_ROUTES[BOARD] || SUBMIT_ROUTES.main;
   const REPORT_ROUTE = REPORT_ROUTES[BOARD] || REPORT_ROUTES.main;
 
-  function esc(s){ return String(s || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c])); }
+  function esc(s){ return String(s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
   function when(value){ try { return new Date(value).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); } catch { return ''; } }
   function unlocked(){ try { return localStorage.getItem(PASS_KEY) === 'yes'; } catch { return false; } }
   async function parse(res){ const text = await res.text(); try { return JSON.parse(text); } catch { return { error: text || ('HTTP ' + res.status) }; } }
@@ -41,8 +43,8 @@
 
   function isPublicUserPost(post){
     if (!post || typeof post !== 'object') return false;
-    const status = String(post.status || 'live').toLowerCase();
-    if (['hidden','test','synthetic','draft','deleted','reported','spam','qa','check'].includes(status)) return false;
+    const postStatus = String(post.status || 'live').toLowerCase();
+    if (['hidden','test','synthetic','draft','deleted','reported','spam','qa','check'].includes(postStatus)) return false;
     const haystack = [post.id, post.title, post.body, post.message, post.category, post.name, post.sourceUrl].map(v => String(v || '').toLowerCase()).join(' ');
     const syntheticMarkers = [
       'synthetic check post',
@@ -98,7 +100,7 @@
       const posts = listFrom(data).filter(postBelongsHere).filter(isPublicUserPost);
       feed.innerHTML = posts.length ? posts.map(renderPost).join('') : '<article class="card redline"><h3>No persistent signals yet</h3><p>' + esc(BOARD_LABEL) + ' is connected. Unlock a Signal Pass and post a source, question, reader note, or public-record lead.</p></article>';
     } catch (err) {
-      feed.innerHTML = offlineNotice(systemErrorLabel('Feed failed', err));
+      feed.innerHTML = loadFallback(systemErrorLabel('Feed failed', err));
     }
   }
   async function postLive(payload){

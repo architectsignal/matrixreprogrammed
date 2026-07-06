@@ -1,0 +1,463 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.315Z",
+  "title": "Atlas Lane Dossiers",
+  "boundary": "Every Atlas box opens a dossier. Dossiers track public-record alignment, influence routes and evidence boundaries; they do not treat policy support, association, symbolism or office-holding as guilt.",
+  "lanes": [
+    {
+      "id": "people",
+      "title": "People",
+      "examples": "People layer overview",
+      "agendaRoute": "Track public actors, offices and influence routes.",
+      "sources": "Public office, documented leadership, public filings and official biographies.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Open politicians, financiers, intelligence figures and media-owner dossiers first."
+      ]
+    },
+    {
+      "id": "politicians",
+      "title": "Politicians",
+      "examples": "Presidents, prime ministers, EU commissioners, security ministers, sanctions officials, migration ministers.",
+      "agendaRoute": "Track public-record support, implementation or opposition to Agenda 2030 / SDG / global-governance policies, emergency powers, migration policy, sanctions and treaty routes.",
+      "sources": "Official government leadership pages, parliamentary pages, ministerial pages, voting records, speeches, sanctions pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "A politician is not labelled as corrupt because they support SDGs or global policy. The dossier tracks public policy alignment, power route and records."
+      ]
+    },
+    {
+      "id": "financiers",
+      "title": "Financiers",
+      "examples": "Central-bank chairs, IMF and World Bank leadership, asset-management CEOs, sovereign wealth leaders, bank regulators.",
+      "agendaRoute": "Track monetary convergence, CBDC, digital identity, financial stability, asset-manager voting power, development finance and central-bank coordination.",
+      "sources": "Official central-bank pages, IMF, World Bank, BIS, SEC, company leadership pages, filings and speeches.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The key question is not “who is rich?” but who controls mandates, voting power, liquidity, standards, settlement rails and policy influence."
+      ]
+    },
+    {
+      "id": "intelligence-figures",
+      "title": "Intelligence figures",
+      "examples": "CIA, ODNI, MI6, GCHQ, NSA, defence-intelligence, oversight committee figures, declassification officials.",
+      "agendaRoute": "Track public leadership, declassification, oversight, intelligence reform, security doctrine, cyber authorities and public testimony.",
+      "sources": "Official agency leadership pages, hearing records, inspector-general reports, declassified reading rooms.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Only public records and official roles are tracked. Private claims require primary records."
+      ]
+    },
+    {
+      "id": "media-owners",
+      "title": "Media owners",
+      "examples": "Media-company owners, chairmen, CEOs, controlling shareholders, platform executives and public editor leadership.",
+      "agendaRoute": "Track ownership, narrative power, platform moderation, acquisition, board control, shareholder control and filing-confirmed influence.",
+      "sources": "Company leadership pages, filings, ownership disclosures, annual reports and merger records.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The dossier tracks ownership and editorial influence routes, not automatic mind-control claims."
+      ]
+    },
+    {
+      "id": "institutions",
+      "title": "Institutions",
+      "examples": "Agencies, NGOs, banks, foundations, universities, media groups, courts, contractors, think tanks and standards bodies.",
+      "agendaRoute": "Map institutional lanes that turn policy into money, rules, standards, grants, enforcement, research or public messaging.",
+      "sources": "Official institution pages, annual reports, filings, grants, leadership pages and public records.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Institutions become meaningful when records show funding, office, contract, mandate or policy effect."
+      ]
+    },
+    {
+      "id": "agencies",
+      "title": "Agencies",
+      "examples": "CIA, NSA, ODNI, DHS, DoD, FDA, CDC, Home Office, Frontex, Europol.",
+      "agendaRoute": "Track public agency power, emergency authority, grants, rules, contracts, enforcement and release events.",
+      "sources": "Official agency pages, reports, reading rooms, inspector-general pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Agency action should be read through official documents before commentary."
+      ]
+    },
+    {
+      "id": "ngos",
+      "title": "NGOs",
+      "examples": "Humanitarian, policy, rights, migration, health and open-government groups.",
+      "agendaRoute": "Track funding, program influence, partnerships, advocacy, field operations and public-policy effects.",
+      "sources": "Official reports, annual reports, funding disclosures, charity records.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "NGO activity is not wrongdoing; the dossier tracks funding and policy route."
+      ]
+    },
+    {
+      "id": "banks-and-central-banks",
+      "title": "Banks and central banks",
+      "examples": "Federal Reserve, ECB, BIS, IMF, World Bank, major banks and development banks.",
+      "agendaRoute": "Track currency convergence, settlement systems, CBDC, lending, crisis response, stress tests and development finance.",
+      "sources": "Official reports, financial statements, stress tests, lending reports, speeches and policy papers.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The strongest evidence is official policy, implementation and money-flow records."
+      ]
+    },
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "examples": "Large philanthropic foundations, policy foundations, donor-advised vehicles and research funders.",
+      "agendaRoute": "Track grants, policy influence, education, health, media, research and NGO funding routes.",
+      "sources": "Grant databases, annual reports, tax filings where available, charity registries.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Foundation support is a funding route, not proof of secret control without records."
+      ]
+    },
+    {
+      "id": "operations",
+      "title": "Operations",
+      "examples": "Wars, scandals, trials, covert-project allegations, sanctions, intelligence programs, procurement lanes and investigations.",
+      "agendaRoute": "Map active operations only through public records, official statements and dated source trails.",
+      "sources": "Official defence statements, court records, sanctions pages, FOIA libraries, public investigations.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Operations must be separated into proven, alleged, disputed and speculative."
+      ]
+    },
+    {
+      "id": "wars",
+      "title": "Wars",
+      "examples": "Ukraine, Gaza, Red Sea, Iran-linked escalation, Taiwan Strait pressure, Sahel conflict and civil wars.",
+      "agendaRoute": "Track war as a convergence route: sanctions, energy, migration, defense contracts, casualties, diplomacy and media narrative.",
+      "sources": "Official defence statements, UN OCHA, ICRC, court records, sanctions pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "War pages must separate civilian harm, military claims, source disputes and contractor/money routes."
+      ]
+    },
+    {
+      "id": "scandals",
+      "title": "Scandals",
+      "examples": "Public-record scandals with court filings, regulator reports, settlements, committee reports and oversight records.",
+      "agendaRoute": "Track scandal as a record chain: allegation, filing, response, settlement, regulator finding and missing proof.",
+      "sources": "Court dockets, regulator releases, committee reports.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Scandal claims stay weak unless tied to documents."
+      ]
+    },
+    {
+      "id": "trials",
+      "title": "Trials",
+      "examples": "Criminal trials, civil suits, depositions, exhibits, appeals, sentencing and settlement hearings.",
+      "agendaRoute": "Track legal process, not viral claims: parties, case numbers, exhibits, rulings and hearing dates.",
+      "sources": "Court dockets, official judgments, PACER/CourtListener where applicable.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Trial pages should show what is alleged, what is proven and what remains contested."
+      ]
+    },
+    {
+      "id": "covert-project-records",
+      "title": "Covert-project records",
+      "examples": "Documented declassified programs, FOIA releases, reading-room files, inspector-general records and public admissions.",
+      "agendaRoute": "Track only documented programs and declassified lanes; separate allegations from released records.",
+      "sources": "CIA Reading Room, National Archives, agency FOIA libraries.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "No private covert claim is treated as settled without a record."
+      ]
+    },
+    {
+      "id": "money-flows",
+      "title": "Money Flows",
+      "examples": "Donations, contracts, grants, lobbying, foundations, procurement, shell structures, settlements, fines and compensation schemes.",
+      "agendaRoute": "Trace money as the strongest path to power: who paid, who received, what for, when and under which authority.",
+      "sources": "FEC, OpenSecrets, USAspending, EU tenders, procurement portals, filings and tax records.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Money-flow records often prove more than commentary."
+      ]
+    },
+    {
+      "id": "donations",
+      "title": "Donations",
+      "examples": "Campaign donations, PAC money, foundation gifts, university gifts and donor networks.",
+      "agendaRoute": "Track donations as influence routes, not automatic bribery.",
+      "sources": "FEC, OpenSecrets, tax filings, foundation reports, university disclosures.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The record must show amount, date, recipient and purpose."
+      ]
+    },
+    {
+      "id": "contracts",
+      "title": "Contracts",
+      "examples": "Defence, intelligence, cyber, AI, healthcare, border, logistics, reconstruction and emergency purchasing.",
+      "agendaRoute": "Track contracts as operational control routes: vendor, agency, service, amount, period and outcome.",
+      "sources": "USAspending, EU tenders, national procurement portals.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "This is a Tier 1 proof lane for the mission."
+      ]
+    },
+    {
+      "id": "grants",
+      "title": "Grants",
+      "examples": "Research, development, NGO, public-health, education and technology grants.",
+      "agendaRoute": "Track grants as policy and influence routes across universities, NGOs, science, media and health.",
+      "sources": "Grants.gov, EU Funding & Tenders, World Bank projects, foundation databases.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The dossier should show funder, recipient, amount, program and public objective."
+      ]
+    },
+    {
+      "id": "lobbying",
+      "title": "Lobbying",
+      "examples": "Lobbying clients, firms, issue areas, bills, agencies contacted and foreign-principal filings.",
+      "agendaRoute": "Track lobbying as public influence routing.",
+      "sources": "LDA, FARA, EU Transparency Register.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Lobbying proves pressure route, not necessarily illegal conduct."
+      ]
+    },
+    {
+      "id": "legal-records",
+      "title": "Legal Records",
+      "examples": "Indictments, civil suits, depositions, hearings, exhibits, judgments, congressional records, FOIA releases and regulator findings.",
+      "agendaRoute": "Evidence hierarchy lane: legal records outrank media and viral claims.",
+      "sources": "Court records, DOJ releases, committee records, regulator findings.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Legal record pages must label allegation, evidence, finding and appeal status."
+      ]
+    },
+    {
+      "id": "indictments",
+      "title": "Indictments",
+      "examples": "Charges, counts, defendants, prosecutors, alleged conduct, dates and case numbers.",
+      "agendaRoute": "Track official charging documents and DOJ releases.",
+      "sources": "Court dockets and DOJ releases.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "An indictment is an allegation until adjudicated."
+      ]
+    },
+    {
+      "id": "civil-suits",
+      "title": "Civil suits",
+      "examples": "Complaints, parties, allegations, responses, settlements, dismissals and judgments.",
+      "agendaRoute": "Track civil claims, filings and settlement boundaries.",
+      "sources": "Court records, PACER, state courts, public dockets.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Settlement is not always admission; label the boundary."
+      ]
+    },
+    {
+      "id": "depositions-and-exhibits",
+      "title": "Depositions and exhibits",
+      "examples": "Transcript excerpts, exhibit numbers, admitted documents and sealed/unsealed status.",
+      "agendaRoute": "Track primary record material and where it appears in the docket.",
+      "sources": "Court filings and exhibit lists.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Never use deposition fragments without source context."
+      ]
+    },
+    {
+      "id": "hearings",
+      "title": "Hearings",
+      "examples": "Congressional hearings, public inquiries, oversight hearings, regulator testimony and court hearings.",
+      "agendaRoute": "Track official testimony, questions, documents and follow-up records.",
+      "sources": "Committee pages, transcripts, video, court minutes.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Hearing claims need transcript or video links."
+      ]
+    },
+    {
+      "id": "symbolic-layer",
+      "title": "Symbolic Layer",
+      "examples": "Mission patches, logos, ritual architecture, fraternal claims, occult aesthetics, language systems and public symbolism.",
+      "agendaRoute": "Track symbolism as interpretation lane, not proof of conduct.",
+      "sources": "Official image libraries, brand pages, heritage records, public archives.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Interpretation lane with source boundary",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Symbolism can guide commentary; it does not prove wrongdoing by itself."
+      ]
+    },
+    {
+      "id": "mission-patches",
+      "title": "Mission patches",
+      "examples": "NASA, NRO, military, intelligence, space and public classified-program patches.",
+      "agendaRoute": "Track official imagery, mission context, symbols and interpretation boundaries.",
+      "sources": "Official image libraries and agency media pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Interpretation lane with source boundary",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Patch symbolism is commentary unless linked to public mission records."
+      ]
+    },
+    {
+      "id": "logos",
+      "title": "Logos",
+      "examples": "Agency seals, corporate marks, NGO marks, think-tank marks and institutional visual identity.",
+      "agendaRoute": "Track logos and visual identity as public symbolic communication, not proof of agenda.",
+      "sources": "Official brand and media-kit pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Interpretation lane with source boundary",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "The page should show official source, symbol reading and boundary."
+      ]
+    },
+    {
+      "id": "ritual-architecture",
+      "title": "Ritual architecture",
+      "examples": "Courts, capitals, memorials, lodges, temples, monuments and ceremonial public spaces.",
+      "agendaRoute": "Track public architecture, ritual use, heritage and symbolic design.",
+      "sources": "Official heritage, building and institution pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Interpretation lane with source boundary",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Interpretation must remain labelled."
+      ]
+    },
+    {
+      "id": "fraternal-claims",
+      "title": "Fraternal claims",
+      "examples": "Public lodge claims, official fraternal pages, public member lists and historical records.",
+      "agendaRoute": "Track only public membership claims or official/historical records.",
+      "sources": "Official fraternal/public archive pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Interpretation lane with source boundary",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Never infer private membership."
+      ]
+    },
+    {
+      "id": "human-cost",
+      "title": "Human Cost",
+      "examples": "Civilian casualties, migration, exploitation, vaccine compensation, displacement, food stress, medical collapse and war effects.",
+      "agendaRoute": "Track power by consequence and method boundaries.",
+      "sources": "UN, official ministries, courts, NGOs and compensation programs.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Numbers require definitions before figures."
+      ]
+    },
+    {
+      "id": "civilian-casualties",
+      "title": "Civilian casualties",
+      "examples": "Deaths, injuries, missing, infrastructure destruction, undercount warnings and methodology differences.",
+      "agendaRoute": "Track human cost of war and policy through source definitions.",
+      "sources": "UN OCHA, ICRC, official ministries, court and NGO datasets.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Separate civilian, combatant, missing, indirect and disputed figures."
+      ]
+    },
+    {
+      "id": "migration",
+      "title": "Migration",
+      "examples": "Border encounters, asylum applications, removals, returns, overstays, deaths/missing and displacement.",
+      "agendaRoute": "Track migration as human cost, policy route, NGO route, border contractor route and political signal.",
+      "sources": "CBP/DHS, Frontex, Eurostat, Home Office, UNHCR, IOM.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Migration claims need definitions before conclusions."
+      ]
+    },
+    {
+      "id": "exploitation",
+      "title": "Exploitation",
+      "examples": "Forced labour, trafficking, child exploitation datasets, enforcement cases and support-service reports.",
+      "agendaRoute": "Track exploitation with victim privacy boundaries and legal/source care.",
+      "sources": "ILO, UNODC, courts, official enforcement pages.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Handle victims carefully; use official categories and court records."
+      ]
+    },
+    {
+      "id": "vaccine-compensation",
+      "title": "Vaccine compensation",
+      "examples": "Claims, compensated cases, denied cases, pending claims, legal standards and causation boundaries.",
+      "agendaRoute": "Track compensation systems and legal standards, not unsupported causation claims.",
+      "sources": "Official compensation programs and court records.",
+      "update": "Weekly by default; faster during official releases, elections, filings, court events, crisis or sanctions changes.",
+      "evidenceClass": "Public-record lane",
+      "boundary": "Agenda 2030 / SDG / global-governance alignment is tracked as public-record policy alignment, not as proof of wrongdoing by itself.",
+      "conclusions": [
+        "Compensation is a legal/administrative lane and must not be overstated."
+      ]
+    }
+  ]
+}

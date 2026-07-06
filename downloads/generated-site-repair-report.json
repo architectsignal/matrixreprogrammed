@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-04T06:34:58.267Z",
+  "generatedAt": "2026-07-06T08:02:57.994Z",
   "repairs": [
     {
       "type": "sec-filing-feed",
@@ -12,6 +12,12 @@
       "type": "probability-snapshot",
       "status": "ok",
       "stdout": "Probability snapshot generated: 14 scenarios, 20 signals.\n",
+      "stderr": ""
+    },
+    {
+      "type": "reader-page-repair",
+      "status": "ok",
+      "stdout": "Generated reader page repair complete: 0 files.\n",
       "stderr": ""
     },
     {

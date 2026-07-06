@@ -1,0 +1,254 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.306Z",
+  "title": "Readable User Briefs",
+  "summary": "Plain-English brief layer for readers who want the machine output translated into what matters, why it matters, what proves it and what to open next.",
+  "sections": [
+    {
+      "title": "What matters today",
+      "body": "Start with the strongest route, the highest clock, the top capital lane and the most important missing record. These are the quickest paths to understanding the structure."
+    },
+    {
+      "title": "Why it matters",
+      "body": "The site is not only tracking names. It is tracking how money, policy, contracts, ownership, votes, institutions and records connect."
+    },
+    {
+      "title": "What proves it",
+      "body": "A claim becomes stronger when it has filings, official records, contracts, court records, proxy-voting records, public mandates or dated primary sources."
+    },
+    {
+      "title": "What to open first",
+      "body": "Open Daily Power Conclusions, then Evidence Graph, then the entity or company page, then Missing Records if the claim still needs proof."
+    }
+  ],
+  "topRoutes": [
+    {
+      "title": "Strongest route today",
+      "text": "World Economic Forum is the strongest current map node because it has the highest combined route, evidence and brain score.",
+      "route": "institution-briefs/world-economic-forum.html"
+    },
+    {
+      "title": "Highest clock pressure",
+      "text": "Surveillance State Clock is the highest clock at 95%.",
+      "route": "timers.html"
+    },
+    {
+      "title": "Top capital lane",
+      "text": "BlackRock should be watched through AUM, holdings, proxy voting, mandates and public filings.",
+      "route": "big-three/blackrock.html"
+    },
+    {
+      "title": "Top contractor lane",
+      "text": "Blackwater / Xe / Academi / Constellis lineage is the strongest contractor watch route in current data.",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html"
+    },
+    {
+      "title": "Top institution lane",
+      "text": "World Bank is the strongest institution route in current data.",
+      "route": "institution-briefs/world-bank.html"
+    },
+    {
+      "title": "Top billionaire lane",
+      "text": "Elon Musk is the strongest elite-network route in current data.",
+      "route": "billionaire-briefs/elon-musk.html"
+    },
+    {
+      "title": "Most important missing record",
+      "text": "[object Object] needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
+      "route": "entity-briefs/object-object.html"
+    }
+  ],
+  "topFeed": [
+    {
+      "id": "missing-records",
+      "title": "Missing records",
+      "summary": "The highest-value source gaps for claim upgrades",
+      "route": "daily-missing-records.html",
+      "priority": 99,
+      "tags": [
+        "missing records",
+        "evidence gaps"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "sec-filings",
+      "title": "SEC filings",
+      "summary": "Filings, 13F, proxy, ownership and market structure routes",
+      "route": "sec-filing-feed.html",
+      "priority": 98,
+      "tags": [
+        "assets",
+        "ownership",
+        "filings",
+        "companies"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "asset-managers",
+      "title": "Asset managers",
+      "summary": "BlackRock, Vanguard, State Street, holdings, voting and mandates",
+      "route": "big-three-asset-managers.html",
+      "priority": 97,
+      "tags": [
+        "BlackRock",
+        "Vanguard",
+        "State Street",
+        "AUM"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "government-contracts",
+      "title": "Government contracts",
+      "summary": "Awards, procurement, contractor and public money routes",
+      "route": "private-contractor-tracker.html",
+      "priority": 96,
+      "tags": [
+        "contracts",
+        "contractors",
+        "public money"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "courts-and-filings",
+      "title": "Courts and filings",
+      "summary": "Cases, dockets, depositions, judgments and sealed-record prompts",
+      "route": "evidence-vault.html",
+      "priority": 95,
+      "tags": [
+        "courts",
+        "records",
+        "missing files"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "sanctions-and-enforcement",
+      "title": "Sanctions and enforcement",
+      "summary": "Treasury, justice, regulators, lawsuits and enforcement routes",
+      "route": "evidence-vault.html",
+      "priority": 94,
+      "tags": [
+        "sanctions",
+        "justice",
+        "regulators"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "central-banks-and-money-rails",
+      "title": "Central banks and money rails",
+      "summary": "Rates, reserves, CBDC, settlement and liquidity routes",
+      "route": "power-structure-map.html",
+      "priority": 93,
+      "tags": [
+        "money",
+        "central banks",
+        "reserves"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "risk-clocks",
+      "title": "Risk clocks",
+      "summary": "Clock pressure, record gaps and linked source routes",
+      "route": "timers.html",
+      "priority": 91,
+      "tags": [
+        "risk clocks",
+        "watch triggers"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "think-tanks-and-policy-shops",
+      "title": "Think tanks and policy shops",
+      "summary": "Policy reports, appointments, attendance and public influence routes",
+      "route": "power-structure-map.html",
+      "priority": 90,
+      "tags": [
+        "think tanks",
+        "policy",
+        "appointments"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    },
+    {
+      "id": "live-intel-drops",
+      "title": "Live intel drops",
+      "summary": "Recent public-source items already pulled into the site",
+      "route": "live-intel.html",
+      "priority": 88,
+      "tags": [
+        "daily drops",
+        "intel"
+      ],
+      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+    }
+  ],
+  "topNodes": [
+    {
+      "name": "World Economic Forum",
+      "score": 100,
+      "route": "institution-briefs/world-economic-forum.html",
+      "type": "institution route"
+    },
+    {
+      "name": "World Health Organization",
+      "score": 100,
+      "route": "institution-briefs/world-health-organization.html",
+      "type": "institution route"
+    },
+    {
+      "name": "World Bank",
+      "score": 100,
+      "route": "institution-briefs/world-bank.html",
+      "type": "institution route"
+    },
+    {
+      "name": "International Monetary Fund",
+      "score": 100,
+      "route": "institution-briefs/international-monetary-fund.html",
+      "type": "institution route"
+    },
+    {
+      "name": "Federal Reserve",
+      "score": 100,
+      "route": "institution-briefs/federal-reserve.html",
+      "type": "institution route"
+    },
+    {
+      "name": "European Commission",
+      "score": 100,
+      "route": "institution-briefs/european-commission.html",
+      "type": "institution route"
+    },
+    {
+      "name": "NATO",
+      "score": 100,
+      "route": "institution-briefs/nato.html",
+      "type": "institution route"
+    },
+    {
+      "name": "United Nations",
+      "score": 100,
+      "route": "institution-briefs/united-nations.html",
+      "type": "institution route"
+    },
+    {
+      "name": "BlackRock",
+      "score": 100,
+      "route": "big-three/blackrock.html",
+      "type": "asset manager route"
+    },
+    {
+      "name": "Vanguard",
+      "score": 100,
+      "route": "big-three/vanguard.html",
+      "type": "asset manager route"
+    }
+  ]
+}

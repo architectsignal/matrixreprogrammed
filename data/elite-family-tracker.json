@@ -1,0 +1,232 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.254Z",
+  "title": "Elite Family Tracker",
+  "boundary": "This system tracks historical lineages, public institutions, registries, archives, foundations and claims needing records. It does not treat surname, ancestry, nobility, religion or association as proof of wrongdoing.",
+  "families": [
+    {
+      "id": "orsini",
+      "name": "Orsini",
+      "kind": "historic noble family tracker",
+      "origin": "Italian nobility / papal Rome research lane",
+      "watch": [
+        "papal-era records",
+        "marriage alliances",
+        "banking and land records",
+        "church offices",
+        "modern foundations / holdings if public",
+        "claims requiring primary sources"
+      ],
+      "layers": [
+        "historic aristocracy",
+        "church-state power",
+        "land and titles",
+        "institutional access"
+      ],
+      "sources": [
+        "encyclopaedia / archive route",
+        "Vatican / church history route",
+        "Italian state archive route",
+        "genealogy source route",
+        "company and foundation registry route"
+      ],
+      "missing": [
+        "primary family tree source",
+        "dated office-holding list",
+        "land / foundation records",
+        "modern corporate registry disambiguation",
+        "counter-source file"
+      ],
+      "boundary": "Historic power or noble status does not prove modern control. Current claims require modern records."
+    },
+    {
+      "id": "breakspear",
+      "name": "Breakspear",
+      "kind": "historic lineage tracker",
+      "origin": "English medieval / papal history research lane",
+      "watch": [
+        "Nicholas Breakspear / Adrian IV route",
+        "clerical networks",
+        "medieval English records",
+        "genealogy claims",
+        "modern name disambiguation"
+      ],
+      "layers": [
+        "historic church office",
+        "medieval records",
+        "name lineage"
+      ],
+      "sources": [
+        "British history archive route",
+        "papal history route",
+        "genealogy route",
+        "academic source route"
+      ],
+      "missing": [
+        "verified lineage tree",
+        "modern entity disambiguation",
+        "primary historical citations"
+      ],
+      "boundary": "A shared surname or medieval office does not prove a modern family network."
+    },
+    {
+      "id": "rothschild",
+      "name": "Rothschild",
+      "kind": "banking dynasty tracker",
+      "origin": "European banking family research lane",
+      "watch": [
+        "banking history",
+        "public companies and trusts",
+        "philanthropy records",
+        "political donations where public",
+        "archival claims requiring counter-sources"
+      ],
+      "layers": [
+        "banking history",
+        "philanthropy",
+        "capital networks",
+        "public records"
+      ],
+      "sources": [
+        "company filings route",
+        "charity registry route",
+        "historical archive route",
+        "parliamentary / lobbying record route"
+      ],
+      "missing": [
+        "current holdings map",
+        "trust / foundation records",
+        "board overlap table",
+        "counter-source route"
+      ],
+      "boundary": "Banking history, philanthropy or surname appearance is not proof of wrongdoing."
+    },
+    {
+      "id": "rockefeller",
+      "name": "Rockefeller",
+      "kind": "industrial / foundation family tracker",
+      "origin": "US industrial and foundation history lane",
+      "watch": [
+        "foundation grants",
+        "energy history",
+        "university / policy links",
+        "public filings",
+        "board overlap"
+      ],
+      "layers": [
+        "energy history",
+        "foundations",
+        "education and policy",
+        "public-private routes"
+      ],
+      "sources": [
+        "foundation filings route",
+        "IRS / nonprofit route",
+        "archive route",
+        "university records route"
+      ],
+      "missing": [
+        "current grant map",
+        "board overlap table",
+        "policy partnership records",
+        "counter-source route"
+      ],
+      "boundary": "Foundation grants and institutional partnerships must be treated as source routes, not conclusions."
+    },
+    {
+      "id": "medici",
+      "name": "Medici",
+      "kind": "historic banking and rule tracker",
+      "origin": "Florentine banking / Renaissance political lane",
+      "watch": [
+        "banking records",
+        "patronage networks",
+        "papal links",
+        "marriage alliances",
+        "institutional inheritance claims"
+      ],
+      "layers": [
+        "historic banking",
+        "political rule",
+        "patronage",
+        "church links"
+      ],
+      "sources": [
+        "Florence archive route",
+        "academic history route",
+        "museum / archive route",
+        "church history route"
+      ],
+      "missing": [
+        "primary archive list",
+        "family tree source",
+        "claim review notes"
+      ],
+      "boundary": "Historic patronage is not a modern control claim."
+    },
+    {
+      "id": "habsburg",
+      "name": "Habsburg",
+      "kind": "dynastic power tracker",
+      "origin": "European dynasty / imperial records lane",
+      "watch": [
+        "dynastic marriages",
+        "state offices",
+        "Catholic orders",
+        "land and foundation records",
+        "modern organization links if public"
+      ],
+      "layers": [
+        "dynastic power",
+        "statecraft",
+        "marriage alliances",
+        "orders and titles"
+      ],
+      "sources": [
+        "Austrian archive route",
+        "European history route",
+        "genealogy source route",
+        "foundation registry route"
+      ],
+      "missing": [
+        "modern public-role table",
+        "foundation / charity map",
+        "counter-source route"
+      ],
+      "boundary": "Dynastic history must be separated from modern claims."
+    },
+    {
+      "id": "windsor",
+      "name": "Windsor",
+      "kind": "royal institution tracker",
+      "origin": "British monarchy / public institution lane",
+      "watch": [
+        "public royal records",
+        "charities",
+        "estates",
+        "honours system",
+        "public finance records",
+        "institutional partnerships"
+      ],
+      "layers": [
+        "monarchy",
+        "charity networks",
+        "land and estate records",
+        "state ceremony"
+      ],
+      "sources": [
+        "Royal Household public records",
+        "UK charity register",
+        "Companies House route",
+        "National Archives route",
+        "parliamentary finance route"
+      ],
+      "missing": [
+        "charity overlap table",
+        "estate record summary",
+        "honours / order overlap map"
+      ],
+      "boundary": "Public monarchy records require careful separation from speculation."
+    }
+  ]
+}

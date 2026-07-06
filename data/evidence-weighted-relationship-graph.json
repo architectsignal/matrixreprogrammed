@@ -1,0 +1,2737 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.297Z",
+  "title": "Evidence Weighted Relationship Graph",
+  "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
+  "nodeCount": 149,
+  "edgeCount": 172,
+  "nodes": [
+    {
+      "id": "world-economic-forum",
+      "layer": "policy-and-institutions",
+      "name": "World Economic Forum",
+      "type": "institution route",
+      "route": "institution-briefs/world-economic-forum.html",
+      "notes": [
+        "active watch",
+        "public-private-contracts",
+        "foundations-ngos",
+        "media-narrative"
+      ],
+      "score": 100
+    },
+    {
+      "id": "world-health-organization",
+      "layer": "policy-and-institutions",
+      "name": "World Health Organization",
+      "type": "institution route",
+      "route": "institution-briefs/world-health-organization.html",
+      "notes": [
+        "active watch",
+        "health",
+        "public-private-contracts",
+        "foundations-ngos"
+      ],
+      "score": 100
+    },
+    {
+      "id": "world-bank",
+      "layer": "policy-and-institutions",
+      "name": "World Bank",
+      "type": "institution route",
+      "route": "institution-briefs/world-bank.html",
+      "notes": [
+        "elite priority",
+        "money",
+        "foundations-ngos",
+        "public-private-contracts"
+      ],
+      "score": 100
+    },
+    {
+      "id": "international-monetary-fund",
+      "layer": "policy-and-institutions",
+      "name": "International Monetary Fund",
+      "type": "institution route",
+      "route": "institution-briefs/international-monetary-fund.html",
+      "notes": [
+        "active watch",
+        "money",
+        "banking",
+        "policy"
+      ],
+      "score": 100
+    },
+    {
+      "id": "federal-reserve",
+      "layer": "policy-and-institutions",
+      "name": "Federal Reserve",
+      "type": "institution route",
+      "route": "institution-briefs/federal-reserve.html",
+      "notes": [
+        "active watch",
+        "money",
+        "banking",
+        "gold-reserves"
+      ],
+      "score": 100
+    },
+    {
+      "id": "european-commission",
+      "layer": "policy-and-institutions",
+      "name": "European Commission",
+      "type": "institution route",
+      "route": "institution-briefs/european-commission.html",
+      "notes": [
+        "elite priority",
+        "identity-access",
+        "migration",
+        "public-private-contracts"
+      ],
+      "score": 100
+    },
+    {
+      "id": "nato",
+      "layer": "policy-and-institutions",
+      "name": "NATO",
+      "type": "institution route",
+      "route": "institution-briefs/nato.html",
+      "notes": [
+        "active watch",
+        "security",
+        "war",
+        "public-private-contracts"
+      ],
+      "score": 100
+    },
+    {
+      "id": "united-nations",
+      "layer": "policy-and-institutions",
+      "name": "United Nations",
+      "type": "institution route",
+      "route": "institution-briefs/united-nations.html",
+      "notes": [
+        "high priority",
+        "foundations-ngos",
+        "migration",
+        "health",
+        "education"
+      ],
+      "score": 100
+    },
+    {
+      "id": "blackrock",
+      "layer": "capital-and-ownership",
+      "name": "BlackRock",
+      "type": "asset manager route",
+      "route": "big-three/blackrock.html",
+      "notes": [
+        "Latest public watch: about $13.46T reported for Q3 2025; verify against latest 10-Q/earnings release before quoting.",
+        "index funds and ETFs",
+        "iShares",
+        "Aladdin risk and portfolio platform",
+        "private markets / infrastructure expansion"
+      ],
+      "score": 100
+    },
+    {
+      "id": "vanguard",
+      "layer": "capital-and-ownership",
+      "name": "Vanguard",
+      "type": "asset manager route",
+      "route": "big-three/vanguard.html",
+      "notes": [
+        "Latest public watch: public reports range around $10T–$12T; verify against Vanguard corporate facts / annual material before quoting.",
+        "index funds and ETFs",
+        "retirement accounts",
+        "mutual fund governance",
+        "proxy voting / stewardship"
+      ],
+      "score": 100
+    },
+    {
+      "id": "state-street-state-street-investment-management",
+      "layer": "capital-and-ownership",
+      "name": "State Street / State Street Investment Management",
+      "type": "asset manager route",
+      "route": "big-three/state-street.html",
+      "notes": [
+        "Latest public watch: about $5.4T AUM reported for Q3 2025; custody / administration figure must be tracked separately from AUM.",
+        "SPDR ETFs",
+        "custody and administration",
+        "investment management",
+        "market services"
+      ],
+      "score": 100
+    },
+    {
+      "id": "blackwater-xe-academi-constellis-lineage",
+      "layer": "execution-and-contracts",
+      "name": "Blackwater / Xe / Academi / Constellis lineage",
+      "type": "contractor route",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
+      "notes": [
+        "active contractor watch",
+        "war",
+        "security",
+        "contractors",
+        "public-private power"
+      ],
+      "score": 100
+    },
+    {
+      "id": "dyncorp-amentum-lineage",
+      "layer": "execution-and-contracts",
+      "name": "DynCorp / Amentum lineage",
+      "type": "contractor route",
+      "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+      "notes": [
+        "active contractor watch",
+        "war",
+        "logistics",
+        "contractors",
+        "public money"
+      ],
+      "score": 100
+    },
+    {
+      "id": "caci-international",
+      "layer": "execution-and-contracts",
+      "name": "CACI International",
+      "type": "contractor route",
+      "route": "contractor-briefs/caci-intelligence-contractor.html",
+      "notes": [
+        "seed contractor profile",
+        "intelligence",
+        "defense technology",
+        "surveillance",
+        "public money"
+      ],
+      "score": 100
+    },
+    {
+      "id": "booz-allen-hamilton",
+      "layer": "execution-and-contracts",
+      "name": "Booz Allen Hamilton",
+      "type": "contractor route",
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
+      "notes": [
+        "seed contractor profile",
+        "intelligence",
+        "consulting",
+        "AI/data",
+        "public money"
+      ],
+      "score": 100
+    },
+    {
+      "id": "palantir-government-platforms",
+      "layer": "execution-and-contracts",
+      "name": "Palantir government platforms",
+      "type": "contractor route",
+      "route": "contractor-briefs/palantir-government-platforms.html",
+      "notes": [
+        "active contractor watch",
+        "AI/data",
+        "surveillance",
+        "security",
+        "health data"
+      ],
+      "score": 100
+    },
+    {
+      "id": "g4s-allied-universal-security-lineage",
+      "layer": "execution-and-contracts",
+      "name": "G4S / Allied Universal security lineage",
+      "type": "contractor route",
+      "route": "contractor-briefs/g4s-allied-security-lineage.html",
+      "notes": [
+        "seed contractor profile",
+        "security",
+        "detention",
+        "facilities",
+        "public-private power"
+      ],
+      "score": 100
+    },
+    {
+      "id": "saic-leidos-lineage",
+      "layer": "execution-and-contracts",
+      "name": "SAIC / Leidos lineage",
+      "type": "contractor route",
+      "route": "contractor-briefs/leidos-saic-lineage.html",
+      "notes": [
+        "seed contractor profile",
+        "defense",
+        "intelligence",
+        "technology",
+        "public money"
+      ],
+      "score": 100
+    },
+    {
+      "id": "elon-musk",
+      "layer": "capital-and-ownership",
+      "name": "Elon Musk",
+      "type": "profile route",
+      "route": "billionaire-briefs/elon-musk.html",
+      "notes": [
+        "elite priority",
+        "Tesla",
+        "SpaceX",
+        "X",
+        "xAI"
+      ],
+      "score": 70
+    },
+    {
+      "id": "jeff-bezos",
+      "layer": "capital-and-ownership",
+      "name": "Jeff Bezos",
+      "type": "profile route",
+      "route": "billionaire-briefs/jeff-bezos.html",
+      "notes": [
+        "elite priority",
+        "Amazon",
+        "AWS",
+        "Blue Origin",
+        "Washington Post"
+      ],
+      "score": 70
+    },
+    {
+      "id": "bill-gates",
+      "layer": "capital-and-ownership",
+      "name": "Bill Gates",
+      "type": "profile route",
+      "route": "billionaire-briefs/bill-gates.html",
+      "notes": [
+        "high priority",
+        "Gates Foundation",
+        "Microsoft legacy",
+        "health and development philanthropy",
+        "health"
+      ],
+      "score": 70
+    },
+    {
+      "id": "mark-zuckerberg",
+      "layer": "capital-and-ownership",
+      "name": "Mark Zuckerberg",
+      "type": "profile route",
+      "route": "billionaire-briefs/mark-zuckerberg.html",
+      "notes": [
+        "active watch",
+        "Meta",
+        "Facebook",
+        "Instagram",
+        "WhatsApp"
+      ],
+      "score": 70
+    },
+    {
+      "id": "larry-ellison",
+      "layer": "capital-and-ownership",
+      "name": "Larry Ellison",
+      "type": "profile route",
+      "route": "billionaire-briefs/larry-ellison.html",
+      "notes": [
+        "active watch",
+        "Oracle",
+        "cloud infrastructure",
+        "health-data systems",
+        "ai-data"
+      ],
+      "score": 70
+    },
+    {
+      "id": "peter-thiel",
+      "layer": "capital-and-ownership",
+      "name": "Peter Thiel",
+      "type": "profile route",
+      "route": "billionaire-briefs/peter-thiel.html",
+      "notes": [
+        "active watch",
+        "Palantir",
+        "Founders Fund",
+        "political and technology networks",
+        "ai-data"
+      ],
+      "score": 70
+    },
+    {
+      "id": "bernard-arnault",
+      "layer": "capital-and-ownership",
+      "name": "Bernard Arnault",
+      "type": "profile route",
+      "route": "billionaire-briefs/bernard-arnault.html",
+      "notes": [
+        "active watch",
+        "LVMH",
+        "luxury networks",
+        "media and culture influence routes",
+        "media-narrative"
+      ],
+      "score": 70
+    },
+    {
+      "id": "michael-bloomberg",
+      "layer": "capital-and-ownership",
+      "name": "Michael Bloomberg",
+      "type": "profile route",
+      "route": "billionaire-briefs/michael-bloomberg.html",
+      "notes": [
+        "active watch",
+        "Bloomberg LP",
+        "media data terminals",
+        "philanthropy",
+        "media-narrative"
+      ],
+      "score": 70
+    },
+    {
+      "id": "warren-buffett",
+      "layer": "capital-and-ownership",
+      "name": "Warren Buffett",
+      "type": "profile route",
+      "route": "billionaire-briefs/warren-buffett.html",
+      "notes": [
+        "elite priority",
+        "Berkshire Hathaway",
+        "insurance",
+        "energy",
+        "rail and finance holdings"
+      ],
+      "score": 70
+    },
+    {
+      "id": "jensen-huang",
+      "layer": "capital-and-ownership",
+      "name": "Jensen Huang",
+      "type": "profile route",
+      "route": "billionaire-briefs/jensen-huang.html",
+      "notes": [
+        "high priority",
+        "NVIDIA",
+        "AI chips",
+        "data-center infrastructure",
+        "ai-data"
+      ],
+      "score": 70
+    },
+    {
+      "id": "wwiii-escalation-clock",
+      "layer": "evidence-and-records",
+      "name": "WWIII Escalation Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "83%",
+        "Ukraine approved a new 40-day pressure campaign against Russian war-support facilities; Hormuz shipping has partially reopened but route risk and ceasefire fragility remain; Gaza, Iran, Lebanon, Red Sea, sanctions, and nuclear rhetoric stay active. Policy convergence tracker lane"
+      ],
+      "score": 58
+    },
+    {
+      "id": "ai-breakout-clock",
+      "layer": "evidence-and-records",
+      "name": "AI Breakout Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "91%",
+        "U.S. pressure for frontier-model government review, national-security model access, autonomous agents, military AI, cyber misuse, labor displacement, and regulation gaps keep the lane high. Latest public drops: 2026-06-22 Five Eyes warns frontier AI cyber-attack capability could "
+      ],
+      "score": 58
+    },
+    {
+      "id": "surveillance-state-clock",
+      "layer": "evidence-and-records",
+      "name": "Surveillance State Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "95%",
+        "Digital ID rollout, biometric verification, facial recognition, AI-model review pathways, platform control, censorship law, payment monitoring, and state-security integration remain the active signal set. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy H"
+      ],
+      "score": 58
+    },
+    {
+      "id": "financial-reset-clock",
+      "layer": "evidence-and-records",
+      "name": "Financial Reset Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "71%",
+        "Debt stress, energy-route risk, cyber disruption to banking rails, CBDC pilots, gold movement, bank fragility, and emergency central-bank language keep the pressure elevated. Policy convergence tracker lanes: CBDC / Tokenized Money / Programmable Finance · Climate / Energy / Carb"
+      ],
+      "score": 58
+    },
+    {
+      "id": "cbdc-rollout-clock",
+      "layer": "evidence-and-records",
+      "name": "CBDC Rollout Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "87%",
+        "Central-bank pilots, digital ID pairing, programmable-money language, cross-border payment rails, wallet standards, and public/private identity infrastructure remain active. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Bio"
+      ],
+      "score": 58
+    },
+    {
+      "id": "cyber-blackout-clock",
+      "layer": "evidence-and-records",
+      "name": "Cyber Blackout Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "73%",
+        "Iran reported card-banking disruption at three major lenders after cyberattacks; wider signals include ransomware, grid warnings, banking outages, state-backed cyber alerts, and telecom fragility. Policy convergence tracker lanes: War / Security / Emergency Powers. Latest public "
+      ],
+      "score": 58
+    },
+    {
+      "id": "alien-disclosure-clock",
+      "layer": "evidence-and-records",
+      "name": "Alien Disclosure Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "37%",
+        "UAP hearings, whistleblower claims, NASA/DoD statements, anomalous-object reports, and scientific shifts remain watch-level rather than confirmed-disclosure signals."
+      ],
+      "score": 58
+    },
+    {
+      "id": "pandemic-biosecurity-clock",
+      "layer": "evidence-and-records",
+      "name": "Pandemic / Biosecurity Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "35%",
+        "WHO alerts, bird flu, lab-leak arguments, emergency planning, contracts, and biosecurity exercises remain watch-level; no current site signal warrants an escalation label. Policy convergence tracker lanes: Health Governance / Biosecurity / Emergency Health Powers."
+      ],
+      "score": 58
+    },
+    {
+      "id": "civil-unrest-clock",
+      "layer": "evidence-and-records",
+      "name": "Civil Unrest Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "68%",
+        "Elections, migration pressure, food and energy strain, policing escalation, speech controls, war protests, and emergency laws keep the civil-stability lane elevated. Policy convergence tracker lanes: War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access"
+      ],
+      "score": 58
+    },
+    {
+      "id": "food-system-stress-clock",
+      "layer": "evidence-and-records",
+      "name": "Food System Stress Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "64%",
+        "FAO/WFP warned acute hunger may worsen across 13 hotspots from June to November 2026; conflict, weather, aid funding, crop stress, water scarcity, and price shocks remain core signals. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / "
+      ],
+      "score": 58
+    },
+    {
+      "id": "energy-shock-clock",
+      "layer": "evidence-and-records",
+      "name": "Energy Shock Clock",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "73%",
+        "Hormuz crude shipments have rebounded after ceasefire movement, but traffic remains below normal and route risk persists; oil chokepoints, LNG stress, refinery attacks, sanctions, and grid strain remain active. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobilit"
+      ],
+      "score": 58
+    },
+    {
+      "id": "machine-convergence",
+      "layer": "evidence-and-records",
+      "name": "Machine Convergence",
+      "type": "risk timer",
+      "route": "timers.html",
+      "notes": [
+        "83%",
+        "Hidden composite index: AI-state integration, surveillance rails, cyber dependency, payment systems, war automation, biometric identity, and platform control. No public certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digi"
+      ],
+      "score": 58
+    },
+    {
+      "id": "orsini",
+      "layer": "lineage-and-orders",
+      "name": "Orsini",
+      "type": "family route",
+      "route": "elite-families/orsini.html",
+      "notes": [
+        "Italian nobility / papal Rome research lane",
+        "historic aristocracy",
+        "church-state power",
+        "land and titles",
+        "institutional access"
+      ],
+      "score": 55
+    },
+    {
+      "id": "rothschild",
+      "layer": "lineage-and-orders",
+      "name": "Rothschild",
+      "type": "family route",
+      "route": "elite-families/rothschild.html",
+      "notes": [
+        "European banking family research lane",
+        "banking history",
+        "philanthropy",
+        "capital networks",
+        "public records"
+      ],
+      "score": 55
+    },
+    {
+      "id": "rockefeller",
+      "layer": "lineage-and-orders",
+      "name": "Rockefeller",
+      "type": "family route",
+      "route": "elite-families/rockefeller.html",
+      "notes": [
+        "US industrial and foundation history lane",
+        "energy history",
+        "foundations",
+        "education and policy",
+        "public-private routes"
+      ],
+      "score": 55
+    },
+    {
+      "id": "medici",
+      "layer": "lineage-and-orders",
+      "name": "Medici",
+      "type": "family route",
+      "route": "elite-families/medici.html",
+      "notes": [
+        "Florentine banking / Renaissance political lane",
+        "historic banking",
+        "political rule",
+        "patronage",
+        "church links"
+      ],
+      "score": 55
+    },
+    {
+      "id": "habsburg",
+      "layer": "lineage-and-orders",
+      "name": "Habsburg",
+      "type": "family route",
+      "route": "elite-families/habsburg.html",
+      "notes": [
+        "European dynasty / imperial records lane",
+        "dynastic power",
+        "statecraft",
+        "marriage alliances",
+        "orders and titles"
+      ],
+      "score": 55
+    },
+    {
+      "id": "windsor",
+      "layer": "lineage-and-orders",
+      "name": "Windsor",
+      "type": "family route",
+      "route": "elite-families/windsor.html",
+      "notes": [
+        "British monarchy / public institution lane",
+        "monarchy",
+        "charity networks",
+        "land and estate records",
+        "state ceremony"
+      ],
+      "score": 55
+    },
+    {
+      "id": "freemasonry",
+      "layer": "lineage-and-orders",
+      "name": "Freemasonry",
+      "type": "order route",
+      "route": "orders/freemasonry.html",
+      "notes": [
+        "fraternal order tracker",
+        "politics where membership is publicly documented",
+        "monuments and architecture",
+        "charities",
+        "military and civic networks"
+      ],
+      "score": 55
+    },
+    {
+      "id": "sovereign-military-order-of-malta",
+      "layer": "lineage-and-orders",
+      "name": "Sovereign Military Order of Malta",
+      "type": "order route",
+      "route": "orders/knights-of-malta.html",
+      "notes": [
+        "sovereign order tracker",
+        "Vatican and Catholic diplomacy",
+        "humanitarian NGOs",
+        "state diplomacy",
+        "aristocratic and diplomatic networks"
+      ],
+      "score": 55
+    },
+    {
+      "id": "knights-templar-legacy-claims",
+      "layer": "lineage-and-orders",
+      "name": "Knights Templar Legacy Claims",
+      "type": "order route",
+      "route": "orders/knights-templar.html",
+      "notes": [
+        "historic order / legacy claim tracker",
+        "crusades",
+        "church-state power",
+        "banking history",
+        "Freemasonry ritual echoes"
+      ],
+      "score": 55
+    },
+    {
+      "id": "society-of-jesus",
+      "layer": "lineage-and-orders",
+      "name": "Society of Jesus",
+      "type": "order route",
+      "route": "orders/jesuits.html",
+      "notes": [
+        "religious order tracker",
+        "education systems",
+        "diplomacy and theology",
+        "Catholic institutions",
+        "mission history"
+      ],
+      "score": 55
+    },
+    {
+      "id": "opus-dei",
+      "layer": "lineage-and-orders",
+      "name": "Opus Dei",
+      "type": "order route",
+      "route": "orders/opus-dei.html",
+      "notes": [
+        "Catholic personal prelature tracker",
+        "Vatican structures",
+        "education",
+        "professional associations",
+        "public controversy / court records where available"
+      ],
+      "score": 55
+    },
+    {
+      "id": "skull-and-bones",
+      "layer": "lineage-and-orders",
+      "name": "Skull and Bones",
+      "type": "order route",
+      "route": "orders/skull-and-bones.html",
+      "notes": [
+        "student society tracker",
+        "US political biographies",
+        "elite education",
+        "clubs and networks",
+        "publishing and memoir claims"
+      ],
+      "score": 55
+    },
+    {
+      "id": "bohemian-grove-bohemian-club",
+      "layer": "lineage-and-orders",
+      "name": "Bohemian Grove / Bohemian Club",
+      "type": "order route",
+      "route": "orders/bohemian-grove.html",
+      "notes": [
+        "elite club tracker",
+        "business elites",
+        "political figures",
+        "media and culture",
+        "private club networks"
+      ],
+      "score": 55
+    },
+    {
+      "id": "bilderberg-meeting",
+      "layer": "lineage-and-orders",
+      "name": "Bilderberg Meeting",
+      "type": "order route",
+      "route": "orders/bilderberg.html",
+      "notes": [
+        "conference tracker",
+        "policy networks",
+        "banks and finance",
+        "technology",
+        "defense and diplomacy"
+      ],
+      "score": 55
+    },
+    {
+      "id": "object-object",
+      "layer": "evidence-and-records",
+      "name": "[object Object]",
+      "type": "missing record",
+      "route": "entity-briefs/object-object.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "health-and-human-services-department",
+      "layer": "evidence-and-records",
+      "name": "Health and Human Services Department",
+      "type": "missing record",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "management-and-budget-office",
+      "layer": "evidence-and-records",
+      "name": "Management and Budget Office",
+      "type": "missing record",
+      "route": "entity-briefs/management-and-budget-office.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "defense-department",
+      "layer": "evidence-and-records",
+      "name": "Defense Department",
+      "type": "missing record",
+      "route": "entity-briefs/defense-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "agency-for-international-development",
+      "layer": "evidence-and-records",
+      "name": "Agency for International Development",
+      "type": "missing record",
+      "route": "entity-briefs/agency-for-international-development.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "agriculture-department",
+      "layer": "evidence-and-records",
+      "name": "Agriculture Department",
+      "type": "missing record",
+      "route": "entity-briefs/agriculture-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "energy-department",
+      "layer": "evidence-and-records",
+      "name": "Energy Department",
+      "type": "missing record",
+      "route": "entity-briefs/energy-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "state-department",
+      "layer": "evidence-and-records",
+      "name": "State Department",
+      "type": "missing record",
+      "route": "entity-briefs/state-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "treasury-department",
+      "layer": "evidence-and-records",
+      "name": "Treasury Department",
+      "type": "missing record",
+      "route": "entity-briefs/treasury-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "veterans-affairs-department",
+      "layer": "evidence-and-records",
+      "name": "Veterans Affairs Department",
+      "type": "missing record",
+      "route": "entity-briefs/veterans-affairs-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "commerce-department",
+      "layer": "evidence-and-records",
+      "name": "Commerce Department",
+      "type": "missing record",
+      "route": "entity-briefs/commerce-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "interior-department",
+      "layer": "evidence-and-records",
+      "name": "Interior Department",
+      "type": "missing record",
+      "route": "entity-briefs/interior-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "layer": "evidence-and-records",
+      "name": "People's Republic of Bangladesh",
+      "type": "missing record",
+      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "transportation-department",
+      "layer": "evidence-and-records",
+      "name": "Transportation Department",
+      "type": "missing record",
+      "route": "entity-briefs/transportation-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "25-365",
+      "layer": "evidence-and-records",
+      "name": "25-365",
+      "type": "missing record",
+      "route": "entity-briefs/25-365.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "supreme-court-of-the-united-states",
+      "layer": "evidence-and-records",
+      "name": "Supreme Court of the United States",
+      "type": "missing record",
+      "route": "entity-briefs/supreme-court-of-the-united-states.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "layer": "evidence-and-records",
+      "name": "National Aeronautics and Space Administration",
+      "type": "missing record",
+      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "centers-for-medicare-medicaid-services",
+      "layer": "evidence-and-records",
+      "name": "Centers for Medicare & Medicaid Services",
+      "type": "missing record",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "federal-procurement-policy-office",
+      "layer": "evidence-and-records",
+      "name": "Federal Procurement Policy Office",
+      "type": "missing record",
+      "route": "entity-briefs/federal-procurement-policy-office.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "general-services-administration",
+      "layer": "evidence-and-records",
+      "name": "General Services Administration",
+      "type": "missing record",
+      "route": "entity-briefs/general-services-administration.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "2024-07773",
+      "layer": "evidence-and-records",
+      "name": "2024-07773",
+      "type": "missing record",
+      "route": "entity-briefs/2024-07773.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "25-581",
+      "layer": "evidence-and-records",
+      "name": "25-581",
+      "type": "missing record",
+      "route": "entity-briefs/25-581.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "ac48383",
+      "layer": "evidence-and-records",
+      "name": "AC48383",
+      "type": "missing record",
+      "route": "entity-briefs/ac48383.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "accountability-now-usa-v-griess",
+      "layer": "evidence-and-records",
+      "name": "Accountability Now USA v. Griess",
+      "type": "missing record",
+      "route": "entity-briefs/accountability-now-usa-v-griess.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "layer": "evidence-and-records",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "type": "missing record",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "biddle-v-biddle",
+      "layer": "evidence-and-records",
+      "name": "Biddle v. Biddle",
+      "type": "missing record",
+      "route": "entity-briefs/biddle-v-biddle.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "layer": "evidence-and-records",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "type": "missing record",
+      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "civil-action-no-2026-1385",
+      "layer": "evidence-and-records",
+      "name": "Civil Action No. 2026-1385",
+      "type": "missing record",
+      "route": "entity-briefs/civil-action-no-2026-1385.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "connecticut-appellate-court",
+      "layer": "evidence-and-records",
+      "name": "Connecticut Appellate Court",
+      "type": "missing record",
+      "route": "entity-briefs/connecticut-appellate-court.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "court-of-appeals-of-north-carolina",
+      "layer": "evidence-and-records",
+      "name": "Court of Appeals of North Carolina",
+      "type": "missing record",
+      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "district-court-district-of-columbia",
+      "layer": "evidence-and-records",
+      "name": "District Court, District of Columbia",
+      "type": "missing record",
+      "route": "entity-briefs/district-court-district-of-columbia.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "layer": "evidence-and-records",
+      "name": "Finance Division, Ministry of Finance",
+      "type": "missing record",
+      "route": "entity-briefs/finance-division-ministry-of-finance.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "khan-v-jewish-women-international",
+      "layer": "evidence-and-records",
+      "name": "Khan v. Jewish Women International",
+      "type": "missing record",
+      "route": "entity-briefs/khan-v-jewish-women-international.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "kingdom-of-morocco",
+      "layer": "evidence-and-records",
+      "name": "Kingdom of Morocco",
+      "type": "missing record",
+      "route": "entity-briefs/kingdom-of-morocco.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "matter-of-pagliughi",
+      "layer": "evidence-and-records",
+      "name": "Matter of Pagliughi",
+      "type": "missing record",
+      "route": "entity-briefs/matter-of-pagliughi.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "layer": "evidence-and-records",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "type": "missing record",
+      "route": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "layer": "evidence-and-records",
+      "name": "Ministry of Health and Family Welfare",
+      "type": "missing record",
+      "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "trump-v-barbara",
+      "layer": "evidence-and-records",
+      "name": "Trump v. Barbara",
+      "type": "missing record",
+      "route": "entity-briefs/trump-v-barbara.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "trump-v-barbara-revisions-7-01-26",
+      "layer": "evidence-and-records",
+      "name": "Trump v. Barbara Revisions: 7/01/26",
+      "type": "missing record",
+      "route": "entity-briefs/trump-v-barbara-revisions-7-01-26.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "aapl",
+      "layer": "evidence-and-records",
+      "name": "AAPL",
+      "type": "missing record",
+      "route": "entity-briefs/aapl.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "breakspear",
+      "layer": "lineage-and-orders",
+      "name": "Breakspear",
+      "type": "family route",
+      "route": "elite-families/breakspear.html",
+      "notes": [
+        "English medieval / papal history research lane",
+        "historic church office",
+        "medieval records",
+        "name lineage"
+      ],
+      "score": 51
+    },
+    {
+      "id": "missing-records",
+      "layer": "evidence-and-records",
+      "name": "Missing records",
+      "type": "deep intel feed lane",
+      "route": "daily-missing-records.html",
+      "notes": [
+        "The highest-value source gaps for claim upgrades",
+        "Priority 99"
+      ],
+      "score": 43
+    },
+    {
+      "id": "sec-filings",
+      "layer": "evidence-and-records",
+      "name": "SEC filings",
+      "type": "deep intel feed lane",
+      "route": "sec-filing-feed.html",
+      "notes": [
+        "Filings, 13F, proxy, ownership and market structure routes",
+        "Priority 98"
+      ],
+      "score": 43
+    },
+    {
+      "id": "asset-managers",
+      "layer": "evidence-and-records",
+      "name": "Asset managers",
+      "type": "deep intel feed lane",
+      "route": "big-three-asset-managers.html",
+      "notes": [
+        "BlackRock, Vanguard, State Street, holdings, voting and mandates",
+        "Priority 97"
+      ],
+      "score": 43
+    },
+    {
+      "id": "government-contracts",
+      "layer": "evidence-and-records",
+      "name": "Government contracts",
+      "type": "deep intel feed lane",
+      "route": "private-contractor-tracker.html",
+      "notes": [
+        "Awards, procurement, contractor and public money routes",
+        "Priority 96"
+      ],
+      "score": 43
+    },
+    {
+      "id": "courts-and-filings",
+      "layer": "evidence-and-records",
+      "name": "Courts and filings",
+      "type": "deep intel feed lane",
+      "route": "evidence-vault.html",
+      "notes": [
+        "Cases, dockets, depositions, judgments and sealed-record prompts",
+        "Priority 95"
+      ],
+      "score": 43
+    },
+    {
+      "id": "sanctions-and-enforcement",
+      "layer": "evidence-and-records",
+      "name": "Sanctions and enforcement",
+      "type": "deep intel feed lane",
+      "route": "evidence-vault.html",
+      "notes": [
+        "Treasury, justice, regulators, lawsuits and enforcement routes",
+        "Priority 94"
+      ],
+      "score": 43
+    },
+    {
+      "id": "central-banks-and-money-rails",
+      "layer": "evidence-and-records",
+      "name": "Central banks and money rails",
+      "type": "deep intel feed lane",
+      "route": "power-structure-map.html",
+      "notes": [
+        "Rates, reserves, CBDC, settlement and liquidity routes",
+        "Priority 93"
+      ],
+      "score": 43
+    },
+    {
+      "id": "risk-clocks",
+      "layer": "evidence-and-records",
+      "name": "Risk clocks",
+      "type": "deep intel feed lane",
+      "route": "timers.html",
+      "notes": [
+        "Clock pressure, record gaps and linked source routes",
+        "Priority 91"
+      ],
+      "score": 43
+    },
+    {
+      "id": "think-tanks-and-policy-shops",
+      "layer": "evidence-and-records",
+      "name": "Think tanks and policy shops",
+      "type": "deep intel feed lane",
+      "route": "power-structure-map.html",
+      "notes": [
+        "Policy reports, appointments, attendance and public influence routes",
+        "Priority 90"
+      ],
+      "score": 43
+    },
+    {
+      "id": "live-intel-drops",
+      "layer": "evidence-and-records",
+      "name": "Live intel drops",
+      "type": "deep intel feed lane",
+      "route": "live-intel.html",
+      "notes": [
+        "Recent public-source items already pulled into the site",
+        "Priority 88"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-surveillance-state-clock-95",
+      "layer": "evidence-and-records",
+      "name": "Surveillance State Clock — 95%",
+      "type": "deep intel item",
+      "route": "timers.html",
+      "notes": [
+        "risk clock",
+        "Score 95"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-ai-breakout-clock-91",
+      "layer": "evidence-and-records",
+      "name": "AI Breakout Clock — 91%",
+      "type": "deep intel item",
+      "route": "timers.html",
+      "notes": [
+        "risk clock",
+        "Score 91"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-cbdc-rollout-clock-87",
+      "layer": "evidence-and-records",
+      "name": "CBDC Rollout Clock — 87%",
+      "type": "deep intel item",
+      "route": "timers.html",
+      "notes": [
+        "risk clock",
+        "Score 87"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-object-object-confirm-the-primary-record-page-pdf-docket-fil",
+      "layer": "evidence-and-records",
+      "name": "[object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/object-object.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
+      "layer": "evidence-and-records",
+      "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-management-and-budget-office-confirm-the-primary-record-page",
+      "layer": "evidence-and-records",
+      "name": "Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/management-and-budget-office.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-defense-department-confirm-the-primary-record-page-pdf-docke",
+      "layer": "evidence-and-records",
+      "name": "Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/defense-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-agency-for-international-development-confirm-the-primary-rec",
+      "layer": "evidence-and-records",
+      "name": "Agency for International Development — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/agency-for-international-development.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-agriculture-department-confirm-the-primary-record-page-pdf-d",
+      "layer": "evidence-and-records",
+      "name": "Agriculture Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/agriculture-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-energy-department-confirm-the-primary-record-page-pdf-docket",
+      "layer": "evidence-and-records",
+      "name": "Energy Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/energy-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-state-department-confirm-the-primary-record-page-pdf-docket-",
+      "layer": "evidence-and-records",
+      "name": "State Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/state-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-treasury-department-confirm-the-primary-record-page-pdf-dock",
+      "layer": "evidence-and-records",
+      "name": "Treasury Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/treasury-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-veterans-affairs-department-confirm-the-primary-record-page-",
+      "layer": "evidence-and-records",
+      "name": "Veterans Affairs Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/veterans-affairs-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-commerce-department-confirm-the-primary-record-page-pdf-dock",
+      "layer": "evidence-and-records",
+      "name": "Commerce Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/commerce-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-interior-department-confirm-the-primary-record-page-pdf-dock",
+      "layer": "evidence-and-records",
+      "name": "Interior Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/interior-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    }
+  ],
+  "edges": [
+    {
+      "from": "orsini",
+      "to": "historic-aristocracy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "church-state-power",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "land-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "institutional-access",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "historic-church-office",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "medieval-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "name-lineage",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "banking-history",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "philanthropy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "capital-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "public-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "energy-history",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "foundations",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "education-and-policy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "public-private-routes",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "historic-banking",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "political-rule",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "patronage",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "church-links",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "dynastic-power",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "statecraft",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "marriage-alliances",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "orders-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "monarchy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "charity-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "land-and-estate-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "state-ceremony",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "politics-where-membership-is-publicly-documented",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "monuments-and-architecture",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "charities",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "military-and-civic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "publishing-and-symbolism",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "vatican-and-catholic-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "humanitarian-ngos",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "state-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "aristocratic-and-diplomatic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "health-and-relief-operations",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "crusades",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "church-state-power",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "banking-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "freemasonry-ritual-echoes",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "modern-groups-claiming-lineage",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "education-systems",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "diplomacy-and-theology",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "catholic-institutions",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "mission-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "publishing-and-universities",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "vatican-structures",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "education",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "professional-associations",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "public-controversy-court-records-where-available",
+      "type": "overlap hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "us-political-biographies",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "elite-education",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "clubs-and-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "publishing-and-memoir-claims",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "business-elites",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "political-figures",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "media-and-culture",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "private-club-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "policy-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "banks-and-finance",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "technology",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "defense-and-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "media",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "media-narrative",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "health",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "banking",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "policy",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "banking",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "gold-reserves",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "identity-access",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "migration",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "security",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "war",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "migration",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "health",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "education",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "index-funds-and-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "ishares",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "aladdin-risk-and-portfolio-platform",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "private-markets-infrastructure-expansion",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "public-company-ownership-concentration",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "index-funds-and-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "retirement-accounts",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "mutual-fund-governance",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "ownership-concentration-across-public-companies",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "fund-owned-corporate-structure",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "spdr-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "custody-and-administration",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "investment-management",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "market-services",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "systemically-important-financial-infrastructure",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "elon-musk",
+      "to": "tesla",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "spacex",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "x",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "xai",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "starlink",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "amazon",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "aws",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "blue-origin",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "washington-post",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "gates-foundation",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "microsoft-legacy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "health-and-development-philanthropy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "mark-zuckerberg",
+      "to": "meta",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "mark-zuckerberg",
+      "to": "facebook",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "mark-zuckerberg",
+      "to": "instagram",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "mark-zuckerberg",
+      "to": "whatsapp",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "larry-ellison",
+      "to": "oracle",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "larry-ellison",
+      "to": "cloud-infrastructure",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "larry-ellison",
+      "to": "health-data-systems",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "peter-thiel",
+      "to": "palantir",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "peter-thiel",
+      "to": "founders-fund",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "peter-thiel",
+      "to": "political-and-technology-networks",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bernard-arnault",
+      "to": "lvmh",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bernard-arnault",
+      "to": "luxury-networks",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bernard-arnault",
+      "to": "media-and-culture-influence-routes",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "michael-bloomberg",
+      "to": "bloomberg-lp",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "michael-bloomberg",
+      "to": "media-data-terminals",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "michael-bloomberg",
+      "to": "philanthropy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "warren-buffett",
+      "to": "berkshire-hathaway",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "warren-buffett",
+      "to": "insurance",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "warren-buffett",
+      "to": "energy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "warren-buffett",
+      "to": "rail-and-finance-holdings",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jensen-huang",
+      "to": "nvidia",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jensen-huang",
+      "to": "ai-chips",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jensen-huang",
+      "to": "data-center-infrastructure",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "blackwater-xe-academi-constellis-lineage",
+      "to": "war",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackwater-xe-academi-constellis-lineage",
+      "to": "security",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackwater-xe-academi-constellis-lineage",
+      "to": "contractors",
+      "type": "execution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackwater-xe-academi-constellis-lineage",
+      "to": "public-private-power",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackwater-xe-academi-constellis-lineage",
+      "to": "intelligence-adjacent-systems",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "dyncorp-amentum-lineage",
+      "to": "war",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "dyncorp-amentum-lineage",
+      "to": "logistics",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "dyncorp-amentum-lineage",
+      "to": "contractors",
+      "type": "execution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "dyncorp-amentum-lineage",
+      "to": "public-money",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "caci-international",
+      "to": "intelligence",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "caci-international",
+      "to": "defense-technology",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "caci-international",
+      "to": "surveillance",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "caci-international",
+      "to": "public-money",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "booz-allen-hamilton",
+      "to": "intelligence",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "booz-allen-hamilton",
+      "to": "consulting",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "booz-allen-hamilton",
+      "to": "ai-data",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "booz-allen-hamilton",
+      "to": "public-money",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "palantir-government-platforms",
+      "to": "ai-data",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "palantir-government-platforms",
+      "to": "surveillance",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "palantir-government-platforms",
+      "to": "security",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "palantir-government-platforms",
+      "to": "health-data",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "palantir-government-platforms",
+      "to": "border-systems",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "g4s-allied-universal-security-lineage",
+      "to": "security",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "g4s-allied-universal-security-lineage",
+      "to": "detention",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "g4s-allied-universal-security-lineage",
+      "to": "facilities",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "g4s-allied-universal-security-lineage",
+      "to": "public-private-power",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "saic-leidos-lineage",
+      "to": "defense",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "saic-leidos-lineage",
+      "to": "intelligence",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "saic-leidos-lineage",
+      "to": "technology",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "saic-leidos-lineage",
+      "to": "public-money",
+      "type": "execution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    }
+  ]
+}

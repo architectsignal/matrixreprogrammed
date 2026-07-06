@@ -1,0 +1,192 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.310Z",
+  "title": "Mission Source Priority Index",
+  "boundary": "The site prioritizes top relevant evidence lanes for its mission. It does not claim to ingest every record. Priority is based on ability to prove, disprove or materially clarify control-route claims.",
+  "priorities": [
+    {
+      "tier": 1,
+      "id": "sec-edgar-core",
+      "title": "SEC EDGAR / ownership / proxy-vote records",
+      "route": "sec-filing-feed.html",
+      "mission": "Best lane for asset managers, BlackRock/Vanguard/State Street, holdings, voting power, mandates and ownership claims.",
+      "proves": [
+        "who reports ownership",
+        "who votes shares",
+        "what companies disclose",
+        "what asset managers file"
+      ],
+      "disproves": [
+        "viral claims that confuse fund holdings with direct secret ownership"
+      ],
+      "score": 100
+    },
+    {
+      "tier": 1,
+      "id": "contracts-procurement-core",
+      "title": "Government contracts and procurement records",
+      "route": "private-contractor-tracker.html",
+      "mission": "Best lane for contractors, public money, operational outsourcing and state/private execution routes.",
+      "proves": [
+        "who was paid",
+        "what service was bought",
+        "which agency awarded it",
+        "contract timing"
+      ],
+      "disproves": [
+        "claims without contract numbers or agency records"
+      ],
+      "score": 99
+    },
+    {
+      "tier": 1,
+      "id": "court-docket-core",
+      "title": "Court dockets, exhibits and enforcement records",
+      "route": "evidence-vault.html",
+      "mission": "Best lane for wrongdoing, litigation, sworn exhibits, settlements, indictments and Epstein-related court trails.",
+      "proves": [
+        "named parties",
+        "documented allegations",
+        "settlements",
+        "official charges",
+        "exhibits"
+      ],
+      "disproves": [
+        "rumor without filings or exhibits"
+      ],
+      "score": 98
+    },
+    {
+      "tier": 1,
+      "id": "central-bank-money-core",
+      "title": "Central-bank, BIS, IMF and digital-money records",
+      "route": "deep-intel-feed.html",
+      "mission": "Best lane for currency convergence, CBDC, settlement, programmable payment and monetary-control routes.",
+      "proves": [
+        "official pilots",
+        "policy papers",
+        "settlement projects",
+        "regulatory movement"
+      ],
+      "disproves": [
+        "claims that leap from discussion paper to completed world currency"
+      ],
+      "score": 96
+    },
+    {
+      "tier": 1,
+      "id": "epstein-court-file-core",
+      "title": "Epstein-file court and source-document lane",
+      "route": "epstein-files.html",
+      "mission": "Best lane for Epstein-related claims when tied to court records, official releases, exhibits and named-source trails.",
+      "proves": [
+        "court-sourced documents",
+        "deposition references",
+        "official releases",
+        "documented institutional links"
+      ],
+      "disproves": [
+        "unsupported name-list claims or decontextualized screenshots"
+      ],
+      "score": 95
+    },
+    {
+      "tier": 2,
+      "id": "governance-policy-core",
+      "title": "UN / WHO / EU / NATO / G20 / public-policy records",
+      "route": "power-structure-map.html",
+      "mission": "Best lane for governance convergence, treaties, standards, emergency frameworks and policy coordination.",
+      "proves": [
+        "policy texts",
+        "national implementation",
+        "public-private participation",
+        "meeting records"
+      ],
+      "disproves": [
+        "claims that every coordination document equals one hidden government"
+      ],
+      "score": 92
+    },
+    {
+      "tier": 2,
+      "id": "charity-foundation-core",
+      "title": "Charity, foundation and NGO registry records",
+      "route": "evidence-vault.html",
+      "mission": "Best lane for foundations, family routes, religious networks, NGOs, funding and institutional influence.",
+      "proves": [
+        "registered officers",
+        "grants",
+        "program funding",
+        "institutional partnerships"
+      ],
+      "disproves": [
+        "family/name association without records"
+      ],
+      "score": 89
+    },
+    {
+      "tier": 2,
+      "id": "lobbying-donor-core",
+      "title": "Lobbying, donations and public influence records",
+      "route": "evidence-vault.html",
+      "mission": "Best lane for policy influence, revolving doors, think tanks and legislative pressure.",
+      "proves": [
+        "who paid",
+        "who lobbied",
+        "which issue",
+        "which date"
+      ],
+      "disproves": [
+        "influence claims without money or meeting records"
+      ],
+      "score": 88
+    },
+    {
+      "tier": 2,
+      "id": "major-media-document-lane",
+      "title": "Major media and wire-source document lane",
+      "route": "live-intel.html",
+      "mission": "Best lane for discovery and timeline building, but should be upgraded with primary documents.",
+      "proves": [
+        "reported chronology",
+        "named public events",
+        "document references"
+      ],
+      "disproves": [
+        "nothing alone; media is a lead unless supported by records"
+      ],
+      "score": 76
+    },
+    {
+      "tier": 3,
+      "id": "wikileaks-document-archive-lane",
+      "title": "WikiLeaks / document-archive lead lane",
+      "route": "evidence-vault.html",
+      "mission": "Useful discovery lane for cables, emails and document dumps when authenticated and cross-checked.",
+      "proves": [
+        "possible source leads",
+        "phrasing and chronology",
+        "names to verify"
+      ],
+      "disproves": [
+        "nothing without authentication and context"
+      ],
+      "score": 70
+    },
+    {
+      "tier": 3,
+      "id": "viral-video-claim-lane",
+      "title": "Viral video and screenshot claim lane",
+      "route": "big-three/blackrock.html",
+      "mission": "Useful lead lane for reader questions and claim triage, not a proof lane by itself.",
+      "proves": [
+        "what claim is circulating",
+        "what screenshots need checking"
+      ],
+      "disproves": [
+        "unsupported viral interpretation when records do not match"
+      ],
+      "score": 62
+    }
+  ]
+}

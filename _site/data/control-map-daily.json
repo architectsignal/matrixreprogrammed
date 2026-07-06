@@ -1,0 +1,1106 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.312Z",
+  "title": "Daily / Weekly Visual Control Map",
+  "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
+  "periods": {
+    "daily": "Built from current graph, feed lanes, clock pressure and daily conclusions.",
+    "weekly": "Use the same data with week-over-week change, top movers and new missing records."
+  },
+  "layers": [
+    {
+      "id": "top-frame",
+      "title": "Top Frame: governance / currency / religion / elite-control lenses",
+      "nodes": [
+        {
+          "name": "One-world governance convergence",
+          "score": 90,
+          "route": "power-structure-map.html",
+          "type": "convergence lens"
+        },
+        {
+          "name": "One-world currency / digital-money rail",
+          "score": 92,
+          "route": "deep-intel-feed.html",
+          "type": "convergence lens"
+        },
+        {
+          "name": "One-world religion / interfaith convergence",
+          "score": 78,
+          "route": "secret-societies-tracker.html",
+          "type": "convergence lens"
+        },
+        {
+          "name": "Elite-control infrastructure",
+          "score": 94,
+          "route": "evidence-graph.html",
+          "type": "convergence lens"
+        }
+      ]
+    },
+    {
+      "id": "source-records",
+      "title": "Evidence Base: government / court / finance / media / document / Epstein lanes",
+      "nodes": [
+        {
+          "name": "Government records",
+          "score": 100,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Court and legal records",
+          "score": 98,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Finance and ownership records",
+          "score": 96,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Contractor records",
+          "score": 95,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Media and wire-source lane",
+          "score": 72,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Document archive / WikiLeaks-style lane",
+          "score": 70,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Epstein files and related court record lane",
+          "score": 88,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        },
+        {
+          "name": "Missing-record queue",
+          "score": 99,
+          "route": "data/master-evidence-source-registry.json",
+          "type": "source lane"
+        }
+      ]
+    },
+    {
+      "id": "relationship-graph",
+      "title": "Power Graph: highest-scoring relationship nodes",
+      "nodes": [
+        {
+          "name": "World Economic Forum",
+          "score": 100,
+          "route": "institution-briefs/world-economic-forum.html",
+          "type": "institution route"
+        },
+        {
+          "name": "World Health Organization",
+          "score": 100,
+          "route": "institution-briefs/world-health-organization.html",
+          "type": "institution route"
+        },
+        {
+          "name": "World Bank",
+          "score": 100,
+          "route": "institution-briefs/world-bank.html",
+          "type": "institution route"
+        },
+        {
+          "name": "International Monetary Fund",
+          "score": 100,
+          "route": "institution-briefs/international-monetary-fund.html",
+          "type": "institution route"
+        },
+        {
+          "name": "Federal Reserve",
+          "score": 100,
+          "route": "institution-briefs/federal-reserve.html",
+          "type": "institution route"
+        },
+        {
+          "name": "European Commission",
+          "score": 100,
+          "route": "institution-briefs/european-commission.html",
+          "type": "institution route"
+        },
+        {
+          "name": "NATO",
+          "score": 100,
+          "route": "institution-briefs/nato.html",
+          "type": "institution route"
+        },
+        {
+          "name": "United Nations",
+          "score": 100,
+          "route": "institution-briefs/united-nations.html",
+          "type": "institution route"
+        },
+        {
+          "name": "BlackRock",
+          "score": 100,
+          "route": "big-three/blackrock.html",
+          "type": "asset manager route"
+        },
+        {
+          "name": "Vanguard",
+          "score": 100,
+          "route": "big-three/vanguard.html",
+          "type": "asset manager route"
+        },
+        {
+          "name": "State Street / State Street Investment Management",
+          "score": 100,
+          "route": "big-three/state-street.html",
+          "type": "asset manager route"
+        },
+        {
+          "name": "Blackwater / Xe / Academi / Constellis lineage",
+          "score": 100,
+          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "DynCorp / Amentum lineage",
+          "score": 100,
+          "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "CACI International",
+          "score": 100,
+          "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "Booz Allen Hamilton",
+          "score": 100,
+          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "Palantir government platforms",
+          "score": 100,
+          "route": "contractor-briefs/palantir-government-platforms.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "G4S / Allied Universal security lineage",
+          "score": 100,
+          "route": "contractor-briefs/g4s-allied-security-lineage.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "SAIC / Leidos lineage",
+          "score": 100,
+          "route": "contractor-briefs/leidos-saic-lineage.html",
+          "type": "contractor route"
+        }
+      ]
+    },
+    {
+      "id": "daily-actions",
+      "title": "User Actions: open, prove, disprove, watch next",
+      "nodes": [
+        {
+          "name": "Strongest route today",
+          "score": 80,
+          "route": "institution-briefs/world-economic-forum.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Highest clock pressure",
+          "score": 80,
+          "route": "timers.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Top capital lane",
+          "score": 80,
+          "route": "big-three/blackrock.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Top contractor lane",
+          "score": 80,
+          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Top institution lane",
+          "score": 80,
+          "route": "institution-briefs/world-bank.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Top billionaire lane",
+          "score": 80,
+          "route": "billionaire-briefs/elon-musk.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "Most important missing record",
+          "score": 80,
+          "route": "entity-briefs/object-object.html",
+          "type": "daily conclusion"
+        },
+        {
+          "name": "One-world governance convergence",
+          "score": 80,
+          "route": "power-structure-map.html",
+          "type": "daily conclusion"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "orsini",
+      "to": "historic-aristocracy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "church-state-power",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "land-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "orsini",
+      "to": "institutional-access",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "historic-church-office",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "medieval-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "breakspear",
+      "to": "name-lineage",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "banking-history",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "philanthropy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "capital-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rothschild",
+      "to": "public-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "energy-history",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "foundations",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "education-and-policy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "rockefeller",
+      "to": "public-private-routes",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "historic-banking",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "political-rule",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "patronage",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "medici",
+      "to": "church-links",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "dynastic-power",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "statecraft",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "marriage-alliances",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "habsburg",
+      "to": "orders-and-titles",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "monarchy",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "charity-networks",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "land-and-estate-records",
+      "type": "layer hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "windsor",
+      "to": "state-ceremony",
+      "type": "layer hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "politics-where-membership-is-publicly-documented",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "monuments-and-architecture",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "charities",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "military-and-civic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "freemasonry",
+      "to": "publishing-and-symbolism",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "vatican-and-catholic-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "humanitarian-ngos",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "state-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "aristocratic-and-diplomatic-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "sovereign-military-order-of-malta",
+      "to": "health-and-relief-operations",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "crusades",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "church-state-power",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "banking-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "freemasonry-ritual-echoes",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "knights-templar-legacy-claims",
+      "to": "modern-groups-claiming-lineage",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "education-systems",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "diplomacy-and-theology",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "catholic-institutions",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "mission-history",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "society-of-jesus",
+      "to": "publishing-and-universities",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "vatican-structures",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "education",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "professional-associations",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "opus-dei",
+      "to": "public-controversy-court-records-where-available",
+      "type": "overlap hint",
+      "weight": 80,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "us-political-biographies",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "elite-education",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "clubs-and-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "skull-and-bones",
+      "to": "publishing-and-memoir-claims",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "business-elites",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "political-figures",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "media-and-culture",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bohemian-grove-bohemian-club",
+      "to": "private-club-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "policy-networks",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "banks-and-finance",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "technology",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "defense-and-diplomacy",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bilderberg-meeting",
+      "to": "media",
+      "type": "overlap hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-economic-forum",
+      "to": "media-narrative",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "health",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-health-organization",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "world-bank",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "banking",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "international-monetary-fund",
+      "to": "policy",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "money",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "banking",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "federal-reserve",
+      "to": "gold-reserves",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "identity-access",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "migration",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "european-commission",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "security",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "war",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "nato",
+      "to": "public-private-contracts",
+      "type": "institution layer",
+      "weight": 80,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "foundations-ngos",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "migration",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "health",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "united-nations",
+      "to": "education",
+      "type": "institution layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "index-funds-and-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "ishares",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "aladdin-risk-and-portfolio-platform",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "private-markets-infrastructure-expansion",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "blackrock",
+      "to": "public-company-ownership-concentration",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "index-funds-and-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "retirement-accounts",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "mutual-fund-governance",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "ownership-concentration-across-public-companies",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "vanguard",
+      "to": "fund-owned-corporate-structure",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "spdr-etfs",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "custody-and-administration",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "investment-management",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "market-services",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "proxy-voting-stewardship",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "state-street-state-street-investment-management",
+      "to": "systemically-important-financial-infrastructure",
+      "type": "capital layer",
+      "weight": 55,
+      "confidence": "mapped"
+    },
+    {
+      "from": "elon-musk",
+      "to": "tesla",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "spacex",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "x",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "xai",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "elon-musk",
+      "to": "starlink",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "amazon",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "aws",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "blue-origin",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "jeff-bezos",
+      "to": "washington-post",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "gates-foundation",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "microsoft-legacy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "bill-gates",
+      "to": "health-and-development-philanthropy",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    },
+    {
+      "from": "mark-zuckerberg",
+      "to": "meta",
+      "type": "ecosystem hint",
+      "weight": 55,
+      "confidence": "review"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "ok": true,
+  "updated": "2026-07-06T08:02:57.218Z",
+  "title": "Big Three Asset Manager Tracker",
+  "boundary": "This tracker maps influence routes, public records and missing records. It does not treat ownership, index inclusion, custody, association or voting power as wrongdoing by itself.",
+  "lanes": [
+    "Management and board",
+    "AUM and AUC/AUA",
+    "ETF and index exposure",
+    "13F holdings",
+    "13D / 13G beneficial ownership",
+    "N-PX proxy voting",
+    "Form ADV adviser details",
+    "public pension mandates",
+    "government contracts and procurement",
+    "custody / administration",
+    "technology platforms",
+    "subsidiaries and acquisitions",
+    "regulatory actions and lawsuits",
+    "lobbying and policy routes",
+    "missing records and watch triggers"
+  ],
+  "companies": [
+    {
+      "id": "blackrock",
+      "name": "BlackRock",
+      "ticker": "BLK",
+      "type": "public asset manager",
+      "aum_watch": "Latest public watch: about $13.46T reported for Q3 2025; verify against latest 10-Q/earnings release before quoting.",
+      "management": [
+        "Laurence D. Fink — chairman and CEO watch route",
+        "Robert S. Kapito — president watch route",
+        "Board, executive committee, risk committee and stewardship leadership to be refreshed from annual report / proxy statement"
+      ],
+      "control_layers": [
+        "index funds and ETFs",
+        "iShares",
+        "Aladdin risk and portfolio platform",
+        "private markets / infrastructure expansion",
+        "proxy voting / stewardship",
+        "public-company ownership concentration"
+      ],
+      "contracts": [
+        "USASpending.gov entity search",
+        "SAM.gov entity search",
+        "SEC material agreements and acquisition filings",
+        "public pension and state investment board mandates",
+        "sovereign wealth / institutional mandate references"
+      ],
+      "source_routes": [
+        "BlackRock investor relations",
+        "BlackRock annual report / 10-K",
+        "SEC EDGAR company filings",
+        "SEC 13F filings",
+        "Form ADV adviser search",
+        "N-PX proxy voting records",
+        "USASpending.gov",
+        "OpenSecrets lobbying search"
+      ],
+      "watch": [
+        "AUM movement",
+        "ETF flows",
+        "top 13F holdings",
+        "proxy voting themes",
+        "public pension mandates",
+        "government or central-bank-adjacent work",
+        "Aladdin / technology partnerships",
+        "acquisitions and private-market expansion",
+        "regulatory actions and lawsuits"
+      ],
+      "missing": [
+        "latest official AUM table",
+        "current executive committee list",
+        "latest 13F parsed holdings",
+        "latest proxy voting dataset",
+        "government contract extract",
+        "public pension mandate list",
+        "lobbying spend summary"
+      ]
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "ticker": "private",
+      "type": "private fund-owned asset manager",
+      "aum_watch": "Latest public watch: public reports range around $10T–$12T; verify against Vanguard corporate facts / annual material before quoting.",
+      "management": [
+        "Salim Ramji — CEO watch route",
+        "Greg Davis — president / CIO watch route",
+        "Chair, board, stewardship and investment leadership to be refreshed from corporate disclosures"
+      ],
+      "control_layers": [
+        "index funds and ETFs",
+        "retirement accounts",
+        "mutual fund governance",
+        "proxy voting / stewardship",
+        "ownership concentration across public companies",
+        "fund-owned corporate structure"
+      ],
+      "contracts": [
+        "public pension mandate searches",
+        "state retirement plan investment options",
+        "SEC adviser records",
+        "retirement platform contracts",
+        "government procurement searches where applicable"
+      ],
+      "source_routes": [
+        "Vanguard corporate facts",
+        "Vanguard fund prospectuses and annual reports",
+        "SEC EDGAR fund filings",
+        "SEC 13F filings",
+        "Form ADV adviser search",
+        "N-PX proxy voting records",
+        "USASpending.gov",
+        "OpenSecrets lobbying search"
+      ],
+      "watch": [
+        "AUM movement",
+        "fee changes",
+        "fund manager changes",
+        "top 13F holdings",
+        "proxy voting themes",
+        "retirement platform influence",
+        "public pension mandates",
+        "regulatory actions and lawsuits"
+      ],
+      "missing": [
+        "latest official AUM figure",
+        "current board / executive list",
+        "latest 13F parsed holdings",
+        "latest N-PX voting data",
+        "retirement-plan mandate list",
+        "lobbying and policy route summary"
+      ]
+    },
+    {
+      "id": "state-street",
+      "name": "State Street / State Street Investment Management",
+      "ticker": "STT",
+      "type": "public bank, custodian and asset manager",
+      "aum_watch": "Latest public watch: about $5.4T AUM reported for Q3 2025; custody / administration figure must be tracked separately from AUM.",
+      "management": [
+        "Ron O’Hanley — State Street Corporation CEO watch route",
+        "Yie-Hsin Hung — investment management CEO watch route",
+        "Board, custody, markets, investment management and stewardship leadership to be refreshed from annual report / proxy statement"
+      ],
+      "control_layers": [
+        "SPDR ETFs",
+        "custody and administration",
+        "investment management",
+        "market services",
+        "proxy voting / stewardship",
+        "systemically important financial infrastructure"
+      ],
+      "contracts": [
+        "custody mandates",
+        "public pension custody / administration contracts",
+        "USASpending.gov entity search",
+        "state procurement portals",
+        "SEC material agreements",
+        "central bank / sovereign account references where public"
+      ],
+      "source_routes": [
+        "State Street investor relations",
+        "State Street annual report / 10-K",
+        "SEC EDGAR company filings",
+        "SEC 13F filings",
+        "Form ADV adviser search",
+        "N-PX proxy voting records",
+        "USASpending.gov",
+        "state procurement portals",
+        "OpenSecrets lobbying search"
+      ],
+      "watch": [
+        "AUM movement",
+        "assets under custody / administration",
+        "ETF flows",
+        "custody mandates",
+        "top 13F holdings",
+        "proxy voting themes",
+        "regulatory actions and lawsuits",
+        "systemic-risk designations",
+        "public pension custody contracts"
+      ],
+      "missing": [
+        "latest official AUM and AUC/AUA split",
+        "current board / executive list",
+        "custody mandate table",
+        "latest 13F parsed holdings",
+        "latest proxy voting data",
+        "government contract extract",
+        "lobbying summary"
+      ]
+    }
+  ]
+}

@@ -12,11 +12,11 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 - Next: control-system-tracker.html
 
-## Epstein probe hones in on billionaire kryptonite: non-disclosure agreements - epsteincoverup.us
+## DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
 
-- Date: 2026-07-02
+- Date: 2026-07-03
 - Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMiYEFVX3lxTE84UlNHclBNdTRLLTdIc0p5d0lVUGNRclpQTDdzSkpDS0N5dUlNYTZkUm1mZjEyX21Ucm51NzZWY2FTUUJpMkhTYkpCSW5KcHRHY25WVnBwR2xrdEtVM09VNw?oc=5
+- Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
 - Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
@@ -32,6 +32,26 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
 
+## Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post
+
+- Date: 2026-07-02
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZnJNZ1lrdV9DOUNPMnotdC1LTkxEWnJTMGMwSVNkcmRvamczXzZFaXA4ZTRkQ3d0dVVfcmpGZEdPRjl4cW95TXZSSU40ZW5KNHJ3TVRVVzlXT3RqeEhxYmFmTkw?oc=5
+- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+
+- Date: 2026-07-01
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
 ## Former Clinton aide appears before House panel in Epstein investigation - Scripps News
 
 - Date: 2026-07-01
@@ -41,16 +61,6 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
-
-## ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-
-- Date: 2026-06-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-- Next: network-maps.html
 
 ## What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
 
@@ -112,16 +122,6 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
 
-## New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
-
-- Date: 2026-06-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5
-- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
 ## Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
 
 - Date: 2026-06-30
@@ -147,36 +147,6 @@ Reusable claim/source/evidence-boundary cards.
 - Date: 2026-06-29
 - Evidence class: Seven-day public-record lead
 - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
-- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault.html
-
-## Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-
-- Date: 2026-06-29
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Why did billionaire Leon Black walk out of the Epstein hearing? - Latest news from Azerbaijan
-
-- Date: 2026-06-27
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0wyZ2t5WEp2UVVkUzlIZ0wzQVh3ampTZUM4ZnBIUGJaalAzWkV0aVdZMUxCS01KdGljZWs3Vm9MdVhiMFdnYXVGTXNBTnFJOERLcjRtM1pQNmxpeXpzMWZucG5lSllJaHFOTFJYMkNDVkJ2MG04aHhsUkdGdmJEVGUtSHZBaC05MjhN?oc=5
-- Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
-
-- Date: 2026-06-27
-- Evidence class: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
 - Record supports: This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.

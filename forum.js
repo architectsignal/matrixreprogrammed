@@ -12,9 +12,7 @@
   const REPORT_ROUTES = { main: '/report-main-post', speculation: '/report-speculation-post', 'epstein-alive': '/report-epstein-alive-post' };
   const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
   const LOCAL_POSTS_KEY = 'cloudflare_kv_only_no_browser_post_store';
-  const SYNC_STATUS_COPY = 'Signal Board is syncing';
-  const PENDING_SYNC_COPY = 'pending sync disabled: Cloudflare KV is the only persistence layer';
-  function loadFallback(message){ return offlineNotice(message || SYNC_STATUS_COPY + ' / ' + PENDING_SYNC_COPY); }
+  function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }
 
   function boardFromPath(){
     const p = String(location.pathname || '').toLowerCase();

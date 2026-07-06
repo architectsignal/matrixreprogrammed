@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-04T06:34:49.607Z
+Updated: 2026-07-06T08:02:48.093Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -30,18 +30,19 @@ Every listed PDF is generated from the current site data at build time. The prem
 ## Full PDF Index
 
 - Anchor Alias Repair Report: downloads/anchor-alias-repair-report.pdf (custom PDF preserved)
-- Auto Evidence Pipeline Report: downloads/auto-evidence-pipeline-report.pdf
-- Black File Exposé Engine: downloads/black-file-exposes.pdf
-- Black Files Series Hub: downloads/black-files-series.pdf
+- Auto Evidence Pipeline Report: downloads/auto-evidence-pipeline-report.pdf (custom PDF preserved)
+- Black File Exposé Engine: downloads/black-file-exposes.pdf (custom PDF preserved)
+- Black Files Series Hub: downloads/black-files-series.pdf (custom PDF preserved)
 - Black File Launch Campaign: downloads/campaign-black-file-launch.pdf (custom PDF preserved)
 - Crime-State Overlap Campaign: downloads/campaign-crime-state-overlap-push.pdf (custom PDF preserved)
 - Intelligence Dossiers Campaign: downloads/campaign-intelligence-dossiers-push.pdf (custom PDF preserved)
 - Symbolic Power Campaign: downloads/campaign-symbolic-power-push.pdf (custom PDF preserved)
 - Trust And Evidence Campaign: downloads/campaign-trust-evidence-push.pdf (custom PDF preserved)
 - War Machine Campaign: downloads/campaign-war-machine-push.pdf (custom PDF preserved)
-- Case Status Dashboard: downloads/case-status-dashboard.pdf
+- Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf (custom PDF preserved)
-- Daily Brain Brief: downloads/daily-brain-brief.pdf
+- Daily Brain Brief: downloads/daily-brain-brief.pdf (custom PDF preserved)
+- Daily Command Brief: downloads/daily-command-brief.pdf
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf (custom PDF preserved)
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf (custom PDF preserved)
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf (custom PDF preserved)
@@ -54,21 +55,23 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Trust And Evidence Pack: downloads/dossier-pack-trust-evidence.pdf (custom PDF preserved)
 - War Machine Pack: downloads/dossier-pack-war-machine.pdf (custom PDF preserved)
 - Matrix Reprogrammed Download Index: downloads/downloads-index.pdf (custom PDF preserved)
-- Epstein Capital Class Map Tracker: downloads/epstein-capital-class-map.pdf
+- Entity Daily Briefs: downloads/entity-daily-briefs.pdf
+- Entity Exposure Index: downloads/entity-exposure-index.pdf
+- Epstein Capital Class Map Tracker: downloads/epstein-capital-class-map.pdf (custom PDF preserved)
 - Epstein Email Signal Map: downloads/epstein-email-signals.pdf (custom PDF preserved)
 - Epstein Evidence Strength Ladder: downloads/epstein-evidence-ladder.pdf (custom PDF preserved)
 - Epstein Evidence Watch: downloads/epstein-evidence-watch.pdf (custom PDF preserved)
 - Epstein Actual Files Cockpit: downloads/epstein-file-cockpit.pdf (custom PDF preserved)
-- Epstein File Scan Batch 001 — DOJ Library Structure And Court-Record Lanes: downloads/epstein-file-scan-batch-001.pdf
-- Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs: downloads/epstein-file-scan-batch-002.pdf
+- Epstein File Scan Batch 001 — DOJ Library Structure And Court-Record Lanes: downloads/epstein-file-scan-batch-001.pdf (custom PDF preserved)
+- Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs: downloads/epstein-file-scan-batch-002.pdf (custom PDF preserved)
 - Epstein Network Architecture Matrix: downloads/epstein-network-architecture.pdf (custom PDF preserved)
 - Epstein Network Deep Dive Matrix: downloads/epstein-network-deep-dive.pdf (custom PDF preserved)
 - Epstein People / Entity Tracker: downloads/epstein-people-index.pdf (custom PDF preserved)
 - Epstein Sighting Watch: downloads/epstein-sighting-watch.pdf (custom PDF preserved)
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
-- Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf
-- Evidence Task Engine: downloads/evidence-task-engine.pdf
+- Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf (custom PDF preserved)
+- Evidence Task Engine: downloads/evidence-task-engine.pdf (custom PDF preserved)
 - Follow The Money Tracking Manual: downloads/follow-the-money-tracking-manual.pdf (custom PDF preserved)
 - Follow The Money Watch: downloads/follow-the-money-watch.pdf (custom PDF preserved)
 - Forum Posts Export: downloads/forum-posts.pdf (custom PDF preserved)
@@ -84,7 +87,10 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf (custom PDF preserved)
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf (custom PDF preserved)
 - Live Intel Machine: downloads/live-intel-latest.pdf (custom PDF preserved)
-- Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf
+- Machine Digest: downloads/machine-digest.pdf
+- Machine Intelligence: downloads/machine-intelligence.pdf
+- Master Brief Engine: downloads/master-brief-engine.pdf
+- Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf (custom PDF preserved)
 - Network Search: downloads/network-search.pdf (custom PDF preserved)
 - Crime Dossiers Offer: downloads/offer-crime-dossiers.pdf (custom PDF preserved)
 - D.O.G The Architect Collector Offer: downloads/offer-dog-architect-collector.pdf (custom PDF preserved)
@@ -93,11 +99,15 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Starter Library Offer: downloads/offer-starter-library.pdf (custom PDF preserved)
 - Trust Before Darkness Offer: downloads/offer-trust-before-darkness.pdf (custom PDF preserved)
 - Trust And Evidence Kit Offer: downloads/offer-trust-evidence-kit.pdf (custom PDF preserved)
-- Outcome Briefings: downloads/outcome-briefings.pdf
+- Outcome Briefings: downloads/outcome-briefings.pdf (custom PDF preserved)
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
-- Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf
+- Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
+- Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf
+- Probability Snapshot: downloads/probability-snapshot.pdf
+- Public Record Intake Manifest: downloads/public-record-intake.pdf
 - Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
+- SEC Filing Feed: downloads/sec-filing-feed.pdf
 - Seven Day Intel: downloads/seven-day-intel.pdf (custom PDF preserved)
 - Black File Starter Share Kit: downloads/share-kit-black-file-starter.pdf (custom PDF preserved)
 - Crime-State Overlap Share Kit: downloads/share-kit-crime-state-overlap.pdf (custom PDF preserved)
@@ -120,9 +130,10 @@ Every listed PDF is generated from the current site data at build time. The prem
 - NASA Hidden Architecture File: downloads/subject-nasa-hidden-architecture.pdf
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
-- Tracker Core — Single Source Of Truth: downloads/tracker-core.pdf
+- Tracker Core — Single Source Of Truth: downloads/tracker-core.pdf (custom PDF preserved)
+- Matrix Reprogrammed Tracker Dashboard: downloads/tracker-dashboard-map.pdf
 - Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
 - Update Cadence Report: downloads/update-cadence-report.pdf (custom PDF preserved)
-- Verified Record Cards: downloads/verified-record-cards.pdf
+- Verified Record Cards: downloads/verified-record-cards.pdf (custom PDF preserved)
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf (custom PDF preserved)
-- Wrongdoing Tracker / Public-Record Case Engine: downloads/wrongdoing-tracker.pdf
+- Wrongdoing Tracker / Public-Record Case Engine: downloads/wrongdoing-tracker.pdf (custom PDF preserved)

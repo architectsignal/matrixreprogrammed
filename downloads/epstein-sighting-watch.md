@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-04T06:34:51.245Z
+Generated: 2026-07-06T08:02:49.303Z
 
 ## Official Boundary
 
@@ -49,6 +49,16 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
+### DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
+- Type: sighting-claim
+- Status: public-record-relevance
+- Evidence level: 7
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+DOJ declines to turn over additional Epstein files, says redactions were appropriate ABC News - Breaking News, Latest News and Videos
+
 ### Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
 - Type: debunk/fake-media-risk
 - Status: unverified-claim
@@ -68,13 +78,3 @@ Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall 
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI
-
-### New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations - Post and Courier
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMi-gFBVV95cUxOX2t6cjJmdWtsQnpwbnIzWTZfN1ZUYVZsRnZfcThWLWdZLU9KODBIMzlSNmotWUEyMHF6OFExSEZHUDRpX3Q1VE96WWdVQ0F6RTVFVGE1amNmU3ZvZ3dvOXR4QVNSYlp5djViYnNuUHh4QW52cW1ZWEw3c3BYUC05TWFmaXhvZng5NVR4amRRVVVVS196S2daeFlySGktR1RKVy1KQ1h5dnRzd1luejlSNWNLVnpCemhQWUpBNVZlRE9JT1lBV1dkUW1sZWEzaG4zbGJtOGlqcmhyNThJNjI4b1Q0WlpEZ1Nqa0tadUpnVXNhbVZJMWMwRmdB?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-New Mexico panel releases subpoena for SC records on Jeffrey Epstein investigations Post and Courier

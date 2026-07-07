@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T10:00:09.850Z",
+  "updated": "2026-07-07T15:13:54.124Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -358,42 +358,6 @@
       "last_seen": "2026-07-07"
     },
     {
-      "id": "apple-inc",
-      "name": "Apple Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-2"
-      ],
-      "last_seen": "2026-07-07"
-    },
-    {
-      "id": "aapl",
-      "name": "AAPL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-2"
-      ],
-      "last_seen": "2026-07-07"
-    },
-    {
       "id": "alphabet-inc",
       "name": "Alphabet Inc.",
       "count": 1,
@@ -407,7 +371,7 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001652044-3"
+        "sec-edgar-filings-cik0001652044-2"
       ],
       "last_seen": "2026-07-07"
     },
@@ -425,7 +389,43 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001652044-3"
+        "sec-edgar-filings-cik0001652044-2"
+      ],
+      "last_seen": "2026-07-07"
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
+      ],
+      "last_seen": "2026-07-07"
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
       ],
       "last_seen": "2026-07-07"
     },

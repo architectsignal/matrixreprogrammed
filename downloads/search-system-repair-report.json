@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-07T10:00:34.255Z",
+  "generatedAt": "2026-07-07T15:14:12.984Z",
   "repairs": [
     "rebuilt-search-v2",
     "search-route:downloads/forum-posts.json",
@@ -26,13 +26,7 @@
     "search-route:data/contradictions.json",
     "search-route:data/main-player-profiles.json",
     "search-route:data/entity-timelines.json",
-    "patched:search.js:fallbackIndex",
-    "patched:llms.txt:Ask Matrix Search",
-    "patched:llms.txt:/forum-feed-epstein-alive",
-    "patched:llms.txt:Public Record Intake",
-    "patched:llms.txt:Machine Digest",
-    "patched:llms.txt:Private Contractor Tracker",
-    "patched:llms.txt:Daily Command Brief"
+    "patched:search.js:fallbackIndex"
   ],
   "mode": "minimal safe Search V2 repair",
   "version": "minimal-search-repair-2026-07-05-elite-reports"

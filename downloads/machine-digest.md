@@ -1,6 +1,6 @@
 # Machine Digest
 
-Updated: 2026-07-07T10:00:09.850Z
+Updated: 2026-07-07T15:13:54.124Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
@@ -17,8 +17,8 @@ Entity observations: 36
 - documented association: Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 — federal-register-policy — https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33
 - documented association: Regulation for Federal Financial Assistance — federal-register-policy — https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance
 - documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
@@ -50,10 +50,10 @@ Entity observations: 36
 - Treasury Department: 1 mention(s), lanes: federal-register-policy
 - NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
 - NVDA: 1 mention(s), lanes: sec-edgar-filings
-- Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
-- AAPL: 1 mention(s), lanes: sec-edgar-filings
 - Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
 - GOOGL: 1 mention(s), lanes: sec-edgar-filings
+- Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
+- AAPL: 1 mention(s), lanes: sec-edgar-filings
 - MICROSOFT CORP: 1 mention(s), lanes: sec-edgar-filings
 - MSFT: 1 mention(s), lanes: sec-edgar-filings
 - AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings

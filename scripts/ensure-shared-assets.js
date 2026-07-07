@@ -42,6 +42,7 @@ runOptional('Top 52 Generated Card Art Install', 'install-generated-card-art.js'
 runOptional('Secondary Deck Artwork Install', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Secondary Deck Artwork Display Patch', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
 runOptional('Card Forum Inject', 'patch-card-forums.js', ['card-forum.js']);
+runOptional('Card Download Manifest', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link', 'patch-homepage-power-deck-link.js', ['index.html']);
 runOptional('Readable User Briefs', 'patch-readable-user-briefs.js', ['daily-power-conclusions.html']);
@@ -56,6 +57,7 @@ runOptional('Reader Experience Governor', 'build-reader-experience-governor.js',
 runOptional('Secondary Deck Artwork Install Final', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Secondary Deck Artwork Display Patch Final', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
 runOptional('Card Forum Inject Final', 'patch-card-forums.js', ['card-forum.js']);
+runOptional('Card Download Manifest Final', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair Final', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link Final', 'patch-homepage-power-deck-link.js', ['index.html']);
 
@@ -91,6 +93,7 @@ for (const file of files) {
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Secondary Deck Artwork Display Patch Pre Audit', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
 runOptional('Card Forum Inject Pre Audit', 'patch-card-forums.js', ['card-forum.js']);
+runOptional('Card Download Manifest Pre Audit', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair Pre Audit', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);

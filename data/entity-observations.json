@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T20:13:59.543Z",
+  "updated": "2026-07-07T04:15:56.230Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -104,6 +104,44 @@
         "federal-register-policy-2026-10817-5"
       ],
       "last_seen": "2026-05-29"
+    },
+    {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-4",
+        "courtlistener-court-records-10882239-5"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-4",
+        "courtlistener-court-records-10882239-5"
+      ],
+      "last_seen": "2026-06-30"
     },
     {
       "id": "homeland-security-department",
@@ -337,7 +375,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "nvda",
@@ -355,43 +393,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-06"
-    },
-    {
-      "id": "apple-inc",
-      "name": "Apple Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-2"
-      ],
-      "last_seen": "2026-07-06"
-    },
-    {
-      "id": "aapl",
-      "name": "AAPL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-2"
-      ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "alphabet-inc",
@@ -407,9 +409,9 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001652044-3"
+        "sec-edgar-filings-cik0001652044-2"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "googl",
@@ -425,9 +427,45 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001652044-3"
+        "sec-edgar-filings-cik0001652044-2"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
+      ],
+      "last_seen": "2026-07-07"
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-3"
+      ],
+      "last_seen": "2026-07-07"
     },
     {
       "id": "microsoft-corp",
@@ -445,7 +483,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "msft",
@@ -463,7 +501,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "amazon-com-inc",
@@ -481,7 +519,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "amzn",
@@ -499,7 +537,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "broadcom-inc",
@@ -517,7 +555,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
     },
     {
       "id": "avgo",
@@ -535,7 +573,259 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-06"
+      "last_seen": "2026-07-07"
+    },
+    {
+      "id": "matter-of-pagliughi",
+      "name": "Matter of Pagliughi",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "2024-07773",
+      "name": "2024-07773",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-1"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "biddle-v-biddle",
+      "name": "Biddle v. Biddle",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "court-of-appeals-of-north-carolina",
+      "name": "Court of Appeals of North Carolina",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "25-581",
+      "name": "25-581",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-2"
+      ],
+      "last_seen": "2026-07-01"
+    },
+    {
+      "id": "khan-v-jewish-women-international",
+      "name": "Khan v. Jewish Women International",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10914068-3"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "connecticut-appellate-court",
+      "name": "Connecticut Appellate Court",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10914068-3"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "ac48383",
+      "name": "AC48383",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10914068-3"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "trump-v-barbara-revisions-7-01-26",
+      "name": "Trump v. Barbara Revisions: 7/01/26",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883542-4"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "trump-v-barbara",
+      "name": "Trump v. Barbara",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10882239-5"
+      ],
+      "last_seen": "2026-06-30"
+    },
+    {
+      "id": "accountability-now-usa-v-griess",
+      "name": "Accountability Now USA v. Griess",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "district-court-district-of-columbia",
+      "name": "District Court, District of Columbia",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "civil-action-no-2026-1385",
+      "name": "Civil Action No. 2026-1385",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883004-6"
+      ],
+      "last_seen": "2026-06-29"
     },
     {
       "id": "republic-of-rwanda",

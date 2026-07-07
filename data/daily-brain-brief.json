@@ -453,15 +453,16 @@
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-06T20:13:59.543Z",
-    "eventCount": 18,
+    "updated": "2026-07-07T04:15:56.230Z",
+    "eventCount": 24,
     "feedCount": 7,
-    "reachedFeedCount": 3,
-    "entityObservationCount": 36,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 52,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -553,7 +554,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-06",
+      "date": "2026-07-07",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -566,22 +567,8 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-06",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "send_to": [
-        "power-entities",
-        "evidence-vault",
-        "outcome-briefings",
-        "search-index"
-      ]
-    },
-    {
-      "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-06",
+      "id": "sec-edgar-filings-cik0001652044-2",
+      "date": "2026-07-07",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -594,8 +581,22 @@
       ]
     },
     {
+      "id": "sec-edgar-filings-cik0000320193-3",
+      "date": "2026-07-07",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "send_to": [
+        "power-entities",
+        "evidence-vault",
+        "outcome-briefings",
+        "search-index"
+      ]
+    },
+    {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-06",
+      "date": "2026-07-07",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -609,7 +610,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-06",
+      "date": "2026-07-07",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -623,7 +624,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-06",
+      "date": "2026-07-07",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -693,6 +694,28 @@
       ]
     },
     {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -746,36 +769,14 @@
       "record_types": [
         "rule_or_notice"
       ]
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-06T20:14:18.373Z",
-    "newRecordCount": 2,
-    "changedRecordCount": 0,
-    "removedRecordCount": 8,
-    "relationshipCandidateCount": 94,
+    "updated": "2026-07-07T04:16:16.842Z",
+    "newRecordCount": 8,
+    "changedRecordCount": 4,
+    "removedRecordCount": 2,
+    "relationshipCandidateCount": 111,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -786,18 +787,54 @@
     {
       "lane": "sec-edgar-filings",
       "grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
+      "summary": "Alphabet Inc. (GOOGL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     },
     {
       "lane": "sec-edgar-filings",
       "grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
+      "summary": "Apple Inc. (AAPL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Khan v. Jewish Women International",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Trump v. Barbara",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Accountability Now USA v. Griess",
+      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/"
     }
   ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-06T20:14:18.529Z",
+    "updated": "2026-07-07T04:16:16.983Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -831,7 +868,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-06T20:14:18.609Z",
+    "updated": "2026-07-07T04:16:17.024Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

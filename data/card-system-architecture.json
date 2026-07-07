@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "title": "Matrix Reprogrammed Card System Architecture",
+  "principle": "The site brain holds the intelligence. The card decks are the visual front-end into that brain.",
+  "cardContract": {
+    "id": "stable slug used across data, art, profile, downloads and search",
+    "deckId": "people-of-interest | controlled-opposition | institutions | future deck id",
+    "rank": "1-52 within deck",
+    "suit": "visual lane such as Crowns, Coins, Swords, Masks, Keys, Serpents",
+    "name": "display name",
+    "profileRoute": "deep-dive profile page route",
+    "artAsset": "individual card image route, one asset per card",
+    "downloadAsset": "downloadable high-resolution card asset",
+    "scores": "live scoring object recalculated from public-record data",
+    "intel": "latest related intel items, source leads and update notices",
+    "evidenceBoundary": "clear non-accusation boundary for the card",
+    "relatedRoutes": "atlas, evidence vault, timelines, search, books, videos and related cards"
+  },
+  "layers": [
+    {
+      "layer": "Data Card",
+      "purpose": "Machine-readable truth layer used for scoring, intel updates, search, profile pages and relationships.",
+      "outputs": ["data/decks/*.json", "search-index.json", "site-graph.json"]
+    },
+    {
+      "layer": "Visual Playing Card",
+      "purpose": "Individual downloadable image for each card. No text overflow. The design is baked into the asset and also displayed in the deck UI.",
+      "outputs": ["assets/cards/<deck>/<card-id>.svg", "downloads/cards/<deck>/<card-id>.png", "downloads/cards/<deck>/<card-id>.svg"]
+    },
+    {
+      "layer": "Deck Wall",
+      "purpose": "Responsive gallery where every card image is displayed cleanly with one clear action: open the deep profile.",
+      "outputs": ["top-52-power-deck.html", "controlled-opposition-deck.html", "institution-deck.html"]
+    },
+    {
+      "layer": "Deep Profile",
+      "purpose": "The investigation page for each card: summary, score breakdown, latest intel, timeline, evidence boundary, source routes and related cards.",
+      "outputs": ["top-52/<id>.html", "controlled-opposition-profile.html?card=<id>", "institution-profile.html?card=<id>"]
+    },
+    {
+      "layer": "Download Hub",
+      "purpose": "All playing cards downloadable individually, by deck, and later as a full ZIP pack.",
+      "outputs": ["card-downloads.html", "data/card-download-manifest.json"]
+    }
+  ],
+  "scoreUpdateModel": {
+    "frequency": "daily build or manual refresh",
+    "inputs": ["public-record data", "RSS/live intel", "atlas relationships", "evidence vault lanes", "source strength", "update priority"],
+    "rule": "Scores can move when the underlying public-record data changes. The card art can stay visually stable while the UI/profile score updates."
+  },
+  "visualRules": [
+    "One card = one image asset.",
+    "No overlay text floating outside the card frame.",
+    "The deck grid displays the card image first, then small UI buttons below it if needed.",
+    "All scores and live intel also appear on the deep profile so the image is not the only source of truth.",
+    "All cards must have a downloadable SVG now; PNG/JPG export can be added as the next renderer step."
+  ]
+}

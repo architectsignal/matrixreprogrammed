@@ -22,6 +22,7 @@ const block=`<!-- power-deck-home-link:start -->
   <div class="eyebrow">Matrix Reprogrammed · Intelligence Decks</div>
   <h2>THE 52-CARD CONTROL MAPS.</h2>
   <p class="lead">Three fixed decks route readers into the strongest public-record paths: people, opposition lanes, and institutions behind digital identity, Agenda 2030, finance, security, biosecurity, AI governance, narrative systems and missing records.</p>
+  <div class="cta-row"><a class="btn" href="card-downloads.html">Open Card Downloads</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/card-system-architecture.json">Architecture</a></div>
   <div class="grid">
 ${card('Persons of Interest · Greatest Hits','◎','The Power Deck','PERSONS OF INTEREST','Top 52 Players: a 52-card map of the strongest public-record influence routes across governance, capital, security, narrative systems, missing records and convergence lanes.','this is an influence-route deck, not an accusation list. Each card opens a dossier with evidence boundaries and source routes.',[
   {href:'top-52-power-deck.html',text:'Open The Power Deck'},
@@ -30,7 +31,7 @@ ${card('Persons of Interest · Greatest Hits','◎','The Power Deck','PERSONS OF
 ])}
 ${card('Controlled Opposition · Narrative Gateways','◉','The Opposition Deck','CONTROLLED OPPOSITION','Top 52 Opposition Lanes: a 52-card map of media figures, platform incentives, audience capture, movement-split risk, gatekeeping claims and narrative containment routes.','this is a watchlist and narrative-analysis deck, not proof that anyone is controlled, paid, handled, deceptive or unlawful. Each card keeps the evidence boundary visible.',[
   {href:'controlled-opposition-deck.html',text:'Open Opposition Deck'},
-  {href:'downloads/controlled-opposition-deck.md',text:'Download Cards',alt:true},
+  {href:'card-downloads.html',text:'Download Cards',alt:true},
   {href:'data/controlled-opposition-deck.json',text:'Deck Data',alt:true}
 ])}
 ${card('Institution Deck · Control Infrastructure','⬡','The Institution Deck','INSTITUTIONS','Top 52 Institutions: a 52-card map of the organizations most relevant to Digital ID, Agenda 2030, central banking, asset management, surveillance, biosecurity, standards, AI governance and narrative power.','this ranks institutional relevance to the site mission, not criminality, intent, secret control or unlawful conduct. Each card is a research route into public records and database pages.',[
@@ -45,4 +46,4 @@ if(html.includes('<section id="homepage-critical-clocks"')) html=html.replace('<
 else if(html.includes('<main id="main-archive">')) html=html.replace('<main id="main-archive">','<main id="main-archive">'+block);
 else html+=block;
 wr('index.html',html);
-console.log('Homepage intelligence deck links patched.');
+console.log('Homepage intelligence deck and card system links patched.');

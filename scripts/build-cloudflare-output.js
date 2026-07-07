@@ -25,6 +25,41 @@ function normalizeWorkerAuditMarkers() {
   if (next !== before) fs.writeFileSync(workerPath, next);
 }
 
+function repairTop52ArtLinks() {
+  let fileCount = 0;
+  let linkCount = 0;
+  function htmlFiles(dir) {
+    if (!fs.existsSync(dir)) return [];
+    const outFiles = [];
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (blockedDirs.has(entry.name)) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) outFiles.push(...htmlFiles(full));
+      else if (entry.name.endsWith('.html')) outFiles.push(full);
+    }
+    return outFiles;
+  }
+  function fixedTarget(target) {
+    if (target.startsWith('../../top-52/')) return '../../top-52-power-deck.html';
+    if (target.startsWith('../top-52/')) return '../top-52-power-deck.html';
+    if (target.startsWith('top-52/')) return 'top-52-power-deck.html';
+    return target;
+  }
+  for (const file of htmlFiles(root)) {
+    const before = fs.readFileSync(file, 'utf8');
+    const after = before.replace(/href=(['"])(\.\.\/\.\.\/top-52\/[^'"]+|\.\.\/top-52\/[^'"]+|top-52\/[^'"]+)\1/g, (match, quote, target) => {
+      const next = fixedTarget(target);
+      if (next !== target) linkCount += 1;
+      return `href=${quote}${next}${quote}`;
+    });
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      fileCount += 1;
+    }
+  }
+  if (fileCount || linkCount) console.log(`Top 52 art link repair complete before Cloudflare output: ${fileCount} file(s), ${linkCount} link(s) fixed.`);
+}
+
 function rm(dir) {
   if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
 }
@@ -70,6 +105,7 @@ function walk(dir) {
 }
 
 normalizeWorkerAuditMarkers();
+repairTop52ArtLinks();
 rm(out);
 ensure(out);
 walk(root);

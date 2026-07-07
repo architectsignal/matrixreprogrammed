@@ -1,12 +1,282 @@
 {
-  "updated": "2026-07-07T04:16:16.842Z",
+  "updated": "2026-07-07T10:00:33.417Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-06T20:14:18.373Z",
-  "currentRecordCount": 24,
-  "previousRecordCount": 18,
+  "previousUpdated": "2026-07-07T04:16:16.842Z",
+  "currentRecordCount": 18,
+  "previousRecordCount": 24,
   "newRecords": [
+    {
+      "key": "federal-register-policy-2026-13656-1",
+      "hash": "6a9c71ad3895251d",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+      "date": "2026-07-07",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13602-2",
+      "hash": "a821d1e6bac4383f",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "date": "2026-07-06",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13057-3",
+      "hash": "cef328f0f25acf82",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "date": "2026-06-29",
+      "names": [
+        "Homeland Security Department"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12989-4",
+      "hash": "3ca943a16dfd1f22",
+      "summary": "Modernizing Security Requirements",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+      "date": "2026-06-26",
+      "names": [
+        "Nuclear Regulatory Commission"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12559-5",
+      "hash": "70139cd29afae1d3",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "date": "2026-06-23",
+      "names": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-10817-6",
+      "hash": "f29f2d88c97f398b",
+      "summary": "Regulation for Federal Financial Assistance",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "date": "2026-05-29",
+      "names": [
+        "Management and Budget Office",
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department",
+        "Labor Department",
+        "Homeland Security Department",
+        "National Foundation on the Arts and the Humanities",
+        "Institute of Museum and Library Services",
+        "National Endowment for the Arts",
+        "National Endowment for the Humanities",
+        "Education Department",
+        "Export-Import Bank",
+        "Executive Office of the President",
+        "Office of National Drug Control Policy",
+        "Peace Corps",
+        "Election Assistance Commission",
+        "Gulf Coast Ecosystem Restoration Council",
+        "Federal Communications Commission",
+        "Consumer Product Safety Commission",
+        "Delta Regional Authority",
+        "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+        "Marine Mammal Commission",
+        "Millennium Challenge Corporation",
+        "National Credit Union Administration"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-2",
+      "hash": "7932777d869ecf88",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-07",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0001652044-3",
+      "hash": "7dbf8f7096949189",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-07",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ]
+    }
+  ],
+  "removedRecords": [
+    {
+      "key": "federal-register-policy-2026-13602-1",
+      "hash": "a821d1e6bac4383f",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "date": "2026-07-06",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13057-2",
+      "hash": "cef328f0f25acf82",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "date": "2026-06-29",
+      "names": [
+        "Homeland Security Department"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12989-3",
+      "hash": "3ca943a16dfd1f22",
+      "summary": "Modernizing Security Requirements",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+      "date": "2026-06-26",
+      "names": [
+        "Nuclear Regulatory Commission"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12559-4",
+      "hash": "70139cd29afae1d3",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "date": "2026-06-23",
+      "names": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-10817-5",
+      "hash": "f29f2d88c97f398b",
+      "summary": "Regulation for Federal Financial Assistance",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "date": "2026-05-29",
+      "names": [
+        "Management and Budget Office",
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department",
+        "Labor Department",
+        "Homeland Security Department",
+        "National Foundation on the Arts and the Humanities",
+        "Institute of Museum and Library Services",
+        "National Endowment for the Arts",
+        "National Endowment for the Humanities",
+        "Education Department",
+        "Export-Import Bank",
+        "Executive Office of the President",
+        "Office of National Drug Control Policy",
+        "Peace Corps",
+        "Election Assistance Commission",
+        "Gulf Coast Ecosystem Restoration Council",
+        "Federal Communications Commission",
+        "Consumer Product Safety Commission",
+        "Delta Regional Authority",
+        "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+        "Marine Mammal Commission",
+        "Millennium Challenge Corporation",
+        "National Credit Union Administration"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2025-19787-6",
+      "hash": "4f0402bcbf21966e",
+      "summary": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+      "date": "2025-11-05",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
     {
       "key": "sec-edgar-filings-cik0001652044-2",
       "hash": "7dbf8f7096949189",
@@ -118,160 +388,59 @@
       ]
     }
   ],
-  "removedRecords": [
-    {
-      "key": "sec-edgar-filings-cik0000320193-2",
-      "hash": "814ac4def8fdf42e",
-      "summary": "Apple Inc. (AAPL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-06",
-      "names": [
-        "Apple Inc.",
-        "AAPL"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "6125ae774c32408f",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-06",
-      "names": [
-        "Alphabet Inc.",
-        "GOOGL"
-      ]
-    }
-  ],
-  "changedRecords": [
-    {
-      "before": {
-        "key": "sec-edgar-filings-cik0001045810-1",
-        "hash": "4a2df26be12cc991",
-        "summary": "NVIDIA CORP (NVDA)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-06",
-        "names": [
-          "NVIDIA CORP",
-          "NVDA"
-        ]
-      },
-      "after": {
-        "key": "sec-edgar-filings-cik0001045810-1",
-        "hash": "2d69faaa0a337211",
-        "summary": "NVIDIA CORP (NVDA)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-07",
-        "names": [
-          "NVIDIA CORP",
-          "NVDA"
-        ]
-      }
-    },
-    {
-      "before": {
-        "key": "sec-edgar-filings-cik0000789019-4",
-        "hash": "e67750be34713b0d",
-        "summary": "MICROSOFT CORP (MSFT)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-06",
-        "names": [
-          "MICROSOFT CORP",
-          "MSFT"
-        ]
-      },
-      "after": {
-        "key": "sec-edgar-filings-cik0000789019-4",
-        "hash": "11093530f46c42e3",
-        "summary": "MICROSOFT CORP (MSFT)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-07",
-        "names": [
-          "MICROSOFT CORP",
-          "MSFT"
-        ]
-      }
-    },
-    {
-      "before": {
-        "key": "sec-edgar-filings-cik0001018724-5",
-        "hash": "4f03670eda69ce10",
-        "summary": "AMAZON COM INC (AMZN)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-06",
-        "names": [
-          "AMAZON COM INC",
-          "AMZN"
-        ]
-      },
-      "after": {
-        "key": "sec-edgar-filings-cik0001018724-5",
-        "hash": "f6e13551950bf064",
-        "summary": "AMAZON COM INC (AMZN)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-07",
-        "names": [
-          "AMAZON COM INC",
-          "AMZN"
-        ]
-      }
-    },
-    {
-      "before": {
-        "key": "sec-edgar-filings-cik0001730168-6",
-        "hash": "d57e59b806bc4efa",
-        "summary": "Broadcom Inc. (AVGO)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-06",
-        "names": [
-          "Broadcom Inc.",
-          "AVGO"
-        ]
-      },
-      "after": {
-        "key": "sec-edgar-filings-cik0001730168-6",
-        "hash": "ce9fb8c1ff2b065d",
-        "summary": "Broadcom Inc. (AVGO)",
-        "source_lane": "sec-edgar-filings",
-        "evidence_grade": "documented association",
-        "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-        "date": "2026-07-07",
-        "names": [
-          "Broadcom Inc.",
-          "AVGO"
-        ]
-      }
-    }
-  ],
+  "changedRecords": [],
   "evidenceUpgrades": [],
   "clockTriggers": [
     {
-      "id": "sec-edgar-filings-cik0001652044-2",
-      "lane": "sec-edgar-filings",
+      "id": "federal-register-policy-2026-13656-1",
+      "lane": "federal-register-policy",
       "evidence_grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
     },
     {
-      "id": "sec-edgar-filings-cik0000320193-3",
+      "id": "federal-register-policy-2026-13602-2",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh"
+    },
+    {
+      "id": "federal-register-policy-2026-13057-3",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration"
+    },
+    {
+      "id": "federal-register-policy-2026-12989-4",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Modernizing Security Requirements",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements"
+    },
+    {
+      "id": "federal-register-policy-2026-12559-5",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33"
+    },
+    {
+      "id": "federal-register-policy-2026-10817-6",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Regulation for Federal Financial Assistance",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-2",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -279,82 +448,10 @@
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     },
     {
-      "id": "courtlistener-court-records-10883674-1",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
-    },
-    {
-      "id": "courtlistener-court-records-10883331-2",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Biddle v. Biddle",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
-    },
-    {
-      "id": "courtlistener-court-records-10914068-3",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Khan v. Jewish Women International",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
-    },
-    {
-      "id": "courtlistener-court-records-10883542-4",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
-    },
-    {
-      "id": "courtlistener-court-records-10882239-5",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Trump v. Barbara",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
-    },
-    {
-      "id": "courtlistener-court-records-10883004-6",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Accountability Now USA v. Griess",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/"
-    },
-    {
-      "id": "sec-edgar-filings-cik0001045810-1",
+      "id": "sec-edgar-filings-cik0001652044-3",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "NVIDIA CORP (NVDA)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "id": "sec-edgar-filings-cik0000789019-4",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "MICROSOFT CORP (MSFT)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "id": "sec-edgar-filings-cik0001018724-5",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "AMAZON COM INC (AMZN)",
-      "trigger": "Review sec-edgar-filings for clock movement.",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
-    },
-    {
-      "id": "sec-edgar-filings-cik0001730168-6",
-      "lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "summary": "Broadcom Inc. (AVGO)",
+      "summary": "Alphabet Inc. (GOOGL)",
       "trigger": "Review sec-edgar-filings for clock movement.",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
     }
@@ -397,11 +494,11 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13602-1",
-        "federal-register-policy-2026-10817-5",
-        "federal-register-policy-2025-19787-6"
+        "federal-register-policy-2026-13656-1",
+        "federal-register-policy-2026-13602-2",
+        "federal-register-policy-2026-10817-6"
       ],
-      "last_seen": "2025-11-05"
+      "last_seen": "2026-05-29"
     },
     {
       "id": "people-s-republic-of-bangladesh",
@@ -437,10 +534,10 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13602-1",
-        "federal-register-policy-2025-19787-6"
+        "federal-register-policy-2026-13656-1",
+        "federal-register-policy-2026-13602-2"
       ],
-      "last_seen": "2025-11-05"
+      "last_seen": "2026-07-06"
     },
     {
       "id": "management-and-budget-office",
@@ -456,48 +553,10 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4",
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-12559-5",
+        "federal-register-policy-2026-10817-6"
       ],
       "last_seen": "2026-05-29"
-    },
-    {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-4",
-        "courtlistener-court-records-10882239-5"
-      ],
-      "last_seen": "2026-06-30"
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-4",
-        "courtlistener-court-records-10882239-5"
-      ],
-      "last_seen": "2026-06-30"
     }
   ]
 }

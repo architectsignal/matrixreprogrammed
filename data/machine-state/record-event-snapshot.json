@@ -1,8 +1,21 @@
 {
-  "updated": "2026-07-07T04:16:16.842Z",
+  "updated": "2026-07-07T10:00:33.417Z",
   "records": [
     {
-      "key": "federal-register-policy-2026-13602-1",
+      "key": "federal-register-policy-2026-13656-1",
+      "hash": "6a9c71ad3895251d",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+      "date": "2026-07-07",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13602-2",
       "hash": "a821d1e6bac4383f",
       "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
       "source_lane": "federal-register-policy",
@@ -15,7 +28,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-13057-2",
+      "key": "federal-register-policy-2026-13057-3",
       "hash": "cef328f0f25acf82",
       "summary": "Alien Registration Form and Evidence of Registration",
       "source_lane": "federal-register-policy",
@@ -27,7 +40,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-12989-3",
+      "key": "federal-register-policy-2026-12989-4",
       "hash": "3ca943a16dfd1f22",
       "summary": "Modernizing Security Requirements",
       "source_lane": "federal-register-policy",
@@ -39,7 +52,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-12559-4",
+      "key": "federal-register-policy-2026-12559-5",
       "hash": "70139cd29afae1d3",
       "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
       "source_lane": "federal-register-policy",
@@ -55,7 +68,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-10817-5",
+      "key": "federal-register-policy-2026-10817-6",
       "hash": "f29f2d88c97f398b",
       "summary": "Regulation for Federal Financial Assistance",
       "source_lane": "federal-register-policy",
@@ -110,19 +123,6 @@
       ]
     },
     {
-      "key": "federal-register-policy-2025-19787-6",
-      "hash": "4f0402bcbf21966e",
-      "summary": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
-      "source_lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
-      "date": "2025-11-05",
-      "names": [
-        "Health and Human Services Department",
-        "Centers for Medicare & Medicaid Services"
-      ]
-    },
-    {
       "key": "sec-edgar-filings-cik0001045810-1",
       "hash": "2d69faaa0a337211",
       "summary": "NVIDIA CORP (NVDA)",
@@ -136,20 +136,7 @@
       ]
     },
     {
-      "key": "sec-edgar-filings-cik0001652044-2",
-      "hash": "7dbf8f7096949189",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-07",
-      "names": [
-        "Alphabet Inc.",
-        "GOOGL"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0000320193-3",
+      "key": "sec-edgar-filings-cik0000320193-2",
       "hash": "7932777d869ecf88",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
@@ -159,6 +146,19 @@
       "names": [
         "Apple Inc.",
         "AAPL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0001652044-3",
+      "hash": "7dbf8f7096949189",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-07",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
       ]
     },
     {
@@ -198,90 +198,6 @@
       "names": [
         "Broadcom Inc.",
         "AVGO"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883674-1",
-      "hash": "f95a37eb5eb447bc",
-      "summary": "Matter of Pagliughi",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-      "date": "2026-07-01",
-      "names": [
-        "Matter of Pagliughi",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-07773"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883331-2",
-      "hash": "b39adcd19b344458",
-      "summary": "Biddle v. Biddle",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-      "date": "2026-07-01",
-      "names": [
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10914068-3",
-      "hash": "8884760b222f1a37",
-      "summary": "Khan v. Jewish Women International",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
-      "date": "2026-06-30",
-      "names": [
-        "Khan v. Jewish Women International",
-        "Connecticut Appellate Court",
-        "AC48383"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883542-4",
-      "hash": "804de5848f56977d",
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-      "date": "2026-06-30",
-      "names": [
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Supreme Court of the United States",
-        "25-365"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10882239-5",
-      "hash": "f14b8750e842ae78",
-      "summary": "Trump v. Barbara",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-      "date": "2026-06-30",
-      "names": [
-        "Trump v. Barbara",
-        "Supreme Court of the United States",
-        "25-365"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883004-6",
-      "hash": "f2fe2069019ad13b",
-      "summary": "Accountability Now USA v. Griess",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
-      "date": "2026-06-29",
-      "names": [
-        "Accountability Now USA v. Griess",
-        "District Court, District of Columbia",
-        "Civil Action No. 2026-1385"
       ]
     },
     {

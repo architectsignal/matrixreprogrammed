@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T04:15:56.230Z",
+  "updated": "2026-07-07T10:00:09.850Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "federal-register-policy",
   "name": "Federal Register latest policy records",
@@ -11,10 +11,41 @@
   "itemCount": 6,
   "raw": {
     "description": "Documents matching 'digital identity OR emergency OR surveillance OR bank'",
-    "count": 180,
-    "total_pages": 18,
+    "count": 181,
+    "total_pages": 19,
     "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=digital+identity+OR+emergency+OR+surveillance+OR+bank&format=json&order=newest&page=2&per_page=10",
     "results": [
+      {
+        "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "type": "Proposed Rule",
+        "abstract": "This proposed rule would revise the Medicare Hospital Outpatient Prospective Payment System (OPPS) and the Medicare Ambulatory Surgical Center (ASC) payment system for calendar year 2027 based on our continuing experience with these systems. We also describe the changes to the amounts and factors used to determine the payment rates for Medicare services paid under the OPPS and those paid under the ASC payment systems. In addition, this proposed rule would update and refine the requirements for the Hospital Outpatient Quality Reporting Program and the Ambulatory Surgical Center Quality Reporting Program. There are no changes to the Rural Emergency Hospital Quality Reporting Program. We propose to expand the prior authorization requirement to include additional Botulinum Toxin Injection services. We also propose to implement certain provisions of the Consolidated Appropriations Act, 2026, for off-campus outpatient departments of a provider. In addition, this proposed rule announces notices of closure of teaching hospitals and opportunities to apply for available slots. This rule also requests information regarding potential approaches to improve comparability and standardization, particularly for complex contracting methodologies, of the HPT information reported in machine- readable files and consumer-friendly displays. We propose hospital AOs with deeming authority to assess compliance with certain Emergency Medical Treatment and Labor Act (EMTALA) administrative requirements during accreditation and reaccreditation surveys. Finally, we are soliciting comments on a potential separate payment under the Inpatient Prospective Payment System (IPPS) for domestic procurement of personal protective equipment and essential medicines.",
+        "document_number": "2026-13656",
+        "html_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13656.pdf",
+        "public_inspection_pdf_url": null,
+        "publication_date": "2026-07-07",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+            "name": "Health and Human Services Department",
+            "id": 221,
+            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+            "parent_id": null,
+            "slug": "health-and-human-services-department"
+          },
+          {
+            "raw_name": "Centers for Medicare & Medicaid Services",
+            "name": "Centers for Medicare & Medicaid Services",
+            "id": 45,
+            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+            "parent_id": 221,
+            "slug": "centers-for-medicare-medicaid-services"
+          }
+        ],
+        "excerpts": "code 99281 (<span class=\"match\">Emergency</span> department visit for the evaluation and management of a patient (Level 1)); CPT code 99282 (<span class=\"match\">Emergency</span> department visit for the evaluation and management of a patient (Level 2)); CPT code 99283 (<span class=\"match\">Emergency</span> department visit for the evaluation and management of a patient (Level 3)); CPT code 99284 (<span class=\"match\">Emergency</span> department visit for the evaluation and management of a patient (Level 4)); CPT code 99285 (<span class=\"match\">Emergency</span> department visit for the evaluation and management of a patient (Level 5)) or HCPCS code G0380 (Type B <span class=\"match\">emergency</span> department"
+      },
       {
         "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
         "type": "Proposed Rule",
@@ -665,37 +696,6 @@
           }
         ],
         "excerpts": "• The <span class=\"match\">digital</span> asset must be freely traded \n 25 \n \n and can be freely held for the foreseeable future;\n \n \n \n 25 \n  The Committee considers assets to be freely traded if they may be traded by U.S. investors and do not have trading restrictions at Eligible <span class=\"match\">Digital</span> Asset Trading Platforms.\n \n \n \n • The <span class=\"match\">digital</span> asset must trade on an Eligible <span class=\"match\">Digital</span> Asset Trading Platform, without withdrawal issues specific to that <span class=\"match\">digital</span> asset; \n 26 \n \n \n \n \n 26 \n  For example, <span class=\"match\">digital</span> asset trading platforms have previously suspended withdrawals in <span class=\"match\">digital</span> assets"
-      },
-      {
-        "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
-        "type": "Proposed Rule",
-        "abstract": "This major proposed rule addresses: changes to the physician fee schedule (PFS); other changes to Medicare Part B payment policies to ensure that payment systems are updated to reflect changes in medical practice, relative value of services, and changes in the statute; codification of establishment of new policies for: the Medicare Prescription Drug Inflation Rebate Program under the Inflation Reduction Act of 2022; the Ambulatory Specialty Model; updates to the Medicare Diabetes Prevention Program expanded model; updates to drugs and biological products paid under Part B; Medicare Shared Savings Program requirements; updates to the Quality Payment Program; updates to policies for Rural Health Clinics and Federally Qualified Health Centers update to the Ambulance Fee Schedule regulations; codification of the Inflation Reduction Act and Consolidated Appropriations Act, 2023 provisions; updates to the Medicare Promoting Interoperability Program.",
-        "document_number": "2025-13271",
-        "html_url": "https://www.federalregister.gov/documents/2025/07/16/2025-13271/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
-        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-07-16/pdf/2025-13271.pdf",
-        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-13271.pdf?1752524111",
-        "publication_date": "2025-07-16",
-        "agencies": [
-          {
-            "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
-            "name": "Health and Human Services Department",
-            "id": 221,
-            "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
-            "parent_id": null,
-            "slug": "health-and-human-services-department"
-          },
-          {
-            "raw_name": "Centers for Medicare & Medicaid Services",
-            "name": "Centers for Medicare & Medicaid Services",
-            "id": 45,
-            "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
-            "parent_id": 221,
-            "slug": "centers-for-medicare-medicaid-services"
-          }
-        ],
-        "excerpts": " \n See \n Administration for Strategic Preparedness &amp; Response website, Declarations of a Public Health <span class=\"match\">Emergency</span> webpage, at https://aspr.hhs.gov/legal/PHE/pages/default.aspx (listing declarations of a public health <span class=\"match\">emergency</span>, among other information). \n See also \n U.S. Department of Health and Human Services website, COVID-19 Public Health <span class=\"match\">Emergency</span> webpage, available at https://www.hhs.gov/coronavirus/covid-19-public-health-<span class=\"match\">emergency</span>/index.html.\n \n \n To ensure that the ACO continues to satisfy Shared Savings Program requirements, CMS monitors"
       }
     ]
   },

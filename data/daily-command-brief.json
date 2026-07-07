@@ -1,23 +1,131 @@
 {
-  "updated": "2026-07-07T04:16:17.024Z",
+  "updated": "2026-07-07T10:00:33.595Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [
     {
-      "key": "sec-edgar-filings-cik0001652044-2",
-      "hash": "7dbf8f7096949189",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_lane": "sec-edgar-filings",
+      "key": "federal-register-policy-2026-13656-1",
+      "hash": "6a9c71ad3895251d",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "source_lane": "federal-register-policy",
       "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
       "date": "2026-07-07",
       "names": [
-        "Alphabet Inc.",
-        "GOOGL"
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
       ]
     },
     {
-      "key": "sec-edgar-filings-cik0000320193-3",
+      "key": "federal-register-policy-2026-13602-2",
+      "hash": "a821d1e6bac4383f",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "date": "2026-07-06",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13057-3",
+      "hash": "cef328f0f25acf82",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "date": "2026-06-29",
+      "names": [
+        "Homeland Security Department"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12989-4",
+      "hash": "3ca943a16dfd1f22",
+      "summary": "Modernizing Security Requirements",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
+      "date": "2026-06-26",
+      "names": [
+        "Nuclear Regulatory Commission"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-12559-5",
+      "hash": "70139cd29afae1d3",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+      "date": "2026-06-23",
+      "names": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-10817-6",
+      "hash": "f29f2d88c97f398b",
+      "summary": "Regulation for Federal Financial Assistance",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
+      "date": "2026-05-29",
+      "names": [
+        "Management and Budget Office",
+        "Health and Human Services Department",
+        "Agriculture Department",
+        "State Department",
+        "Agency for International Development",
+        "Veterans Affairs Department",
+        "Energy Department",
+        "Treasury Department",
+        "Defense Department",
+        "Transportation Department",
+        "Commerce Department",
+        "Interior Department",
+        "Environmental Protection Agency",
+        "U.S. International Development Finance Corporation",
+        "National Aeronautics and Space Administration",
+        "United States Agency for Global Media",
+        "Nuclear Regulatory Commission",
+        "Corporation for National and Community Service",
+        "Social Security Administration",
+        "Housing and Urban Development Department",
+        "National Science Foundation",
+        "National Archives and Records Administration",
+        "Small Business Administration",
+        "Justice Department",
+        "Labor Department",
+        "Homeland Security Department",
+        "National Foundation on the Arts and the Humanities",
+        "Institute of Museum and Library Services",
+        "National Endowment for the Arts",
+        "National Endowment for the Humanities",
+        "Education Department",
+        "Export-Import Bank",
+        "Executive Office of the President",
+        "Office of National Drug Control Policy",
+        "Peace Corps",
+        "Election Assistance Commission",
+        "Gulf Coast Ecosystem Restoration Council",
+        "Federal Communications Commission",
+        "Consumer Product Safety Commission",
+        "Delta Regional Authority",
+        "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
+        "Marine Mammal Commission",
+        "Millennium Challenge Corporation",
+        "National Credit Union Administration"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-2",
       "hash": "7932777d869ecf88",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
@@ -30,87 +138,16 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10883674-1",
-      "hash": "f95a37eb5eb447bc",
-      "summary": "Matter of Pagliughi",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-      "date": "2026-07-01",
+      "key": "sec-edgar-filings-cik0001652044-3",
+      "hash": "7dbf8f7096949189",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-07",
       "names": [
-        "Matter of Pagliughi",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-07773"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883331-2",
-      "hash": "b39adcd19b344458",
-      "summary": "Biddle v. Biddle",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-      "date": "2026-07-01",
-      "names": [
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10914068-3",
-      "hash": "8884760b222f1a37",
-      "summary": "Khan v. Jewish Women International",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
-      "date": "2026-06-30",
-      "names": [
-        "Khan v. Jewish Women International",
-        "Connecticut Appellate Court",
-        "AC48383"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883542-4",
-      "hash": "804de5848f56977d",
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-      "date": "2026-06-30",
-      "names": [
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Supreme Court of the United States",
-        "25-365"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10882239-5",
-      "hash": "f14b8750e842ae78",
-      "summary": "Trump v. Barbara",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-      "date": "2026-06-30",
-      "names": [
-        "Trump v. Barbara",
-        "Supreme Court of the United States",
-        "25-365"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10883004-6",
-      "hash": "f2fe2069019ad13b",
-      "summary": "Accountability Now USA v. Griess",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/",
-      "date": "2026-06-29",
-      "names": [
-        "Accountability Now USA v. Griess",
-        "District Court, District of Columbia",
-        "Civil Action No. 2026-1385"
+        "Alphabet Inc.",
+        "GOOGL"
       ]
     }
   ],
@@ -627,7 +664,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -654,7 +691,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -681,7 +718,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -708,7 +745,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -735,7 +772,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -762,7 +799,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -789,7 +826,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -816,7 +853,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-10817-5"
+            "federal-register-policy-2026-10817-6"
           ],
           "control_layers": [
             "policy",
@@ -1107,7 +1144,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1134,7 +1171,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1161,7 +1198,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1188,7 +1225,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1424,7 +1461,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1451,7 +1488,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1478,7 +1515,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1505,7 +1542,7 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-12559-4"
+            "federal-register-policy-2026-12559-5"
           ],
           "control_layers": [
             "policy",
@@ -1598,8 +1635,8 @@
       "level": "high priority",
       "latest_records": [
         {
-          "title": "Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
-          "url": "https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other",
+          "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+          "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
           "grade": "documented association"
         }
       ],
@@ -1707,18 +1744,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "25-365",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-365.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Supreme Court of the United States",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-the-united-states.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "National Aeronautics and Space Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/national-aeronautics-and-space-administration.html",
@@ -1740,6 +1765,18 @@
       "entity": "General Services Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/general-services-administration.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Chattogram Water Supply and Sewerage Authority",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Finance Division, Ministry of Finance",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/finance-division-ministry-of-finance.html",
       "type": "entity brief"
     }
   ],

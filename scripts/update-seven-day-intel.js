@@ -83,4 +83,4 @@ async function main() {
   writeVaultMarkdown(vault);
   console.log(`Seven-day intel updater complete: ${items.length} active items, ${feedFetch.results.length} fetched RSS lead(s), ${feedFetch.errors.length} feed error(s). Exports: ${sevenDayIntelDownloadRoute}, downloads/intel-vault.json`);
 }
-main().catch(error => { console.warn(`Seven-day intel updater failed softly: ${error.message}`); process.exit(0); });
+main().catch(error => { console.warn(`Seven-day intel updater failed safely: ${error.message}`); process.exit(0); });

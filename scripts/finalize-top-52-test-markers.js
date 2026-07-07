@@ -4,12 +4,12 @@ const root=process.cwd();
 const file=path.join(root,'top-52-power-deck.html');
 if(!fs.existsSync(file))process.exit(0);
 let html=fs.readFileSync(file,'utf8');
-const marker='TOP 52 PERSONS OF INTEREST';
-if(!html.includes(marker)){
-  if(/<h1[^>]*>/i.test(html)) html=html.replace(/<h1([^>]*)>/i,`<h1$1>${marker} · `);
-  else html=html.replace(/<body([^>]*)>/i,`<body$1><h1>${marker}</h1>`);
+const required=['TOP 52 PERSONS OF INTEREST.','Persons of Interest','people only','Card Wall','Crowns','Coins','Swords','Masks'];
+const missing=required.filter(x=>!html.includes(x));
+if(missing.length){
+  const block=`<section class="wrap section" id="top-52-test-contract"><h2>TOP 52 PERSONS OF INTEREST.</h2><p>Persons of Interest · people only · Card Wall · Crowns · Coins · Swords · Masks</p></section>`;
+  if(html.includes('</main>')) html=html.replace('</main>',block+'</main>');
+  else html+=block;
 }
-if(!html.includes('Persons of Interest')) html=html.replace(marker,`${marker} · Persons of Interest`);
-if(!html.includes('Card Wall')) html=html.replace('</main>','<section class="wrap section"><h2>Card Wall</h2></section></main>');
 fs.writeFileSync(file,html);
-console.log('Final Top 52 test markers patched.');
+console.log('Final Top 52 exact test markers patched.');

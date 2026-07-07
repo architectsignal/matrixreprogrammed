@@ -460,11 +460,11 @@
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-07T15:13:54.124Z",
-    "eventCount": 18,
+    "updated": "2026-07-07T20:13:44.608Z",
+    "eventCount": 24,
     "feedCount": 7,
-    "reachedFeedCount": 3,
-    "entityObservationCount": 36,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 52,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -696,6 +696,28 @@
       ]
     },
     {
+      "id": "supreme-court-of-the-united-states",
+      "name": "Supreme Court of the United States",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
+      "id": "25-365",
+      "name": "25-365",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -749,36 +771,14 @@
       "record_types": [
         "rule_or_notice"
       ]
-    },
-    {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-07T15:14:12.157Z",
-    "newRecordCount": 2,
+    "updated": "2026-07-07T20:14:02.405Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 2,
-    "relationshipCandidateCount": 94,
+    "removedRecordCount": 0,
+    "relationshipCandidateCount": 111,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -787,20 +787,44 @@
   },
   "topChangeSignals": [
     {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
     },
     {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Khan v. Jewish Women International",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Trump v. Barbara",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/"
     }
   ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-07T15:14:12.295Z",
+    "updated": "2026-07-07T20:14:02.546Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -834,7 +858,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-07T15:14:12.332Z",
+    "updated": "2026-07-07T20:14:02.583Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

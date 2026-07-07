@@ -40,7 +40,8 @@ runOptional('Top 52 Phase 4 Art Studio', 'build-top-52-art-studio.js', ['data/to
 runOptional('Top 52 Batch 1 Art Queue', 'build-top-52-batch1-art-queue.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Generated Card Art Install', 'install-generated-card-art.js', ['data/top-52-power-deck.json']);
 runOptional('Secondary Deck Artwork Install', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
-runOptional('Secondary Deck Artwork Display Patch', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
+runOptional('Deep Card Dossiers', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Clean Card Deck Walls', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
@@ -55,7 +56,8 @@ runOptional('Logo Symbolism Dossiers', 'build-logo-symbolism-dossiers.js', ['atl
 runOptional('Atlas Lane Link Repair', 'repair-atlas-lane-population-links.js', ['data/atlas-lane-populations.json']);
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 runOptional('Secondary Deck Artwork Install Final', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
-runOptional('Secondary Deck Artwork Display Patch Final', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
+runOptional('Deep Card Dossiers Final', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Clean Card Deck Walls Final', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject Final', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest Final', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair Final', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
@@ -91,7 +93,8 @@ for (const file of files) {
 }
 
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
-runOptional('Secondary Deck Artwork Display Patch Pre Audit', 'patch-secondary-deck-artwork.js', ['controlled-opposition-deck.html', 'institution-deck.html']);
+runOptional('Deep Card Dossiers Pre Audit', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Clean Card Deck Walls Pre Audit', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject Pre Audit', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest Pre Audit', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair Pre Audit', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);

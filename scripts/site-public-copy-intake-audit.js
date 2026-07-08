@@ -5,9 +5,9 @@ function run(label,script){try{const p=path.join(root,'scripts',script);if(fs.ex
 run('Monetisation system','build-monetisation-system.js');
 run('Site brain router','build-site-brain-router.js');
 run('Review dashboard','build-review-dashboard.js');
-run('Intelligence platform core','build-intelligence-platform-core.js');
+run('Safe platform core','build-platform-core-safe.js');
 run('Review dashboard refresh','build-review-dashboard.js');
-run('Intelligence platform core final','build-intelligence-platform-core.js');
+run('Safe platform core final','build-platform-core-safe.js');
 run('Books Black File CTA','patch-books-black-file-cta.js');
 run('Books daily drop route','patch-books-daily-drop-route.js');
 run('Books evidence badge route','patch-books-evidence-badge-route.js');

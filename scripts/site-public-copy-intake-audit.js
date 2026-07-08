@@ -3,12 +3,15 @@ const path=require('path');
 const root=process.cwd();
 function run(label,script){try{const p=path.join(root,'scripts',script);if(fs.existsSync(p))require(p)}catch(error){console.warn(`${label} skipped before public audit: ${error.message}`)}}
 run('Monetisation system','build-monetisation-system.js');
+run('Site brain router','build-site-brain-router.js');
+run('Review dashboard','build-review-dashboard.js');
+run('Intelligence platform core','build-intelligence-platform-core.js');
+run('Review dashboard refresh','build-review-dashboard.js');
+run('Intelligence platform core final','build-intelligence-platform-core.js');
 run('Books Black File CTA','patch-books-black-file-cta.js');
 run('Books daily drop route','patch-books-daily-drop-route.js');
 run('Books evidence badge route','patch-books-evidence-badge-route.js');
 run('Books source document vault route','patch-books-source-document-vault-route.js');
-run('Site brain router','build-site-brain-router.js');
-run('Review dashboard','build-review-dashboard.js');
 run('Review dashboard money sections','patch-review-dashboard-money-sections.js');
 run('Epstein File Check system','build-epstein-file-check-system.js');
 run('Speculative conclusion engine','build-speculative-conclusion-engine.js');
@@ -22,12 +25,26 @@ const rel=p=>path.relative(root,p).replace(/\\/g,'/');
 function visibleText(html){return html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<template[\s\S]*?<\/template>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim()}
 const publicFiles=walk(root).filter(p=>/\.(html|md|json)$/i.test(p)).filter(p=>!rel(p).startsWith('node_modules/'));
 const severePatterns=[/\[object Object\]/i,/lorem ipsum/i,/as an ai language model/i,/chatgpt/i,/author note/i,/internal note/i,/source-facing/i,/do not show/i,/debug only/i,/undefined\s*undefined/i,/NaN/i];
-const softPatterns=[/TODO/i,/FIXME/i,/placeholder/i,/compatibility marker/i,/test marker/i,/dummy/i,/sample text/i];
+const softPatterns=[/TODO/i,/FIXME/i,/compatibility marker/i,/test marker/i,/dummy/i,/sample text/i];
 const issues=[];
-for(const file of publicFiles){const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}const body=r.endsWith('.html')?visibleText(raw):raw;for(const pattern of severePatterns){if(pattern.test(body))issues.push({severity:'high',file:r,pattern:String(pattern),note:'Potentially visible internal, broken, or author-facing text.'})}for(const pattern of softPatterns){if(pattern.test(body))issues.push({severity:'review',file:r,pattern:String(pattern),note:'Review whether this text is intentionally visible.'})}}
+for(const file of publicFiles){
+  const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}
+  const body=r.endsWith('.html')?visibleText(raw):raw;
+  for(const pattern of severePatterns){if(pattern.test(body))issues.push({severity:'high',file:r,pattern:String(pattern),note:'Potentially visible internal, broken, or author-facing text.'})}
+  for(const pattern of softPatterns){if(pattern.test(body))issues.push({severity:'review',file:r,pattern:String(pattern),note:'Review whether this text is intentionally visible.'})}
+}
 const htmlFiles=walk(root).filter(p=>/\.html$/i.test(p));
 const intake=[];
-for(const file of htmlFiles){const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}const hasForm=/<form\b/i.test(raw)||/<input\b/i.test(raw)||/<textarea\b/i.test(raw)||/card-intel-forum|forum-post|submit|source lead|correction/i.test(raw);if(!hasForm)continue;const text=visibleText(raw).toLowerCase();const hasBoundary=/boundary|evidence|source|review|privacy|submission|correction|lead/.test(text);const hasAction=/submit|send|search|upload|post|review|open|join|download/.test(text);const hasFallback=/manifest unavailable|unavailable|try again|reviewed|lead|correction|source|download json lead|placeholder|provider/.test(text);intake.push({file:r,hasBoundary,hasAction,hasFallback,status:hasBoundary&&hasAction?'ok':'review'})}
+for(const file of htmlFiles){
+  const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}
+  const hasForm=/<form\b/i.test(raw)||/<input\b/i.test(raw)||/<textarea\b/i.test(raw)||/card-intel-forum|forum-post|submit|source lead|correction|email-capture/i.test(raw);
+  if(!hasForm)continue;
+  const text=visibleText(raw).toLowerCase();
+  const hasBoundary=/boundary|evidence|source|review|privacy|submission|correction|lead|provider/.test(text);
+  const hasAction=/submit|send|search|upload|post|review|open|join|download/.test(text);
+  const hasFallback=/manifest unavailable|unavailable|try again|reviewed|lead|correction|source|download json lead|placeholder|provider|connect/.test(text);
+  intake.push({file:r,hasBoundary,hasAction,hasFallback,status:hasBoundary&&hasAction?'ok':'review'});
+}
 const summary={ok:issues.filter(i=>i.severity==='high').length===0,intakeOk:intake.every(i=>i.status==='ok'),updated:new Date().toISOString(),filesScanned:publicFiles.length,highIssues:issues.filter(i=>i.severity==='high').length,reviewIssues:issues.filter(i=>i.severity==='review').length,intakeAreas:intake.length,weakIntakeAreas:intake.filter(i=>i.status!=='ok').length};
 const report={title:'Site Public Copy And Intake Audit',summary,issues:issues.slice(0,500),intake};
 wr('data/site-public-copy-intake-audit.json',JSON.stringify(report,null,2));

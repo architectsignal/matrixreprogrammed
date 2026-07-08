@@ -1,6 +1,6 @@
 # Convergence Control Lenses
 
-Generated: 2026-07-08T06:13:19.175Z
+Generated: 2026-07-08T06:40:35.930Z
 
 Boundary: These are analytical lenses for tracking public-record convergence. They are not treated as proof of a hidden plan unless records support a specific claim.
 

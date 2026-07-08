@@ -1,8 +1,35 @@
 {
-  "updated": "2026-07-08T06:13:04.956Z",
+  "updated": "2026-07-08T06:40:22.058Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "sec-edgar-filings-cik0001652044-2",
+      "hash": "1afa9768cf5d3e77",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-08",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-3",
+      "hash": "5401b45fb060b7f8",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-08",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    }
+  ],
   "topEntityChanges": [
     {
       "name": "[object Object]",

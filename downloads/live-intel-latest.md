@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-08T06:12:47.711Z
+Updated: 2026-07-08T06:40:03.196Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -68,179 +68,27 @@ Updated: 2026-07-08T06:12:47.711Z
   - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-03 — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
-  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id. Open the source first, then follow the evidence route.
-  - Short title: Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital S
-  - Longform title: Google News / control structure — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-center.html
-- 2026-07-02 — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
-  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online. The record matters, but the evidence class matters more.
-  - Short title: Democratic congressman asks the CFPB to investigate ‘rent now, pay later
-  - Longform title: Google News / Epstein timeline and files — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Heral
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-02 — Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post
-  - Source: https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZnJNZ1lrdV9DOUNPMnotdC1LTkxEWnJTMGMwSVNkcmRvamczXzZFaXA4ZTRkQ3d0dVVfcmpGZEdPRjl4cW95TXZSSU40ZW5KNHJ3TVRVVzlXT3RqeEhxYmFmTkw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post. The record matters, but the evidence class matters more.
-  - Short title: Alleged Epstein victim who accused Donald Trump of sexual assault fears
-  - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusal
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
+- 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
+  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds
+  - Short title: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New
+  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Offer: offer-crime-dossiers.html
+- 2026-06-30 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
   - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Former Clinton aide appears before House panel in Epstein investigation - Scripps News. The record matters, but the evidence class matters more.
-  - Short title: Former Clinton aide appears before House panel in Epstein investigation
-  - Longform title: Google News / Epstein timeline and files — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
-  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation. The record matters, but the evidence class matters more.
-  - Short title: What the Epstein files say about former Bill Clinton aide Doug Band - Ne
-  - Longform title: Google News / Epstein timeline and files — What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
-  - Short title: Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot
-  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
-  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: ICE biometrics underpin broader surveillance network, report argues - Biometric Update. Open the source first, then follow the evidence route.
-  - Short title: ICE biometrics underpin broader surveillance network, report argues - Bi
-  - Longform title: Google News / control structure — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-center.html
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New seven-day intelligence lane: AWS is investing billions to put AI into production for the public sector - About Amazon. Open the source first, then follow the evidence route.
-  - Short title: AWS is investing billions to put AI into production for the public secto
-  - Longform title: Google News / war machine — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-30 — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
-  - Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI. The record matters, but the evidence class matters more.
-  - Short title: Longtime Clinton aide walks back claim former president visited Epstein
-  - Longform title: Google News / Epstein timeline and files — Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZ
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
-  - Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network. The record matters, but the evidence class matters more.
-  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s
-  - Longform title: Google News / Epstein timeline and files — Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstei
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Former Clinton aide appears before House panel in Epstein investigation
+  - Short title: Epstein Files Update: Former Clinton aide appears before House panel in Epstein investigatio
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Former Clinton aide appears before House panel in Ep
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
   - Offer: offer-starter-library.html
 - 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
   - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian. The record matters, but the evidence class matters more.
-  - Short title: Alleged Epstein victim and Trump accuser living in fear of retaliation,
-  - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guard
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
-  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News. The record matters, but the evidence class matters more.
-  - Short title: Clinton confidant who called Maxwell his 'lover' grilled by Congress ove
-  - Longform title: Google News / Epstein timeline and files — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-29 — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
-  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New archive lane: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive. A released file is the start of the investigation, not the final verdict.
-  - Short title: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not C
-  - Longform title: Google News / declassified files — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Sec
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
-  - Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
-  - Evidence: Official cyber-threat reporting / conflict lane
-  - Video hook: Ceasefire does not mean cyberfire. The public war clock may pause while the network war accelerates.
-  - Short title: Iran-Israel Cyber Surge: June 2026
-  - Longform title: Cyber War Update: Israel Says Iranian Cyber Incidents Surged In June 2026
-  - Next action: Update cyber timer and watch critical infrastructure, banking, telecom, legal/accounting firms, and public-sector incident reporting.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
-  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
-  - Evidence: Data-exposure / private-network security lane
-  - Video hook: The intelligence state does not only leak through spies. Sometimes it leaks through elite private networks and bad web configuration.
-  - Short title: Dialog Exposure: Private Network Intel Risk
-  - Longform title: National Security Data Exposure: Pentagon Looks Into Dialog Leak Risk
-  - Next action: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-26 — Judge orders DOJ to release more Epstein records or justify redactions by July 2
-  - Source: https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
-  - Evidence: Court-process / disclosure-order watch
-  - Video hook: The Epstein story just moved from rumour to deadline: July 2 is now a records-watch date. The question is not gossip. The question is: what did DOJ redact, and why?
-  - Short title: Epstein Files: July 2 DOJ Redaction Deadline
-  - Longform title: Epstein Files Update: Judge Orders DOJ To Release More Records Or Explain Redactions By July 2
-  - Next action: Watch July 2. If DOJ files less-redacted records, classify each document by source type, people named, record status, and boundary before surfacing claims.
-  - Offer: offer-starter-library.html
-- 2026-06-26 — Epstein settlement and NDA lane moves into oversight focus
-  - Source: https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6
-  - Evidence: Reported oversight / settlement-document lane
-  - Video hook: The Epstein paper trail is not only flight logs. It is settlements, NDAs, sealed records, lawyers, and the machinery that keeps testimony out of public view.
-  - Short title: Epstein NDAs: The Hidden Settlement Lane
-  - Longform title: Epstein Files Update: Settlement And NDA Records Become A Public Oversight Lane
-  - Next action: Create a settlement/NDA source door: who can subpoena, what can be compelled, what remains sealed, and what source class supports each claim.
-  - Offer: offer-starter-library.html
-- 2026-06-25 — Maxwell habeas petition claims new Epstein-file evidence; prosecutors reject arguments
-  - Source: https://www.reuters.com/legal/government/epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-conviction-us-2026-06-25/
-  - Evidence: Court-process update / litigation claim and government response
-  - Video hook: Maxwell is trying to use the new Epstein files as a legal weapon. Prosecutors say no. The record lane is now petition, response, ruling.
-  - Short title: Maxwell Uses Epstein Files In New Habeas Fight
-  - Longform title: Maxwell Habeas Update: New Epstein-File Arguments, Prosecutors Oppose, Court Process Continues
-  - Next action: Track Judge Engelmayer docket movement and extract named-record claims only after the filing is available or source-cited.
-  - Offer: offer-starter-library.html
-- 2026-06-23 — Digital euro clears key European Parliament hurdle
-  - Source: https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/
-  - Evidence: CBDC legislative-process / pilot-lane update
-  - Video hook: The digital euro just moved from theory toward the machinery: law, pilot, wallet, limits, fees, privacy. That is the control-system lane to watch.
-  - Short title: Digital Euro Clears Key Hurdle
-  - Longform title: CBDC Watch: Digital Euro Clears Parliamentary Hurdle As EU Pushes Sovereign Payment Rails
-  - Next action: Escalate CBDC timer through legislation, pilot, wallet integration, merchant rules, holding limits, and privacy architecture.
-  - Offer: offer-starter-library.html
-- 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
-  - Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-  - Evidence: Intelligence-alliance warning / cyber-risk lane
-  - Video hook: Five Eyes just moved AI from tech hype into national-security cyber countdown. The question is not whether AI is magic. The question is who gets offensive capability first.
-  - Short title: Five Eyes AI Cyber Warning
-  - Longform title: Five Eyes Warning: AI Cyberattack Models Could Be Months Away, Turning AI Into A Security Timer
-  - Next action: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-06-30 — Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
-  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxNS1Z2SXRuSEdCLW5vanRocnFSN0Rja2VLOXdOVU1TUUQ3TFR5V0NQaHVxRm5aeHA1d2dtcXkwMXY3SlFNNTZsS1lrRkQ5cFZyTVNIZzZkNTR4X2U1V2ZkQzJTZmEtSjlha2JCZ3d5aWwwbWNCZHNodDVGN2xyUGUtUXNadkVrbVB1SDJSWlpNbHBYV3lvMi0yLU5scTE2RGcxR2FsZ096MW1ROVIwVVRiazNfZmhhSFJfMEdQYVF3?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
-  - Short title: Clinton confidant who called Maxwell his ‘lover’ grilled by Congress ove
-  - Longform title: Epstein Files, Timeline And Court Records — Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News
-  - Source: https://news.google.com/rss/articles/CBMipwJBVV95cUxObzVDOU4zQWJMR1FfR1NCUzlYOFdyekFudXlwcW9zN0xZQU0xNEoyOVdFcW11RUFwX1NZaVhvUGVHMWdKQjQxd1hMcDg4dEJZOXhqeU05OEZnTnFQSGc2Q09MZ3QwX0hkM28zNUhpcGFjZkZfREtwdlhjcUZvc2UtRGpJbGV0QUNvenJKODRaalh0SWdsT0oycEI3VlFFb3F5YTJwQ3ZKMEpNU29GWEE4eFRUUUExRjVTaUVhUlZTRDVvVmNVZjhobVBIalpPYWVHQW80aEQ1X0ZuVDNCSzFGaU1QM3BTd0dhdEUwelRLRVo2dnI1SF93bTBNOTlvdTJtU2pHSldvbjVOeHRWU0VDVnZsSkY5MWZ4eTRYbTNEOUhaVDVRaDJZ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News
-  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton's
-  - Longform title: Epstein Files, Timeline And Court Records — Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epste
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Evidence: News/source-watch item
+  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says
+  - Short title: Epstein Files Update: Alleged Epstein victim and Trump accuser living in fear of retaliation
+  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Alleged Epstein victim and Trump accuser living in f
+  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
   - Offer: offer-starter-library.html

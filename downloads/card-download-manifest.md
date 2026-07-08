@@ -1,12 +1,14 @@
 # Card Download Manifest
 
-Updated: 2026-07-08T06:13:19.073Z
+Updated: 2026-07-08T06:40:35.835Z
 
-Total cards: 156
+Decks: 7
 
-Missing assets: 0
+Total cards: 364
 
-## People of Interest
+Missing routes/assets: 0
+
+## Top 52 Persons of Interest
 - 1. Elon Musk — assets/top-52/cards/elon-musk.svg — top-52/elon-musk.html
 - 2. Jeff Bezos — assets/top-52/cards/jeff-bezos.svg — top-52/jeff-bezos.html
 - 3. Warren Buffett — assets/top-52/cards/warren-buffett.svg — top-52/warren-buffett.html
@@ -167,3 +169,219 @@ Missing assets: 0
 - 50. ICANN — assets/institution/cards/icann.svg — institution-profile.html?card=icann
 - 51. SWIFT — assets/institution/cards/swift.svg — institution-profile.html?card=swift
 - 52. World Wide Web Consortium — assets/institution/cards/world-wide-web-consortium.svg — institution-profile.html?card=world-wide-web-consortium
+
+## Power Families Deck
+- 1. Rothschild family — assets/power-families/cards/rothschild-family.svg — power-families/rothschild-family.html
+- 2. Rockefeller family — assets/power-families/cards/rockefeller-family.svg — power-families/rockefeller-family.html
+- 3. House of Saud — assets/power-families/cards/house-of-saud.svg — power-families/house-of-saud.html
+- 4. Al Nahyan family — assets/power-families/cards/al-nahyan-family.svg — power-families/al-nahyan-family.html
+- 5. Al Thani family — assets/power-families/cards/al-thani-family.svg — power-families/al-thani-family.html
+- 6. Al Maktoum family — assets/power-families/cards/al-maktoum-family.svg — power-families/al-maktoum-family.html
+- 7. Windsor family — assets/power-families/cards/windsor-family.svg — power-families/windsor-family.html
+- 8. Walton family — assets/power-families/cards/walton-family.svg — power-families/walton-family.html
+- 9. Mars family — assets/power-families/cards/mars-family.svg — power-families/mars-family.html
+- 10. Koch family — assets/power-families/cards/koch-family.svg — power-families/koch-family.html
+- 11. Ambani family — assets/power-families/cards/ambani-family.svg — power-families/ambani-family.html
+- 12. Adani family — assets/power-families/cards/adani-family.svg — power-families/adani-family.html
+- 13. Arnault family — assets/power-families/cards/arnault-family.svg — power-families/arnault-family.html
+- 14. Bettencourt Meyers family — assets/power-families/cards/bettencourt-meyers-family.svg — power-families/bettencourt-meyers-family.html
+- 15. Quandt-Klatten family — assets/power-families/cards/quandt-klatten-family.svg — power-families/quandt-klatten-family.html
+- 16. Porsche-Piëch family — assets/power-families/cards/porsche-pi-ch-family.svg — power-families/porsche-pi-ch-family.html
+- 17. Agnelli-Elkann family — assets/power-families/cards/agnelli-elkann-family.svg — power-families/agnelli-elkann-family.html
+- 18. Lee Samsung family — assets/power-families/cards/lee-samsung-family.svg — power-families/lee-samsung-family.html
+- 19. Pritzker family — assets/power-families/cards/pritzker-family.svg — power-families/pritzker-family.html
+- 20. Cargill-MacMillan family — assets/power-families/cards/cargill-macmillan-family.svg — power-families/cargill-macmillan-family.html
+- 21. Duncan family — assets/power-families/cards/duncan-family.svg — power-families/duncan-family.html
+- 22. Lauder family — assets/power-families/cards/lauder-family.svg — power-families/lauder-family.html
+- 23. Cox family — assets/power-families/cards/cox-family.svg — power-families/cox-family.html
+- 24. Johnson SC family — assets/power-families/cards/johnson-sc-family.svg — power-families/johnson-sc-family.html
+- 25. Mellon family — assets/power-families/cards/mellon-family.svg — power-families/mellon-family.html
+- 26. Oppenheimer family — assets/power-families/cards/oppenheimer-family.svg — power-families/oppenheimer-family.html
+- 27. Rupert family — assets/power-families/cards/rupert-family.svg — power-families/rupert-family.html
+- 28. Pinault family — assets/power-families/cards/pinault-family.svg — power-families/pinault-family.html
+- 29. Dassault family — assets/power-families/cards/dassault-family.svg — power-families/dassault-family.html
+- 30. Dumas-Hermès family — assets/power-families/cards/dumas-herm-s-family.svg — power-families/dumas-herm-s-family.html
+- 31. Møller family — assets/power-families/cards/m-ller-family.svg — power-families/m-ller-family.html
+- 32. Rausing family — assets/power-families/cards/rausing-family.svg — power-families/rausing-family.html
+- 33. Ferrero family — assets/power-families/cards/ferrero-family.svg — power-families/ferrero-family.html
+- 34. Del Vecchio family — assets/power-families/cards/del-vecchio-family.svg — power-families/del-vecchio-family.html
+- 35. Benetton family — assets/power-families/cards/benetton-family.svg — power-families/benetton-family.html
+- 36. Newhouse family — assets/power-families/cards/newhouse-family.svg — power-families/newhouse-family.html
+- 37. Hearst family — assets/power-families/cards/hearst-family.svg — power-families/hearst-family.html
+- 38. Sulzberger family — assets/power-families/cards/sulzberger-family.svg — power-families/sulzberger-family.html
+- 39. Redstone family — assets/power-families/cards/redstone-family.svg — power-families/redstone-family.html
+- 40. Mohn family — assets/power-families/cards/mohn-family.svg — power-families/mohn-family.html
+- 41. Albrecht family — assets/power-families/cards/albrecht-family.svg — power-families/albrecht-family.html
+- 42. Schwarz family — assets/power-families/cards/schwarz-family.svg — power-families/schwarz-family.html
+- 43. Tata family and trusts — assets/power-families/cards/tata-family-and-trusts.svg — power-families/tata-family-and-trusts.html
+- 44. Birla family — assets/power-families/cards/birla-family.svg — power-families/birla-family.html
+- 45. Soros family — assets/power-families/cards/soros-family.svg — power-families/soros-family.html
+- 46. Bloomberg family — assets/power-families/cards/bloomberg-family.svg — power-families/bloomberg-family.html
+- 47. Musk family — assets/power-families/cards/musk-family.svg — power-families/musk-family.html
+- 48. Gates family — assets/power-families/cards/gates-family.svg — power-families/gates-family.html
+- 49. Bezos family — assets/power-families/cards/bezos-family.svg — power-families/bezos-family.html
+- 50. Zuckerberg-Chan family — assets/power-families/cards/zuckerberg-chan-family.svg — power-families/zuckerberg-chan-family.html
+- 51. Page-Brin families — assets/power-families/cards/page-brin-families.svg — power-families/page-brin-families.html
+- 52. Ellison family — assets/power-families/cards/ellison-family.svg — power-families/ellison-family.html
+
+## Secret Societies Deck
+- 1. Freemasonry — assets/secret-societies/cards/freemasonry.svg — secret-societies/freemasonry.html
+- 2. Scottish Rite Freemasonry — assets/secret-societies/cards/scottish-rite-freemasonry.svg — secret-societies/scottish-rite-freemasonry.html
+- 3. York Rite Freemasonry — assets/secret-societies/cards/york-rite-freemasonry.svg — secret-societies/york-rite-freemasonry.html
+- 4. Shriners International — assets/secret-societies/cards/shriners-international.svg — secret-societies/shriners-international.html
+- 5. Order of the Eastern Star — assets/secret-societies/cards/order-of-the-eastern-star.svg — secret-societies/order-of-the-eastern-star.html
+- 6. Sovereign Military Order of Malta — assets/secret-societies/cards/sovereign-military-order-of-malta.svg — secret-societies/sovereign-military-order-of-malta.html
+- 7. Knights of Columbus — assets/secret-societies/cards/knights-of-columbus.svg — secret-societies/knights-of-columbus.html
+- 8. Odd Fellows — assets/secret-societies/cards/odd-fellows.svg — secret-societies/odd-fellows.html
+- 9. Elks — assets/secret-societies/cards/elks.svg — secret-societies/elks.html
+- 10. Moose International — assets/secret-societies/cards/moose-international.svg — secret-societies/moose-international.html
+- 11. Orange Order — assets/secret-societies/cards/orange-order.svg — secret-societies/orange-order.html
+- 12. Ancient Order of Hibernians — assets/secret-societies/cards/ancient-order-of-hibernians.svg — secret-societies/ancient-order-of-hibernians.html
+- 13. Rosicrucian AMORC — assets/secret-societies/cards/rosicrucian-amorc.svg — secret-societies/rosicrucian-amorc.html
+- 14. Societas Rosicruciana in Anglia — assets/secret-societies/cards/societas-rosicruciana-in-anglia.svg — secret-societies/societas-rosicruciana-in-anglia.html
+- 15. Hermetic Order of the Golden Dawn — assets/secret-societies/cards/hermetic-order-of-the-golden-dawn.svg — secret-societies/hermetic-order-of-the-golden-dawn.html
+- 16. Ordo Templi Orientis — assets/secret-societies/cards/ordo-templi-orientis.svg — secret-societies/ordo-templi-orientis.html
+- 17. A∴A∴ Thelemic order — assets/secret-societies/cards/a-a-thelemic-order.svg — secret-societies/a-a-thelemic-order.html
+- 18. Martinist Order — assets/secret-societies/cards/martinist-order.svg — secret-societies/martinist-order.html
+- 19. Memphis-Misraim Rite — assets/secret-societies/cards/memphis-misraim-rite.svg — secret-societies/memphis-misraim-rite.html
+- 20. Bavarian Illuminati historical file — assets/secret-societies/cards/bavarian-illuminati-historical-file.svg — secret-societies/bavarian-illuminati-historical-file.html
+- 21. Carbonari historical network — assets/secret-societies/cards/carbonari-historical-network.svg — secret-societies/carbonari-historical-network.html
+- 22. Propaganda Due P2 historical file — assets/secret-societies/cards/propaganda-due-p2-historical-file.svg — secret-societies/propaganda-due-p2-historical-file.html
+- 23. Skull and Bones — assets/secret-societies/cards/skull-and-bones.svg — secret-societies/skull-and-bones.html
+- 24. Scroll and Key — assets/secret-societies/cards/scroll-and-key.svg — secret-societies/scroll-and-key.html
+- 25. Wolf’s Head Society — assets/secret-societies/cards/wolf-s-head-society.svg — secret-societies/wolf-s-head-society.html
+- 26. Porcellian Club — assets/secret-societies/cards/porcellian-club.svg — secret-societies/porcellian-club.html
+- 27. Bohemian Club — assets/secret-societies/cards/bohemian-club.svg — secret-societies/bohemian-club.html
+- 28. Bilderberg Meetings — assets/secret-societies/cards/bilderberg-meetings.svg — secret-societies/bilderberg-meetings.html
+- 29. Trilateral Commission — assets/secret-societies/cards/trilateral-commission.svg — secret-societies/trilateral-commission.html
+- 30. Pilgrims Society — assets/secret-societies/cards/pilgrims-society.svg — secret-societies/pilgrims-society.html
+- 31. Round Table movement — assets/secret-societies/cards/round-table-movement.svg — secret-societies/round-table-movement.html
+- 32. Le Cercle — assets/secret-societies/cards/le-cercle.svg — secret-societies/le-cercle.html
+- 33. Club of Rome — assets/secret-societies/cards/club-of-rome.svg — secret-societies/club-of-rome.html
+- 34. Fabian Society — assets/secret-societies/cards/fabian-society.svg — secret-societies/fabian-society.html
+- 35. Theosophical Society — assets/secret-societies/cards/theosophical-society.svg — secret-societies/theosophical-society.html
+- 36. Anthroposophical Society — assets/secret-societies/cards/anthroposophical-society.svg — secret-societies/anthroposophical-society.html
+- 37. Lucis Trust — assets/secret-societies/cards/lucis-trust.svg — secret-societies/lucis-trust.html
+- 38. Opus Dei public route — assets/secret-societies/cards/opus-dei-public-route.svg — secret-societies/opus-dei-public-route.html
+- 39. Jesuit order public route — assets/secret-societies/cards/jesuit-order-public-route.svg — secret-societies/jesuit-order-public-route.html
+- 40. Order of the Holy Sepulchre — assets/secret-societies/cards/order-of-the-holy-sepulchre.svg — secret-societies/order-of-the-holy-sepulchre.html
+- 41. Vatican diplomatic orders route — assets/secret-societies/cards/vatican-diplomatic-orders-route.svg — secret-societies/vatican-diplomatic-orders-route.html
+- 42. Ditchley Foundation network — assets/secret-societies/cards/ditchley-foundation-network.svg — secret-societies/ditchley-foundation-network.html
+- 43. Rhodes Trust network — assets/secret-societies/cards/rhodes-trust-network.svg — secret-societies/rhodes-trust-network.html
+- 44. Cecil Rhodes legacy route — assets/secret-societies/cards/cecil-rhodes-legacy-route.svg — secret-societies/cecil-rhodes-legacy-route.html
+- 45. Rotary International — assets/secret-societies/cards/rotary-international.svg — secret-societies/rotary-international.html
+- 46. Lions Clubs International — assets/secret-societies/cards/lions-clubs-international.svg — secret-societies/lions-clubs-international.html
+- 47. Kiwanis International — assets/secret-societies/cards/kiwanis-international.svg — secret-societies/kiwanis-international.html
+- 48. Junior Chamber International — assets/secret-societies/cards/junior-chamber-international.svg — secret-societies/junior-chamber-international.html
+- 49. Mensa International — assets/secret-societies/cards/mensa-international.svg — secret-societies/mensa-international.html
+- 50. World Economic Forum Young Global Leaders — assets/secret-societies/cards/world-economic-forum-young-global-leaders.svg — secret-societies/world-economic-forum-young-global-leaders.html
+- 51. Global Shapers Community — assets/secret-societies/cards/global-shapers-community.svg — secret-societies/global-shapers-community.html
+- 52. TED / TED Fellows network — assets/secret-societies/cards/ted-ted-fellows-network.svg — secret-societies/ted-ted-fellows-network.html
+
+## Policy Deck
+- 1. UN Sustainable Development Goals — assets/policy/cards/un-sustainable-development-goals.svg — policy/un-sustainable-development-goals.html
+- 2. UN Pact for the Future — assets/policy/cards/un-pact-for-the-future.svg — policy/un-pact-for-the-future.html
+- 3. WHO Pandemic Agreement — assets/policy/cards/who-pandemic-agreement.svg — policy/who-pandemic-agreement.html
+- 4. International Health Regulations amendments — assets/policy/cards/international-health-regulations-amendments.svg — policy/international-health-regulations-amendments.html
+- 5. Pathogen Access and Benefit-Sharing PABS annex — assets/policy/cards/pathogen-access-and-benefit-sharing-pabs-annex.svg — policy/pathogen-access-and-benefit-sharing-pabs-annex.html
+- 6. eIDAS 2 / European Digital Identity Wallet — assets/policy/cards/eidas-2-european-digital-identity-wallet.svg — policy/eidas-2-european-digital-identity-wallet.html
+- 7. EU Digital Services Act — assets/policy/cards/eu-digital-services-act.svg — policy/eu-digital-services-act.html
+- 8. EU Digital Markets Act — assets/policy/cards/eu-digital-markets-act.svg — policy/eu-digital-markets-act.html
+- 9. EU AI Act — assets/policy/cards/eu-ai-act.svg — policy/eu-ai-act.html
+- 10. UK Online Safety Act — assets/policy/cards/uk-online-safety-act.svg — policy/uk-online-safety-act.html
+- 11. Digital euro legislative package — assets/policy/cards/digital-euro-legislative-package.svg — policy/digital-euro-legislative-package.html
+- 12. G20 cross-border payments roadmap — assets/policy/cards/g20-cross-border-payments-roadmap.svg — policy/g20-cross-border-payments-roadmap.html
+- 13. BIS Project mBridge / multi-CBDC bridge — assets/policy/cards/bis-project-mbridge-multi-cbdc-bridge.svg — policy/bis-project-mbridge-multi-cbdc-bridge.html
+- 14. FATF Travel Rule for virtual assets — assets/policy/cards/fatf-travel-rule-for-virtual-assets.svg — policy/fatf-travel-rule-for-virtual-assets.html
+- 15. OECD Common Reporting Standard — assets/policy/cards/oecd-common-reporting-standard.svg — policy/oecd-common-reporting-standard.html
+- 16. OECD Crypto-Asset Reporting Framework — assets/policy/cards/oecd-crypto-asset-reporting-framework.svg — policy/oecd-crypto-asset-reporting-framework.html
+- 17. ISSB global sustainability disclosure standards — assets/policy/cards/issb-global-sustainability-disclosure-standards.svg — policy/issb-global-sustainability-disclosure-standards.html
+- 18. EU Corporate Sustainability Reporting Directive — assets/policy/cards/eu-corporate-sustainability-reporting-directive.svg — policy/eu-corporate-sustainability-reporting-directive.html
+- 19. EU Corporate Sustainability Due Diligence Directive — assets/policy/cards/eu-corporate-sustainability-due-diligence-directive.svg — policy/eu-corporate-sustainability-due-diligence-directive.html
+- 20. EU Carbon Border Adjustment Mechanism — assets/policy/cards/eu-carbon-border-adjustment-mechanism.svg — policy/eu-carbon-border-adjustment-mechanism.html
+- 21. EU Emissions Trading System expansion — assets/policy/cards/eu-emissions-trading-system-expansion.svg — policy/eu-emissions-trading-system-expansion.html
+- 22. Net Zero national commitments — assets/policy/cards/net-zero-national-commitments.svg — policy/net-zero-national-commitments.html
+- 23. Nationally Determined Contributions under Paris Agreement — assets/policy/cards/nationally-determined-contributions-under-paris-agreement.svg — policy/nationally-determined-contributions-under-paris-agreement.html
+- 24. Global Methane Pledge — assets/policy/cards/global-methane-pledge.svg — policy/global-methane-pledge.html
+- 25. CORSIA aviation emissions scheme — assets/policy/cards/corsia-aviation-emissions-scheme.svg — policy/corsia-aviation-emissions-scheme.html
+- 26. Smart city digital infrastructure strategies — assets/policy/cards/smart-city-digital-infrastructure-strategies.svg — policy/smart-city-digital-infrastructure-strategies.html
+- 27. UN Global Compact for Migration — assets/policy/cards/un-global-compact-for-migration.svg — policy/un-global-compact-for-migration.html
+- 28. EU Migration and Asylum Pact — assets/policy/cards/eu-migration-and-asylum-pact.svg — policy/eu-migration-and-asylum-pact.html
+- 29. Entry/Exit System EES — assets/policy/cards/entry-exit-system-ees.svg — policy/entry-exit-system-ees.html
+- 30. ETIAS travel authorisation — assets/policy/cards/etias-travel-authorisation.svg — policy/etias-travel-authorisation.html
+- 31. ICAO digital travel credential standards — assets/policy/cards/icao-digital-travel-credential-standards.svg — policy/icao-digital-travel-credential-standards.html
+- 32. Biometric border systems — assets/policy/cards/biometric-border-systems.svg — policy/biometric-border-systems.html
+- 33. Digital health certificate frameworks — assets/policy/cards/digital-health-certificate-frameworks.svg — policy/digital-health-certificate-frameworks.html
+- 34. National digital health records strategies — assets/policy/cards/national-digital-health-records-strategies.svg — policy/national-digital-health-records-strategies.html
+- 35. Electronic invoicing mandates — assets/policy/cards/electronic-invoicing-mandates.svg — policy/electronic-invoicing-mandates.html
+- 36. Real-time tax reporting systems — assets/policy/cards/real-time-tax-reporting-systems.svg — policy/real-time-tax-reporting-systems.html
+- 37. Open banking and digital finance rules — assets/policy/cards/open-banking-and-digital-finance-rules.svg — policy/open-banking-and-digital-finance-rules.html
+- 38. Stablecoin regulation frameworks — assets/policy/cards/stablecoin-regulation-frameworks.svg — policy/stablecoin-regulation-frameworks.html
+- 39. MiCA crypto-asset regulation — assets/policy/cards/mica-crypto-asset-regulation.svg — policy/mica-crypto-asset-regulation.html
+- 40. Central bank instant payment systems — assets/policy/cards/central-bank-instant-payment-systems.svg — policy/central-bank-instant-payment-systems.html
+- 41. Age verification / online access laws — assets/policy/cards/age-verification-online-access-laws.svg — policy/age-verification-online-access-laws.html
+- 42. Platform transparency reporting laws — assets/policy/cards/platform-transparency-reporting-laws.svg — policy/platform-transparency-reporting-laws.html
+- 43. Trusted flagger and illegal-content notice systems — assets/policy/cards/trusted-flagger-and-illegal-content-notice-systems.svg — policy/trusted-flagger-and-illegal-content-notice-systems.html
+- 44. Cyber resilience legislation — assets/policy/cards/cyber-resilience-legislation.svg — policy/cyber-resilience-legislation.html
+- 45. NIS2 cybersecurity directive — assets/policy/cards/nis2-cybersecurity-directive.svg — policy/nis2-cybersecurity-directive.html
+- 46. Critical Entities Resilience directive — assets/policy/cards/critical-entities-resilience-directive.svg — policy/critical-entities-resilience-directive.html
+- 47. Digital public infrastructure policies — assets/policy/cards/digital-public-infrastructure-policies.svg — policy/digital-public-infrastructure-policies.html
+- 48. India Stack / DPI export model — assets/policy/cards/india-stack-dpi-export-model.svg — policy/india-stack-dpi-export-model.html
+- 49. World Bank ID4D identity programmes — assets/policy/cards/world-bank-id4d-identity-programmes.svg — policy/world-bank-id4d-identity-programmes.html
+- 50. GovTech digital service mandates — assets/policy/cards/govtech-digital-service-mandates.svg — policy/govtech-digital-service-mandates.html
+- 51. CBDC offline wallet design rules — assets/policy/cards/cbdc-offline-wallet-design-rules.svg — policy/cbdc-offline-wallet-design-rules.html
+- 52. Programmable compliance in payments — assets/policy/cards/programmable-compliance-in-payments.svg — policy/programmable-compliance-in-payments.html
+
+## Think Tanks Deck
+- 1. Council on Foreign Relations — assets/think-tanks/cards/council-on-foreign-relations.svg — think-tanks/council-on-foreign-relations.html
+- 2. Brookings Institution — assets/think-tanks/cards/brookings-institution.svg — think-tanks/brookings-institution.html
+- 3. Chatham House — assets/think-tanks/cards/chatham-house.svg — think-tanks/chatham-house.html
+- 4. RAND Corporation — assets/think-tanks/cards/rand-corporation.svg — think-tanks/rand-corporation.html
+- 5. Center for Strategic and International Studies — assets/think-tanks/cards/center-for-strategic-and-international-studies.svg — think-tanks/center-for-strategic-and-international-studies.html
+- 6. Atlantic Council — assets/think-tanks/cards/atlantic-council.svg — think-tanks/atlantic-council.html
+- 7. Carnegie Endowment for International Peace — assets/think-tanks/cards/carnegie-endowment-for-international-peace.svg — think-tanks/carnegie-endowment-for-international-peace.html
+- 8. Heritage Foundation — assets/think-tanks/cards/heritage-foundation.svg — think-tanks/heritage-foundation.html
+- 9. American Enterprise Institute — assets/think-tanks/cards/american-enterprise-institute.svg — think-tanks/american-enterprise-institute.html
+- 10. Cato Institute — assets/think-tanks/cards/cato-institute.svg — think-tanks/cato-institute.html
+- 11. Aspen Institute — assets/think-tanks/cards/aspen-institute.svg — think-tanks/aspen-institute.html
+- 12. Wilson Center — assets/think-tanks/cards/wilson-center.svg — think-tanks/wilson-center.html
+- 13. Hoover Institution — assets/think-tanks/cards/hoover-institution.svg — think-tanks/hoover-institution.html
+- 14. Belfer Center — assets/think-tanks/cards/belfer-center.svg — think-tanks/belfer-center.html
+- 15. Peterson Institute for International Economics — assets/think-tanks/cards/peterson-institute-for-international-economics.svg — think-tanks/peterson-institute-for-international-economics.html
+- 16. Center for a New American Security — assets/think-tanks/cards/center-for-a-new-american-security.svg — think-tanks/center-for-a-new-american-security.html
+- 17. New America — assets/think-tanks/cards/new-america.svg — think-tanks/new-america.html
+- 18. Center for American Progress — assets/think-tanks/cards/center-for-american-progress.svg — think-tanks/center-for-american-progress.html
+- 19. Hudson Institute — assets/think-tanks/cards/hudson-institute.svg — think-tanks/hudson-institute.html
+- 20. Manhattan Institute — assets/think-tanks/cards/manhattan-institute.svg — think-tanks/manhattan-institute.html
+- 21. Mercatus Center — assets/think-tanks/cards/mercatus-center.svg — think-tanks/mercatus-center.html
+- 22. Urban Institute — assets/think-tanks/cards/urban-institute.svg — think-tanks/urban-institute.html
+- 23. World Resources Institute — assets/think-tanks/cards/world-resources-institute.svg — think-tanks/world-resources-institute.html
+- 24. International Institute for Sustainable Development — assets/think-tanks/cards/international-institute-for-sustainable-development.svg — think-tanks/international-institute-for-sustainable-development.html
+- 25. Overseas Development Institute — assets/think-tanks/cards/overseas-development-institute.svg — think-tanks/overseas-development-institute.html
+- 26. International Institute for Strategic Studies — assets/think-tanks/cards/international-institute-for-strategic-studies.svg — think-tanks/international-institute-for-strategic-studies.html
+- 27. Royal United Services Institute — assets/think-tanks/cards/royal-united-services-institute.svg — think-tanks/royal-united-services-institute.html
+- 28. SIPRI — assets/think-tanks/cards/sipri.svg — think-tanks/sipri.html
+- 29. German Marshall Fund — assets/think-tanks/cards/german-marshall-fund.svg — think-tanks/german-marshall-fund.html
+- 30. Bruegel — assets/think-tanks/cards/bruegel.svg — think-tanks/bruegel.html
+- 31. Centre for European Policy Studies — assets/think-tanks/cards/centre-for-european-policy-studies.svg — think-tanks/centre-for-european-policy-studies.html
+- 32. European Council on Foreign Relations — assets/think-tanks/cards/european-council-on-foreign-relations.svg — think-tanks/european-council-on-foreign-relations.html
+- 33. SWP Berlin — assets/think-tanks/cards/swp-berlin.svg — think-tanks/swp-berlin.html
+- 34. Institut français des relations internationales — assets/think-tanks/cards/institut-fran-ais-des-relations-internationales.svg — think-tanks/institut-fran-ais-des-relations-internationales.html
+- 35. Institut Montaigne — assets/think-tanks/cards/institut-montaigne.svg — think-tanks/institut-montaigne.html
+- 36. Clingendael Institute — assets/think-tanks/cards/clingendael-institute.svg — think-tanks/clingendael-institute.html
+- 37. Lowy Institute — assets/think-tanks/cards/lowy-institute.svg — think-tanks/lowy-institute.html
+- 38. Australian Strategic Policy Institute — assets/think-tanks/cards/australian-strategic-policy-institute.svg — think-tanks/australian-strategic-policy-institute.html
+- 39. Observer Research Foundation — assets/think-tanks/cards/observer-research-foundation.svg — think-tanks/observer-research-foundation.html
+- 40. Institute for Defence Studies and Analyses — assets/think-tanks/cards/institute-for-defence-studies-and-analyses.svg — think-tanks/institute-for-defence-studies-and-analyses.html
+- 41. Japan Institute of International Affairs — assets/think-tanks/cards/japan-institute-of-international-affairs.svg — think-tanks/japan-institute-of-international-affairs.html
+- 42. Korea Institute for National Unification — assets/think-tanks/cards/korea-institute-for-national-unification.svg — think-tanks/korea-institute-for-national-unification.html
+- 43. China Institutes of Contemporary International Relations — assets/think-tanks/cards/china-institutes-of-contemporary-international-relations.svg — think-tanks/china-institutes-of-contemporary-international-relations.html
+- 44. Chinese Academy of Social Sciences — assets/think-tanks/cards/chinese-academy-of-social-sciences.svg — think-tanks/chinese-academy-of-social-sciences.html
+- 45. Carnegie China route — assets/think-tanks/cards/carnegie-china-route.svg — think-tanks/carnegie-china-route.html
+- 46. Kiel Institute for the World Economy — assets/think-tanks/cards/kiel-institute-for-the-world-economy.svg — think-tanks/kiel-institute-for-the-world-economy.html
+- 47. Ifo Institute — assets/think-tanks/cards/ifo-institute.svg — think-tanks/ifo-institute.html
+- 48. Club of Rome — assets/think-tanks/cards/club-of-rome.svg — think-tanks/club-of-rome.html
+- 49. World Economic Forum policy platform — assets/think-tanks/cards/world-economic-forum-policy-platform.svg — think-tanks/world-economic-forum-policy-platform.html
+- 50. BIS research route — assets/think-tanks/cards/bis-research-route.svg — think-tanks/bis-research-route.html
+- 51. IMF policy research route — assets/think-tanks/cards/imf-policy-research-route.svg — think-tanks/imf-policy-research-route.html
+- 52. OECD policy research route — assets/think-tanks/cards/oecd-policy-research-route.svg — think-tanks/oecd-policy-research-route.html

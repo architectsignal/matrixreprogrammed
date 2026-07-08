@@ -1,0 +1,109 @@
+{
+  "ok": true,
+  "updated": "2026-07-08T06:40:35.511Z",
+  "title": "Information Gathering And Conclusion System",
+  "mission": "Turn public-source leads into useful, evidence-bounded conclusions that help readers understand power, policy, money, identity, institutions, missing records and convergence routes without confusing speculation for proof.",
+  "pipeline": [
+    {
+      "id": "collect",
+      "title": "Collect",
+      "rule": "Gather source links, official pages, filings, public records, archives, reader leads, card forum submissions and daily public drops."
+    },
+    {
+      "id": "classify",
+      "title": "Classify",
+      "rule": "Tag each item by lane, actor, jurisdiction, date, evidence level, source class, affected deck/cards and missing records."
+    },
+    {
+      "id": "grade",
+      "title": "Grade Evidence",
+      "rule": "Separate official records, primary documents, reliable reporting, commentary, speculation, contradiction and unsupported claims."
+    },
+    {
+      "id": "crosscheck",
+      "title": "Cross-check",
+      "rule": "Compare against counter-sources, corrections, older records, duplicate claims, outdated pages and source conflicts."
+    },
+    {
+      "id": "connect",
+      "title": "Connect",
+      "rule": "Route source material to clocks, cards, policies, institutions, people, think tanks, books, videos and user briefs."
+    },
+    {
+      "id": "conclude",
+      "title": "Conclude",
+      "rule": "Produce conclusion, why it matters, evidence boundary, confidence, missing record, and next action."
+    },
+    {
+      "id": "publish",
+      "title": "Publish",
+      "rule": "Expose the conclusion through Daily Brief, Live Intel, card dossiers, risk clocks, search routes and downloads."
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "rule": "Re-check stale conclusions, process reader corrections and downgrade or archive unsupported items."
+    }
+  ],
+  "evidenceLevels": [
+    {
+      "level": 1,
+      "label": "Lead",
+      "meaning": "Interesting source or claim, not enough to conclude."
+    },
+    {
+      "level": 2,
+      "label": "Public mention",
+      "meaning": "Speech, article, webpage, interview, report or claim with a visible source."
+    },
+    {
+      "level": 3,
+      "label": "Primary source",
+      "meaning": "Official page, filing, legislation, public record, court material, regulator notice or original document."
+    },
+    {
+      "level": 4,
+      "label": "Implementation",
+      "meaning": "Procurement, pilot, legal mandate, enforcement action, operational rollout or signed agreement."
+    },
+    {
+      "level": 5,
+      "label": "Convergence",
+      "meaning": "Two or more systems connect, such as ID plus payments, health plus travel, AI plus public services."
+    },
+    {
+      "level": 6,
+      "label": "Lock-in signal",
+      "meaning": "Opt-out becomes difficult, access becomes conditional, or infrastructure becomes unavoidable."
+    }
+  ],
+  "conclusionTemplate": [
+    "Conclusion",
+    "Why it matters",
+    "Evidence boundary",
+    "Confidence level",
+    "What would change the conclusion",
+    "Missing records",
+    "Next action",
+    "Linked pages/cards/clocks"
+  ],
+  "sitewideFeeds": {
+    "latestDrops": 4,
+    "clocks": 12,
+    "deepIntelLanes": 18,
+    "deepIntelItems": 57,
+    "cardDecks": 2,
+    "cardFeedCards": 104,
+    "sourceLedgerEntries": 0
+  },
+  "qualityRules": [
+    "No [object Object] visible in public pages.",
+    "No internal author notes, debug text or prompt text visible to users.",
+    "No source link, no ledger entry.",
+    "No conclusion without an evidence boundary.",
+    "No score movement without a dated source route.",
+    "No relationship entry presented as guilt or proof.",
+    "Every intake area needs action, boundary and correction route.",
+    "Every public brief needs next action and missing-record path."
+  ]
+}

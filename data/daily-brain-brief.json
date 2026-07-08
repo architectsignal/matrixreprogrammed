@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T06:12:51.255Z",
+  "updated": "2026-07-08T06:40:04.173Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -215,7 +215,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-06T08:02:58.940Z",
+    "lastComputed": "2026-07-08T06:13:21.355Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "highestProbabilityScenario": {
@@ -329,7 +329,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-06T08:02:58.940Z",
+    "lastComputed": "2026-07-08T06:13:21.355Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "missingRecords": [
@@ -454,7 +454,7 @@
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-08T06:12:51.289Z",
+    "updated": "2026-07-08T06:40:04.202Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -563,11 +563,11 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0000320193-2",
+      "id": "sec-edgar-filings-cik0001652044-2",
       "date": "2026-07-08",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
+      "summary": "Alphabet Inc. (GOOGL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -577,11 +577,11 @@
       ]
     },
     {
-      "id": "sec-edgar-filings-cik0001652044-3",
+      "id": "sec-edgar-filings-cik0000320193-3",
       "date": "2026-07-08",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
+      "summary": "Apple Inc. (AAPL)",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
       "send_to": [
         "power-entities",
@@ -768,10 +768,10 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-08T06:13:04.758Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-08T06:40:21.885Z",
+    "newRecordCount": 2,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
+    "removedRecordCount": 2,
     "relationshipCandidateCount": 111,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
@@ -779,9 +779,22 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "lane": "sec-edgar-filings",
+      "grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-08T06:13:04.914Z",
+    "updated": "2026-07-08T06:40:22.018Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -815,7 +828,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-08T06:13:04.956Z",
+    "updated": "2026-07-08T06:40:22.058Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

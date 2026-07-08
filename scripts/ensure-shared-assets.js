@@ -41,6 +41,7 @@ runOptional('Top 52 Batch 1 Art Queue', 'build-top-52-batch1-art-queue.js', ['da
 runOptional('Top 52 Generated Card Art Install', 'install-generated-card-art.js', ['data/top-52-power-deck.json']);
 runOptional('Secondary Deck Artwork Install', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Card Intelligence Feed', 'build-card-intelligence-feed.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Deep Card Dossiers', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Clean Card Deck Walls', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject', 'patch-card-forums.js', ['card-forum.js']);
@@ -58,6 +59,7 @@ runOptional('Atlas Lane Link Repair', 'repair-atlas-lane-population-links.js', [
 runOptional('Reader Experience Governor', 'build-reader-experience-governor.js', ['index.html']);
 runOptional('Secondary Deck Artwork Install Final', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard Final', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Card Intelligence Feed Final', 'build-card-intelligence-feed.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Deep Card Dossiers Final', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Clean Card Deck Walls Final', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject Final', 'patch-card-forums.js', ['card-forum.js']);
@@ -96,16 +98,15 @@ for (const file of files) {
 
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard Pre Audit', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
+runOptional('Card Intelligence Feed Pre Audit', 'build-card-intelligence-feed.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Deep Card Dossiers Pre Audit', 'build-card-dossier-profiles.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Clean Card Deck Walls Pre Audit', 'build-clean-card-decks.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Forum Inject Pre Audit', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest Pre Audit', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Top 52 Art Link Repair Pre Audit', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
-runOptional('Final Top 52 Test Markers', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
 runOptional('BlackRock Video Briefs Test', 'blackrock-video-briefs-test.js', ['big-three/blackrock.html']);
 runOptional('Convergence Control Lenses Test', 'convergence-control-lenses-test.js', ['daily-power-conclusions.html']);
-runOptional('Final Top 52 Test Markers Before Test', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Top 52 Power Deck Test', 'top-52-power-deck-test.js', ['top-52-power-deck.html']);
 runOptional('Top 52 People Only Test', 'top-52-people-only-test.js', ['data/top-52-power-deck.json']);
 runOptional('Top 52 Phase 3 Visuals Test', 'top-52-phase3-visuals-test.js', ['top-52-power-deck.html']);

@@ -6,6 +6,7 @@ run('Monetisation system','build-monetisation-system.js');
 run('Books Black File CTA','patch-books-black-file-cta.js');
 run('Books daily drop route','patch-books-daily-drop-route.js');
 run('Books evidence badge route','patch-books-evidence-badge-route.js');
+run('Books source document vault route','patch-books-source-document-vault-route.js');
 run('Site brain router','build-site-brain-router.js');
 run('Review dashboard','build-review-dashboard.js');
 run('Review dashboard money sections','patch-review-dashboard-money-sections.js');

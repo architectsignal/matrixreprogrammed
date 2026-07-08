@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "updated": "2026-07-08T00:00:00.000Z",
+  "title": "Matrix Reprogrammed Site Brain Router",
+  "mission": "Collect public-source leads, classify them, route them to the right dossiers/clocks/briefs, and produce cautious evidence-bounded conclusions.",
+  "rules": [
+    "No speculation as fact",
+    "No source link, no ledger entry",
+    "Every conclusion needs evidence boundary, confidence, missing record and next action",
+    "Reader submissions are leads until reviewed"
+  ],
+  "totals": {"inputs": 0, "routed": 0, "conclusions": 0, "missingRecords": 0},
+  "routedSources": [],
+  "byLane": {},
+  "conclusions": [],
+  "missingRecordQueue": [],
+  "note": "Baseline file. The build-site-brain-router script overwrites this during shared builds."
+}

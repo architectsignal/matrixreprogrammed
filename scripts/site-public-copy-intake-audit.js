@@ -1,6 +1,7 @@
 const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
+try{const brain=path.join(root,'scripts','build-site-brain-router.js');if(fs.existsSync(brain))require(brain);}catch(error){console.warn(`Site brain router skipped before public audit: ${error.message}`)}
 const fp=p=>path.join(root,p);
 const wr=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};
 const walk=(dir,files=[])=>{for(const name of fs.readdirSync(dir)){if(['.git','node_modules','.wrangler','dist','build'].includes(name))continue;const full=path.join(dir,name);const st=fs.statSync(full);if(st.isDirectory())walk(full,files);else files.push(full)}return files};
@@ -13,7 +14,7 @@ const issues=[];
 for(const file of publicFiles){const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}const body=r.endsWith('.html')?visibleText(raw):raw;for(const pattern of severePatterns){if(pattern.test(body))issues.push({severity:'high',file:r,pattern:String(pattern),note:'Potentially visible internal, broken, or author-facing text.'})}for(const pattern of softPatterns){if(pattern.test(body))issues.push({severity:'review',file:r,pattern:String(pattern),note:'Review whether this text is intentionally visible.'})}}
 const htmlFiles=walk(root).filter(p=>/\.html$/i.test(p));
 const intake=[];
-for(const file of htmlFiles){const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}const lower=raw.toLowerCase();const hasForm=/<form\b/i.test(raw)||/<input\b/i.test(raw)||/<textarea\b/i.test(raw)||/card-intel-forum|forum-post|submit|source lead|correction/i.test(raw);if(!hasForm)continue;const text=visibleText(raw).toLowerCase();const hasBoundary=/boundary|evidence|source|review|privacy|submission|correction|lead/.test(text);const hasAction=/submit|send|search|upload|post|review|open/.test(text);const hasFallback=/manifest unavailable|unavailable|try again|reviewed|lead|correction|source/.test(text);intake.push({file:r,hasBoundary,hasAction,hasFallback,status:hasBoundary&&hasAction?'ok':'review'})}
+for(const file of htmlFiles){const r=rel(file);let raw='';try{raw=fs.readFileSync(file,'utf8')}catch{continue}const hasForm=/<form\b/i.test(raw)||/<input\b/i.test(raw)||/<textarea\b/i.test(raw)||/card-intel-forum|forum-post|submit|source lead|correction/i.test(raw);if(!hasForm)continue;const text=visibleText(raw).toLowerCase();const hasBoundary=/boundary|evidence|source|review|privacy|submission|correction|lead/.test(text);const hasAction=/submit|send|search|upload|post|review|open/.test(text);const hasFallback=/manifest unavailable|unavailable|try again|reviewed|lead|correction|source|download json lead/.test(text);intake.push({file:r,hasBoundary,hasAction,hasFallback,status:hasBoundary&&hasAction?'ok':'review'})}
 const summary={ok:issues.filter(i=>i.severity==='high').length===0,intakeOk:intake.every(i=>i.status==='ok'),updated:new Date().toISOString(),filesScanned:publicFiles.length,highIssues:issues.filter(i=>i.severity==='high').length,reviewIssues:issues.filter(i=>i.severity==='review').length,intakeAreas:intake.length,weakIntakeAreas:intake.filter(i=>i.status!=='ok').length};
 const report={title:'Site Public Copy And Intake Audit',summary,issues:issues.slice(0,500),intake};
 wr('data/site-public-copy-intake-audit.json',JSON.stringify(report,null,2));

@@ -16,6 +16,7 @@ function runOptional(label, script, requiredFiles = []) {
   }
 }
 
+runOptional('Deck Expansion Wave', 'build-deck-expansion-wave.js', []);
 runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
 runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
 runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.json']);
@@ -100,6 +101,7 @@ for (const file of files) {
   }
 }
 
+runOptional('Deck Expansion Wave Pre Audit', 'build-deck-expansion-wave.js', []);
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard Pre Audit', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Intelligence Feed Pre Audit', 'build-card-intelligence-feed.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);

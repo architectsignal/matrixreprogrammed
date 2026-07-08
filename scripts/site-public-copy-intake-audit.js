@@ -7,6 +7,7 @@ try{const brain=path.join(root,'scripts','build-site-brain-router.js');if(fs.exi
 try{const review=path.join(root,'scripts','build-review-dashboard.js');if(fs.existsSync(review))require(review);}catch(error){console.warn(`Review dashboard skipped before public audit: ${error.message}`)}
 try{const reviewMoney=path.join(root,'scripts','patch-review-dashboard-money-sections.js');if(fs.existsSync(reviewMoney))require(reviewMoney);}catch(error){console.warn(`Review dashboard money sections skipped before public audit: ${error.message}`)}
 try{const epstein=path.join(root,'scripts','build-epstein-file-check-system.js');if(fs.existsSync(epstein))require(epstein);}catch(error){console.warn(`Epstein File Check system skipped before public audit: ${error.message}`)}
+try{const speculative=path.join(root,'scripts','build-speculative-conclusion-engine.js');if(fs.existsSync(speculative))require(speculative);}catch(error){console.warn(`Speculative conclusion engine skipped before public audit: ${error.message}`)}
 try{const moneyHome=path.join(root,'scripts','patch-monetisation-home-link.js');if(fs.existsSync(moneyHome))require(moneyHome);}catch(error){console.warn(`Monetisation home link skipped before public audit: ${error.message}`)}
 try{const homeReview=path.join(root,'scripts','patch-review-dashboard-home-link.js');if(fs.existsSync(homeReview))require(homeReview);}catch(error){console.warn(`Review dashboard home link skipped before public audit: ${error.message}`)}
 const fp=p=>path.join(root,p);

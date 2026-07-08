@@ -26,6 +26,7 @@ function runOptional(label, script, requiredFiles = []) {
 
 runOptional('Deck Expansion Wave', 'build-deck-expansion-wave.js', []);
 runOptional('Black Nobility Deck', 'build-black-nobility-deck.js', []);
+runOptional('Jurisdictions of Power Deck', 'build-jurisdictions-of-power-deck.js', []);
 runOptional('Information Gathering And Conclusion System', 'build-information-gathering-conclusion-system.js', []);
 runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
 runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
@@ -84,6 +85,7 @@ runOptional('Top 52 Art Link Repair Final', 'repair-top-52-art-links.js', ['top-
 runOptional('Final Top 52 Test Markers Final', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link Final', 'patch-homepage-power-deck-link.js', ['index.html']);
 runOptional('Black Nobility Deck Final', 'build-black-nobility-deck.js', []);
+runOptional('Jurisdictions of Power Deck Final', 'build-jurisdictions-of-power-deck.js', []);
 runOptional('Information Gathering And Conclusion System Final', 'build-information-gathering-conclusion-system.js', []);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
@@ -117,6 +119,7 @@ for (const file of files) {
 
 runOptional('Deck Expansion Wave Pre Audit', 'build-deck-expansion-wave.js', []);
 runOptional('Black Nobility Deck Pre Audit', 'build-black-nobility-deck.js', []);
+runOptional('Jurisdictions of Power Deck Pre Audit', 'build-jurisdictions-of-power-deck.js', []);
 runOptional('Information Gathering And Conclusion System Pre Audit', 'build-information-gathering-conclusion-system.js', []);
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard Pre Audit', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);

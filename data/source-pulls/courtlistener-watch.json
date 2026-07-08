@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T19:55:12.423Z",
+  "updated": "2026-07-08T22:39:34.598Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -11,9 +11,133 @@
   "itemCount": 6,
   "raw": {
     "count": 23267,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgwMzU4NDAwMDAwJnM9MTA4Njk3NTUmdD1vJmQ9MjAyNi0wNy0wOCZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxMTM2MDAwMDAwJnM9MTA4NzM3MzcmdD1vJmQ9MjAyNi0wNy0wOCZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10919908/sawas-v-elzanaty/",
+        "attorney": "",
+        "caseName": "Sawas v. Elzanaty",
+        "caseNameFull": "",
+        "citation": [
+          "2026 NY Slip Op 04336"
+        ],
+        "citeCount": 0,
+        "cluster_id": 10919908,
+        "court": "Appellate Division of the Supreme Court of the State of New York",
+        "court_citation_string": "N.Y. App. Div.",
+        "court_id": "nyappdiv",
+        "court_jurisdiction": "SA",
+        "dateArgued": null,
+        "dateFiled": "2026-07-08",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "2021-00294",
+        "docket_id": 73590860,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-08T20:28:36.266012Z",
+          "date_created": "2026-07-08T20:28:36.146337Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [],
+            "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_04336.shtml",
+            "id": 11387444,
+            "joined_by_ids": [],
+            "local_path": "html/2026/07/08/sawas_v._elzanaty.html",
+            "meta": {
+              "timestamp": "2026-07-08T22:28:15.130081Z",
+              "date_created": "2026-07-08T20:28:36.170258Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "5756d9a724a3f943f106f6484b87626a9b529366",
+            "snippet": "Sawas v Elzanaty - 2026 NY Slip Op 04336\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n             ",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11387444
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
+      {
+        "absolute_url": "/opinion/10919846/people-v-brim/",
+        "attorney": "",
+        "caseName": "People v. Brim",
+        "caseNameFull": "",
+        "citation": [],
+        "citeCount": 0,
+        "cluster_id": 10919846,
+        "court": "California Court of Appeal",
+        "court_citation_string": "Cal. Ct. App.",
+        "court_id": "calctapp",
+        "court_jurisdiction": "SA",
+        "dateArgued": null,
+        "dateFiled": "2026-07-08",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "A170747M",
+        "docket_id": 73590569,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-08T20:08:03.026560Z",
+          "date_created": "2026-07-08T20:08:01.277853Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [],
+            "download_url": "https://www.courts.ca.gov/opinions/documents/A170747M.PDF",
+            "id": 11387382,
+            "joined_by_ids": [],
+            "local_path": "pdf/2026/07/08/people_v._brim.pdf",
+            "meta": {
+              "timestamp": "2026-07-08T21:59:40.021255Z",
+              "date_created": "2026-07-08T20:08:01.295276Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "4c3cc26754f2e8ec309ec8d1afbf38165dfb9b5c",
+            "snippet": "Filed 7/8/26 (unmodified opn. attached)\n                          CERTIFIED FOR PUBLICATION\n\n       IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA\n\n                             FIRST APPELLATE DISTRICT\n\n                                          DIVISION TWO\n\n\n THE PEOPLE,                                       A170747\n         Plaintiff and Respondent,\n                                                   (Alameda County\n v.                                                Super. Ct. No. 19CR017660",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11387382
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
       {
         "absolute_url": "/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
         "attorney": "",
@@ -1703,162 +1827,6 @@
         "scdb_id": "",
         "sibling_ids": [
           11341208
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10870030/phillips-v-united-states/",
-        "attorney": "",
-        "caseName": "Phillips v. United States",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10870030,
-        "court": "District of Columbia Court of Appeals",
-        "court_citation_string": "D.C.",
-        "court_id": "dc",
-        "court_jurisdiction": "S",
-        "dateArgued": null,
-        "dateFiled": "2026-06-04",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "24-CF-0758",
-        "docket_id": 73439314,
-        "judge": "",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-04T14:04:54.472732Z",
-          "date_created": "2026-06-04T14:04:54.231269Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              1441913,
-              1466353,
-              1520556,
-              1906701,
-              1932784,
-              1942057,
-              1944061,
-              1974409,
-              2060864,
-              2108768,
-              2287785,
-              2294377,
-              2311689,
-              2314295,
-              2325770,
-              2654917,
-              2770336,
-              4948264,
-              4963489,
-              4965378,
-              9694296,
-              9759992,
-              9785065,
-              9803805,
-              9820201
-            ],
-            "download_url": "https://www.dccourts.gov/sites/default/files/2026-06/Phillips%20v.%20US%2024-CF-0758.pdf",
-            "id": 11337487,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/04/phillips_v._united_states.pdf",
-            "meta": {
-              "timestamp": "2026-06-04T14:05:33.287151Z",
-              "date_created": "2026-06-04T14:04:54.296421Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "e33529a78c906ca97d663f2fb8ed4788e153c8aa",
-            "snippet": "Notice: This opinion is subject to formal revision before publication in the Atlantic\nand Maryland Reporters. Users are requested to notify the Clerk of the Court of\nany formal errors so that corrections may be made before the bound volumes go\nto press.\n\n\n             DISTRICT OF COLUMBIA COURT OF APPEALS\n\n                                   No. 24-CF-0758\n\n                           BRYANT PHILLIPS, APPELLANT,\n\n                                         V.\n\n                            UNITED STATE",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [],
-        "panel_names": [],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11337487
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10869755/james-mebane-v-gkn-driveline-north-america-inc/",
-        "attorney": "",
-        "caseName": "James Mebane v. GKN Driveline North America, Inc.",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10869755,
-        "court": "Court of Appeals for the Fourth Circuit",
-        "court_citation_string": "4th Cir.",
-        "court_id": "ca4",
-        "court_jurisdiction": "F",
-        "dateArgued": "2026-05-06",
-        "dateFiled": "2026-06-02",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "25-2191",
-        "docket_id": 71652385,
-        "judge": "",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-03T21:01:03.455081Z",
-          "date_created": "2026-06-03T21:01:03.024471Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              214313,
-              820391,
-              2966991,
-              4181066,
-              8412563,
-              9427828,
-              9427834
-            ],
-            "download_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca4-25-02191/pdf/USCOURTS-ca4-25-02191-0.pdf",
-            "id": 11337212,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/02/james_mebane_v._gkn_driveline_north_america_inc..pdf",
-            "meta": {
-              "timestamp": "2026-06-03T21:03:25.236577Z",
-              "date_created": "2026-06-03T21:01:03.028504Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "a7352a055faa47f4d7058798aec53bcb69da5871",
-            "snippet": "USCA4 Appeal: 25-2191      Doc: 41        Filed: 06/02/2026     Pg: 1 of 11\n\n\n\n\n                                             PUBLISHED\n\n                               UNITED STATES COURT OF APPEALS\n                                   FOR THE FOURTH CIRCUIT\n\n\n                                              No. 25-2191\n\n\n        JAMES MEBANE, on behalf of himself and all others similarly situated,\n\n                            Plaintiff – Appellant,\n\n                     and\n\n        ANGELA WORSHAM, o",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [],
-        "panel_names": [],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11337212
         ],
         "source": "C",
         "status": "Published",

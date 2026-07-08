@@ -1,32 +1,90 @@
 {
-  "updated": "2026-07-08T19:55:31.123Z",
+  "updated": "2026-07-08T22:39:48.081Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [
     {
-      "key": "sec-edgar-filings-cik0000320193-2",
-      "hash": "5401b45fb060b7f8",
-      "summary": "Apple Inc. (AAPL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "key": "courtlistener-court-records-10919908-1",
+      "hash": "81e0bf4c2be8a6fd",
+      "summary": "Sawas v. Elzanaty",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
       "date": "2026-07-08",
       "names": [
-        "Apple Inc.",
-        "AAPL"
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294"
       ]
     },
     {
-      "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "1afa9768cf5d3e77",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "key": "courtlistener-court-records-10919846-2",
+      "hash": "49b2b26e8c22195c",
+      "summary": "People v. Brim",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
       "date": "2026-07-08",
       "names": [
-        "Alphabet Inc.",
-        "GOOGL"
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10917016-3",
+      "hash": "8721abb56410f277",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
+      "date": "2026-07-07",
+      "names": [
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Court of Appeals for the Second Circuit",
+        "25-113"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883674-4",
+      "hash": "f95a37eb5eb447bc",
+      "summary": "Matter of Pagliughi",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "date": "2026-07-01",
+      "names": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883331-5",
+      "hash": "b39adcd19b344458",
+      "summary": "Biddle v. Biddle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "date": "2026-07-01",
+      "names": [
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10914068-6",
+      "hash": "8884760b222f1a37",
+      "summary": "Khan v. Jewish Women International",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
+      "date": "2026-06-30",
+      "names": [
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383"
       ]
     }
   ],
@@ -1623,15 +1681,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "25-365",
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-365.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Supreme Court of the United States",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-the-united-states.html",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "type": "entity brief"
     },
     {
@@ -1656,6 +1708,12 @@
       "entity": "General Services Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/general-services-administration.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2021-00294",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2021-00294.html",
       "type": "entity brief"
     }
   ],

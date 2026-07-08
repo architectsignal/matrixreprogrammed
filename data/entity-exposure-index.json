@@ -1,12 +1,12 @@
 {
-  "updated": "2026-07-08T19:55:31.029Z",
+  "updated": "2026-07-08T22:39:47.993Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
   "profiles": [
     {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
       "exposure_score": 368,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -15,8 +15,8 @@
       ],
       "records": [
         {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -26,8 +26,8 @@
           ]
         },
         {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -37,8 +37,8 @@
           ]
         },
         {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -50,97 +50,8 @@
           ]
         },
         {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "25-365",
-          "score": 20,
-          "type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Trump v. Barbara Revisions: 7/01/26",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Trump v. Barbara",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Supreme Court of the United States across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Supreme Court of the United States."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Supreme Court of the United States deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
-      "exposure_score": 358,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -154,19 +65,25 @@
       ],
       "relationships": [
         {
-          "with": "Supreme Court of the United States",
-          "score": 20,
-          "type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Trump v. Barbara Revisions: 7/01/26",
+          "with": "Sawas v. Elzanaty",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "Trump v. Barbara",
+          "with": "2021-00294",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Matter of Pagliughi",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2024-07773",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -176,12 +93,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 25-365 across courtlistener-court-records.",
+        "Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 25-365."
+        "Watch courtlistener-court-records for follow-up records involving Appellate Division of the Supreme Court of the State of New York."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "25-365 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -347,8 +264,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "id": "california-court-of-appeal",
+      "name": "California Court of Appeal",
       "exposure_score": 184,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -357,8 +274,8 @@
       ],
       "records": [
         {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -368,8 +285,8 @@
           ]
         },
         {
-          "title": "Matter of Pagliughi",
-          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -383,13 +300,13 @@
       ],
       "relationships": [
         {
-          "with": "Matter of Pagliughi",
+          "with": "People v. Brim",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2024-07773",
+          "with": "A170747M",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -399,12 +316,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.",
+        "Watch California Court of Appeal across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Appellate Division of the Supreme Court of the State of New York."
+        "Watch courtlistener-court-records for follow-up records involving California Court of Appeal."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -736,6 +653,66 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
+      "id": "2021-00294",
+      "name": "2021-00294",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Sawas v. Elzanaty",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch 2021-00294 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving 2021-00294."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
       "id": "2024-07773",
       "name": "2024-07773",
       "exposure_score": 179,
@@ -913,6 +890,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "a170747m",
+      "name": "A170747M",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People v. Brim",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "California Court of Appeal",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch A170747M across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving A170747M."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -1156,6 +1193,126 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
+      "id": "people-v-brim",
+      "name": "People v. Brim",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "California Court of Appeal",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "A170747M",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch People v. Brim across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving People v. Brim."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "sawas-v-elzanaty",
+      "name": "Sawas v. Elzanaty",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2021-00294",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Sawas v. Elzanaty across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Sawas v. Elzanaty."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Sawas v. Elzanaty deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
       "id": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
       "name": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "exposure_score": 179,
@@ -1213,126 +1370,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "trump-v-barbara",
-      "name": "Trump v. Barbara",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Supreme Court of the United States",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "25-365",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Trump v. Barbara across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Trump v. Barbara."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Trump v. Barbara deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "trump-v-barbara-revisions-7-01-26",
-      "name": "Trump v. Barbara Revisions: 7/01/26",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Supreme Court of the United States",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "25-365",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Trump v. Barbara Revisions: 7/01/26 across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Trump v. Barbara Revisions: 7/01/26."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Trump v. Barbara Revisions: 7/01/26 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

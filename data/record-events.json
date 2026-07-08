@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T19:55:12.423Z",
+  "updated": "2026-07-08T22:39:34.598Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -73,7 +73,7 @@
     {
       "id": "federal-register-policy-2026-13656-1",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -108,7 +108,7 @@
     {
       "id": "federal-register-policy-2026-13602-2",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -143,7 +143,7 @@
     {
       "id": "federal-register-policy-2026-13057-3",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -177,7 +177,7 @@
     {
       "id": "federal-register-policy-2026-12989-4",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -211,7 +211,7 @@
     {
       "id": "federal-register-policy-2026-12559-5",
       "date": "2026-06-23",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -249,7 +249,7 @@
     {
       "id": "federal-register-policy-2026-10817-6",
       "date": "2026-05-29",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -355,7 +355,7 @@
     {
       "id": "sec-edgar-filings-cik0001045810-1",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -390,7 +390,7 @@
     {
       "id": "sec-edgar-filings-cik0000320193-2",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -425,7 +425,7 @@
     {
       "id": "sec-edgar-filings-cik0001652044-3",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -460,7 +460,7 @@
     {
       "id": "sec-edgar-filings-cik0000789019-4",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -495,7 +495,7 @@
     {
       "id": "sec-edgar-filings-cik0001018724-5",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -530,7 +530,7 @@
     {
       "id": "sec-edgar-filings-cik0001730168-6",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -563,9 +563,81 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10917016-1",
+      "id": "courtlistener-court-records-10919908-1",
+      "date": "2026-07-08",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294"
+      ],
+      "institution_names": [
+        "Appellate Division of the Supreme Court of the State of New York"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+      "source_record_id": 10919908,
+      "summary": "Sawas v. Elzanaty",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10919846-2",
+      "date": "2026-07-08",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "courtlistener-court-records",
+      "source_name": "CourtListener court record signal",
+      "entity_names": [
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M"
+      ],
+      "institution_names": [
+        "California Court of Appeal"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "record_type": "court_record_signal",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+      "source_record_id": 10919846,
+      "summary": "People v. Brim",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "evidence-vault",
+        "epstein-files",
+        "record-intake-queue",
+        "black-file"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "courtlistener-court-records-10917016-3",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -599,9 +671,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10883674-2",
+      "id": "courtlistener-court-records-10883674-4",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -635,9 +707,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10883331-3",
+      "id": "courtlistener-court-records-10883331-5",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -671,9 +743,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10914068-4",
+      "id": "courtlistener-court-records-10914068-6",
       "date": "2026-06-30",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -707,81 +779,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "courtlistener-court-records-10883542-5",
-      "date": "2026-06-30",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Supreme Court of the United States",
-        "25-365"
-      ],
-      "institution_names": [
-        "Supreme Court of the United States"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-      "source_record_id": 10883542,
-      "summary": "Trump v. Barbara Revisions: 7/01/26",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10882239-6",
-      "date": "2026-06-30",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Trump v. Barbara",
-        "Supreme Court of the United States",
-        "25-365"
-      ],
-      "institution_names": [
-        "Supreme Court of the United States"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-      "source_record_id": 10882239,
-      "summary": "Trump v. Barbara",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
       "id": "world-bank-projects-p505244-1",
       "date": "2024-12-20T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -813,7 +813,7 @@
     {
       "id": "world-bank-projects-p176429-2",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -846,7 +846,7 @@
     {
       "id": "world-bank-projects-p181587-3",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -881,7 +881,7 @@
     {
       "id": "world-bank-projects-p180283-4",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -916,7 +916,7 @@
     {
       "id": "world-bank-projects-p507508-5",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
@@ -948,7 +948,7 @@
     {
       "id": "world-bank-projects-p180439-6",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-08T19:55:12.423Z",
+      "pulled_at": "2026-07-08T22:39:34.598Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",

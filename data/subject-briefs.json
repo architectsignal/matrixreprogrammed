@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T19:55:31.123Z",
+  "updated": "2026-07-08T22:39:48.081Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -1751,6 +1751,18 @@
       ],
       "latest_records": [
         {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
           "title": "The New York and Presbyterian Hospital v. New York State Nurses Association",
           "url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
           "grade": "charged / sued",
@@ -1773,37 +1785,26 @@
           "url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
           "grade": "charged / sued",
           "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Trump v. Barbara Revisions: 7/01/26",
-          "url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Trump v. Barbara",
-          "url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
         }
       ],
       "top_entities": [
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294",
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M",
         "The New York and Presbyterian Hospital v. New York State Nurses Association",
         "Court of Appeals for the Second Circuit",
         "25-113",
         "Matter of Pagliughi",
-        "Appellate Division of the Supreme Court of the State of New York",
         "2024-07773",
         "Biddle v. Biddle",
         "Court of Appeals of North Carolina",
         "25-581",
         "Khan v. Jewish Women International",
         "Connecticut Appellate Court",
-        "AC48383",
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Supreme Court of the United States",
-        "25-365",
-        "Trump v. Barbara"
+        "AC48383"
       ],
       "relationship_candidates": [],
       "missing_records": [

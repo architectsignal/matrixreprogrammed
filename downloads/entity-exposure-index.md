@@ -1,8 +1,8 @@
 # Entity Exposure Index
 
-Updated: 2026-07-08T19:55:31.029Z
+Updated: 2026-07-08T22:39:47.993Z
 
-## Supreme Court of the United States
+## Appellate Division of the Supreme Court of the State of New York
 
 Score: 368
 
@@ -10,17 +10,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Supreme Court of the United States deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 25-365
-
-Score: 358
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 25-365 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## [object Object]
 
@@ -32,7 +22,7 @@ Highest evidence: documented association
 
 Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Appellate Division of the Supreme Court of the State of New York
+## California Court of Appeal
 
 Score: 184
 
@@ -40,7 +30,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Connecticut Appellate Court
 
@@ -82,6 +72,16 @@ Highest evidence: documented association
 
 Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## 2021-00294
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## 2024-07773
 
 Score: 179
@@ -111,6 +111,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: 25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## A170747M
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## AC48383
 
@@ -152,6 +162,26 @@ Highest evidence: charged / sued
 
 Reading: Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## People v. Brim
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: People v. Brim deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Sawas v. Elzanaty
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Sawas v. Elzanaty deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## The New York and Presbyterian Hospital v. New York State Nurses Association
 
 Score: 179
@@ -161,26 +191,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Trump v. Barbara
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Trump v. Barbara deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Trump v. Barbara Revisions: 7/01/26
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Trump v. Barbara Revisions: 7/01/26 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Defense Department
 

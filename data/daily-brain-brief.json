@@ -453,15 +453,16 @@
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-08T19:55:12.423Z",
+    "updated": "2026-07-08T22:39:34.598Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
-    "entityObservationCount": 52,
+    "entityObservationCount": 53,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -693,19 +694,8 @@
       ]
     },
     {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
-      "id": "25-365",
-      "name": "25-365",
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
       "count": 2,
       "lanes": [
         "courtlistener-court-records"
@@ -768,14 +758,25 @@
       "record_types": [
         "rule_or_notice"
       ]
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-08T19:55:30.938Z",
-    "newRecordCount": 2,
+    "updated": "2026-07-08T22:39:47.902Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 2,
-    "relationshipCandidateCount": 111,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 112,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -784,20 +785,44 @@
   },
   "topChangeSignals": [
     {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Apple Inc. (AAPL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Sawas v. Elzanaty",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
     },
     {
-      "lane": "sec-edgar-filings",
-      "grade": "documented association",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "People v. Brim",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Khan v. Jewish Women International",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
     }
   ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-08T19:55:31.084Z",
+    "updated": "2026-07-08T22:39:48.045Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -831,7 +856,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-08T19:55:31.123Z",
+    "updated": "2026-07-08T22:39:48.081Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

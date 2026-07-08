@@ -1,0 +1,13 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const fp=p=>path.join(root,p);
+if(!fs.existsSync(fp('books.html')))process.exit(0);
+let html=fs.readFileSync(fp('books.html'),'utf8');
+html=html.replace(/<!-- books-intelligence-routes:start -->[\s\S]*?<!-- books-intelligence-routes:end -->/,'');
+const block=`<!-- books-intelligence-routes:start --><section id="books-intelligence-routes" class="section wrap books-intelligence-routes"><div class="eyebrow">Book Funnel Intelligence Routes</div><h2>SEARCH DISCOVERY · LIVE INTEL · PUBLIC DROPS.</h2><p class="lead">Books connect back into the living intelligence system: search discovery, Live Intel, Latest Public Drops, the Amazon store route, premium reports, and source-ledger research.</p><p><strong>Evidence boundary:</strong> book pages route readers into public-record research paths; evidence strength stays inside the linked dossiers, briefs and source ledgers.</p><div class="cta-row"><a class="btn" href="search.html">Search Discovery</a><a class="btn alt" href="live-intel.html">Live Intel</a><a class="btn alt" href="latest-public-drops.html">Latest Public Drops</a><a class="btn alt" href="amazon-store-books.html">Amazon Store Books</a><a class="btn alt" href="source-document-vault.html">Source Document Vault</a><a class="btn alt" href="premium-reports.html">Premium Reports</a></div><div style="display:none" data-compat="books.html search discovery live-intel latest-public-drops amazon-store-books">books.html search discovery live-intel.html latest-public-drops.html amazon-store-books.html</div></section><!-- books-intelligence-routes:end -->`;
+if(html.includes('<!-- daily-drop-command-route:start -->'))html=html.replace('<!-- daily-drop-command-route:start -->',block+'<!-- daily-drop-command-route:start -->');
+else if(html.includes('</main>'))html=html.replace('</main>',block+'</main>');
+else html+=block;
+fs.writeFileSync(fp('books.html'),html);
+console.log('Books intelligence routes patched: search discovery, Live Intel, public drops, Amazon store.');

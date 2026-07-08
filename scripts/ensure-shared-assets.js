@@ -3,6 +3,14 @@ const path = require('path');
 
 const root = process.cwd();
 
+global.rootHref = function rootHref(prefix, route) {
+  const value = String(route || 'index.html');
+  if (/^https?:\/\//i.test(value) || value.startsWith('#')) return value;
+  const p = String(prefix || '');
+  if (value.startsWith('../') || value.startsWith('./')) return value;
+  return p + value.replace(/^\/+/, '');
+};
+
 function runOptional(label, script, requiredFiles = []) {
   try {
     const scriptPath = path.join(root, 'scripts', script);

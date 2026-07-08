@@ -1,726 +1,140 @@
 {
   "ok": true,
-  "updated": "2026-07-06T08:02:57.310Z",
+  "updated": "2026-07-08T09:25:00.000Z",
   "title": "Deep Intel Feed Matrix",
-  "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
+  "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims, does not treat association as proof, and does not convert speculation into fact.",
   "lanes": [
     {
-      "id": "missing-records",
-      "title": "Missing records",
-      "summary": "The highest-value source gaps for claim upgrades",
-      "route": "daily-missing-records.html",
+      "id": "daily-public-drops",
+      "title": "Daily public-source drops",
+      "summary": "Current dated source drops used by Live Intel, clocks, cards, user briefs and Matrix Brain.",
+      "route": "live-intel.html",
+      "priority": 100,
+      "tags": ["daily", "public sources", "sitewide refresh"],
+      "intakeRule": "Start with data/latest-public-drops.json and preserve source, date, evidence class, boundary, route and next action."
+    },
+    {
+      "id": "eu-ai-act-core",
+      "title": "EU AI Act implementation and cyber-AI governance",
+      "summary": "Current lane for AI Act dates, GPAI rules, transparency duties, high-risk systems, AI Office guidance and AI/cyber governance.",
+      "route": "answer-engine.html",
       "priority": 99,
-      "tags": [
-        "missing records",
-        "evidence gaps"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+      "tags": ["AI Act", "AI governance", "cybersecurity", "EU"],
+      "intakeRule": "Prefer European Commission AI Act pages, AI Office materials, legal text, national authority pages and enforcement actions."
     },
     {
-      "id": "sec-filings",
-      "title": "SEC filings",
-      "summary": "Filings, 13F, proxy, ownership and market structure routes",
-      "route": "sec-filing-feed.html",
+      "id": "digital-identity-core",
+      "title": "Digital ID and EUDI Wallet implementation",
+      "summary": "Current lane for EUDI Wallet rollout, relying-party rules, credential disclosure, biometric identity and identity wallet integration.",
+      "route": "control-system-tracker.html#digital-id",
       "priority": 98,
-      "tags": [
-        "assets",
-        "ownership",
-        "filings",
-        "companies"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+      "tags": ["digital ID", "EUDI wallet", "eIDAS", "identity"],
+      "intakeRule": "Prefer EU regulation/implementing acts, national wallet pages, relying-party registries, technical standards and privacy/security audits."
     },
     {
-      "id": "asset-managers",
-      "title": "Asset managers",
-      "summary": "BlackRock, Vanguard, State Street, holdings, voting and mandates",
-      "route": "big-three-asset-managers.html",
+      "id": "digital-money-core",
+      "title": "CBDC, digital euro and programmable payment rails",
+      "summary": "Current lane for ECB digital euro readiness, EU legislation, pilots, wallet design, private payment dependence and tokenised settlement.",
+      "route": "control-system-tracker.html#programmable-money",
       "priority": 97,
-      "tags": [
-        "BlackRock",
-        "Vanguard",
-        "State Street",
-        "AUM"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+      "tags": ["CBDC", "digital euro", "central banks", "payments"],
+      "intakeRule": "Prefer ECB pages, ECB progress reports, Parliament/Council records, central-bank documents, pilot data and implementation rules."
     },
     {
-      "id": "government-contracts",
-      "title": "Government contracts",
-      "summary": "Awards, procurement, contractor and public money routes",
-      "route": "private-contractor-tracker.html",
+      "id": "health-governance-core",
+      "title": "WHO Pandemic Agreement, PABS and health-governance records",
+      "summary": "Current lane for WHO Pandemic Agreement adoption, PABS annex negotiation, ratification, national implementation and health-governance infrastructure.",
+      "route": "control-system-tracker.html#health-and-biosecurity",
       "priority": 96,
-      "tags": [
-        "contracts",
-        "contractors",
-        "public money"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+      "tags": ["WHO", "PABS", "pandemic agreement", "biosecurity"],
+      "intakeRule": "Prefer WHO agreement pages, WHA decisions, IGWG documents, annex drafts, national ratification records and parliamentary materials."
+    },
+    {
+      "id": "risk-clocks-core",
+      "title": "Risk clocks and policy-convergence routes",
+      "summary": "Clock pressure scores, linked drops, evidence boundaries and homepage eligibility checks.",
+      "route": "timers.html",
+      "priority": 95,
+      "tags": ["risk clocks", "watch triggers", "daily refresh"],
+      "intakeRule": "Update scores only from dated source-linked signals; keep score movement separated from prediction claims."
+    },
+    {
+      "id": "card-intelligence-core",
+      "title": "Card intelligence feed and source ledger",
+      "summary": "Scores, rationale, update triggers, relationship-note slots and source-backed entries for all card decks.",
+      "route": "card-intelligence-feed.html",
+      "priority": 94,
+      "tags": ["cards", "deck", "source ledger", "rationale"],
+      "intakeRule": "Use data/card-intelligence-feed.json and data/card-source-ledger.json. No source link, no ledger entry."
     },
     {
       "id": "courts-and-filings",
-      "title": "Courts and filings",
-      "summary": "Cases, dockets, depositions, judgments and sealed-record prompts",
+      "title": "Courts, filings, dockets and public records",
+      "summary": "Highest-value lane for verified claims, legal process, public filings, judgments, exhibits, settlements and enforcement records.",
       "route": "evidence-vault.html",
-      "priority": 95,
-      "tags": [
-        "courts",
-        "records",
-        "missing files"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
-    },
-    {
-      "id": "sanctions-and-enforcement",
-      "title": "Sanctions and enforcement",
-      "summary": "Treasury, justice, regulators, lawsuits and enforcement routes",
-      "route": "evidence-vault.html",
-      "priority": 94,
-      "tags": [
-        "sanctions",
-        "justice",
-        "regulators"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
-    },
-    {
-      "id": "central-banks-and-money-rails",
-      "title": "Central banks and money rails",
-      "summary": "Rates, reserves, CBDC, settlement and liquidity routes",
-      "route": "power-structure-map.html",
       "priority": 93,
-      "tags": [
-        "money",
-        "central banks",
-        "reserves"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
+      "tags": ["courts", "filings", "records", "evidence"],
+      "intakeRule": "Prefer primary dockets, filings, judgments, official releases and exhibits before commentary."
     },
     {
-      "id": "risk-clocks",
-      "title": "Risk clocks",
-      "summary": "Clock pressure, record gaps and linked source routes",
-      "route": "timers.html",
-      "priority": 91,
-      "tags": [
-        "risk clocks",
-        "watch triggers"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
-    },
-    {
-      "id": "think-tanks-and-policy-shops",
-      "title": "Think tanks and policy shops",
-      "summary": "Policy reports, appointments, attendance and public influence routes",
-      "route": "power-structure-map.html",
-      "priority": 90,
-      "tags": [
-        "think tanks",
-        "policy",
-        "appointments"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
-    },
-    {
-      "id": "live-intel-drops",
-      "title": "Live intel drops",
-      "summary": "Recent public-source items already pulled into the site",
-      "route": "live-intel.html",
-      "priority": 88,
-      "tags": [
-        "daily drops",
-        "intel"
-      ],
-      "intakeRule": "prefer primary records, official filings, dated public pages and source routes before commentary"
-    },
-    {
-      "id": "sec-edgar-core",
-      "title": "SEC EDGAR / ownership / proxy-vote records",
-      "summary": "Best lane for asset managers, BlackRock/Vanguard/State Street, holdings, voting power, mandates and ownership claims.",
+      "id": "asset-managers-and-sec",
+      "title": "SEC filings, ownership and asset managers",
+      "summary": "BlackRock, Vanguard, State Street, ownership, proxy voting, 13F, mandates and market-structure routes.",
       "route": "sec-filing-feed.html",
-      "priority": 100,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
-    },
-    {
-      "id": "contracts-procurement-core",
-      "title": "Government contracts and procurement records",
-      "summary": "Best lane for contractors, public money, operational outsourcing and state/private execution routes.",
-      "route": "private-contractor-tracker.html",
-      "priority": 99,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
-    },
-    {
-      "id": "court-docket-core",
-      "title": "Court dockets, exhibits and enforcement records",
-      "summary": "Best lane for wrongdoing, litigation, sworn exhibits, settlements, indictments and Epstein-related court trails.",
-      "route": "evidence-vault.html",
-      "priority": 98,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
-    },
-    {
-      "id": "central-bank-money-core",
-      "title": "Central-bank, BIS, IMF and digital-money records",
-      "summary": "Best lane for currency convergence, CBDC, settlement, programmable payment and monetary-control routes.",
-      "route": "deep-intel-feed.html",
-      "priority": 96,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
-    },
-    {
-      "id": "epstein-court-file-core",
-      "title": "Epstein-file court and source-document lane",
-      "summary": "Best lane for Epstein-related claims when tied to court records, official releases, exhibits and named-source trails.",
-      "route": "epstein-files.html",
-      "priority": 95,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
-    },
-    {
-      "id": "governance-policy-core",
-      "title": "UN / WHO / EU / NATO / G20 / public-policy records",
-      "summary": "Best lane for governance convergence, treaties, standards, emergency frameworks and policy coordination.",
-      "route": "power-structure-map.html",
       "priority": 92,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
+      "tags": ["SEC", "ownership", "BlackRock", "Vanguard", "State Street"],
+      "intakeRule": "Use SEC filings, proxy statements, stewardship reports, official company disclosures and market-structure records."
     },
     {
-      "id": "charity-foundation-core",
-      "title": "Charity, foundation and NGO registry records",
-      "summary": "Best lane for foundations, family routes, religious networks, NGOs, funding and institutional influence.",
-      "route": "evidence-vault.html",
-      "priority": 89,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
+      "id": "government-contracts",
+      "title": "Government contracts and procurement records",
+      "summary": "Awards, vendor relationships, contractor outsourcing, public money and state/private implementation routes.",
+      "route": "private-contractor-tracker.html",
+      "priority": 91,
+      "tags": ["contracts", "procurement", "contractors", "public money"],
+      "intakeRule": "Prefer award notices, procurement portals, contract records, budget documents and official vendor disclosures."
     },
     {
-      "id": "lobbying-donor-core",
-      "title": "Lobbying, donations and public influence records",
-      "summary": "Best lane for policy influence, revolving doors, think tanks and legislative pressure.",
-      "route": "evidence-vault.html",
-      "priority": 88,
-      "tags": [
-        "mission-priority",
-        "source-lane"
-      ],
-      "intakeRule": "Open this before weaker commentary routes."
+      "id": "missing-records",
+      "title": "Missing records and evidence gaps",
+      "summary": "Highest-value source gaps requiring primary record confirmation before any claim upgrade.",
+      "route": "daily-missing-records.html",
+      "priority": 90,
+      "tags": ["missing records", "evidence gaps", "source priority"],
+      "intakeRule": "Every missing-record item must identify the exact primary record, docket, PDF, filing, award notice, registry, or archive needed."
     }
   ],
   "items": [
-    {
-      "title": "Surveillance State Clock — 95%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 95,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "AI Breakout Clock — 91%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 91,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "CBDC Rollout Clock — 87%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 87,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "[object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/object-object.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/health-and-human-services-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/defense-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Agency for International Development — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/agency-for-international-development.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Agriculture Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/agriculture-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Energy Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/energy-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "State Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/state-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Treasury Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/treasury-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Veterans Affairs Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/veterans-affairs-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Commerce Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/commerce-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Interior Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/interior-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Transportation Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/transportation-department.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "25-365 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-365.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Supreme Court of the United States — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-the-united-states.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/federal-procurement-policy-office.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/general-services-administration.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2024-07773.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-581.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/ac48383.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Accountability Now USA v. Griess — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/accountability-now-usa-v-griess.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "WWIII Escalation Clock — 83%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 83,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Machine Convergence — 83%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 83,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Cyber Blackout Clock — 73%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 73,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Energy Shock Clock — 73%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 73,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Former Clinton aide appears before House panel in Epstein investigation - Scripps News",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive",
-      "route": "live-intel.html",
-      "source": "declassified-files",
-      "score": 72,
-      "tags": [
-        "declassified-files"
-      ]
-    },
-    {
-      "title": "ICE biometrics underpin broader surveillance network, report argues - Biometric Update",
-      "route": "live-intel.html",
-      "source": "control-system",
-      "score": 72,
-      "tags": [
-        "control-system"
-      ]
-    },
-    {
-      "title": "Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id",
-      "route": "live-intel.html",
-      "source": "control-system",
-      "score": 72,
-      "tags": [
-        "control-system"
-      ]
-    },
-    {
-      "title": "AWS is investing billions to put AI into production for the public sector - About Amazon",
-      "route": "live-intel.html",
-      "source": "war-machine",
-      "score": 72,
-      "tags": [
-        "war-machine"
-      ]
-    },
-    {
-      "title": "Financial Reset Clock — 71%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 71,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Civil Unrest Clock — 68%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 68,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Food System Stress Clock — 64%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 64,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Alien Disclosure Clock — 37%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 37,
-      "tags": [
-        "clock"
-      ]
-    },
-    {
-      "title": "Pandemic / Biosecurity Clock — 35%",
-      "route": "timers.html",
-      "source": "risk clock",
-      "score": 35,
-      "tags": [
-        "clock"
-      ]
-    }
+    {"title":"Surveillance State Clock — 92%","route":"timers.html","source":"risk clock","score":92,"tags":["clock","homepage"]},
+    {"title":"AI Breakout Clock — 88%","route":"timers.html","source":"risk clock","score":88,"tags":["clock","AI Act"]},
+    {"title":"CBDC Rollout Clock — 86%","route":"timers.html","source":"risk clock","score":86,"tags":["clock","digital euro"]},
+    {"title":"Machine Convergence Clock — 82%","route":"timers.html","source":"risk clock","score":82,"tags":["clock","composite"]},
+    {"title":"Digital ID: EUDI Wallet late-2026 rollout watch","route":"control-system-tracker.html#digital-id","source":"latest public drop","score":90,"tags":["digital ID","EUDI wallet"]},
+    {"title":"WHO Pandemic Agreement: PABS annex negotiation watch","route":"control-system-tracker.html#health-and-biosecurity","source":"latest public drop","score":86,"tags":["WHO","PABS","health governance"]},
+    {"title":"EU AI Act: August 2026 transparency rules and 2027/2028 high-risk timetable","route":"answer-engine.html","source":"latest public drop","score":92,"tags":["AI Act","AI governance"]},
+    {"title":"Digital euro: 2026 legislation / 2027 testing / 2029 readiness watch","route":"control-system-tracker.html#programmable-money","source":"latest public drop","score":88,"tags":["CBDC","digital euro"]},
+    {"title":"Card source ledger: no source link, no ledger entry","route":"data/card-source-ledger.json","source":"card system","score":84,"tags":["cards","source ledger"]},
+    {"title":"Missing record queue: remove placeholder [object Object] entries and require exact primary record targets","route":"daily-missing-records.html","source":"quality control","score":85,"tags":["record gap","site quality"]}
   ],
-  "brainInjection": {
-    "layer": "evidence-and-records",
-    "nodeCount": 64
-  },
-  "missionPriorityIndex": true
+  "dailyRefreshContract": {
+    "updated": "2026-07-08",
+    "rule": "Daily updates must refresh latest-public-drops, global-risk-clocks, deep-intel-feed-matrix, daily-power-conclusions, card-intelligence-feed, card-source-ledger, user briefs, homepage deck links and site-health reports.",
+    "requiredBuildSteps": [
+      "update-seven-day-intel",
+      "update-live-intel",
+      "ensure-shared-assets",
+      "site-brain",
+      "pressure-test:global-risk-clocks",
+      "pressure-test:live-intel",
+      "pressure-test"
+    ],
+    "qualityGate": [
+      "No stale activeWindow item without archive route.",
+      "No [object Object] strings in public files.",
+      "No repeated Latest public drops text inside clock signals.",
+      "Every score movement must include a dated source route.",
+      "Every card ledger entry must have a source link and review status.",
+      "Every user brief must include conclusion, why it matters, evidence boundary and next action."
+    ]
+  }
 }

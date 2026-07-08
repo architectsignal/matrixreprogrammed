@@ -2,6 +2,7 @@ const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
 try{const money=path.join(root,'scripts','build-monetisation-system.js');if(fs.existsSync(money))require(money);}catch(error){console.warn(`Monetisation system skipped before public audit: ${error.message}`)}
+try{const booksBlackFile=path.join(root,'scripts','patch-books-black-file-cta.js');if(fs.existsSync(booksBlackFile))require(booksBlackFile);}catch(error){console.warn(`Books Black File CTA skipped before public audit: ${error.message}`)}
 try{const brain=path.join(root,'scripts','build-site-brain-router.js');if(fs.existsSync(brain))require(brain);}catch(error){console.warn(`Site brain router skipped before public audit: ${error.message}`)}
 try{const review=path.join(root,'scripts','build-review-dashboard.js');if(fs.existsSync(review))require(review);}catch(error){console.warn(`Review dashboard skipped before public audit: ${error.message}`)}
 try{const reviewMoney=path.join(root,'scripts','patch-review-dashboard-money-sections.js');if(fs.existsSync(reviewMoney))require(reviewMoney);}catch(error){console.warn(`Review dashboard money sections skipped before public audit: ${error.message}`)}

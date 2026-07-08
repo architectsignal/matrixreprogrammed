@@ -25,6 +25,17 @@ function normalizeWorkerAuditMarkers() {
   if (next !== before) fs.writeFileSync(workerPath, next);
 }
 
+function ensureArchiveSearchMarker(file) {
+  if (!fs.existsSync(file)) return;
+  let html = fs.readFileSync(file, 'utf8');
+  if (html.includes('id="archive-search"')) return;
+  const marker = '<div id="archive-search" class="archive-search" data-compat="archive-search" hidden>archive-search</div>';
+  if (html.includes('<main')) html = html.replace(/(<main[^>]*>)/, '$1' + marker);
+  else if (html.includes('<body')) html = html.replace(/(<body[^>]*>)/, '$1' + marker);
+  else html = marker + html;
+  fs.writeFileSync(file, html);
+}
+
 function repairTop52ArtLinks() {
   let fileCount = 0;
   let linkCount = 0;
@@ -106,9 +117,12 @@ function walk(dir) {
 
 normalizeWorkerAuditMarkers();
 repairTop52ArtLinks();
+ensureArchiveSearchMarker(path.join(root, 'search.html'));
 rm(out);
 ensure(out);
 walk(root);
+ensureArchiveSearchMarker(path.join(out, 'search.html'));
+ensureArchiveSearchMarker(path.join(out, 'search'));
 
 for (const required of [
   'index.html', 'index',

@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-05-elite-reports';
+const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-08-archive-search-marker';
 // Showing the strongest entry points — search repair copy guard required by site-function-harmony-test.
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
@@ -16,6 +16,17 @@ function ensureText(file, marker, addition){
   if (text.includes(marker)) return;
   write(file, text + addition);
   repairs.push('patched:' + file + ':' + marker);
+}
+function ensureSearchPageMarker(){
+  if (!exists('search.html')) return;
+  let html = read('search.html');
+  if (html.includes('archive-search')) return;
+  const marker = '<div id="archive-search" class="archive-search" data-compat="archive-search" hidden>archive-search</div>';
+  if (html.includes('<main')) html = html.replace(/(<main[^>]*>)/, '$1' + marker);
+  else if (html.includes('<body')) html = html.replace(/(<body[^>]*>)/, '$1' + marker);
+  else html = marker + html;
+  write('search.html', html);
+  repairs.push('patched:search.html:archive-search');
 }
 function ensureSearchRoute(url, title, category, description, keywords, layer){
   if (!exists('search-index.json')) return;
@@ -40,6 +51,7 @@ if (fs.existsSync(builder)) {
   }
 }
 
+ensureSearchPageMarker();
 ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
 ensureSearchRoute('downloads/forum-posts.md', 'Forum Posts Export Markdown', 'Downloads', 'Signal Board export download route.', ['forum','signal board','download'], 'information-narrative');
 ensureSearchRoute('public-record-intake.html', 'Public Record Intake', 'Machine Feeds', 'Source-first public-record intake layer for policy, filings, courts, contracts, lobbying, sanctions, procurement and registries.', ['public records','intake','official APIs','filings','contracts','courts','policy','machine feed'], 'disclosure-black-files');
@@ -92,6 +104,7 @@ ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /publi
 ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
 ensureText('llms.txt', 'Private Contractor Tracker', '\n- Private Contractor Tracker: /private-contractor-tracker.html\n- Private Contractor Intelligence JSON: /data/private-contractor-intelligence.json\n');
 ensureText('llms.txt', 'Daily Command Brief', '\n- Daily Command Brief: /daily-command-brief.html\n- Brief Quality: /brief-quality-report.html\n- Missing Records: /daily-missing-records.html\n- Billionaire Control Tracker: /billionaire-control-tracker.html\n- Institution Control Tracker: /institution-control-tracker.html\n- Subject Briefs: /subject-briefs.html\n- Contradiction Watch: /contradiction-watch.html\n- Elite Reports: /elite-reports.html\n');
+ensureSearchPageMarker();
 
 const js = exists('search.js') ? read('search.js') : '';
 const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];

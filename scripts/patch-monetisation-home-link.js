@@ -1,0 +1,13 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const fp=p=>path.join(root,p);
+if(!fs.existsSync(fp('index.html')))process.exit(0);
+let html=fs.readFileSync(fp('index.html'),'utf8');
+html=html.replace(/<!-- monetisation-home:start -->[\s\S]*?<!-- monetisation-home:end -->/,'');
+const block=`<!-- monetisation-home:start --><section id="monetisation-home" class="section wrap"><div class="eyebrow">Matrix Reprogrammed · Money Engine</div><h2>TURN THE INTELLIGENCE MACHINE INTO PRODUCTS.</h2><p class="lead">Free public intelligence builds trust. Email capture builds the list. Membership, reports, card decks, books and public-record research services create revenue.</p><p><strong>Boundary:</strong> products and services are public-record research tools. They do not sell unsupported accusations or claims beyond evidence.</p><div class="cta-row"><a class="btn" href="store.html">Store</a><a class="btn alt" href="membership.html">Membership</a><a class="btn alt" href="free-downloads.html">Free Downloads</a><a class="btn alt" href="card-deck-store.html">Card Deck Store</a><a class="btn alt" href="monetisation-dashboard.html">Money Dashboard</a></div></section><!-- monetisation-home:end -->`;
+if(html.includes('<section id="power-deck-home-link"')) html=html.replace('<section id="power-deck-home-link"',block+'<section id="power-deck-home-link"');
+else if(html.includes('</main>')) html=html.replace('</main>',block+'</main>');
+else html+=block;
+fs.writeFileSync(fp('index.html'),html);
+console.log('Monetisation homepage links patched.');

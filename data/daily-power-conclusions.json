@@ -1,61 +1,66 @@
 {
   "ok": true,
-  "updated": "2026-07-06T08:02:57.308Z",
+  "updated": "2026-07-08T09:35:00.000Z",
+  "briefingStandard": {
+    "rule": "Every user-facing brief must include conclusion, why it matters, evidence boundary and next action.",
+    "bannedPatterns": ["[object Object]", "unsourced certainty", "association as guilt", "repeated clock text"],
+    "sourceRoute": "data/deep-intel-feed-matrix.json"
+  },
   "conclusions": [
     {
       "title": "Strongest route today",
-      "text": "World Economic Forum is the strongest current map node because it has the highest combined route, evidence and brain score.",
-      "route": "institution-briefs/world-economic-forum.html"
-    },
-    {
-      "title": "Highest clock pressure",
-      "text": "Surveillance State Clock is the highest clock at 95%.",
+      "text": "Conclusion: the strongest current route is surveillance-state convergence, because four refreshed public-source lanes now point into the same system: AI governance, digital identity wallets, digital money, and health-governance frameworks. Why it matters: these are not isolated stories; they are infrastructure lanes that can connect identity, access, payments, public services, speech rules and emergency policy. Evidence boundary: this is a convergence signal, not proof of one hidden controller. Next action: read the refreshed clocks and follow each source route before upgrading any claim.",
       "route": "timers.html"
     },
     {
-      "title": "Top capital lane",
-      "text": "BlackRock should be watched through AUM, holdings, proxy voting, mandates and public filings.",
-      "route": "big-three/blackrock.html"
+      "title": "Highest clock pressure",
+      "text": "Conclusion: Surveillance State Clock is now the top public-facing clock at 92%. Why it matters: the July refresh links EUDI Wallet rollout, AI Act implementation, digital euro readiness and WHO/PABS governance into one pressure map. Evidence boundary: clock scores are editorial pressure signals, not predictions. Next action: monitor mandates, pilots, enforcement actions and wallet/payment integrations.",
+      "route": "timers.html"
     },
     {
-      "title": "Top contractor lane",
-      "text": "Blackwater / Xe / Academi / Constellis lineage is the strongest contractor watch route in current data.",
-      "route": "contractor-briefs/blackwater-constellis-lineage.html"
+      "title": "AI governance lane",
+      "text": "Conclusion: the EU AI Act is no longer future background; it is an active implementation file. Why it matters: transparency rules, GPAI duties, high-risk AI timetables, AI Office guidance and AI/cybersecurity work create a live governance lane. Evidence boundary: regulation is not automatically censorship or abuse. Next action: track the August 2026 transparency rules, 2027 high-risk application dates, 2028 product-linked obligations and enforcement cases.",
+      "route": "answer-engine.html"
     },
     {
-      "title": "Top institution lane",
-      "text": "World Bank is the strongest institution route in current data.",
-      "route": "institution-briefs/world-bank.html"
+      "title": "Digital identity lane",
+      "text": "Conclusion: EUDI Wallet remains a late-2026 implementation watch, with new research highlighting user oversharing risk. Why it matters: identity-wallet risk is not only law; it is UX, relying-party access, disclosure defaults and whether users understand what they share. Evidence boundary: a privacy study is not proof of deliberate abuse. Next action: track national wallet launches, relying-party registries, private-sector acceptance and audits.",
+      "route": "control-system-tracker.html#digital-id"
     },
     {
-      "title": "Top billionaire lane",
-      "text": "Elon Musk is the strongest elite-network route in current data.",
-      "route": "billionaire-briefs/elon-musk.html"
+      "title": "Digital money lane",
+      "text": "Conclusion: the digital euro clock now turns on 2026 legislation, 2027 testing, and possible 2029 readiness. Why it matters: the ECB frames the digital euro as a public digital form of cash and a euro-area payment option, but the control-system question is privacy, wallet design, limits, intermediaries and acceptance rules. Evidence boundary: readiness is not launch. Next action: watch EU legislation, pilot documents, holding limits, offline design and merchant/bank rules.",
+      "route": "control-system-tracker.html#programmable-money"
+    },
+    {
+      "title": "Health governance lane",
+      "text": "Conclusion: WHO Pandemic Agreement is adopted, but the PABS annex remains the crucial implementation bottleneck. Why it matters: PABS controls the pathogen-sharing and benefit-sharing lane, while the wider agreement points to supply chains, financing, surveillance and national implementation. Evidence boundary: WHO states the agreement does not give it authority to impose lockdowns or vaccine mandates. Next action: watch IGWG outputs, PABS text, ratification counts and national implementation laws.",
+      "route": "control-system-tracker.html#health-and-biosecurity"
+    },
+    {
+      "title": "Card intelligence lane",
+      "text": "Conclusion: the card system now has a source-ledger rule: no source link, no ledger entry. Why it matters: this lets cards carry deep rationale, scoring and relationship notes without becoming rumour boards. Evidence boundary: relationship notes are source containers, not guilt or proof. Next action: add source-backed entries card by card only after review.",
+      "route": "card-intelligence-feed.html"
     },
     {
       "title": "Most important missing record",
-      "text": "[object Object] needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
-      "route": "entity-briefs/object-object.html"
+      "text": "Conclusion: the old placeholder missing-record brief has been removed. The highest missing-record priority now is exact primary-source targeting: docket, filing, official PDF, regulator notice, procurement award, public registry, or archived policy page. Why it matters: the site becomes stronger when every claim points to a record class. Evidence boundary: missing record means unresolved, not proven. Next action: use daily-missing-records.html to convert gaps into specific source hunts.",
+      "route": "daily-missing-records.html"
+    },
+    {
+      "title": "Top capital lane",
+      "text": "Conclusion: BlackRock, Vanguard and State Street remain core capital-lane routes, but the source priority is filings, stewardship reports, voting records and mandates, not commentary. Why it matters: ownership influence is only useful when tied to holdings, voting power, products, mandates or disclosed policy. Evidence boundary: asset ownership is not proof of control by itself. Next action: use SEC and proxy-vote routes first.",
+      "route": "big-three-asset-managers.html"
     },
     {
       "title": "One-world governance convergence",
-      "text": "Track whether national decision-making is being pulled upward into global policy bodies, treaty systems, standards bodies, public-private forums and emergency frameworks. Evidence route: UN / WHO / IMF / BIS / G20 policy documents. Boundary: This does not prove a single hidden world government. It tracks documented convergence of policy authority and institutional coordination.",
+      "text": "Conclusion: governance convergence should now be tracked through exact public records: UN/WHO/EU/G20/BIS/IMF/NATO documents, treaties, standards, grants, mandates and implementation laws. Why it matters: public-policy alignment can happen through boring paperwork before it becomes visible to the public. Evidence boundary: convergence is not proof of a single hidden world government. Next action: classify every new item by actor, date, jurisdiction, evidence level and boundary.",
       "route": "power-structure-map.html"
     },
     {
-      "title": "One-world currency / digital-money rail",
-      "text": "Track CBDC pilots, BIS settlement projects, digital ID, payment rails, stablecoin regulation, programmable payments and central-bank coordination. Evidence route: central-bank papers. Boundary: This does not prove one single currency is already here. It tracks the infrastructure that could make money more centralized, programmable and surveillable.",
-      "route": "deep-intel-feed.html"
-    },
-    {
-      "title": "One-world religion / interfaith convergence",
-      "text": "Track interfaith diplomacy, religious soft-power forums, Vatican/UN routes, global ethics language, education programmes and institutional spiritual framing. Evidence route: official interfaith declarations. Boundary: This does not prove a single world religion. It tracks public institutional convergence around religion, ethics, diplomacy and social doctrine.",
-      "route": "secret-societies-tracker.html"
-    },
-    {
-      "title": "Elite-control infrastructure",
-      "text": "Track how asset managers, central banks, contractors, think tanks, governments, tech platforms, media systems, foundations and elite networks connect through records. Evidence route: SEC filings and proxy votes. Boundary: Association is not guilt. A control route strengthens only when records show money, office, contract, mandate, voting power or policy influence.",
-      "route": "evidence-graph.html"
+      "title": "Site quality rule",
+      "text": "Conclusion: the daily refresh must now fail if public files contain [object Object], repeated clock spam, stale active drops, or unsupported card-ledger entries. Why it matters: the site only feels like a living intelligence machine if the public pages are readable and current. Evidence boundary: pressure scores and briefs are editorial signals. Next action: run the pressure-test chain after every refresh and repair failures before calling the deployment operational.",
+      "route": "data/deep-intel-feed-matrix.json"
     }
   ],
   "convergenceLenses": true

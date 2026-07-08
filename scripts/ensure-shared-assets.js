@@ -17,6 +17,7 @@ function runOptional(label, script, requiredFiles = []) {
 }
 
 runOptional('Deck Expansion Wave', 'build-deck-expansion-wave.js', []);
+runOptional('Information Gathering And Conclusion System', 'build-information-gathering-conclusion-system.js', []);
 runOptional('Matrix Brain render', 'build-matrix-brain.js', ['data/site-intelligence-core.json']);
 runOptional('Latest public drops render', 'build-latest-public-drops.js', ['data/latest-public-drops.json']);
 runOptional('Intel Vault render', 'build-intel-vault.js', ['data/intel-vault.json']);
@@ -71,6 +72,7 @@ runOptional('Card Download Manifest Final', 'build-card-download-manifest.js', [
 runOptional('Top 52 Art Link Repair Final', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Final Top 52 Test Markers Final', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link Final', 'patch-homepage-power-deck-link.js', ['index.html']);
+runOptional('Information Gathering And Conclusion System Final', 'build-information-gathering-conclusion-system.js', []);
 
 const files = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 
@@ -102,6 +104,7 @@ for (const file of files) {
 }
 
 runOptional('Deck Expansion Wave Pre Audit', 'build-deck-expansion-wave.js', []);
+runOptional('Information Gathering And Conclusion System Pre Audit', 'build-information-gathering-conclusion-system.js', []);
 runOptional('Secondary Deck Artwork Install Pre Audit', 'install-secondary-deck-artwork.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Art Asset Guard Pre Audit', 'ensure-card-art-assets.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Intelligence Feed Pre Audit', 'build-card-intelligence-feed.js', ['data/controlled-opposition-deck.json', 'data/institution-deck.json']);

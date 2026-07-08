@@ -1,47 +1,47 @@
 # WWIII Escalation Clock
-Pulse: 83%
+Pulse: 81%
 Route: live-intel.html
 
 # AI Breakout Clock
-Pulse: 91%
+Pulse: 93%
 Route: answer-engine.html
 
 # Surveillance State Clock
-Pulse: 95%
+Pulse: 97%
 Route: surveillance-hub.html
 
 # Financial Reset Clock
-Pulse: 71%
+Pulse: 75%
 Route: power-atlas.html
 
 # CBDC Rollout Clock
-Pulse: 87%
+Pulse: 91%
 Route: surveillance-hub.html
 
 # Cyber Blackout Clock
-Pulse: 73%
+Pulse: 77%
 Route: live-intel.html
 
 # Alien Disclosure Clock
-Pulse: 37%
+Pulse: 35%
 Route: news.html
 
 # Pandemic / Biosecurity Clock
-Pulse: 35%
+Pulse: 69%
 Route: dashboard-human-cost.html
 
 # Civil Unrest Clock
-Pulse: 68%
+Pulse: 65%
 Route: live-intel.html
 
 # Food System Stress Clock
-Pulse: 64%
+Pulse: 63%
 Route: dashboard-human-cost.html
 
 # Energy Shock Clock
-Pulse: 73%
+Pulse: 70%
 Route: dashboard-conflict.html
 
 # Machine Convergence
-Pulse: 83%
+Pulse: 87%
 Route: black-file.html

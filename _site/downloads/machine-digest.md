@@ -1,6 +1,6 @@
 # Machine Digest
 
-Updated: 2026-07-06T08:02:29.087Z
+Updated: 2026-07-08T06:12:51.289Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
@@ -10,24 +10,24 @@ Entity observations: 52
 
 ## Latest Events
 
+- documented association: Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots — federal-register-policy — https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment
 - documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
 - documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
 - documented association: Modernizing Security Requirements — federal-register-policy — https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements
 - documented association: Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 — federal-register-policy — https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33
 - documented association: Regulation for Federal Financial Assistance — federal-register-policy — https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance
-- documented association: Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program — federal-register-policy — https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other
 - documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
 - charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
 - charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
+- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/
 - charged / sued: Trump v. Barbara Revisions: 7/01/26 — courtlistener-court-records — https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/
 - charged / sued: Trump v. Barbara — courtlistener-court-records — https://www.courtlistener.com/opinion/10882239/trump-v-barbara/
-- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10881616/khan-v-jewish-women-international/
-- charged / sued: Accountability Now USA v. Griess — courtlistener-court-records — https://www.courtlistener.com/opinion/10883004/accountability-now-usa-v-griess/
 - documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
@@ -58,10 +58,10 @@ Entity observations: 52
 - Treasury Department: 1 mention(s), lanes: federal-register-policy
 - NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
 - NVDA: 1 mention(s), lanes: sec-edgar-filings
-- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
-- GOOGL: 1 mention(s), lanes: sec-edgar-filings
 - Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AAPL: 1 mention(s), lanes: sec-edgar-filings
+- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
+- GOOGL: 1 mention(s), lanes: sec-edgar-filings
 - MICROSOFT CORP: 1 mention(s), lanes: sec-edgar-filings
 - MSFT: 1 mention(s), lanes: sec-edgar-filings
 - AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings

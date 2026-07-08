@@ -1,7 +1,7 @@
 {
-  "updated": "2026-07-08T09:15:00.000Z",
+  "updated": "2026-07-08T09:00:00.000Z",
   "title": "Global Risk Clocks",
-  "summary": "Speculative pressure scores refreshed from dated public-source drops. These remain evidence-boundary signals, not predictions or claims of certainty.",
+  "summary": "Speculative pressure scores enriched with latest dated public-source drops. These remain evidence-boundary signals, not predictions or claims of certainty.",
   "homepageRule": "Only clocks at 90 percent or above may surface on the homepage. Alerts may surface only when active, source-linked and within their active window.",
   "evidenceRule": "Use dated public signals only. Keep speculation labelled. Do not repeat drop text inside signal strings; attach drops through latestDrops.",
   "clocks": [
@@ -12,13 +12,23 @@
       "score": 76,
       "scoreLabel": "Speculative pressure score",
       "window": "3–18 months",
-      "signals": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised.",
+      "signals": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
       "nextRoute": "live-intel.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
       "secondaryRoute": "control-system-tracker.html",
-      "timerUpdateRule": "Raise only with source-linked troop movement, emergency law, cyber/kinetic escalation, sanctions shock, nuclear posture change or official military statement.",
-      "latestDrops": []
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
+      "latestDrops": [],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "security-and-war-powers",
+          "trackerTitle": "War / Security / Emergency Powers",
+          "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
+          "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+          "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+          "trackerRoute": "control-system-tracker.html#security-and-war-powers"
+        }
+      ]
     },
     {
       "slug": "ai-breakout",
@@ -27,14 +37,20 @@
       "score": 88,
       "scoreLabel": "Speculative pressure score",
       "window": "0–36 months",
-      "signals": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high.",
+      "signals": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
       "nextRoute": "answer-engine.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
       "secondaryRoute": "answer-engine.html",
       "timerUpdateRule": "Raise on official enforcement action, frontier-model incident, national-security model review, cybersecurity AI testing platform, high-risk AI deployment mandate, or AI Office action.",
       "latestDrops": [
-        {"id":"eu-ai-act-july-2026-implementation-and-cyber-ai-plan","title":"EU AI Act implementation enters 2026 enforcement phase","published":"2026-07-07T00:00:00.000Z","evidenceLevel":"Official EU implementation timeline / regulatory governance lane","route":"answer-engine.html"}
+        {
+          "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "route": "answer-engine.html"
+        }
       ]
     },
     {
@@ -44,17 +60,84 @@
       "score": 92,
       "scoreLabel": "Speculative pressure score",
       "window": "Already underway",
-      "signals": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals.",
+      "signals": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until ",
       "nextRoute": "surveillance-hub.html",
       "homepageEligible": true,
       "policyConvergenceRoute": "control-system-tracker.html",
       "secondaryRoute": "control-system-tracker.html",
-      "timerUpdateRule": "Raise on mandatory identity use for major services, identity-linked payment rails, biometric travel expansion, health-pass integration, platform enforcement tied to state rules, or legal mandate.",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"eu-ai-act-july-2026-implementation-and-cyber-ai-plan","title":"EU AI Act implementation enters 2026 enforcement phase","published":"2026-07-07T00:00:00.000Z","evidenceLevel":"Official EU implementation timeline / regulatory governance lane","route":"answer-engine.html"},
-        {"id":"eudi-wallet-late-2026-rollout-and-oversharing-risk","title":"EUDI Wallet late-2026 rollout and oversharing risk","published":"2026-06-04T16:22:44.000Z","evidenceLevel":"Academic implementation-risk study / digital identity rollout lane","route":"control-system-tracker.html#digital-id"},
-        {"id":"who-pandemic-agreement-pabs-igwg-july-2026","title":"WHO Pandemic Agreement remains adopted while PABS annex is negotiated","published":"2026-07-06T00:00:00.000Z","evidenceLevel":"Official WHO treaty/implementation-process lane","route":"control-system-tracker.html#health-and-biosecurity"},
-        {"id":"digital-euro-2026-law-2027-pilot-2029-issuance-watch","title":"ECB digital euro 2026 law / 2029 readiness watch","published":"2026-07-08T00:00:00.000Z","evidenceLevel":"Official ECB CBDC project timeline","route":"control-system-tracker.html#programmable-money"}
+        {
+          "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "route": "answer-engine.html"
+        },
+        {
+          "id": "who-pandemic-agreement-pabs-igwg-july-2026",
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "published": "2026-07-06T00:00:00.000Z",
+          "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "route": "control-system-tracker.html#health-and-biosecurity"
+        },
+        {
+          "id": "digital-euro-2026-law-2027-pilot-2029-issuance-watch",
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "published": "2026-07-08T00:00:00.000Z",
+          "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+          "route": "control-system-tracker.html#programmable-money"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "agenda-2030-and-global-standards",
+          "trackerTitle": "Agenda 2030 / Global Standards / Policy Harmonisation",
+          "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
+          "timerTrigger": "Global standards, treaties, model laws, funding conditions, or procurement rules begin routing into domestic mandates.",
+          "escalationRule": "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.",
+          "trackerRoute": "control-system-tracker.html#agenda-2030-and-global-standards"
+        },
+        {
+          "trackerLane": "digital-id",
+          "trackerTitle": "Digital ID / Biometrics / Identity Wallets",
+          "readerQuestion": "Is identity becoming a master permission key?",
+          "timerTrigger": "Digital identity becomes mandatory, biometric, cross-border, or linked to money, travel, benefits, health, age verification, or online access.",
+          "escalationRule": "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems.",
+          "trackerRoute": "control-system-tracker.html#digital-id"
+        },
+        {
+          "trackerLane": "security-and-war-powers",
+          "trackerTitle": "War / Security / Emergency Powers",
+          "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
+          "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+          "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+          "trackerRoute": "control-system-tracker.html#security-and-war-powers"
+        },
+        {
+          "trackerLane": "speech-and-platform-governance",
+          "trackerTitle": "Speech / Platforms / Search / Payment Access",
+          "readerQuestion": "Is speech control being routed through platform and payment infrastructure?",
+          "timerTrigger": "Speech, search, payment, advertising, or platform access becomes governed by state-linked or public-private enforcement systems.",
+          "escalationRule": "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging.",
+          "trackerRoute": "control-system-tracker.html#speech-and-platform-governance"
+        },
+        {
+          "trackerLane": "health-and-biosecurity",
+          "trackerTitle": "Health Governance / Biosecurity / Emergency Health Powers",
+          "readerQuestion": "Is public health becoming a governance operating system?",
+          "timerTrigger": "Health governance connects to identity, travel, work, emergency law, procurement, digital records, or speech policy.",
+          "escalationRule": "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets.",
+          "trackerRoute": "control-system-tracker.html#health-and-biosecurity"
+        },
+        {
+          "trackerLane": "migration-borders-and-population-systems",
+          "trackerTitle": "Migration / Borders / Biometric Travel",
+          "readerQuestion": "Is movement being managed through identity, biometric, and security infrastructure?",
+          "timerTrigger": "Migration, border, biometric, NGO-state, housing, labor, or digital travel systems become integrated with identity and security infrastructure.",
+          "escalationRule": "Escalate when border biometrics become national identity rails, emergency contracts expand, or security narratives drive domestic powers.",
+          "trackerRoute": "control-system-tracker.html#migration-borders-and-population-systems"
+        }
       ]
     },
     {
@@ -64,14 +147,46 @@
       "score": 70,
       "scoreLabel": "Speculative pressure score",
       "window": "6–36 months",
-      "signals": "Debt stress, private payment dependence, tokenised settlement, stablecoin competition, CBDC planning and digital-euro legislation keep the financial-system lane elevated. July refresh raises the source quality through official ECB digital euro timeline language.",
+      "signals": "Debt stress, private payment dependence, tokenised settlement, stablecoin competition, CBDC planning and digital-euro legislation keep the financial-system lane elevated. July refresh raises the source quality through official ECB digital euro timeline language. Policy convergence tracker lanes: CBDC / Tokenized Money / Programmable Finance · Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
       "nextRoute": "power-atlas.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#programmable-money",
-      "timerUpdateRule": "Raise on CBDC legislation, central-bank pilot, banking stress, cash restriction, settlement outage, stablecoin policy shock, or identity-linked payment requirement.",
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"digital-euro-2026-law-2027-pilot-2029-issuance-watch","title":"ECB digital euro 2026 law / 2029 readiness watch","published":"2026-07-08T00:00:00.000Z","evidenceLevel":"Official ECB CBDC project timeline","route":"control-system-tracker.html#programmable-money"}
+        {
+          "id": "digital-euro-2026-law-2027-pilot-2029-issuance-watch",
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "published": "2026-07-08T00:00:00.000Z",
+          "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+          "route": "control-system-tracker.html#programmable-money"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "programmable-money",
+          "trackerTitle": "CBDC / Tokenized Money / Programmable Finance",
+          "readerQuestion": "Is money becoming a permission layer?",
+          "timerTrigger": "CBDC, tokenized deposits, programmable compliance, cash restrictions, or identity-linked wallets move from papers into pilots, contracts, or mandates.",
+          "escalationRule": "Escalate on procurement, legal mandate, banking rollout, wallet identity requirement, transaction restriction, or cross-border integration.",
+          "trackerRoute": "control-system-tracker.html#programmable-money"
+        },
+        {
+          "trackerLane": "climate-energy-and-carbon",
+          "trackerTitle": "Climate / Energy / Carbon / Mobility",
+          "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
+          "timerTrigger": "Climate or energy policy moves into carbon accounts, smart-meter enforcement, mobility restrictions, food/farm controls, ESG finance, or emergency powers.",
+          "escalationRule": "Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.",
+          "trackerRoute": "control-system-tracker.html#climate-energy-and-carbon"
+        },
+        {
+          "trackerLane": "food-water-land-and-supply-chains",
+          "trackerTitle": "Food / Water / Land / Supply Chains",
+          "readerQuestion": "Are food and land systems becoming control infrastructure instead of local resilience?",
+          "timerTrigger": "Food, water, land, seed, farm, fertilizer, traceability, rationing, or supply-chain rules become centralized through corporate-state policy networks.",
+          "escalationRule": "Escalate when rules pressure local production, mandate traceability, concentrate ownership, or link food access to identity, carbon, or finance systems.",
+          "trackerRoute": "control-system-tracker.html#food-water-land-and-supply-chains"
+        }
       ]
     },
     {
@@ -81,14 +196,46 @@
       "score": 86,
       "scoreLabel": "Speculative pressure score",
       "window": "0–5 years",
-      "signals": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy.",
+      "signals": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
       "nextRoute": "surveillance-hub.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#programmable-money",
-      "timerUpdateRule": "Raise on legislation, pilot launch, bank/wallet implementation rules, holding limits, offline design, privacy enforcement, or merchant acceptance requirements.",
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"digital-euro-2026-law-2027-pilot-2029-issuance-watch","title":"ECB digital euro 2026 law / 2029 readiness watch","published":"2026-07-08T00:00:00.000Z","evidenceLevel":"Official ECB CBDC project timeline","route":"control-system-tracker.html#programmable-money"}
+        {
+          "id": "digital-euro-2026-law-2027-pilot-2029-issuance-watch",
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "published": "2026-07-08T00:00:00.000Z",
+          "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+          "route": "control-system-tracker.html#programmable-money"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "agenda-2030-and-global-standards",
+          "trackerTitle": "Agenda 2030 / Global Standards / Policy Harmonisation",
+          "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
+          "timerTrigger": "Global standards, treaties, model laws, funding conditions, or procurement rules begin routing into domestic mandates.",
+          "escalationRule": "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.",
+          "trackerRoute": "control-system-tracker.html#agenda-2030-and-global-standards"
+        },
+        {
+          "trackerLane": "digital-id",
+          "trackerTitle": "Digital ID / Biometrics / Identity Wallets",
+          "readerQuestion": "Is identity becoming a master permission key?",
+          "timerTrigger": "Digital identity becomes mandatory, biometric, cross-border, or linked to money, travel, benefits, health, age verification, or online access.",
+          "escalationRule": "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems.",
+          "trackerRoute": "control-system-tracker.html#digital-id"
+        },
+        {
+          "trackerLane": "programmable-money",
+          "trackerTitle": "CBDC / Tokenized Money / Programmable Finance",
+          "readerQuestion": "Is money becoming a permission layer?",
+          "timerTrigger": "CBDC, tokenized deposits, programmable compliance, cash restrictions, or identity-linked wallets move from papers into pilots, contracts, or mandates.",
+          "escalationRule": "Escalate on procurement, legal mandate, banking rollout, wallet identity requirement, transaction restriction, or cross-border integration.",
+          "trackerRoute": "control-system-tracker.html#programmable-money"
+        }
       ]
     },
     {
@@ -98,14 +245,30 @@
       "score": 72,
       "scoreLabel": "Speculative pressure score",
       "window": "1–5 years",
-      "signals": "Cyber risk remains elevated through AI-enabled misuse, infrastructure dependency, banking/payment concentration, state cyber operations and EU AI/cyber resilience planning. July refresh links cyber risk more strongly to AI governance rather than a specific blackout event.",
+      "signals": "Cyber risk remains elevated through AI-enabled misuse, infrastructure dependency, banking/payment concentration, state cyber operations and EU AI/cyber resilience planning. July refresh links cyber risk more strongly to AI governance rather than a specific blackout event. Policy convergence tracker lanes: War / Security / Emergency Powers. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
       "nextRoute": "live-intel.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "evidence-vault.html",
-      "timerUpdateRule": "Raise on official incident, sector outage, bank/payment disruption, grid or telecom incident, agency warning, or confirmed AI-enabled cyber capability.",
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"eu-ai-act-july-2026-implementation-and-cyber-ai-plan","title":"EU AI Act implementation and cybersecurity/AI governance lane","published":"2026-07-07T00:00:00.000Z","evidenceLevel":"Official EU implementation timeline / cyber-AI lane","route":"answer-engine.html"}
+        {
+          "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "route": "answer-engine.html"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "security-and-war-powers",
+          "trackerTitle": "War / Security / Emergency Powers",
+          "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
+          "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+          "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+          "trackerRoute": "control-system-tracker.html#security-and-war-powers"
+        }
       ]
     },
     {
@@ -127,14 +290,30 @@
       "score": 64,
       "scoreLabel": "Speculative pressure score",
       "window": "0–24 months",
-      "signals": "WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures.",
+      "signals": "WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures. Policy convergence tracker lanes: Health Governance / Biosecurity / Emergency Health Powers. Latest public drops: 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
       "nextRoute": "dashboard-human-cost.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#health-and-biosecurity",
-      "timerUpdateRule": "Raise on PABS annex text, ratification milestones, national implementation law, health credential integration, emergency procurement, or official supply-chain/logistics mechanism.",
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"who-pandemic-agreement-pabs-igwg-july-2026","title":"WHO Pandemic Agreement remains adopted while PABS annex is negotiated","published":"2026-07-06T00:00:00.000Z","evidenceLevel":"Official WHO treaty/implementation-process lane","route":"control-system-tracker.html#health-and-biosecurity"}
+        {
+          "id": "who-pandemic-agreement-pabs-igwg-july-2026",
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "published": "2026-07-06T00:00:00.000Z",
+          "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "route": "control-system-tracker.html#health-and-biosecurity"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "health-and-biosecurity",
+          "trackerTitle": "Health Governance / Biosecurity / Emergency Health Powers",
+          "readerQuestion": "Is public health becoming a governance operating system?",
+          "timerTrigger": "Health governance connects to identity, travel, work, emergency law, procurement, digital records, or speech policy.",
+          "escalationRule": "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets.",
+          "trackerRoute": "control-system-tracker.html#health-and-biosecurity"
+        }
       ]
     },
     {
@@ -144,13 +323,39 @@
       "score": 60,
       "scoreLabel": "Speculative pressure score",
       "window": "0–24 months",
-      "signals": "Civil-stability pressure remains elevated through elections, migration, economic strain, war protest cycles, platform/speech rules and emergency politics. July refresh adds no single acute civil-unrest trigger, so the score is held lower than homepage threshold.",
+      "signals": "Civil-stability pressure remains elevated through elections, migration, economic strain, war protest cycles, platform/speech rules and emergency politics. July refresh adds no single acute civil-unrest trigger, so the score is held lower than homepage threshold. Policy convergence tracker lanes: War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Migration / Borders / Biometric Travel.",
       "nextRoute": "live-intel.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#speech-and-platform-governance",
-      "timerUpdateRule": "Raise on emergency law, mass protest, platform/payment access event, migration shock, policing escalation, or court-confirmed unrest trigger.",
-      "latestDrops": []
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
+      "latestDrops": [],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "security-and-war-powers",
+          "trackerTitle": "War / Security / Emergency Powers",
+          "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
+          "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+          "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+          "trackerRoute": "control-system-tracker.html#security-and-war-powers"
+        },
+        {
+          "trackerLane": "speech-and-platform-governance",
+          "trackerTitle": "Speech / Platforms / Search / Payment Access",
+          "readerQuestion": "Is speech control being routed through platform and payment infrastructure?",
+          "timerTrigger": "Speech, search, payment, advertising, or platform access becomes governed by state-linked or public-private enforcement systems.",
+          "escalationRule": "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging.",
+          "trackerRoute": "control-system-tracker.html#speech-and-platform-governance"
+        },
+        {
+          "trackerLane": "migration-borders-and-population-systems",
+          "trackerTitle": "Migration / Borders / Biometric Travel",
+          "readerQuestion": "Is movement being managed through identity, biometric, and security infrastructure?",
+          "timerTrigger": "Migration, border, biometric, NGO-state, housing, labor, or digital travel systems become integrated with identity and security infrastructure.",
+          "escalationRule": "Escalate when border biometrics become national identity rails, emergency contracts expand, or security narratives drive domestic powers.",
+          "trackerRoute": "control-system-tracker.html#migration-borders-and-population-systems"
+        }
+      ]
     },
     {
       "slug": "food-system-stress",
@@ -159,13 +364,31 @@
       "score": 58,
       "scoreLabel": "Speculative pressure score",
       "window": "1–3 years",
-      "signals": "Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh.",
+      "signals": "Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.",
       "nextRoute": "dashboard-human-cost.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#food-water-land-and-supply-chains",
-      "timerUpdateRule": "Raise on official food-security warning, export ban, crop failure, rationing, traceability mandate, fertilizer shock, water restriction, or supply-chain disruption.",
-      "latestDrops": []
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
+      "latestDrops": [],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "climate-energy-and-carbon",
+          "trackerTitle": "Climate / Energy / Carbon / Mobility",
+          "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
+          "timerTrigger": "Climate or energy policy moves into carbon accounts, smart-meter enforcement, mobility restrictions, food/farm controls, ESG finance, or emergency powers.",
+          "escalationRule": "Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.",
+          "trackerRoute": "control-system-tracker.html#climate-energy-and-carbon"
+        },
+        {
+          "trackerLane": "food-water-land-and-supply-chains",
+          "trackerTitle": "Food / Water / Land / Supply Chains",
+          "readerQuestion": "Are food and land systems becoming control infrastructure instead of local resilience?",
+          "timerTrigger": "Food, water, land, seed, farm, fertilizer, traceability, rationing, or supply-chain rules become centralized through corporate-state policy networks.",
+          "escalationRule": "Escalate when rules pressure local production, mandate traceability, concentrate ownership, or link food access to identity, carbon, or finance systems.",
+          "trackerRoute": "control-system-tracker.html#food-water-land-and-supply-chains"
+        }
+      ]
     },
     {
       "slug": "energy-shock",
@@ -174,13 +397,31 @@
       "score": 65,
       "scoreLabel": "Speculative pressure score",
       "window": "6–24 months",
-      "signals": "Energy pressure remains elevated through chokepoints, LNG/refinery risks, sanctions, cyber risk and grid strain. No new July source in this refresh justifies escalation.",
+      "signals": "Energy pressure remains elevated through chokepoints, LNG/refinery risks, sanctions, cyber risk and grid strain. No new July source in this refresh justifies escalation. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.",
       "nextRoute": "dashboard-conflict.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "control-system-tracker.html#climate-energy-and-carbon",
-      "timerUpdateRule": "Raise on chokepoint closure, refinery/energy infrastructure attack, grid event, LNG disruption, sanctions shock or official emergency measure.",
-      "latestDrops": []
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
+      "latestDrops": [],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "climate-energy-and-carbon",
+          "trackerTitle": "Climate / Energy / Carbon / Mobility",
+          "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
+          "timerTrigger": "Climate or energy policy moves into carbon accounts, smart-meter enforcement, mobility restrictions, food/farm controls, ESG finance, or emergency powers.",
+          "escalationRule": "Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.",
+          "trackerRoute": "control-system-tracker.html#climate-energy-and-carbon"
+        },
+        {
+          "trackerLane": "food-water-land-and-supply-chains",
+          "trackerTitle": "Food / Water / Land / Supply Chains",
+          "readerQuestion": "Are food and land systems becoming control infrastructure instead of local resilience?",
+          "timerTrigger": "Food, water, land, seed, farm, fertilizer, traceability, rationing, or supply-chain rules become centralized through corporate-state policy networks.",
+          "escalationRule": "Escalate when rules pressure local production, mandate traceability, concentrate ownership, or link food access to identity, carbon, or finance systems.",
+          "trackerRoute": "control-system-tracker.html#food-water-land-and-supply-chains"
+        }
+      ]
     },
     {
       "slug": "machine-convergence",
@@ -189,21 +430,97 @@
       "score": 82,
       "scoreLabel": "Speculative pressure score",
       "window": "0–5 years",
-      "signals": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim.",
+      "signals": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is nego",
       "nextRoute": "black-file.html",
       "homepageEligible": false,
       "policyConvergenceRoute": "control-system-tracker.html",
-      "secondaryRoute": "black-file.html",
-      "timerUpdateRule": "Raise when two or more lanes integrate: identity plus money, health plus travel, AI plus public services, payments plus speech/platform access, or security plus civilian infrastructure.",
+      "secondaryRoute": "control-system-tracker.html",
+      "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
       "latestDrops": [
-        {"id":"eu-ai-act-july-2026-implementation-and-cyber-ai-plan","title":"EU AI Act implementation enters 2026 enforcement phase","published":"2026-07-07T00:00:00.000Z","evidenceLevel":"Official EU implementation timeline / regulatory governance lane","route":"answer-engine.html"},
-        {"id":"eudi-wallet-late-2026-rollout-and-oversharing-risk","title":"EUDI Wallet late-2026 rollout and oversharing risk","published":"2026-06-04T16:22:44.000Z","evidenceLevel":"Academic implementation-risk study / digital identity rollout lane","route":"control-system-tracker.html#digital-id"},
-        {"id":"digital-euro-2026-law-2027-pilot-2029-issuance-watch","title":"ECB digital euro 2026 law / 2029 readiness watch","published":"2026-07-08T00:00:00.000Z","evidenceLevel":"Official ECB CBDC project timeline","route":"control-system-tracker.html#programmable-money"}
+        {
+          "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "route": "answer-engine.html"
+        },
+        {
+          "id": "who-pandemic-agreement-pabs-igwg-july-2026",
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "published": "2026-07-06T00:00:00.000Z",
+          "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "route": "control-system-tracker.html#health-and-biosecurity"
+        },
+        {
+          "id": "digital-euro-2026-law-2027-pilot-2029-issuance-watch",
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "published": "2026-07-08T00:00:00.000Z",
+          "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+          "route": "control-system-tracker.html#programmable-money"
+        }
+      ],
+      "policyConvergenceLinks": [
+        {
+          "trackerLane": "agenda-2030-and-global-standards",
+          "trackerTitle": "Agenda 2030 / Global Standards / Policy Harmonisation",
+          "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
+          "timerTrigger": "Global standards, treaties, model laws, funding conditions, or procurement rules begin routing into domestic mandates.",
+          "escalationRule": "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.",
+          "trackerRoute": "control-system-tracker.html#agenda-2030-and-global-standards"
+        },
+        {
+          "trackerLane": "digital-id",
+          "trackerTitle": "Digital ID / Biometrics / Identity Wallets",
+          "readerQuestion": "Is identity becoming a master permission key?",
+          "timerTrigger": "Digital identity becomes mandatory, biometric, cross-border, or linked to money, travel, benefits, health, age verification, or online access.",
+          "escalationRule": "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems.",
+          "trackerRoute": "control-system-tracker.html#digital-id"
+        },
+        {
+          "trackerLane": "programmable-money",
+          "trackerTitle": "CBDC / Tokenized Money / Programmable Finance",
+          "readerQuestion": "Is money becoming a permission layer?",
+          "timerTrigger": "CBDC, tokenized deposits, programmable compliance, cash restrictions, or identity-linked wallets move from papers into pilots, contracts, or mandates.",
+          "escalationRule": "Escalate on procurement, legal mandate, banking rollout, wallet identity requirement, transaction restriction, or cross-border integration.",
+          "trackerRoute": "control-system-tracker.html#programmable-money"
+        },
+        {
+          "trackerLane": "speech-and-platform-governance",
+          "trackerTitle": "Speech / Platforms / Search / Payment Access",
+          "readerQuestion": "Is speech control being routed through platform and payment infrastructure?",
+          "timerTrigger": "Speech, search, payment, advertising, or platform access becomes governed by state-linked or public-private enforcement systems.",
+          "escalationRule": "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging.",
+          "trackerRoute": "control-system-tracker.html#speech-and-platform-governance"
+        },
+        {
+          "trackerLane": "health-and-biosecurity",
+          "trackerTitle": "Health Governance / Biosecurity / Emergency Health Powers",
+          "readerQuestion": "Is public health becoming a governance operating system?",
+          "timerTrigger": "Health governance connects to identity, travel, work, emergency law, procurement, digital records, or speech policy.",
+          "escalationRule": "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets.",
+          "trackerRoute": "control-system-tracker.html#health-and-biosecurity"
+        },
+        {
+          "trackerLane": "climate-energy-and-carbon",
+          "trackerTitle": "Climate / Energy / Carbon / Mobility",
+          "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
+          "timerTrigger": "Climate or energy policy moves into carbon accounts, smart-meter enforcement, mobility restrictions, food/farm controls, ESG finance, or emergency powers.",
+          "escalationRule": "Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.",
+          "trackerRoute": "control-system-tracker.html#climate-energy-and-carbon"
+        },
+        {
+          "trackerLane": "migration-borders-and-population-systems",
+          "trackerTitle": "Migration / Borders / Biometric Travel",
+          "readerQuestion": "Is movement being managed through identity, biometric, and security infrastructure?",
+          "timerTrigger": "Migration, border, biometric, NGO-state, housing, labor, or digital travel systems become integrated with identity and security infrastructure.",
+          "escalationRule": "Escalate when border biometrics become national identity rails, emergency contracts expand, or security narratives drive domestic powers.",
+          "trackerRoute": "control-system-tracker.html#migration-borders-and-population-systems"
+        }
       ]
     }
   ],
   "policyConvergence": {
-    "updated": "2026-07-08",
+    "updated": "2026-06-29",
     "trackerRoute": "control-system-tracker.html",
     "timerMapRoute": "downloads/policy-convergence-timer-map.json",
     "method": [

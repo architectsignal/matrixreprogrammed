@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T08:02:45.870Z",
+  "updated": "2026-07-08T06:13:04.758Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -48,8 +48,8 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883542-3",
-        "courtlistener-court-records-10882239-4"
+        "courtlistener-court-records-10883542-5",
+        "courtlistener-court-records-10882239-6"
       ],
       "control_layers": [
         "courts",
@@ -76,8 +76,8 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13602-1",
-        "federal-register-policy-2025-19787-6"
+        "federal-register-policy-2026-13656-1",
+        "federal-register-policy-2026-13602-2"
       ],
       "control_layers": [
         "policy",
@@ -104,8 +104,8 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4",
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-12559-5",
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -113,6 +113,87 @@
         "identity_access"
       ],
       "score": 18,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "court-of-appeals-for-the-second-circuit__the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "from": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "to": "Court of Appeals for the Second Circuit",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-113__the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "from": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "to": "25-113",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-113__court-of-appeals-for-the-second-circuit",
+      "from": "Court of Appeals for the Second Circuit",
+      "to": "25-113",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
       "grade": "candidate",
       "relationship_type": "public-record co-occurrence",
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -132,7 +213,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-1"
+        "courtlistener-court-records-10883674-2"
       ],
       "control_layers": [
         "courts",
@@ -159,7 +240,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-1"
+        "courtlistener-court-records-10883674-2"
       ],
       "control_layers": [
         "courts",
@@ -186,7 +267,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-1"
+        "courtlistener-court-records-10883674-2"
       ],
       "control_layers": [
         "courts",
@@ -213,7 +294,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-2"
+        "courtlistener-court-records-10883331-3"
       ],
       "control_layers": [
         "courts",
@@ -240,7 +321,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-2"
+        "courtlistener-court-records-10883331-3"
       ],
       "control_layers": [
         "courts",
@@ -267,115 +348,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-2"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "supreme-court-of-the-united-states__trump-v-barbara-revisions-7-01-26",
-      "from": "Trump v. Barbara Revisions: 7/01/26",
-      "to": "Supreme Court of the United States",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-3"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "25-365__trump-v-barbara-revisions-7-01-26",
-      "from": "Trump v. Barbara Revisions: 7/01/26",
-      "to": "25-365",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-3"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "supreme-court-of-the-united-states__trump-v-barbara",
-      "from": "Trump v. Barbara",
-      "to": "Supreme Court of the United States",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10882239-4"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "25-365__trump-v-barbara",
-      "from": "Trump v. Barbara",
-      "to": "25-365",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10882239-4"
+        "courtlistener-court-records-10883331-3"
       ],
       "control_layers": [
         "courts",
@@ -402,7 +375,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10881616-5"
+        "courtlistener-court-records-10914068-4"
       ],
       "control_layers": [
         "courts",
@@ -429,7 +402,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10881616-5"
+        "courtlistener-court-records-10914068-4"
       ],
       "control_layers": [
         "courts",
@@ -456,7 +429,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10881616-5"
+        "courtlistener-court-records-10914068-4"
       ],
       "control_layers": [
         "courts",
@@ -469,9 +442,9 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "accountability-now-usa-v-griess__district-court-district-of-columbia",
-      "from": "Accountability Now USA v. Griess",
-      "to": "District Court, District of Columbia",
+      "id": "supreme-court-of-the-united-states__trump-v-barbara-revisions-7-01-26",
+      "from": "Trump v. Barbara Revisions: 7/01/26",
+      "to": "Supreme Court of the United States",
       "count": 1,
       "lanes": [
         "courtlistener-court-records"
@@ -483,7 +456,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883004-6"
+        "courtlistener-court-records-10883542-5"
       ],
       "control_layers": [
         "courts",
@@ -496,9 +469,9 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "accountability-now-usa-v-griess__civil-action-no-2026-1385",
-      "from": "Accountability Now USA v. Griess",
-      "to": "Civil Action No. 2026-1385",
+      "id": "25-365__trump-v-barbara-revisions-7-01-26",
+      "from": "Trump v. Barbara Revisions: 7/01/26",
+      "to": "25-365",
       "count": 1,
       "lanes": [
         "courtlistener-court-records"
@@ -510,7 +483,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883004-6"
+        "courtlistener-court-records-10883542-5"
       ],
       "control_layers": [
         "courts",
@@ -523,9 +496,9 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "civil-action-no-2026-1385__district-court-district-of-columbia",
-      "from": "District Court, District of Columbia",
-      "to": "Civil Action No. 2026-1385",
+      "id": "supreme-court-of-the-united-states__trump-v-barbara",
+      "from": "Trump v. Barbara",
+      "to": "Supreme Court of the United States",
       "count": 1,
       "lanes": [
         "courtlistener-court-records"
@@ -537,7 +510,34 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883004-6"
+        "courtlistener-court-records-10882239-6"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-365__trump-v-barbara",
+      "from": "Trump v. Barbara",
+      "to": "25-365",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10882239-6"
       ],
       "control_layers": [
         "courts",
@@ -564,7 +564,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -591,7 +591,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -618,7 +618,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -645,7 +645,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -672,7 +672,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -699,7 +699,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -726,7 +726,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -753,7 +753,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -780,7 +780,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-4"
+        "federal-register-policy-2026-12559-5"
       ],
       "control_layers": [
         "policy",
@@ -807,7 +807,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -834,7 +834,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -861,7 +861,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -888,7 +888,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -915,7 +915,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -942,7 +942,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -969,7 +969,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -996,7 +996,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1023,7 +1023,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1050,7 +1050,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1077,7 +1077,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1104,7 +1104,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1131,7 +1131,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1158,7 +1158,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1185,7 +1185,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1212,7 +1212,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1239,7 +1239,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1266,7 +1266,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1293,7 +1293,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1320,7 +1320,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1347,7 +1347,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1374,7 +1374,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1401,7 +1401,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1428,7 +1428,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1455,7 +1455,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1482,7 +1482,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1509,7 +1509,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1536,7 +1536,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1563,7 +1563,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1590,7 +1590,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1617,7 +1617,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1644,7 +1644,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1671,7 +1671,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1698,7 +1698,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1725,7 +1725,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1752,7 +1752,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1779,7 +1779,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1806,7 +1806,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1833,7 +1833,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1860,7 +1860,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1887,7 +1887,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1914,7 +1914,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1941,7 +1941,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1968,7 +1968,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -1995,7 +1995,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2022,7 +2022,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2049,7 +2049,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2076,7 +2076,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2103,7 +2103,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2130,7 +2130,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2157,7 +2157,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2184,7 +2184,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2211,7 +2211,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2238,7 +2238,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2265,7 +2265,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2292,7 +2292,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2319,7 +2319,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2346,7 +2346,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2373,7 +2373,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2400,7 +2400,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2427,7 +2427,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2454,7 +2454,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2481,7 +2481,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2508,7 +2508,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2535,7 +2535,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-10817-5"
+        "federal-register-policy-2026-10817-6"
       ],
       "control_layers": [
         "policy",
@@ -2575,33 +2575,6 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "alphabet-inc__googl",
-      "from": "Alphabet Inc.",
-      "to": "GOOGL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "control_layers": [
-        "money",
-        "companies",
-        "ownership"
-      ],
-      "score": 9,
-      "grade": "candidate",
-      "relationship_type": "weak co-occurrence signal",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
       "id": "aapl__apple-inc",
       "from": "Apple Inc.",
       "to": "AAPL",
@@ -2616,7 +2589,34 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "alphabet-inc__googl",
+      "from": "Alphabet Inc.",
+      "to": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
       ],
       "control_layers": [
         "money",

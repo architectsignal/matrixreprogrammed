@@ -1,6 +1,6 @@
 # Daily Brain Brief
 
-Updated: 2026-07-06T08:02:29.058Z
+Updated: 2026-07-08T06:12:51.255Z
 
 This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.
 
@@ -49,15 +49,15 @@ Machine Digest: machine-digest.html
 Record events: 12
 Entity observations: 12
 
+- documented association: Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots — federal-register-policy — https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment
 - documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
 - documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
 - documented association: Modernizing Security Requirements — federal-register-policy — https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements
 - documented association: Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 — federal-register-policy — https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33
 - documented association: Regulation for Federal Financial Assistance — federal-register-policy — https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance
-- documented association: Medicare and Medicaid Programs; CY 2026 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program — federal-register-policy — https://www.federalregister.gov/documents/2025/11/05/2025-19787/medicare-and-medicaid-programs-cy-2026-payment-policies-under-the-physician-fee-schedule-and-other
 - documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces

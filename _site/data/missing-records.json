@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T08:02:46.062Z",
+  "updated": "2026-07-08T06:13:04.956Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
@@ -131,6 +131,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "25-113",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/25-113.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "25-581",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/25-581.html",
@@ -140,12 +146,6 @@
       "entity": "AC48383",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/ac48383.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Accountability Now USA v. Griess",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/accountability-now-usa-v-griess.html",
       "type": "entity brief"
     },
     {
@@ -167,27 +167,21 @@
       "type": "entity brief"
     },
     {
-      "entity": "Civil Action No. 2026-1385",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/civil-action-no-2026-1385.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Connecticut Appellate Court",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/connecticut-appellate-court.html",
       "type": "entity brief"
     },
     {
-      "entity": "Court of Appeals of North Carolina",
+      "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
+      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
       "type": "entity brief"
     },
     {
-      "entity": "District Court, District of Columbia",
+      "entity": "Court of Appeals of North Carolina",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/district-court-district-of-columbia.html",
+      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
       "type": "entity brief"
     },
     {
@@ -224,6 +218,12 @@
       "entity": "Ministry of Health and Family Welfare",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/ministry-of-health-and-family-welfare.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "type": "entity brief"
     },
     {
@@ -383,15 +383,15 @@
       "type": "record review"
     },
     {
-      "entity": "Court of Appeals of North Carolina",
+      "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/court-of-appeals-of-north-carolina.html",
+      "route": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
       "type": "record review"
     },
     {
-      "entity": "District Court, District of Columbia",
+      "entity": "Court of Appeals of North Carolina",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/district-court-district-of-columbia.html",
+      "route": "entity-exposure/court-of-appeals-of-north-carolina.html",
       "type": "record review"
     },
     {
@@ -407,6 +407,12 @@
       "type": "record review"
     },
     {
+      "entity": "25-113",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/25-113.html",
+      "type": "record review"
+    },
+    {
       "entity": "25-581",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/25-581.html",
@@ -419,21 +425,9 @@
       "type": "record review"
     },
     {
-      "entity": "Accountability Now USA v. Griess",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/accountability-now-usa-v-griess.html",
-      "type": "record review"
-    },
-    {
       "entity": "Biddle v. Biddle",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/biddle-v-biddle.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Civil Action No. 2026-1385",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/civil-action-no-2026-1385.html",
       "type": "record review"
     },
     {
@@ -446,6 +440,12 @@
       "entity": "Matter of Pagliughi",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/matter-of-pagliughi.html",
+      "type": "record review"
+    },
+    {
+      "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "type": "record review"
     },
     {

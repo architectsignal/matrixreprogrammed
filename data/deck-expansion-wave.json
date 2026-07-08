@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "updated": "2026-07-08T06:13:18.820Z",
+  "decks": [
+    {
+      "id": "power-families",
+      "title": "Power Families Deck",
+      "cardCount": 52,
+      "route": "power-families-deck.html",
+      "data": "data/power-families-deck.json",
+      "boundary": "This is a public influence-route deck. Family inclusion is not an accusation and does not imply collective intent or wrongdoing."
+    },
+    {
+      "id": "secret-societies",
+      "title": "Secret Societies Deck",
+      "cardCount": 52,
+      "route": "secret-societies-deck.html",
+      "data": "data/secret-societies-deck.json",
+      "boundary": "This deck separates documented history from speculation. Inclusion does not prove hidden control, unlawful conduct or secret coordination."
+    },
+    {
+      "id": "policy",
+      "title": "Policy Deck",
+      "cardCount": 52,
+      "route": "policy-deck.html",
+      "data": "data/policy-deck.json",
+      "boundary": "This deck tracks policy convergence and implementation routes. It does not claim a single hidden government exists or that every policy has the same intent."
+    },
+    {
+      "id": "think-tanks",
+      "title": "Think Tanks Deck",
+      "cardCount": 52,
+      "route": "think-tanks-deck.html",
+      "data": "data/think-tanks-deck.json",
+      "boundary": "This is a policy influence-route deck. Inclusion means public relevance to policy formation, not proof of control or improper conduct."
+    }
+  ]
+}

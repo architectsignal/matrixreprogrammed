@@ -1,8 +1,17 @@
 {
   "ok": true,
-  "updated": "2026-07-06T08:02:57.812Z",
-  "htmlFiles": 745,
-  "weak": [],
+  "updated": "2026-07-08T06:13:19.852Z",
+  "htmlFiles": 1099,
+  "weak": [
+    {
+      "file": "controlled-opposition-profile.html",
+      "words": 69
+    },
+    {
+      "file": "institution-profile.html",
+      "words": 67
+    }
+  ],
   "dead": [],
   "placeholders": [
     {
@@ -46,6 +55,15 @@
     },
     {
       "file": "black-files.html"
+    },
+    {
+      "file": "card-downloads.html"
+    },
+    {
+      "file": "card-intelligence-feed.html"
+    },
+    {
+      "file": "card-system-health.html"
     },
     {
       "file": "case-status-dashboard.html"
@@ -248,9 +266,9 @@
   ],
   "badLinks": [],
   "counts": {
-    "weak": 0,
+    "weak": 2,
     "dead": 0,
-    "placeholders": 80,
+    "placeholders": 83,
     "badLinks": 0
   }
 }

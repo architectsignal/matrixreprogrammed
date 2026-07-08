@@ -46,7 +46,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-06T08:02:25.608Z
+Updated: 2026-07-08T06:12:47.711Z
 Items: 12
 
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
@@ -99,13 +99,13 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
-  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
-  - Evidence: Seven-day public-record/news lead
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News
+  - Source: https://news.google.com/rss/articles/CBMipwJBVV95cUxObzVDOU4zQWJMR1FfR1NCUzlYOFdyekFudXlwcW9zN0xZQU0xNEoyOVdFcW11RUFwX1NZaVhvUGVHMWdKQjQxd1hMcDg4dEJZOXhqeU05OEZnTnFQSGc2Q09MZ3QwX0hkM28zNUhpcGFjZkZfREtwdlhjcUZvc2UtRGpJbGV0QUNvenJKODRaalh0SWdsT0oycEI3VlFFb3F5YTJwQ3ZKMEpNU29GWEE4eFRUUUExRjVTaUVhUlZTRDVvVmNVZjhobVBIalpPYWVHQW80aEQ1X0ZuVDNCSzFGaU1QM3BTd0dhdEUwelRLRVo2dnI1SF93bTBNOTlvdTJtU2pHSldvbjVOeHRWU0VDVnZsSkY5MWZ4eTRYbTNEOUhaVDVRaDJZ?oc=5
+  - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
-  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+- 2026-06-30 — Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
+  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -138,8 +138,8 @@ Items: 12
 - Google News / Epstein timeline and files: Former Clinton aide appears before House panel in Epstein investigation - Scripps News — https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
 - Google News / Epstein timeline and files: What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation — https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5
 - Google News / Epstein timeline and files: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI — https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
+- Big Country News: Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News — https://news.google.com/rss/articles/CBMipwJBVV95cUxObzVDOU4zQWJMR1FfR1NCUzlYOFdyekFudXlwcW9zN0xZQU0xNEoyOVdFcW11RUFwX1NZaVhvUGVHMWdKQjQxd1hMcDg4dEJZOXhqeU05OEZnTnFQSGc2Q09MZ3QwX0hkM28zNUhpcGFjZkZfREtwdlhjcUZvc2UtRGpJbGV0QUNvenJKODRaalh0SWdsT0oycEI3VlFFb3F5YTJwQ3ZKMEpNU29GWEE4eFRUUUExRjVTaUVhUlZTRDVvVmNVZjhobVBIalpPYWVHQW80aEQ1X0ZuVDNCSzFGaU1QM3BTd0dhdEUwelRLRVo2dnI1SF93bTBNOTlvdTJtU2pHSldvbjVOeHRWU0VDVnZsSkY5MWZ4eTRYbTNEOUhaVDVRaDJZ?oc=5
 - Google News / Epstein timeline and files: Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News — https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
-- Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 
 ## Book Routes
 

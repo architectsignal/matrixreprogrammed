@@ -1,17 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-07-08T03:43:27.978Z
+Updated: 2026-07-08T06:13:04.758Z
 
 Current records: 24
 Previous records: 24
-New records: 2
-Changed records: 4
+New records: 0
+Changed records: 0
 Relationship candidates: 111
 
 ## New Records
 
-- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 
 ## Relationship Candidates
 

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-06T08:02:25.608Z
+Updated: 2026-07-08T06:12:47.711Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -56,21 +56,21 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
-  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
-  - Evidence: Data-exposure / private-network security lane
-  - Boundary: A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.
-  - Next: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Evidence: News/source-watch item
   - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
   - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
-  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
+  - Next: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
+- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
+  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
+  - Evidence: Data-exposure / private-network security lane
+  - Boundary: A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.
+  - Next: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
 - 2026-06-29 — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
   - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
   - Evidence: Seven-day public-record lead
@@ -130,9 +130,9 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-- Google News / Epstein timeline and files: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS — https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+- European Commission AI Act page, last updated 2026-07-07: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
 - Google News / declassified files: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive — https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
 - Reuters: Israel cyber chief says Iranian cyber incidents surged in June 2026 — https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5

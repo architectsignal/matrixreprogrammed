@@ -1,0 +1,113 @@
+# Secondary Deck Artwork
+
+Generated: 2026-07-08T06:13:19.026Z
+
+Boundary: Editorial SVG card assets for Deck II and Deck III. Artwork is decorative and not evidence.
+
+## Controlled Opposition
+- 1. Alex Jones: assets/controlled-opposition/cards/alex-jones.svg
+- 2. Andrew Tate: assets/controlled-opposition/cards/andrew-tate.svg
+- 3. Mark Sargent: assets/controlled-opposition/cards/mark-sargent.svg
+- 4. David Icke: assets/controlled-opposition/cards/david-icke.svg
+- 5. Russell Brand: assets/controlled-opposition/cards/russell-brand.svg
+- 6. Joe Rogan: assets/controlled-opposition/cards/joe-rogan.svg
+- 7. Tucker Carlson: assets/controlled-opposition/cards/tucker-carlson.svg
+- 8. Candace Owens: assets/controlled-opposition/cards/candace-owens.svg
+- 9. Jordan Peterson: assets/controlled-opposition/cards/jordan-peterson.svg
+- 10. Ben Shapiro: assets/controlled-opposition/cards/ben-shapiro.svg
+- 11. Tim Pool: assets/controlled-opposition/cards/tim-pool.svg
+- 12. Steven Crowder: assets/controlled-opposition/cards/steven-crowder.svg
+- 13. Charlie Kirk: assets/controlled-opposition/cards/charlie-kirk.svg
+- 14. Matt Walsh: assets/controlled-opposition/cards/matt-walsh.svg
+- 15. Glenn Beck: assets/controlled-opposition/cards/glenn-beck.svg
+- 16. Piers Morgan: assets/controlled-opposition/cards/piers-morgan.svg
+- 17. Elon Musk: assets/controlled-opposition/cards/elon-musk.svg
+- 18. Kanye West / Ye: assets/controlled-opposition/cards/kanye-west-ye.svg
+- 19. RFK Jr.: assets/controlled-opposition/cards/rfk-jr.svg
+- 20. Tulsi Gabbard: assets/controlled-opposition/cards/tulsi-gabbard.svg
+- 21. Vivek Ramaswamy: assets/controlled-opposition/cards/vivek-ramaswamy.svg
+- 22. Nigel Farage: assets/controlled-opposition/cards/nigel-farage.svg
+- 23. Marine Le Pen: assets/controlled-opposition/cards/marine-le-pen.svg
+- 24. Geert Wilders: assets/controlled-opposition/cards/geert-wilders.svg
+- 25. Javier Milei: assets/controlled-opposition/cards/javier-milei.svg
+- 26. Steve Bannon: assets/controlled-opposition/cards/steve-bannon.svg
+- 27. Roger Stone: assets/controlled-opposition/cards/roger-stone.svg
+- 28. Milo Yiannopoulos: assets/controlled-opposition/cards/milo-yiannopoulos.svg
+- 29. Nick Fuentes: assets/controlled-opposition/cards/nick-fuentes.svg
+- 30. Gavin McInnes: assets/controlled-opposition/cards/gavin-mcinnes.svg
+- 31. Laura Loomer: assets/controlled-opposition/cards/laura-loomer.svg
+- 32. Mike Cernovich: assets/controlled-opposition/cards/mike-cernovich.svg
+- 33. Jack Posobiec: assets/controlled-opposition/cards/jack-posobiec.svg
+- 34. James O'Keefe: assets/controlled-opposition/cards/james-o-keefe.svg
+- 35. Project Veritas network: assets/controlled-opposition/cards/project-veritas-network.svg
+- 36. Naomi Wolf: assets/controlled-opposition/cards/naomi-wolf.svg
+- 37. Bret Weinstein: assets/controlled-opposition/cards/bret-weinstein.svg
+- 38. Heather Heying: assets/controlled-opposition/cards/heather-heying.svg
+- 39. Del Bigtree: assets/controlled-opposition/cards/del-bigtree.svg
+- 40. Robert Malone: assets/controlled-opposition/cards/robert-malone.svg
+- 41. Peter McCullough: assets/controlled-opposition/cards/peter-mccullough.svg
+- 42. Sherri Tenpenny: assets/controlled-opposition/cards/sherri-tenpenny.svg
+- 43. Kate Shemirani: assets/controlled-opposition/cards/kate-shemirani.svg
+- 44. Mark Steele: assets/controlled-opposition/cards/mark-steele.svg
+- 45. Piers Corbyn: assets/controlled-opposition/cards/piers-corbyn.svg
+- 46. Max Blumenthal: assets/controlled-opposition/cards/max-blumenthal.svg
+- 47. Jimmy Dore: assets/controlled-opposition/cards/jimmy-dore.svg
+- 48. Glenn Greenwald: assets/controlled-opposition/cards/glenn-greenwald.svg
+- 49. Matt Taibbi: assets/controlled-opposition/cards/matt-taibbi.svg
+- 50. Julian Assange: assets/controlled-opposition/cards/julian-assange.svg
+- 51. Edward Snowden: assets/controlled-opposition/cards/edward-snowden.svg
+- 52. Graham Hancock: assets/controlled-opposition/cards/graham-hancock.svg
+
+## Institution Deck
+- 1. World Economic Forum: assets/institution/cards/world-economic-forum.svg
+- 2. United Nations: assets/institution/cards/united-nations.svg
+- 3. World Health Organization: assets/institution/cards/world-health-organization.svg
+- 4. Bank for International Settlements: assets/institution/cards/bank-for-international-settlements.svg
+- 5. BlackRock: assets/institution/cards/blackrock.svg
+- 6. Vanguard: assets/institution/cards/vanguard.svg
+- 7. State Street: assets/institution/cards/state-street.svg
+- 8. International Monetary Fund: assets/institution/cards/international-monetary-fund.svg
+- 9. World Bank: assets/institution/cards/world-bank.svg
+- 10. Federal Reserve System: assets/institution/cards/federal-reserve-system.svg
+- 11. European Central Bank: assets/institution/cards/european-central-bank.svg
+- 12. European Commission: assets/institution/cards/european-commission.svg
+- 13. World Trade Organization: assets/institution/cards/world-trade-organization.svg
+- 14. Organisation for Economic Co-operation and Development: assets/institution/cards/organisation-for-economic-co-operation-and-development.svg
+- 15. G20: assets/institution/cards/g20.svg
+- 16. G7: assets/institution/cards/g7.svg
+- 17. Microsoft: assets/institution/cards/microsoft.svg
+- 18. Google: assets/institution/cards/google.svg
+- 19. Apple: assets/institution/cards/apple.svg
+- 20. Meta Platforms: assets/institution/cards/meta-platforms.svg
+- 21. Amazon: assets/institution/cards/amazon.svg
+- 22. Oracle: assets/institution/cards/oracle.svg
+- 23. Palantir Technologies: assets/institution/cards/palantir-technologies.svg
+- 24. OpenAI: assets/institution/cards/openai.svg
+- 25. Central Intelligence Agency: assets/institution/cards/central-intelligence-agency.svg
+- 26. National Security Agency: assets/institution/cards/national-security-agency.svg
+- 27. Federal Bureau of Investigation: assets/institution/cards/federal-bureau-of-investigation.svg
+- 28. GCHQ: assets/institution/cards/gchq.svg
+- 29. MI6: assets/institution/cards/mi6.svg
+- 30. NATO: assets/institution/cards/nato.svg
+- 31. Council on Foreign Relations: assets/institution/cards/council-on-foreign-relations.svg
+- 32. Trilateral Commission: assets/institution/cards/trilateral-commission.svg
+- 33. Bilderberg Group: assets/institution/cards/bilderberg-group.svg
+- 34. Chatham House: assets/institution/cards/chatham-house.svg
+- 35. Atlantic Council: assets/institution/cards/atlantic-council.svg
+- 36. Brookings Institution: assets/institution/cards/brookings-institution.svg
+- 37. Gavi, the Vaccine Alliance: assets/institution/cards/gavi-the-vaccine-alliance.svg
+- 38. Coalition for Epidemic Preparedness Innovations: assets/institution/cards/coalition-for-epidemic-preparedness-innovations.svg
+- 39. Food and Agriculture Organization: assets/institution/cards/food-and-agriculture-organization.svg
+- 40. Codex Alimentarius Commission: assets/institution/cards/codex-alimentarius-commission.svg
+- 41. Reuters: assets/institution/cards/reuters.svg
+- 42. Associated Press: assets/institution/cards/associated-press.svg
+- 43. BBC: assets/institution/cards/bbc.svg
+- 44. The New York Times: assets/institution/cards/the-new-york-times.svg
+- 45. Bill & Melinda Gates Foundation: assets/institution/cards/bill-melinda-gates-foundation.svg
+- 46. Open Society Foundations: assets/institution/cards/open-society-foundations.svg
+- 47. Rockefeller Foundation: assets/institution/cards/rockefeller-foundation.svg
+- 48. Wellcome Trust: assets/institution/cards/wellcome-trust.svg
+- 49. International Organization for Standardization: assets/institution/cards/international-organization-for-standardization.svg
+- 50. ICANN: assets/institution/cards/icann.svg
+- 51. SWIFT: assets/institution/cards/swift.svg
+- 52. World Wide Web Consortium: assets/institution/cards/world-wide-web-consortium.svg

@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-06T08:02:45.909Z
+Updated: 2026-07-08T06:13:04.798Z
 
 Briefs generated: 58
 
@@ -214,6 +214,16 @@ Evidence: legal record present
 
 Watch next: Watch 2024-07773 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## 25-113
+
+At a glance: 25-113 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 25-113 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## 25-581
 
 At a glance: 25-581 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -233,16 +243,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch AC48383 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Accountability Now USA v. Griess
-
-At a glance: Accountability Now USA v. Griess is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Accountability Now USA v. Griess across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -274,16 +274,6 @@ Evidence: documented public-record association
 
 Watch next: Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
-## Civil Action No. 2026-1385
-
-At a glance: Civil Action No. 2026-1385 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Civil Action No. 2026-1385 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## Connecticut Appellate Court
 
 At a glance: Connecticut Appellate Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -294,6 +284,16 @@ Evidence: legal record present
 
 Watch next: Watch Connecticut Appellate Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## Court of Appeals for the Second Circuit
+
+At a glance: Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Second Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Court of Appeals of North Carolina
 
 At a glance: Court of Appeals of North Carolina is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -303,16 +303,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Court of Appeals of North Carolina across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## District Court, District of Columbia
-
-At a glance: District Court, District of Columbia is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch District Court, District of Columbia across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Finance Division, Ministry of Finance
 
@@ -373,6 +363,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Ministry of Health and Family Welfare across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+
+## The New York and Presbyterian Hospital v. New York State Nurses Association
+
+At a glance: The New York and Presbyterian Hospital v. New York State Nurses Association is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch The New York and Presbyterian Hospital v. New York State Nurses Association across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Trump v. Barbara
 

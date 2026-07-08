@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-06T08:02:25.608Z
+Updated: 2026-07-08T06:12:47.711Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -20,6 +20,54 @@ Updated: 2026-07-06T08:02:25.608Z
 - Crime State Overlap: crime-hub.html
 
 ## Latest Items
+- 2026-07-03 — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
+  - Short title: DOJ declines to turn over additional Epstein files, says redactions were
+  - Longform title: Epstein Files, Timeline And Court Records — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
+  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
+  - Short title: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit -
+  - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+  - Short title: James Comer Says Oversight Will Hold Public Hearings on Epstein - News o
+  - Longform title: Epstein Files, Timeline And Court Records — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NO
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
+  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
+  - Short title: Epstein moved millions through mysterious Virgin Islands bank right befo
+  - Longform title: Epstein Files, Timeline And Court Records — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
+  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-03 — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
   - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
   - Evidence: Seven-day public-record lead
@@ -28,14 +76,6 @@ Updated: 2026-07-06T08:02:25.608Z
   - Longform title: Google News / control structure — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-center.html
-- 2026-07-03 — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiowFBVV95cUxNZlJoVXJLMmJFa19VQjFEenl0QzBzRlpMOGpPWkJNcmg4ZGczcXlFWmRXMWZHV1Q0aHh5aVhKT3VyVVN0MHo5ckhCQWRXZlYtWkdvVENXdzNtLUFnWjNQbDVCRDVOSXFadlJwNTdUVFVoWkt4Q2g3Mk9Zd0k0MTZPY2V6Zl93NVpmdjdmMkFVS0MwR0RnQlh0NHI0VVU1cC03Z2hv0gGoAUFVX3lxTE9tbHR0QVZoV3NHM2NhSUR2RWlhcmM5SldJTHFpc2lkMG1WbWhvRHpaeEpHY2RJaGlLMzByUHduSWVnSzVxcDQ0SGZPa1Q3dm9Wdl9VSlhrQ2ZsSFZ5ME5kZlByX1BiWnk5bU1OZHR4Y3ZSV2VkbzlnYU1lNTZTbkE5Q183blpValh0T0pxbDllWWUtejlRUk9XbWtBM3I4Z3d0MGdpc0ZRRw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News - Breaking News, Latest News and Videos. The record matters, but the evidence class matters more.
-  - Short title: DOJ declines to turn over additional Epstein files, says redactions were
-  - Longform title: Google News / Epstein timeline and files — DOJ declines to turn over additional Epstein files, says redactions were appropriate - ABC News -
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-02 — Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
   - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -50,14 +90,6 @@ Updated: 2026-07-06T08:02:25.608Z
   - Video hook: New Epstein file lane: Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post. The record matters, but the evidence class matters more.
   - Short title: Alleged Epstein victim who accused Donald Trump of sexual assault fears
   - Longform title: Google News / Epstein timeline and files — Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusal
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
-  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Video hook: New Epstein file lane: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS. The record matters, but the evidence class matters more.
-  - Short title: James Comer Says Oversight Will Hold Public Hearings on Epstein - News o
-  - Longform title: Google News / Epstein timeline and files — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOT
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-01 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
@@ -140,3 +172,75 @@ Updated: 2026-07-06T08:02:25.608Z
   - Longform title: Google News / declassified files — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Sec
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-intelligence-dossiers.html
+- 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
+  - Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
+  - Evidence: Official cyber-threat reporting / conflict lane
+  - Video hook: Ceasefire does not mean cyberfire. The public war clock may pause while the network war accelerates.
+  - Short title: Iran-Israel Cyber Surge: June 2026
+  - Longform title: Cyber War Update: Israel Says Iranian Cyber Incidents Surged In June 2026
+  - Next action: Update cyber timer and watch critical infrastructure, banking, telecom, legal/accounting firms, and public-sector incident reporting.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
+  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
+  - Evidence: Data-exposure / private-network security lane
+  - Video hook: The intelligence state does not only leak through spies. Sometimes it leaks through elite private networks and bad web configuration.
+  - Short title: Dialog Exposure: Private Network Intel Risk
+  - Longform title: National Security Data Exposure: Pentagon Looks Into Dialog Leak Risk
+  - Next action: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-26 — Judge orders DOJ to release more Epstein records or justify redactions by July 2
+  - Source: https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
+  - Evidence: Court-process / disclosure-order watch
+  - Video hook: The Epstein story just moved from rumour to deadline: July 2 is now a records-watch date. The question is not gossip. The question is: what did DOJ redact, and why?
+  - Short title: Epstein Files: July 2 DOJ Redaction Deadline
+  - Longform title: Epstein Files Update: Judge Orders DOJ To Release More Records Or Explain Redactions By July 2
+  - Next action: Watch July 2. If DOJ files less-redacted records, classify each document by source type, people named, record status, and boundary before surfacing claims.
+  - Offer: offer-starter-library.html
+- 2026-06-26 — Epstein settlement and NDA lane moves into oversight focus
+  - Source: https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6
+  - Evidence: Reported oversight / settlement-document lane
+  - Video hook: The Epstein paper trail is not only flight logs. It is settlements, NDAs, sealed records, lawyers, and the machinery that keeps testimony out of public view.
+  - Short title: Epstein NDAs: The Hidden Settlement Lane
+  - Longform title: Epstein Files Update: Settlement And NDA Records Become A Public Oversight Lane
+  - Next action: Create a settlement/NDA source door: who can subpoena, what can be compelled, what remains sealed, and what source class supports each claim.
+  - Offer: offer-starter-library.html
+- 2026-06-25 — Maxwell habeas petition claims new Epstein-file evidence; prosecutors reject arguments
+  - Source: https://www.reuters.com/legal/government/epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-conviction-us-2026-06-25/
+  - Evidence: Court-process update / litigation claim and government response
+  - Video hook: Maxwell is trying to use the new Epstein files as a legal weapon. Prosecutors say no. The record lane is now petition, response, ruling.
+  - Short title: Maxwell Uses Epstein Files In New Habeas Fight
+  - Longform title: Maxwell Habeas Update: New Epstein-File Arguments, Prosecutors Oppose, Court Process Continues
+  - Next action: Track Judge Engelmayer docket movement and extract named-record claims only after the filing is available or source-cited.
+  - Offer: offer-starter-library.html
+- 2026-06-23 — Digital euro clears key European Parliament hurdle
+  - Source: https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/
+  - Evidence: CBDC legislative-process / pilot-lane update
+  - Video hook: The digital euro just moved from theory toward the machinery: law, pilot, wallet, limits, fees, privacy. That is the control-system lane to watch.
+  - Short title: Digital Euro Clears Key Hurdle
+  - Longform title: CBDC Watch: Digital Euro Clears Parliamentary Hurdle As EU Pushes Sovereign Payment Rails
+  - Next action: Escalate CBDC timer through legislation, pilot, wallet integration, merchant rules, holding limits, and privacy architecture.
+  - Offer: offer-starter-library.html
+- 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
+  - Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
+  - Evidence: Intelligence-alliance warning / cyber-risk lane
+  - Video hook: Five Eyes just moved AI from tech hype into national-security cyber countdown. The question is not whether AI is magic. The question is who gets offensive capability first.
+  - Short title: Five Eyes AI Cyber Warning
+  - Longform title: Five Eyes Warning: AI Cyberattack Models Could Be Months Away, Turning AI Into A Security Timer
+  - Next action: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-06-30 — Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxNS1Z2SXRuSEdCLW5vanRocnFSN0Rja2VLOXdOVU1TUUQ3TFR5V0NQaHVxRm5aeHA1d2dtcXkwMXY3SlFNNTZsS1lrRkQ5cFZyTVNIZzZkNTR4X2U1V2ZkQzJTZmEtSjlha2JCZ3d5aWwwbWNCZHNodDVGN2xyUGUtUXNadkVrbVB1SDJSWlpNbHBYV3lvMi0yLU5scTE2RGcxR2FsZ096MW1ROVIwVVRiazNfZmhhSFJfMEdQYVF3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
+  - Short title: Clinton confidant who called Maxwell his ‘lover’ grilled by Congress ove
+  - Longform title: Epstein Files, Timeline And Court Records — Clinton confidant who called Maxwell his ‘lover’ grilled by Congress over Epstein ties - WFIN
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-06-30 — Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News
+  - Source: https://news.google.com/rss/articles/CBMipwJBVV95cUxObzVDOU4zQWJMR1FfR1NCUzlYOFdyekFudXlwcW9zN0xZQU0xNEoyOVdFcW11RUFwX1NZaVhvUGVHMWdKQjQxd1hMcDg4dEJZOXhqeU05OEZnTnFQSGc2Q09MZ3QwX0hkM28zNUhpcGFjZkZfREtwdlhjcUZvc2UtRGpJbGV0QUNvenJKODRaalh0SWdsT0oycEI3VlFFb3F5YTJwQ3ZKMEpNU29GWEE4eFRUUUExRjVTaUVhUlZTRDVvVmNVZjhobVBIalpPYWVHQW80aEQ1X0ZuVDNCSzFGaU1QM3BTd0dhdEUwelRLRVo2dnI1SF93bTBNOTlvdTJtU2pHSldvbjVOeHRWU0VDVnZsSkY5MWZ4eTRYbTNEOUhaVDVRaDJZ?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epstein - Big Country News
+  - Short title: Doug Band, former aide to Bill Clinton, to be questioned about Clinton's
+  - Longform title: Epstein Files, Timeline And Court Records — Doug Band, former aide to Bill Clinton, to be questioned about Clinton's interactions with Epste
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html

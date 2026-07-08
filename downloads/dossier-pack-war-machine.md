@@ -48,29 +48,34 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-06T08:02:25.608Z
+Updated: 2026-07-08T06:12:47.711Z
 Items: 12
 
-- 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
-  - Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
-  - Evidence: Official cyber-threat reporting / conflict lane
-  - Boundary: Reported incident counts are not proof of attribution for every incident. Track official statements, technical indicators, affected sectors, and independent confirmation.
-  - Next: Update cyber timer and watch critical infrastructure, banking, telecom, legal/accounting firms, and public-sector incident reporting.
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
   - Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
-  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
-  - Evidence: Data-exposure / private-network security lane
-  - Boundary: A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.
-  - Next: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
+- 2026-06-29 — Israel cyber chief says Iranian cyber incidents surged in June 2026
+  - Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
+  - Evidence: Official cyber-threat reporting / conflict lane
+  - Boundary: Reported incident counts are not proof of attribution for every incident. Track official statements, technical indicators, affected sectors, and independent confirmation.
+  - Next: Update cyber timer and watch critical infrastructure, banking, telecom, legal/accounting firms, and public-sector incident reporting.
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
+  - Next: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
 - 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
   - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-27 — Pentagon looks into Dialog data exposure involving national-security officials
+  - Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
+  - Evidence: Data-exposure / private-network security lane
+  - Boundary: A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.
+  - Next: Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.
 - 2026-06-16 — Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
   - Evidence: Seven-day public-record lead
@@ -106,11 +111,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Lawmakers once saw Bill Gates as a benevolent innovator. After Epstein, they aren’t sure. - Politico
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxQZHdweW9BMjNMa3JIOWZPZWxsVGtwUGFMYkhXbWthZjFNWVBUa0dsdVN4UVNxZ211TWxWbkFhM05TSUhIS3FVTVNXRDRXQmhkRmttbTZWR3BhLXVSWjZMOHJxM2ZzRWlVSVpmLW9HY0xqTGlkd19sVElDRTVqbENEbXRqZTJfbGlBUDFPMQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -129,10 +129,11 @@ Items: 12
 - Book route: book intelligence dossiers — book-intelligence-dossiers.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- Reuters: Israel cyber chief says Iranian cyber incidents surged in June 2026 — https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
+- Reuters: Israel cyber chief says Iranian cyber incidents surged in June 2026 — https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
+- European Commission AI Act page, last updated 2026-07-07: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
+- Wired: Pentagon looks into Dialog data exposure involving national-security officials — https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials
 - Google News / declassified files: Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine — https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5
 - Google News / Epstein timeline and files: Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI — https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
@@ -140,7 +141,6 @@ Items: 12
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Former cellmate reveals shock new details of Jeffrey Epstein’s death - Nine.com.au — https://news.google.com/rss/articles/CBMixwFBVV95cUxPa0ZBcFUwVnMyS2FyZ3lXcXpfcnBmWjhXa1NIY0VkblFrOFF1cVlDT0tsblpoRWNXWnBYOTU3a01qRDV3RVhvUFNyZlhwX01sOUcwRE5Sck5XUGhOZTRFNWZpbzdpeWFjN1JZeU56UkRjUzlMR0Q4Q1llVEZOZDZvU0NYTFhnRGotTEhLdGtMVnJRenZ3ZHc1cFM2alFrcl9WamJ1X3VfeGFKUzVOUW5LQmthaWVpS1pFOVR5cVNVdlBldFhSY3Y4?oc=5
-- Google News / Epstein sighting and alive claims: Lawmakers once saw Bill Gates as a benevolent innovator. After Epstein, they aren’t sure. - Politico — https://news.google.com/rss/articles/CBMijAFBVV95cUxQZHdweW9BMjNMa3JIOWZPZWxsVGtwUGFMYkhXbWthZjFNWVBUa0dsdVN4UVNxZ211TWxWbkFhM05TSUhIS3FVTVNXRDRXQmhkRmttbTZWR3BhLXVSWjZMOHJxM2ZzRWlVSVpmLW9HY0xqTGlkd19sVElDRTVqbENEbXRqZTJfbGlBUDFPMQ?oc=5
 
 ## Book Routes
 

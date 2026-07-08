@@ -1,6 +1,6 @@
 # Auto Evidence Pipeline Report
 
-Updated: 2026-07-06T08:02:24.373Z
+Updated: 2026-07-08T06:12:46.319Z
 
 Boundary: Automation scans public index pages and PDF identifiers only. It does not bypass age verification, publish private victim identifiers, read inaccessible gated PDFs, or assert wrongdoing without verified record cards.
 

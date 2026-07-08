@@ -7,8 +7,8 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-06T08:02:25.608Z",
-  "latestDropsUpdated": "2026-06-29T08:05:00.000Z",
+  "liveIntelUpdated": "2026-07-08T06:12:47.711Z",
+  "latestDropsUpdated": "2026-07-08T09:00:00.000Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Intelligence Network Pack",
   "label": "Agency / surveillance pack",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=intelligence-network",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=intelligence-network",
   "liveIntelWindow": {
-    "updated": "2026-07-06T08:02:25.608Z",
+    "updated": "2026-07-08T06:12:47.711Z",
     "itemCount": 12,
     "items": [
       {
@@ -92,6 +92,7 @@
         "title": "Five Eyes warns frontier AI cyber-attack capability could arrive within months",
         "url": "https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security",
         "published": "2026-06-22T12:00:00.000Z",
+        "fetchedAt": "2026-07-08T06:12:50.536Z",
         "summary": "Five Eyes cyber authorities reportedly warned that advanced AI models capable of major cyberattacks against governments and businesses may be only months away.",
         "evidenceLevel": "Intelligence-alliance warning / cyber-risk lane",
         "evidenceBoundary": "A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.",
@@ -100,49 +101,21 @@
         "videoHook": "Five Eyes just moved AI from tech hype into national-security cyber countdown. The question is not whether AI is magic. The question is who gets offensive capability first.",
         "rumbleShortTitle": "Five Eyes AI Cyber Warning",
         "rumbleLongTitle": "Five Eyes Warning: AI Cyberattack Models Could Be Months Away, Turning AI Into A Security Timer",
+        "socialThread": [
+          "1/ New War Machine / Intelligence State / AI Cyber update: Five Eyes warns frontier AI cyber-attack capability could arrive within months",
+          "2/ Treat the source as the starting point, not the conclusion.",
+          "3/ Classify the evidence level, then follow the route into Live Intel, timers, and the source vault.",
+          "4/ Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security"
+        ],
         "evidenceRoute": "evidence-vault.html",
         "videoRoute": "videos.html",
         "bookRoute": "book-intelligence-dossiers.html",
         "offerRoute": "offer-intelligence-dossiers.html",
         "optinRoute": "optin-intelligence-files-brief.html",
-        "timerLinks": [
-          "ai-breakout",
-          "cyber-blackout",
-          "surveillance-state",
-          "machine-convergence"
-        ],
-        "sourceRequirement": "Official Five Eyes statement, agency advisory, or reputable reporting quoting the warning",
-        "sourceType": "latest-public-drop",
-        "freshness": "active weekly drop"
-      },
-      {
-        "id": "dialog-national-security-data-exposure-2026-06-27",
-        "lane": "war-machine",
-        "laneTitle": "Intelligence State / Private Network Exposure",
-        "sourceLabel": "Wired",
-        "title": "Pentagon looks into Dialog data exposure involving national-security officials",
-        "url": "https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials",
-        "published": "2026-06-27T12:00:00.000Z",
-        "summary": "Reporting says a data exposure at Dialog exposed personal information for U.S. and allied national-security and military officials, prompting Pentagon review of possible operational risk.",
-        "evidenceLevel": "Data-exposure / private-network security lane",
-        "evidenceBoundary": "A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.",
-        "whyItMatters": "The security state is increasingly routed through private events, invitation networks, elite forums, vendors, and platforms whose misconfigurations can expose sensitive nodes.",
-        "nextAction": "Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.",
-        "videoHook": "The intelligence state does not only leak through spies. Sometimes it leaks through elite private networks and bad web configuration.",
-        "rumbleShortTitle": "Dialog Exposure: Private Network Intel Risk",
-        "rumbleLongTitle": "National Security Data Exposure: Pentagon Looks Into Dialog Leak Risk",
-        "evidenceRoute": "evidence-vault.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-intelligence-dossiers.html",
-        "offerRoute": "offer-intelligence-dossiers.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "timerLinks": [
-          "surveillance-state",
-          "cyber-blackout"
-        ],
-        "sourceRequirement": "Reporter evidence, company statement, Pentagon response, official review, or breach notice",
-        "sourceType": "latest-public-drop",
-        "freshness": "active weekly drop"
+        "storeRoute": "amazon-store-books.html",
+        "status": "curated-latest-public-drop",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "epstein-files-rxbzdgvpbibgawxlcy",
@@ -180,34 +153,63 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "epstein-files-2026-07-01-james-comer-says-oversight-will-hold-public-hearings-on-epstein-news-o",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5",
-        "published": "2026-07-01T15:38:19.000Z",
-        "fetchedAt": "2026-07-06T08:02:25.608Z",
-        "summary": "James Comer Says Oversight Will Hold Public Hearings on Epstein News of the United States - NOTUS",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "James Comer Says Oversight Will Hold Public Hearings on Epstein - News o",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOT",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+        "lane": "control-system",
+        "laneTitle": "AI Governance / EU AI Act / Cybersecurity",
+        "sourceLabel": "European Commission AI Act page, last updated 2026-07-07",
+        "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "published": "2026-07-07T00:00:00.000Z",
+        "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+        "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+        "evidenceBoundary": "Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.",
+        "whyItMatters": "This is now a live AI governance clock, not a future theory. It connects model providers, transparency duties, cybersecurity, national authorities, and high-risk public-sector/biometric/migration systems.",
+        "nextAction": "Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.",
+        "evidenceRoute": "answer-engine.html",
         "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "timerLinks": [
+          "ai-breakout",
+          "surveillance-state",
+          "machine-convergence",
+          "cyber-blackout"
+        ],
+        "sourceRequirement": "Official Commission AI Act page, EU legal text, AI Office guidance, national authority page, enforcement decision, or official standardisation document",
+        "sourceType": "latest-public-drop",
+        "freshness": "active weekly drop"
+      },
+      {
+        "id": "dialog-national-security-data-exposure-2026-06-27",
+        "lane": "war-machine",
+        "laneTitle": "Intelligence State / Private Network Exposure",
+        "sourceLabel": "Wired",
+        "title": "Pentagon looks into Dialog data exposure involving national-security officials",
+        "url": "https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials",
+        "published": "2026-06-27T12:00:00.000Z",
+        "fetchedAt": "2026-07-08T06:12:50.536Z",
+        "summary": "Reporting says a data exposure at Dialog exposed personal information for U.S. and allied national-security and military officials, prompting Pentagon review of possible operational risk.",
+        "evidenceLevel": "Data-exposure / private-network security lane",
+        "evidenceBoundary": "A data exposure is not proof of espionage or compromise. Track what was exposed, who had access, official risk assessment, remediation, and any confirmed exploitation.",
+        "whyItMatters": "The security state is increasingly routed through private events, invitation networks, elite forums, vendors, and platforms whose misconfigurations can expose sensitive nodes.",
+        "nextAction": "Add to intelligence/private-network exposure lane and watch for Pentagon statement, remediation notice, affected-role disclosure, and follow-up risk findings.",
+        "videoHook": "The intelligence state does not only leak through spies. Sometimes it leaks through elite private networks and bad web configuration.",
+        "rumbleShortTitle": "Dialog Exposure: Private Network Intel Risk",
+        "rumbleLongTitle": "National Security Data Exposure: Pentagon Looks Into Dialog Leak Risk",
+        "socialThread": [
+          "1/ New Intelligence State / Private Network Exposure update: Pentagon looks into Dialog data exposure involving national-security officials",
+          "2/ Treat the source as the starting point, not the conclusion.",
+          "3/ Classify the evidence level, then follow the route into Live Intel, timers, and the source vault.",
+          "4/ Source: https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials"
+        ],
+        "evidenceRoute": "evidence-vault.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-intelligence-dossiers.html",
+        "offerRoute": "offer-intelligence-dossiers.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
         "storeRoute": "amazon-store-books.html",
-        "status": "rss-seven-day",
+        "status": "curated-latest-public-drop",
         "sourceType": "live-intel",
         "freshness": "active live intel"
       },
@@ -219,7 +221,7 @@
         "title": "MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive",
         "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5",
         "published": "2026-06-29T12:00:00.000Z",
-        "fetchedAt": "2026-07-06T08:02:25.608Z",
+        "fetchedAt": "2026-07-08T06:12:50.536Z",
         "summary": "MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories National Security Archive",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -251,6 +253,7 @@
         "title": "Israel cyber chief says Iranian cyber incidents surged in June 2026",
         "url": "https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/",
         "published": "2026-06-29T06:00:00.000Z",
+        "fetchedAt": "2026-07-08T06:12:50.536Z",
         "summary": "Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditions, while critical infrastructure had not been compromised.",
         "evidenceLevel": "Official cyber-threat reporting / conflict lane",
         "evidenceBoundary": "Reported incident counts are not proof of attribution for every incident. Track official statements, technical indicators, affected sectors, and independent confirmation.",
@@ -259,19 +262,21 @@
         "videoHook": "Ceasefire does not mean cyberfire. The public war clock may pause while the network war accelerates.",
         "rumbleShortTitle": "Iran-Israel Cyber Surge: June 2026",
         "rumbleLongTitle": "Cyber War Update: Israel Says Iranian Cyber Incidents Surged In June 2026",
+        "socialThread": [
+          "1/ New War Machine / Cyber Conflict update: Israel cyber chief says Iranian cyber incidents surged in June 2026",
+          "2/ Treat the source as the starting point, not the conclusion.",
+          "3/ Classify the evidence level, then follow the route into Live Intel, timers, and the source vault.",
+          "4/ Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/"
+        ],
         "evidenceRoute": "evidence-vault.html",
         "videoRoute": "videos.html",
         "bookRoute": "book-intelligence-dossiers.html",
         "offerRoute": "offer-intelligence-dossiers.html",
         "optinRoute": "optin-intelligence-files-brief.html",
-        "timerLinks": [
-          "cyber-blackout",
-          "wwiii-escalation",
-          "energy-shock"
-        ],
-        "sourceRequirement": "Official cyber agency statement, incident report, technical advisory, or reputable reporting",
-        "sourceType": "latest-public-drop",
-        "freshness": "active weekly drop"
+        "storeRoute": "amazon-store-books.html",
+        "status": "curated-latest-public-drop",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
@@ -451,7 +456,7 @@
         "title": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI",
         "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5",
         "published": "2026-06-30T16:53:00.000Z",
-        "fetchedAt": "2026-07-06T08:02:25.608Z",
+        "fetchedAt": "2026-07-08T06:12:50.535Z",
         "summary": "Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI",
         "evidenceLevel": "Seven-day public-record/news lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
@@ -559,19 +564,19 @@
       "kind": "Guardian / Five Eyes warning report"
     },
     {
-      "title": "Pentagon looks into Dialog data exposure involving national-security officials",
-      "route": "https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials",
-      "kind": "Wired"
-    },
-    {
       "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
       "route": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
       "kind": "Google News / Epstein timeline and files"
     },
     {
-      "title": "James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS",
-      "route": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5",
-      "kind": "Google News / Epstein timeline and files"
+      "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+      "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "kind": "European Commission AI Act page, last updated 2026-07-07"
+    },
+    {
+      "title": "Pentagon looks into Dialog data exposure involving national-security officials",
+      "route": "https://www.wired.com/story/the-pentagon-is-looking-into-the-dialog-data-exposure-for-unmasking-national-security-officials",
+      "kind": "Wired"
     },
     {
       "title": "MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive",

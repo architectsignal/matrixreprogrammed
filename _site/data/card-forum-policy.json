@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "title": "Card Intelligence Forum Policy",
+  "purpose": "Every card deep-dive page has a mini forum/intake panel where users can submit public-record leads, links, corrections and context for that exact card.",
+  "boundary": "Submissions are leads, not verified facts. Nothing submitted by a user becomes a site claim until reviewed, sourced, classified and evidence-rated.",
+  "allowedSubmissionTypes": [
+    "public source link",
+    "court record link",
+    "government or institutional record",
+    "archive or declassified file link",
+    "news/reporting link",
+    "correction request",
+    "timeline note",
+    "relationship suggestion",
+    "broken link report",
+    "artwork correction"
+  ],
+  "rejectedContent": [
+    "unsupported accusations",
+    "private personal data",
+    "doxxing",
+    "threats or harassment",
+    "medical/legal claims without sources",
+    "calls for violence",
+    "fabricated documents",
+    "spam"
+  ],
+  "fields": [
+    "deckId",
+    "cardId",
+    "cardName",
+    "submissionType",
+    "sourceUrl",
+    "title",
+    "note",
+    "submitterNameOptional",
+    "createdAt",
+    "status"
+  ],
+  "statuses": ["new lead", "needs review", "source checked", "added to profile", "rejected", "archived"],
+  "nextImplementation": "Wire profile pages to submit to a Worker route such as /submit-card-intel and store approved leads in data/card-intel-submissions.json or a database-backed queue."
+}

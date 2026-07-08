@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-06T08:02:49.303Z
+Generated: 2026-07-08T06:13:09.211Z
 
 ## Official Boundary
 
@@ -58,6 +58,36 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 DOJ declines to turn over additional Epstein files, says redactions were appropriate ABC News - Breaking News, Latest News and Videos
+
+### Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
+
+### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+
+### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 
 ### Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
 - Type: debunk/fake-media-risk

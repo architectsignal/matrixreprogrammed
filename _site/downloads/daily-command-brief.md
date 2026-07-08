@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-06T08:02:46.062Z
+Updated: 2026-07-08T06:13:04.956Z
 
 ## Top Contractor Signals
 
@@ -35,22 +35,22 @@ Updated: 2026-07-06T08:02:46.062Z
 - Federal Procurement Policy Office: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - General Services Administration: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2024-07773: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 25-113: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 25-581: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AC48383: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Accountability Now USA v. Griess: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Biddle v. Biddle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Chattogram Water Supply and Sewerage Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Civil Action No. 2026-1385: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Connecticut Appellate Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals of North Carolina: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- District Court, District of Columbia: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Finance Division, Ministry of Finance: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Khan v. Jewish Women International: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Kingdom of Morocco: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Matter of Pagliughi: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF): Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Ministry of Health and Family Welfare: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- The New York and Presbyterian Hospital v. New York State Nurses Association: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Trump v. Barbara: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Trump v. Barbara Revisions: 7/01/26: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

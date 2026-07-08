@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800" role="img" aria-label="Jamie Dimon Card 10 of Coins Matrix Reprogrammed card artwork">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="24%" r="72%"><stop offset="0" stop-color="#26120a"/><stop offset="0.42" stop-color="#090807"/><stop offset="1" stop-color="#020202"/></radialGradient>
+    <linearGradient id="red" x1="0" x2="1"><stop offset="0" stop-color="#3b0907"/><stop offset="0.5" stop-color="#751410"/><stop offset="1" stop-color="#300706"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(32)"><line x1="0" y1="0" x2="0" y2="8" stroke="#d8b56a" stroke-opacity=".13" stroke-width="1"/></pattern>
+    <style><![CDATA[
+      .gold{fill:#d8b56a}.red{fill:#8b1b16}.cream{fill:#f2e2b8}.line{stroke:#d8b56a;stroke-width:3;fill:none}.thin{stroke:#d8b56a;stroke-width:1.2;fill:none;opacity:.75}.micro{font-family:Georgia,serif;font-size:22px;letter-spacing:2px;fill:#d8b56a}.serif{font-family:Georgia,serif}.small{font-size:30px;letter-spacing:4px}.route{font-size:38px;letter-spacing:2px}.name{font-size:78px;letter-spacing:4px}.title{font-size:45px;letter-spacing:6px}.score{font-size:100px}.tiny{font-size:20px;letter-spacing:2px;opacity:.85}
+    ]]></style>
+  </defs>
+  <rect width="1200" height="1800" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1132" height="1732" rx="36" fill="none" stroke="#d8b56a" stroke-width="8"/>
+  <rect x="58" y="58" width="1084" height="1684" rx="28" fill="none" stroke="#d8b56a" stroke-width="2" opacity=".75"/>
+  <rect x="84" y="84" width="1032" height="1632" rx="20" fill="url(#hatch)" opacity=".38"/>
+  <path d="M180 114 Q600 62 1020 114 L980 186 Q600 142 220 186 Z" fill="url(#red)" stroke="#d8b56a" stroke-width="4"/>
+  <text x="600" y="159" text-anchor="middle" class="serif title cream">CARD 10 OF COINS</text>
+  <circle cx="150" cy="160" r="70" fill="#100706" stroke="#d8b56a" stroke-width="4"/><circle cx="1050" cy="160" r="70" fill="#100706" stroke="#d8b56a" stroke-width="4"/>
+  <text x="150" y="180" text-anchor="middle" class="serif gold" font-size="78">◆</text><text x="1050" y="180" text-anchor="middle" class="serif gold" font-size="78">◆</text>
+  <ellipse cx="600" cy="520" rx="330" ry="360" fill="#111" stroke="#d8b56a" stroke-width="6"/>
+  <ellipse cx="600" cy="520" rx="296" ry="322" fill="url(#hatch)" stroke="#d8b56a" stroke-width="2" opacity=".95"/>
+  <path d="M410 675 C430 535 490 442 600 430 C710 442 770 535 790 675 C730 735 470 735 410 675Z" fill="#16100b" stroke="#d8b56a" stroke-width="3" opacity=".95"/>
+  <circle cx="600" cy="360" r="112" fill="#1b1209" stroke="#d8b56a" stroke-width="4"/>
+  <text x="600" y="392" text-anchor="middle" class="serif gold" font-size="90">JD</text>
+  <path d="M260 824 H940 Q978 824 1002 862 Q978 900 940 900 H260 Q222 900 198 862 Q222 824 260 824Z" fill="#050505" stroke="#d8b56a" stroke-width="6"/>
+  <text x="600" y="881" text-anchor="middle" class="serif name cream">JAMIE DIMON</text>
+  <circle cx="600" cy="1076" r="132" fill="#0b0908" stroke="#d8b56a" stroke-width="5"/>
+  <circle cx="600" cy="1076" r="108" fill="url(#red)" stroke="#d8b56a" stroke-width="2"/>
+  <text x="600" y="1037" text-anchor="middle" class="serif tiny gold">OVERALL INFLUENCE SCORE</text>
+  <text x="600" y="1120" text-anchor="middle" class="serif score cream">85</text>
+  <text x="702" y="1120" class="serif gold" font-size="38">/100</text>
+  <rect x="300" y="1242" width="600" height="98" rx="18" fill="#090807" stroke="#d8b56a" stroke-width="4"/>
+  <text x="600" y="1282" text-anchor="middle" class="serif small gold">EVIDENCE-GRADE</text>
+  <text x="600" y="1324" text-anchor="middle" class="serif" fill="#d8b56a" font-size="46" letter-spacing="4">STRONG ROUTE</text>
+  <path d="M160 1410 H1040 L990 1502 H210 Z" fill="url(#red)" stroke="#d8b56a" stroke-width="4"/>
+  <text x="600" y="1470" text-anchor="middle" class="serif route cream">BANKING AND FINANCIAL-SYSTEM ROUTE</text>
+  <rect x="124" y="230" width="190" height="1050" rx="22" fill="#050505" stroke="#d8b56a" stroke-width="2" opacity=".88"/>
+  <rect x="886" y="230" width="190" height="1050" rx="22" fill="#050505" stroke="#d8b56a" stroke-width="2" opacity=".88"/>
+  <text x="219" y="330" text-anchor="middle" class="serif micro">FINANCE</text><circle cx="219" cy="380" r="44" class="thin"/><text x="219" y="396" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="219" y="540" text-anchor="middle" class="serif micro">ASSET FLOW</text><circle cx="219" cy="590" r="44" class="thin"/><text x="219" y="606" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="219" y="750" text-anchor="middle" class="serif micro">MARKET NETWORKS</text><circle cx="219" cy="800" r="44" class="thin"/><text x="219" y="816" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="219" y="960" text-anchor="middle" class="serif micro">ALLOCATION</text><circle cx="219" cy="1010" r="44" class="thin"/><text x="219" y="1026" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="981" y="330" text-anchor="middle" class="serif micro">FINANCE</text><rect x="937" y="352" width="88" height="88" rx="14" class="thin"/><text x="981" y="414" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="981" y="540" text-anchor="middle" class="serif micro">ASSET FLOW</text><rect x="937" y="562" width="88" height="88" rx="14" class="thin"/><text x="981" y="624" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="981" y="750" text-anchor="middle" class="serif micro">MARKET NETWORKS</text><rect x="937" y="772" width="88" height="88" rx="14" class="thin"/><text x="981" y="834" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="981" y="960" text-anchor="middle" class="serif micro">ALLOCATION</text><rect x="937" y="982" width="88" height="88" rx="14" class="thin"/><text x="981" y="1044" text-anchor="middle" class="serif gold" font-size="45">◆</text>
+  <text x="600" y="1636" text-anchor="middle" class="serif small gold">PUBLIC-RECORD INFLUENCE ROUTE • NOT ACCUSATION</text>
+  <text x="600" y="1694" text-anchor="middle" class="serif tiny gold">MATRIX REPROGRAMMED · GENERATED CARD ART LAYER · 2026-07-08</text>
+</svg>

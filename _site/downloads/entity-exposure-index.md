@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-06T08:02:45.967Z
+Updated: 2026-07-08T06:13:04.857Z
 
 ## Supreme Court of the United States
 
@@ -52,6 +52,16 @@ Highest evidence: charged / sued
 
 Reading: Connecticut Appellate Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Court of Appeals for the Second Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## Court of Appeals of North Carolina
 
 Score: 184
@@ -61,16 +71,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## District Court, District of Columbia
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: District Court, District of Columbia deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Health and Human Services Department
 
@@ -92,6 +92,16 @@ Highest evidence: charged / sued
 
 Reading: 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## 25-113
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 25-113 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## 25-581
 
 Score: 179
@@ -112,16 +122,6 @@ Highest evidence: charged / sued
 
 Reading: AC48383 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Accountability Now USA v. Griess
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Accountability Now USA v. Griess deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## Biddle v. Biddle
 
 Score: 179
@@ -131,16 +131,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Civil Action No. 2026-1385
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Civil Action No. 2026-1385 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Khan v. Jewish Women International
 
@@ -161,6 +151,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## The New York and Presbyterian Hospital v. New York State Nurses Association
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Trump v. Barbara
 

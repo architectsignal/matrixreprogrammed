@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-06T08:02:57.293Z
+Generated: 2026-07-08T06:13:18.972Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,9 +15,10 @@ Generated: 2026-07-06T08:02:57.293Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
-- 95 — Surveillance State Clock — 95% — timers.html
-- 91 — AI Breakout Clock — 91% — timers.html
-- 87 — CBDC Rollout Clock — 87% — timers.html
+- 97 — Surveillance State Clock — 97% — timers.html
+- 93 — AI Breakout Clock — 93% — timers.html
+- 91 — CBDC Rollout Clock — 91% — timers.html
+- 87 — Machine Convergence — 87% — timers.html
 - 85 — [object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/object-object.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
 - 85 — Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/management-and-budget-office.html
@@ -39,9 +40,8 @@ Generated: 2026-07-06T08:02:57.293Z
 - 85 — Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/federal-procurement-policy-office.html
 - 85 — General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/general-services-administration.html
 - 85 — 2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-07773.html
+- 85 — 25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-113.html
 - 85 — 25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-581.html
 - 85 — AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ac48383.html
-- 85 — Accountability Now USA v. Griess — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/accountability-now-usa-v-griess.html
 - 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
-- 83 — WWIII Escalation Clock — 83% — timers.html
-- 83 — Machine Convergence — 83% — timers.html
+- 81 — WWIII Escalation Clock — 81% — timers.html

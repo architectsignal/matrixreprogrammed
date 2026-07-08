@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "d422053d8ea8da282be574c9aa3b86babc854b7a",
-  "buildShortSha": "d422053d8ea8",
-  "generatedAt": "2026-07-06T08:02:57.994Z",
+  "buildSha": "bbd4ed0b23a697bf8d3b3215bd7b676a9731e81a",
+  "buildShortSha": "bbd4ed0b23a6",
+  "generatedAt": "2026-07-08T06:13:20.066Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -25,19 +25,19 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "bd7a449301200800"
+      "hash": "6194d65d3f8272a3"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "bd7a449301200800"
+      "hash": "6194d65d3f8272a3"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "7f64ec9b9c903dfd"
+      "hash": "aab3527c0a8815bb"
     },
     {
       "name": "Dark Speculation Forum",
@@ -61,13 +61,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "531d400e15ef58d8"
+      "hash": "4b5a9e266ec21f4c"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "6652d7be1fc59fe7"
+      "hash": "19e45277ae260431"
     },
     {
       "name": "Probability Lab",
@@ -79,19 +79,19 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "3fe8a2203d8e0542"
+      "hash": "952cb0116a2f2ffe"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "a27d1833f255d3cd"
+      "hash": "ea7af9e16a11f2aa"
     },
     {
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "3c527d043a0a207f"
+      "hash": "15f59419e548e930"
     }
   ],
   "repairs": [

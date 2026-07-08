@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-07T20:14:02.491Z
+Updated: 2026-07-08T03:43:28.071Z
 
 ## Supreme Court of the United States
 

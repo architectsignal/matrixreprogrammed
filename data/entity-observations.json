@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:13:44.608Z",
+  "updated": "2026-07-08T03:43:13.660Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -375,7 +375,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "nvda",
@@ -393,43 +393,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-07"
-    },
-    {
-      "id": "alphabet-inc",
-      "name": "Alphabet Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "last_seen": "2026-07-07"
-    },
-    {
-      "id": "googl",
-      "name": "GOOGL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "apple-inc",
@@ -445,9 +409,9 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "aapl",
@@ -463,9 +427,45 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
+    },
+    {
+      "id": "alphabet-inc",
+      "name": "Alphabet Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
+      ],
+      "last_seen": "2026-07-08"
+    },
+    {
+      "id": "googl",
+      "name": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
+      ],
+      "last_seen": "2026-07-08"
     },
     {
       "id": "microsoft-corp",
@@ -483,7 +483,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "msft",
@@ -501,7 +501,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "amazon-com-inc",
@@ -519,7 +519,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "amzn",
@@ -537,7 +537,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "broadcom-inc",
@@ -555,7 +555,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "avgo",
@@ -573,7 +573,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-07"
+      "last_seen": "2026-07-08"
     },
     {
       "id": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",

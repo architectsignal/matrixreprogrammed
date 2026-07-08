@@ -1,21 +1,17 @@
 # Machine Intelligence
 
-Updated: 2026-07-07T20:14:02.405Z
+Updated: 2026-07-08T03:43:27.978Z
 
 Current records: 24
-Previous records: 18
-New records: 6
-Changed records: 0
+Previous records: 24
+New records: 2
+Changed records: 4
 Relationship candidates: 111
 
 ## New Records
 
-- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
-- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
-- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
-- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/
-- charged / sued: Trump v. Barbara Revisions: 7/01/26 — courtlistener-court-records — https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/
-- charged / sued: Trump v. Barbara — courtlistener-court-records — https://www.courtlistener.com/opinion/10882239/trump-v-barbara/
+- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 
 ## Relationship Candidates
 

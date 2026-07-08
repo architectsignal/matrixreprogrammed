@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:14:02.405Z",
+  "updated": "2026-07-08T03:43:27.978Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -2575,33 +2575,6 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "alphabet-inc__googl",
-      "from": "Alphabet Inc.",
-      "to": "GOOGL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "control_layers": [
-        "money",
-        "companies",
-        "ownership"
-      ],
-      "score": 9,
-      "grade": "candidate",
-      "relationship_type": "weak co-occurrence signal",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
       "id": "aapl__apple-inc",
       "from": "Apple Inc.",
       "to": "AAPL",
@@ -2616,7 +2589,34 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "alphabet-inc__googl",
+      "from": "Alphabet Inc.",
+      "to": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
       ],
       "control_layers": [
         "money",

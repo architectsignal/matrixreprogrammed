@@ -16,11 +16,12 @@ const decks=[
  normalizeObjectDeck('data/power-families-deck.json','power-families','Power Families Deck','assets/power-families/cards','power-families'),
  normalizeObjectDeck('data/secret-societies-deck.json','secret-societies','Secret Societies Deck','assets/secret-societies/cards','secret-societies'),
  normalizeObjectDeck('data/policy-deck.json','policy','Policy Deck','assets/policy/cards','policy'),
- normalizeObjectDeck('data/think-tanks-deck.json','think-tanks','Think Tanks Deck','assets/think-tanks/cards','think-tanks')
+ normalizeObjectDeck('data/think-tanks-deck.json','think-tanks','Think Tanks Deck','assets/think-tanks/cards','think-tanks'),
+ normalizeObjectDeck('data/black-nobility-deck.json','black-nobility','Black Nobility & Allied Dynasties Deck','assets/black-nobility/cards','black-nobility')
 ].filter(d=>d.cards.length);
 const missing=[];
 for(const deck of decks){for(const card of deck.cards){if(!ex(card.asset))missing.push({deck:deck.id,card:card.id,asset:card.asset,missing:'asset'});if(!ex(card.profileRoute.split('?')[0]))missing.push({deck:deck.id,card:card.id,profileRoute:card.profileRoute,missing:'profile'});}}
-const manifest={ok:missing.length===0,title:'Matrix Reprogrammed Card Download Manifest',updated:new Date().toISOString(),boundary:'Card downloads are visual gateways. Evidence, current Intel and scoring live in linked profiles and source routes.',cardContractVersion:'1.1',expectedCardsPerDeck:52,totalDecks:decks.length,totalCards:decks.reduce((n,d)=>n+d.cards.length,0),missing,downloadHub:'card-downloads.html',decks};
+const manifest={ok:missing.length===0,title:'Matrix Reprogrammed Card Download Manifest',updated:new Date().toISOString(),boundary:'Card downloads are visual gateways. Evidence, current Intel and scoring live in linked profiles and source routes.',cardContractVersion:'1.2',expectedCardsPerDeck:52,totalDecks:decks.length,totalCards:decks.reduce((n,d)=>n+d.cards.length,0),missing,downloadHub:'card-downloads.html',decks};
 wr('data/card-download-manifest.json',JSON.stringify(manifest,null,2));
 wr('downloads/card-download-manifest.md','# Card Download Manifest\n\nUpdated: '+manifest.updated+'\n\nDecks: '+manifest.totalDecks+'\n\nTotal cards: '+manifest.totalCards+'\n\nMissing routes/assets: '+missing.length+'\n\n'+decks.map(d=>'## '+d.title+'\n'+d.cards.map(c=>`- ${c.rank}. ${c.name} — ${c.asset} — ${c.profileRoute}`).join('\n')).join('\n\n'));
 console.log(`Card download manifest built: ${manifest.totalDecks} decks / ${manifest.totalCards} cards, ${missing.length} missing routes/assets.`);

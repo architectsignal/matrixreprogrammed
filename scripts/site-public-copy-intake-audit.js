@@ -2,6 +2,7 @@ const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
 try{const brain=path.join(root,'scripts','build-site-brain-router.js');if(fs.existsSync(brain))require(brain);}catch(error){console.warn(`Site brain router skipped before public audit: ${error.message}`)}
+try{const review=path.join(root,'scripts','build-review-dashboard.js');if(fs.existsSync(review))require(review);}catch(error){console.warn(`Review dashboard skipped before public audit: ${error.message}`)}
 const fp=p=>path.join(root,p);
 const wr=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};
 const walk=(dir,files=[])=>{for(const name of fs.readdirSync(dir)){if(['.git','node_modules','.wrangler','dist','build'].includes(name))continue;const full=path.join(dir,name);const st=fs.statSync(full);if(st.isDirectory())walk(full,files);else files.push(full)}return files};

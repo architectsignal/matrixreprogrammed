@@ -1,6 +1,26 @@
 # Entity Exposure Index
 
-Updated: 2026-07-08T08:43:54.537Z
+Updated: 2026-07-08T14:40:51.416Z
+
+## Supreme Court of the United States
+
+Score: 368
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Supreme Court of the United States deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 25-365
+
+Score: 358
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 25-365 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## [object Object]
 
@@ -12,6 +32,46 @@ Highest evidence: documented association
 
 Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Appellate Division of the Supreme Court of the State of New York
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Connecticut Appellate Court
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Connecticut Appellate Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Second Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals of North Carolina
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## Health and Human Services Department
 
 Score: 184
@@ -21,6 +81,106 @@ Level: critical public-record exposure
 Highest evidence: documented association
 
 Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 2024-07773
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 25-113
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 25-113 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 25-581
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 25-581 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## AC48383
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: AC48383 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Biddle v. Biddle
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Khan v. Jewish Women International
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Khan v. Jewish Women International deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Matter of Pagliughi
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Matter of Pagliughi deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## The New York and Presbyterian Hospital v. New York State Nurses Association
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Trump v. Barbara
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Trump v. Barbara deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Trump v. Barbara Revisions: 7/01/26
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Trump v. Barbara Revisions: 7/01/26 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Defense Department
 

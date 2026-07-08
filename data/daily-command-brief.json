@@ -1,10 +1,23 @@
 {
-  "updated": "2026-07-08T08:43:54.621Z",
+  "updated": "2026-07-08T14:40:51.508Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [
     {
-      "key": "sec-edgar-filings-cik0000320193-2",
+      "key": "sec-edgar-filings-cik0001652044-2",
+      "hash": "1afa9768cf5d3e77",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-07-08",
+      "names": [
+        "Alphabet Inc.",
+        "GOOGL"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-3",
       "hash": "5401b45fb060b7f8",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
@@ -17,16 +30,87 @@
       ]
     },
     {
-      "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "1afa9768cf5d3e77",
-      "summary": "Alphabet Inc. (GOOGL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-08",
+      "key": "courtlistener-court-records-10917016-1",
+      "hash": "8721abb56410f277",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
+      "date": "2026-07-07",
       "names": [
-        "Alphabet Inc.",
-        "GOOGL"
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Court of Appeals for the Second Circuit",
+        "25-113"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883674-2",
+      "hash": "f95a37eb5eb447bc",
+      "summary": "Matter of Pagliughi",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "date": "2026-07-01",
+      "names": [
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883331-3",
+      "hash": "b39adcd19b344458",
+      "summary": "Biddle v. Biddle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "date": "2026-07-01",
+      "names": [
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10914068-4",
+      "hash": "8884760b222f1a37",
+      "summary": "Khan v. Jewish Women International",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
+      "date": "2026-06-30",
+      "names": [
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10883542-5",
+      "hash": "804de5848f56977d",
+      "summary": "Trump v. Barbara Revisions: 7/01/26",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/",
+      "date": "2026-06-30",
+      "names": [
+        "Trump v. Barbara Revisions: 7/01/26",
+        "Supreme Court of the United States",
+        "25-365"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10882239-6",
+      "hash": "f14b8750e842ae78",
+      "summary": "Trump v. Barbara",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10882239/trump-v-barbara/",
+      "date": "2026-06-30",
+      "names": [
+        "Trump v. Barbara",
+        "Supreme Court of the United States",
+        "25-365"
       ]
     }
   ],
@@ -1623,6 +1707,18 @@
       "type": "entity brief"
     },
     {
+      "entity": "25-365",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/25-365.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of the United States",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-the-united-states.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "National Aeronautics and Space Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/national-aeronautics-and-space-administration.html",
@@ -1644,18 +1740,6 @@
       "entity": "General Services Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/general-services-administration.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Chattogram Water Supply and Sewerage Authority",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Finance Division, Ministry of Finance",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/finance-division-ministry-of-finance.html",
       "type": "entity brief"
     }
   ],

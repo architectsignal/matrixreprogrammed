@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T08:43:42.068Z",
+  "updated": "2026-07-08T14:40:33.092Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "pulls": [
     {
@@ -23,10 +23,10 @@
     {
       "lane": "courtlistener-court-records",
       "name": "CourtListener court record signal",
-      "ok": false,
-      "status": 502,
+      "ok": true,
+      "status": 200,
       "output": "data/source-pulls/courtlistener-watch.json",
-      "itemCount": 0,
+      "itemCount": 6,
       "error": null
     },
     {

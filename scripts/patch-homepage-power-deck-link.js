@@ -22,7 +22,7 @@ const block=`<!-- power-deck-home-link:start -->
   <div class="eyebrow">Matrix Reprogrammed · Intelligence Decks</div>
   <h2>THE 52-CARD CONTROL MAPS.</h2>
   <p class="lead">Nine fixed decks route readers into public-record paths: people, opposition lanes, institutions, power families, public/private societies, policies, think tanks, black nobility and jurisdictions of power. Every deck uses the same source-ledger, dossier and evidence-boundary structure.</p>
-  <div class="cta-row"><a class="btn" href="card-artwork-automation.html">Artwork Automation</a><a class="btn alt" href="card-artwork-queue.html">Next Art Batch</a><a class="btn alt" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="jurisdictions-of-power-deck.html">Jurisdictions Deck</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
+  <div class="cta-row"><a class="btn" href="site-brain-router.html">Site Brain Router</a><a class="btn alt" href="card-artwork-automation.html">Artwork Automation</a><a class="btn alt" href="card-artwork-queue.html">Next Art Batch</a><a class="btn alt" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="jurisdictions-of-power-deck.html">Jurisdictions Deck</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
   <div class="grid">
 ${card('Persons of Interest · Greatest Hits','◎','The Power Deck','PERSONS OF INTEREST','Top 52 Players: a 52-card map of public-record influence routes across governance, capital, security, narrative systems, missing records and convergence lanes.','this is an influence-route deck, not an accusation list. Each card opens a dossier with evidence boundaries and source routes.',[
   {href:'top-52-power-deck.html',text:'Open The Power Deck'},
@@ -38,6 +38,12 @@ ${card('Institution Deck · Control Infrastructure','⬡','The Institution Deck'
   {href:'institution-deck.html',text:'Open Institution Deck'},
   {href:'institution-control-tracker.html',text:'Open Tracker',alt:true},
   {href:'data/institution-deck.json',text:'Deck Data',alt:true}
+])}
+${card('Site Brain · Source Routing / Conclusions','☉','Living Machine','SITE BRAIN ROUTER','The router classifies public-source leads, reader submissions, drops, ledgers and audit signals, then routes them to cards, clocks, briefs, missing-record queues and evidence-bounded conclusions.','routing is not proof. It is an evidence-management system that shows where sources belong, what they show, what they do not show and what record is still missing.',[
+  {href:'site-brain-router.html',text:'Open Router'},
+  {href:'data/site-brain-router.json',text:'Router Data',alt:true},
+  {href:'data/routed-conclusions.json',text:'Routed Conclusions',alt:true},
+  {href:'data/missing-record-queue.json',text:'Missing Records',alt:true}
 ])}
 ${card('Jurisdictions of Power · Law / Money / Sovereignty','§','The Jurisdiction Deck','VATICAN · CITY OF LONDON · WASHINGTON','Top 52 jurisdictional power routes: sovereign seats, financial districts, offshore centres, corporate-law venues, free zones, treaty hubs and regulatory gateways. The three core dossiers are Vatican City / Holy See, City of London, and Washington, D.C.','this is a jurisdictional influence-route deck. Inclusion maps legal, financial, diplomatic and administrative functions; it is not an accusation of wrongdoing, secrecy abuse or unlawful conduct.',[
   {href:'jurisdictions-of-power-deck.html',text:'Open Jurisdictions Deck'},
@@ -61,4 +67,4 @@ if(html.includes('<section id="homepage-critical-clocks"')) html=html.replace('<
 else if(html.includes('<main id="main-archive">')) html=html.replace('<main id="main-archive">','<main id="main-archive">'+block);
 else html+=block;
 wr('index.html',html);
-console.log('Homepage intelligence deck, jurisdictions, artwork automation, intake, and conclusion links patched.');
+console.log('Homepage intelligence deck, site brain, jurisdictions, artwork automation, intake, and conclusion links patched.');

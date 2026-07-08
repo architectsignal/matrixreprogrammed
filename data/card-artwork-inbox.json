@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "title": "Card Artwork Inbox",
+  "updated": "2026-07-08T00:00:00.000Z",
+  "purpose": "Drop source URLs or data URIs here and the artwork workflow installs them into the correct card asset paths automatically.",
+  "rule": "Each pending item needs deckId, cardId, and either sourceUrl or sourceDataUri. The installer writes an installed image asset, replaces the expected SVG card wrapper, updates logs, and leaves evidence/dossier data unchanged.",
+  "acceptedDeckIds": [
+    "people-of-interest",
+    "top-52",
+    "controlled-opposition",
+    "institutions",
+    "power-families",
+    "secret-societies",
+    "policy",
+    "think-tanks",
+    "black-nobility"
+  ],
+  "examplePendingItem": {
+    "deckId": "people-of-interest",
+    "cardId": "george-soros",
+    "label": "George Soros",
+    "sourceUrl": "https://example.com/george-soros-card.webp",
+    "status": "pending"
+  },
+  "pending": []
+}

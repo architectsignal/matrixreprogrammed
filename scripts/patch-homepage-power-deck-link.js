@@ -22,7 +22,7 @@ const block=`<!-- power-deck-home-link:start -->
   <div class="eyebrow">Matrix Reprogrammed · Intelligence Decks</div>
   <h2>THE 52-CARD CONTROL MAPS.</h2>
   <p class="lead">Seven fixed decks route readers into public-record paths: people, opposition lanes, institutions, power families, public/private societies, policies and think tanks. Every deck uses the same source-ledger, dossier and evidence-boundary structure.</p>
-  <div class="cta-row"><a class="btn" href="deck-expansion-hub.html">Open Deck Expansion Hub</a><a class="btn alt" href="card-downloads.html">Open Card Downloads</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="card-production-pipeline.html">Production Pipeline</a><a class="btn alt" href="data/deck-expansion-wave.json">Expansion Data</a></div>
+  <div class="cta-row"><a class="btn" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
   <div class="grid">
 ${card('Persons of Interest · Greatest Hits','◎','The Power Deck','PERSONS OF INTEREST','Top 52 Players: a 52-card map of public-record influence routes across governance, capital, security, narrative systems, missing records and convergence lanes.','this is an influence-route deck, not an accusation list. Each card opens a dossier with evidence boundaries and source routes.',[
   {href:'top-52-power-deck.html',text:'Open The Power Deck'},
@@ -53,4 +53,4 @@ if(html.includes('<section id="homepage-critical-clocks"')) html=html.replace('<
 else if(html.includes('<main id="main-archive">')) html=html.replace('<main id="main-archive">','<main id="main-archive">'+block);
 else html+=block;
 wr('index.html',html);
-console.log('Homepage intelligence deck and expansion hub links patched.');
+console.log('Homepage intelligence deck, intake, and conclusion links patched.');

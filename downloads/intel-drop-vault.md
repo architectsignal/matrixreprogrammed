@@ -1,14 +1,27 @@
 # Matrix Reprogrammed Intel Drop Vault
 
-Generated: 2026-07-06T11:47:12.357Z
+Generated: 2026-07-08T09:42:42.325Z
 Live window: 7 days
-Total drops: 7
-Live-window drops: 6
-Vaulted old drops: 1
+Total drops: 8
+Live-window drops: 5
+Vaulted old drops: 3
 
 ## Boundary
 
 Old updates do not vanish. They leave the live desk and become source-trail vault records.
+
+## General Assembly LIVE: Debating US sanctions against Cuba
+
+- Date: 2026-07-08
+- Status: live-window
+- Category: War File
+- Evidence label: War File
+- Source: UN News
+- Source link: https://news.un.org/feed/view/en/story/2026/07/1167883
+- Reader path: WHAT WWIII WILL REALLY LOOK LIKE
+- Archive file: data/drops/2026-07-08-general-assembly-live-debating-us-sanctions-against-cuba.json
+
+Source first, claim second, pattern last. A saved update is a route into evidence, not a final conclusion.
 
 ## Global push for AI governance amid warnings of ‘catastrophic harm’
 
@@ -65,7 +78,7 @@ Source first, claim second, pattern last. A saved update is a route into evidenc
 ## Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory
 
 - Date: 2026-06-30
-- Status: live-window
+- Status: vaulted
 - Category: Declassified / Intelligence
 - Evidence label: War File
 - Source: UN News
@@ -78,7 +91,7 @@ Source first, claim second, pattern last. A saved update is a route into evidenc
 ## Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory
 
 - Date: 2026-06-29
-- Status: live-window
+- Status: vaulted
 - Category: Declassified / Intelligence
 - Evidence label: War File
 - Source: UN News

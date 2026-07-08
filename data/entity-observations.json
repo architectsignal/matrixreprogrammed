@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T14:40:33.092Z",
+  "updated": "2026-07-08T19:55:12.423Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -396,42 +396,6 @@
       "last_seen": "2026-07-08"
     },
     {
-      "id": "alphabet-inc",
-      "name": "Alphabet Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "last_seen": "2026-07-08"
-    },
-    {
-      "id": "googl",
-      "name": "GOOGL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0001652044-2"
-      ],
-      "last_seen": "2026-07-08"
-    },
-    {
       "id": "apple-inc",
       "name": "Apple Inc.",
       "count": 1,
@@ -445,7 +409,7 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
       ],
       "last_seen": "2026-07-08"
     },
@@ -463,7 +427,43 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0000320193-3"
+        "sec-edgar-filings-cik0000320193-2"
+      ],
+      "last_seen": "2026-07-08"
+    },
+    {
+      "id": "alphabet-inc",
+      "name": "Alphabet Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
+      ],
+      "last_seen": "2026-07-08"
+    },
+    {
+      "id": "googl",
+      "name": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
       ],
       "last_seen": "2026-07-08"
     },

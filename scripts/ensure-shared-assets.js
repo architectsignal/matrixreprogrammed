@@ -153,6 +153,7 @@ runOptional('Atlas Lane Populations Test', 'atlas-lane-populations-test.js', ['d
 runOptional('Logo Symbolism Dossiers Test', 'logo-symbolism-dossiers-test.js', ['data/logo-symbolism-dossiers.json']);
 runOptional('Card Artwork Inbox Install', 'install-card-artwork-inbox.js', ['data/card-artwork-inbox.json']);
 runOptional('Card Artwork Queue', 'build-card-artwork-queue.js', ['data/card-download-manifest.json']);
+runOptional('Card Artwork Batches', 'build-card-artwork-batches.js', ['data/card-download-manifest.json']);
 runOptional('Card Deck System Audit After Artwork Queue', 'card-deck-system-audit.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
 runOptional('Public Copy And Intake Audit', 'site-public-copy-intake-audit.js', []);
 

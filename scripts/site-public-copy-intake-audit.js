@@ -12,6 +12,7 @@ run('Books Black File CTA','patch-books-black-file-cta.js');
 run('Books daily drop route','patch-books-daily-drop-route.js');
 run('Books evidence badge route','patch-books-evidence-badge-route.js');
 run('Books source document vault route','patch-books-source-document-vault-route.js');
+run('Books intelligence routes','patch-books-intelligence-routes.js');
 run('Review dashboard money sections','patch-review-dashboard-money-sections.js');
 run('Epstein File Check system','build-epstein-file-check-system.js');
 run('Speculative conclusion engine','build-speculative-conclusion-engine.js');

@@ -25,7 +25,7 @@ function inject(file,deckId){
 }
 inject('controlled-opposition-profile.html','controlled-opposition');
 inject('institution-profile.html','institutions');
-for(const dirName of ['top-52','controlled-opposition','institutions','power-families','secret-societies','policy','think-tanks']){
+for(const dirName of ['top-52','controlled-opposition','institutions','power-families','secret-societies','policy','think-tanks','black-nobility','jurisdictions-of-power']){
   const dir=fp(dirName);
   if(!fs.existsSync(dir)||!fs.statSync(dir).isDirectory())continue;
   for(const name of fs.readdirSync(dir)){

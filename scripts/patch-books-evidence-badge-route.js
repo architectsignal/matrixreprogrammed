@@ -1,0 +1,14 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const fp=p=>path.join(root,p);
+if(!fs.existsSync(fp('books.html')))process.exit(0);
+let html=fs.readFileSync(fp('books.html'),'utf8');
+html=html.replace(/<!-- evidence-badge-system-route:start -->[\s\S]*?<!-- evidence-badge-system-route:end -->/,'');
+const block=`<!-- evidence-badge-system-route:start --><section id="books-evidence-badge-system-route" class="section wrap evidence-badge-system-route"><div class="eyebrow">Evidence Badge System</div><h2>READ THE CLAIM BEFORE YOU BELIEVE THE CLAIM.</h2><p class="lead">Every book route connects back to the Matrix Reprogrammed claim classifier: what a source proves, what it does not prove, what would strengthen it, and when speculation belongs in quarantine.</p><p><strong>Evidence boundary:</strong> books and dossiers must separate documented fact, sourced analysis, reasonable inference, speculation, unsupported claims, and missing records.</p><div class="cta-row"><a class="btn" href="claim-classifier.html">Open Claim Classifier</a><a class="btn alt" href="evidence-vault.html">Evidence Vault</a><a class="btn alt" href="source-intake.html">Submit Source</a><a class="btn alt" href="speculation-needs-review.html">Speculation Quarantine</a></div></section><!-- evidence-badge-system-route:end -->`;
+if(html.includes('<!-- daily-drop-command-route:start -->')) html=html.replace('<!-- daily-drop-command-route:start -->',block+'<!-- daily-drop-command-route:start -->');
+else if(html.includes('<!-- black-file-conversion-panel:start -->')) html=html.replace('<!-- black-file-conversion-panel:start -->',block+'<!-- black-file-conversion-panel:start -->');
+else if(html.includes('</main>'))html=html.replace('</main>',block+'</main>');
+else html+=block;
+fs.writeFileSync(fp('books.html'),html);
+console.log('Books evidence-badge-system-route marker preserved.');

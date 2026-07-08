@@ -1,0 +1,54 @@
+name: Daily Sitewide Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Refresh seven-day and live intel
+        run: |
+          npm run update-seven-day-intel
+          npm run update-live-intel
+
+      - name: Build site brain and shared systems
+        run: |
+          npm run site-brain
+          npm run ensure-shared-assets
+
+      - name: Pressure test refreshed systems
+        run: |
+          npm run pressure-test:global-risk-clocks
+          npm run pressure-test:live-intel
+          npm run pressure-test
+
+      - name: Commit refreshed generated files
+        run: |
+          git config user.name "matrix-refresh-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Daily sitewide intelligence refresh"
+            git push
+          fi

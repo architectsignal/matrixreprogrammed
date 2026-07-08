@@ -142,6 +142,8 @@ runOptional('Mission Source Priority Index Test', 'mission-source-priority-test.
 runOptional('Atlas Lane Dossiers Test', 'atlas-lane-dossiers-test.js', ['data/atlas-lane-dossiers.json']);
 runOptional('Atlas Lane Populations Test', 'atlas-lane-populations-test.js', ['data/atlas-lane-populations.json']);
 runOptional('Logo Symbolism Dossiers Test', 'logo-symbolism-dossiers-test.js', ['data/logo-symbolism-dossiers.json']);
+runOptional('Card Artwork Inbox Install', 'install-card-artwork-inbox.js', ['data/card-artwork-inbox.json']);
+runOptional('Card Artwork Queue', 'build-card-artwork-queue.js', ['data/card-download-manifest.json']);
 runOptional('Public Copy And Intake Audit', 'site-public-copy-intake-audit.js', []);
 
 console.log(`Shared asset normalizer complete: ${touched} HTML file(s) patched.`);

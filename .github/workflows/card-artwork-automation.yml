@@ -1,0 +1,53 @@
+name: Card Artwork Automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build current site assets
+        run: npm run ensure-shared-assets
+
+      - name: Install pending card artwork
+        run: node scripts/install-card-artwork-inbox.js
+
+      - name: Build next artwork queue
+        run: node scripts/build-card-artwork-queue.js
+
+      - name: Refresh card manifest and dossier depth
+        run: |
+          node scripts/build-card-download-manifest.js
+          node scripts/patch-card-dossier-depth.js
+          node scripts/site-public-copy-intake-audit.js
+
+      - name: Commit artwork automation output
+        run: |
+          git config user.name "matrix-artwork-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No artwork changes to commit."
+          else
+            git commit -m "Automated card artwork install and queue refresh"
+            git push
+          fi

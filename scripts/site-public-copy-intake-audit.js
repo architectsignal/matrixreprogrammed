@@ -4,6 +4,7 @@ const root=process.cwd();
 try{const money=path.join(root,'scripts','build-monetisation-system.js');if(fs.existsSync(money))require(money);}catch(error){console.warn(`Monetisation system skipped before public audit: ${error.message}`)}
 try{const brain=path.join(root,'scripts','build-site-brain-router.js');if(fs.existsSync(brain))require(brain);}catch(error){console.warn(`Site brain router skipped before public audit: ${error.message}`)}
 try{const review=path.join(root,'scripts','build-review-dashboard.js');if(fs.existsSync(review))require(review);}catch(error){console.warn(`Review dashboard skipped before public audit: ${error.message}`)}
+try{const reviewMoney=path.join(root,'scripts','patch-review-dashboard-money-sections.js');if(fs.existsSync(reviewMoney))require(reviewMoney);}catch(error){console.warn(`Review dashboard money sections skipped before public audit: ${error.message}`)}
 try{const homeReview=path.join(root,'scripts','patch-review-dashboard-home-link.js');if(fs.existsSync(homeReview))require(homeReview);}catch(error){console.warn(`Review dashboard home link skipped before public audit: ${error.message}`)}
 const fp=p=>path.join(root,p);
 const wr=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};

@@ -1,0 +1,13 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const fp=p=>path.join(root,p);
+if(!fs.existsSync(fp('books.html')))process.exit(0);
+let html=fs.readFileSync(fp('books.html'),'utf8');
+html=html.replace(/<!-- books-daily-drop-route-patch:start -->[\s\S]*?<!-- books-daily-drop-route-patch:end -->/,'');
+const block=`<!-- books-daily-drop-route-patch:start --><section id="books-daily-drop-route-patch" class="section wrap daily-drop-route-patch"><div class="eyebrow">Daily Drop Route Patch</div><h2>FROM DAILY DROP TO BOOK FUNNEL.</h2><p class="lead">The daily public-record drops route readers from fresh intelligence into the book universe, premium reports, free brief and store. This preserves the required books.html daily drop route patch after monetisation rebuilds.</p><p><strong>Evidence boundary:</strong> daily drops are source leads and public-record updates, not proof beyond the cited records.</p><div class="cta-row"><a class="btn" href="daily-command-brief.html">Read The Daily Drop</a><a class="btn alt" href="latest-public-drops.html">Latest Public Drops</a><a class="btn alt" href="daily-control-brief-signup.html">Get The Free Brief</a><a class="btn alt" href="premium-reports.html">Upgrade To Reports</a><a class="btn alt" href="store.html">Store</a></div></section><!-- books-daily-drop-route-patch:end -->`;
+if(html.includes('<!-- black-file-conversion-panel:start -->')) html=html.replace('<!-- black-file-conversion-panel:start -->',block+'<!-- black-file-conversion-panel:start -->');
+else if(html.includes('</main>'))html=html.replace('</main>',block+'</main>');
+else html+=block;
+fs.writeFileSync(fp('books.html'),html);
+console.log('Books daily drop route patch preserved.');

@@ -60,6 +60,8 @@ runOptional('Clean Card Deck Walls', 'build-clean-card-decks.js', ['data/top-52-
 runOptional('Card Forum Inject', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Dossier Depth Guard', 'patch-card-dossier-depth.js', ['data/card-download-manifest.json']);
+runOptional('Card Dossier Intelligence Packs', 'patch-card-dossier-intelligence-packs.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
+runOptional('Card Deck System Audit', 'card-deck-system-audit.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
 runOptional('Top 52 Art Link Repair', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Final Top 52 Test Markers', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link', 'patch-homepage-power-deck-link.js', ['index.html']);
@@ -81,6 +83,8 @@ runOptional('Clean Card Deck Walls Final', 'build-clean-card-decks.js', ['data/t
 runOptional('Card Forum Inject Final', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest Final', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Dossier Depth Guard Final', 'patch-card-dossier-depth.js', ['data/card-download-manifest.json']);
+runOptional('Card Dossier Intelligence Packs Final', 'patch-card-dossier-intelligence-packs.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
+runOptional('Card Deck System Audit Final', 'card-deck-system-audit.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
 runOptional('Top 52 Art Link Repair Final', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Final Top 52 Test Markers Final', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Homepage Power Deck Link Final', 'patch-homepage-power-deck-link.js', ['index.html']);
@@ -130,6 +134,8 @@ runOptional('Clean Card Deck Walls Pre Audit', 'build-clean-card-decks.js', ['da
 runOptional('Card Forum Inject Pre Audit', 'patch-card-forums.js', ['card-forum.js']);
 runOptional('Card Download Manifest Pre Audit', 'build-card-download-manifest.js', ['data/top-52-power-deck.json', 'data/controlled-opposition-deck.json', 'data/institution-deck.json']);
 runOptional('Card Dossier Depth Guard Pre Audit', 'patch-card-dossier-depth.js', ['data/card-download-manifest.json']);
+runOptional('Card Dossier Intelligence Packs Pre Audit', 'patch-card-dossier-intelligence-packs.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
+runOptional('Card Deck System Audit Pre Audit', 'card-deck-system-audit.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
 runOptional('Top 52 Art Link Repair Pre Audit', 'repair-top-52-art-links.js', ['top-52-power-deck.html']);
 runOptional('Final Top 52 Test Markers Pre Audit', 'finalize-top-52-test-markers.js', ['top-52-power-deck.html']);
 runOptional('Site Population Audit', 'site-population-audit.js', ['index.html']);
@@ -147,6 +153,7 @@ runOptional('Atlas Lane Populations Test', 'atlas-lane-populations-test.js', ['d
 runOptional('Logo Symbolism Dossiers Test', 'logo-symbolism-dossiers-test.js', ['data/logo-symbolism-dossiers.json']);
 runOptional('Card Artwork Inbox Install', 'install-card-artwork-inbox.js', ['data/card-artwork-inbox.json']);
 runOptional('Card Artwork Queue', 'build-card-artwork-queue.js', ['data/card-download-manifest.json']);
+runOptional('Card Deck System Audit After Artwork Queue', 'card-deck-system-audit.js', ['data/card-download-manifest.json', 'data/card-intelligence-feed.json']);
 runOptional('Public Copy And Intake Audit', 'site-public-copy-intake-audit.js', []);
 
 console.log(`Shared asset normalizer complete: ${touched} HTML file(s) patched.`);

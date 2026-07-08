@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-08T06:40:04.202Z
+Updated: 2026-07-08T08:43:42.068Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 4
-Normalized events: 24
-Entity observations: 52
+Feeds reached: 3
+Normalized events: 18
+Entity observations: 36
 
 ## Latest Events
 
@@ -17,17 +17,11 @@ Entity observations: 52
 - documented association: Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 — federal-register-policy — https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33
 - documented association: Regulation for Federal Financial Assistance — federal-register-policy — https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance
 - documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
-- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
-- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
-- charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/
-- charged / sued: Trump v. Barbara Revisions: 7/01/26 — courtlistener-court-records — https://www.courtlistener.com/opinion/10883542/trump-v-barbara-revisions-70126/
-- charged / sued: Trump v. Barbara — courtlistener-court-records — https://www.courtlistener.com/opinion/10882239/trump-v-barbara/
 - documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
@@ -42,8 +36,6 @@ Entity observations: 52
 - People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
 - Management and Budget Office: 2 mention(s), lanes: federal-register-policy
-- Supreme Court of the United States: 2 mention(s), lanes: courtlistener-court-records
-- 25-365: 2 mention(s), lanes: courtlistener-court-records
 - Homeland Security Department: 1 mention(s), lanes: federal-register-policy
 - Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
 - Federal Procurement Policy Office: 1 mention(s), lanes: federal-register-policy
@@ -58,12 +50,14 @@ Entity observations: 52
 - Treasury Department: 1 mention(s), lanes: federal-register-policy
 - NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
 - NVDA: 1 mention(s), lanes: sec-edgar-filings
-- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
-- GOOGL: 1 mention(s), lanes: sec-edgar-filings
 - Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AAPL: 1 mention(s), lanes: sec-edgar-filings
+- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
+- GOOGL: 1 mention(s), lanes: sec-edgar-filings
 - MICROSOFT CORP: 1 mention(s), lanes: sec-edgar-filings
 - MSFT: 1 mention(s), lanes: sec-edgar-filings
 - AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
+- AVGO: 1 mention(s), lanes: sec-edgar-filings
+- Republic of Rwanda: 1 mention(s), lanes: world-bank-projects

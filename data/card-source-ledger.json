@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "title": "Card Source Ledger",
+  "updated": "2026-07-08T00:00:00.000Z",
+  "purpose": "Stores source-backed notes for card dossiers after review.",
+  "rule": "No source link, no ledger entry.",
+  "entryFields": [
+    "cardId",
+    "deckId",
+    "entryTitle",
+    "entryType",
+    "sourceUrl",
+    "sourceLabel",
+    "whatTheSourceShows",
+    "whatTheSourceDoesNotShow",
+    "reviewStatus",
+    "reviewedAt"
+  ],
+  "allowedEntryTypes": [
+    "primary document",
+    "archive link",
+    "official page",
+    "public database",
+    "reliable report",
+    "correction",
+    "counter-source",
+    "relationship note"
+  ],
+  "reviewStatuses": [
+    "submitted",
+    "reviewed",
+    "corrected",
+    "disputed",
+    "superseded",
+    "removed"
+  ],
+  "entries": []
+}

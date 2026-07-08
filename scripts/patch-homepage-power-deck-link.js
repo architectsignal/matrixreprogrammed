@@ -21,8 +21,8 @@ const block=`<!-- power-deck-home-link:start -->
 <section id="power-deck-home-link" class="section wrap">
   <div class="eyebrow">Matrix Reprogrammed · Intelligence Decks</div>
   <h2>THE 52-CARD CONTROL MAPS.</h2>
-  <p class="lead">Seven fixed decks route readers into public-record paths: people, opposition lanes, institutions, power families, public/private societies, policies and think tanks. Every deck uses the same source-ledger, dossier and evidence-boundary structure.</p>
-  <div class="cta-row"><a class="btn" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
+  <p class="lead">Nine fixed decks route readers into public-record paths: people, opposition lanes, institutions, power families, public/private societies, policies, think tanks, black nobility and jurisdictions of power. Every deck uses the same source-ledger, dossier and evidence-boundary structure.</p>
+  <div class="cta-row"><a class="btn" href="source-intake.html">Submit Source Lead</a><a class="btn alt" href="jurisdictions-of-power-deck.html">Jurisdictions Deck</a><a class="btn alt" href="conclusion-engine.html">Conclusion Engine</a><a class="btn alt" href="information-gathering-system.html">Gathering System</a><a class="btn alt" href="deck-expansion-hub.html">Deck Expansion Hub</a><a class="btn alt" href="card-system-health.html">Card System Health</a><a class="btn alt" href="data/site-public-copy-intake-audit.json">Copy/Intake Audit</a></div>
   <div class="grid">
 ${card('Persons of Interest · Greatest Hits','◎','The Power Deck','PERSONS OF INTEREST','Top 52 Players: a 52-card map of public-record influence routes across governance, capital, security, narrative systems, missing records and convergence lanes.','this is an influence-route deck, not an accusation list. Each card opens a dossier with evidence boundaries and source routes.',[
   {href:'top-52-power-deck.html',text:'Open The Power Deck'},
@@ -39,12 +39,20 @@ ${card('Institution Deck · Control Infrastructure','⬡','The Institution Deck'
   {href:'institution-control-tracker.html',text:'Open Tracker',alt:true},
   {href:'data/institution-deck.json',text:'Deck Data',alt:true}
 ])}
-${card('Deck Expansion · Families / Societies / Policies / Think Tanks','♔','The Expansion Wave','NEXT 208 CARDS','Four new 52-card decks: Power Families, Secret Societies, Policy, and Think Tanks. Each card opens a dossier with main public nodes, why-it-matters rationale, source routes, score, download and forum intake.','inclusion means research relevance to the public influence map, not proof of hidden control, collective intent, unlawful conduct or wrongdoing.',[
+${card('Jurisdictions of Power · Law / Money / Sovereignty','§','The Jurisdiction Deck','VATICAN · CITY OF LONDON · WASHINGTON','Top 52 jurisdictional power routes: sovereign seats, financial districts, offshore centres, corporate-law venues, free zones, treaty hubs and regulatory gateways. The three core dossiers are Vatican City / Holy See, City of London, and Washington, D.C.','this is a jurisdictional influence-route deck. Inclusion maps legal, financial, diplomatic and administrative functions; it is not an accusation of wrongdoing, secrecy abuse or unlawful conduct.',[
+  {href:'jurisdictions-of-power-deck.html',text:'Open Jurisdictions Deck'},
+  {href:'jurisdictions-of-power/vatican-city-holy-see.html',text:'Vatican',alt:true},
+  {href:'jurisdictions-of-power/city-of-london.html',text:'City of London',alt:true},
+  {href:'jurisdictions-of-power/washington-d-c.html',text:'Washington D.C.',alt:true}
+])}
+${card('Deck Expansion · Families / Societies / Policies / Think Tanks','♔','The Expansion Wave','NEXT 312 CARDS','Six new 52-card decks: Power Families, Secret Societies, Policy, Think Tanks, Black Nobility, and Jurisdictions of Power. Each card opens a dossier with main public nodes, history, functions, source routes, score, download and forum intake.','inclusion means research relevance to the public influence map, not proof of hidden control, collective intent, unlawful conduct or wrongdoing.',[
   {href:'deck-expansion-hub.html',text:'Open Expansion Hub'},
   {href:'power-families-deck.html',text:'Families',alt:true},
   {href:'secret-societies-deck.html',text:'Societies',alt:true},
   {href:'policy-deck.html',text:'Policies',alt:true},
-  {href:'think-tanks-deck.html',text:'Think Tanks',alt:true}
+  {href:'think-tanks-deck.html',text:'Think Tanks',alt:true},
+  {href:'black-nobility-deck.html',text:'Black Nobility',alt:true},
+  {href:'jurisdictions-of-power-deck.html',text:'Jurisdictions',alt:true}
 ])}
   </div>
 </section>
@@ -53,4 +61,4 @@ if(html.includes('<section id="homepage-critical-clocks"')) html=html.replace('<
 else if(html.includes('<main id="main-archive">')) html=html.replace('<main id="main-archive">','<main id="main-archive">'+block);
 else html+=block;
 wr('index.html',html);
-console.log('Homepage intelligence deck, intake, and conclusion links patched.');
+console.log('Homepage intelligence deck, jurisdictions, intake, and conclusion links patched.');

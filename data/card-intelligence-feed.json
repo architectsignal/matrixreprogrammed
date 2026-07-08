@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "title": "Card Intelligence Feed And Scoring Model",
+  "updated": "2026-07-08T09:45:00.000Z",
+  "boundary": "This feed provides research routing, scoring context, update triggers and source-ledger pointers. It is not an accusation system and does not assert guilt, intent, hidden control or unlawful conduct.",
+  "model": {
+    "scoreType": "research relevance and update priority",
+    "dimensions": [
+      "publicRole",
+      "networkReach",
+      "updatePriority",
+      "evidenceRoute",
+      "narrativeSignal",
+      "legalProximity"
+    ],
+    "confidence": ["high", "medium", "watch"],
+    "rule": "Scores guide where readers and editors should look first. They do not prove claims."
+  },
+  "legalProximityRules": {
+    "name": "Public-record proximity lane",
+    "rule": "Only add entries when supported by public-record source routes. Never use rumor or guilt by association.",
+    "acceptedSources": [
+      "court record",
+      "public docket",
+      "official investigation report",
+      "regulator action",
+      "parliamentary or public inquiry record",
+      "high-reliability reporting with clear source attribution"
+    ],
+    "rejectedSources": [
+      "unsourced social media claim",
+      "rumor",
+      "private personal data",
+      "doxxing",
+      "guilt by association",
+      "anonymous allegation without documents"
+    ]
+  },
+  "totals": {
+    "cards": 0,
+    "decks": 0
+  },
+  "cards": [],
+  "byDeck": {}
+}

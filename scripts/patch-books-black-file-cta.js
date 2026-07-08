@@ -1,0 +1,11 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const fp=p=>path.join(root,p);
+if(!fs.existsSync(fp('books.html')))process.exit(0);
+let html=fs.readFileSync(fp('books.html'),'utf8');
+html=html.replace(/<!-- black-file-conversion-panel:start -->[\s\S]*?<!-- black-file-conversion-panel:end -->/,'');
+const block=`<!-- black-file-conversion-panel:start --><section class="section wrap black-file-conversion-panel"><div class="eyebrow">Black File Conversion</div><h2>YOU HAVE SEEN THE PUBLIC RECORD.</h2><p class="lead">Continue from the live intelligence machine into the long-form Black File and book universe. The site shows the trail; the books turn the research into finished investigations.</p><p><strong>Boundary:</strong> books must keep evidence, analysis, inference, speculation and missing records clearly separated.</p><div class="cta-row"><a class="btn" href="epstein-files.html">Read The Black File</a><a class="btn alt" href="store.html">Open The Store</a><a class="btn alt" href="daily-control-brief-signup.html">Get The Free Brief</a></div></section><!-- black-file-conversion-panel:end -->`;
+if(html.includes('</main>'))html=html.replace('</main>',block+'</main>');else html+=block;
+fs.writeFileSync(fp('books.html'),html);
+console.log('Books Black File conversion panel patched.');

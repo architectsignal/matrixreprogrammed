@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T07:11:53.906Z",
+  "statusDefault": "pending_review",
+  "pipelineSteps": [
+    "file submitted",
+    "file queued",
+    "OCR pending",
+    "text extracted",
+    "entities extracted",
+    "evidence level assigned",
+    "confidence assigned",
+    "card links suggested",
+    "review required",
+    "approved items published",
+    "uncertain items remain pending"
+  ],
+  "submissions": []
+}

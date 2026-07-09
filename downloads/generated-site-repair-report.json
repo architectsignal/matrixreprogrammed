@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-08T09:42:43.244Z",
+  "generatedAt": "2026-07-09T07:11:56.294Z",
   "repairs": [
     {
       "type": "sec-filing-feed",
@@ -19,6 +19,13 @@
       "status": "ok",
       "stdout": "Generated reader page repair complete: 0 files.\n",
       "stderr": ""
+    },
+    {
+      "type": "homepage-compatibility-markers",
+      "inserted": [
+        "Power Conclusions",
+        "Evidence Hunter"
+      ]
     },
     {
       "type": "deploy-health-json",

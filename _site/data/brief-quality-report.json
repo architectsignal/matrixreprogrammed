@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T06:13:04.956Z",
+  "updated": "2026-07-09T07:11:37.871Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
@@ -144,8 +144,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
       "score": 100,
       "level": "elite priority",
       "source_strength": 50,
@@ -154,22 +154,12 @@
       "reader_friendliness": 85
     },
     {
-      "id": "25-365",
-      "name": "25-365",
-      "score": 97,
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "score": 100,
       "level": "elite priority",
       "source_strength": 50,
-      "relationship_depth": 60,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "supreme-court-of-the-united-states",
-      "name": "Supreme Court of the United States",
-      "score": 97,
-      "level": "elite priority",
-      "source_strength": 50,
-      "relationship_depth": 60,
+      "relationship_depth": 80,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },
@@ -204,6 +194,16 @@
       "reader_friendliness": 85
     },
     {
+      "id": "2021-00294",
+      "name": "2021-00294",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "2024-07773",
       "name": "2024-07773",
       "score": 67,
@@ -234,6 +234,16 @@
       "reader_friendliness": 85
     },
     {
+      "id": "a170747m",
+      "name": "A170747M",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "ac48383",
       "name": "AC48383",
       "score": 67,
@@ -244,8 +254,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "id": "biddle-v-biddle",
+      "name": "Biddle v. Biddle",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -254,8 +264,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "biddle-v-biddle",
-      "name": "Biddle v. Biddle",
+      "id": "california-court-of-appeal",
+      "name": "California Court of Appeal",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -364,28 +374,28 @@
       "reader_friendliness": 85
     },
     {
+      "id": "people-v-brim",
+      "name": "People v. Brim",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "sawas-v-elzanaty",
+      "name": "Sawas v. Elzanaty",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
       "name": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "trump-v-barbara",
-      "name": "Trump v. Barbara",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "trump-v-barbara-revisions-7-01-26",
-      "name": "Trump v. Barbara Revisions: 7/01/26",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,

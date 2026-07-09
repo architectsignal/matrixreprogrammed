@@ -48,19 +48,9 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-08T06:12:47.711Z
+Updated: 2026-07-09T07:11:16.877Z
 Items: 12
 
-- 2026-07-03 — Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
-  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-30 — ICE biometrics underpin broader surveillance network, report argues - Biometric Update
-  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
   - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
   - Evidence: Seven-day public-record lead
@@ -80,16 +70,6 @@ Items: 12
   - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-30 — AWS is investing billions to put AI into production for the public sector - About Amazon
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-29 — MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
-  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-17 — Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
@@ -111,6 +91,26 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
+  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-25 — Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent
+  - Source: https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -129,18 +129,18 @@ Items: 12
 - Source route: claim classifier — claim-classifier.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- Google News / control structure: Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id — https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
-- Google News / control structure: ICE biometrics underpin broader surveillance network, report argues - Biometric Update — https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
 - Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
 - Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
 - Google News / control structure: South Africa boosts Smart ID adoption through expanded bank network - Biometric Update — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
-- Google News / war machine: AWS is investing billions to put AI into production for the public sector - About Amazon — https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-- Google News / declassified files: MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive — https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
 - Google News / crime state overlap: Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP — https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
 - Google News / Epstein timeline and files: Democrats to call on Vance to testify to House committee over Epstein files - The Guardian — https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells US House ‘I have never victimized anyone’ in Epstein testimony - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNaWpGR1luRUZpVHdCYzlYTEJWZVpVSFhBUzlLdnFIREtQRUZOc1ZTQndnem12cE43elNxeGpIOTFWdk5fQkpfRmktTnczZFNYN0o4X0lCb0NKdmdFcnRRZUxsRko3bmtRNDBhQk4yWWlabnE5akxmS2ZaOXAtanF5eFpuWXBuRi1JY2ZkcA?oc=5
 - Google News / Epstein timeline and files: Bill Gates to testify on Epstein relationship Wednesday - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxPczZUcGdUVGRLUDlwdjQyTGN5V3drNTZyTE01SXdfb3dHWEpqZWwtbkJtV0Vjakh6aGNBQ0w5Yng0b3hzUGNJMFQ4NlFEVlZaTnpOSXR1RU80OVBCcy0weXBFNnNnOU8xeUtYUWpKQ2d3dGVjeUxYejduYTFJRFk4N1Z6SFQxdGxadkpTWHdXdFF3WFdK0gGaAUFVX3lxTE96aHg1c21EWjhlazd5Wmlpa1RERkw1c3B0RG9DSEZISE9IQ0FGOWlCR0RaLUwyMDE3U0NidEx0TFljclN0QUI5OE00cE85bDZxVnp0NVRJV2dyYTRMYjM1UU0ybkFJcTQ0LWFabVJOYVp5T201QW0tVDFOYjhNdWdKV2JGQjVBVFN0Q3Y4WFRyWUVteUFTTnlQQXc?oc=5
+- Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
+- Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+- Google News / crime state overlap: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal — https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5
+- Google News / Epstein timeline and files: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent — https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
 
 ## Book Routes
 

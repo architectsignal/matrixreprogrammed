@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-08T06:13:09.211Z
+Generated: 2026-07-09T07:11:41.546Z
 
 ## Official Boundary
 
@@ -59,6 +59,26 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 
 DOJ declines to turn over additional Epstein files, says redactions were appropriate ABC News - Breaking News, Latest News and Videos
 
+### EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
+- Type: survival-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About AOL.com
+
+### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
+
 ### Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
 - Type: related-claim-traffic
 - Status: unverified-claim
@@ -69,15 +89,15 @@ DOJ declines to turn over additional Epstein files, says redactions were appropr
 
 Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
 
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 5
+### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+- Type: related-claim-traffic
+- Status: public-record-relevance
+- Evidence level: 7
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com
 
 ### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
 - Type: sighting-claim
@@ -89,22 +109,12 @@ Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
 
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 
-### Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
-- Type: debunk/fake-media-risk
+### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+- Type: sighting-claim
 - Status: unverified-claim
-- Evidence level: 3
+- Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
+- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources ABC News - Breaking News, Latest News and Videos
-
-### Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
-- Type: debunk/fake-media-risk
-- Status: unverified-claim
-- Evidence level: 4
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
-
-Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI
+Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo

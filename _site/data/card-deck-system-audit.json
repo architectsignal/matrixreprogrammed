@@ -1,0 +1,22 @@
+{
+  "title": "Card Deck System Audit",
+  "summary": {
+    "ok": true,
+    "updated": "2026-07-09T07:11:52.307Z",
+    "expectedDecks": 9,
+    "manifestDecks": 9,
+    "manifestCards": 468,
+    "feedDecks": 9,
+    "feedCards": 468,
+    "highIssues": 0,
+    "reviewIssues": 1
+  },
+  "issues": [
+    {
+      "severity": "review",
+      "deck": "institutions",
+      "card": "bill-and-melinda-gates-foundation",
+      "note": "Missing exact card in intelligence feed"
+    }
+  ]
+}

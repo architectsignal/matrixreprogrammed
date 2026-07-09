@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T07:11:53.906Z",
+  "boundary": "Appearance in an Epstein-related public file is a research lead, not proof of wrongdoing. This system separates documented fact, sourced analysis, reasonable inference, speculation, unsupported claims, and missing records. No person, company, institution, flight, address, meeting, email, phone number, or association should be treated as proof of serious conduct unless supported by court records, sworn evidence, official findings, judgments, or other reliable public records.",
+  "documentTypes": [
+    "flight log",
+    "address book",
+    "phone book",
+    "calendar",
+    "email",
+    "court filing",
+    "deposition",
+    "transcript",
+    "exhibit",
+    "official record",
+    "settlement document",
+    "judgment",
+    "civil complaint",
+    "financial record",
+    "property record",
+    "company record",
+    "press report",
+    "official release",
+    "archive item",
+    "unclear / needs review"
+  ],
+  "files": [
+    {
+      "id": "ep-doc-001",
+      "title": "System placeholder — add verified public file",
+      "documentType": "official release",
+      "sourceUrl": "",
+      "releaseSource": "source pending",
+      "dateAdded": "2026-07-09T07:11:53.906Z",
+      "documentDate": "unknown",
+      "pageCount": null,
+      "ocrStatus": "not_started",
+      "entitiesExtracted": [],
+      "evidenceLevel": 0,
+      "reviewStatus": "pending_review",
+      "confidence": "watch",
+      "whatItProves": "Nothing beyond the system being ready for a verified source.",
+      "whatItSuggests": "Add official public files before producing entity results.",
+      "whatItDoesNotProve": "It proves no claim about any person, company, institution, event, journey, address, or relationship.",
+      "missingRecords": [
+        "official source URL",
+        "document metadata",
+        "OCR verification"
+      ],
+      "relatedCards": [],
+      "relatedConclusions": [],
+      "reviewerNotes": "Seed entry."
+    }
+  ]
+}

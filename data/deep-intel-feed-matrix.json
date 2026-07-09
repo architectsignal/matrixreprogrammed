@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-08T06:40:35.932Z",
+  "updated": "2026-07-09T07:11:52.431Z",
   "title": "Deep Intel Feed Matrix",
   "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
   "lanes": [
@@ -394,17 +394,8 @@
       ]
     },
     {
-      "title": "25-365 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-365.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
-      "title": "Supreme Court of the United States — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-the-united-states.html",
+      "title": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "source": "missing record",
       "score": 85,
       "tags": [
@@ -448,6 +439,15 @@
       ]
     },
     {
+      "title": "2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2021-00294.html",
+      "source": "missing record",
+      "score": 85,
+      "tags": [
+        "record gap"
+      ]
+    },
+    {
       "title": "2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/2024-07773.html",
       "source": "missing record",
@@ -475,8 +475,8 @@
       ]
     },
     {
-      "title": "AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/ac48383.html",
+      "title": "A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/a170747m.html",
       "source": "missing record",
       "score": 85,
       "tags": [
@@ -484,8 +484,8 @@
       ]
     },
     {
-      "title": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "title": "AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/ac48383.html",
       "source": "missing record",
       "score": 85,
       "tags": [
@@ -538,7 +538,16 @@
       ]
     },
     {
-      "title": "James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS",
+      "title": "EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
+      "title": "Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -556,7 +565,7 @@
       ]
     },
     {
-      "title": "Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo",
+      "title": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -571,6 +580,42 @@
       "score": 72,
       "tags": [
         "epstein-files"
+      ]
+    },
+    {
+      "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
+      "title": "Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
+      "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
+      "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
       ]
     },
     {
@@ -648,7 +693,7 @@
   ],
   "brainInjection": {
     "layer": "evidence-and-records",
-    "nodeCount": 56
+    "nodeCount": 61
   },
   "missionPriorityIndex": true
 }

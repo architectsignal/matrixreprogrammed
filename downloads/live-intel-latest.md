@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-08T06:40:03.196Z
+Updated: 2026-07-09T07:11:16.877Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -36,12 +36,20 @@ Updated: 2026-07-08T06:40:03.196Z
   - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-01 — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
-  - Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
+- 2026-07-08 — EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
+  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
-  - Short title: James Comer Says Oversight Will Hold Public Hearings on Epstein - News o
-  - Longform title: Epstein Files, Timeline And Court Records — James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NO
+  - Video hook: New public-record signal: EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
+  - Short title: EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspirac
+  - Longform title: Epstein Files, Timeline And Court Records — EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-09 — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+  - Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+  - Short title: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's p
+  - Longform title: Epstein Files, Timeline And Court Records — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
@@ -52,12 +60,12 @@ Updated: 2026-07-08T06:40:03.196Z
   - Longform title: Epstein Files, Timeline And Court Records — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- 2026-07-08 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Video hook: New public-record signal: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+  - Short title: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resu
+  - Longform title: Epstein Files, Timeline And Court Records — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Mill
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
@@ -67,6 +75,38 @@ Updated: 2026-07-08T06:40:03.196Z
   - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
   - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
+  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
+  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
+  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
+  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
+  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
+  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
+  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
+  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
+  - Source: https://www.who.int/health-topics/who-pandemic-agreement
+  - Evidence: Official WHO treaty/implementation-process lane
+  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
+  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
+  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
+  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
   - Offer: offer-starter-library.html
 - 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
   - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5

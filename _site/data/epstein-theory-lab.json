@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T07:11:53.906Z",
+  "title": "Epstein Theory Lab",
+  "boundary": "The Theory Lab is for hypothesis mapping only. It is not evidence, not accusation, not proof of wrongdoing, and not a substitute for court records or verified sources. The system keeps theories separate from the evidence ledger.",
+  "rules": [
+    "Every theory must be labelled speculation unless supported by evidence levels 4 to 5.",
+    "No person may be labelled as having done anything serious without court-confirmed evidence.",
+    "Theory cards must include what would support and what would falsify the theory.",
+    "Theory cards cannot update dossiers as fact unless manually promoted after source review."
+  ],
+  "lanes": [
+    "money route hypothesis",
+    "jurisdiction hypothesis",
+    "institutional failure hypothesis",
+    "media/narrative hypothesis",
+    "missing-record hypothesis",
+    "identity-ambiguity hypothesis",
+    "court-record hypothesis",
+    "document pattern hypothesis",
+    "security-reference hypothesis — legal-sensitive"
+  ],
+  "hypotheses": [
+    {
+      "id": "ep-theory-001",
+      "title": "Missing-record pressure point",
+      "lane": "missing-record hypothesis",
+      "hypothesis": "If a source route has many mentions but no original exhibit or surrounding pages, the correct action is to prioritise missing records rather than strengthen the claim.",
+      "whyItInterestsReaders": "It gives researchers a clear next step without overstating the evidence.",
+      "evidenceUsed": [
+        "system placeholder queues"
+      ],
+      "evidenceLevel": 0,
+      "confidence": "watch",
+      "whatWouldSupportIt": [
+        "official source URL",
+        "full exhibit with surrounding pages",
+        "court docket reference"
+      ],
+      "whatWouldFalsifyIt": [
+        "complete source record showing no relevant context",
+        "identity mismatch",
+        "duplicate or false document"
+      ],
+      "whatThisDoesNotProve": "It proves no wrongdoing and names no person.",
+      "riskLevel": "low",
+      "status": "published_as_speculation"
+    }
+  ]
+}

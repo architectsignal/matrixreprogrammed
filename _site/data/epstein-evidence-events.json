@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T07:11:53.906Z",
+  "boundary": "Appearance in an Epstein-related public file is a research lead, not proof of wrongdoing. This system separates documented fact, sourced analysis, reasonable inference, speculation, unsupported claims, and missing records. No person, company, institution, flight, address, meeting, email, phone number, or association should be treated as proof of serious conduct unless supported by court records, sworn evidence, official findings, judgments, or other reliable public records.",
+  "evidenceLevels": [
+    {
+      "level": 0,
+      "label": "Unverified mention",
+      "meaning": "Text appears but has not been verified or contextualised."
+    },
+    {
+      "level": 1,
+      "label": "Document appearance",
+      "meaning": "The item appears in a released or submitted document."
+    },
+    {
+      "level": 2,
+      "label": "Public-record match",
+      "meaning": "The item can be matched to a public person, company, institution, property, case, date, address, or official record."
+    },
+    {
+      "level": 3,
+      "label": "Repeated public-record connection",
+      "meaning": "The item appears across multiple records, while meaning remains limited to the records."
+    },
+    {
+      "level": 4,
+      "label": "Court-linked evidence",
+      "meaning": "The item is connected to court filings, testimony, sworn material, official exhibits, transcripts, pleas, judgments, or verified legal records."
+    },
+    {
+      "level": 5,
+      "label": "Official finding / legal conclusion",
+      "meaning": "The item is connected to an official finding, settlement, regulator finding, court judgment, or legally established fact."
+    }
+  ],
+  "events": []
+}

@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 429
+Scanned pages: 461
 Weak pages: 10
 
 ## Weakest Pages
@@ -16,6 +16,7 @@ Weak pages: 10
 - 68/100 — subject-index.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — subject-trust-evidence-method.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — tracker-dashboard.html: Missing evidence route; Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route
+- 76/100 — deploy-health.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i
 - 76/100 — network-search.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — subject-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
@@ -32,7 +33,7 @@ Weak pages: 10
 - 84/100 — authority-war-machine.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — big-three-asset-managers.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — controlled-opposition-profile.html: Visible scaffold/internal copy: /Reader path/i; Thin copy: 216 visible words
+- 84/100 — card-artwork-queue.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — deploy-status.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — distribution-articles.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
@@ -50,7 +51,6 @@ Weak pages: 10
 - 84/100 — evidence-vault.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — feed-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
-- 84/100 — institution-profile.html: Visible scaffold/internal copy: /Reader path/i; Thin copy: 209 visible words
 - 84/100 — news.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i

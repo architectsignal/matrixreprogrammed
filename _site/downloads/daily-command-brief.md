@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-08T06:13:04.956Z
+Updated: 2026-07-09T07:11:37.871Z
 
 ## Top Contractor Signals
 
@@ -28,18 +28,19 @@ Updated: 2026-07-08T06:13:04.956Z
 - Interior Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - People's Republic of Bangladesh: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Transportation Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 25-365: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Supreme Court of the United States: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - National Aeronautics and Space Administration: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Federal Procurement Policy Office: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - General Services Administration: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2021-00294: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2024-07773: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 25-113: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 25-581: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- A170747M: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AC48383: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Biddle v. Biddle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Chattogram Water Supply and Sewerage Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Connecticut Appellate Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -50,7 +51,6 @@ Updated: 2026-07-08T06:13:04.956Z
 - Matter of Pagliughi: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF): Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Ministry of Health and Family Welfare: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- People v. Brim: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Sawas v. Elzanaty: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - The New York and Presbyterian Hospital v. New York State Nurses Association: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Trump v. Barbara: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Trump v. Barbara Revisions: 7/01/26: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

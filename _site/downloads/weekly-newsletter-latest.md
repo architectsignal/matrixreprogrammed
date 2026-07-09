@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-08T06:13:09.771Z
+Generated: 2026-07-09T07:11:42.098Z
 
 ## Open Routes
 
@@ -21,93 +21,63 @@ DOJ declines to turn over additional Epstein files, says redactions were appropr
 - Date: 2026-07-07T16:37:31.000Z
 - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
 DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit The New Republic
-### James Comer Says Oversight Will Hold Public Hearings on Epstein - News of the United States - NOTUS
+### EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-01T15:38:19.000Z
-- Source: https://news.google.com/rss/articles/CBMijgFBVV95cUxPckNuYXhVdVJQUVhtd0NqWC1qOHF1bjVOTC1kb0I5bFJmVi1FWXhpbzktaXlhdXZBdFJpSl9vYk5sR096Mkd2b3F3Q2ZpYnVmbVMydDZkS3lNLWVJT2toMHZ4RFF3am96ek9WQVNQU0F3ZTI0VVN0RVdZZ1BJXzhvSTF4ejBaWHJ5X1llZENB?oc=5
-James Comer Says Oversight Will Hold Public Hearings on Epstein News of the United States - NOTUS
+- Date: 2026-07-08T20:07:31.000Z
+- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
+EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About AOL.com
+### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-09T06:33:00.000Z
+- Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
+Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
 ### Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-06T09:00:00.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
 Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T20:13:13.000Z
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+- Date: 2026-07-08T17:52:57.000Z
+- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
+EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com
 ### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-07T21:24:42.000Z
 - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
-### Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki - Qoo10.co.id
-- Lane: Google News / control structure
-- Date: 2026-07-03T22:07:45.000Z
-- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWWxCZGt4dVlaRWlHWDVxQm5ZcXVIVGF3Qkh5aXBtZm5yMWowT0tGYUVEM0gyemhabFEtdHVWUTR2V2pwSVJzYmp3UlBfQmcwcTBsYTlob2l1a0RtWjAzazBFVHJFVUFaX1ljSkNwdDh3VkFqdmE4UWtxN1RrTnZCRUNCV0lhWGc10gGQAUFVX3lxTE8zMmo2VlEySUtRRGd1S2pwZ25Ja2lYY2JIb3kycEJrbUpKQzlaMXZacFp6dEhiQjVwdy1KUDEtdGM1a1NaRExXTzBGajdxTmhWMld2eEs0bWt6ZFFmaEYyalBhSEpoX3dVZmYyVWt6V2x5TkZpd256R3lNT0RXTndVVXhBU0h1dm9FZFBuTWZnUA?oc=5
-Finland Turns To Nokia For An Anti-Drone Border Network, A New Digital Shield For Helsinki Qoo10.co.id
-### Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies - Times Herald Online
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-07-02T01:32:05.000Z
-- Source: https://news.google.com/rss/articles/CBMifkFVX3lxTE1pN1EwVEdFVC0yclI1YXVUalNGaXVWWkJJUjUtRWdwcUJndkNJazdORFk2bmxja0E3X1E3Q2pzX2paV195dzQ5NkVzLUxUZXRUWGg4VGFnVUhTdi1ra2RTTWNzVzhwRVg0b0JBWVhzLWhBbjJPWV81OFRFVmhjdw?oc=5
-Democratic congressman asks the CFPB to investigate ‘rent now, pay later’ companies Times Herald Online
-### Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation - The Jerusalem Post
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-07-02T00:21:07.000Z
-- Source: https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xZnJNZ1lrdV9DOUNPMnotdC1LTkxEWnJTMGMwSVNkcmRvamczXzZFaXA4ZTRkQ3d0dVVfcmpGZEdPRjl4cW95TXZSSU40ZW5KNHJ3TVRVVzlXT3RqeEhxYmFmTkw?oc=5
-Alleged Epstein victim who accused Donald Trump of sexual assault fears retaliation The Jerusalem Post
+### ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
+- Lane: CBDC / Digital Euro / Sovereign Payment Rails
+- Date: 2026-07-08T00:00:00.000Z
+- Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
+### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-07T20:13:13.000Z
+- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+- Lane: AI Governance / EU AI Act / Cybersecurity
+- Date: 2026-07-07T00:00:00.000Z
+- Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.
+### WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
+- Lane: WHO Pandemic Agreement / PABS / Global Health Governance
+- Date: 2026-07-06T00:00:00.000Z
+- Source: https://www.who.int/health-topics/who-pandemic-agreement
+WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.
+### ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
+- Lane: Crime State Overlap
+- Date: 2026-06-30T22:24:00.000Z
+- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
+‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post
 ### Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-07-01T04:51:33.000Z
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-06-30T17:28:33.000Z
 - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
 Former Clinton aide appears before House panel in Epstein investigation Scripps News
-### What the Epstein files say about former Bill Clinton aide Doug Band - NewsNation
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T20:41:52.000Z
-- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQdHdqUWp6QjVkS29Cc3RuRUNteHY0c2t0ZUs2LXFmemtWV3VER3dPdy1teFM4cVNPeWF5SW1ZazI1R0hmUnV2RzNSMGxZY3A2a2FQOWY1QjFETTR0WFdwVEd6Q1Q3aFhMNVBXVXV1TmVZR0pYSVNFRDdRLW9HcF9fald6OUtpN2x3OHU5akFldGNsY01B0gGaAUFVX3lxTE5rcHBnSzdVZmRfWWs1Y0ZhdUxpVmNaX1Q1NElZWFltUXc3MmR5VVhFVVFyOVA1Vi01SFgwM2hFMWtzZDlXREI2cXRVOTZCSXZOQXpCbkRsUHloNjFoMXhPSUpqcjFleUZSeGE1WFBUTl9jbFFEb04yaUxJR0lYZ2pteE0xMldlYml0OXYxR0pwNlpRYzdKWVVxbVE?oc=5
-What the Epstein files say about former Bill Clinton aide Doug Band NewsNation
-### Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources - ABC News - Breaking News, Latest News and Videos
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T19:12:53.000Z
-- Source: https://news.google.com/rss/articles/CBMinAFBVV95cUxQT2lDOGpGbjF1c05iNnFlYkJyMTVnZ1lGVkRHYW5PekgwdlpQaWRrY25UWk55d3laTUxSTzkwZl9SVGdETEk5eTYzak9IdkxXUnVVUlNNeEdzRno4Y2xfcmIyeEdzSlZoMWxrMVpJV2YwelZXZV9IYVJJb05EWVRDaF9RZEt5ZmFSVVhydkxQM0I2aFNheW5JMUtrNXbSAaIBQVVfeXFMUHRPbnVOVFVCLXpoNk1ZMlZNTTl5d1laNnRucTlhTklHLW00YnJKcnB4TUREVWVXQjFFdkxsQlhPN3ExTllZVUoyczFZZVdtUDJvZ3BIZDJDVDh5azRDMnRtbWY5RV9JcXdISGVFQlZaVTF3cWdtM0tFVzJGOEo4Qnk2RWpHRjJtTHdIb1liMnRybmRabVM1MXRsUHk2X1dyOWJ3?oc=5
-Doug Band, former aide to Bill Clinton, repeatedly tells panel he cannot recall interactions with Epstein: Sources ABC News - Breaking News, Latest News and Videos
-### ICE biometrics underpin broader surveillance network, report argues - Biometric Update
-- Lane: Google News / control structure
-- Date: 2026-06-30T19:04:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2lRWTZxUjZLLXJQTUFkY3ZIZEEtenN1c2pUXzQxQW5GSy1pbjRzNmtpQ0ZiSUlHSW9DN24wVkhjZEx4V2E0SE84UEdPMnJJQXhkRDlMYklWQWtRUGN2RGgtWk45bl8yNElYSFRJX0Z5VHRLbmt1VExIMGdSZHNaaTdsYjFCeG1jOURiNVo4SUpIaVlxWmdtZ0RkQnowa1h6UnFobkV6akw?oc=5
-ICE biometrics underpin broader surveillance network, report argues Biometric Update
-### AWS is investing billions to put AI into production for the public sector - About Amazon
-- Lane: Google News / war machine
-- Date: 2026-06-30T17:48:21.000Z
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOS3BmcDBmeWpWYjkybGlJR2drYXNHTW9wblFSVW1WSmozSjJpQU96S1l3cVBJeUJYS25fVTBXY2NhSlFDQjdWcHl4aXBxRURyUTZ2QldZYlpHdlNjUVF0aUtTRXhubThYWjRuVXZETmZHMDI3WlEwUXpEa0xMOVEwWG9NaW0?oc=5
-AWS is investing billions to put AI into production for the public sector About Amazon
-### Longtime Clinton aide walks back claim former president visited Epstein island, sources say - KEZI
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T16:53:00.000Z
-- Source: https://news.google.com/rss/articles/CBMihgJBVV95cUxOaXRnVlY2UUVnWU9fTnZ3WFN0YU9VbUR2MkxydU1GUDJMSXZwbFhXVERMelF2eDVsZ2JrWVpOenZ0VXllWTdKbjBfMWlScWxKc1FIa2VQY0w3dDRQbldWUzJpc0xZUzJWRVQzSTBSai03cVFBNVc0dXprNUJHN0JvY3AxY2tXZEFCMkNXdU1YX29ENV9zdUltRDVYQ2xSZ1Z6TWNjVXhIaEhmR2hCQUNLcXBCc2RvN2dCQ1Z2X2tkYi1oei0tVUNWcVFNandmOVgzLXYzanpxdXIzWUsxSUd2RXRUUGE4ZjVHamJXWWZXUjVMa09ISjQtR3JqcHVEX25PRDA1b0hR?oc=5
-Longtime Clinton aide walks back claim former president visited Epstein island, sources say KEZI
-### Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein - Rural Radio Network
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T15:40:24.000Z
-- Source: https://news.google.com/rss/articles/CBMi5AFBVV95cUxQREUzNjdrQnRvZ2trNWFxNTVwQkdXWmJ5djRBdU1lUWdPUTRrek9RUFEwN2NFMnhwU1A3OU5HVjN5c19qR2tJd1J4VTRUR2hQWDZKMWR5Nzh6czNETGlfQTVXeXZmekN4QXd3ZVFMWUlKUTJqaE1GaFlTbUU1WHktZE1DWmlUMFNFMlRDV25qZjFTUS1ORGR3Tm56eVN5NC12bFdoS0VCLU1YTGoxcDRxMGtXRnhoeWtfYXY0bU9rM3ZyTnp3dEhZd3FkRHZlamtULThPQXRrNGNSWGpUNHp2WkI1aFo?oc=5
-Doug Band, former aide to Bill Clinton, to be questioned about Clinton’s interactions with Epstein Rural Radio Network
 ### Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
-- Lane: Google News / Epstein timeline and files
+- Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-06-30T15:24:00.000Z
 - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
 Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says The Guardian
-### Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties - Fox News
-- Lane: Google News / Epstein timeline and files
-- Date: 2026-06-30T10:00:15.000Z
-- Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEtnMXk2X2JYblo5V3pxZmpCeGY2OFF1WWRaNGJQX0ZZcHJFUHNkdDVIWHlQemF3SGJBUnNkQXhHOTIzeUdKaEEwNUtfMzY3amJXSWpYMHowclM3bk9QVVUtSGRzeFozUXlIWnRCVVU3UmFkUTNhcm5nU1lJQmJNZW9aRDFEX1BKZU81eHpJQWVMM3p4RUJDblZZYlhidVFzc3RkX0EwXzM5SkQxTzlwNngydlLSAboBQVVfeXFMTXozYmZKa1l4M3RiVWlTTnY2UzZYNWFRbkJfaHYyNTJCVUd1TnhzVWFqdV9xOTFVTE9VSngwSkxHSXdnOXl0N29JRE5CS1NaM2c2UkFqNnpLZzdRV2VlbkNETlZMTkgteEw5WWx5bTZWdlhFTWpFV0g1QTdldmlDLUFqU2VEbm5VaWtxMmFTNGROZTd5Q2FEU2hCRTRaMndxdHFpa0tpSzBwM0RIbTc4QU5zM0tHQTZYelJ3?oc=5
-Clinton confidant who called Maxwell his 'lover' grilled by Congress over Epstein ties Fox News
-### MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories - National Security Archive
-- Lane: Google News / declassified files
-- Date: 2026-06-29T12:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRTc1S2ZHSHVjSnR0N0Z1WnAta3JTSHE1QXVDZXFvZTJreFBqRE5RbzdRSXh1QktQNzNnd1NjWUJiVzFSZU5vZGppZVhuaW4wOFRUMHlCamR2N0NnZFRmS0xOTW9BTFhqdWtGNkhEYXhRTmQteUhpaFBidmJyNHllclk0T2pjaW5hd1JKVTlmZlA0aUtvM3RGcGQxLWRpVm5yLUdDSlBpMnFDQXNiSUQtTktPdURRNGxBaHRwdV9YV2cxYUk?oc=5
-MKUltra: Declassification Task Force Should Focus on Real Secrets, Not Conspiracy Theories National Security Archive
-### Israel cyber chief says Iranian cyber incidents surged in June 2026
-- Lane: War Machine / Cyber Conflict
-- Date: 2026-06-29T06:00:00.000Z
-- Source: https://www.reuters.com/world/middle-east/iran-cyberattacks-israel-surged-2026-israeli-cyber-chief-says-2026-06-29/
-Israel's cyber chief reportedly said hostile cyber incidents rose sharply in June 2026 amid conflict conditions, while critical infrastructure had not been compromised.

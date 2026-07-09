@@ -3,15 +3,233 @@
   "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
   "sourceRulesUpdated": "2026-06-24",
   "sourceRuleCount": 8,
-  "scannedPages": 2195,
-  "flaggedPages": 1293,
-  "highPriorityPages": 689,
-  "mediumPriorityPages": 599,
-  "pagesWithMissingRules": 81,
+  "scannedPages": 2236,
+  "flaggedPages": 1319,
+  "highPriorityPages": 694,
+  "mediumPriorityPages": 620,
+  "pagesWithMissingRules": 89,
   "autoUpdateEligibleFigures": 3,
-  "manualReviewFigures": 62,
-  "missingRuleFigures": 221,
+  "manualReviewFigures": 73,
+  "missingRuleFigures": 258,
   "pages": [
+    {
+      "file": "live-intel.html",
+      "priority": "High",
+      "figureCount": 24,
+      "missingRuleCount": 23,
+      "autoAllowedCount": 1,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence Level Seven-day public-record lead A fres",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com &gt; Short: EXCLUSIVE: Chilling Jeffrey Epstein",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com 2/ Do not treat a headline as proof. First class",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence Level News/source",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "pe, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds &gt; Short: Crime-State Overlap Update:",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "records: Feds &gt; Short: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New &gt; Longform: What This Public-Record Update Reveals About Crime State Overlap: ‘S",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "ublic-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp Open Source Evidence Route Video Hook Free Brief Offer Store Social thre",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "read / caption copy 1/ New Crime State Overlap update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds 2/ Treat the source as the starting poin",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence Level Seven-day public-record lead A fres",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com &gt; Short: EXCLUSIVE: Chilling Jeffrey Epstein",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com 2/ Do not treat a headline as proof. First class",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence Level News/source",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "pe, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds &gt; Short: Crime-State Overlap Update:",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "records: Feds &gt; Short: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New &gt; Longform: What This Public-Record Update Reveals About Crime State Overlap: ‘S",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "ublic-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp Open Source Evidence Route Video Hook Free Brief Offer Store Social thre",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "read / caption copy 1/ New Crime State Overlap update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds 2/ Treat the source as the starting poin",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [
+        {
+          "value": "2026. Source",
+          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second. &gt; Short: ECB says digital euro aims for potential first issuance during 2029 if E &gt",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "5 Source",
+          "context": "WER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5 Source Lanes Source lane Epstein Files, Timeline And Court Records Public-record updates, court filings, document re",
+          "classification": "auto-update-allowed",
+          "updatePolicy": "auto-update-allowed",
+          "matchedRules": [
+            {
+              "id": "live-intel-feed-items",
+              "label": "Live Intel feed-derived updates",
+              "updatePolicy": "auto-update-allowed",
+              "sourceType": "rss-feed-lane",
+              "reviewNote": "Feed-derived counts may update weekly through the Live Intel Action because they come from the generated data object, not hand-written claims."
+            }
+          ]
+        },
+        {
+          "value": "2026. Source",
+          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second. &gt; Short: ECB says digital euro aims for potential first issuance during 2029 if E &gt",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "5 Source",
+          "context": "WER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5 Source Cards Open the source card before sharing a strong claim: source, evidence class, what the record supports, w",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-07-09T07:11:16.877Z &gt; Source lanes: 5 &gt; Items available: 14 &gt; Evidence route: evidence-vault.html &g"
+        },
+        {
+          "value": "2026",
+          "context": "ideo hook, free brief, offer, and book path for deeper context. Latest Actionable Updates 2026-07-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files DOJ declines to"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-07 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files DOJ Tries to Hid"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-08 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims EXCLUSIVE"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-09 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Never-bef"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-06 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Epstein m"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
     {
       "file": "_site/machine-digest.html",
       "priority": "High",
@@ -188,8 +406,8 @@
     {
       "file": "machine-digest.html",
       "priority": "High",
-      "figureCount": 20,
-      "missingRuleCount": 20,
+      "figureCount": 19,
+      "missingRuleCount": 19,
       "autoAllowedCount": 0,
       "manualReviewCount": 0,
       "staticCount": 0,
@@ -199,13 +417,6 @@
         {
           "value": "53 Lane",
           "context": "ion: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53 Lane: federal-register-policy Source: open record route documented association · rule_or_notice Regulation for Fed",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "26 Lane",
-          "context": ": open record route charged / sued · court_record_signal Trump v. Barbara Revisions: 7/01/26 Lane: courtlistener-court-records Source: open record route charged / sued · court_record_signal Trump v. Barbara",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -240,21 +451,14 @@
         },
         {
           "value": "2 Lanes",
-          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Management and Budget Office Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Supreme Court of the United States Mentions: 2 Lanes: courtlisten",
+          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Management and Budget Office Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "2 Lanes",
-          "context": ": federal-register-policy ENTITY OBSERVATION Supreme Court of the United States Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION 25-365 Mentions: 2 Lanes: courtlistener-court-records ENTITY",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "2 Lanes",
-          "context": "States Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION 25-365 Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Homeland Security Department Mentions: 1 Lanes: federal-regis",
+          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Homeland Security Department Mentions: 1 Lanes: federal-regis",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -324,14 +528,21 @@
         },
         {
           "value": "1 Lanes",
-          "context": "1 Lanes: federal-register-policy ENTITY OBSERVATION Veterans Affairs Department Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Energy Department Mentions: 1 Lanes: federal-register-policy Figu",
+          "context": "1 Lanes: federal-register-policy ENTITY OBSERVATION Veterans Affairs Department Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Energy Department Mentions: 1 Lanes: federal-register-policy ENTI",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Energy Department Mentions: 1 Lanes: federal-register-policy Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page ar",
+          "context": "Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Energy Department Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Treasury Department Mentions: 1 Lanes: federal-register-policy Fi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "ntions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Treasury Department Mentions: 1 Lanes: federal-register-policy Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page ar",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -340,11 +551,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ne-readable data Machine-readable data Machine-readable data MACHINE DIGEST &gt; updated: 2026-07-08T06:40:04.202Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "ne-readable data Machine-readable data Machine-readable data MACHINE DIGEST &gt; updated: 2026-07-09T07:11:20.122Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ta MACHINE DIGEST &gt; updated: 2026-07-08T06:40:04.202Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 24 &gt; entity observation"
+          "context": "ta MACHINE DIGEST &gt; updated: 2026-07-09T07:11:20.122Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 24 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -359,95 +570,53 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "live-intel.html",
+      "file": "dossier-pack-symbolic-power.html",
       "priority": "High",
-      "figureCount": 14,
+      "figureCount": 13,
       "missingRuleCount": 13,
-      "autoAllowedCount": 1,
+      "autoAllowedCount": 0,
       "manualReviewCount": 0,
       "staticCount": 0,
       "percentages": [],
       "money": [
         {
           "value": "$1",
-          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "context": "k Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence Level News/source",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence: News/source-watc",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence: Seven-day public-record lead Boundary: A",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "$1",
-          "context": "pe, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds &gt; Short: Crime-State Overlap Update:",
+          "context": "m8xQks5eldPT0t3?oc=5 Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post https://news.google.com/",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "$1",
-          "context": "records: Feds &gt; Short: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New &gt; Longform: What This Public-Record Update Reveals About Crime State Overlap: ‘S",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "ublic-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp Open Source Evidence Route Video Hook Free Brief Offer Store Social thre",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "read / caption copy 1/ New Crime State Overlap update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds 2/ Treat the source as the starting poin",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence Level News/source",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "pe, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds &gt; Short: Crime-State Overlap Update:",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "records: Feds &gt; Short: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New &gt; Longform: What This Public-Record Update Reveals About Crime State Overlap: ‘S",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "ublic-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp Open Source Evidence Route Video Hook Free Brief Offer Store Social thre",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "read / caption copy 1/ New Crime State Overlap update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds 2/ Treat the source as the starting poin",
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com https://news.google.com/rss/articles/CBMiggFBVV9",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -455,23 +624,50 @@
       ],
       "crisisFigures": [
         {
-          "value": "5 Source",
-          "context": "TXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5 Source Lanes Source lane Epstein Files, Timeline And Court Records Public-record updates, court filings, document re",
-          "classification": "auto-update-allowed",
-          "updatePolicy": "auto-update-allowed",
-          "matchedRules": [
-            {
-              "id": "live-intel-feed-items",
-              "label": "Live Intel feed-derived updates",
-              "updatePolicy": "auto-update-allowed",
-              "sourceType": "rss-feed-lane",
-              "reviewNote": "Feed-derived counts may update weekly through the Live Intel Action because they come from the generated data object, not hand-written claims."
-            }
-          ]
+          "value": "33 book",
+          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-c",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
         },
         {
-          "value": "5 Source",
-          "context": "WER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5 Source Cards Open the source card before sharing a strong claim: source, evidence class, what the record supports, w",
+          "value": "33 book",
+          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-cards.html Trust route trust editorial standards trust-edito",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book lin",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book link amazon store books amazon-store-books.html Google News /",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "5 Book",
+          "context": "N0EtdzZtdFJzUGliM1JBeXhtY0QzZWJkUnlVaER0VUtHM0I1czI4c1kxc1lkQ2lBV3FHQS0yTUxZOGtzX1RYbA?oc=5 Book Routes Book / Store Route book symbol book-symbol.html Book / Store Route book as above so below book-as-abov",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "s above so below book-as-above-so-below.html Book / Store Route book masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books b",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "33 book",
+          "context": "masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books books.html Book / Store Route amazon store books amazon-store-books.h",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -480,27 +676,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-07-08T06:40:03.196Z &gt; Source lanes: 5 &gt; Items available: 9 &gt; Evidence route: evidence-vault.html &gt"
+          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-29 · Google News / Epstein timeline and files Epstein Files | History, Timeline, Vote, Trump, &amp; Update"
         },
         {
           "value": "2026",
-          "context": "ideo hook, free brief, offer, and book path for deeper context. Latest Actionable Updates 2026-07-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files DOJ declines to"
+          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-07 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files DOJ Tries to Hid"
+          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-01 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files James Comer Says"
+          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-06 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Epstein m"
+          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-29 · Google News / Epstein timeline and files Epstein Files | History, Timeline, Vote, Trump, &amp; Update"
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-07 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Never-Bef"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-26 · Google News / Epstein timeline and files Judge orders DOJ to either unredact more Epstein files or ex"
         }
       ],
       "needsSourceRule": true,
@@ -606,118 +802,6 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "dossier-pack-symbolic-power.html",
-      "priority": "High",
-      "figureCount": 10,
-      "missingRuleCount": 10,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$1",
-          "context": "k Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Evidence: News/source-watc",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "$1",
-          "context": "m8xQks5eldPT0t3?oc=5 Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post https://news.google.com/",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [
-        {
-          "value": "33 book",
-          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-c",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html document link source cards source-cards.html Trust route trust editorial standards trust-edito",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "nk book as above so below book-as-above-so-below.html book link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book lin",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "link book masonic architecture 33 book-masonic-architecture-33.html book link book degree 33 book-degree-33.html book link books books.html book link amazon store books amazon-store-books.html Google News /",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "5 Book",
-          "context": "clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5 Book Routes Book / Store Route book symbol book-symbol.html Book / Store Route book as above so below book-as-abov",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "s above so below book-as-above-so-below.html Book / Store Route book masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books b",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "33 book",
-          "context": "masonic architecture 33 book-masonic-architecture-33.html Book / Store Route book degree 33 book-degree-33.html Book / Store Route books books.html Book / Store Route amazon store books amazon-store-books.h",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "archived source leads, source links, evidence boundaries, and next actions for this pack. 2026-06-29 · Google News / Epstein timeline and files Epstein Files | History, Timeline, Vote, Trump, &amp; Update"
-        },
-        {
-          "value": "2026",
-          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
-        },
-        {
-          "value": "2026",
-          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
-        },
-        {
-          "value": "2026",
-          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
-        },
-        {
-          "value": "2026",
-          "context": "rs to the free brief, offer, book, or Amazon store. Open Source Evidence Route Book Route 2026-06-29 · Google News / Epstein timeline and files Epstein Files | History, Timeline, Vote, Trump, &amp; Update"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-26 · Google News / Epstein timeline and files Judge orders DOJ to either unredact more Epstein files or ex"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
       "file": "palantir-watch.html",
       "priority": "High",
       "figureCount": 10,
@@ -811,6 +895,104 @@
         {
           "value": "2026",
           "context": "iers. Machine-readable data Manual Figures & Sources Figures on this page Checked: 1 July 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "daily-drop.html",
+      "priority": "High",
+      "figureCount": 8,
+      "missingRuleCount": 8,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com What the record proves Seven-day public-record lea",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com What it does not prove Boundary A fresh news or ar",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Seven-day public-record lead Epstein Files, Timeli",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$1",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post News/source-watch item Cri",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [
+        {
+          "value": "12 source",
+          "context": "essional oversight, news bulletins, archives, and video routes stay active. Archive depth 12 source cards The Evidence Vault routes claims through court records, official datasets, archives, regulators, oversi",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-07-09T07:11:40.141Z &gt; Live Intel updated: 2026-07-09T07:11:16.877Z &gt; Items available: 14 &gt; Epstein l"
+        },
+        {
+          "value": "2026",
+          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-07-09T07:11:40.141Z &gt; Live Intel updated: 2026-07-09T07:11:16.877Z &gt; Items available: 14 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/ent"
+        },
+        {
+          "value": "2026",
+          "context": "t Current Epstein-linked updates and source-watch items with visible evidence boundaries. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": true,
@@ -1018,14 +1200,14 @@
         },
         {
           "value": "2 Lanes",
-          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Management and Budget Office Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Supreme Court of the United States Mentions: 2 Lanes: courtlisten",
+          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Management and Budget Office Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "2 Lanes",
-          "context": ": federal-register-policy ENTITY OBSERVATION Supreme Court of the United States Mentions: 2 Lanes: courtlistener-court-records Machine Intelligence Signals Change Detection Engine adds record movement and en",
+          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records Machine Intelligence Signals Change Detection Engine adds record movement and en",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -1034,7 +1216,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-readable data Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-08T06:40:04.173Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
+          "context": "-readable data Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-09T07:11:20.092Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
         },
         {
           "value": "2027",
@@ -1570,10 +1752,10 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "daily-drop.html",
+      "file": "subject-freemasonry-symbol-system.html",
       "priority": "High",
-      "figureCount": 3,
-      "missingRuleCount": 3,
+      "figureCount": 4,
+      "missingRuleCount": 4,
       "autoAllowedCount": 0,
       "manualReviewCount": 0,
       "staticCount": 0,
@@ -1581,52 +1763,135 @@
       "money": [
         {
           "value": "$1",
-          "context": "rime State Overlap · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "context": "Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post News/source-watch item Cri",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Boundary: A news item is a",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
-        }
-      ],
-      "crisisFigures": [
+        },
         {
-          "value": "12 source",
-          "context": "essional oversight, news bulletins, archives, and video routes stay active. Archive depth 12 source cards The Evidence Vault routes claims through court records, official datasets, archives, regulators, oversi",
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         }
       ],
+      "crisisFigures": [],
       "dates": [
         {
           "value": "2026",
-          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-07-08T06:40:24.169Z &gt; Live Intel updated: 2026-07-08T06:40:03.196Z &gt; Items available: 9 &gt; Epstein la"
+          "context": "e, public-record infiltration cases, and speculative narrative. Latest Live-Intel Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
         },
         {
           "value": "2026",
-          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-07-08T06:40:24.169Z &gt; Live Intel updated: 2026-07-08T06:40:03.196Z &gt; Items available: 9 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/enti"
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         },
         {
           "value": "2026",
-          "context": "t Current Epstein-linked updates and source-watch items with visible evidence boundaries. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
         },
         {
           "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
         },
         {
           "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
         },
         {
           "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "subject-trust-evidence-method.html",
+      "priority": "High",
+      "figureCount": 4,
+      "missingRuleCount": 3,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 1,
+      "percentages": [],
+      "money": [
+        {
+          "value": "$1",
+          "context": "e Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "classification": "do-not-auto-update",
+          "updatePolicy": "do-not-auto-update",
+          "matchedRules": [
+            {
+              "id": "static-historical-context",
+              "label": "Static historical publication years and archival dates",
+              "updatePolicy": "do-not-auto-update",
+              "sourceType": "static-context",
+              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+            }
+          ]
+        },
+        {
+          "value": "$1",
+          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Boundary: A news item is a",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ource can start a question, but it cannot carry a strong claim. Latest Live-Intel Matches 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+        },
+        {
+          "value": "2026",
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
+        },
+        {
+          "value": "2026",
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
+        },
+        {
+          "value": "2026",
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
         }
       ],
       "needsSourceRule": true,
@@ -3321,6 +3586,45 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
+      "file": "epstein-sighting-watch.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Status: public-record-relevance Evidence: Level 7",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2019",
+          "context": "Official Boundary The official record treats Jeffrey Epstein as deceased as of August 10, 2019. This watch does not claim he is alive. It tracks internet sightings, lookalike claims, fake-media claims, me"
+        },
+        {
+          "value": "2026",
+          "context": "e. Keep it legal. Submit Claim Figures & Sources Epstein evidence counts Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
       "file": "forum.html",
       "priority": "High",
       "figureCount": 2,
@@ -3411,6 +3715,281 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
+      "file": "optin-black-file-brief.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "optin-dog-architect-initiation.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "optin-full-archive-map.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "optin-intelligence-files-brief.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "optin-trust-evidence-checklist.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
       "file": "subject-dog-architect.html",
       "priority": "High",
       "figureCount": 2,
@@ -3459,14 +4038,14 @@
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
         }
       ],
       "needsSourceRule": true,
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "subject-freemasonry-symbol-system.html",
+      "file": "subject-epstein-black-file.html",
       "priority": "High",
       "figureCount": 2,
       "missingRuleCount": 2,
@@ -3476,15 +4055,15 @@
       "percentages": [],
       "money": [
         {
-          "value": "$1",
-          "context": "Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Boundary: A news item is a",
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -3494,27 +4073,82 @@
       "dates": [
         {
           "value": "2026",
-          "context": "e, public-record infiltration cases, and speculative narrative. Latest Live-Intel Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
+          "context": "ated from court records, official releases, and sourced claims. Latest Live-Intel Matches 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
         },
         {
           "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
         },
         {
           "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         },
         {
           "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "subject-nasa-hidden-architecture.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "dary Separate public-record history from narrative speculation. Latest Live-Intel Matches 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
         }
       ],
       "needsSourceRule": true,
@@ -3523,10 +4157,10 @@
     {
       "file": "dossier-pack-crime-state-overlap.html",
       "priority": "High",
-      "figureCount": 4,
+      "figureCount": 7,
       "missingRuleCount": 1,
       "autoAllowedCount": 0,
-      "manualReviewCount": 3,
+      "manualReviewCount": 6,
       "staticCount": 0,
       "percentages": [],
       "money": [
@@ -3561,8 +4195,53 @@
           ]
         },
         {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence: Seven-day public-record lead Boundary: A",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
           "value": "$1",
           "context": "xRG9VUWJBRW43QQ?oc=5 Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post https://news.google.com/",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com https://news.google.com/rss/articles/CBMiggFBVV9",
           "classification": "manual-review-only",
           "updatePolicy": "manual-review-only",
           "matchedRules": [
@@ -3579,7 +4258,7 @@
       "crisisFigures": [
         {
           "value": "5 Book",
-          "context": "bEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5 Book Routes Book / Store Route book cartels book-cartels.html Book / Store Route book albanian mafia book-albanian",
+          "context": "J5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5 Book Routes Book / Store Route book cartels book-cartels.html Book / Store Route book albanian mafia book-albanian",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -3703,69 +4382,6 @@
         {
           "value": "2026",
           "context": "European Commission AI Act page, last updated 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified The Commission's"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "subject-trust-evidence-method.html",
-      "priority": "High",
-      "figureCount": 2,
-      "missingRuleCount": 1,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 1,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$1",
-          "context": "e Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
-          "classification": "do-not-auto-update",
-          "updatePolicy": "do-not-auto-update",
-          "matchedRules": [
-            {
-              "id": "static-historical-context",
-              "label": "Static historical publication years and archival dates",
-              "updatePolicy": "do-not-auto-update",
-              "sourceType": "static-context",
-              "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
-            }
-          ]
-        },
-        {
-          "value": "$1",
-          "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Boundary: A news item is a",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ource can start a question, but it cannot carry a strong claim. Latest Live-Intel Matches 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
-        },
-        {
-          "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
-        },
-        {
-          "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
-        },
-        {
-          "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
         }
       ],
       "needsSourceRule": true,
@@ -4986,13 +5602,43 @@
     {
       "file": "source-cards.html",
       "priority": "High",
-      "figureCount": 2,
+      "figureCount": 4,
       "missingRuleCount": 0,
       "autoAllowedCount": 0,
-      "manualReviewCount": 2,
+      "manualReviewCount": 4,
       "staticCount": 0,
       "percentages": [],
       "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com What the record supports: This item is fresh enoug",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
         {
           "value": "$1",
           "context": "Book Route 2026-06-30 · Court / oversight record lane ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
@@ -5043,7 +5689,11 @@
         },
         {
           "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-01 · Court finding / conviction lane James Comer Says Oversight Will Hold Public Hearings on Epstein - New"
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-08 · Court finding / conviction lane EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspi"
+        },
+        {
+          "value": "2026",
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-09 · Court finding / conviction lane Never-before-seen footage exposes eerie interiors of Jeffrey Epstein'"
         },
         {
           "value": "2026",
@@ -5051,11 +5701,7 @@
         },
         {
           "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-07 · Court finding / conviction lane Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yah"
-        },
-        {
-          "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-07 · Court finding / conviction lane NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstei"
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-08 · Court finding / conviction lane EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory R"
         }
       ],
       "needsSourceRule": false,
@@ -5064,10 +5710,10 @@
     {
       "file": "subject-crime-state-overlap.html",
       "priority": "High",
-      "figureCount": 2,
+      "figureCount": 4,
       "missingRuleCount": 0,
       "autoAllowedCount": 0,
-      "manualReviewCount": 2,
+      "manualReviewCount": 4,
       "staticCount": 0,
       "percentages": [],
       "money": [
@@ -5089,6 +5735,36 @@
         {
           "value": "$1",
           "context": ", compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post Boundary: A news item is a",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
           "classification": "manual-review-only",
           "updatePolicy": "manual-review-only",
           "matchedRules": [
@@ -5110,7 +5786,11 @@
         },
         {
           "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
+          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         },
         {
           "value": "2026",
@@ -5118,15 +5798,11 @@
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
         },
         {
           "value": "2026",
           "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
         }
       ],
       "needsSourceRule": false,
@@ -5135,16 +5811,16 @@
     {
       "file": "subject-intelligence-network.html",
       "priority": "High",
-      "figureCount": 2,
+      "figureCount": 4,
       "missingRuleCount": 0,
       "autoAllowedCount": 0,
-      "manualReviewCount": 2,
+      "manualReviewCount": 4,
       "staticCount": 0,
       "percentages": [],
       "money": [
         {
           "value": "$1",
-          "context": "Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
+          "context": "e Route 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post ‘State sanctioned’ Russi",
           "classification": "manual-review-only",
           "updatePolicy": "manual-review-only",
           "matchedRules": [
@@ -5171,33 +5847,134 @@
               "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
             }
           ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Boundary: A fresh news or archive item is a lead,",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
         }
       ],
       "crisisFigures": [],
       "dates": [
         {
           "value": "2026",
-          "context": "separate from inference, network theory, and symbolic analysis. Latest Live-Intel Matches 2026-06-30 · Google News / crime state overlap ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New Yor"
+          "context": "separate from inference, network theory, and symbolic analysis. Latest Live-Intel Matches 2026-07-07 · European Commission AI Act page, last updated 2026-07-07 EU AI Act implementation enters 2026 enforce"
         },
         {
           "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
+          "context": "sis. Latest Live-Intel Matches 2026-07-07 · European Commission AI Act page, last updated 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+          "context": "European Commission AI Act page, last updated 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified The Commission's"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
+          "context": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified The Commission's AI Act page now frames the AI Act as an active implementat"
+        },
+        {
+          "value": "2025",
+          "context": "s the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through D"
+        },
+        {
+          "value": "2025",
+          "context": "lementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "Covered by source rules, but manual review is required before public figure changes."
+    },
+    {
+      "file": "optin-crime-network-brief.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 2,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com EXCLUSIVE: Chilling Jeffrey Epstein Prison Death",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        },
+        {
+          "value": "3 Million",
+          "context": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com Evidence boundary: A fresh news or archive item is",
+          "classification": "manual-review-only",
+          "updatePolicy": "manual-review-only",
+          "matchedRules": [
+            {
+              "id": "crime-state-figures",
+              "label": "Crime, cartels, money laundering, and prosecution figures",
+              "updatePolicy": "manual-review-only",
+              "sourceType": "court-or-official-release-required",
+              "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+            }
+          ]
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes I"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
+        },
+        {
+          "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Bod"
         }
       ],
       "needsSourceRule": false,
@@ -12541,6 +13318,26 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "black-nobility-deck.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "sties and allied European houses. Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "book-ab-the-brand.html",
       "priority": "High",
       "figureCount": 0,
@@ -13818,8 +14615,12 @@
       "crisisFigures": [],
       "dates": [
         {
+          "value": "2021",
+          "context": "&amp; Medicaid Services — high priority Quality 73/100 · source 50 · relationship 20 Open 2021-00294 — high priority Quality 67/100 · source 25 · relationship 40 Open 2024-07773 — high priority Quality 67"
+        },
+        {
           "value": "2024",
-          "context": "&amp; Medicaid Services — high priority Quality 73/100 · source 50 · relationship 20 Open 2024-07773 — high priority Quality 67/100 · source 25 · relationship 40 Open 25-113 — high priority Quality 67/100"
+          "context": "ship 20 Open 2021-00294 — high priority Quality 67/100 · source 25 · relationship 40 Open 2024-07773 — high priority Quality 67/100 · source 25 · relationship 40 Open 25-113 — high priority Quality 67/100"
         },
         {
           "value": "2026",
@@ -13864,6 +14665,46 @@
         {
           "value": "2026",
           "context": "e-readable data Markdown Campaign Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "card-artwork-batches.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "n. Books Free Briefs Rumble Store Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "card-deck-store.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "n. Books Free Briefs Rumble Store Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -13918,7 +14759,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-07-08T06:40:24.212Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
+          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-07-09T07:11:40.189Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
         },
         {
           "value": "2026",
@@ -14343,8 +15184,16 @@
       "crisisFigures": [],
       "dates": [
         {
+          "value": "2021",
+          "context": "ry record page, PDF, docket, filing, award notice or registry record. · entity brief Open 2021-00294 Confirm the primary record page, PDF, docket, filing, award notice or registry record. · entity brief O"
+        },
+        {
           "value": "2024",
           "context": "ry record page, PDF, docket, filing, award notice or registry record. · entity brief Open 2024-07773 Confirm the primary record page, PDF, docket, filing, award notice or registry record. · entity brief O"
+        },
+        {
+          "value": "2021",
+          "context": "y record page, PDF, docket, filing, award notice or registry record. · record review Open 2021-00294 Confirm the primary record page, PDF, docket, filing, award notice or registry record. · record review"
         },
         {
           "value": "2024",
@@ -14404,7 +15253,7 @@
         },
         {
           "value": "2030",
-          "context": "orcement, money, technology and opt-out rules. Weekly scan: 3 live-intel match(es) Agenda 2030 SDGs control system global governance policy harmonisation public private partnership Claim Classifier Source"
+          "context": "orcement, money, technology and opt-out rules. Weekly scan: 4 live-intel match(es) Agenda 2030 SDGs control system global governance policy harmonisation public private partnership Claim Classifier Source"
         },
         {
           "value": "2026",
@@ -14509,26 +15358,6 @@
         {
           "value": "2026",
           "context": "record. missing record Open route Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "deploy-health.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "Machine-readable data Forum Health DEPLOY HEALTH &gt; Build: f47c6b04a247 &gt; Generated: 2026-07-08T06:40:24.449Z &gt; SEC feed: READY &gt; Probability snapshot: READY &gt; Overall: READY What to check l"
         }
       ],
       "needsSourceRule": false,
@@ -14732,7 +15561,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "d watch next. Machine-readable data Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-08T06:40:21.918Z &gt; briefs generated: 58 &gt; pages generated: 58 &gt; style: user friendly &gt; boundar"
+          "context": "d watch next. Machine-readable data Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-09T07:11:37.717Z &gt; briefs generated: 59 &gt; pages generated: 59 &gt; style: user friendly &gt; boundar"
+        },
+        {
+          "value": "2021",
+          "context": "gnals both exist. Open Brief Machine-readable data observed entity · legal record present 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candid"
+        },
+        {
+          "value": "2021",
+          "context": "exist. Open Brief Machine-readable data observed entity · legal record present 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
         },
         {
           "value": "2024",
@@ -14764,7 +15601,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "s and missing records. Machine-readable data Download Index EXPOSURE ENGINE &gt; updated: 2026-07-08T06:40:21.969Z &gt; profiles: 58 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "s and missing records. Machine-readable data Download Index EXPOSURE ENGINE &gt; updated: 2026-07-09T07:11:37.772Z &gt; profiles: 59 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+        },
+        {
+          "value": "2021",
+          "context": "pen Exposure Brief Machine-readable data critical public-record exposure · charged / sued 2021-00294 2021-00294 deserves active public-record review. The score reflects records, categories, relationships"
+        },
+        {
+          "value": "2021",
+          "context": "e Brief Machine-readable data critical public-record exposure · charged / sued 2021-00294 2021-00294 deserves active public-record review. The score reflects records, categories, relationships or missing-"
         },
         {
           "value": "2024",
@@ -14795,8 +15640,12 @@
       "crisisFigures": [],
       "dates": [
         {
+          "value": "2021",
+          "context": "Office 1 timeline item(s). Open General Services Administration 1 timeline item(s). Open 2021-00294 1 timeline item(s). Open 2024-07773 1 timeline item(s). Open 25-113 1 timeline item(s). Open 25-581 1 t"
+        },
+        {
           "value": "2024",
-          "context": "Office 1 timeline item(s). Open General Services Administration 1 timeline item(s). Open 2024-07773 1 timeline item(s). Open 25-113 1 timeline item(s). Open 25-581 1 timeline item(s). Open AC48383 1 time"
+          "context": "eral Services Administration 1 timeline item(s). Open 2021-00294 1 timeline item(s). Open 2024-07773 1 timeline item(s). Open 25-113 1 timeline item(s). Open 25-581 1 timeline item(s). Open A170747M 1 tim"
         },
         {
           "value": "2026",
@@ -14887,7 +15736,7 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
-      "file": "epstein-sighting-watch.html",
+      "file": "evidence-hunter.html",
       "priority": "High",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -14899,12 +15748,8 @@
       "crisisFigures": [],
       "dates": [
         {
-          "value": "2019",
-          "context": "Official Boundary The official record treats Jeffrey Epstein as deceased as of August 10, 2019. This watch does not claim he is alive. It tracks internet sightings, lookalike claims, fake-media claims, me"
-        },
-        {
           "value": "2026",
-          "context": "e. Keep it legal. Submit Claim Figures & Sources Epstein evidence counts Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "readable data Back to Conclusions Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -15526,6 +16371,26 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "jurisdictions-of-power-deck.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "n. Books Free Briefs Rumble Store Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "launch-room.html",
       "priority": "High",
       "figureCount": 0,
@@ -15559,7 +16424,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ine-readable data Machine-readable data Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-08T06:40:21.885Z &gt; current records: 24 &gt; previous records: 24 &gt; new records: 2 &gt; changed recor"
+          "context": "ine-readable data Machine-readable data Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-09T07:11:37.681Z &gt; current records: 24 &gt; previous records: 24 &gt; new records: 0 &gt; changed recor"
+        },
+        {
+          "value": "2021",
+          "context": "rance in records. It is not a claim of private coordination. SCORE 10 Sawas v. Elzanaty ↔ 2021-00294 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means rep"
+        },
+        {
+          "value": "2021",
+          "context": "coordination. SCORE 10 Appellate Division of the Supreme Court of the State of New York ↔ 2021-00294 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means rep"
         },
         {
           "value": "2024",
@@ -15841,7 +16714,7 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
-      "file": "optin-black-file-brief.html",
+      "file": "one-world-convergence.html",
       "priority": "High",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -15851,32 +16724,7 @@
       "percentages": [],
       "money": [],
       "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
+      "dates": [],
       "needsSourceRule": false,
       "recommendation": "No obvious dynamic figures detected."
     },
@@ -15901,206 +16749,6 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
-      "file": "optin-crime-network-brief.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "optin-dog-architect-initiation.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "optin-full-archive-map.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "optin-intelligence-files-brief.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "optin-trust-evidence-checklist.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "pic, then shows what changed, why it matters, and what the record does or does not prove. 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
       "file": "outcome-briefings.html",
       "priority": "High",
       "figureCount": 0,
@@ -16114,7 +16762,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "adable data Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-08T06:40:04.146Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
+          "context": "adable data Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-09T07:11:20.062Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
         },
         {
           "value": "2026",
@@ -16378,7 +17026,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nd missing records. Machine-readable data Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-08T06:40:22.018Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "nd missing records. Machine-readable data Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-09T07:11:37.831Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         },
         {
           "value": "2026",
@@ -16402,7 +17050,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ta Download Markdown Probability Lab Prediction Engine PROBABILITY SNAPSHOT &gt; Updated: 2026-07-08T06:40:25.548Z &gt; Scenarios: 14 &gt; Signals: 20 &gt; Average: 72% &gt; Model: scenario feeds + weight"
+          "context": "ta Download Markdown Probability Lab Prediction Engine PROBABILITY SNAPSHOT &gt; Updated: 2026-07-09T07:11:41.293Z &gt; Scenarios: 14 &gt; Signals: 20 &gt; Average: 72% &gt; Model: scenario feeds + weight"
         },
         {
           "value": "2026",
@@ -16506,7 +17154,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "classifying each filing. Machine-readable data Download Markdown SEC FEED &gt; Generated: 2026-07-08T06:40:24.475Z &gt; Cards: 9 &gt; Captured: 9 &gt; Failed: 0 Boundary This feed captures official SEC fi"
+          "context": "classifying each filing. Machine-readable data Download Markdown SEC FEED &gt; Generated: 2026-07-09T07:11:40.466Z &gt; Cards: 9 &gt; Captured: 9 &gt; Failed: 0 Boundary This feed captures official SEC fi"
         },
         {
           "value": "2026",
@@ -16741,7 +17389,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-07-08T06:40:24.255Z &gt; Source doors: 26 &gt; Epstein actual-file doors: 14 &gt; Evidence Vault cards import"
+          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-07-09T07:11:40.236Z &gt; Source doors: 26 &gt; Epstein actual-file doors: 14 &gt; Evidence Vault cards import"
         },
         {
           "value": "2026",
@@ -16952,46 +17600,6 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
-      "file": "subject-epstein-black-file.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ated from court records, official releases, and sourced claims. Latest Live-Intel Matches 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Former Clinton aide appears before House panel in Epstein in"
-        },
-        {
-          "value": "2026",
-          "context": "official releases, and archived material before making claims. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-06-30 · Google News / Epstein timeline and files Alleged Epstein victim and Trump accuser living in fear of r"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
       "file": "subject-index.html",
       "priority": "High",
       "figureCount": 0,
@@ -17006,46 +17614,6 @@
         {
           "value": "2026",
           "context": "and claim boundary. Open Hub PDF Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "subject-nasa-hidden-architecture.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "dary Separate public-record history from narrative speculation. Latest Live-Intel Matches 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims Never-Before-Seen Video From Jeffrey Epstein's Pedoph"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-03 · Google News / Epstein timeline and files DOJ declines to turn over additional Epstein files, says red"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-01 · Google News / Epstein timeline and files James Comer Says Oversight Will Hold Public Hearings on Epst"
         }
       ],
       "needsSourceRule": false,
@@ -22942,6 +23510,21 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "accountability-watch.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "answer-operation-gladio.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -24035,6 +24618,21 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "card-artwork-queue.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "card-intelligence-feed.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -24740,6 +25338,51 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "cross-reference-map.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "custom-research.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "daily-control-brief-signup.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "deck-expansion-hub.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -24995,6 +25638,42 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "entity-briefs/2021-00294.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2021",
+          "context": "2021-00294 Brief | Matrix Reprogrammed MATRIX REPROGRAMMED Entity Briefs Machine Intelligence Evidence Search Enti"
+        },
+        {
+          "value": "2021",
+          "context": "MATRIX REPROGRAMMED Entity Briefs Machine Intelligence Evidence Search Entity Daily Brief 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candid"
+        },
+        {
+          "value": "2021",
+          "context": "OGRAMMED Entity Briefs Machine Intelligence Evidence Search Entity Daily Brief 2021-00294 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and"
+        },
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        },
+        {
+          "value": "2021",
+          "context": "imary record page, PDF, docket, filing, award notice or registry record. Watch Next Watch 2021-00294 across courtlistener-court-records. Check whether new courtlistener-court-records records repeat this n"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "entity-briefs/2024-07773.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -25020,7 +25699,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -25044,7 +25723,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25064,7 +25743,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T19:55:30.974Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25084,7 +25763,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/a170747m.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25104,7 +25803,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25124,7 +25823,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25168,7 +25867,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25188,7 +25887,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25208,7 +25907,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25228,7 +25927,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25248,7 +25947,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25268,11 +25967,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        },
+        {
+          "value": "2021",
+          "context": "i — charged / sued Connections Sawas v. Elzanaty — score 10 — public-record co-occurrence 2021-00294 — score 10 — public-record co-occurrence Matter of Pagliughi — score 10 — public-record co-occurrence 2"
         },
         {
           "value": "2024",
-          "context": "— charged / sued Connections Matter of Pagliughi — score 10 — public-record co-occurrence 2024-07773 — score 10 — public-record co-occurrence Missing Records Confirm the primary record page, PDF, docket,"
+          "context": "public-record co-occurrence Matter of Pagliughi — score 10 — public-record co-occurrence 2024-07773 — score 10 — public-record co-occurrence Missing Records Confirm the primary record page, PDF, docket,"
         }
       ],
       "needsSourceRule": false,
@@ -25292,7 +25995,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25312,7 +26015,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25332,7 +26035,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25352,7 +26055,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/california-court-of-appeal.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25372,7 +26095,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -25400,7 +26123,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25456,7 +26179,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25476,7 +26199,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25496,7 +26219,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25516,7 +26239,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25536,7 +26259,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25580,7 +26303,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25600,7 +26323,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -25620,7 +26343,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25640,7 +26363,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25660,7 +26383,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25680,7 +26403,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25700,7 +26423,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
         },
         {
           "value": "2027",
@@ -25728,7 +26451,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -25748,7 +26471,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25768,7 +26491,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25788,7 +26511,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25808,7 +26531,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25828,7 +26551,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -25852,7 +26575,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25872,7 +26595,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25892,7 +26615,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25912,7 +26635,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25932,7 +26655,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25952,7 +26675,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -25972,7 +26695,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -25992,7 +26715,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26012,7 +26735,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
         }
       ],
       "needsSourceRule": false,
@@ -26032,7 +26755,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/people-v-brim.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26052,7 +26795,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26072,7 +26815,31 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-briefs/sawas-v-elzanaty.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        },
+        {
+          "value": "2021",
+          "context": "on of the Supreme Court of the State of New York — score 10 — public-record co-occurrence 2021-00294 — score 10 — public-record co-occurrence Missing Records Confirm the primary record page, PDF, docket,"
         }
       ],
       "needsSourceRule": false,
@@ -26092,7 +26859,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26112,7 +26879,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T19:55:30.974Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26132,7 +26899,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26152,7 +26919,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26172,7 +26939,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26192,7 +26959,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T19:55:30.974Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26212,7 +26979,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-08T19:55:30.974Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -26232,7 +26999,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -26252,7 +27019,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -26272,9 +27039,24 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-08T06:40:21.918Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-09T07:11:37.717Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-relationship-map.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
       "needsSourceRule": false,
       "recommendation": "No obvious dynamic figures detected."
     },
@@ -26355,6 +27137,21 @@
     },
     {
       "file": "findings-dashboard.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "free-downloads.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27117,6 +27914,10 @@
       "dates": [
         {
           "value": "2026",
+          "context": "e trail. War File · live-window General Assembly LIVE: Debating US sanctions against Cuba 2026-07-08 · UN News Source first, claim second, pattern last. A saved update is a route into evidence, not a fina"
+        },
+        {
+          "value": "2026",
           "context": "lligence · live-window Global push for AI governance amid warnings of ‘catastrophic harm’ 2026-07-06 · UN News Source first, claim second, pattern last. A saved update is a route into evidence, not a fina"
         },
         {
@@ -27134,17 +27935,43 @@
         {
           "value": "2026",
           "context": "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory 2026-06-30 · UN News Source first, claim second, pattern last. A saved update is a route into evidence, not a fina"
-        },
-        {
-          "value": "2026",
-          "context": "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory 2026-06-29 · UN News Source first, claim second, pattern last. A saved update is a route into evidence, not a fina"
         }
       ],
       "needsSourceRule": false,
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "latest-public-drops.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "members.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "membership.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27175,6 +28002,21 @@
     },
     {
       "file": "missing-files.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "monetisation-dashboard.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27264,7 +28106,37 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "power-conclusions.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "power-dossiers.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "premium-reports.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27564,6 +28436,21 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "review-dashboard.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "review-lanes.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -27595,6 +28482,21 @@
     },
     {
       "file": "share-kit-war-machine.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "site-brain-router.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27670,6 +28572,21 @@
     },
     {
       "file": "source-route-cards.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "store.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -27880,6 +28797,21 @@
     },
     {
       "file": "war-conflict-hub.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "who-holds-power.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,

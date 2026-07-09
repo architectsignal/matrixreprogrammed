@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T00:00:00.000Z",
+  "purpose": "Reader-facing conclusions with confidence levels and missing records.",
+  "method": "Record first. Analysis second. Hypothesis labelled. Missing records visible.",
+  "conclusions": [
+    {"title":"Power stack","confidence":"structure high, intent requires records","missing":"Decision records, funding trails, filings, contracts and meeting calendars."},
+    {"title":"Convergence direction","confidence":"medium","missing":"Legal text, vendor contracts, regulator guidance and implementation roadmaps."},
+    {"title":"Policy route","confidence":"medium","missing":"Report citations, funder disclosures, consultation records and lobbying filings."},
+    {"title":"Jurisdiction route","confidence":"high for structure","missing":"Registry records, court filings, treaty texts and ownership records."},
+    {"title":"Evidence rule","confidence":"high for method","missing":"Source links attached to every major card and page."}
+  ]
+}

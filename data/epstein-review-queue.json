@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "updated": "2026-07-09T07:11:53.906Z",
+  "boundary": "Appearance in an Epstein-related public file is a research lead, not proof of wrongdoing. This system separates documented fact, sourced analysis, reasonable inference, speculation, unsupported claims, and missing records. No person, company, institution, flight, address, meeting, email, phone number, or association should be treated as proof of serious conduct unless supported by court records, sworn evidence, official findings, judgments, or other reliable public records.",
+  "riskLevels": [
+    "low",
+    "medium",
+    "high",
+    "legal-sensitive",
+    "identity-ambiguous",
+    "source-weak"
+  ],
+  "items": [
+    {
+      "id": "ep-review-001",
+      "item": "Placeholder file requires verification",
+      "source": "ep-doc-001",
+      "problem": "No original source URL or OCR text.",
+      "riskLevel": "source-weak",
+      "whatNeedsChecking": "Source URL, document type, OCR text, metadata and entity extraction.",
+      "nextAction": "Add official source URL or verified archive source.",
+      "assignedStatus": "unassigned",
+      "reviewerNotes": ""
+    }
+  ]
+}

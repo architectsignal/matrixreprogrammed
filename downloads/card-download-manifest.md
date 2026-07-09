@@ -1,174 +1,174 @@
 # Card Download Manifest
 
-Updated: 2026-07-08T06:40:35.835Z
+Updated: 2026-07-09T07:11:52.093Z
 
-Decks: 7
+Decks: 9
 
-Total cards: 364
+Total cards: 468
 
 Missing routes/assets: 0
 
 ## Top 52 Persons of Interest
-- 1. Elon Musk — assets/top-52/cards/elon-musk.svg — top-52/elon-musk.html
-- 2. Jeff Bezos — assets/top-52/cards/jeff-bezos.svg — top-52/jeff-bezos.html
-- 3. Warren Buffett — assets/top-52/cards/warren-buffett.svg — top-52/warren-buffett.html
-- 4. World Health Organization — assets/top-52/cards/world-health-organization.svg — top-52/world-health-organization.html
-- 5. Federal Reserve — assets/top-52/cards/federal-reserve.svg — top-52/federal-reserve.html
-- 6. CACI International — assets/top-52/cards/caci-international.svg — top-52/caci-international.html
-- 7. Booz Allen Hamilton — assets/top-52/cards/booz-allen-hamilton.svg — top-52/booz-allen-hamilton.html
-- 8. Larry Fink — assets/top-52/cards/larry-fink.svg — top-52/larry-fink.html
-- 9. Klaus Schwab — assets/top-52/cards/klaus-schwab.svg — top-52/klaus-schwab.html
-- 10. Emmanuel Macron — assets/top-52/cards/emmanuel-macron.svg — top-52/emmanuel-macron.html
-- 11. Tony Blair — assets/top-52/cards/tony-blair.svg — top-52/tony-blair.html
-- 12. Jamie Dimon — assets/top-52/cards/jamie-dimon.svg — top-52/jamie-dimon.html
-- 13. Jerome Powell — assets/top-52/cards/jerome-powell.svg — top-52/jerome-powell.html
-- 14. Jensen Huang — assets/top-52/cards/jensen-huang.svg — top-52/jensen-huang.html
-- 15. Christine Lagarde — assets/top-52/cards/christine-lagarde.svg — top-52/christine-lagarde.html
-- 16. Pope Francis — assets/top-52/cards/pope-francis.svg — top-52/pope-francis.html
-- 17. King Charles III — assets/top-52/cards/king-charles-iii.svg — top-52/king-charles-iii.html
-- 18. Erik Prince — assets/top-52/cards/erik-prince.svg — top-52/erik-prince.html
-- 19. Bill Gates — assets/top-52/cards/bill-gates.svg — top-52/bill-gates.html
-- 20. Sam Altman — assets/top-52/cards/sam-altman.svg — top-52/sam-altman.html
-- 21. Sundar Pichai — assets/top-52/cards/sundar-pichai.svg — top-52/sundar-pichai.html
-- 22. Satya Nadella — assets/top-52/cards/satya-nadella.svg — top-52/satya-nadella.html
-- 23. Tim Cook — assets/top-52/cards/tim-cook.svg — top-52/tim-cook.html
-- 24. George Soros — assets/top-52/cards/george-soros.svg — top-52/george-soros.html
-- 25. Mukesh Ambani — assets/top-52/cards/mukesh-ambani.svg — top-52/mukesh-ambani.html
-- 26. Xi Jinping — assets/top-52/cards/xi-jinping.svg — top-52/xi-jinping.html
-- 27. Narendra Modi — assets/top-52/cards/narendra-modi.svg — top-52/narendra-modi.html
-- 28. Vladimir Putin — assets/top-52/cards/vladimir-putin.svg — top-52/vladimir-putin.html
-- 29. Benjamin Netanyahu — assets/top-52/cards/benjamin-netanyahu.svg — top-52/benjamin-netanyahu.html
-- 30. Volodymyr Zelenskyy — assets/top-52/cards/volodymyr-zelenskyy.svg — top-52/volodymyr-zelenskyy.html
-- 31. Giorgia Meloni — assets/top-52/cards/giorgia-meloni.svg — top-52/giorgia-meloni.html
-- 32. Gautam Adani — assets/top-52/cards/gautam-adani.svg — top-52/gautam-adani.html
-- 33. Ray Dalio — assets/top-52/cards/ray-dalio.svg — top-52/ray-dalio.html
-- 34. Brian Moynihan — assets/top-52/cards/brian-moynihan.svg — top-52/brian-moynihan.html
-- 35. David Solomon — assets/top-52/cards/david-solomon.svg — top-52/david-solomon.html
-- 36. Jane Fraser — assets/top-52/cards/jane-fraser.svg — top-52/jane-fraser.html
-- 37. Ajay Banga — assets/top-52/cards/ajay-banga.svg — top-52/ajay-banga.html
-- 38. Kristalina Georgieva — assets/top-52/cards/kristalina-georgieva.svg — top-52/kristalina-georgieva.html
-- 39. Tedros Adhanom Ghebreyesus — assets/top-52/cards/tedros-adhanom-ghebreyesus.svg — top-52/tedros-adhanom-ghebreyesus.html
-- 40. António Guterres — assets/top-52/cards/ant-nio-guterres.svg — top-52/ant-nio-guterres.html
-- 41. Mark Rutte — assets/top-52/cards/mark-rutte.svg — top-52/mark-rutte.html
-- 42. Jens Stoltenberg — assets/top-52/cards/jens-stoltenberg.svg — top-52/jens-stoltenberg.html
-- 43. Alex Karp — assets/top-52/cards/alex-karp.svg — top-52/alex-karp.html
-- 44. Miriam Adelson — assets/top-52/cards/miriam-adelson.svg — top-52/miriam-adelson.html
-- 45. Rupert Murdoch — assets/top-52/cards/rupert-murdoch.svg — top-52/rupert-murdoch.html
-- 46. Laurene Powell Jobs — assets/top-52/cards/laurene-powell-jobs.svg — top-52/laurene-powell-jobs.html
-- 47. Mark Zuckerberg — assets/top-52/cards/mark-zuckerberg.svg — top-52/mark-zuckerberg.html
-- 48. Larry Ellison — assets/top-52/cards/larry-ellison.svg — top-52/larry-ellison.html
-- 49. Peter Thiel — assets/top-52/cards/peter-thiel.svg — top-52/peter-thiel.html
-- 50. Michael Bloomberg — assets/top-52/cards/michael-bloomberg.svg — top-52/michael-bloomberg.html
-- 51. MacKenzie Scott — assets/top-52/cards/mackenzie-scott.svg — top-52/mackenzie-scott.html
-- 52. Priscilla Chan — assets/top-52/cards/priscilla-chan.svg — top-52/priscilla-chan.html
+- 1. Elon Musk — assets/top-52/cards/elon-musk.svg — top-52/elon-musk.html — source route: billionaire-briefs/elon-musk.html
+- 2. Jeff Bezos — assets/top-52/cards/jeff-bezos.svg — top-52/jeff-bezos.html — source route: billionaire-briefs/jeff-bezos.html
+- 3. Warren Buffett — assets/top-52/cards/warren-buffett.svg — top-52/warren-buffett.html — source route: billionaire-briefs/warren-buffett.html
+- 4. World Health Organization — assets/top-52/cards/world-health-organization.svg — top-52/world-health-organization.html — source route: institution-briefs/world-health-organization.html
+- 5. Federal Reserve — assets/top-52/cards/federal-reserve.svg — top-52/federal-reserve.html — source route: institution-briefs/federal-reserve.html
+- 6. CACI International — assets/top-52/cards/caci-international.svg — top-52/caci-international.html — source route: contractor-briefs/caci-intelligence-contractor.html
+- 7. Booz Allen Hamilton — assets/top-52/cards/booz-allen-hamilton.svg — top-52/booz-allen-hamilton.html — source route: contractor-briefs/booz-allen-intelligence-contractor.html
+- 8. Larry Fink — assets/top-52/cards/larry-fink.svg — top-52/larry-fink.html — source route: big-three/blackrock.html
+- 9. Klaus Schwab — assets/top-52/cards/klaus-schwab.svg — top-52/klaus-schwab.html — source route: institution-briefs/world-economic-forum.html
+- 10. Emmanuel Macron — assets/top-52/cards/emmanuel-macron.svg — top-52/emmanuel-macron.html — source route: power-structure-map.html
+- 11. Tony Blair — assets/top-52/cards/tony-blair.svg — top-52/tony-blair.html — source route: power-structure-map.html
+- 12. Jamie Dimon — assets/top-52/cards/jamie-dimon.svg — top-52/jamie-dimon.html — source route: evidence-graph.html
+- 13. Jerome Powell — assets/top-52/cards/jerome-powell.svg — top-52/jerome-powell.html — source route: evidence-graph.html
+- 14. Jensen Huang — assets/top-52/cards/jensen-huang.svg — top-52/jensen-huang.html — source route: billionaire-briefs/jensen-huang.html
+- 15. Christine Lagarde — assets/top-52/cards/christine-lagarde.svg — top-52/christine-lagarde.html — source route: evidence-graph.html
+- 16. Pope Francis — assets/top-52/cards/pope-francis.svg — top-52/pope-francis.html — source route: power-structure-map.html
+- 17. King Charles III — assets/top-52/cards/king-charles-iii.svg — top-52/king-charles-iii.html — source route: power-structure-map.html
+- 18. Erik Prince — assets/top-52/cards/erik-prince.svg — top-52/erik-prince.html — source route: contractor-briefs/blackwater-constellis-lineage.html
+- 19. Bill Gates — assets/top-52/cards/bill-gates.svg — top-52/bill-gates.html — source route: billionaire-briefs/bill-gates.html
+- 20. Sam Altman — assets/top-52/cards/sam-altman.svg — top-52/sam-altman.html — source route: answer-engine.html
+- 21. Sundar Pichai — assets/top-52/cards/sundar-pichai.svg — top-52/sundar-pichai.html — source route: answer-engine.html
+- 22. Satya Nadella — assets/top-52/cards/satya-nadella.svg — top-52/satya-nadella.html — source route: answer-engine.html
+- 23. Tim Cook — assets/top-52/cards/tim-cook.svg — top-52/tim-cook.html — source route: evidence-graph.html
+- 24. George Soros — assets/top-52/cards/george-soros.svg — top-52/george-soros.html — source route: evidence-graph.html
+- 25. Mukesh Ambani — assets/top-52/cards/mukesh-ambani.svg — top-52/mukesh-ambani.html — source route: evidence-graph.html
+- 26. Xi Jinping — assets/top-52/cards/xi-jinping.svg — top-52/xi-jinping.html — source route: power-structure-map.html
+- 27. Narendra Modi — assets/top-52/cards/narendra-modi.svg — top-52/narendra-modi.html — source route: power-structure-map.html
+- 28. Vladimir Putin — assets/top-52/cards/vladimir-putin.svg — top-52/vladimir-putin.html — source route: power-structure-map.html
+- 29. Benjamin Netanyahu — assets/top-52/cards/benjamin-netanyahu.svg — top-52/benjamin-netanyahu.html — source route: power-structure-map.html
+- 30. Volodymyr Zelenskyy — assets/top-52/cards/volodymyr-zelenskyy.svg — top-52/volodymyr-zelenskyy.html — source route: power-structure-map.html
+- 31. Giorgia Meloni — assets/top-52/cards/giorgia-meloni.svg — top-52/giorgia-meloni.html — source route: power-structure-map.html
+- 32. Gautam Adani — assets/top-52/cards/gautam-adani.svg — top-52/gautam-adani.html — source route: evidence-graph.html
+- 33. Ray Dalio — assets/top-52/cards/ray-dalio.svg — top-52/ray-dalio.html — source route: evidence-graph.html
+- 34. Brian Moynihan — assets/top-52/cards/brian-moynihan.svg — top-52/brian-moynihan.html — source route: evidence-graph.html
+- 35. David Solomon — assets/top-52/cards/david-solomon.svg — top-52/david-solomon.html — source route: evidence-graph.html
+- 36. Jane Fraser — assets/top-52/cards/jane-fraser.svg — top-52/jane-fraser.html — source route: evidence-graph.html
+- 37. Ajay Banga — assets/top-52/cards/ajay-banga.svg — top-52/ajay-banga.html — source route: evidence-graph.html
+- 38. Kristalina Georgieva — assets/top-52/cards/kristalina-georgieva.svg — top-52/kristalina-georgieva.html — source route: evidence-graph.html
+- 39. Tedros Adhanom Ghebreyesus — assets/top-52/cards/tedros-adhanom-ghebreyesus.svg — top-52/tedros-adhanom-ghebreyesus.html — source route: power-structure-map.html
+- 40. António Guterres — assets/top-52/cards/ant-nio-guterres.svg — top-52/ant-nio-guterres.html — source route: power-structure-map.html
+- 41. Mark Rutte — assets/top-52/cards/mark-rutte.svg — top-52/mark-rutte.html — source route: power-structure-map.html
+- 42. Jens Stoltenberg — assets/top-52/cards/jens-stoltenberg.svg — top-52/jens-stoltenberg.html — source route: power-structure-map.html
+- 43. Alex Karp — assets/top-52/cards/alex-karp.svg — top-52/alex-karp.html — source route: evidence-graph.html
+- 44. Miriam Adelson — assets/top-52/cards/miriam-adelson.svg — top-52/miriam-adelson.html — source route: evidence-graph.html
+- 45. Rupert Murdoch — assets/top-52/cards/rupert-murdoch.svg — top-52/rupert-murdoch.html — source route: evidence-graph.html
+- 46. Laurene Powell Jobs — assets/top-52/cards/laurene-powell-jobs.svg — top-52/laurene-powell-jobs.html — source route: evidence-graph.html
+- 47. Mark Zuckerberg — assets/top-52/cards/mark-zuckerberg.svg — top-52/mark-zuckerberg.html — source route: billionaire-briefs/mark-zuckerberg.html
+- 48. Larry Ellison — assets/top-52/cards/larry-ellison.svg — top-52/larry-ellison.html — source route: billionaire-briefs/larry-ellison.html
+- 49. Peter Thiel — assets/top-52/cards/peter-thiel.svg — top-52/peter-thiel.html — source route: billionaire-briefs/peter-thiel.html
+- 50. Michael Bloomberg — assets/top-52/cards/michael-bloomberg.svg — top-52/michael-bloomberg.html — source route: billionaire-briefs/michael-bloomberg.html
+- 51. MacKenzie Scott — assets/top-52/cards/mackenzie-scott.svg — top-52/mackenzie-scott.html — source route: evidence-graph.html
+- 52. Priscilla Chan — assets/top-52/cards/priscilla-chan.svg — top-52/priscilla-chan.html — source route: evidence-graph.html
 
 ## Controlled Opposition
-- 1. Alex Jones — assets/controlled-opposition/cards/alex-jones.svg — controlled-opposition-profile.html?card=alex-jones
-- 2. Andrew Tate — assets/controlled-opposition/cards/andrew-tate.svg — controlled-opposition-profile.html?card=andrew-tate
-- 3. Mark Sargent — assets/controlled-opposition/cards/mark-sargent.svg — controlled-opposition-profile.html?card=mark-sargent
-- 4. David Icke — assets/controlled-opposition/cards/david-icke.svg — controlled-opposition-profile.html?card=david-icke
-- 5. Russell Brand — assets/controlled-opposition/cards/russell-brand.svg — controlled-opposition-profile.html?card=russell-brand
-- 6. Joe Rogan — assets/controlled-opposition/cards/joe-rogan.svg — controlled-opposition-profile.html?card=joe-rogan
-- 7. Tucker Carlson — assets/controlled-opposition/cards/tucker-carlson.svg — controlled-opposition-profile.html?card=tucker-carlson
-- 8. Candace Owens — assets/controlled-opposition/cards/candace-owens.svg — controlled-opposition-profile.html?card=candace-owens
-- 9. Jordan Peterson — assets/controlled-opposition/cards/jordan-peterson.svg — controlled-opposition-profile.html?card=jordan-peterson
-- 10. Ben Shapiro — assets/controlled-opposition/cards/ben-shapiro.svg — controlled-opposition-profile.html?card=ben-shapiro
-- 11. Tim Pool — assets/controlled-opposition/cards/tim-pool.svg — controlled-opposition-profile.html?card=tim-pool
-- 12. Steven Crowder — assets/controlled-opposition/cards/steven-crowder.svg — controlled-opposition-profile.html?card=steven-crowder
-- 13. Charlie Kirk — assets/controlled-opposition/cards/charlie-kirk.svg — controlled-opposition-profile.html?card=charlie-kirk
-- 14. Matt Walsh — assets/controlled-opposition/cards/matt-walsh.svg — controlled-opposition-profile.html?card=matt-walsh
-- 15. Glenn Beck — assets/controlled-opposition/cards/glenn-beck.svg — controlled-opposition-profile.html?card=glenn-beck
-- 16. Piers Morgan — assets/controlled-opposition/cards/piers-morgan.svg — controlled-opposition-profile.html?card=piers-morgan
-- 17. Elon Musk — assets/controlled-opposition/cards/elon-musk.svg — controlled-opposition-profile.html?card=elon-musk
-- 18. Kanye West / Ye — assets/controlled-opposition/cards/kanye-west-ye.svg — controlled-opposition-profile.html?card=kanye-west-ye
-- 19. RFK Jr. — assets/controlled-opposition/cards/rfk-jr.svg — controlled-opposition-profile.html?card=rfk-jr
-- 20. Tulsi Gabbard — assets/controlled-opposition/cards/tulsi-gabbard.svg — controlled-opposition-profile.html?card=tulsi-gabbard
-- 21. Vivek Ramaswamy — assets/controlled-opposition/cards/vivek-ramaswamy.svg — controlled-opposition-profile.html?card=vivek-ramaswamy
-- 22. Nigel Farage — assets/controlled-opposition/cards/nigel-farage.svg — controlled-opposition-profile.html?card=nigel-farage
-- 23. Marine Le Pen — assets/controlled-opposition/cards/marine-le-pen.svg — controlled-opposition-profile.html?card=marine-le-pen
-- 24. Geert Wilders — assets/controlled-opposition/cards/geert-wilders.svg — controlled-opposition-profile.html?card=geert-wilders
-- 25. Javier Milei — assets/controlled-opposition/cards/javier-milei.svg — controlled-opposition-profile.html?card=javier-milei
-- 26. Steve Bannon — assets/controlled-opposition/cards/steve-bannon.svg — controlled-opposition-profile.html?card=steve-bannon
-- 27. Roger Stone — assets/controlled-opposition/cards/roger-stone.svg — controlled-opposition-profile.html?card=roger-stone
-- 28. Milo Yiannopoulos — assets/controlled-opposition/cards/milo-yiannopoulos.svg — controlled-opposition-profile.html?card=milo-yiannopoulos
-- 29. Nick Fuentes — assets/controlled-opposition/cards/nick-fuentes.svg — controlled-opposition-profile.html?card=nick-fuentes
-- 30. Gavin McInnes — assets/controlled-opposition/cards/gavin-mcinnes.svg — controlled-opposition-profile.html?card=gavin-mcinnes
-- 31. Laura Loomer — assets/controlled-opposition/cards/laura-loomer.svg — controlled-opposition-profile.html?card=laura-loomer
-- 32. Mike Cernovich — assets/controlled-opposition/cards/mike-cernovich.svg — controlled-opposition-profile.html?card=mike-cernovich
-- 33. Jack Posobiec — assets/controlled-opposition/cards/jack-posobiec.svg — controlled-opposition-profile.html?card=jack-posobiec
-- 34. James O'Keefe — assets/controlled-opposition/cards/james-o-keefe.svg — controlled-opposition-profile.html?card=james-o-keefe
-- 35. Project Veritas network — assets/controlled-opposition/cards/project-veritas-network.svg — controlled-opposition-profile.html?card=project-veritas-network
-- 36. Naomi Wolf — assets/controlled-opposition/cards/naomi-wolf.svg — controlled-opposition-profile.html?card=naomi-wolf
-- 37. Bret Weinstein — assets/controlled-opposition/cards/bret-weinstein.svg — controlled-opposition-profile.html?card=bret-weinstein
-- 38. Heather Heying — assets/controlled-opposition/cards/heather-heying.svg — controlled-opposition-profile.html?card=heather-heying
-- 39. Del Bigtree — assets/controlled-opposition/cards/del-bigtree.svg — controlled-opposition-profile.html?card=del-bigtree
-- 40. Robert Malone — assets/controlled-opposition/cards/robert-malone.svg — controlled-opposition-profile.html?card=robert-malone
-- 41. Peter McCullough — assets/controlled-opposition/cards/peter-mccullough.svg — controlled-opposition-profile.html?card=peter-mccullough
-- 42. Sherri Tenpenny — assets/controlled-opposition/cards/sherri-tenpenny.svg — controlled-opposition-profile.html?card=sherri-tenpenny
-- 43. Kate Shemirani — assets/controlled-opposition/cards/kate-shemirani.svg — controlled-opposition-profile.html?card=kate-shemirani
-- 44. Mark Steele — assets/controlled-opposition/cards/mark-steele.svg — controlled-opposition-profile.html?card=mark-steele
-- 45. Piers Corbyn — assets/controlled-opposition/cards/piers-corbyn.svg — controlled-opposition-profile.html?card=piers-corbyn
-- 46. Max Blumenthal — assets/controlled-opposition/cards/max-blumenthal.svg — controlled-opposition-profile.html?card=max-blumenthal
-- 47. Jimmy Dore — assets/controlled-opposition/cards/jimmy-dore.svg — controlled-opposition-profile.html?card=jimmy-dore
-- 48. Glenn Greenwald — assets/controlled-opposition/cards/glenn-greenwald.svg — controlled-opposition-profile.html?card=glenn-greenwald
-- 49. Matt Taibbi — assets/controlled-opposition/cards/matt-taibbi.svg — controlled-opposition-profile.html?card=matt-taibbi
-- 50. Julian Assange — assets/controlled-opposition/cards/julian-assange.svg — controlled-opposition-profile.html?card=julian-assange
-- 51. Edward Snowden — assets/controlled-opposition/cards/edward-snowden.svg — controlled-opposition-profile.html?card=edward-snowden
-- 52. Graham Hancock — assets/controlled-opposition/cards/graham-hancock.svg — controlled-opposition-profile.html?card=graham-hancock
+- 1. Alex Jones — assets/controlled-opposition/cards/alex-jones.svg — controlled-opposition/alex-jones.html
+- 2. Andrew Tate — assets/controlled-opposition/cards/andrew-tate.svg — controlled-opposition/andrew-tate.html
+- 3. Mark Sargent — assets/controlled-opposition/cards/mark-sargent.svg — controlled-opposition/mark-sargent.html
+- 4. David Icke — assets/controlled-opposition/cards/david-icke.svg — controlled-opposition/david-icke.html
+- 5. Russell Brand — assets/controlled-opposition/cards/russell-brand.svg — controlled-opposition/russell-brand.html
+- 6. Joe Rogan — assets/controlled-opposition/cards/joe-rogan.svg — controlled-opposition/joe-rogan.html
+- 7. Tucker Carlson — assets/controlled-opposition/cards/tucker-carlson.svg — controlled-opposition/tucker-carlson.html
+- 8. Candace Owens — assets/controlled-opposition/cards/candace-owens.svg — controlled-opposition/candace-owens.html
+- 9. Jordan Peterson — assets/controlled-opposition/cards/jordan-peterson.svg — controlled-opposition/jordan-peterson.html
+- 10. Ben Shapiro — assets/controlled-opposition/cards/ben-shapiro.svg — controlled-opposition/ben-shapiro.html
+- 11. Tim Pool — assets/controlled-opposition/cards/tim-pool.svg — controlled-opposition/tim-pool.html
+- 12. Steven Crowder — assets/controlled-opposition/cards/steven-crowder.svg — controlled-opposition/steven-crowder.html
+- 13. Charlie Kirk — assets/controlled-opposition/cards/charlie-kirk.svg — controlled-opposition/charlie-kirk.html
+- 14. Matt Walsh — assets/controlled-opposition/cards/matt-walsh.svg — controlled-opposition/matt-walsh.html
+- 15. Glenn Beck — assets/controlled-opposition/cards/glenn-beck.svg — controlled-opposition/glenn-beck.html
+- 16. Piers Morgan — assets/controlled-opposition/cards/piers-morgan.svg — controlled-opposition/piers-morgan.html
+- 17. Elon Musk — assets/controlled-opposition/cards/elon-musk.svg — controlled-opposition/elon-musk.html
+- 18. Kanye West / Ye — assets/controlled-opposition/cards/kanye-west-ye.svg — controlled-opposition/kanye-west-ye.html
+- 19. RFK Jr. — assets/controlled-opposition/cards/rfk-jr.svg — controlled-opposition/rfk-jr.html
+- 20. Tulsi Gabbard — assets/controlled-opposition/cards/tulsi-gabbard.svg — controlled-opposition/tulsi-gabbard.html
+- 21. Vivek Ramaswamy — assets/controlled-opposition/cards/vivek-ramaswamy.svg — controlled-opposition/vivek-ramaswamy.html
+- 22. Nigel Farage — assets/controlled-opposition/cards/nigel-farage.svg — controlled-opposition/nigel-farage.html
+- 23. Marine Le Pen — assets/controlled-opposition/cards/marine-le-pen.svg — controlled-opposition/marine-le-pen.html
+- 24. Geert Wilders — assets/controlled-opposition/cards/geert-wilders.svg — controlled-opposition/geert-wilders.html
+- 25. Javier Milei — assets/controlled-opposition/cards/javier-milei.svg — controlled-opposition/javier-milei.html
+- 26. Steve Bannon — assets/controlled-opposition/cards/steve-bannon.svg — controlled-opposition/steve-bannon.html
+- 27. Roger Stone — assets/controlled-opposition/cards/roger-stone.svg — controlled-opposition/roger-stone.html
+- 28. Milo Yiannopoulos — assets/controlled-opposition/cards/milo-yiannopoulos.svg — controlled-opposition/milo-yiannopoulos.html
+- 29. Nick Fuentes — assets/controlled-opposition/cards/nick-fuentes.svg — controlled-opposition/nick-fuentes.html
+- 30. Gavin McInnes — assets/controlled-opposition/cards/gavin-mcinnes.svg — controlled-opposition/gavin-mcinnes.html
+- 31. Laura Loomer — assets/controlled-opposition/cards/laura-loomer.svg — controlled-opposition/laura-loomer.html
+- 32. Mike Cernovich — assets/controlled-opposition/cards/mike-cernovich.svg — controlled-opposition/mike-cernovich.html
+- 33. Jack Posobiec — assets/controlled-opposition/cards/jack-posobiec.svg — controlled-opposition/jack-posobiec.html
+- 34. James O'Keefe — assets/controlled-opposition/cards/james-o-keefe.svg — controlled-opposition/james-o-keefe.html
+- 35. Project Veritas network — assets/controlled-opposition/cards/project-veritas-network.svg — controlled-opposition/project-veritas-network.html
+- 36. Naomi Wolf — assets/controlled-opposition/cards/naomi-wolf.svg — controlled-opposition/naomi-wolf.html
+- 37. Bret Weinstein — assets/controlled-opposition/cards/bret-weinstein.svg — controlled-opposition/bret-weinstein.html
+- 38. Heather Heying — assets/controlled-opposition/cards/heather-heying.svg — controlled-opposition/heather-heying.html
+- 39. Del Bigtree — assets/controlled-opposition/cards/del-bigtree.svg — controlled-opposition/del-bigtree.html
+- 40. Robert Malone — assets/controlled-opposition/cards/robert-malone.svg — controlled-opposition/robert-malone.html
+- 41. Peter McCullough — assets/controlled-opposition/cards/peter-mccullough.svg — controlled-opposition/peter-mccullough.html
+- 42. Sherri Tenpenny — assets/controlled-opposition/cards/sherri-tenpenny.svg — controlled-opposition/sherri-tenpenny.html
+- 43. Kate Shemirani — assets/controlled-opposition/cards/kate-shemirani.svg — controlled-opposition/kate-shemirani.html
+- 44. Mark Steele — assets/controlled-opposition/cards/mark-steele.svg — controlled-opposition/mark-steele.html
+- 45. Piers Corbyn — assets/controlled-opposition/cards/piers-corbyn.svg — controlled-opposition/piers-corbyn.html
+- 46. Max Blumenthal — assets/controlled-opposition/cards/max-blumenthal.svg — controlled-opposition/max-blumenthal.html
+- 47. Jimmy Dore — assets/controlled-opposition/cards/jimmy-dore.svg — controlled-opposition/jimmy-dore.html
+- 48. Glenn Greenwald — assets/controlled-opposition/cards/glenn-greenwald.svg — controlled-opposition/glenn-greenwald.html
+- 49. Matt Taibbi — assets/controlled-opposition/cards/matt-taibbi.svg — controlled-opposition/matt-taibbi.html
+- 50. Julian Assange — assets/controlled-opposition/cards/julian-assange.svg — controlled-opposition/julian-assange.html
+- 51. Edward Snowden — assets/controlled-opposition/cards/edward-snowden.svg — controlled-opposition/edward-snowden.html
+- 52. Graham Hancock — assets/controlled-opposition/cards/graham-hancock.svg — controlled-opposition/graham-hancock.html
 
 ## Institution Deck
-- 1. World Economic Forum — assets/institution/cards/world-economic-forum.svg — institution-profile.html?card=world-economic-forum
-- 2. United Nations — assets/institution/cards/united-nations.svg — institution-profile.html?card=united-nations
-- 3. World Health Organization — assets/institution/cards/world-health-organization.svg — institution-profile.html?card=world-health-organization
-- 4. Bank for International Settlements — assets/institution/cards/bank-for-international-settlements.svg — institution-profile.html?card=bank-for-international-settlements
-- 5. BlackRock — assets/institution/cards/blackrock.svg — institution-profile.html?card=blackrock
-- 6. Vanguard — assets/institution/cards/vanguard.svg — institution-profile.html?card=vanguard
-- 7. State Street — assets/institution/cards/state-street.svg — institution-profile.html?card=state-street
-- 8. International Monetary Fund — assets/institution/cards/international-monetary-fund.svg — institution-profile.html?card=international-monetary-fund
-- 9. World Bank — assets/institution/cards/world-bank.svg — institution-profile.html?card=world-bank
-- 10. Federal Reserve System — assets/institution/cards/federal-reserve-system.svg — institution-profile.html?card=federal-reserve-system
-- 11. European Central Bank — assets/institution/cards/european-central-bank.svg — institution-profile.html?card=european-central-bank
-- 12. European Commission — assets/institution/cards/european-commission.svg — institution-profile.html?card=european-commission
-- 13. World Trade Organization — assets/institution/cards/world-trade-organization.svg — institution-profile.html?card=world-trade-organization
-- 14. Organisation for Economic Co-operation and Development — assets/institution/cards/organisation-for-economic-co-operation-and-development.svg — institution-profile.html?card=organisation-for-economic-co-operation-and-development
-- 15. G20 — assets/institution/cards/g20.svg — institution-profile.html?card=g20
-- 16. G7 — assets/institution/cards/g7.svg — institution-profile.html?card=g7
-- 17. Microsoft — assets/institution/cards/microsoft.svg — institution-profile.html?card=microsoft
-- 18. Google — assets/institution/cards/google.svg — institution-profile.html?card=google
-- 19. Apple — assets/institution/cards/apple.svg — institution-profile.html?card=apple
-- 20. Meta Platforms — assets/institution/cards/meta-platforms.svg — institution-profile.html?card=meta-platforms
-- 21. Amazon — assets/institution/cards/amazon.svg — institution-profile.html?card=amazon
-- 22. Oracle — assets/institution/cards/oracle.svg — institution-profile.html?card=oracle
-- 23. Palantir Technologies — assets/institution/cards/palantir-technologies.svg — institution-profile.html?card=palantir-technologies
-- 24. OpenAI — assets/institution/cards/openai.svg — institution-profile.html?card=openai
-- 25. Central Intelligence Agency — assets/institution/cards/central-intelligence-agency.svg — institution-profile.html?card=central-intelligence-agency
-- 26. National Security Agency — assets/institution/cards/national-security-agency.svg — institution-profile.html?card=national-security-agency
-- 27. Federal Bureau of Investigation — assets/institution/cards/federal-bureau-of-investigation.svg — institution-profile.html?card=federal-bureau-of-investigation
-- 28. GCHQ — assets/institution/cards/gchq.svg — institution-profile.html?card=gchq
-- 29. MI6 — assets/institution/cards/mi6.svg — institution-profile.html?card=mi6
-- 30. NATO — assets/institution/cards/nato.svg — institution-profile.html?card=nato
-- 31. Council on Foreign Relations — assets/institution/cards/council-on-foreign-relations.svg — institution-profile.html?card=council-on-foreign-relations
-- 32. Trilateral Commission — assets/institution/cards/trilateral-commission.svg — institution-profile.html?card=trilateral-commission
-- 33. Bilderberg Group — assets/institution/cards/bilderberg-group.svg — institution-profile.html?card=bilderberg-group
-- 34. Chatham House — assets/institution/cards/chatham-house.svg — institution-profile.html?card=chatham-house
-- 35. Atlantic Council — assets/institution/cards/atlantic-council.svg — institution-profile.html?card=atlantic-council
-- 36. Brookings Institution — assets/institution/cards/brookings-institution.svg — institution-profile.html?card=brookings-institution
-- 37. Gavi, the Vaccine Alliance — assets/institution/cards/gavi-the-vaccine-alliance.svg — institution-profile.html?card=gavi-the-vaccine-alliance
-- 38. Coalition for Epidemic Preparedness Innovations — assets/institution/cards/coalition-for-epidemic-preparedness-innovations.svg — institution-profile.html?card=coalition-for-epidemic-preparedness-innovations
-- 39. Food and Agriculture Organization — assets/institution/cards/food-and-agriculture-organization.svg — institution-profile.html?card=food-and-agriculture-organization
-- 40. Codex Alimentarius Commission — assets/institution/cards/codex-alimentarius-commission.svg — institution-profile.html?card=codex-alimentarius-commission
-- 41. Reuters — assets/institution/cards/reuters.svg — institution-profile.html?card=reuters
-- 42. Associated Press — assets/institution/cards/associated-press.svg — institution-profile.html?card=associated-press
-- 43. BBC — assets/institution/cards/bbc.svg — institution-profile.html?card=bbc
-- 44. The New York Times — assets/institution/cards/the-new-york-times.svg — institution-profile.html?card=the-new-york-times
-- 45. Bill & Melinda Gates Foundation — assets/institution/cards/bill-melinda-gates-foundation.svg — institution-profile.html?card=bill-melinda-gates-foundation
-- 46. Open Society Foundations — assets/institution/cards/open-society-foundations.svg — institution-profile.html?card=open-society-foundations
-- 47. Rockefeller Foundation — assets/institution/cards/rockefeller-foundation.svg — institution-profile.html?card=rockefeller-foundation
-- 48. Wellcome Trust — assets/institution/cards/wellcome-trust.svg — institution-profile.html?card=wellcome-trust
-- 49. International Organization for Standardization — assets/institution/cards/international-organization-for-standardization.svg — institution-profile.html?card=international-organization-for-standardization
-- 50. ICANN — assets/institution/cards/icann.svg — institution-profile.html?card=icann
-- 51. SWIFT — assets/institution/cards/swift.svg — institution-profile.html?card=swift
-- 52. World Wide Web Consortium — assets/institution/cards/world-wide-web-consortium.svg — institution-profile.html?card=world-wide-web-consortium
+- 1. World Economic Forum — assets/institution/cards/world-economic-forum.svg — institutions/world-economic-forum.html
+- 2. United Nations — assets/institution/cards/united-nations.svg — institutions/united-nations.html
+- 3. World Health Organization — assets/institution/cards/world-health-organization.svg — institutions/world-health-organization.html
+- 4. Bank for International Settlements — assets/institution/cards/bank-for-international-settlements.svg — institutions/bank-for-international-settlements.html
+- 5. BlackRock — assets/institution/cards/blackrock.svg — institutions/blackrock.html
+- 6. Vanguard — assets/institution/cards/vanguard.svg — institutions/vanguard.html
+- 7. State Street — assets/institution/cards/state-street.svg — institutions/state-street.html
+- 8. International Monetary Fund — assets/institution/cards/international-monetary-fund.svg — institutions/international-monetary-fund.html
+- 9. World Bank — assets/institution/cards/world-bank.svg — institutions/world-bank.html
+- 10. Federal Reserve System — assets/institution/cards/federal-reserve-system.svg — institutions/federal-reserve-system.html
+- 11. European Central Bank — assets/institution/cards/european-central-bank.svg — institutions/european-central-bank.html
+- 12. European Commission — assets/institution/cards/european-commission.svg — institutions/european-commission.html
+- 13. World Trade Organization — assets/institution/cards/world-trade-organization.svg — institutions/world-trade-organization.html
+- 14. Organisation for Economic Co-operation and Development — assets/institution/cards/organisation-for-economic-co-operation-and-development.svg — institutions/organisation-for-economic-co-operation-and-development.html
+- 15. G20 — assets/institution/cards/g20.svg — institutions/g20.html
+- 16. G7 — assets/institution/cards/g7.svg — institutions/g7.html
+- 17. Microsoft — assets/institution/cards/microsoft.svg — institutions/microsoft.html
+- 18. Google — assets/institution/cards/google.svg — institutions/google.html
+- 19. Apple — assets/institution/cards/apple.svg — institutions/apple.html
+- 20. Meta Platforms — assets/institution/cards/meta-platforms.svg — institutions/meta-platforms.html
+- 21. Amazon — assets/institution/cards/amazon.svg — institutions/amazon.html
+- 22. Oracle — assets/institution/cards/oracle.svg — institutions/oracle.html
+- 23. Palantir Technologies — assets/institution/cards/palantir-technologies.svg — institutions/palantir-technologies.html
+- 24. OpenAI — assets/institution/cards/openai.svg — institutions/openai.html
+- 25. Central Intelligence Agency — assets/institution/cards/central-intelligence-agency.svg — institutions/central-intelligence-agency.html
+- 26. National Security Agency — assets/institution/cards/national-security-agency.svg — institutions/national-security-agency.html
+- 27. Federal Bureau of Investigation — assets/institution/cards/federal-bureau-of-investigation.svg — institutions/federal-bureau-of-investigation.html
+- 28. GCHQ — assets/institution/cards/gchq.svg — institutions/gchq.html
+- 29. MI6 — assets/institution/cards/mi6.svg — institutions/mi6.html
+- 30. NATO — assets/institution/cards/nato.svg — institutions/nato.html
+- 31. Council on Foreign Relations — assets/institution/cards/council-on-foreign-relations.svg — institutions/council-on-foreign-relations.html
+- 32. Trilateral Commission — assets/institution/cards/trilateral-commission.svg — institutions/trilateral-commission.html
+- 33. Bilderberg Group — assets/institution/cards/bilderberg-group.svg — institutions/bilderberg-group.html
+- 34. Chatham House — assets/institution/cards/chatham-house.svg — institutions/chatham-house.html
+- 35. Atlantic Council — assets/institution/cards/atlantic-council.svg — institutions/atlantic-council.html
+- 36. Brookings Institution — assets/institution/cards/brookings-institution.svg — institutions/brookings-institution.html
+- 37. Gavi, the Vaccine Alliance — assets/institution/cards/gavi-the-vaccine-alliance.svg — institutions/gavi-the-vaccine-alliance.html
+- 38. Coalition for Epidemic Preparedness Innovations — assets/institution/cards/coalition-for-epidemic-preparedness-innovations.svg — institutions/coalition-for-epidemic-preparedness-innovations.html
+- 39. Food and Agriculture Organization — assets/institution/cards/food-and-agriculture-organization.svg — institutions/food-and-agriculture-organization.html
+- 40. Codex Alimentarius Commission — assets/institution/cards/codex-alimentarius-commission.svg — institutions/codex-alimentarius-commission.html
+- 41. Reuters — assets/institution/cards/reuters.svg — institutions/reuters.html
+- 42. Associated Press — assets/institution/cards/associated-press.svg — institutions/associated-press.html
+- 43. BBC — assets/institution/cards/bbc.svg — institutions/bbc.html
+- 44. The New York Times — assets/institution/cards/the-new-york-times.svg — institutions/the-new-york-times.html
+- 45. Bill & Melinda Gates Foundation — assets/institution/cards/bill-and-melinda-gates-foundation.svg — institutions/bill-and-melinda-gates-foundation.html
+- 46. Open Society Foundations — assets/institution/cards/open-society-foundations.svg — institutions/open-society-foundations.html
+- 47. Rockefeller Foundation — assets/institution/cards/rockefeller-foundation.svg — institutions/rockefeller-foundation.html
+- 48. Wellcome Trust — assets/institution/cards/wellcome-trust.svg — institutions/wellcome-trust.html
+- 49. International Organization for Standardization — assets/institution/cards/international-organization-for-standardization.svg — institutions/international-organization-for-standardization.html
+- 50. ICANN — assets/institution/cards/icann.svg — institutions/icann.html
+- 51. SWIFT — assets/institution/cards/swift.svg — institutions/swift.html
+- 52. World Wide Web Consortium — assets/institution/cards/world-wide-web-consortium.svg — institutions/world-wide-web-consortium.html
 
 ## Power Families Deck
 - 1. Rothschild family — assets/power-families/cards/rothschild-family.svg — power-families/rothschild-family.html
@@ -385,3 +385,111 @@ Missing routes/assets: 0
 - 50. BIS research route — assets/think-tanks/cards/bis-research-route.svg — think-tanks/bis-research-route.html
 - 51. IMF policy research route — assets/think-tanks/cards/imf-policy-research-route.svg — think-tanks/imf-policy-research-route.html
 - 52. OECD policy research route — assets/think-tanks/cards/oecd-policy-research-route.svg — think-tanks/oecd-policy-research-route.html
+
+## Black Nobility & Allied Dynasties Deck
+- 1. Orsini — assets/black-nobility/cards/orsini.svg — black-nobility/orsini.html
+- 2. Colonna — assets/black-nobility/cards/colonna.svg — black-nobility/colonna.html
+- 3. Borghese — assets/black-nobility/cards/borghese.svg — black-nobility/borghese.html
+- 4. Barberini — assets/black-nobility/cards/barberini.svg — black-nobility/barberini.html
+- 5. Chigi — assets/black-nobility/cards/chigi.svg — black-nobility/chigi.html
+- 6. Aldobrandini — assets/black-nobility/cards/aldobrandini.svg — black-nobility/aldobrandini.html
+- 7. Pamphilj — assets/black-nobility/cards/pamphilj.svg — black-nobility/pamphilj.html
+- 8. Odescalchi — assets/black-nobility/cards/odescalchi.svg — black-nobility/odescalchi.html
+- 9. Massimo — assets/black-nobility/cards/massimo.svg — black-nobility/massimo.html
+- 10. Ruspoli — assets/black-nobility/cards/ruspoli.svg — black-nobility/ruspoli.html
+- 11. Torlonia — assets/black-nobility/cards/torlonia.svg — black-nobility/torlonia.html
+- 12. Caetani — assets/black-nobility/cards/caetani.svg — black-nobility/caetani.html
+- 13. Boncompagni Ludovisi — assets/black-nobility/cards/boncompagni-ludovisi.svg — black-nobility/boncompagni-ludovisi.html
+- 14. Doria — assets/black-nobility/cards/doria.svg — black-nobility/doria.html
+- 15. Spinola — assets/black-nobility/cards/spinola.svg — black-nobility/spinola.html
+- 16. Giustiniani — assets/black-nobility/cards/giustiniani.svg — black-nobility/giustiniani.html
+- 17. Contarini — assets/black-nobility/cards/contarini.svg — black-nobility/contarini.html
+- 18. Mocenigo — assets/black-nobility/cards/mocenigo.svg — black-nobility/mocenigo.html
+- 19. Cornaro — assets/black-nobility/cards/cornaro.svg — black-nobility/cornaro.html
+- 20. Morosini — assets/black-nobility/cards/morosini.svg — black-nobility/morosini.html
+- 21. Loredan — assets/black-nobility/cards/loredan.svg — black-nobility/loredan.html
+- 22. Gritti — assets/black-nobility/cards/gritti.svg — black-nobility/gritti.html
+- 23. Vendramin — assets/black-nobility/cards/vendramin.svg — black-nobility/vendramin.html
+- 24. Bragadin — assets/black-nobility/cards/bragadin.svg — black-nobility/bragadin.html
+- 25. Querini — assets/black-nobility/cards/querini.svg — black-nobility/querini.html
+- 26. Pisani — assets/black-nobility/cards/pisani.svg — black-nobility/pisani.html
+- 27. Medici — assets/black-nobility/cards/medici.svg — black-nobility/medici.html
+- 28. Este — assets/black-nobility/cards/este.svg — black-nobility/este.html
+- 29. Gonzaga — assets/black-nobility/cards/gonzaga.svg — black-nobility/gonzaga.html
+- 30. Sforza — assets/black-nobility/cards/sforza.svg — black-nobility/sforza.html
+- 31. Visconti — assets/black-nobility/cards/visconti.svg — black-nobility/visconti.html
+- 32. Farnese — assets/black-nobility/cards/farnese.svg — black-nobility/farnese.html
+- 33. Savoy — assets/black-nobility/cards/savoy.svg — black-nobility/savoy.html
+- 34. Grimaldi — assets/black-nobility/cards/grimaldi.svg — black-nobility/grimaldi.html
+- 35. Pallavicini — assets/black-nobility/cards/pallavicini.svg — black-nobility/pallavicini.html
+- 36. Malaspina — assets/black-nobility/cards/malaspina.svg — black-nobility/malaspina.html
+- 37. Bentivoglio — assets/black-nobility/cards/bentivoglio.svg — black-nobility/bentivoglio.html
+- 38. Montefeltro — assets/black-nobility/cards/montefeltro.svg — black-nobility/montefeltro.html
+- 39. della Rovere — assets/black-nobility/cards/della-rovere.svg — black-nobility/della-rovere.html
+- 40. Habsburg-Lorraine — assets/black-nobility/cards/habsburg-lorraine.svg — black-nobility/habsburg-lorraine.html
+- 41. Bourbon-Two Sicilies — assets/black-nobility/cards/bourbon-two-sicilies.svg — black-nobility/bourbon-two-sicilies.html
+- 42. Bourbon-Parma — assets/black-nobility/cards/bourbon-parma.svg — black-nobility/bourbon-parma.html
+- 43. Liechtenstein — assets/black-nobility/cards/liechtenstein.svg — black-nobility/liechtenstein.html
+- 44. Schwarzenberg — assets/black-nobility/cards/schwarzenberg.svg — black-nobility/schwarzenberg.html
+- 45. Lobkowicz — assets/black-nobility/cards/lobkowicz.svg — black-nobility/lobkowicz.html
+- 46. Thurn und Taxis — assets/black-nobility/cards/thurn-und-taxis.svg — black-nobility/thurn-und-taxis.html
+- 47. Braganza — assets/black-nobility/cards/braganza.svg — black-nobility/braganza.html
+- 48. Wittelsbach — assets/black-nobility/cards/wittelsbach.svg — black-nobility/wittelsbach.html
+- 49. Hohenzollern-Sigmaringen — assets/black-nobility/cards/hohenzollern-sigmaringen.svg — black-nobility/hohenzollern-sigmaringen.html
+- 50. Orange-Nassau — assets/black-nobility/cards/orange-nassau.svg — black-nobility/orange-nassau.html
+- 51. Oldenburg — assets/black-nobility/cards/oldenburg.svg — black-nobility/oldenburg.html
+- 52. Arenberg — assets/black-nobility/cards/arenberg.svg — black-nobility/arenberg.html
+
+## Jurisdictions of Power Deck
+- 1. Vatican City / Holy See — assets/jurisdictions-of-power/cards/vatican-city-holy-see.svg — jurisdictions-of-power/vatican-city-holy-see.html
+- 2. City of London — assets/jurisdictions-of-power/cards/city-of-london.svg — jurisdictions-of-power/city-of-london.html
+- 3. Washington, D.C. — assets/jurisdictions-of-power/cards/washington-d-c.svg — jurisdictions-of-power/washington-d-c.html
+- 4. Brussels / EU Quarter — assets/jurisdictions-of-power/cards/brussels-eu-quarter.svg — jurisdictions-of-power/brussels-eu-quarter.html
+- 5. Geneva — assets/jurisdictions-of-power/cards/geneva.svg — jurisdictions-of-power/geneva.html
+- 6. New York City — assets/jurisdictions-of-power/cards/new-york-city.svg — jurisdictions-of-power/new-york-city.html
+- 7. Basel — assets/jurisdictions-of-power/cards/basel.svg — jurisdictions-of-power/basel.html
+- 8. Frankfurt — assets/jurisdictions-of-power/cards/frankfurt.svg — jurisdictions-of-power/frankfurt.html
+- 9. The Hague — assets/jurisdictions-of-power/cards/the-hague.svg — jurisdictions-of-power/the-hague.html
+- 10. Paris / OECD-FATF Route — assets/jurisdictions-of-power/cards/paris-oecd-fatf-route.svg — jurisdictions-of-power/paris-oecd-fatf-route.html
+- 11. Beijing — assets/jurisdictions-of-power/cards/beijing.svg — jurisdictions-of-power/beijing.html
+- 12. Moscow — assets/jurisdictions-of-power/cards/moscow.svg — jurisdictions-of-power/moscow.html
+- 13. Riyadh — assets/jurisdictions-of-power/cards/riyadh.svg — jurisdictions-of-power/riyadh.html
+- 14. Cayman Islands — assets/jurisdictions-of-power/cards/cayman-islands.svg — jurisdictions-of-power/cayman-islands.html
+- 15. British Virgin Islands — assets/jurisdictions-of-power/cards/british-virgin-islands.svg — jurisdictions-of-power/british-virgin-islands.html
+- 16. Bermuda — assets/jurisdictions-of-power/cards/bermuda.svg — jurisdictions-of-power/bermuda.html
+- 17. Luxembourg — assets/jurisdictions-of-power/cards/luxembourg.svg — jurisdictions-of-power/luxembourg.html
+- 18. Switzerland — assets/jurisdictions-of-power/cards/switzerland.svg — jurisdictions-of-power/switzerland.html
+- 19. Singapore — assets/jurisdictions-of-power/cards/singapore.svg — jurisdictions-of-power/singapore.html
+- 20. Hong Kong — assets/jurisdictions-of-power/cards/hong-kong.svg — jurisdictions-of-power/hong-kong.html
+- 21. Netherlands — assets/jurisdictions-of-power/cards/netherlands.svg — jurisdictions-of-power/netherlands.html
+- 22. Ireland — assets/jurisdictions-of-power/cards/ireland.svg — jurisdictions-of-power/ireland.html
+- 23. Delaware — assets/jurisdictions-of-power/cards/delaware.svg — jurisdictions-of-power/delaware.html
+- 24. Jersey — assets/jurisdictions-of-power/cards/jersey.svg — jurisdictions-of-power/jersey.html
+- 25. Guernsey — assets/jurisdictions-of-power/cards/guernsey.svg — jurisdictions-of-power/guernsey.html
+- 26. Isle of Man — assets/jurisdictions-of-power/cards/isle-of-man.svg — jurisdictions-of-power/isle-of-man.html
+- 27. Dubai / DIFC — assets/jurisdictions-of-power/cards/dubai-difc.svg — jurisdictions-of-power/dubai-difc.html
+- 28. Abu Dhabi / ADGM — assets/jurisdictions-of-power/cards/abu-dhabi-adgm.svg — jurisdictions-of-power/abu-dhabi-adgm.html
+- 29. Monaco — assets/jurisdictions-of-power/cards/monaco.svg — jurisdictions-of-power/monaco.html
+- 30. Liechtenstein — assets/jurisdictions-of-power/cards/liechtenstein.svg — jurisdictions-of-power/liechtenstein.html
+- 31. Panama — assets/jurisdictions-of-power/cards/panama.svg — jurisdictions-of-power/panama.html
+- 32. Bahamas — assets/jurisdictions-of-power/cards/bahamas.svg — jurisdictions-of-power/bahamas.html
+- 33. Malta — assets/jurisdictions-of-power/cards/malta.svg — jurisdictions-of-power/malta.html
+- 34. Cyprus — assets/jurisdictions-of-power/cards/cyprus.svg — jurisdictions-of-power/cyprus.html
+- 35. Mauritius — assets/jurisdictions-of-power/cards/mauritius.svg — jurisdictions-of-power/mauritius.html
+- 36. Seychelles — assets/jurisdictions-of-power/cards/seychelles.svg — jurisdictions-of-power/seychelles.html
+- 37. Belize — assets/jurisdictions-of-power/cards/belize.svg — jurisdictions-of-power/belize.html
+- 38. Gibraltar — assets/jurisdictions-of-power/cards/gibraltar.svg — jurisdictions-of-power/gibraltar.html
+- 39. Andorra — assets/jurisdictions-of-power/cards/andorra.svg — jurisdictions-of-power/andorra.html
+- 40. San Marino — assets/jurisdictions-of-power/cards/san-marino.svg — jurisdictions-of-power/san-marino.html
+- 41. Macau — assets/jurisdictions-of-power/cards/macau.svg — jurisdictions-of-power/macau.html
+- 42. Labuan — assets/jurisdictions-of-power/cards/labuan.svg — jurisdictions-of-power/labuan.html
+- 43. Cook Islands — assets/jurisdictions-of-power/cards/cook-islands.svg — jurisdictions-of-power/cook-islands.html
+- 44. Marshall Islands — assets/jurisdictions-of-power/cards/marshall-islands.svg — jurisdictions-of-power/marshall-islands.html
+- 45. St Kitts and Nevis — assets/jurisdictions-of-power/cards/st-kitts-and-nevis.svg — jurisdictions-of-power/st-kitts-and-nevis.html
+- 46. Turks and Caicos Islands — assets/jurisdictions-of-power/cards/turks-and-caicos-islands.svg — jurisdictions-of-power/turks-and-caicos-islands.html
+- 47. Anguilla — assets/jurisdictions-of-power/cards/anguilla.svg — jurisdictions-of-power/anguilla.html
+- 48. Samoa — assets/jurisdictions-of-power/cards/samoa.svg — jurisdictions-of-power/samoa.html
+- 49. Vanuatu — assets/jurisdictions-of-power/cards/vanuatu.svg — jurisdictions-of-power/vanuatu.html
+- 50. Bahrain — assets/jurisdictions-of-power/cards/bahrain.svg — jurisdictions-of-power/bahrain.html
+- 51. Qatar Financial Centre — assets/jurisdictions-of-power/cards/qatar-financial-centre.svg — jurisdictions-of-power/qatar-financial-centre.html
+- 52. Astana International Financial Centre — assets/jurisdictions-of-power/cards/astana-international-financial-centre.svg — jurisdictions-of-power/astana-international-financial-centre.html

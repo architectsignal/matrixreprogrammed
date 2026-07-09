@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T06:13:04.758Z",
+  "updated": "2026-07-09T07:11:37.681Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -29,34 +29,6 @@
         "global_money"
       ],
       "score": 27,
-      "grade": "candidate",
-      "relationship_type": "repeated public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "25-365__supreme-court-of-the-united-states",
-      "from": "Supreme Court of the United States",
-      "to": "25-365",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-5",
-        "courtlistener-court-records-10882239-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 20,
       "grade": "candidate",
       "relationship_type": "repeated public-record co-occurrence",
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -118,6 +90,168 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york__sawas-v-elzanaty",
+      "from": "Sawas v. Elzanaty",
+      "to": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2021-00294__sawas-v-elzanaty",
+      "from": "Sawas v. Elzanaty",
+      "to": "2021-00294",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2021-00294__appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "from": "Appellate Division of the Supreme Court of the State of New York",
+      "to": "2021-00294",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "california-court-of-appeal__people-v-brim",
+      "from": "People v. Brim",
+      "to": "California Court of Appeal",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "a170747m__people-v-brim",
+      "from": "People v. Brim",
+      "to": "A170747M",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "a170747m__california-court-of-appeal",
+      "from": "California Court of Appeal",
+      "to": "A170747M",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
       "id": "court-of-appeals-for-the-second-circuit__the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
       "from": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "to": "Court of Appeals for the Second Circuit",
@@ -132,7 +266,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-1"
+        "courtlistener-court-records-10917016-3"
       ],
       "control_layers": [
         "courts",
@@ -159,7 +293,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-1"
+        "courtlistener-court-records-10917016-3"
       ],
       "control_layers": [
         "courts",
@@ -186,7 +320,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-1"
+        "courtlistener-court-records-10917016-3"
       ],
       "control_layers": [
         "courts",
@@ -213,7 +347,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-2"
+        "courtlistener-court-records-10883674-4"
       ],
       "control_layers": [
         "courts",
@@ -240,7 +374,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-2"
+        "courtlistener-court-records-10883674-4"
       ],
       "control_layers": [
         "courts",
@@ -267,7 +401,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-2"
+        "courtlistener-court-records-10883674-4"
       ],
       "control_layers": [
         "courts",
@@ -294,7 +428,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-3"
+        "courtlistener-court-records-10883331-5"
       ],
       "control_layers": [
         "courts",
@@ -321,7 +455,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-3"
+        "courtlistener-court-records-10883331-5"
       ],
       "control_layers": [
         "courts",
@@ -348,7 +482,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-3"
+        "courtlistener-court-records-10883331-5"
       ],
       "control_layers": [
         "courts",
@@ -375,7 +509,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10914068-4"
+        "courtlistener-court-records-10914068-6"
       ],
       "control_layers": [
         "courts",
@@ -402,7 +536,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10914068-4"
+        "courtlistener-court-records-10914068-6"
       ],
       "control_layers": [
         "courts",
@@ -429,115 +563,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10914068-4"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "supreme-court-of-the-united-states__trump-v-barbara-revisions-7-01-26",
-      "from": "Trump v. Barbara Revisions: 7/01/26",
-      "to": "Supreme Court of the United States",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-5"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "25-365__trump-v-barbara-revisions-7-01-26",
-      "from": "Trump v. Barbara Revisions: 7/01/26",
-      "to": "25-365",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10883542-5"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "supreme-court-of-the-united-states__trump-v-barbara",
-      "from": "Trump v. Barbara",
-      "to": "Supreme Court of the United States",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10882239-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "25-365__trump-v-barbara",
-      "from": "Trump v. Barbara",
-      "to": "25-365",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10882239-6"
+        "courtlistener-court-records-10914068-6"
       ],
       "control_layers": [
         "courts",

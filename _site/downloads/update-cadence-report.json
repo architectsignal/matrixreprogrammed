@@ -1,9 +1,10 @@
 {
-  "generatedAt": "2026-07-02T07:45:22.826Z",
+  "generatedAt": "2026-07-08T06:40:40.753Z",
   "ok": true,
   "hardIssues": [],
   "softIssues": [
-    ".github/workflows/auto-update-orchestrator.yml missing daily update step"
+    ".github/workflows/auto-update-orchestrator.yml missing daily update step",
+    "scripts/patch-worker-newsletter-system.js missing weekly newsletter send handler"
   ],
   "boundary": "Cadence audit hard-fails missing update systems and duplicate automatic schedules. Exact wording and marker checks are warnings so regenerated copy does not block production deploy."
 }

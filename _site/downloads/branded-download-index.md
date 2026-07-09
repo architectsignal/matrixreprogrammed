@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-08T06:13:07.317Z
+Updated: 2026-07-09T07:11:40.412Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -30,34 +30,40 @@ Every listed PDF is generated from the current site data at build time. The prem
 ## Full PDF Index
 
 - Anchor Alias Repair Report: downloads/anchor-alias-repair-report.pdf (custom PDF preserved)
-- Atlas Lane Dossiers: downloads/atlas-lane-dossiers.pdf
+- Atlas Lane Dossiers: downloads/atlas-lane-dossiers.pdf (custom PDF preserved)
+- Atlas Lane Link Repair: downloads/atlas-lane-link-repair.pdf (custom PDF preserved)
+- Atlas Lane Populations: downloads/atlas-lane-populations.pdf (custom PDF preserved)
 - Auto Evidence Pipeline Report: downloads/auto-evidence-pipeline-report.pdf (custom PDF preserved)
-- Big Three Asset Manager Tracker: downloads/big-three-asset-managers.pdf
-- Big Three Search Routes Report: downloads/big-three-search-routes-report.pdf
+- Big Three Asset Manager Tracker: downloads/big-three-asset-managers.pdf (custom PDF preserved)
+- Big Three Search Routes Report: downloads/big-three-search-routes-report.pdf (custom PDF preserved)
 - Black File Exposé Engine: downloads/black-file-exposes.pdf (custom PDF preserved)
 - Black Files Series Hub: downloads/black-files-series.pdf (custom PDF preserved)
-- BlackRock Viral Video Claim Audit: downloads/blackrock-video-claim-audit.pdf
+- BlackRock Viral Video Claim Audit: downloads/blackrock-video-claim-audit.pdf (custom PDF preserved)
 - Black File Launch Campaign: downloads/campaign-black-file-launch.pdf (custom PDF preserved)
 - Crime-State Overlap Campaign: downloads/campaign-crime-state-overlap-push.pdf (custom PDF preserved)
 - Intelligence Dossiers Campaign: downloads/campaign-intelligence-dossiers-push.pdf (custom PDF preserved)
 - Symbolic Power Campaign: downloads/campaign-symbolic-power-push.pdf (custom PDF preserved)
 - Trust And Evidence Campaign: downloads/campaign-trust-evidence-push.pdf (custom PDF preserved)
 - War Machine Campaign: downloads/campaign-war-machine-push.pdf (custom PDF preserved)
-- Card Intelligence Feed: downloads/card-intelligence-feed.pdf
+- Card Artwork Batches: downloads/card-artwork-batches.pdf
+- Card Artwork Install Log: downloads/card-artwork-install-log.pdf
+- Next Card Artwork Queue: downloads/card-artwork-queue.pdf
+- Card Download Manifest: downloads/card-download-manifest.pdf (custom PDF preserved)
+- Card Intelligence Feed: downloads/card-intelligence-feed.pdf (custom PDF preserved)
 - Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf (custom PDF preserved)
-- WWIII Escalation Clock: downloads/clock-wall.pdf
-- Control Brain V2: downloads/control-brain-v2.pdf
-- Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf
-- Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf
-- Convergence Control Lenses: downloads/convergence-control-lenses.pdf
+- WWIII Escalation Clock: downloads/clock-wall.pdf (custom PDF preserved)
+- Control Brain V2: downloads/control-brain-v2.pdf (custom PDF preserved)
+- Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf (custom PDF preserved)
+- Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf (custom PDF preserved)
+- Convergence Control Lenses: downloads/convergence-control-lenses.pdf (custom PDF preserved)
 - Daily Brain Brief: downloads/daily-brain-brief.pdf (custom PDF preserved)
-- Deep Daily Control Brief: downloads/daily-brief-master.pdf
+- Deep Daily Control Brief: downloads/daily-brief-master.pdf (custom PDF preserved)
 - Daily Command Brief: downloads/daily-command-brief.pdf (custom PDF preserved)
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf (custom PDF preserved)
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf (custom PDF preserved)
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf (custom PDF preserved)
-- Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf
+- Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf (custom PDF preserved)
 - Deploy Health: downloads/deploy-health.pdf (custom PDF preserved)
 - Deploy Status: downloads/deploy-status.pdf (custom PDF preserved)
 - Black File Starter Pack: downloads/dossier-pack-black-file-starter.pdf (custom PDF preserved)
@@ -67,8 +73,8 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Trust And Evidence Pack: downloads/dossier-pack-trust-evidence.pdf (custom PDF preserved)
 - War Machine Pack: downloads/dossier-pack-war-machine.pdf (custom PDF preserved)
 - Matrix Reprogrammed Download Index: downloads/downloads-index.pdf (custom PDF preserved)
-- Elite Family Tracker: downloads/elite-family-tracker.pdf
-- Elite Reports: downloads/elite-reports.pdf
+- Elite Family Tracker: downloads/elite-family-tracker.pdf (custom PDF preserved)
+- Elite Reports: downloads/elite-reports.pdf (custom PDF preserved)
 - Entity Daily Briefs: downloads/entity-daily-briefs.pdf (custom PDF preserved)
 - Entity Exposure Index: downloads/entity-exposure-index.pdf (custom PDF preserved)
 - Epstein Capital Class Map Tracker: downloads/epstein-capital-class-map.pdf (custom PDF preserved)
@@ -101,13 +107,16 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf (custom PDF preserved)
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf (custom PDF preserved)
 - Live Intel Machine: downloads/live-intel-latest.pdf (custom PDF preserved)
+- Logo Symbolism Dossiers: downloads/logo-symbolism-dossiers.pdf (custom PDF preserved)
 - Machine Digest: downloads/machine-digest.pdf (custom PDF preserved)
 - Machine Intelligence: downloads/machine-intelligence.pdf (custom PDF preserved)
 - Master Brief Engine: downloads/master-brief-engine.pdf (custom PDF preserved)
-- Master Evidence Source Registry: downloads/master-evidence-source-registry.pdf
+- Master Evidence Source Registry: downloads/master-evidence-source-registry.pdf (custom PDF preserved)
 - Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf (custom PDF preserved)
-- Mission Intelligence 10: downloads/mission-intelligence-10.pdf
-- Mission Source Priority Index: downloads/mission-source-priority-index.pdf
+- Mission Health Audit: downloads/mission-health-audit.pdf
+- Mission Intelligence 10: downloads/mission-intelligence-10.pdf (custom PDF preserved)
+- Mission Source Priority Index: downloads/mission-source-priority-index.pdf (custom PDF preserved)
+- Monetisation Dashboard: downloads/monetisation-dashboard.pdf
 - Network Search: downloads/network-search.pdf (custom PDF preserved)
 - Crime Dossiers Offer: downloads/offer-crime-dossiers.pdf (custom PDF preserved)
 - D.O.G The Architect Collector Offer: downloads/offer-dog-architect-collector.pdf (custom PDF preserved)
@@ -117,18 +126,21 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Trust Before Darkness Offer: downloads/offer-trust-before-darkness.pdf (custom PDF preserved)
 - Trust And Evidence Kit Offer: downloads/offer-trust-evidence-kit.pdf (custom PDF preserved)
 - Outcome Briefings: downloads/outcome-briefings.pdf (custom PDF preserved)
+- Page Quality Audit: downloads/page-quality-audit.pdf
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
 - Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf (custom PDF preserved)
 - Probability Snapshot: downloads/probability-snapshot.pdf (custom PDF preserved)
 - Public Record Intake Manifest: downloads/public-record-intake.pdf (custom PDF preserved)
-- Readable User Briefs: downloads/readable-user-briefs.pdf
-- Reader Experience Governor: downloads/reader-experience-governor-report.pdf
-- Reader Page Repair: downloads/reader-page-repair.pdf
+- Readable User Briefs: downloads/readable-user-briefs.pdf (custom PDF preserved)
+- Reader Experience Governor: downloads/reader-experience-governor-report.pdf (custom PDF preserved)
+- Reader Page Repair: downloads/reader-page-repair.pdf (custom PDF preserved)
+- Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf
 - Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
 - SEC Filing Feed: downloads/sec-filing-feed.pdf (custom PDF preserved)
-- Secret Societies and Orders Tracker: downloads/secret-societies-tracker.pdf
+- Secondary Deck Artwork: downloads/secondary-deck-artwork.pdf (custom PDF preserved)
+- Secret Societies and Orders Tracker: downloads/secret-societies-tracker.pdf (custom PDF preserved)
 - Seven Day Intel: downloads/seven-day-intel.pdf (custom PDF preserved)
 - Black File Starter Share Kit: downloads/share-kit-black-file-starter.pdf (custom PDF preserved)
 - Crime-State Overlap Share Kit: downloads/share-kit-crime-state-overlap.pdf (custom PDF preserved)
@@ -136,12 +148,14 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Symbolic Power Share Kit: downloads/share-kit-symbolic-power.pdf (custom PDF preserved)
 - Trust And Evidence Share Kit: downloads/share-kit-trust-evidence.pdf (custom PDF preserved)
 - War Machine Share Kit: downloads/share-kit-war-machine.pdf (custom PDF preserved)
+- Site Brain Router: downloads/site-brain-router.pdf
 - Site Freshness Report: downloads/site-freshness-report.pdf (custom PDF preserved)
 - Matrix Intelligence Core: downloads/site-intelligence-core.pdf (custom PDF preserved)
 - Site Intelligence Graph: downloads/site-intelligence-graph.pdf (custom PDF preserved)
-- Site Population Audit: downloads/site-population-audit.pdf
+- Site Population Audit: downloads/site-population-audit.pdf (custom PDF preserved)
+- Site Public Copy And Intake Audit: downloads/site-public-copy-intake-audit.pdf
 - Site Quality Report: downloads/site-quality-report.pdf (custom PDF preserved)
-- Site Relationship Map: downloads/site-relationship-map.pdf
+- Site Relationship Map: downloads/site-relationship-map.pdf (custom PDF preserved)
 - Source Cards: downloads/source-cards.pdf (custom PDF preserved)
 - Source Document Vault: downloads/source-document-vault.pdf (custom PDF preserved)
 - Crime-State Overlap Brief: downloads/subject-crime-state-overlap.pdf
@@ -153,9 +167,15 @@ Every listed PDF is generated from the current site data at build time. The prem
 - NASA Hidden Architecture File: downloads/subject-nasa-hidden-architecture.pdf
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
+- Top 52 Art System Style Bible: downloads/top-52-art-style-bible.pdf (custom PDF preserved)
+- Top 52 Batch 1 Art Queue: downloads/top-52-batch1-art-queue.pdf (custom PDF preserved)
+- Top 52 Card Art Manifest: downloads/top-52-card-art-manifest.pdf (custom PDF preserved)
+- Top 52 Generated Card Artwork: downloads/top-52-generated-art.pdf (custom PDF preserved)
+- Top 52 Influence Profiles: downloads/top-52-influence-profiles.pdf (custom PDF preserved)
+- Top 52 Persons of Interest: downloads/top-52-power-deck.pdf (custom PDF preserved)
 - Tracker Core — Single Source Of Truth: downloads/tracker-core.pdf (custom PDF preserved)
 - Matrix Reprogrammed Tracker Dashboard: downloads/tracker-dashboard-map.pdf (custom PDF preserved)
-- Tracker Page Completion Report: downloads/tracker-page-completion-report.pdf
+- Tracker Page Completion Report: downloads/tracker-page-completion-report.pdf (custom PDF preserved)
 - Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
 - Update Cadence Report: downloads/update-cadence-report.pdf (custom PDF preserved)
 - Verified Record Cards: downloads/verified-record-cards.pdf (custom PDF preserved)

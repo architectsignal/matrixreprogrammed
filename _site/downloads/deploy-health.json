@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "bbd4ed0b23a697bf8d3b3215bd7b676a9731e81a",
-  "buildShortSha": "bbd4ed0b23a6",
-  "generatedAt": "2026-07-08T06:13:20.066Z",
+  "buildSha": "6cc136e2320d3b0c82ad37845272c24f09902b44",
+  "buildShortSha": "6cc136e2320d",
+  "generatedAt": "2026-07-09T07:11:56.294Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -15,6 +15,11 @@
     "/search",
     "/books",
     "/live-intel",
+    "/power-conclusions",
+    "/evidence-hunter",
+    "/who-holds-power",
+    "/one-world-convergence",
+    "/accountability-watch",
     "/epstein-files",
     "/sec-filing-feed.html",
     "/probability-lab.html",
@@ -25,19 +30,49 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "6194d65d3f8272a3"
+      "hash": "1aa39baed697c410"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "6194d65d3f8272a3"
+      "hash": "1aa39baed697c410"
+    },
+    {
+      "name": "Power Conclusions",
+      "route": "/power-conclusions.html",
+      "file": "power-conclusions.html",
+      "hash": "190e156d7b76afa3"
+    },
+    {
+      "name": "Evidence Hunter",
+      "route": "/evidence-hunter.html",
+      "file": "evidence-hunter.html",
+      "hash": "60f4985db547af2b"
+    },
+    {
+      "name": "Who Holds Power",
+      "route": "/who-holds-power.html",
+      "file": "who-holds-power.html",
+      "hash": "3ef08e8184aa4eca"
+    },
+    {
+      "name": "Convergence Map",
+      "route": "/one-world-convergence.html",
+      "file": "one-world-convergence.html",
+      "hash": "fe372d51ab49aa47"
+    },
+    {
+      "name": "Accountability Watch",
+      "route": "/accountability-watch.html",
+      "file": "accountability-watch.html",
+      "hash": "9ad7179d2f51648b"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "aab3527c0a8815bb"
+      "hash": "1b311266435519af"
     },
     {
       "name": "Dark Speculation Forum",
@@ -55,19 +90,19 @@
       "name": "Books",
       "route": "/books.html",
       "file": "books.html",
-      "hash": "09d8aff847db3e82"
+      "hash": "5d8edab2c6b66ea9"
     },
     {
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "4b5a9e266ec21f4c"
+      "hash": "f5e833d7c0bbc011"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "19e45277ae260431"
+      "hash": "046681b16ecc34eb"
     },
     {
       "name": "Probability Lab",
@@ -79,7 +114,7 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "952cb0116a2f2ffe"
+      "hash": "8c25a0203611c82d"
     },
     {
       "name": "Forum Worker",
@@ -91,7 +126,7 @@
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "15f59419e548e930"
+      "hash": "ae5b39d4fcbba934"
     }
   ],
   "repairs": [
@@ -112,6 +147,13 @@
       "status": "ok",
       "stdout": "Generated reader page repair complete: 0 files.\n",
       "stderr": ""
+    },
+    {
+      "type": "homepage-compatibility-markers",
+      "inserted": [
+        "Power Conclusions",
+        "Evidence Hunter"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Card Intelligence Feed
 
-Updated: 2026-07-08T06:40:35.752Z
+Updated: 2026-07-09T07:11:51.880Z
 
 Boundary: This feed provides research routing, scoring context, relationship-source rules and speculative rationale. It is not an accusation system and does not assert guilt, intent, hidden control or unlawful conduct.
 
@@ -2554,3 +2554,731 @@ Score: 72/100 · Confidence: medium
 OECD policy research route is included because it is a high-relevance public-record route in the think-tanks deck. The card points readers toward think tank, policy shop, research institute or public-policy platform route. The Masks suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for OECD policy research route unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #1: Orsini
+Score: 94/100 · Confidence: high
+
+Orsini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 94/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Orsini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #2: Colonna
+Score: 93/100 · Confidence: high
+
+Colonna is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 93/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Colonna unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #3: Borghese
+Score: 92/100 · Confidence: high
+
+Borghese is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 92/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Borghese unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #4: Barberini
+Score: 91/100 · Confidence: high
+
+Barberini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 91/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Barberini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #5: Chigi
+Score: 90/100 · Confidence: medium
+
+Chigi is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 90/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Chigi unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #6: Aldobrandini
+Score: 89/100 · Confidence: medium
+
+Aldobrandini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 89/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Aldobrandini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #7: Pamphilj
+Score: 88/100 · Confidence: medium
+
+Pamphilj is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 88/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Pamphilj unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #8: Odescalchi
+Score: 87/100 · Confidence: medium
+
+Odescalchi is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 87/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Odescalchi unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #9: Massimo
+Score: 86/100 · Confidence: medium
+
+Massimo is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 86/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Massimo unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #10: Ruspoli
+Score: 85/100 · Confidence: medium
+
+Ruspoli is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 85/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Ruspoli unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #11: Torlonia
+Score: 84/100 · Confidence: medium
+
+Torlonia is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Torlonia unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #12: Caetani
+Score: 83/100 · Confidence: medium
+
+Caetani is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Caetani unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #13: Boncompagni Ludovisi
+Score: 82/100 · Confidence: medium
+
+Boncompagni Ludovisi is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward Roman / papal nobility. The Crowns suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Boncompagni Ludovisi unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #14: Doria
+Score: 88/100 · Confidence: medium
+
+Doria is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 88/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Doria unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #15: Spinola
+Score: 87/100 · Confidence: medium
+
+Spinola is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 87/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Spinola unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #16: Giustiniani
+Score: 86/100 · Confidence: medium
+
+Giustiniani is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 86/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Giustiniani unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #17: Contarini
+Score: 85/100 · Confidence: medium
+
+Contarini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 85/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Contarini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #18: Mocenigo
+Score: 84/100 · Confidence: medium
+
+Mocenigo is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Mocenigo unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #19: Cornaro
+Score: 83/100 · Confidence: medium
+
+Cornaro is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Cornaro unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #20: Morosini
+Score: 82/100 · Confidence: medium
+
+Morosini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Morosini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #21: Loredan
+Score: 81/100 · Confidence: medium
+
+Loredan is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 81/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Loredan unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #22: Gritti
+Score: 80/100 · Confidence: medium
+
+Gritti is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Gritti unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #23: Vendramin
+Score: 79/100 · Confidence: medium
+
+Vendramin is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Vendramin unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #24: Bragadin
+Score: 78/100 · Confidence: medium
+
+Bragadin is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 78/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bragadin unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #25: Querini
+Score: 77/100 · Confidence: medium
+
+Querini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Querini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #26: Pisani
+Score: 76/100 · Confidence: medium
+
+Pisani is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward merchant, banking and maritime nobility. The Coins suit marks the first investigation lane, and the 76/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Pisani unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #27: Medici
+Score: 84/100 · Confidence: medium
+
+Medici is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Medici unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #28: Este
+Score: 83/100 · Confidence: medium
+
+Este is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Este unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #29: Gonzaga
+Score: 82/100 · Confidence: medium
+
+Gonzaga is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Gonzaga unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #30: Sforza
+Score: 81/100 · Confidence: medium
+
+Sforza is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 81/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Sforza unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #31: Visconti
+Score: 80/100 · Confidence: medium
+
+Visconti is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Visconti unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #32: Farnese
+Score: 79/100 · Confidence: medium
+
+Farnese is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Farnese unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #33: Savoy
+Score: 78/100 · Confidence: medium
+
+Savoy is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 78/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Savoy unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #34: Grimaldi
+Score: 77/100 · Confidence: medium
+
+Grimaldi is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Grimaldi unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #35: Pallavicini
+Score: 76/100 · Confidence: medium
+
+Pallavicini is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 76/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Pallavicini unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #36: Malaspina
+Score: 75/100 · Confidence: medium
+
+Malaspina is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 75/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Malaspina unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #37: Bentivoglio
+Score: 74/100 · Confidence: medium
+
+Bentivoglio is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 74/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bentivoglio unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #38: Montefeltro
+Score: 73/100 · Confidence: medium
+
+Montefeltro is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 73/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Montefeltro unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #39: della Rovere
+Score: 72/100 · Confidence: medium
+
+della Rovere is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward territorial, princely and martial houses. The Swords suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for della Rovere unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #40: Habsburg-Lorraine
+Score: 80/100 · Confidence: medium
+
+Habsburg-Lorraine is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Habsburg-Lorraine unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #41: Bourbon-Two Sicilies
+Score: 79/100 · Confidence: medium
+
+Bourbon-Two Sicilies is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bourbon-Two Sicilies unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #42: Bourbon-Parma
+Score: 78/100 · Confidence: medium
+
+Bourbon-Parma is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 78/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bourbon-Parma unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #43: Liechtenstein
+Score: 77/100 · Confidence: medium
+
+Liechtenstein is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Liechtenstein unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #44: Schwarzenberg
+Score: 76/100 · Confidence: medium
+
+Schwarzenberg is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 76/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Schwarzenberg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #45: Lobkowicz
+Score: 75/100 · Confidence: medium
+
+Lobkowicz is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 75/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Lobkowicz unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #46: Thurn und Taxis
+Score: 74/100 · Confidence: medium
+
+Thurn und Taxis is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 74/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Thurn und Taxis unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #47: Braganza
+Score: 73/100 · Confidence: medium
+
+Braganza is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 73/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Braganza unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #48: Wittelsbach
+Score: 72/100 · Confidence: medium
+
+Wittelsbach is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Wittelsbach unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #49: Hohenzollern-Sigmaringen
+Score: 71/100 · Confidence: watch
+
+Hohenzollern-Sigmaringen is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 71/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Hohenzollern-Sigmaringen unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #50: Orange-Nassau
+Score: 70/100 · Confidence: watch
+
+Orange-Nassau is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 70/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Orange-Nassau unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #51: Oldenburg
+Score: 69/100 · Confidence: watch
+
+Oldenburg is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 69/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Oldenburg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Black Nobility & Allied Dynasties Deck #52: Arenberg
+Score: 68/100 · Confidence: watch
+
+Arenberg is included because it is a high-relevance public-record route in the black-nobility deck. The card points readers toward allied dynasties and extended aristocratic networks. The Masks suit marks the first investigation lane, and the 68/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Arenberg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #1: Vatican City / Holy See
+Score: 98/100 · Confidence: high
+
+Vatican City / Holy See is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 98/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Vatican City / Holy See unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #2: City of London
+Score: 97/100 · Confidence: high
+
+City of London is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 97/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for City of London unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #3: Washington, D.C.
+Score: 96/100 · Confidence: high
+
+Washington, D.C. is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 96/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Washington, D.C. unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #4: Brussels / EU Quarter
+Score: 95/100 · Confidence: high
+
+Brussels / EU Quarter is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 95/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Brussels / EU Quarter unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #5: Geneva
+Score: 94/100 · Confidence: high
+
+Geneva is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 94/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Geneva unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #6: New York City
+Score: 93/100 · Confidence: high
+
+New York City is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 93/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for New York City unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #7: Basel
+Score: 92/100 · Confidence: high
+
+Basel is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 92/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Basel unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #8: Frankfurt
+Score: 91/100 · Confidence: high
+
+Frankfurt is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 91/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Frankfurt unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #9: The Hague
+Score: 90/100 · Confidence: medium
+
+The Hague is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 90/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for The Hague unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #10: Paris / OECD-FATF Route
+Score: 89/100 · Confidence: medium
+
+Paris / OECD-FATF Route is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 89/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Paris / OECD-FATF Route unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #11: Beijing
+Score: 88/100 · Confidence: medium
+
+Beijing is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 88/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Beijing unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #12: Moscow
+Score: 87/100 · Confidence: medium
+
+Moscow is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 87/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Moscow unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #13: Riyadh
+Score: 86/100 · Confidence: medium
+
+Riyadh is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward sovereign, diplomatic and supranational command seats. The Crowns suit marks the first investigation lane, and the 86/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Riyadh unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #14: Cayman Islands
+Score: 91/100 · Confidence: high
+
+Cayman Islands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 91/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Cayman Islands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #15: British Virgin Islands
+Score: 90/100 · Confidence: medium
+
+British Virgin Islands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 90/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for British Virgin Islands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #16: Bermuda
+Score: 89/100 · Confidence: medium
+
+Bermuda is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 89/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bermuda unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #17: Luxembourg
+Score: 88/100 · Confidence: medium
+
+Luxembourg is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 88/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Luxembourg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #18: Switzerland
+Score: 87/100 · Confidence: medium
+
+Switzerland is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 87/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Switzerland unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #19: Singapore
+Score: 86/100 · Confidence: medium
+
+Singapore is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 86/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Singapore unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #20: Hong Kong
+Score: 85/100 · Confidence: medium
+
+Hong Kong is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 85/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Hong Kong unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #21: Netherlands
+Score: 84/100 · Confidence: medium
+
+Netherlands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Netherlands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #22: Ireland
+Score: 83/100 · Confidence: medium
+
+Ireland is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Ireland unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #23: Delaware
+Score: 82/100 · Confidence: medium
+
+Delaware is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Delaware unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #24: Jersey
+Score: 81/100 · Confidence: medium
+
+Jersey is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 81/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jersey unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #25: Guernsey
+Score: 80/100 · Confidence: medium
+
+Guernsey is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Guernsey unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #26: Isle of Man
+Score: 79/100 · Confidence: medium
+
+Isle of Man is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward financial centres, tax treaty routes and offshore capital lanes. The Coins suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Isle of Man unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #27: Dubai / DIFC
+Score: 84/100 · Confidence: medium
+
+Dubai / DIFC is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Dubai / DIFC unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #28: Abu Dhabi / ADGM
+Score: 83/100 · Confidence: medium
+
+Abu Dhabi / ADGM is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Abu Dhabi / ADGM unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #29: Monaco
+Score: 82/100 · Confidence: medium
+
+Monaco is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Monaco unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #30: Liechtenstein
+Score: 81/100 · Confidence: medium
+
+Liechtenstein is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 81/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Liechtenstein unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #31: Panama
+Score: 80/100 · Confidence: medium
+
+Panama is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Panama unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #32: Bahamas
+Score: 79/100 · Confidence: medium
+
+Bahamas is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bahamas unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #33: Malta
+Score: 78/100 · Confidence: medium
+
+Malta is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 78/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Malta unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #34: Cyprus
+Score: 77/100 · Confidence: medium
+
+Cyprus is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Cyprus unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #35: Mauritius
+Score: 76/100 · Confidence: medium
+
+Mauritius is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 76/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Mauritius unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #36: Seychelles
+Score: 75/100 · Confidence: medium
+
+Seychelles is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 75/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Seychelles unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #37: Belize
+Score: 74/100 · Confidence: medium
+
+Belize is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 74/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Belize unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #38: Gibraltar
+Score: 73/100 · Confidence: medium
+
+Gibraltar is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 73/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Gibraltar unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #39: Andorra
+Score: 72/100 · Confidence: medium
+
+Andorra is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Andorra unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #40: San Marino
+Score: 82/100 · Confidence: medium
+
+San Marino is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward legal, corporate, arbitration and regulatory venues. The Courts suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for San Marino unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #41: Macau
+Score: 77/100 · Confidence: medium
+
+Macau is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Macau unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #42: Labuan
+Score: 76/100 · Confidence: medium
+
+Labuan is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 76/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Labuan unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #43: Cook Islands
+Score: 75/100 · Confidence: medium
+
+Cook Islands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 75/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Cook Islands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #44: Marshall Islands
+Score: 74/100 · Confidence: medium
+
+Marshall Islands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 74/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Marshall Islands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #45: St Kitts and Nevis
+Score: 73/100 · Confidence: medium
+
+St Kitts and Nevis is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 73/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for St Kitts and Nevis unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #46: Turks and Caicos Islands
+Score: 72/100 · Confidence: medium
+
+Turks and Caicos Islands is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Turks and Caicos Islands unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #47: Anguilla
+Score: 71/100 · Confidence: watch
+
+Anguilla is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 71/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Anguilla unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #48: Samoa
+Score: 70/100 · Confidence: watch
+
+Samoa is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 70/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Samoa unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #49: Vanuatu
+Score: 69/100 · Confidence: watch
+
+Vanuatu is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 69/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Vanuatu unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #50: Bahrain
+Score: 68/100 · Confidence: watch
+
+Bahrain is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 68/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bahrain unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #51: Qatar Financial Centre
+Score: 67/100 · Confidence: watch
+
+Qatar Financial Centre is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 67/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Qatar Financial Centre unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Jurisdictions of Power Deck #52: Astana International Financial Centre
+Score: 66/100 · Confidence: watch
+
+Astana International Financial Centre is included because it is a high-relevance public-record route in the jurisdictions-of-power deck. The card points readers toward special zones, enclaves, ports and strategic administrative gateways. The Masks suit marks the first investigation lane, and the 66/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Astana International Financial Centre unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.

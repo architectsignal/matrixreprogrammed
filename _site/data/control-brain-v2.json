@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "updated": "2026-07-08T06:13:18.952Z",
+  "updated": "2026-07-09T07:11:51.738Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 141,
-    "edges": 262,
+    "nodes": 142,
+    "edges": 263,
     "topNodes": 25
   },
   "top": [
@@ -223,17 +223,17 @@
         "courts-law"
       ],
       "score": 100,
-      "centrality": 16,
+      "centrality": 17,
       "evidenceConfidence": 9,
       "missingPressure": 16,
       "contradictionPressure": 0,
       "records": [
+        "Sawas v. Elzanaty",
+        "People v. Brim",
         "The New York and Presbyterian Hospital v. New York State Nurses Association",
         "Matter of Pagliughi",
         "Biddle v. Biddle",
-        "Khan v. Jewish Women International",
-        "Trump v. Barbara Revisions: 7/01/26",
-        "Trump v. Barbara"
+        "Khan v. Jewish Women International"
       ],
       "missing": [
         "Primary record route",
@@ -250,7 +250,7 @@
       "links": [
         "subject-briefs.html"
       ],
-      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 16 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "foundation-and-ngo-policy-influence",
@@ -2469,6 +2469,48 @@
     },
     {
       "from": "disclosure-gaps-and-missing-files",
+      "to": "sawas-v-elzanaty",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2021-00294",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "people-v-brim",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "california-court-of-appeal",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "a170747m",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
       "to": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
       "type": "subject entity route",
       "weight": 2,
@@ -2491,13 +2533,6 @@
     {
       "from": "disclosure-gaps-and-missing-files",
       "to": "matter-of-pagliughi",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2547,34 +2582,6 @@
     {
       "from": "disclosure-gaps-and-missing-files",
       "to": "ac48383",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "trump-v-barbara-revisions-7-01-26",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "supreme-court-of-the-united-states",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "25-365",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "trump-v-barbara",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -3003,7 +3010,7 @@
     {
       "entity": "Disclosure gaps and missing files",
       "priority": "red",
-      "why": "Disclosure gaps and missing files is ranked 100/100 because of 16 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "why": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
         "subject-briefs.html",
         "evidence-vault.html",

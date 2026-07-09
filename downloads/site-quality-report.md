@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 438
+Scanned pages: 461
 Weak pages: 10
 
 ## Weakest Pages
@@ -16,6 +16,7 @@ Weak pages: 10
 - 68/100 — subject-index.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — subject-trust-evidence-method.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — tracker-dashboard.html: Missing evidence route; Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route
+- 76/100 — deploy-health.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i
 - 76/100 — network-search.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — subject-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
@@ -32,6 +33,7 @@ Weak pages: 10
 - 84/100 — authority-war-machine.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — big-three-asset-managers.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — card-artwork-queue.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — deploy-status.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — distribution-articles.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
@@ -64,8 +66,6 @@ Weak pages: 10
 - 84/100 — source-cards.html: Missing Rumble/video route; Intel/evidence page missing Live Intel route
 - 84/100 — start-here.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — system-feed-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /generated output/i
-- 84/100 — top-52-art-studio.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — top-52-batch1-art-queue.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

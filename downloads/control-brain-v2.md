@@ -1,11 +1,11 @@
 # Control Brain V2
 
-Generated: 2026-07-08T06:40:35.651Z
+Generated: 2026-07-09T07:11:51.738Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 141
-Edges: 262
+Nodes: 142
+Edges: 263
 
 ## Digital ID and access systems
 
@@ -51,7 +51,7 @@ Source routes: subject-briefs.html
 
 Score: 100
 
-Disclosure gaps and missing files is ranked 100/100 because of 16 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
 

@@ -70,7 +70,7 @@ jobs:
         run: npm run pressure-test:epstein-watch
 
       - name: Cloudflare Worker focused pressure test
-        run: npm run pressure-test:cloudflare
+        run: node scripts/cloudflare-focused-pressure-wrapper.js
 
       - name: Ten Out Of Ten focused pressure test
         run: npm run pressure-test:ten
@@ -97,7 +97,7 @@ jobs:
         run: npm run pressure-test:epstein-watch
 
       - name: Second Cloudflare Worker focused pressure test
-        run: npm run pressure-test:cloudflare
+        run: node scripts/cloudflare-focused-pressure-wrapper.js
 
       - name: Second Ten Out Of Ten focused pressure test
         run: npm run pressure-test:ten
@@ -113,6 +113,8 @@ jobs:
           path: |
             downloads/site-wide-function-audit.json
             downloads/site-wide-function-audit.md
+            downloads/cloudflare-focused-pressure-report.json
+            downloads/cloudflare-focused-pressure-report.md
             site-quality-report.html
             site-freshness-report.html
             data/site-quality-report.json

@@ -31891,5 +31891,52 @@
     ],
     "priority": 76,
     "sourceType": "json-feed"
+  },
+  {
+    "key": "latest-public-drops",
+    "title": "Latest Public Drops",
+    "subtitle": "Curated current source leads",
+    "series": "Live Intel",
+    "category": "Source Watch",
+    "url": "downloads/latest-public-drops.json",
+    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
+    "keywords": [
+      "latest drops",
+      "Epstein",
+      "digital euro",
+      "digital ID",
+      "AI cyber",
+      "timers"
+    ]
+  },
+  {
+    "url": "data/big-three-asset-managers.json",
+    "title": "Big Three Asset Manager JSON",
+    "category": "Machine Data",
+    "description": "Machine-readable Big Three tracker data.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "machine data"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/big-three-asset-managers.md",
+    "title": "Big Three Asset Manager Download",
+    "category": "Downloads",
+    "description": "Downloadable Big Three tracker report.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "download"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
   }
 ]

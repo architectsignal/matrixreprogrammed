@@ -454,11 +454,12 @@
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-08T22:39:34.598Z",
+    "updated": "2026-07-09T04:12:36.779Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -554,7 +555,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -568,7 +569,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -582,7 +583,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -596,7 +597,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -610,7 +611,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -624,7 +625,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-08",
+      "date": "2026-07-09",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -772,10 +773,10 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-08T22:39:47.902Z",
-    "newRecordCount": 6,
-    "changedRecordCount": 0,
-    "removedRecordCount": 6,
+    "updated": "2026-07-09T04:12:54.331Z",
+    "newRecordCount": 0,
+    "changedRecordCount": 6,
+    "removedRecordCount": 0,
     "relationshipCandidateCount": 112,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
@@ -783,46 +784,9 @@
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Sawas v. Elzanaty",
-      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "People v. Brim",
-      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Matter of Pagliughi",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Biddle v. Biddle",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
-    },
-    {
-      "lane": "courtlistener-court-records",
-      "grade": "charged / sued",
-      "summary": "Khan v. Jewish Women International",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
-    }
-  ],
+  "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-08T22:39:48.045Z",
+    "updated": "2026-07-09T04:12:54.473Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -856,7 +820,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-08T22:39:48.081Z",
+    "updated": "2026-07-09T04:12:54.511Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

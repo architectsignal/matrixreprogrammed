@@ -28,10 +28,12 @@ fs.mkdirSync(fp('downloads'),{recursive:true});
 for(const [label,file] of [
   ['deploy status','scripts/build-deploy-status.js'],
   ['generated repair','scripts/repair-generated-site-artifacts.js'],
-  ['search repair','scripts/repair-search-system.js'],
   ['shared assets','scripts/ensure-shared-assets.js'],
+  ['search repair after shared assets','scripts/repair-search-system.js'],
   ['worker pages origin patch','scripts/patch-worker-pages-origin.js'],
   ['cloudflare output','scripts/build-cloudflare-output.js'],
+  ['search repair after cloudflare output','scripts/repair-search-system.js'],
+  ['cloudflare output final','scripts/build-cloudflare-output.js'],
   ['site brain health','scripts/site-brain-health.js']
 ]) run(label,file);
 for(const p of ['index.html','search.html','search.js','search-index.json','books.html','live-intel.html','epstein-files.html','forum.html','forum.js','deploy-status.html','deploy-status.json','deploy-health.html','deploy-health.json','src/worker.js','wrangler.toml','_headers','scripts/build-cloudflare-output.js']) needFile(p);
@@ -59,6 +61,7 @@ needText('search.html','id="search-results"','search results container');
 needText('search.js','/search-index.json','search index fetch');
 needText('search.js','fallbackIndex','fallback index');
 needSiteText('search.html','id="archive-search"','built archive search marker');
+needSiteText('search.js','fallbackIndex','built fallback index');
 needText('wrangler.toml','main = "src/worker.js"','Worker entrypoint');
 needText('wrangler.toml','directory = "./_site"','Cloudflare asset directory');
 needText('wrangler.toml','binding = "ASSETS"','ASSETS binding');

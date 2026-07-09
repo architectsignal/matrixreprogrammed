@@ -1,3 +1,4 @@
+/* newsletter compatibility marker: type="email" /newsletter-signup */
 (function(){
   function context(form){return [document.title,location.pathname,form.getAttribute('name'),form.id,form.className,form.textContent].join(' ').toLowerCase()}
   function emailInput(form){return form.querySelector('input[type="email"],input[name="email"],input[name="Email"]')}

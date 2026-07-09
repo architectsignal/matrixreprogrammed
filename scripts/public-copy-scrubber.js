@@ -28,4 +28,5 @@ fs.mkdirSync(full('downloads'),{recursive:true});
 fs.mkdirSync(full('data'),{recursive:true});
 fs.writeFileSync(full('data/public-copy-scrubber-report.json'),JSON.stringify(report,null,2));
 fs.writeFileSync(full('downloads/public-copy-scrubber-report.md'),'# Public Copy Scrubber Report\n\nUpdated: '+report.updated+'\n\nChanged files: '+changed.length+'\n\nVisible review issues: '+issues.length+'\n\n## Changed\n'+(changed.map(x=>'- '+x).join('\n')||'- None')+'\n\n## Issues\n'+(issues.map(x=>'- '+x.file+': '+x.pattern).join('\n')||'- None'));
+try{require(path.join(root,'scripts','conclusion-depth-audit.js'))}catch(error){console.warn('Conclusion depth audit skipped: '+error.message)}
 console.log(`Public copy scrubber complete: ${changed.length} file(s) cleaned, ${issues.length} review issue(s).`);

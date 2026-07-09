@@ -31,9 +31,7 @@ jobs:
           npm run update-live-intel
 
       - name: Build site brain and shared systems
-        run: |
-          npm run site-brain
-          npm run ensure-shared-assets
+        run: node scripts/daily-sitewide-build-safe.js
 
       - name: Pressure test refreshed systems
         run: |

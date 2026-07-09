@@ -37,13 +37,16 @@ const repairs = [];
 runRepairScript('sec-filing-feed', 'scripts/build-sec-filing-feed.js', 'SKIP_SEC_FILING_FEED');
 runRepairScript('probability-snapshot', 'scripts/build-probability-snapshot.js', 'SKIP_PROBABILITY_SNAPSHOT');
 runRepairScript('reader-page-repair', 'scripts/repair-generated-reader-pages.js', 'SKIP_READER_PAGE_REPAIR');
+runRepairScript('power-conclusions', 'scripts/build-power-conclusions-engine.js', 'SKIP_POWER_CONCLUSIONS');
 
 let home = read('index.html');
 if (home) {
   const requiredHidden = [
     { marker: 'Read The Black File', html: '<a href="black-file.html">Read The Black File</a>' },
     { marker: 'Useful Free Briefs', html: '<a href="optin-center.html">Useful Free Briefs</a>' },
-    { marker: 'downloads/forum-posts.json', html: '<a href="downloads/forum-posts.json">downloads/forum-posts.json</a>' }
+    { marker: 'downloads/forum-posts.json', html: '<a href="downloads/forum-posts.json">downloads/forum-posts.json</a>' },
+    { marker: 'Power Conclusions', html: '<a href="power-conclusions.html">Power Conclusions</a>' },
+    { marker: 'Evidence Hunter', html: '<a href="evidence-hunter.html">Evidence Hunter</a>' }
   ];
   const missing = requiredHidden.filter(item => !home.includes(item.marker));
   if (missing.length) {
@@ -64,6 +67,11 @@ if (blackFiles && blackFiles.includes('forEach(x=>series(wrap,s))')) {
 const modules = [
   { name: 'Homepage', route: '/', file: 'index.html', hash: hash('index.html') },
   { name: 'All-seeing eye gate', route: '/', file: 'index.html', hash: hash('index.html') },
+  { name: 'Power Conclusions', route: '/power-conclusions.html', file: 'power-conclusions.html', hash: hash('power-conclusions.html') },
+  { name: 'Evidence Hunter', route: '/evidence-hunter.html', file: 'evidence-hunter.html', hash: hash('evidence-hunter.html') },
+  { name: 'Who Holds Power', route: '/who-holds-power.html', file: 'who-holds-power.html', hash: hash('who-holds-power.html') },
+  { name: 'Convergence Map', route: '/one-world-convergence.html', file: 'one-world-convergence.html', hash: hash('one-world-convergence.html') },
+  { name: 'Accountability Watch', route: '/accountability-watch.html', file: 'accountability-watch.html', hash: hash('accountability-watch.html') },
   { name: 'Dark Speculation Lab', route: '/dark-speculation-lab.html', file: 'dark-speculation-lab.html', hash: hash('dark-speculation-lab.html') },
   { name: 'Dark Speculation Forum', route: '/dark-speculation-forum.html', file: 'dark-speculation-forum.html', hash: hash('dark-speculation-forum.html') },
   { name: 'Evidence Vault', route: '/evidence-vault.html', file: 'evidence-vault.html', hash: hash('evidence-vault.html') },
@@ -85,7 +93,7 @@ const health = {
   workerScript: 'src/worker.js',
   assetOutput: '_site',
   homepageExpectedMarker: 'FOLLOW THE FILES.',
-  routes: ['/','/forum-health','/deploy-status','/deploy-status.json','/search','/books','/live-intel','/epstein-files','/sec-filing-feed.html','/probability-lab.html','/probability-snapshot.html'],
+  routes: ['/','/forum-health','/deploy-status','/deploy-status.json','/search','/books','/live-intel','/power-conclusions','/evidence-hunter','/who-holds-power','/one-world-convergence','/accountability-watch','/epstein-files','/sec-filing-feed.html','/probability-lab.html','/probability-snapshot.html'],
   modules,
   repairs
 };
@@ -93,7 +101,7 @@ write('deploy-health.json', JSON.stringify(health, null, 2));
 write('downloads/deploy-health.json', JSON.stringify(health, null, 2));
 repairs.push({ type: 'deploy-health-json', files: ['deploy-health.json', 'downloads/deploy-health.json'] });
 
-const healthHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Deploy Health | Matrix Reprogrammed</title><meta name="description" content="Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, feeds and reader conversion routes." /><link rel="stylesheet" href="styles.css" /></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="deploy-status.html">Deploy Status</a><a href="sec-filing-feed.html">SEC Filing Feed</a><a href="probability-lab.html">Probability Lab</a><a href="probability-snapshot.html">Probability Snapshot</a><a href="books.html">Books</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Cloudflare Health Check</div><h1>DEPLOY HEALTH.</h1><p class="lead">This page shows whether the live build should contain the homepage, forum routes, SEC filing feed, probability lab, probability snapshot and reader conversion paths.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="downloads/deploy-health.json">Download Health</a><a class="btn alt" href="forum-health">Forum Health</a></div></section><section class="section wrap split"><div class="terminal">DEPLOY HEALTH\n&gt; Build: ${esc(short(buildSha))}\n&gt; Generated: ${esc(generatedAt)}\n&gt; SEC feed: ${hash('sec-filing-feed.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Probability snapshot: ${hash('probability-snapshot.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Overall: READY</div><aside class="card redline"><h2>What to check live</h2><p>Open the SEC Filing Feed and Probability Snapshot. Both are generated through the repair step during build.</p><a class="btn" href="sec-filing-feed.html">Open SEC Feed</a><a class="btn alt" href="probability-snapshot.html">Open Probability Snapshot</a></aside></section><section class="section wrap"><h2>Module Checks</h2><div class="grid">${modules.map(item => `<article class="card redline"><span class="label">Ready</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p></article>`).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — deploy health ${esc(short(buildSha))}</p></footer></div><script src="matrix.js"></script></body></html>`;
+const healthHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Deploy Health | Matrix Reprogrammed</title><meta name="description" content="Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, feeds and reader conversion routes." /><link rel="stylesheet" href="styles.css" /></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="deploy-status.html">Deploy Status</a><a href="power-conclusions.html">Power Conclusions</a><a href="evidence-hunter.html">Evidence Hunter</a><a href="sec-filing-feed.html">SEC Filing Feed</a><a href="books.html">Books</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Cloudflare Health Check</div><h1>DEPLOY HEALTH.</h1><p class="lead">This page shows whether the live build should contain the homepage, forum routes, power conclusions, evidence hunter, filing feed, probability snapshot and reader conversion paths.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="downloads/deploy-health.json">Download Health</a><a class="btn alt" href="forum-health">Forum Health</a></div></section><section class="section wrap split"><div class="terminal">DEPLOY HEALTH\n&gt; Build: ${esc(short(buildSha))}\n&gt; Generated: ${esc(generatedAt)}\n&gt; Power conclusions: ${hash('power-conclusions.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Evidence hunter: ${hash('evidence-hunter.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Overall: READY</div><aside class="card redline"><h2>What to check live</h2><p>Open Power Conclusions and Evidence Hunter. These are generated through the repair step during build.</p><a class="btn" href="power-conclusions.html">Open Conclusions</a><a class="btn alt" href="evidence-hunter.html">Open Evidence Hunter</a></aside></section><section class="section wrap"><h2>Module Checks</h2><div class="grid">${modules.map(item => `<article class="card redline"><span class="label">Ready</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p></article>`).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — deploy health ${esc(short(buildSha))}</p></footer></div><script src="matrix.js"></script></body></html>`;
 write('deploy-health.html', healthHtml);
 repairs.push({ type: 'deploy-health-html', file: 'deploy-health.html' });
 

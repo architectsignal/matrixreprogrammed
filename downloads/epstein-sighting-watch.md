@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-09T07:11:41.546Z
+Generated: 2026-07-09T07:55:01.370Z
 
 ## Official Boundary
 
@@ -108,13 +108,3 @@ EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces i
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
-
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo

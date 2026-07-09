@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-09T07:11:16.877Z
+Updated: 2026-07-09T07:54:41.703Z
 Items: 12
 
 - 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
@@ -56,11 +56,6 @@ Items: 12
   - Evidence: Intelligence-alliance warning / cyber-risk lane
   - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
   - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
-- 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Evidence: News/source-watch item
@@ -71,16 +66,6 @@ Items: 12
   - Evidence: Official EU implementation timeline / regulatory governance lane
   - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
   - Next: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
-- 2026-06-30 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-  - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-- 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
 - 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -111,6 +96,21 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Judge orders DOJ to release more Epstein records or justify redactions by July 2
+  - Source: https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
+  - Evidence: Court-process / disclosure-order watch
+  - Boundary: A redaction dispute is not proof of the redacted claim. Track the order, the redaction log, the DOJ response, and any released record separately.
+  - Next: Watch July 2. If DOJ files less-redacted records, classify each document by source type, people named, record status, and boundary before surfacing claims.
+- 2026-06-26 — 5 Questions Keeping the Epstein Files Alive - Newsweek
+  - Source: https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -130,17 +130,17 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-- Google News / crime state overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post — https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - European Commission AI Act page, last updated 2026-07-07: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-- Google News / Epstein timeline and files: Former Clinton aide appears before House panel in Epstein investigation - Scripps News — https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-- Google News / Epstein timeline and files: Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Former Epstein executive secretary tells Oversight Committee he was a 'master manipulator' - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiswFBVV95cUxNQ3kwNGRGc3dnaTRBanV2WmFEbDFUZVI5UmZFRU9tV3U4VTJVcDRFOWZyRHh6bHRRR2JYR1ZJTFlsclMwclhjcS1qR2RxTk5jZXp1UXhsYTFPZ3BXd1doblMtUVY2eXl3NXdKeUpxY3FMcEhISWk0b2U4eHJIRnc5ZVdoTWRpdmRUaHRxa0dqeWxRTm9oN1pxbDBsbUhUaW4zbGtxYnRtdG0zSGJnWl9YZDhIUdIBuAFBVV95cUxNNGVmLWQxcGItNE9MeWw5VWFVSEpPc003d3VvRl9qOHloTUwtQ1dyOW1aWC1YQlhUSEJqVFROZG82M1J3cHNYVUdaZUYzbEZQWDBmMjBBMWYxU0VmazVXbjl6d25PdW1zVWlDajYtRnNoNGI0UmU3QXMxeW1oQmRoZS1HcEhVdTRqVDlWY09UbnZYc054SkhqWnpCVGw2M0RCNjBfb1prYkVITmtrMjRTOXRxUjV3TXZI?oc=5
 - Google News / Epstein sighting and alive claims: Jeffrey Epstein's Death: Mystery Deepens Around Orange Figure Near His Jail Cell - TMZ — https://news.google.com/rss/articles/CBMiogFBVV95cUxNYUt5MGI1Wm9leW5PSjFaYWRMZ3BPTlIzTXE0anIyelhZV0V2WUg0eGI2cHFfZkgzZzlZSC05eHU3U01lQzE0ekc3U0IzLUFtY1pCOEtjNEE5ZWF0c2FKRmxYbHlsQzdmZ0ZUT1hsOV84bHFPN3Q5SEtmTEhTbVF4VWRidE00Z3RmWC1rOWdfQjVBMjZUNTF3ZnV6ZlQ0d0l4QVE?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Axios / federal court order report: Judge orders DOJ to release more Epstein records or justify redactions by July 2 — https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
+- Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
+- Google News / Epstein timeline and files: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News — https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
 
 ## Book Routes
 

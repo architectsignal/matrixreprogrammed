@@ -1,11 +1,11 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-09T07:11:40.141Z
+Updated: 2026-07-09T07:54:59.413Z
 
 ## Status
 
-- Live Intel items: 14
-- Epstein items: 8
+- Live Intel items: 7
+- Epstein items: 7
 - Epstein source lanes: 7
 - People/entities tracked: 12
 - Source cards: 12
@@ -40,31 +40,3 @@ Updated: 2026-07-09T07:11:40.141Z
   - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
-- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-  - Source: https://www.who.int/health-topics/who-pandemic-agreement
-  - Evidence: Official WHO treaty/implementation-process lane
-  - Boundary: Treaty adoption is not the same as force, ratification, domestic implementation, or WHO control over national measures. WHO states the agreement does not authorize it to impose lockdowns or vaccine mandates.
-- 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-- 2026-06-30 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-  - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
-- 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
-  - Evidence: News/source-watch item
-  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.

@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-09T07:11:42.098Z
+Generated: 2026-07-09T07:55:01.934Z
 
 ## Open Routes
 
@@ -46,38 +46,3 @@ EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces i
 - Date: 2026-07-07T21:24:42.000Z
 - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
-### ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-- Lane: CBDC / Digital Euro / Sovereign Payment Rails
-- Date: 2026-07-08T00:00:00.000Z
-- Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T20:13:13.000Z
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
-### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-- Lane: AI Governance / EU AI Act / Cybersecurity
-- Date: 2026-07-07T00:00:00.000Z
-- Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.
-### WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-- Lane: WHO Pandemic Agreement / PABS / Global Health Governance
-- Date: 2026-07-06T00:00:00.000Z
-- Source: https://www.who.int/health-topics/who-pandemic-agreement
-WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.
-### ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-- Lane: Crime State Overlap
-- Date: 2026-06-30T22:24:00.000Z
-- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds New York Post
-### Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-06-30T17:28:33.000Z
-- Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-Former Clinton aide appears before House panel in Epstein investigation Scripps News
-### Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-06-30T15:24:00.000Z
-- Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
-Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says The Guardian

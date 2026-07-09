@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-09T07:11:56.088Z",
-    "filesScanned": 3418,
-    "highIssues": 1956,
-    "reviewIssues": 6,
-    "intakeAreas": 1747,
+    "updated": "2026-07-09T07:55:17.584Z",
+    "filesScanned": 3742,
+    "highIssues": 2107,
+    "reviewIssues": 8,
+    "intakeAreas": 1968,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -26,6 +26,12 @@
     {
       "severity": "high",
       "file": "_site/SITE_BUILD_STATUS.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/about.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -385,6 +391,324 @@
     },
     {
       "severity": "high",
+      "file": "_site/black-nobility/aldobrandini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/arenberg.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/barberini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/bentivoglio.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/boncompagni-ludovisi.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/borghese.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/bourbon-parma.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/bourbon-two-sicilies.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/bragadin.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/braganza.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/caetani.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/chigi.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/colonna.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/contarini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/cornaro.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/della-rovere.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/doria.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/este.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/farnese.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/giustiniani.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/gonzaga.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/grimaldi.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/gritti.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/habsburg-lorraine.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/hohenzollern-sigmaringen.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/liechtenstein.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/lobkowicz.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/loredan.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/malaspina.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/massimo.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/medici.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/mocenigo.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/montefeltro.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/morosini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/odescalchi.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/oldenburg.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/orange-nassau.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/orsini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/pallavicini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/pamphilj.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/pisani.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/querini.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/ruspoli.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/savoy.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/schwarzenberg.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/sforza.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/spinola.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/thurn-und-taxis.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/torlonia.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/vendramin.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/visconti.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility/wittelsbach.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-nobility-deck.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/book-ab-the-brand.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -643,12 +967,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/books.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/brief-quality-report.html",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -691,318 +1009,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/controlled-opposition/alex-jones.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/andrew-tate.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/ben-shapiro.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/bret-weinstein.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/candace-owens.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/charlie-kirk.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/david-icke.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/del-bigtree.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/edward-snowden.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/elon-musk.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/gavin-mcinnes.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/geert-wilders.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/glenn-beck.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/glenn-greenwald.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/graham-hancock.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/heather-heying.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/jack-posobiec.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/james-o-keefe.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/javier-milei.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/jimmy-dore.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/joe-rogan.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/jordan-peterson.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/julian-assange.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/kanye-west-ye.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/kate-shemirani.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/laura-loomer.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/marine-le-pen.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/mark-sargent.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/mark-steele.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/matt-taibbi.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/matt-walsh.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/max-blumenthal.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/mike-cernovich.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/milo-yiannopoulos.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/naomi-wolf.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/nick-fuentes.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/nigel-farage.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/peter-mccullough.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/piers-corbyn.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/piers-morgan.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/project-veritas-network.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/rfk-jr.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/robert-malone.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/roger-stone.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/russell-brand.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/sherri-tenpenny.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/steve-bannon.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/steven-crowder.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/tim-pool.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/tucker-carlson.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/tulsi-gabbard.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/controlled-opposition/vivek-ramaswamy.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/crime-dossiers.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1010,6 +1016,12 @@
     {
       "severity": "high",
       "file": "_site/crime-hub.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/cross-reference-map.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1135,6 +1147,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/black-nobility-deck.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/blackrock-video-claim-audit.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1171,6 +1189,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/card-artwork-batches.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/card-download-manifest.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1190,6 +1214,12 @@
     {
       "severity": "high",
       "file": "_site/data/clock-wall.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/conclusion-engine.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1226,6 +1256,12 @@
     {
       "severity": "high",
       "file": "_site/data/convergence-control-lenses.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/cross-reference-map.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1321,7 +1357,19 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/drops/2026-07-08-general-assembly-live-debating-us-sanctions-against-cuba.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/elite-family-tracker.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/elite-power-theory.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1334,6 +1382,12 @@
     {
       "severity": "high",
       "file": "_site/data/elite-reports.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/emergency-power-theory.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1405,6 +1459,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/epstein-conclusions.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/epstein-docs.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1418,6 +1478,12 @@
     {
       "severity": "high",
       "file": "_site/data/epstein-file-cockpit.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/epstein-file-index.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1442,12 +1508,6 @@
     {
       "severity": "high",
       "file": "_site/data/epstein-research-targets.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/epstein-sighting-scan.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1519,6 +1579,24 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/illuminati-secret-society-theory.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/information-gathering-system.json",
+      "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/information-gathering-system.json",
+      "pattern": "/author note/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/institution-control-index.json",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1537,6 +1615,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/institutional-capture-theory.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/intel-drop-vault.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1544,6 +1628,18 @@
     {
       "severity": "high",
       "file": "_site/data/intel-vault.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/jurisdictional-power-theory.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/jurisdictions-of-power-deck.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1621,6 +1717,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/missing-record-queue.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/missing-records.json",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1633,13 +1735,37 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/mission-health-audit.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/mission-source-priority-index.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
+      "file": "_site/data/monetisation-dashboard.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/network-maps.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/new-world-order-theory.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/one-world-currency-theory.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1765,7 +1891,25 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/review-dashboard.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/routed-conclusions.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/sales-ladder.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/search-index.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1795,6 +1939,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/site-brain-router.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/site-freshness-report.json",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1810,6 +1960,30 @@
       "file": "_site/data/site-intelligence-core.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/site-public-copy-intake-audit.json",
+      "pattern": "/chatgpt/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/site-public-copy-intake-audit.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "review",
+      "file": "_site/data/site-public-copy-intake-audit.json",
+      "pattern": "/compatibility marker/i",
+      "note": "Review whether this text is intentionally visible."
+    },
+    {
+      "severity": "review",
+      "file": "_site/data/site-public-copy-intake-audit.json",
+      "pattern": "/dummy/i",
+      "note": "Review whether this text is intentionally visible."
     },
     {
       "severity": "high",
@@ -1862,6 +2036,12 @@
     {
       "severity": "high",
       "file": "_site/data/source-route-cards-batch-001.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/speculative-conclusions.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1987,13 +2167,13 @@
     },
     {
       "severity": "high",
-      "file": "_site/dossier-larry-fink.html",
+      "file": "_site/docs/matrix-reprogrammed-master-upgrade-spec.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
-      "file": "_site/dossier-pack-black-file-starter.html",
+      "file": "_site/dossier-larry-fink.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2077,6 +2257,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/downloads/card-download-manifest.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/downloads/card-intelligence-feed.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2137,6 +2323,18 @@
     },
     {
       "severity": "high",
+      "file": "_site/downloads/daily-drop.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/daily-drop.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/downloads/dark-speculation-deep-dossiers.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2163,18 +2361,6 @@
       "severity": "high",
       "file": "_site/downloads/deep-intel-feed-matrix.md",
       "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/dossier-pack-black-file-starter.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/dossier-pack-black-file-starter.md",
-      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2342,18 +2528,6 @@
     {
       "severity": "high",
       "file": "_site/downloads/epstein-people-index.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-sighting-watch.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-sighting-watch.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2581,6 +2755,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/downloads/site-brain-router.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/downloads/site-intelligence-core.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2594,6 +2774,18 @@
     {
       "severity": "high",
       "file": "_site/downloads/site-intelligence-graph.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/site-public-copy-intake-audit.md",
+      "pattern": "/chatgpt/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/site-public-copy-intake-audit.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2618,6 +2810,12 @@
     {
       "severity": "high",
       "file": "_site/downloads/source-document-vault.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/speculative-conclusions.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2683,8 +2881,20 @@
     },
     {
       "severity": "high",
+      "file": "_site/elite-power-theory.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/elite-reports.html",
       "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/emergency-power-theory.html",
+      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2800,219 +3010,16 @@
       "file": "_site/entity-briefs/ministry-of-health-and-family-welfare.html",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/ministry-of-health-and-family-welfare.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/national-aeronautics-and-space-administration.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/object-object.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/object-object.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/people-s-republic-of-bangladesh.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/people-s-republic-of-bangladesh.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/republic-of-india.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/republic-of-india.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/republic-of-rwanda.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/republic-of-rwanda.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/state-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/transportation-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/treasury-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/u-s-international-development-finance-corporation.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/united-states-agency-for-global-media.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-briefs/veterans-affairs-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-daily-briefs.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-daily-briefs.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/agency-for-international-development.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/agriculture-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/chattogram-water-supply-and-sewerage-authority.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/commerce-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/defense-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/energy-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/environmental-protection-agency.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/finance-division-ministry-of-finance.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/finance-division-ministry-of-finance.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/health-and-human-services-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/interior-department.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/kingdom-of-morocco.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/management-and-budget-office.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/ministry-of-health-and-family-welfare.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/national-aeronautics-and-space-administration.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/entity-exposure/object-object.html",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
   "intake": [
+    {
+      "file": "_site/accountability-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
     {
       "file": "_site/agenda-2030.html",
       "hasBoundary": true,
@@ -3658,6 +3665,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/black-file-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/black-file.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3666,6 +3680,377 @@
     },
     {
       "file": "_site/black-files.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/aldobrandini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/arenberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/barberini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/bentivoglio.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/boncompagni-ludovisi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/borghese.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/bourbon-parma.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/bourbon-two-sicilies.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/bragadin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/braganza.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/caetani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/chigi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/colonna.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/contarini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/cornaro.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/della-rovere.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/doria.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/este.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/farnese.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/giustiniani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/gonzaga.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/grimaldi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/gritti.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/habsburg-lorraine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/hohenzollern-sigmaringen.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/liechtenstein.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/lobkowicz.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/loredan.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/malaspina.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/massimo.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/medici.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/mocenigo.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/montefeltro.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/morosini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/odescalchi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/oldenburg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/orange-nassau.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/orsini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/pallavicini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/pamphilj.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/pisani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/querini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/ruspoli.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/savoy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/schwarzenberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/sforza.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/spinola.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/thurn-und-taxis.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/torlonia.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/vendramin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/visconti.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility/wittelsbach.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/black-nobility-deck.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4393,7 +4778,196 @@
       "status": "ok"
     },
     {
+      "file": "_site/card-artwork-automation.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-001.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-002.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-003.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-004.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-005.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-006.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-007.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-008.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-009.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-010.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-011.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-012.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-013.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-014.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-015.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-016.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-017.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-018.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-019.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-020.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-021.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-022.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-023.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-batches/batch-024.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-artwork-queue.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/card-batch-tracker.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/card-deck-store.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4450,6 +5024,13 @@
     },
     {
       "file": "_site/codex.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/conclusion-engine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4890,6 +5471,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/custom-research.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/daily-brain-brief.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -4898,6 +5486,13 @@
     },
     {
       "file": "_site/daily-command-brief.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/daily-control-brief-signup.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5156,6 +5751,20 @@
       "status": "ok"
     },
     {
+      "file": "_site/elite-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/emergency-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entities.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5205,6 +5814,20 @@
       "status": "ok"
     },
     {
+      "file": "_site/epstein-evidence-boundary.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-file-check.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/epstein-file-scan-batch-002.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5226,6 +5849,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/epstein-search.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/epstein-sighting-submit.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5234,6 +5864,20 @@
     },
     {
       "file": "_site/epstein-sighting-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-upload-check.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/evidence-hunter.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5373,6 +6017,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/free-downloads.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/full-vrc-review-batch-002.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5443,6 +6094,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/illuminati-secret-society-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/index.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5451,6 +6109,13 @@
     },
     {
       "file": "_site/index_v2.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/information-gathering-system.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5472,6 +6137,13 @@
     },
     {
       "file": "_site/institution-tracker.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institutional-capture-theory.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5521,6 +6193,13 @@
     },
     {
       "file": "_site/institutions/bilderberg-group.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institutions/bill-and-melinda-gates-foundation.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5884,6 +6563,391 @@
       "status": "ok"
     },
     {
+      "file": "_site/jurisdictional-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/abu-dhabi-adgm.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/andorra.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/anguilla.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/astana-international-financial-centre.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/bahamas.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/bahrain.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/basel.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/beijing.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/belize.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/bermuda.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/british-virgin-islands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/brussels-eu-quarter.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/cayman-islands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/city-of-london.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/cook-islands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/cyprus.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/delaware.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/dubai-difc.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/frankfurt.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/geneva.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/gibraltar.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/guernsey.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/hong-kong.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/ireland.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/isle-of-man.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/jersey.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/labuan.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/liechtenstein.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/luxembourg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/macau.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/malta.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/marshall-islands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/mauritius.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/monaco.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/moscow.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/netherlands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/new-york-city.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/panama.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/paris-oecd-fatf-route.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/qatar-financial-centre.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/riyadh.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/samoa.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/san-marino.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/seychelles.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/singapore.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/st-kitts-and-nevis.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/switzerland.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/the-hague.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/turks-and-caicos-islands.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/vanuatu.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/vatican-city-holy-see.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power/washington-d-c.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/jurisdictions-of-power-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/latest-public-drops.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/launch-room.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5975,7 +7039,21 @@
       "status": "ok"
     },
     {
+      "file": "_site/media-narrative-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/members.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/membership.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6010,6 +7088,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/monetisation-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/network-map-index.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6025,6 +7110,13 @@
     },
     {
       "file": "_site/network-search.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/new-world-order-theory.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6095,6 +7187,27 @@
     },
     {
       "file": "_site/offer-trust-evidence-kit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/one-world-convergence.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/one-world-currency-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/one-world-religion-theory.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6605,6 +7718,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/power-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/power-dossiers.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6990,6 +8110,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/premium-reports.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/private-contractor-tracker.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7047,6 +8174,13 @@
     },
     {
       "file": "_site/research-tools.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/review-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7522,6 +8656,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/site-brain-router.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/site-freshness-report.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7606,6 +8747,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/source-intake.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/source-iom-missing-migrants.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7655,6 +8803,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/speculation-needs-review.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/speculation-review.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7662,7 +8817,21 @@
       "status": "ok"
     },
     {
-      "file": "_site/start-here.html",
+      "file": "_site/speculative-conclusion-review-queue.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/speculative-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/store.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7782,6 +8951,13 @@
     },
     {
       "file": "_site/thank-you-power-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/theory-lab.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8152,7 +9328,364 @@
       "status": "ok"
     },
     {
+      "file": "_site/top-52/ajay-banga.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/alex-karp.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/ant-nio-guterres.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/benjamin-netanyahu.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/bill-gates.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/booz-allen-hamilton.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/brian-moynihan.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/caci-international.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/christine-lagarde.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/david-solomon.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/top-52/elon-musk.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/emmanuel-macron.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/erik-prince.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/federal-reserve.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/gautam-adani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/george-soros.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/giorgia-meloni.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jamie-dimon.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jane-fraser.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jeff-bezos.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jens-stoltenberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jensen-huang.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/jerome-powell.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/king-charles-iii.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/klaus-schwab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/kristalina-georgieva.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/larry-ellison.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/larry-fink.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/laurene-powell-jobs.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/mackenzie-scott.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/mark-rutte.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/mark-zuckerberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/michael-bloomberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/miriam-adelson.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/mukesh-ambani.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/narendra-modi.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/peter-thiel.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/pope-francis.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/priscilla-chan.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/ray-dalio.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/rupert-murdoch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/sam-altman.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/satya-nadella.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/sundar-pichai.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/tedros-adhanom-ghebreyesus.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/tim-cook.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/tony-blair.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/vladimir-putin.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/volodymyr-zelenskyy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/warren-buffett.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/world-health-organization.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52/xi-jinping.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8348,7 +9881,21 @@
       "status": "ok"
     },
     {
+      "file": "_site/who-holds-power.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/wrongdoing-tracker.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "about.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

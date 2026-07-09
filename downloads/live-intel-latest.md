@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-09T07:11:16.877Z
+Updated: 2026-07-09T07:54:41.703Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -75,60 +75,4 @@ Updated: 2026-07-09T07:11:16.877Z
   - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
   - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
-  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
-  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
-  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
-  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
-  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
-  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-  - Source: https://www.who.int/health-topics/who-pandemic-agreement
-  - Evidence: Official WHO treaty/implementation-process lane
-  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
-  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
-  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
-  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxPVUZWYl9BcXRzLVRxSkt3MHV3dDVuNGRPNW1qbDVuUGRiTXVEREZKUmFodTZ5S3hLQlBaa21lcHBhQS1PblBrdElXLTVrRjdLSjJTU0MyWlFnSHNpSldVMlBnRVZIQzJSWER4dWlybWxUdTF1UzY1TGJhU1dMRWJWaG1wQWtrdHhvd0tlNWwxRzN5WW5fSmk4ZkwwZWtTRU5nUm9ITlIybw?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, compromised 1M medical records: Feds
-  - Short title: Crime-State Overlap Update: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New
-  - Longform title: What This Public-Record Update Reveals About Crime State Overlap: ‘State sanctioned’ Russian mob ran $1B Medicare scam out of New York, comp
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-  - Offer: offer-crime-dossiers.html
-- 2026-06-30 — Former Clinton aide appears before House panel in Epstein investigation - Scripps News
-  - Source: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUmdDNGFnd3ZMQXdMVmJuN3BneTgtT1NxQVhTdXpzcmhoUFNwWGZiRF8tUWNRTVhtV3ZlUUhpUHZRVUFraTRpLWpJdWxnVzR6d24xdzJteS1jSUJ2TXRpUnNUbnpVTEh2Q0FRNWlac3RkcEtPWVVFLVQ1dFhjbnZkcURpckMtRXNjSms3TVZQMWZ4SWliWXdRRktrdVBWTjdFbndUYTN1V1lRQ0hFcXJkMWFCQ0pPMHZoNEc1dUg4U0RzcWIzdVE?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Former Clinton aide appears before House panel in Epstein investigation
-  - Short title: Epstein Files Update: Former Clinton aide appears before House panel in Epstein investigatio
-  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Former Clinton aide appears before House panel in Ep
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-  - Offer: offer-starter-library.html
-- 2026-06-30 — Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxNOGpLYkVfV0kySmVBV1phUkdUelhaMElZMU0zRUVtMFRrdkxGVXZPdXNZNjFydG5JUFRISFBnYTdpR2JCbmJfS2JnbUFRTXljTHZvSlZBcnVIQXZKckxnM2plWkJpQWVvby1nVzljV3VIX0xVNGxfaUM3Z01hcHlNY25uV2lwSGMtYXd3OQ?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Alleged Epstein victim and Trump accuser living in fear of retaliation, relative says
-  - Short title: Epstein Files Update: Alleged Epstein victim and Trump accuser living in fear of retaliation
-  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Alleged Epstein victim and Trump accuser living in f
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
   - Offer: offer-starter-library.html

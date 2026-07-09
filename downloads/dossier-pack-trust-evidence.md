@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-09T07:11:16.877Z
+Updated: 2026-07-09T07:54:41.703Z
 Items: 12
 
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update

@@ -22,15 +22,20 @@ const forbidIncludes = (file, text, label = text) => {
   if (read(file).includes(text)) fail(`${file}: should not contain ${label}`);
 };
 
-const membershipPatch = spawnSync(process.execPath, ['scripts/patch-worker-newsletter-system.js'], {
-  cwd: root,
-  encoding: 'utf8',
-  shell: false,
-  maxBuffer: 30 * 1024 * 1024
-});
-if (membershipPatch.stdout) process.stdout.write(membershipPatch.stdout);
-if (membershipPatch.stderr) process.stderr.write(membershipPatch.stderr);
-if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit code ${membershipPatch.status}`);
+function runPatch(script, label) {
+  const result = spawnSync(process.execPath, [script], {
+    cwd: root,
+    encoding: 'utf8',
+    shell: false,
+    maxBuffer: 30 * 1024 * 1024
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) fail(`${label} failed with exit code ${result.status}`);
+}
+
+runPatch('scripts/patch-worker-newsletter-system.js', 'membership Worker patch');
+runPatch('scripts/patch-membership-auth-ui.js', 'membership auth UI patch');
 
 [
   'src/worker.js',
@@ -40,6 +45,7 @@ if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit
   'scripts/build-cloudflare-output.js',
   'scripts/patch-worker-pages-origin.js',
   'scripts/patch-worker-membership-auth.js',
+  'scripts/patch-membership-auth-ui.js',
   'scripts/membership-auth-test.js',
   'package.json',
   'membership.html',
@@ -100,6 +106,9 @@ requireIncludes('membership.html', 'marketingConsent', 'explicit marketing conse
 requireIncludes('member-login.html', '/api/auth/request-link', 'passwordless login request call');
 requireIncludes('member-dashboard.html', '/api/member/me', 'member identity request');
 requireIncludes('member-dashboard.html', '/api/auth/logout', 'member logout request');
+requireIncludes('_site/membership.html', '/api/membership/signup', 'deployed membership signup call');
+requireIncludes('_site/member-login.html', '/api/auth/request-link', 'deployed login request call');
+requireIncludes('_site/member-dashboard.html', '/api/member/me', 'deployed member identity request');
 
 forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
@@ -145,4 +154,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth routes, member pages, active JSONC/TOML bindings, analytics, headers and build wiring.');
+console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth routes, canonical member pages, active JSONC/TOML bindings, analytics, headers and build wiring.');

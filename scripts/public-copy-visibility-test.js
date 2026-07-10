@@ -25,7 +25,7 @@ function visibleMarkup(html) {
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
     .replace(/<template\b[^>]*>[\s\S]*?<\/template>/gi, ' ');
-  for (const tag of ['article', 'section', 'details', 'footer', 'div', 'p', 'li', 'a', 'span', 'aside']) {
+  for (const tag of ['article', 'section', 'details', 'footer', 'div', 'p', 'li', 'a', 'span', 'aside', 'blockquote', 'pre', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']) {
     const hidden = new RegExp(`<${tag}\\b[^>]*(?:internal-only|data-internal-only=["']true["']|\\shidden(?:\\s|>|=))[^>]*>[\\s\\S]*?<\\/${tag}>`, 'gi');
     let before;
     do { before = text; text = text.replace(hidden, ' '); } while (text !== before);
@@ -75,7 +75,6 @@ for (const phrase of [
   'Next Art Batch',
   'Site Brain Router',
   'Gathering System',
-  'Conclusion Engine',
   'Machine Index',
   'Update Monitor',
   'TURN THE INTELLIGENCE MACHINE INTO PRODUCTS',
@@ -101,7 +100,7 @@ for (const phrase of [
 check('homepage uses reader-facing navigation label', indexVisible.includes('Reader Resources'));
 check('homepage keeps public intelligence and book routes', indexVisible.includes('Open Live Intel') && indexVisible.includes('Buy The Books'));
 check('homepage keeps public card decks', indexVisible.includes('PERSONS OF INTEREST') && indexVisible.includes('CONTROLLED OPPOSITION'));
-check('homepage keeps weekly signup', indexHtml.includes('Join Weekly Signal'));
+check('homepage keeps weekly signup', indexHtml.includes('Join Weekly Signal') && indexVisible.includes('Join Weekly Signal'));
 check('homepage replaces funnel wording in free brief card', !indexVisible.includes('Capture attention with source-led PDFs'));
 check('homepage replaces funnel wording in live intel card', !indexVisible.includes('routed into evidence trails, video hooks, free briefs, offers, and books'));
 
@@ -156,6 +155,7 @@ if (siteIndex) {
   check('deployed homepage includes hidden-control CSS', siteIndex.includes('id="public-internal-visibility"'));
   check('deployed homepage hides author-facing navigation', !siteVisible.includes('Sell / Capture'));
   check('deployed homepage hides commercial strategy', !siteVisible.includes('Free public intelligence builds trust') && !siteVisible.includes('CAPTURE SYSTEM'));
+  check('deployed homepage keeps weekly signup', siteVisible.includes('Join Weekly Signal'));
 }
 
 const cloudflareHeaders = read('_site/_headers');

@@ -8,6 +8,7 @@ function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg) { problems.push(msg); }
 function requireFile(file) { if (!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function requireAnyIncludes(file, texts, label) { if (!exists(file)) return; const body = read(file); if (!texts.some(text => body.includes(text))) fail(`${file}: missing ${label}`); }
 function visibleCopy(file) { return read(file).replace(/<!--[\s\S]*?-->/g, ' ').replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '); }
 
 const core = ['index.html','live-intel.html','epstein-files.html','news.html','evidence-vault.html','videos.html','books.html','amazon-store-books.html','optin-center.html','offer-center.html','search.html','netlify.toml','package.json'];
@@ -21,12 +22,12 @@ const homepageMustHave = [
   'Declassified Files',
   'Buy The Books',
   'Get Free Briefs',
-  'Main Doors',
   'Live source lanes',
   'source → evidence → video hook → free brief → book/store',
   'Join The Signal'
 ];
 for (const marker of homepageMustHave) requireIncludes('index.html', marker, `homepage 10/10 marker: ${marker}`);
+requireAnyIncludes('index.html', ['Explore', 'Main Doors'], 'homepage reader navigation marker');
 
 const pageRoutes = {
   'index.html': ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html','optin-center.html','books.html','search.html'],

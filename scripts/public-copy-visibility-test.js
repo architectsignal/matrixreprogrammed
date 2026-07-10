@@ -132,12 +132,19 @@ if (siteIndex) {
   check('deployed homepage hides author-facing navigation', !visibleText(siteIndex).includes('Sell / Capture'));
 }
 
+const cloudflareHeaders = read('_site/_headers');
+if (cloudflareHeaders) {
+  check('Cloudflare _headers keeps a valid path-first format', /^\/\*/.test(cloudflareHeaders.trimStart()));
+  check('Cloudflare _headers contains no injected HTML', !/<(?:style|script|html)\b/i.test(cloudflareHeaders));
+  check('Cloudflare _headers retains HSTS', cloudflareHeaders.includes('Strict-Transport-Security'));
+}
+
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   checks,
   failures,
-  boundary: 'Operational pages, routes, raw data and diagnostic text remain in the repository. The normal public interface must not display author, automation, audit, health or configuration controls.'
+  boundary: 'Operational pages, routes, raw data and diagnostic text remain in the repository. The normal public interface must not display author, automation, audit, health or configuration controls, and the scrub must never modify Cloudflare control files.'
 };
 fs.writeFileSync(path.join(reportDir, 'public-copy-visibility-test.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(path.join(reportDir, 'public-copy-visibility-test.md'), `# Public Copy Visibility Test\n\nResult: ${report.ok ? 'PASS' : 'FAIL'}\n\n${checks.map(item => `- ${item.ok ? 'PASS' : 'FAIL'}: ${item.name}`).join('\n')}\n`);

@@ -7,6 +7,14 @@ on:
 
 permissions:
   contents: write
+  actions: read
+
+concurrency:
+  group: daily-sitewide-refresh
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   refresh:
@@ -20,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
@@ -28,58 +36,66 @@ jobs:
       - name: Refresh seven-day and live intel
         continue-on-error: true
         run: |
-          npm run update-seven-day-intel || echo "update-seven-day-intel recorded a soft failure"
-          npm run update-live-intel || echo "update-live-intel recorded a soft failure"
+          npm run update-seven-day-intel || echo "update-seven-day-intel recorded a source-refresh failure"
+          npm run update-live-intel || echo "update-live-intel recorded a source-refresh failure"
 
       - name: Build site brain and shared systems
         continue-on-error: true
+        run: node scripts/daily-sitewide-build-safe.js
+
+      - name: Repair and test deploy-critical systems
+        continue-on-error: true
         run: |
-          set +e
-          node scripts/daily-sitewide-build-safe.js
-          status=$?
-          if [ "$status" -ne 0 ]; then
-            echo "daily-sitewide-build-safe recorded a soft failure; writing fallback status and continuing"
-          fi
-          REFRESH_BUILDER_STATUS="$status" node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          function writeJson(file, payload) {
-            fs.mkdirSync(path.dirname(file), { recursive: true });
-            fs.writeFileSync(file, JSON.stringify(payload, null, 2));
-          }
-          const payload = {
-            ok: true,
-            resilient: true,
-            fallback: process.env.REFRESH_BUILDER_STATUS !== '0',
-            builderStatus: process.env.REFRESH_BUILDER_STATUS || 'unknown',
-            generatedAt: new Date().toISOString(),
-            note: 'Daily refresh completed with resilient workflow wrapper. Generator failures, if any, are logged in downloads/daily-sitewide-build-report.json.'
-          };
-          fs.mkdirSync('downloads', { recursive: true });
-          fs.mkdirSync('data', { recursive: true });
-          fs.mkdirSync('_site/data', { recursive: true });
-          if (!fs.existsSync('downloads/daily-sitewide-build-report.json')) writeJson('downloads/daily-sitewide-build-report.json', payload);
-          writeJson('data/daily-sitewide-refresh-status.json', payload);
-          fs.copyFileSync('data/daily-sitewide-refresh-status.json', '_site/data/daily-sitewide-refresh-status.json');
-          NODE
-          exit 0
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/newsletter-persistence-test.js
+          node scripts/repair-search-system.js
+          node scripts/repair-critical-route-drift.js
+          node scripts/site-function-harmony-test.js
 
       - name: Pressure test refreshed systems
         continue-on-error: true
         run: |
-          npm run pressure-test:global-risk-clocks || echo "global risk clocks pressure test recorded a soft failure"
-          npm run pressure-test:live-intel || echo "live intel pressure test recorded a soft failure"
-          npm run pressure-test || echo "general pressure test recorded a soft failure"
+          npm run pressure-test:global-risk-clocks
+          npm run pressure-test:live-intel
+          npm run pressure-test
 
-      - name: Commit refreshed generated files
+      - name: Commit refreshed generated files and reports
         if: always()
         run: |
           git config user.name "matrix-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add .
+          git add -A
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
           else
-            git commit -m "Daily sitewide intelligence refresh"
+            git commit -m "Daily sitewide intelligence refresh [deploy]"
             git push
           fi
+
+      - name: Enforce truthful daily refresh status
+        if: always()
+        env:
+          AUTOMATION_HEALTH_MODE: daily
+        run: node scripts/automation-health-gate.js
+
+      - name: Upload daily refresh reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-sitewide-refresh-reports-${{ github.sha }}
+          path: |
+            downloads/daily-sitewide-build-report.json
+            downloads/daily-sitewide-build-report.md
+            downloads/critical-route-drift-report.json
+            downloads/critical-route-drift-report.md
+            downloads/newsletter-worker-patch-report.json
+            downloads/newsletter-persistence-test.json
+            downloads/newsletter-persistence-test.md
+            downloads/search-system-repair-report.json
+            downloads/search-runtime-hardening-report.json
+            downloads/site-function-harmony-report.json
+            downloads/site-function-harmony-report.md
+            downloads/automation-health-daily.json
+            downloads/automation-health-daily.md
+          if-no-files-found: ignore
+          retention-days: 21

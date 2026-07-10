@@ -58,6 +58,15 @@ if (scrub.stdout) process.stdout.write(scrub.stdout);
 if (scrub.stderr) process.stderr.write(scrub.stderr);
 check('visibility scrub executes', scrub.status === 0, `exit ${scrub.status}`);
 
+const weekly = spawnSync(process.execPath, ['scripts/ensure-public-weekly-signup.js'], {
+  cwd: root,
+  encoding: 'utf8',
+  maxBuffer: 10 * 1024 * 1024
+});
+if (weekly.stdout) process.stdout.write(weekly.stdout);
+if (weekly.stderr) process.stderr.write(weekly.stderr);
+check('public weekly signup repair executes', weekly.status === 0, `exit ${weekly.status}`);
+
 for (const file of ['index.html', 'membership.html', 'member-dashboard.html']) {
   check(`${file} exists`, Boolean(read(file)));
   check(`${file} includes hidden-control CSS`, read(file).includes('id="public-internal-visibility"'));
@@ -100,7 +109,7 @@ for (const phrase of [
 check('homepage uses reader-facing navigation label', indexVisible.includes('Reader Resources'));
 check('homepage keeps public intelligence and book routes', indexVisible.includes('Open Live Intel') && indexVisible.includes('Buy The Books'));
 check('homepage keeps public card decks', indexVisible.includes('PERSONS OF INTEREST') && indexVisible.includes('CONTROLLED OPPOSITION'));
-check('homepage keeps weekly signup', indexHtml.includes('Join Weekly Signal') && indexVisible.includes('Join Weekly Signal'));
+check('homepage keeps weekly signup', indexHtml.includes('id="public-weekly-signal-form"') && indexVisible.includes('Join Weekly Signal'));
 check('homepage replaces funnel wording in free brief card', !indexVisible.includes('Capture attention with source-led PDFs'));
 check('homepage replaces funnel wording in live intel card', !indexVisible.includes('routed into evidence trails, video hooks, free briefs, offers, and books'));
 
@@ -155,7 +164,7 @@ if (siteIndex) {
   check('deployed homepage includes hidden-control CSS', siteIndex.includes('id="public-internal-visibility"'));
   check('deployed homepage hides author-facing navigation', !siteVisible.includes('Sell / Capture'));
   check('deployed homepage hides commercial strategy', !siteVisible.includes('Free public intelligence builds trust') && !siteVisible.includes('CAPTURE SYSTEM'));
-  check('deployed homepage keeps weekly signup', siteVisible.includes('Join Weekly Signal'));
+  check('deployed homepage keeps weekly signup', siteIndex.includes('id="public-weekly-signal-form"') && siteVisible.includes('Join Weekly Signal'));
 }
 
 const cloudflareHeaders = read('_site/_headers');

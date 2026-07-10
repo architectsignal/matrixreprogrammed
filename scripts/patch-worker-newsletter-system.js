@@ -8,6 +8,7 @@ const newsletterPath = path.join(root, 'newsletter.html');
 const membershipPatchPath = path.join(root, 'scripts', 'patch-worker-membership-foundation.js');
 const authPatchPath = path.join(root, 'scripts', 'patch-worker-membership-auth.js');
 const paypalPatchPath = path.join(root, 'scripts', 'patch-worker-paypal-membership.js');
+const membershipUiPatchPath = path.join(root, 'scripts', 'patch-membership-auth-ui.js');
 const reportDir = path.join(root, 'downloads');
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -78,9 +79,11 @@ if (fs.existsSync(newsletterPath)) {
 let membershipIntegrated = false;
 let authIntegrated = false;
 let paypalIntegrated = false;
+let membershipUiIntegrated = false;
 if (fs.existsSync(membershipPatchPath)) membershipIntegrated = runPatch(membershipPatchPath, 'membership foundation');
 if (fs.existsSync(authPatchPath)) authIntegrated = runPatch(authPatchPath, 'membership authentication');
 if (fs.existsSync(paypalPatchPath)) paypalIntegrated = runPatch(paypalPatchPath, 'PayPal membership');
+if (fs.existsSync(membershipUiPatchPath)) membershipUiIntegrated = runPatch(membershipUiPatchPath, 'membership user interface');
 
 const finalWorker = fs.readFileSync(workerPath, 'utf8');
 if (membershipIntegrated && !finalWorker.includes("originalPath==='/api/membership/signup'")) fail('membership signup route missing after integration');
@@ -98,6 +101,7 @@ const report = {
   membershipIntegrated,
   authIntegrated,
   paypalIntegrated,
+  membershipUiIntegrated,
   mode: paypalIntegrated ? 'D1 membership capture, passwordless authentication and PayPal subscription enforcement' : authIntegrated ? 'D1 membership capture followed by email verification and passwordless authentication' : membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
 };
 fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify(report, null, 2));

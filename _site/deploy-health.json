@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "6cc136e2320d3b0c82ad37845272c24f09902b44",
-  "buildShortSha": "6cc136e2320d",
-  "generatedAt": "2026-07-09T07:11:56.294Z",
+  "buildSha": "c359a94295058a05325eabb7a593422437a70e7c",
+  "buildShortSha": "c359a9429505",
+  "generatedAt": "2026-07-10T07:01:41.919Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -16,6 +16,7 @@
     "/books",
     "/live-intel",
     "/power-conclusions",
+    "/reader-conclusions",
     "/evidence-hunter",
     "/who-holds-power",
     "/one-world-convergence",
@@ -30,19 +31,25 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "1aa39baed697c410"
+      "hash": "70d71fe6deb15a48"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "1aa39baed697c410"
+      "hash": "70d71fe6deb15a48"
     },
     {
       "name": "Power Conclusions",
       "route": "/power-conclusions.html",
       "file": "power-conclusions.html",
       "hash": "190e156d7b76afa3"
+    },
+    {
+      "name": "Reader Conclusions",
+      "route": "/reader-conclusions.html",
+      "file": "reader-conclusions.html",
+      "hash": "09df9841b133b931"
     },
     {
       "name": "Evidence Hunter",
@@ -72,7 +79,7 @@
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "1b311266435519af"
+      "hash": "4d6f7ab0c61d0468"
     },
     {
       "name": "Dark Speculation Forum",
@@ -96,13 +103,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "f5e833d7c0bbc011"
+      "hash": "f42b30caddb7032b"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "046681b16ecc34eb"
+      "hash": "c145220a12def5e2"
     },
     {
       "name": "Probability Lab",
@@ -114,13 +121,13 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "8c25a0203611c82d"
+      "hash": "457a85e0adfcc500"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "ea7af9e16a11f2aa"
+      "hash": "502d9e64a347200d"
     },
     {
       "name": "Cloudflare Assets",
@@ -149,9 +156,22 @@
       "stderr": ""
     },
     {
+      "type": "reader-conclusions-layer",
+      "status": "ok",
+      "stdout": "Reader conclusions layer built.\n",
+      "stderr": ""
+    },
+    {
+      "type": "public-copy-scrubber",
+      "status": "ok",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 81 review issue(s).\n",
+      "stderr": ""
+    },
+    {
       "type": "homepage-compatibility-markers",
       "inserted": [
         "Power Conclusions",
+        "Reader Conclusions",
         "Evidence Hunter"
       ]
     }

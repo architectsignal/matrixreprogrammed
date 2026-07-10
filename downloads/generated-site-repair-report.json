@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-10T06:47:19.293Z",
+  "generatedAt": "2026-07-10T07:01:41.919Z",
   "repairs": [
     {
       "type": "sec-filing-feed",
@@ -29,8 +29,16 @@
     {
       "type": "public-copy-scrubber",
       "status": "ok",
-      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 0 file(s) cleaned, 82 review issue(s).\n",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 81 review issue(s).\n",
       "stderr": ""
+    },
+    {
+      "type": "homepage-compatibility-markers",
+      "inserted": [
+        "Power Conclusions",
+        "Reader Conclusions",
+        "Evidence Hunter"
+      ]
     },
     {
       "type": "deploy-health-json",

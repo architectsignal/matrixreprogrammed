@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Review Dashboard
 
-Updated: 2026-07-09T07:11:53.459Z
+Updated: 2026-07-10T07:01:38.482Z
 
 Decks: 9
 
@@ -10,7 +10,7 @@ Unresolved source leads: 80
 
 Primary-source cards needed: 468
 
-Submissions awaiting review: 80
+Submissions awaiting review: 128
 
 Artwork missing: 468
 
@@ -24,15 +24,15 @@ Artwork missing: 468
 - Think Tanks Deck: 52 card(s) need primary-source enrichment.
 - Black Nobility & Allied Dynasties Deck: 52 card(s) need primary-source enrichment.
 - Jurisdictions of Power Deck: 52 card(s) need primary-source enrichment.
-- Public copy audit has 1839 high issue(s).
+- Public copy audit has 2110 high issue(s).
 
 ## Deck Health
-- Top 52 Persons of Interest: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 24
-- Controlled Opposition: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 123
-- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 1586
-- Power Families Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 148
-- Secret Societies Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 68
-- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 1585
-- Think Tanks Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 35
+- Top 52 Persons of Interest: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 28
+- Controlled Opposition: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 125
+- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 1971
+- Power Families Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 254
+- Secret Societies Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 72
+- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 1970
+- Think Tanks Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 37
 - Black Nobility & Allied Dynasties Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 0
-- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 8
+- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 118

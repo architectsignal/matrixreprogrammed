@@ -3,14 +3,14 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 2688
-Flagged pages: 1942
+Scanned pages: 2689
+Flagged pages: 1951
 High priority pages: 691
-Medium priority pages: 1244
+Medium priority pages: 1253
 Pages with missing rules: 228
 Auto-update eligible figures: 3
 Manual-review figures: 84
-Missing-rule figures: 534
+Missing-rule figures: 539
 
 ## High Priority Pages
 - _site/live-intel.html: 25 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -23,9 +23,9 @@ Missing-rule figures: 534
 - review-dashboard.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-drop.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - custom-research.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
@@ -39,10 +39,10 @@ Missing-rule figures: 534
 - big-three-asset-managers.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - media-narrative-theory.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- one-world-religion-theory.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/subject-trust-evidence-method.html: 4 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
-- black-file-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/live-intel.html: 24 figure(s) need source rules.
@@ -55,9 +55,9 @@ Missing-rule figures: 534
 - review-dashboard.html: 12 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 10 figure(s) need source rules.
+- live-intel.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
 - _site/daily-drop.html: 8 figure(s) need source rules.
-- live-intel.html: 8 figure(s) need source rules.
 - _site/daily-brain-brief.html: 6 figure(s) need source rules.
 - custom-research.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
@@ -71,6 +71,7 @@ Missing-rule figures: 534
 - big-three-asset-managers.html: 4 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
 - media-narrative-theory.html: 4 figure(s) need source rules.
+- one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-atlas.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
 - _site/subject-trust-evidence-method.html: 3 figure(s) need source rules.
@@ -84,7 +85,6 @@ Missing-rule figures: 534
 - _site/big-three/blackrock.html: 2 figure(s) need source rules.
 - _site/big-three/vanguard.html: 2 figure(s) need source rules.
 - _site/card-dossier-standard.html: 2 figure(s) need source rules.
-- _site/conclusion-engine.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

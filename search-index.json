@@ -9323,8 +9323,8 @@
   {
     "key": "deploy-health.html",
     "title": "Deploy Health | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
+    "category": "Money / Reserves",
+    "layer": "money-reserves",
     "url": "deploy-health.html",
     "description": "Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, feeds and reader conversion routes.",
     "keywords": [
@@ -25064,8 +25064,6 @@
     "url": "sec-filing-feed.html",
     "description": "Build-generated SEC annual filing metadata feed.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
@@ -31984,53 +31982,6 @@
       "reader reports"
     ],
     "priority": 76,
-    "sourceType": "json-feed"
-  },
-  {
-    "key": "latest-public-drops",
-    "title": "Latest Public Drops",
-    "subtitle": "Curated current source leads",
-    "series": "Live Intel",
-    "category": "Source Watch",
-    "url": "downloads/latest-public-drops.json",
-    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
-    "keywords": [
-      "latest drops",
-      "Epstein",
-      "digital euro",
-      "digital ID",
-      "AI cyber",
-      "timers"
-    ]
-  },
-  {
-    "url": "data/big-three-asset-managers.json",
-    "title": "Big Three Asset Manager JSON",
-    "category": "Machine Data",
-    "description": "Machine-readable Big Three tracker data.",
-    "keywords": [
-      "BlackRock",
-      "Vanguard",
-      "State Street",
-      "machine data"
-    ],
-    "layer": "money-reserves",
-    "priority": 91,
-    "sourceType": "json-feed"
-  },
-  {
-    "url": "downloads/big-three-asset-managers.md",
-    "title": "Big Three Asset Manager Download",
-    "category": "Downloads",
-    "description": "Downloadable Big Three tracker report.",
-    "keywords": [
-      "BlackRock",
-      "Vanguard",
-      "State Street",
-      "download"
-    ],
-    "layer": "money-reserves",
-    "priority": 91,
     "sourceType": "json-feed"
   }
 ]

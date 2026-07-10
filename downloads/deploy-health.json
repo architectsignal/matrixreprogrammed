@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "d1748710ca45fc844b7c67e2f17d5aaa1858d4e7",
-  "buildShortSha": "d1748710ca45",
-  "generatedAt": "2026-07-10T06:47:19.293Z",
+  "buildSha": "c359a94295058a05325eabb7a593422437a70e7c",
+  "buildShortSha": "c359a9429505",
+  "generatedAt": "2026-07-10T07:01:41.919Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -31,13 +31,13 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "f61c6d1637533cd3"
+      "hash": "70d71fe6deb15a48"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "f61c6d1637533cd3"
+      "hash": "70d71fe6deb15a48"
     },
     {
       "name": "Power Conclusions",
@@ -103,13 +103,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "c0adc3c960bab5cd"
+      "hash": "f42b30caddb7032b"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "c7d73c7dcf160309"
+      "hash": "c145220a12def5e2"
     },
     {
       "name": "Probability Lab",
@@ -121,7 +121,7 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "3860b09bb7e03cc7"
+      "hash": "457a85e0adfcc500"
     },
     {
       "name": "Forum Worker",
@@ -164,8 +164,16 @@
     {
       "type": "public-copy-scrubber",
       "status": "ok",
-      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 0 file(s) cleaned, 82 review issue(s).\n",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 81 review issue(s).\n",
       "stderr": ""
+    },
+    {
+      "type": "homepage-compatibility-markers",
+      "inserted": [
+        "Power Conclusions",
+        "Reader Conclusions",
+        "Evidence Hunter"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-09T07:54:59.685Z
+Updated: 2026-07-10T07:01:19.863Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -34,6 +34,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Atlas Lane Link Repair: downloads/atlas-lane-link-repair.pdf (custom PDF preserved)
 - Atlas Lane Populations: downloads/atlas-lane-populations.pdf (custom PDF preserved)
 - Auto Evidence Pipeline Report: downloads/auto-evidence-pipeline-report.pdf (custom PDF preserved)
+- Automatic Orchestrator Final Audit: downloads/automatic-orchestrator-final-audit.pdf
 - Big Three Asset Manager Tracker: downloads/big-three-asset-managers.pdf (custom PDF preserved)
 - Big Three Search Routes Report: downloads/big-three-search-routes-report.pdf (custom PDF preserved)
 - Black File Exposé Engine: downloads/black-file-exposes.pdf (custom PDF preserved)
@@ -48,9 +49,9 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Card Artwork Batches: downloads/card-artwork-batches.pdf (custom PDF preserved)
 - Card Artwork Install Log: downloads/card-artwork-install-log.pdf (custom PDF preserved)
 - Next Card Artwork Queue: downloads/card-artwork-queue.pdf (custom PDF preserved)
-- Card Deck System Audit: downloads/card-deck-system-audit.pdf
-- Card Dossier Depth Audit: downloads/card-dossier-depth-audit.pdf
-- Card Dossier Intelligence Pack Audit: downloads/card-dossier-intelligence-pack-audit.pdf
+- Card Deck System Audit: downloads/card-deck-system-audit.pdf (custom PDF preserved)
+- Card Dossier Depth Audit: downloads/card-dossier-depth-audit.pdf (custom PDF preserved)
+- Card Dossier Intelligence Pack Audit: downloads/card-dossier-intelligence-pack-audit.pdf (custom PDF preserved)
 - Card Download Manifest: downloads/card-download-manifest.pdf (custom PDF preserved)
 - Card Intelligence Feed: downloads/card-intelligence-feed.pdf (custom PDF preserved)
 - Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
@@ -81,20 +82,20 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Entity Daily Briefs: downloads/entity-daily-briefs.pdf (custom PDF preserved)
 - Entity Exposure Index: downloads/entity-exposure-index.pdf (custom PDF preserved)
 - Epstein Capital Class Map Tracker: downloads/epstein-capital-class-map.pdf (custom PDF preserved)
-- Epstein Conclusions: downloads/epstein-conclusions.pdf
+- Epstein Conclusions: downloads/epstein-conclusions.pdf (custom PDF preserved)
 - Epstein Email Signal Map: downloads/epstein-email-signals.pdf (custom PDF preserved)
 - Epstein Evidence Strength Ladder: downloads/epstein-evidence-ladder.pdf (custom PDF preserved)
 - Epstein Evidence Watch: downloads/epstein-evidence-watch.pdf (custom PDF preserved)
-- Epstein File Check Audit: downloads/epstein-file-check-audit.pdf
+- Epstein File Check Audit: downloads/epstein-file-check-audit.pdf (custom PDF preserved)
 - Epstein Actual Files Cockpit: downloads/epstein-file-cockpit.pdf (custom PDF preserved)
 - Epstein File Scan Batch 001 — DOJ Library Structure And Court-Record Lanes: downloads/epstein-file-scan-batch-001.pdf (custom PDF preserved)
 - Epstein File Scan Batch 002 — First Ten Epstein And Maxwell Court PDFs: downloads/epstein-file-scan-batch-002.pdf (custom PDF preserved)
-- Epstein Missing Records: downloads/epstein-missing-records.pdf
+- Epstein Missing Records: downloads/epstein-missing-records.pdf (custom PDF preserved)
 - Epstein Network Architecture Matrix: downloads/epstein-network-architecture.pdf (custom PDF preserved)
 - Epstein Network Deep Dive Matrix: downloads/epstein-network-deep-dive.pdf (custom PDF preserved)
 - Epstein People / Entity Tracker: downloads/epstein-people-index.pdf (custom PDF preserved)
 - Epstein Sighting Watch: downloads/epstein-sighting-watch.pdf (custom PDF preserved)
-- Epstein Source Ledger: downloads/epstein-source-ledger.pdf
+- Epstein Source Ledger: downloads/epstein-source-ledger.pdf (custom PDF preserved)
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
 - Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf (custom PDF preserved)
@@ -165,9 +166,9 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Site Relationship Map: downloads/site-relationship-map.pdf (custom PDF preserved)
 - Source Cards: downloads/source-cards.pdf (custom PDF preserved)
 - Source Document Vault: downloads/source-document-vault.pdf (custom PDF preserved)
-- Speculation / Needs Review: downloads/speculation-needs-review-public.pdf
-- Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf
-- Speculative Conclusions: downloads/speculative-conclusions.pdf
+- Speculation / Needs Review: downloads/speculation-needs-review-public.pdf (custom PDF preserved)
+- Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf (custom PDF preserved)
+- Speculative Conclusions: downloads/speculative-conclusions.pdf (custom PDF preserved)
 - Crime-State Overlap Brief: downloads/subject-crime-state-overlap.pdf
 - D.O.G The Architect Initiation Map: downloads/subject-dog-architect.pdf
 - Epstein / Black File Source Map: downloads/subject-epstein-black-file.pdf
@@ -177,7 +178,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - NASA Hidden Architecture File: downloads/subject-nasa-hidden-architecture.pdf
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
-- Theory Lab Conclusions: downloads/theory-lab-conclusions.pdf
+- Theory Lab Conclusions: downloads/theory-lab-conclusions.pdf (custom PDF preserved)
 - Top 52 Art System Style Bible: downloads/top-52-art-style-bible.pdf (custom PDF preserved)
 - Top 52 Batch 1 Art Queue: downloads/top-52-batch1-art-queue.pdf (custom PDF preserved)
 - Top 52 Card Art Manifest: downloads/top-52-card-art-manifest.pdf (custom PDF preserved)

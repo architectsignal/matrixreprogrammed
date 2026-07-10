@@ -1,0 +1,221 @@
+{
+  "ok": false,
+  "updated": "2026-07-10T07:01:43.858Z",
+  "purpose": "Checks whether important reader pages contain conclusion depth, evidence boundaries, limits and missing records.",
+  "pages": [
+    {
+      "file": "power-conclusions.html",
+      "exists": true,
+      "score": 6,
+      "max": 6,
+      "missing": [],
+      "status": "strong"
+    },
+    {
+      "file": "reader-conclusions.html",
+      "exists": true,
+      "score": 6,
+      "max": 6,
+      "missing": [],
+      "status": "strong"
+    },
+    {
+      "file": "who-holds-power.html",
+      "exists": true,
+      "score": 1,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record",
+        "next action",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "one-world-convergence.html",
+      "exists": true,
+      "score": 1,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record",
+        "next action",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "accountability-watch.html",
+      "exists": true,
+      "score": 4,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "evidence-hunter.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "review-dashboard.html",
+      "exists": true,
+      "score": 4,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "site-brain-router.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "evidence boundary",
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "source-intake.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "search.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "next action"
+      ],
+      "status": "weak"
+    }
+  ],
+  "weak": [
+    {
+      "file": "who-holds-power.html",
+      "exists": true,
+      "score": 1,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record",
+        "next action",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "one-world-convergence.html",
+      "exists": true,
+      "score": 1,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record",
+        "next action",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "accountability-watch.html",
+      "exists": true,
+      "score": 4,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "evidence-hunter.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "missing record"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "review-dashboard.html",
+      "exists": true,
+      "score": 4,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "site-brain-router.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "evidence boundary",
+        "what proves",
+        "what suggests"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "source-intake.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "confidence or limit"
+      ],
+      "status": "weak"
+    },
+    {
+      "file": "search.html",
+      "exists": true,
+      "score": 3,
+      "max": 6,
+      "missing": [
+        "what proves",
+        "what suggests",
+        "next action"
+      ],
+      "status": "weak"
+    }
+  ]
+}

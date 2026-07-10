@@ -36,6 +36,8 @@ function runPatch(script, label) {
 
 runPatch('scripts/patch-worker-newsletter-system.js', 'membership Worker patch');
 runPatch('scripts/patch-membership-auth-ui.js', 'membership auth UI patch');
+runPatch('scripts/hide-internal-public-controls.js', 'public visibility patch');
+runPatch('scripts/public-copy-visibility-test.js', 'public visibility test');
 
 [
   'src/worker.js',
@@ -49,6 +51,8 @@ runPatch('scripts/patch-membership-auth-ui.js', 'membership auth UI patch');
   'scripts/patch-worker-membership-auth.js',
   'scripts/patch-worker-paypal-membership.js',
   'scripts/patch-membership-auth-ui.js',
+  'scripts/hide-internal-public-controls.js',
+  'scripts/public-copy-visibility-test.js',
   'scripts/membership-auth-test.js',
   'package.json',
   'membership.html',
@@ -120,14 +124,18 @@ requireIncludes('membership.html', '/api/paypal/config', 'PayPal configuration c
 requireIncludes('membership.html', '/api/paypal/checkout-intent', 'PayPal checkout-intent call');
 requireIncludes('membership.html', '/api/paypal/subscription/confirm', 'PayPal server confirmation call');
 requireIncludes('membership.html', 'actions.subscription.create', 'PayPal subscription button flow');
+requireIncludes('membership.html', 'id="public-internal-visibility"', 'public visibility CSS');
 requireIncludes('member-login.html', '/api/auth/request-link', 'passwordless login request call');
 requireIncludes('member-dashboard.html', '/api/member/me', 'member identity request');
 requireIncludes('member-dashboard.html', '/api/auth/logout', 'member logout request');
 requireIncludes('member-dashboard.html', '/api/paypal/subscription/cancel', 'PayPal cancellation request');
 requireIncludes('member-dashboard.html', 'paidAccessEnabled', 'server entitlement display');
+requireIncludes('member-dashboard.html', 'id="public-internal-visibility"', 'dashboard public visibility CSS');
 requireIncludes('_site/membership.html', '/api/paypal/subscription/confirm', 'deployed PayPal confirmation call');
+requireIncludes('_site/membership.html', 'id="public-internal-visibility"', 'deployed public visibility CSS');
 requireIncludes('_site/member-login.html', '/api/auth/request-link', 'deployed login request call');
 requireIncludes('_site/member-dashboard.html', '/api/paypal/subscription/cancel', 'deployed PayPal cancellation call');
+requireIncludes('_site/member-dashboard.html', 'id="public-internal-visibility"', 'deployed dashboard visibility CSS');
 
 requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents', 'PayPal checkout-intent table in deployment migration');
 requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS payment_webhook_events', 'PayPal webhook event table');
@@ -159,6 +167,8 @@ requireIncludes('wrangler.jsonc', '"pattern": "www.matrixreprogrammed.com/*"', '
 requireIncludes('_headers', 'Strict-Transport-Security', 'HSTS header');
 requireIncludes('_headers', 'immutable', 'immutable cache header');
 requireIncludes('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
+requireIncludes('scripts/build-cloudflare-output.js', 'hide-internal-public-controls.js', 'public visibility build hook');
+requireIncludes('scripts/build-cloudflare-output.js', 'public-copy-visibility-test.js', 'public visibility build test');
 requireIncludes('scripts/build-cloudflare-output.js', 'Cloudflare output ready', 'output success marker');
 requireIncludes('package.json', 'patch-worker-pages-origin.js', 'Worker asset patch in build');
 requireIncludes('package.json', 'build-cloudflare-output.js', 'Cloudflare output builder in build');
@@ -178,4 +188,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth, PayPal verification and webhooks, canonical member pages, active bindings, analytics, headers and build wiring.');
+console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth, PayPal verification and webhooks, hidden internal controls, canonical member pages, active bindings, analytics, headers and build wiring.');

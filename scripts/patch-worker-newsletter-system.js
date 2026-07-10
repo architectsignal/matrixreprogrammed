@@ -1,9 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const workerPath = path.join(root, 'src', 'worker.js');
 const newsletterPath = path.join(root, 'newsletter.html');
+const membershipPatchPath = path.join(root, 'scripts', 'patch-worker-membership-foundation.js');
 const reportDir = path.join(root, 'downloads');
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -63,12 +65,25 @@ if (fs.existsSync(newsletterPath)) {
   if (after !== before) fs.writeFileSync(newsletterPath, after);
 }
 
+let membershipIntegrated = false;
+if (fs.existsSync(membershipPatchPath)) {
+  const result = spawnSync(process.execPath, [membershipPatchPath], { cwd: root, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) fail(`membership foundation integration failed with status ${result.status}`);
+  membershipIntegrated = true;
+}
+
+const finalWorker = fs.readFileSync(workerPath, 'utf8');
+if (membershipIntegrated && !finalWorker.includes("originalPath==='/api/membership/signup'")) fail('membership signup route missing after integration');
+
 const report = {
   ok: true,
   generatedAt: new Date().toISOString(),
-  changed: worker !== beforeWorker,
+  changed: finalWorker !== beforeWorker,
   required,
-  mode: 'real Cloudflare KV persistence enforcement'
+  membershipIntegrated,
+  mode: membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
 };
 fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify(report, null, 2));
-console.log('Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');
+console.log(membershipIntegrated ? 'Newsletter Worker patch OK: membership foundation applied after compatibility repair.' : 'Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');

@@ -454,11 +454,12 @@
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-09T20:03:25.978Z",
+    "updated": "2026-07-10T04:13:23.391Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -554,7 +555,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -568,7 +569,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -582,7 +583,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -596,7 +597,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -610,7 +611,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -624,7 +625,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -772,9 +773,9 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-09T20:03:44.304Z",
+    "updated": "2026-07-10T04:13:41.787Z",
     "newRecordCount": 0,
-    "changedRecordCount": 0,
+    "changedRecordCount": 6,
     "removedRecordCount": 0,
     "relationshipCandidateCount": 112,
     "evidenceUpgradeCount": 0,
@@ -785,7 +786,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-09T20:03:44.454Z",
+    "updated": "2026-07-10T04:13:41.936Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -819,7 +820,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-09T20:03:44.491Z",
+    "updated": "2026-07-10T04:13:41.975Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

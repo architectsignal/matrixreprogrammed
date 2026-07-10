@@ -40,20 +40,24 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Patch newsletter Worker before build
+      - name: Enforce newsletter persistence before build
         run: |
-          node scripts/patch-worker-newsletter-system.js || echo "Newsletter Worker patch warning before build; continuing to full guarded build."
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-newsletter-capture-ui.js
+          node scripts/newsletter-persistence-test.js
 
       - name: Build generated site
         run: npm run build
 
-      - name: Repatch newsletter Worker after build
+      - name: Repair and verify deploy-critical output
         run: |
-          node scripts/patch-worker-newsletter-system.js || echo "Newsletter Worker patch warning after build; continuing to Cloudflare pressure checks."
-
-      - name: Patch newsletter capture UI
-        run: |
-          node scripts/patch-newsletter-capture-ui.js || echo "Newsletter capture UI patch warning; continuing."
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-newsletter-capture-ui.js
+          node scripts/newsletter-persistence-test.js
+          node scripts/repair-search-system.js
+          node scripts/repair-generated-site-artifacts.js
+          node scripts/repair-critical-route-drift.js
+          node scripts/site-function-harmony-test.js
 
       - name: Archive old Intel updates to vault
         run: node scripts/archive-intel-drops-to-vault.js
@@ -75,8 +79,11 @@ jobs:
 
       - name: Cloudflare Worker asset route test
         run: |
-          node scripts/patch-worker-newsletter-system.js || echo "Newsletter Worker patch warning inside Cloudflare test; continuing."
-          node scripts/patch-newsletter-capture-ui.js || echo "Newsletter capture UI patch warning inside Cloudflare test; continuing."
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-newsletter-capture-ui.js
+          node scripts/newsletter-persistence-test.js
+          node scripts/repair-search-system.js
+          node scripts/repair-critical-route-drift.js
           node scripts/cloudflare-focused-pressure-wrapper.js
 
       - name: Update cadence audit
@@ -111,19 +118,31 @@ jobs:
           echo "Wrangler exit status: $status" | tee -a downloads/wrangler-deploy.log
           exit "$status"
 
-      - name: Cloudflare deployment proof
+      - name: Cloudflare API deployment proof
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_ZONE_NAME: matrixreprogrammed.com
           CLOUDFLARE_WORKER_NAME: matrixreprogrammed
           EXPECTED_BUILD_SHA: ${{ github.sha }}
-        run: |
-          set -o pipefail
-          node scripts/cloudflare-deploy-proof.js
+        run: node scripts/cloudflare-deploy-proof.js
 
-      - name: Advisory public live verification
+      - name: Public deployed build and persistence proof
+        env:
+          EXPECTED_BUILD_SHA: ${{ github.sha }}
+          DEPLOY_VERIFY_HOSTS: matrixreprogrammed.com,www.matrixreprogrammed.com
+        run: node scripts/verify-deployed-build.js
+
+      - name: Enforce truthful production status
+        env:
+          AUTOMATION_HEALTH_MODE: deploy
+        run: node scripts/automation-health-gate.js
+
+      - name: Advisory extended live verification
         continue-on-error: true
+        env:
+          SITE_URL: https://www.matrixreprogrammed.com
+          EXPECTED_BUILD_SHA: ${{ github.sha }}
         run: node scripts/live-site-verification.js
 
       - name: Upload deployment reports
@@ -135,6 +154,7 @@ jobs:
             downloads/deployment-proof.json
             downloads/deployment-proof.md
             downloads/wrangler-deploy.log
+            cloudflare-deploy-proof-report.json
             downloads/deploy-health.json
             downloads/generated-site-repair-report.json
             downloads/site-brain-health.json
@@ -144,4 +164,16 @@ jobs:
             downloads/production-deploy-guard-report.md
             downloads/live-site-verification.json
             downloads/live-site-verification.md
+            downloads/critical-route-drift-report.json
+            downloads/critical-route-drift-report.md
+            downloads/newsletter-worker-patch-report.json
+            downloads/newsletter-persistence-test.json
+            downloads/newsletter-persistence-test.md
+            downloads/search-system-repair-report.json
+            downloads/search-runtime-hardening-report.json
+            downloads/site-function-harmony-report.json
+            downloads/site-function-harmony-report.md
+            downloads/automation-health-deploy.json
+            downloads/automation-health-deploy.md
           if-no-files-found: ignore
+          retention-days: 21

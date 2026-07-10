@@ -145,7 +145,10 @@ function publicCopy(html) {
     .replace(/Paid access is granted only while PayPal reports <strong>ACTIVE<\/strong>\./g, '')
     .replace(/<p class="mini">Verification links expire after 15 minutes and can be used once\. Login sessions use secure, HttpOnly cookies\.<\/p>/g, '<p class="mini">Verification links expire after 15 minutes and can only be used once.</p>');
 
-  html = html.replace(/<footer class="footer wrap"><p><strong>Boundary:<\/strong> Paid access will not be enabled until PayPal subscription state, cancellation and failed-payment handling are verified\.<\/p><\/footer>/g, match => addClass(match.replace('<footer', '<footer')));
+  html = html.replace(
+    /<footer class="footer wrap">(?=<p><strong>Boundary:<\/strong> Paid access will not be enabled until PayPal subscription state, cancellation and failed-payment handling are verified\.<\/p><\/footer>)/g,
+    '<footer class="footer wrap internal-only" data-internal-only="true">'
+  );
   html = html.replace(/<p class="small" id="paypal-reference"><\/p>/g, '<p class="small internal-only" id="paypal-reference" data-internal-only="true"></p>');
   return html;
 }

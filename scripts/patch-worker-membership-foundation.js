@@ -90,7 +90,7 @@ const required = [
   "originalPath==='/api/membership/health'",
   "originalPath==='/api/admin/members'",
   'ADMIN_API_TOKEN',
-  "status:'pending-verification'"
+  "status:result.saved?'pending-verification'"
 ];
 const missing = required.filter(marker => !worker.includes(marker));
 if (missing.length) fail(`patched Worker missing membership marker(s): ${missing.join(', ')}`);

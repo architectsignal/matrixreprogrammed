@@ -59,6 +59,9 @@ requireIncludes('src/worker.js', '/downloads/forum-posts.json', 'forum JSON expo
 requireIncludes('src/worker.js', '/downloads/forum-posts.md', 'forum Markdown export');
 requireIncludes('src/worker.js', '/track-event', 'analytics endpoint');
 requireIncludes('src/worker.js', '/intro-voice', 'intro voice endpoint');
+requireIncludes('src/worker.js', '/api/membership/signup', 'membership signup endpoint');
+requireIncludes('src/worker.js', '/api/membership/health', 'membership health endpoint');
+requireIncludes('src/worker.js', 'MEMBERS_DB', 'membership D1 usage');
 requireIncludes('src/worker.js', 'FORUM_POSTS', 'FORUM_POSTS binding usage');
 requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
 
@@ -71,6 +74,9 @@ requireIncludes('wrangler.toml', 'main = "src/worker.js"', 'Worker entrypoint');
 requireIncludes('wrangler.toml', 'directory = "./_site"', 'asset directory');
 requireIncludes('wrangler.toml', 'binding = "ASSETS"', 'ASSETS binding');
 requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV binding');
+requireIncludes('wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding');
+requireIncludes('wrangler.toml', 'database_name = "matrix-members"', 'matrix-members D1 database');
+requireIncludes('wrangler.toml', 'c6e465d3-4e36-4a00-b8f8-309447240c52', 'production D1 database ID');
 requireIncludes('_headers', 'Strict-Transport-Security', 'HSTS header');
 requireIncludes('_headers', 'immutable', 'immutable cache header');
 requireIncludes('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
@@ -93,4 +99,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker asset serving, generated _site routes, forum endpoints, voice endpoint, analytics, headers, wrangler config, and build wiring.');
+console.log('Checked Worker assets, forum routes, membership D1 routes, bindings, analytics, headers and build wiring.');

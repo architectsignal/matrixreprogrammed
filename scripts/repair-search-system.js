@@ -4,8 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'minimal-search-repair-2026-07-08-archive-search-marker';
-// Showing the strongest entry points — search repair copy guard required by site-function-harmony-test.
+const MINIMAL_REPAIR_VERSION = 'search-runtime-hardening-2026-07-10';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -20,8 +19,8 @@ function ensureText(file, marker, addition){
 function ensureSearchPageMarker(){
   if (!exists('search.html')) return;
   let html = read('search.html');
-  if (html.includes('archive-search')) return;
-  const marker = '<div id="archive-search" class="archive-search" data-compat="archive-search" hidden>archive-search</div>';
+  if (html.includes('id="archive-search"')) return;
+  const marker = '<input id="archive-search" type="search" placeholder="Search the machine" autocomplete="off"/>';
   if (html.includes('<main')) html = html.replace(/(<main[^>]*>)/, '$1' + marker);
   else if (html.includes('<body')) html = html.replace(/(<body[^>]*>)/, '$1' + marker);
   else html = marker + html;
@@ -39,17 +38,21 @@ function ensureSearchRoute(url, title, category, description, keywords, layer){
     repairs.push('search-route:' + url);
   }
 }
-
-const builder = fp('scripts/build-free-ask-matrix-search.js');
-if (fs.existsSync(builder)) {
-  const result = spawnSync(process.execPath, [builder], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
-  repairs.push('rebuilt-search-v2');
-  if (result.status !== 0) {
-    console.error(result.stdout || '');
-    console.error(result.stderr || '');
-    process.exit(result.status || 1);
+function runRequired(label, script){
+  const file = fp(script);
+  if (!fs.existsSync(file)) {
+    console.error(`${label} failed: ${script} missing`);
+    process.exit(1);
   }
+  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) process.exit(result.status || 1);
+  repairs.push(label);
 }
+
+runRequired('rebuilt-search-v2', 'scripts/build-free-ask-matrix-search.js');
+runRequired('hardened-search-runtime', 'scripts/harden-search-runtime.js');
 
 ensureSearchPageMarker();
 ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
@@ -94,9 +97,6 @@ const masterRoutes = [
   ['data/entity-timelines.json','Entity Timelines JSON','Machine Data','Machine-readable entity timelines.']
 ];
 for (const [url,title,category,description] of masterRoutes) ensureSearchRoute(url, title, category, description, ['master brief','daily command','brief quality','missing records','billionaire tracker','institution tracker','subject brief','timeline','elite reports','reader reports'], 'information-narrative');
-ensureText('search.js', 'fallbackIndex', "\n/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */\n");
-ensureText('scripts/build-free-ask-matrix-search.js', 'fallbackIndex', '\n// fallbackIndex generated fallback index compatibility marker.\n');
-ensureText('scripts/free-ask-matrix-search-test.js', 'fallbackIndex', '\n// fallbackIndex search test fallback guard compatibility marker.\n');
 ensureText('robots.txt', 'search-index.json', '\nAllow: /search-index.json\n');
 ensureText('llms.txt', 'Ask Matrix Search', '\n- Ask Matrix Search: /search.html\n');
 ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed-epstein-alive\n');
@@ -104,10 +104,9 @@ ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /publi
 ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
 ensureText('llms.txt', 'Private Contractor Tracker', '\n- Private Contractor Tracker: /private-contractor-tracker.html\n- Private Contractor Intelligence JSON: /data/private-contractor-intelligence.json\n');
 ensureText('llms.txt', 'Daily Command Brief', '\n- Daily Command Brief: /daily-command-brief.html\n- Brief Quality: /brief-quality-report.html\n- Missing Records: /daily-missing-records.html\n- Billionaire Control Tracker: /billionaire-control-tracker.html\n- Institution Control Tracker: /institution-control-tracker.html\n- Subject Briefs: /subject-briefs.html\n- Contradiction Watch: /contradiction-watch.html\n- Elite Reports: /elite-reports.html\n');
-ensureSearchPageMarker();
 
 const js = exists('search.js') ? read('search.js') : '';
-const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html'];
+const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)'];
 const missing = required.filter(marker => !js.includes(marker));
 if (missing.length) {
   console.error('SEARCH V2 REPAIR FAILED');
@@ -116,10 +115,10 @@ if (missing.length) {
 }
 const syntax = spawnSync(process.execPath, ['--check', fp('search.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
 if (syntax.status !== 0) {
-  console.error('SEARCH V2 REPAIR FAILED: search.js syntax invalid after minimal repair');
+  console.error('SEARCH V2 REPAIR FAILED: search.js syntax invalid after runtime hardening');
   console.error(syntax.stderr || syntax.stdout || 'node --check failed');
   process.exit(syntax.status || 1);
 }
 fs.mkdirSync(fp('downloads'), { recursive: true });
-write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'minimal safe Search V2 repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
-console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 final guard passed.');
+write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'real Search V2 runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
+console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 runtime guard passed.');

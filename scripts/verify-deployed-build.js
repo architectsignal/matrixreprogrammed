@@ -18,7 +18,7 @@ function wait(ms) {
 }
 
 async function getJson(url) {
-  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.3' } });
+  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.4' } });
   const text = await response.text();
   const contentType = String(response.headers.get('content-type') || '').toLowerCase();
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -46,12 +46,16 @@ function membershipPersistenceConfigured(body = {}) {
   return body.ok === true && body.configured === true && body.d1Connected === true && body.d1SchemaReady === true && Number.isFinite(Number(body.d1MemberCount));
 }
 
+function membershipAuthReady(body = {}) {
+  return body.ok === true && body.d1Connected === true && body.authSchemaReady === true && body.provider === 'brevo' && body.endpoints && body.endpoints.verify === '/api/auth/verify' && body.endpoints.me === '/api/member/me';
+}
+
 async function main() {
   if (!expectedSha) throw new Error('EXPECTED_BUILD_SHA or GITHUB_SHA is required');
 
   const hostResults = [];
   for (const host of hosts) {
-    const result = { host, deployStatus: null, forumHealth: null, membershipHealth: null, errors: [] };
+    const result = { host, deployStatus: null, forumHealth: null, membershipHealth: null, authHealth: null, errors: [] };
     try {
       const proof = await getJsonUntil(
         attempt => `https://${host}/deploy-status.json?proof=${Date.now()}-${attempt}`,
@@ -98,6 +102,22 @@ async function main() {
       result.errors.push(`membership-health: ${error.message}`);
       add(`${host} membership health reachable`, false, error.message);
     }
+
+    try {
+      const proof = await getJsonUntil(
+        attempt => `https://${host}/api/auth/health?proof=${Date.now()}-${attempt}`,
+        membershipAuthReady,
+        6,
+        4000
+      );
+      const { response, body } = proof;
+      result.authHealth = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
+      add(`${host} passwordless auth backend ready`, membershipAuthReady(body), { ...body, attempts: proof.attempts });
+      add(`${host} transactional email configured`, body.transactionalEmailConfigured === true, { provider: body.provider, configured: body.transactionalEmailConfigured }, 'advisory');
+    } catch (error) {
+      result.errors.push(`auth-health: ${error.message}`);
+      add(`${host} auth health reachable`, false, error.message);
+    }
     hostResults.push(result);
   }
 
@@ -112,7 +132,7 @@ async function main() {
     hardFailures,
     hostResults,
     propagationPolicy: { deployStatusAttempts: 8, deployStatusDelayMs: 5000, healthAttempts: 6, healthDelayMs: 4000 },
-    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA, forum KV is connected, and the authoritative MEMBERS_DB D1 binding can query the deployed membership schema.'
+    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA, forum KV is connected, MEMBERS_DB can query the membership schema, and the passwordless authentication routes can query magic-link and session tables. Transactional email configuration remains advisory until its secret and sender are installed.'
   };
 
   fs.writeFileSync(path.join(outDir, 'deployment-proof.json'), JSON.stringify(report, null, 2));
@@ -123,7 +143,7 @@ async function main() {
     `Expected SHA: ${expectedSha}`,
     `Result: ${report.ok ? 'PASS' : 'FAIL'}`,
     '',
-    ...checks.map(check => `- ${check.ok ? 'PASS' : 'FAIL'}: ${check.name}`)
+    ...checks.map(check => `- ${check.ok ? 'PASS' : check.severity === 'advisory' ? 'ADVISORY' : 'FAIL'}: ${check.name}`)
   ].join('\n'));
 
   if (!report.ok) {

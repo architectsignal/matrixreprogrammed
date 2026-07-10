@@ -13,13 +13,33 @@ function add(name, ok, detail = null, severity = 'hard') {
   checks.push({ name, ok: Boolean(ok), detail, severity });
 }
 
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function getJson(url) {
-  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.1' } });
+  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.2' } });
   const text = await response.text();
   const contentType = String(response.headers.get('content-type') || '').toLowerCase();
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   if (!contentType.includes('application/json') || /^\s*</.test(text)) throw new Error('HTML returned instead of JSON');
   return { response, body: JSON.parse(text) };
+}
+
+async function getJsonUntil(makeUrl, predicate, attempts = 6, delayMs = 5000) {
+  let last = null;
+  let lastError = null;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      last = await getJson(makeUrl(attempt));
+      if (predicate(last.body)) return { ...last, attempts: attempt, matched: true };
+    } catch (error) {
+      lastError = error;
+    }
+    if (attempt < attempts) await wait(delayMs);
+  }
+  if (last) return { ...last, attempts, matched: false };
+  throw lastError || new Error('No valid JSON response received');
 }
 
 function membershipPersistenceConfigured(body = {}) {
@@ -34,29 +54,47 @@ async function main() {
   for (const host of hosts) {
     const result = { host, deployStatus: null, forumHealth: null, newsletterHealth: null, errors: [] };
     try {
-      const { response, body } = await getJson(`https://${host}/deploy-status.json?proof=${Date.now()}`);
-      result.deployStatus = { status: response.status, finalUrl: response.url, body };
+      const proof = await getJsonUntil(
+        attempt => `https://${host}/deploy-status.json?proof=${Date.now()}-${attempt}`,
+        body => String(body.buildSha || '') === expectedSha,
+        8,
+        5000
+      );
+      const { response, body } = proof;
+      result.deployStatus = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
       const liveSha = String(body.buildSha || '');
-      add(`${host} serves expected build SHA`, liveSha === expectedSha, { expectedSha, liveSha, finalUrl: response.url });
+      add(`${host} serves expected build SHA`, liveSha === expectedSha, { expectedSha, liveSha, finalUrl: response.url, attempts: proof.attempts });
     } catch (error) {
       result.errors.push(`deploy-status: ${error.message}`);
       add(`${host} deploy-status reachable`, false, error.message);
     }
 
     try {
-      const { response, body } = await getJson(`https://${host}/forum-health?proof=${Date.now()}`);
-      result.forumHealth = { status: response.status, finalUrl: response.url, body };
-      add(`${host} Worker health active`, body.ok === true && body.backend === 'src/worker.js' && Boolean(body.assetBinding), body);
-      add(`${host} forum KV connected`, body.bindingHealthy === true && body.forumPostsBinding === 'connected', body);
+      const proof = await getJsonUntil(
+        attempt => `https://${host}/forum-health?proof=${Date.now()}-${attempt}`,
+        body => body.ok === true && body.backend === 'src/worker.js' && Boolean(body.assetBinding) && body.bindingHealthy === true && body.forumPostsBinding === 'connected',
+        4,
+        3000
+      );
+      const { response, body } = proof;
+      result.forumHealth = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
+      add(`${host} Worker health active`, body.ok === true && body.backend === 'src/worker.js' && Boolean(body.assetBinding), { ...body, attempts: proof.attempts });
+      add(`${host} forum KV connected`, body.bindingHealthy === true && body.forumPostsBinding === 'connected', { ...body, attempts: proof.attempts });
     } catch (error) {
       result.errors.push(`forum-health: ${error.message}`);
       add(`${host} forum health reachable`, false, error.message);
     }
 
     try {
-      const { response, body } = await getJson(`https://${host}/newsletter-health?proof=${Date.now()}`);
-      result.newsletterHealth = { status: response.status, finalUrl: response.url, body };
-      add(`${host} membership persistence configured`, membershipPersistenceConfigured(body), body);
+      const proof = await getJsonUntil(
+        attempt => `https://${host}/newsletter-health?proof=${Date.now()}-${attempt}`,
+        membershipPersistenceConfigured,
+        4,
+        3000
+      );
+      const { response, body } = proof;
+      result.newsletterHealth = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
+      add(`${host} membership persistence configured`, membershipPersistenceConfigured(body), { ...body, attempts: proof.attempts });
     } catch (error) {
       result.errors.push(`newsletter-health: ${error.message}`);
       add(`${host} membership health reachable`, false, error.message);
@@ -74,7 +112,8 @@ async function main() {
     checks,
     hardFailures,
     hostResults,
-    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA through the Worker, forum KV is connected, and membership capture reports either D1 or the approved KV compatibility backend.'
+    propagationPolicy: { deployStatusAttempts: 8, deployStatusDelayMs: 5000, healthAttempts: 4, healthDelayMs: 3000 },
+    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA through the Worker, forum KV is connected, and membership capture reports either D1 or the approved KV compatibility backend. Bounded retries allow normal edge propagation but do not convert a stale host into a pass.'
   };
 
   fs.writeFileSync(path.join(outDir, 'deployment-proof.json'), JSON.stringify(report, null, 2));

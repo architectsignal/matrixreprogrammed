@@ -11,6 +11,7 @@ on:
       - 'scripts/**'
       - 'src/**'
       - 'data/**'
+      - 'migrations/**'
       - '.github/workflows/**'
       - 'package.json'
       - 'wrangler.toml'
@@ -25,6 +26,7 @@ on:
       - 'scripts/**'
       - 'src/**'
       - 'data/**'
+      - 'migrations/**'
       - '.github/workflows/**'
       - 'package.json'
       - 'wrangler.toml'
@@ -79,6 +81,16 @@ jobs:
             downloads/newsletter-worker-patch-report.json
             downloads/newsletter-persistence-test.json
             downloads/newsletter-persistence-test.md
+            downloads/membership-foundation-patch-report.json
+            downloads/membership-foundation-test.json
+            downloads/membership-foundation-test.md
+            downloads/membership-auth-patch-report.json
+            downloads/membership-auth-test.json
+            downloads/membership-auth-test.md
+            downloads/membership-auth-ui-patch.json
+            downloads/paypal-membership-patch-report.json
+            downloads/paypal-membership-test.json
+            downloads/paypal-membership-test.md
             downloads/search-system-repair-report.json
             downloads/search-runtime-hardening-report.json
             downloads/critical-route-drift-report.json

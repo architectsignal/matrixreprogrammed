@@ -16,7 +16,7 @@ function run(label, command, args, options = {}) {
   const started = new Date().toISOString();
   console.log(`\n=== ${label} ===`);
   console.log(`${command} ${args.join(' ')}`);
-  const result = spawnSync(command, args, { cwd: root, encoding: 'utf8', shell: false, maxBuffer: 30 * 1024 * 1024, env: { ...process.env, FULL_SYSTEM_AUDIT: '1' } });
+  const result = spawnSync(command, args, { cwd: root, encoding: 'utf8', shell: false, maxBuffer: 40 * 1024 * 1024, env: { ...process.env, FULL_SYSTEM_AUDIT: '1' } });
   const stdout = result.stdout || '';
   const stderr = result.stderr || '';
   if (stdout) process.stdout.write(stdout);
@@ -31,15 +31,17 @@ function needFile(name, label = name) { const ok = exists(name); report.files.pu
 function needText(file, text, label = text) { const ok = exists(file) && read(file).includes(text); report.files.push({ file, ok, label }); if (!ok) report.ok = false; return ok; }
 
 function runCriticalRepairCycle(label) {
-  run(`${label}: newsletter persistence patch`, 'node', ['scripts/patch-worker-newsletter-system.js']);
+  run(`${label}: newsletter, membership and payment patch`, 'node', ['scripts/patch-worker-newsletter-system.js']);
   run(`${label}: newsletter persistence execution test`, 'node', ['scripts/newsletter-persistence-test.js']);
+  run(`${label}: PayPal membership contract`, 'node', ['scripts/paypal-membership-test-runner.js']);
   run(`${label}: Search V2 repair`, 'node', ['scripts/repair-search-system.js']);
   run(`${label}: critical route and object drift`, 'node', ['scripts/repair-critical-route-drift.js']);
   run(`${label}: site function harmony`, 'node', ['scripts/site-function-harmony-test.js']);
 }
 
-run('Prebuild newsletter persistence patch', 'node', ['scripts/patch-worker-newsletter-system.js']);
+run('Prebuild membership and payment patch', 'node', ['scripts/patch-worker-newsletter-system.js']);
 run('Prebuild newsletter persistence execution test', 'node', ['scripts/newsletter-persistence-test.js']);
+run('Prebuild PayPal membership contract', 'node', ['scripts/paypal-membership-test-runner.js']);
 run('Full build and normal pressure chain', 'npm', ['run', 'build']);
 runCriticalRepairCycle('Postbuild cycle one');
 run('Postbuild site-wide function audit', 'node', ['scripts/site-wide-function-audit.js', '--postbuild']);
@@ -49,6 +51,8 @@ run('Static link audit', 'node', ['tools/link-audit.js']);
 const focused = [
   ['Ask Matrix free/local search', ['scripts/free-ask-matrix-search-test.js']],
   ['Newsletter persistent KV contract', ['scripts/newsletter-persistence-test.js']],
+  ['Membership authentication', ['scripts/membership-auth-test.js']],
+  ['PayPal membership and webhook entitlements', ['scripts/paypal-membership-test-runner.js']],
   ['Critical route and object drift', ['scripts/repair-critical-route-drift.js']],
   ['Site function harmony', ['scripts/site-function-harmony-test.js']],
   ['Forum three-board split', ['scripts/forum-board-split-test.js']],
@@ -79,6 +83,8 @@ run('Final site QA audit', 'node', ['scripts/audit-site.js']);
 run('Final Cloudflare route audit', 'node', ['scripts/cloudflare-worker-routes-test.js']);
 run('Final Ask Matrix audit', 'node', ['scripts/free-ask-matrix-search-test.js']);
 run('Final newsletter persistence proof', 'node', ['scripts/newsletter-persistence-test.js']);
+run('Final membership authentication proof', 'node', ['scripts/membership-auth-test.js']);
+run('Final PayPal membership proof', 'node', ['scripts/paypal-membership-test-runner.js']);
 run('Final route drift proof', 'node', ['scripts/repair-critical-route-drift.js']);
 
 report.summary = { htmlFiles: countFiles('.html'), javascriptFiles: countFiles('.js'), jsonFiles: countFiles('.json'), commandCount: report.commands.length, failedCommands: report.commands.filter(c => !c.ok).length, systemCount: 0, failedSystems: 0 };
@@ -94,6 +100,13 @@ const checks = [
   ['Newsletter subscriber KV write', 'src/worker.js', 'newsletter:subscriber:${id}'],
   ['Newsletter index KV write', 'src/worker.js', "FORUM_POSTS.put('newsletter:index'"],
   ['Newsletter truthful saved state', 'src/worker.js', 'const saved=subscriberSaved&&indexSaved'],
+  ['Member passwordless login route', 'src/worker.js', '/api/auth/request-link'],
+  ['PayPal subscription confirmation', 'src/worker.js', '/api/paypal/subscription/confirm'],
+  ['PayPal signed webhook verification', 'src/worker.js', '/v1/notifications/verify-webhook-signature'],
+  ['PayPal ACTIVE-only entitlement', 'src/worker.js', "paypalPaidStatus(value){return paypalSafeStatus(value)==='ACTIVE'}"],
+  ['PayPal checkout intent UI', 'membership.html', '/api/paypal/checkout-intent'],
+  ['PayPal cancellation UI', 'member-dashboard.html', '/api/paypal/subscription/cancel'],
+  ['PayPal checkout intent schema', 'migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents'],
   ['Ask Matrix', 'search.html', 'id="phase-twelve-authority-engine"'],
   ['Ask Matrix local index', 'search.js', 'search-index.json'],
   ['Ask Matrix real fallback index', 'search.js', 'const fallbackIndex='],
@@ -119,7 +132,7 @@ const checks = [
 for (const [name, file, marker] of checks) addSystem(name, needText(file, marker, marker), { file, marker });
 
 for (const file of [
-  'downloads/site-wide-function-audit.json', 'downloads/site-wide-function-audit.md', 'site-quality-report.html', 'site-freshness-report.html', 'deploy-status.json', 'downloads/deploy-status.json', 'downloads/newsletter-worker-patch-report.json', 'downloads/newsletter-persistence-test.json', 'downloads/newsletter-persistence-test.md', 'downloads/search-runtime-hardening-report.json', 'downloads/critical-route-drift-report.json', 'downloads/critical-route-drift-report.md', 'downloads/site-function-harmony-report.json', 'downloads/site-function-harmony-report.md', 'data/forum-board-split.json', 'downloads/seven-day-intel.json', 'data/deep-intel-feed-matrix.json', 'downloads/deep-intel-feed-matrix.md', 'data/evidence-weighted-relationship-graph.json', 'data/daily-power-conclusions.json', 'data/top-52-power-deck.json', 'downloads/top-52-power-deck.md', 'data/top-52-card-art-manifest.json', 'downloads/top-52-card-art-manifest.md', 'data/top-52-art-studio.json', 'downloads/top-52-art-style-bible.md', 'data/top-52-batch1-art-queue.json', 'downloads/top-52-batch1-art-queue.md', 'top-52-phase3.css', 'downloads/mission-intelligence-10.md', 'downloads/the-black-file-matrix-reprogrammed.pdf'
+  'downloads/site-wide-function-audit.json', 'downloads/site-wide-function-audit.md', 'site-quality-report.html', 'site-freshness-report.html', 'deploy-status.json', 'downloads/deploy-status.json', 'downloads/newsletter-worker-patch-report.json', 'downloads/newsletter-persistence-test.json', 'downloads/newsletter-persistence-test.md', 'downloads/membership-auth-patch-report.json', 'downloads/membership-auth-test.json', 'downloads/membership-auth-test.md', 'downloads/membership-auth-ui-patch.json', 'downloads/paypal-membership-patch-report.json', 'downloads/paypal-membership-test.json', 'downloads/paypal-membership-test.md', 'downloads/search-runtime-hardening-report.json', 'downloads/critical-route-drift-report.json', 'downloads/critical-route-drift-report.md', 'downloads/site-function-harmony-report.json', 'downloads/site-function-harmony-report.md', 'data/forum-board-split.json', 'downloads/seven-day-intel.json', 'data/deep-intel-feed-matrix.json', 'downloads/deep-intel-feed-matrix.md', 'data/evidence-weighted-relationship-graph.json', 'data/daily-power-conclusions.json', 'data/top-52-power-deck.json', 'downloads/top-52-power-deck.md', 'data/top-52-card-art-manifest.json', 'downloads/top-52-card-art-manifest.md', 'data/top-52-art-studio.json', 'downloads/top-52-art-style-bible.md', 'data/top-52-batch1-art-queue.json', 'downloads/top-52-batch1-art-queue.md', 'top-52-phase3.css', 'downloads/mission-intelligence-10.md', 'downloads/the-black-file-matrix-reprogrammed.pdf'
 ]) needFile(file);
 
 report.summary.systemCount = report.systems.length;
@@ -127,7 +140,7 @@ report.summary.failedSystems = report.systems.filter(s => !s.ok).length;
 report.finishedAt = new Date().toISOString();
 if (report.summary.failedCommands) report.recommendations.push('Open the failed command tail in downloads/full-system-audit.json and fix the first failing subsystem before rerunning.');
 if (report.summary.failedSystems) report.recommendations.push('Generated output exists but one or more required live markers are missing. Check build order and late overwrite scripts.');
-if (!report.summary.failedCommands && !report.summary.failedSystems) report.recommendations.push('All audited systems passed, including newsletter KV persistence, Search V2 runtime fallback and late-build route drift.');
+if (!report.summary.failedCommands && !report.summary.failedSystems) report.recommendations.push('All audited systems passed, including D1 membership, passwordless authentication, PayPal ACTIVE-only entitlement enforcement, signed webhook verification, Search V2 fallback and late-build route drift.');
 fs.writeFileSync(path.join(downloads, 'full-system-audit.json'), JSON.stringify(report, null, 2));
 const lines = ['# Full System Audit', '', `Started: ${report.startedAt}`, `Finished: ${report.finishedAt}`, `Status: ${report.ok ? 'PASS' : 'FAIL'}`, '', '## Summary', '', `- HTML files: ${report.summary.htmlFiles}`, `- JavaScript files: ${report.summary.javascriptFiles}`, `- JSON files: ${report.summary.jsonFiles}`, `- Commands run: ${report.summary.commandCount}`, `- Failed commands: ${report.summary.failedCommands}`, `- Systems checked: ${report.summary.systemCount}`, `- Failed systems: ${report.summary.failedSystems}`, '', '## Commands', '', ...report.commands.map(c => `- ${c.ok ? 'PASS' : 'FAIL'} — ${c.label} — \`${c.command}\``), '', '## Systems', '', ...report.systems.map(s => `- ${s.ok ? 'PASS' : 'FAIL'} — ${s.name} — ${s.file || ''}`), '', '## Required Files', '', ...report.files.map(f => `- ${f.ok ? 'PASS' : 'FAIL'} — ${f.file} — ${f.label}`), '', '## Recommendations', '', ...report.recommendations.map(r => `- ${r}`)];
 fs.writeFileSync(path.join(downloads, 'full-system-audit.md'), lines.join('\n'));

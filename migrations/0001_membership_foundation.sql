@@ -71,6 +71,17 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS paypal_checkout_intents (
+  id TEXT PRIMARY KEY,
+  member_id TEXT NOT NULL,
+  tier TEXT NOT NULL CHECK (tier IN ('supporter', 'intelligence', 'research_pro')),
+  plan_id TEXT NOT NULL,
+  expires_at TEXT NOT NULL,
+  used_at TEXT,
+  created_at TEXT NOT NULL,
+  FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE CASCADE
+);
+
 CREATE TABLE IF NOT EXISTS payment_webhook_events (
   id TEXT PRIMARY KEY,
   provider TEXT NOT NULL DEFAULT 'paypal',
@@ -102,5 +113,7 @@ CREATE INDEX IF NOT EXISTS idx_sessions_hash ON member_sessions(session_hash);
 CREATE INDEX IF NOT EXISTS idx_sessions_member ON member_sessions(member_id, expires_at);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_member ON subscriptions(member_id, status);
 CREATE INDEX IF NOT EXISTS idx_subscriptions_provider_id ON subscriptions(provider_subscription_id);
+CREATE INDEX IF NOT EXISTS idx_paypal_checkout_member ON paypal_checkout_intents(member_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_paypal_checkout_expiry ON paypal_checkout_intents(expires_at, used_at);
 CREATE INDEX IF NOT EXISTS idx_webhook_events_provider_id ON payment_webhook_events(provider_event_id);
 CREATE INDEX IF NOT EXISTS idx_audit_target ON audit_log(target_type, target_id, created_at);

@@ -39,9 +39,15 @@ for (const page of pages) {
 for (const required of [
   ['membership.html', '/api/membership/signup'],
   ['membership.html', 'marketingConsent'],
+  ['membership.html', '/api/paypal/config'],
+  ['membership.html', '/api/paypal/checkout-intent'],
+  ['membership.html', '/api/paypal/subscription/confirm'],
+  ['membership.html', 'actions.subscription.create'],
   ['member-login.html', '/api/auth/request-link'],
   ['member-dashboard.html', '/api/member/me'],
-  ['member-dashboard.html', '/api/auth/logout']
+  ['member-dashboard.html', '/api/auth/logout'],
+  ['member-dashboard.html', '/api/paypal/subscription/cancel'],
+  ['member-dashboard.html', 'paidAccessEnabled']
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
@@ -55,7 +61,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   changed,
   pages: pages.map(page => page.name),
-  boundary: 'Canonical membership authentication pages are restored after all generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
+  paypalCheckout: true,
+  paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
+  boundary: 'Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));

@@ -36,8 +36,8 @@ for(const [label,file] of [
   ['cloudflare output final','scripts/build-cloudflare-output.js'],
   ['site brain health','scripts/site-brain-health.js']
 ]) run(label,file);
-run('PayPal membership contract','scripts/paypal-membership-test.js',true);
-for(const p of ['index.html','search.html','search.js','search-index.json','books.html','live-intel.html','epstein-files.html','forum.html','forum.js','membership.html','member-login.html','member-dashboard.html','deploy-status.html','deploy-status.json','deploy-health.html','deploy-health.json','src/worker.js','wrangler.toml','_headers','migrations/0001_membership_foundation.sql','scripts/patch-worker-paypal-membership.js','scripts/paypal-membership-test.js','scripts/build-cloudflare-output.js']) needFile(p);
+run('PayPal membership contract','scripts/paypal-membership-test-runner.js',true);
+for(const p of ['index.html','search.html','search.js','search-index.json','books.html','live-intel.html','epstein-files.html','forum.html','forum.js','membership.html','member-login.html','member-dashboard.html','deploy-status.html','deploy-status.json','deploy-health.html','deploy-health.json','src/worker.js','wrangler.toml','_headers','migrations/0001_membership_foundation.sql','scripts/patch-worker-paypal-membership.js','scripts/paypal-membership-test.js','scripts/paypal-membership-test-runner.js','scripts/build-cloudflare-output.js']) needFile(p);
 for(const p of ['index.html','index','search.html','search','search.js','search-index.json','books.html','books','live-intel.html','live-intel','epstein-files.html','epstein-files','forum.html','forum','membership.html','membership','member-login.html','member-login','member-dashboard.html','member-dashboard','deploy-status.html','deploy-status','deploy-health.html','deploy-health']) needSite(p);
 if(siteExists('_redirects'))hard.push('_site/_redirects must not exist for Worker assets deployment');
 needText('src/worker.js','env.ASSETS.fetch','Worker asset fetch');

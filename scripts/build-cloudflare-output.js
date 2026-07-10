@@ -118,6 +118,7 @@ function walk(dir) {
 normalizeWorkerAuditMarkers();
 repairTop52ArtLinks();
 ensureArchiveSearchMarker(path.join(root, 'search.html'));
+require('./patch-membership-auth-ui.js');
 require('./hide-internal-public-controls.js');
 rm(out);
 ensure(out);

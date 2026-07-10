@@ -59,8 +59,12 @@ jobs:
           npm run pressure-test:live-intel
           npm run pressure-test
 
-      - name: Commit refreshed generated files and reports
-        if: always()
+      - name: Enforce truthful daily refresh status
+        env:
+          AUTOMATION_HEALTH_MODE: daily
+        run: node scripts/automation-health-gate.js
+
+      - name: Commit healthy refreshed generated files and reports
         run: |
           git config user.name "matrix-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -71,12 +75,6 @@ jobs:
             git commit -m "Daily sitewide intelligence refresh [deploy]"
             git push
           fi
-
-      - name: Enforce truthful daily refresh status
-        if: always()
-        env:
-          AUTOMATION_HEALTH_MODE: daily
-        run: node scripts/automation-health-gate.js
 
       - name: Upload daily refresh reports
         if: always()

@@ -4,11 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Member Dashboard | Matrix Reprogrammed</title>
-  <meta name="description" content="Your Matrix Reprogrammed membership status, access and account controls."/>
+  <meta name="description" content="Your Matrix Reprogrammed membership status, PayPal subscription and account controls."/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="reader-experience.css"/>
   <style>
-    .dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.panel{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}.value{font-size:1.2rem;color:#d8b56a;font-weight:800}.status{min-height:1.4rem}.hidden{display:none!important}.actions{display:flex;gap:.7rem;flex-wrap:wrap}.locked{opacity:.7}
+    .dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.panel{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}.value{font-size:1.2rem;color:#d8b56a;font-weight:800}.status{min-height:1.4rem}.hidden{display:none!important}.actions{display:flex;gap:.7rem;flex-wrap:wrap}.locked{opacity:.72}.good{color:#9ddd9d}.warning{color:#d8b56a}.danger{color:#ff9b8f}.small{font-size:.85rem;color:#c8b98c;word-break:break-word}
   </style>
 </head>
 <body>
@@ -29,12 +29,12 @@
     <div id="dashboard-content" class="hidden">
       <section class="dashboard-grid">
         <article class="panel"><h2>Account</h2><p class="value" id="member-name">Member</p><p id="member-email"></p><p>Email verified: <strong id="member-verified">—</strong></p></article>
-        <article class="panel"><h2>Membership</h2><p class="value" id="member-tier">Free</p><p>Status: <strong id="member-status">—</strong></p><p>Marketing email: <strong id="marketing-status">—</strong></p></article>
-        <article class="panel locked"><h2>PayPal subscription</h2><p class="value">Not activated yet</p><p>Paid access remains locked until PayPal subscription webhooks and entitlement checks are live.</p></article>
+        <article class="panel"><h2>Membership</h2><p class="value" id="member-tier">Free</p><p>Status: <strong id="member-status">—</strong></p><p>Marketing email: <strong id="marketing-status">—</strong></p><p>Paid access: <strong id="paid-access">—</strong></p></article>
+        <article class="panel" id="paypal-panel"><h2>PayPal subscription</h2><p class="value" id="paypal-status">No paid subscription</p><p>Plan: <strong id="paypal-tier">—</strong></p><p>Next billing: <strong id="paypal-next-billing">—</strong></p><p class="small" id="paypal-reference"></p><div class="actions"><a class="btn" href="membership.html">View membership plans</a><button id="cancel-subscription" class="btn hidden" type="button">Cancel PayPal membership</button></div><p id="paypal-action-status" class="status"></p></article>
       </section>
       <section class="section panel">
         <h2>Your current access</h2>
-        <ul><li>free member account</li><li>Daily Control Brief signup</li><li>passwordless member login</li><li>future PayPal upgrade path</li></ul>
+        <ul id="access-list"><li>free member account</li><li>Daily Control Brief signup</li><li>passwordless member login</li></ul>
         <div class="actions"><a class="btn" href="daily-command-brief.html">Open Daily Brief</a><a class="btn" href="search.html">Search the archive</a><button id="logout-button" class="btn" type="button">Log out</button></div>
       </section>
     </div>
@@ -46,10 +46,44 @@
   const status = document.getElementById('dashboard-status');
   const loggedOut = document.getElementById('logged-out');
   const content = document.getElementById('dashboard-content');
+  const cancelButton = document.getElementById('cancel-subscription');
+  const actionStatus = document.getElementById('paypal-action-status');
+  let currentSubscription = null;
+  const titleCase = value => String(value || '').replace(/_/g,' ').replace(/\b\w/g, letter => letter.toUpperCase());
   const showLoggedOut = message => {
     status.textContent = message || 'Sign-in required.';
     loggedOut.classList.remove('hidden');
     content.classList.add('hidden');
+  };
+  const renderAccess = paid => {
+    const list = document.getElementById('access-list');
+    const free = ['free member account','Daily Control Brief signup','passwordless member login'];
+    const paidItems = ['paid member entitlement active','premium briefs and member-only releases','tier-aware protected content'];
+    list.innerHTML = [...free,...(paid?paidItems:[])].map(item => '<li>'+item+'</li>').join('');
+  };
+  const renderSubscription = data => {
+    const subscription = data.subscription || null;
+    currentSubscription = subscription;
+    const paid = data.paidAccessEnabled === true;
+    document.getElementById('paid-access').textContent = paid ? 'Active' : 'Not active';
+    document.getElementById('paid-access').className = paid ? 'good' : 'warning';
+    if (!subscription) {
+      document.getElementById('paypal-status').textContent = data.paypalConfigured ? 'No paid subscription' : 'PayPal setup pending';
+      document.getElementById('paypal-tier').textContent = 'Free';
+      document.getElementById('paypal-next-billing').textContent = '—';
+      document.getElementById('paypal-reference').textContent = '';
+      cancelButton.classList.add('hidden');
+      renderAccess(false);
+      return;
+    }
+    const subStatus = String(subscription.status || 'UNKNOWN').toUpperCase();
+    document.getElementById('paypal-status').textContent = titleCase(subStatus);
+    document.getElementById('paypal-status').className = 'value ' + (subStatus === 'ACTIVE' ? 'good' : ['CANCELLED','EXPIRED','SUSPENDED'].includes(subStatus) ? 'danger' : 'warning');
+    document.getElementById('paypal-tier').textContent = titleCase(subscription.tier || 'free');
+    document.getElementById('paypal-next-billing').textContent = subscription.next_billing_at ? new Date(subscription.next_billing_at).toLocaleString() : 'Not supplied by PayPal';
+    document.getElementById('paypal-reference').textContent = subscription.provider_subscription_id ? 'PayPal reference: ' + subscription.provider_subscription_id : '';
+    if (!['CANCELLED','EXPIRED'].includes(subStatus)) cancelButton.classList.remove('hidden'); else cancelButton.classList.add('hidden');
+    renderAccess(paid);
   };
   const load = async () => {
     try {
@@ -60,16 +94,37 @@
       document.getElementById('member-name').textContent = member.displayName || 'Matrix Member';
       document.getElementById('member-email').textContent = member.email || '';
       document.getElementById('member-verified').textContent = member.emailVerifiedAt ? 'Yes' : 'No';
-      document.getElementById('member-tier').textContent = String(member.tier || 'free').replace(/_/g,' ');
+      document.getElementById('member-tier').textContent = titleCase(member.tier || 'free');
       document.getElementById('member-status').textContent = member.status || 'unknown';
       document.getElementById('marketing-status').textContent = member.marketingStatus || 'unknown';
-      status.textContent = new URLSearchParams(location.search).has('verified') ? 'Email verified. Your member account is active.' : 'Secure session active.';
+      const query = new URLSearchParams(location.search);
+      status.textContent = query.has('verified') ? 'Email verified. Your member account is active.' : query.get('paypal') === 'active' ? 'PayPal membership verified and active.' : 'Secure session active.';
+      renderSubscription(data);
       content.classList.remove('hidden');
       loggedOut.classList.add('hidden');
     } catch (error) {
       showLoggedOut('The member session could not be checked.');
     }
   };
+  cancelButton.addEventListener('click', async () => {
+    if (!currentSubscription || !confirm('Cancel this PayPal membership? Paid access will be removed when the cancellation is confirmed.')) return;
+    cancelButton.disabled = true;
+    actionStatus.className = 'status warning';
+    actionStatus.textContent = 'Cancelling the subscription with PayPal…';
+    try {
+      const response = await fetch('/api/paypal/subscription/cancel', {method:'POST',headers:{accept:'application/json'}});
+      const data = await response.json();
+      if (!response.ok || !data.ok) throw new Error(data.error || 'Cancellation failed.');
+      actionStatus.className = 'status good';
+      actionStatus.textContent = 'PayPal membership cancelled. Refreshing your access…';
+      setTimeout(load, 700);
+    } catch (error) {
+      actionStatus.className = 'status danger';
+      actionStatus.textContent = error.message || 'Cancellation failed.';
+    } finally {
+      cancelButton.disabled = false;
+    }
+  });
   document.getElementById('logout-button').addEventListener('click', async () => {
     await fetch('/api/auth/logout', {method:'POST', headers:{accept:'application/json'}}).catch(()=>null);
     location.href = '/member-login.html';

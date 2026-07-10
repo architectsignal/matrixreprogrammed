@@ -19,17 +19,22 @@ function read(file) {
   return fs.readFileSync(full, 'utf8');
 }
 
-function visibleText(html) {
+function visibleMarkup(html) {
   let text = String(html || '')
     .replace(/<!--[\s\S]*?-->/g, ' ')
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ');
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<template\b[^>]*>[\s\S]*?<\/template>/gi, ' ');
   for (const tag of ['article', 'section', 'details', 'footer', 'div', 'p', 'li', 'a', 'span']) {
-    const hidden = new RegExp(`<${tag}\\b[^>]*(?:internal-only|data-internal-only=["']true["'])[^>]*>[\\s\\S]*?<\\/${tag}>`, 'gi');
+    const hidden = new RegExp(`<${tag}\\b[^>]*(?:internal-only|data-internal-only=["']true["']|\\shidden(?:\\s|>|=))[^>]*>[\\s\\S]*?<\\/${tag}>`, 'gi');
     let before;
     do { before = text; text = text.replace(hidden, ' '); } while (text !== before);
   }
-  return text
+  return text;
+}
+
+function visibleText(html) {
+  return visibleMarkup(html)
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/gi, ' ')
     .replace(/&amp;/gi, '&')
@@ -42,11 +47,6 @@ function visibleText(html) {
 function matchingAnchors(html, hrefFragment) {
   const escaped = hrefFragment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return [...html.matchAll(new RegExp(`<a\\b[^>]*href\\s*=\\s*["'][^"']*${escaped}[^"']*["'][^>]*>`, 'gi'))].map(match => match[0]);
-}
-
-function allMatchingAnchorsHidden(html, hrefFragment) {
-  const anchors = matchingAnchors(html, hrefFragment);
-  return anchors.length > 0 && anchors.every(anchor => /internal-only|data-internal-only=["']true["']/i.test(anchor));
 }
 
 const scrub = spawnSync(process.execPath, ['scripts/hide-internal-public-controls.js'], {
@@ -65,6 +65,7 @@ for (const file of ['index.html', 'membership.html', 'member-dashboard.html']) {
 }
 
 const indexHtml = read('index.html');
+const indexPublicMarkup = visibleMarkup(indexHtml);
 const indexVisible = visibleText(indexHtml);
 for (const phrase of [
   'Sell / Capture',
@@ -95,11 +96,11 @@ for (const route of [
   'sales-ladder.html',
   'schema-index.html'
 ]) {
-  if (indexHtml.includes(route)) check(`homepage link hidden: ${route}`, allMatchingAnchorsHidden(indexHtml, route));
+  if (indexHtml.includes(route)) check(`homepage route not visible: ${route}`, matchingAnchors(indexPublicMarkup, route).length === 0);
 }
 
-const rawAnchors = [...indexHtml.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+\.(?:json|md))(?:[?#][^"']*)?["'][^>]*>/gi)];
-for (const match of rawAnchors) check(`raw data link hidden: ${match[1]}`, /internal-only|data-internal-only=["']true["']/i.test(match[0]));
+const rawAnchors = [...indexPublicMarkup.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+\.(?:json|md))(?:[?#][^"']*)?["'][^>]*>/gi)];
+for (const match of rawAnchors) check(`raw data link not visible: ${match[1]}`, false);
 
 const membershipHtml = read('membership.html');
 const membershipVisible = visibleText(membershipHtml);

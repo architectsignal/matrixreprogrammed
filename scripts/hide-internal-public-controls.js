@@ -43,13 +43,25 @@ const internalSectionPhrases = [
   'STORE / MEMBERSHIP / REPORTS.'
 ];
 const internalCompactPhrases = [
-  'READER MONEY PATH',
   'Every route now points somewhere useful.',
   'Machine Room',
   'Research Tools',
+  'Monetisation Dashboard'
+];
+const internalInlinePhrases = [
+  'READER MONEY PATH',
+  'Hook: latest file, hidden route, or public-source shock',
+  'Proof: evidence vault, claim classifier, source card',
+  'Capture: free brief / PDF mini-book',
+  'Conversion: related book or Amazon store',
+  'Return: daily drop, forum, live intel',
   'CAPTURE SYSTEM',
   'Persistent Cloudflare D1 member record',
-  'Monetisation Dashboard'
+  'Email verification and passwordless login',
+  'Weekly newsletter sender',
+  'Vault route',
+  'Download route',
+  'Book path'
 ];
 const noIndexFiles = new Set(internalRoutes);
 
@@ -102,7 +114,11 @@ function hideInternalArticles(html) {
 }
 
 function parseContainerRanges(html) {
-  const allowed = new Set(['section', 'article', 'aside', 'details', 'div']);
+  const allowed = new Set([
+    'section', 'article', 'aside', 'details', 'div',
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    'p', 'li', 'ul', 'ol', 'blockquote', 'pre', 'span'
+  ]);
   const stack = [];
   const ranges = [];
   const re = /<\/?([a-z0-9]+)\b[^>]*>/gi;
@@ -125,6 +141,19 @@ function parseContainerRanges(html) {
   return ranges;
 }
 
+function applyOpeningEdits(html, ranges, starts) {
+  const edits = [...starts]
+    .map(start => ranges.find(range => range.start === start))
+    .filter(Boolean)
+    .sort((a, b) => b.start - a.start);
+  for (const range of edits) {
+    const opening = html.slice(range.start, range.openEnd);
+    if (/\binternal-only\b|data-internal-only=["']true["']/i.test(opening)) continue;
+    html = html.slice(0, range.start) + addClass(opening) + html.slice(range.openEnd);
+  }
+  return html;
+}
+
 function markPhraseContainers(html, phrases, mode) {
   const lower = html.toLowerCase();
   const ranges = parseContainerRanges(html);
@@ -139,32 +168,30 @@ function markPhraseContainers(html, phrases, mode) {
       let chosen = null;
       if (mode === 'section') {
         chosen = ancestors.filter(range => range.tag === 'section').sort((a, b) => (a.end - a.start) - (b.end - b.start))[0] || null;
+      } else if (mode === 'inline') {
+        const preferred = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'p', 'blockquote', 'pre', 'ul', 'ol', 'span'];
+        chosen = ancestors
+          .filter(range => preferred.includes(range.tag))
+          .sort((a, b) => (a.end - a.start) - (b.end - b.start))[0]
+          || ancestors.filter(range => range.tag === 'div').sort((a, b) => (a.end - a.start) - (b.end - b.start))[0]
+          || null;
       } else {
         chosen = ancestors
           .filter(range => ['article', 'aside', 'details'].includes(range.tag) || (range.tag === 'div' && /(?:card|panel|box|path|status|capture|machine|route|reader|cta|money|engine)/i.test(range.opening)))
           .sort((a, b) => (a.end - a.start) - (b.end - b.start))[0]
-          || ancestors.filter(range => range.tag === 'section').sort((a, b) => (a.end - a.start) - (b.end - b.start))[0]
           || null;
       }
       if (chosen) openingStarts.add(chosen.start);
       from = index + needle.length;
     }
   }
-  const edits = [...openingStarts]
-    .map(start => ranges.find(range => range.start === start))
-    .filter(Boolean)
-    .sort((a, b) => b.start - a.start);
-  for (const range of edits) {
-    const opening = html.slice(range.start, range.openEnd);
-    if (/\binternal-only\b|data-internal-only=["']true["']/i.test(opening)) continue;
-    html = html.slice(0, range.start) + addClass(opening) + html.slice(range.openEnd);
-  }
-  return html;
+  return applyOpeningEdits(html, ranges, openingStarts);
 }
 
 function hideCommercialStrategy(html) {
   html = markPhraseContainers(html, internalSectionPhrases, 'section');
   html = markPhraseContainers(html, internalCompactPhrases, 'compact');
+  html = markPhraseContainers(html, internalInlinePhrases, 'inline');
   return html;
 }
 
@@ -210,6 +237,8 @@ function publicCopy(html) {
     .replace(/The backend checks the PayPal subscription, Plan ID, checkout intent and webhook status\./g, 'PayPal confirms each membership before access begins.')
     .replace(/The browser cannot activate a membership\./g, '')
     .replace(/Paid access is granted only while PayPal reports <strong>ACTIVE<\/strong>\./g, '')
+    .replace(/free briefs, offers, and books/gi, 'free briefs and books')
+    .replace(/free briefs, offers, and book paths/gi, 'free briefs and related books')
     .replace(/<p class="mini">Verification links expire after 15 minutes and can be used once\. Login sessions use secure, HttpOnly cookies\.<\/p>/g, '<p class="mini">Verification links expire after 15 minutes and can only be used once.</p>');
 
   html = html.replace(
@@ -285,7 +314,7 @@ const report = {
   filesChecked: targets.length,
   filesChanged: changed,
   internalRoutesHidden: internalRoutes,
-  commercialStrategyHidden: [...internalSectionPhrases, ...internalCompactPhrases],
+  commercialStrategyHidden: [...internalSectionPhrases, ...internalCompactPhrases, ...internalInlinePhrases],
   rawDataLinksHidden: true,
   internalPagesNoIndexed: true,
   cloudflareControlFilesExcluded: true,

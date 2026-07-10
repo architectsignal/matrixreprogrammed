@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Dashboard | Matrix Reprogrammed</title>
+  <meta name="description" content="Your Matrix Reprogrammed membership status, access and account controls."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="reader-experience.css"/>
+  <style>
+    .dashboard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.panel{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}.value{font-size:1.2rem;color:#d8b56a;font-weight:800}.status{min-height:1.4rem}.hidden{display:none!important}.actions{display:flex;gap:.7rem;flex-wrap:wrap}.locked{opacity:.7}
+  </style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+<div class="page">
+  <header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="membership.html">Membership</a><a href="member-dashboard.html">Dashboard</a><a href="search.html">Search</a><a href="start-here.html">Start Here</a></nav></header>
+  <main class="wrap section">
+    <div class="eyebrow">Private Member Layer</div>
+    <h1>MEMBER DASHBOARD.</h1>
+    <p id="dashboard-status" class="status">Checking your secure session…</p>
+
+    <section id="logged-out" class="panel hidden">
+      <h2>Sign-in required</h2>
+      <p>Your member session is missing or has expired.</p>
+      <a class="btn" href="member-login.html">Request a login link</a>
+    </section>
+
+    <div id="dashboard-content" class="hidden">
+      <section class="dashboard-grid">
+        <article class="panel"><h2>Account</h2><p class="value" id="member-name">Member</p><p id="member-email"></p><p>Email verified: <strong id="member-verified">—</strong></p></article>
+        <article class="panel"><h2>Membership</h2><p class="value" id="member-tier">Free</p><p>Status: <strong id="member-status">—</strong></p><p>Marketing email: <strong id="marketing-status">—</strong></p></article>
+        <article class="panel locked"><h2>PayPal subscription</h2><p class="value">Not activated yet</p><p>Paid access remains locked until PayPal subscription webhooks and entitlement checks are live.</p></article>
+      </section>
+      <section class="section panel">
+        <h2>Your current access</h2>
+        <ul><li>free member account</li><li>Daily Control Brief signup</li><li>passwordless member login</li><li>future PayPal upgrade path</li></ul>
+        <div class="actions"><a class="btn" href="daily-command-brief.html">Open Daily Brief</a><a class="btn" href="search.html">Search the archive</a><button id="logout-button" class="btn" type="button">Log out</button></div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="matrix.js"></script>
+<script>
+(() => {
+  const status = document.getElementById('dashboard-status');
+  const loggedOut = document.getElementById('logged-out');
+  const content = document.getElementById('dashboard-content');
+  const showLoggedOut = message => {
+    status.textContent = message || 'Sign-in required.';
+    loggedOut.classList.remove('hidden');
+    content.classList.add('hidden');
+  };
+  const load = async () => {
+    try {
+      const response = await fetch('/api/member/me', {headers:{accept:'application/json'}, cache:'no-store'});
+      const data = await response.json();
+      if (!response.ok || !data.authenticated) return showLoggedOut('Your secure member session is not active.');
+      const member = data.member || {};
+      document.getElementById('member-name').textContent = member.displayName || 'Matrix Member';
+      document.getElementById('member-email').textContent = member.email || '';
+      document.getElementById('member-verified').textContent = member.emailVerifiedAt ? 'Yes' : 'No';
+      document.getElementById('member-tier').textContent = String(member.tier || 'free').replace(/_/g,' ');
+      document.getElementById('member-status').textContent = member.status || 'unknown';
+      document.getElementById('marketing-status').textContent = member.marketingStatus || 'unknown';
+      status.textContent = new URLSearchParams(location.search).has('verified') ? 'Email verified. Your member account is active.' : 'Secure session active.';
+      content.classList.remove('hidden');
+      loggedOut.classList.add('hidden');
+    } catch (error) {
+      showLoggedOut('The member session could not be checked.');
+    }
+  };
+  document.getElementById('logout-button').addEventListener('click', async () => {
+    await fetch('/api/auth/logout', {method:'POST', headers:{accept:'application/json'}}).catch(()=>null);
+    location.href = '/member-login.html';
+  });
+  load();
+})();
+</script>
+</body>
+</html>

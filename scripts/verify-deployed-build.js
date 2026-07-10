@@ -14,12 +14,17 @@ function add(name, ok, detail = null, severity = 'hard') {
 }
 
 async function getJson(url) {
-  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.0' } });
+  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.1' } });
   const text = await response.text();
   const contentType = String(response.headers.get('content-type') || '').toLowerCase();
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   if (!contentType.includes('application/json') || /^\s*</.test(text)) throw new Error('HTML returned instead of JSON');
   return { response, body: JSON.parse(text) };
+}
+
+function membershipPersistenceConfigured(body = {}) {
+  const persistentBackend = body.capturePersistent === true || body.d1Connected === true || body.kvFallbackConnected === true;
+  return body.ok === true && body.configured === true && persistentBackend;
 }
 
 async function main() {
@@ -51,10 +56,10 @@ async function main() {
     try {
       const { response, body } = await getJson(`https://${host}/newsletter-health?proof=${Date.now()}`);
       result.newsletterHealth = { status: response.status, finalUrl: response.url, body };
-      add(`${host} newsletter persistence configured`, body.ok === true && body.configured === true && body.capturePersistent === true, body);
+      add(`${host} membership persistence configured`, membershipPersistenceConfigured(body), body);
     } catch (error) {
       result.errors.push(`newsletter-health: ${error.message}`);
-      add(`${host} newsletter health reachable`, false, error.message);
+      add(`${host} membership health reachable`, false, error.message);
     }
     hostResults.push(result);
   }
@@ -69,7 +74,7 @@ async function main() {
     checks,
     hardFailures,
     hostResults,
-    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA through the Worker and report connected persistent KV services.'
+    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA through the Worker, forum KV is connected, and membership capture reports either D1 or the approved KV compatibility backend.'
   };
 
   fs.writeFileSync(path.join(outDir, 'deployment-proof.json'), JSON.stringify(report, null, 2));

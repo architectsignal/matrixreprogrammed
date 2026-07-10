@@ -195,12 +195,14 @@ jobs:
         run: node scripts/automation-health-gate.js
 
       - name: Publish Facebook daily post
+        continue-on-error: true
         env:
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
         run: node scripts/publish-facebook-post.js
 
       - name: Publish Facebook weekly video when due
+        continue-on-error: true
         env:
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
@@ -242,6 +244,8 @@ jobs:
             downloads/automatic-orchestrator-final-audit.md
             downloads/automation-health-orchestrator.json
             downloads/automation-health-orchestrator.md
+            data/card-dossier-intelligence-pack-audit.json
+            downloads/card-dossier-intelligence-pack-audit.md
             public-content-scrub-report.json
             site-brain-health-report.json
             downloads/site-wide-function-audit.json

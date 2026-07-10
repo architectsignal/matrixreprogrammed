@@ -18,7 +18,7 @@ function wait(ms) {
 }
 
 async function getJson(url) {
-  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.2' } });
+  const response = await fetch(url, { redirect: 'follow', cache: 'no-store', headers: { Accept: 'application/json', 'User-Agent': 'MatrixReprogrammedDeploymentProof/2.3' } });
   const text = await response.text();
   const contentType = String(response.headers.get('content-type') || '').toLowerCase();
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -43,8 +43,7 @@ async function getJsonUntil(makeUrl, predicate, attempts = 6, delayMs = 5000) {
 }
 
 function membershipPersistenceConfigured(body = {}) {
-  const persistentBackend = body.capturePersistent === true || body.d1Connected === true || body.kvFallbackConnected === true;
-  return body.ok === true && body.configured === true && persistentBackend;
+  return body.ok === true && body.configured === true && body.d1Connected === true && body.d1SchemaReady === true && Number.isFinite(Number(body.d1MemberCount));
 }
 
 async function main() {
@@ -52,7 +51,7 @@ async function main() {
 
   const hostResults = [];
   for (const host of hosts) {
-    const result = { host, deployStatus: null, forumHealth: null, newsletterHealth: null, errors: [] };
+    const result = { host, deployStatus: null, forumHealth: null, membershipHealth: null, errors: [] };
     try {
       const proof = await getJsonUntil(
         attempt => `https://${host}/deploy-status.json?proof=${Date.now()}-${attempt}`,
@@ -87,16 +86,16 @@ async function main() {
 
     try {
       const proof = await getJsonUntil(
-        attempt => `https://${host}/newsletter-health?proof=${Date.now()}-${attempt}`,
+        attempt => `https://${host}/api/membership/health?proof=${Date.now()}-${attempt}`,
         membershipPersistenceConfigured,
-        4,
-        3000
+        6,
+        4000
       );
       const { response, body } = proof;
-      result.newsletterHealth = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
-      add(`${host} membership persistence configured`, membershipPersistenceConfigured(body), { ...body, attempts: proof.attempts });
+      result.membershipHealth = { status: response.status, finalUrl: response.url, body, attempts: proof.attempts, matched: proof.matched };
+      add(`${host} membership D1 schema ready`, membershipPersistenceConfigured(body), { ...body, attempts: proof.attempts });
     } catch (error) {
-      result.errors.push(`newsletter-health: ${error.message}`);
+      result.errors.push(`membership-health: ${error.message}`);
       add(`${host} membership health reachable`, false, error.message);
     }
     hostResults.push(result);
@@ -112,8 +111,8 @@ async function main() {
     checks,
     hardFailures,
     hostResults,
-    propagationPolicy: { deployStatusAttempts: 8, deployStatusDelayMs: 5000, healthAttempts: 4, healthDelayMs: 3000 },
-    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA through the Worker, forum KV is connected, and membership capture reports either D1 or the approved KV compatibility backend. Bounded retries allow normal edge propagation but do not convert a stale host into a pass.'
+    propagationPolicy: { deployStatusAttempts: 8, deployStatusDelayMs: 5000, healthAttempts: 6, healthDelayMs: 4000 },
+    boundary: 'Production is confirmed only when both public hosts serve the expected build SHA, forum KV is connected, and the authoritative MEMBERS_DB D1 binding can query the deployed membership schema.'
   };
 
   fs.writeFileSync(path.join(outDir, 'deployment-proof.json'), JSON.stringify(report, null, 2));

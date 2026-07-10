@@ -3,9 +3,22 @@ name: Full System Audit
 on:
   workflow_dispatch:
   schedule:
-    # Runs after the daily update and master-audit windows.
     - cron: '47 10 * * *'
   push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - 'src/**'
+      - 'data/**'
+      - '.github/workflows/**'
+      - 'package.json'
+      - 'wrangler.toml'
+      - 'netlify.toml'
+      - '**.html'
+      - '**.css'
+      - '**.js'
+  pull_request:
     branches:
       - main
     paths:
@@ -57,12 +70,23 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: full-system-audit-reports
+          name: full-system-audit-reports-${{ github.sha }}
           path: |
             downloads/full-system-audit.json
             downloads/full-system-audit.md
             downloads/site-wide-function-audit.json
             downloads/site-wide-function-audit.md
+            downloads/newsletter-worker-patch-report.json
+            downloads/newsletter-persistence-test.json
+            downloads/newsletter-persistence-test.md
+            downloads/search-system-repair-report.json
+            downloads/search-runtime-hardening-report.json
+            downloads/critical-route-drift-report.json
+            downloads/critical-route-drift-report.md
+            downloads/site-function-harmony-report.json
+            downloads/site-function-harmony-report.md
+            data/card-dossier-intelligence-pack-audit.json
+            downloads/card-dossier-intelligence-pack-audit.md
             site-quality-report.html
             site-freshness-report.html
             data/site-quality-report.json
@@ -73,7 +97,7 @@ jobs:
           retention-days: 21
 
       - name: Post audit report to GitHub issue
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
@@ -95,9 +119,7 @@ jobs:
             }
             if (reportMd.length > 45000) reportMd = reportMd.slice(0, 45000) + '\n\n_Report truncated. Open the workflow artifact for the full report._';
             const body = `# Latest Full System Audit\n\nStatus: **${status}**\n\nWorkflow run: ${runUrl}\n\nArtifacts: open the workflow run and download **full-system-audit-reports**.\n${summary}\n---\n\n${reportMd}`;
-            const search = await github.rest.search.issuesAndPullRequests({
-              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${title}"`
-            });
+            const search = await github.rest.search.issuesAndPullRequests({ q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${title}"` });
             if (search.data.items.length) {
               const issue_number = search.data.items[0].number;
               await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number, body });

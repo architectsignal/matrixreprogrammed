@@ -78,6 +78,15 @@ function addClass(openingTag, className = 'internal-only') {
   return openingTag.replace(/>$/, ` class="${className}" data-internal-only="true">`);
 }
 
+function removeInternalOnly(openingTag) {
+  let next = openingTag.replace(/\sdata-internal-only\s*=\s*(["'])true\1/gi, '');
+  next = next.replace(/\bclass\s*=\s*(["'])([^"']*)\1/i, (match, quote, classes) => {
+    const remaining = String(classes).split(/\s+/).filter(Boolean).filter(name => name !== 'internal-only');
+    return remaining.length ? `class=${quote}${remaining.join(' ')}${quote}` : '';
+  });
+  return next;
+}
+
 function ensureVisibilityStyle(html) {
   if (html.includes('id="public-internal-visibility"')) return html;
   if (html.includes('</head>')) return html.replace('</head>', `${INTERNAL_STYLE}</head>`);
@@ -117,9 +126,9 @@ function hideInternalArticles(html) {
 
 function parseContainerRanges(html) {
   const allowed = new Set([
-    'section', 'article', 'aside', 'details', 'div',
+    'section', 'article', 'aside', 'details', 'div', 'form',
     'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-    'p', 'li', 'ul', 'ol', 'blockquote', 'pre', 'span'
+    'p', 'li', 'ul', 'ol', 'blockquote', 'pre', 'span', 'button'
   ]);
   const stack = [];
   const ranges = [];
@@ -188,6 +197,24 @@ function markPhraseContainers(html, phrases, mode) {
     }
   }
   return applyOpeningEdits(html, ranges, openingStarts);
+}
+
+function ensurePhraseVisible(html, phrase) {
+  const lower = html.toLowerCase();
+  const needle = String(phrase || '').toLowerCase();
+  const index = lower.indexOf(needle);
+  if (index < 0) return html;
+  const ranges = parseContainerRanges(html);
+  const ancestors = ranges
+    .filter(range => range.start <= index && range.end >= index + needle.length)
+    .filter(range => ['section', 'article', 'aside', 'div', 'form'].includes(range.tag))
+    .sort((a, b) => b.start - a.start);
+  for (const range of ancestors) {
+    const opening = html.slice(range.start, range.openEnd);
+    const next = removeInternalOnly(opening);
+    if (next !== opening) html = html.slice(0, range.start) + next + html.slice(range.openEnd);
+  }
+  return html;
 }
 
 function hideCommercialStrategy(html) {
@@ -282,6 +309,7 @@ function patchHtml(file) {
   html = hideInternalArticles(html);
   html = hideCommercialStrategy(html);
   html = publicCopy(html);
+  html = ensurePhraseVisible(html, 'Join Weekly Signal');
   html = addVault(html);
   if (html !== before) fs.writeFileSync(file, html);
   return html !== before;
@@ -317,10 +345,11 @@ const report = {
   filesChanged: changed,
   internalRoutesHidden: internalRoutes,
   commercialStrategyHidden: [...internalSectionPhrases, ...internalCompactPhrases, ...internalInlinePhrases],
+  publicSignupPreserved: 'Join Weekly Signal',
   rawDataLinksHidden: true,
   internalPagesNoIndexed: true,
   cloudflareControlFilesExcluded: true,
-  note: 'Files and routes remain intact. The public interface hides operational, audit, automation, commercial-strategy and author-facing controls.'
+  note: 'Files and routes remain intact. The public interface hides operational, audit, automation, commercial-strategy and author-facing controls while preserving the public weekly signup.'
 };
 fs.writeFileSync(path.join(reportDir, 'public-visibility-report.json'), JSON.stringify(report, null, 2));
 console.log(`Public visibility layer applied: ${changed} file(s) changed; internal routes and commercial strategy retained but hidden from normal visitors.`);

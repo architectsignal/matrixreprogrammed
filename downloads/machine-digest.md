@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-10T08:15:39.921Z
+Updated: 2026-07-10T09:52:23.046Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 3
-Normalized events: 18
-Entity observations: 44
+Feeds reached: 4
+Normalized events: 24
+Entity observations: 53
 
 ## Latest Events
 
@@ -28,10 +28,18 @@ Entity observations: 44
 - charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
 - charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
 - charged / sued: Khan v. Jewish Women International — courtlistener-court-records — https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/
+- documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Health, Nutrition and Population Sector Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Amaravati Integrated Urban Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Second Bangladesh Green and Climate Resilient Development Credit — world-bank-projects — https://search.worldbank.org/api/v2/projects
 
 ## Entity Observations
 
+- [object Object]: 6 mention(s), lanes: world-bank-projects
 - Health and Human Services Department: 3 mention(s), lanes: federal-register-policy
+- People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
 - Management and Budget Office: 2 mention(s), lanes: federal-register-policy
 - Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
@@ -59,5 +67,3 @@ Entity observations: 44
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
-- Sawas v. Elzanaty: 1 mention(s), lanes: courtlistener-court-records
-- 2021-00294: 1 mention(s), lanes: courtlistener-court-records

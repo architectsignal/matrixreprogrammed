@@ -1,8 +1,91 @@
 {
-  "updated": "2026-07-10T08:15:56.716Z",
+  "updated": "2026-07-10T09:52:36.552Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "world-bank-projects-p505244-1",
+      "hash": "fd9accf9765e887b",
+      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-20T00:00:00Z",
+      "names": [
+        "Republic of Rwanda",
+        "[object Object]"
+      ]
+    },
+    {
+      "key": "world-bank-projects-p176429-2",
+      "hash": "554cae7bd48fae3d",
+      "summary": "Chattogram Water Supply Improvement Project",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-19T00:00:00Z",
+      "names": [
+        "Chattogram Water Supply and Sewerage Authority",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ]
+    },
+    {
+      "key": "world-bank-projects-p181587-3",
+      "hash": "776acfe97c9d46dc",
+      "summary": "Transforming Agri-food Systems in Morocco",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-19T00:00:00Z",
+      "names": [
+        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+        "Kingdom of Morocco",
+        "[object Object]"
+      ]
+    },
+    {
+      "key": "world-bank-projects-p180283-4",
+      "hash": "0eeff5b6e3a99d48",
+      "summary": "Health, Nutrition and Population Sector Development Program",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-19T00:00:00Z",
+      "names": [
+        "Ministry of Health and Family Welfare",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ]
+    },
+    {
+      "key": "world-bank-projects-p507508-5",
+      "hash": "595b384fbd52b527",
+      "summary": "Amaravati Integrated Urban Development Program",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-19T00:00:00Z",
+      "names": [
+        "Republic of India",
+        "[object Object]"
+      ]
+    },
+    {
+      "key": "world-bank-projects-p180439-6",
+      "hash": "53c92c6d27b169bb",
+      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+      "source_lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "date": "2024-12-19T00:00:00Z",
+      "names": [
+        "Finance Division, Ministry of Finance",
+        "People's Republic of Bangladesh",
+        "[object Object]"
+      ]
+    }
+  ],
   "topEntityChanges": [
     {
       "name": "Health and Human Services Department",
@@ -907,7 +990,7 @@
         "foundations-ngos": 20,
         "public-private-contracts": 20
       },
-      "control_score": 88,
+      "control_score": 100,
       "level": "elite priority",
       "latest_records": [
         {
@@ -919,9 +1002,68 @@
           "title": "Regulation for Federal Financial Assistance",
           "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
           "grade": "documented association"
+        },
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association"
         }
       ],
       "relationship_candidates": [
+        {
+          "id": "object-object__people-s-republic-of-bangladesh",
+          "from": "People's Republic of Bangladesh",
+          "to": "[object Object]",
+          "count": 3,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2",
+            "world-bank-projects-p180283-4",
+            "world-bank-projects-p180439-6"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 27,
+          "grade": "candidate",
+          "relationship_type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
         {
           "id": "federal-procurement-policy-office__management-and-budget-office",
           "from": "Management and Budget Office",
@@ -1024,6 +1166,87 @@
             "policy",
             "emergency_power",
             "identity_access"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "object-object__republic-of-rwanda",
+          "from": "Republic of Rwanda",
+          "to": "[object Object]",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p505244-1"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
+          "from": "Chattogram Water Supply and Sewerage Authority",
+          "to": "People's Republic of Bangladesh",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
+          ],
+          "score": 9,
+          "grade": "candidate",
+          "relationship_type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "chattogram-water-supply-and-sewerage-authority__object-object",
+          "from": "Chattogram Water Supply and Sewerage Authority",
+          "to": "[object Object]",
+          "count": 1,
+          "lanes": [
+            "world-bank-projects"
+          ],
+          "record_types": [
+            "global_project_record"
+          ],
+          "evidence_grades": [
+            "documented association"
+          ],
+          "source_events": [
+            "world-bank-projects-p176429-2"
+          ],
+          "control_layers": [
+            "development_finance",
+            "infrastructure",
+            "global_money"
           ],
           "score": 9,
           "grade": "candidate",
@@ -1438,6 +1661,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "People's Republic of Bangladesh",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Transportation Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/transportation-department.html",
@@ -1483,12 +1712,6 @@
       "entity": "2024-07773",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/2024-07773.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "25-113",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/25-113.html",
       "type": "entity brief"
     }
   ],

@@ -1,9 +1,32 @@
 {
-  "updated": "2026-07-10T08:15:39.921Z",
+  "updated": "2026-07-10T09:52:23.046Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
   "observations": [
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p505244-1",
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p181587-3",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p507508-5",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
     {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
@@ -23,6 +46,26 @@
         "federal-register-policy-2026-10817-6"
       ],
       "last_seen": "2026-05-29"
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "count": 3,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
     },
     {
       "id": "centers-for-medicare-and-medicaid-services",
@@ -800,6 +843,132 @@
         "courtlistener-court-records-10914068-6"
       ],
       "last_seen": "2026-06-30"
+    },
+    {
+      "id": "republic-of-rwanda",
+      "name": "Republic of Rwanda",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p505244-1"
+      ],
+      "last_seen": "2024-12-20T00:00:00Z"
+    },
+    {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p176429-2"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p181587-3"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "kingdom-of-morocco",
+      "name": "Kingdom of Morocco",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p181587-3"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "name": "Ministry of Health and Family Welfare",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p180283-4"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p507508-5"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
+    {
+      "id": "finance-division-ministry-of-finance",
+      "name": "Finance Division, Ministry of Finance",
+      "count": 1,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
     }
   ]
 }

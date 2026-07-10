@@ -452,15 +452,16 @@
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-10T08:15:39.921Z",
-    "eventCount": 18,
+    "updated": "2026-07-10T09:52:23.046Z",
+    "eventCount": 24,
     "feedCount": 7,
-    "reachedFeedCount": 3,
-    "entityObservationCount": 44,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 53,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -637,6 +638,17 @@
   ],
   "entityObservationSignals": [
     {
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ]
+    },
+    {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
       "count": 3,
@@ -645,6 +657,17 @@
       ],
       "record_types": [
         "rule_or_notice"
+      ]
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "count": 3,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
       ]
     },
     {
@@ -745,45 +768,60 @@
       "record_types": [
         "rule_or_notice"
       ]
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
-      "id": "state-department",
-      "name": "State Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-10T08:15:56.545Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-10T09:52:36.369Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 6,
-    "relationshipCandidateCount": 100,
+    "removedRecordCount": 0,
+    "relationshipCandidateCount": 112,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Chattogram Water Supply Improvement Project",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Transforming Agri-food Systems in Morocco",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Health, Nutrition and Population Sector Development Program",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Amaravati Integrated Urban Development Program",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "lane": "world-bank-projects",
+      "grade": "documented association",
+      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-10T08:15:56.680Z",
+    "updated": "2026-07-10T09:52:36.514Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -817,7 +855,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-10T08:15:56.716Z",
+    "updated": "2026-07-10T09:52:36.552Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

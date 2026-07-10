@@ -1,18 +1,25 @@
 # Machine Intelligence
 
-Updated: 2026-07-10T08:15:56.545Z
+Updated: 2026-07-10T09:52:36.369Z
 
-Current records: 18
-Previous records: 24
-New records: 0
+Current records: 24
+Previous records: 18
+New records: 6
 Changed records: 0
-Relationship candidates: 100
+Relationship candidates: 112
 
 ## New Records
 
+- documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Health, Nutrition and Population Sector Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Amaravati Integrated Urban Development Program — world-bank-projects — https://search.worldbank.org/api/v2/projects
+- documented association: Second Bangladesh Green and Climate Resilient Development Credit — world-bank-projects — https://search.worldbank.org/api/v2/projects
 
 ## Relationship Candidates
 
+- Score 27: People's Republic of Bangladesh ↔ [object Object] — repeated public-record co-occurrence
 - Score 18: Health and Human Services Department ↔ Centers for Medicare & Medicaid Services — public-record co-occurrence
 - Score 18: Management and Budget Office ↔ Defense Department — public-record co-occurrence
 - Score 10: Sawas v. Elzanaty ↔ Appellate Division of the Supreme Court of the State of New York — public-record co-occurrence
@@ -42,4 +49,3 @@ Relationship candidates: 100
 - Score 9: Defense Department ↔ General Services Administration — weak co-occurrence signal
 - Score 9: Defense Department ↔ National Aeronautics and Space Administration — weak co-occurrence signal
 - Score 9: General Services Administration ↔ National Aeronautics and Space Administration — weak co-occurrence signal
-- Score 9: Management and Budget Office ↔ Health and Human Services Department — weak co-occurrence signal

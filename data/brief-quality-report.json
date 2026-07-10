@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T08:15:56.716Z",
+  "updated": "2026-07-10T09:52:36.552Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
@@ -110,6 +110,16 @@
       "level": "elite priority",
       "source_strength": 25,
       "relationship_depth": 100,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "score": 100,
+      "level": "elite priority",
+      "source_strength": 75,
+      "relationship_depth": 80,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },
@@ -254,6 +264,16 @@
       "reader_friendliness": 85
     },
     {
+      "id": "chattogram-water-supply-and-sewerage-authority",
+      "name": "Chattogram Water Supply and Sewerage Authority",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "connecticut-appellate-court",
       "name": "Connecticut Appellate Court",
       "score": 67,
@@ -284,6 +304,16 @@
       "reader_friendliness": 85
     },
     {
+      "id": "finance-division-ministry-of-finance",
+      "name": "Finance Division, Ministry of Finance",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "khan-v-jewish-women-international",
       "name": "Khan v. Jewish Women International",
       "score": 67,
@@ -294,8 +324,38 @@
       "reader_friendliness": 85
     },
     {
+      "id": "kingdom-of-morocco",
+      "name": "Kingdom of Morocco",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "matter-of-pagliughi",
       "name": "Matter of Pagliughi",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
+      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "ministry-of-health-and-family-welfare",
+      "name": "Ministry of Health and Family Welfare",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -446,6 +506,26 @@
     {
       "id": "nvidia-corp",
       "name": "NVIDIA CORP",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "republic-of-india",
+      "name": "Republic of India",
+      "score": 55,
+      "level": "active watch",
+      "source_strength": 25,
+      "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "republic-of-rwanda",
+      "name": "Republic of Rwanda",
       "score": 55,
       "level": "active watch",
       "source_strength": 25,

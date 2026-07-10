@@ -1,13 +1,12 @@
 {
-  "updated": "2026-07-10T08:15:56.545Z",
+  "updated": "2026-07-10T09:52:36.369Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-10T08:01:19.277Z",
-  "currentRecordCount": 18,
-  "previousRecordCount": 24,
-  "newRecords": [],
-  "removedRecords": [
+  "previousUpdated": "2026-07-10T08:15:56.545Z",
+  "currentRecordCount": 24,
+  "previousRecordCount": 18,
+  "newRecords": [
     {
       "key": "world-bank-projects-p505244-1",
       "hash": "fd9accf9765e887b",
@@ -91,10 +90,83 @@
       ]
     }
   ],
+  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
+  "clockTriggers": [
+    {
+      "id": "world-bank-projects-p505244-1",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "id": "world-bank-projects-p176429-2",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Chattogram Water Supply Improvement Project",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "id": "world-bank-projects-p181587-3",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Transforming Agri-food Systems in Morocco",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "id": "world-bank-projects-p180283-4",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Health, Nutrition and Population Sector Development Program",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "id": "world-bank-projects-p507508-5",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Amaravati Integrated Urban Development Program",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    },
+    {
+      "id": "world-bank-projects-p180439-6",
+      "lane": "world-bank-projects",
+      "evidence_grade": "documented association",
+      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
+      "trigger": "Review world-bank-projects for clock movement.",
+      "source_url": "https://search.worldbank.org/api/v2/projects"
+    }
+  ],
   "repeatedEntities": [
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p505244-1",
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p181587-3",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p507508-5",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
+    },
     {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
@@ -114,6 +186,26 @@
         "federal-register-policy-2026-10817-6"
       ],
       "last_seen": "2026-05-29"
+    },
+    {
+      "id": "people-s-republic-of-bangladesh",
+      "name": "People's Republic of Bangladesh",
+      "count": 3,
+      "lanes": [
+        "world-bank-projects"
+      ],
+      "record_types": [
+        "global_project_record"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p180439-6"
+      ],
+      "last_seen": "2024-12-19T00:00:00Z"
     },
     {
       "id": "centers-for-medicare-and-medicaid-services",

@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-10T07:53:50.621Z
+Updated: 2026-07-10T08:01:19.459Z
 
 ## Top Contractor Signals
 
@@ -14,7 +14,6 @@ Updated: 2026-07-10T07:53:50.621Z
 
 ## Missing Records
 
-- [object Object]: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Management and Budget Office: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Defense Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -54,3 +53,4 @@ Updated: 2026-07-10T07:53:50.621Z
 - People v. Brim: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Sawas v. Elzanaty: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - The New York and Presbyterian Hospital v. New York State Nurses Association: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

@@ -1,13 +1,12 @@
 {
-  "updated": "2026-07-10T14:51:08.493Z",
+  "updated": "2026-07-10T19:50:49.077Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-10T09:52:36.369Z",
-  "currentRecordCount": 18,
-  "previousRecordCount": 24,
-  "newRecords": [],
-  "removedRecords": [
+  "previousUpdated": "2026-07-10T14:51:08.493Z",
+  "currentRecordCount": 24,
+  "previousRecordCount": 18,
+  "newRecords": [
     {
       "key": "courtlistener-court-records-10919908-1",
       "hash": "81e0bf4c2be8a6fd",
@@ -93,9 +92,59 @@
       ]
     }
   ],
+  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
+  "clockTriggers": [
+    {
+      "id": "courtlistener-court-records-10919908-1",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Sawas v. Elzanaty",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
+    },
+    {
+      "id": "courtlistener-court-records-10919846-2",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "People v. Brim",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
+    },
+    {
+      "id": "courtlistener-court-records-10917016-3",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
+    },
+    {
+      "id": "courtlistener-court-records-10883674-4",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "id": "courtlistener-court-records-10883331-5",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    },
+    {
+      "id": "courtlistener-court-records-10914068-6",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Khan v. Jewish Women International",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/"
+    }
+  ],
   "repeatedEntities": [
     {
       "id": "object-object",
@@ -197,6 +246,25 @@
         "federal-register-policy-2026-10817-6"
       ],
       "last_seen": "2026-05-29"
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-1",
+        "courtlistener-court-records-10883674-4"
+      ],
+      "last_seen": "2026-07-01"
     }
   ]
 }

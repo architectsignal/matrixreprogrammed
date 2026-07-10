@@ -9,9 +9,18 @@ function write(name, value){ fs.mkdirSync(path.dirname(fp(name)), { recursive: t
 function readJson(name, fallback){ try { return exists(name) ? JSON.parse(read(name)) : fallback; } catch { return fallback; } }
 function esc(value = ''){ return String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c])); }
 function clean(value = ''){ return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
-function slug(value = 'entity'){ return clean(value).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'entity'; }
+function entityLabel(value){
+  if (typeof value === 'string' || typeof value === 'number') return clean(value);
+  if (!value || typeof value !== 'object') return '';
+  for (const key of ['name','label','title','display_name','displayName','entity','value']) {
+    const candidate = entityLabel(value[key]);
+    if (candidate && candidate !== '[object Object]') return candidate;
+  }
+  return '';
+}
+function slug(value = 'entity'){ return entityLabel(value).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'entity'; }
 function arr(value){ return Array.isArray(value) ? value.filter(Boolean) : (value ? [value] : []); }
-function uniq(items){ return [...new Set(arr(items).map(clean).filter(Boolean))]; }
+function uniq(items){ return [...new Set(arr(items).map(item => typeof item === 'object' ? entityLabel(item) : clean(item)).filter(Boolean))]; }
 
 const updated = new Date().toISOString();
 const recordFeed = readJson('data/record-events.json', { events: [] });
@@ -19,14 +28,16 @@ const observationFeed = readJson('data/entity-observations.json', { observations
 const relationshipFeed = readJson('data/entity-relationship-scores.json', { relationships: [] });
 const changeFeed = readJson('data/change-detection.json', { newRecords: [], changedRecords: [], clockTriggers: [] });
 const entityFeed = readJson('data/entities.json', { entities: [] });
+void changeFeed;
 
 const entityMap = new Map();
 function ensureEntity(name, seed = {}){
-  const label = clean(name);
-  if (!label || label.length < 2) return null;
-  const id = seed.id || slug(label);
+  const label = entityLabel(name);
+  if (!label || label.length < 2 || label === '[object Object]') return null;
+  const seedId = typeof seed.id === 'string' ? seed.id : '';
+  const id = seedId || slug(label);
   const prior = entityMap.get(id) || { id, name: label, type: seed.type || 'tracked entity', count: 0, control_layers: [], evidence_grades: [], source_events: [], relationships: [], records: [], missing_records: [], watch_next: [] };
-  prior.name = prior.name || label;
+  prior.name = prior.name && prior.name !== '[object Object]' ? prior.name : label;
   prior.type = seed.type || prior.type;
   prior.count += Number(seed.count || 0);
   prior.control_layers = uniq([...prior.control_layers, ...(seed.control_layers || [])]);
@@ -41,10 +52,12 @@ function ensureEntity(name, seed = {}){
 }
 
 for (const entity of arr(entityFeed.entities).slice(0, 250)) {
-  ensureEntity(entity.name, { id: entity.id || slug(entity.name), type: entity.type || 'entity', count: 1, control_layers: entity.control_layers || [], evidence_grades: [entity.evidence_grade || 'documented association'], missing_records: entity.missing_records || [], watch_next: entity.watch_triggers || [] });
+  const label = entityLabel(entity);
+  ensureEntity(label, { id: typeof entity.id === 'string' ? entity.id : slug(label), type: entity.type || 'entity', count: 1, control_layers: entity.control_layers || [], evidence_grades: [entity.evidence_grade || 'documented association'], missing_records: entity.missing_records || [], watch_next: entity.watch_triggers || [] });
 }
 for (const obs of arr(observationFeed.observations)) {
-  ensureEntity(obs.name, { id: obs.id || slug(obs.name), type: 'observed entity', count: obs.count || 1, control_layers: obs.lanes || [], evidence_grades: obs.evidence_grades || [], source_events: obs.source_events || [], watch_next: [`Watch ${obs.name} across ${arr(obs.lanes).join(', ') || 'future source lanes'}.`] });
+  const label = entityLabel(obs);
+  ensureEntity(label, { id: typeof obs.id === 'string' ? obs.id : slug(label), type: 'observed entity', count: obs.count || 1, control_layers: obs.lanes || [], evidence_grades: obs.evidence_grades || [], source_events: obs.source_events || [], watch_next: label ? [`Watch ${label} across ${arr(obs.lanes).join(', ') || 'future source lanes'}.`] : [] });
 }
 for (const event of arr(recordFeed.events)) {
   const names = uniq([...(event.entity_names || []), ...(event.institution_names || [])]).slice(0, 16);
@@ -53,8 +66,10 @@ for (const event of arr(recordFeed.events)) {
   }
 }
 for (const rel of arr(relationshipFeed.relationships)) {
-  ensureEntity(rel.from, { relationships: [rel], count: Math.max(1, Math.round((rel.score || 1) / 10)), control_layers: rel.control_layers || [], evidence_grades: rel.evidence_grades || [] });
-  ensureEntity(rel.to, { relationships: [rel], count: Math.max(1, Math.round((rel.score || 1) / 10)), control_layers: rel.control_layers || [], evidence_grades: rel.evidence_grades || [] });
+  const from = entityLabel(rel.from);
+  const to = entityLabel(rel.to);
+  ensureEntity(from, { relationships: [{ ...rel, from, to }], count: Math.max(1, Math.round((rel.score || 1) / 10)), control_layers: rel.control_layers || [], evidence_grades: rel.evidence_grades || [] });
+  ensureEntity(to, { relationships: [{ ...rel, from, to }], count: Math.max(1, Math.round((rel.score || 1) / 10)), control_layers: rel.control_layers || [], evidence_grades: rel.evidence_grades || [] });
 }
 
 if (!entityMap.size) {
@@ -84,7 +99,7 @@ function briefFor(entity){
   const topRecords = arr(entity.records).slice(0, 5);
   const topRelations = arr(entity.relationships).sort((a,b)=>Number(b.score||0)-Number(a.score||0)).slice(0, 5);
   const layers = arr(entity.control_layers);
-  const brief = {
+  return {
     id: entity.id,
     name: entity.name,
     type: entity.type || 'tracked entity',
@@ -94,16 +109,15 @@ function briefFor(entity){
     why_it_matters: layers.length ? `This entity touches: ${layers.slice(0, 6).join(', ')}.` : 'It is being watched because it appeared in the machine tracking layer.',
     evidence_grade: evidenceSummary(entity),
     plain_english_judgement: plainJudgement(entity),
-    source_routes: topRecords.map(r => ({ title: r.summary || r.source_lane, url: r.source_url || 'machine-digest.html', grade: r.evidence_grade || 'not graded' })),
-    connections: topRelations.map(r => ({ with: r.from === entity.name ? r.to : r.from, score: r.score, type: r.relationship_type, boundary: r.boundary })),
+    source_routes: topRecords.map(r => ({ title: clean(r.summary || r.source_lane || 'Source route'), url: typeof r.source_url === 'string' ? r.source_url : 'machine-digest.html', grade: clean(r.evidence_grade || 'not graded') })),
+    connections: topRelations.map(r => ({ with: entityLabel(r.from) === entity.name ? entityLabel(r.to) : entityLabel(r.from), score: r.score, type: clean(r.relationship_type), boundary: clean(r.boundary) })).filter(x => x.with),
     missing_records: arr(entity.missing_records).length ? arr(entity.missing_records).slice(0, 8) : ['More primary records are needed before stronger conclusions are made.'],
     watch_next: arr(entity.watch_next).length ? arr(entity.watch_next).slice(0, 8) : ['Watch for new filings, contracts, court records, policy moves or procurement records involving this entity.'],
     boundary: 'This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing.'
   };
-  return brief;
 }
 
-const briefs = [...entityMap.values()].sort((a,b)=>(b.count||0)-(a.count||0) || a.name.localeCompare(b.name)).slice(0, 200).map(briefFor);
+const briefs = [...entityMap.values()].filter(entity => entity.name && entity.name !== '[object Object]').sort((a,b)=>(b.count||0)-(a.count||0) || a.name.localeCompare(b.name)).slice(0, 200).map(briefFor);
 write('data/entity-daily-briefs.json', JSON.stringify({ updated, title: 'Entity Daily Briefs', purpose: 'User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors.', boundary: 'Briefs summarize public-record signals with evidence grades. They do not replace source review.', briefs }, null, 2));
 
 function miniBrief(brief){
@@ -116,7 +130,7 @@ function fullBriefPage(brief){
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>${esc(brief.name)} Brief | Matrix Reprogrammed</title><meta name="description" content="User-friendly Matrix Reprogrammed entity brief for ${esc(brief.name)}."/><link rel="stylesheet" href="../styles.css"/><link rel="stylesheet" href="../fixes.css"/></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="../index.html"><img src="../sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="../entity-daily-briefs.html">Entity Briefs</a><a href="../machine-intelligence.html">Machine Intelligence</a><a href="../evidence-vault.html">Evidence</a><a href="../search.html">Search</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Entity Daily Brief</div><h1>${esc(brief.name).toUpperCase()}</h1><p class="lead">${esc(brief.at_a_glance)}</p><div class="cta-row"><a class="btn" href="../data/entity-daily-briefs.json">Briefs JSON</a><a class="btn alt" href="../machine-digest.html">Machine Digest</a></div></section><section class="section wrap split"><div class="terminal">AT A GLANCE\n&gt; type: ${esc(brief.type)}\n&gt; evidence: ${esc(brief.evidence_grade)}\n&gt; updated: ${esc(brief.updated)}\n&gt; boundary: public-record tracking brief</div><aside class="card redline"><h2>Plain-English Judgement</h2><p>${esc(brief.plain_english_judgement)}</p></aside></section><section class="section wrap"><div class="grid"><article class="card"><h2>What Changed</h2><ul>${list(brief.what_changed)}</ul></article><article class="card"><h2>Why It Matters</h2><p>${esc(brief.why_it_matters)}</p></article><article class="card"><h2>Source Routes</h2><ul>${sourceList}</ul></article><article class="card"><h2>Connections</h2><ul>${connList}</ul></article><article class="card"><h2>Missing Records</h2><ul>${list(brief.missing_records)}</ul></article><article class="card"><h2>Watch Next</h2><ul>${list(brief.watch_next)}</ul></article></div></section></main><footer class="footer wrap"><p><strong>Boundary:</strong> ${esc(brief.boundary)}</p></footer></div><script src="../matrix.js"></script><script src="../analytics.js"></script></body></html>`;
 }
 for (const brief of briefs.slice(0, 120)) write(`entity-briefs/${brief.id}.html`, fullBriefPage(brief));
-const hub = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Entity Daily Briefs | Matrix Reprogrammed</title><meta name="description" content="User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors."/><link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="fixes.css"/></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="machine-intelligence.html">Machine Intelligence</a><a href="machine-digest.html">Machine Digest</a><a href="power-entities.html">Power Entities</a><a href="search.html">Search</a></nav></header><main><section class="hero wrap"><div class="eyebrow">User-Friendly Briefing Layer</div><h1>ENTITY DAILY BRIEFS.</h1><p class="lead">Plain-English briefs for tracked people, institutions, companies, agencies and control-structure contributors. Each brief separates what changed, why it matters, evidence grade, source routes, missing records and watch next.</p><div class="cta-row"><a class="btn" href="data/entity-daily-briefs.json">Briefs JSON</a><a class="btn alt" href="downloads/entity-daily-briefs.md">Download Briefs</a></div></section><section class="section wrap split"><div class="terminal">ENTITY BRIEFING FACTORY\n&gt; updated: ${esc(updated)}\n&gt; briefs generated: ${briefs.length}\n&gt; pages generated: ${Math.min(briefs.length,120)}\n&gt; style: user friendly\n&gt; boundary: source routes before conclusions</div><aside class="card redline"><h2>Eventually</h2><p>This layer is built to support daily briefs for every person, institution, company, agency, bank, foundation, NGO, contractor, media group and control-structure contributor the site tracks.</p></aside></section><section class="section wrap"><h2>Latest Entity Briefs</h2><div class="grid">${briefs.slice(0, 60).map(miniBrief).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — every entity gets a brief, every brief follows the record.</p></footer></div><script src="matrix.js"></script><script src="analytics.js"></script></body></html>`;
+const hub = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Entity Daily Briefs | Matrix Reprogrammed</title><meta name="description" content="User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors."/><link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="fixes.css"/></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="machine-intelligence.html">Machine Intelligence</a><a href="machine-digest.html">Machine Digest</a><a href="entities.html">Entities</a><a href="search.html">Search</a></nav></header><main><section class="hero wrap"><div class="eyebrow">User-Friendly Briefing Layer</div><h1>ENTITY DAILY BRIEFS.</h1><p class="lead">Plain-English briefs for tracked people, institutions, companies, agencies and control-structure contributors. Each brief separates what changed, why it matters, evidence grade, source routes, missing records and watch next.</p><div class="cta-row"><a class="btn" href="data/entity-daily-briefs.json">Briefs JSON</a><a class="btn alt" href="downloads/entity-daily-briefs.md">Download Briefs</a></div></section><section class="section wrap split"><div class="terminal">ENTITY BRIEFING FACTORY\n&gt; updated: ${esc(updated)}\n&gt; briefs generated: ${briefs.length}\n&gt; pages generated: ${Math.min(briefs.length,120)}\n&gt; style: user friendly\n&gt; boundary: source routes before conclusions</div><aside class="card redline"><h2>Eventually</h2><p>This layer is built to support daily briefs for every person, institution, company, agency, bank, foundation, NGO, contractor, media group and control-structure contributor the site tracks.</p></aside></section><section class="section wrap"><h2>Latest Entity Briefs</h2><div class="grid">${briefs.slice(0, 60).map(miniBrief).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — every entity gets a brief, every brief follows the record.</p></footer></div><script src="matrix.js"></script><script src="analytics.js"></script></body></html>`;
 write('entity-daily-briefs.html', hub);
 const md = ['# Entity Daily Briefs', '', `Updated: ${updated}`, '', `Briefs generated: ${briefs.length}`, '', ...briefs.slice(0, 80).map(b => `## ${b.name}\n\nAt a glance: ${b.at_a_glance}\n\nJudgement: ${b.plain_english_judgement}\n\nEvidence: ${b.evidence_grade}\n\nWatch next: ${arr(b.watch_next).join('; ')}\n`)].join('\n');
 write('downloads/entity-daily-briefs.md', md);

@@ -21,7 +21,7 @@ const tasks=[
 'Attach every think tank card to funders, reports, citations and policy outcomes.',
 'Attach every jurisdiction card to registries, laws, courts, treaty roles and money routes.',
 'Turn unsupported claims into missing-record tasks instead of final claims.',
-'Remove author-facing notes and convert them into reader-facing method notes or operator-only reports.'
+'Remove internal production notes and convert them into reader-safe method notes or operator-only reports.'
 ];
 wr('data/reader-conclusions-layer.json',JSON.stringify({ok:true,updated:now,method,boundary,conclusions,tasks},null,2));
 const nav='<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="start-here.html">Start Here</a><a href="search.html">Search</a><a href="card-deck-store.html">Decks</a><a href="source-intake.html">Submit Source</a><a href="review-dashboard.html">Review</a></nav></header>';

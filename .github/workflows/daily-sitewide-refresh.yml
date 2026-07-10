@@ -40,7 +40,7 @@ jobs:
           if [ "$status" -ne 0 ]; then
             echo "daily-sitewide-build-safe recorded a soft failure; writing fallback status and continuing"
           fi
-          node - <<'NODE'
+          REFRESH_BUILDER_STATUS="$status" node - <<'NODE'
           const fs = require('fs');
           const path = require('path');
           function writeJson(file, payload) {
@@ -50,7 +50,8 @@ jobs:
           const payload = {
             ok: true,
             resilient: true,
-            fallback: status !== '0',
+            fallback: process.env.REFRESH_BUILDER_STATUS !== '0',
+            builderStatus: process.env.REFRESH_BUILDER_STATUS || 'unknown',
             generatedAt: new Date().toISOString(),
             note: 'Daily refresh completed with resilient workflow wrapper. Generator failures, if any, are logged in downloads/daily-sitewide-build-report.json.'
           };

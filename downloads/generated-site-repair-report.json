@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-09T07:55:17.797Z",
+  "generatedAt": "2026-07-10T01:00:29.513Z",
   "repairs": [
     {
       "type": "sec-filing-feed",
@@ -21,11 +21,16 @@
       "stderr": ""
     },
     {
-      "type": "homepage-compatibility-markers",
-      "inserted": [
-        "Power Conclusions",
-        "Evidence Hunter"
-      ]
+      "type": "reader-conclusions-layer",
+      "status": "ok",
+      "stdout": "Reader conclusions layer built.\n",
+      "stderr": ""
+    },
+    {
+      "type": "public-copy-scrubber",
+      "status": "ok",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 0 file(s) cleaned, 82 review issue(s).\n",
+      "stderr": ""
     },
     {
       "type": "deploy-health-json",

@@ -34,7 +34,7 @@ env:
 
 jobs:
   automatic-update:
-    name: Generate, repair, audit, commit once, and deploy
+    name: Generate, repair, audit, commit once, and trigger deploy
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
@@ -77,19 +77,24 @@ jobs:
       - name: Build generated site
         run: npm run build
 
-      - name: Patch newsletter Worker and capture UI
+      - name: Enforce newsletter persistence
         run: |
           node scripts/patch-worker-newsletter-system.js
           node scripts/patch-newsletter-capture-ui.js
+          node scripts/newsletter-persistence-test.js
 
-      - name: Audit branded downloads
-        run: node scripts/brand-downloads-audit.js
-
-      - name: Repair generated artifacts
+      - name: Repair deploy-critical generated systems
         run: |
           node scripts/repair-search-system.js
           node scripts/repair-generated-site-artifacts.js
           node scripts/ensure-shared-assets.js
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/newsletter-persistence-test.js
+          node scripts/repair-search-system.js
+          node scripts/repair-critical-route-drift.js
+
+      - name: Audit branded downloads
+        run: node scripts/brand-downloads-audit.js
 
       - name: Generate Transparent Maintenance report
         run: node scripts/build-transparent-maintenance-report.js
@@ -111,6 +116,7 @@ jobs:
           fi
 
       - name: Final mission-critical audit
+        id: final_audit
         continue-on-error: true
         run: |
           set +e
@@ -128,66 +134,73 @@ jobs:
             status=$?
             if [ "$status" -ne 0 ]; then
               failed=$((failed+1))
-              echo "- $label: soft-failed with exit $status" >> downloads/automatic-orchestrator-final-audit.md
+              echo "- $label: failed with exit $status" >> downloads/automatic-orchestrator-final-audit.md
             else
               echo "- $label: ok" >> downloads/automatic-orchestrator-final-audit.md
             fi
           }
-          run_check "patch worker newsletter system" node scripts/patch-worker-newsletter-system.js
-          run_check "patch newsletter capture ui" node scripts/patch-newsletter-capture-ui.js
+          run_check "newsletter worker persistence patch" node scripts/patch-worker-newsletter-system.js
+          run_check "newsletter persistence execution test" node scripts/newsletter-persistence-test.js
           run_check "archive intel drops to vault" node scripts/archive-intel-drops-to-vault.js
           run_check "brand downloads audit" node scripts/brand-downloads-audit.js
           run_check "repair search system" node scripts/repair-search-system.js
           run_check "repair generated artifacts" node scripts/repair-generated-site-artifacts.js
           run_check "ensure shared assets" node scripts/ensure-shared-assets.js
+          run_check "critical route drift gate" node scripts/repair-critical-route-drift.js
           run_check "site audit" node scripts/audit-site.js
           run_check "site function harmony" node scripts/site-function-harmony-test.js
           run_check "forum board split" node scripts/forum-board-split-test.js
           run_check "mission critical growth" node scripts/mission-critical-growth-test.js
-          node - <<'NODE'
+          HARD_FAILURES="$failed" node - <<'NODE'
           const fs = require('fs');
-          const lines = fs.existsSync('downloads/automatic-orchestrator-final-audit.md') ? fs.readFileSync('downloads/automatic-orchestrator-final-audit.md','utf8').split('\n') : [];
-          const failed = lines.filter(line => line.includes('soft-failed')).length;
-          const report = { ok: true, resilient: true, softFailures: failed, generatedAt: new Date().toISOString(), note: 'Automatic orchestrator final audit completed. Soft failures are logged but do not block the living update system.' };
+          const failed = Number(process.env.HARD_FAILURES || 0);
+          const report = {
+            ok: failed === 0,
+            resilient: true,
+            status: failed === 0 ? 'passed' : 'failed',
+            hardFailures: failed,
+            generatedAt: new Date().toISOString(),
+            note: failed === 0 ? 'All orchestrator audit gates passed.' : 'The living update completed its reporting cycle but is not healthy enough to commit or publish.'
+          };
           fs.writeFileSync('downloads/automatic-orchestrator-final-audit.json', JSON.stringify(report, null, 2));
           NODE
-          echo "Final audit soft failures: $failed"
-          exit 0
+          echo "Final audit hard failures: $failed"
+          exit "$failed"
 
       - name: Commit all generated automatic updates once
+        if: steps.final_audit.outcome == 'success'
         run: |
-          set +e
           git config user.name "matrix-auto-update-bot"
           git config user.email "actions@github.com"
-          git add src/worker.js data/latest-drop.json data/latest-video-package.json data/drops data/intel-drop-vault.json social/daily video-packages news.html intel-archive.html intel-drop-vault.html newsletter.html newsletter.js optin-center.html download-center.html index.html downloads/the-black-file-matrix-reprogrammed.pdf downloads/intel-drop-vault.json downloads/intel-drop-vault.md downloads/downloads-index.json downloads/downloads-index.md downloads/transparent-maintenance-report.json downloads/transparent-maintenance-report.md downloads/site-intelligence-core.json downloads/site-intelligence-core.md downloads/site-intelligence-graph.json downloads/global-risk-clocks-linked.json downloads/policy-convergence-timer-map.json downloads/dark-speculation-deep-dossiers.json downloads/dark-speculation-deep-dossiers.md data/global-risk-clocks.json search-index.json search.html search.js llms.txt sitemap.xml dark-speculation-lab.html control-system-tracker.html site-intelligence-core.html deploy-health.json deploy-status.json downloads/deploy-health.json downloads/deploy-status.json downloads/search-system-repair-report.json downloads/generated-site-repair-report.json downloads/forum-posts.json downloads/forum-posts.md downloads/automatic-orchestrator-final-audit.json downloads/automatic-orchestrator-final-audit.md || true
+          git add -A
           if git diff --cached --quiet; then
             echo "No generated automatic update changes to commit."
             exit 0
           fi
           git commit -m "Automatic site update $(date -u +%F) [deploy]"
-          if [ "$?" -ne 0 ]; then
-            echo "Commit failed. Continuing without blocking reports."
-            exit 0
-          fi
           for attempt in 1 2 3; do
             git push && exit 0
             echo "Push failed on attempt $attempt. Rebasing and retrying."
-            git fetch origin main || true
-            git pull --rebase --autostash origin main || { git rebase --abort || true; git reset --hard HEAD || true; }
+            git fetch origin main
+            git pull --rebase --autostash origin main || { git rebase --abort || true; exit 1; }
             sleep 2
           done
-          echo "Push failed after retries. Generated reports remain in artifacts."
-          exit 0
+          echo "Push failed after retries."
+          exit 1
+
+      - name: Enforce truthful orchestrator status
+        if: always()
+        env:
+          AUTOMATION_HEALTH_MODE: orchestrator
+        run: node scripts/automation-health-gate.js
 
       - name: Publish Facebook daily post
-        continue-on-error: true
         env:
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
         run: node scripts/publish-facebook-post.js
 
       - name: Publish Facebook weekly video when due
-        continue-on-error: true
         env:
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
@@ -204,7 +217,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: automatic-site-update-reports
+          name: automatic-site-update-reports-${{ github.sha }}
           path: |
             downloads/transparent-maintenance-report.json
             downloads/transparent-maintenance-report.md
@@ -216,9 +229,19 @@ jobs:
             downloads/downloads-index.json
             downloads/downloads-index.md
             downloads/search-system-repair-report.json
+            downloads/search-runtime-hardening-report.json
             downloads/generated-site-repair-report.json
+            downloads/critical-route-drift-report.json
+            downloads/critical-route-drift-report.md
+            downloads/newsletter-worker-patch-report.json
+            downloads/newsletter-persistence-test.json
+            downloads/newsletter-persistence-test.md
+            downloads/site-function-harmony-report.json
+            downloads/site-function-harmony-report.md
             downloads/automatic-orchestrator-final-audit.json
             downloads/automatic-orchestrator-final-audit.md
+            downloads/automation-health-orchestrator.json
+            downloads/automation-health-orchestrator.md
             public-content-scrub-report.json
             site-brain-health-report.json
             downloads/site-wide-function-audit.json
@@ -227,4 +250,4 @@ jobs:
             video-packages/**/package.json
             video-packages/**/weekly-dog-transmission.mp4
           if-no-files-found: ignore
-          retention-days: 14
+          retention-days: 21

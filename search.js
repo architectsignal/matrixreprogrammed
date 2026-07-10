@@ -13,6 +13,21 @@ function card(i){const pills=[i.category,i.layer,i.sourceType].filter(Boolean).s
 function status(q,ranked,tokens){const top=ranked[0],l=queryLayer(tokens);if(!answer)return;if(!q)answer.textContent=["SEARCH V2 STATUS","> Brain-aware index: active","> Type a question to rank the control structure","> HTML + JSON feeds indexed","> Mission routes boosted"].join("\n");else if(top)answer.textContent=["SEARCH V2 ROUTE","> Query: "+q,"> Layer: "+(l?l.layer:"general"),"> Best route: "+top.title,"> Open: "+top.url,"> Boundary: search routing is not proof. Follow the evidence route."].join("\n");else answer.textContent=["SEARCH V2 ROUTE","> No direct match. Try control structure, gold custody, digital ID, Epstein redaction, billionaire watch, or speculation review."].join("\n");}
 function render(index,q){q=q||"";const tokens=words(q);let ranked=index.map(function(i){return Object.assign({},i,{_score:score(i,tokens,q)});}).filter(function(i){return !q||i._score>Number(i.priority||0)/4;}).sort(function(a,b){return b._score-a._score||String(a.title).localeCompare(String(b.title));}).slice(0,q?36:24);if(count)count.textContent=(q?"Found ":"Showing ")+ranked.length+" route"+(ranked.length===1?"":"s");results.innerHTML=ranked.length?ranked.map(card).join(""):"<article class=\"card redline\"><h3>No direct route found</h3><p>Try control structure, gold custody, digital identity, Epstein redaction, billionaire watch, speculation, books, or evidence.</p></article>";status(q,ranked,tokens);}
 function init(index){index=Array.isArray(index)?index:[];function run(){render(index,input.value.trim());}input.addEventListener("input",run);if(shortcuts)shortcuts.addEventListener("click",function(e){const b=e.target.closest("button[data-q]");if(!b)return;input.value=b.dataset.q||"";run();input.focus();});run();}
-fetch("/search-index.json",{cache:"no-store",headers:{Accept:"application/json"}}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(init).catch(function(err){if(count)count.textContent="Search index failed to load";results.innerHTML="<article class=\"card redline\"><h3>Search fallback</h3><p>Open the Control Structure Map, Daily Brain Brief, Evidence Vault, or Books while the index refreshes.</p><div class=\"cta-row small\"><a class=\"btn\" href=\"control-structure.html\">Control Map</a><a class=\"btn alt\" href=\"daily-brain-brief.html\">Daily Brief</a><a class=\"btn alt\" href=\"evidence-vault.html\">Evidence</a></div></article>";if(answer)answer.textContent=["SEARCH V2 STATUS","> Fallback active","> "+String(err.message||err).slice(0,120)].join("\n");});
+const fallbackIndex=[{"title":"Control Structure Map","url":"control-structure.html","category":"Main Mission","layer":"control-structure","description":"Open the seven-layer control map.","keywords":["control","power","structure"],"priority":100},{"title":"Daily Brain Brief","url":"daily-brain-brief.html","category":"Living Brain","layer":"information-narrative","description":"Open the latest conclusions and watch list.","keywords":["daily","brain","brief"],"priority":98},{"title":"Evidence Vault","url":"evidence-vault.html","category":"Evidence","layer":"disclosure-black-files","description":"Follow source documents and evidence routes.","keywords":["evidence","records","documents"],"priority":92},{"title":"Books","url":"books.html","category":"Books","layer":"general","description":"Open the Matrix Reprogrammed book archive.","keywords":["books","archive"],"priority":80}];
+function loadSearchIndex(){
+return fetch('/search-index.json',{cache:'no-store',headers:{Accept:'application/json'}}).then(async function(r){
+const type=String(r.headers.get('content-type')||'').toLowerCase();
+const text=await r.text();
+if(!r.ok)throw new Error('HTTP '+r.status);
+if(!type.includes('application/json')||/^\s*</.test(text))throw new Error('HTML returned instead of JSON');
+let parsed;try{parsed=JSON.parse(text);}catch(e){throw new Error("Invalid search JSON: "+e.message);}
+if(!Array.isArray(parsed))throw new Error('Search index is not an array');
+return parsed;
+});
+}
+loadSearchIndex().then(init).catch(function(err){
+init(fallbackIndex);
+if(count)count.textContent="Search index unavailable — showing verified fallback routes";
+if(answer)answer.textContent=["SEARCH V2 STATUS","> Fallback index active","> "+String(err.message||err).slice(0,120),"> Verified mission routes remain available"].join("\n");
+});
 })();
-/* Search V2 harmony markers: fallbackIndex failSafe HTML returned instead of JSON cache:'no-store' */

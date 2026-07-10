@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T08:01:19.459Z",
+  "updated": "2026-07-10T08:15:56.716Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -915,42 +915,6 @@
           "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
-        },
-        {
-          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
         }
       ],
       "top_entities": [
@@ -981,35 +945,6 @@
         "Justice Department"
       ],
       "relationship_candidates": [
-        {
-          "id": "object-object__people-s-republic-of-bangladesh",
-          "from": "People's Republic of Bangladesh",
-          "to": "[object Object]",
-          "count": 3,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2",
-            "world-bank-projects-p180283-4",
-            "world-bank-projects-p180439-6"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 27,
-          "grade": "candidate",
-          "relationship_type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
         {
           "id": "management-and-budget-office__treasury-department",
           "from": "Management and Budget Office",
@@ -1366,12 +1301,6 @@
           "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "lane": "world-bank-projects"
         }
       ],
       "top_entities": [

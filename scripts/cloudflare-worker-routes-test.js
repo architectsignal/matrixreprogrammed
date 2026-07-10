@@ -35,6 +35,7 @@ if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit
 [
   'src/worker.js',
   'wrangler.toml',
+  'wrangler.jsonc',
   '_headers',
   'scripts/build-cloudflare-output.js',
   'scripts/patch-worker-pages-origin.js',
@@ -88,6 +89,16 @@ requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV binding');
 requireIncludes('wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding');
 requireIncludes('wrangler.toml', 'database_name = "matrix-members"', 'matrix-members D1 database');
 requireIncludes('wrangler.toml', 'c6e465d3-4e36-4a00-b8f8-309447240c52', 'production D1 database ID');
+
+requireIncludes('wrangler.jsonc', '"main": "src/worker.js"', 'active Worker entrypoint');
+requireIncludes('wrangler.jsonc', '"binding": "ASSETS"', 'active ASSETS binding');
+requireIncludes('wrangler.jsonc', '"binding": "FORUM_POSTS"', 'active FORUM_POSTS binding');
+requireIncludes('wrangler.jsonc', '"binding": "MEMBERS_DB"', 'active MEMBERS_DB D1 binding');
+requireIncludes('wrangler.jsonc', '"database_name": "matrix-members"', 'active matrix-members D1 database');
+requireIncludes('wrangler.jsonc', '"database_id": "c6e465d3-4e36-4a00-b8f8-309447240c52"', 'active production D1 database ID');
+requireIncludes('wrangler.jsonc', '"pattern": "matrixreprogrammed.com/*"', 'active apex Worker route');
+requireIncludes('wrangler.jsonc', '"pattern": "www.matrixreprogrammed.com/*"', 'active www Worker route');
+
 requireIncludes('_headers', 'Strict-Transport-Security', 'HSTS header');
 requireIncludes('_headers', 'immutable', 'immutable cache header');
 requireIncludes('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
@@ -110,4 +121,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker assets, forum routes, membership D1 routes, bindings, analytics, headers and build wiring.');
+console.log('Checked Worker assets, forum routes, membership D1 routes, active JSONC/TOML bindings, analytics, headers and build wiring.');

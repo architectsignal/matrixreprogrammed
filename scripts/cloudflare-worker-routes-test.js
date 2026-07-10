@@ -26,7 +26,7 @@ const membershipPatch = spawnSync(process.execPath, ['scripts/patch-worker-newsl
   cwd: root,
   encoding: 'utf8',
   shell: false,
-  maxBuffer: 20 * 1024 * 1024
+  maxBuffer: 30 * 1024 * 1024
 });
 if (membershipPatch.stdout) process.stdout.write(membershipPatch.stdout);
 if (membershipPatch.stderr) process.stderr.write(membershipPatch.stderr);
@@ -39,7 +39,12 @@ if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit
   '_headers',
   'scripts/build-cloudflare-output.js',
   'scripts/patch-worker-pages-origin.js',
+  'scripts/patch-worker-membership-auth.js',
+  'scripts/membership-auth-test.js',
   'package.json',
+  'membership.html',
+  'member-login.html',
+  'member-dashboard.html',
   '_site/index.html',
   '_site/index',
   '_site/search.html',
@@ -52,6 +57,12 @@ if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit
   '_site/epstein-files',
   '_site/forum.html',
   '_site/forum',
+  '_site/membership.html',
+  '_site/membership',
+  '_site/member-login.html',
+  '_site/member-login',
+  '_site/member-dashboard.html',
+  '_site/member-dashboard',
   '_site/deploy-status.html',
   '_site/deploy-status'
 ].forEach(requireFile);
@@ -73,9 +84,22 @@ requireIncludes('src/worker.js', '/track-event', 'analytics endpoint');
 requireIncludes('src/worker.js', '/intro-voice', 'intro voice endpoint');
 requireIncludes('src/worker.js', '/api/membership/signup', 'membership signup endpoint');
 requireIncludes('src/worker.js', '/api/membership/health', 'membership health endpoint');
+requireIncludes('src/worker.js', '/api/auth/request-link', 'magic-link request endpoint');
+requireIncludes('src/worker.js', '/api/auth/verify', 'magic-link verification endpoint');
+requireIncludes('src/worker.js', '/api/auth/logout', 'member logout endpoint');
+requireIncludes('src/worker.js', '/api/auth/health', 'auth health endpoint');
+requireIncludes('src/worker.js', '/api/member/me', 'member identity endpoint');
+requireIncludes('src/worker.js', 'api.brevo.com/v3/smtp/email', 'Brevo transactional email delivery');
+requireIncludes('src/worker.js', "crypto.subtle.digest('SHA-256'", 'hashed auth tokens');
 requireIncludes('src/worker.js', 'MEMBERS_DB', 'membership D1 usage');
 requireIncludes('src/worker.js', 'FORUM_POSTS', 'FORUM_POSTS binding usage');
 requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
+
+requireIncludes('membership.html', '/api/membership/signup', 'live membership signup call');
+requireIncludes('membership.html', 'marketingConsent', 'explicit marketing consent field');
+requireIncludes('member-login.html', '/api/auth/request-link', 'passwordless login request call');
+requireIncludes('member-dashboard.html', '/api/member/me', 'member identity request');
+requireIncludes('member-dashboard.html', '/api/auth/logout', 'member logout request');
 
 forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
@@ -121,4 +145,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker assets, forum routes, membership D1 routes, active JSONC/TOML bindings, analytics, headers and build wiring.');
+console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth routes, member pages, active JSONC/TOML bindings, analytics, headers and build wiring.');

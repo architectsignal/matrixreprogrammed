@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const problems = [];
@@ -20,6 +21,16 @@ const forbidIncludes = (file, text, label = text) => {
   if (!exists(file)) return;
   if (read(file).includes(text)) fail(`${file}: should not contain ${label}`);
 };
+
+const membershipPatch = spawnSync(process.execPath, ['scripts/patch-worker-newsletter-system.js'], {
+  cwd: root,
+  encoding: 'utf8',
+  shell: false,
+  maxBuffer: 20 * 1024 * 1024
+});
+if (membershipPatch.stdout) process.stdout.write(membershipPatch.stdout);
+if (membershipPatch.stderr) process.stderr.write(membershipPatch.stderr);
+if (membershipPatch.status !== 0) fail(`membership Worker patch failed with exit code ${membershipPatch.status}`);
 
 [
   'src/worker.js',

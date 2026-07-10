@@ -33,7 +33,7 @@ function needText(file, text, label = text) { const ok = exists(file) && read(fi
 function runCriticalRepairCycle(label) {
   run(`${label}: newsletter, membership and payment patch`, 'node', ['scripts/patch-worker-newsletter-system.js']);
   run(`${label}: newsletter persistence execution test`, 'node', ['scripts/newsletter-persistence-test.js']);
-  run(`${label}: PayPal membership contract`, 'node', ['scripts/paypal-membership-test.js']);
+  run(`${label}: PayPal membership contract`, 'node', ['scripts/paypal-membership-test-runner.js']);
   run(`${label}: Search V2 repair`, 'node', ['scripts/repair-search-system.js']);
   run(`${label}: critical route and object drift`, 'node', ['scripts/repair-critical-route-drift.js']);
   run(`${label}: site function harmony`, 'node', ['scripts/site-function-harmony-test.js']);
@@ -41,7 +41,7 @@ function runCriticalRepairCycle(label) {
 
 run('Prebuild membership and payment patch', 'node', ['scripts/patch-worker-newsletter-system.js']);
 run('Prebuild newsletter persistence execution test', 'node', ['scripts/newsletter-persistence-test.js']);
-run('Prebuild PayPal membership contract', 'node', ['scripts/paypal-membership-test.js']);
+run('Prebuild PayPal membership contract', 'node', ['scripts/paypal-membership-test-runner.js']);
 run('Full build and normal pressure chain', 'npm', ['run', 'build']);
 runCriticalRepairCycle('Postbuild cycle one');
 run('Postbuild site-wide function audit', 'node', ['scripts/site-wide-function-audit.js', '--postbuild']);
@@ -52,7 +52,7 @@ const focused = [
   ['Ask Matrix free/local search', ['scripts/free-ask-matrix-search-test.js']],
   ['Newsletter persistent KV contract', ['scripts/newsletter-persistence-test.js']],
   ['Membership authentication', ['scripts/membership-auth-test.js']],
-  ['PayPal membership and webhook entitlements', ['scripts/paypal-membership-test.js']],
+  ['PayPal membership and webhook entitlements', ['scripts/paypal-membership-test-runner.js']],
   ['Critical route and object drift', ['scripts/repair-critical-route-drift.js']],
   ['Site function harmony', ['scripts/site-function-harmony-test.js']],
   ['Forum three-board split', ['scripts/forum-board-split-test.js']],
@@ -84,7 +84,7 @@ run('Final Cloudflare route audit', 'node', ['scripts/cloudflare-worker-routes-t
 run('Final Ask Matrix audit', 'node', ['scripts/free-ask-matrix-search-test.js']);
 run('Final newsletter persistence proof', 'node', ['scripts/newsletter-persistence-test.js']);
 run('Final membership authentication proof', 'node', ['scripts/membership-auth-test.js']);
-run('Final PayPal membership proof', 'node', ['scripts/paypal-membership-test.js']);
+run('Final PayPal membership proof', 'node', ['scripts/paypal-membership-test-runner.js']);
 run('Final route drift proof', 'node', ['scripts/repair-critical-route-drift.js']);
 
 report.summary = { htmlFiles: countFiles('.html'), javascriptFiles: countFiles('.js'), jsonFiles: countFiles('.json'), commandCount: report.commands.length, failedCommands: report.commands.filter(c => !c.ok).length, systemCount: 0, failedSystems: 0 };

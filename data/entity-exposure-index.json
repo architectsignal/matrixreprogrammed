@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T07:53:50.534Z",
+  "updated": "2026-07-10T08:01:19.369Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -99,168 +99,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "object-object",
-      "name": "[object Object]",
-      "exposure_score": 269,
-      "highest_evidence_grade": "documented association",
-      "exposure_categories": [
-        "General public-record exposure route",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "matched_terms": []
-        },
-        {
-          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        },
-        {
-          "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        },
-        {
-          "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        },
-        {
-          "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        },
-        {
-          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association",
-          "category": "General public-record exposure route",
-          "source_lane": "world-bank-projects",
-          "record_type": "global_project_record",
-          "matched_terms": []
-        }
-      ],
-      "relationships": [
-        {
-          "with": "People's Republic of Bangladesh",
-          "score": 27,
-          "type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Republic of Rwanda",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Chattogram Water Supply and Sewerage Authority",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Kingdom of Morocco",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Ministry of Health and Family Welfare",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Republic of India",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Finance Division, Ministry of Finance",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch [object Object] across world-bank-projects.",
-        "Check whether new world-bank-projects records repeat this name.",
-        "Watch world-bank-projects for follow-up records involving [object Object]."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "[object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -1370,6 +1208,131 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "object-object",
+      "name": "[object Object]",
+      "exposure_score": 169,
+      "highest_evidence_grade": "documented association",
+      "exposure_categories": [
+        "General public-record exposure route",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Chattogram Water Supply Improvement Project",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Transforming Agri-food Systems in Morocco",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Health, Nutrition and Population Sector Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Amaravati Integrated Urban Development Program",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        },
+        {
+          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
+          "url": "https://search.worldbank.org/api/v2/projects",
+          "grade": "documented association",
+          "category": "General public-record exposure route",
+          "source_lane": "world-bank-projects",
+          "record_type": "global_project_record",
+          "matched_terms": []
+        }
+      ],
+      "relationships": [
+        {
+          "with": "People's Republic of Bangladesh",
+          "score": 27,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Republic of Rwanda",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Chattogram Water Supply and Sewerage Authority",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Kingdom of Morocco",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Ministry of Health and Family Welfare",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Republic of India",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Finance Division, Ministry of Finance",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch world-bank-projects for follow-up records involving [object Object]."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "[object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

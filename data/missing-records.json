@@ -1,15 +1,9 @@
 {
-  "updated": "2026-07-10T07:53:50.621Z",
+  "updated": "2026-07-10T08:01:19.459Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
-    {
-      "entity": "[object Object]",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/object-object.html",
-      "type": "entity brief"
-    },
     {
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -365,12 +359,6 @@
       "type": "record review"
     },
     {
-      "entity": "[object Object]",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/object-object.html",
-      "type": "record review"
-    },
-    {
       "entity": "California Court of Appeal",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/california-court-of-appeal.html",
@@ -470,6 +458,12 @@
       "entity": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "type": "record review"
+    },
+    {
+      "entity": "[object Object]",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/object-object.html",
       "type": "record review"
     },
     {

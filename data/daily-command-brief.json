@@ -1,14 +1,9 @@
 {
-  "updated": "2026-07-10T07:53:50.621Z",
+  "updated": "2026-07-10T08:01:19.459Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
   "topEntityChanges": [
-    {
-      "name": "[object Object]",
-      "judgement": "High-interest tracked entity because it appears across records and relationship candidates.",
-      "route": "entity-briefs/object-object.html"
-    },
     {
       "name": "Health and Human Services Department",
       "judgement": "High-interest tracked entity because it appears across records and relationship candidates.",
@@ -53,6 +48,11 @@
       "name": "Veterans Affairs Department",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/veterans-affairs-department.html"
+    },
+    {
+      "name": "Commerce Department",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/commerce-department.html"
     }
   ],
   "topContractors": [
@@ -1512,12 +1512,6 @@
   ],
   "missingRecords": [
     {
-      "entity": "[object Object]",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/object-object.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
@@ -1629,6 +1623,12 @@
       "entity": "2021-00294",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/2021-00294.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2024-07773",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2024-07773.html",
       "type": "entity brief"
     }
   ],

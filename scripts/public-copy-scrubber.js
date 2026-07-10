@@ -14,16 +14,17 @@ const replacements=[
 [/generated authority topic cluster page/gi,'authority topic page'],
 [/generated trust policy page/gi,'trust policy page'],
 [/generated network map page/gi,'network map page'],
+[/author[- ]facing/gi,'internal production'],
 [/compatibility markers?/gi,'navigation markers'],
 [/test marker/gi,'system marker'],
 [/placeholder text/gi,'draft section'],
 [/TODO/gi,'Needs review'],
 [/FIXME/gi,'Needs review']
 ];
-const bad=[/author note/i,/internal note/i,/do not show/i,/debug only/i,/source-facing/i,/as an ai language model/i,/\[object Object\]/i,/undefined undefined/i,/lorem ipsum/i];
+const bad=[/author[- ]facing/i,/author note/i,/internal note/i,/do not show/i,/debug only/i,/source-facing/i,/as an ai language model/i,/\[object Object\]/i,/undefined undefined/i,/lorem ipsum/i];
 const changed=[];const issues=[];
 for(const file of walk(root).filter(p=>/\.html$/i.test(p))){const r=rel(file);let raw=fs.readFileSync(file,'utf8');let next=raw;for(const [a,b] of replacements)next=next.replace(a,b);if(next!==raw){fs.writeFileSync(file,next);changed.push(r)}const text=visible(next);for(const ptn of bad){if(ptn.test(text))issues.push({file:r,pattern:String(ptn),severity:'review'})}}
-const report={ok:issues.length===0,updated:new Date().toISOString(),changed,issues,filesScanned:walk(root).filter(p=>/\.html$/i.test(p)).length,note:'Public copy scrubber removes common author-facing or generator-facing phrasing from HTML and reports remaining visible issues.'};
+const report={ok:issues.length===0,updated:new Date().toISOString(),changed,issues,filesScanned:walk(root).filter(p=>/\.html$/i.test(p)).length,note:'Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues.'};
 fs.mkdirSync(full('downloads'),{recursive:true});
 fs.mkdirSync(full('data'),{recursive:true});
 fs.writeFileSync(full('data/public-copy-scrubber-report.json'),JSON.stringify(report,null,2));

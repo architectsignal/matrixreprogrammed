@@ -27,7 +27,7 @@ function runPatch(script, label) {
     cwd: root,
     encoding: 'utf8',
     shell: false,
-    maxBuffer: 30 * 1024 * 1024
+    maxBuffer: 40 * 1024 * 1024
   });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
@@ -42,9 +42,12 @@ runPatch('scripts/patch-membership-auth-ui.js', 'membership auth UI patch');
   'wrangler.toml',
   'wrangler.jsonc',
   '_headers',
+  'migrations/0001_membership_foundation.sql',
+  'migrations/0002_paypal_subscriptions.sql',
   'scripts/build-cloudflare-output.js',
   'scripts/patch-worker-pages-origin.js',
   'scripts/patch-worker-membership-auth.js',
+  'scripts/patch-worker-paypal-membership.js',
   'scripts/patch-membership-auth-ui.js',
   'scripts/membership-auth-test.js',
   'package.json',
@@ -95,6 +98,16 @@ requireIncludes('src/worker.js', '/api/auth/verify', 'magic-link verification en
 requireIncludes('src/worker.js', '/api/auth/logout', 'member logout endpoint');
 requireIncludes('src/worker.js', '/api/auth/health', 'auth health endpoint');
 requireIncludes('src/worker.js', '/api/member/me', 'member identity endpoint');
+requireIncludes('src/worker.js', '/api/paypal/config', 'PayPal public configuration endpoint');
+requireIncludes('src/worker.js', '/api/paypal/checkout-intent', 'PayPal checkout intent endpoint');
+requireIncludes('src/worker.js', '/api/paypal/subscription/confirm', 'PayPal confirmation endpoint');
+requireIncludes('src/worker.js', '/api/paypal/subscription/cancel', 'PayPal cancellation endpoint');
+requireIncludes('src/worker.js', '/api/paypal/webhook', 'PayPal webhook endpoint');
+requireIncludes('src/worker.js', '/api/paypal/health', 'PayPal health endpoint');
+requireIncludes('src/worker.js', '/v1/notifications/verify-webhook-signature', 'PayPal webhook signature verification');
+requireIncludes('src/worker.js', '/v1/billing/subscriptions/', 'PayPal server-side subscription lookup');
+requireIncludes('src/worker.js', 'paypal_checkout_intents', 'PayPal checkout-intent D1 usage');
+requireIncludes('src/worker.js', "paypalPaidStatus(value){return paypalSafeStatus(value)==='ACTIVE'}", 'ACTIVE-only paid access rule');
 requireIncludes('src/worker.js', 'api.brevo.com/v3/smtp/email', 'Brevo transactional email delivery');
 requireIncludes('src/worker.js', "crypto.subtle.digest('SHA-256'", 'hashed auth tokens');
 requireIncludes('src/worker.js', 'MEMBERS_DB', 'membership D1 usage');
@@ -103,17 +116,28 @@ requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage'
 
 requireIncludes('membership.html', '/api/membership/signup', 'live membership signup call');
 requireIncludes('membership.html', 'marketingConsent', 'explicit marketing consent field');
+requireIncludes('membership.html', '/api/paypal/config', 'PayPal configuration call');
+requireIncludes('membership.html', '/api/paypal/checkout-intent', 'PayPal checkout-intent call');
+requireIncludes('membership.html', '/api/paypal/subscription/confirm', 'PayPal server confirmation call');
+requireIncludes('membership.html', 'actions.subscription.create', 'PayPal subscription button flow');
 requireIncludes('member-login.html', '/api/auth/request-link', 'passwordless login request call');
 requireIncludes('member-dashboard.html', '/api/member/me', 'member identity request');
 requireIncludes('member-dashboard.html', '/api/auth/logout', 'member logout request');
-requireIncludes('_site/membership.html', '/api/membership/signup', 'deployed membership signup call');
+requireIncludes('member-dashboard.html', '/api/paypal/subscription/cancel', 'PayPal cancellation request');
+requireIncludes('member-dashboard.html', 'paidAccessEnabled', 'server entitlement display');
+requireIncludes('_site/membership.html', '/api/paypal/subscription/confirm', 'deployed PayPal confirmation call');
 requireIncludes('_site/member-login.html', '/api/auth/request-link', 'deployed login request call');
-requireIncludes('_site/member-dashboard.html', '/api/member/me', 'deployed member identity request');
+requireIncludes('_site/member-dashboard.html', '/api/paypal/subscription/cancel', 'deployed PayPal cancellation call');
+
+requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents', 'PayPal checkout-intent table in deployment migration');
+requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS payment_webhook_events', 'PayPal webhook event table');
+requireIncludes('migrations/0001_membership_foundation.sql', 'provider_subscription_id TEXT UNIQUE', 'unique PayPal subscription identifier');
 
 forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
 forbidIncludes('src/worker.js', 'STATIC_ORIGIN ||', 'stale origin override');
 forbidIncludes('src/worker.js', 'cacheEverything', 'stale origin cache path');
+forbidIncludes('src/worker.js', 'clientSecret:', 'PayPal client secret in JSON response');
 
 requireIncludes('wrangler.toml', 'main = "src/worker.js"', 'Worker entrypoint');
 requireIncludes('wrangler.toml', 'directory = "./_site"', 'asset directory');
@@ -154,4 +178,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth routes, canonical member pages, active JSONC/TOML bindings, analytics, headers and build wiring.');
+console.log('Checked Worker assets, forum routes, D1 membership capture, passwordless auth, PayPal verification and webhooks, canonical member pages, active bindings, analytics, headers and build wiring.');

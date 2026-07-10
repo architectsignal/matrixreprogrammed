@@ -118,6 +118,7 @@ function walk(dir) {
 normalizeWorkerAuditMarkers();
 repairTop52ArtLinks();
 ensureArchiveSearchMarker(path.join(root, 'search.html'));
+require('./hide-internal-public-controls.js');
 rm(out);
 ensure(out);
 walk(root);
@@ -150,6 +151,7 @@ if (fs.existsSync(path.join(out, '_redirects'))) {
   console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets because Wrangler validates it before the Worker router can run.');
   process.exit(1);
 }
+require('./public-copy-visibility-test.js');
 const count = [];
 (function countFiles(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {

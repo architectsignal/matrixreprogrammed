@@ -30,16 +30,7 @@ const internalRoutes = [
   'card-art-studio.html'
 ];
 
-const internalContainerMarkers = [
-  'site-brain-router.html',
-  'card-artwork-automation.html',
-  'card-artwork-queue.html',
-  'card-system-health.html',
-  'information-gathering-system.html',
-  'conclusion-engine.html',
-  'data/site-public-copy-intake-audit.json'
-];
-
+const internalArticleHeadings = ['SITE BRAIN ROUTER'];
 const noIndexFiles = new Set(internalRoutes);
 
 function addClass(openingTag, className = 'internal-only') {
@@ -82,30 +73,12 @@ function hideInternalLinks(html) {
   });
 }
 
-function markNearestContainer(html, marker) {
-  let searchFrom = 0;
-  while (true) {
-    const markerIndex = html.indexOf(marker, searchFrom);
-    if (markerIndex < 0) break;
-    let changed = false;
-    for (const tagName of ['article', 'section', 'div']) {
-      const openIndex = html.lastIndexOf(`<${tagName}`, markerIndex);
-      if (openIndex < 0) continue;
-      const closeBefore = html.lastIndexOf(`</${tagName}>`, markerIndex);
-      if (closeBefore > openIndex) continue;
-      const openEnd = html.indexOf('>', openIndex);
-      if (openEnd < 0 || openEnd > markerIndex) continue;
-      const opening = html.slice(openIndex, openEnd + 1);
-      if (!/internal-only/.test(opening)) {
-        html = html.slice(0, openIndex) + addClass(opening) + html.slice(openEnd + 1);
-      }
-      searchFrom = markerIndex + marker.length + 32;
-      changed = true;
-      break;
-    }
-    if (!changed) searchFrom = markerIndex + marker.length;
-  }
-  return html;
+function hideInternalArticles(html) {
+  return html.replace(/<article\b[^>]*>[\s\S]*?<\/article>/gi, block => {
+    const isInternal = internalArticleHeadings.some(heading => block.includes(`<h2>${heading}</h2>`));
+    if (!isInternal) return block;
+    return block.replace(/^<article\b[^>]*>/i, opening => addClass(opening));
+  });
 }
 
 function publicCopy(html) {
@@ -158,8 +131,7 @@ function addVault(html) {
   const payload = {
     purpose: 'Internal routes and operational labels retained for audits but hidden from normal public navigation.',
     hiddenRoutes: internalRoutes,
-    labels: ['Sell / Capture', 'Site Brain Router', 'Artwork Automation', 'Card System Health', 'Copy/Intake Audit'],
-    updatedAt: new Date().toISOString()
+    labels: ['Sell / Capture', 'Site Brain Router', 'Artwork Automation', 'Card System Health', 'Copy/Intake Audit']
   };
   const vault = `<script type="application/json" id="${VAULT_ID}" data-internal-only="true">${JSON.stringify(payload)}</script>`;
   if (html.includes('</body>')) return html.replace('</body>', `${vault}</body>`);
@@ -173,7 +145,7 @@ function patchHtml(file) {
   html = ensureVisibilityStyle(html);
   html = ensureNoIndex(html, fileName);
   html = hideInternalLinks(html);
-  for (const marker of internalContainerMarkers) html = markNearestContainer(html, marker);
+  html = hideInternalArticles(html);
   html = publicCopy(html);
   html = addVault(html);
   if (html !== before) fs.writeFileSync(file, html);

@@ -36,11 +36,7 @@ const internalSectionPhrases = [
   'TURN THE INTELLIGENCE MACHINE INTO PRODUCTS.',
   'One Machine · Three Doors',
   'MATRIX REPROGRAMMED STATUS',
-  'The Public-Record Power Machine',
-  'New Control Room',
-  'THE TRACKER DASHBOARD IS LIVE.',
-  'Mission + Money Engine',
-  'STORE / MEMBERSHIP / REPORTS.'
+  'The Public-Record Power Machine'
 ];
 const internalCompactPhrases = [
   'Every route now points somewhere useful.',
@@ -55,6 +51,12 @@ const internalInlinePhrases = [
   'Capture: free brief / PDF mini-book',
   'Conversion: related book or Amazon store',
   'Return: daily drop, forum, live intel',
+  'New Control Room',
+  'THE TRACKER DASHBOARD IS LIVE.',
+  'People, money, institutions, Epstein files, source records, speculation lanes and historical transport evidence now route through one central command page.',
+  'Mission + Money Engine',
+  'STORE / MEMBERSHIP / REPORTS.',
+  'The intelligence machine now routes readers into free briefs, memberships, card decks, premium reports, books and public-record research services.',
   'CAPTURE SYSTEM',
   'Persistent Cloudflare D1 member record',
   'Email verification and passwordless login',

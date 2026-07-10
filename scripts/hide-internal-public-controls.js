@@ -159,9 +159,11 @@ function collectHtml(dir, topLevelOnly = false) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       if (!topLevelOnly) files.push(...collectHtml(full));
-    } else if (entry.name.endsWith('.html') || (dir.endsWith('_site') && !path.extname(entry.name))) {
-      files.push(full);
+      continue;
     }
+    const isHtmlFile = entry.name.endsWith('.html');
+    const isExtensionlessHtmlRoute = !path.extname(entry.name) && fs.existsSync(path.join(dir, `${entry.name}.html`));
+    if (isHtmlFile || isExtensionlessHtmlRoute) files.push(full);
   }
   return files;
 }
@@ -181,6 +183,7 @@ const report = {
   internalRoutesHidden: internalRoutes,
   rawDataLinksHidden: true,
   internalPagesNoIndexed: true,
+  cloudflareControlFilesExcluded: true,
   note: 'Files and routes remain intact. The public interface hides operational, audit, automation and author-facing controls.'
 };
 fs.writeFileSync(path.join(reportDir, 'public-visibility-report.json'), JSON.stringify(report, null, 2));

@@ -39,10 +39,14 @@ function visibleText(html) {
     .trim();
 }
 
-function hiddenAnchor(html, hrefFragment) {
+function matchingAnchors(html, hrefFragment) {
   const escaped = hrefFragment.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const match = html.match(new RegExp(`<a\\b[^>]*href=["'][^"']*${escaped}[^"']*["'][^>]*>`, 'i'));
-  return Boolean(match && /internal-only|data-internal-only=["']true["']/i.test(match[0]));
+  return [...html.matchAll(new RegExp(`<a\\b[^>]*href\\s*=\\s*["'][^"']*${escaped}[^"']*["'][^>]*>`, 'gi'))].map(match => match[0]);
+}
+
+function allMatchingAnchorsHidden(html, hrefFragment) {
+  const anchors = matchingAnchors(html, hrefFragment);
+  return anchors.length > 0 && anchors.every(anchor => /internal-only|data-internal-only=["']true["']/i.test(anchor));
 }
 
 const scrub = spawnSync(process.execPath, ['scripts/hide-internal-public-controls.js'], {
@@ -91,10 +95,10 @@ for (const route of [
   'sales-ladder.html',
   'schema-index.html'
 ]) {
-  if (indexHtml.includes(route)) check(`homepage link hidden: ${route}`, hiddenAnchor(indexHtml, route));
+  if (indexHtml.includes(route)) check(`homepage link hidden: ${route}`, allMatchingAnchorsHidden(indexHtml, route));
 }
 
-const rawAnchors = [...indexHtml.matchAll(/<a\b[^>]*href=["']([^"']+\.(?:json|md))(?:[?#][^"']*)?["'][^>]*>/gi)];
+const rawAnchors = [...indexHtml.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+\.(?:json|md))(?:[?#][^"']*)?["'][^>]*>/gi)];
 for (const match of rawAnchors) check(`raw data link hidden: ${match[1]}`, /internal-only|data-internal-only=["']true["']/i.test(match[0]));
 
 const membershipHtml = read('membership.html');
@@ -107,14 +111,14 @@ for (const phrase of [
   'not configured yet',
   'PayPal activation pending'
 ]) check(`membership page hides “${phrase}”`, !membershipVisible.includes(phrase));
-check('membership page keeps reader-facing signup', /Create Free Member Account|Join free today/i.test(membershipVisible));
+check('membership page keeps working signup form', membershipHtml.includes('id="membership-signup"') && membershipHtml.includes('/api/membership/signup'));
 
 const dashboardHtml = read('member-dashboard.html');
 const dashboardVisible = visibleText(dashboardHtml);
 for (const phrase of ['Private Member Layer', 'secure session', 'entitlement', 'tier-aware', 'PayPal reference']) {
   check(`member dashboard hides “${phrase}”`, !dashboardVisible.includes(phrase));
 }
-check('member dashboard keeps useful account controls', dashboardVisible.includes('MEMBER DASHBOARD'));
+check('member dashboard keeps useful account controls', dashboardHtml.includes('id="dashboard-content"') && dashboardHtml.includes('/api/member/me'));
 
 for (const file of ['review-dashboard.html', 'deploy-status.html', 'card-system-health.html', 'site-brain-router.html']) {
   const html = read(file);

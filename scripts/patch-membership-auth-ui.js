@@ -5,7 +5,7 @@ const root = process.cwd();
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
 const pages = [
-  { name: 'membership.html', template: path.join(templateDir, 'membership.html') },
+  { name: 'membership.html', template: path.join(templateDir, 'membership.template') },
   { name: 'member-login.html', template: path.join(root, 'member-login.html') },
   { name: 'member-dashboard.html', template: path.join(root, 'member-dashboard.html') }
 ];

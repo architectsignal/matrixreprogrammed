@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Member Login | Matrix Reprogrammed</title>
+  <meta name="description" content="Request a secure one-time login link for your Matrix Reprogrammed member account."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="reader-experience.css"/>
+  <style>
+    .login-card{max-width:680px;margin:2rem auto;border:1px solid rgba(216,181,106,.3);border-radius:22px;padding:1.2rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}
+    .login-form{display:grid;gap:.8rem}.login-form input{width:100%;box-sizing:border-box;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.85rem}.status{min-height:1.4rem;font-weight:700}.status.ok{color:#9ddd9d}.status.error{color:#ff9b8f}
+  </style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+<div class="page">
+  <header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="membership.html">Membership</a><a href="member-dashboard.html">Dashboard</a><a href="start-here.html">Start Here</a></nav></header>
+  <main class="wrap section">
+    <section class="login-card">
+      <div class="eyebrow">Secure Member Access</div>
+      <h1>SIGN IN WITHOUT A PASSWORD.</h1>
+      <p>Enter the email attached to your member account. A one-time link will be emailed to you and will expire after 15 minutes.</p>
+      <form id="login-form" class="login-form" novalidate>
+        <label>Email address <input id="login-email" type="email" maxlength="240" autocomplete="email" required placeholder="you@example.com"/></label>
+        <button class="btn" type="submit">Email My Login Link</button>
+        <p id="login-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="mini">For privacy, the response is the same whether or not an email address exists in the member database.</p>
+      <p><a href="membership.html">Create a free member account</a></p>
+    </section>
+  </main>
+</div>
+<script src="matrix.js"></script>
+<script>
+(() => {
+  const form = document.getElementById('login-form');
+  const status = document.getElementById('login-status');
+  const error = new URLSearchParams(location.search).get('error');
+  if (error) {
+    status.className = 'status error';
+    status.textContent = 'That one-time link is invalid, expired or has already been used. Request a new link below.';
+  }
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    status.className = 'status';
+    status.textContent = 'Requesting a secure link…';
+    try {
+      const response = await fetch('/api/auth/request-link', {
+        method:'POST', headers:{'content-type':'application/json'},
+        body:JSON.stringify({email:document.getElementById('login-email').value.trim()})
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'The login email could not be requested.');
+      status.className = 'status ok';
+      status.textContent = data.message || 'If a matching account exists, a one-time link has been sent.';
+    } catch (err) {
+      status.className = 'status error';
+      status.textContent = err.message || 'The login email could not be requested.';
+    }
+  });
+})();
+</script>
+</body>
+</html>

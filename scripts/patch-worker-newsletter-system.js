@@ -6,6 +6,7 @@ const root = process.cwd();
 const workerPath = path.join(root, 'src', 'worker.js');
 const newsletterPath = path.join(root, 'newsletter.html');
 const membershipPatchPath = path.join(root, 'scripts', 'patch-worker-membership-foundation.js');
+const authPatchPath = path.join(root, 'scripts', 'patch-worker-membership-auth.js');
 const reportDir = path.join(root, 'downloads');
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -14,6 +15,14 @@ function fail(message) {
   fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify(report, null, 2));
   console.error(`Newsletter patch failed: ${message}`);
   process.exit(1);
+}
+
+function runPatch(scriptPath, label) {
+  const result = spawnSync(process.execPath, [scriptPath], { cwd: root, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) fail(`${label} integration failed with status ${result.status}`);
+  return true;
 }
 
 if (!fs.existsSync(workerPath)) fail('src/worker.js missing');
@@ -66,16 +75,14 @@ if (fs.existsSync(newsletterPath)) {
 }
 
 let membershipIntegrated = false;
-if (fs.existsSync(membershipPatchPath)) {
-  const result = spawnSync(process.execPath, [membershipPatchPath], { cwd: root, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
-  if (result.stdout) process.stdout.write(result.stdout);
-  if (result.stderr) process.stderr.write(result.stderr);
-  if (result.status !== 0) fail(`membership foundation integration failed with status ${result.status}`);
-  membershipIntegrated = true;
-}
+let authIntegrated = false;
+if (fs.existsSync(membershipPatchPath)) membershipIntegrated = runPatch(membershipPatchPath, 'membership foundation');
+if (fs.existsSync(authPatchPath)) authIntegrated = runPatch(authPatchPath, 'membership authentication');
 
 const finalWorker = fs.readFileSync(workerPath, 'utf8');
 if (membershipIntegrated && !finalWorker.includes("originalPath==='/api/membership/signup'")) fail('membership signup route missing after integration');
+if (authIntegrated && !finalWorker.includes("originalPath==='/api/auth/request-link'")) fail('membership auth route missing after integration');
+if (authIntegrated && !finalWorker.includes("originalPath==='/api/member/me'")) fail('member identity route missing after integration');
 
 const report = {
   ok: true,
@@ -83,7 +90,8 @@ const report = {
   changed: finalWorker !== beforeWorker,
   required,
   membershipIntegrated,
-  mode: membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
+  authIntegrated,
+  mode: authIntegrated ? 'D1 membership capture followed by email verification and passwordless authentication' : membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
 };
 fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify(report, null, 2));
-console.log(membershipIntegrated ? 'Newsletter Worker patch OK: membership foundation applied after compatibility repair.' : 'Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');
+console.log(authIntegrated ? 'Newsletter Worker patch OK: membership foundation and authentication applied.' : membershipIntegrated ? 'Newsletter Worker patch OK: membership foundation applied after compatibility repair.' : 'Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');

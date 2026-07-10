@@ -42,6 +42,32 @@ class MockStatement {
       this.db.audit.push({ args: this.args });
       return { success: true };
     }
+    if (this.sql.includes('UPDATE magic_links SET used_at=? WHERE member_id=? AND purpose=?')) {
+      const [usedAt, memberId, purpose] = this.args;
+      for (const row of this.db.magicLinks.values()) {
+        if (row.member_id === memberId && row.purpose === purpose && !row.used_at) row.used_at = usedAt;
+      }
+      return { success: true };
+    }
+    if (this.sql.includes('INSERT INTO magic_links')) {
+      const [id, memberId, tokenHash, purpose, expiresAt, createdAt] = this.args;
+      this.db.magicLinks.set(id, {
+        id,
+        member_id: memberId,
+        token_hash: tokenHash,
+        purpose,
+        expires_at: expiresAt,
+        used_at: null,
+        created_at: createdAt
+      });
+      return { success: true };
+    }
+    if (this.sql.includes('UPDATE magic_links SET used_at=? WHERE id=?')) {
+      const [usedAt, id] = this.args;
+      const row = this.db.magicLinks.get(id);
+      if (row) row.used_at = usedAt;
+      return { success: true };
+    }
     if (this.sql.includes('UPDATE members SET marketing_status')) {
       const [updatedAt, email] = this.args;
       const key = String(email).toLowerCase();
@@ -49,10 +75,12 @@ class MockStatement {
       if (existing) this.db.members.set(key, { ...existing, marketing_status: 'unsubscribed', updated_at: updatedAt });
       return { success: true };
     }
-    throw new Error(`Unhandled mock D1 run SQL: ${this.sql.slice(0, 120)}`);
+    throw new Error(`Unhandled mock D1 run SQL: ${this.sql.slice(0, 160)}`);
   }
   async first() {
     if (this.sql.includes('SELECT COUNT(*) AS count FROM members')) return { count: this.db.members.size };
+    if (this.sql.includes('SELECT COUNT(*) AS count FROM magic_links')) return { count: this.db.magicLinks.size };
+    if (this.sql.includes('SELECT COUNT(*) AS count FROM member_sessions')) return { count: this.db.sessions.size };
     if (this.sql.includes('FROM members WHERE email=?')) return this.db.members.get(String(this.args[0]).toLowerCase()) || null;
     return null;
   }
@@ -63,7 +91,13 @@ class MockStatement {
 }
 
 class MockD1 {
-  constructor() { this.members = new Map(); this.consents = []; this.audit = []; }
+  constructor() {
+    this.members = new Map();
+    this.consents = [];
+    this.audit = [];
+    this.magicLinks = new Map();
+    this.sessions = new Map();
+  }
   prepare(sql) { return new MockStatement(this, sql); }
 }
 
@@ -120,6 +154,7 @@ async function main() {
   checks.push({ name: 'D1 member row created', ok: d1.members.has('member@example.com') && d1.members.get('member@example.com').tier === 'free' });
   checks.push({ name: 'D1 consent row created', ok: d1.consents.length === 1 && d1.consents[0].wording_version === 'membership-consent-v1' });
   checks.push({ name: 'D1 audit row created', ok: d1.audit.length === 1 });
+  checks.push({ name: 'verification link row is safely invalidated when email delivery is unavailable', ok: d1.magicLinks.size === 1 && [...d1.magicLinks.values()].every(row => Boolean(row.used_at) && row.token_hash.length === 64) });
 
   const repeatResponse = await worker.fetch(jsonRequest('https://matrixreprogrammed.com/newsletter-signup', {
     email: 'member@example.com', name: 'Updated Member', marketingConsent: 'true', source: 'repeat-test'
@@ -170,7 +205,8 @@ async function main() {
     checks,
     d1MemberCount: d1.members.size,
     d1ConsentCount: d1.consents.length,
-    boundary: 'Phase 1 is healthy only when the production D1 binding is configured, the schema is queryable, signups persist to D1, consent is recorded, and member lists require administrator authentication.'
+    d1MagicLinkCount: d1.magicLinks.size,
+    boundary: 'Phase 1 remains healthy after authentication integration only when the production D1 binding is configured, signups persist, consent is recorded, undelivered verification links are invalidated, and member lists require administrator authentication.'
   };
   fs.writeFileSync(path.join(reportDir, 'membership-foundation-test.json'), JSON.stringify(report, null, 2));
   fs.writeFileSync(path.join(reportDir, 'membership-foundation-test.md'), '# Membership Foundation Test\n\nGenerated: '+report.generatedAt+'\nResult: '+(report.ok?'PASS':'FAIL')+'\n\n'+checks.map(c=>`- ${c.ok?'PASS':'FAIL'}: ${c.name}`).join('\n'));

@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-10T07:01:22.125Z
+Generated: 2026-07-10T07:53:55.429Z
 
 ## Official Boundary
 
@@ -108,13 +108,3 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
-
-### EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
-- Type: survival-claim
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About AOL.com

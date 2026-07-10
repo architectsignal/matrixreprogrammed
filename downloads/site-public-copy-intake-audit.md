@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-10T07:01:41.720Z
+Updated: 2026-07-10T07:54:12.864Z
 
-Files scanned: 3755
+Files scanned: 3771
 
-High issues: 2128
+High issues: 2129
 
 Review issues: 8
 
-Intake areas: 2056
+Intake areas: 2145
 
 Weak intake areas: 0
 
@@ -285,7 +285,6 @@ Weak intake areas: 0
 - _site/data/jurisdictional-power-theory.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/jurisdictions-of-power-deck.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/kdp_asin_map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/latest-drop.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/latest-public-drops.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/latest-video-package.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/live-intel-sources.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -319,9 +318,13 @@ Weak intake areas: 0
 - _site/data/probability-signal-feed-002.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/probability-snapshot.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/probability-update-log.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/public-copy-scrubber-report.json: /author note/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/public-copy-scrubber-report.json: /do not show/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/public-copy-scrubber-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/public-interest-anti-corruption-charter.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/public-record-intake.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/readable-user-briefs.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/reader-conclusions-layer.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/record-events.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/record-events.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/record-intake-queue-batch-001.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -338,6 +341,7 @@ Weak intake areas: 0
 - _site/data/site-freshness-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/site-intelligence-core.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/site-public-copy-intake-audit.json: /chatgpt/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/site-public-copy-intake-audit.json: /author note/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/site-public-copy-intake-audit.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/site-quality-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/site-relationship-map.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
@@ -457,8 +461,12 @@ Weak intake areas: 0
 - _site/downloads/policy-convergence-tracker.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/power-architecture-watchlist.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/probability-snapshot.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/public-copy-scrubber-report.md: /author note/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/public-copy-scrubber-report.md: /do not show/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/public-copy-scrubber-report.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/public-record-intake.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/readable-user-briefs.md: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/reader-conclusions.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/sec-filing-feed.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/secret-societies-tracker.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/seven-day-intel.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -471,6 +479,7 @@ Weak intake areas: 0
 - _site/downloads/site-intelligence-core.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/site-intelligence-graph.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/site-public-copy-intake-audit.md: /chatgpt/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/site-public-copy-intake-audit.md: /author note/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/site-public-copy-intake-audit.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/source-cards.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/source-cards.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -500,15 +509,6 @@ Weak intake areas: 0
 - _site/entity-briefs/energy-department.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/entity-briefs/environmental-protection-agency.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/entity-briefs/finance-division-ministry-of-finance.html: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/finance-division-ministry-of-finance.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/health-and-human-services-department.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/interior-department.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/kingdom-of-morocco.html: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/kingdom-of-morocco.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/management-and-budget-office.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/entity-briefs/ministry-of-health-and-family-welfare.html: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 None

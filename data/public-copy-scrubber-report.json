@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-10T07:01:43.814Z",
+  "updated": "2026-07-10T07:54:14.840Z",
   "changed": [
     "deploy-health.html"
   ],
@@ -202,6 +202,11 @@
     },
     {
       "file": "_site/site-freshness-report.html",
+      "pattern": "/\\[object Object\\]/i",
+      "severity": "review"
+    },
+    {
+      "file": "_site/subject-briefs/banking-payment-rails.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
@@ -411,6 +416,6 @@
       "severity": "review"
     }
   ],
-  "filesScanned": 2693,
+  "filesScanned": 2694,
   "note": "Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues."
 }

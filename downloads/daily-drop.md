@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-10T07:01:19.584Z
+Updated: 2026-07-10T07:53:53.167Z
 
 ## Status
 
-- Live Intel items: 14
+- Live Intel items: 10
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -52,19 +52,3 @@ Updated: 2026-07-10T07:01:19.584Z
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-08 — EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.
-- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-  - Source: https://www.who.int/health-topics/who-pandemic-agreement
-  - Evidence: Official WHO treaty/implementation-process lane
-  - Boundary: Treaty adoption is not the same as force, ratification, domestic implementation, or WHO control over national measures. WHO states the agreement does not authorize it to impose lockdowns or vaccine mandates.

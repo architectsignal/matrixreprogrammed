@@ -1,10 +1,10 @@
 # Public Copy Scrubber Report
 
-Updated: 2026-07-10T07:01:43.814Z
+Updated: 2026-07-10T07:54:14.840Z
 
 Changed files: 1
 
-Visible review issues: 81
+Visible review issues: 82
 
 ## Changed
 - deploy-health.html
@@ -50,6 +50,7 @@ Visible review issues: 81
 - _site/reports/entity-object-object.html: /\[object Object\]/i
 - _site/reports/missing-records-report.html: /\[object Object\]/i
 - _site/site-freshness-report.html: /\[object Object\]/i
+- _site/subject-briefs/banking-payment-rails.html: /\[object Object\]/i
 - brief-quality-report.html: /\[object Object\]/i
 - daily-brain-brief.html: /\[object Object\]/i
 - daily-missing-records.html: /\[object Object\]/i

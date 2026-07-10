@@ -1,6 +1,6 @@
 # Reader Experience Governor
 
-Generated: 2026-07-10T07:01:37.623Z
+Generated: 2026-07-10T07:54:09.364Z
 
 Files scanned: 1347
 

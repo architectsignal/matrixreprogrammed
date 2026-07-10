@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-10T07:01:22.722Z
+Generated: 2026-07-10T07:53:56.004Z
 
 ## Open Routes
 
@@ -61,23 +61,3 @@ NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private
 - Date: 2026-07-09T13:30:11.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News
-### EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-08T20:07:31.000Z
-- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
-EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About AOL.com
-### ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-- Lane: CBDC / Digital Euro / Sovereign Payment Rails
-- Date: 2026-07-08T00:00:00.000Z
-- Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
-### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-- Lane: AI Governance / EU AI Act / Cybersecurity
-- Date: 2026-07-07T00:00:00.000Z
-- Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.
-### WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-- Lane: WHO Pandemic Agreement / PABS / Global Health Governance
-- Date: 2026-07-06T00:00:00.000Z
-- Source: https://www.who.int/health-topics/who-pandemic-agreement
-WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.

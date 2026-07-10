@@ -1,148 +1,101 @@
 {
-  "updated": "2026-07-10T09:52:36.369Z",
+  "updated": "2026-07-10T14:51:08.493Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-07-10T08:15:56.545Z",
-  "currentRecordCount": 24,
-  "previousRecordCount": 18,
-  "newRecords": [
+  "previousUpdated": "2026-07-10T09:52:36.369Z",
+  "currentRecordCount": 18,
+  "previousRecordCount": 24,
+  "newRecords": [],
+  "removedRecords": [
     {
-      "key": "world-bank-projects-p505244-1",
-      "hash": "fd9accf9765e887b",
-      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-20T00:00:00Z",
+      "key": "courtlistener-court-records-10919908-1",
+      "hash": "81e0bf4c2be8a6fd",
+      "summary": "Sawas v. Elzanaty",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+      "date": "2026-07-08",
       "names": [
-        "Republic of Rwanda",
-        "[object Object]"
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294"
       ]
     },
     {
-      "key": "world-bank-projects-p176429-2",
-      "hash": "554cae7bd48fae3d",
-      "summary": "Chattogram Water Supply Improvement Project",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
+      "key": "courtlistener-court-records-10919846-2",
+      "hash": "49b2b26e8c22195c",
+      "summary": "People v. Brim",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+      "date": "2026-07-08",
       "names": [
-        "Chattogram Water Supply and Sewerage Authority",
-        "People's Republic of Bangladesh",
-        "[object Object]"
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M"
       ]
     },
     {
-      "key": "world-bank-projects-p181587-3",
-      "hash": "776acfe97c9d46dc",
-      "summary": "Transforming Agri-food Systems in Morocco",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
+      "key": "courtlistener-court-records-10917016-3",
+      "hash": "8721abb56410f277",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
+      "date": "2026-07-07",
       "names": [
-        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-        "Kingdom of Morocco",
-        "[object Object]"
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Court of Appeals for the Second Circuit",
+        "25-113"
       ]
     },
     {
-      "key": "world-bank-projects-p180283-4",
-      "hash": "0eeff5b6e3a99d48",
-      "summary": "Health, Nutrition and Population Sector Development Program",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
+      "key": "courtlistener-court-records-10883674-4",
+      "hash": "f95a37eb5eb447bc",
+      "summary": "Matter of Pagliughi",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+      "date": "2026-07-01",
       "names": [
-        "Ministry of Health and Family Welfare",
-        "People's Republic of Bangladesh",
-        "[object Object]"
+        "Matter of Pagliughi",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-07773"
       ]
     },
     {
-      "key": "world-bank-projects-p507508-5",
-      "hash": "595b384fbd52b527",
-      "summary": "Amaravati Integrated Urban Development Program",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
+      "key": "courtlistener-court-records-10883331-5",
+      "hash": "b39adcd19b344458",
+      "summary": "Biddle v. Biddle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+      "date": "2026-07-01",
       "names": [
-        "Republic of India",
-        "[object Object]"
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
       ]
     },
     {
-      "key": "world-bank-projects-p180439-6",
-      "hash": "53c92c6d27b169bb",
-      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
+      "key": "courtlistener-court-records-10914068-6",
+      "hash": "8884760b222f1a37",
+      "summary": "Khan v. Jewish Women International",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
+      "date": "2026-06-30",
       "names": [
-        "Finance Division, Ministry of Finance",
-        "People's Republic of Bangladesh",
-        "[object Object]"
+        "Khan v. Jewish Women International",
+        "Connecticut Appellate Court",
+        "AC48383"
       ]
     }
   ],
-  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [
-    {
-      "id": "world-bank-projects-p505244-1",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    },
-    {
-      "id": "world-bank-projects-p176429-2",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Chattogram Water Supply Improvement Project",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    },
-    {
-      "id": "world-bank-projects-p181587-3",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Transforming Agri-food Systems in Morocco",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    },
-    {
-      "id": "world-bank-projects-p180283-4",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Health, Nutrition and Population Sector Development Program",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    },
-    {
-      "id": "world-bank-projects-p507508-5",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Amaravati Integrated Urban Development Program",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    },
-    {
-      "id": "world-bank-projects-p180439-6",
-      "lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
-      "trigger": "Review world-bank-projects for clock movement.",
-      "source_url": "https://search.worldbank.org/api/v2/projects"
-    }
-  ],
+  "clockTriggers": [],
   "repeatedEntities": [
     {
       "id": "object-object",
@@ -244,25 +197,6 @@
         "federal-register-policy-2026-10817-6"
       ],
       "last_seen": "2026-05-29"
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10919908-1",
-        "courtlistener-court-records-10883674-4"
-      ],
-      "last_seen": "2026-07-01"
     }
   ]
 }

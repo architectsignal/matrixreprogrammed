@@ -1,91 +1,8 @@
 {
-  "updated": "2026-07-10T09:52:36.552Z",
+  "updated": "2026-07-10T14:51:08.676Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [
-    {
-      "key": "world-bank-projects-p505244-1",
-      "hash": "fd9accf9765e887b",
-      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-20T00:00:00Z",
-      "names": [
-        "Republic of Rwanda",
-        "[object Object]"
-      ]
-    },
-    {
-      "key": "world-bank-projects-p176429-2",
-      "hash": "554cae7bd48fae3d",
-      "summary": "Chattogram Water Supply Improvement Project",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
-      "names": [
-        "Chattogram Water Supply and Sewerage Authority",
-        "People's Republic of Bangladesh",
-        "[object Object]"
-      ]
-    },
-    {
-      "key": "world-bank-projects-p181587-3",
-      "hash": "776acfe97c9d46dc",
-      "summary": "Transforming Agri-food Systems in Morocco",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
-      "names": [
-        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-        "Kingdom of Morocco",
-        "[object Object]"
-      ]
-    },
-    {
-      "key": "world-bank-projects-p180283-4",
-      "hash": "0eeff5b6e3a99d48",
-      "summary": "Health, Nutrition and Population Sector Development Program",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
-      "names": [
-        "Ministry of Health and Family Welfare",
-        "People's Republic of Bangladesh",
-        "[object Object]"
-      ]
-    },
-    {
-      "key": "world-bank-projects-p507508-5",
-      "hash": "595b384fbd52b527",
-      "summary": "Amaravati Integrated Urban Development Program",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
-      "names": [
-        "Republic of India",
-        "[object Object]"
-      ]
-    },
-    {
-      "key": "world-bank-projects-p180439-6",
-      "hash": "53c92c6d27b169bb",
-      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
-      "source_lane": "world-bank-projects",
-      "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
-      "date": "2024-12-19T00:00:00Z",
-      "names": [
-        "Finance Division, Ministry of Finance",
-        "People's Republic of Bangladesh",
-        "[object Object]"
-      ]
-    }
-  ],
+  "topMovements": [],
   "topEntityChanges": [
     {
       "name": "Health and Human Services Department",
@@ -1673,12 +1590,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "National Aeronautics and Space Administration",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/national-aeronautics-and-space-administration.html",
@@ -1703,15 +1614,21 @@
       "type": "entity brief"
     },
     {
-      "entity": "2021-00294",
+      "entity": "Chattogram Water Supply and Sewerage Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2021-00294.html",
+      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
       "type": "entity brief"
     },
     {
-      "entity": "2024-07773",
+      "entity": "Finance Division, Ministry of Finance",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2024-07773.html",
+      "route": "entity-briefs/finance-division-ministry-of-finance.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Kingdom of Morocco",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/kingdom-of-morocco.html",
       "type": "entity brief"
     }
   ],

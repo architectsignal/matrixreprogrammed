@@ -105,6 +105,20 @@ jobs:
           fi
           echo "Cloudflare secrets present."
 
+      - name: Apply membership D1 schema
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          echo "Applying idempotent membership schema to matrix-members..." | tee downloads/membership-d1-migration.log
+          npx --yes wrangler@latest d1 execute matrix-members --remote --file=./migrations/0001_membership_foundation.sql 2>&1 | tee -a downloads/membership-d1-migration.log
+          status=${PIPESTATUS[0]}
+          echo "D1 migration exit status: $status" | tee -a downloads/membership-d1-migration.log
+          exit "$status"
+
       - name: Deploy to Cloudflare Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -179,7 +193,7 @@ jobs:
               `- Cloudflare/API deployment proof: ${proof ? 'report generated' : 'missing'}`,
               `- Exact live SHA on both hosts: ${checks.some(c => /expected build SHA/.test(c.name) && c.ok) ? 'checked' : 'not confirmed'}`,
               `- Worker health and forum KV: ${checks.some(c => /forum KV connected/.test(c.name) && c.ok) ? 'connected' : 'not confirmed'}`,
-              `- Newsletter persistence: ${checks.some(c => /newsletter persistence configured/.test(c.name) && c.ok) ? 'configured' : 'not confirmed'}`,
+              `- Membership D1 schema: ${checks.some(c => /membership D1 schema ready/.test(c.name) && c.ok) ? 'connected and queryable' : 'not confirmed'}`,
               `- Truthful deploy health gate: ${health?.ok === true ? 'passed' : 'failed or missing'}`,
               '',
               '## Failed Checks',
@@ -188,7 +202,7 @@ jobs:
               '',
               '## Evidence Boundary',
               '',
-              'Production is marked PASS only when the live hosts serve the expected commit SHA and the persistent Worker services report healthy.'
+              'Production is marked PASS only when both live hosts serve the expected commit SHA, Worker services report healthy, and the authoritative membership D1 schema is queryable.'
             ].join('\n');
             const search = await github.rest.search.issuesAndPullRequests({ q: `repo:${context.repo.owner}/${context.repo.repo} is:issue in:title "${title}"` });
             if (search.data.items.length) {
@@ -207,6 +221,7 @@ jobs:
           path: |
             downloads/deployment-proof.json
             downloads/deployment-proof.md
+            downloads/membership-d1-migration.log
             downloads/wrangler-deploy.log
             cloudflare-deploy-proof-report.json
             downloads/deploy-health.json
@@ -223,6 +238,9 @@ jobs:
             downloads/newsletter-worker-patch-report.json
             downloads/newsletter-persistence-test.json
             downloads/newsletter-persistence-test.md
+            downloads/membership-foundation-patch-report.json
+            downloads/membership-foundation-test.json
+            downloads/membership-foundation-test.md
             downloads/search-system-repair-report.json
             downloads/search-runtime-hardening-report.json
             downloads/site-function-harmony-report.json

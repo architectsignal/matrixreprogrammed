@@ -52,6 +52,7 @@ class MockStatement {
     throw new Error(`Unhandled mock D1 run SQL: ${this.sql.slice(0, 120)}`);
   }
   async first() {
+    if (this.sql.includes('SELECT COUNT(*) AS count FROM members')) return { count: this.db.members.size };
     if (this.sql.includes('FROM members WHERE email=?')) return this.db.members.get(String(this.args[0]).toLowerCase()) || null;
     return null;
   }
@@ -82,11 +83,14 @@ async function readJson(response) {
 async function main() {
   const workerFile = path.join(root, 'src', 'worker.js');
   const migrationFile = path.join(root, 'migrations', '0001_membership_foundation.sql');
+  const wranglerFile = path.join(root, 'wrangler.toml');
   if (!fs.existsSync(workerFile)) throw new Error('src/worker.js missing');
   if (!fs.existsSync(migrationFile)) throw new Error('membership migration missing');
+  if (!fs.existsSync(wranglerFile)) throw new Error('wrangler.toml missing');
 
   const source = fs.readFileSync(workerFile, 'utf8');
   const migration = fs.readFileSync(migrationFile, 'utf8');
+  const wrangler = fs.readFileSync(wranglerFile, 'utf8');
   const tempFile = path.join(reportDir, `.membership-worker-test-${Date.now()}.mjs`);
   fs.writeFileSync(tempFile, source);
   let module;
@@ -143,7 +147,7 @@ async function main() {
 
   const healthResponse = await worker.fetch(new Request('https://matrixreprogrammed.com/api/membership/health'), env);
   const health = await readJson(healthResponse);
-  checks.push({ name: 'membership health reports D1 without exposing PII', ok: healthResponse.status === 200 && health.ok === true && health.d1Connected === true && health.members === 1 && !JSON.stringify(health).includes('member@example.com') });
+  checks.push({ name: 'membership health proves D1 schema without exposing PII', ok: healthResponse.status === 200 && health.ok === true && health.d1Connected === true && health.d1SchemaReady === true && health.d1MemberCount === 1 && health.members === 1 && !JSON.stringify(health).includes('member@example.com') });
 
   const fallbackEnv = { FORUM_POSTS: new MockKV(), ADMIN_API_TOKEN: 'fallback-admin' };
   const fallbackResponse = await worker.fetch(jsonRequest('https://matrixreprogrammed.com/api/membership/signup', { email: 'fallback@example.com', marketingConsent: true }), fallbackEnv);
@@ -157,6 +161,7 @@ async function main() {
   for (const marker of ['CREATE TABLE IF NOT EXISTS members', 'CREATE TABLE IF NOT EXISTS email_consents', 'CREATE TABLE IF NOT EXISTS subscriptions', "provider TEXT NOT NULL DEFAULT 'paypal'"]) {
     checks.push({ name: `migration contains ${marker}`, ok: migration.includes(marker) });
   }
+  checks.push({ name: 'production D1 binding configured', ok: wrangler.includes('binding = "MEMBERS_DB"') && wrangler.includes('database_name = "matrix-members"') && wrangler.includes('database_id = "c6e465d3-4e36-4a00-b8f8-309447240c52"') });
   checks.push({ name: 'public unprotected subscriber response removed', ok: !source.includes("return json({ok:true,count:subscribers.length,subscribers})") });
 
   const report = {
@@ -165,7 +170,7 @@ async function main() {
     checks,
     d1MemberCount: d1.members.size,
     d1ConsentCount: d1.consents.length,
-    boundary: 'Phase 1 is healthy only when signups persist to D1, consent is recorded, missing storage cannot claim success, and member lists require administrator authentication.'
+    boundary: 'Phase 1 is healthy only when the production D1 binding is configured, the schema is queryable, signups persist to D1, consent is recorded, and member lists require administrator authentication.'
   };
   fs.writeFileSync(path.join(reportDir, 'membership-foundation-test.json'), JSON.stringify(report, null, 2));
   fs.writeFileSync(path.join(reportDir, 'membership-foundation-test.md'), '# Membership Foundation Test\n\nGenerated: '+report.generatedAt+'\nResult: '+(report.ok?'PASS':'FAIL')+'\n\n'+checks.map(c=>`- ${c.ok?'PASS':'FAIL'}: ${c.name}`).join('\n'));

@@ -28,9 +28,9 @@ function relative(file) {
   return path.relative(root, file).replace(/\\/g, '/');
 }
 
-function repairTextFile(file) {
+function repairGeneratedFile(file) {
   const rel = relative(file);
-  if (!/\.(html|js|json|md|txt)$/i.test(rel)) return;
+  if (!/\.(html|json|md|txt)$/i.test(rel)) return;
   let before;
   try { before = fs.readFileSync(file, 'utf8'); } catch { return; }
   let after = before;
@@ -48,7 +48,7 @@ function repairTextFile(file) {
   }
 }
 
-for (const file of walk(root)) repairTextFile(file);
+for (const file of walk(root)) repairGeneratedFile(file);
 
 const criticalPages = [
   'entity-daily-briefs.html',
@@ -75,7 +75,7 @@ const report = {
   touched,
   removedCorruptCards,
   hardIssues,
-  boundary: 'Generated public pages must not expose dead critical routes or JavaScript object coercion artifacts.'
+  boundary: 'Generated public pages must not expose dead critical routes or JavaScript object coercion artifacts. Source code is never rewritten by this repair gate.'
 };
 
 fs.writeFileSync(path.join(reportDir, 'critical-route-drift-report.json'), JSON.stringify(report, null, 2));
@@ -102,4 +102,4 @@ if (!report.ok) {
   process.exit(1);
 }
 
-console.log(`Critical route drift gate passed: ${touched.length} file(s) repaired, ${removedCorruptCards.length} corrupt card block(s) removed.`);
+console.log(`Critical route drift gate passed: ${touched.length} generated file(s) repaired, ${removedCorruptCards.length} corrupt card block(s) removed.`);

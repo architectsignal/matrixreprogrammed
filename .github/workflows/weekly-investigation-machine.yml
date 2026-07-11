@@ -17,9 +17,9 @@ concurrency:
 
 jobs:
   investigate:
-    name: Deep source sweep, pattern analysis and weekly report
+    name: Preserve sources, deep sweep and publish weekly report
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 70
 
     steps:
       - name: Checkout current main
@@ -36,6 +36,14 @@ jobs:
       - name: Repair moved official source routes
         run: node scripts/repair-investigation-source-registry.js
 
+      - name: Preserve registered sources and detect changes
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: weekly
+          SOURCE_MONITOR_CONCURRENCY: '4'
+          SOURCE_MONITOR_TIMEOUT_MS: '30000'
+        run: node scripts/monitor-source-changes.js weekly
+
       - name: Run weekly deep source sweep
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
@@ -44,7 +52,7 @@ jobs:
           INVESTIGATION_TIMEOUT_MS: '30000'
         run: node scripts/run-investigation-machine.js weekly
 
-      - name: Rebuild weekly findings, daily brief and search
+      - name: Rebuild weekly findings, daily brief, search and preservation
         run: |
           node scripts/update-live-intel.js
           node scripts/update-seven-day-intel.js
@@ -54,6 +62,7 @@ jobs:
           node scripts/repair-search-system.js
           node scripts/extend-search-with-investigations.js
           node scripts/search-investigation-smoke-test.js
+          node scripts/source-change-preservation-test.js
           node scripts/final-investigation-hardening.js
 
       - name: Full advisory pressure test
@@ -75,6 +84,10 @@ jobs:
             data/weekly-investigation-conclusions.json \
             data/investigation-status.json \
             data/investigation-source-pulls/weekly-latest.json \
+            data/source-snapshot-index.json \
+            data/source-change-ledger.json \
+            data/source-change-public.json \
+            data/source-snapshots \
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
@@ -82,6 +95,7 @@ jobs:
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
             investigation-source-ledger.html \
+            source-changes.html \
             investigation-pulse.js \
             daily-brain-brief.html \
             outcome-briefings.html \
@@ -93,6 +107,8 @@ jobs:
             downloads/weekly-investigation-report.md \
             downloads/investigation-source-ledger.md \
             downloads/investigation-machine-run-report.json \
+            downloads/source-change-monitor-report.json \
+            downloads/source-change-preservation-test.json \
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
@@ -113,6 +129,8 @@ jobs:
           name: weekly-investigation-${{ github.run_id }}
           path: |
             downloads/investigation-machine-run-report.json
+            downloads/source-change-monitor-report.json
+            downloads/source-change-preservation-test.json
             downloads/search-investigation-smoke-test.json
             downloads/weekly-investigation-report.md
             downloads/investigation-source-ledger.md

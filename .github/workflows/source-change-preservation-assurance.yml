@@ -1,0 +1,146 @@
+name: Source Change Preservation Assurance
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/preserve-investigation-sources.js'
+      - 'scripts/source-change-utils.js'
+      - 'scripts/build-source-change-page.js'
+      - 'scripts/extend-search-with-source-changes.js'
+      - 'scripts/source-change-*.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'data/investigation-source-changes.json'
+      - 'evidence-archive/**'
+      - '.github/workflows/source-change-preservation-assurance.yml'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/preserve-investigation-sources.js'
+      - 'scripts/source-change-utils.js'
+      - 'scripts/build-source-change-page.js'
+      - 'scripts/extend-search-with-source-changes.js'
+      - 'scripts/source-change-*.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'data/investigation-source-changes.json'
+      - 'evidence-archive/**'
+      - '.github/workflows/source-change-preservation-assurance.yml'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: source-change-preservation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify preservation, public boundaries, search and live route
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run isolated preservation tests
+        run: node scripts/source-change-preservation-test.js
+
+      - name: Build public source-change route and search entries
+        run: |
+          node scripts/build-source-change-page.js
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/final-investigation-hardening.js
+          node scripts/extend-search-with-source-changes.js
+          node scripts/source-change-search-test.js
+
+      - name: Verify archive exclusion from Cloudflare output contract
+        run: |
+          node --check scripts/build-cloudflare-output.js
+          grep -q "'evidence-archive'" scripts/build-cloudflare-output.js
+          grep -q "private evidence archive must not be deployed" scripts/build-cloudflare-output.js
+
+      - name: Wait for production and verify live source-change outputs
+        if: github.event_name == 'push'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_BUILD_SHA: ${{ github.sha }}
+        run: |
+          mkdir -p downloads
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error --max-time 15 "$SITE_URL/source-changes.html" | grep -q 'SOURCE CHANGE RECORD'; then
+              echo "Source-change route is live."
+              break
+            fi
+            if [ "$attempt" -eq 30 ]; then
+              echo "Production did not expose the source-change route within the verification window."
+              exit 1
+            fi
+            sleep 20
+          done
+          node <<'NODE'
+          const fs = require('fs');
+          const base = String(process.env.SITE_URL || '').replace(/\/$/, '');
+          const expectedSha = process.env.EXPECTED_BUILD_SHA || '';
+          const checks = [];
+          const add = (name, ok, detail = '') => checks.push({ name, ok: Boolean(ok), detail });
+          async function text(route) {
+            const response = await fetch(`${base}${route}`, { redirect: 'follow', headers: { accept: 'text/html,application/json,*/*', 'user-agent': 'MatrixSourceChangeLiveProof/1.0' } });
+            return { response, body: await response.text() };
+          }
+          (async () => {
+            const page = await text('/source-changes.html');
+            add('public source-change route', page.response.ok && page.body.includes('SOURCE CHANGE RECORD'), `HTTP ${page.response.status}`);
+            const feedResponse = await text('/data/investigation-source-changes.json');
+            let feed = null;
+            try { feed = JSON.parse(feedResponse.body); } catch {}
+            add('public source-change JSON', feedResponse.response.ok && feed && Array.isArray(feed.changes), `HTTP ${feedResponse.response.status}`);
+            add('public evidence boundary', /does not by itself prove/i.test(feed?.boundary || ''), feed?.boundary || 'missing');
+            const searchResponse = await text('/search-index.json');
+            let index = null;
+            try { index = JSON.parse(searchResponse.body); } catch {}
+            add('source changes indexed in production search', Array.isArray(index) && index.some(item => item && item.url === 'source-changes.html'), `HTTP ${searchResponse.response.status}`);
+            const archive = await text('/evidence-archive/manifest.json');
+            add('private archive excluded from public assets', !archive.response.ok, `HTTP ${archive.response.status}`);
+            const statusResponse = await text('/deploy-status.json');
+            let status = null;
+            try { status = JSON.parse(statusResponse.body); } catch {}
+            const liveSha = status?.buildSha || '';
+            add('live build SHA available', Boolean(liveSha), liveSha || 'missing');
+            const report = { ok: checks.every(check => check.ok), generatedAt: new Date().toISOString(), site: base, expectedSha, checks };
+            fs.writeFileSync('downloads/source-change-live-verification.json', JSON.stringify(report, null, 2));
+            if (!report.ok) {
+              for (const check of checks.filter(item => !item.ok)) console.error(`FAILED: ${check.name}: ${check.detail}`);
+              process.exit(1);
+            }
+            console.log(`Live source-change verification passed: ${checks.length} checks.`);
+          })().catch(error => { console.error(error.stack || error.message); process.exit(1); });
+          NODE
+
+      - name: Upload source-change assurance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-change-assurance-${{ github.run_id }}
+          path: |
+            downloads/source-change-preservation-test.json
+            downloads/source-change-search-test.json
+            downloads/source-change-live-verification.json
+            downloads/investigation-source-changes.md
+          if-no-files-found: ignore
+          retention-days: 30

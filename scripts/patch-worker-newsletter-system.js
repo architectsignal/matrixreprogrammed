@@ -9,6 +9,8 @@ const membershipPatchPath = path.join(root, 'scripts', 'patch-worker-membership-
 const authPatchPath = path.join(root, 'scripts', 'patch-worker-membership-auth.js');
 const paypalPatchPath = path.join(root, 'scripts', 'patch-worker-paypal-membership.js');
 const membershipUiPatchPath = path.join(root, 'scripts', 'patch-membership-auth-ui.js');
+const osintPatchPath = path.join(root, 'scripts', 'patch-osint-tools-system.js');
+const researchToolsUiPatchPath = path.join(root, 'scripts', 'patch-research-tools-ui.js');
 const reportDir = path.join(root, 'downloads');
 fs.mkdirSync(reportDir, { recursive: true });
 
@@ -80,10 +82,14 @@ let membershipIntegrated = false;
 let authIntegrated = false;
 let paypalIntegrated = false;
 let membershipUiIntegrated = false;
+let osintIntegrated = false;
+let researchToolsUiIntegrated = false;
 if (fs.existsSync(membershipPatchPath)) membershipIntegrated = runPatch(membershipPatchPath, 'membership foundation');
 if (fs.existsSync(authPatchPath)) authIntegrated = runPatch(authPatchPath, 'membership authentication');
 if (fs.existsSync(paypalPatchPath)) paypalIntegrated = runPatch(paypalPatchPath, 'PayPal membership');
 if (fs.existsSync(membershipUiPatchPath)) membershipUiIntegrated = runPatch(membershipUiPatchPath, 'membership user interface');
+if (fs.existsSync(osintPatchPath)) osintIntegrated = runPatch(osintPatchPath, 'gated OSINT tools');
+if (fs.existsSync(researchToolsUiPatchPath)) researchToolsUiIntegrated = runPatch(researchToolsUiPatchPath, 'research tools user interface');
 
 const finalWorker = fs.readFileSync(workerPath, 'utf8');
 if (membershipIntegrated && !finalWorker.includes("originalPath==='/api/membership/signup'")) fail('membership signup route missing after integration');
@@ -92,6 +98,10 @@ if (authIntegrated && !finalWorker.includes("originalPath==='/api/member/me'")) 
 if (paypalIntegrated && !finalWorker.includes("originalPath==='/api/paypal/subscription/confirm'")) fail('PayPal confirmation route missing after integration');
 if (paypalIntegrated && !finalWorker.includes("originalPath==='/api/paypal/webhook'")) fail('PayPal webhook route missing after integration');
 if (paypalIntegrated && !finalWorker.includes('return handlePayPalMemberMe(request,env)')) fail('PayPal-aware member identity route missing after integration');
+if (osintIntegrated && !finalWorker.includes("originalPath==='/api/tools/config'")) fail('member OSINT configuration route missing after integration');
+if (osintIntegrated && !finalWorker.includes("originalPath==='/api/admin/tools/jobs/next'")) fail('private OSINT runner route missing after integration');
+if (osintIntegrated && !finalWorker.includes('osint-tools-v1: encrypted D1 jobs')) fail('OSINT encryption and access-control implementation missing after integration');
+if (researchToolsUiIntegrated && !fs.readFileSync(path.join(root, 'index.html'), 'utf8').includes('href="research-tools.html"')) fail('research tools homepage route missing after integration');
 
 const report = {
   ok: true,
@@ -102,7 +112,9 @@ const report = {
   authIntegrated,
   paypalIntegrated,
   membershipUiIntegrated,
-  mode: paypalIntegrated ? 'D1 membership capture, passwordless authentication and PayPal subscription enforcement' : authIntegrated ? 'D1 membership capture followed by email verification and passwordless authentication' : membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
+  osintIntegrated,
+  researchToolsUiIntegrated,
+  mode: osintIntegrated ? 'D1 membership, passwordless authentication, PayPal subscriptions and encrypted member/admin OSINT tools' : paypalIntegrated ? 'D1 membership capture, passwordless authentication and PayPal subscription enforcement' : authIntegrated ? 'D1 membership capture followed by email verification and passwordless authentication' : membershipIntegrated ? 'newsletter compatibility patch followed by D1-first membership enforcement' : 'real Cloudflare KV persistence enforcement'
 };
 fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify(report, null, 2));
-console.log(paypalIntegrated ? 'Newsletter Worker patch OK: membership foundation, authentication and PayPal subscriptions applied.' : authIntegrated ? 'Newsletter Worker patch OK: membership foundation and authentication applied.' : membershipIntegrated ? 'Newsletter Worker patch OK: membership foundation applied after compatibility repair.' : 'Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');
+console.log(osintIntegrated ? 'Newsletter Worker patch OK: membership, authentication, PayPal and gated OSINT tools applied.' : paypalIntegrated ? 'Newsletter Worker patch OK: membership foundation, authentication and PayPal subscriptions applied.' : authIntegrated ? 'Newsletter Worker patch OK: membership foundation and authentication applied.' : membershipIntegrated ? 'Newsletter Worker patch OK: membership foundation applied after compatibility repair.' : 'Newsletter Worker patch OK: signup now validates email and persists both subscriber record and newsletter index to KV.');

@@ -1,0 +1,140 @@
+name: Gated OSINT Tools Assurance
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'research-tools.html'
+      - 'research-tools.js'
+      - 'src/worker.js'
+      - 'migrations/0001_membership_foundation.sql'
+      - 'migrations/0002_osint_tools.sql'
+      - 'tools/osint_runner.py'
+      - 'tools/osint-requirements.txt'
+      - 'tools/OSINT_RUNNER_SETUP.md'
+      - 'scripts/patch-osint-tools-system.js'
+      - 'scripts/patch-research-tools-ui.js'
+      - 'scripts/osint-tools-test.js'
+      - 'scripts/patch-worker-newsletter-system.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/osint-tools-assurance.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'research-tools.html'
+      - 'research-tools.js'
+      - 'src/worker.js'
+      - 'migrations/0001_membership_foundation.sql'
+      - 'migrations/0002_osint_tools.sql'
+      - 'tools/osint_runner.py'
+      - 'tools/osint-requirements.txt'
+      - 'tools/OSINT_RUNNER_SETUP.md'
+      - 'scripts/patch-osint-tools-system.js'
+      - 'scripts/patch-research-tools-ui.js'
+      - 'scripts/osint-tools-test.js'
+      - 'scripts/patch-worker-newsletter-system.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/osint-tools-assurance.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: gated-osint-tools-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify member/admin gates, encryption and private runner separation
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate scripts and migration syntax
+        run: |
+          node --check scripts/patch-osint-tools-system.js
+          node --check scripts/patch-research-tools-ui.js
+          node --check scripts/osint-tools-test.js
+          node --check scripts/patch-worker-newsletter-system.js
+          python -m py_compile tools/osint_runner.py
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+          db = sqlite3.connect(':memory:')
+          db.executescript(Path('migrations/0001_membership_foundation.sql').read_text())
+          db.executescript(Path('migrations/0002_osint_tools.sql').read_text())
+          tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+          required = {'members', 'member_sessions', 'osint_tool_jobs', 'osint_runner_heartbeats', 'audit_log'}
+          missing = required - tables
+          if missing:
+              raise SystemExit(f'Missing D1 tables: {sorted(missing)}')
+          print('Membership and OSINT migration SQL valid.')
+          PY
+
+      - name: Apply canonical Worker and homepage patches
+        run: |
+          node scripts/patch-worker-newsletter-system.js
+          node scripts/patch-research-tools-ui.js
+          node --check src/worker.js
+
+      - name: Run gated tools contract tests
+        run: node scripts/osint-tools-test.js
+
+      - name: Build complete Cloudflare output
+        run: |
+          mkdir -p downloads
+          set -o pipefail
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js 2>&1 | tee downloads/osint-tools-cloudflare-build.log
+          test -f _site/research-tools.html
+          test -f _site/research-tools
+          test -f _site/research-tools.js
+          grep -q 'Member Tool · Holehe' _site/research-tools.html
+          grep -q 'Member Tool · SpiderFoot' _site/research-tools.html
+          grep -q 'Administrator Only · h8mail' _site/research-tools.html
+          grep -q 'https://emailosint.org/' _site/index.html
+          test ! -e _site/tools
+          test ! -e _site/downloads/osint-tools-test.json
+          test ! -e _site/downloads/osint-worker-patch-report.json
+
+      - name: Verify Worker route and privacy contract
+        run: |
+          grep -q "originalPath==='/api/tools/config'" src/worker.js
+          grep -q "originalPath==='/api/admin/tools/jobs/next'" src/worker.js
+          grep -q "policy.access==='admin'&&!osintIsAdmin" src/worker.js
+          grep -q "name:'AES-GCM'" src/worker.js
+          grep -q "target_ciphertext='',target_iv=''" src/worker.js
+          if git grep -n 'MATRIX_OSINT_RUNNER_TOKEN=' -- ':!tools/OSINT_RUNNER_SETUP.md' ':!.github/workflows/osint-tools-assurance.yml'; then
+            echo 'Runner token value must not be committed.'
+            exit 1
+          fi
+
+      - name: Upload OSINT assurance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gated-osint-tools-${{ github.run_id }}
+          path: |
+            downloads/osint-tools-test.json
+            downloads/osint-worker-patch-report.json
+            downloads/research-tools-ui-patch.json
+            downloads/osint-tools-cloudflare-build.log
+          if-no-files-found: ignore
+          retention-days: 30

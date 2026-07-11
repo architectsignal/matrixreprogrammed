@@ -1,0 +1,6 @@
+Phase 5 guarded production redeploy
+
+Source graph commit: 71a15fc1ace09804c45026f12add1e75ad3d6285
+Reason: force the guarded Cloudflare deployment workflow to publish and verify the completed non-empty Phase 5 evidence network after the earlier generated-output workflow race.
+
+This file is operational metadata under .github and is not included in public Cloudflare assets.

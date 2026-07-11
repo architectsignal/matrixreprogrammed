@@ -97,7 +97,6 @@ for (const phrase of [
   'MATRIX REPROGRAMMED STATUS',
   'Reader route: source',
   'Machine Room',
-  'Research Tools',
   'The Public-Record Power Machine',
   'THE TRACKER DASHBOARD IS LIVE',
   'Mission + Money Engine',
@@ -109,6 +108,7 @@ for (const phrase of [
 check('homepage uses reader-facing navigation label', indexVisible.includes('Reader Resources'));
 check('homepage keeps public intelligence and book routes', indexVisible.includes('Open Live Intel') && indexVisible.includes('Buy The Books'));
 check('homepage keeps public card decks', indexVisible.includes('PERSONS OF INTEREST') && indexVisible.includes('CONTROLLED OPPOSITION'));
+check('homepage keeps public Research Tools route', indexVisible.includes('EMAIL & DIGITAL FOOTPRINT RESEARCH') && matchingAnchors(indexPublicMarkup, 'research-tools.html').length > 0);
 check('homepage keeps weekly signup', indexHtml.includes('id="public-weekly-signal-form"') && indexVisible.includes('Join Weekly Signal'));
 check('homepage replaces funnel wording in free brief card', !indexVisible.includes('Capture attention with source-led PDFs'));
 check('homepage replaces funnel wording in live intel card', !indexVisible.includes('routed into evidence trails, video hooks, free briefs, offers, and books'));
@@ -164,6 +164,7 @@ if (siteIndex) {
   check('deployed homepage includes hidden-control CSS', siteIndex.includes('id="public-internal-visibility"'));
   check('deployed homepage hides author-facing navigation', !siteVisible.includes('Sell / Capture'));
   check('deployed homepage hides commercial strategy', !siteVisible.includes('Free public intelligence builds trust') && !siteVisible.includes('CAPTURE SYSTEM'));
+  check('deployed homepage keeps public Research Tools route', siteVisible.includes('EMAIL & DIGITAL FOOTPRINT RESEARCH') && matchingAnchors(visibleMarkup(siteIndex), 'research-tools.html').length > 0);
   check('deployed homepage keeps weekly signup', siteIndex.includes('id="public-weekly-signal-form"') && siteVisible.includes('Join Weekly Signal'));
 }
 
@@ -179,7 +180,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   checks,
   failures,
-  boundary: 'Operational pages, routes, raw data, commercial funnel strategy and diagnostic text remain in the repository. The normal public interface must not display author, automation, audit, health, capture, conversion, revenue or configuration controls, and the scrub must never modify Cloudflare control files.'
+  boundary: 'Operational pages, routes, raw data, commercial funnel strategy and diagnostic text remain in the repository. The normal public interface must not display author, automation, audit, health, capture, conversion, revenue or configuration controls. Public member research tools may remain visible when their access gates and evidence boundaries are explicit, and the scrub must never modify Cloudflare control files.'
 };
 fs.writeFileSync(path.join(reportDir, 'public-copy-visibility-test.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(path.join(reportDir, 'public-copy-visibility-test.md'), `# Public Copy Visibility Test\n\nResult: ${report.ok ? 'PASS' : 'FAIL'}\n\n${checks.map(item => `- ${item.ok ? 'PASS' : 'FAIL'}: ${item.name}`).join('\n')}\n`);

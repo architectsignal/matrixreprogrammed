@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.0.1",
   "title": "Matrix Reprogrammed Structured Investigation Schema",
   "description": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
   "evidenceBoundary": "A structured entity or relationship records what a cited source states or what an automated parser observed. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt.",
@@ -26,6 +26,7 @@
   },
   "relationshipTypes": {
     "published": "A source published or hosts a finding or document.",
+    "operatedBy": "A registered source platform is operated, maintained or published by an identified organisation or public body.",
     "retrievedFrom": "A document was retrieved from a registered source.",
     "supports": "A cited document directly supports a finding within the stated evidence boundary.",
     "mentions": "A source record names an entity without establishing wrongdoing or a substantive relationship.",

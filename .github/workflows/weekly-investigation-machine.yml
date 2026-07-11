@@ -33,6 +33,9 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Repair moved official source routes
+        run: node scripts/repair-investigation-source-registry.js
+
       - name: Run weekly deep source sweep
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
@@ -65,6 +68,7 @@ jobs:
           git config user.name "matrix-investigation-bot"
           git config user.email "actions@github.com"
           git add \
+            data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
             data/daily-investigation-conclusions.json \

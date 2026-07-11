@@ -1,0 +1,64 @@
+name: Open Source Site Assurance
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 8 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'evidence-network-map.html'
+      - 'evidence-network-map.js'
+      - 'scripts/build-evidence-network-map.js'
+      - 'scripts/playwright-public-site-audit.js'
+      - 'scripts/templates/membership-auth/membership.template'
+      - '.github/workflows/open-source-site-assurance.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: open-source-site-assurance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser-audit:
+    name: Real-browser search, map, membership and page audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Playwright without changing the project lockfile
+        run: |
+          npm install --no-save --ignore-scripts playwright
+          npx playwright install --with-deps chromium
+
+      - name: Build current evidence network data
+        run: node scripts/build-evidence-network-map.js
+
+      - name: Audit the live site in Chromium
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          PLAYWRIGHT_MAX_PAGES: '80'
+        run: node scripts/playwright-public-site-audit.js
+
+      - name: Upload browser audit report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-public-site-audit-${{ github.run_id }}
+          path: downloads/playwright-site-audit/
+          if-no-files-found: ignore
+          retention-days: 21

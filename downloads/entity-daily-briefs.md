@@ -1,8 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-11T08:14:32.765Z
+Updated: 2026-07-11T09:17:48.345Z
 
-Briefs generated: 58
+Briefs generated: 50
 
 ## Health and Human Services Department
 
@@ -113,16 +113,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Check whether new federal-register-policy records repeat this name.
-
-## People's Republic of Bangladesh
-
-At a glance: People's Republic of Bangladesh is currently tracked as observed entity with 3 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: High-interest tracked entity because it appears across records and relationship candidates.
-
-Evidence: documented public-record association
-
-Watch next: Watch People's Republic of Bangladesh across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
 ## Transportation Department
 
@@ -264,16 +254,6 @@ Evidence: legal record present
 
 Watch next: Watch California Court of Appeal across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Chattogram Water Supply and Sewerage Authority
-
-At a glance: Chattogram Water Supply and Sewerage Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
 ## Connecticut Appellate Court
 
 At a glance: Connecticut Appellate Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -304,16 +284,6 @@ Evidence: legal record present
 
 Watch next: Watch Court of Appeals of North Carolina across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Finance Division, Ministry of Finance
-
-At a glance: Finance Division, Ministry of Finance is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Finance Division, Ministry of Finance across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
 ## Khan v. Jewish Women International
 
 At a glance: Khan v. Jewish Women International is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -324,16 +294,6 @@ Evidence: legal record present
 
 Watch next: Watch Khan v. Jewish Women International across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Kingdom of Morocco
-
-At a glance: Kingdom of Morocco is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Kingdom of Morocco across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
 ## Matter of Pagliughi
 
 At a glance: Matter of Pagliughi is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -343,26 +303,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Matter of Pagliughi across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)
-
-At a glance: Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
-## Ministry of Health and Family Welfare
-
-At a glance: Ministry of Health and Family Welfare is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Ministry of Health and Family Welfare across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
 ## People v. Brim
 
@@ -513,26 +453,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch NVIDIA CORP across sec-edgar-filings.; Check whether new sec-edgar-filings records repeat this name.
-
-## Republic of India
-
-At a glance: Republic of India is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Republic of India across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
-
-## Republic of Rwanda
-
-At a glance: Republic of Rwanda is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Republic of Rwanda across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
 ## Homeland Security Department
 

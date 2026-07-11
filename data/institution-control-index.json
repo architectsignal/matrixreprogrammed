@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T08:14:32.915Z",
+  "updated": "2026-07-11T09:17:48.463Z",
   "title": "Institution Control Tracker",
   "boundary": "Institution profiles describe public-record routes, partnerships and missing documents.",
   "profiles": [
@@ -100,7 +100,7 @@
         "foundations-ngos": 20,
         "public-private-contracts": 20
       },
-      "control_score": 100,
+      "control_score": 88,
       "level": "elite priority",
       "latest_records": [
         {
@@ -112,68 +112,9 @@
           "title": "Regulation for Federal Financial Assistance",
           "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
           "grade": "documented association"
-        },
-        {
-          "title": "Boosting Green Finance, Investment and Trade in Rwanda",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
-        },
-        {
-          "title": "Chattogram Water Supply Improvement Project",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
-        },
-        {
-          "title": "Transforming Agri-food Systems in Morocco",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
-        },
-        {
-          "title": "Health, Nutrition and Population Sector Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
-        },
-        {
-          "title": "Amaravati Integrated Urban Development Program",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
-        },
-        {
-          "title": "Second Bangladesh Green and Climate Resilient Development Credit",
-          "url": "https://search.worldbank.org/api/v2/projects",
-          "grade": "documented association"
         }
       ],
       "relationship_candidates": [
-        {
-          "id": "object-object__people-s-republic-of-bangladesh",
-          "from": "People's Republic of Bangladesh",
-          "to": "[object Object]",
-          "count": 3,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2",
-            "world-bank-projects-p180283-4",
-            "world-bank-projects-p180439-6"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 27,
-          "grade": "candidate",
-          "relationship_type": "repeated public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
         {
           "id": "federal-procurement-policy-office__management-and-budget-office",
           "from": "Management and Budget Office",
@@ -276,87 +217,6 @@
             "policy",
             "emergency_power",
             "identity_access"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "object-object__republic-of-rwanda",
-          "from": "Republic of Rwanda",
-          "to": "[object Object]",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p505244-1"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "chattogram-water-supply-and-sewerage-authority__people-s-republic-of-bangladesh",
-          "from": "Chattogram Water Supply and Sewerage Authority",
-          "to": "People's Republic of Bangladesh",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "chattogram-water-supply-and-sewerage-authority__object-object",
-          "from": "Chattogram Water Supply and Sewerage Authority",
-          "to": "[object Object]",
-          "count": 1,
-          "lanes": [
-            "world-bank-projects"
-          ],
-          "record_types": [
-            "global_project_record"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "world-bank-projects-p176429-2"
-          ],
-          "control_layers": [
-            "development_finance",
-            "infrastructure",
-            "global_money"
           ],
           "score": 9,
           "grade": "candidate",

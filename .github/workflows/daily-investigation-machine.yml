@@ -2,6 +2,13 @@ name: Daily Investigation Machine
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/daily-investigation-machine.yml'
+      - 'scripts/run-investigation-machine.js'
+      - 'data/investigation-source-registry.json'
   schedule:
     - cron: '20 5 * * *'
 

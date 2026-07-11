@@ -84,16 +84,28 @@ jobs:
           SEC_PUBLIC_CHANGE_LIMIT: '4000'
         run: node scripts/collect-sec-market-activity.js
 
-      - name: Build public tracker, graph and search records
+      - name: Rebuild canonical structured graph
         run: |
           node scripts/build-structured-investigation-data.js
           node scripts/refine-structured-entity-types.js
+
+      - name: Build and integrate market activity
+        run: |
           node scripts/build-market-activity-pages.js
           node scripts/integrate-market-activity-data.js
+
+      - name: Rebuild entity and relationship pages
+        run: |
           node scripts/build-entity-registry-page.js
           node scripts/build-relationship-registry-page.js
+
+      - name: Rebuild evidence network
+        run: |
           node scripts/build-evidence-network-map.js
           node scripts/wire-evidence-network-map.js
+
+      - name: Rebuild Search V3
+        run: |
           node scripts/repair-search-system.js
           node scripts/extend-search-with-structured-data.js
           node scripts/build-search-v3-index.js

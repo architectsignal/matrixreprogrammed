@@ -1,0 +1,156 @@
+name: Search V3 Evidence Assurance
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 7 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/investigation-ledger.json'
+      - 'data/daily-investigation-conclusions.json'
+      - 'data/weekly-investigation-conclusions.json'
+      - 'data/investigation-source-registry.json'
+      - 'data/source-change-public.json'
+      - 'data/document-extraction-index.json'
+      - 'data/investigation-knowledge-graph.json'
+      - 'data/entity-registry.json'
+      - 'data/relationship-registry.json'
+      - 'scripts/build-search-v3-index.js'
+      - 'scripts/build-search-v3-runtime.js'
+      - 'scripts/search-v3-runtime-template.js'
+      - 'scripts/search-v3-quality-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/search-v3-assurance.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-search-v3-index.js'
+      - 'scripts/build-search-v3-runtime.js'
+      - 'scripts/search-v3-runtime-template.js'
+      - 'scripts/search-v3-quality-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/search-v3-assurance.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: search-v3-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Build, test, publish and verify evidence-aware search
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild complete public search index
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/extend-search-with-documents.js
+          node scripts/extend-search-with-structured-data.js
+          node scripts/build-search-v3-index.js
+          node scripts/build-search-v3-runtime.js
+
+      - name: Validate ranking, filters, evidence boundaries and fallback
+        run: |
+          node scripts/search-v3-quality-test.js
+          node scripts/search-investigation-smoke-test.js
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js
+          test -f _site/search.html
+          test -f _site/search.js
+          test -f _site/search-index.json
+          test -f _site/data/search-facets.json
+          grep -q 'search-v3-filters' _site/search.html
+          grep -q 'SEARCH V3' _site/search.js
+          grep -q 'primarySource' _site/search-index.json
+          grep -q 'structured-relationship' _site/search-index.json
+          test ! -e _site/downloads/search-v3-build-report.json
+          test ! -e _site/downloads/search-v3-runtime-report.json
+          test ! -e _site/downloads/search-v3-quality-test.json
+
+      - name: Commit generated Search V3 outputs
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          git config user.name "matrix-search-bot"
+          git config user.email "actions@github.com"
+          git add \
+            search.html \
+            search.js \
+            search-index.json \
+            data/search-facets.json \
+            downloads/search-v3-build-report.json \
+            downloads/search-v3-runtime-report.json \
+            downloads/search-v3-quality-test.json \
+            downloads/search-investigation-smoke-test.json \
+            downloads/search-system-repair-report.json \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No Search V3 output changes to commit."
+            exit 0
+          fi
+          git commit -m "Build evidence-aware public search $(date -u +%F) [deploy]"
+          git push || (git pull --rebase --autostash origin main && git push)
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify live Search V3 routes and metadata
+        if: github.event_name != 'pull_request' && steps.commit.outputs.committed == 'true'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: |
+          for attempt in $(seq 1 36); do
+            page_ok=false
+            runtime_ok=false
+            index_ok=false
+            facets_ok=false
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/search.html?q=SEC+enforcement&grade=B&jurisdiction=United+States" | grep -q 'search-v3-filters' && page_ok=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/search.js" | grep -q 'SEARCH V3' && runtime_ok=true || true
+            live_index="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/search-index.json" || true)"
+            printf '%s' "$live_index" | grep -q '"searchVersion": 3' && printf '%s' "$live_index" | grep -q '"primarySource": true' && printf '%s' "$live_index" | grep -q 'structured-relationship' && index_ok=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/search-facets.json" | grep -q '"searchVersion": 3' && facets_ok=true || true
+            if [ "$page_ok" = true ] && [ "$runtime_ok" = true ] && [ "$index_ok" = true ] && [ "$facets_ok" = true ]; then
+              echo "Search V3 is live with evidence filters, primary-source metadata and structured relationships."
+              exit 0
+            fi
+            echo "Waiting for Search V3 production deployment ($attempt/36)…"
+            sleep 20
+          done
+          echo "Production did not expose all Search V3 outputs within the verification window."
+          exit 1
+
+      - name: Upload Search V3 reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: search-v3-${{ github.run_id }}
+          path: |
+            downloads/search-v3-build-report.json
+            downloads/search-v3-runtime-report.json
+            downloads/search-v3-quality-test.json
+            downloads/search-investigation-smoke-test.json
+          if-no-files-found: ignore
+          retention-days: 60

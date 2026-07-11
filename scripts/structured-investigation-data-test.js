@@ -87,8 +87,10 @@ check('evidence boundary remains explicit', /does not|not convert|not establish/
 const entityPagePath = path.join(root, 'entity-registry.html');
 const relationshipPagePath = path.join(root, 'relationship-registry.html');
 const entityPage = fs.existsSync(entityPagePath) ? fs.readFileSync(entityPagePath, 'utf8') : '';
+const entityCards = entityPage.match(/<article class="entity-card"[^>]*>/g) || [];
+const duplicateAnchorCard = entityCards.find(card => (card.match(/\sid="[^"]+"/g) || []).length !== 1 || (card.match(/\sdata-entity-id="[^"]+"/g) || []).length !== 1);
 check('entity registry page generated', /ENTITY REGISTRY/.test(entityPage), 'entity-registry.html missing or incomplete');
-check('entity anchors unique and not duplicated', !/<article[^>]*\bid="[^"]+"[^>]*\bid="/i.test(entityPage) && (entityPage.match(/data-entity-id=/g) || []).length === Math.min(graph.entities?.length || 0, 500), 'duplicate or missing entity anchors');
+check('entity anchors unique and not duplicated', !duplicateAnchorCard && entityCards.length === Math.min(graph.entities?.length || 0, 500), duplicateAnchorCard || `cards ${entityCards.length}`);
 check('relationship registry page generated', fs.existsSync(relationshipPagePath) && /RELATIONSHIP REGISTRY/.test(fs.readFileSync(relationshipPagePath, 'utf8')), 'relationship-registry.html missing or incomplete');
 check('entity CSV generated', fs.existsSync(path.join(root, 'downloads', 'investigation-entities.csv')), 'entities CSV missing');
 check('relationship CSV generated', fs.existsSync(path.join(root, 'downloads', 'investigation-relationships.csv')), 'relationships CSV missing');

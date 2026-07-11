@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T12:53:43.495Z",
+  "updated": "2026-07-11T13:06:17.977Z",
   "summary": {
     "discoveredCandidates": 264,
     "checkedThisRun": 12,
@@ -18,7 +18,7 @@
       "originalFileName": "judg26498-chad-miller.pdf",
       "bytes": 331637,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-chad-miller.pdf"
       ],
@@ -33,7 +33,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Mon, 09 Mar 2026 21:47:45 GMT"
@@ -89,8 +89,8 @@
       "preservation": {
         "originalSha256": "71a3a8053e182934a63d80e770cca85d6f96616340dc4a43828cf80be89b9335",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/71a3a8053e182934a63d80e770cca85d6f96616340dc4a43828cf80be89b9335.pdf",
@@ -104,7 +104,7 @@
       "originalFileName": "2026-13996.pdf",
       "bytes": 258250,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://public-inspection.federalregister.gov/2026-13996.pdf?1783601118"
       ],
@@ -119,7 +119,7 @@
           "authority": "primary-official",
           "discoveredFrom": "source-monitor",
           "discoveredAt": "2026-07-11T12:51:22.471Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "\"1ff17b5e169306749044220741e0bb29\"",
           "lastModified": "Thu, 09 Jul 2026 12:45:19 GMT"
@@ -147,16 +147,12 @@
           "value": "25-CRB-0013-PR"
         },
         {
-          "type": "case-or-docket",
-          "value": "for"
-        },
-        {
           "type": "report",
           "value": "FR 61424"
         },
         {
-          "type": "report",
-          "value": "FR Doc"
+          "type": "federal-register",
+          "value": "2026-13996"
         }
       ],
       "extraction": {
@@ -183,8 +179,8 @@
       "preservation": {
         "originalSha256": "aeb34da6588c7ea5d75c67e0f4ceddf8030b4c8165fb9a74438f0a425f258427",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/aeb34da6588c7ea5d75c67e0f4ceddf8030b4c8165fb9a74438f0a425f258427.pdf",
@@ -198,7 +194,7 @@
       "originalFileName": "2026-14070.pdf",
       "bytes": 233818,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.govinfo.gov/content/pkg/FR-2026-07-13/pdf/2026-14070.pdf"
       ],
@@ -213,7 +209,7 @@
           "authority": "primary-official",
           "discoveredFrom": "source-monitor",
           "discoveredAt": "2026-07-11T12:51:22.471Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Sat, 11 Jul 2026 04:35:55 GMT"
@@ -240,14 +236,6 @@
         "pdf_version": "1.7"
       },
       "identifiers": [
-        {
-          "type": "case-or-docket",
-          "value": "PHMSA"
-        },
-        {
-          "type": "report",
-          "value": "FR Doc"
-        },
         {
           "type": "report",
           "value": "FR 1608"
@@ -277,8 +265,8 @@
       "preservation": {
         "originalSha256": "6f9f8bf79aaccb91ea301d46c03bda617f20b6cab503e05836b6b3ca1a239c71",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/6f9f8bf79aaccb91ea301d46c03bda617f20b6cab503e05836b6b3ca1a239c71.pdf",
@@ -292,7 +280,7 @@
       "originalFileName": "judg26545-lloyd.pdf",
       "bytes": 244413,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf"
       ],
@@ -307,7 +295,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Thu, 30 Apr 2026 17:23:31 GMT"
@@ -361,8 +349,8 @@
       "preservation": {
         "originalSha256": "1dd13bb46aace5b5f76aa59636226e2ae9973d0ea56452248d4a5b180db56f42",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/1dd13bb46aace5b5f76aa59636226e2ae9973d0ea56452248d4a5b180db56f42.pdf",
@@ -376,7 +364,7 @@
       "originalFileName": "judg26506-suzee-han.pdf",
       "bytes": 252965,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf"
       ],
@@ -391,7 +379,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Tue, 24 Mar 2026 18:59:12 GMT"
@@ -441,8 +429,8 @@
       "preservation": {
         "originalSha256": "6960ea14c65d98405708eb1526b9daa40f5547a455f7c5c180a41da039cf3491",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/6960ea14c65d98405708eb1526b9daa40f5547a455f7c5c180a41da039cf3491.pdf",
@@ -456,7 +444,7 @@
       "originalFileName": "26526-final-judgment-bongiorno.pdf",
       "bytes": 173743,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf"
       ],
@@ -471,7 +459,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Fri, 10 Apr 2026 17:44:15 GMT"
@@ -506,10 +494,6 @@
         {
           "type": "case-or-docket",
           "value": "1:21-"
-        },
-        {
-          "type": "report",
-          "value": "SEC website"
         }
       ],
       "extraction": {
@@ -536,8 +520,8 @@
       "preservation": {
         "originalSha256": "21062c3794165a26e8de00956a2a18ff0e8f562cf89cfc33f0731b7ded0d63b7",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/21062c3794165a26e8de00956a2a18ff0e8f562cf89cfc33f0731b7ded0d63b7.pdf",
@@ -551,7 +535,7 @@
       "originalFileName": "order26497.pdf",
       "bytes": 257525,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/order26497.pdf"
       ],
@@ -566,7 +550,7 @@
           "authority": "primary-official",
           "discoveredFrom": "source-monitor",
           "discoveredAt": "2026-07-11T12:51:22.471Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Fri, 06 Mar 2026 19:04:34 GMT"
@@ -597,78 +581,6 @@
         {
           "type": "case-or-docket",
           "value": "23cv0815-L-DDL"
-        },
-        {
-          "type": "report",
-          "value": "SEC replied"
-        },
-        {
-          "type": "report",
-          "value": "SEC filed"
-        },
-        {
-          "type": "report",
-          "value": "SEC expert"
-        },
-        {
-          "type": "report",
-          "value": "SEC also"
-        },
-        {
-          "type": "report",
-          "value": "SEC alleged"
-        },
-        {
-          "type": "report",
-          "value": "SEC claims"
-        },
-        {
-          "type": "report",
-          "value": "SEC contends"
-        },
-        {
-          "type": "report",
-          "value": "SEC had"
-        },
-        {
-          "type": "report",
-          "value": "SEC seeks"
-        },
-        {
-          "type": "report",
-          "value": "SEC must"
-        },
-        {
-          "type": "report",
-          "value": "SEC has"
-        },
-        {
-          "type": "report",
-          "value": "SEC showed"
-        },
-        {
-          "type": "report",
-          "value": "SEC civil"
-        },
-        {
-          "type": "report",
-          "value": "SEC may"
-        },
-        {
-          "type": "report",
-          "value": "SEC establishes"
-        },
-        {
-          "type": "report",
-          "value": "SEC relies"
-        },
-        {
-          "type": "report",
-          "value": "SEC calculated"
-        },
-        {
-          "type": "report",
-          "value": "SEC requests"
         }
       ],
       "extraction": {
@@ -695,8 +607,8 @@
       "preservation": {
         "originalSha256": "4ed5cb53b53914104fe6240e218eb75cd87999b427afce49160cd9bca0b4fea5",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/4ed5cb53b53914104fe6240e218eb75cd87999b427afce49160cd9bca0b4fea5.pdf",
@@ -710,7 +622,7 @@
       "originalFileName": "judg26498-puzzullo.pdf",
       "bytes": 515751,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26498-puzzullo.pdf"
       ],
@@ -725,7 +637,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Mon, 09 Mar 2026 21:36:58 GMT"
@@ -785,8 +697,8 @@
       "preservation": {
         "originalSha256": "71075e23fe7038c5177057732d9c8c26dfa61b6c819e5d8ccceee8a0c3335a7c",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/71075e23fe7038c5177057732d9c8c26dfa61b6c819e5d8ccceee8a0c3335a7c.pdf",
@@ -800,7 +712,7 @@
       "originalFileName": "judg26549-daveglo.pdf",
       "bytes": 301651,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26549-daveglo.pdf"
       ],
@@ -815,7 +727,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Tue, 05 May 2026 17:59:34 GMT"
@@ -870,8 +782,8 @@
       "preservation": {
         "originalSha256": "68517786b3f869614d6441d53a05381d403439e93d26dabe1d259b750629864c",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/68517786b3f869614d6441d53a05381d403439e93d26dabe1d259b750629864c.pdf",
@@ -885,7 +797,7 @@
       "originalFileName": "judg26550.pdf",
       "bytes": 444472,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26550.pdf"
       ],
@@ -900,7 +812,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Tue, 05 May 2026 20:23:14 GMT"
@@ -955,8 +867,8 @@
       "preservation": {
         "originalSha256": "5fb001c8d3d59b384a7b9d0e375a2bbd1cfa3e387b683a9ba9dc7dd55bb4bb76",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/5fb001c8d3d59b384a7b9d0e375a2bbd1cfa3e387b683a9ba9dc7dd55bb4bb76.pdf",
@@ -970,7 +882,7 @@
       "originalFileName": "judg26493.pdf",
       "bytes": 12844304,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf"
       ],
@@ -985,7 +897,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Thu, 26 Feb 2026 14:13:07 GMT"
@@ -1013,12 +925,7 @@
         "optimized": "no",
         "pdf_version": "1.6"
       },
-      "identifiers": [
-        {
-          "type": "report",
-          "value": "SEC website"
-        }
-      ],
+      "identifiers": [],
       "extraction": {
         "method": "pdftotext",
         "ocrUsed": false,
@@ -1043,8 +950,8 @@
       "preservation": {
         "originalSha256": "f57d360e4a64cc086c4022d2d9440ed1b1f3face28a8068656ffe1b52955f9cc",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/f57d360e4a64cc086c4022d2d9440ed1b1f3face28a8068656ffe1b52955f9cc.pdf",
@@ -1058,7 +965,7 @@
       "originalFileName": "judg26502.pdf",
       "bytes": 146698,
       "firstSeen": "2026-07-11T12:53:43.495Z",
-      "lastSeen": "2026-07-11T12:53:43.495Z",
+      "lastSeen": "2026-07-11T13:06:17.977Z",
       "sourceUrls": [
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf"
       ],
@@ -1073,7 +980,7 @@
           "authority": "primary-official",
           "discoveredFrom": "investigation-ledger",
           "discoveredAt": "2026-07-11T12:51:11.789Z",
-          "retrievedAt": "2026-07-11T12:53:43.495Z",
+          "retrievedAt": "2026-07-11T13:06:17.977Z",
           "httpStatus": 200,
           "etag": "",
           "lastModified": "Tue, 17 Mar 2026 18:02:56 GMT"
@@ -1101,10 +1008,6 @@
         {
           "type": "case-or-docket",
           "value": "2:23"
-        },
-        {
-          "type": "report",
-          "value": "SEC website"
         }
       ],
       "extraction": {
@@ -1131,8 +1034,8 @@
       "preservation": {
         "originalSha256": "5cfcef7e6d9081a2f8b4cfc1886b43bfec0c385292da8630d61ad78bdec6524d",
         "method": "github-actions-artifact",
-        "artifactName": "pdf-evidence-29153357053",
-        "workflowRunId": "29153357053",
+        "artifactName": "pdf-evidence-29153703936",
+        "workflowRunId": "29153703936",
         "repository": "architectsignal/matrixreprogrammed",
         "retentionDays": 90,
         "artifactPath": "document-archive/5cfcef7e6d9081a2f8b4cfc1886b43bfec0c385292da8630d61ad78bdec6524d.pdf",

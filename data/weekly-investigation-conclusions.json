@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "kind": "weekly",
+  "generatedAt": null,
+  "period": null,
+  "summary": {
+    "sourcesScheduled": 0,
+    "sourcesFetched": 0,
+    "sourceFailures": 0,
+    "changedSources": 0,
+    "findingsInWindow": 0,
+    "establishedWrongdoingFindings": 0,
+    "officialActionFindings": 0,
+    "documentOrLeakLeads": 0
+  },
+  "topConclusion": "The weekly deep investigation source registry is active and awaiting its first scheduled cross-source sweep.",
+  "patterns": {},
+  "establishedWrongdoing": [],
+  "officialActions": [],
+  "documentAndLeakLeads": [],
+  "strongestFindings": [],
+  "changedSources": [],
+  "sourceFailures": [],
+  "missingRecords": [],
+  "boundary": "Established wrongdoing is used only for the scope of a final official record. Charges are allegations. Leaks are leads until authenticated and corroborated."
+}

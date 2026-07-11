@@ -4,7 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'search-runtime-hardening-2026-07-10';
+const MINIMAL_REPAIR_VERSION = 'search-runtime-hardening-2026-07-11-investigation';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
@@ -51,8 +51,10 @@ function runRequired(label, script){
   repairs.push(label);
 }
 
+runRequired('built-investigation-pages', 'scripts/build-investigation-pages.js');
 runRequired('rebuilt-search-v2', 'scripts/build-free-ask-matrix-search.js');
 runRequired('hardened-search-runtime', 'scripts/harden-search-runtime.js');
+runRequired('extended-investigation-search', 'scripts/extend-search-with-investigations.js');
 
 ensureSearchPageMarker();
 ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
@@ -104,9 +106,10 @@ ensureText('llms.txt', 'Public Record Intake', '\n- Public Record Intake: /publi
 ensureText('llms.txt', 'Machine Digest', '\n- Machine Digest: /machine-digest.html\n- Record Events: /data/record-events.json\n- Entity Observations: /data/entity-observations.json\n');
 ensureText('llms.txt', 'Private Contractor Tracker', '\n- Private Contractor Tracker: /private-contractor-tracker.html\n- Private Contractor Intelligence JSON: /data/private-contractor-intelligence.json\n');
 ensureText('llms.txt', 'Daily Command Brief', '\n- Daily Command Brief: /daily-command-brief.html\n- Brief Quality: /brief-quality-report.html\n- Missing Records: /daily-missing-records.html\n- Billionaire Control Tracker: /billionaire-control-tracker.html\n- Institution Control Tracker: /institution-control-tracker.html\n- Subject Briefs: /subject-briefs.html\n- Contradiction Watch: /contradiction-watch.html\n- Elite Reports: /elite-reports.html\n');
+ensureText('llms.txt', 'Intelligent Investigation Machine', '\n- Intelligent Investigation Machine: /investigation-machine.html\n- Daily Investigation Conclusions: /daily-investigation-conclusions.html\n- Weekly Investigation Report: /weekly-investigation-report.html\n- Investigation Source Ledger: /investigation-source-ledger.html\n- Investigation Evidence Ledger JSON: /data/investigation-ledger.json\n');
 
 const js = exists('search.js') ? read('search.js') : '';
-const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)'];
+const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)','investigationQueryPrefill'];
 const missing = required.filter(marker => !js.includes(marker));
 if (missing.length) {
   console.error('SEARCH V2 REPAIR FAILED');
@@ -119,6 +122,7 @@ if (syntax.status !== 0) {
   console.error(syntax.stderr || syntax.stdout || 'node --check failed');
   process.exit(syntax.status || 1);
 }
+runRequired('verified-investigation-search', 'scripts/search-investigation-smoke-test.js');
 fs.mkdirSync(fp('downloads'), { recursive: true });
-write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'real Search V2 runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
-console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 runtime guard passed.');
+write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 plus investigation evidence runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
+console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 investigation runtime guard passed.');

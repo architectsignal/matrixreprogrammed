@@ -70,6 +70,33 @@
     "sourceType": "investigation-route"
   },
   {
+    "key": "source-changes.html",
+    "title": "Source Change Ledger",
+    "category": "Evidence Preservation",
+    "layer": "disclosure-black-files",
+    "url": "source-changes.html",
+    "description": "Public evidence-preservation ledger for additions, removals, source failures, restorations, retrieval dates and SHA-256 content hashes.",
+    "keywords": [
+      "information-narrative",
+      "Information / Narrative",
+      "elite-networks",
+      "Elite Networks",
+      "source change",
+      "page changed",
+      "record removed",
+      "record restored",
+      "change detection",
+      "snapshot",
+      "sha256",
+      "hash",
+      "evidence preservation",
+      "missing record",
+      "redaction log"
+    ],
+    "priority": 108,
+    "sourceType": "investigation-route"
+  },
+  {
     "key": "weekly-investigation-report.html",
     "title": "Weekly Investigation Report",
     "category": "Weekly Intelligence",
@@ -136,6 +163,24 @@
     ],
     "priority": 107,
     "sourceType": "investigation-route"
+  },
+  {
+    "url": "data/source-change-public.json",
+    "title": "Public Source Change Data JSON",
+    "category": "Machine Data",
+    "layer": "disclosure-black-files",
+    "priority": 102,
+    "description": "Machine-readable public source-change records with hashes, retrieval dates, additions, removals, restorations and evidence boundaries.",
+    "keywords": [
+      "source change json",
+      "hashes",
+      "retrieval date",
+      "addition",
+      "removal",
+      "restored source",
+      "evidence preservation"
+    ],
+    "sourceType": "json-feed"
   },
   {
     "url": "data/investigation-ledger.json",
@@ -205,7 +250,15 @@
       "parties",
       "legal",
       "stated",
-      "does"
+      "does",
+      "not",
+      "justify",
+      "unrelated",
+      "accusations",
+      "securities",
+      "exchange",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -261,7 +314,12 @@
       "not",
       "justify",
       "unrelated",
-      "accusations"
+      "accusations",
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -317,7 +375,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -373,7 +435,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -481,7 +547,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -537,7 +604,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -593,7 +661,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -649,7 +718,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -705,7 +775,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -761,7 +832,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -817,7 +889,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -873,7 +946,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -929,7 +1003,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -985,7 +1060,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1041,7 +1117,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1097,7 +1174,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1153,7 +1231,8 @@
       "securities",
       "exchange",
       "commission",
-      "litigation"
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1209,7 +1288,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1265,7 +1347,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1321,7 +1405,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1377,7 +1463,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1433,7 +1522,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1489,7 +1581,12 @@
       "not",
       "justify",
       "unrelated",
-      "accusations"
+      "accusations",
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1545,7 +1642,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1601,7 +1701,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1657,7 +1761,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1713,7 +1821,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1769,7 +1879,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1825,7 +1939,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1881,7 +1997,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1937,7 +2056,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -1993,7 +2115,12 @@
       "not",
       "justify",
       "unrelated",
-      "accusations"
+      "accusations",
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2049,7 +2176,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2105,7 +2235,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2161,7 +2294,11 @@
       "justify",
       "unrelated",
       "accusations",
-      "securities"
+      "securities",
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2217,7 +2354,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2273,7 +2412,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2329,7 +2471,10 @@
       "unrelated",
       "accusations",
       "securities",
-      "exchange"
+      "exchange",
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2385,7 +2530,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -2441,7 +2588,9 @@
       "accusations",
       "securities",
       "exchange",
-      "commission"
+      "commission",
+      "litigation",
+      "releases"
     ],
     "priority": 100,
     "sourceType": "investigation-finding"
@@ -18914,6 +19063,28 @@
       "Disclosure / Black Files",
       "speculation-review",
       "Speculation Review"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "evidence-network-map.html",
+    "title": "Interactive Evidence Network | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "evidence-network-map.html",
+    "description": "Interactive public-record map connecting investigation lanes, source platforms and evidence-bounded findings.",
+    "keywords": [
+      "identity-access",
+      "Identity / Access",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"

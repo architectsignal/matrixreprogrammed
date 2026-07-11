@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-07-11T10:20:29.613Z
+Generated: 2026-07-11T12:29:13.227Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -11,7 +11,7 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - sourcesScheduled: 12
 - sourcesFetched: 12
 - sourceFailures: 0
-- changedSources: 3
+- changedSources: 4
 - findingsInWindow: 411
 - establishedWrongdoingFindings: 18
 - officialActionFindings: 0

@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T12:29:37.642Z",
+  "checks": [
+    {
+      "name": "registry loaded",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "snapshot index generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all checked sources retain provenance",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "change ledger generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public change feed generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public feed has evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public change page generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page states evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public route indexed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public JSON indexed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "change records are indexed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "technical error strings excluded from public feed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hashes are SHA-256 when present",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

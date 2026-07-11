@@ -9,10 +9,14 @@ on:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'scripts/run-investigation-machine.js'
       - 'scripts/monitor-source-changes.js'
+      - 'scripts/harden-source-change-preservation.js'
       - 'scripts/source-change-preservation-test.js'
+      - 'scripts/source-change-preservation-hardening-test.js'
+      - 'scripts/build-cloudflare-output.js'
       - 'scripts/extend-search-with-investigations.js'
       - 'scripts/repair-investigation-source-registry.js'
       - 'data/investigation-source-registry.json'
+      - 'evidence-archive/**'
   schedule:
     - cron: '20 5 * * *'
 
@@ -28,9 +32,9 @@ concurrency:
 
 jobs:
   investigate:
-    name: Preserve sources, search records and publish daily conclusions
+    name: Search records, preserve source changes and publish daily conclusions
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 65
 
     steps:
       - name: Checkout current main
@@ -47,6 +51,14 @@ jobs:
       - name: Repair moved official source routes
         run: node scripts/repair-investigation-source-registry.js
 
+      - name: Run daily investigation source search
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        run: node scripts/run-investigation-machine.js daily
+
       - name: Preserve registered sources and detect changes
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
@@ -55,13 +67,13 @@ jobs:
           SOURCE_MONITOR_TIMEOUT_MS: '25000'
         run: node scripts/monitor-source-changes.js daily
 
-      - name: Run daily investigation source search
+      - name: Harden preservation, retain failure history and download linked evidence
         env:
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           INVESTIGATION_MODE: daily
-          INVESTIGATION_CONCURRENCY: '4'
-          INVESTIGATION_TIMEOUT_MS: '25000'
-        run: node scripts/run-investigation-machine.js daily
+          SOURCE_DOCUMENTS_PER_RUN: '4'
+          SOURCE_DOCUMENT_MAX_BYTES: '12582912'
+          SOURCE_DOCUMENT_TIMEOUT_MS: '35000'
+        run: node scripts/harden-source-change-preservation.js daily
 
       - name: Refresh wider live intelligence and conclusions
         run: |
@@ -77,6 +89,7 @@ jobs:
           node scripts/extend-search-with-investigations.js
           node scripts/search-investigation-smoke-test.js
           node scripts/source-change-preservation-test.js
+          node scripts/source-change-preservation-hardening-test.js
           node scripts/final-investigation-hardening.js
 
       - name: Advisory site audit
@@ -102,6 +115,7 @@ jobs:
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
+            evidence-archive \
             investigation-machine.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
@@ -119,7 +133,9 @@ jobs:
             downloads/investigation-source-ledger.md \
             downloads/investigation-machine-run-report.json \
             downloads/source-change-monitor-report.json \
+            downloads/source-change-preservation-hardening-report.json \
             downloads/source-change-preservation-test.json \
+            downloads/source-change-preservation-hardening-test.json \
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
@@ -139,7 +155,9 @@ jobs:
           path: |
             downloads/investigation-machine-run-report.json
             downloads/source-change-monitor-report.json
+            downloads/source-change-preservation-hardening-report.json
             downloads/source-change-preservation-test.json
+            downloads/source-change-preservation-hardening-test.json
             downloads/search-investigation-smoke-test.json
             downloads/daily-investigation-conclusions.md
             downloads/investigation-source-ledger.md

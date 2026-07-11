@@ -1,0 +1,147 @@
+name: Source Preservation Hardening Assurance
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/harden-source-change-preservation.js'
+      - 'scripts/source-change-preservation-hardening-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-archive/**'
+      - '.github/workflows/source-preservation-hardening-assurance.yml'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/harden-source-change-preservation.js'
+      - 'scripts/source-change-preservation-hardening-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-archive/**'
+      - '.github/workflows/source-preservation-hardening-assurance.yml'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: source-preservation-hardening-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify evidence fields, private boundaries, search and production route
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate preservation scripts and workflow YAML
+        run: |
+          node --check scripts/harden-source-change-preservation.js
+          node --check scripts/source-change-preservation-hardening-test.js
+          ruby -e "require 'yaml'; Dir['.github/workflows/{daily-investigation-machine,weekly-investigation-machine,source-preservation-hardening-assurance}.yml'].each { |f| YAML.load_file(f); puts \"valid #{f}\" }"
+
+      - name: Run preservation boundary tests
+        run: |
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/harden-source-change-preservation.js daily
+          node scripts/source-change-preservation-test.js
+          node scripts/source-change-preservation-hardening-test.js
+
+      - name: Build full Cloudflare output and search
+        run: |
+          mkdir -p downloads
+          set -o pipefail
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js 2>&1 | tee downloads/source-preservation-cloudflare-build.log
+          test -f _site/source-changes.html
+          test -f _site/data/source-change-public.json
+          test ! -e _site/evidence-archive
+          test ! -e _site/data/source-snapshots
+          test ! -e _site/data/source-snapshot-index.json
+          test ! -e _site/data/source-change-ledger.json
+          test ! -e _site/downloads/source-change-monitor-report.json
+
+      - name: Verify live public route and private exclusions
+        if: github.event_name == 'push'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_BUILD_SHA: ${{ github.sha }}
+        run: |
+          mkdir -p downloads
+          for attempt in $(seq 1 36); do
+            PAGE="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/source-changes.html" || true)"
+            if printf '%s' "$PAGE" | grep -q 'SOURCE CHANGE LEDGER' && printf '%s' "$PAGE" | grep -q 'Alternative explanation'; then
+              echo "Hardened source-change route is live."
+              break
+            fi
+            if [ "$attempt" -eq 36 ]; then
+              echo "Production did not expose the hardened source-change route within the verification window."
+              exit 1
+            fi
+            sleep 20
+          done
+          node <<'NODE'
+          const fs = require('fs');
+          const base = String(process.env.SITE_URL || '').replace(/\/$/, '');
+          const expectedSha = process.env.EXPECTED_BUILD_SHA || '';
+          const checks = [];
+          const add = (name, ok, detail = '') => checks.push({ name, ok: Boolean(ok), detail });
+          async function request(route) {
+            const response = await fetch(`${base}${route}`, { redirect: 'follow', headers: { accept: 'text/html,application/json,*/*', 'user-agent': 'MatrixSourcePreservationLiveProof/1.0' } });
+            return { response, body: await response.text() };
+          }
+          (async () => {
+            const page = await request('/source-changes.html');
+            add('public source-change route', page.response.ok && page.body.includes('SOURCE CHANGE LEDGER') && page.body.includes('Alternative explanation') && page.body.includes('Next record required'), `HTTP ${page.response.status}`);
+            const feedResponse = await request('/data/source-change-public.json');
+            let feed = null; try { feed = JSON.parse(feedResponse.body); } catch {}
+            add('public source-change JSON', feedResponse.response.ok && feed && Array.isArray(feed.changes), `HTTP ${feedResponse.response.status}`);
+            add('public evidence boundary', /not automatic evidence|not proof|does not establish/i.test(feed?.evidenceBoundary || ''), feed?.evidenceBoundary || 'missing');
+            const requiredFields = ['title','sourceUrl','retrievalDate','evidenceGrade','factualStatus','established','notEstablished','mechanism','implication','alternativeExplanation','nextRecordRequired','correctionRoute'];
+            add('public evidence fields', !feed?.changes?.length || requiredFields.every(field => feed.changes.every(change => change[field] !== undefined && change[field] !== null)), `${feed?.changes?.length || 0} changes`);
+            const searchResponse = await request('/search-index.json');
+            let search = null; try { search = JSON.parse(searchResponse.body); } catch {}
+            add('source changes indexed', Array.isArray(search) && search.some(item => item?.url === 'source-changes.html'), `HTTP ${searchResponse.response.status}`);
+            for (const route of ['/evidence-archive/manifest.json','/data/source-snapshot-index.json','/data/source-change-ledger.json','/data/source-snapshots/','/downloads/source-change-monitor-report.json']) {
+              const privateResponse = await request(route);
+              add(`private route excluded ${route}`, !privateResponse.response.ok, `HTTP ${privateResponse.response.status}`);
+            }
+            const statusResponse = await request('/deploy-status.json');
+            let status = null; try { status = JSON.parse(statusResponse.body); } catch {}
+            add('live build SHA available', Boolean(status?.buildSha), status?.buildSha || 'missing');
+            const report = { ok: checks.every(check => check.ok), generatedAt: new Date().toISOString(), site: base, expectedSha, liveSha: status?.buildSha || null, checks };
+            fs.writeFileSync('downloads/source-preservation-live-verification.json', JSON.stringify(report, null, 2));
+            if (!report.ok) {
+              checks.filter(check => !check.ok).forEach(check => console.error(`FAILED: ${check.name}: ${check.detail}`));
+              process.exit(1);
+            }
+            console.log(`Live source preservation verification passed: ${checks.length} checks.`);
+          })().catch(error => { console.error(error.stack || error.message); process.exit(1); });
+          NODE
+
+      - name: Upload preservation assurance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-preservation-hardening-${{ github.run_id }}
+          path: |
+            downloads/source-change-preservation-test.json
+            downloads/source-change-preservation-hardening-test.json
+            downloads/source-change-preservation-hardening-report.json
+            downloads/source-preservation-cloudflare-build.log
+            downloads/source-preservation-live-verification.json
+          if-no-files-found: ignore
+          retention-days: 30

@@ -20,7 +20,7 @@ const checks = [];
 function check(name, ok, detail = '') { checks.push({ name, ok: Boolean(ok), detail: ok ? '' : detail }); if (!ok) failures.push({ name, detail }); }
 
 const requiredEntityTypes = ['Person','Organization','Company','GovernmentAgency','Contractor','Foundation','Trust','Contract','Payment','Sanction','CourtCase','Investigation','Document','Finding','MissingRecord','Source','LegalAuthority','Decision','PublicGroup'];
-const requiredRelationshipTypes = ['published','retrievedFrom','supports','mentions','subjectOf','affiliatedWith','owns','contractsWith','awardedTo','paid','sanctioned','partyTo','investigates','governedBy','decided','affects','overseenBy','missingFrom','changedAt','relatedTo'];
+const requiredRelationshipTypes = ['published','operatedBy','retrievedFrom','supports','mentions','subjectOf','affiliatedWith','owns','contractsWith','awardedTo','paid','sanctioned','partyTo','investigates','governedBy','decided','affects','overseenBy','missingFrom','changedAt','relatedTo'];
 const requiredEvidenceFields = ['sourceId','sourceTitle','sourceUrl','retrievalDate','evidenceGrade','factualStatus','establishes','doesNotEstablish','reviewStatus'];
 check('schema version present', /^\d+\.\d+\.\d+$/.test(String(schema.schemaVersion || '')), String(schema.schemaVersion || 'missing'));
 check('all required entity types defined', requiredEntityTypes.every(type => schema.entityTypes?.[type]?.followTheMoney), JSON.stringify(requiredEntityTypes.filter(type => !schema.entityTypes?.[type]?.followTheMoney)));
@@ -42,7 +42,7 @@ for (const entity of graph.entities || []) {
   check(`entity review status present: ${entity.id}`, Boolean(entity.reviewStatus), entity.name);
   check(`entity evidence attached: ${entity.id}`, Array.isArray(entity.evidenceRefs) && entity.evidenceRefs.length > 0, entity.name);
   for (const evidence of entity.evidenceRefs || []) {
-    const missing = ['sourceId','sourceTitle','retrievalDate','evidenceGrade','factualStatus','establishes','doesNotEstablish','reviewStatus'].filter(field => evidence[field] == null || evidence[field] === '');
+    const missing = requiredEvidenceFields.filter(field => evidence[field] == null || evidence[field] === '');
     check(`entity evidence fields: ${entity.id}`, missing.length === 0, JSON.stringify(missing));
     check(`entity evidence grade valid: ${entity.id}`, /^[ABCD]$/.test(String(evidence.evidenceGrade || '')), evidence.evidenceGrade);
   }
@@ -64,12 +64,19 @@ for (const relationship of graph.relationships || []) {
   if (relationship.type === 'mentions') {
     check(`mention boundary explicit: ${relationship.id}`, /mention|does not|not establish|guilt|ownership|payment|coordination/i.test(String(relationship.doesNotEstablish || '')), relationship.doesNotEstablish);
   }
+  if (relationship.type === 'operatedBy') {
+    check(`source operator relationship registry-defined: ${relationship.id}`, relationship.reviewStatus === 'registry-defined' && relationship.extractionMethod === 'registered-source-label' && Number(relationship.confidence) === 1, JSON.stringify({ reviewStatus: relationship.reviewStatus, extractionMethod: relationship.extractionMethod, confidence: relationship.confidence }));
+    check(`source operator boundary explicit: ${relationship.id}`, /does not establish|does not|not establish|wrongdoing|responsibility/i.test(String(relationship.doesNotEstablish || '')), relationship.doesNotEstablish);
+  }
   if (strongTypes.has(relationship.type) && relationship.reviewStatus !== 'human-reviewed') {
     check(`strong relationship requires reviewed or exact source field: ${relationship.id}`, /official-structured-field|human-reviewed|exact-identifier/i.test(String(relationship.extractionMethod || '')), JSON.stringify({ type: relationship.type, reviewStatus: relationship.reviewStatus, extractionMethod: relationship.extractionMethod }));
   }
 }
 
 check('registered sources represented', (graph.countsByType?.Source || 0) > 0, JSON.stringify(graph.countsByType || {}));
+check('government agencies represented', (graph.countsByType?.GovernmentAgency || 0) > 0, JSON.stringify(graph.countsByType || {}));
+check('source operator links represented', (graph.countsByRelationship?.operatedBy || 0) > 0, JSON.stringify(graph.countsByRelationship || {}));
+check('each registered source has an operator link', (graph.countsByRelationship?.operatedBy || 0) >= (graph.countsByType?.Source || 0), JSON.stringify({ sources: graph.countsByType?.Source, operatedBy: graph.countsByRelationship?.operatedBy }));
 check('findings represented', (graph.countsByType?.Finding || 0) > 0, JSON.stringify(graph.countsByType || {}));
 if ((graph.documents || []).length > 0) {
   check('documents represented', (graph.countsByType?.Document || 0) > 0, JSON.stringify(graph.countsByType || {}));
@@ -77,18 +84,23 @@ if ((graph.documents || []).length > 0) {
 }
 if ((graph.missingRecords || []).length > 0) check('missing records represented', (graph.countsByType?.MissingRecord || 0) > 0, JSON.stringify(graph.countsByType || {}));
 check('evidence boundary remains explicit', /does not|not convert|not establish/i.test(String(graph.evidenceBoundary || '')), graph.evidenceBoundary);
-check('entity registry page generated', fs.existsSync(path.join(root, 'entity-registry.html')) && /ENTITY REGISTRY/.test(fs.readFileSync(path.join(root, 'entity-registry.html'), 'utf8')), 'entity-registry.html missing or incomplete');
-check('relationship registry page generated', fs.existsSync(path.join(root, 'relationship-registry.html')) && /RELATIONSHIP REGISTRY/.test(fs.readFileSync(path.join(root, 'relationship-registry.html'), 'utf8')), 'relationship-registry.html missing or incomplete');
+const entityPagePath = path.join(root, 'entity-registry.html');
+const relationshipPagePath = path.join(root, 'relationship-registry.html');
+const entityPage = fs.existsSync(entityPagePath) ? fs.readFileSync(entityPagePath, 'utf8') : '';
+check('entity registry page generated', /ENTITY REGISTRY/.test(entityPage), 'entity-registry.html missing or incomplete');
+check('entity anchors unique and not duplicated', !/<article[^>]*\bid="[^"]+"[^>]*\bid="/i.test(entityPage) && (entityPage.match(/data-entity-id=/g) || []).length === Math.min(graph.entities?.length || 0, 500), 'duplicate or missing entity anchors');
+check('relationship registry page generated', fs.existsSync(relationshipPagePath) && /RELATIONSHIP REGISTRY/.test(fs.readFileSync(relationshipPagePath, 'utf8')), 'relationship-registry.html missing or incomplete');
 check('entity CSV generated', fs.existsSync(path.join(root, 'downloads', 'investigation-entities.csv')), 'entities CSV missing');
 check('relationship CSV generated', fs.existsSync(path.join(root, 'downloads', 'investigation-relationships.csv')), 'relationships CSV missing');
 check('entity registry indexed in search', Array.isArray(search) && search.some(item => item?.url === 'entity-registry.html'), 'entity registry search route missing');
 check('relationship registry indexed in search', Array.isArray(search) && search.some(item => item?.url === 'relationship-registry.html'), 'relationship registry search route missing');
 check('structured entity records indexed', Array.isArray(search) && search.some(item => item?.sourceType === 'structured-entity'), 'structured entity search entries missing');
+check('government agency records indexed', Array.isArray(search) && search.some(item => item?.sourceType === 'structured-entity' && item?.entityType === 'GovernmentAgency'), 'government agency search entries missing');
 const serializedPublic = JSON.stringify({ graph, entityRegistry, relationshipRegistry });
 check('no raw document text exposed in graph', !/"(?:rawText|normalizedText|fullText|ocrText)"\s*:/i.test(serializedPublic), 'raw document text field exposed');
 check('no credential-shaped fields exposed', !/"(?:apiKey|api_key|token|secret|password|authorization)"\s*:/i.test(serializedPublic), 'credential-shaped field exposed');
 
-const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), summary: { checks: checks.length, failures: failures.length, entities: graph.entities?.length || 0, relationships: graph.relationships?.length || 0 }, checks, failures };
+const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), summary: { checks: checks.length, failures: failures.length, entities: graph.entities?.length || 0, relationships: graph.relationships?.length || 0, governmentAgencies: graph.countsByType?.GovernmentAgency || 0, contractors: graph.countsByType?.Contractor || 0, operatorLinks: graph.countsByRelationship?.operatedBy || 0 }, checks, failures };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report.summary, null, 2));

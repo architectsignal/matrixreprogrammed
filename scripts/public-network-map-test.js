@@ -55,7 +55,8 @@ if (fs.existsSync(path.join(root, 'evidence-network-map.js'))) {
 }
 if (fs.existsSync(path.join(root, 'evidence-network-map.html'))) {
   const html = read('evidence-network-map.html');
-  for (const marker of ['id="map-mode"','id="map-relationship"','id="map-factual-status"','id="map-entity-type"','id="map-review"','id="map-confidence"','id="map-date-from"','id="map-date-to"','id="map-share"','id="map-clear-path"','What the record establishes','Textual mentions']) assert(`page marker ${marker}`, html.includes(marker), marker);
+  for (const marker of ['id="map-mode"','id="map-relationship"','id="map-factual-status"','id="map-entity-type"','id="map-review"','id="map-confidence"','id="map-date-from"','id="map-date-to"','id="map-share"','id="map-clear-path"','Textual mentions']) assert(`page marker ${marker}`, html.includes(marker), marker);
+  assert('page explains established fact field', /what the record establishes/i.test(html), 'what the record establishes');
   assert('mobile presentation', html.includes('@media(max-width:600px)') && html.includes('@media(max-width:420px)'), 'responsive breakpoints');
   assert('public correction and audit routes', html.includes('relationship-registry.html') && html.includes('downloads/evidence-network-map.csv'), 'registry and CSV');
 }

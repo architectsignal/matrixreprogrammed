@@ -1,4 +1,4 @@
-# Phase 5 production release marker
+# Phase 5 and gated OSINT production release
 
 This non-public marker requests a guarded production deployment after all repository gates pass.
 

@@ -13,6 +13,8 @@ on:
       - 'scripts/sec-market-utils.js'
       - 'scripts/build-market-activity-pages.js'
       - 'scripts/integrate-market-activity-data.js'
+      - 'scripts/sync-market-activity-graph.js'
+      - 'scripts/build-entity-registry-page.js'
       - 'scripts/patch-market-watchlists-worker.js'
       - 'scripts/market-activity-test.js'
       - 'market-activity.js'
@@ -30,6 +32,8 @@ on:
       - 'scripts/sec-market-utils.js'
       - 'scripts/build-market-activity-pages.js'
       - 'scripts/integrate-market-activity-data.js'
+      - 'scripts/sync-market-activity-graph.js'
+      - 'scripts/build-entity-registry-page.js'
       - 'scripts/patch-market-watchlists-worker.js'
       - 'scripts/market-activity-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -149,9 +153,12 @@ jobs:
             data/market-position-changes \
             data/entity-registry.json \
             data/relationship-registry.json \
+            data/investigation-knowledge-graph.json \
             market-activity.html \
             market-activity \
             downloads/market-activity.csv \
+            downloads/investigation-entities.csv \
+            downloads/investigation-relationships.csv \
             entity-registry.html \
             relationship-registry.html \
             evidence-network-map.html \
@@ -221,6 +228,7 @@ jobs:
             downloads/phase6-data-integration.json
             downloads/phase6-worker-patch.json
             downloads/market-cloudflare-build.log
+            scripts/reports/market-graph-sync-report.json
             data/market-activity.json
             data/market-activity-state.json
             data/market-holdings

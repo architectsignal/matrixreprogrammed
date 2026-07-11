@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-11T13:29:27.165Z",
+  "generatedAt": "2026-07-11T13:53:11.429Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "2693 entries"
+      "detail": "1457 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "2693 unique routes"
+      "detail": "1457 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -115,22 +115,22 @@
     {
       "name": "local query corruption bribery fraud official enforcement",
       "ok": true,
-      "detail": "entity-registry.html#entity-finding-18cc99b8cc7fdd992e408813, investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news"
+      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, investigation-machine.html"
     },
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "entity-registry.html#entity-finding-ae8bec742bcfd76417dda139, investigation-source-ledger.html?source=wikileaks-publications, entity-registry.html#entity-finding-bcd74225adf67b8d3cc242a2"
+      "detail": "investigation-source-ledger.html?source=wikileaks-publications, investigation-source-ledger.html?source=federal-register-latest, investigation-machine.html"
     },
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "entity-registry.html#entity-entity-governmentagency-d1b189399623fd473eb0, investigation-source-ledger.html?source=usaspending-recent-contracts, entity-registry.html#entity-source-usaspending-recent-contracts"
+      "detail": "investigation-source-ledger.html?source=usaspending-recent-contracts, investigation-source-ledger.html?source=gao-reports, investigation-machine.html"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=doj-epstein-disclosures, entity-registry.html#entity-source-doj-epstein-disclosures, entity-registry.html#entity-courtcase-ff25c5e9090ffc33fd39"
+      "detail": "investigation-source-ledger.html?source=doj-epstein-disclosures, epstein-files.html, data/investigation-source-registry.json"
     },
     {
       "name": "local query SEC filings ownership enforcement",

@@ -97,6 +97,7 @@ require('./patch-membership-auth-ui.js');
 require('./hide-internal-public-controls.js');
 require('./hide-commercial-strategy-blocks.js');
 require('./final-public-editorial-hardening.js');
+require('./final-public-route-cleanup.js');
 rm(out); ensure(out); walk(root);
 ensureArchiveSearchMarker(path.join(out, 'search.html'));
 ensureArchiveSearchMarker(path.join(out, 'search'));

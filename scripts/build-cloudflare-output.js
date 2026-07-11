@@ -121,6 +121,7 @@ ensureArchiveSearchMarker(path.join(root, 'search.html'));
 require('./patch-membership-auth-ui.js');
 require('./hide-internal-public-controls.js');
 require('./hide-commercial-strategy-blocks.js');
+require('./final-public-editorial-hardening.js');
 rm(out);
 ensure(out);
 walk(root);

@@ -11,6 +11,10 @@ The public website does not execute Holehe, SpiderFoot or h8mail inside Cloudfla
 - Lawful-use and no-minor confirmations required.
 - No raw recovery data, passwords, hashes, phone numbers, IP addresses, credentials or breach rows are returned.
 
+## Activation status
+
+The website page, member/admin gates, encrypted D1 queue and private-runner API can deploy before the local runner is online. The tools become operational only after both Worker secrets are configured and this private runner sends a recent heartbeat. The page reports that state truthfully.
+
 ## Required Cloudflare secrets
 
 Set these on the `matrixreprogrammed` Worker:

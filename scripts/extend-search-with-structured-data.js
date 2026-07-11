@@ -4,7 +4,6 @@ const path = require('path');
 const root = process.cwd();
 const indexPath = path.join(root, 'search-index.json');
 const graphPath = path.join(root, 'data', 'investigation-knowledge-graph.json');
-const registryPagePath = path.join(root, 'entity-registry.html');
 const searchPagePath = path.join(root, 'search.html');
 
 function readJson(file, fallback) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; } }
@@ -77,7 +76,7 @@ const reviewWeight = {
   'unreviewed-source-document': 4,
   'machine-extracted-unreviewed': 1
 };
-const typeWeight = { GovernmentAgency: 15, Company: 14, Person: 14, Contract: 13, Payment: 13, CourtCase: 13, Sanction: 13, Investigation: 12, Document: 11, MissingRecord: 11, Source: 9, Finding: 7 };
+const typeWeight = { GovernmentAgency: 15, Contractor: 15, Company: 14, Person: 14, Contract: 13, Payment: 13, CourtCase: 13, Sanction: 13, Investigation: 12, Foundation: 12, Trust: 12, Document: 11, MissingRecord: 11, Source: 9, Finding: 7 };
 
 for (const entity of graph.entities || []) {
   if (!entity?.id || !entity?.name) continue;
@@ -103,16 +102,6 @@ for (const entity of graph.entities || []) {
 
 const finalIndex = [...map.values()].sort((a, b) => Number(b.priority || 0) - Number(a.priority || 0) || String(a.title || '').localeCompare(String(b.title || '')));
 fs.writeFileSync(indexPath, JSON.stringify(finalIndex, null, 2));
-
-if (fs.existsSync(registryPagePath)) {
-  let html = fs.readFileSync(registryPagePath, 'utf8');
-  let entityIndex = 0;
-  html = html.replace(/<article class="entity-card"/g, match => {
-    const entity = graph.entities?.[entityIndex++];
-    return entity ? `<article class="entity-card" id="entity-${String(entity.id).replace(/[^a-zA-Z0-9._-]/g, '-')}" data-entity-id="${String(entity.id).replace(/[^a-zA-Z0-9._-]/g, '-')}"` : match;
-  });
-  fs.writeFileSync(registryPagePath, html);
-}
 
 if (fs.existsSync(searchPagePath)) {
   let html = fs.readFileSync(searchPagePath, 'utf8');

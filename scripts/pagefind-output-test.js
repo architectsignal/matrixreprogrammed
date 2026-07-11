@@ -26,7 +26,7 @@ const files = recursiveFiles(pagefind);
 const relative = files.map(file => path.relative(pagefind, file).replace(/\\/g, '/'));
 check('Pagefind directory exists', fs.existsSync(pagefind));
 check('Pagefind JavaScript entry exists', relative.includes('pagefind.js'));
-check('Pagefind WebAssembly engine exists', relative.some(file => /\.wasm$/i.test(file)));
+check('Pagefind runtime package exists', relative.includes('pagefind.js') && relative.includes('pagefind-entry.json'));
 check('Pagefind metadata exists', relative.some(file => /\.pf_meta$/i.test(file)));
 check('Pagefind index shards exist', relative.some(file => /\.pf_index$/i.test(file)));
 check('Pagefind fragments exist', relative.some(file => /\.pf_fragment$/i.test(file)));
@@ -35,7 +35,16 @@ check('Search page includes fallback runtime', fs.existsSync(path.join(site, 'se
 check('Pagefind fallback runtime is deployed', fs.existsSync(path.join(site, 'pagefind-fallback.js')));
 
 const failed = checks.filter(item => !item.pass);
-const report = { ok: failed.length === 0, generatedAt: new Date().toISOString(), site, files: relative.length, checks: checks.length, failures: failed.length, results: checks };
+const report = {
+  ok: failed.length === 0,
+  generatedAt: new Date().toISOString(),
+  site,
+  files: relative.length,
+  generatedFiles: relative,
+  checks: checks.length,
+  failures: failed.length,
+  results: checks
+};
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 console.log(`Pagefind output test: ${checks.length - failed.length}/${checks.length} checks passed across ${relative.length} generated files.`);
 if (failed.length) process.exit(1);

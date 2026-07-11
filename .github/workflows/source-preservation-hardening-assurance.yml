@@ -65,7 +65,7 @@ jobs:
         run: |
           mkdir -p downloads
           set -o pipefail
-          SOURCE_DOCUMENTS_PER_RUN=0 npm run build:cloudflare 2>&1 | tee downloads/source-preservation-cloudflare-build.log
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js 2>&1 | tee downloads/source-preservation-cloudflare-build.log
           test -f _site/source-changes.html
           test -f _site/data/source-change-public.json
           test ! -e _site/evidence-archive

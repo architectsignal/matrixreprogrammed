@@ -71,7 +71,9 @@ jobs:
 
       - name: Build full Cloudflare output
         run: |
-          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js
+          mkdir -p downloads
+          set -o pipefail
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js 2>&1 | tee downloads/phase5-cloudflare-build.log
           test -f _site/evidence-network-map.html
           test -f _site/evidence-network-map.js
           test -f _site/data/evidence-network-map.json
@@ -177,6 +179,7 @@ jobs:
             downloads/evidence-network-map-build.json
             downloads/evidence-network-map-wiring.json
             downloads/public-network-map-test.json
+            downloads/phase5-cloudflare-build.log
             downloads/public-network-map-live-verification.json
           if-no-files-found: ignore
           retention-days: 30

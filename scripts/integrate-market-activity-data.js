@@ -15,12 +15,19 @@ const writeJson = (file, value) => {
 const slug = value => String(value || '').toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'record';
 const hash = value => crypto.createHash('sha256').update(String(value)).digest('hex').slice(0, 16);
 const first = (value, fallback = '') => Array.isArray(value) ? (value[0] || fallback) : (value || fallback);
+const unique = values => [...new Set((values || []).filter(Boolean))];
+const validDate = value => {
+  const date = new Date(value || 0);
+  return Number.isFinite(date.getTime()) && date.getTime() > 0 ? date.toISOString() : null;
+};
 
+const schema = readJson('data/investigation-entity-schema.json', { entityTypes: {}, relationshipTypes: {} });
 const activity = readJson('data/market-activity.json', { insiderTransactions: [], positionChanges: [] });
 const insiderTransactions = (activity.insiderTransactions || []).map(record => ({
   ...record,
   recordType: 'insider-transaction',
   subjectName: first(record.reportingOwnerNames, first(record.reportingOwners, {}).name || 'Reported insider'),
+  subjectCik: first(record.reportingOwners, {}).cik || '',
   issuerName: record.issuer?.name || record.issuerName || record.trackedSubjectName || 'Issuer',
   issuerCik: record.issuer?.cik || '',
   ticker: record.issuer?.ticker || record.ticker || '',
@@ -38,6 +45,7 @@ const positionChanges = (activity.positionChanges || activity.institutionalChang
   ...record,
   recordType: 'institutional-position-change',
   subjectName: record.managerName || 'Reporting institution',
+  subjectCik: record.managerCik || '',
   issuerName: record.issuerName || 'Reported security',
   ticker: record.ticker || '',
   formType: '13F-HR',
@@ -57,40 +65,76 @@ const relationshipPayload = readJson('data/relationship-registry.json', { schema
 const entities = Array.isArray(entityPayload) ? entityPayload : (entityPayload.entities || []);
 const relationships = Array.isArray(relationshipPayload) ? relationshipPayload : (relationshipPayload.relationships || []);
 const byKey = new Map();
-for (const entity of entities) {
-  for (const key of [entity.id, entity.name, ...(entity.aliases || []), ...(entity.identifiers ? Object.values(entity.identifiers) : [])].filter(Boolean)) {
-    byKey.set(String(key).toLowerCase(), entity);
-  }
-}
 
-function ensureEntity(name, schema, aliases = [], identifiers = {}) {
-  const keys = [name, ...aliases, ...Object.values(identifiers)].filter(Boolean).map(value => String(value).toLowerCase());
+function identifierArray(value) {
+  if (Array.isArray(value)) return value.filter(item => item && item.type && item.value).map(item => ({ type: String(item.type), value: String(item.value) }));
+  if (value && typeof value === 'object') return Object.entries(value).filter(([, itemValue]) => itemValue).map(([type, itemValue]) => ({ type, value: String(itemValue) }));
+  return [];
+}
+function identifierValues(value) { return identifierArray(value).map(item => item.value); }
+function mergeIdentifiers(current, additions) {
+  const all = [...identifierArray(current), ...identifierArray(additions)];
+  return all.filter((item, index) => all.findIndex(other => other.type === item.type && other.value.toLowerCase() === item.value.toLowerCase()) === index).slice(0, 60);
+}
+function indexEntity(entity) {
+  for (const key of [entity.id, entity.name, ...(entity.aliases || []), ...identifierValues(entity.identifiers)].filter(Boolean)) byKey.set(String(key).toLowerCase(), entity);
+}
+for (const entity of entities) indexEntity(entity);
+
+function evidenceRef(record, insider) {
+  return {
+    sourceId: insider ? 'sec-form4' : 'sec-form13f',
+    sourceTitle: insider ? `SEC Form 4 ${record.accessionNumber || ''}`.trim() : `SEC Form 13F comparison ${record.eventDate || ''}`.trim(),
+    sourceUrl: record.sourceUrl || '',
+    publicationDate: validDate(record.filingDate),
+    retrievalDate: validDate(record.retrievalDate || activity.generatedAt || new Date().toISOString()),
+    evidenceGrade: record.evidenceGrade || 'A',
+    factualStatus: record.factualStatus || 'authenticated primary record',
+    establishes: record.established || (insider
+      ? 'The authenticated Form 4 reports the coded transaction and stated ownership fields.'
+      : 'Consecutive authenticated Form 13F reports support the stated change between quarter-end positions.'),
+    doesNotEstablish: record.notEstablished || (insider
+      ? 'The filing does not establish motive, investment merit, present ownership, coordination or wrongdoing.'
+      : 'The comparison does not establish exact trade dates, execution prices, present ownership, motive or wrongdoing.'),
+    reviewStatus: record.reviewStatus || 'official-filing-machine-parsed'
+  };
+}
+function evidenceKey(ref) { return [ref.sourceId, ref.sourceUrl, ref.publicationDate, ref.factualStatus].join('|'); }
+
+function ensureEntity(name, type, aliases = [], identifiers = {}, ref = null) {
+  const idList = identifierArray(identifiers);
+  const keys = [name, ...aliases, ...idList.map(item => item.value)].filter(Boolean).map(value => String(value).toLowerCase());
   let found = keys.map(key => byKey.get(key)).find(Boolean);
   if (found) {
-    found.aliases = [...new Set([...(found.aliases || []), ...aliases].filter(Boolean))];
-    found.identifiers = { ...(found.identifiers || {}), ...Object.fromEntries(Object.entries(identifiers).filter(([, value]) => value)) };
+    found.aliases = unique([...(found.aliases || []), ...aliases]).slice(0, 30);
+    found.identifiers = mergeIdentifiers(found.identifiers, idList);
+    found.evidenceRefs = Array.isArray(found.evidenceRefs) ? found.evidenceRefs : [];
+    if (ref && !found.evidenceRefs.some(existing => evidenceKey(existing) === evidenceKey(ref))) found.evidenceRefs.push(ref);
+    found.evidenceRefs = found.evidenceRefs.slice(0, 50);
+    found.lastSeen = validDate(ref?.retrievalDate || found.lastSeen) || found.lastSeen || null;
+    indexEntity(found);
     return found;
   }
-  const id = `market-${schema.toLowerCase()}-${slug(name)}-${hash(name)}`;
+  const id = `market-${type.toLowerCase()}-${slug(name)}-${hash(name + '|' + idList.map(item => `${item.type}:${item.value}`).join('|'))}`;
   found = {
     id,
-    schema,
+    type,
+    followTheMoneySchema: schema.entityTypes?.[type]?.followTheMoney || (type === 'Person' ? 'Person' : type === 'Company' ? 'Company' : 'Organization'),
     name,
-    caption: name,
-    aliases: [...new Set(aliases.filter(Boolean))],
-    identifiers: Object.fromEntries(Object.entries(identifiers).filter(([, value]) => value)),
-    reviewStatus: 'source-registry',
-    extractionMethod: 'official-filing-watchlist',
-    confidence: 1,
-    sourceCount: 0,
-    evidenceBoundary: 'Inclusion in the market tracker reports a public filing identity. It does not imply wrongdoing, motive, endorsement or investment advice.'
+    aliases: unique(aliases).slice(0, 30),
+    roles: ['named-in-official-market-disclosure'],
+    identifiers: idList,
+    properties: { sourceSystem: 'SEC EDGAR market activity tracker' },
+    evidenceRefs: ref ? [ref] : [],
+    reviewStatus: 'official-filing-machine-parsed',
+    firstSeen: validDate(ref?.retrievalDate) || null,
+    lastSeen: validDate(ref?.retrievalDate) || null
   };
   entities.push(found);
-  for (const key of [id, name, ...aliases, ...Object.values(identifiers)].filter(Boolean)) byKey.set(String(key).toLowerCase(), found);
+  indexEntity(found);
   return found;
 }
 
-const sec = ensureEntity('U.S. Securities and Exchange Commission', 'GovernmentAgency', ['SEC'], { jurisdiction: 'US' });
 const existingRelationshipIds = new Set(relationships.map(record => record.id));
 const addedRelationships = [];
 const searchPayload = readJson('search-index.json', []);
@@ -99,23 +143,22 @@ const searchIds = new Set(searchRecords.map(record => record.id));
 
 for (const record of records) {
   const insider = record.recordType === 'insider-transaction';
+  const ref = evidenceRef(record, insider);
+  if (!ref.sourceUrl) continue;
   const subject = ensureEntity(
     record.subjectName,
     insider ? 'Person' : 'Organization',
     [],
-    insider
-      ? { secReportingOwnerCik: first(record.reportingOwners, {}).cik || '' }
-      : { secCik: record.managerCik || '' }
+    insider ? { secReportingOwnerCik: record.subjectCik } : { secCik: record.subjectCik },
+    ref
   );
   const issuer = ensureEntity(
     record.issuerName,
     'Company',
     record.ticker ? [record.ticker] : [],
-    { ticker: record.ticker || '', cusip: record.cusip || '', secCik: record.issuerCik || '' }
+    { ticker: record.ticker || '', cusip: record.cusip || '', secCik: record.issuerCik || '' },
+    ref
   );
-  subject.sourceCount = (subject.sourceCount || 0) + 1;
-  issuer.sourceCount = (issuer.sourceCount || 0) + 1;
-  sec.sourceCount = (sec.sourceCount || 0) + 1;
 
   const relationshipType = insider ? 'reportedTransaction' : 'reportedPositionChange';
   const key = [relationshipType, subject.id, issuer.id, record.id || record.accessionNumber || record.sourceUrl, record.eventDate, record.transactionCode || record.changeType].join('|');
@@ -123,40 +166,26 @@ for (const record of records) {
   if (!existingRelationshipIds.has(relationshipId)) {
     const relationship = {
       id: relationshipId,
-      source: subject.id,
-      target: issuer.id,
-      type: relationshipType,
+      type: schema.relationshipTypes?.[relationshipType] ? relationshipType : 'relatedTo',
+      from: subject.id,
+      to: issuer.id,
       label: insider
         ? (record.transactionLabel || record.action || record.transactionCode || 'reported transaction')
         : String(record.changeType || 'reported position change').replace(/-/g, ' '),
-      sourceUrl: record.sourceUrl || '',
-      sourceTitle: `SEC ${record.formType || 'filing'} ${record.accessionNumber || ''}`.trim(),
-      sourceAuthority: 'official',
-      sourceType: 'regulatory filing',
-      publicationDate: record.filingDate || '',
-      retrievalDate: record.retrievalDate || activity.generatedAt || '',
-      evidenceGrade: record.evidenceGrade || 'A',
-      factualStatus: record.factualStatus || 'authenticated primary record',
-      reviewStatus: record.reviewStatus || 'automated-official-source',
+      date: validDate(record.eventDate || record.filingDate),
+      sourceRecordId: record.id || record.accessionNumber || null,
+      sourceId: ref.sourceId,
+      sourceTitle: ref.sourceTitle,
+      sourceUrl: ref.sourceUrl,
+      publicationDate: ref.publicationDate,
+      retrievalDate: ref.retrievalDate,
+      evidenceGrade: ref.evidenceGrade,
+      factualStatus: ref.factualStatus,
+      establishes: ref.establishes,
+      doesNotEstablish: ref.doesNotEstablish,
+      reviewStatus: ref.reviewStatus,
       extractionMethod: insider ? 'SEC Form 4 XML parser' : 'comparison of consecutive SEC Form 13F information tables',
       confidence: 0.98,
-      established: record.established || (insider
-        ? 'The SEC filing reports the stated transaction, code, shares and ownership fields.'
-        : 'Successive SEC Form 13F reports support the stated change between reported quarter-end positions.'),
-      notEstablished: record.notEstablished || (insider
-        ? 'The filing does not by itself establish motive, investment merit, current ownership, coordination or wrongdoing.'
-        : 'The comparison does not establish the exact trade date, execution price, beneficial owner, motive or whether the position remains held today.'),
-      mechanism: insider
-        ? 'A reporting owner filed a Form 4 transaction relating to an issuer security.'
-        : 'A reporting manager disclosed quarter-end holdings on Form 13F; successive reports were compared.',
-      implication: 'The official filing adds a time-bounded financial-disclosure relationship to the public entity graph.',
-      alternativeExplanation: insider
-        ? 'The event may be an award, option exercise, gift, tax withholding or other coded transaction rather than an open-market purchase or sale.'
-        : 'The change may reflect trading, mergers, corporate actions, manager transfers, corrections or confidential-treatment changes.',
-      nextRecordRequired: insider
-        ? 'Review the complete Form 4, footnotes, transaction code and later amendments.'
-        : 'Review both complete 13F information tables, amendments, issuer corporate actions and the next quarterly filing.',
-      correctionRoute: 'Use the Matrix correction route with the SEC accession number and the conflicting primary record.',
       properties: {
         formType: record.formType || '',
         accessionNumber: record.accessionNumber || '',
@@ -185,17 +214,17 @@ for (const record of records) {
       title: insider
         ? `${record.subjectName}: ${record.transactionLabel || record.action || record.transactionCode || 'reported transaction'} in ${record.issuerName}`
         : `${record.subjectName}: ${String(record.changeType || 'position change').replace(/-/g, ' ')} in ${record.issuerName}`,
-      url: `market-activity.html#${relationshipId}`,
+      url: `market-activity.html#market-${record.id || relationshipId}`,
       description: insider
         ? `Official SEC Form 4 record: ${record.shares ?? '—'} shares; transaction ${record.transactionCode || record.action || 'other'}; filed ${record.filingDate || '—'}.`
         : `Official SEC Form 13F comparison: ${record.shareChange ?? '—'} share change between reported quarter ends; filed ${record.filingDate || '—'}.`,
-      content: [record.subjectName, record.issuerName, record.ticker, record.transactionCode, record.transactionLabel, record.changeType, record.established, record.notEstablished].filter(Boolean).join(' '),
+      content: [record.subjectName, record.issuerName, record.ticker, record.transactionCode, record.transactionLabel, record.changeType, ref.establishes, ref.doesNotEstablish].filter(Boolean).join(' '),
       resultKind: insider ? 'insider transaction' : 'institutional position change',
       sourceType: 'SEC filing',
       sourceAuthority: 'official',
       primarySource: true,
-      evidenceGrade: record.evidenceGrade || 'A',
-      factualStatus: record.factualStatus || 'authenticated primary record',
+      evidenceGrade: ref.evidenceGrade,
+      factualStatus: ref.factualStatus,
       publicationDate: record.filingDate || '',
       retrievalDate: record.retrievalDate || activity.generatedAt || '',
       jurisdiction: 'United States',
@@ -203,7 +232,7 @@ for (const record of records) {
       entityType: insider ? 'Person' : 'Organization',
       aliases: [record.ticker, record.issuerName].filter(Boolean),
       identifiers: [record.accessionNumber, record.transactionCode, record.cusip].filter(Boolean),
-      reviewStatus: record.reviewStatus || 'automated-official-source',
+      reviewStatus: ref.reviewStatus,
       statusClass: 'official-record'
     });
     searchIds.add(searchId);
@@ -223,6 +252,11 @@ writeJson('downloads/phase6-data-integration.json', {
   relationships: relationships.length,
   marketRelationshipsAdded: addedRelationships.length,
   searchRecords: searchRecords.length,
+  canonicalGraphContract: {
+    entityIdentifiers: 'array of {type,value}',
+    relationshipEndpoints: ['from', 'to'],
+    relationshipTypes: ['reportedTransaction', 'reportedPositionChange']
+  },
   evidenceBoundary: 'Financial disclosure relationships report official filings only and do not establish motive, present ownership, coordination, investment merit or wrongdoing.'
 });
 console.log(`Phase 6 integrated: ${records.length} activity records, ${addedRelationships.length} new graph relationships.`);

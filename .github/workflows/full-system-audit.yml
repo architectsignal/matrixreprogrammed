@@ -49,9 +49,9 @@ env:
 
 jobs:
   full-system-audit:
-    name: Full build, double audit, subsystem pressure tests
+    name: Full build, every-page crawl, links, freshness and conclusions
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 75
 
     steps:
       - name: Checkout repository
@@ -68,6 +68,18 @@ jobs:
       - name: Run full system audit
         run: node scripts/full-system-audit.js
 
+      - name: Audit every generated public page and local link
+        run: node scripts/exhaustive-public-site-audit.js
+
+      - name: Crawl every live sitemap page and discovered link
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          CHECK_EXTERNAL_LINKS: 'true'
+          MAX_EXTERNAL_LINKS: '500'
+          LIVE_CRAWL_CONCURRENCY: '6'
+          LIVE_CRAWL_TIMEOUT_MS: '15000'
+        run: node scripts/live-exhaustive-site-crawl.js
+
       - name: Upload full system audit reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -76,6 +88,10 @@ jobs:
           path: |
             downloads/full-system-audit.json
             downloads/full-system-audit.md
+            downloads/exhaustive-public-site-audit.json
+            downloads/exhaustive-public-site-audit.md
+            downloads/live-exhaustive-site-crawl.json
+            downloads/live-exhaustive-site-crawl.md
             downloads/site-wide-function-audit.json
             downloads/site-wide-function-audit.md
             downloads/newsletter-worker-patch-report.json
@@ -118,17 +134,17 @@ jobs:
             const title = 'Full System Audit Report';
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const mdPath = path.join(process.cwd(), 'downloads', 'full-system-audit.md');
-            const jsonPath = path.join(process.cwd(), 'downloads', 'full-system-audit.json');
+            const localPath = path.join(process.cwd(), 'downloads', 'exhaustive-public-site-audit.json');
+            const livePath = path.join(process.cwd(), 'downloads', 'live-exhaustive-site-crawl.json');
             let reportMd = fs.existsSync(mdPath) ? fs.readFileSync(mdPath, 'utf8') : '# Full System Audit\n\nReport file was not generated. Open the workflow logs.';
             let status = '${{ job.status }}';
             let summary = '';
-            if (fs.existsSync(jsonPath)) {
-              try {
-                const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-                status = data.ok ? 'PASS' : 'FAIL';
-                summary = `\n\n## Machine Summary\n\n- Status: ${status}\n- Commands: ${data.summary?.commandCount ?? 'unknown'}\n- Failed commands: ${data.summary?.failedCommands ?? 'unknown'}\n- Systems checked: ${data.summary?.systemCount ?? 'unknown'}\n- Failed systems: ${data.summary?.failedSystems ?? 'unknown'}\n`;
-              } catch {}
-            }
+            const readJson = file => { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; } };
+            const full = readJson(path.join(process.cwd(), 'downloads', 'full-system-audit.json'));
+            const local = fs.existsSync(localPath) ? readJson(localPath) : null;
+            const live = fs.existsSync(livePath) ? readJson(livePath) : null;
+            if (full) status = full.ok && (!local || local.ok) && (!live || live.ok) ? 'PASS' : 'FAIL';
+            summary = `\n\n## Machine Summary\n\n- Status: ${status}\n- Commands: ${full?.summary?.commandCount ?? 'unknown'}\n- Failed commands: ${full?.summary?.failedCommands ?? 'unknown'}\n- Local public pages: ${local?.totals?.publicPages ?? 'unknown'}\n- Local link references: ${local?.totals?.linkReferences ?? 'unknown'}\n- Live sitemap pages: ${live?.totals?.sitemapPages ?? 'unknown'}\n- Live internal URLs: ${live?.totals?.internalUrlsChecked ?? 'unknown'}\n- Live external links: ${live?.totals?.externalUrlsChecked ?? 'unknown'}\n- Deep conclusion pages: ${live?.totals?.deepConclusionPages ?? local?.totals?.deepConclusionPages ?? 'unknown'}\n- Hard failures: ${(local?.totals?.hardFailures ?? 0) + (live?.totals?.hardFailures ?? 0)}\n`;
             if (reportMd.length > 45000) reportMd = reportMd.slice(0, 45000) + '\n\n_Report truncated. Open the workflow artifact for the full report._';
             const body = `# Latest Full System Audit\n\nStatus: **${status}**\n\nWorkflow run: ${runUrl}\n\nArtifacts: open the workflow run and download **full-system-audit-reports**.\n${summary}\n---\n\n${reportMd}`;
             const search = await github.rest.search.issuesAndPullRequests({ q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open in:title "${title}"` });

@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+require('./sync-market-activity-graph.js');
+
 const root = process.cwd();
 const data = readJson(path.join(root, 'data', 'entity-registry.json'), { evidenceBoundary: '', countsByType: {}, totals: {}, entities: [] });
 const relationshipData = readJson(path.join(root, 'data', 'relationship-registry.json'), { totals: {} });

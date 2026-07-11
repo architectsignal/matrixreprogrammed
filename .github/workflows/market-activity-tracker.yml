@@ -13,6 +13,8 @@ on:
       - 'scripts/sec-market-utils.js'
       - 'scripts/build-market-activity-pages.js'
       - 'scripts/integrate-market-activity-data.js'
+      - 'scripts/sync-market-activity-graph.js'
+      - 'scripts/build-entity-registry-page.js'
       - 'scripts/patch-market-watchlists-worker.js'
       - 'scripts/market-activity-test.js'
       - 'market-activity.js'
@@ -30,6 +32,8 @@ on:
       - 'scripts/sec-market-utils.js'
       - 'scripts/build-market-activity-pages.js'
       - 'scripts/integrate-market-activity-data.js'
+      - 'scripts/sync-market-activity-graph.js'
+      - 'scripts/build-entity-registry-page.js'
       - 'scripts/patch-market-watchlists-worker.js'
       - 'scripts/market-activity-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -76,7 +80,6 @@ jobs:
         run: node scripts/market-activity-test.js
 
       - name: Collect official SEC filings
-        if: github.event_name != 'pull_request'
         env:
           SEC_FORM4_FILINGS_PER_ISSUER: '12'
           SEC_REQUEST_DELAY_MS: '180'
@@ -115,7 +118,27 @@ jobs:
       - name: Run complete guarded Cloudflare build
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: node scripts/build-cloudflare-output.js
+        run: |
+          set -o pipefail
+          node scripts/build-cloudflare-output.js 2>&1 | tee downloads/market-cloudflare-build.log
+
+      - name: Commit validated bootstrap outputs to PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "matrix-market-bootstrap-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data/market-activity.json \
+            data/market-activity-state.json \
+            data/market-holdings \
+            data/market-position-changes \
+            || true
+          if git diff --cached --quiet; then
+            echo "No bootstrap market-data changes to commit."
+            exit 0
+          fi
+          git commit -m "Bootstrap official SEC market activity $(date -u +%F) [market-bootstrap]"
+          git push origin HEAD:${{ github.head_ref }}
 
       - name: Commit official market outputs
         if: github.event_name != 'pull_request'
@@ -130,9 +153,12 @@ jobs:
             data/market-position-changes \
             data/entity-registry.json \
             data/relationship-registry.json \
+            data/investigation-knowledge-graph.json \
             market-activity.html \
             market-activity \
             downloads/market-activity.csv \
+            downloads/investigation-entities.csv \
+            downloads/investigation-relationships.csv \
             entity-registry.html \
             relationship-registry.html \
             evidence-network-map.html \
@@ -201,6 +227,11 @@ jobs:
             downloads/sec-market-activity-collection-report.json
             downloads/phase6-data-integration.json
             downloads/phase6-worker-patch.json
+            downloads/market-cloudflare-build.log
+            scripts/reports/market-graph-sync-report.json
             data/market-activity.json
+            data/market-activity-state.json
+            data/market-holdings
+            data/market-position-changes
           if-no-files-found: ignore
           retention-days: 60

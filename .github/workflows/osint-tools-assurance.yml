@@ -121,7 +121,7 @@ jobs:
           grep -q "policy.access==='admin'&&!osintIsAdmin" src/worker.js
           grep -q "name:'AES-GCM'" src/worker.js
           grep -q "target_ciphertext='',target_iv=''" src/worker.js
-          if grep -R --line-number --exclude='OSINT_RUNNER_SETUP.md' --exclude='osint-tools-test.js' 'MATRIX_OSINT_RUNNER_TOKEN=' .; then
+          if git grep -n 'MATRIX_OSINT_RUNNER_TOKEN=' -- ':!tools/OSINT_RUNNER_SETUP.md' ':!.github/workflows/osint-tools-assurance.yml'; then
             echo 'Runner token value must not be committed.'
             exit 1
           fi

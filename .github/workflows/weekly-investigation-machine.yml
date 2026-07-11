@@ -17,9 +17,9 @@ concurrency:
 
 jobs:
   investigate:
-    name: Deep source sweep, pattern analysis and weekly report
+    name: Deep source sweep, preservation history and weekly report
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 75
 
     steps:
       - name: Checkout current main
@@ -44,6 +44,16 @@ jobs:
           INVESTIGATION_TIMEOUT_MS: '30000'
         run: node scripts/run-investigation-machine.js weekly
 
+      - name: Preserve weekly source versions and linked evidence
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: weekly
+          SOURCE_ARCHIVE_TIMEOUT_MS: '35000'
+          SOURCE_DOCUMENT_TIMEOUT_MS: '40000'
+          SOURCE_DOCUMENTS_PER_RUN: '8'
+          SOURCE_DOCUMENT_MAX_BYTES: '15728640'
+        run: node scripts/preserve-investigation-sources.js weekly
+
       - name: Rebuild weekly findings, daily brief and search
         run: |
           node scripts/update-live-intel.js
@@ -51,10 +61,14 @@ jobs:
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js
           node scripts/build-investigation-pages.js
+          node scripts/build-source-change-page.js
           node scripts/repair-search-system.js
           node scripts/extend-search-with-investigations.js
-          node scripts/search-investigation-smoke-test.js
           node scripts/final-investigation-hardening.js
+          node scripts/extend-search-with-source-changes.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/source-change-search-test.js
+          node scripts/source-change-preservation-test.js
 
       - name: Full advisory pressure test
         continue-on-error: true
@@ -71,6 +85,7 @@ jobs:
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
+            data/investigation-source-changes.json \
             data/daily-investigation-conclusions.json \
             data/weekly-investigation-conclusions.json \
             data/investigation-status.json \
@@ -78,21 +93,29 @@ jobs:
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
+            evidence-archive \
             investigation-machine.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
             investigation-source-ledger.html \
+            source-changes.html \
             investigation-pulse.js \
             daily-brain-brief.html \
             outcome-briefings.html \
             search.html \
             search.js \
             search-index.json \
+            sitemap.xml \
+            llms.txt \
             fixes.css \
             downloads/daily-investigation-conclusions.md \
             downloads/weekly-investigation-report.md \
             downloads/investigation-source-ledger.md \
+            downloads/investigation-source-changes.md \
             downloads/investigation-machine-run-report.json \
+            downloads/source-change-preservation-report.json \
+            downloads/source-change-preservation-test.json \
+            downloads/source-change-search-test.json \
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
@@ -113,9 +136,13 @@ jobs:
           name: weekly-investigation-${{ github.run_id }}
           path: |
             downloads/investigation-machine-run-report.json
+            downloads/source-change-preservation-report.json
+            downloads/source-change-preservation-test.json
+            downloads/source-change-search-test.json
             downloads/search-investigation-smoke-test.json
             downloads/weekly-investigation-report.md
             downloads/investigation-source-ledger.md
+            downloads/investigation-source-changes.md
             downloads/manual-deep-site-audit.json
             downloads/manual-deep-site-audit.md
             data/investigation-source-pulls/weekly-latest.json

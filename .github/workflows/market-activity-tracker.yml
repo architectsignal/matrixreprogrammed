@@ -114,7 +114,9 @@ jobs:
       - name: Run complete guarded Cloudflare build
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: node scripts/build-cloudflare-output.js
+        run: |
+          set -o pipefail
+          node scripts/build-cloudflare-output.js 2>&1 | tee downloads/market-cloudflare-build.log
 
       - name: Commit validated bootstrap outputs to PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
@@ -218,6 +220,7 @@ jobs:
             downloads/sec-market-activity-collection-report.json
             downloads/phase6-data-integration.json
             downloads/phase6-worker-patch.json
+            downloads/market-cloudflare-build.log
             data/market-activity.json
             data/market-activity-state.json
             data/market-holdings

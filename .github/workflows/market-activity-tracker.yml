@@ -99,10 +99,11 @@ jobs:
           node scripts/build-entity-registry-page.js
           node scripts/build-relationship-registry-page.js
 
-      - name: Rebuild evidence network
-        run: |
-          node scripts/build-evidence-network-map.js
-          node scripts/wire-evidence-network-map.js
+      - name: Generate evidence-network data and page
+        run: node scripts/build-evidence-network-map.js
+
+      - name: Wire evidence-network public routes
+        run: node scripts/wire-evidence-network-map.js
 
       - name: Rebuild Search V3
         run: |

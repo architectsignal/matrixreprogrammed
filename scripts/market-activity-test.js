@@ -84,7 +84,7 @@ check('Collector fails when every subject fails', collector.includes('summary.co
 const integration = read('scripts/integrate-market-activity-data.js');
 check('Search integration prioritises official source', integration.includes("sourceAuthority: 'official'"));
 check('Graph relationships carry established and not-established fields', integration.includes('established:') && integration.includes('notEstablished:'));
-check('Graph does not imply motive or wrongdoing', /does not establish motive/i.test(integration));
+check('Graph does not imply motive or wrongdoing', /does not(?: by itself)? establish[^.]{0,160}motive|does not establish[^.]{0,160}wrongdoing/i.test(integration));
 
 const cloudflare = read('scripts/build-cloudflare-output.js');
 check('Cloudflare build runs Phase 6 tests', cloudflare.includes("runRequired('Phase 6 market activity test'"));

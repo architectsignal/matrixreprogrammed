@@ -109,6 +109,7 @@ require('./hide-commercial-strategy-blocks.js');
 require('./final-public-editorial-hardening.js');
 require('./final-public-route-cleanup.js');
 runRequired('Evidence network map build', 'scripts/build-evidence-network-map.js');
+runRequired('Evidence network map wiring', 'scripts/wire-evidence-network-map.js');
 runRequired('Final investigation search repair', 'scripts/repair-search-system.js');
 require('./final-investigation-hardening.js');
 runRequired('Investigation search smoke test', 'scripts/search-investigation-smoke-test.js');

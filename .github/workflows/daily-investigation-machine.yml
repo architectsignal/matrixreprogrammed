@@ -1,0 +1,115 @@
+name: Daily Investigation Machine
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 5 * * *'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: daily-investigation-machine
+  cancel-in-progress: false
+
+jobs:
+  investigate:
+    name: Search sources, update evidence ledger and publish daily conclusions
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run daily investigation source search
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        run: node scripts/run-investigation-machine.js daily
+
+      - name: Refresh wider live intelligence and conclusions
+        run: |
+          node scripts/update-live-intel.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+
+      - name: Rebuild and verify search
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/final-investigation-hardening.js
+
+      - name: Advisory site audit
+        continue-on-error: true
+        run: node scripts/audit-site.js
+
+      - name: Commit daily investigation outputs
+        run: |
+          git config user.name "matrix-investigation-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data/investigation-source-state.json \
+            data/investigation-ledger.json \
+            data/daily-investigation-conclusions.json \
+            data/weekly-investigation-conclusions.json \
+            data/investigation-status.json \
+            data/investigation-source-pulls/daily-latest.json \
+            data/live-intel.json \
+            data/outcome-briefings.json \
+            data/daily-brain-brief.json \
+            investigation-machine.html \
+            daily-investigation-conclusions.html \
+            weekly-investigation-report.html \
+            investigation-source-ledger.html \
+            investigation-pulse.js \
+            daily-brain-brief.html \
+            outcome-briefings.html \
+            search.html \
+            search.js \
+            search-index.json \
+            fixes.css \
+            downloads/daily-investigation-conclusions.md \
+            downloads/weekly-investigation-report.md \
+            downloads/investigation-source-ledger.md \
+            downloads/investigation-machine-run-report.json \
+            downloads/search-investigation-smoke-test.json \
+            downloads/final-investigation-hardening.json \
+            downloads/search-system-repair-report.json \
+            || true
+          if git diff --cached --quiet; then
+            echo "No meaningful daily investigation changes to commit."
+            exit 0
+          fi
+          git commit -m "Daily investigation conclusions $(date -u +%F) [deploy]"
+          git push || (git pull --rebase --autostash origin main && git push)
+
+      - name: Upload investigation reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-investigation-${{ github.run_id }}
+          path: |
+            downloads/investigation-machine-run-report.json
+            downloads/search-investigation-smoke-test.json
+            downloads/daily-investigation-conclusions.md
+            downloads/investigation-source-ledger.md
+            data/investigation-source-pulls/daily-latest.json
+          if-no-files-found: ignore
+          retention-days: 30

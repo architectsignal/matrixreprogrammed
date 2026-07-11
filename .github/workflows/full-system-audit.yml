@@ -49,7 +49,7 @@ env:
 
 jobs:
   full-system-audit:
-    name: Full build, every page, every link, freshness and conclusions
+    name: Full build, every page, every link, investigation search, freshness and conclusions
     runs-on: ubuntu-latest
     timeout-minutes: 90
 
@@ -71,11 +71,21 @@ jobs:
       - name: Audit every generated public page and local target
         run: node scripts/exhaustive-public-site-audit-v2.js
 
+      - name: Verify local search UI, index and investigation queries
+        run: node scripts/search-investigation-smoke-test.js
+
       - name: Crawl every live route, external link, dataset and conclusion
         if: github.event_name != 'pull_request'
         env:
           SITE_URL: https://matrixreprogrammed.com
         run: node scripts/manual-deep-site-audit.js
+
+      - name: Verify live search and investigation queries
+        if: github.event_name != 'pull_request'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          SEARCH_TEST_LIVE: 'true'
+        run: node scripts/search-investigation-smoke-test.js
 
       - name: Upload full system audit reports
         if: always()
@@ -88,6 +98,12 @@ jobs:
             downloads/exhaustive-public-site-audit.json
             downloads/exhaustive-public-site-audit.md
             downloads/final-public-editorial-hardening.json
+            downloads/final-investigation-hardening.json
+            downloads/search-investigation-smoke-test.json
+            downloads/investigation-machine-run-report.json
+            downloads/daily-investigation-conclusions.md
+            downloads/weekly-investigation-report.md
+            downloads/investigation-source-ledger.md
             downloads/manual-deep-site-audit.json
             downloads/manual-deep-site-audit.md
             downloads/site-wide-function-audit.json
@@ -117,6 +133,10 @@ jobs:
             site-freshness-report.html
             data/site-quality-report.json
             data/site-freshness-report.json
+            data/investigation-status.json
+            data/investigation-ledger.json
+            data/daily-investigation-conclusions.json
+            data/weekly-investigation-conclusions.json
             deploy-status.json
             downloads/deploy-status.json
           if-no-files-found: ignore
@@ -135,10 +155,12 @@ jobs:
             const full = readJson(path.join(process.cwd(), 'downloads', 'full-system-audit.json'));
             const local = readJson(path.join(process.cwd(), 'downloads', 'exhaustive-public-site-audit.json'));
             const deep = readJson(path.join(process.cwd(), 'downloads', 'manual-deep-site-audit.json'));
+            const searchTest = readJson(path.join(process.cwd(), 'downloads', 'search-investigation-smoke-test.json'));
+            const investigation = readJson(path.join(process.cwd(), 'data', 'investigation-status.json'));
             let reportMd = fs.existsSync(path.join(process.cwd(), 'downloads', 'full-system-audit.md')) ? fs.readFileSync(path.join(process.cwd(), 'downloads', 'full-system-audit.md'), 'utf8') : '# Full System Audit\n\nReport missing.';
             const deepMd = fs.existsSync(path.join(process.cwd(), 'downloads', 'manual-deep-site-audit.md')) ? fs.readFileSync(path.join(process.cwd(), 'downloads', 'manual-deep-site-audit.md'), 'utf8') : '';
-            const status = full?.ok && local?.ok && (!deep || deep.ok) ? 'PASS' : 'FAIL';
-            const summary = `\n\n## Machine Summary\n\n- Status: ${status}\n- Commands: ${full?.summary?.commandCount ?? 'unknown'}\n- Failed commands: ${full?.summary?.failedCommands ?? 'unknown'}\n- Public pages checked: ${local?.totals?.publicPages ?? 'unknown'}\n- Local references checked: ${local?.totals?.linkReferences ?? 'unknown'}\n- Deep conclusion pages: ${local?.totals?.deepConclusionPages ?? 'unknown'}\n- Live routes: ${deep?.summary?.liveRoutes ?? 'unknown'}\n- External links checked: ${deep?.summary?.externalChecked ?? 'unknown'}\n- Freshness datasets: ${deep?.summary?.freshnessFiles ?? 'unknown'}\n- Hard failures: ${(local?.totals?.hardFailures ?? 0) + (deep?.summary?.hardFailures ?? 0)}\n`;
+            const status = full?.ok && local?.ok && searchTest?.ok && (!deep || deep.ok) ? 'PASS' : 'FAIL';
+            const summary = `\n\n## Machine Summary\n\n- Status: ${status}\n- Commands: ${full?.summary?.commandCount ?? 'unknown'}\n- Failed commands: ${full?.summary?.failedCommands ?? 'unknown'}\n- Public pages checked: ${local?.totals?.publicPages ?? 'unknown'}\n- Local references checked: ${local?.totals?.linkReferences ?? 'unknown'}\n- Deep conclusion pages: ${local?.totals?.deepConclusionPages ?? 'unknown'}\n- Live routes: ${deep?.summary?.liveRoutes ?? 'unknown'}\n- External links checked: ${deep?.summary?.externalChecked ?? 'unknown'}\n- Freshness datasets: ${deep?.summary?.freshnessFiles ?? 'unknown'}\n- Search test: ${searchTest?.ok ? 'PASS' : 'FAIL'}\n- Investigation sources: ${investigation?.registeredSources ?? 'unknown'}\n- Investigation findings: ${investigation?.ledgerFindings ?? 'unknown'}\n- Last investigation run: ${investigation?.lastInvestigationRun ?? 'pending'}\n- Hard failures: ${(local?.totals?.hardFailures ?? 0) + (deep?.summary?.hardFailures ?? 0) + (searchTest?.failures?.length ?? 0)}\n`;
             reportMd = `${reportMd}\n\n---\n\n${deepMd}`;
             if (reportMd.length > 55000) reportMd = reportMd.slice(0, 55000) + '\n\n_Report truncated. Open the workflow artifact for the full report._';
             const body = `# Latest Full System Audit\n\nStatus: **${status}**\n\nWorkflow run: ${runUrl}\n\nArtifacts: open the workflow run and download **full-system-audit-reports**.\n${summary}\n---\n\n${reportMd}`;

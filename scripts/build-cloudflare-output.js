@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const out = path.join(root, '_site');
@@ -60,6 +61,15 @@ function repairTop52ArtLinks() {
   }
   if (fileCount || linkCount) console.log(`Top 52 art link repair complete before Cloudflare output: ${fileCount} file(s), ${linkCount} link(s) fixed.`);
 }
+function runRequired(label, script) {
+  const result = spawnSync(process.execPath, [path.join(root, script)], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) {
+    console.error(`${label} failed.`);
+    process.exit(result.status || 1);
+  }
+}
 function rm(dir) { if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true }); }
 function ensure(dir) { fs.mkdirSync(dir, { recursive: true }); }
 function shouldCopy(rel, entry) {
@@ -98,13 +108,16 @@ require('./hide-internal-public-controls.js');
 require('./hide-commercial-strategy-blocks.js');
 require('./final-public-editorial-hardening.js');
 require('./final-public-route-cleanup.js');
+runRequired('Final investigation search repair', 'scripts/repair-search-system.js');
+require('./final-investigation-hardening.js');
+runRequired('Investigation search smoke test', 'scripts/search-investigation-smoke-test.js');
 rm(out); ensure(out); walk(root);
 ensureArchiveSearchMarker(path.join(out, 'search.html'));
 ensureArchiveSearchMarker(path.join(out, 'search'));
-for (const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']) {
+for (const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','investigation-pulse.js','data/investigation-status.json','data/investigation-source-registry.json','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']) {
   if (!fs.existsSync(path.join(out, required))) { console.error(`Cloudflare output failed: _site/${required} missing`); process.exit(1); }
 }
 if (fs.existsSync(path.join(out, '_redirects'))) { console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets.'); process.exit(1); }
 require('./public-copy-visibility-test.js');
 const count=[];(function countFiles(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,entry.name);if(entry.isDirectory())countFiles(full);else count.push(full);}})(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including upgraded intelligence tools and extensionless HTML assets.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including the daily and weekly investigation machine, source ledger, global pulse and verified search.`);

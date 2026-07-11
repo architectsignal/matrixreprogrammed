@@ -4,6 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const dataDir = path.join(root, 'data');
 const downloadsDir = path.join(root, 'downloads');
+const reportsDir = path.join(root, 'scripts', 'reports');
 const now = new Date().toISOString();
 
 function readJson(file, fallback) {
@@ -137,7 +138,7 @@ const relationshipCsv = [
 fs.writeFileSync(path.join(downloadsDir, 'investigation-entities.csv'), entityCsv.map(row => row.map(csvCell).join(',')).join('\n'));
 fs.writeFileSync(path.join(downloadsDir, 'investigation-relationships.csv'), relationshipCsv.map(row => row.map(csvCell).join(',')).join('\n'));
 
-writeJson(path.join(downloadsDir, 'market-graph-sync-report.json'), {
+writeJson(path.join(reportsDir, 'market-graph-sync-report.json'), {
   ok: true,
   generatedAt: now,
   totals: synchronizedGraph.totals,

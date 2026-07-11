@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "version": 1,
+  "generatedAt": null,
+  "source": "U.S. Securities and Exchange Commission EDGAR",
+  "sourceUrl": "https://www.sec.gov/edgar/search/",
+  "evidenceGrade": "A",
+  "evidenceBoundary": "These records reproduce or compare official SEC disclosures. A filing does not prove motive, investment merit, present ownership, coordination or wrongdoing. Form 13F differences do not reveal exact trade dates or execution prices.",
+  "methodology": {
+    "form4": "Parse official ownership XML and preserve each reported transaction code, acquired/disposed indicator, shares, price, post-transaction holdings and direct/indirect ownership.",
+    "form13f": "Parse official 13F information-table XML and compare consecutive quarter-end reports by manager, CUSIP, class and put/call status.",
+    "ranking": "Open-market purchase and sale codes are kept separate from awards, exercises, gifts, tax withholding and other transaction codes."
+  },
+  "summary": {
+    "trackedSubjects": 0,
+    "insiderTransactions": 0,
+    "institutionalFilings": 0,
+    "positionChanges": 0,
+    "newPositions": 0,
+    "increasedPositions": 0,
+    "reducedPositions": 0,
+    "exitedPositions": 0
+  },
+  "subjects": [],
+  "insiderTransactions": [],
+  "institutionalFilings": [],
+  "positionChanges": [],
+  "collectionFailures": []
+}

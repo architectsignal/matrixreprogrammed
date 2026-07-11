@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.1",
+  "schemaVersion": "1.1.0",
   "title": "Matrix Reprogrammed Structured Investigation Schema",
   "description": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
   "evidenceBoundary": "A structured entity or relationship records what a cited source states or what an automated parser observed. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt.",
@@ -45,6 +45,8 @@
     "overseenBy": "A record identifies an oversight or supervisory body.",
     "missingFrom": "A record was observed as missing, removed or unavailable from a source.",
     "changedAt": "A source-change observation records a changed public source.",
+    "reportedTransaction": "An authenticated ownership filing reports a coded transaction between a reporting person and an issuer security.",
+    "reportedPositionChange": "Consecutive authenticated institutional filings support a change between reported quarter-end positions.",
     "relatedTo": "A neutral relationship used only when the available record does not support a narrower type."
   },
   "requiredEvidenceFields": [

@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-11T14:36:09.251Z",
-  "schemaVersion": "1.0.1",
+  "generatedAt": "2026-07-11T23:56:45.260Z",
+  "schemaVersion": "1.1.0",
   "totals": {
     "entities": 1234,
     "relationships": 1538,
@@ -51,6 +51,8 @@
     "overseenBy": 0,
     "missingFrom": 0,
     "changedAt": 1,
+    "reportedTransaction": 0,
+    "reportedPositionChange": 0,
     "relatedTo": 0
   },
   "routes": [
@@ -63,5 +65,5 @@
     "relationship-registry.html"
   ],
   "software": "Node.js with FollowTheMoney-compatible concepts; no paid service or external database required.",
-  "refinedAt": "2026-07-11T14:36:09.498Z"
+  "refinedAt": "2026-07-11T23:56:45.514Z"
 }

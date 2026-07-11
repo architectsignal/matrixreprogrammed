@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-07-11T10:15:45.417Z",
+  "generatedAt": "2026-07-11T10:20:29.613Z",
   "period": {
-    "start": "2026-07-09T10:15:54.881Z",
-    "end": "2026-07-11T10:15:45.417Z",
+    "start": "2026-07-09T10:20:39.080Z",
+    "end": "2026-07-11T10:20:29.613Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -19,10 +19,10 @@
   ],
   "summary": {
     "sourcesScheduled": 12,
-    "sourcesFetched": 10,
-    "sourceFailures": 2,
-    "changedSources": 0,
-    "findingsInWindow": 386,
+    "sourcesFetched": 12,
+    "sourceFailures": 0,
+    "changedSources": 3,
+    "findingsInWindow": 411,
     "establishedWrongdoingFindings": 18,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0
@@ -31,32 +31,49 @@
   "patterns": {
     "byLane": {
       "government-enforcement": 75,
+      "international-corruption": 44,
       "oversight-audit": 117,
-      "international-corruption": 19,
       "money-contracts": 52,
       "epstein-disclosure": 80,
       "declassified-leaks": 43
     },
     "byStatus": {
-      "established-wrongdoing": 63,
+      "established-wrongdoing": 64,
       "official-enforcement": 20,
       "official-audit-finding": 11,
-      "wrongdoing-lead": 3,
-      "document-release": 19,
+      "official-charge-or-allegation": 1,
+      "wrongdoing-lead": 25,
+      "document-release": 20,
       "leak-or-document-lead": 43,
       "record-update": 227
     },
     "topWrongdoingIndicators": [
       {
+        "term": "fraud",
+        "count": 25
+      },
+      {
         "term": "sanction",
         "count": 19
+      },
+      {
+        "term": "corruption",
+        "count": 3
       },
       {
         "term": "misconduct",
         "count": 2
       },
       {
-        "term": "fraud",
+        "term": "convicted",
+        "count": 1
+      },
+      {
+        "term": "indicted",
+        "count": 1
+      },
+      {
+        "term": "bribery",
         "count": 1
       },
       {
@@ -77,9 +94,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Steve Bajic",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -98,7 +115,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "ab4520ad85bff15354423b11",
@@ -111,9 +128,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Christopher McKnight",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -132,7 +149,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "41338a1858b9f0ba5e65f3a4",
@@ -145,9 +162,9 @@
       "authority": "primary-official",
       "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -166,7 +183,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "64e1f0f53d8031366a67f2c6",
@@ -179,9 +196,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Robert Yedid",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -200,7 +217,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "a5f67ee2a60f22788958c284",
@@ -213,9 +230,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Andrew Kaufman",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -234,7 +251,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "8194b7e8b7e811fe8d10ab2f",
@@ -247,9 +264,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Mark Jacobs",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -268,7 +285,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "908e93ff5a07d8b4500eed38",
@@ -281,9 +298,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -302,7 +319,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "86705f73deac83b805ef4eea",
@@ -315,9 +332,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -336,7 +353,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "b3da1d0797a1b7d1fbb0773b",
@@ -349,9 +366,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -370,7 +387,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "8b5fcbcbcce1dd2f3c66a749",
@@ -383,9 +400,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Michael Bowen",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -404,7 +421,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "1e43ec8e272bc23c7824442b",
@@ -417,9 +434,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -438,7 +455,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "392ea37d1d6b5e5c9af93b67",
@@ -451,9 +468,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -472,7 +489,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "93e7bb9b21bc9a5bb87f8f7a",
@@ -485,9 +502,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -506,7 +523,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "78c7b3e53eaef473c9cc5d50",
@@ -519,9 +536,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Ross Gregory Erskine",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -540,7 +557,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "fd0bd0d092ec5e7ef84616da",
@@ -553,9 +570,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -574,7 +591,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "95018eb915abff944c5987dc",
@@ -587,9 +604,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -608,7 +625,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "b2cb16391dbfb1e40f62a083",
@@ -621,9 +638,9 @@
       "authority": "primary-official",
       "title": "Consent of and Final Judgment as to Gautam Adani",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -642,7 +659,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "0d1a208466ca961f87bdbe14",
@@ -655,9 +672,9 @@
       "authority": "primary-official",
       "title": "Consent of and Final Judgment as to Sagar Adani",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -676,7 +693,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     }
   ],
   "officialActions": [],
@@ -693,9 +710,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Steve Bajic",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -714,7 +731,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "ab4520ad85bff15354423b11",
@@ -727,9 +744,9 @@
       "authority": "primary-official",
       "title": "Final Judgment -Christopher McKnight",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -748,7 +765,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "41338a1858b9f0ba5e65f3a4",
@@ -761,9 +778,9 @@
       "authority": "primary-official",
       "title": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -782,7 +799,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "64e1f0f53d8031366a67f2c6",
@@ -795,9 +812,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Robert Yedid",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -816,7 +833,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "a5f67ee2a60f22788958c284",
@@ -829,9 +846,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Andrew Kaufman",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -850,7 +867,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "8194b7e8b7e811fe8d10ab2f",
@@ -863,9 +880,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Mark Jacobs",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -884,7 +901,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "908e93ff5a07d8b4500eed38",
@@ -897,9 +914,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -918,7 +935,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "86705f73deac83b805ef4eea",
@@ -931,9 +948,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -952,7 +969,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "b3da1d0797a1b7d1fbb0773b",
@@ -965,9 +982,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -986,7 +1003,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "8b5fcbcbcce1dd2f3c66a749",
@@ -999,9 +1016,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Michael Bowen",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1020,7 +1037,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "1e43ec8e272bc23c7824442b",
@@ -1033,9 +1050,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1054,7 +1071,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "392ea37d1d6b5e5c9af93b67",
@@ -1067,9 +1084,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1088,7 +1105,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "93e7bb9b21bc9a5bb87f8f7a",
@@ -1101,9 +1118,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1122,7 +1139,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "78c7b3e53eaef473c9cc5d50",
@@ -1135,9 +1152,9 @@
       "authority": "primary-official",
       "title": "Final Judgment - Ross Gregory Erskine",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1156,7 +1173,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "fd0bd0d092ec5e7ef84616da",
@@ -1169,9 +1186,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1190,7 +1207,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "95018eb915abff944c5987dc",
@@ -1203,9 +1220,9 @@
       "authority": "primary-official",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1224,7 +1241,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "b2cb16391dbfb1e40f62a083",
@@ -1237,9 +1254,9 @@
       "authority": "primary-official",
       "title": "Consent of and Final Judgment as to Gautam Adani",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1258,7 +1275,7 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     },
     {
       "id": "0d1a208466ca961f87bdbe14",
@@ -1271,9 +1288,9 @@
       "authority": "primary-official",
       "title": "Consent of and Final Judgment as to Sagar Adani",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-07-11T10:15:45.417Z",
+      "published": "2026-07-11T10:20:29.613Z",
       "firstSeen": "2026-07-11T10:15:45.417Z",
-      "lastSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T10:20:29.613Z",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1292,26 +1309,147 @@
         "judgment"
       ],
       "rawMeta": null,
-      "occurrences": 1
+      "occurrences": 2
     }
   ],
-  "changedSources": [],
-  "sourceFailures": [
+  "changedSources": [
     {
-      "sourceId": "uk-sfo-news",
-      "label": "UK Serious Fraud Office — News Releases",
-      "url": "https://www.sfo.gov.uk/category/news-releases/",
-      "status": "failed",
-      "error": "fetch failed"
+      "sourceId": "doj-justice-news",
+      "label": "U.S. Department of Justice — Justice News",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "url": "https://www.justice.gov/news",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "lastAttempt": "2026-07-11T10:20:29.613Z",
+      "lastSuccess": "2026-07-11T10:20:29.613Z",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": "",
+      "finalUrl": "https://www.justice.gov/news",
+      "contentType": "text/html",
+      "bytes": 2188,
+      "bodyHash": "ea892bde8067f675b3854bf7649d47d181ab026267bb3fc44a413fa3106329ae",
+      "changed": true,
+      "firstSnapshot": false,
+      "itemCount": 1,
+      "itemIds": [
+        "b2440144f917a2ad008b8101"
+      ]
     },
     {
-      "sourceId": "eppo-news",
-      "label": "European Public Prosecutor's Office — News",
-      "url": "https://www.eppo.europa.eu/en/media/news",
-      "status": "failed",
-      "error": "HTTP 404"
+      "sourceId": "sec-current-filings",
+      "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "lastAttempt": "2026-07-11T10:20:29.613Z",
+      "lastSuccess": "2026-07-11T10:20:29.613Z",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": "",
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "contentType": "application/atom+xml",
+      "bytes": 22812,
+      "bodyHash": "29cb0f1d2b6aa775963d27c01f60ea12d4ee7a9adf43d07dc98d575394290a86",
+      "changed": true,
+      "firstSnapshot": false,
+      "itemCount": 40,
+      "itemIds": [
+        "1fc0b635ff3a51cf5aa0fa01",
+        "e2905c0f54ffa868944f4a88",
+        "d64bacebc4e38bad65fdf635",
+        "ae372a8cb7a883567f626614",
+        "5f129d86ed52475d51c5811b",
+        "a9fb8425f321f16b8fbbcf8e",
+        "fa98106d7b17f4ae9a98f2d8",
+        "60db7e6b710c66e7041aa6d9",
+        "5f47e14394b68d83d0a7191b",
+        "11aa9e482fe4809776fb7285",
+        "d19795d12e6207d2119fb57c",
+        "b68c1d0dacb092399a8fddea",
+        "c95aef9e46b52ec84e16e635",
+        "d788c182281f2d6505299ad8",
+        "aab2511729587ed369faf67f",
+        "911293eb2730f17b2647aa2b",
+        "8104a70e7a3050c50df76b4f",
+        "730c2dba082e0d2b8d708c77",
+        "bbb7e088febd82bee63a6794",
+        "91e1274311a70a5c04830917",
+        "b95850f62d248c593b948864",
+        "677c432e6454f2e13ee87ccc",
+        "298e9e87f5417f0c024e390c",
+        "ba8f3bafaa726d0382370385",
+        "ff3f58e21c1102743fa06722",
+        "876dd3177370133e42edf0c0",
+        "34e4026eb0f3944f6552b835",
+        "cefd7cbcd4a98e9aff0f56cf",
+        "59440b4b6cc529687a64d545",
+        "5539707ef2c1c09dd75a39c3",
+        "1ea7bb7a62240e86a0975044",
+        "7f05ab465d30211d6925a5dc",
+        "b4f55419591f8b3ec1df520b",
+        "32572fd8b2e92da7640e3aec",
+        "e499d980f62009e499c22728",
+        "e27150e81a31498a42e31ee2",
+        "b21aa5ba63b54271e26d8f57",
+        "ceea92723ecaa0669313d213",
+        "6bb19d54548b60ee56414fef",
+        "eb888e921836d03ba1019eac"
+      ]
+    },
+    {
+      "sourceId": "treasury-ofac-recent-actions",
+      "label": "U.S. Treasury OFAC — Recent Actions",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "url": "https://ofac.treasury.gov/recent-actions",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "lastAttempt": "2026-07-11T10:20:29.613Z",
+      "lastSuccess": "2026-07-11T10:20:29.613Z",
+      "status": "fetched",
+      "statusCode": 200,
+      "error": "",
+      "finalUrl": "https://ofac.treasury.gov/recent-actions",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 43122,
+      "bodyHash": "66dac754dce3732d631f40afd9f13cc8830cce5e3d0d412d18165895b726b254",
+      "changed": true,
+      "firstSnapshot": false,
+      "itemCount": 19,
+      "itemIds": [
+        "bbea9900cdc5b0301822293c",
+        "d88f72066e8094857c6daa09",
+        "8f30a86c785326f82e876fd0",
+        "46946e16f112789f29e7d82a",
+        "cb9fba51d8a573f83caac8be",
+        "4ab643a278033340eba0594c",
+        "850fa4b2c63684f816a29d18",
+        "76142a57170810b52ba84460",
+        "6296d1b6c665d1cf9c8e2094",
+        "06ed387a2351449d62f3321e",
+        "4762db97d51afa32cce6dc03",
+        "319f28e79bc93664e1bb5f64",
+        "879790ee064135422e5d0c65",
+        "4fbc62e65352bde8e5139257",
+        "7e3b4ba55b3b42cf89362343",
+        "f97196de8424ac92a1451345",
+        "64325ff51f70d5e4fe3bd893",
+        "1de434047ff4e142882cb5bf",
+        "ea48cfad3dd1eb064ffc06bf"
+      ]
     }
   ],
+  "sourceFailures": [],
   "missingRecords": [
     {
       "findingId": "cf53bb9e78937f9225db689c",

@@ -38,6 +38,16 @@ upsert(map, {
   sourceType: 'structured-entity-registry'
 });
 upsert(map, {
+  url: 'relationship-registry.html',
+  title: 'Sourced Investigation Relationship Registry',
+  category: 'Structured Investigation Data',
+  layer: 'disclosure-black-files',
+  description: 'Public relationships showing the source, date, evidence grade, factual status, review state, extraction method, what the record establishes and what it does not establish.',
+  keywords: ['relationship registry','people institution company contract payment legal authority decision public oversight missing record relationship source evidence grade status'],
+  priority: 108,
+  sourceType: 'structured-relationship-registry'
+});
+upsert(map, {
   url: 'data/investigation-knowledge-graph.json',
   title: 'Structured Investigation Knowledge Graph JSON',
   category: 'Machine Data',

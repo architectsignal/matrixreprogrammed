@@ -1,0 +1,182 @@
+name: Phase 5 Public Network Maps
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/build-evidence-network-map.js'
+      - 'scripts/public-network-map-test.js'
+      - 'scripts/build-relationship-registry-page.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-network-map.html'
+      - 'evidence-network-map.js'
+      - 'data/entity-registry.json'
+      - 'data/relationship-registry.json'
+      - '.github/workflows/public-network-map-assurance.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-evidence-network-map.js'
+      - 'scripts/public-network-map-test.js'
+      - 'scripts/build-relationship-registry-page.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-network-map.html'
+      - 'evidence-network-map.js'
+      - 'data/entity-registry.json'
+      - 'data/relationship-registry.json'
+      - '.github/workflows/public-network-map-assurance.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: phase5-public-network-maps-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-test-publish:
+    name: Build, validate, publish and verify evidence-led network maps
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild structured registries and Phase 5 graph
+        run: |
+          node scripts/build-structured-investigation-data.js
+          node scripts/refine-structured-entity-types.js
+          node scripts/build-entity-registry-page.js
+          node scripts/build-relationship-registry-page.js
+          node scripts/build-evidence-network-map.js
+          node scripts/wire-evidence-network-map.js
+
+      - name: Validate evidence fields, boundaries, filters and mobile interface
+        run: node scripts/public-network-map-test.js
+
+      - name: Build full Cloudflare output
+        run: |
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js
+          test -f _site/evidence-network-map.html
+          test -f _site/evidence-network-map.js
+          test -f _site/data/evidence-network-map.json
+          test -f _site/downloads/evidence-network-map.csv
+          test ! -e _site/downloads/evidence-network-map-build.json
+          test ! -e _site/downloads/public-network-map-test.json
+
+      - name: Commit generated Phase 5 outputs
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "matrix-network-map-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data/evidence-network-map.json \
+            downloads/evidence-network-map.csv \
+            relationship-registry.html \
+            network-maps.html \
+            network-map-index.html \
+            sitemap.xml \
+            llms.txt \
+            robots.txt \
+            search-index.json \
+            data/search-facets.json \
+            search.html \
+            search.js \
+            || true
+          if git diff --cached --quiet; then
+            echo "No generated Phase 5 changes to commit."
+          else
+            git commit -m "Build public evidence network $(date -u +%F) [deploy]"
+            git push || (git pull --rebase --autostash origin main && git push)
+          fi
+          echo "OUTPUT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Set pull-request verification SHA
+        if: github.event_name != 'push'
+        run: echo "OUTPUT_SHA=${{ github.sha }}" >> "$GITHUB_ENV"
+
+      - name: Verify live Phase 5 routes and exact deployed SHA
+        if: github.event_name == 'push'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: |
+          mkdir -p downloads
+          for attempt in $(seq 1 42); do
+            PAGE="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/evidence-network-map.html" || true)"
+            STATUS="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/deploy-status.json" || true)"
+            if printf '%s' "$PAGE" | grep -q 'PUBLIC EVIDENCE NETWORK' && printf '%s' "$PAGE" | grep -q 'map-factual-status' && printf '%s' "$STATUS" | grep -q "$OUTPUT_SHA"; then
+              echo "Phase 5 route and exact build SHA are live."
+              break
+            fi
+            if [ "$attempt" -eq 42 ]; then
+              echo "Production did not expose the Phase 5 route at $OUTPUT_SHA within the verification window."
+              exit 1
+            fi
+            sleep 20
+          done
+          node <<'NODE'
+          const fs = require('fs');
+          const base = String(process.env.SITE_URL || '').replace(/\/$/, '');
+          const expectedSha = process.env.OUTPUT_SHA || '';
+          const checks = [];
+          const add = (name, ok, detail = '') => checks.push({ name, ok: Boolean(ok), detail });
+          async function request(route) {
+            const response = await fetch(`${base}${route}`, { redirect: 'follow', headers: { accept: 'text/html,application/json,text/csv,*/*', 'user-agent': 'MatrixPhase5LiveProof/1.0' } });
+            return { response, body: await response.text() };
+          }
+          (async () => {
+            const page = await request('/evidence-network-map.html');
+            add('public map page', page.response.ok && page.body.includes('PUBLIC EVIDENCE NETWORK') && page.body.includes('map-factual-status') && page.body.includes('map-clear-path'), `HTTP ${page.response.status}`);
+            const runtime = await request('/evidence-network-map.js');
+            add('public map runtime', runtime.response.ok && runtime.body.includes('doesNotEstablish') && runtime.body.includes('aStar') && runtime.body.includes('URLSearchParams'), `HTTP ${runtime.response.status}`);
+            const graphResponse = await request('/data/evidence-network-map.json');
+            let graph = null; try { graph = JSON.parse(graphResponse.body); } catch {}
+            add('public graph JSON', graphResponse.response.ok && graph?.schemaVersion === '2.0.0' && graph?.elements?.edges?.length > 100, `HTTP ${graphResponse.response.status}`);
+            const required = ['sourceTitle','sourceUrl','date','grade','factualStatus','establishes','doesNotEstablish','reviewStatus','extractionMethod','confidence'];
+            add('live relationship evidence fields', Boolean(graph?.elements?.edges?.length) && graph.elements.edges.every(edge => required.every(field => edge.data?.[field] !== undefined && edge.data?.[field] !== null && String(edge.data[field]).trim() !== '')), `${graph?.elements?.edges?.length || 0} edges`);
+            const csv = await request('/downloads/evidence-network-map.csv');
+            add('public relationship CSV', csv.response.ok && csv.body.startsWith('relationship_id,') && csv.body.includes('what_is_not_established'), `HTTP ${csv.response.status}`);
+            for (const route of ['/downloads/evidence-network-map-build.json','/downloads/evidence-network-map-wiring.json','/downloads/public-network-map-test.json']) {
+              const privateResponse = await request(route);
+              add(`private diagnostic excluded ${route}`, !privateResponse.response.ok, `HTTP ${privateResponse.response.status}`);
+            }
+            const deploy = await request('/deploy-status.json');
+            let status = null; try { status = JSON.parse(deploy.body); } catch {}
+            add('exact live build SHA', status?.buildSha === expectedSha, status?.buildSha || 'missing');
+            const report = { ok: checks.every(check => check.ok), generatedAt: new Date().toISOString(), site: base, expectedSha, checks };
+            fs.writeFileSync('downloads/public-network-map-live-verification.json', JSON.stringify(report, null, 2));
+            if (!report.ok) {
+              checks.filter(check => !check.ok).forEach(check => console.error(`FAILED: ${check.name}: ${check.detail}`));
+              process.exit(1);
+            }
+            console.log(`Live Phase 5 verification passed: ${checks.length} checks.`);
+          })().catch(error => { console.error(error.stack || error.message); process.exit(1); });
+          NODE
+
+      - name: Upload Phase 5 reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5-public-network-maps-${{ github.run_id }}
+          path: |
+            downloads/evidence-network-map-build.json
+            downloads/evidence-network-map-wiring.json
+            downloads/public-network-map-test.json
+            downloads/public-network-map-live-verification.json
+          if-no-files-found: ignore
+          retention-days: 30

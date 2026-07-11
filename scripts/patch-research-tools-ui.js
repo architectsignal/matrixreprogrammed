@@ -4,6 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const indexPath = path.join(root, 'index.html');
 const toolsPath = path.join(root, 'research-tools.html');
+const visibilityPath = path.join(root, 'scripts', 'hide-internal-public-controls.js');
 if (!fs.existsSync(indexPath)) throw new Error('index.html not found');
 if (!fs.existsSync(toolsPath)) throw new Error('research-tools.html not found');
 
@@ -19,6 +20,22 @@ if (index.includes(start) && index.includes(end)) {
   index = index.replace('</main>', `${card}</main>`);
 }
 fs.writeFileSync(indexPath, index);
+
+let visibilityPatched = false;
+if (fs.existsSync(visibilityPath)) {
+  const before = fs.readFileSync(visibilityPath, 'utf8');
+  let after = before.replace(/\n\s*'Research Tools',?/g, '');
+  if (!after.includes("ensurePhraseVisible(html, 'EMAIL & DIGITAL FOOTPRINT RESEARCH.')")) {
+    after = after.replace(
+      "html = ensurePhraseVisible(html, 'Join Weekly Signal');",
+      "html = ensurePhraseVisible(html, 'Join Weekly Signal');\n  html = ensurePhraseVisible(html, 'EMAIL & DIGITAL FOOTPRINT RESEARCH.');"
+    );
+  }
+  if (after !== before) {
+    fs.writeFileSync(visibilityPath, after);
+    visibilityPatched = true;
+  }
+}
 
 const sitemapPath = path.join(root, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
@@ -38,6 +55,7 @@ fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), J
   ok: index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
   generatedAt: new Date().toISOString(),
   homepageRoute: 'research-tools.html',
-  externalRoute: 'https://emailosint.org/'
+  externalRoute: 'https://emailosint.org/',
+  visibilityPatched
 }, null, 2));
-console.log('Research tools homepage route applied.');
+console.log('Research tools homepage route and visibility policy applied.');

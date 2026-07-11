@@ -38,6 +38,8 @@ if(priorDocumentLimit===undefined)delete process.env.SOURCE_DOCUMENTS_PER_RUN;el
 runRequired('Source change preservation test','scripts/source-change-preservation-test.js');
 runRequired('Source change hardening test','scripts/source-change-preservation-hardening-test.js');
 runRequired('Structured investigation graph build','scripts/build-structured-investigation-data.js');
+runRequired('Structured entity type refinement','scripts/refine-structured-entity-types.js');
+runRequired('Entity registry page build','scripts/build-entity-registry-page.js');
 runRequired('Relationship registry page build','scripts/build-relationship-registry-page.js');
 runRequired('Structured investigation search extension','scripts/extend-search-with-structured-data.js');
 runRequired('Structured investigation data test','scripts/structured-investigation-data-test.js');
@@ -51,4 +53,4 @@ if(fs.existsSync(path.join(out,'_redirects'))){console.error('Cloudflare output 
 for(const privatePath of ['evidence-archive','data/source-snapshots','data/source-snapshot-index.json','data/source-change-ledger.json','downloads/source-change-monitor-report.json','downloads/source-change-preservation-hardening-report.json']){if(fs.existsSync(path.join(out,privatePath))){console.error(`Cloudflare output failed: private evidence archive or diagnostics exposed at _site/${privatePath}`);process.exit(1)}}
 require('./public-copy-visibility-test.js');
 const count=[];(function countFiles(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,entry.name);if(entry.isDirectory())countFiles(full);else count.push(full)}})(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files, including Phase 3 structured entities and evidence-bound relationships while private evidence snapshots and diagnostics remain excluded.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files, including refined Phase 3 agencies, contractors, structured entities and evidence-bound relationships while private evidence snapshots and diagnostics remain excluded.`);

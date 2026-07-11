@@ -4,7 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const indexPath = path.join(root, 'index.html');
 const toolsPath = path.join(root, 'research-tools.html');
-const templatePath = path.join(root, 'scripts', 'templates', 'research-tools-member.html');
+const templatePath = path.join(root, 'scripts', 'templates', 'research-tools-member.txt');
 const visibilityPath = path.join(root, 'scripts', 'hide-internal-public-controls.js');
 if (!fs.existsSync(indexPath)) throw new Error('index.html not found');
 if (!fs.existsSync(templatePath)) throw new Error('canonical Research Tools template not found');

@@ -1,0 +1,19 @@
+{
+  "updated": null,
+  "mode": null,
+  "title": "Investigation Source Changes",
+  "boundary": "A changed, removed, restored or unavailable source is an evidence-preservation observation. It does not by itself prove concealment, destruction, misconduct, intent or criminal wrongdoing.",
+  "methodology": "Registered sources are retrieved on schedule, canonicalised, hashed and compared with the previous preserved observation. Added and removed record identifiers are separated from template and metadata churn.",
+  "summary": {
+    "monitoredSources": 0,
+    "sourcesCheckedThisRun": 0,
+    "meaningfulChangesThisRun": 0,
+    "meaningfulChangesLast24Hours": 0,
+    "removalObservationsLast24Hours": 0,
+    "unavailableSourcesLast24Hours": 0,
+    "restoredSourcesLast24Hours": 0,
+    "preservedSnapshotsThisRun": 0,
+    "preservedDocumentsThisRun": 0
+  },
+  "changes": []
+}

@@ -13,7 +13,7 @@ function clean(value = '') {
   return String(value || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 function terms(value = '') {
-  return [...new Set(clean(value).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(word => word.length > 2))].slice(0, 45);
+  return [...new Set(clean(value).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(word => word.length > 2))].slice(0, 60);
 }
 function upsert(map, item) {
   const prior = map.get(item.url) || {};
@@ -52,6 +52,11 @@ const routes = [
     keywords: ['source ledger','government platforms','DOJ','SEC','USAspending','Federal Register','WikiLeaks','FBI Vault','CIA reading room','EPPO','SFO','HATVP']
   },
   {
+    url: 'source-changes.html', title: 'Source Change Ledger', category: 'Evidence Preservation', layer: 'disclosure-black-files', priority: 108,
+    description: 'Public evidence-preservation ledger for additions, removals, source failures, restorations, retrieval dates and SHA-256 content hashes.',
+    keywords: ['source change','page changed','record removed','record restored','change detection','snapshot','sha256','hash','evidence preservation','missing record','redaction log']
+  },
+  {
     url: 'data/investigation-ledger.json', title: 'Investigation Evidence Ledger JSON', category: 'Machine Data', layer: 'government-enforcement', priority: 101,
     description: 'Machine-readable evidence findings with grade, status, source, mechanism, implication, boundary and next records.',
     keywords: ['json','investigation ledger','wrongdoing status','evidence grade','mechanism','next records']
@@ -70,6 +75,11 @@ const routes = [
     url: 'data/investigation-source-registry.json', title: 'Investigation Source Registry JSON', category: 'Machine Data', layer: 'disclosure-black-files', priority: 98,
     description: 'Government, regulator, court, oversight, archive, WikiLeaks and anti-corruption sources searched daily and weekly.',
     keywords: ['source registry','government sources','WikiLeaks','DOJ Epstein','SEC','USAspending','oversight']
+  },
+  {
+    url: 'data/source-change-public.json', title: 'Public Source Change Data JSON', category: 'Machine Data', layer: 'disclosure-black-files', priority: 102,
+    description: 'Machine-readable public source-change records with hashes, retrieval dates, additions, removals, restorations and evidence boundaries.',
+    keywords: ['source change json','hashes','retrieval date','addition','removal','restored source','evidence preservation']
   }
 ];
 routes.forEach(route => upsert(map, { ...route, sourceType: route.url.endsWith('.html') ? 'investigation-route' : 'json-feed' }));
@@ -109,14 +119,30 @@ for (const source of registry.sources || []) {
   });
 }
 
+const sourceChanges = readJson('data/source-change-public.json', {changes: []});
+for (const change of sourceChanges.changes || []) {
+  if (!change?.id) continue;
+  const description = clean(`${change.established || ''} ${change.notEstablished || ''} ${(change.additions || []).join(' ')} ${(change.removals || []).join(' ')}`);
+  upsert(map, {
+    url: `source-changes.html?change=${encodeURIComponent(change.id)}`,
+    title: `${change.sourceLabel || change.sourceId} — ${String(change.changeType || 'source change').replace(/-/g, ' ')}`,
+    category: `Source Change · Grade ${change.evidenceGrade || 'B'}`,
+    layer: change.lane || 'disclosure-black-files',
+    description: description.slice(0, 700),
+    keywords: terms(`${change.sourceLabel} ${change.sourceId} ${change.changeType} ${change.status} ${description} ${change.previousHash} ${change.currentHash}`),
+    priority: change.changeType === 'source-unavailable' ? 106 : 103,
+    sourceType: 'source-change'
+  });
+}
+
 const finalIndex = [...map.values()].sort((a, b) => Number(b.priority || 0) - Number(a.priority || 0) || String(a.title || '').localeCompare(String(b.title || '')));
 fs.writeFileSync(indexPath, JSON.stringify(finalIndex, null, 2));
 
 if (fs.existsSync(searchPagePath)) {
   let html = fs.readFileSync(searchPagePath, 'utf8');
-  html = html.replace('Search by control layer, person, institution, record route, missing file, book, briefing, or outcome.', 'Search every investigation finding, government source, person, institution, contract, filing, court record, leak, missing file, book, briefing, or outcome.');
+  html = html.replace('Search by control layer, person, institution, record route, missing file, book, briefing, or outcome.', 'Search every investigation finding, government source, person, institution, contract, filing, court record, leak, source change, missing file, book, briefing, or outcome.');
   if (!html.includes('data-q="corruption bribery fraud official enforcement"')) {
-    const buttons = '<button class="btn alt" data-q="corruption bribery fraud official enforcement">Corruption</button><button class="btn alt" data-q="WikiLeaks documents cables archive">WikiLeaks</button><button class="btn alt" data-q="government contracts USAspending procurement">Government Contracts</button><button class="btn alt" data-q="daily investigation conclusions wrongdoing">Daily Conclusions</button>';
+    const buttons = '<button class="btn alt" data-q="corruption bribery fraud official enforcement">Corruption</button><button class="btn alt" data-q="WikiLeaks documents cables archive">WikiLeaks</button><button class="btn alt" data-q="government contracts USAspending procurement">Government Contracts</button><button class="btn alt" data-q="daily investigation conclusions wrongdoing">Daily Conclusions</button><button class="btn alt" data-q="missing record redaction log source change">Source Changes</button>';
     html = html.replace('</div></section><section class="section wrap split">', `${buttons}</div></section><section class="section wrap split">`);
   }
   fs.writeFileSync(searchPagePath, html);
@@ -128,8 +154,8 @@ if (fs.existsSync(searchJsPath)) {
     js = js.replace('function init(index){index=Array.isArray(index)?index:[];function run(){', 'function init(index){index=Array.isArray(index)?index:[];/* investigationQueryPrefill */try{const q=new URLSearchParams(location.search).get("q");if(q&&!input.value)input.value=q;}catch(_){}function run(){');
   }
   js = js.replace('"elite-networks":["elite","billionaire","foundation","institution","wef","blackrock","control","power"]', '"elite-networks":["elite","billionaire","foundation","institution","wef","blackrock","control","power","corruption","bribery","fraud","contract","procurement"]');
-  js = js.replace('"disclosure-black-files":["epstein","disclosure","redaction","withheld","sealed","court","file","records"]', '"disclosure-black-files":["epstein","disclosure","redaction","withheld","sealed","court","file","records","wikileaks","leak","declassified","foia"]');
+  js = js.replace('"disclosure-black-files":["epstein","disclosure","redaction","withheld","sealed","court","file","records"]', '"disclosure-black-files":["epstein","disclosure","redaction","withheld","sealed","court","file","records","wikileaks","leak","declassified","foia","source change","removed","restored","hash"]');
   fs.writeFileSync(searchJsPath, js);
 }
 
-console.log(`Investigation search extension complete: ${finalIndex.length} routes, ${seenFindings.size} live findings and ${(registry.sources || []).length} monitored sources indexed.`);
+console.log(`Investigation search extension complete: ${finalIndex.length} routes, ${seenFindings.size} live findings, ${(registry.sources || []).length} monitored sources and ${(sourceChanges.changes || []).length} preserved source changes indexed.`);

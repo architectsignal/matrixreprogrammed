@@ -4,9 +4,13 @@ const path = require('path');
 const root = process.cwd();
 const indexPath = path.join(root, 'index.html');
 const toolsPath = path.join(root, 'research-tools.html');
+const templatePath = path.join(root, 'scripts', 'templates', 'research-tools-member.html');
 const visibilityPath = path.join(root, 'scripts', 'hide-internal-public-controls.js');
 if (!fs.existsSync(indexPath)) throw new Error('index.html not found');
-if (!fs.existsSync(toolsPath)) throw new Error('research-tools.html not found');
+if (!fs.existsSync(templatePath)) throw new Error('canonical Research Tools template not found');
+
+const canonicalTools = fs.readFileSync(templatePath, 'utf8');
+fs.writeFileSync(toolsPath, canonicalTools);
 
 let index = fs.readFileSync(indexPath, 'utf8');
 const start = '<!-- osint-tools-home:start -->';
@@ -52,10 +56,11 @@ if (fs.existsSync(llmsPath)) {
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), JSON.stringify({
-  ok: index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
+  ok: canonicalTools.includes('data-tool-form="holehe"') && canonicalTools.includes('data-tool-form="spiderfoot"') && canonicalTools.includes('data-tool-form="h8mail"') && index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
   generatedAt: new Date().toISOString(),
   homepageRoute: 'research-tools.html',
   externalRoute: 'https://emailosint.org/',
+  canonicalTemplate: path.relative(root, templatePath).replace(/\\/g, '/'),
   visibilityPatched
 }, null, 2));
-console.log('Research tools homepage route and visibility policy applied.');
+console.log('Canonical Research Tools page, homepage route and visibility policy applied.');

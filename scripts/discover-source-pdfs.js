@@ -133,8 +133,7 @@ async function mapLimit(items, limit, fn) {
       documentLinks: links,
       lastDocumentDiscovery: now,
       documentDiscoveryStatus: result.ok ? 'fetched' : (result.skipped ? 'skipped' : 'failed'),
-      documentDiscoveryCount: links.length,
-      documentDiscoveryFailureCategory: result.ok ? '' : result.category
+      documentDiscoveryCount: links.length
     };
     documents.push(...links);
   }

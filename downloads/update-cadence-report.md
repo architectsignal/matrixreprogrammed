@@ -1,6 +1,6 @@
 # Update Cadence Report
 
-Generated: 2026-07-10T07:54:17.039Z
+Generated: 2026-07-11T06:29:05.599Z
 Result: PASS
 
 Cadence audit hard-fails missing update systems and duplicate automatic schedules. Exact wording and marker checks are warnings so regenerated copy does not block production deploy.
@@ -9,5 +9,4 @@ Cadence audit hard-fails missing update systems and duplicate automatic schedule
 
 ## Soft Issues
 - .github/workflows/auto-update-orchestrator.yml missing daily update step
-- scripts/patch-worker-newsletter-system.js missing newsletter capture handler
 - scripts/patch-worker-newsletter-system.js missing weekly newsletter send handler

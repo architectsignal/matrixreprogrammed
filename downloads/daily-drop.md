@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-11T05:57:59.359Z
+Updated: 2026-07-11T06:28:28.800Z
 
 ## Status
 
-- Live Intel items: 15
+- Live Intel items: 9
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -48,23 +48,3 @@ Updated: 2026-07-11T05:57:59.359Z
   - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.
-- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.

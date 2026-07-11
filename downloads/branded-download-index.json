@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T05:57:59.631Z",
+  "updated": "2026-07-11T06:28:29.070Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 171,
+  "count": 180,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -292,6 +292,12 @@
       "file": "downloads/clock-wall.pdf",
       "title": "WWIII Escalation Clock",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/commercial-strategy-visibility.pdf",
+      "title": "Commercial Strategy Visibility",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -685,6 +691,24 @@
       "kind": "download"
     },
     {
+      "file": "downloads/membership-auth-patch-report.pdf",
+      "title": "Membership Auth Patch Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/membership-auth-ui-patch.pdf",
+      "title": "Membership Auth Ui Patch",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/membership-foundation-patch-report.pdf",
+      "title": "Membership Foundation Patch Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/missing-files-pressure-list.pdf",
       "title": "Missing Files / Pressure List",
       "reused": true,
@@ -718,6 +742,12 @@
       "file": "downloads/network-search.pdf",
       "title": "Network Search",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/newsletter-worker-patch-report.pdf",
+      "title": "Newsletter Worker Patch Report",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -775,6 +805,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/paypal-membership-patch-report.pdf",
+      "title": "Paypal Membership Patch Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/policy-convergence-timer-map.pdf",
       "title": "Policy Convergence Timer Map",
       "reused": true,
@@ -817,9 +853,27 @@
       "kind": "download"
     },
     {
+      "file": "downloads/public-copy-visibility-test.pdf",
+      "title": "Public Copy Visibility Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/public-record-intake.pdf",
       "title": "Public Record Intake Manifest",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/public-visibility-report.pdf",
+      "title": "Public Visibility Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/public-weekly-signup-report.pdf",
+      "title": "Public Weekly Signup Report",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -855,7 +909,7 @@
     {
       "file": "downloads/search-runtime-hardening-report.pdf",
       "title": "Search Runtime Hardening Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {

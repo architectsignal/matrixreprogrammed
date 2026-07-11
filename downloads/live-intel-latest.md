@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-11T05:57:35.195Z
+Updated: 2026-07-11T06:28:05.986Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -92,51 +92,3 @@ Updated: 2026-07-11T05:57:35.195Z
   - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: download-center.html
-- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Short title: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resu
-  - Longform title: Epstein Files, Timeline And Court Records — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Mill
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Short title: NSA revives 'Tailored Access Operations' name for elite hacking unit - T
-  - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
-  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
-  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
-  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
-  - Longform title: Epstein Files, Timeline And Court Records — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
-  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
-  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
-  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-  - Source: https://www.who.int/health-topics/who-pandemic-agreement
-  - Evidence: Official WHO treaty/implementation-process lane
-  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
-  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
-  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
-  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
-  - Offer: offer-starter-library.html

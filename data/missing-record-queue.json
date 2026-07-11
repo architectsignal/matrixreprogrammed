@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-11T05:58:19.368Z",
+  "updated": "2026-07-11T06:28:47.897Z",
   "queue": [
     {
       "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
@@ -34779,6 +34779,11 @@
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
         {
+          "lane": "people",
+          "label": "People dossier",
+          "deck": "people-of-interest"
+        },
+        {
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
@@ -34859,11 +34864,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "missing-record",
-          "label": "Missing-record queue",
-          "deck": null
         }
       ],
       "confidence": "watch"
@@ -34892,11 +34892,6 @@
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
         {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
-        {
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
@@ -34905,6 +34900,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "missing-record",
+          "label": "Missing-record queue",
+          "deck": null
         }
       ],
       "confidence": "watch"
@@ -34932,6 +34932,11 @@
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
+        {
+          "lane": "people",
+          "label": "People dossier",
+          "deck": "people-of-interest"
+        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -34977,11 +34982,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -35002,7 +35002,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1745",
@@ -35018,9 +35018,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1746",
@@ -35038,7 +35043,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1747",
@@ -35056,7 +35061,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1748",
@@ -35090,6 +35095,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1750",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1751",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "missing-record",
@@ -35100,7 +35141,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1750",
+      "title": "Source 1752",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35123,47 +35164,6 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1751",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1752",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
       "title": "Source 1753",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -35172,11 +35172,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -35197,6 +35192,11 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -35215,14 +35215,14 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -35259,6 +35259,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -35313,6 +35318,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1761",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1762",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "society",
@@ -35323,7 +35364,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1761",
+      "title": "Source 1763",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35346,7 +35387,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1762",
+      "title": "Source 1764",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35369,7 +35410,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1763",
+      "title": "Source 1765",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35382,47 +35423,6 @@
           "lane": "family",
           "label": "Power Families / Black Nobility",
           "deck": "power-families"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1764",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1765",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
         },
         {
           "lane": "policy",
@@ -35446,6 +35446,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -35479,11 +35484,6 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -35505,11 +35505,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -35523,6 +35518,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -35569,6 +35569,47 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1773",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1774",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "security",
@@ -35579,7 +35620,7 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 1773",
+      "title": "Source 1775",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35602,7 +35643,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1774",
+      "title": "Source 1776",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35620,7 +35661,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1775",
+      "title": "Source 1777",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -35646,57 +35687,6 @@
         }
       ],
       "confidence": "watch"
-    },
-    {
-      "title": "Source 1776",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
-        }
-      ],
-      "confidence": "medium"
-    },
-    {
-      "title": "Source 1777",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
-        },
-        {
-          "lane": "identity",
-          "label": "Digital ID / surveillance route",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "medium"
     },
     {
       "title": "Source 1778",
@@ -35735,9 +35725,19 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
+        },
+        {
+          "lane": "identity",
+          "label": "Digital ID / surveillance route",
+          "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1780",
@@ -35753,9 +35753,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1781",
@@ -35773,7 +35778,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1782",
@@ -35807,14 +35812,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1784",
@@ -35850,12 +35850,12 @@
           "deck": "policy"
         },
         {
-          "lane": "identity",
-          "label": "Digital ID / surveillance route",
-          "deck": "policy"
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1786",
@@ -35873,7 +35873,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1787",
@@ -35889,9 +35889,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "identity",
+          "label": "Digital ID / surveillance route",
+          "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1788",
@@ -35909,7 +35914,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1789",
@@ -35943,11 +35948,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -35986,12 +35986,12 @@
           "deck": "policy"
         },
         {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1793",
@@ -36025,9 +36025,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1795",
@@ -36097,19 +36102,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1799",
@@ -36143,6 +36138,16 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "medium"
@@ -36160,11 +36165,6 @@
         {
           "lane": "policy",
           "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "identity",
-          "label": "Digital ID / surveillance route",
           "deck": "policy"
         }
       ],
@@ -36186,7 +36186,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1803",
@@ -36204,9 +36204,9 @@
           "deck": "policy"
         },
         {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
+          "lane": "identity",
+          "label": "Digital ID / surveillance route",
+          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -36243,6 +36243,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -36261,11 +36266,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -36302,12 +36302,53 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
     },
     {
       "title": "Source 1809",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1810",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1811",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36330,53 +36371,53 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1810",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
-        }
-      ],
-      "confidence": "medium"
-    },
-    {
-      "title": "Source 1811",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
-        }
-      ],
-      "confidence": "medium"
-    },
-    {
       "title": "Source 1812",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "title": "Source 1813",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "title": "Source 1814",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36399,7 +36440,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1813",
+      "title": "Source 1815",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36417,7 +36458,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1814",
+      "title": "Source 1816",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36445,7 +36486,7 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 1815",
+      "title": "Source 1817",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36468,7 +36509,7 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 1816",
+      "title": "Source 1818",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36496,47 +36537,6 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 1817",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1818",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
       "title": "Source 1819",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -36545,11 +36545,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -36573,6 +36568,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -36586,6 +36586,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -36645,6 +36650,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1825",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1826",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "biosecurity",
@@ -36655,7 +36696,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1825",
+      "title": "Source 1827",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -36676,42 +36717,6 @@
         }
       ],
       "confidence": "medium"
-    },
-    {
-      "title": "Source 1826",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1827",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
     },
     {
       "title": "Source 1828",
@@ -36778,11 +36783,6 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -36799,11 +36799,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -36995,7 +36990,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1841",
@@ -37041,7 +37036,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1843",
@@ -37307,6 +37302,11 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -37346,11 +37346,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -37540,11 +37535,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -37583,9 +37573,19 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -37622,11 +37622,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -37816,11 +37811,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -37867,6 +37857,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -37974,6 +37969,11 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -37990,6 +37990,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -38013,6 +38018,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1886",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1887",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "thinktank",
@@ -38023,7 +38064,7 @@
       "confidence": "medium"
     },
     {
-      "title": "Source 1886",
+      "title": "Source 1888",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -38044,42 +38085,6 @@
         }
       ],
       "confidence": "medium"
-    },
-    {
-      "title": "Source 1887",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1888",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
     },
     {
       "title": "Source 1889",
@@ -38185,14 +38190,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1895",
@@ -38218,11 +38218,6 @@
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
         {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
-        {
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
@@ -38231,9 +38226,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1897",
@@ -38258,6 +38258,11 @@
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
+        {
+          "lane": "people",
+          "label": "People dossier",
+          "deck": "people-of-interest"
+        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -38285,11 +38290,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "jurisdiction",
-          "label": "Jurisdictions of Power dossier",
-          "deck": "jurisdictions-of-power"
         }
       ],
       "confidence": "watch"
@@ -38326,6 +38326,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "jurisdiction",
+          "label": "Jurisdictions of Power dossier",
+          "deck": "jurisdictions-of-power"
         }
       ],
       "confidence": "watch"
@@ -38382,7 +38387,7 @@
           "deck": "policy"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1905",
@@ -38398,11 +38403,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38421,14 +38421,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1907",
@@ -38467,6 +38462,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38485,6 +38485,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38503,11 +38508,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38544,6 +38544,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38562,11 +38567,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38603,6 +38603,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38621,11 +38626,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38662,6 +38662,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38680,11 +38685,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38703,11 +38703,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38726,6 +38721,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38744,6 +38744,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38798,11 +38803,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38816,11 +38816,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -38864,14 +38859,14 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38890,6 +38885,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38908,6 +38908,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -38926,11 +38931,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -38969,9 +38969,9 @@
           "deck": "policy"
         },
         {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -38990,11 +38990,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39036,6 +39031,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39077,6 +39077,24 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1939",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "society",
@@ -39087,7 +39105,30 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1939",
+      "title": "Source 1940",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 1941",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -39110,7 +39151,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 1940",
+      "title": "Source 1942",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -39123,42 +39164,6 @@
           "lane": "family",
           "label": "Power Families / Black Nobility",
           "deck": "power-families"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1941",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 1942",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
         },
         {
           "lane": "policy",
@@ -39200,11 +39205,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39241,6 +39241,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39295,16 +39300,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39323,11 +39318,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -39351,6 +39341,11 @@
           "lane": "society",
           "label": "Secret Societies dossier",
           "deck": "secret-societies"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39369,6 +39364,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -39387,11 +39387,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "jurisdiction",
-          "label": "Jurisdictions of Power dossier",
-          "deck": "jurisdictions-of-power"
         },
         {
           "lane": "society",
@@ -39415,11 +39410,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39438,6 +39428,16 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "jurisdiction",
+          "label": "Jurisdictions of Power dossier",
+          "deck": "jurisdictions-of-power"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39497,6 +39497,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -39551,11 +39556,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39589,14 +39589,14 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39615,11 +39615,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39633,6 +39628,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -39658,12 +39658,12 @@
           "deck": "policy"
         },
         {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1967",
@@ -39679,11 +39679,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39725,6 +39720,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -39743,9 +39743,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 1971",
@@ -39905,11 +39910,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "missing-record",
-          "label": "Missing-record queue",
-          "deck": null
         }
       ],
       "confidence": "watch"
@@ -39987,6 +39987,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "missing-record",
+          "label": "Missing-record queue",
+          "deck": null
         }
       ],
       "confidence": "watch"
@@ -40131,11 +40136,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "identity",
-          "label": "Digital ID / surveillance route",
-          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -40154,11 +40154,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40176,6 +40171,11 @@
         {
           "lane": "policy",
           "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "identity",
+          "label": "Digital ID / surveillance route",
           "deck": "policy"
         }
       ],
@@ -40195,6 +40195,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40249,14 +40254,9 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
-      "confidence": "medium"
+      "confidence": "watch"
     },
     {
       "title": "Source 1998",
@@ -40272,11 +40272,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "biosecurity",
-          "label": "Health/biosecurity route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40295,9 +40290,14 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
-      "confidence": "watch"
+      "confidence": "medium"
     },
     {
       "title": "Source 2000",
@@ -40313,6 +40313,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "biosecurity",
+          "label": "Health/biosecurity route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40403,11 +40408,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40441,6 +40441,47 @@
           "deck": "institutions"
         },
         {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2008",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2009",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
           "lane": "family",
           "label": "Power Families / Black Nobility",
           "deck": "power-families"
@@ -40454,7 +40495,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2008",
+      "title": "Source 2010",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -40477,7 +40518,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2009",
+      "title": "Source 2011",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -40495,42 +40536,6 @@
           "lane": "security",
           "label": "War/security route",
           "deck": "institutions"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 2010",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 2011",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "confidence": "watch"
@@ -40675,11 +40680,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -40716,6 +40716,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -40842,11 +40847,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40883,6 +40883,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -40991,11 +40996,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "society",
-          "label": "Secret Societies dossier",
-          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -41014,11 +41014,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -41039,9 +41034,9 @@
           "deck": "policy"
         },
         {
-          "lane": "thinktank",
-          "label": "Think Tanks dossier",
-          "deck": "think-tanks"
+          "lane": "society",
+          "label": "Secret Societies dossier",
+          "deck": "secret-societies"
         }
       ],
       "confidence": "watch"
@@ -41062,9 +41057,9 @@
           "deck": "policy"
         },
         {
-          "lane": "money",
-          "label": "Financial/currency route",
-          "deck": "institutions"
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -41083,6 +41078,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "thinktank",
+          "label": "Think Tanks dossier",
+          "deck": "think-tanks"
         }
       ],
       "confidence": "watch"
@@ -41101,6 +41101,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "money",
+          "label": "Financial/currency route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -41209,11 +41214,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "security",
-          "label": "War/security route",
-          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -41250,6 +41250,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "security",
+          "label": "War/security route",
+          "deck": "institutions"
         }
       ],
       "confidence": "watch"
@@ -41574,11 +41579,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "narrative",
-          "label": "Controlled Opposition / media route",
-          "deck": "controlled-opposition"
         }
       ],
       "confidence": "watch"
@@ -41615,6 +41615,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "narrative",
+          "label": "Controlled Opposition / media route",
+          "deck": "controlled-opposition"
         }
       ],
       "confidence": "watch"
@@ -42497,6 +42502,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2119",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2120",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "security",
@@ -42507,7 +42548,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2119",
+      "title": "Source 2121",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -42530,51 +42571,10 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2120",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
-      "title": "Source 2121",
-      "sourceUrl": "",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-      "affectedDestinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
-        }
-      ],
-      "confidence": "watch"
-    },
-    {
       "title": "Source 2122",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
-        {
-          "lane": "people",
-          "label": "People dossier",
-          "deck": "people-of-interest"
-        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -42611,6 +42611,11 @@
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
+        {
+          "lane": "people",
+          "label": "People dossier",
+          "deck": "people-of-interest"
+        },
         {
           "lane": "institution",
           "label": "Institution dossier",
@@ -42653,11 +42658,6 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -42674,11 +42674,6 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
-        },
-        {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -42730,11 +42725,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "correction",
-          "label": "Correction / counter-evidence",
-          "deck": null
         }
       ],
       "confidence": "watch"
@@ -42758,11 +42748,6 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
-        },
-        {
-          "lane": "correction",
-          "label": "Correction / counter-evidence",
-          "deck": null
         }
       ],
       "confidence": "watch"
@@ -42786,6 +42771,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "correction",
+          "label": "Correction / counter-evidence",
+          "deck": null
         }
       ],
       "confidence": "watch"
@@ -42809,6 +42799,11 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        },
+        {
+          "lane": "correction",
+          "label": "Correction / counter-evidence",
+          "deck": null
         }
       ],
       "confidence": "watch"
@@ -42847,6 +42842,11 @@
           "deck": "institutions"
         },
         {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
+        },
+        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -42863,6 +42863,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -42919,11 +42924,6 @@
           "deck": "institutions"
         },
         {
-          "lane": "family",
-          "label": "Power Families / Black Nobility",
-          "deck": "power-families"
-        },
-        {
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
@@ -42958,6 +42958,11 @@
           "lane": "institution",
           "label": "Institution dossier",
           "deck": "institutions"
+        },
+        {
+          "lane": "family",
+          "label": "Power Families / Black Nobility",
+          "deck": "power-families"
         },
         {
           "lane": "policy",
@@ -43089,6 +43094,42 @@
           "lane": "policy",
           "label": "Policy dossier and clock",
           "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2148",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "confidence": "watch"
+    },
+    {
+      "title": "Source 2149",
+      "sourceUrl": "",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+      "affectedDestinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
         },
         {
           "lane": "security",
@@ -43099,7 +43140,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2148",
+      "title": "Source 2150",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [
@@ -43122,7 +43163,7 @@
       "confidence": "watch"
     },
     {
-      "title": "Source 2149",
+      "title": "Source 2151",
       "sourceUrl": "",
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
       "affectedDestinations": [

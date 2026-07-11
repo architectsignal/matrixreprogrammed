@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-11T05:57:35.195Z
+Updated: 2026-07-11T06:28:05.986Z
 Items: 12
 
 - 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
@@ -81,11 +81,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-07-09 — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
   - Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
   - Evidence: Seven-day public-record lead
@@ -111,6 +106,11 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -135,12 +135,12 @@ Items: 12
 - Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-- Google News / Epstein sighting and alive claims: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com — https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
 - Google News / Epstein sighting and alive claims: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION — https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
 - Google News / Epstein sighting and alive claims: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News — https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
 - Google News / Epstein sighting and alive claims: Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald — https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
 - Google News / declassified files: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 — https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
 - Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
+- Google News / Epstein timeline and files: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News — https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
 
 ## Book Routes
 

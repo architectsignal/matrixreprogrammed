@@ -14,7 +14,7 @@ function words(query) {
   return String(query || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(word => word.length > 1 && !stop.has(word));
 }
 function keys(item) { return Array.isArray(item.keywords) ? item.keywords : String(item.keywords || '').split(/[, ]+/).filter(Boolean); }
-function hay(item) { return [item.title, item.category, item.layer, item.description, keys(item).join(' ')].join(' ').toLowerCase(); }
+function hay(item) { return [item.title, item.category, item.layer, item.description, keys(item).join(' '), item.sourceType, item.statusClass, item.entity].join(' ').toLowerCase(); }
 function score(item, tokens, query) {
   const text = hay(item);
   let value = Number(item.priority || 0) / 4;
@@ -44,15 +44,15 @@ function testIndex(index, label) {
   const required = ['investigation-machine.html', 'daily-investigation-conclusions.html', 'weekly-investigation-report.html', 'investigation-source-ledger.html', 'epstein-files.html', 'evidence-vault.html'];
   for (const url of required) index.some(item => item.url === url) ? pass(`${label} route ${url}`) : fail(`${label} route ${url}`, 'missing');
   const queries = [
-    { query: 'corruption bribery fraud official enforcement', expected: /investigation-machine|daily-investigation-conclusions|government-enforcement/ },
-    { query: 'WikiLeaks documents cables archive', expected: /investigation-source-ledger|investigation-machine|evidence-vault/ },
-    { query: 'government contracts USAspending procurement', expected: /investigation-source-ledger|investigation-machine|private-contractor/ },
-    { query: 'Epstein DOJ disclosures redactions', expected: /epstein|investigation-source-ledger|daily-investigation/ },
-    { query: 'SEC filings ownership enforcement', expected: /investigation|sec|evidence|blackrock/ }
+    { query: 'corruption bribery fraud official enforcement', expected: /investigation-machine|daily-investigation-conclusions|government-enforcement|structured-relationship/ },
+    { query: 'WikiLeaks documents cables archive', expected: /wikileaks|investigation-source-ledger|investigation-machine|evidence-vault|daily-investigation-conclusions|structured-relationship/ },
+    { query: 'government contracts USAspending procurement', expected: /investigation-source-ledger|investigation-machine|private-contractor|entity-registry|relationship-registry/ },
+    { query: 'Epstein DOJ disclosures redactions', expected: /epstein|investigation-source-ledger|daily-investigation|relationship-registry/ },
+    { query: 'SEC filings ownership enforcement', expected: /investigation|sec|evidence|blackrock|source-changes|entity-registry|relationship-registry/ }
   ];
   for (const test of queries) {
     const results = ranked(index, test.query);
-    const routeText = results.map(item => `${item.url} ${item.layer} ${item.title}`).join(' ');
+    const routeText = results.map(item => `${item.url} ${item.layer} ${item.title} ${item.sourceType || ''} ${item.statusClass || ''}`).join(' ').toLowerCase();
     if (!results.length) fail(`${label} query ${test.query}`, 'zero results');
     else if (!test.expected.test(routeText)) fail(`${label} query ${test.query}`, `expected route absent from top ${results.length}: ${results.slice(0, 5).map(item => item.url).join(', ')}`);
     else pass(`${label} query ${test.query}`, results.slice(0, 3).map(item => item.url).join(', '));

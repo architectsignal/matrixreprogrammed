@@ -1,0 +1,168 @@
+name: Structured Investigation Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 6 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/investigation-ledger.json'
+      - 'data/investigation-source-registry.json'
+      - 'data/document-extraction-index.json'
+      - 'data/source-change-public.json'
+      - 'data/investigation-entity-schema.json'
+      - 'data/structured-investigation-overrides.json'
+      - 'scripts/build-structured-investigation-data.js'
+      - 'scripts/refine-structured-entity-types.js'
+      - 'scripts/build-entity-registry-page.js'
+      - 'scripts/build-relationship-registry-page.js'
+      - 'scripts/wire-structured-investigation-routes.js'
+      - 'scripts/extend-search-with-structured-data.js'
+      - 'scripts/structured-investigation-data-test.js'
+      - '.github/workflows/structured-investigation-data.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/investigation-entity-schema.json'
+      - 'data/structured-investigation-overrides.json'
+      - 'scripts/build-structured-investigation-data.js'
+      - 'scripts/refine-structured-entity-types.js'
+      - 'scripts/build-entity-registry-page.js'
+      - 'scripts/build-relationship-registry-page.js'
+      - 'scripts/wire-structured-investigation-routes.js'
+      - 'scripts/extend-search-with-structured-data.js'
+      - 'scripts/structured-investigation-data-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/structured-investigation-data.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: structured-investigation-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build, validate, publish and verify structured investigation data
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and refine canonical entity and relationship graph
+        run: |
+          node scripts/build-structured-investigation-data.js
+          node scripts/refine-structured-entity-types.js
+          node scripts/build-entity-registry-page.js
+          node scripts/build-relationship-registry-page.js
+
+      - name: Rebuild public search with findings, documents and entities
+        run: |
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/extend-search-with-documents.js
+          node scripts/extend-search-with-structured-data.js
+
+      - name: Validate schema, evidence fields, public routes and search
+        run: |
+          node scripts/structured-investigation-data-test.js
+          node scripts/search-investigation-smoke-test.js
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js
+
+      - name: Commit structured public outputs
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          git config user.name "matrix-structure-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data/investigation-knowledge-graph.json \
+            data/entity-registry.json \
+            data/relationship-registry.json \
+            entity-registry.html \
+            relationship-registry.html \
+            search.html \
+            search.js \
+            search-index.json \
+            sitemap.xml \
+            llms.txt \
+            investigation-machine.html \
+            investigation-source-ledger.html \
+            daily-investigation-conclusions.html \
+            weekly-investigation-report.html \
+            evidence-network-map.html \
+            downloads/investigation-entities.csv \
+            downloads/investigation-relationships.csv \
+            downloads/structured-investigation-data-build.json \
+            downloads/structured-investigation-data-test.json \
+            downloads/search-investigation-smoke-test.json \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No structured data changes to commit."
+            exit 0
+          fi
+          git commit -m "Build structured investigation graph $(date -u +%F) [deploy]"
+          git push || (git pull --rebase --autostash origin main && git push)
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify live structured routes and search
+        if: github.event_name != 'pull_request' && steps.commit.outputs.committed == 'true'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: |
+          for attempt in $(seq 1 36); do
+            entity_ok=false
+            relationship_ok=false
+            graph_ok=false
+            search_ok=false
+            agency_ok=false
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/entity-registry.html" | grep -q 'ENTITY REGISTRY' && entity_ok=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/relationship-registry.html" | grep -q 'RELATIONSHIP REGISTRY' && relationship_ok=true || true
+            public_graph="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/investigation-knowledge-graph.json" || true)"
+            printf '%s' "$public_graph" | grep -q 'FollowTheMoney-compatible' && graph_ok=true || true
+            printf '%s' "$public_graph" | grep -q 'GovernmentAgency' && agency_ok=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/search-index.json" | grep -q 'structured-entity-registry' && search_ok=true || true
+            if [ "$entity_ok" = true ] && [ "$relationship_ok" = true ] && [ "$graph_ok" = true ] && [ "$agency_ok" = true ] && [ "$search_ok" = true ]; then
+              echo "Structured investigation routes are live, typed and searchable."
+              exit 0
+            fi
+            echo "Waiting for structured production deployment ($attempt/36)…"
+            sleep 20
+          done
+          echo "Production did not expose all Phase 3 routes within the verification window."
+          exit 1
+
+      - name: Upload structured data reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: structured-investigation-data-${{ github.run_id }}
+          path: |
+            downloads/structured-investigation-data-build.json
+            downloads/structured-investigation-data-test.json
+            downloads/search-investigation-smoke-test.json
+            downloads/investigation-entities.csv
+            downloads/investigation-relationships.csv
+          if-no-files-found: ignore
+          retention-days: 60

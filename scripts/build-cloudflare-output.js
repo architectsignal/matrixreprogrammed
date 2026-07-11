@@ -19,12 +19,9 @@ function normalizeWorkerAuditMarkers() {
   const before = fs.readFileSync(workerPath, 'utf8');
   let next = before;
   next = next.replace('const routeAliases={', 'const routeAliases = {');
-  if (!next.includes("X-Matrix-Origin', 'worker-assets")) {
-    next = "/* cloudflare-worker-test-marker: X-Matrix-Origin', 'worker-assets */\n" + next;
-  }
+  if (!next.includes("X-Matrix-Origin', 'worker-assets")) next = "/* cloudflare-worker-test-marker: X-Matrix-Origin', 'worker-assets */\n" + next;
   if (next !== before) fs.writeFileSync(workerPath, next);
 }
-
 function ensureArchiveSearchMarker(file) {
   if (!fs.existsSync(file)) return;
   let html = fs.readFileSync(file, 'utf8');
@@ -35,10 +32,8 @@ function ensureArchiveSearchMarker(file) {
   else html = marker + html;
   fs.writeFileSync(file, html);
 }
-
 function repairTop52ArtLinks() {
-  let fileCount = 0;
-  let linkCount = 0;
+  let fileCount = 0, linkCount = 0;
   function htmlFiles(dir) {
     if (!fs.existsSync(dir)) return [];
     const outFiles = [];
@@ -59,41 +54,25 @@ function repairTop52ArtLinks() {
   for (const file of htmlFiles(root)) {
     const before = fs.readFileSync(file, 'utf8');
     const after = before.replace(/href=(['"])(\.\.\/\.\.\/top-52\/[^'"]+|\.\.\/top-52\/[^'"]+|top-52\/[^'"]+)\1/g, (match, quote, target) => {
-      const next = fixedTarget(target);
-      if (next !== target) linkCount += 1;
-      return `href=${quote}${next}${quote}`;
+      const next = fixedTarget(target); if (next !== target) linkCount += 1; return `href=${quote}${next}${quote}`;
     });
-    if (after !== before) {
-      fs.writeFileSync(file, after);
-      fileCount += 1;
-    }
+    if (after !== before) { fs.writeFileSync(file, after); fileCount += 1; }
   }
   if (fileCount || linkCount) console.log(`Top 52 art link repair complete before Cloudflare output: ${fileCount} file(s), ${linkCount} link(s) fixed.`);
 }
-
-function rm(dir) {
-  if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
-}
-function ensure(dir) {
-  fs.mkdirSync(dir, { recursive: true });
-}
+function rm(dir) { if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true }); }
+function ensure(dir) { fs.mkdirSync(dir, { recursive: true }); }
 function shouldCopy(rel, entry) {
   if (entry.isDirectory()) return !blockedDirs.has(entry.name);
   const base = path.basename(rel);
   if (blockedFiles.has(base)) return false;
   if (allowedRootFiles.has(base)) return true;
-  const ext = path.extname(base).toLowerCase();
-  return allowedExt.has(ext);
+  return allowedExt.has(path.extname(base).toLowerCase());
 }
 function copyFile(src, dest, rel) {
   const size = fs.statSync(src).size;
-  if (size > maxAssetBytes) {
-    console.warn(`Skipping oversized Cloudflare asset (${Math.round(size / 1024 / 1024)} MiB): ${rel}`);
-    return false;
-  }
-  ensure(path.dirname(dest));
-  fs.copyFileSync(src, dest);
-  return true;
+  if (size > maxAssetBytes) { console.warn(`Skipping oversized Cloudflare asset (${Math.round(size / 1024 / 1024)} MiB): ${rel}`); return false; }
+  ensure(path.dirname(dest)); fs.copyFileSync(src, dest); return true;
 }
 function copyHtmlRouteVariant(src, rel) {
   if (!rel.endsWith('.html')) return;
@@ -104,14 +83,10 @@ function copyHtmlRouteVariant(src, rel) {
 }
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    const rel = path.relative(root, full).replace(/\\/g, '/');
+    const full = path.join(dir, entry.name), rel = path.relative(root, full).replace(/\\/g, '/');
     if (!shouldCopy(rel, entry)) continue;
     if (entry.isDirectory()) walk(full);
-    else {
-      const copied = copyFile(full, path.join(out, rel), rel);
-      if (copied) copyHtmlRouteVariant(full, rel);
-    }
+    else { const copied = copyFile(full, path.join(out, rel), rel); if (copied) copyHtmlRouteVariant(full, rel); }
   }
 }
 
@@ -121,45 +96,15 @@ ensureArchiveSearchMarker(path.join(root, 'search.html'));
 require('./patch-membership-auth-ui.js');
 require('./hide-internal-public-controls.js');
 require('./hide-commercial-strategy-blocks.js');
-rm(out);
-ensure(out);
-walk(root);
+require('./final-public-editorial-hardening.js');
+require('./final-public-route-cleanup.js');
+rm(out); ensure(out); walk(root);
 ensureArchiveSearchMarker(path.join(out, 'search.html'));
 ensureArchiveSearchMarker(path.join(out, 'search'));
-
-for (const required of [
-  'index.html', 'index',
-  'start-here.html', 'start-here',
-  'books.html', 'books',
-  'epstein-files.html', 'epstein-files',
-  'live-intel.html', 'live-intel',
-  'search.html', 'search',
-  'timers.html', 'timers',
-  'forum.html', 'forum',
-  'atlas-layers.html', 'atlas-layers',
-  'migration-flow.html', 'migration-flow',
-  'data/global-risk-clocks.json',
-  'data/atlas-layers.json',
-  'data/migration-flow-panel.json',
-  'data/forum-seed.json',
-  '_headers'
-]) {
-  if (!fs.existsSync(path.join(out, required))) {
-    console.error(`Cloudflare output failed: _site/${required} missing`);
-    process.exit(1);
-  }
+for (const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']) {
+  if (!fs.existsSync(path.join(out, required))) { console.error(`Cloudflare output failed: _site/${required} missing`); process.exit(1); }
 }
-if (fs.existsSync(path.join(out, '_redirects'))) {
-  console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets because Wrangler validates it before the Worker router can run.');
-  process.exit(1);
-}
+if (fs.existsSync(path.join(out, '_redirects'))) { console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets.'); process.exit(1); }
 require('./public-copy-visibility-test.js');
-const count = [];
-(function countFiles(dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) countFiles(full);
-    else count.push(full);
-  }
-})(out);
+const count=[];(function countFiles(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,entry.name);if(entry.isDirectory())countFiles(full);else count.push(full);}})(out);
 console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including upgraded intelligence tools and extensionless HTML assets.`);

@@ -50,3 +50,5 @@ const report = {
 };
 fs.writeFileSync(path.join(reportDir, 'public-weekly-signup-report.json'), JSON.stringify(report, null, 2));
 console.log(`Public weekly signup ensured on ${changed.length} page variant(s).`);
+
+require('./restore-public-core-routes.js');

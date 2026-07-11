@@ -63,7 +63,9 @@ jobs:
 
       - name: Build full Cloudflare output and search
         run: |
-          SOURCE_DOCUMENTS_PER_RUN=0 npm run build:cloudflare
+          mkdir -p downloads
+          set -o pipefail
+          SOURCE_DOCUMENTS_PER_RUN=0 npm run build:cloudflare 2>&1 | tee downloads/source-preservation-cloudflare-build.log
           test -f _site/source-changes.html
           test -f _site/data/source-change-public.json
           test ! -e _site/evidence-archive
@@ -139,6 +141,7 @@ jobs:
             downloads/source-change-preservation-test.json
             downloads/source-change-preservation-hardening-test.json
             downloads/source-change-preservation-hardening-report.json
+            downloads/source-preservation-cloudflare-build.log
             downloads/source-preservation-live-verification.json
           if-no-files-found: ignore
           retention-days: 30

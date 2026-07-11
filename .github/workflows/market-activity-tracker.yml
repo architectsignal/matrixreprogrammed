@@ -76,7 +76,6 @@ jobs:
         run: node scripts/market-activity-test.js
 
       - name: Collect official SEC filings
-        if: github.event_name != 'pull_request'
         env:
           SEC_FORM4_FILINGS_PER_ISSUER: '12'
           SEC_REQUEST_DELAY_MS: '180'
@@ -116,6 +115,24 @@ jobs:
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: node scripts/build-cloudflare-output.js
+
+      - name: Commit validated bootstrap outputs to PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "matrix-market-bootstrap-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data/market-activity.json \
+            data/market-activity-state.json \
+            data/market-holdings \
+            data/market-position-changes \
+            || true
+          if git diff --cached --quiet; then
+            echo "No bootstrap market-data changes to commit."
+            exit 0
+          fi
+          git commit -m "Bootstrap official SEC market activity $(date -u +%F) [market-bootstrap]"
+          git push origin HEAD:${{ github.head_ref }}
 
       - name: Commit official market outputs
         if: github.event_name != 'pull_request'
@@ -202,5 +219,8 @@ jobs:
             downloads/phase6-data-integration.json
             downloads/phase6-worker-patch.json
             data/market-activity.json
+            data/market-activity-state.json
+            data/market-holdings
+            data/market-position-changes
           if-no-files-found: ignore
           retention-days: 60

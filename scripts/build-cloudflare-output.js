@@ -6,7 +6,7 @@ const root = process.cwd();
 const out = path.join(root, '_site');
 const allowedExt = new Set(['.html','.css','.js','.json','.xml','.txt','.md','.pdf','.png','.jpg','.jpeg','.webp','.svg','.ico','.gif','.mp4','.webm','.woff','.woff2','.csv']);
 const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xml','site-graph.json','claim-taxonomy.json','crawler-map.json','search-index.json','sigil.png','matrix.js','styles.css','fixes.css']);
-const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site']);
+const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive']);
 const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','CLOUDFLARE_PAGES_SETUP.md']);
 const maxAssetBytes=25*1024*1024;
 function normalizeWorkerAuditMarkers(){const file=path.join(root,'src','worker.js');if(!fs.existsSync(file))return;const before=fs.readFileSync(file,'utf8');let next=before.replace('const routeAliases={','const routeAliases = {');if(!next.includes("X-Matrix-Origin', 'worker-assets"))next="/* cloudflare-worker-test-marker: X-Matrix-Origin', 'worker-assets */\n"+next;if(next!==before)fs.writeFileSync(file,next)}
@@ -32,13 +32,18 @@ runRequired('Evidence network map build','scripts/build-evidence-network-map.js'
 runRequired('Evidence network map wiring','scripts/wire-evidence-network-map.js');
 runRequired('Final investigation search repair','scripts/repair-search-system.js');
 require('./final-investigation-hardening.js');
+runRequired('Source change public page build','scripts/build-source-change-page.js');
+runRequired('Source change search extension','scripts/extend-search-with-source-changes.js');
+runRequired('Source change preservation test','scripts/source-change-preservation-test.js');
+runRequired('Source change search test','scripts/source-change-search-test.js');
 runRequired('Investigation search smoke test','scripts/search-investigation-smoke-test.js');
 runRequired('Cytoscape network map upgrade','scripts/upgrade-network-maps-with-cytoscape.js');
 runRequired('Cytoscape network map test','scripts/cytoscape-network-map-test.js');
 rm(out);ensure(out);walk(root);
 ensureArchiveSearchMarker(path.join(out,'search.html'));ensureArchiveSearchMarker(path.join(out,'search'));
-for(const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv','data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']){if(!fs.existsSync(path.join(out,required))){console.error(`Cloudflare output failed: _site/${required} missing`);process.exit(1)}}
+for(const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','source-changes.html','source-changes','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv','data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','data/investigation-source-changes.json','downloads/investigation-source-changes.md','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']){if(!fs.existsSync(path.join(out,required))){console.error(`Cloudflare output failed: _site/${required} missing`);process.exit(1)}}
 if(fs.existsSync(path.join(out,'_redirects'))){console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets.');process.exit(1)}
+if(fs.existsSync(path.join(out,'evidence-archive'))){console.error('Cloudflare output failed: private evidence archive must not be deployed as a public asset.');process.exit(1)}
 require('./public-copy-visibility-test.js');
 const count=[];(function countFiles(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,entry.name);if(entry.isDirectory())countFiles(full);else count.push(full)}})(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files, including both interactive Cytoscape map systems, the investigation-ledger evidence map, verified search and membership access copy.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files, including evidence preservation summaries, both interactive Cytoscape map systems, verified investigation search and membership access copy.`);

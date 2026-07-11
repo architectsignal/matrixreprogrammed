@@ -17,9 +17,9 @@ concurrency:
 
 jobs:
   investigate:
-    name: Preserve sources, deep sweep and publish weekly report
+    name: Deep sweep, preserve source history and publish weekly report
     runs-on: ubuntu-latest
-    timeout-minutes: 70
+    timeout-minutes: 85
 
     steps:
       - name: Checkout current main
@@ -36,6 +36,14 @@ jobs:
       - name: Repair moved official source routes
         run: node scripts/repair-investigation-source-registry.js
 
+      - name: Run weekly deep source sweep
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: weekly
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '30000'
+        run: node scripts/run-investigation-machine.js weekly
+
       - name: Preserve registered sources and detect changes
         env:
           FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
@@ -44,13 +52,13 @@ jobs:
           SOURCE_MONITOR_TIMEOUT_MS: '30000'
         run: node scripts/monitor-source-changes.js weekly
 
-      - name: Run weekly deep source sweep
+      - name: Harden preservation, retain failure history and download linked evidence
         env:
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
           INVESTIGATION_MODE: weekly
-          INVESTIGATION_CONCURRENCY: '4'
-          INVESTIGATION_TIMEOUT_MS: '30000'
-        run: node scripts/run-investigation-machine.js weekly
+          SOURCE_DOCUMENTS_PER_RUN: '8'
+          SOURCE_DOCUMENT_MAX_BYTES: '15728640'
+          SOURCE_DOCUMENT_TIMEOUT_MS: '40000'
+        run: node scripts/harden-source-change-preservation.js weekly
 
       - name: Rebuild weekly findings, daily brief, search and preservation
         run: |
@@ -63,6 +71,7 @@ jobs:
           node scripts/extend-search-with-investigations.js
           node scripts/search-investigation-smoke-test.js
           node scripts/source-change-preservation-test.js
+          node scripts/source-change-preservation-hardening-test.js
           node scripts/final-investigation-hardening.js
 
       - name: Full advisory pressure test
@@ -91,6 +100,7 @@ jobs:
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
+            evidence-archive \
             investigation-machine.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
@@ -108,7 +118,9 @@ jobs:
             downloads/investigation-source-ledger.md \
             downloads/investigation-machine-run-report.json \
             downloads/source-change-monitor-report.json \
+            downloads/source-change-preservation-hardening-report.json \
             downloads/source-change-preservation-test.json \
+            downloads/source-change-preservation-hardening-test.json \
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
@@ -130,7 +142,9 @@ jobs:
           path: |
             downloads/investigation-machine-run-report.json
             downloads/source-change-monitor-report.json
+            downloads/source-change-preservation-hardening-report.json
             downloads/source-change-preservation-test.json
+            downloads/source-change-preservation-hardening-test.json
             downloads/search-investigation-smoke-test.json
             downloads/weekly-investigation-report.md
             downloads/investigation-source-ledger.md

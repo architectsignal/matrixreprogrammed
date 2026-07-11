@@ -108,16 +108,22 @@ require('./hide-internal-public-controls.js');
 require('./hide-commercial-strategy-blocks.js');
 require('./final-public-editorial-hardening.js');
 require('./final-public-route-cleanup.js');
+runRequired('Evidence network map build', 'scripts/build-evidence-network-map.js');
 runRequired('Final investigation search repair', 'scripts/repair-search-system.js');
 require('./final-investigation-hardening.js');
 runRequired('Investigation search smoke test', 'scripts/search-investigation-smoke-test.js');
 rm(out); ensure(out); walk(root);
 ensureArchiveSearchMarker(path.join(out, 'search.html'));
 ensureArchiveSearchMarker(path.join(out, 'search'));
-for (const required of ['index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search','investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','investigation-pulse.js','data/investigation-status.json','data/investigation-source-registry.json','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers']) {
+for (const required of [
+  'index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel','search.html','search',
+  'investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','investigation-pulse.js',
+  'evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv','data/membership-feature-matrix.json',
+  'data/investigation-status.json','data/investigation-source-registry.json','timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
+]) {
   if (!fs.existsSync(path.join(out, required))) { console.error(`Cloudflare output failed: _site/${required} missing`); process.exit(1); }
 }
 if (fs.existsSync(path.join(out, '_redirects'))) { console.error('Cloudflare output failed: _site/_redirects must not be deployed for Worker assets.'); process.exit(1); }
 require('./public-copy-visibility-test.js');
 const count=[];(function countFiles(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,entry.name);if(entry.isDirectory())countFiles(full);else count.push(full);}})(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site without node_modules or _redirects, including the daily and weekly investigation machine, source ledger, global pulse and verified search.`);
+console.log(`Cloudflare output ready: ${count.length} deployable files copied to _site, including the open-source evidence map, daily investigation system and verified search.`);

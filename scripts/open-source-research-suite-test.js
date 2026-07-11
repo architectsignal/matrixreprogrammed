@@ -23,7 +23,7 @@ for (const file of [
 const reader = read('evidence-reader.js');
 const readerPage = read('evidence-reader.html');
 const manifest = json('data/evidence-reader-manifest.json');
-check('Evidence reader declares PDF.js', /pdfjs-dist@4\.10\.38/.test(reader));
+check('Evidence reader declares PDF.js', reader.includes("const PDFJS_VERSION = '4.10.38'") && reader.includes('pdfjs-dist@${PDFJS_VERSION}'));
 check('PDF.js worker is pinned to same version', /pdf\.worker\.min\.mjs/.test(reader) && /PDFJS_VERSION/.test(reader));
 check('Reader accepts only same-origin manifest PDF URLs', reader.includes('url.origin !== location.origin') && reader.includes("/\\.pdf"));
 check('Reader has no arbitrary src query parameter', !/params\.get\(['"]src['"]\)/.test(reader));
@@ -44,7 +44,7 @@ const timeline = json('data/evidence-timeline.json');
 const timelineJs = read('evidence-timeline.js');
 const timelinePage = read('evidence-timeline.html');
 check('Timeline declares vis-timeline engine', timeline.engine === 'vis-timeline');
-check('Timeline runtime pins vis-timeline version', /vis-timeline@7\.7\.3/.test(timelineJs));
+check('Timeline runtime pins vis-timeline version', timelineJs.includes("const VIS_VERSION = '7.7.3'") && timelineJs.includes('vis-timeline@${VIS_VERSION}'));
 check('Timeline has accessible list fallback', timelineJs.includes('accessible event list') && timelinePage.includes('Accessible event list'));
 check('Timeline has URL query filters', timelineJs.includes('URLSearchParams') && timelinePage.includes('timeline-grade'));
 check('Timeline is mobile responsive', /@media\(max-width:850px\)/.test(timelinePage));

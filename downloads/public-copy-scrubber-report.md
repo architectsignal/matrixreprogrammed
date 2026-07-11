@@ -1,10 +1,10 @@
 # Public Copy Scrubber Report
 
-Updated: 2026-07-10T07:54:14.840Z
+Updated: 2026-07-11T05:58:25.637Z
 
 Changed files: 1
 
-Visible review issues: 82
+Visible review issues: 72
 
 ## Changed
 - deploy-health.html
@@ -51,12 +51,8 @@ Visible review issues: 82
 - _site/reports/missing-records-report.html: /\[object Object\]/i
 - _site/site-freshness-report.html: /\[object Object\]/i
 - _site/subject-briefs/banking-payment-rails.html: /\[object Object\]/i
-- brief-quality-report.html: /\[object Object\]/i
 - daily-brain-brief.html: /\[object Object\]/i
 - daily-missing-records.html: /\[object Object\]/i
-- daily-power-conclusions.html: /\[object Object\]/i
-- deep-intel-feed.html: /\[object Object\]/i
-- elite-reports.html: /\[object Object\]/i
 - entity-briefs/chattogram-water-supply-and-sewerage-authority.html: /\[object Object\]/i
 - entity-briefs/finance-division-ministry-of-finance.html: /\[object Object\]/i
 - entity-briefs/kingdom-of-morocco.html: /\[object Object\]/i
@@ -66,7 +62,6 @@ Visible review issues: 82
 - entity-briefs/people-s-republic-of-bangladesh.html: /\[object Object\]/i
 - entity-briefs/republic-of-india.html: /\[object Object\]/i
 - entity-briefs/republic-of-rwanda.html: /\[object Object\]/i
-- entity-daily-briefs.html: /\[object Object\]/i
 - entity-exposure/chattogram-water-supply-and-sewerage-authority.html: /\[object Object\]/i
 - entity-exposure/finance-division-ministry-of-finance.html: /\[object Object\]/i
 - entity-exposure/kingdom-of-morocco.html: /\[object Object\]/i
@@ -78,17 +73,12 @@ Visible review issues: 82
 - entity-exposure/republic-of-rwanda.html: /\[object Object\]/i
 - entity-exposure-index.html: /\[object Object\]/i
 - entity-timelines/object-object.html: /\[object Object\]/i
-- entity-timelines.html: /\[object Object\]/i
 - index.html: /do not show/i
-- index.html: /\[object Object\]/i
 - information-gathering-system.html: /author note/i
 - information-gathering-system.html: /\[object Object\]/i
 - institution-briefs/world-bank.html: /\[object Object\]/i
 - machine-digest.html: /\[object Object\]/i
 - machine-intelligence.html: /\[object Object\]/i
-- power-structure-map.html: /\[object Object\]/i
-- reports/daily-revelation-report.html: /\[object Object\]/i
 - reports/entity-object-object.html: /\[object Object\]/i
-- reports/missing-records-report.html: /\[object Object\]/i
 - site-freshness-report.html: /\[object Object\]/i
 - subject-briefs/banking-payment-rails.html: /\[object Object\]/i

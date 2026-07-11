@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T07:53:53.418Z",
+  "updated": "2026-07-11T05:57:59.631Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 170,
+  "count": 171,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -297,7 +297,7 @@
     {
       "file": "downloads/conclusion-depth-audit.pdf",
       "title": "Conclusion Depth Audit",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -375,7 +375,7 @@
     {
       "file": "downloads/deploy-retry-marker.pdf",
       "title": "Deploy Retry Marker",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -795,7 +795,7 @@
     {
       "file": "downloads/pressure-test-site-report.pdf",
       "title": "Site Pressure Test Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -813,7 +813,7 @@
     {
       "file": "downloads/public-copy-scrubber-report.pdf",
       "title": "Public Copy Scrubber Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -831,7 +831,7 @@
     {
       "file": "downloads/reader-conclusions.pdf",
       "title": "Reader Conclusions",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -850,6 +850,12 @@
       "file": "downloads/review-dashboard.pdf",
       "title": "Matrix Reprogrammed Review Dashboard",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/search-runtime-hardening-report.pdf",
+      "title": "Search Runtime Hardening Report",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -933,7 +939,7 @@
     {
       "file": "downloads/site-function-harmony-report.pdf",
       "title": "Site Function Harmony Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {

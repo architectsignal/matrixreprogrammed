@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-10T07:01:16.739Z
+Updated: 2026-07-11T05:57:56.518Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -11,16 +11,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## [object Object]
-
-Score: 269
-
-Level: critical public-record exposure
-
-Highest evidence: documented association
-
-Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## California Court of Appeal
 
@@ -191,6 +181,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: The New York and Presbyterian Hospital v. New York State Nurses Association deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## [object Object]
+
+Score: 169
+
+Level: critical public-record exposure
+
+Highest evidence: documented association
+
+Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Defense Department
 

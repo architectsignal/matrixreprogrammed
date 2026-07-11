@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T05:58:35.186Z",
+  "changed": true,
+  "required": [
+    "env.FORUM_POSTS.put(`newsletter:subscriber:${id}`",
+    "env.FORUM_POSTS.put('newsletter:index'",
+    "const saved=subscriberSaved&&indexSaved",
+    "error:'Valid email required'",
+    "persistent:false,saved:false"
+  ],
+  "membershipIntegrated": true,
+  "authIntegrated": true,
+  "paypalIntegrated": true,
+  "membershipUiIntegrated": true,
+  "mode": "D1 membership capture, passwordless authentication and PayPal subscription enforcement"
+}

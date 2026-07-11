@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "b8b9ed9f9d36a4e7da5b16faffc1ad4f77b00ec9",
-  "buildShortSha": "b8b9ed9f9d36",
-  "generatedAt": "2026-07-10T07:54:13.060Z",
+  "buildSha": "ce70b0c42e3f9d4983896df64f214d815cbb5c3c",
+  "buildShortSha": "ce70b0c42e3f",
+  "generatedAt": "2026-07-11T05:58:23.145Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -31,13 +31,13 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "872fb975baaeac01"
+      "hash": "94e2ca2af59c9e78"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "872fb975baaeac01"
+      "hash": "94e2ca2af59c9e78"
     },
     {
       "name": "Power Conclusions",
@@ -79,7 +79,7 @@
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "82c820111f696374"
+      "hash": "643f99bc9b5866cd"
     },
     {
       "name": "Dark Speculation Forum",
@@ -103,13 +103,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "41cafa3cf83a7823"
+      "hash": "9ac16c0077a29f45"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "2703eb2ce7a1c8ee"
+      "hash": "83485d7fe2fc4335"
     },
     {
       "name": "Probability Lab",
@@ -121,7 +121,7 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "9ac261264662923e"
+      "hash": "fb62410940f6884d"
     },
     {
       "name": "Forum Worker",
@@ -133,7 +133,7 @@
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "ae5b39d4fcbba934"
+      "hash": "63c53e036f012f5e"
     }
   ],
   "repairs": [
@@ -164,7 +164,7 @@
     {
       "type": "public-copy-scrubber",
       "status": "ok",
-      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 82 review issue(s).\n",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 72 review issue(s).\n",
       "stderr": ""
     },
     {

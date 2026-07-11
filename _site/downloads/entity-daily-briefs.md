@@ -1,18 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-10T07:01:16.681Z
+Updated: 2026-07-11T05:57:56.460Z
 
-Briefs generated: 59
-
-## [object Object]
-
-At a glance: [object Object] is currently tracked as observed entity with 5 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: High-interest tracked entity because it appears across records and relationship candidates.
-
-Evidence: documented public-record association
-
-Watch next: Watch [object Object] across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+Briefs generated: 58
 
 ## Health and Human Services Department
 

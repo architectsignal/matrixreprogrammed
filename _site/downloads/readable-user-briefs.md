@@ -1,6 +1,6 @@
 # Readable User Briefs
 
-Generated: 2026-07-10T07:01:37.289Z
+Generated: 2026-07-11T05:58:18.226Z
 
 ## What matters today
 Start with the strongest route, the highest clock, the top capital lane and the most important missing record. These are the quickest paths to understanding the structure.
@@ -21,4 +21,4 @@ Open Daily Power Conclusions, then Evidence Graph, then the entity or company pa
 - Top contractor lane: Blackwater / Xe / Academi / Constellis lineage is the strongest contractor watch route in current data. (contractor-briefs/blackwater-constellis-lineage.html)
 - Top institution lane: World Bank is the strongest institution route in current data. (institution-briefs/world-bank.html)
 - Top billionaire lane: Elon Musk is the strongest elite-network route in current data. (billionaire-briefs/elon-musk.html)
-- Most important missing record: [object Object] needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.. (entity-briefs/object-object.html)
+- Most important missing record: Health and Human Services Department needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.. (entity-briefs/health-and-human-services-department.html)

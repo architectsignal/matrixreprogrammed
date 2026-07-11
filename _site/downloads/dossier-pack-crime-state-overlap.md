@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-10T07:00:56.650Z
+Updated: 2026-07-11T05:57:35.195Z
 Items: 12
 
 - 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal

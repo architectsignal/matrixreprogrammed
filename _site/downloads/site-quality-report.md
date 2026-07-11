@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 490
+Scanned pages: 492
 Weak pages: 10
 
 ## Weakest Pages

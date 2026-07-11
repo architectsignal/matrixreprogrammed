@@ -1,8 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-10T07:01:35.676Z",
+  "generatedAt": "2026-07-11T05:58:16.612Z",
   "repairs": [
     "rebuilt-search-v2",
+    "hardened-search-runtime",
     "search-route:downloads/forum-posts.json",
     "search-route:downloads/forum-posts.md",
     "search-route:data/public-record-intake.json",
@@ -25,9 +26,8 @@
     "search-route:data/subject-briefs.json",
     "search-route:data/contradictions.json",
     "search-route:data/main-player-profiles.json",
-    "search-route:data/entity-timelines.json",
-    "patched:search.js:fallbackIndex"
+    "search-route:data/entity-timelines.json"
   ],
-  "mode": "minimal safe Search V2 repair",
-  "version": "minimal-search-repair-2026-07-08-archive-search-marker"
+  "mode": "real Search V2 runtime repair",
+  "version": "search-runtime-hardening-2026-07-10"
 }

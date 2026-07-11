@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-10T07:54:08.571Z",
+  "updated": "2026-07-11T05:58:17.520Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
   "nodeCount": 149,
@@ -774,17 +774,6 @@
       "score": 55
     },
     {
-      "id": "object-object",
-      "layer": "evidence-and-records",
-      "name": "[object Object]",
-      "type": "missing record",
-      "route": "entity-briefs/object-object.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "health-and-human-services-department",
       "layer": "evidence-and-records",
       "name": "Health and Human Services Department",
@@ -1214,6 +1203,17 @@
       "score": 54
     },
     {
+      "id": "aapl",
+      "layer": "evidence-and-records",
+      "name": "AAPL",
+      "type": "missing record",
+      "route": "entity-briefs/aapl.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "breakspear",
       "layer": "lineage-and-orders",
       "name": "Breakspear",
@@ -1396,18 +1396,6 @@
       "score": 43
     },
     {
-      "id": "feed-object-object-confirm-the-primary-record-page-pdf-docket-fil",
-      "layer": "evidence-and-records",
-      "name": "[object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/object-object.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
       "layer": "evidence-and-records",
       "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1521,6 +1509,18 @@
       "name": "Commerce Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/commerce-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-interior-department-confirm-the-primary-record-page-pdf-dock",
+      "layer": "evidence-and-records",
+      "name": "Interior Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/interior-department.html",
       "notes": [
         "missing record",
         "Score 85"

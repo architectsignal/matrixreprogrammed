@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T05:58:35.145Z",
+  "changed": true,
+  "mode": "PayPal subscription verification, signed webhooks and D1 entitlements",
+  "paidAccessPolicy": "ACTIVE only",
+  "rawCredentialsExposed": false,
+  "required": [
+    "paypal-membership-v1:",
+    "/v1/oauth2/token",
+    "/v1/billing/subscriptions/",
+    "/v1/notifications/verify-webhook-signature",
+    "originalPath==='/api/paypal/config'",
+    "originalPath==='/api/paypal/checkout-intent'",
+    "originalPath==='/api/paypal/subscription/confirm'",
+    "originalPath==='/api/paypal/subscription/cancel'",
+    "originalPath==='/api/paypal/webhook'",
+    "originalPath==='/api/paypal/health'",
+    "paypal_checkout_intents",
+    "PAYPAL_WEBHOOK_ID",
+    "paidAccessPolicy:'ACTIVE subscriptions only'",
+    "return handlePayPalMemberMe(request,env)"
+  ]
+}

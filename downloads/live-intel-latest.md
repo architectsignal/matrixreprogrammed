@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-10T07:53:35.687Z
+Updated: 2026-07-11T05:57:35.195Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -20,12 +20,12 @@ Updated: 2026-07-10T07:53:35.687Z
 - Crime State Overlap: crime-hub.html
 
 ## Latest Items
-- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- 2026-07-09 — Why the House’s Epstein investigation isn't going away - Politico
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
-  - Longform title: Epstein Files, Timeline And Court Records — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Video hook: New public-record signal: Why the House’s Epstein investigation isn't going away - Politico
+  - Short title: Why the House’s Epstein investigation isn't going away - Politico
+  - Longform title: Epstein Files, Timeline And Court Records — Why the House’s Epstein investigation isn't going away - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
@@ -44,14 +44,6 @@ Updated: 2026-07-10T07:53:35.687Z
   - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Short title: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resu
-  - Longform title: Epstein Files, Timeline And Court Records — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Mill
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
   - Evidence: Seven-day public-record lead
@@ -60,15 +52,7 @@ Updated: 2026-07-10T07:53:35.687Z
   - Longform title: Epstein Files, Timeline And Court Records — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Short title: Trump administration hindering investigation into Epstein’s ranch - Nine
-  - Longform title: Epstein Files, Timeline And Court Records — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-09 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
+- 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
@@ -92,6 +76,30 @@ Updated: 2026-07-10T07:53:35.687Z
   - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+  - Short title: Trump administration hindering investigation into Epstein’s ranch - Nine
+  - Longform title: Epstein Files, Timeline And Court Records — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-09 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Short title: NASA insider hints bigger UFO file release as declassification ramps up
+  - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: download-center.html
+- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+  - Short title: EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resu
+  - Longform title: Epstein Files, Timeline And Court Records — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Mill
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
   - Evidence: Seven-day public-record lead
@@ -99,4 +107,36 @@ Updated: 2026-07-10T07:53:35.687Z
   - Short title: NSA revives 'Tailored Access Operations' name for elite hacking unit - T
   - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
+  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
+  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
+  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
+  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
+  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
+  - Longform title: Epstein Files, Timeline And Court Records — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
+  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
+  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
+  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
+  - Source: https://www.who.int/health-topics/who-pandemic-agreement
+  - Evidence: Official WHO treaty/implementation-process lane
+  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
+  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
+  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
+  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
   - Offer: offer-starter-library.html

@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-10T07:01:22.125Z
+Generated: 2026-07-11T05:58:02.297Z
 
 ## Official Boundary
 
@@ -49,16 +49,6 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-- Type: related-claim-traffic
-- Status: public-record-relevance
-- Evidence level: 7
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com
-
 ### Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
 - Type: related-claim-traffic
 - Status: unverified-claim
@@ -68,16 +58,6 @@ EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces i
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
-
-### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 
 ### Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
 - Type: sighting-claim
@@ -109,12 +89,22 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 
-### EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About - AOL.com
-- Type: survival-claim
+### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+- Type: related-claim-traffic
 - Status: unverified-claim
 - Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQnJGRFRRenppTXdXYzhFclJKLXpLTUxJbmhMSnBMRmJYSmNsNDdOdmhSTzNZanJKSk9sQnVIRVhXcHJ6TFE5clgyTnlrUEtNaUdvMmQ4ZllqbnRiS3I5Tk1jWDhTUjJrVEhqZlVCaC00ZkRBNE94UTlPZnozSkJZUlg0cmlfOVQt?oc=5
+- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-EXCLUSIVE: Jeffrey Epstein Found Alive?! Radar Goes Inside the Conspiracy Theory Web Nuts Can't Stop Talking About AOL.com
+Trump administration hindering investigation into Epstein’s ranch Nine.com.au
+
+### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+- Type: related-claim-traffic
+- Status: public-record-relevance
+- Evidence level: 7
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com

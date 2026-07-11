@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-10T07:54:12.864Z",
-    "filesScanned": 3771,
-    "highIssues": 2129,
+    "updated": "2026-07-11T05:58:22.937Z",
+    "filesScanned": 3778,
+    "highIssues": 2169,
     "reviewIssues": 8,
-    "intakeAreas": 2145,
+    "intakeAreas": 2147,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -15104,6 +15104,20 @@
     },
     {
       "file": "media-narrative-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "member-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "member-login.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

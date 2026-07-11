@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-10T07:54:09.101Z",
+  "updated": "2026-07-11T05:58:18.229Z",
   "title": "Deep Intel Feed Matrix",
   "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
   "lanes": [
@@ -268,15 +268,6 @@
       ]
     },
     {
-      "title": "[object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/object-object.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
       "title": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
       "source": "missing record",
@@ -493,6 +484,15 @@
       ]
     },
     {
+      "title": "Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/biddle-v-biddle.html",
+      "source": "missing record",
+      "score": 85,
+      "tags": [
+        "record gap"
+      ]
+    },
+    {
       "title": "WWIII Escalation Clock — 81%",
       "route": "timers.html",
       "source": "risk clock",
@@ -520,7 +520,7 @@
       ]
     },
     {
-      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
+      "title": "Why the House’s Epstein investigation isn't going away - Politico",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -547,25 +547,7 @@
       ]
     },
     {
-      "title": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
       "title": "Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Trump administration hindering investigation into Epstein’s ranch - Nine.com.au",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -601,7 +583,70 @@
       ]
     },
     {
+      "title": "Trump administration hindering investigation into Epstein’s ranch - Nine.com.au",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
+      "title": "NASA insider hints bigger UFO file release as declassification ramps up - Cybernews",
+      "route": "live-intel.html",
+      "source": "declassified-files",
+      "score": 72,
+      "tags": [
+        "declassified-files"
+      ]
+    },
+    {
+      "title": "EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
       "title": "NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
+      "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
+      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
+      "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
+      "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
       "route": "live-intel.html",
       "source": "control-system",
       "score": 72,
@@ -657,7 +702,7 @@
   ],
   "brainInjection": {
     "layer": "evidence-and-records",
-    "nodeCount": 57
+    "nodeCount": 62
   },
   "missionPriorityIndex": true
 }

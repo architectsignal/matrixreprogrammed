@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-10T07:53:53.167Z
+Updated: 2026-07-11T05:57:59.359Z
 
 ## Status
 
-- Live Intel items: 10
+- Live Intel items: 15
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -12,8 +12,8 @@ Updated: 2026-07-10T07:53:53.167Z
 
 ## Latest Items
 
-- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- 2026-07-09 — Why the House’s Epstein investigation isn't going away - Politico
+  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
@@ -24,19 +24,11 @@ Updated: 2026-07-10T07:53:53.167Z
   - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-09 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
+- 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
@@ -48,7 +40,31 @@ Updated: 2026-07-10T07:53:53.167Z
   - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-09 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-07-10 — EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
+  - Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
+  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
+  - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.
+- 2026-07-07 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Boundary: Implementation dates and obligations are not proof of censorship or abuse. Track the legal text, guidance, enforcement actions, standards, national authorities, and actual platform behaviour separately.

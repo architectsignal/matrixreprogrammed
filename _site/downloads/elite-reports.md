@@ -1,18 +1,12 @@
 # Elite Reports
 
-Generated: 2026-07-10T07:01:36.563Z
+Generated: 2026-07-11T05:58:17.477Z
 
 ## Daily Revelation Report
 
 EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
 
 Source: daily-command-brief.html
-
-## [object Object] — Entity Report
-
-High-interest tracked entity because it appears across records and relationship candidates.
-
-Source: entity-daily-briefs.html
 
 ## Health and Human Services Department — Entity Report
 
@@ -63,6 +57,12 @@ Worth watching because records and relationship signals both exist.
 Source: entity-daily-briefs.html
 
 ## Veterans Affairs Department — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Commerce Department — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

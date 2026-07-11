@@ -3,14 +3,14 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 2690
-Flagged pages: 1964
-High priority pages: 693
-Medium priority pages: 1264
-Pages with missing rules: 233
+Scanned pages: 2692
+Flagged pages: 1966
+High priority pages: 694
+Medium priority pages: 1265
+Pages with missing rules: 227
 Auto-update eligible figures: 2
-Manual-review figures: 72
-Missing-rule figures: 523
+Manual-review figures: 68
+Missing-rule figures: 510
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -23,13 +23,12 @@ Missing-rule figures: 523
 - _site/dossier-pack-symbolic-power.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
+- live-intel.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
-- live-intel.html: 8 figure/stat markers; 8 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-drop.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - custom-research.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
-- daily-drop.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - store.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
@@ -41,6 +40,7 @@ Missing-rule figures: 523
 - power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - black-file-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
+- daily-drop.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - membership.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - one-world-currency-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 
@@ -55,13 +55,12 @@ Missing-rule figures: 523
 - _site/dossier-pack-symbolic-power.html: 10 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 10 figure(s) need source rules.
+- live-intel.html: 10 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
-- live-intel.html: 8 figure(s) need source rules.
 - _site/daily-brain-brief.html: 6 figure(s) need source rules.
 - _site/daily-drop.html: 6 figure(s) need source rules.
 - custom-research.html: 6 figure(s) need source rules.
 - daily-brain-brief.html: 6 figure(s) need source rules.
-- daily-drop.html: 6 figure(s) need source rules.
 - store.html: 6 figure(s) need source rules.
 - _site/intel-archive.html: 4 figure(s) need source rules.
 - _site/power-atlas.html: 4 figure(s) need source rules.
@@ -73,6 +72,7 @@ Missing-rule figures: 523
 - power-atlas.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
 - black-file-theory.html: 3 figure(s) need source rules.
+- daily-drop.html: 3 figure(s) need source rules.
 - membership.html: 3 figure(s) need source rules.
 - one-world-currency-theory.html: 3 figure(s) need source rules.
 - _site/news.html: 2 figure(s) need source rules.

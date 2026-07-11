@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-10T07:53:53.418Z
+Updated: 2026-07-11T05:57:59.631Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -57,7 +57,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf (custom PDF preserved)
 - WWIII Escalation Clock: downloads/clock-wall.pdf (custom PDF preserved)
-- Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf
+- Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf (custom PDF preserved)
 - Control Brain V2: downloads/control-brain-v2.pdf (custom PDF preserved)
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf (custom PDF preserved)
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf (custom PDF preserved)
@@ -70,7 +70,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf (custom PDF preserved)
 - Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf (custom PDF preserved)
 - Deploy Health: downloads/deploy-health.pdf (custom PDF preserved)
-- Deploy Retry Marker: downloads/deploy-retry-marker.pdf
+- Deploy Retry Marker: downloads/deploy-retry-marker.pdf (custom PDF preserved)
 - Deploy Status: downloads/deploy-status.pdf (custom PDF preserved)
 - Black File Starter Pack: downloads/dossier-pack-black-file-starter.pdf (custom PDF preserved)
 - Crime-State Overlap Pack: downloads/dossier-pack-crime-state-overlap.pdf (custom PDF preserved)
@@ -140,16 +140,17 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
-- Site Pressure Test Report: downloads/pressure-test-site-report.pdf
+- Site Pressure Test Report: downloads/pressure-test-site-report.pdf (custom PDF preserved)
 - Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf (custom PDF preserved)
 - Probability Snapshot: downloads/probability-snapshot.pdf (custom PDF preserved)
-- Public Copy Scrubber Report: downloads/public-copy-scrubber-report.pdf
+- Public Copy Scrubber Report: downloads/public-copy-scrubber-report.pdf (custom PDF preserved)
 - Public Record Intake Manifest: downloads/public-record-intake.pdf (custom PDF preserved)
 - Readable User Briefs: downloads/readable-user-briefs.pdf (custom PDF preserved)
-- Reader Conclusions: downloads/reader-conclusions.pdf
+- Reader Conclusions: downloads/reader-conclusions.pdf (custom PDF preserved)
 - Reader Experience Governor: downloads/reader-experience-governor-report.pdf (custom PDF preserved)
 - Reader Page Repair: downloads/reader-page-repair.pdf (custom PDF preserved)
 - Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf (custom PDF preserved)
+- Search Runtime Hardening Report: downloads/search-runtime-hardening-report.pdf
 - Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
 - SEC Filing Feed: downloads/sec-filing-feed.pdf (custom PDF preserved)
 - Secondary Deck Artwork: downloads/secondary-deck-artwork.pdf (custom PDF preserved)
@@ -163,7 +164,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - War Machine Share Kit: downloads/share-kit-war-machine.pdf (custom PDF preserved)
 - Site Brain Router: downloads/site-brain-router.pdf (custom PDF preserved)
 - Site Freshness Report: downloads/site-freshness-report.pdf (custom PDF preserved)
-- Site Function Harmony Report: downloads/site-function-harmony-report.pdf
+- Site Function Harmony Report: downloads/site-function-harmony-report.pdf (custom PDF preserved)
 - Matrix Intelligence Core: downloads/site-intelligence-core.pdf (custom PDF preserved)
 - Site Intelligence Graph: downloads/site-intelligence-graph.pdf (custom PDF preserved)
 - Site Population Audit: downloads/site-population-audit.pdf (custom PDF preserved)

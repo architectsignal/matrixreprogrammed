@@ -1,0 +1,418 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T05:58:42.605Z",
+  "checks": [
+    {
+      "name": "visibility scrub executes",
+      "ok": true,
+      "detail": "exit 0"
+    },
+    {
+      "name": "public weekly signup repair executes",
+      "ok": true,
+      "detail": "exit 0"
+    },
+    {
+      "name": "index.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html includes hidden-control CSS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html retains internal-copy vault",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership.html includes hidden-control CSS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership.html retains internal-copy vault",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member-dashboard.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member-dashboard.html includes hidden-control CSS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member-dashboard.html retains internal-copy vault",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Sell / Capture”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Copy/Intake Audit”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Card System Health”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Artwork Automation”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Next Art Batch”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Site Brain Router”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Gathering System”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Machine Index”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Update Monitor”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “TURN THE INTELLIGENCE MACHINE INTO PRODUCTS”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Free public intelligence builds trust”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Email capture builds the list”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “create revenue”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “READER MONEY PATH”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Hook: latest file”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Capture: free brief”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Conversion: related book”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “MATRIX REPROGRAMMED STATUS”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Reader route: source”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Machine Room”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Research Tools”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “The Public-Record Power Machine”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “THE TRACKER DASHBOARD IS LIVE”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Mission + Money Engine”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Monetisation Dashboard”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “CAPTURE SYSTEM”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Persistent Cloudflare D1 member record”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage hides “Weekly newsletter sender”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage uses reader-facing navigation label",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage keeps public intelligence and book routes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage keeps public card decks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage keeps weekly signup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage replaces funnel wording in free brief card",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage replaces funnel wording in live intel card",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: review-dashboard.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: site-brain-router.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: card-artwork-automation.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: card-artwork-queue.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: card-system-health.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: information-gathering-system.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: conclusion-engine.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: update-monitor.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: distribution-center.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: launch-room.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: offer-center.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: sales-ladder.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route not visible: schema-index.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “Membership System”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “protected-access testing”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “webhooks can prove”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “HttpOnly cookies”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “not configured yet”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page hides “PayPal activation pending”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "membership page keeps working signup form",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard hides “Private Member Layer”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard hides “secure session”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard hides “entitlement”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard hides “tier-aware”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard hides “PayPal reference”",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member dashboard keeps useful account controls",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "review-dashboard.html excluded from search indexing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deploy-status.html excluded from search indexing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "card-system-health.html excluded from search indexing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "site-brain-router.html excluded from search indexing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deployed homepage includes hidden-control CSS",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deployed homepage hides author-facing navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deployed homepage hides commercial strategy",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deployed homepage keeps weekly signup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare _headers keeps a valid path-first format",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare _headers contains no injected HTML",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare _headers retains HSTS",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": [],
+  "boundary": "Operational pages, routes, raw data, commercial funnel strategy and diagnostic text remain in the repository. The normal public interface must not display author, automation, audit, health, capture, conversion, revenue or configuration controls, and the scrub must never modify Cloudflare control files."
+}

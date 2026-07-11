@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-10T07:01:22.066Z
+Updated: 2026-07-11T05:58:02.241Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -118,7 +118,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Elite / Ritual / Child-Harm
 - Label: internet mythology
-- Matches: 2
+- Matches: 1
 - Boundary: Extreme internet horror motif unless case-specific evidence exists.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -184,7 +184,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 4
+- Matches: 3
 - Boundary: Do not convert ancient-name symbolism into factual accusation.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -360,7 +360,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 3
+- Matches: 2
 - Boundary: Track as a classic narrative unless direct documents are found.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -437,7 +437,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Modern Slavery
 - Label: case-specific evidence required
-- Matches: 4
+- Matches: 5
 - Boundary: Needs case-level sources and careful language.
 - Research brief: Use case-level records: court files, police reports, labour inspections, NGO investigations, sanctions, company statements and victim-protection boundaries.
 - Support standard: Would need a court file, official report, dated record, investigative finding, authenticated exhibit, or multiple independent sources.

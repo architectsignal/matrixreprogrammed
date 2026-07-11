@@ -1,0 +1,6 @@
+{
+  "ok": true,
+  "purpose": "Trigger a fresh deploy run after hardening the newsletter Worker patch step.",
+  "updated": "2026-07-10T07:58:00Z",
+  "note": "Previous production deploy failed on an older commit before the newsletter patch script was softened."
+}

@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-10T07:01:36.609Z
+Generated: 2026-07-11T05:58:17.516Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -19,7 +19,6 @@ Generated: 2026-07-10T07:01:36.609Z
 - 93 — AI Breakout Clock — 93% — timers.html
 - 91 — CBDC Rollout Clock — 91% — timers.html
 - 87 — Machine Convergence — 87% — timers.html
-- 85 — [object Object] — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/object-object.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
 - 85 — Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/management-and-budget-office.html
 - 85 — Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/defense-department.html
@@ -44,4 +43,5 @@ Generated: 2026-07-10T07:01:36.609Z
 - 85 — 25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-581.html
 - 85 — A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/a170747m.html
 - 85 — AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ac48383.html
+- 85 — Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/biddle-v-biddle.html
 - 81 — WWIII Escalation Clock — 81% — timers.html

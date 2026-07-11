@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-10T07:54:14.840Z",
+  "updated": "2026-07-11T05:58:25.637Z",
   "changed": [
     "deploy-health.html"
   ],
@@ -211,32 +211,12 @@
       "severity": "review"
     },
     {
-      "file": "brief-quality-report.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
       "file": "daily-brain-brief.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
     {
       "file": "daily-missing-records.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "daily-power-conclusions.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "deep-intel-feed.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "elite-reports.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
@@ -282,11 +262,6 @@
     },
     {
       "file": "entity-briefs/republic-of-rwanda.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "entity-daily-briefs.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
@@ -346,18 +321,8 @@
       "severity": "review"
     },
     {
-      "file": "entity-timelines.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
       "file": "index.html",
       "pattern": "/do not show/i",
-      "severity": "review"
-    },
-    {
-      "file": "index.html",
-      "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
     {
@@ -386,22 +351,7 @@
       "severity": "review"
     },
     {
-      "file": "power-structure-map.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "reports/daily-revelation-report.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
       "file": "reports/entity-object-object.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
-      "file": "reports/missing-records-report.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
     },
@@ -416,6 +366,6 @@
       "severity": "review"
     }
   ],
-  "filesScanned": 2694,
+  "filesScanned": 2697,
   "note": "Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues."
 }

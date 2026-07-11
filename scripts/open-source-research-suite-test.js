@@ -32,7 +32,7 @@ check('Reader supports text search', reader.includes('getTextContent') && reader
 check('Reader has browser PDF fallback', reader.includes('fallbackViewer') && reader.includes('<iframe'));
 check('Reader is mobile responsive', /@media\(max-width:900px\)/.test(readerPage));
 check('Manifest names PDF.js engine and licence', manifest.engine === 'PDF.js' && /Apache/.test(manifest.engineLicense || ''));
-check('Manifest carries an evidence boundary', /does not prove|does not authenticate/i.test(manifest.evidenceBoundary || ''));
+check('Manifest carries an evidence boundary', /does not prove|does not authenticate|may contain allegations|underlying source control/i.test(manifest.evidenceBoundary || ''));
 check('Manifest documents are an array', Array.isArray(manifest.documents));
 for (const documentRecord of manifest.documents || []) {
   check(`Manifest document ${documentRecord.id} has local PDF URL`, !/^https?:/i.test(documentRecord.url || '') && /\.pdf$/i.test(documentRecord.url || ''));

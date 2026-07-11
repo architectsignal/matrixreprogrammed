@@ -11,7 +11,7 @@ const internalPages = new Set([
   'funnel-book-path.html', 'monetisation-dashboard.html', 'site-population-audit.html',
   'speculative-conclusion-review-queue.html', 'thank-you-book-path.html'
 ]);
-const report = { generatedAt: new Date().toISOString(), pagesScanned: 0, pulseInjected: 0, noindexApplied: 0, internalLinksHidden: 0, cssPatched: false };
+const report = { generatedAt: new Date().toISOString(), pagesScanned: 0, pulseInjected: 0, pulseRoutesNormalised: 0, noindexApplied: 0, internalLinksHidden: 0, cssPatched: false, pulseScriptPatched: false };
 
 function walk(dir, out = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -23,9 +23,7 @@ function walk(dir, out = []) {
   return out;
 }
 function addNoindex(html) {
-  if (/name=["']robots["']/i.test(html)) {
-    return html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/i, '<meta name="robots" content="noindex,nofollow,noarchive"/>');
-  }
+  if (/name=["']robots["']/i.test(html)) return html.replace(/<meta\b[^>]*name=["']robots["'][^>]*>/i, '<meta name="robots" content="noindex,nofollow,noarchive"/>');
   return html.includes('</head>') ? html.replace('</head>', '<meta name="robots" content="noindex,nofollow,noarchive"/></head>') : html;
 }
 function addInternalClass(tag) {
@@ -42,15 +40,17 @@ function hideInternalLinks(html) {
   });
 }
 function injectPulse(html) {
-  if (html.includes('src="investigation-pulse.js"') || html.includes("src='investigation-pulse.js'")) return html;
+  const normalised = html.replace(/src=(["'])(?:\.\/)?investigation-pulse\.js\1/gi, 'src="/investigation-pulse.js"');
+  if (normalised !== html) report.pulseRoutesNormalised += 1;
+  html = normalised;
+  if (/src=["']\/investigation-pulse\.js["']/i.test(html)) return html;
   if (!html.includes('</body>')) return html;
   report.pulseInjected += 1;
-  return html.replace('</body>', '<script src="investigation-pulse.js"></script></body>');
+  return html.replace('</body>', '<script src="/investigation-pulse.js"></script></body>');
 }
 
 for (const file of walk(root)) {
   report.pagesScanned += 1;
-  const relative = path.relative(root, file).replace(/\\/g, '/');
   const base = path.basename(file);
   let html = fs.readFileSync(file, 'utf8');
   const before = html;
@@ -63,8 +63,21 @@ for (const file of walk(root)) {
     html = injectPulse(html);
   }
   if (html !== before) fs.writeFileSync(file, html);
-  if (relative.startsWith('reports/') && !internalPages.has(base)) {
-    // Reports are public investigation outputs and receive the same pulse through the injection above.
+}
+
+const pulsePath = path.join(root, 'investigation-pulse.js');
+if (fs.existsSync(pulsePath)) {
+  let pulse = fs.readFileSync(pulsePath, 'utf8');
+  const before = pulse;
+  pulse = pulse
+    .replace(/href=\"investigation-machine\.html\"/g, 'href=\"/investigation-machine.html\"')
+    .replace(/href=\"daily-investigation-conclusions\.html\"/g, 'href=\"/daily-investigation-conclusions.html\"')
+    .replace(/href=\"weekly-investigation-report\.html\"/g, 'href=\"/weekly-investigation-report.html\"')
+    .replace(/href=\"investigation-source-ledger\.html\"/g, 'href=\"/investigation-source-ledger.html\"')
+    .replace(/href=\"search\.html\"/g, 'href=\"/search.html\"');
+  if (pulse !== before) {
+    fs.writeFileSync(pulsePath, pulse);
+    report.pulseScriptPatched = true;
   }
 }
 
@@ -80,4 +93,4 @@ if (fs.existsSync(cssPath)) {
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-investigation-hardening.json'), JSON.stringify(report, null, 2));
-console.log(`Final investigation hardening: ${report.pagesScanned} HTML pages scanned, ${report.pulseInjected} pulse scripts injected, ${report.noindexApplied} internal pages noindexed, ${report.internalLinksHidden} internal links hidden.`);
+console.log(`Final investigation hardening: ${report.pagesScanned} HTML pages scanned, ${report.pulseInjected} pulse scripts injected, ${report.pulseRoutesNormalised} pulse routes normalised, ${report.noindexApplied} internal pages noindexed, ${report.internalLinksHidden} internal links hidden.`);

@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'scripts/run-investigation-machine.js'
+      - 'scripts/repair-investigation-source-registry.js'
       - 'data/investigation-source-registry.json'
   schedule:
     - cron: '20 5 * * *'
@@ -39,6 +40,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+
+      - name: Repair moved official source routes
+        run: node scripts/repair-investigation-source-registry.js
 
       - name: Run daily investigation source search
         env:
@@ -72,6 +76,7 @@ jobs:
           git config user.name "matrix-investigation-bot"
           git config user.email "actions@github.com"
           git add \
+            data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
             data/daily-investigation-conclusions.json \

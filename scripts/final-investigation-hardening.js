@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+const pulseFile = path.join(root, 'investigation-pulse.js');
 const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);
 const internalPages = new Set([
   'review-dashboard.html', 'deploy-status.html', 'deploy-health.html', 'card-system-health.html', 'site-brain-router.html',
@@ -39,14 +40,21 @@ function hideInternalLinks(html) {
     return addInternalClass(tag);
   });
 }
-function injectPulse(html) {
-  const normalised = html.replace(/src=(["'])(?:\.\/)?investigation-pulse\.js\1/gi, 'src="/investigation-pulse.js"');
+function pulseSrcFor(file) {
+  let relative = path.relative(path.dirname(file), pulseFile).replace(/\\/g, '/');
+  if (!relative || relative === '.') relative = 'investigation-pulse.js';
+  return relative;
+}
+function injectPulse(html, file) {
+  const desired = pulseSrcFor(file);
+  const pulseTag = `<script src="${desired}"></script>`;
+  const normalised = html.replace(/<script\b[^>]*src=(["'])(?:\/|(?:\.\.\/)*|\.\/)?investigation-pulse\.js\1[^>]*><\/script>/gi, pulseTag);
   if (normalised !== html) report.pulseRoutesNormalised += 1;
   html = normalised;
-  if (/src=["']\/investigation-pulse\.js["']/i.test(html)) return html;
+  if (html.includes(pulseTag)) return html;
   if (!html.includes('</body>')) return html;
   report.pulseInjected += 1;
-  return html.replace('</body>', '<script src="/investigation-pulse.js"></script></body>');
+  return html.replace('</body>', `${pulseTag}</body>`);
 }
 
 for (const file of walk(root)) {
@@ -60,14 +68,13 @@ for (const file of walk(root)) {
     html = next;
   } else {
     html = hideInternalLinks(html);
-    html = injectPulse(html);
+    html = injectPulse(html, file);
   }
   if (html !== before) fs.writeFileSync(file, html);
 }
 
-const pulsePath = path.join(root, 'investigation-pulse.js');
-if (fs.existsSync(pulsePath)) {
-  let pulse = fs.readFileSync(pulsePath, 'utf8');
+if (fs.existsSync(pulseFile)) {
+  let pulse = fs.readFileSync(pulseFile, 'utf8');
   const before = pulse;
   pulse = pulse
     .replace(/href=\"investigation-machine\.html\"/g, 'href=\"/investigation-machine.html\"')
@@ -76,7 +83,7 @@ if (fs.existsSync(pulsePath)) {
     .replace(/href=\"investigation-source-ledger\.html\"/g, 'href=\"/investigation-source-ledger.html\"')
     .replace(/href=\"search\.html\"/g, 'href=\"/search.html\"');
   if (pulse !== before) {
-    fs.writeFileSync(pulsePath, pulse);
+    fs.writeFileSync(pulseFile, pulse);
     report.pulseScriptPatched = true;
   }
 }

@@ -7,9 +7,38 @@ const pagePath = path.join(root, 'search.html');
 const runtimePath = path.join(root, 'search.js');
 const templatePath = path.join(root, 'scripts', 'search-v3-runtime-template.js');
 const reportPath = path.join(root, 'downloads', 'search-v3-runtime-report.json');
+const indexPath = path.join(root, 'search-index.json');
+const maxDeployableSearchBytes = 24 * 1024 * 1024;
+
+function compactSearchIndex() {
+  let records = [];
+  try { records = JSON.parse(fs.readFileSync(indexPath, 'utf8')); } catch {}
+  if (!Array.isArray(records)) throw new Error('Search V3 runtime build failed: search-index.json is not an array.');
+  const before = records.length;
+  records = records.filter(record => {
+    if (record?.sourceType !== 'structured-relationship') return true;
+    const text = `${record.category || ''} ${record.title || ''} ${record.factualStatus || ''}`;
+    return !/reportedTransaction|reportedPositionChange|reported transaction|reported position change/i.test(text);
+  });
+  const serialized = JSON.stringify(records);
+  const bytes = Buffer.byteLength(serialized);
+  if (bytes > maxDeployableSearchBytes) {
+    throw new Error(`Search V3 runtime build failed: compact index is ${Math.ceil(bytes / 1024 / 1024)} MiB, above the 24 MiB deployment guard.`);
+  }
+  fs.writeFileSync(indexPath, serialized);
+  return { before, after: records.length, removedDuplicateMarketRelationships: before - records.length, bytes };
+}
 
 if (!fs.existsSync(pagePath) || !fs.existsSync(templatePath)) {
   console.error('Search V3 runtime build failed: search page or runtime template missing.');
+  process.exit(1);
+}
+
+let compactStats;
+try {
+  compactStats = compactSearchIndex();
+} catch (error) {
+  console.error(error.message);
   process.exit(1);
 }
 
@@ -49,12 +78,18 @@ const requiredRuntime = ['SEARCH V3','SEARCH V2 compatibility','investigationQue
 const missingPage = requiredPage.filter(marker => !html.includes(marker));
 const missingRuntime = requiredRuntime.filter(marker => !runtime.includes(marker));
 const report = {
-  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0,
+  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0 && compactStats.bytes <= maxDeployableSearchBytes,
   generatedAt: new Date().toISOString(),
   missingPage,
   missingRuntime,
   syntaxOk: syntax.status === 0,
-  syntaxError: syntax.status === 0 ? null : String(syntax.stderr || syntax.stdout || 'node --check failed')
+  syntaxError: syntax.status === 0 ? null : String(syntax.stderr || syntax.stdout || 'node --check failed'),
+  compactIndex: {
+    ...compactStats,
+    mebibytes: Number((compactStats.bytes / 1024 / 1024).toFixed(2)),
+    deploymentLimitMebibytes: 24,
+    evidenceBoundary: 'Only duplicate verbose market relationship records are removed. Compact official filing results remain searchable, and the complete relationships remain available in the public graph and registries.'
+  }
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -65,4 +100,4 @@ if (!report.ok) {
   if (!report.syntaxOk) console.error(report.syntaxError);
   process.exit(1);
 }
-console.log('Search V3 runtime built with evidence filters, URL parameters, fallback routes and primary-source ranking.');
+console.log(`Search V3 runtime built with evidence filters and a ${report.compactIndex.mebibytes} MiB deployable index; ${compactStats.removedDuplicateMarketRelationships} duplicate market relationship records removed.`);

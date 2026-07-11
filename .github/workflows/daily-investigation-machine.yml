@@ -9,6 +9,11 @@ on:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'scripts/run-investigation-machine.js'
       - 'scripts/repair-investigation-source-registry.js'
+      - 'scripts/preserve-investigation-sources.js'
+      - 'scripts/source-change-utils.js'
+      - 'scripts/build-source-change-page.js'
+      - 'scripts/extend-search-with-source-changes.js'
+      - 'scripts/source-change-*.js'
       - 'data/investigation-source-registry.json'
   schedule:
     - cron: '20 5 * * *'
@@ -25,9 +30,9 @@ concurrency:
 
 jobs:
   investigate:
-    name: Search sources, update evidence ledger and publish daily conclusions
+    name: Search sources, preserve changes and publish daily conclusions
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 55
 
     steps:
       - name: Checkout current main
@@ -52,6 +57,16 @@ jobs:
           INVESTIGATION_TIMEOUT_MS: '25000'
         run: node scripts/run-investigation-machine.js daily
 
+      - name: Preserve source versions, record changes and download linked evidence
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          SOURCE_ARCHIVE_TIMEOUT_MS: '30000'
+          SOURCE_DOCUMENT_TIMEOUT_MS: '35000'
+          SOURCE_DOCUMENTS_PER_RUN: '4'
+          SOURCE_DOCUMENT_MAX_BYTES: '12582912'
+        run: node scripts/preserve-investigation-sources.js daily
+
       - name: Refresh wider live intelligence and conclusions
         run: |
           node scripts/update-live-intel.js
@@ -59,13 +74,17 @@ jobs:
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js
           node scripts/build-investigation-pages.js
+          node scripts/build-source-change-page.js
 
       - name: Rebuild and verify search
         run: |
           node scripts/repair-search-system.js
           node scripts/extend-search-with-investigations.js
-          node scripts/search-investigation-smoke-test.js
           node scripts/final-investigation-hardening.js
+          node scripts/extend-search-with-source-changes.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/source-change-search-test.js
+          node scripts/source-change-preservation-test.js
 
       - name: Advisory site audit
         continue-on-error: true
@@ -79,6 +98,7 @@ jobs:
             data/investigation-source-registry.json \
             data/investigation-source-state.json \
             data/investigation-ledger.json \
+            data/investigation-source-changes.json \
             data/daily-investigation-conclusions.json \
             data/weekly-investigation-conclusions.json \
             data/investigation-status.json \
@@ -86,21 +106,29 @@ jobs:
             data/live-intel.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
+            evidence-archive \
             investigation-machine.html \
             daily-investigation-conclusions.html \
             weekly-investigation-report.html \
             investigation-source-ledger.html \
+            source-changes.html \
             investigation-pulse.js \
             daily-brain-brief.html \
             outcome-briefings.html \
             search.html \
             search.js \
             search-index.json \
+            sitemap.xml \
+            llms.txt \
             fixes.css \
             downloads/daily-investigation-conclusions.md \
             downloads/weekly-investigation-report.md \
             downloads/investigation-source-ledger.md \
+            downloads/investigation-source-changes.md \
             downloads/investigation-machine-run-report.json \
+            downloads/source-change-preservation-report.json \
+            downloads/source-change-preservation-test.json \
+            downloads/source-change-search-test.json \
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
@@ -119,9 +147,13 @@ jobs:
           name: daily-investigation-${{ github.run_id }}
           path: |
             downloads/investigation-machine-run-report.json
+            downloads/source-change-preservation-report.json
+            downloads/source-change-preservation-test.json
+            downloads/source-change-search-test.json
             downloads/search-investigation-smoke-test.json
             downloads/daily-investigation-conclusions.md
             downloads/investigation-source-ledger.md
+            downloads/investigation-source-changes.md
             data/investigation-source-pulls/daily-latest.json
           if-no-files-found: ignore
           retention-days: 30

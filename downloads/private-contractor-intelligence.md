@@ -1,6 +1,6 @@
 # Private Contractor Intelligence
 
-Updated: 2026-07-11T08:14:32.878Z
+Updated: 2026-07-11T09:26:14.523Z
 
 ## Boundary
 This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt.

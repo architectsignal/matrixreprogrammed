@@ -11,8 +11,10 @@ on:
       - '.github/workflows/pdf-evidence-extraction.yml'
       - 'scripts/discover-source-pdfs.js'
       - 'scripts/extract-pdf-documents.js'
+      - 'scripts/sanitize-document-identifiers.js'
       - 'scripts/extend-search-with-documents.js'
       - 'scripts/document-extraction-test.js'
+      - 'scripts/document-identifier-quality-test.js'
       - 'data/investigation-source-registry.json'
   pull_request:
     branches:
@@ -21,8 +23,10 @@ on:
       - '.github/workflows/pdf-evidence-extraction.yml'
       - 'scripts/discover-source-pdfs.js'
       - 'scripts/extract-pdf-documents.js'
+      - 'scripts/sanitize-document-identifiers.js'
       - 'scripts/extend-search-with-documents.js'
       - 'scripts/document-extraction-test.js'
+      - 'scripts/document-identifier-quality-test.js'
       - 'data/investigation-source-registry.json'
 
 permissions:
@@ -90,6 +94,9 @@ jobs:
           DOCUMENT_ARTIFACT_RETENTION_DAYS: '90'
         run: node scripts/extract-pdf-documents.js daily
 
+      - name: Recalculate and validate document identifiers
+        run: node scripts/sanitize-document-identifiers.js
+
       - name: Rebuild investigation and document search indexes
         run: |
           node scripts/repair-search-system.js
@@ -100,6 +107,7 @@ jobs:
         run: |
           node scripts/search-investigation-smoke-test.js
           node scripts/document-extraction-test.js
+          node scripts/document-identifier-quality-test.js
           node scripts/audit-site.js
 
       - name: Commit public document outputs
@@ -138,6 +146,8 @@ jobs:
             downloads/source-document-discovery-report.json
             downloads/document-extraction-report.json
             downloads/document-extraction-test.json
+            downloads/document-identifier-quality-report.json
+            downloads/document-identifier-quality-test.json
             downloads/search-investigation-smoke-test.json
           if-no-files-found: ignore
           retention-days: 90
@@ -151,15 +161,18 @@ jobs:
             page_ok=false
             json_ok=false
             search_ok=false
+            identifier_ok=false
             curl --fail --silent --show-error --max-time 20 "$SITE_URL/document-library.html" | grep -q 'DOCUMENT LIBRARY' && page_ok=true || true
-            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/document-library.json" | grep -qi 'unreviewed source record' && json_ok=true || true
+            public_json="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/document-library.json" || true)"
+            printf '%s' "$public_json" | grep -qi 'unreviewed source record' && json_ok=true || true
+            if ! printf '%s' "$public_json" | grep -Eqi '"value"[[:space:]]*:[[:space:]]*"(for|FR Doc|PHMSA)"'; then identifier_ok=true; fi
             curl --fail --silent --show-error --max-time 20 "$SITE_URL/search-index.json" | grep -q 'document-library.html' && search_ok=true || true
-            if [ "$page_ok" = true ] && [ "$json_ok" = true ] && [ "$search_ok" = true ]; then
-              echo "Production document extraction outputs are live and searchable."
+            if [ "$page_ok" = true ] && [ "$json_ok" = true ] && [ "$search_ok" = true ] && [ "$identifier_ok" = true ]; then
+              echo "Production document extraction outputs are live, searchable and identifier-clean."
               exit 0
             fi
             echo "Waiting for production deployment ($attempt/30)…"
             sleep 20
           done
-          echo "Production did not expose the document route, public JSON and search entry within ten minutes."
+          echo "Production did not expose clean document outputs within ten minutes."
           exit 1

@@ -1,0 +1,43 @@
+const fs = require('fs');
+const path = require('path');
+
+const root = process.cwd();
+const indexPath = path.join(root, 'index.html');
+const toolsPath = path.join(root, 'research-tools.html');
+if (!fs.existsSync(indexPath)) throw new Error('index.html not found');
+if (!fs.existsSync(toolsPath)) throw new Error('research-tools.html not found');
+
+let index = fs.readFileSync(indexPath, 'utf8');
+const start = '<!-- osint-tools-home:start -->';
+const end = '<!-- osint-tools-home:end -->';
+const card = `${start}<section id="osint-tools-home" class="section wrap"><div class="eyebrow">Member Research Tools</div><h2>EMAIL & DIGITAL FOOTPRINT RESEARCH.</h2><p class="lead">Verified members can submit controlled, single-email checks through Holehe and passive SpiderFoot. The breach-exposure tool is restricted to authenticated administrators.</p><p><strong>Boundary:</strong> account, footprint and breach signals are leads—not proof of identity, ownership, current use, wrongdoing or criminal conduct.</p><div class="cta-row"><a class="btn" href="research-tools.html">Open Research Tools</a><a class="btn alt" href="member-login.html">Member Login</a><a class="btn alt" href="https://emailosint.org/" target="_blank" rel="noopener noreferrer nofollow">External Email OSINT ↗</a></div></section>${end}`;
+if (index.includes(start) && index.includes(end)) {
+  index = index.replace(new RegExp(`${start}[\\s\\S]*?${end}`), card);
+} else if (index.includes('<!-- power-deck-home-link:start -->')) {
+  index = index.replace('<!-- power-deck-home-link:start -->', `${card}<!-- power-deck-home-link:start -->`);
+} else {
+  index = index.replace('</main>', `${card}</main>`);
+}
+fs.writeFileSync(indexPath, index);
+
+const sitemapPath = path.join(root, 'sitemap.xml');
+if (fs.existsSync(sitemapPath)) {
+  let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  if (!sitemap.includes('/research-tools.html')) sitemap = sitemap.replace('</urlset>', '<url><loc>https://matrixreprogrammed.com/research-tools.html</loc></url></urlset>');
+  fs.writeFileSync(sitemapPath, sitemap);
+}
+const llmsPath = path.join(root, 'llms.txt');
+if (fs.existsSync(llmsPath)) {
+  let llms = fs.readFileSync(llmsPath, 'utf8');
+  if (!llms.includes('research-tools.html')) llms += '\n- Member research tools: https://matrixreprogrammed.com/research-tools.html\n';
+  fs.writeFileSync(llmsPath, llms);
+}
+
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), JSON.stringify({
+  ok: index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
+  generatedAt: new Date().toISOString(),
+  homepageRoute: 'research-tools.html',
+  externalRoute: 'https://emailosint.org/'
+}, null, 2));
+console.log('Research tools homepage route applied.');

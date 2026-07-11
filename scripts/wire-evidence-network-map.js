@@ -1,0 +1,13 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const route='evidence-network-map.html';
+const today=new Date().toISOString().slice(0,10);
+const changed=[];
+function patch(file,fn){const full=path.join(root,file);if(!fs.existsSync(full))return;const before=fs.readFileSync(full,'utf8'),after=fn(before);if(after!==before){fs.writeFileSync(full,after);changed.push(file)}}
+patch('network-maps.html',html=>{if(html.includes(`href="${route}"`))return html;const button=`<a class="btn" href="${route}">Open Investigation Evidence Map</a>`;return html.includes('<div class="cta-row">')?html.replace('<div class="cta-row">',`<div class="cta-row">${button}`):html.replace('</main>',`<section class="section wrap"><h2>Investigation Evidence Map</h2><p>Explore current source platforms and evidence findings with every boundary attached.</p>${button}</section></main>`)})
+patch('network-map-index.html',html=>{if(html.includes(`href="${route}"`))return html;const card=`<article class="card redline"><span class="label">Current investigation evidence</span><h3>Evidence Network Map</h3><p>Filter current findings by source lane, evidence grade and legal-record status.</p><a class="btn" href="${route}">Open Evidence Map</a></article>`;const marker='<section class="section wrap"><h2>Map Lanes</h2><div class="grid">';return html.includes(marker)?html.replace(marker,marker+card):html.replace('</main>',`<section class="section wrap"><div class="grid">${card}</div></section></main>`)})
+patch('sitemap.xml',xml=>xml.includes(`/${route}</loc>`)?xml:xml.replace('</urlset>',`  <url><loc>https://matrixreprogrammed.com/${route}</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>\n</urlset>`))
+patch('llms.txt',text=>text.includes('Interactive Investigation Evidence Network')?text:`${text.trim()}\n- Interactive Investigation Evidence Network: /${route}\n- Evidence Network JSON: /data/evidence-network-map.json\n- Public Evidence Map CSV: /downloads/evidence-network-map.csv\n`)
+patch('robots.txt',text=>{const lines=[];if(!text.includes('/data/evidence-network-map.json'))lines.push('Allow: /data/evidence-network-map.json');if(!text.includes('/downloads/evidence-network-map.csv'))lines.push('Allow: /downloads/evidence-network-map.csv');return lines.length?`${text.trim()}\n${lines.join('\n')}\n`:text})
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true});fs.writeFileSync(path.join(root,'downloads','evidence-network-map-wiring.json'),JSON.stringify({ok:true,generatedAt:new Date().toISOString(),changed,route},null,2));console.log(`Evidence network wiring: ${changed.length?changed.join(', '):'already current'}.`);

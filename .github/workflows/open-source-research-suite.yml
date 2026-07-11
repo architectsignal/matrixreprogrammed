@@ -1,0 +1,166 @@
+name: Open Source Research Suite
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 7 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - 'data/**'
+      - 'scripts/build-evidence-reader.js'
+      - 'scripts/build-evidence-timeline.js'
+      - 'scripts/patch-pagefind-fallback.js'
+      - 'scripts/open-source-research-suite-test.js'
+      - 'scripts/pagefind-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-reader.js'
+      - 'evidence-timeline.js'
+      - 'pagefind-fallback.js'
+      - '.github/workflows/open-source-research-suite.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - 'data/**'
+      - 'scripts/build-evidence-reader.js'
+      - 'scripts/build-evidence-timeline.js'
+      - 'scripts/patch-pagefind-fallback.js'
+      - 'scripts/open-source-research-suite-test.js'
+      - 'scripts/pagefind-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-reader.js'
+      - 'evidence-timeline.js'
+      - 'pagefind-fallback.js'
+      - '.github/workflows/open-source-research-suite.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: open-source-research-suite-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[pagefind]')
+    name: Build PDF reader, timeline and Pagefind fallback
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build guarded Cloudflare site
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Build independent Pagefind index
+        run: npx --yes pagefind@1.4.0 --site _site --output-path _site/pagefind
+
+      - name: Validate generated Pagefind assets
+        env:
+          PAGEFIND_SITE: _site
+        run: node scripts/pagefind-output-test.js
+
+      - name: Commit generated open-source outputs
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          rm -rf pagefind
+          cp -R _site/pagefind pagefind
+          git config user.name "matrix-open-source-bot"
+          git config user.email "actions@github.com"
+          git add -f pagefind
+          git add \
+            evidence-reader.html \
+            evidence-reader \
+            evidence-timeline.html \
+            evidence-timeline \
+            search.html \
+            search \
+            sitemap.xml \
+            llms.txt \
+            data/evidence-reader-manifest.json \
+            data/evidence-timeline.json \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No open-source research output changes to commit."
+            exit 0
+          fi
+          git commit -m "Build PDF reader timeline and Pagefind index $(date -u +%F) [pagefind] [deploy]"
+          pushed=false
+          for attempt in 1 2 3; do
+            if git push; then
+              pushed=true
+              break
+            fi
+            git pull --rebase --autostash origin main
+          done
+          if [ "$pushed" != true ]; then
+            echo "Generated open-source outputs could not be pushed after three attempts."
+            exit 1
+          fi
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify live public research routes
+        if: github.event_name != 'pull_request' && steps.commit.outputs.committed == 'true'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: |
+          for attempt in $(seq 1 36); do
+            reader=false
+            manifest=false
+            timeline=false
+            timeline_data=false
+            pagefind=false
+            fallback=false
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/evidence-reader.html" | grep -q 'EVIDENCE READER' && reader=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-reader-manifest.json" | grep -q '"engine": "PDF.js"' && manifest=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/evidence-timeline.html" | grep -q 'EVIDENCE TIMELINE' && timeline=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-timeline.json" | grep -q '"engine": "vis-timeline"' && timeline_data=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/pagefind/pagefind.js" | grep -q 'Pagefind' && pagefind=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/search.html" | grep -q 'pagefind-fallback.js' && fallback=true || true
+            if [ "$reader" = true ] && [ "$manifest" = true ] && [ "$timeline" = true ] && [ "$timeline_data" = true ] && [ "$pagefind" = true ] && [ "$fallback" = true ]; then
+              echo "PDF reader, evidence timeline and Pagefind fallback are live."
+              exit 0
+            fi
+            echo "Waiting for open-source research deployment ($attempt/36)…"
+            sleep 20
+          done
+          echo "Production did not expose every open-source research route within the verification window."
+          exit 1
+
+      - name: Upload research-suite reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: open-source-research-suite-${{ github.run_id }}
+          path: |
+            downloads/open-source-research-suite-test.json
+            downloads/pagefind-output-test.json
+            downloads/open-source-research-wiring.json
+            data/evidence-reader-manifest.json
+            data/evidence-timeline.json
+          if-no-files-found: ignore
+          retention-days: 60

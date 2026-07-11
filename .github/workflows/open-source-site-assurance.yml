@@ -12,7 +12,7 @@ on:
       - 'evidence-network-map.js'
       - 'scripts/build-evidence-network-map.js'
       - 'scripts/playwright-public-site-audit.js'
-      - 'scripts/templates/membership-auth/membership.template'
+      - 'scripts/patch-membership-access-copy.js'
       - '.github/workflows/open-source-site-assurance.yml'
 
 permissions:
@@ -41,6 +41,19 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Build current evidence network data
         run: node scripts/build-evidence-network-map.js
+      - name: Wait for the current production deployment
+        if: github.event_name == 'push'
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error --max-time 15 https://matrixreprogrammed.com/evidence-network-map.html | grep -q 'INTERACTIVE EVIDENCE NETWORK'; then
+              echo "Current evidence map is live."
+              exit 0
+            fi
+            echo "Waiting for production deployment ($attempt/30)…"
+            sleep 20
+          done
+          echo "Production did not expose the new evidence map within ten minutes."
+          exit 1
       - name: Audit the live site in Chromium
         env:
           SITE_URL: https://matrixreprogrammed.com

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-11T12:29:13.227Z",
+  "checkedAt": "2026-07-11T12:51:11.789Z",
   "selectedSources": 12,
   "fetchedSources": 12,
   "skippedSources": 0,
@@ -32,7 +32,7 @@
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
       "bytes": 2195,
-      "bodyHash": "b26eddb24b185f90587d845b10b973335283caf7219287abe3d15282d3493e44",
+      "bodyHash": "ccbfa5c024aa27da8214fdaa29769c1544cd584fd0c709e51d320f3166026d40",
       "itemCount": 1,
       "error": ""
     },
@@ -58,7 +58,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22812,
-      "bodyHash": "9bc5375178981fb46b004652809cd54b6240c895356065206fdd921144e5a511",
+      "bodyHash": "b16231b5930ebdc53b1ec3691600194417b3fd8b577a8c1b1cf1657e56d93fbd",
       "itemCount": 40,
       "error": ""
     },
@@ -109,8 +109,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43120,
-      "bodyHash": "7e5918d5d33446a6e3bd9fb2588d406b7180d9a28871d323deb58225afc736e0",
+      "bytes": 43119,
+      "bodyHash": "a46062ec08c0cc87eb5496831c9463f7b56ac2f6f76ad03437e6bd33be040905",
       "itemCount": 19,
       "error": ""
     },
@@ -149,7 +149,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101899,
-      "bodyHash": "e3bc6e90973901cade112c2ec9fbd3a7d05068f28b4f6b3240c06dc72569d1a0",
+      "bodyHash": "ab2fb987466541546ec2dde0e7444ed497e92f480508feebe6eade812dac3ea9",
       "itemCount": 16,
       "error": ""
     },

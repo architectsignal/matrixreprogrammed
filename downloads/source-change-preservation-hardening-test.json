@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T12:51:49.109Z",
+  "checks": [
+    {
+      "name": "hardener executes",
+      "ok": true,
+      "detail": "Source change hardening complete: 1 changes, 1 snapshots and 0 documents processed.\n"
+    },
+    {
+      "name": "credentials redacted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public evidence fields complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "failure history retained",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "snapshot provenance retained",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "daily conclusions connected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page shows limits and next record",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public feed excludes diagnostics",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare blocks evidence archive",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare blocks snapshot diagnostics",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

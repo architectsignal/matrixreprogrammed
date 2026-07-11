@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T12:51:32.801Z",
+  "mode": "daily",
+  "sources": 12,
+  "changes": 1,
+  "snapshots": 13,
+  "documentsPreserved": 4,
+  "documentFailures": 0,
+  "publicFields": [
+    "title",
+    "sourceUrl",
+    "retrievalDate",
+    "evidenceGrade",
+    "factualStatus",
+    "established",
+    "notEstablished",
+    "mechanism",
+    "implication",
+    "alternativeExplanation",
+    "nextRecordRequired",
+    "correctionRoute"
+  ],
+  "boundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent."
+}

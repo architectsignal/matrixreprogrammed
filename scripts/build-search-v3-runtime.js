@@ -8,8 +8,21 @@ const runtimePath = path.join(root, 'search.js');
 const templatePath = path.join(root, 'scripts', 'search-v3-runtime-template.js');
 const reportPath = path.join(root, 'downloads', 'search-v3-runtime-report.json');
 const indexPath = path.join(root, 'search-index.json');
+const facetsPath = path.join(root, 'data', 'search-facets.json');
 const maxDeployableSearchBytes = 24 * 1024 * 1024;
 
+function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
+function facetCounts(records, field) {
+  const counter = new Map();
+  for (const record of records) {
+    const value = clean(record?.[field]);
+    if (!value) continue;
+    counter.set(value, (counter.get(value) || 0) + 1);
+  }
+  return [...counter.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([value, count]) => ({ value, count }));
+}
 function compactSearchIndex() {
   let records = [];
   try { records = JSON.parse(fs.readFileSync(indexPath, 'utf8')); } catch {}
@@ -26,7 +39,26 @@ function compactSearchIndex() {
     throw new Error(`Search V3 runtime build failed: compact index is ${Math.ceil(bytes / 1024 / 1024)} MiB, above the 24 MiB deployment guard.`);
   }
   fs.writeFileSync(indexPath, serialized);
-  return { before, after: records.length, removedDuplicateMarketRelationships: before - records.length, bytes };
+  let priorFacets = {};
+  try { priorFacets = JSON.parse(fs.readFileSync(facetsPath, 'utf8')); } catch {}
+  const facets = {
+    ...priorFacets,
+    searchVersion: 3,
+    updated: new Date().toISOString(),
+    totalResults: records.length,
+    evidenceBoundary: priorFacets.evidenceBoundary || 'Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.',
+    filters: {
+      evidenceGrade: facetCounts(records, 'evidenceGrade'),
+      sourceType: facetCounts(records, 'sourceType'),
+      statusClass: facetCounts(records, 'statusClass'),
+      jurisdiction: facetCounts(records, 'jurisdiction'),
+      entityType: facetCounts(records, 'entityType'),
+      resultKind: facetCounts(records, 'resultKind')
+    }
+  };
+  fs.mkdirSync(path.dirname(facetsPath), { recursive: true });
+  fs.writeFileSync(facetsPath, JSON.stringify(facets, null, 2));
+  return { before, after: records.length, removedDuplicateMarketRelationships: before - records.length, bytes, facetTotal: facets.totalResults };
 }
 
 if (!fs.existsSync(pagePath) || !fs.existsSync(templatePath)) {
@@ -78,7 +110,7 @@ const requiredRuntime = ['SEARCH V3','SEARCH V2 compatibility','investigationQue
 const missingPage = requiredPage.filter(marker => !html.includes(marker));
 const missingRuntime = requiredRuntime.filter(marker => !runtime.includes(marker));
 const report = {
-  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0 && compactStats.bytes <= maxDeployableSearchBytes,
+  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0 && compactStats.bytes <= maxDeployableSearchBytes && compactStats.facetTotal === compactStats.after,
   generatedAt: new Date().toISOString(),
   missingPage,
   missingRuntime,
@@ -100,4 +132,4 @@ if (!report.ok) {
   if (!report.syntaxOk) console.error(report.syntaxError);
   process.exit(1);
 }
-console.log(`Search V3 runtime built with evidence filters and a ${report.compactIndex.mebibytes} MiB deployable index; ${compactStats.removedDuplicateMarketRelationships} duplicate market relationship records removed.`);
+console.log(`Search V3 runtime built with evidence filters and a ${report.compactIndex.mebibytes} MiB deployable index; ${compactStats.removedDuplicateMarketRelationships} duplicate market relationship records removed and facets synchronized.`);

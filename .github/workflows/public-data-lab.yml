@@ -1,0 +1,115 @@
+name: Phase 9 Public Data Laboratory
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/phase9-public-data-lab
+      - main
+    paths:
+      - 'data/public-data-lab.json'
+      - 'data-lab.js'
+      - 'scripts/build-public-data-lab.js'
+      - 'scripts/public-data-lab-test.js'
+      - 'scripts/public-data-lab-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/public-data-lab.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/public-data-lab.json'
+      - 'data-lab.js'
+      - 'scripts/build-public-data-lab.js'
+      - 'scripts/public-data-lab-test.js'
+      - 'scripts/public-data-lab-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/public-data-lab.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: phase9-public-data-lab-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[data-lab]')
+    name: Build and verify browser-side public data lab
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate Phase 9 source files
+        run: |
+          node --check scripts/build-public-data-lab.js
+          node --check scripts/public-data-lab-test.js
+          node --check scripts/public-data-lab-output-test.js
+          node --check data-lab.js
+          node -e "JSON.parse(require('fs').readFileSync('data/public-data-lab.json')); console.log('public data lab registry valid')"
+
+      - name: Build public data laboratory
+        run: node scripts/build-public-data-lab.js
+
+      - name: Run read-only and evidence-boundary gates
+        run: node scripts/public-data-lab-test.js
+
+      - name: Build guarded Cloudflare output and search
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Verify exact deployable output
+        run: node scripts/public-data-lab-output-test.js
+
+      - name: Commit generated public routes
+        if: github.event_name == 'push'
+        id: commit
+        run: |
+          git config user.name "matrix-data-lab-bot"
+          git config user.email "actions@github.com"
+          git add \
+            data-lab.html \
+            index.html \
+            research-tools.html \
+            sitemap.xml \
+            llms.txt \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No generated Public Data Laboratory changes to commit."
+            exit 0
+          fi
+          git commit -m "Build Public Data Laboratory [data-lab] [deploy]"
+          git push || (git pull --rebase --autostash && git push)
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload Phase 9 reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-data-lab-${{ github.run_id }}
+          path: |
+            downloads/public-data-lab-build.json
+            downloads/public-data-lab-test.json
+            downloads/public-data-lab-output-test.json
+          if-no-files-found: ignore
+          retention-days: 60

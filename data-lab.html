@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Public Data Laboratory | Matrix Reprogrammed</title>
+  <meta name="description" content="Run capped read-only DuckDB-Wasm SQL over approved Matrix public datasets and explore results locally with Perspective." />
+  <meta property="og:title" content="Matrix Public Data Laboratory" />
+  <meta property="og:description" content="Reproduce entity, relationship, SEC filing and evidence-network analysis directly in the browser without a paid backend." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fixes.css" />
+  <style>
+    .data-lab-boundary{border-left:3px solid #d8b56a;background:rgba(216,181,106,.07);padding:.8rem}.data-lab-warning{border-left:4px solid #d8b56a;background:rgba(216,181,106,.08);padding:1rem 1.15rem;border-radius:10px}
+    .data-lab-card-top{display:flex;justify-content:space-between;gap:.7rem;align-items:center;flex-wrap:wrap}.data-lab-card-top>span:last-child{font-size:.75rem;color:#c8b98c}.data-lab-dataset-card,.data-lab-preset-card{display:flex;flex-direction:column}.data-lab-dataset-card .cta-row,.data-lab-preset-card .btn{margin-top:auto}
+    .data-lab-workbench{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:1rem;align-items:start}.data-lab-editor,.data-lab-output{border:1px solid rgba(216,181,106,.28);border-radius:14px;background:rgba(5,5,5,.92);padding:1rem}
+    .data-lab-editor textarea{width:100%;min-height:230px;box-sizing:border-box;background:#080706;color:#f3e6bd;border:1px solid rgba(216,181,106,.34);border-radius:10px;padding:1rem;font:14px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;resize:vertical}.data-lab-toolbar{display:grid;grid-template-columns:minmax(190px,1fr) 120px auto auto;gap:.55rem;align-items:center}.data-lab-toolbar select,.data-lab-toolbar button{min-height:42px}.data-lab-status[data-kind="success"]{color:#8bd9a5}.data-lab-status[data-kind="error"]{color:#ff8b8b}.data-lab-status[data-kind="warning"]{color:#e7c678}
+    .data-lab-schema{display:flex;flex-wrap:wrap;gap:.35rem}.data-lab-schema span{border:1px solid rgba(216,181,106,.22);border-radius:999px;padding:.25rem .55rem;font-size:.72rem}.data-lab-schema small{color:#c8b98c}.data-lab-modes{display:flex;flex-wrap:wrap;gap:.45rem}.data-lab-modes button[aria-pressed="true"]{box-shadow:0 0 0 2px #d8b56a}.data-lab-table-scroll{overflow:auto;max-height:680px;border:1px solid rgba(216,181,106,.2);border-radius:10px}.data-lab-table-scroll table{border-collapse:collapse;width:max-content;min-width:100%;font-size:.78rem}.data-lab-table-scroll th,.data-lab-table-scroll td{padding:.55rem .65rem;border-bottom:1px solid rgba(216,181,106,.14);border-right:1px solid rgba(216,181,106,.1);text-align:left;vertical-align:top;max-width:460px;overflow-wrap:anywhere}.data-lab-table-scroll th{position:sticky;top:0;background:#100e09;color:#d8b56a;z-index:2}
+    perspective-viewer{display:block;width:100%;height:680px;border:1px solid rgba(216,181,106,.25);border-radius:10px;background:#0a0907}.data-lab-engine-note code{white-space:nowrap}.data-lab-dataset-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+    @media(max-width:960px){.data-lab-workbench{grid-template-columns:1fr}.data-lab-toolbar{grid-template-columns:1fr}.data-lab-table-scroll{max-height:520px}perspective-viewer{height:520px}}
+    @media print{canvas,.signal-face,.veil,.topbar,.data-lab-toolbar,.data-lab-modes,.btn{display:none!important}.page,.card,.data-lab-editor,.data-lab-output{background:#fff;color:#000}.card{break-inside:avoid}.data-lab-table-scroll{max-height:none;overflow:visible}}
+  </style>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style></head>
+<body>
+  <canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div>
+  <div class="page">
+    <header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="data-lab.html" aria-current="page">Data Lab</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="evidence-timeline.html">Timeline</a><a href="search.html">Search</a></nav></header>
+    <main>
+      <section class="hero wrap">
+        <div class="eyebrow">Phase 9 · DuckDB-Wasm · Perspective · zero-cost browser analysis</div>
+        <h1>PUBLIC DATA LABORATORY.</h1>
+        <p class="lead">Run reproducible read-only SQL over the public entity, relationship, SEC filing and evidence-network exports. The database, joins, aggregations and visual exploration run locally in the reader's browser.</p>
+        <p class="data-lab-warning"><strong>Evidence boundary:</strong> The laboratory lets readers reproduce counts, filters, joins and aggregations over approved public datasets. Query output reflects the selected records and code; it does not prove causation, motive, coordination, identity, present ownership or wrongdoing. Machine-extracted and machine-classified records remain subject to their stated review status and source limitations.</p>
+        <div class="cta-row"><a class="btn" href="#workbench">Open SQL Workbench</a><a class="btn alt" href="#datasets">Approved Datasets</a><a class="btn alt" href="#presets">Reproducible Presets</a></div>
+      </section>
+
+      <section class="section wrap">
+        <div class="eyebrow">Fail-closed controls</div><h2>WHAT THE BROWSER MAY—and MAY NOT—DO.</h2>
+        <div class="grid">
+          <article class="card"><h3>Read-only SQL</h3><p>Only one <code>SELECT</code> or <code>WITH</code> statement can run. Writes, attachments, extension loading, direct file readers and remote URLs are blocked.</p></article>
+          <article class="card"><h3>Bounded work</h3><p>Every result is wrapped in a hard 1,000-row cap, with a 12-second browser timeout and a 6,000-character SQL limit.</p></article>
+          <article class="card"><h3>Approved files only</h3><p>The engine receives four same-origin public downloads. Private diagnostics, internal archives, arbitrary URLs and the user's local filesystem are not registered.</p></article>
+          <article class="card"><h3>Reproducible—not authoritative</h3><p>Readers can copy SQL, share a query link and download the capped result. The result still inherits every source, review-status and evidence limitation in the underlying records.</p></article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="workbench">
+        <div class="eyebrow">Browser-side investigation workbench</div><h2>QUERY THE PUBLIC RECORDS.</h2>
+        <div class="data-lab-workbench">
+          <article class="data-lab-editor">
+            <div class="data-lab-toolbar">
+              <select id="data-lab-preset" aria-label="Choose a reproducible query preset"><option value="">Custom query</option><option value="entity-types">Entities by type</option><option value="high-evidence-entities">Highest evidence-count entities</option><option value="relationship-types">Relationship types and grades</option><option value="relationship-sources">Most represented relationship sources</option><option value="named-relationship-join">Relationship edges with entity names</option><option value="market-by-issuer">Market disclosures by issuer and action</option><option value="largest-reported-values">Largest reported market values</option><option value="market-monthly">Market records by month</option><option value="evidence-network-preview">Evidence network rows</option></select>
+              <select id="data-lab-limit" aria-label="Maximum result rows"><option value="100">100 rows</option><option value="250" selected>250 rows</option><option value="500">500 rows</option><option value="1000">1,000 rows</option></select>
+              <button class="btn" id="data-lab-run" type="button">Run Query</button>
+              <button class="btn alt" id="data-lab-reset" type="button">Reset</button>
+            </div>
+            <textarea id="data-lab-query" spellcheck="false" aria-label="Read-only SQL query">SELECT type, COUNT(*) AS records, SUM(TRY_CAST(evidence_count AS BIGINT)) AS evidence_references FROM entities GROUP BY type ORDER BY records DESC</textarea>
+            <p class="figure-caption">Keyboard: Ctrl/⌘ + Enter. Views: <code>entities</code>, <code>relationships</code>, <code>market_activity</code>, <code>evidence_network</code>.</p>
+            <div class="cta-row small"><button class="btn alt" id="data-lab-copy-sql" type="button">Copy SQL</button><button class="btn alt" id="data-lab-copy-link" type="button">Copy Query Link</button><button class="btn alt" id="data-lab-download" type="button" disabled>Download Result CSV</button></div>
+            <p id="data-lab-status" class="data-lab-status" aria-live="polite">Loading the browser database engine…</p>
+            <div id="data-lab-schema" class="data-lab-schema" aria-label="Active dataset columns"></div>
+          </article>
+          <aside class="data-lab-output">
+            <span class="label">Active evidence boundary</span>
+            <p id="data-lab-active-boundary" class="data-lab-boundary">An entity record establishes that the named item appears in the structured registry. It does not establish guilt, ownership, control, identity equivalence or a substantive relationship beyond cited evidence.</p>
+            <p id="data-lab-result-meta" class="figure-caption">No query has run.</p>
+            <div class="data-lab-modes"><button class="btn alt" id="data-lab-table-mode" type="button" aria-pressed="true">Accessible Table</button><button class="btn alt" id="data-lab-perspective-mode" type="button" aria-pressed="false" disabled>Perspective Explorer</button></div>
+          </aside>
+        </div>
+        <div id="data-lab-table" style="margin-top:1rem"><p class="figure-caption">Run a preset or write a read-only SELECT query.</p></div>
+        <perspective-viewer id="data-lab-viewer" hidden></perspective-viewer>
+      </section>
+
+      <section class="section wrap" id="datasets"><div class="eyebrow">Public files with provenance attached</div><h2>APPROVED DATASETS.</h2><div class="grid data-lab-dataset-grid">
+<article class="card data-lab-dataset-card">
+  <div class="data-lab-card-top"><span class="label">Approved public dataset</span><span>4,670 estimated rows</span></div>
+  <h3>Entity Registry</h3>
+  <p>Structured people, companies, agencies, contracts, cases, findings and other entities with review status and evidence counts.</p>
+  <p class="data-lab-boundary"><strong>Boundary:</strong> An entity record establishes that the named item appears in the structured registry. It does not establish guilt, ownership, control, identity equivalence or a substantive relationship beyond cited evidence.</p>
+  <p class="figure-caption"><strong>SQL view:</strong> <code>entities</code> · <strong>Format:</strong> CSV</p>
+  <div class="cta-row small">
+    <button class="btn" type="button" data-data-lab-dataset="entities">Query this dataset</button>
+    <a class="btn alt" href="downloads/investigation-entities.csv" download>Download CSV</a>
+    <a class="btn alt internal-only" href="data/entity-registry.json">Open provenance</a>
+  </div>
+</article>
+<article class="card data-lab-dataset-card">
+  <div class="data-lab-card-top"><span class="label">Approved public dataset</span><span>5,777 estimated rows</span></div>
+  <h3>Relationship Registry</h3>
+  <p>Evidence-linked relationships, mentions, filing subjects, source changes and other documented edges.</p>
+  <p class="data-lab-boundary"><strong>Boundary:</strong> A relationship row records what a cited source states or what a parser observed. Mention, proximity and association do not establish control, coordination, payment, intent or wrongdoing.</p>
+  <p class="figure-caption"><strong>SQL view:</strong> <code>relationships</code> · <strong>Format:</strong> CSV</p>
+  <div class="cta-row small">
+    <button class="btn" type="button" data-data-lab-dataset="relationships">Query this dataset</button>
+    <a class="btn alt" href="downloads/investigation-relationships.csv" download>Download CSV</a>
+    <a class="btn alt internal-only" href="data/relationship-registry.json">Open provenance</a>
+  </div>
+</article>
+<article class="card data-lab-dataset-card">
+  <div class="data-lab-card-top"><span class="label">Approved public dataset</span><span>4,239 estimated rows</span></div>
+  <h3>SEC Market Activity</h3>
+  <p>Official Form 4 transactions and Form 13F position changes collected from SEC EDGAR.</p>
+  <p class="data-lab-boundary"><strong>Boundary:</strong> SEC filings report transactions or quarter-end positions under specific disclosure rules. They do not establish motive, investment merit, current ownership, coordination or wrongdoing; 13F changes do not reveal exact trade dates or execution prices.</p>
+  <p class="figure-caption"><strong>SQL view:</strong> <code>market_activity</code> · <strong>Format:</strong> CSV</p>
+  <div class="cta-row small">
+    <button class="btn" type="button" data-data-lab-dataset="market_activity">Query this dataset</button>
+    <a class="btn alt" href="downloads/market-activity.csv" download>Download CSV</a>
+    <a class="btn alt internal-only" href="data/market-activity.json">Open provenance</a>
+  </div>
+</article>
+<article class="card data-lab-dataset-card">
+  <div class="data-lab-card-top"><span class="label">Approved public dataset</span><span>5,000 estimated rows</span></div>
+  <h3>Evidence Network Export</h3>
+  <p>Public network-map export connecting evidence-led nodes and edges used by the visual investigation map.</p>
+  <p class="data-lab-boundary"><strong>Boundary:</strong> Network position and connectivity describe the exported graph. Centrality, density and proximity do not establish hierarchy, command, conspiracy, motive or unlawful conduct.</p>
+  <p class="figure-caption"><strong>SQL view:</strong> <code>evidence_network</code> · <strong>Format:</strong> CSV</p>
+  <div class="cta-row small">
+    <button class="btn" type="button" data-data-lab-dataset="evidence_network">Query this dataset</button>
+    <a class="btn alt" href="downloads/evidence-network-map.csv" download>Download CSV</a>
+    <a class="btn alt internal-only" href="data/evidence-network-map.json">Open provenance</a>
+  </div>
+</article></div></section>
+      <section class="section wrap" id="presets"><div class="eyebrow">Start with reproducible questions</div><h2>QUERY PRESETS.</h2><div class="grid">
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Entities by type</h3>
+  <p>Count registry records and attached evidence references by entity type.</p>
+  <p class="figure-caption">Uses: <code>entities</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="entity-types">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Highest evidence-count entities</h3>
+  <p>Surface records with the largest number of attached evidence references without treating volume as proof.</p>
+  <p class="figure-caption">Uses: <code>entities</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="high-evidence-entities">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Relationship types and grades</h3>
+  <p>Compare relationship categories by evidence grade and review status.</p>
+  <p class="figure-caption">Uses: <code>relationships</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="relationship-types">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Most represented relationship sources</h3>
+  <p>Count relationship records by public source while retaining grade and status distinctions.</p>
+  <p class="figure-caption">Uses: <code>relationships</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="relationship-sources">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Relationship edges with entity names</h3>
+  <p>Join relationship endpoints to the entity registry for reproducible edge inspection.</p>
+  <p class="figure-caption">Uses: <code>relationships</code> + <code>entities</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="named-relationship-join">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Market disclosures by issuer and action</h3>
+  <p>Aggregate reported SEC records by issuer and action category.</p>
+  <p class="figure-caption">Uses: <code>market_activity</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="market-by-issuer">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Largest reported market values</h3>
+  <p>Inspect the largest values reported in the source export with filing links attached.</p>
+  <p class="figure-caption">Uses: <code>market_activity</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="largest-reported-values">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Market records by month</h3>
+  <p>Group Form 4 and 13F-derived records by the available transaction or period date.</p>
+  <p class="figure-caption">Uses: <code>market_activity</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="market-monthly">Run preset</button>
+</article>
+<article class="card data-lab-preset-card">
+  <span class="label">Reproducible query preset</span>
+  <h3>Evidence network rows</h3>
+  <p>Open the public network-map export for filtering and schema inspection.</p>
+  <p class="figure-caption">Uses: <code>evidence_network</code></p>
+  <button class="btn alt" type="button" data-data-lab-preset="evidence-network-preview">Run preset</button>
+</article></div></section>
+
+      <section class="section wrap data-lab-warning data-lab-engine-note">
+        <h2>OPEN-SOURCE ENGINE NOTES.</h2>
+        <p>DuckDB-Wasm <code>1.33.0</code> executes SQL and reads approved CSV files in-browser. Perspective <code>4.5.2</code> is an optional local result explorer. When either CDN dependency is unavailable, the page retains direct dataset downloads, schema documentation and its accessible interface rather than sending records to a paid backend.</p>
+      </section>
+    </main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — inspect the data, preserve the boundary, publish the query.</p><p class="warning">Aggregations and correlations are leads for verification. They are not proof of causation, guilt, coordination or present fact.</p></footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script type="module" src="data-lab.js"></script>
+<script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Sell / Capture","Site Brain Router","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Mission + Money Engine","Capture System","Monetisation Dashboard"]}</script></body>
+</html>

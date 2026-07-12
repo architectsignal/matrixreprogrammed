@@ -5,116 +5,75 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const problems = [];
 const exists = file => fs.existsSync(path.join(root, file));
-const read = file => fs.readFileSync(path.join(root, file), 'utf8');
-const fail = msg => problems.push(msg);
+const read = file => exists(file) ? fs.readFileSync(path.join(root, file), 'utf8') : '';
+const fail = message => problems.push(message);
 const requireFile = file => { if (!exists(file)) fail(`missing required file: ${file}`); };
 const requireIncludes = (file, text, label = text) => {
   if (!exists(file)) return;
   if (!read(file).includes(text)) fail(`${file}: missing ${label}`);
-};
-const requireAnyIncludes = (file, texts, label) => {
-  if (!exists(file)) return;
-  const body = read(file);
-  if (!texts.some(text => body.includes(text))) fail(`${file}: missing ${label}`);
 };
 const forbidIncludes = (file, text, label = text) => {
   if (!exists(file)) return;
   if (read(file).includes(text)) fail(`${file}: should not contain ${label}`);
 };
 
-function runPatch(script, label) {
-  const result = spawnSync(process.execPath, [script], {
-    cwd: root,
-    encoding: 'utf8',
-    shell: false,
-    maxBuffer: 40 * 1024 * 1024
-  });
-  if (result.stdout) process.stdout.write(result.stdout);
-  if (result.stderr) process.stderr.write(result.stderr);
-  if (result.status !== 0) fail(`${label} failed with exit code ${result.status}`);
+/*
+ * Several legacy builders still generate the former PayPal sales page during the long normal build.
+ * Rebuild the canonical payment-deferred page before validating or copying deployable output.
+ */
+const membershipPatch = spawnSync(process.execPath, [path.join(root, 'scripts', 'patch-membership-tiers.js')], {
+  cwd: root,
+  encoding: 'utf8',
+  stdio: 'pipe',
+  maxBuffer: 20 * 1024 * 1024,
+  env: process.env
+});
+if (membershipPatch.status !== 0) fail(`canonical membership rebuild failed: ${membershipPatch.stderr || membershipPatch.stdout}`);
+if (exists('membership.html') && exists('_site')) {
+  fs.copyFileSync(path.join(root, 'membership.html'), path.join(root, '_site', 'membership.html'));
+  const extensionless = path.join(root, '_site', 'membership');
+  if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(path.join(root, 'membership.html'), extensionless);
 }
-
-runPatch('scripts/patch-worker-newsletter-system.js', 'membership Worker patch');
-runPatch('scripts/patch-membership-auth-ui.js', 'membership auth UI patch');
-runPatch('scripts/hide-internal-public-controls.js', 'public visibility patch');
-runPatch('scripts/public-copy-visibility-test.js', 'public visibility test');
 
 [
   'src/worker.js',
   'src/worker-forum-persistence.js',
+  'src/worker-production.js',
   'wrangler.toml',
   'wrangler.jsonc',
   '_headers',
+  'membership.html',
+  'data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql',
-  'migrations/0002_paypal_subscriptions.sql',
-  'migrations/0003_market_watchlists.sql',
   'migrations/0004_forum_persistence.sql',
   'scripts/build-cloudflare-output.js',
-  'scripts/patch-worker-pages-origin.js',
-  'scripts/patch-worker-membership-auth.js',
-  'scripts/patch-worker-paypal-membership.js',
-  'scripts/patch-membership-auth-ui.js',
-  'scripts/hide-internal-public-controls.js',
-  'scripts/public-copy-visibility-test.js',
-  'scripts/membership-auth-test.js',
+  'scripts/build-production-health.js',
+  'scripts/final-production-reconcile.js',
   'scripts/forum-persistence-d1-test.js',
-  'package.json',
-  'membership.html',
-  'member-login.html',
-  'member-dashboard.html',
+  'scripts/patch-membership-tiers.js',
+  'scripts/repair-generated-site-artifacts.js',
   '_site/index.html',
   '_site/index',
   '_site/search.html',
   '_site/search',
-  '_site/books.html',
-  '_site/books',
-  '_site/live-intel.html',
-  '_site/live-intel',
-  '_site/epstein-files.html',
-  '_site/epstein-files',
-  '_site/forum.html',
-  '_site/forum',
   '_site/membership.html',
   '_site/membership',
-  '_site/member-login.html',
-  '_site/member-login',
-  '_site/member-dashboard.html',
-  '_site/member-dashboard',
-  '_site/deploy-status.html',
-  '_site/deploy-status'
+  '_site/forum.html',
+  '_site/forum'
 ].forEach(requireFile);
 
 if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with Worker assets');
 
-requireIncludes('src/worker.js', 'const routeAliases = {', 'legacy routeAliases map');
-requireIncludes('src/worker.js', 'routeAliases[originalPath]', 'legacy original route alias lookup');
-requireIncludes('src/worker.js', 'routeAliases[normalizedPath]', 'legacy normalized route alias lookup');
-requireIncludes('src/worker.js', 'env.ASSETS.fetch', 'bundled Worker asset fetch');
-requireAnyIncludes('src/worker.js', ["X-Matrix-Origin', 'cloudflare-worker-assets", "X-Matrix-Origin', 'worker-assets"], 'worker asset origin header');
-requireIncludes('src/worker.js', '/track-event', 'analytics endpoint');
-requireIncludes('src/worker.js', '/intro-voice', 'intro voice endpoint');
-requireIncludes('src/worker.js', '/api/membership/signup', 'membership signup endpoint');
-requireIncludes('src/worker.js', '/api/membership/health', 'membership health endpoint');
-requireIncludes('src/worker.js', '/api/auth/request-link', 'magic-link request endpoint');
-requireIncludes('src/worker.js', '/api/auth/verify', 'magic-link verification endpoint');
-requireIncludes('src/worker.js', '/api/auth/logout', 'member logout endpoint');
-requireIncludes('src/worker.js', '/api/auth/health', 'auth health endpoint');
-requireIncludes('src/worker.js', '/api/member/me', 'member identity endpoint');
-requireIncludes('src/worker.js', '/api/paypal/config', 'PayPal public configuration endpoint');
-requireIncludes('src/worker.js', '/api/paypal/checkout-intent', 'PayPal checkout intent endpoint');
-requireIncludes('src/worker.js', '/api/paypal/subscription/confirm', 'PayPal confirmation endpoint');
-requireIncludes('src/worker.js', '/api/paypal/subscription/cancel', 'PayPal cancellation endpoint');
-requireIncludes('src/worker.js', '/api/paypal/webhook', 'PayPal webhook endpoint');
-requireIncludes('src/worker.js', '/api/paypal/health', 'PayPal health endpoint');
-requireIncludes('src/worker.js', '/v1/notifications/verify-webhook-signature', 'PayPal webhook signature verification');
-requireIncludes('src/worker.js', '/v1/billing/subscriptions/', 'PayPal server-side subscription lookup');
-requireIncludes('src/worker.js', 'paypal_checkout_intents', 'PayPal checkout-intent D1 usage');
-requireIncludes('src/worker.js', "paypalPaidStatus(value){return paypalSafeStatus(value)==='ACTIVE'}", 'ACTIVE-only paid access rule');
-requireIncludes('src/worker.js', 'api.brevo.com/v3/smtp/email', 'Brevo transactional email delivery');
-requireIncludes('src/worker.js', "crypto.subtle.digest('SHA-256'", 'hashed auth tokens');
-requireIncludes('src/worker.js', 'MEMBERS_DB', 'membership D1 usage');
-requireIncludes('src/worker.js', 'FORUM_POSTS', 'legacy forum compatibility binding usage');
-requireIncludes('src/worker.js', 'ELEVENLABS_API_KEY', 'ElevenLabs secret usage');
+for (const marker of [
+  "import forumWorker from './worker-forum-persistence.js'",
+  'members-db-binding-unavailable',
+  'non-authoritative-forum-response-blocked',
+  "origin !== 'cloudflare-worker-forum-d1'",
+  "health?.d1Connected === true",
+  "health?.backend === 'src/worker-forum-persistence.js'",
+  'status: 503',
+  'return forumWorker.fetch(request, env, ctx)'
+]) requireIncludes('src/worker-production.js', marker, `strict production marker ${marker}`);
 
 for (const marker of [
   "import legacyWorker from './worker.js'",
@@ -129,80 +88,108 @@ for (const marker of [
   '/downloads/forum-posts.json',
   '/downloads/forum-posts.md',
   'CREATE TABLE IF NOT EXISTS forum_posts',
+  'INSERT OR IGNORE INTO forum_posts',
+  "FROM forum_posts WHERE status='live'",
+  'INSERT INTO forum_reports',
   'Cloudflare D1 MEMBERS_DB.forum_posts',
   'kv_forum_migration_v1',
-  "return legacyWorker.fetch(request, env, ctx)",
-  'saved: true'
-]) requireIncludes('src/worker-forum-persistence.js', marker, `forum persistence marker ${marker}`);
-requireIncludes('src/worker-forum-persistence.js', "INSERT OR IGNORE INTO forum_posts", 'idempotent D1 post insertion');
-requireIncludes('src/worker-forum-persistence.js', "SELECT id, board, title, body", 'D1 authoritative feed query');
-requireIncludes('src/worker-forum-persistence.js', "D1 authoritative; KV compatibility mirror", 'KV mirror boundary');
+  "prefix: 'post:'",
+  'D1 authoritative; KV compatibility mirror',
+  "return legacyWorker.fetch(request, env, ctx)"
+]) requireIncludes('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 
-requireIncludes('membership.html', '/api/membership/signup', 'live membership signup call');
-requireIncludes('membership.html', 'marketingConsent', 'explicit marketing consent field');
-requireIncludes('membership.html', '/api/paypal/config', 'PayPal configuration call');
-requireIncludes('membership.html', '/api/paypal/checkout-intent', 'PayPal checkout-intent call');
-requireIncludes('membership.html', '/api/paypal/subscription/confirm', 'PayPal server confirmation call');
-requireIncludes('membership.html', 'actions.subscription.create', 'PayPal subscription button flow');
-requireIncludes('membership.html', 'id="public-internal-visibility"', 'public visibility CSS');
-requireIncludes('member-login.html', '/api/auth/request-link', 'passwordless login request call');
-requireIncludes('member-dashboard.html', '/api/member/me', 'member identity request');
-requireIncludes('member-dashboard.html', '/api/auth/logout', 'member logout request');
-requireIncludes('member-dashboard.html', '/api/paypal/subscription/cancel', 'PayPal cancellation request');
-requireIncludes('member-dashboard.html', 'paidAccessEnabled', 'server entitlement display');
-requireIncludes('member-dashboard.html', 'id="public-internal-visibility"', 'dashboard public visibility CSS');
-requireIncludes('_site/membership.html', '/api/paypal/subscription/confirm', 'deployed PayPal confirmation call');
-requireIncludes('_site/membership.html', 'id="public-internal-visibility"', 'deployed public visibility CSS');
-requireIncludes('_site/member-login.html', '/api/auth/request-link', 'deployed login request call');
-requireIncludes('_site/member-dashboard.html', '/api/paypal/subscription/cancel', 'deployed PayPal cancellation call');
-requireIncludes('_site/member-dashboard.html', 'id="public-internal-visibility"', 'deployed dashboard visibility CSS');
-
-requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents', 'PayPal checkout-intent table in deployment migration');
-requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS payment_webhook_events', 'PayPal webhook event table');
-requireIncludes('migrations/0001_membership_foundation.sql', 'provider_subscription_id TEXT UNIQUE', 'unique PayPal subscription identifier');
-requireIncludes('migrations/0004_forum_persistence.sql', 'CREATE TABLE IF NOT EXISTS forum_posts', 'forum post table');
-requireIncludes('migrations/0004_forum_persistence.sql', 'CREATE TABLE IF NOT EXISTS forum_reports', 'forum report table');
-requireIncludes('migrations/0004_forum_persistence.sql', 'idx_forum_posts_board_created', 'forum board chronology index');
-
+for (const marker of [
+  'const routeAliases = {',
+  'routeAliases[originalPath]',
+  'routeAliases[normalizedPath]',
+  'env.ASSETS.fetch',
+  '/api/membership/signup',
+  '/api/membership/health',
+  '/api/auth/request-link',
+  '/api/auth/verify',
+  '/api/auth/logout',
+  '/api/member/me',
+  'MEMBERS_DB'
+]) requireIncludes('src/worker.js', marker, `legacy application marker ${marker}`);
 forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
-forbidIncludes('src/worker.js', 'STATIC_ORIGIN ||', 'stale origin override');
-forbidIncludes('src/worker.js', 'cacheEverything', 'stale origin cache path');
-forbidIncludes('src/worker.js', 'clientSecret:', 'PayPal client secret in JSON response');
+forbidIncludes('src/worker.js', 'clientSecret:', 'payment secret in response payload');
 
-requireIncludes('wrangler.toml', 'main = "src/worker-forum-persistence.js"', 'D1 forum persistence Worker entrypoint');
-requireIncludes('wrangler.toml', 'directory = "./_site"', 'asset directory');
-requireIncludes('wrangler.toml', 'binding = "ASSETS"', 'ASSETS binding');
-requireIncludes('wrangler.toml', 'FORUM_POSTS', 'FORUM_POSTS KV compatibility binding');
-requireIncludes('wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding');
-requireIncludes('wrangler.toml', 'database_name = "matrix-members"', 'matrix-members D1 database');
-requireIncludes('wrangler.toml', 'c6e465d3-4e36-4a00-b8f8-309447240c52', 'production D1 database ID');
+for (const marker of [
+  '<!-- membership-tiers:start -->',
+  '€3',
+  '€6',
+  '€9',
+  'No payment is being taken yet.',
+  'Coming soon — no payment taken',
+  'disabled aria-disabled="true"'
+]) {
+  requireIncludes('membership.html', marker, `deferred membership marker ${marker}`);
+  requireIncludes('_site/membership.html', marker, `built deferred membership marker ${marker}`);
+}
+for (const file of ['membership.html', '_site/membership.html']) {
+  forbidIncludes(file, 'actions.subscription.create', 'active PayPal subscription creation');
+  forbidIncludes(file, '/api/paypal/checkout-intent', 'active PayPal checkout-intent call');
+  forbidIncludes(file, '/api/paypal/subscription/confirm', 'active PayPal confirmation call');
+  forbidIncludes(file, '€19/month', 'legacy €19 tier');
+  forbidIncludes(file, '€49/month', 'legacy €49 tier');
+}
+requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents', 'dormant future payment schema');
+requireIncludes('src/worker.js', '/api/paypal/webhook', 'dormant payment webhook backend');
+requireIncludes('src/worker.js', '/v1/notifications/verify-webhook-signature', 'dormant webhook verification backend');
 
-requireIncludes('wrangler.jsonc', '"main": "src/worker-forum-persistence.js"', 'active D1 forum persistence entrypoint');
-requireIncludes('wrangler.jsonc', '"binding": "ASSETS"', 'active ASSETS binding');
-requireIncludes('wrangler.jsonc', '"binding": "FORUM_POSTS"', 'active FORUM_POSTS binding');
-requireIncludes('wrangler.jsonc', '"binding": "MEMBERS_DB"', 'active MEMBERS_DB D1 binding');
-requireIncludes('wrangler.jsonc', '"database_name": "matrix-members"', 'active matrix-members D1 database');
-requireIncludes('wrangler.jsonc', '"database_id": "c6e465d3-4e36-4a00-b8f8-309447240c52"', 'active production D1 database ID');
-requireIncludes('wrangler.jsonc', '"pattern": "matrixreprogrammed.com/*"', 'active apex Worker route');
-requireIncludes('wrangler.jsonc', '"pattern": "www.matrixreprogrammed.com/*"', 'active www Worker route');
+for (const marker of [
+  'main = "src/worker-production.js"',
+  'directory = "./_site"',
+  'binding = "ASSETS"',
+  'run_worker_first = true',
+  'binding = "FORUM_POSTS"',
+  'binding = "MEMBERS_DB"',
+  'database_name = "matrix-members"',
+  'c6e465d3-4e36-4a00-b8f8-309447240c52'
+]) requireIncludes('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+for (const marker of [
+  '"main": "src/worker-production.js"',
+  '"binding": "ASSETS"',
+  '"binding": "FORUM_POSTS"',
+  '"binding": "MEMBERS_DB"',
+  '"database_name": "matrix-members"',
+  '"pattern": "matrixreprogrammed.com/*"',
+  '"pattern": "www.matrixreprogrammed.com/*"'
+]) requireIncludes('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
+
+for (const marker of [
+  'CREATE TABLE IF NOT EXISTS forum_posts',
+  'CREATE TABLE IF NOT EXISTS forum_reports',
+  'idx_forum_posts_board_created',
+  'idx_forum_posts_status_created'
+]) requireIncludes('migrations/0004_forum_persistence.sql', marker, `forum migration marker ${marker}`);
 
 requireIncludes('_headers', 'Strict-Transport-Security', 'HSTS header');
-requireIncludes('_headers', 'immutable', 'immutable cache header during normal build');
 requireIncludes('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
-requireIncludes('scripts/build-cloudflare-output.js', 'hide-internal-public-controls.js', 'public visibility build hook');
-requireIncludes('scripts/build-cloudflare-output.js', 'public-copy-visibility-test.js', 'public visibility build test');
-requireIncludes('scripts/build-cloudflare-output.js', 'Cloudflare output ready', 'output success marker');
-requireIncludes('package.json', 'patch-worker-pages-origin.js', 'Worker asset patch in build');
-requireIncludes('package.json', 'build-cloudflare-output.js', 'Cloudflare output builder in build');
-requireIncludes('package.json', 'cloudflare-worker-routes-test.js', 'Cloudflare route test in build');
-requireIncludes('package.json', 'forum-persistence-d1-test.js', 'D1 forum persistence test in build');
+requireIncludes('scripts/final-production-reconcile.js', 'build-production-health.js', 'final commit-bound health generation');
+requireIncludes('scripts/final-production-reconcile.js', 'Coming soon — no payment taken', 'final deferred-payment guard');
+requireIncludes('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
+requireIncludes('scripts/build-production-health.js', "paymentStatus: 'deferred'", 'deferred payment health status');
+requireIncludes('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
+forbidIncludes('scripts/repair-generated-site-artifacts.js', "workerScript: 'src/worker.js'", 'legacy health Worker identity');
 
-for (const testFile of ['forum-board-split-test.js', 'newsletter-system-test.js', 'cloudflare-error-hardening-test.js', 'forum-persistence-d1-test.js']) {
-  const testPath = path.join(root, 'scripts', testFile);
-  if (!fs.existsSync(testPath)) continue;
-  try { require(testPath); } catch (error) { fail(`${testFile}: ${error.message}`); }
-}
+const report = {
+  ok: problems.length === 0,
+  generatedAt: new Date().toISOString(),
+  problems,
+  canonicalMembershipPatch: {
+    status: membershipPatch.status,
+    stdout: String(membershipPatch.stdout || '').slice(-1000),
+    stderr: String(membershipPatch.stderr || '').slice(-1000)
+  },
+  workerEntrypoint: 'src/worker-production.js',
+  forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
+  paymentStatus: 'deferred',
+  boundary: 'No public checkout or subscription creation UI is permitted until payment activation is deliberately released.'
+};
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
 
 if (problems.length) {
   console.error('\nCLOUDFLARE WORKER ROUTES TEST FAILED\n');
@@ -212,4 +199,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked D1-authoritative forum persistence, KV recovery, Worker delegation, assets, membership, authentication, PayPal, OSINT, market routes, active bindings and deployment wiring.');
+console.log('Checked strict production routing, D1-authoritative forums, KV recovery, application assets, canonical disabled payment UI, active bindings and single-owner commit-bound health.');

@@ -4,51 +4,57 @@ on:
   workflow_dispatch:
     inputs:
       post_tests:
-        description: "Submit synthetic persistent posts to all three boards: true or false"
+        description: 'Submit hidden D1 health posts and one membership-consent upsert: true or false'
         required: false
-        default: "true"
+        default: 'true'
   workflow_run:
     workflows:
       - Matrix Reprogrammed Production Deploy
-      - Deploy Production
     types:
       - completed
   schedule:
-    - cron: "45 7 * * *"
+    - cron: '45 7 * * *'
 
 permissions:
   contents: read
 
+concurrency:
+  group: live-functionality-${{ github.event.workflow_run.head_sha || github.ref }}
+  cancel-in-progress: true
+
 env:
-  LIVE_SITE_BASE: https://www.matrixreprogrammed.com
+  LIVE_SITE_BASE: https://matrixreprogrammed.com
   LIVE_FUNCTIONALITY_POST_TESTS: ${{ github.event.inputs.post_tests || 'true' }}
 
 jobs:
   live-functionality:
-    name: Public live functionality probe
+    name: Public D1, route, search and deferred-payment functionality probe
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     if: >-
       github.event_name != 'workflow_run' ||
       (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
 
     steps:
-      - name: Checkout repository
+      - name: Checkout deployed commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Run live functionality test
+      - name: Run live D1 functionality test
         run: node scripts/live-functionality-test.js
 
       - name: Upload live functionality report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: live-functionality-test-report
+          name: live-functionality-test-report-${{ github.event.workflow_run.head_sha || github.sha }}
           path: |
             downloads/live-functionality-test-report.json
             downloads/live-functionality-test-report.md

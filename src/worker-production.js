@@ -50,6 +50,18 @@ function hasD1(env) {
   return Boolean(env?.MEMBERS_DB && typeof env.MEMBERS_DB.prepare === 'function');
 }
 
+function d1OnlyForumEnv(env) {
+  /*
+   * D1 is the production forum database. The historical KV namespace is optional
+   * migration/recovery infrastructure and must never be able to block forum startup,
+   * reads, writes or health checks when its daily quota is exhausted.
+   *
+   * KV data can be migrated later through a controlled maintenance run. Public forum
+   * traffic is deliberately isolated from KV so it remains available on D1 alone.
+   */
+  return { ...env, FORUM_POSTS: undefined };
+}
+
 async function validateForumResponse(path, response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-forum-d1') {
@@ -74,7 +86,7 @@ export default {
     if (!forumRoutes.has(path)) return forumWorker.fetch(request, env, ctx);
     if (!hasD1(env)) return unavailable('members-db-binding-unavailable');
     try {
-      const response = await forumWorker.fetch(request, env, ctx);
+      const response = await forumWorker.fetch(request, d1OnlyForumEnv(env), ctx);
       return validateForumResponse(path, response);
     } catch (error) {
       return unavailable('forum-worker-exception', error?.message || error);

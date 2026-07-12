@@ -32,7 +32,9 @@ const requiredSource = [
   'security-privacy.html', 'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
   'deploy-manifest.json', 'data/production-freshness-policy.json', 'data/live-intel.json',
   'data/daily-power-conclusions.json', 'data/daily-investigation-conclusions.json',
-  'data/daily-brain-brief.json', 'data/outcome-briefings.json', 'src/worker.js', 'wrangler.toml'
+  'data/daily-brain-brief.json', 'data/outcome-briefings.json', 'src/worker.js',
+  'src/worker-forum-persistence.js', 'migrations/0004_forum_persistence.sql',
+  'scripts/forum-persistence-d1-test.js', 'wrangler.toml', 'wrangler.jsonc'
 ];
 const requiredBuilt = [
   'index.html', 'index', 'start-here.html', 'start-here', 'live-intel.html', 'live-intel',
@@ -79,8 +81,30 @@ const freshnessReport = exists('downloads/production-freshness-guard.json') ? pa
 if (!freshnessReport) hard.push('production freshness report missing');
 else if (!freshnessReport.ok) hard.push(`production freshness guard reports ${freshnessReport.hardIssues?.length || 1} issue(s)`);
 
-for (const text of ['FORUM_POSTS', '/forum-health', '/forum-feed-main', '/submit-main-post']) if (!read('src/worker.js').includes(text)) hard.push(`src/worker.js missing ${text}`);
-for (const text of ['binding = "FORUM_POSTS"', 'directory = "./_site"', 'run_worker_first = true']) if (!read('wrangler.toml').includes(text)) hard.push(`wrangler.toml missing ${text}`);
+for (const text of ['env.ASSETS.fetch', '/api/membership/signup', '/api/paypal/webhook', '/api/tools/jobs']) {
+  if (!read('src/worker.js').includes(text)) hard.push(`src/worker.js missing delegated route marker ${text}`);
+}
+for (const text of [
+  "import legacyWorker from './worker.js'",
+  '/forum-health',
+  '/forum-feed-main',
+  '/submit-main-post',
+  'CREATE TABLE IF NOT EXISTS forum_posts',
+  'Cloudflare D1 MEMBERS_DB.forum_posts',
+  'kv_forum_migration_v1',
+  'return legacyWorker.fetch(request, env, ctx)'
+]) {
+  if (!read('src/worker-forum-persistence.js').includes(text)) hard.push(`forum persistence wrapper missing ${text}`);
+}
+for (const text of ['CREATE TABLE IF NOT EXISTS forum_posts', 'CREATE TABLE IF NOT EXISTS forum_reports', 'idx_forum_posts_board_created']) {
+  if (!read('migrations/0004_forum_persistence.sql').includes(text)) hard.push(`forum persistence migration missing ${text}`);
+}
+for (const text of ['main = "src/worker-forum-persistence.js"', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"', 'directory = "./_site"', 'run_worker_first = true']) {
+  if (!read('wrangler.toml').includes(text)) hard.push(`wrangler.toml missing ${text}`);
+}
+for (const text of ['"main": "src/worker-forum-persistence.js"', '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"']) {
+  if (!read('wrangler.jsonc').includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
+}
 if (siteExists('_redirects')) hard.push('_site/_redirects must not be deployed for Worker assets');
 
 const report = {
@@ -91,14 +115,15 @@ const report = {
   builtManifestSha: builtManifest?.commitSha || null,
   hardIssues: hard,
   softIssues: soft,
-  boundary: 'Deployment is blocked on missing critical routes, stale intelligence, duplicate IDs, absent confidence cards, invalid manifests or SHA drift.'
+  forumPersistence: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; FORUM_POSTS KV is a mirror and recovery source.',
+  boundary: 'Deployment is blocked on missing critical routes, stale intelligence, duplicate IDs, absent confidence cards, invalid manifests, SHA drift or non-authoritative forum storage.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nForum storage: ${report.forumPersistence}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)}.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with D1-authoritative forums.`);

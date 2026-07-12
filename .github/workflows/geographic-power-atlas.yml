@@ -11,6 +11,7 @@ on:
       - 'geographic-power-atlas.js'
       - 'scripts/build-geographic-power-atlas.js'
       - 'scripts/prepare-geographic-power-atlas-output.js'
+      - 'scripts/patch-start-here-safety-links.js'
       - 'scripts/geographic-power-atlas-test.js'
       - 'scripts/geographic-power-atlas-output-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -23,6 +24,7 @@ on:
       - 'geographic-power-atlas.js'
       - 'scripts/build-geographic-power-atlas.js'
       - 'scripts/prepare-geographic-power-atlas-output.js'
+      - 'scripts/patch-start-here-safety-links.js'
       - 'scripts/geographic-power-atlas-test.js'
       - 'scripts/geographic-power-atlas-output-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -64,6 +66,7 @@ jobs:
         run: |
           node --check scripts/build-geographic-power-atlas.js
           node --check scripts/prepare-geographic-power-atlas-output.js
+          node --check scripts/patch-start-here-safety-links.js
           node --check scripts/geographic-power-atlas-test.js
           node --check scripts/geographic-power-atlas-output-test.js
           node --input-type=module --check < geographic-power-atlas.js
@@ -95,6 +98,7 @@ jobs:
             data/geographic-power-atlas-data.json \
             downloads/geographic-power-atlas.csv \
             index.html \
+            start-here.html \
             research-tools.html \
             sitemap.xml \
             llms.txt \

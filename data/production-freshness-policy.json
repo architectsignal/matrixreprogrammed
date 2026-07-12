@@ -6,7 +6,7 @@
     {
       "id": "live-intel",
       "file": "data/live-intel.json",
-      "timestampFields": ["updated"],
+      "timestampFields": ["lastCheckedAt", "updated"],
       "maxAgeHours": 26,
       "minimumArray": "feedResults",
       "minimumCount": 1

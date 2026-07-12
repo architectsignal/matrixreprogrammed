@@ -20,7 +20,7 @@ const routeMarkers = {
   '/geographic-power-atlas': 'GEOGRAPHIC POWER ATLAS',
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
-  '/search': 'ASK MATRIX',
+  '/search': 'SEARCH THE MACHINE',
   '/deploy-health': 'D1 AUTHORITATIVE / FAIL CLOSED'
 };
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }

@@ -1,4 +1,5 @@
 (() => {
+  'use strict';
   const q = selector => document.querySelector(selector);
   const qa = selector => [...document.querySelectorAll(selector)];
   const search = q('#dark-risk-search');

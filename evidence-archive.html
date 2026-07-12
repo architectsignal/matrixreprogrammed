@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Evidence Archive & Verification | Matrix Reprogrammed</title>
+  <meta name="description" content="Replay approved public web captures, inspect source changes, verify SHA-256 integrity and export professional citations." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fixes.css" />
+  <style>
+    .phase8-grid{display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);gap:1rem}.archive-list{max-height:72vh;overflow:auto}.archive-list button{display:block;width:100%;text-align:left;padding:.8rem;margin:.45rem 0;border:1px solid rgba(216,181,106,.28);border-radius:10px;background:#0b0a08;color:#f3e6bd}.archive-list button[aria-current="true"]{border-color:#d8b56a}.archive-stage{min-height:620px;border:1px solid rgba(216,181,106,.25);border-radius:12px;overflow:hidden;background:#111}.archive-stage replay-web-page{width:100%;height:620px;display:block}.verification-box,.diff-box,.citation-box{margin-top:1rem}.hash{font-family:monospace;overflow-wrap:anywhere}.diff-output{white-space:pre-wrap;background:#0b0a08;border:1px solid rgba(216,181,106,.22);border-radius:10px;padding:1rem;max-height:440px;overflow:auto}.diff-add{background:rgba(40,150,80,.24);text-decoration:none}.diff-remove{background:rgba(190,55,55,.25);text-decoration:line-through}.control-row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}.control-row input,.control-row select,.citation-output{padding:.7rem;background:#090806;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:8px}.citation-output{width:100%;min-height:130px}.status-good{color:#9ddb9d}.status-warn{color:#e7c678}@media(max-width:900px){.phase8-grid{grid-template-columns:1fr}.archive-list{max-height:none}.archive-stage,.archive-stage replay-web-page{min-height:520px;height:520px}}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/replaywebpage@2.4.6/ui.js"></script>
+</head>
+<body>
+  <canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
+      <nav class="nav"><a href="evidence-archive.html" aria-current="page">Evidence Archive</a><a href="evidence-reader.html">PDF Reader</a><a href="evidence-timeline.html">Timeline</a><a href="search.html">Search</a></nav>
+    </header>
+    <main>
+      <section class="hero wrap">
+        <div class="eyebrow">Phase 8 · replay, integrity, comparison and citation</div>
+        <h1>EVIDENCE ARCHIVE & VERIFICATION.</h1>
+        <p class="lead">Replay approved public web captures, compare recorded source changes, verify file hashes and export citations tied to preserved evidence.</p>
+        <p class="card"><strong>Evidence boundary:</strong> A preserved capture proves what an approved public URL returned at the recorded time. It does not authenticate every statement, establish intent, remove legal context or convert allegations into proven wrongdoing.</p>
+      </section>
+      <section class="section wrap phase8-grid">
+        <aside class="card">
+          <label>Find an archive<input id="archive-search" type="search" placeholder="Source, lane, date or SHA-256" /></label>
+          <div id="archive-list" class="archive-list"><p>Loading archive manifest…</p></div>
+        </aside>
+        <div>
+          <article class="card">
+            <span id="archive-status-label" class="label">NO ARCHIVE SELECTED</span>
+            <h2 id="archive-title">Choose a preserved capture</h2>
+            <p id="archive-meta"></p>
+            <p><strong>SHA-256:</strong> <code id="archive-hash" class="hash">—</code></p>
+            <p><strong>Established:</strong> <span id="archive-established">—</span></p>
+            <p><strong>Not established:</strong> <span id="archive-not-established">—</span></p>
+            <div class="control-row"><a id="archive-live" class="btn alt" href="#" target="_blank" rel="noopener noreferrer">Open live source</a><button id="archive-verify" class="btn" type="button">Verify archive hash</button><button id="archive-cite" class="btn alt" type="button">Create citation</button></div>
+            <p id="archive-verification-status" class="figure-caption">Select a capture to begin.</p>
+          </article>
+          <div id="archive-stage" class="archive-stage"><p style="padding:1rem">No replayable WACZ capture is selected.</p></div>
+        </div>
+      </section>
+      <section class="section wrap">
+        <article class="card verification-box">
+          <div class="eyebrow">Signed publication chain</div><h2>INTEGRITY MANIFEST</h2>
+          <p id="integrity-summary">Loading signed-manifest status…</p>
+          <div class="control-row"><a class="btn alt" href="data/evidence-integrity-manifest.json">Open manifest</a><a class="btn alt" href="data/evidence-integrity-manifest.sigstore.json">Open Sigstore bundle</a><button id="copy-verify-command" class="btn" type="button">Copy Cosign verification command</button></div>
+          <p class="figure-caption">Integrity verification establishes that published bytes match the signed manifest. It does not establish the truth of every statement inside a source or archive.</p>
+        </article>
+      </section>
+      <section class="section wrap">
+        <article class="card diff-box">
+          <div class="eyebrow">Visual canonical-text comparison</div><h2>SOURCE CHANGE DIFF</h2>
+          <div class="control-row"><select id="change-select"><option value="">Choose a recorded change</option></select><select id="diff-mode"><option value="words">Word comparison</option><option value="lines">Line comparison</option></select></div>
+          <p id="diff-boundary" class="figure-caption">Recorded additions and removals are transparency observations, not automatic proof of concealment or wrongdoing.</p>
+          <div id="diff-output" class="diff-output">Choose a source-change record.</div>
+        </article>
+      </section>
+      <section class="section wrap">
+        <article class="card citation-box">
+          <div class="eyebrow">Citation.js bibliography output</div><h2>CITATION EXPORT</h2>
+          <div class="control-row"><select id="citation-style"><option value="apa">APA</option><option value="chicago">Chicago</option><option value="harvard1">Harvard</option><option value="vancouver">Vancouver</option><option value="bibtex">BibTeX</option><option value="ris">RIS</option></select><button id="copy-citation" class="btn" type="button">Copy citation</button><button id="download-bibliography" class="btn alt" type="button">Download bibliography</button></div>
+          <textarea id="citation-output" class="citation-output" readonly placeholder="Select an archive and create a citation."></textarea>
+        </article>
+      </section>
+    </main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — preserve the record, show the boundary, let the reader verify.</p></footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script type="module" src="evidence-archive.js"></script>
+</body>
+</html>

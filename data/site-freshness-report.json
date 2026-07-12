@@ -3,14 +3,14 @@
   "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
   "sourceRulesUpdated": "2026-06-24",
   "sourceRuleCount": 8,
-  "scannedPages": 2696,
-  "flaggedPages": 2152,
-  "highPriorityPages": 713,
-  "mediumPriorityPages": 1434,
-  "pagesWithMissingRules": 215,
+  "scannedPages": 2707,
+  "flaggedPages": 2162,
+  "highPriorityPages": 718,
+  "mediumPriorityPages": 1438,
+  "pagesWithMissingRules": 217,
   "autoUpdateEligibleFigures": 2,
   "manualReviewFigures": 57,
-  "missingRuleFigures": 468,
+  "missingRuleFigures": 493,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -217,6 +217,187 @@
         {
           "value": "2026",
           "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Health/biosecurity route Conclusion: 5 source route(s) currently point to Health/biosecur"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "relationship-registry.html",
+      "priority": "High",
+      "figureCount": 20,
+      "missingRuleCount": 20,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "€1.7",
+          "context": "tions GRADE A established-wrongdoing machine-extracted-unreviewed Greece: 57 convicted in €1.7 million agricultural subsidy fraud involving National Reserve payments → mentions → €1.7 million money event",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€1.7",
+          "context": "€1.7 million agricultural subsidy fraud involving National Reserve payments → mentions → €1.7 million money event Entity types: Finding → Payment Source: European Public Prosecutor&#39;s Office — News ·",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€1.7",
+          "context": "utor&#39;s Office — News · 2026-07-11 What the record establishes: The cited record names €1.7 million money event. What it does not establish: A textual mention does not establish guilt, control, ownersh",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€23.5",
+          "context": ".67 mentions GRADE B wrongdoing-lead machine-extracted-unreviewed Italy: EPPO seizes over €23.5 million in investigation into VAT fraud in the fuel sector → mentions → €23.5 million money event Entity type",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€23.5",
+          "context": "seizes over €23.5 million in investigation into VAT fraud in the fuel sector → mentions → €23.5 million money event Entity types: Finding → Payment Source: European Public Prosecutor&#39;s Office — News ·",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€23.5",
+          "context": "utor&#39;s Office — News · 2026-07-11 What the record establishes: The cited record names €23.5 million money event. What it does not establish: A textual mention does not establish guilt, control, ownersh",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "£96,000",
+          "context": ".67 mentions GRADE B wrongdoing-lead machine-extracted-unreviewed SFO to secure a further £96,000 from “green energy” fraudster → mentions → Serious Fraud Office Entity types: Finding → GovernmentAgency Sour",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "£96,000",
+          "context": ".67 mentions GRADE B wrongdoing-lead machine-extracted-unreviewed SFO to secure a further £96,000 from “green energy” fraudster → mentions → £96,000 money event Entity types: Finding → Payment Source: UK Ser",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "£96,000",
+          "context": "ted-unreviewed SFO to secure a further £96,000 from “green energy” fraudster → mentions → £96,000 money event Entity types: Finding → Payment Source: UK Serious Fraud Office — News And Communications · 2026-",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "£96,000",
+          "context": "News And Communications · 2026-07-11 What the record establishes: The cited record names £96,000 money event. What it does not establish: A textual mention does not establish guilt, control, ownership, paym",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3.5 Million",
+          "context": "ons GRADE B document-release machine-extracted-unreviewed Department of Justice Publishes 3.5 Million Responsive Pages in Compliance with the Epstein Files Transparency Act → mentions → Epstein Files Transparenc",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3.5 Million",
+          "context": "ons GRADE B document-release machine-extracted-unreviewed Department of Justice Publishes 3.5 Million Responsive Pages in Compliance with the Epstein Files Transparency Act → mentions → United States Department",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3.5 Million",
+          "context": "ons GRADE B document-release machine-extracted-unreviewed Department of Justice Publishes 3.5 Million Responsive Pages in Compliance with the Epstein Files Transparency Act → mentions → Epstein Files Transparenc",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$480,000.00",
+          "context": "ISPELL REGIONAL MEDICAL CENTER INC — Department of Health and Human Services → mentions → $480,000.00 money event Entity types: Finding → Payment Source: USAspending.gov — Recent Contract Awards · 2017-05-31 Wha",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$480,000.00",
+          "context": "— Recent Contract Awards · 2017-05-31 What the record establishes: The cited record names $480,000.00 money event. What it does not establish: A textual mention does not establish guilt, control, ownership, paym",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$40,000.00",
+          "context": "ISPELL REGIONAL MEDICAL CENTER INC — Department of Health and Human Services → mentions → $40,000.00 money event Entity types: Finding → Payment Source: USAspending.gov — Recent Contract Awards · 2017-05-31 Wha",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$40,000.00",
+          "context": "— Recent Contract Awards · 2017-05-31 What the record establishes: The cited record names $40,000.00 money event. What it does not establish: A textual mention does not establish guilt, control, ownership, paym",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$0.18",
+          "context": "nreviewed ADVANTAGE LEASING ASSOCIATES LLC — Environmental Protection Agency → mentions → $0.18 money event Entity types: Finding → Payment Source: USAspending.gov — Recent Contract Awards · 2017-05-02 Wha",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$0.18",
+          "context": "— Recent Contract Awards · 2017-05-02 What the record establishes: The cited record names $0.18 money event. What it does not establish: A textual mention does not establish guilt, control, ownership, paym",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "$53,867.07",
+          "context": "e machine-extracted-unreviewed LOCKMASTERS INC — District of Columbia Courts → mentions → $53,867.07 money event Entity types: Finding → Payment Source: USAspending.gov — Recent Contract Awards · 2026-07-09 Wha",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "Record → Source Source: U.S. Securities and Exchange Commission — Current EDGAR Filings · 2026-07-11 What the record establishes: The normalized content returned by the registered source differs from the"
+        },
+        {
+          "value": "2026",
+          "context": "GovernmentAgency Source: U.S. Securities and Exchange Commission — Litigation Releases · 2026-07-11 What the record establishes: The cited record names AS TO DEFENDANT DAQUAN LLOYD The Securities and Exc"
+        },
+        {
+          "value": "2026",
+          "context": "→ LegalAuthority Source: U.S. Securities and Exchange Commission — Litigation Releases · 2026-07-11 What the record establishes: The cited record names Federal Rule. What it does not establish: A textual"
+        },
+        {
+          "value": "2026",
+          "context": "→ LegalAuthority Source: U.S. Securities and Exchange Commission — Litigation Releases · 2026-07-11 What the record establishes: The cited record names Bankruptcy Code. What it does not establish: A text"
+        },
+        {
+          "value": "2026",
+          "context": "→ LegalAuthority Source: U.S. Securities and Exchange Commission — Litigation Releases · 2026-07-11 What the record establishes: The cited record names Exchange Act. What it does not establish: A textual"
+        },
+        {
+          "value": "2026",
+          "context": "→ LegalAuthority Source: U.S. Securities and Exchange Commission — Litigation Releases · 2026-07-11 What the record establishes: The cited record names Securities Exchange Act. What it does not establish"
         }
       ],
       "needsSourceRule": true,
@@ -536,11 +717,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ne-readable data Machine-readable data Machine-readable data MACHINE DIGEST &gt; updated: 2026-07-11T06:28:06.850Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "ne-readable data Machine-readable data Machine-readable data MACHINE DIGEST &gt; updated: 2026-07-12T06:17:51.766Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ta MACHINE DIGEST &gt; updated: 2026-07-11T06:28:06.850Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 24 &gt; entity observation"
+          "context": "ta MACHINE DIGEST &gt; updated: 2026-07-12T06:17:51.766Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 24 &gt; entity observation"
         },
         {
           "value": "2027",
@@ -858,27 +1039,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Policy dossier and clock Conclusion: 5 document link(s) currently point to Policy dossier"
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z Policy dossier and clock Conclusion: 5 document link(s) currently point to Policy dossier"
         },
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Controlled Opposition / media route Conclusion: 5 document link(s) currently point to Con"
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z Controlled Opposition / media route Conclusion: 5 document link(s) currently point to Con"
         },
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Digital ID / surveillance route Conclusion: 5 document link(s) currently point to Digital"
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z Digital ID / surveillance route Conclusion: 5 document link(s) currently point to Digital"
         },
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z War/security route Conclusion: 5 document link(s) currently point to War/security route."
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z War/security route Conclusion: 5 document link(s) currently point to War/security route."
         },
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Jurisdictions of Power dossier Conclusion: 5 document link(s) currently point to Jurisdic"
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z Jurisdictions of Power dossier Conclusion: 5 document link(s) currently point to Jurisdic"
         },
         {
           "value": "2026",
-          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T05:58:19.367Z Health/biosecurity route Conclusion: 5 document link(s) currently point to Health/biosecu"
+          "context": "tigate, not what has been proven beyond the source material. Confidence: watch · Updated: 2026-07-11T07:27:04.222Z Health/biosecurity route Conclusion: 5 document link(s) currently point to Health/biosecu"
         }
       ],
       "needsSourceRule": true,
@@ -1594,7 +1775,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-readable data Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-11T06:28:06.819Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
+          "context": "-readable data Download Markdown Matrix Brain Control Map DAILY BRAIN BRIEF &gt; updated: 2026-07-12T06:17:51.734Z &gt; conclusions: 5 &gt; outcome briefs: 5 &gt; signals: 5 &gt; scenarios: 14 &gt; policy"
         },
         {
           "value": "2027",
@@ -2008,28 +2189,28 @@
       "crisisFigures": [
         {
           "value": "542 Source",
-          "context": "nt phase with transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 742 Source 994 Source 1614 Source 1814 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance Stat",
+          "context": "nt phase with transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 744 Source 996 Source 1616 Source 1818 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance Stat",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "742 Source",
-          "context": "th transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 742 Source 994 Source 1614 Source 1814 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyb",
+          "value": "744 Source",
+          "context": "th transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 744 Source 996 Source 1616 Source 1818 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyb",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "994 Source",
-          "context": "ency rules due August 2026 and high-risk timelines clarified Source 542 Source 742 Source 994 Source 1614 Source 1814 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyber Blackout",
+          "value": "996 Source",
+          "context": "ency rules due August 2026 and high-risk timelines clarified Source 542 Source 744 Source 996 Source 1616 Source 1818 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyber Blackout",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "1614 Source",
-          "context": "due August 2026 and high-risk timelines clarified Source 542 Source 742 Source 994 Source 1614 Source 1814 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyber Blackout Clock Civil",
+          "value": "1616 Source",
+          "context": "due August 2026 and high-risk timelines clarified Source 542 Source 744 Source 996 Source 1616 Source 1818 Risk Clocks WWIII Escalation Clock AI Breakout Clock Surveillance State Clock Cyber Blackout Clock Civil",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -2042,7 +2223,7 @@
         },
         {
           "value": "2026",
-          "context": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 742 Source 994 Source 1614 Source 1814 Risk Clocks WWIII"
+          "context": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Source 542 Source 744 Source 996 Source 1616 Source 1818 Risk Clocks WWIII"
         },
         {
           "value": "2026",
@@ -2065,28 +2246,28 @@
       "crisisFigures": [
         {
           "value": "623 Source",
-          "context": "ssiers / Source Ledger / Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 684 Source 880 Source 1695 Source 1756 Risk Clocks No reviewed entries yet. Reader Warning This section explo",
+          "context": "ssiers / Source Ledger / Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 686 Source 882 Source 1697 Source 1760 Risk Clocks No reviewed entries yet. Reader Warning This section explo",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "684 Source",
-          "context": "urce Ledger / Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 684 Source 880 Source 1695 Source 1756 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypot",
+          "value": "686 Source",
+          "context": "urce Ledger / Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 686 Source 882 Source 1697 Source 1760 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypot",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "880 Source",
-          "context": "/ Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 684 Source 880 Source 1695 Source 1756 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raise",
+          "value": "882 Source",
+          "context": "/ Risk Clocks Source Ledger Entries Vatican City / Holy See Source 623 Source 686 Source 882 Source 1697 Source 1760 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raise",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "1695 Source",
-          "context": "cks Source Ledger Entries Vatican City / Holy See Source 623 Source 684 Source 880 Source 1695 Source 1756 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised by public-",
+          "value": "1697 Source",
+          "context": "cks Source Ledger Entries Vatican City / Holy See Source 623 Source 686 Source 882 Source 1697 Source 1760 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised by public-",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -2312,21 +2493,21 @@
       "crisisFigures": [
         {
           "value": "2026 Source",
-          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 677 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothe",
+          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 679 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothe",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "476 Source",
-          "context": "aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 677 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised",
+          "context": "aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 679 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "566 Source",
-          "context": "tential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 677 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised by public-r",
+          "context": "tential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 679 Risk Clocks No reviewed entries yet. Reader Warning This section explores a hypothesis raised by public-r",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -2339,15 +2520,77 @@
         },
         {
           "value": "2029",
-          "context": "out user oversharing risks ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 677 Risk Clocks No reviewed entries yet. Re"
+          "context": "out user oversharing risks ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 679 Risk Clocks No reviewed entries yet. Re"
         },
         {
           "value": "2026",
-          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 677 Risk Clocks No reviewed entries yet. Reader Warning This section explores a"
+          "context": "igital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Source 476 Source 566 Source 679 Risk Clocks No reviewed entries yet. Reader Warning This section explores a"
         },
         {
           "value": "2026",
           "context": "ce Submit Correction Paid Reports Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "entity-registry.html",
+      "priority": "High",
+      "figureCount": 3,
+      "missingRuleCount": 3,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "3.5 Million",
+          "context": "action. CourtCase CourtCase machine-classified-unreviewed Department of Justice Publishes 3.5 Million Responsive Pages in Compliance with the Epstein Files Transparency Act Roles: document-release Evidence refer",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€1.7",
+          "context": "dinated action. CourtCase CourtCase machine-classified-unreviewed Greece: 57 convicted in €1.7 million agricultural subsidy fraud involving National Reserve payments Roles: established-wrongdoing Evidence",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "€900",
+          "context": "nated action. Finding Thing machine-classified Bulgaria: EPPO detains eight suspects over €900 000 subsidy fraud involving employment benefits Roles: wrongdoing-lead · international-corruption Evidence re",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
+        },
+        {
+          "value": "2026",
+          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "ngdoing, intent or coordinated action. Contract Contract machine-classified-unreviewed FY 2026 Job Placement and Training-Native American Technology and Manufacturing Grant Pilot Program (IGNITE: Indigeno"
+        },
+        {
+          "value": "2026",
+          "context": "ange Commission — Current EDGAR Filings · Grade B · record-update SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: This update alone does not establi"
         }
       ],
       "needsSourceRule": true,
@@ -2365,21 +2608,21 @@
       "money": [
         {
           "value": "€9",
-          "context": "ot activate a membership. PayPal confirms each membership before access begins. Supporter €9/month weekly member brief member newsletter sample premium reports member-only source drops Sign in to activa",
+          "context": "onnect provider and payment stack before taking live payments. Membership Tiers Supporter €9/month weekly member brief member newsletter sample premium reports member-only source drops Join reader field",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "€19",
-          "context": "emium reports member-only source drops Sign in to activate this plan. Intelligence Member €19/month premium daily brief full card intelligence full source ledger deeper dossiers downloadable card decks w",
+          "context": "ter sample premium reports member-only source drops Join reader field Intelligence Member €19/month premium daily brief full card intelligence full source ledger deeper dossiers downloadable card decks w",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "€49",
-          "context": "decks weekly control map missing-record queue Sign in to activate this plan. Research Pro €49/month advanced search full dossier exports monthly PDF intelligence report document link maps policy tracker",
+          "context": "oadable card decks weekly control map missing-record queue Join reader field Research Pro €49/month advanced search full dossier exports monthly PDF intelligence report document link maps policy tracker",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -2389,7 +2632,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ts Sign in to activate this plan. Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "source requests Join reader field Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": true,
@@ -2408,21 +2651,21 @@
       "crisisFigures": [
         {
           "value": "13 Source",
-          "context": "-2026 implementation watch, with new research warning about user oversharing risks Source 13 Source 705 Source 1085 Source 1777 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock",
+          "context": "-2026 implementation watch, with new research warning about user oversharing risks Source 13 Source 707 Source 1087 Source 1781 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "705 Source",
-          "context": "ementation watch, with new research warning about user oversharing risks Source 13 Source 705 Source 1085 Source 1777 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock CBDC Rollo",
+          "value": "707 Source",
+          "context": "ementation watch, with new research warning about user oversharing risks Source 13 Source 707 Source 1087 Source 1781 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock CBDC Rollo",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "1085 Source",
-          "context": "watch, with new research warning about user oversharing risks Source 13 Source 705 Source 1085 Source 1777 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock CBDC Rollout Clock Cyb",
+          "value": "1087 Source",
+          "context": "watch, with new research warning about user oversharing risks Source 13 Source 707 Source 1087 Source 1781 Risk Clocks WWIII Escalation Clock Surveillance State Clock Financial Reset Clock CBDC Rollout Clock Cyb",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -2439,7 +2682,7 @@
         },
         {
           "value": "2026",
-          "context": "irst issuance during 2029 if EU legislation is adopted in 2026 EUDI Wallet remains a late-2026 implementation watch, with new research warning about user oversharing risks Source 13 Source 705 Source 1085"
+          "context": "irst issuance during 2029 if EU legislation is adopted in 2026 EUDI Wallet remains a late-2026 implementation watch, with new research warning about user oversharing risks Source 13 Source 707 Source 1087"
         },
         {
           "value": "2026",
@@ -4599,7 +4842,7 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
-      "file": "reports/daily-revelation-report.html",
+      "file": "investigation-machine.html",
       "priority": "High",
       "figureCount": 2,
       "missingRuleCount": 2,
@@ -4607,24 +4850,49 @@
       "manualReviewCount": 0,
       "staticCount": 0,
       "percentages": [],
-      "money": [
+      "money": [],
+      "crisisFigures": [
         {
-          "value": "3 Million",
-          "context": "E: Chilling Jeffrey Epstein Prison Death &#39;Body Swap&#39; Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com Open Source Route Evidence Vault Missing Records",
+          "value": "2027 Source",
+          "context": "rican Industry Classification System (NAICS)-Request for Comments on Proposed Updates for 2027 Source: Federal Register — Latest Documents · 13 Jul 2026, 00:00 UTC Conclusion: A dated source update exists and sh",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
-          "value": "3 Million",
-          "context": "E: Chilling Jeffrey Epstein Prison Death &#39;Body Swap&#39; Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com Surveillance State Clock at 92% Records missing",
+          "value": "2025 Source",
+          "context": "liminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2024-2025 Source: Federal Register — Latest Documents · 13 Jul 2026, 00:00 UTC Conclusion: A dated source update exists and sh",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         }
       ],
-      "crisisFigures": [],
-      "dates": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "gnal Board Timers Distribution Update Monitor Living Public-Record Investigation System · 2026-07-12 INTELLIGENT INVESTIGATION MACHINE. Daily and weekly searches across government platforms, official enfo"
+        },
+        {
+          "value": "2026",
+          "context": "on Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 11 Jul 2026, 12:51 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 12 &gt; Source failures: 0 &gt; Finding"
+        },
+        {
+          "value": "2026",
+          "context": "— District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 30 Sept 2026, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        },
+        {
+          "value": "2026",
+          "context": "T CORP. — Department of Defense Source: USAspending.gov — Recent Contract Awards · 21 Aug 2026, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        },
+        {
+          "value": "2026",
+          "context": "dity Futures Trading Commission Source: USAspending.gov — Recent Contract Awards · 13 Aug 2026, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        },
+        {
+          "value": "2026",
+          "context": "Nuclear Facilities Safety Board Source: USAspending.gov — Recent Contract Awards · 1 Aug 2026, 00:00 UTC Conclusion: An official audit, inspector-general or oversight source reports a finding, deficiency"
+        }
+      ],
       "needsSourceRule": true,
       "recommendation": "Add figure-source rules before automatic replacement."
     },
@@ -5487,15 +5755,19 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-07-11T06:28:28.800Z &gt; Live Intel updated: 2026-07-11T06:28:05.986Z &gt; Items available: 9 &gt; Epstein la"
+          "context": "ta Markdown Brief Epstein Command Center Network Search DAILY DROP STATUS &gt; Generated: 2026-07-12T06:18:12.510Z &gt; Live Intel updated: 2026-07-12T06:17:48.501Z &gt; Items available: 11 &gt; Epstein l"
         },
         {
           "value": "2026",
-          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-07-11T06:28:28.800Z &gt; Live Intel updated: 2026-07-11T06:28:05.986Z &gt; Items available: 9 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/enti"
+          "context": "earch DAILY DROP STATUS &gt; Generated: 2026-07-12T06:18:12.510Z &gt; Live Intel updated: 2026-07-12T06:17:48.501Z &gt; Items available: 11 &gt; Epstein lane items: 8 &gt; Watch sources: 7 &gt; People/ent"
         },
         {
           "value": "2026",
           "context": "t Current Epstein-linked updates and source-watch items with visible evidence boundaries. 2026-07-09 · Google News / Epstein timeline and files Why the House’s Epstein investigation isn't going away - Pol"
+        },
+        {
+          "value": "2026",
+          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
         },
         {
           "value": "2026",
@@ -5504,10 +5776,6 @@
         {
           "value": "2026",
           "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
-        },
-        {
-          "value": "2026",
-          "context": "en the claim. Commentary alone does not. Open Source Evidence Route Free Brief Book Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
         }
       ],
       "needsSourceRule": true,
@@ -5670,7 +5938,7 @@
       "crisisFigures": [
         {
           "value": "5 Book",
-          "context": "V3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5 Book Routes Book / Store Route trust center trust-center.html Book / Store Route source cards source-cards.html Bo",
+          "context": "MGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5 Book Routes Book / Store Route trust center trust-center.html Book / Store Route source cards source-cards.html Bo",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -5699,7 +5967,7 @@
         },
         {
           "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-06-17 · Google News / crime state overlap Ex-Cyprus President May Face Criminal Charges in Corruption Probe -"
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / control structure NSA revives 'Tailored Access Operations' name for elite hacking unit"
         }
       ],
       "needsSourceRule": true,
@@ -5748,34 +6016,6 @@
         {
           "value": "2025",
           "context": "s the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through D"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "elite-reports.html",
-      "priority": "High",
-      "figureCount": 1,
-      "missingRuleCount": 1,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "3 Million",
-          "context": "E: Chilling Jeffrey Epstein Prison Death &#39;Body Swap&#39; Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com Open Report entity report Health and Human Servi",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "becoming conclusions. Open Report Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": true,
@@ -5953,8 +6193,8 @@
       "money": [],
       "crisisFigures": [
         {
-          "value": "922 Source",
-          "context": "y Mohn family Related Dossiers / Source Ledger / Risk Clocks Source Ledger Entries Source 922 Source 1995 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules",
+          "value": "924 Source",
+          "context": "y Mohn family Related Dossiers / Source Ledger / Risk Clocks Source Ledger Entries Source 924 Source 1998 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -5962,12 +6202,12 @@
       ],
       "dates": [
         {
-          "value": "1995",
-          "context": "ly Related Dossiers / Source Ledger / Risk Clocks Source Ledger Entries Source 922 Source 1995 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules due A"
+          "value": "1998",
+          "context": "ly Related Dossiers / Source Ledger / Risk Clocks Source Ledger Entries Source 924 Source 1998 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules due A"
         },
         {
           "value": "2026",
-          "context": "r Entries Source 922 Source 1995 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified EUDI Wallet remai"
+          "context": "r Entries Source 924 Source 1998 Open Society Foundations EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified EUDI Wallet remai"
         },
         {
           "value": "2026",
@@ -14715,7 +14955,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-07-11T06:28:28.846Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
+          "context": "data Markdown Classifier Evidence Vault Daily Drop CLAIM CLASSIFIER STATUS &gt; Updated: 2026-07-12T06:18:12.560Z &gt; Badge classes: 12 &gt; Source hierarchy entries: 8 &gt; Claim rules: 8 &gt; Rule: so"
         },
         {
           "value": "2026",
@@ -14966,7 +15206,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "s 2652 nodes 5634 edges 468 cards Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "s 2655 nodes 5642 edges 468 cards Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -15007,6 +15247,46 @@
         {
           "value": "2026",
           "context": "tion Watch 0 review prompts. Open Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "daily-investigation-conclusions.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "mble Channels Signal Board Timers Distribution Update Monitor daily Intelligence · 11 Jul 2026, 12:51 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
+        },
+        {
+          "value": "2026",
+          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-12 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
+        },
+        {
+          "value": "2026",
+          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-12 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
+        },
+        {
+          "value": "2026",
+          "context": "teve Bajic Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+        },
+        {
+          "value": "2026",
+          "context": "r McKnight Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+        },
+        {
+          "value": "2026",
+          "context": "esh Taneja Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
         }
       ],
       "needsSourceRule": false,
@@ -15094,7 +15374,7 @@
         },
         {
           "value": "2030",
-          "context": "orcement, money, technology and opt-out rules. Weekly scan: 3 live-intel match(es) Agenda 2030 SDGs control system global governance policy harmonisation public private partnership Claim Classifier Source"
+          "context": "orcement, money, technology and opt-out rules. Weekly scan: 4 live-intel match(es) Agenda 2030 SDGs control system global governance policy harmonisation public private partnership Claim Classifier Source"
         },
         {
           "value": "2026",
@@ -15417,6 +15697,26 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "elite-reports.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "becoming conclusions. Open Report Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "emergency-power-theory.html",
       "priority": "High",
       "figureCount": 0,
@@ -15466,7 +15766,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "d watch next. Machine-readable data Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-11T06:28:25.988Z &gt; briefs generated: 58 &gt; pages generated: 58 &gt; style: user friendly &gt; boundar"
+          "context": "d watch next. Machine-readable data Download Briefs ENTITY BRIEFING FACTORY &gt; updated: 2026-07-12T06:18:09.009Z &gt; briefs generated: 58 &gt; pages generated: 58 &gt; style: user friendly &gt; boundar"
         },
         {
           "value": "2021",
@@ -15506,7 +15806,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "s and missing records. Machine-readable data Download Index EXPOSURE ENGINE &gt; updated: 2026-07-11T06:28:26.044Z &gt; profiles: 59 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "s and missing records. Machine-readable data Download Index EXPOSURE ENGINE &gt; updated: 2026-07-12T06:18:09.070Z &gt; profiles: 59 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         },
         {
           "value": "2021",
@@ -16401,6 +16701,46 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "investigation-source-ledger.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "Channels Signal Board Timers Distribution Update Monitor Every Search Attempt Preserved · 2026-07-12 INVESTIGATION SOURCE LEDGER. Source status, last success, changed content, parsed item count and failur"
+        },
+        {
+          "value": "2026",
+          "context": "Department of Justice — Epstein Disclosures Lane: epstein-disclosure Last attempt: 11 Jul 2026, 12:51 UTC Last success: 11 Jul 2026, 12:51 UTC Items: 80 · Changed: no Open Source Platform primary-official"
+        },
+        {
+          "value": "2026",
+          "context": "osures Lane: epstein-disclosure Last attempt: 11 Jul 2026, 12:51 UTC Last success: 11 Jul 2026, 12:51 UTC Items: 80 · Changed: no Open Source Platform primary-official · fetched U.S. Department of Justice"
+        },
+        {
+          "value": "2026",
+          "context": "S. Department of Justice — Justice News Lane: government-enforcement Last attempt: 11 Jul 2026, 12:51 UTC Last success: 11 Jul 2026, 12:51 UTC Items: 1 · Changed: yes Open Source Platform primary-official"
+        },
+        {
+          "value": "2026",
+          "context": "ws Lane: government-enforcement Last attempt: 11 Jul 2026, 12:51 UTC Last success: 11 Jul 2026, 12:51 UTC Items: 1 · Changed: yes Open Source Platform primary-official · fetched U.S. Department of Justice"
+        },
+        {
+          "value": "2026",
+          "context": "Justice Office of Inspector General — Reports Lane: oversight-audit Last attempt: 11 Jul 2026, 12:51 UTC Last success: 11 Jul 2026, 12:51 UTC Items: 14 · Changed: no Open Source Platform primary-official"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "investigations.html",
       "priority": "High",
       "figureCount": 0,
@@ -16493,11 +16833,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-07-11T06:28:05.986Z &gt; Source lanes: 5 &gt; Items available: 9 &gt; Evidence route: evidence-vault.html &gt"
+          "context": "-readable data Markdown Brief Epstein Watch Books / Store LIVE INTEL STATUS &gt; Updated: 2026-07-12T06:17:48.501Z &gt; Source lanes: 5 &gt; Items available: 11 &gt; Evidence route: evidence-vault.html &g"
         },
         {
           "value": "2026",
           "context": "ideo hook, free brief, offer, and book path for deeper context. Latest Actionable Updates 2026-07-09 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Why the House’s"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-09 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files New Mexico Accus"
         },
         {
           "value": "2026",
@@ -16510,10 +16854,6 @@
         {
           "value": "2026",
           "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-06 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Epstein m"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-07-08 · Epstein Files, Timeline And Court Records · Google News / Epstein sighting and alive claims Jeffrey E"
         }
       ],
       "needsSourceRule": false,
@@ -16533,7 +16873,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ine-readable data Machine-readable data Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-11T06:28:25.953Z &gt; current records: 24 &gt; previous records: 24 &gt; new records: 0 &gt; changed recor"
+          "context": "ine-readable data Machine-readable data Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-07-12T06:18:08.972Z &gt; current records: 24 &gt; previous records: 24 &gt; new records: 0 &gt; changed recor"
         },
         {
           "value": "2021",
@@ -16926,6 +17266,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -16939,10 +17283,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -16986,6 +17326,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -16999,10 +17343,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -17026,6 +17366,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -17039,10 +17383,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -17066,6 +17406,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -17079,10 +17423,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -17106,6 +17446,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -17119,10 +17463,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -17146,6 +17486,10 @@
         },
         {
           "value": "2026",
+          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -17159,10 +17503,6 @@
         {
           "value": "2026",
           "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
-        },
-        {
-          "value": "2026",
-          "context": "hare the claim at the strength the record supports. Open Source Evidence Route Book Route 2026-07-09 · Google News / Epstein sighting and alive claims Never-before-seen footage exposes eerie interiors of"
         }
       ],
       "needsSourceRule": false,
@@ -17182,7 +17522,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "adable data Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-11T06:28:06.790Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
+          "context": "adable data Matrix Brain Probability Snapshot Record Intake OUTCOME ENGINE\\n&gt; updated: 2026-07-12T06:17:51.702Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
         },
         {
           "value": "2026",
@@ -17446,7 +17786,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nd missing records. Machine-readable data Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-11T06:28:26.098Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "nd missing records. Machine-readable data Download Brief CONTRACTOR TRACKER &gt; updated: 2026-07-12T06:18:09.127Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         },
         {
           "value": "2026",
@@ -17470,7 +17810,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ta Download Markdown Probability Lab Prediction Engine PROBABILITY SNAPSHOT &gt; Updated: 2026-07-11T06:28:30.410Z &gt; Scenarios: 14 &gt; Signals: 20 &gt; Average: 72% &gt; Model: scenario feeds + weight"
+          "context": "ta Download Markdown Probability Lab Prediction Engine PROBABILITY SNAPSHOT &gt; Updated: 2026-07-12T06:18:14.672Z &gt; Scenarios: 14 &gt; Signals: 20 &gt; Average: 72% &gt; Model: scenario feeds + weight"
         },
         {
           "value": "2026",
@@ -17574,7 +17914,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "classifying each filing. Machine-readable data Download Markdown SEC FEED &gt; Generated: 2026-07-11T06:28:29.128Z &gt; Cards: 9 &gt; Captured: 9 &gt; Failed: 0 Boundary This feed captures official SEC fi"
+          "context": "classifying each filing. Machine-readable data Download Markdown SEC FEED &gt; Generated: 2026-07-12T06:18:13.003Z &gt; Cards: 9 &gt; Captured: 9 &gt; Failed: 0 Boundary This feed captures official SEC fi"
         },
         {
           "value": "2026",
@@ -17774,7 +18114,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "-architecture-watchlist.html\" } ] Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+          "context": "{ \"file\": \"policy-watch.html\" } ] Figures & Sources Figures on this page Checked: 25 June 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
         }
       ],
       "needsSourceRule": false,
@@ -17798,6 +18138,10 @@
         },
         {
           "value": "2026",
+          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-09 · Court finding / conviction lane New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The"
+        },
+        {
+          "value": "2026",
           "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-09 · Court finding / conviction lane Exclusive: Epstein survivors say his former assistant Lesley Groff li"
         },
         {
@@ -17811,10 +18155,6 @@
         {
           "value": "2026",
           "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-08 · Court finding / conviction lane Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This"
-        },
-        {
-          "value": "2026",
-          "context": "aims, contact records, settlements, and commentary. Open Source Evidence Route Book Route 2026-07-09 · Court finding / conviction lane Never-before-seen footage exposes eerie interiors of Jeffrey Epstein'"
         }
       ],
       "needsSourceRule": false,
@@ -17849,7 +18189,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-07-11T06:28:28.893Z &gt; Source doors: 26 &gt; Epstein actual-file doors: 14 &gt; Evidence Vault cards import"
+          "context": "rkdown Claim Classifier Epstein Command Center SOURCE DOCUMENT VAULT STATUS &gt; Updated: 2026-07-12T06:18:12.613Z &gt; Source doors: 26 &gt; Epstein actual-file doors: 14 &gt; Evidence Vault cards import"
         },
         {
           "value": "2026",
@@ -18141,6 +18481,10 @@
         },
         {
           "value": "2026",
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
+        },
+        {
+          "value": "2026",
           "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
         },
         {
@@ -18150,10 +18494,6 @@
         {
           "value": "2026",
           "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-06 · Google News / Epstein sighting and alive claims Epstein moved millions through mysterious Virgin Isla"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-08 · Google News / Epstein sighting and alive claims Jeffrey Epstein Look-alike Breaks Silence After Viral"
         }
       ],
       "needsSourceRule": false,
@@ -18217,7 +18557,11 @@
         },
         {
           "value": "2026",
-          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
+          "context": "in, context, and corroboration before it becomes a conclusion. Open Source Evidence Route 2026-07-09 · Google News / control structure NSA revives 'Tailored Access Operations' name for elite hacking unit"
+        },
+        {
+          "value": "2026",
+          "context": "s, and do not share a claim stronger than the record supports. Open Source Evidence Route 2026-07-07 · Google News / Epstein sighting and alive claims NEVER-BEFORE-SEEN footage reveals the innerworkings o"
         },
         {
           "value": "2026",
@@ -18229,11 +18573,7 @@
         },
         {
           "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein timeline and files Exclusive: Epstein survivors say his former assistant Lesley"
-        },
-        {
-          "value": "2026",
-          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-07 · Google News / Epstein timeline and files DOJ Tries to Hide Blanche’s Communications From Epstein File"
+          "context": "ngs from claims, contact records, settlements, and commentary. Open Source Evidence Route 2026-07-09 · Google News / Epstein timeline and files New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inqui"
         }
       ],
       "needsSourceRule": false,
@@ -18751,6 +19091,46 @@
         {
           "value": "2026",
           "context": "data Rumble Channels Books / Store Figures & Sources Figures on this page Checked: 1 July 2026 Numbers on this page are public-record leads. Crime, migration, sexual-offence, payout, death, and crisis fig"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "weekly-investigation-report.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ble Channels Signal Board Timers Distribution Update Monitor weekly Intelligence · 11 Jul 2026, 12:51 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
+        },
+        {
+          "value": "2026",
+          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-07-12 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
+        },
+        {
+          "value": "2026",
+          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-07-12 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
+        },
+        {
+          "value": "2026",
+          "context": "teve Bajic Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+        },
+        {
+          "value": "2026",
+          "context": "r McKnight Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
+        },
+        {
+          "value": "2026",
+          "context": "esh Taneja Source: U.S. Securities and Exchange Commission — Litigation Releases · 11 Jul 2026, 12:51 UTC Conclusion: An official record reports a conviction, guilty plea, sentence, final judgment or comp"
         }
       ],
       "needsSourceRule": false,
@@ -35986,7 +36366,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -36022,7 +36402,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -36046,7 +36426,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36086,7 +36466,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36106,7 +36486,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36126,7 +36506,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36146,7 +36526,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36190,7 +36570,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36210,7 +36590,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36230,7 +36610,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36250,7 +36630,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36270,7 +36650,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36290,7 +36670,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -36318,7 +36698,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36338,7 +36718,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36358,7 +36738,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36378,7 +36758,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36398,7 +36778,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36418,7 +36798,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2027",
@@ -36446,7 +36826,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36502,7 +36882,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36522,7 +36902,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36542,7 +36922,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36562,7 +36942,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36582,7 +36962,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36626,7 +37006,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36646,7 +37026,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -36666,7 +37046,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36686,7 +37066,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36706,7 +37086,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36726,7 +37106,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36746,7 +37126,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
         },
         {
           "value": "2027",
@@ -36774,7 +37154,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -36794,7 +37174,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36814,7 +37194,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36834,7 +37214,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36854,7 +37234,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36874,7 +37254,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -36898,7 +37278,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36918,7 +37298,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36938,7 +37318,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36958,7 +37338,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36978,7 +37358,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -36998,7 +37378,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -37018,7 +37398,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37038,7 +37418,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37078,7 +37458,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement High-interest tracked"
         }
       ],
       "needsSourceRule": false,
@@ -37098,7 +37478,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37118,7 +37498,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37138,7 +37518,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37158,7 +37538,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -37182,7 +37562,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37222,7 +37602,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37242,7 +37622,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37262,7 +37642,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37322,7 +37702,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -37342,7 +37722,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "t; type: tracked entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -37362,7 +37742,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-11T06:28:25.988Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-07-12T06:18:09.009Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -37520,6 +37900,21 @@
     },
     {
       "file": "evidence-lane-symbolic-records.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "evidence-network-map.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -39214,6 +39609,21 @@
     },
     {
       "file": "main-players/amentum.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "market-watchlist.html",
       "priority": "Medium",
       "figureCount": 0,
       "missingRuleCount": 0,
@@ -41063,6 +41473,21 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "reports/daily-revelation-report.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "reports/institution-international-monetary-fund.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -42074,6 +42499,42 @@
       "money": [],
       "crisisFigures": [],
       "dates": [],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "source-changes.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "g, concealment or intent. Machine-readable data Daily Conclusions GRADE B content changed 2026-07-11 U.S. Securities and Exchange Commission — Current EDGAR Filings What is established: The normalized con"
+        },
+        {
+          "value": "2026",
+          "context": "oved document may explain the difference. Additions detected Latest Filings - Sat, 11 Jul 2026 08:51:22 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-1"
+        },
+        {
+          "value": "2026",
+          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-11T08:51:22-04:00 4 - HANNAH ALISON L. Removals detected Latest Filings - Sat, 11 Jul 2026 08:29:04 EDT ht"
+        },
+        {
+          "value": "2026",
+          "context": "-07-11T08:51:22-04:00 4 - HANNAH ALISON L. Removals detected Latest Filings - Sat, 11 Jul 2026 08:29:04 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-1"
+        },
+        {
+          "value": "2026",
+          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-11T08:29:04-04:00 4 - HANNAH ALISON L. Next record required Open the current source and identify the exact"
+        }
+      ],
       "needsSourceRule": false,
       "recommendation": "No obvious dynamic figures detected."
     },
@@ -43241,6 +43702,68 @@
       "dates": [],
       "needsSourceRule": false,
       "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "document-library.html",
+      "priority": "Low",
+      "figureCount": 3,
+      "missingRuleCount": 3,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "13996 Source",
+          "context": "published finding. case-or-docket: 25-CRB-0013-PR report: FR 61424 federal-register: 2026-13996 Source provenance Federal Register — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-document pdft",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1608 Source",
+          "context": "uthenticate every statement, or convert the document into a published finding. report: FR 1608 Source provenance Federal Register — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-document pdft",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "23 Source",
+          "context": "cate every statement, or convert the document into a published finding. case-or-docket: 2:23 Source provenance U.S. Securities and Exchange Commission — Litigation Releases · retrieved 2026-07-11",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "urce provenance U.S. Securities and Exchange Commission — Litigation Releases · retrieved 2026-07-11 GRADE B unreviewed-source-document pdftotext 2026-13996.pdf Document hash: aeb34da6588c7ea5d75c67e0f4ce"
+        },
+        {
+          "value": "2026",
+          "context": "— Litigation Releases · retrieved 2026-07-11 GRADE B unreviewed-source-document pdftotext 2026-13996.pdf Document hash: aeb34da6588c7ea5d75c67e0f4ceddf8030b4c8165fb9a74438f0a425f258427 Extraction: 7935 ch"
+        },
+        {
+          "value": "2026",
+          "context": "to a published finding. case-or-docket: 25-CRB-0013-PR report: FR 61424 federal-register: 2026-13996 Source provenance Federal Register — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-"
+        },
+        {
+          "value": "2026",
+          "context": "al-register: 2026-13996 Source provenance Federal Register — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-document pdftotext 2026-14070.pdf Document hash: 6f9f8bf79aaccb91ea301d46c03b"
+        },
+        {
+          "value": "2026",
+          "context": "er — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-document pdftotext 2026-14070.pdf Document hash: 6f9f8bf79aaccb91ea301d46c03bda617f20b6cab503e05836b6b3ca1a239c71 Extraction: 14272 c"
+        },
+        {
+          "value": "2026",
+          "context": "inding. report: FR 1608 Source provenance Federal Register — Latest Documents · retrieved 2026-07-11 GRADE B unreviewed-source-document pdftotext Daquan Lloyd Document hash: 1dd13bb46aace5b5f76aa59636226e"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
       "file": "_site/authority-symbolic-power.html",

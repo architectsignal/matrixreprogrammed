@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T06:28:59.561Z",
+  "changed": true,
+  "mode": "D1-first membership foundation with live schema readiness proof",
+  "publicSubscriberListLocked": true,
+  "idempotent": true,
+  "required": [
+    "env.MEMBERS_DB.prepare",
+    "membership compatibility audit markers:",
+    "membershipSchemaStatus",
+    "d1SchemaReady",
+    "Cloudflare D1 MEMBERS_DB",
+    "Explicit email consent is required",
+    "originalPath==='/api/membership/signup'",
+    "originalPath==='/api/membership/health'",
+    "originalPath==='/api/admin/members'",
+    "ADMIN_API_TOKEN",
+    "status:result.saved?'pending-verification'"
+  ]
+}

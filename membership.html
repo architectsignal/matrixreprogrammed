@@ -1,1 +1,188 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Membership | Matrix Reprogrammed</title><meta name="description" content="Paid access to premium briefs, ledgers, decks, reports and research tools."/><link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="reader-experience.css"/><style>.money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.money-card{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}.price{font-size:2rem;color:#d8b56a;font-weight:900}.mini{font-size:.84rem;color:#c8b98c}.email-capture{display:flex;gap:.5rem;flex-wrap:wrap}.email-capture input{min-width:240px;flex:1;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.75rem}</style></head><body><canvas id="matrix"></canvas><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="start-here.html">Start Here</a><a href="daily-command-brief.html">Daily Brief</a><a href="search.html">Search</a><a href="deck-expansion-hub.html">Decks</a><a href="review-dashboard.html">Review</a><a href="store.html">Store</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav></header><main class="wrap section"><div class="eyebrow">Mission + Money Engine</div><h1>MEMBERSHIP.</h1><p class="lead">Paid access to premium briefs, ledgers, decks, reports and research tools.</p><p><strong>Mission:</strong> Matrix Reprogrammed is a public-record intelligence machine mapping people, institutions, money, policy, jurisdictions, families, societies, think tanks, legal systems, narratives and missing records.</p><p><strong>Evidence boundary:</strong> Inclusion means public-record research relevance. Claims must be checked against sources, limits, context and missing records.</p><section class="section money-card"><h2>Get the free Daily Control Brief first</h2><p>Enter your email to receive this free brief/download when the email provider is connected.</p><form class="email-capture" data-capture="Get the free Daily Control Brief first"><input type="email" placeholder="you@example.com" aria-label="Email address"/><button class="btn" type="button">Join / Download</button></form><p class="mini">Email capture placeholder: connect provider and payment stack before taking live payments.</p></section><section class="section"><h2>Membership Tiers</h2><div class="money-grid"><article class="money-card" id="join-supporter"><h3>Supporter</h3><div class="price">€9/month</div><ul><li>weekly member brief</li><li>member newsletter</li><li>sample premium reports</li><li>member-only source drops</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article><article class="money-card" id="join-intelligence-member"><h3>Intelligence Member</h3><div class="price">€19/month</div><ul><li>premium daily brief</li><li>full card intelligence</li><li>full source ledger</li><li>deeper dossiers</li><li>downloadable card decks</li><li>weekly control map</li><li>missing-record queue</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article><article class="money-card" id="join-research-pro"><h3>Research Pro</h3><div class="price">€49/month</div><ul><li>advanced search</li><li>full dossier exports</li><li>monthly PDF intelligence report</li><li>source route maps</li><li>policy tracker</li><li>jurisdiction tracker</li><li>card score movement reports</li><li>priority source requests</li></ul><a class="btn" href="daily-control-brief-signup.html">Join Placeholder</a></article></div></section></main><footer class="footer wrap"><p><strong>Boundary:</strong> Inclusion means public-record research relevance. Claims must be checked against sources, limits, context and missing records.</p></footer></div><script src="matrix.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership | Matrix Reprogrammed</title>
+  <meta name="description" content="Create a free Matrix Reprogrammed account or upgrade through a verified PayPal subscription."/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="reader-experience.css"/>
+  <style>
+    .money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1rem}
+    .money-card{border:1px solid rgba(216,181,106,.28);border-radius:22px;padding:1rem;background:linear-gradient(150deg,rgba(14,8,2,.96),rgba(0,0,0,.95))}
+    .price{font-size:2rem;color:#d8b56a;font-weight:900}.mini{font-size:.84rem;color:#c8b98c}
+    .member-form{display:grid;gap:.8rem;max-width:720px}.member-form input{width:100%;box-sizing:border-box;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.85rem}
+    .consent-row{display:flex;gap:.65rem;align-items:flex-start}.consent-row input{width:auto;margin-top:.25rem}.status{min-height:1.4rem;font-weight:700}.status.ok{color:#9ddd9d}.status.error{color:#ff9b8f}.status.pending{color:#d8b56a}
+    .account-actions{display:flex;gap:.7rem;flex-wrap:wrap}.paypal-zone{min-height:48px;margin-top:.8rem}.plan-state{font-size:.86rem;color:#c8b98c;min-height:2.5rem}.secure-note{border-left:3px solid #d8b56a;padding-left:.8rem}
+  </style>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style></head>
+<body>
+<canvas id="matrix"></canvas>
+<div class="page">
+  <header class="wrap topbar">
+    <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a>
+    <nav class="nav"><a href="start-here.html">Start Here</a><a href="daily-command-brief.html">Daily Brief</a><a href="search.html">Search</a><a href="deck-expansion-hub.html">Decks</a><a href="review-dashboard.html" class="internal-only" data-internal-only="true">Review</a><a href="store.html">Store</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav>
+  </header>
+  <main class="wrap section">
+    <div class="eyebrow">Membership</div>
+    <h1>JOIN THE PRIVATE MEMBER LAYER.</h1>
+    <p class="lead">Create a free account or upgrade through a PayPal subscription that is verified by the Matrix Reprogrammed backend before access is granted.</p>
+    <p><strong>Evidence boundary:</strong> Membership changes access, never the evidence standard applied to claims.</p>
+
+    <section class="section money-card">
+      <h2>Free membership and Daily Control Brief</h2>
+      <p>Create an account using your email. You will receive a secure one-time verification link. No password is required.</p>
+      <form id="membership-signup" class="member-form" novalidate>
+        <label>Display name <input id="member-name" name="name" type="text" maxlength="120" autocomplete="name" placeholder="Your name (optional)"/></label>
+        <label>Email address <input id="member-email" name="email" type="email" maxlength="240" autocomplete="email" required placeholder="you@example.com"/></label>
+        <label class="consent-row"><input id="member-consent" name="marketingConsent" type="checkbox" required/><span>I agree to receive the Matrix Reprogrammed member email and Daily Control Brief. I can unsubscribe at any time.</span></label>
+        <button class="btn" type="submit">Create Free Member Account</button>
+        <p id="signup-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="account-actions">
+        <a class="btn" href="member-login.html">Already a member? Sign in</a>
+        <a class="btn" href="member-dashboard.html">Open member dashboard</a>
+      </div>
+      <p class="mini">Verification links expire after 15 minutes and can only be used once.</p>
+    </section>
+
+    <section class="section">
+      <h2>PayPal membership tiers</h2>
+      <p id="paypal-system-status" class="status pending" role="status" aria-live="polite">Checking your member session and PayPal configuration…</p>
+      <p class="secure-note"><strong>Access rule:</strong> the browser cannot activate a membership. PayPal confirms each membership before access begins. </p>
+      <div class="money-grid">
+        <article class="money-card" id="join-supporter">
+          <h3>Supporter</h3><div class="price">€9/month</div>
+          <ul><li>weekly member brief</li><li>member newsletter</li><li>sample premium reports</li><li>member-only source drops</li></ul>
+          <div id="paypal-supporter" class="paypal-zone"></div><p id="paypal-supporter-status" class="plan-state">Sign in to activate this plan.</p>
+        </article>
+        <article class="money-card" id="join-intelligence-member">
+          <h3>Intelligence Member</h3><div class="price">€19/month</div>
+          <ul><li>premium daily brief</li><li>full card intelligence</li><li>full source ledger</li><li>deeper dossiers</li><li>downloadable card decks</li><li>weekly control map</li><li>missing-record queue</li></ul>
+          <div id="paypal-intelligence" class="paypal-zone"></div><p id="paypal-intelligence-status" class="plan-state">Sign in to activate this plan.</p>
+        </article>
+        <article class="money-card" id="join-research-pro">
+          <h3>Research Pro</h3><div class="price">€49/month</div>
+          <ul><li>advanced search</li><li>full dossier exports</li><li>monthly PDF intelligence report</li><li>source route maps</li><li>policy tracker</li><li>jurisdiction tracker</li><li>card score movement reports</li><li>priority source requests</li></ul>
+          <div id="paypal-research-pro" class="paypal-zone"></div><p id="paypal-research-pro-status" class="plan-state">Sign in to activate this plan.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap"><p><strong>Billing boundary:</strong> PayPal holds payment details. Matrix Reprogrammed stores only the verified subscription identifiers, status and entitlement tier.</p></footer>
+</div>
+<script src="matrix.js"></script>
+<script>
+(() => {
+  const signupForm = document.getElementById('membership-signup');
+  const signupStatus = document.getElementById('signup-status');
+  signupForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    signupStatus.className = 'status pending';
+    signupStatus.textContent = 'Creating your account…';
+    const email = document.getElementById('member-email').value.trim();
+    const name = document.getElementById('member-name').value.trim();
+    const marketingConsent = document.getElementById('member-consent').checked;
+    try {
+      const response = await fetch('/api/membership/signup', {
+        method: 'POST', headers: {'content-type':'application/json'},
+        body: JSON.stringify({email,name,marketingConsent,consentVersion:'membership-consent-v1',source:'membership-page',sourcePage:'/membership.html'})
+      });
+      const data = await response.json();
+      if (!response.ok || !data.saved) throw new Error(data.error || data.message || 'Account could not be created.');
+      signupStatus.className = 'status ok';
+      signupStatus.textContent = data.emailSent ? 'Check your email for your verification link.' : 'We could not send the email. Please try again later.';
+      if (data.emailSent) signupForm.reset();
+    } catch (error) {
+      signupStatus.className = 'status error';
+      signupStatus.textContent = error.message || 'Account could not be created.';
+    }
+  });
+
+  const systemStatus = document.getElementById('paypal-system-status');
+  const planUi = {
+    supporter: {container:'#paypal-supporter', status:document.getElementById('paypal-supporter-status')},
+    intelligence: {container:'#paypal-intelligence', status:document.getElementById('paypal-intelligence-status')},
+    research_pro: {container:'#paypal-research-pro', status:document.getElementById('paypal-research-pro-status')}
+  };
+  const setAllPlanMessages = message => Object.values(planUi).forEach(item => { item.status.textContent = message; });
+  const readJson = async response => { const text = await response.text(); try { return JSON.parse(text); } catch { throw new Error('The membership service returned an invalid response.'); } };
+  const postJson = async (url, body) => {
+    const response = await fetch(url, {method:'POST', headers:{'content-type':'application/json',accept:'application/json'}, body:JSON.stringify(body)});
+    const data = await readJson(response);
+    if (!response.ok || data.ok === false) throw new Error(data.error || data.message || 'The PayPal membership request failed.');
+    return data;
+  };
+  const loadSdk = clientId => new Promise((resolve, reject) => {
+    if (window.paypal) return resolve();
+    const script = document.createElement('script');
+    script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=EUR&vault=true&intent=subscription&components=buttons';
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error('The PayPal checkout library could not be loaded.'));
+    document.head.appendChild(script);
+  });
+  const renderPlan = tier => {
+    const ui = planUi[tier];
+    let checkoutIntentId = '';
+    ui.status.textContent = 'PayPal checkout ready.';
+    window.paypal.Buttons({
+      style:{shape:'rect',layout:'vertical',label:'subscribe',height:42},
+      createSubscription: async (data, actions) => {
+        ui.status.textContent = 'Creating a secure checkout intent…';
+        const intent = await postJson('/api/paypal/checkout-intent', {tier});
+        checkoutIntentId = intent.intentId;
+        ui.status.textContent = 'Complete the approval in PayPal.';
+        return actions.subscription.create({
+          plan_id:intent.planId,
+          custom_id:intent.intentId,
+          application_context:{brand_name:'Matrix Reprogrammed',shipping_preference:'NO_SHIPPING',user_action:'SUBSCRIBE_NOW'}
+        });
+      },
+      onApprove: async data => {
+        ui.status.textContent = 'Verifying the PayPal subscription with the server…';
+        try {
+          const confirmed = await postJson('/api/paypal/subscription/confirm', {subscriptionId:data.subscriptionID,checkoutIntentId});
+          ui.status.textContent = confirmed.paidAccess ? 'Membership active. Opening your dashboard…' : confirmed.message;
+          ui.status.style.color = confirmed.paidAccess ? '#9ddd9d' : '#d8b56a';
+          if (confirmed.paidAccess) setTimeout(() => { location.href='/member-dashboard.html?paypal=active'; }, 900);
+        } catch (error) {
+          ui.status.textContent = error.message;
+          ui.status.style.color = '#ff9b8f';
+        }
+      },
+      onCancel: () => { ui.status.textContent = 'PayPal checkout cancelled. No membership change was made.'; },
+      onError: error => { ui.status.textContent = 'PayPal checkout error. ' + (error && error.message ? error.message : 'Please try again.'); ui.status.style.color='#ff9b8f'; }
+    }).render(ui.container);
+  };
+  const initialisePayPal = async () => {
+    try {
+      const response = await fetch('/api/paypal/config', {headers:{accept:'application/json'},cache:'no-store'});
+      const config = await readJson(response);
+      if (response.status === 401) {
+        systemStatus.className = 'status pending';
+        systemStatus.innerHTML = 'Sign in before choosing a paid plan. <a href="member-login.html">Request a secure login link</a>.';
+        setAllPlanMessages('Sign in to activate this plan.');
+        return;
+      }
+      if (!response.ok || !config.configured || !config.clientId) {
+        systemStatus.className = 'status pending';
+        systemStatus.textContent = 'PayPal checkout is being configured. Free membership remains available.';
+        setAllPlanMessages('Coming soon.');
+        return;
+      }
+      await loadSdk(config.clientId);
+      systemStatus.className = 'status ok';
+      systemStatus.textContent = 'Secure PayPal checkout is ready. Prices are billed monthly in EUR.';
+      Object.keys(planUi).forEach(renderPlan);
+    } catch (error) {
+      systemStatus.className = 'status error';
+      systemStatus.textContent = error.message || 'PayPal checkout could not be initialised.';
+      setAllPlanMessages('Checkout unavailable at the moment.');
+    }
+  };
+  initialisePayPal();
+})();
+</script>
+<script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Sell / Capture","Site Brain Router","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Mission + Money Engine","Capture System","Monetisation Dashboard"]}</script></body>
+</html>

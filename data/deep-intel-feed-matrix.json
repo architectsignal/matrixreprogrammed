@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-11T07:26:58.880Z",
+  "updated": "2026-07-12T06:18:34.788Z",
   "title": "Deep Intel Feed Matrix",
   "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
   "lanes": [
@@ -529,6 +529,15 @@
       ]
     },
     {
+      "title": "New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
       "title": "Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN",
       "route": "live-intel.html",
       "source": "epstein-files",
@@ -601,6 +610,15 @@
       ]
     },
     {
+      "title": "NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News",
+      "route": "live-intel.html",
+      "source": "control-system",
+      "score": 72,
+      "tags": [
+        "control-system"
+      ]
+    },
+    {
       "title": "Energy Shock Clock — 70%",
       "route": "timers.html",
       "source": "risk clock",
@@ -648,7 +666,7 @@
   ],
   "brainInjection": {
     "layer": "evidence-and-records",
-    "nodeCount": 56
+    "nodeCount": 58
   },
   "missionPriorityIndex": true
 }

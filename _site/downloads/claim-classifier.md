@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Claim Classifier
 
-Updated: 2026-07-11T05:57:59.409Z
+Updated: 2026-07-12T06:18:12.560Z
 
 Rule: Source first. Evidence class second. Claim strength third. Network interpretation last.
 

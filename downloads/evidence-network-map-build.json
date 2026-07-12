@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:18:55.814Z",
+  "schemaVersion": "2.0.0",
+  "totals": {
+    "entities": 3853,
+    "relationships": 5777,
+    "coreRelationships": 5217,
+    "officialRelationships": 5726,
+    "reviewedRelationships": 527,
+    "weakMentions": 560,
+    "excluded": {
+      "orphaned": 0,
+      "unsourced": 0,
+      "malformed": 0
+    }
+  },
+  "dateRange": {
+    "from": "1978-09-15T00:00:00.000Z",
+    "to": "2026-09-30T00:00:00.000Z"
+  },
+  "publicRoute": "evidence-network-map.html",
+  "dataRoute": "data/evidence-network-map.json",
+  "csvRoute": "downloads/evidence-network-map.csv",
+  "software": "Cytoscape.js",
+  "boundary": "Every line represents a relationship stated by a cited source or observed by a disclosed extraction method. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt."
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T06:28:28.753Z",
+  "updated": "2026-07-12T06:18:12.458Z",
   "purpose": "Reusable source cards that turn public-record leads into claim/evidence/source/boundary/next-step cards.",
   "rules": [
     "Claim strength must never exceed the source type.",
@@ -30,7 +30,27 @@
       "offerRoute": "offer-starter-library.html"
     },
     {
-      "id": "epstein-files-2026-07-09-1",
+      "id": "epstein-files-2026-07-09-2",
+      "lane": "epstein-files",
+      "date": "2026-07-09",
+      "claim": "New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times",
+      "sourceLabel": "Google News / Epstein timeline and files",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5",
+      "summary": "New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times",
+      "evidenceClass": "Court finding / conviction lane",
+      "recordSupports": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+      "notProven": "This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.",
+      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+      "peopleEntities": [],
+      "nextSourceToOpen": "epstein-files.html#epstein-evidence-ladder",
+      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+      "bookRoute": "book-black-file.html",
+      "videoRoute": "videos.html",
+      "optinRoute": "optin-black-file-brief.html",
+      "offerRoute": "offer-starter-library.html"
+    },
+    {
+      "id": "epstein-files-2026-07-09-3",
       "lane": "epstein-files",
       "date": "2026-07-09",
       "claim": "Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN",
@@ -50,7 +70,7 @@
       "offerRoute": "offer-starter-library.html"
     },
     {
-      "id": "epstein-files-2026-07-07-3",
+      "id": "epstein-files-2026-07-07-5",
       "lane": "epstein-files",
       "date": "2026-07-07",
       "claim": "DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic",
@@ -188,6 +208,26 @@
       "videoRoute": "videos.html",
       "optinRoute": "optin-intelligence-files-brief.html",
       "offerRoute": "download-center.html"
+    },
+    {
+      "id": "control-system-2026-07-09-36",
+      "lane": "control-system",
+      "date": "2026-07-09",
+      "claim": "NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News",
+      "sourceLabel": "Google News / control structure",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5",
+      "summary": "NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News",
+      "evidenceClass": "Sourced reporting lane",
+      "recordSupports": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+      "notProven": "This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.",
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "peopleEntities": [],
+      "nextSourceToOpen": "atlas-index.html",
+      "evidenceRoute": "atlas-index.html",
+      "bookRoute": "book-elite-toolkit.html",
+      "videoRoute": "videos.html",
+      "optinRoute": "optin-full-archive-map.html",
+      "offerRoute": "offer-starter-library.html"
     }
   ]
 }

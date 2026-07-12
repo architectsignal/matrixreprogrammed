@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-11T06:28:05.986Z
+Updated: 2026-07-12T06:17:48.501Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,14 @@ Updated: 2026-07-11T06:28:05.986Z
   - Video hook: New public-record signal: Why the House’s Epstein investigation isn't going away - Politico
   - Short title: Why the House’s Epstein investigation isn't going away - Politico
   - Longform title: Epstein Files, Timeline And Court Records — Why the House’s Epstein investigation isn't going away - Politico
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-09 — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Short title: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New
+  - Longform title: Epstein Files, Timeline And Court Records — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
@@ -92,3 +100,11 @@ Updated: 2026-07-11T06:28:05.986Z
   - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: download-center.html
+- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+  - Short title: NSA revives 'Tailored Access Operations' name for elite hacking unit - T
+  - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html

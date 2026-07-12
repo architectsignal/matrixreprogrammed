@@ -1,17 +1,17 @@
 {
   "searchVersion": 3,
-  "updated": "2026-07-11T23:07:58.384Z",
-  "totalResults": 4711,
+  "updated": "2026-07-12T06:19:00.322Z",
+  "totalResults": 11569,
   "evidenceBoundary": "Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.",
   "filters": {
     "evidenceGrade": [
       {
-        "value": "B",
-        "count": 2552
+        "value": "A",
+        "count": 7452
       },
       {
-        "value": "A",
-        "count": 594
+        "value": "B",
+        "count": 2552
       },
       {
         "value": "C",
@@ -20,16 +20,20 @@
     ],
     "sourceType": [
       {
+        "value": "SEC filing",
+        "count": 4239
+      },
+      {
+        "value": "structured-entity",
+        "count": 3853
+      },
+      {
         "value": "structured-relationship",
         "count": 1538
       },
       {
         "value": "html",
         "count": 1333
-      },
-      {
-        "value": "structured-entity",
-        "count": 1234
       },
       {
         "value": "investigation-finding",
@@ -71,11 +75,11 @@
     "statusClass": [
       {
         "value": "source-record",
-        "count": 3025
+        "count": 9881
       },
       {
         "value": "context",
-        "count": 1472
+        "count": 1474
       },
       {
         "value": "enforcement",
@@ -97,7 +101,7 @@
     "jurisdiction": [
       {
         "value": "United States",
-        "count": 3014
+        "count": 9872
       },
       {
         "value": "International",
@@ -118,6 +122,14 @@
     ],
     "entityType": [
       {
+        "value": "Organization",
+        "count": 4021
+      },
+      {
+        "value": "Company",
+        "count": 2596
+      },
+      {
         "value": "Finding",
         "count": 506
       },
@@ -128,6 +140,10 @@
       {
         "value": "Finding→GovernmentAgency",
         "count": 341
+      },
+      {
+        "value": "Person",
+        "count": 296
       },
       {
         "value": "CourtCase",
@@ -170,10 +186,6 @@
         "count": 37
       },
       {
-        "value": "Company",
-        "count": 35
-      },
-      {
         "value": "Document→GovernmentAgency",
         "count": 32
       },
@@ -204,10 +216,6 @@
       {
         "value": "Source→GovernmentAgency",
         "count": 18
-      },
-      {
-        "value": "Organization",
-        "count": 17
       },
       {
         "value": "Document",
@@ -246,10 +254,6 @@
         "count": 3
       },
       {
-        "value": "Person",
-        "count": 3
-      },
-      {
         "value": "Finding→Foundation",
         "count": 2
       },
@@ -284,6 +288,14 @@
     ],
     "resultKind": [
       {
+        "value": "institutional position change",
+        "count": 4000
+      },
+      {
+        "value": "entity",
+        "count": 3854
+      },
+      {
         "value": "relationship",
         "count": 1539
       },
@@ -292,12 +304,12 @@
         "count": 1361
       },
       {
-        "value": "entity",
-        "count": 1235
-      },
-      {
         "value": "finding",
         "count": 507
+      },
+      {
+        "value": "insider transaction",
+        "count": 239
       },
       {
         "value": "dataset",

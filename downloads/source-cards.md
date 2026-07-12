@@ -12,6 +12,16 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
 
+## New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+
+- Date: 2026-07-09
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
 ## Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
 
 - Date: 2026-07-09
@@ -91,3 +101,13 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
 - Next: evidence-vault-index.html
+
+## NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+
+- Date: 2026-07-09
+- Evidence class: Sourced reporting lane
+- Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
+- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: atlas-index.html

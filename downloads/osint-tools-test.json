@@ -1,0 +1,227 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:19:03.846Z",
+  "checks": [
+    {
+      "name": "required file research-tools.html",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file research-tools.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file migrations/0002_osint_tools.sql",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file tools/osint_runner.py",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file tools/osint-requirements.txt",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file tools/OSINT_RUNNER_SETUP.md",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file scripts/patch-osint-tools-system.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file scripts/patch-research-tools-ui.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file src/worker.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "three open-source tools shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "h8mail is administrator-only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member tools identified",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "lawful-use confirmations required",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "evidence boundary visible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "external Email OSINT linked safely",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "client uses member-authenticated APIs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "client does not persist targets locally",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "client reveals admin card only for admin role",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "client clears submitted form",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "encrypted D1 job fields present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner heartbeat table present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tool and status constraints present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "worker patch applied",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member role loaded from D1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member and admin routes present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "targets encrypted with AES-GCM",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "member rate limits enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "h8mail admin gate enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitive result keys removed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "completed targets cleared",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner bearer token required",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CORS accepts private runner headers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner supports all three tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner never logs target",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner strips sensitive outputs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "h8mail uses hidden JSON output",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SpiderFoot uses passive scan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "raw breach rows not returned",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "private polling API used",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage links research tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage keeps evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare build requires tools page and client",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare build runs OSINT tests",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "private runner code is not a public required asset",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": []
+}

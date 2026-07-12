@@ -41,7 +41,6 @@ const internalSectionPhrases = [
 const internalCompactPhrases = [
   'Every route now points somewhere useful.',
   'Machine Room',
-  'Research Tools',
   'Monetisation Dashboard'
 ];
 const internalInlinePhrases = [
@@ -310,6 +309,7 @@ function patchHtml(file) {
   html = hideCommercialStrategy(html);
   html = publicCopy(html);
   html = ensurePhraseVisible(html, 'Join Weekly Signal');
+  html = ensurePhraseVisible(html, 'EMAIL & DIGITAL FOOTPRINT RESEARCH.');
   html = addVault(html);
   if (html !== before) fs.writeFileSync(file, html);
   return html !== before;

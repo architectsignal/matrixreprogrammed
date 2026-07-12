@@ -1,7 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-10T07:54:16.666Z",
+  "generatedAt": "2026-07-11T06:29:05.225Z",
   "hardIssues": [],
-  "softIssues": [],
+  "softIssues": [
+    "scripts/repair-search-system.js missing search repair copy guard"
+  ],
   "boundary": "Site function harmony blocks true deploy breakers only: missing critical files, invalid core JSON, broken search/worker/forum routes, or malformed Cloudflare output. Copy/template drift is recorded as soft review."
 }

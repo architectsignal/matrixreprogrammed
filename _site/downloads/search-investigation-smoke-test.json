@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:19:03.808Z",
+  "checks": [
+    {
+      "name": "local search.html",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "local search.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "local search-index.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "local index JSON",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "search.html marker id=\"archive-search\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.html marker id=\"search-results\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.html marker id=\"search-count\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.html marker src=\"search.js\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "investigation shortcut",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "search.js syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "search.js marker /search-index.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.js marker investigationQueryPrefill",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.js marker init(fallbackIndex)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search.js marker HTML returned instead of JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local index size",
+      "ok": true,
+      "detail": "11569 entries"
+    },
+    {
+      "name": "local unique URLs",
+      "ok": true,
+      "detail": "11569 unique routes"
+    },
+    {
+      "name": "local route investigation-machine.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local route daily-investigation-conclusions.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local route weekly-investigation-report.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local route investigation-source-ledger.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local route epstein-files.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local route evidence-vault.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "local query corruption bribery fraud official enforcement",
+      "ok": true,
+      "detail": "daily-investigation-conclusions.html?finding=18cc99b8cc7fdd992e408813, relationship-registry.html?relationship=relationship-e21fdfc24c60fc957461, relationship-registry.html?relationship=relationship-5a0766df84093b0ce650"
+    },
+    {
+      "name": "local query WikiLeaks documents cables archive",
+      "ok": true,
+      "detail": "daily-investigation-conclusions.html?finding=ae8bec742bcfd76417dda139, relationship-registry.html?relationship=relationship-abc97a28d6fe671506a2, daily-investigation-conclusions.html?finding=610886d8639ec49338292fcc"
+    },
+    {
+      "name": "local query government contracts USAspending procurement",
+      "ok": true,
+      "detail": "entity-registry.html#entity-entity-governmentagency-d1b189399623fd473eb0, investigation-source-ledger.html?source=usaspending-recent-contracts, entity-registry.html#entity-entity-governmentagency-880bbdeda82eafd6a083"
+    },
+    {
+      "name": "local query Epstein DOJ disclosures redactions",
+      "ok": true,
+      "detail": "relationship-registry.html?relationship=relationship-129f617bbb0bdb6948bb, daily-investigation-conclusions.html?finding=3369f7cbbbd92ca2343c48c2, investigation-source-ledger.html?source=doj-epstein-disclosures"
+    },
+    {
+      "name": "local query SEC filings ownership enforcement",
+      "ok": true,
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=ec24f811962be678d371bfc7, daily-investigation-conclusions.html?finding=source-change-ec24f811962be678d371bfc7"
+    }
+  ],
+  "failures": []
+}

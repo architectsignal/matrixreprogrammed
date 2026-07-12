@@ -1,0 +1,265 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:18:56.169Z",
+  "totals": {
+    "entities": 3853,
+    "relationships": 5777,
+    "coreRelationships": 5217,
+    "officialRelationships": 5726,
+    "reviewedRelationships": 527,
+    "weakMentions": 560,
+    "excluded": {
+      "orphaned": 0,
+      "unsourced": 0,
+      "malformed": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "graph schema version",
+      "ok": true,
+      "detail": "2.0.0"
+    },
+    {
+      "name": "graph evidence boundary",
+      "ok": true,
+      "detail": "Every line represents a relationship stated by a cited source or observed by a disclosed extraction method. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt."
+    },
+    {
+      "name": "substantial entity graph",
+      "ok": true,
+      "detail": "3853 nodes"
+    },
+    {
+      "name": "substantial relationship graph",
+      "ok": true,
+      "detail": "5777 edges"
+    },
+    {
+      "name": "relationship totals agree",
+      "ok": true,
+      "detail": "5777 / 5777"
+    },
+    {
+      "name": "entity totals agree",
+      "ok": true,
+      "detail": "3853 / 3853"
+    },
+    {
+      "name": "no orphan relationships",
+      "ok": true,
+      "detail": "0 orphan edges"
+    },
+    {
+      "name": "every relationship carries complete evidence fields",
+      "ok": true,
+      "detail": "0 incomplete edges"
+    },
+    {
+      "name": "weak mentions keep explicit limitations",
+      "ok": true,
+      "detail": "0 failures"
+    },
+    {
+      "name": "lower grades are not described as proven criminal wrongdoing",
+      "ok": true,
+      "detail": "0 failures"
+    },
+    {
+      "name": "core view exists",
+      "ok": true,
+      "detail": "5217 core edges"
+    },
+    {
+      "name": "official view exists",
+      "ok": true,
+      "detail": "5726 official edges"
+    },
+    {
+      "name": "weak mentions are separated",
+      "ok": true,
+      "detail": "560 weak mentions"
+    },
+    {
+      "name": "relationship filter metadata",
+      "ok": true,
+      "detail": "9 types"
+    },
+    {
+      "name": "entity filter metadata",
+      "ok": true,
+      "detail": "17 types"
+    },
+    {
+      "name": "output evidence-network-map.html",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "output evidence-network-map.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "output downloads/evidence-network-map.csv",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "output downloads/evidence-network-map-build.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "runtime syntax",
+      "ok": true,
+      "detail": "valid"
+    },
+    {
+      "name": "runtime marker relationshipType",
+      "ok": true,
+      "detail": "relationshipType"
+    },
+    {
+      "name": "runtime marker doesNotEstablish",
+      "ok": true,
+      "detail": "doesNotEstablish"
+    },
+    {
+      "name": "runtime marker sourceUrl",
+      "ok": true,
+      "detail": "sourceUrl"
+    },
+    {
+      "name": "runtime marker pathStart",
+      "ok": true,
+      "detail": "pathStart"
+    },
+    {
+      "name": "runtime marker aStar",
+      "ok": true,
+      "detail": "aStar"
+    },
+    {
+      "name": "runtime marker URLSearchParams",
+      "ok": true,
+      "detail": "URLSearchParams"
+    },
+    {
+      "name": "runtime marker navigator.clipboard",
+      "ok": true,
+      "detail": "navigator.clipboard"
+    },
+    {
+      "name": "runtime marker map-visible-relationships",
+      "ok": true,
+      "detail": "map-visible-relationships"
+    },
+    {
+      "name": "page marker id=\"map-mode\"",
+      "ok": true,
+      "detail": "id=\"map-mode\""
+    },
+    {
+      "name": "page marker id=\"map-relationship\"",
+      "ok": true,
+      "detail": "id=\"map-relationship\""
+    },
+    {
+      "name": "page marker id=\"map-factual-status\"",
+      "ok": true,
+      "detail": "id=\"map-factual-status\""
+    },
+    {
+      "name": "page marker id=\"map-entity-type\"",
+      "ok": true,
+      "detail": "id=\"map-entity-type\""
+    },
+    {
+      "name": "page marker id=\"map-review\"",
+      "ok": true,
+      "detail": "id=\"map-review\""
+    },
+    {
+      "name": "page marker id=\"map-confidence\"",
+      "ok": true,
+      "detail": "id=\"map-confidence\""
+    },
+    {
+      "name": "page marker id=\"map-date-from\"",
+      "ok": true,
+      "detail": "id=\"map-date-from\""
+    },
+    {
+      "name": "page marker id=\"map-date-to\"",
+      "ok": true,
+      "detail": "id=\"map-date-to\""
+    },
+    {
+      "name": "page marker id=\"map-share\"",
+      "ok": true,
+      "detail": "id=\"map-share\""
+    },
+    {
+      "name": "page marker id=\"map-clear-path\"",
+      "ok": true,
+      "detail": "id=\"map-clear-path\""
+    },
+    {
+      "name": "page marker Textual mentions",
+      "ok": true,
+      "detail": "Textual mentions"
+    },
+    {
+      "name": "page explains established fact field",
+      "ok": true,
+      "detail": "what the record establishes"
+    },
+    {
+      "name": "mobile presentation",
+      "ok": true,
+      "detail": "responsive breakpoints"
+    },
+    {
+      "name": "public correction and audit routes",
+      "ok": true,
+      "detail": "registry and CSV"
+    },
+    {
+      "name": "CSV column relationship_id",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "CSV column source_url",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "CSV column evidence_grade",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "CSV column factual_status",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "CSV column what_is_established",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "CSV column what_is_not_established",
+      "ok": true,
+      "detail": "relationship_id,from_id,from_name,from_type,relationship_type,to_id,to_name,to_type,source_title,source_url,date,publication_date,retrieval_date,evidence_grade,factual_status,review_status,extraction_method,confidence,what_is_established,what_is_not_established"
+    },
+    {
+      "name": "stable relationship anchors",
+      "ok": true,
+      "detail": "relationship anchors present"
+    }
+  ],
+  "failures": []
+}

@@ -3,17 +3,18 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 2696
-Flagged pages: 2152
-High priority pages: 713
-Medium priority pages: 1434
-Pages with missing rules: 215
+Scanned pages: 2707
+Flagged pages: 2162
+High priority pages: 718
+Medium priority pages: 1438
+Pages with missing rules: 217
 Auto-update eligible figures: 2
 Manual-review figures: 57
-Missing-rule figures: 468
+Missing-rule figures: 493
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
+- relationship-registry.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/machine-digest.html: 19 figure/stat markers; 19 missing rules. Add figure-source rules before automatic replacement.
 - machine-digest.html: 19 figure/stat markers; 19 missing rules. Add figure-source rules before automatic replacement.
 - _site/premium-reports.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
@@ -39,13 +40,13 @@ Missing-rule figures: 468
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/daily-drop.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - black-file-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
+- entity-registry.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - membership.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - one-world-currency-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
-- _site/news.html: 27 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
-- news.html: 27 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
+- relationship-registry.html: 20 figure(s) need source rules.
 - _site/machine-digest.html: 19 figure(s) need source rules.
 - machine-digest.html: 19 figure(s) need source rules.
 - _site/premium-reports.html: 12 figure(s) need source rules.
@@ -71,6 +72,7 @@ Missing-rule figures: 468
 - power-structure-map.html: 4 figure(s) need source rules.
 - _site/daily-drop.html: 3 figure(s) need source rules.
 - black-file-theory.html: 3 figure(s) need source rules.
+- entity-registry.html: 3 figure(s) need source rules.
 - membership.html: 3 figure(s) need source rules.
 - one-world-currency-theory.html: 3 figure(s) need source rules.
 - _site/news.html: 2 figure(s) need source rules.
@@ -83,8 +85,6 @@ Missing-rule figures: 468
 - _site/conclusion-engine.html: 2 figure(s) need source rules.
 - _site/dark-speculation-forum.html: 2 figure(s) need source rules.
 - _site/epstein-sighting-watch.html: 2 figure(s) need source rules.
-- _site/forum.html: 2 figure(s) need source rules.
-- _site/intel-vault.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

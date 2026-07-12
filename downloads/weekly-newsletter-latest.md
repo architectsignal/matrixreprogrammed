@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-11T06:28:32.077Z
+Generated: 2026-07-12T06:18:16.731Z
 
 ## Open Routes
 
@@ -16,6 +16,11 @@ Generated: 2026-07-11T06:28:32.077Z
 - Date: 2026-07-09T08:45:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
 Why the House’s Epstein investigation isn't going away Politico
+### New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-09T16:46:28.000Z
+- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times
 ### Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-09T09:00:25.000Z
@@ -48,7 +53,7 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 ### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-10T00:28:19.000Z
+- Date: 2026-07-10T00:32:14.000Z
 - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
 Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 ### NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
@@ -56,3 +61,8 @@ Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 - Date: 2026-07-09T09:48:03.000Z
 - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
 NASA insider hints bigger UFO file release as declassification ramps up Cybernews
+### NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+- Lane: Elite Control Structure
+- Date: 2026-07-09T13:30:11.000Z
+- Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
+NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News

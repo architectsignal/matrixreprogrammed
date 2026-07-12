@@ -1,0 +1,37 @@
+{
+  "updated": "2026-07-11",
+  "principle": "Primary-source links, evidence boundaries, corrections and enough information to verify public claims remain free. Membership pays for convenience, history, alerts, exports and deeper research tools.",
+  "tiers": [
+    {
+      "id": "public",
+      "label": "Public",
+      "priceEurMonthly": 0,
+      "features": ["daily public investigation summary", "basic site search", "current interactive evidence map", "public source links and evidence boundaries", "current public CSV snapshot", "evidence policy and corrections"]
+    },
+    {
+      "id": "free",
+      "label": "Free account",
+      "priceEurMonthly": 0,
+      "features": ["verified member dashboard", "weekly email brief", "saved reading routes", "selected source-drop notifications"]
+    },
+    {
+      "id": "supporter",
+      "label": "Supporter",
+      "priceEurMonthly": 9,
+      "features": ["member weekly investigation brief", "early selected reports", "watchlist alerts", "member source drops", "supporter archive"]
+    },
+    {
+      "id": "intelligence",
+      "label": "Intelligence Member",
+      "priceEurMonthly": 19,
+      "features": ["premium daily investigation brief", "historical evidence-map views", "advanced relationship and date filters", "full source-ledger change history", "entity comparison", "downloadable reports and datasets", "missing-record queue"]
+    },
+    {
+      "id": "research_pro",
+      "label": "Research Pro",
+      "priceEurMonthly": 49,
+      "features": ["bulk evidence exports", "research API access", "private case boards", "document text and metadata extraction", "priority source requests", "professional monthly intelligence pack", "policy and jurisdiction exports"]
+    }
+  ],
+  "neverPaywalled": ["primary-source link supporting a public accusation", "evidence grade and evidence boundary", "correction or retraction", "record status: conviction, charge, allegation, audit finding or leak lead", "basic public search", "public-interest safety information"]
+}

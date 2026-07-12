@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-11T06:28:59.594Z",
+  "changed": true,
+  "mode": "D1 email verification and passwordless magic-link authentication",
+  "provider": "Brevo transactional email",
+  "rawTokensStored": false,
+  "sessionCookie": "HttpOnly Secure SameSite=Lax",
+  "required": [
+    "membership-auth-v1:",
+    "crypto.subtle.digest('SHA-256'",
+    "api.brevo.com/v3/smtp/email",
+    "purpose==='verify_email'",
+    "'Set-Cookie':authSessionCookie",
+    "originalPath==='/api/auth/request-link'",
+    "originalPath==='/api/auth/verify'",
+    "originalPath==='/api/auth/logout'",
+    "originalPath==='/api/member/me'",
+    "originalPath==='/api/auth/health'",
+    "emailVerificationRequired:true"
+  ]
+}

@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-11T05:58:02.894Z
+Generated: 2026-07-12T06:18:16.731Z
 
 ## Open Routes
 
@@ -16,6 +16,11 @@ Generated: 2026-07-11T05:58:02.894Z
 - Date: 2026-07-09T08:45:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
 Why the House’s Epstein investigation isn't going away Politico
+### New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-09T16:46:28.000Z
+- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times
 ### Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-09T09:00:25.000Z
@@ -48,7 +53,7 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 ### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-10T00:28:19.000Z
+- Date: 2026-07-10T00:32:14.000Z
 - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
 Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 ### NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
@@ -56,33 +61,8 @@ Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 - Date: 2026-07-09T09:48:03.000Z
 - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
 NASA insider hints bigger UFO file release as declassification ramps up Cybernews
-### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-10T01:09:02.000Z
-- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com
 ### NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
 - Lane: Elite Control Structure
 - Date: 2026-07-09T13:30:11.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News
-### ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-- Lane: CBDC / Digital Euro / Sovereign Payment Rails
-- Date: 2026-07-08T00:00:00.000Z
-- Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T05:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-- Lane: AI Governance / EU AI Act / Cybersecurity
-- Date: 2026-07-07T00:00:00.000Z
-- Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.
-### WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-- Lane: WHO Pandemic Agreement / PABS / Global Health Governance
-- Date: 2026-07-06T00:00:00.000Z
-- Source: https://www.who.int/health-topics/who-pandemic-agreement
-WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.

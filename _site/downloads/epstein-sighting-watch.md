@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-11T05:58:02.297Z
+Generated: 2026-07-12T06:18:15.977Z
 
 ## Official Boundary
 
@@ -98,13 +98,3 @@ NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Trump administration hindering investigation into Epstein’s ranch Nine.com.au
-
-### EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker - AOL.com
-- Type: related-claim-traffic
-- Status: public-record-relevance
-- Evidence level: 7
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiggFBVV95cUxNMjJtbFhxNGhRMF9jaFRialdKSjRFaUNLOThjbjlZQWR5R0V6SWVHaDVwOWRMaXRsdUZVcDUzY0hYTGJxNWI1QzJqVlM3aVpMVWJEZERNRUNxODRLLVFuV1dyUVpIaVlYTGxKRHc3aVFHTERLXzRyeERua1BIc0xJMjNB?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-EXCLUSIVE: Chilling Jeffrey Epstein Prison Death 'Body Swap' Theory Resurfaces in Wake of 3 Million-Page DoJ Document Dump on Pedophile Sex Trafficker AOL.com

@@ -1,0 +1,223 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:19:03.895Z",
+  "checks": 43,
+  "failures": 0,
+  "results": [
+    {
+      "name": "Form 4 fixture parses two transactions",
+      "pass": true,
+      "detail": "2"
+    },
+    {
+      "name": "P code is open-market purchase",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "P code value is calculated",
+      "pass": true,
+      "detail": "25000"
+    },
+    {
+      "name": "F code is not mislabelled as a sale",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Unknown transaction code remains other",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "13F fixture creates three changes",
+      "pass": true,
+      "detail": "3"
+    },
+    {
+      "name": "13F increase detected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "13F new position detected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "13F exit detected",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "13F limitation remains attached",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: data/market-activity-watchlist.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: data/market-activity.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: market-activity.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: market-watchlist.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: market-watchlist.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: migrations/0003_market_watchlists.sql",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: scripts/collect-sec-market-activity.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: scripts/build-market-activity-pages.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: scripts/integrate-market-activity-data.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Required file exists: scripts/patch-market-watchlists-worker.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Watchlist has enabled subjects",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Every enabled subject has a ten-digit CIK",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Watchlist carries no-guilt boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Page reads canonical positionChanges field",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Page distinguishes Form 4 transaction codes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Page carries investment-advice boundary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Page has URL filters",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Watchlist API requires authenticated member",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Watchlist API has tier limits",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Watchlist API exposes list, create and delete routes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 watchlists are member-scoped",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 watchlist target is unique per member",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Alert delivery deduplicates activity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collector identifies itself to SEC",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collector serialises SEC requests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collector preserves holdings and change files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collector fails when every subject fails",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Search integration prioritises official source",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph relationships carry established and not-established fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Graph does not imply motive or wrongdoing",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare build runs Phase 6 tests",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cloudflare package requires public tracker routes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Phase 6 diagnostics remain private",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

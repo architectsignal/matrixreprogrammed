@@ -1,10 +1,10 @@
 # Card Dossier Depth Audit
 
-Updated: 2026-07-11T07:27:03.929Z
+Updated: 2026-07-12T06:18:34.485Z
 
 Checked cards: 468
 
-Patched pages: 0
+Patched pages: 468
 
 High issues: 0
 

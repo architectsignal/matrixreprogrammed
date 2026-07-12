@@ -1,0 +1,540 @@
+{
+  "updated": "2026-07-11",
+  "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
+  "rules": [
+    "Primary government, court, regulator, inspector-general and official archive records receive the highest evidence weight.",
+    "A conviction, judgment, guilty plea, official sanction or final enforcement order may support a finding of established wrongdoing within the exact scope of that record.",
+    "An indictment, charge, complaint, investigation or allegation is not proof of guilt and must be labelled accordingly.",
+    "Leaks and archive releases are evidence leads. Documents must be authenticated, dated, contextualised and cross-checked before they support a substantive accusation.",
+    "Every conclusion must state the source, evidence grade, what the record establishes, what it does not establish, the mechanism, affected power route and the next record needed.",
+    "Source failures, removed files, changed indexes, unexplained gaps and contradictory versions are tracked as missing-record or transparency findings, not automatic proof of corruption.",
+    "The machine investigates vigorously but does not invent intent, guilt, coordination or criminality beyond the evidence."
+  ],
+  "wrongdoingTerms": [
+    "bribery",
+    "corruption",
+    "fraud",
+    "money laundering",
+    "kickback",
+    "embezzlement",
+    "obstruction",
+    "misconduct",
+    "abuse of power",
+    "conflict of interest",
+    "sanction",
+    "debarred",
+    "indicted",
+    "charged",
+    "convicted",
+    "sentenced",
+    "guilty plea",
+    "pleaded guilty",
+    "civil penalty",
+    "enforcement action",
+    "improper payment",
+    "waste and abuse",
+    "trafficking",
+    "false statements",
+    "insider trading",
+    "market manipulation",
+    "procurement fraud"
+  ],
+  "lanes": [
+    {
+      "id": "epstein-disclosure",
+      "title": "Epstein Files And Institutional Accountability",
+      "route": "epstein-files.html",
+      "description": "Official disclosures, court records, oversight releases, inventories, redactions, removals, restored files, institutional decision chains and missing records."
+    },
+    {
+      "id": "government-enforcement",
+      "title": "Government Enforcement And Public Corruption",
+      "route": "investigation-machine.html",
+      "description": "Official charges, convictions, sanctions, settlements, inspector-general findings and public-integrity cases."
+    },
+    {
+      "id": "money-contracts",
+      "title": "Money, Contracts And Corporate Power",
+      "route": "private-contractor-tracker.html",
+      "description": "Federal awards, procurement, SEC filings, ownership, political money, conflicts, contractor networks and public dependency."
+    },
+    {
+      "id": "declassified-leaks",
+      "title": "Declassified Records, Leaks And Archives",
+      "route": "evidence-vault.html",
+      "description": "FOIA releases, declassified records, WikiLeaks publications, archives and authenticity checks."
+    },
+    {
+      "id": "oversight-audit",
+      "title": "Oversight, Audit And Missing Records",
+      "route": "daily-missing-records.html",
+      "description": "Inspector-general reports, audit findings, parliamentary and congressional oversight, information-access failures and unresolved record gaps."
+    },
+    {
+      "id": "international-corruption",
+      "title": "International Corruption And Organised Power",
+      "route": "crime-hub.html",
+      "description": "Anti-corruption prosecutors, sanctions, organised crime, public-office abuse, offshore structures and cross-border enforcement."
+    }
+  ],
+  "sources": [
+    {
+      "id": "doj-epstein-disclosures",
+      "label": "U.S. Department of Justice — Epstein Disclosures",
+      "lane": "epstein-disclosure",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.justice.gov/epstein/doj-disclosures",
+      "keywords": [
+        "Epstein",
+        "Maxwell",
+        "disclosure",
+        "redaction",
+        "withheld",
+        "released",
+        "removed",
+        "restored",
+        "court"
+      ]
+    },
+    {
+      "id": "doj-justice-news",
+      "label": "U.S. Department of Justice — Justice News",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.justice.gov/news",
+      "keywords": [
+        "public corruption",
+        "bribery",
+        "fraud",
+        "money laundering",
+        "obstruction",
+        "trafficking",
+        "indicted",
+        "charged",
+        "convicted",
+        "sentenced"
+      ]
+    },
+    {
+      "id": "doj-oig-reports",
+      "label": "U.S. Department of Justice Office of Inspector General — Reports",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://oig.justice.gov/reports",
+      "keywords": [
+        "audit",
+        "investigation",
+        "misconduct",
+        "waste",
+        "fraud",
+        "abuse",
+        "finding",
+        "recommendation"
+      ]
+    },
+    {
+      "id": "sec-current-filings",
+      "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "rss",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "keywords": [
+        "8-K",
+        "10-K",
+        "10-Q",
+        "13D",
+        "13G",
+        "ownership",
+        "material agreement",
+        "investigation",
+        "restatement"
+      ]
+    },
+    {
+      "id": "sec-litigation-releases",
+      "label": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "keywords": [
+        "fraud",
+        "bribery",
+        "insider trading",
+        "market manipulation",
+        "charged",
+        "judgment",
+        "penalty",
+        "settlement"
+      ]
+    },
+    {
+      "id": "federal-register-latest",
+      "label": "Federal Register — Latest Documents",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "json",
+      "parser": "federal-register",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "keywords": [
+        "ethics",
+        "procurement",
+        "sanctions",
+        "surveillance",
+        "emergency",
+        "waiver",
+        "exemption",
+        "investigation",
+        "oversight"
+      ]
+    },
+    {
+      "id": "usaspending-recent-contracts",
+      "label": "USAspending.gov — Recent Contract Awards",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "json-post",
+      "parser": "usaspending-awards",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "payload": {
+        "filters": {
+          "time_period": [
+            {
+              "start_date": "{{START_DATE}}",
+              "end_date": "{{END_DATE}}"
+            }
+          ],
+          "award_type_codes": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "fields": [
+          "Award ID",
+          "Recipient Name",
+          "Award Amount",
+          "Awarding Agency",
+          "Awarding Sub Agency",
+          "Start Date",
+          "End Date",
+          "Description",
+          "generated_subawards"
+        ],
+        "page": 1,
+        "limit": 100,
+        "subawards": false
+      },
+      "keywords": [
+        "consulting",
+        "surveillance",
+        "intelligence",
+        "security",
+        "emergency",
+        "sole source",
+        "data",
+        "identity",
+        "weapons",
+        "detention"
+      ]
+    },
+    {
+      "id": "treasury-ofac-recent-actions",
+      "label": "U.S. Treasury OFAC — Recent Actions",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://ofac.treasury.gov/recent-actions",
+      "keywords": [
+        "sanctions",
+        "corruption",
+        "kleptocracy",
+        "trafficking",
+        "money laundering",
+        "terror finance",
+        "network"
+      ]
+    },
+    {
+      "id": "fbi-vault-recent",
+      "label": "FBI Vault — Recently Added",
+      "lane": "declassified-leaks",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://vault.fbi.gov/recently-added",
+      "keywords": [
+        "released",
+        "records",
+        "investigation",
+        "corruption",
+        "organised crime",
+        "intelligence"
+      ]
+    },
+    {
+      "id": "cia-reading-room",
+      "label": "CIA Freedom of Information Act Electronic Reading Room",
+      "lane": "declassified-leaks",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.cia.gov/readingroom/",
+      "keywords": [
+        "declassified",
+        "FOIA",
+        "release",
+        "intelligence",
+        "covert",
+        "oversight"
+      ]
+    },
+    {
+      "id": "gao-reports",
+      "label": "U.S. Government Accountability Office — Reports And Testimonies",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.gao.gov/reports-testimonies",
+      "keywords": [
+        "fraud",
+        "waste",
+        "abuse",
+        "improper payments",
+        "procurement",
+        "oversight",
+        "high risk"
+      ]
+    },
+    {
+      "id": "house-oversight-releases",
+      "label": "U.S. House Committee on Oversight and Government Reform — Releases",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://oversight.house.gov/release/",
+      "keywords": [
+        "investigation",
+        "subpoena",
+        "hearing",
+        "documents",
+        "Epstein",
+        "conflict",
+        "fraud",
+        "accountability"
+      ]
+    },
+    {
+      "id": "wikileaks-publications",
+      "label": "WikiLeaks — Publications",
+      "lane": "declassified-leaks",
+      "authority": "document-archive",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://wikileaks.org/-Leaks-.html",
+      "keywords": [
+        "publication",
+        "documents",
+        "cables",
+        "emails",
+        "files",
+        "archive",
+        "government",
+        "intelligence"
+      ]
+    },
+    {
+      "id": "icij-offshore-leaks",
+      "label": "ICIJ Offshore Leaks Database",
+      "lane": "international-corruption",
+      "authority": "credible-investigative-archive",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://offshoreleaks.icij.org/",
+      "keywords": [
+        "offshore",
+        "beneficial owner",
+        "shell company",
+        "trust",
+        "intermediary",
+        "jurisdiction"
+      ]
+    },
+    {
+      "id": "uk-sfo-news",
+      "label": "UK Serious Fraud Office — News And Communications",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "keywords": [
+        "fraud",
+        "bribery",
+        "corruption",
+        "charged",
+        "convicted",
+        "investigation",
+        "confiscation"
+      ]
+    },
+    {
+      "id": "eppo-news",
+      "label": "European Public Prosecutor's Office — News",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "frequency": [
+        "daily",
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.eppo.europa.eu/media/news_en",
+      "keywords": [
+        "fraud",
+        "corruption",
+        "money laundering",
+        "public funds",
+        "charged",
+        "convicted",
+        "seized"
+      ]
+    },
+    {
+      "id": "hatvp-open-data",
+      "label": "France HATVP — Open Data",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.hatvp.fr/open-data/",
+      "keywords": [
+        "declaration",
+        "interests",
+        "assets",
+        "lobbying",
+        "public official",
+        "transparency"
+      ]
+    },
+    {
+      "id": "cour-des-comptes-publications",
+      "label": "France Cour des comptes — Publications",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.ccomptes.fr/fr/publications",
+      "keywords": [
+        "audit",
+        "public spending",
+        "irregularity",
+        "management",
+        "control",
+        "recommendation"
+      ]
+    },
+    {
+      "id": "fec-updates",
+      "label": "U.S. Federal Election Commission — Updates",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "html",
+      "url": "https://www.fec.gov/updates/",
+      "keywords": [
+        "campaign finance",
+        "enforcement",
+        "civil penalty",
+        "contribution",
+        "disclosure",
+        "committee"
+      ]
+    },
+    {
+      "id": "openfec-api",
+      "label": "OpenFEC API — Political Money",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "frequency": [
+        "weekly"
+      ],
+      "type": "json",
+      "parser": "openfec",
+      "optional": true,
+      "requiredEnv": [
+        "FEC_API_KEY"
+      ],
+      "url": "https://api.open.fec.gov/v1/schedules/schedule_a/by_date/?api_key={{FEC_API_KEY}}&min_date={{START_DATE}}&max_date={{END_DATE}}&per_page=100",
+      "keywords": [
+        "contribution",
+        "committee",
+        "donor",
+        "political money",
+        "date",
+        "amount"
+      ]
+    }
+  ]
+}

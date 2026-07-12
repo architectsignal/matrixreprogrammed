@@ -1,1 +1,80 @@
-{"updated":"2026-07-03","batchId":"CONCLUSIONS-001","title":"Conclusions Engine Batch 001 — Public Power Findings","mission":"Convert tracking feed data into defensible public conclusions: what is proven by public records, what is strongly indicated, what is open, what is missing, and what cannot be claimed yet.","boundary":"This engine does not declare guilt or hidden intent. It produces evidence-grade conclusions from public-record source routes, company filings, regulator lanes, public-contract routes, transparency reports, and missing-record pressure lists.","conclusionRules":["A conclusion can be published when it is supported by a public source route or verified record card.","A public-power conclusion is not a legal accusation.","A missing-record conclusion means the record is required before upgrading a claim.","Intent, hidden coordination, corruption, or unlawful conduct require direct legal or verified records.","Sensitive records are linked or marked gated; they are not reproduced."],"findings":[{"id":"CON-001","grade":"A","title":"The site now has a working power-tracking model.","conclusion":"Matrix Reprogrammed can track high-power people and institutions by public-record infrastructure lanes: AI, cloud, social platforms, satellites, public-sector data systems, finance, health data, identity/payment systems, and information ranking.","basis":["data/power-architecture-watchlist.json","data/power-dossiers.json","data/tracking-feed-batch-001.json"],"doesNotMean":"It does not mean every listed person is guilty of a crime or operating a proven unlawful plan.","nextAction":"Convert source routes into verified record cards."},{"id":"CON-002","grade":"A","title":"The first top-ten target list is data-driven and updateable.","conclusion":"The top-ten power targets are stored in JSON and rendered into public pages, meaning the ranking can change when evidence or scoring data changes.","basis":["power-architecture-watchlist.html","power-dossiers.html","data/power-architecture-watchlist.json"],"doesNotMean":"It does not freeze the ranking forever or prove the list is complete.","nextAction":"Add scoring values, source dates and last-reviewed fields to every target."},{"id":"CON-003","grade":"A","title":"The public-record intake lanes are defined.","conclusion":"The tracker now has source lanes for SEC/annual reports, public contracts, transparency reports, regulators, privacy-impact assessments, lobbying/political-money records and missing-record pressure.","basis":["data/tracking-feed-batch-001.json"],"doesNotMean":"It does not prove each record has already been pulled or verified.","nextAction":"Create verified source cards for each top-ten target's first SEC or official source route."},{"id":"CON-004","grade":"B","title":"The core architecture to watch is bigger than one case.","conclusion":"Epstein files remain one major investigation lane, but the broader site mission now includes the modern power architecture: AI compute, cloud, platform data, space/telecom, finance, public-sector systems and missing records.","basis":["black-files.html","content-expansion.html","tracking-feed.html","power-architecture-watchlist.html"],"doesNotMean":"It does not claim all power-architecture targets are tied to Epstein.","nextAction":"Keep Epstein lanes separate from general power-architecture lanes unless source records connect them."},{"id":"CON-005","grade":"B","title":"The most urgent next evidence job is record conversion.","conclusion":"The site has enough structure. The next value comes from pulling and classifying source records into verified cards, especially SEC filings, public-contract routes, transparency reports, regulator records and court PDFs.","basis":["data/tracking-feed-batch-001.json","data/missing-files-pressure-list.json","data/verified-record-cards.json"],"doesNotMean":"It does not mean the site is finished or every tracker is full.","nextAction":"Run TRACK-FEED-002: first verified source cards for the top ten."},{"id":"CON-006","grade":"C","title":"Intent claims remain open until direct records support them.","conclusion":"The site can track who has capacity to shape major public systems, but it cannot responsibly conclude personal intent or coordinated hidden action without direct source records.","basis":["data/power-dossiers.json","data/tracking-feed-batch-001.json"],"doesNotMean":"It does not deny the possibility of coordination; it means the current evidence model keeps those claims in open/missing lanes.","nextAction":"Build a Claims Board with claim, supporting records, counter-sources and falsification tests."}],"publicSummary":"The system is now ready to operate as an evidence machine. It can track power architecture, expose missing records, and create public conclusions only when source routes support them. The next step is record conversion: first source cards, then verified record cards, then upgraded conclusions."}
+{
+  "updated": "2026-07-12T06:18:51.117Z",
+  "batchId": "CONCLUSIONS-002",
+  "title": "Current Public-Record Findings",
+  "mission": "Convert records into conclusions with mechanism, implications, limitations and next records.",
+  "boundary": "Association, scale, missing records and institutional overlap do not prove guilt, secret intent or unified command.",
+  "conclusionRules": [
+    "Use a primary record or named reputable source for each material fact.",
+    "Explain the mechanism connecting entity, money, rule or contract to an outcome.",
+    "State the strongest alternative explanation and what cannot be established.",
+    "Name the record or event that would upgrade, downgrade or falsify the finding.",
+    "Treat missing records as evidence-quality findings, not proof of concealment."
+  ],
+  "findings": [
+    {
+      "id": "CON-101",
+      "grade": "A",
+      "title": "Access infrastructure is a measurable power layer.",
+      "conclusion": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
+      "basis": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+        "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+        "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
+        "https://www.bis.org/topic/cbdc.htm"
+      ],
+      "doesNotMean": "Interoperability proves a hidden controller or authoritarian intent.",
+      "nextAction": "Track mandatory-use language, vendor awards, data sharing, offline alternatives and appeals."
+    },
+    {
+      "id": "CON-102",
+      "grade": "A",
+      "title": "Influence is strongest where money and implementation meet.",
+      "conclusion": "Filings, public awards, political-finance records and proxy votes can establish a decision chain from capital or access to public implementation.",
+      "basis": [
+        "https://www.sec.gov/edgar/search/",
+        "https://www.usaspending.gov/",
+        "https://www.fec.gov/data/"
+      ],
+      "doesNotMean": "A holding, contract or donation proves corruption or control.",
+      "nextAction": "Build entity-to-contract-to-policy timelines and record competing interests and enforcement."
+    },
+    {
+      "id": "CON-103",
+      "grade": "A",
+      "title": "Epstein disclosure is an inventory and legal-basis problem.",
+      "conclusion": "The January 2026 release established a very large corpus, but completeness requires reconciliation of the reviewed universe with duplicates, privileges, victim protection, removed files and the release index.",
+      "basis": [
+        "https://www.justice.gov/epstein/doj-disclosures",
+        "https://apnews.com/article/ed743598c320b94bd9d91631618678d9"
+      ],
+      "doesNotMean": "A difference between reviewed and published material proves protection.",
+      "nextAction": "Track withholding logs, restored files, court challenges and version history."
+    },
+    {
+      "id": "CON-104",
+      "grade": "B",
+      "title": "Network centrality is a priority, not a verdict.",
+      "conclusion": "A connected entity merits record review, but centrality must become contracts, votes, filings, meetings or mandates before a substantive claim.",
+      "basis": [
+        "evidence-graph.html",
+        "power-structure-map.html"
+      ],
+      "doesNotMean": "Repeated proximity proves knowledge, guilt or coordinated intent.",
+      "nextAction": "Identify one primary record, counter-record and missing record for each high-ranked node."
+    },
+    {
+      "id": "CON-105",
+      "grade": "B",
+      "title": "Useful speculation has a falsification test.",
+      "conclusion": "A theory becomes useful when it names the mechanism, supporting record, alternative explanation and observation that would make it weaker.",
+      "basis": [
+        "speculative-conclusions.html",
+        "evidence-policy.html"
+      ],
+      "doesNotMean": "Internal coherence proves the hypothesis.",
+      "nextAction": "Downgrade theories that cannot identify a record capable of disproving them."
+    }
+  ],
+  "publicSummary": "Power is most defensibly mapped through rules, money, contracts, standards, data and access infrastructure. Overlap alone does not establish unified command."
+}

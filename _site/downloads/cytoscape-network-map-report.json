@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:19:04.017Z",
+  "library": "Cytoscape.js 3.34.0",
+  "licence": "MIT",
+  "generated": [
+    {
+      "file": "map-intelligence-network.html",
+      "nodes": 18,
+      "edges": 19
+    },
+    {
+      "file": "map-crime-state-overlap.html",
+      "nodes": 16,
+      "edges": 15
+    },
+    {
+      "file": "map-war-machine.html",
+      "nodes": 15,
+      "edges": 16
+    },
+    {
+      "file": "map-elite-access.html",
+      "nodes": 21,
+      "edges": 17
+    },
+    {
+      "file": "map-symbolic-power.html",
+      "nodes": 16,
+      "edges": 13
+    },
+    {
+      "file": "map-medical-policy-power.html",
+      "nodes": 16,
+      "edges": 13
+    }
+  ],
+  "failures": [],
+  "access": {
+    "public": [
+      "interactive map",
+      "map search",
+      "layout switching",
+      "node details",
+      "evidence routes"
+    ],
+    "intelligenceMember": [
+      "evidence-class filters",
+      "documented shortest-path analysis"
+    ],
+    "researchPro": [
+      "PNG export",
+      "JSON export"
+    ]
+  },
+  "boundary": "A graph line carries its relationship type and evidence class. Association is not guilt."
+}

@@ -1,0 +1,86 @@
+# Public Copy Visibility Test
+
+Result: PASS
+
+- PASS: visibility scrub executes
+- PASS: public weekly signup repair executes
+- PASS: index.html exists
+- PASS: index.html includes hidden-control CSS
+- PASS: index.html retains internal-copy vault
+- PASS: membership.html exists
+- PASS: membership.html includes hidden-control CSS
+- PASS: membership.html retains internal-copy vault
+- PASS: member-dashboard.html exists
+- PASS: member-dashboard.html includes hidden-control CSS
+- PASS: member-dashboard.html retains internal-copy vault
+- PASS: homepage hides “Sell / Capture”
+- PASS: homepage hides “Copy/Intake Audit”
+- PASS: homepage hides “Card System Health”
+- PASS: homepage hides “Artwork Automation”
+- PASS: homepage hides “Next Art Batch”
+- PASS: homepage hides “Site Brain Router”
+- PASS: homepage hides “Gathering System”
+- PASS: homepage hides “Machine Index”
+- PASS: homepage hides “Update Monitor”
+- PASS: homepage hides “TURN THE INTELLIGENCE MACHINE INTO PRODUCTS”
+- PASS: homepage hides “Free public intelligence builds trust”
+- PASS: homepage hides “Email capture builds the list”
+- PASS: homepage hides “create revenue”
+- PASS: homepage hides “READER MONEY PATH”
+- PASS: homepage hides “Hook: latest file”
+- PASS: homepage hides “Capture: free brief”
+- PASS: homepage hides “Conversion: related book”
+- PASS: homepage hides “MATRIX REPROGRAMMED STATUS”
+- PASS: homepage hides “Reader route: source”
+- PASS: homepage hides “Machine Room”
+- PASS: homepage hides “Research Tools”
+- PASS: homepage hides “The Public-Record Power Machine”
+- PASS: homepage hides “THE TRACKER DASHBOARD IS LIVE”
+- PASS: homepage hides “Mission + Money Engine”
+- PASS: homepage hides “Monetisation Dashboard”
+- PASS: homepage hides “CAPTURE SYSTEM”
+- PASS: homepage hides “Persistent Cloudflare D1 member record”
+- PASS: homepage hides “Weekly newsletter sender”
+- PASS: homepage uses reader-facing navigation label
+- PASS: homepage keeps public intelligence and book routes
+- PASS: homepage keeps public card decks
+- PASS: homepage keeps weekly signup
+- PASS: homepage replaces funnel wording in free brief card
+- PASS: homepage replaces funnel wording in live intel card
+- PASS: homepage route not visible: review-dashboard.html
+- PASS: homepage route not visible: site-brain-router.html
+- PASS: homepage route not visible: card-artwork-automation.html
+- PASS: homepage route not visible: card-artwork-queue.html
+- PASS: homepage route not visible: card-system-health.html
+- PASS: homepage route not visible: information-gathering-system.html
+- PASS: homepage route not visible: conclusion-engine.html
+- PASS: homepage route not visible: update-monitor.html
+- PASS: homepage route not visible: distribution-center.html
+- PASS: homepage route not visible: launch-room.html
+- PASS: homepage route not visible: offer-center.html
+- PASS: homepage route not visible: sales-ladder.html
+- PASS: homepage route not visible: schema-index.html
+- PASS: membership page hides “Membership System”
+- PASS: membership page hides “protected-access testing”
+- PASS: membership page hides “webhooks can prove”
+- PASS: membership page hides “HttpOnly cookies”
+- PASS: membership page hides “not configured yet”
+- PASS: membership page hides “PayPal activation pending”
+- PASS: membership page keeps working signup form
+- PASS: member dashboard hides “Private Member Layer”
+- PASS: member dashboard hides “secure session”
+- PASS: member dashboard hides “entitlement”
+- PASS: member dashboard hides “tier-aware”
+- PASS: member dashboard hides “PayPal reference”
+- PASS: member dashboard keeps useful account controls
+- PASS: review-dashboard.html excluded from search indexing
+- PASS: deploy-status.html excluded from search indexing
+- PASS: card-system-health.html excluded from search indexing
+- PASS: site-brain-router.html excluded from search indexing
+- PASS: deployed homepage includes hidden-control CSS
+- PASS: deployed homepage hides author-facing navigation
+- PASS: deployed homepage hides commercial strategy
+- PASS: deployed homepage keeps weekly signup
+- PASS: Cloudflare _headers keeps a valid path-first format
+- PASS: Cloudflare _headers contains no injected HTML
+- PASS: Cloudflare _headers retains HSTS

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "ce70b0c42e3f9d4983896df64f214d815cbb5c3c",
-  "buildShortSha": "ce70b0c42e3f",
-  "generatedAt": "2026-07-11T05:58:23.145Z",
+  "buildSha": "a4f208d06baa4406919fdc2a0ee45d92bec50546",
+  "buildShortSha": "a4f208d06baa",
+  "generatedAt": "2026-07-12T06:18:43.271Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -31,19 +31,19 @@
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "94e2ca2af59c9e78"
+      "hash": "46a4c3e25a07c15d"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "94e2ca2af59c9e78"
+      "hash": "46a4c3e25a07c15d"
     },
     {
       "name": "Power Conclusions",
       "route": "/power-conclusions.html",
       "file": "power-conclusions.html",
-      "hash": "190e156d7b76afa3"
+      "hash": "b0b8f9e81a356b5a"
     },
     {
       "name": "Reader Conclusions",
@@ -55,31 +55,31 @@
       "name": "Evidence Hunter",
       "route": "/evidence-hunter.html",
       "file": "evidence-hunter.html",
-      "hash": "60f4985db547af2b"
+      "hash": "832f1a8cfa6a3eb7"
     },
     {
       "name": "Who Holds Power",
       "route": "/who-holds-power.html",
       "file": "who-holds-power.html",
-      "hash": "3ef08e8184aa4eca"
+      "hash": "2506e7a8e366996b"
     },
     {
       "name": "Convergence Map",
       "route": "/one-world-convergence.html",
       "file": "one-world-convergence.html",
-      "hash": "fe372d51ab49aa47"
+      "hash": "1351b883b2334724"
     },
     {
       "name": "Accountability Watch",
       "route": "/accountability-watch.html",
       "file": "accountability-watch.html",
-      "hash": "9ad7179d2f51648b"
+      "hash": "0bded53b26fbee06"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "643f99bc9b5866cd"
+      "hash": "cb2fb576145d5f50"
     },
     {
       "name": "Dark Speculation Forum",
@@ -103,37 +103,37 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "9ac16c0077a29f45"
+      "hash": "56765aa91531b256"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "83485d7fe2fc4335"
+      "hash": "2412b29aee99d4da"
     },
     {
       "name": "Probability Lab",
       "route": "/probability-lab.html",
       "file": "probability-lab.html",
-      "hash": "3c27097205b6872c"
+      "hash": "f65aecb4b619b2a1"
     },
     {
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "fb62410940f6884d"
+      "hash": "7e6158181d48c713"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "502d9e64a347200d"
+      "hash": "bd213af4d99767dc"
     },
     {
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "63c53e036f012f5e"
+      "hash": "40d960d9d3fdc43f"
     }
   ],
   "repairs": [
@@ -164,7 +164,7 @@
     {
       "type": "public-copy-scrubber",
       "status": "ok",
-      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 72 review issue(s).\n",
+      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 62 review issue(s).\n",
       "stderr": ""
     },
     {

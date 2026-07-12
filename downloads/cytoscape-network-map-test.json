@@ -1,0 +1,535 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:19:04.078Z",
+  "maps": 6,
+  "totalNodes": 102,
+  "totalEdges": 93,
+  "checks": [
+    {
+      "name": "interactive-network-map.js exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "interactive-network-map.js syntax",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker window.cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker /api/member/me",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker data-member-level=\"intelligence\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker data-member-level=\"research\"",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker aStar",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime marker cy.png",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html graph slug",
+      "ok": true,
+      "detail": "intelligence-network !== intelligence-network"
+    },
+    {
+      "name": "map-intelligence-network.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-intelligence-network.html graph elements",
+      "ok": true,
+      "detail": "37 elements"
+    },
+    {
+      "name": "map-intelligence-network.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-intelligence-network.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-intelligence-network.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html graph slug",
+      "ok": true,
+      "detail": "crime-state-overlap !== crime-state-overlap"
+    },
+    {
+      "name": "map-crime-state-overlap.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-crime-state-overlap.html graph elements",
+      "ok": true,
+      "detail": "31 elements"
+    },
+    {
+      "name": "map-crime-state-overlap.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-crime-state-overlap.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-crime-state-overlap.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html graph slug",
+      "ok": true,
+      "detail": "war-machine !== war-machine"
+    },
+    {
+      "name": "map-war-machine.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-war-machine.html graph elements",
+      "ok": true,
+      "detail": "31 elements"
+    },
+    {
+      "name": "map-war-machine.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-war-machine.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-war-machine.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html graph slug",
+      "ok": true,
+      "detail": "elite-access !== elite-access"
+    },
+    {
+      "name": "map-elite-access.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-elite-access.html graph elements",
+      "ok": true,
+      "detail": "38 elements"
+    },
+    {
+      "name": "map-elite-access.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-elite-access.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-elite-access.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html graph slug",
+      "ok": true,
+      "detail": "symbolic-power !== symbolic-power"
+    },
+    {
+      "name": "map-symbolic-power.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-symbolic-power.html graph elements",
+      "ok": true,
+      "detail": "29 elements"
+    },
+    {
+      "name": "map-symbolic-power.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-symbolic-power.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-symbolic-power.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html interactive section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html pinned Cytoscape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html local runtime",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html public search",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html public layout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html intelligence controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html research controls hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html graph JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html graph slug",
+      "ok": true,
+      "detail": "medical-policy-power !== medical-policy-power"
+    },
+    {
+      "name": "map-medical-policy-power.html graph centre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "map-medical-policy-power.html graph elements",
+      "ok": true,
+      "detail": "29 elements"
+    },
+    {
+      "name": "map-medical-policy-power.html unique node IDs",
+      "ok": true,
+      "detail": "0 duplicate(s)"
+    },
+    {
+      "name": "map-medical-policy-power.html edge endpoints",
+      "ok": true,
+      "detail": "0 broken edge(s)"
+    },
+    {
+      "name": "map-medical-policy-power.html relationship evidence classes",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": [],
+  "accessBoundary": {
+    "public": "Full interactive evidence map, search, layouts and node routes.",
+    "intelligenceMember": "Evidence filters and documented path analysis.",
+    "researchPro": "Map image and structured JSON exports."
+  }
+}

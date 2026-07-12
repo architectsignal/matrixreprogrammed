@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "updated": "2026-07-12T00:00:00.000Z",
+  "refreshRequestedAt": "2026-07-12T00:00:00.000Z",
+  "title": "Matrix Reprogrammed Market Activity Watchlist",
+  "evidenceBoundary": "A tracked subject is included because it is relevant to public-record research. Inclusion does not imply wrongdoing, suspicion, endorsement or investment advice.",
+  "rules": [
+    "Every subject must have an official SEC CIK and a human-review status.",
+    "Form 4 activity is reported by transaction code and must separate market purchases and sales from grants, exercises, gifts, tax withholding and other events.",
+    "Form 13F comparisons describe quarter-end reported position changes, not exact trade dates, execution prices, current holdings or motive.",
+    "The underlying SEC filing controls if any generated summary conflicts with the source."
+  ],
+  "subjects": [
+    {
+      "id": "issuer-tesla",
+      "kind": "issuer",
+      "name": "Tesla, Inc.",
+      "aliases": ["Tesla", "TSLA"],
+      "cik": "0001318605",
+      "ticker": "TSLA",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Tesla, Inc.", "Tesla Inc", "Tesla"]
+    },
+    {
+      "id": "issuer-palantir",
+      "kind": "issuer",
+      "name": "Palantir Technologies Inc.",
+      "aliases": ["Palantir", "PLTR"],
+      "cik": "0001321655",
+      "ticker": "PLTR",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Palantir Technologies Inc.", "Palantir Technologies", "Palantir"]
+    },
+    {
+      "id": "issuer-nvidia",
+      "kind": "issuer",
+      "name": "NVIDIA Corporation",
+      "aliases": ["NVIDIA", "NVDA"],
+      "cik": "0001045810",
+      "ticker": "NVDA",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["NVIDIA Corporation", "NVIDIA Corp", "NVIDIA"]
+    },
+    {
+      "id": "issuer-microsoft",
+      "kind": "issuer",
+      "name": "Microsoft Corporation",
+      "aliases": ["Microsoft", "MSFT"],
+      "cik": "0000789019",
+      "ticker": "MSFT",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Microsoft Corporation", "Microsoft Corp", "Microsoft"]
+    },
+    {
+      "id": "issuer-meta",
+      "kind": "issuer",
+      "name": "Meta Platforms, Inc.",
+      "aliases": ["Meta", "META", "Facebook"],
+      "cik": "0001326801",
+      "ticker": "META",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Meta Platforms, Inc.", "Meta Platforms", "Facebook"]
+    },
+    {
+      "id": "issuer-amazon",
+      "kind": "issuer",
+      "name": "Amazon.com, Inc.",
+      "aliases": ["Amazon", "AMZN"],
+      "cik": "0001018724",
+      "ticker": "AMZN",
+      "forms": ["4", "4/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Amazon.com, Inc.", "Amazon.com", "Amazon"]
+    },
+    {
+      "id": "manager-berkshire",
+      "kind": "institution",
+      "name": "Berkshire Hathaway Inc.",
+      "aliases": ["Berkshire Hathaway", "BRK.A", "BRK.B"],
+      "cik": "0001067983",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["Berkshire Hathaway Inc.", "Berkshire Hathaway"]
+    },
+    {
+      "id": "manager-blackrock",
+      "kind": "institution",
+      "name": "BlackRock, Inc.",
+      "aliases": ["BlackRock", "BLK"],
+      "cik": "0001364742",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["BlackRock, Inc.", "BlackRock Inc", "BlackRock"]
+    },
+    {
+      "id": "manager-vanguard",
+      "kind": "institution",
+      "name": "The Vanguard Group, Inc.",
+      "aliases": ["Vanguard", "Vanguard Group"],
+      "cik": "0000102909",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["The Vanguard Group, Inc.", "Vanguard Group", "Vanguard"]
+    },
+    {
+      "id": "manager-state-street",
+      "kind": "institution",
+      "name": "State Street Corporation",
+      "aliases": ["State Street", "STT"],
+      "cik": "0000093751",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["State Street Corporation", "State Street Corp", "State Street"]
+    },
+    {
+      "id": "manager-jpmorgan",
+      "kind": "institution",
+      "name": "JPMorgan Chase & Co.",
+      "aliases": ["JPMorgan", "JPMorgan Chase", "JPM"],
+      "cik": "0000019617",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["JPMorgan Chase & Co.", "JPMorgan Chase", "JPMorgan"]
+    },
+    {
+      "id": "manager-goldman-sachs",
+      "kind": "institution",
+      "name": "The Goldman Sachs Group, Inc.",
+      "aliases": ["Goldman Sachs", "GS"],
+      "cik": "0000886982",
+      "forms": ["13F-HR", "13F-HR/A"],
+      "enabled": true,
+      "reviewStatus": "human-reviewed",
+      "entityMatch": ["The Goldman Sachs Group, Inc.", "Goldman Sachs Group", "Goldman Sachs"]
+    }
+  ]
+}

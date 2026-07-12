@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T06:28:29.070Z",
+  "updated": "2026-07-12T06:18:12.940Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 180,
+  "count": 195,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -297,7 +297,7 @@
     {
       "file": "downloads/commercial-strategy-visibility.pdf",
       "title": "Commercial Strategy Visibility",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -352,6 +352,12 @@
       "file": "downloads/daily-drop.pdf",
       "title": "Matrix Reprogrammed Daily Drop",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/daily-investigation-conclusions.pdf",
+      "title": "Daily Investigation Conclusions",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -571,6 +577,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/final-investigation-hardening.pdf",
+      "title": "Final Investigation Hardening",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/follow-the-money-tracking-manual.pdf",
       "title": "Follow The Money Tracking Manual",
       "reused": true,
@@ -610,6 +622,18 @@
       "file": "downloads/intel-vault.pdf",
       "title": "Intel Vault",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/investigation-machine-run-report.pdf",
+      "title": "Investigation Machine Run Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/investigation-source-ledger.pdf",
+      "title": "Investigation Source Ledger",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -693,19 +717,19 @@
     {
       "file": "downloads/membership-auth-patch-report.pdf",
       "title": "Membership Auth Patch Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/membership-auth-ui-patch.pdf",
       "title": "Membership Auth Ui Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/membership-foundation-patch-report.pdf",
       "title": "Membership Foundation Patch Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -747,7 +771,7 @@
     {
       "file": "downloads/newsletter-worker-patch-report.pdf",
       "title": "Newsletter Worker Patch Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -807,7 +831,7 @@
     {
       "file": "downloads/paypal-membership-patch-report.pdf",
       "title": "Paypal Membership Patch Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -855,7 +879,7 @@
     {
       "file": "downloads/public-copy-visibility-test.pdf",
       "title": "Public Copy Visibility Test",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -867,13 +891,13 @@
     {
       "file": "downloads/public-visibility-report.pdf",
       "title": "Public Visibility Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/public-weekly-signup-report.pdf",
       "title": "Public Weekly Signup Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -907,6 +931,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/search-investigation-smoke-test.pdf",
+      "title": "Search Investigation Smoke Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/search-runtime-hardening-report.pdf",
       "title": "Search Runtime Hardening Report",
       "reused": true,
@@ -916,6 +946,24 @@
       "file": "downloads/search-system-repair-report.pdf",
       "title": "Search System Repair Report",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/search-v3-build-report.pdf",
+      "title": "Search V3 Build Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/search-v3-quality-test.pdf",
+      "title": "Search V3 Quality Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/search-v3-runtime-report.pdf",
+      "title": "Search V3 Runtime Report",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -1039,6 +1087,30 @@
       "kind": "download"
     },
     {
+      "file": "downloads/source-change-monitor-report.pdf",
+      "title": "Source Change Monitor Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/source-change-preservation-hardening-report.pdf",
+      "title": "Source Change Preservation Hardening Report",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/source-change-preservation-hardening-test.pdf",
+      "title": "Source Change Preservation Hardening Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/source-change-preservation-test.pdf",
+      "title": "Source Change Preservation Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/source-document-vault.pdf",
       "title": "Source Document Vault",
       "reused": true,
@@ -1060,6 +1132,18 @@
       "file": "downloads/speculative-conclusions.pdf",
       "title": "Speculative Conclusions",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/structured-investigation-data-build.pdf",
+      "title": "Structured Investigation Data Build",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/structured-investigation-data-test.pdf",
+      "title": "Structured Investigation Data Test",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -1206,6 +1290,12 @@
       "file": "downloads/verified-record-cards.pdf",
       "title": "Verified Record Cards",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/weekly-investigation-report.pdf",
+      "title": "Weekly Investigation Report",
+      "reused": false,
       "kind": "download"
     },
     {

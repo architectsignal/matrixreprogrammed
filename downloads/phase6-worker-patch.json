@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:18:46.295Z",
+  "syntaxValid": true,
+  "routes": [
+    "GET /api/market/watchlists",
+    "POST /api/market/watchlists",
+    "DELETE /api/market/watchlists/:id",
+    "GET /api/market/alerts"
+  ],
+  "evidenceBoundary": "Authenticated dashboard alerts only; public filings do not establish motive, present ownership, coordination, investment merit or wrongdoing."
+}

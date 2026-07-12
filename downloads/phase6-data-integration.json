@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-12T06:18:54.411Z",
+  "activityRecords": 4239,
+  "insiderTransactions": 239,
+  "positionChanges": 4000,
+  "entities": 3853,
+  "relationships": 5777,
+  "marketRelationshipsAdded": 4239,
+  "searchRecords": 5698,
+  "canonicalGraphContract": {
+    "entityIdentifiers": "array of {type,value}",
+    "relationshipEndpoints": [
+      "from",
+      "to"
+    ],
+    "relationshipTypes": [
+      "reportedTransaction",
+      "reportedPositionChange"
+    ]
+  },
+  "evidenceBoundary": "Financial disclosure relationships report official filings only and do not establish motive, present ownership, coordination, investment merit or wrongdoing."
+}

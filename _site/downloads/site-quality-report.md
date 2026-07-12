@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 492
+Scanned pages: 503
 Weak pages: 10
 
 ## Weakest Pages
@@ -47,9 +47,12 @@ Weak pages: 10
 - 84/100 — dossier-pack-symbolic-power.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — dossier-pack-trust-evidence.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — dossier-pack-war-machine.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
+- 84/100 — entity-registry.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — evidence-network-map.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — evidence-vault.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — feed-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
+- 84/100 — market-activity.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — news.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
@@ -59,13 +62,10 @@ Weak pages: 10
 - 84/100 — path-survival-war.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-war-contractors.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — power-atlas.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — relationship-registry.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — sales-ladder.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — schema-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — source-card-index.html: Thin copy: 197 visible words; Intel/evidence page missing Live Intel route
-- 84/100 — source-cards.html: Missing Rumble/video route; Intel/evidence page missing Live Intel route
-- 84/100 — start-here.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — system-feed-index.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /generated output/i
-- 84/100 — top-52-art-studio.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

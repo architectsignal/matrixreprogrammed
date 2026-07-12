@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "cc68bba4ec8f447c36eb1ccc021c026c1af1ab70",
-  "buildShortSha": "cc68bba4ec8f",
-  "generatedAt": "2026-07-11T06:28:50.978Z",
+  "buildSha": "a4f208d06baa4406919fdc2a0ee45d92bec50546",
+  "buildShortSha": "a4f208d06baa",
+  "generatedAt": "2026-07-12T06:18:43.271Z",
   "target": "Cloudflare Worker / _site assets",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
@@ -79,7 +79,7 @@
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "47e57327e08ad03b"
+      "hash": "cb2fb576145d5f50"
     },
     {
       "name": "Dark Speculation Forum",
@@ -103,13 +103,13 @@
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "571ba10d1fac3198"
+      "hash": "56765aa91531b256"
     },
     {
       "name": "SEC Filing Feed",
       "route": "/sec-filing-feed.html",
       "file": "sec-filing-feed.html",
-      "hash": "2786a1494517e968"
+      "hash": "2412b29aee99d4da"
     },
     {
       "name": "Probability Lab",
@@ -121,7 +121,7 @@
       "name": "Probability Snapshot",
       "route": "/probability-snapshot.html",
       "file": "probability-snapshot.html",
-      "hash": "727724ff92f2ca05"
+      "hash": "7e6158181d48c713"
     },
     {
       "name": "Forum Worker",
@@ -133,7 +133,7 @@
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "63c53e036f012f5e"
+      "hash": "40d960d9d3fdc43f"
     }
   ],
   "repairs": [

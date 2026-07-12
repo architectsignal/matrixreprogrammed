@@ -33,7 +33,6 @@ Result: PASS
 - PASS: homepage hides “MATRIX REPROGRAMMED STATUS”
 - PASS: homepage hides “Reader route: source”
 - PASS: homepage hides “Machine Room”
-- PASS: homepage hides “Research Tools”
 - PASS: homepage hides “The Public-Record Power Machine”
 - PASS: homepage hides “THE TRACKER DASHBOARD IS LIVE”
 - PASS: homepage hides “Mission + Money Engine”
@@ -44,6 +43,7 @@ Result: PASS
 - PASS: homepage uses reader-facing navigation label
 - PASS: homepage keeps public intelligence and book routes
 - PASS: homepage keeps public card decks
+- PASS: homepage keeps public Research Tools route
 - PASS: homepage keeps weekly signup
 - PASS: homepage replaces funnel wording in free brief card
 - PASS: homepage replaces funnel wording in live intel card
@@ -80,6 +80,7 @@ Result: PASS
 - PASS: deployed homepage includes hidden-control CSS
 - PASS: deployed homepage hides author-facing navigation
 - PASS: deployed homepage hides commercial strategy
+- PASS: deployed homepage keeps public Research Tools route
 - PASS: deployed homepage keeps weekly signup
 - PASS: Cloudflare _headers keeps a valid path-first format
 - PASS: Cloudflare _headers contains no injected HTML

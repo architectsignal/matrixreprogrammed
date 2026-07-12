@@ -1,6 +1,6 @@
 # SEC Filing Feed
 
-Updated: 2026-07-11T06:28:51.002Z
+Updated: 2026-07-12T06:18:43.292Z
 
 This feed captures official SEC filing metadata only. It does not verify narrative content until the selected annual filing is reviewed and classified.
 

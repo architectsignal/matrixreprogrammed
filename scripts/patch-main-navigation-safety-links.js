@@ -7,13 +7,17 @@ const startHerePath = path.join(root, 'start-here.html');
 if (!fs.existsSync(indexPath)) throw new Error('index.html not found for primary safety navigation patch.');
 if (!fs.existsSync(startHerePath)) throw new Error('start-here.html not found for safety route patch.');
 
+const removeDisplacedPrimaryLinks = value => String(value)
+  .replace(/<a href="security-privacy\.html">Security Tools<\/a>/gi, '')
+  .replace(/<a href="dark-web-safety\.html">Dark Web Safety<\/a>/gi, '')
+  .replace(/<a href="amazon-store-books\.html">Amazon Store<\/a>/gi, '')
+  .replace(/<a href="videos\.html">Rumble Channels<\/a>/gi, '');
+
 let html = fs.readFileSync(indexPath, 'utf8');
 const navMatch = html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/i);
 if (!navMatch) throw new Error('Primary navigation container not found.');
 
-let links = navMatch[1];
-links = links.replace(/<a href="security-privacy\.html">Security Tools<\/a>/gi, '');
-links = links.replace(/<a href="dark-web-safety\.html">Dark Web Safety<\/a>/gi, '');
+let links = removeDisplacedPrimaryLinks(navMatch[1]);
 const promoted = '<a href="security-privacy.html">Security Tools</a><a href="dark-web-safety.html">Dark Web Safety</a>';
 if (/<a href="search\.html">Search<\/a>/i.test(links)) {
   links = links.replace(/<a href="search\.html">Search<\/a>/i, `${promoted}<a href="search.html">Search</a>`);
@@ -26,9 +30,7 @@ fs.writeFileSync(indexPath, html);
 let startHere = fs.readFileSync(startHerePath, 'utf8');
 const startNav = startHere.match(/(<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>)([\s\S]*?)<\/nav>/i);
 if (!startNav) throw new Error('Start Here navigation not found.');
-let startLinks = startNav[2]
-  .replace(/<a href="security-privacy\.html">Security Tools<\/a>/gi, '')
-  .replace(/<a href="dark-web-safety\.html">Dark Web Safety<\/a>/gi, '');
+let startLinks = removeDisplacedPrimaryLinks(startNav[2]);
 if (/<a href="search\.html">Search<\/a>/i.test(startLinks)) {
   startLinks = startLinks.replace(/<a href="search\.html">Search<\/a>/i, `${promoted}<a href="search.html">Search</a>`);
 } else {
@@ -45,11 +47,13 @@ else startHere = startHere.replace('</main>', `${safetyCards}</main>`);
 fs.writeFileSync(startHerePath, startHere);
 
 const count = (text, value) => (text.match(new RegExp(`href="${value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length;
+const countAnchors = value => (String(value).match(/<a\b[^>]*href=/gi) || []).length;
 if (!/<div class="nav-primary">[\s\S]*href="security-privacy\.html"[\s\S]*href="dark-web-safety\.html"[\s\S]*<\/div>/i.test(html)) {
   throw new Error('Safety links were not promoted into primary navigation.');
 }
+if (countAnchors(links) > 8) throw new Error(`Homepage primary navigation remains too dense: ${countAnchors(links)} links.`);
 if (count(startHere, 'security-privacy.html') < 2 || count(startHere, 'dark-web-safety.html') < 2) {
   throw new Error('Start Here safety navigation or cards are missing.');
 }
 if (!startHere.includes('id="start-here-safety"')) throw new Error('Start Here safety section is missing.');
-console.log('Primary navigation and Start Here now expose Security Tools and Dark Web Safety.');
+console.log('Primary navigation and Start Here expose Security Tools and Dark Web Safety within the eight-tab limit.');

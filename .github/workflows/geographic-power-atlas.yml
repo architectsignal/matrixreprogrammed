@@ -63,7 +63,7 @@ jobs:
           node --check scripts/build-geographic-power-atlas.js
           node --check scripts/geographic-power-atlas-test.js
           node --check scripts/geographic-power-atlas-output-test.js
-          node --check geographic-power-atlas.js
+          node --input-type=module --check < geographic-power-atlas.js
           node -e "JSON.parse(require('fs').readFileSync('data/geographic-power-atlas-seed.json')); console.log('atlas seed valid')"
 
       - name: Build geographic power atlas

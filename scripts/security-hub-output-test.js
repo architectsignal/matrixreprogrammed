@@ -1,3 +1,4 @@
+// Final release gate: audit the exact generated Cloudflare output before merge.
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();

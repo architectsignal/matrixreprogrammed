@@ -2,13 +2,28 @@
   const intro = document.querySelector('[data-homepage-mask-intro]');
   if (!intro) return;
 
-  const sessionKey = 'matrix-homepage-mask-intro-seen-v1';
-  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  const holdMs = reducedMotion ? 1200 : 3600;
-  const dissolveMs = reducedMotion ? 220 : 1200;
+  const sessionKey = 'matrix-homepage-intro-seen-v2';
+  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
+  const timing = reducedMotion
+    ? { eye: 800, burn: 220, mask: 1000, dissolve: 220 }
+    : { eye: 3000, burn: 1100, mask: 3000, dissolve: 1200 };
+
+  const timers = new Set();
   let finished = false;
-  let holdTimer = null;
-  let removeTimer = null;
+
+  function later(callback, delay) {
+    const id = window.setTimeout(() => {
+      timers.delete(id);
+      callback();
+    }, delay);
+    timers.add(id);
+    return id;
+  }
+
+  function clearTimers() {
+    for (const id of timers) window.clearTimeout(id);
+    timers.clear();
+  }
 
   function hasSeen() {
     try { return sessionStorage.getItem(sessionKey) === 'true'; }
@@ -32,7 +47,15 @@
     }
   }
 
+  function setPhase(phase) {
+    intro.classList.remove('phase-eye', 'phase-burn', 'phase-mask');
+    intro.classList.add(`phase-${phase}`);
+    intro.dataset.phase = phase;
+    document.dispatchEvent(new CustomEvent('matrix:homepage-intro-phase', { detail: { phase } }));
+  }
+
   function removeIntro() {
+    clearTimers();
     intro.classList.add('is-removed');
     intro.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('mask-intro-active');
@@ -40,15 +63,32 @@
     document.dispatchEvent(new CustomEvent('matrix:homepage-mask-intro-complete'));
   }
 
-  function finish(options = {}) {
+  function finish(reason = 'timer') {
     if (finished) return;
     finished = true;
-    clearTimeout(holdTimer);
-    clearTimeout(removeTimer);
+    clearTimers();
     markSeen();
+    intro.dataset.finishReason = reason;
     intro.classList.add('is-dissolving');
-    intro.dataset.finishReason = options.reason || 'timer';
-    removeTimer = window.setTimeout(removeIntro, dissolveMs + 80);
+    later(removeIntro, timing.dissolve + 90);
+  }
+
+  function startSequence() {
+    setPhase('eye');
+    later(() => setPhase('burn'), timing.eye);
+    later(() => setPhase('mask'), timing.eye + timing.burn);
+    later(() => finish('timer'), timing.eye + timing.burn + timing.mask);
+  }
+
+  function waitForAssets() {
+    const images = [...intro.querySelectorAll('[data-intro-asset]')];
+    if (!images.length) return Promise.reject(new Error('No intro assets found'));
+    return Promise.all(images.map(image => new Promise(resolve => {
+      if (image.complete && image.naturalWidth > 0) return resolve({ ok: true, image });
+      const done = ok => resolve({ ok, image });
+      image.addEventListener('load', () => done(true), { once: true });
+      image.addEventListener('error', () => done(false), { once: true });
+    })));
   }
 
   if (hasSeen()) {
@@ -60,15 +100,21 @@
   intro.setAttribute('aria-hidden', 'false');
   prepareWelcomeGate();
 
-  const skip = intro.querySelector('[data-mask-intro-skip]');
-  skip?.addEventListener('click', () => finish({ reason: 'skip' }));
-
+  intro.querySelector('[data-mask-intro-skip]')?.addEventListener('click', () => finish('skip'));
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !finished) finish({ reason: 'escape' });
+    if (event.key === 'Escape' && !finished) finish('escape');
   }, { once: true });
 
-  const image = intro.querySelector('img');
-  image?.addEventListener('error', () => finish({ reason: 'asset-error' }), { once: true });
+  waitForAssets()
+    .then(results => {
+      const failures = results.filter(result => !result.ok);
+      if (failures.length === results.length) return finish('asset-error');
+      if (failures.length) intro.dataset.assetWarning = String(failures.length);
+      startSequence();
+    })
+    .catch(() => finish('asset-error'));
 
-  holdTimer = window.setTimeout(() => finish({ reason: 'timer' }), holdMs);
+  later(() => {
+    if (!intro.dataset.phase && !finished) startSequence();
+  }, 1800);
 })();

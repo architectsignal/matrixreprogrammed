@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "version": 1,
+  "generatedAt": "2026-07-12T09:12:55.375Z",
+  "engines": {
+    "maplibre": {
+      "version": "6.0.0-20",
+      "license": "BSD-3-Clause"
+    },
+    "pmtiles": {
+      "version": "4.4.1",
+      "license": "BSD-3-Clause"
+    }
+  },
+  "basemap": {
+    "styleUrl": "https://demotiles.maplibre.org/style.json",
+    "provider": "MapLibre demo tiles",
+    "optional": true,
+    "fallback": "local-dark-graticule"
+  },
+  "evidenceBoundary": "A mapped point establishes only the registered geographic scope stated by its precision class and cited public source. It does not prove control, coordination, presence at a particular time, ownership, wrongdoing or a relationship between nearby points.",
+  "policy": "Only explicitly registered public locations may be mapped. The build never geocodes names, addresses or inferred relationships.",
+  "precisionClasses": {
+    "public-campus": {
+      "label": "Public campus",
+      "maximumUncertaintyMetres": 1500
+    },
+    "city-centroid": {
+      "label": "City-level",
+      "maximumUncertaintyMetres": 25000
+    },
+    "jurisdiction-centroid": {
+      "label": "Jurisdiction-level",
+      "maximumUncertaintyMetres": 150000
+    }
+  },
+  "counts": {
+    "locations": 32,
+    "categories": 14,
+    "countries": 9,
+    "matchedEvidenceRecords": 18037
+  },
+  "categories": [
+    "central-bank",
+    "financial-governance",
+    "financial-institution",
+    "financial-intelligence",
+    "government",
+    "infrastructure",
+    "intelligence",
+    "intergovernmental",
+    "justice",
+    "law-enforcement",
+    "oversight",
+    "parliament",
+    "regulator",
+    "security-alliance"
+  ],
+  "countries": [
+    "Austria",
+    "Belgium",
+    "France",
+    "Germany",
+    "Netherlands",
+    "Singapore",
+    "Switzerland",
+    "United Kingdom",
+    "United States"
+  ],
+  "pmtilesSources": []
+}

@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Review Dashboard
 
-Updated: 2026-07-12T06:48:31.496Z
+Updated: 2026-07-12T07:49:46.639Z
 
 Decks: 9
 
@@ -24,15 +24,15 @@ Artwork missing: 468
 - Think Tanks Deck: 52 card(s) need primary-source enrichment.
 - Black Nobility & Allied Dynasties Deck: 52 card(s) need primary-source enrichment.
 - Jurisdictions of Power Deck: 52 card(s) need primary-source enrichment.
-- Public copy audit has 2236 high issue(s).
+- Public copy audit has 2271 high issue(s).
 
 ## Deck Health
 - Top 52 Persons of Interest: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 30
 - Controlled Opposition: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 127
-- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2165
+- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2175
 - Power Families Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 256
 - Secret Societies Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 72
-- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2164
+- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2174
 - Think Tanks Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 38
 - Black Nobility & Allied Dynasties Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 0
-- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 120
+- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 122

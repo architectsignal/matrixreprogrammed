@@ -11,6 +11,7 @@ const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'production-fr
 const routeMarkers = {
   '/': 'FOLLOW THE FILES',
   '/start-here': 'Open Dark Web Safety',
+  '/membership': 'Coming soon — no payment taken',
   '/live-intel': 'LIVE INTEL',
   '/daily-power-conclusions': '<!-- conclusion-integrity:start -->',
   '/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->',
@@ -18,7 +19,9 @@ const routeMarkers = {
   '/dark-web-safety': 'DARK WEB SAFETY',
   '/geographic-power-atlas': 'GEOGRAPHIC POWER ATLAS',
   '/data-lab': 'PUBLIC DATA',
-  '/evidence-archive': 'EVIDENCE ARCHIVE'
+  '/evidence-archive': 'EVIDENCE ARCHIVE',
+  '/search': 'SEARCH THE MACHINE',
+  '/deploy-health': 'D1 AUTHORITATIVE / FAIL CLOSED'
 };
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 async function fetchText(route, options = {}) {
@@ -29,7 +32,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/1.0',
+      'user-agent': 'MatrixProductionVerifier/2.0',
       ...(options.headers || {})
     }
   });
@@ -37,7 +40,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/1.0' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/2.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -63,11 +66,13 @@ async function verifyForumPersistence() {
   const before = await forumHealth();
   const beforeCount = Number(before.data?.storedPostCount);
   const healthReady = before.response.ok
+    && before.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+    && before.data?.backend === 'src/worker-forum-persistence.js'
     && before.data?.persistent === true
     && before.data?.d1Connected === true
     && String(before.data?.authoritativeStorage || '').includes('D1')
     && Number.isFinite(beforeCount);
-  if (!healthReady) return { ok: false, stage: 'health-before', beforeStatus: before.response.status, before: before.data };
+  if (!healthReady) return { ok: false, stage: 'health-before', beforeStatus: before.response.status, beforeHeaders: before.response.headers, before: before.data };
 
   const probeBody = {
     title: `Health check ${expectedSha.slice(0, 12)}`,
@@ -82,17 +87,18 @@ async function verifyForumPersistence() {
   });
   const submission = parseJson(submitted.text);
   const writeOk = submitted.ok
+    && submitted.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
     && submission?.saved === true
     && submission?.persistent === true
     && String(submission?.storage || '').includes('D1')
     && Boolean(submission?.post?.id);
-  if (!writeOk) return { ok: false, stage: 'write', beforeCount, submitStatus: submitted.status, submission };
+  if (!writeOk) return { ok: false, stage: 'write', beforeCount, submitStatus: submitted.status, submitHeaders: submitted.headers, submission };
 
   let after = null;
   for (let check = 1; check <= 5; check++) {
     after = await forumHealth();
     const afterCount = Number(after.data?.storedPostCount);
-    if (after.response.ok && Number.isFinite(afterCount) && afterCount >= beforeCount + 1) {
+    if (after.response.ok && after.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1' && Number.isFinite(afterCount) && afterCount >= beforeCount + 1) {
       return {
         ok: true,
         stage: 'd1-write-read',
@@ -105,16 +111,18 @@ async function verifyForumPersistence() {
     }
     await sleep(500);
   }
-  return { ok: false, stage: 'read-after-write', beforeCount, postId: submission.post.id, afterStatus: after?.response?.status, after: after?.data };
+  return { ok: false, stage: 'read-after-write', beforeCount, postId: submission.post.id, afterStatus: after?.response?.status, afterHeaders: after?.response?.headers, after: after?.data };
 }
 async function verifyOnce() {
   const mainSha = await currentMainSha();
   const manifestResponse = await fetchText('/deploy-manifest.json');
   const manifest = parseJson(manifestResponse.text);
+  const healthResponse = await fetchText('/deploy-health.json');
+  const health = parseJson(healthResponse.text);
   const routeResults = [];
   for (const [route, marker] of Object.entries(routeMarkers)) {
     const response = await fetchText(route);
-    routeResults.push({ route, status: response.status, marker, ok: response.ok && response.text.includes(marker) });
+    routeResults.push({ route, status: response.status, marker, ok: response.ok && response.text.includes(marker), cacheControl: response.headers['cache-control'] || null });
   }
   const payloads = {};
   for (const item of policy.datasets || []) {
@@ -123,10 +131,20 @@ async function verifyOnce() {
   }
   const freshness = freshnessChecks(payloads);
   const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha && manifest.commitSha === mainSha);
-  const coreOk = manifestResponse.ok && manifestMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
+  const healthMatches = Boolean(
+    healthResponse.ok
+    && health?.ok === true
+    && health?.buildSha === expectedSha
+    && health?.manifestSha === expectedSha
+    && health?.manifestMatches === true
+    && health?.workerScript === 'src/worker-production.js'
+    && health?.paymentStatus === 'deferred'
+    && String(health?.paymentMessage || '').includes('no payment is taken')
+  );
+  const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const forumPersistence = coreOk ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const ok = coreOk && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, routeResults, freshness, forumPersistence };
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, forumPersistence };
 }
 
 (async () => {
@@ -137,7 +155,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
-      console.log(`Live production and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
+      console.log(`Live production, commit-bound health and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

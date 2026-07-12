@@ -30,10 +30,28 @@ const headers = `/*
   Cache-Control: no-store, max-age=0
   Content-Type: application/json; charset=utf-8
 
+/deploy-health.html
+  Cache-Control: no-store, max-age=0
+
+/deploy-health
+  Cache-Control: no-store, max-age=0
+
+/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+
+/downloads/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+  Content-Disposition: attachment
+
 /
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /start-here
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/membership
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /live-intel
@@ -66,6 +84,9 @@ const headers = `/*
 /evidence-archive
   Cache-Control: no-cache, max-age=0, must-revalidate
 
+/search
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
 /downloads/*.pdf
   Content-Disposition: attachment
   Content-Type: application/pdf
@@ -93,5 +114,14 @@ fs.writeFileSync(path.join(root, '_headers'), headers);
 const site = path.join(root, '_site');
 if (fs.existsSync(site)) fs.writeFileSync(path.join(site, '_headers'), headers);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
-fs.writeFileSync(path.join(root, 'downloads', 'production-cache-policy.json'), JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), criticalHtml: 'no-cache', liveJson: 'no-cache', deployManifest: 'no-store', unversionedAssets: '5-minute revalidation' }, null, 2));
-console.log('Final production cache policy enforced after legacy generators.');
+fs.writeFileSync(path.join(root, 'downloads', 'production-cache-policy.json'), JSON.stringify({
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  criticalHtml: 'no-cache',
+  liveJson: 'no-cache',
+  deployManifest: 'no-store',
+  deployHealth: 'no-store',
+  membership: 'no-cache with checkout disabled',
+  unversionedAssets: '5-minute revalidation'
+}, null, 2));
+console.log('Final production cache policy enforced after legacy generators, including uncached health proof.');

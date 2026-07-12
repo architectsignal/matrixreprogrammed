@@ -11,12 +11,14 @@ on:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'src/worker.js'
       - 'src/worker-forum-persistence.js'
+      - 'src/worker-production.js'
       - 'wrangler.toml'
       - 'wrangler.jsonc'
       - 'migrations/0004_forum_persistence.sql'
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
+      - 'scripts/build-production-health.js'
       - 'scripts/patch-homepage-mask-intro.js'
       - 'scripts/homepage-mask-intro-test.js'
       - 'scripts/patch-membership-tiers.js'
@@ -45,12 +47,14 @@ on:
       - '.github/workflows/production-sync-assurance.yml'
       - 'src/worker.js'
       - 'src/worker-forum-persistence.js'
+      - 'src/worker-production.js'
       - 'wrangler.toml'
       - 'wrangler.jsonc'
       - 'migrations/0004_forum_persistence.sql'
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
+      - 'scripts/build-production-health.js'
       - 'scripts/patch-homepage-mask-intro.js'
       - 'scripts/homepage-mask-intro-test.js'
       - 'scripts/patch-membership-tiers.js'
@@ -102,7 +106,7 @@ jobs:
         run: npm run build
       - name: Verify D1-authoritative forum persistence wiring
         run: node scripts/forum-persistence-d1-test.js
-      - name: Bundle Worker without deploying
+      - name: Bundle strict Worker without deploying
         run: npx wrangler@latest deploy --dry-run
       - name: Reconcile final production output
         env:
@@ -132,5 +136,6 @@ jobs:
             downloads/membership-tiers-report.json
             downloads/conclusion-integrity-report.json
             downloads/deploy-manifest.json
+            downloads/deploy-health.json
           if-no-files-found: ignore
           retention-days: 30

@@ -17,6 +17,9 @@ on:
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
+      - 'scripts/patch-homepage-mask-intro.js'
+      - 'scripts/homepage-mask-intro-test.js'
+      - 'scripts/patch-membership-tiers.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/update-live-intel.js'
@@ -25,6 +28,11 @@ on:
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
+      - 'homepage-mask-intro.css'
+      - 'homepage-mask-intro.js'
+      - 'assets/homepage-mask.svg'
+      - 'membership.html'
+      - 'data/membership-tiers.json'
       - 'data/production-freshness-policy.json'
       - 'package.json'
       - '_headers'
@@ -42,6 +50,9 @@ on:
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
+      - 'scripts/patch-homepage-mask-intro.js'
+      - 'scripts/homepage-mask-intro-test.js'
+      - 'scripts/patch-membership-tiers.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/update-live-intel.js'
@@ -50,6 +61,11 @@ on:
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
+      - 'homepage-mask-intro.css'
+      - 'homepage-mask-intro.js'
+      - 'assets/homepage-mask.svg'
+      - 'membership.html'
+      - 'data/membership-tiers.json'
       - 'data/production-freshness-policy.json'
       - 'package.json'
       - '_headers'
@@ -109,6 +125,9 @@ jobs:
             downloads/production-deploy-guard-report.json
             downloads/forum-persistence-d1-test.json
             downloads/final-production-reconcile.json
+            downloads/homepage-mask-intro-test.json
+            downloads/homepage-mask-intro-report.json
+            downloads/membership-tiers-report.json
             downloads/conclusion-integrity-report.json
             downloads/deploy-manifest.json
           if-no-files-found: ignore

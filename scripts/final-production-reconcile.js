@@ -4,7 +4,23 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
+const reportPath = path.join(root, 'downloads', 'final-production-reconcile.json');
 const report = { ok: true, generatedAt: new Date().toISOString(), commands: [], copied: [], checks: [] };
+function persistReport() {
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+}
+process.on('uncaughtException', error => {
+  report.ok = false;
+  report.failedAt = new Date().toISOString();
+  report.error = String(error && error.stack ? error.stack : error);
+  persistReport();
+  console.error(report.error);
+  process.exit(1);
+});
+process.on('unhandledRejection', error => {
+  throw error;
+});
 function run(script, optional = false) {
   const file = path.join(root, script);
   if (!fs.existsSync(file)) {
@@ -12,7 +28,7 @@ function run(script, optional = false) {
     throw new Error(`Missing reconciliation script: ${script}`);
   }
   const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', env: process.env });
-  report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-1000), stderr: String(result.stderr || '').slice(-1000) });
+  report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-3000), stderr: String(result.stderr || '').slice(-3000) });
   if (result.status !== 0) throw new Error(`${script} failed: ${result.stderr || result.stdout}`);
 }
 function copy(rel) {
@@ -39,9 +55,18 @@ function requireMarker(rel, marker) {
   const duplicates = duplicateIds(text);
   if (duplicates.length) throw new Error(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
 }
+function rejectMarker(rel, marker) {
+  const text = fs.readFileSync(path.join(root, rel), 'utf8');
+  const ok = !text.includes(marker);
+  report.checks.push({ rel, rejectedMarker: marker, ok });
+  if (!ok) throw new Error(`${rel} contains forbidden legacy marker: ${marker}`);
+}
 
 if (!fs.existsSync(site)) throw new Error('_site does not exist; run the normal build first.');
 run('scripts/patch-main-navigation-safety-links.js');
+run('scripts/patch-membership-tiers.js');
+run('scripts/patch-homepage-mask-intro.js');
+run('scripts/homepage-mask-intro-test.js');
 run('scripts/build-live-intel-machine.js');
 run('scripts/build-mission-intelligence-10.js');
 run('scripts/build-investigation-pages.js');
@@ -52,11 +77,12 @@ run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
 
 const critical = [
-  'index.html', 'start-here.html', 'live-intel.html', 'daily-power-conclusions.html',
+  'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js', 'assets/homepage-mask.svg',
+  'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', '_headers', 'data/live-intel.json',
+  'evidence-archive.html', '_headers', 'data/membership-tiers.json', 'data/live-intel.json',
   'data/daily-power-conclusions.json', 'data/daily-investigation-conclusions.json',
   'data/weekly-investigation-conclusions.json', 'data/daily-brain-brief.json',
   'data/outcome-briefings.json', 'data/production-freshness-policy.json'
@@ -64,8 +90,22 @@ const critical = [
 critical.forEach(copy);
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
+requireMarker('index.html', 'data-homepage-mask-intro');
+requireMarker('index.html', 'assets/homepage-mask.svg');
+requireMarker('index.html', 'homepage-mask-intro.js');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
+requireMarker('membership.html', '<!-- membership-tiers:start -->');
+requireMarker('membership.html', '€3');
+requireMarker('membership.html', '€6');
+requireMarker('membership.html', '€9');
+requireMarker('membership.html', 'Coming soon — no payment taken');
+rejectMarker('membership.html', '€19/month');
+rejectMarker('membership.html', '€49/month');
+requireMarker('homepage-mask-intro.js', 'sessionStorage');
+requireMarker('homepage-mask-intro.js', '3600');
+requireMarker('homepage-mask-intro.css', 'mask-intro-dissolve');
+requireMarker('assets/homepage-mask.svg', 'Ivory anonymous mask');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');
@@ -73,6 +113,5 @@ requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');
 requireMarker('_headers', '/deploy-manifest.json');
 requireMarker('_headers', 'Cache-Control: no-store');
 run('scripts/build-deploy-manifest.js');
-fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
-fs.writeFileSync(path.join(root, 'downloads', 'final-production-reconcile.json'), JSON.stringify(report, null, 2));
+persistReport();
 console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied after legacy generators.`);

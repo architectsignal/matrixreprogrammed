@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Ivory anonymous mask</title>
+  <desc id="desc">An original, symmetrical ivory ceremonial mask with engraved filigree, deep eye openings and a transparent background.</desc>
+  <defs>
+    <linearGradient id="ivory" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffdf0"/>
+      <stop offset="0.22" stop-color="#eadcb5"/>
+      <stop offset="0.5" stop-color="#fff8dc"/>
+      <stop offset="0.78" stop-color="#cdbb88"/>
+      <stop offset="1" stop-color="#f5e9c8"/>
+    </linearGradient>
+    <radialGradient id="forehead" cx="50%" cy="24%" r="62%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".72"/>
+      <stop offset=".42" stop-color="#f6e9c4" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#6b5632" stop-opacity=".28"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b4525"/>
+      <stop offset=".48" stop-color="#1e160d"/>
+      <stop offset="1" stop-color="#725d35"/>
+    </linearGradient>
+    <linearGradient id="engrave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#70562b"/>
+      <stop offset=".5" stop-color="#b8974f"/>
+      <stop offset="1" stop-color="#6b4e22"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="34" stdDeviation="28" flood-color="#000" flood-opacity=".86"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#ead79c" flood-opacity=".25"/>
+    </filter>
+    <filter id="surface" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency=".018 .11" numOctaves="3" seed="19" result="grain"/>
+      <feColorMatrix in="grain" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono" result="faint">
+        <feFuncA type="table" tableValues="0 .16"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="multiply"/>
+    </filter>
+    <clipPath id="maskClip">
+      <path d="M450 48C281 48 147 161 119 331c-22 135 3 288 63 432 54 129 139 238 268 291 129-53 214-162 268-291 60-144 85-297 63-432C753 161 619 48 450 48Z"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M450 48C281 48 147 161 119 331c-22 135 3 288 63 432 54 129 139 238 268 291 129-53 214-162 268-291 60-144 85-297 63-432C753 161 619 48 450 48Z" fill="url(#ivory)" stroke="url(#edge)" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M450 66C295 66 176 171 148 334c-21 123 4 268 61 404 49 119 126 218 241 269 115-51 192-150 241-269 57-136 82-281 61-404C724 171 605 66 450 66Z" fill="url(#forehead)" opacity=".86"/>
+
+    <g clip-path="url(#maskClip)" filter="url(#surface)">
+      <path d="M97 515C224 435 326 419 450 451c124-32 226-16 353 64" fill="none" stroke="#9f7f42" stroke-opacity=".18" stroke-width="54"/>
+      <path d="M160 742C274 681 352 668 450 695c98-27 176-14 290 47" fill="none" stroke="#624720" stroke-opacity=".12" stroke-width="36"/>
+      <path d="M450 40V1044" stroke="#5a431e" stroke-opacity=".18" stroke-width="2"/>
+      <path d="M158 366C280 298 352 284 450 309c98-25 170-11 292 57" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="4"/>
+    </g>
+
+    <path d="M168 397c62-76 145-99 236-57-28 82-99 134-210 114-24-10-34-32-26-57Z" fill="#080806" stroke="#5c4828" stroke-width="12"/>
+    <path d="M732 397c-62-76-145-99-236-57 28 82 99 134 210 114 24-10 34-32 26-57Z" fill="#080806" stroke="#5c4828" stroke-width="12"/>
+    <path d="M188 400c51-49 112-63 179-34-41 42-96 64-162 58-17-4-22-13-17-24Z" fill="#20170d" opacity=".9"/>
+    <path d="M712 400c-51-49-112-63-179-34 41 42 96 64 162 58 17-4 22-13 17-24Z" fill="#20170d" opacity=".9"/>
+
+    <path d="M450 318c-46 95-68 207-59 329 4 49 22 84 59 105 37-21 55-56 59-105 9-122-13-234-59-329Z" fill="url(#ivory)" stroke="#7b6134" stroke-width="8"/>
+    <path d="M450 373c-18 91-26 185-21 281 1 22 8 39 21 52 13-13 20-30 21-52 5-96-3-190-21-281Z" fill="#8d7240" opacity=".24"/>
+    <path d="M389 649c24 8 44 20 61 36 17-16 37-28 61-36" fill="none" stroke="#6c5228" stroke-width="9" stroke-linecap="round"/>
+
+    <path d="M267 730c48 17 103 24 183 22 80 2 135-5 183-22-31 68-91 111-183 118-92-7-152-50-183-118Z" fill="#f2e5c0" stroke="#72582c" stroke-width="8"/>
+    <path d="M303 756c45 25 94 35 147 31 53 4 102-6 147-31-30 43-79 67-147 72-68-5-117-29-147-72Z" fill="#2b1b10"/>
+    <path d="M339 769c33 13 70 18 111 15 41 3 78-2 111-15-28 22-65 33-111 35-46-2-83-13-111-35Z" fill="#9d7442" opacity=".72"/>
+
+    <path d="M450 92c-31 29-55 65-72 109 27-14 51-18 72-12 21-6 45-2 72 12-17-44-41-80-72-109Z" fill="none" stroke="url(#engrave)" stroke-width="7"/>
+    <circle cx="450" cy="178" r="22" fill="none" stroke="url(#engrave)" stroke-width="6"/>
+    <path d="M450 150v56M422 178h56" stroke="url(#engrave)" stroke-width="4" stroke-linecap="round"/>
+
+    <g fill="none" stroke="url(#engrave)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M188 292c54-62 116-98 186-109-51 32-84 69-100 111 33-28 66-41 98-40-38 28-66 62-84 102" stroke-width="7"/>
+      <path d="M712 292c-54-62-116-98-186-109 51 32 84 69 100 111-33-28-66-41-98-40 38 28 66 62 84 102" stroke-width="7"/>
+      <path d="M168 503c64 22 113 58 146 108-49-30-94-40-135-31 47 14 83 39 109 76" stroke-width="6"/>
+      <path d="M732 503c-64 22-113 58-146 108 49-30 94-40 135-31-47 14-83 39-109 76" stroke-width="6"/>
+      <path d="M198 676c42 15 76 42 102 82-38-20-73-25-106-15 37 8 67 28 91 60" stroke-width="5"/>
+      <path d="M702 676c-42 15-76 42-102 82 38-20 73-25 106-15-37 8-67 28-91 60" stroke-width="5"/>
+      <path d="M282 884c49 21 89 53 121 96-46-27-89-38-130-31 40 15 73 38 101 70" stroke-width="5"/>
+      <path d="M618 884c-49 21-89 53-121 96 46-27 89-38 130-31-40 15-73 38-101 70" stroke-width="5"/>
+    </g>
+
+    <g fill="#8c6a34" opacity=".8">
+      <circle cx="231" cy="252" r="7"/><circle cx="270" cy="216" r="5"/><circle cx="318" cy="190" r="4"/>
+      <circle cx="669" cy="252" r="7"/><circle cx="630" cy="216" r="5"/><circle cx="582" cy="190" r="4"/>
+      <circle cx="211" cy="609" r="5"/><circle cx="245" cy="632" r="4"/><circle cx="689" cy="609" r="5"/><circle cx="655" cy="632" r="4"/>
+    </g>
+
+    <path d="M143 323c-31 101-21 242 33 403 38 113 100 208 188 278" fill="none" stroke="#fff8dc" stroke-opacity=".38" stroke-width="9" stroke-linecap="round"/>
+    <path d="M757 323c31 101 21 242-33 403-38 113-100 208-188 278" fill="none" stroke="#4c381d" stroke-opacity=".28" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

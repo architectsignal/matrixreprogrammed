@@ -1,0 +1,269 @@
+name: Evidence Archive Verification
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 6 * * 0'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/evidence-archive-policy.json'
+      - 'data/investigation-source-registry.json'
+      - 'data/source-change-public.json'
+      - 'scripts/prepare-browsertrix-crawl.js'
+      - 'scripts/build-evidence-archive.js'
+      - 'scripts/patch-phase8-evidence-archive.js'
+      - 'scripts/evidence-archive-verification-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-archive.html'
+      - 'evidence-archive.js'
+      - 'evidence-citation.js'
+      - 'source-change-diff.js'
+      - 'replay/sw.js'
+      - '.github/workflows/evidence-archive-verification.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/evidence-archive-policy.json'
+      - 'data/investigation-source-registry.json'
+      - 'data/source-change-public.json'
+      - 'scripts/prepare-browsertrix-crawl.js'
+      - 'scripts/build-evidence-archive.js'
+      - 'scripts/patch-phase8-evidence-archive.js'
+      - 'scripts/evidence-archive-verification-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - 'evidence-archive.html'
+      - 'evidence-archive.js'
+      - 'evidence-citation.js'
+      - 'source-change-diff.js'
+      - 'replay/sw.js'
+      - '.github/workflows/evidence-archive-verification.yml'
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: evidence-archive-verification-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+  BROWSERTRIX_IMAGE: webrecorder/browsertrix-crawler:1.13.2
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[phase8-archive]')
+    name: Capture replay sign and verify approved evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Prepare approved Browsertrix crawl plan
+        run: node scripts/prepare-browsertrix-crawl.js
+
+      - name: Capture approved public sources as WACZ
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          mkdir -p browsertrix-output web-archives
+          count="$(jq '.sources | length' downloads/browsertrix-crawl-plan.json)"
+          if [ "$count" -eq 0 ]; then
+            echo "No approved public sources are scheduled for capture."
+            exit 0
+          fi
+          capture_date="$(date -u +%F)"
+          jq -c '.sources[]' downloads/browsertrix-crawl-plan.json | while read -r source; do
+            id="$(jq -r '.id' <<<"$source")"
+            url="$(jq -r '.url' <<<"$source")"
+            label="$(jq -r '.label' <<<"$source")"
+            page_limit="$(jq -r '.pageLimit' <<<"$source")"
+            size_limit="$(jq -r '.sizeLimit' <<<"$source")"
+            time_limit="$(jq -r '.timeLimit' <<<"$source")"
+            rm -rf "browsertrix-output/$id"
+            mkdir -p "browsertrix-output/$id"
+            docker run --rm \
+              -v "$PWD/browsertrix-output/$id:/crawls" \
+              "$BROWSERTRIX_IMAGE" crawl \
+              --url "$url" \
+              --scopeType page \
+              --pageLimit "$page_limit" \
+              --collection "$id" \
+              --generateWACZ \
+              --cwd /crawls \
+              --timeLimit "$time_limit" \
+              --sizeLimit "$size_limit" \
+              --blockAds \
+              --headless \
+              --userAgentSuffix "+MatrixReprogrammedEvidenceArchive/1.0 njmgroupfrance@gmail.com"
+            wacz="$(find "browsertrix-output/$id" -type f -name '*.wacz' -print | sort | head -n 1)"
+            if [ -z "$wacz" ]; then
+              echo "Browsertrix produced no WACZ for $id"
+              exit 1
+            fi
+            bytes="$(stat -c '%s' "$wacz")"
+            if [ "$bytes" -le 0 ] || [ "$bytes" -gt "$size_limit" ] || [ "$bytes" -ge 25000000 ]; then
+              echo "Capture $id violates the archive size gate: $bytes bytes"
+              exit 1
+            fi
+            output="web-archives/${id}-${capture_date}.wacz"
+            cp "$wacz" "$output"
+            jq -n \
+              --arg sourceId "$id" \
+              --arg title "$label" \
+              --arg sourceUrl "$url" \
+              --arg capturedAt "$(date -u +%FT%TZ)" \
+              --argjson bytes "$bytes" \
+              --argjson pageLimit "$page_limit" \
+              '{sourceId:$sourceId,title:$title,sourceUrl:$sourceUrl,capturedAt:$capturedAt,bytes:$bytes,pageLimit:$pageLimit,engine:"Browsertrix Crawler",engineVersion:"1.13.2",format:"WACZ"}' > "${output}.metadata.json"
+          done
+
+      - name: Build Phase 8 public manifests and routes
+        run: |
+          node scripts/build-evidence-archive.js
+          node scripts/patch-phase8-evidence-archive.js
+
+      - name: Run Phase 8 evidence gates
+        run: node scripts/evidence-archive-verification-test.js
+
+      - name: Build complete guarded Cloudflare site
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Install Cosign
+        if: github.event_name != 'pull_request'
+        uses: sigstore/cosign-installer@v4.1.2
+
+      - name: Sign integrity manifest with GitHub OIDC
+        if: github.event_name != 'pull_request'
+        run: |
+          rm -f data/evidence-integrity-manifest.sigstore.json
+          cosign sign-blob --yes \
+            --bundle data/evidence-integrity-manifest.sigstore.json \
+            data/evidence-integrity-manifest.json
+          cosign verify-blob \
+            --bundle data/evidence-integrity-manifest.sigstore.json \
+            --certificate-identity-regexp '^https://github.com/architectsignal/matrixreprogrammed/.github/workflows/evidence-archive-verification.yml@refs/heads/main$' \
+            --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
+            data/evidence-integrity-manifest.json
+
+      - name: Re-run tests with mandatory signature bundle
+        if: github.event_name != 'pull_request'
+        env:
+          REQUIRE_SIGSTORE_BUNDLE: '1'
+        run: node scripts/evidence-archive-verification-test.js
+
+      - name: Commit generated captures manifests and signature
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          git config user.name "matrix-evidence-archive-bot"
+          git config user.email "actions@github.com"
+          git add \
+            web-archives \
+            evidence-archive.html \
+            evidence-archive.js \
+            evidence-citation.js \
+            source-change-diff.js \
+            replay/sw.js \
+            research-tools.html \
+            source-changes.html \
+            sitemap.xml \
+            llms.txt \
+            data/evidence-archive-manifest.json \
+            data/evidence-integrity-manifest.json \
+            data/evidence-integrity-manifest.sigstore.json \
+            data/evidence-citations.json \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No Phase 8 evidence outputs changed."
+            exit 0
+          fi
+          git commit -m "Refresh signed evidence archive $(date -u +%F) [phase8-archive] [deploy]"
+          pushed=false
+          for attempt in 1 2 3; do
+            if git push; then
+              pushed=true
+              break
+            fi
+            git pull --rebase --autostash origin main
+          done
+          if [ "$pushed" != true ]; then
+            echo "Phase 8 generated outputs could not be pushed after three attempts."
+            exit 1
+          fi
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Verify live replay and signed integrity routes
+        if: github.event_name != 'pull_request' && steps.commit.outputs.committed == 'true'
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 36); do
+            archive=false
+            manifest=false
+            integrity=false
+            bundle=false
+            replay_sw=false
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/evidence-archive.html" | grep -q 'EVIDENCE ARCHIVE & VERIFICATION' && archive=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-archive-manifest.json" | grep -q 'Browsertrix Crawler' && manifest=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-integrity-manifest.json" | grep -q 'Sigstore Cosign' && integrity=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-integrity-manifest.sigstore.json" | grep -Eq 'verificationMaterial|messageSignature|dsseEnvelope' && bundle=true || true
+            curl --fail --silent --show-error --max-time 20 "$SITE_URL/replay/sw.js" | grep -q 'replaywebpage@2.4.6' && replay_sw=true || true
+            if [ "$archive" = true ] && [ "$manifest" = true ] && [ "$integrity" = true ] && [ "$bundle" = true ] && [ "$replay_sw" = true ]; then
+              curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-integrity-manifest.json" -o /tmp/evidence-integrity-manifest.json
+              curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-integrity-manifest.sigstore.json" -o /tmp/evidence-integrity-manifest.sigstore.json
+              cosign verify-blob \
+                --bundle /tmp/evidence-integrity-manifest.sigstore.json \
+                --certificate-identity-regexp '^https://github.com/architectsignal/matrixreprogrammed/.github/workflows/evidence-archive-verification.yml@refs/heads/main$' \
+                --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
+                /tmp/evidence-integrity-manifest.json
+              first_archive="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/data/evidence-archive-manifest.json" | jq -r '.archives[0].replayUrl // empty')"
+              if [ -n "$first_archive" ]; then
+                status="$(curl --silent --output /tmp/archive-range.bin --write-out '%{http_code}' --max-time 20 -H 'Range: bytes=0-63' "$SITE_URL/$first_archive")"
+                [ "$status" = '206' ] || [ "$status" = '200' ] || { echo "Archive range request failed: HTTP $status"; exit 1; }
+              fi
+              echo "Phase 8 replay routes and signed integrity manifest are live."
+              exit 0
+            fi
+            echo "Waiting for Phase 8 production deployment ($attempt/36)…"
+            sleep 20
+          done
+          echo "Production did not expose the complete signed Phase 8 evidence archive within the verification window."
+          exit 1
+
+      - name: Upload Phase 8 reports and captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase8-evidence-archive-${{ github.run_id }}
+          path: |
+            downloads/browsertrix-crawl-plan.json
+            downloads/phase8-evidence-archive-build.json
+            downloads/phase8-evidence-archive-test.json
+            downloads/phase8-wiring.json
+            data/evidence-archive-manifest.json
+            data/evidence-integrity-manifest.json
+            data/evidence-integrity-manifest.sigstore.json
+            web-archives/*.metadata.json
+          if-no-files-found: ignore
+          retention-days: 90

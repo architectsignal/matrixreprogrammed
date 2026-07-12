@@ -10,6 +10,9 @@ on:
       - 'scripts/source-change-preservation-hardening-test.js'
       - 'scripts/build-cloudflare-output.js'
       - 'evidence-archive/**'
+      - 'evidence-archive.html'
+      - 'evidence-archive.js'
+      - 'data/evidence-archive-*.json'
       - '.github/workflows/source-preservation-hardening-assurance.yml'
       - '.github/workflows/daily-investigation-machine.yml'
       - '.github/workflows/weekly-investigation-machine.yml'
@@ -21,6 +24,9 @@ on:
       - 'scripts/source-change-preservation-hardening-test.js'
       - 'scripts/build-cloudflare-output.js'
       - 'evidence-archive/**'
+      - 'evidence-archive.html'
+      - 'evidence-archive.js'
+      - 'data/evidence-archive-*.json'
       - '.github/workflows/source-preservation-hardening-assurance.yml'
       - '.github/workflows/daily-investigation-machine.yml'
       - '.github/workflows/weekly-investigation-machine.yml'
@@ -68,7 +74,9 @@ jobs:
           SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js 2>&1 | tee downloads/source-preservation-cloudflare-build.log
           test -f _site/source-changes.html
           test -f _site/data/source-change-public.json
-          test ! -e _site/evidence-archive
+          test -f _site/evidence-archive
+          test ! -d _site/evidence-archive
+          test ! -e _site/evidence-archive/manifest.json
           test ! -e _site/data/source-snapshots
           test ! -e _site/data/source-snapshot-index.json
           test ! -e _site/data/source-change-ledger.json

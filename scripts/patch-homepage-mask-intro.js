@@ -4,7 +4,7 @@ const path = require('path');
 const root = process.cwd();
 const pagePath = path.join(root, 'index.html');
 const reportPath = path.join(root, 'downloads', 'homepage-mask-intro-report.json');
-const required = ['homepage-mask-intro.css', 'homepage-mask-intro.js', 'assets/homepage-mask.webp'];
+const required = ['homepage-mask-intro.css', 'homepage-mask-intro.js', 'assets/homepage-mask.svg'];
 for (const rel of required) {
   if (!fs.existsSync(path.join(root, rel))) throw new Error(`Homepage mask intro asset missing: ${rel}`);
 }
@@ -12,8 +12,8 @@ if (!fs.existsSync(pagePath)) throw new Error('index.html is missing');
 
 let html = fs.readFileSync(pagePath, 'utf8');
 const cssLink = '<link rel="stylesheet" href="homepage-mask-intro.css" data-homepage-mask-intro-style />';
-const preload = '<link rel="preload" as="image" href="assets/homepage-mask.webp" type="image/webp" fetchpriority="high" data-homepage-mask-preload />';
-const overlay = '<!-- homepage-mask-intro:start --><section id="homepage-mask-intro" class="homepage-mask-intro" data-homepage-mask-intro aria-label="Matrix Reprogrammed opening sequence" aria-hidden="false"><div class="homepage-mask-intro__stage"><img class="homepage-mask-intro__mask" src="assets/homepage-mask.webp" width="220" height="268" alt="" aria-hidden="true" decoding="async" fetchpriority="high" /><p class="homepage-mask-intro__wordmark">Matrix Reprogrammed</p><button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button></div></section><!-- homepage-mask-intro:end -->';
+const preload = '<link rel="preload" as="image" href="assets/homepage-mask.svg" type="image/svg+xml" fetchpriority="high" data-homepage-mask-preload />';
+const overlay = '<!-- homepage-mask-intro:start --><section id="homepage-mask-intro" class="homepage-mask-intro" data-homepage-mask-intro aria-label="Matrix Reprogrammed opening sequence" aria-hidden="false"><div class="homepage-mask-intro__stage"><img class="homepage-mask-intro__mask" src="assets/homepage-mask.svg" width="900" height="1100" alt="" aria-hidden="true" decoding="async" fetchpriority="high" /><p class="homepage-mask-intro__wordmark">Matrix Reprogrammed</p><button class="homepage-mask-intro__skip" type="button" data-mask-intro-skip>Skip intro</button></div></section><!-- homepage-mask-intro:end -->';
 const runtime = '<script src="homepage-mask-intro.js" data-homepage-mask-intro-runtime></script>';
 
 html = html
@@ -39,7 +39,7 @@ const counts = {
   style: (html.match(/data-homepage-mask-intro-style/g) || []).length,
   preload: (html.match(/data-homepage-mask-preload/g) || []).length,
   runtime: (html.match(/data-homepage-mask-intro-runtime/g) || []).length,
-  asset: (html.match(/assets\/homepage-mask\.webp/g) || []).length
+  asset: (html.match(/assets\/homepage-mask\.svg/g) || []).length
 };
 const failures = [];
 if (counts.overlay !== 1) failures.push(`expected one mask overlay, found ${counts.overlay}`);

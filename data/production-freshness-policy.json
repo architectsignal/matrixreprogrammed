@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "generatedFor": "Matrix Reprogrammed production deployment",
+  "defaultMaxFutureMinutes": 15,
+  "datasets": [
+    {
+      "id": "live-intel",
+      "file": "data/live-intel.json",
+      "timestampFields": ["updated"],
+      "maxAgeHours": 26,
+      "minimumArray": "feedResults",
+      "minimumCount": 1
+    },
+    {
+      "id": "daily-investigation",
+      "file": "data/daily-investigation-conclusions.json",
+      "timestampFields": ["generatedAt"],
+      "maxAgeHours": 30,
+      "minimumArray": "strongestFindings",
+      "minimumCount": 0
+    },
+    {
+      "id": "daily-power-conclusions",
+      "file": "data/daily-power-conclusions.json",
+      "timestampFields": ["updated"],
+      "maxAgeHours": 30,
+      "minimumArray": "conclusions",
+      "minimumCount": 1
+    },
+    {
+      "id": "daily-brain-brief",
+      "file": "data/daily-brain-brief.json",
+      "timestampFields": ["updated"],
+      "maxAgeHours": 30,
+      "minimumArray": "topConclusions",
+      "minimumCount": 1
+    },
+    {
+      "id": "outcome-briefings",
+      "file": "data/outcome-briefings.json",
+      "timestampFields": ["updated"],
+      "maxAgeHours": 30,
+      "minimumArray": "briefings",
+      "minimumCount": 1
+    }
+  ]
+}

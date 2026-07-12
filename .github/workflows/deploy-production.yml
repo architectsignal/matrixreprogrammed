@@ -1,111 +1,102 @@
-name: Deploy Production
+name: Deploy Production (Manual Fallback)
 
 on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type DEPLOY to confirm production release after tests pass'
+        description: 'Type DEPLOY to run the manual fallback release'
         required: true
         default: 'NO'
-  push:
-    branches: [ main ]
 
 permissions:
-  contents: write
+  contents: read
   actions: read
-  issues: write
 
 concurrency:
-  group: production-deploy
-  cancel-in-progress: false
+  group: matrixreprogrammed-production
+  cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   deploy:
-    name: Guarded Cloudflare production deploy
+    name: Manual strict-D1 Cloudflare fallback deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') }}
+    timeout-minutes: 110
+    if: ${{ github.event.inputs.confirm == 'DEPLOY' }}
 
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Record exact main commit
+        run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install locked dependencies
+        run: npm ci
 
-      - name: Enforce newsletter persistence before build
+      - name: Refresh public intelligence before release
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
         run: |
-          node scripts/patch-worker-newsletter-system.js
-          node scripts/patch-newsletter-capture-ui.js
-          node scripts/newsletter-persistence-test.js
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
 
-      - name: Build generated site
+      - name: Build complete site
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: Repair and verify deploy-critical output
+      - name: Verify strict Worker and D1 forum wiring
         run: |
-          node scripts/patch-worker-newsletter-system.js
-          node scripts/patch-newsletter-capture-ui.js
-          node scripts/newsletter-persistence-test.js
-          node scripts/repair-search-system.js
-          node scripts/repair-generated-site-artifacts.js
-          node scripts/repair-critical-route-drift.js
-          node scripts/site-function-harmony-test.js
+          node scripts/forum-persistence-d1-test.js
+          node scripts/cloudflare-worker-routes-test.js
+          npx wrangler@latest deploy --dry-run
 
-      - name: Archive old Intel updates to vault
-        run: node scripts/archive-intel-drops-to-vault.js
+      - name: Reconcile after every legacy generator
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+        run: node scripts/final-production-reconcile.js
 
-      - name: Audit branded downloads
-        run: node scripts/brand-downloads-audit.js
-
-      - name: Mission-critical growth gate
-        run: node scripts/mission-critical-growth-test.js
-
-      - name: Atlas Layers test
-        run: npm run pressure-test:atlas-layers
-
-      - name: Migration Flow test
-        run: npm run pressure-test:migration-flow
-
-      - name: Risk Clocks and Forum Cloudflare test
-        run: npm run pressure-test:global-risk-clocks
-
-      - name: Cloudflare Worker asset route test
+      - name: Run final production gates
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: |
-          node scripts/patch-worker-newsletter-system.js
-          node scripts/patch-newsletter-capture-ui.js
-          node scripts/newsletter-persistence-test.js
-          node scripts/repair-search-system.js
-          node scripts/repair-critical-route-drift.js
-          node scripts/cloudflare-focused-pressure-wrapper.js
+          node scripts/production-freshness-guard.js
+          node scripts/production-sync-test.js
+          node scripts/production-deploy-guard.js
 
-      - name: Update cadence audit
-        run: node scripts/update-cadence-test.js
-
-      - name: Verify Cloudflare secrets
+      - name: Verify Cloudflare credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "::error::CLOUDFLARE_API_TOKEN secret is missing. Add it in GitHub Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::error::CLOUDFLARE_ACCOUNT_ID secret is missing. Add it in GitHub Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-          echo "Cloudflare secrets present."
+          test -n "$CLOUDFLARE_API_TOKEN" || (echo 'CLOUDFLARE_API_TOKEN is missing' && exit 1)
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo 'CLOUDFLARE_ACCOUNT_ID is missing' && exit 1)
 
-      - name: Apply membership D1 schema
+      - name: Apply idempotent forum D1 schema
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -113,13 +104,9 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p downloads
-          echo "Applying idempotent membership schema to matrix-members..." | tee downloads/membership-d1-migration.log
-          npx --yes wrangler@latest d1 execute matrix-members --remote --file=./migrations/0001_membership_foundation.sql 2>&1 | tee -a downloads/membership-d1-migration.log
-          status=${PIPESTATUS[0]}
-          echo "D1 migration exit status: $status" | tee -a downloads/membership-d1-migration.log
-          exit "$status"
+          npx --yes wrangler@latest d1 execute matrix-members --remote --file=./migrations/0004_forum_persistence.sql 2>&1 | tee downloads/forum-d1-migration.log
 
-      - name: Deploy to Cloudflare Worker
+      - name: Deploy strict Worker and exact reconciled assets
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -127,125 +114,32 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p downloads
-          echo "Deploying Cloudflare Worker with bundled _site assets for matrixreprogrammed..." | tee downloads/wrangler-deploy.log
-          npx --yes wrangler@latest deploy 2>&1 | tee -a downloads/wrangler-deploy.log
-          status=${PIPESTATUS[0]}
-          echo "Wrangler exit status: $status" | tee -a downloads/wrangler-deploy.log
-          exit "$status"
+          npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
 
-      - name: Cloudflare API deployment proof
+      - name: Verify live commit, routes, D1 persistence and deferred payments
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_ZONE_NAME: matrixreprogrammed.com
-          CLOUDFLARE_WORKER_NAME: matrixreprogrammed
-          EXPECTED_BUILD_SHA: ${{ github.sha }}
-        run: node scripts/cloudflare-deploy-proof.js
+          SITE_URL: https://matrixreprogrammed.com
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_VERIFY_ATTEMPTS: '36'
+          LIVE_VERIFY_DELAY_MS: '10000'
+        run: node scripts/verify-live-production.js
 
-      - name: Public deployed build and persistence proof
-        env:
-          EXPECTED_BUILD_SHA: ${{ github.sha }}
-          DEPLOY_VERIFY_HOSTS: matrixreprogrammed.com,www.matrixreprogrammed.com
-        run: node scripts/verify-deployed-build.js
-
-      - name: Enforce truthful production status
-        env:
-          AUTOMATION_HEALTH_MODE: deploy
-        run: node scripts/automation-health-gate.js
-
-      - name: Advisory extended live verification
-        continue-on-error: true
-        env:
-          SITE_URL: https://www.matrixreprogrammed.com
-          EXPECTED_BUILD_SHA: ${{ github.sha }}
-        run: node scripts/live-site-verification.js
-
-      - name: Publish permanent production proof
-        if: always()
-        continue-on-error: true
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const path = require('path');
-            const title = 'Production Deployment Proof';
-            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const proofPath = path.join(process.cwd(), 'downloads', 'deployment-proof.json');
-            const healthPath = path.join(process.cwd(), 'downloads', 'automation-health-deploy.json');
-            let proof = null;
-            let health = null;
-            try { proof = JSON.parse(fs.readFileSync(proofPath, 'utf8')); } catch {}
-            try { health = JSON.parse(fs.readFileSync(healthPath, 'utf8')); } catch {}
-            const passed = Boolean(proof?.ok === true && health?.ok === true);
-            const status = passed ? 'PASS' : 'FAIL';
-            const checks = Array.isArray(proof?.checks) ? proof.checks : [];
-            const failed = checks.filter(check => !check.ok);
-            const body = [
-              '# Latest Production Deployment Proof',
-              '',
-              `Status: **${status}**`,
-              `Commit: \`${context.sha}\``,
-              `Workflow run: ${runUrl}`,
-              `Checked: ${proof?.checkedAt || new Date().toISOString()}`,
-              '',
-              '## Required Proof',
-              '',
-              `- Cloudflare/API deployment proof: ${proof ? 'report generated' : 'missing'}`,
-              `- Exact live SHA on both hosts: ${checks.some(c => /expected build SHA/.test(c.name) && c.ok) ? 'checked' : 'not confirmed'}`,
-              `- Worker health and forum KV: ${checks.some(c => /forum KV connected/.test(c.name) && c.ok) ? 'connected' : 'not confirmed'}`,
-              `- Membership D1 schema: ${checks.some(c => /membership D1 schema ready/.test(c.name) && c.ok) ? 'connected and queryable' : 'not confirmed'}`,
-              `- Truthful deploy health gate: ${health?.ok === true ? 'passed' : 'failed or missing'}`,
-              '',
-              '## Failed Checks',
-              '',
-              failed.length ? failed.map(item => `- ${item.name}`).join('\n') : '- None',
-              '',
-              '## Evidence Boundary',
-              '',
-              'Production is marked PASS only when both live hosts serve the expected commit SHA, Worker services report healthy, and the authoritative membership D1 schema is queryable.'
-            ].join('\n');
-            const search = await github.rest.search.issuesAndPullRequests({ q: `repo:${context.repo.owner}/${context.repo.repo} is:issue in:title "${title}"` });
-            if (search.data.items.length) {
-              const issue_number = search.data.items[0].number;
-              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number, body, state: 'open' });
-              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number, body: `Production deployment proof finished with **${status}** for \`${context.sha.slice(0, 12)}\`.\n\nRun: ${runUrl}` });
-            } else {
-              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['production-deployment'] });
-            }
-
-      - name: Upload deployment reports
+      - name: Upload manual fallback proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: deployment-proof-${{ github.sha }}
+          name: manual-production-proof-${{ github.run_id }}
           path: |
-            downloads/deployment-proof.json
-            downloads/deployment-proof.md
-            downloads/membership-d1-migration.log
-            downloads/wrangler-deploy.log
-            cloudflare-deploy-proof-report.json
+            downloads/deploy-manifest.json
             downloads/deploy-health.json
-            downloads/generated-site-repair-report.json
-            downloads/site-brain-health.json
-            downloads/cloudflare-worker-routes-test.json
-            downloads/cloudflare-focused-pressure-wrapper.json
+            downloads/production-freshness-guard.json
+            downloads/production-sync-test.json
             downloads/production-deploy-guard-report.json
-            downloads/production-deploy-guard-report.md
-            downloads/live-site-verification.json
-            downloads/live-site-verification.md
-            downloads/critical-route-drift-report.json
-            downloads/critical-route-drift-report.md
-            downloads/newsletter-worker-patch-report.json
-            downloads/newsletter-persistence-test.json
-            downloads/newsletter-persistence-test.md
-            downloads/membership-foundation-patch-report.json
-            downloads/membership-foundation-test.json
-            downloads/membership-foundation-test.md
-            downloads/search-system-repair-report.json
-            downloads/search-runtime-hardening-report.json
-            downloads/site-function-harmony-report.json
-            downloads/site-function-harmony-report.md
-            downloads/automation-health-deploy.json
-            downloads/automation-health-deploy.md
+            downloads/forum-persistence-d1-test.json
+            downloads/final-production-reconcile.json
+            downloads/live-production-verification.json
+            downloads/forum-d1-migration.log
+            downloads/wrangler-deploy.log
           if-no-files-found: ignore
-          retention-days: 21
+          retention-days: 60

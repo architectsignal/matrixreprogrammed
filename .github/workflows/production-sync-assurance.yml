@@ -9,6 +9,13 @@ on:
       - '.github/workflows/deploy.yml'
       - '.github/workflows/production-sync-assurance.yml'
       - '.github/workflows/daily-investigation-machine.yml'
+      - 'src/worker.js'
+      - 'src/worker-forum-persistence.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - 'migrations/0004_forum_persistence.sql'
+      - 'scripts/forum-persistence-d1-test.js'
+      - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
@@ -19,6 +26,7 @@ on:
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
       - 'data/production-freshness-policy.json'
+      - 'package.json'
       - '_headers'
   push:
     branches:
@@ -26,6 +34,13 @@ on:
     paths:
       - '.github/workflows/deploy.yml'
       - '.github/workflows/production-sync-assurance.yml'
+      - 'src/worker.js'
+      - 'src/worker-forum-persistence.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - 'migrations/0004_forum_persistence.sql'
+      - 'scripts/forum-persistence-d1-test.js'
+      - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
@@ -36,6 +51,7 @@ on:
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
       - 'data/production-freshness-policy.json'
+      - 'package.json'
       - '_headers'
 
 permissions:
@@ -66,6 +82,8 @@ jobs:
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
+      - name: Verify D1-authoritative forum persistence wiring
+        run: node scripts/forum-persistence-d1-test.js
       - name: Reconcile final production output
         env:
           DEPLOY_COMMIT_SHA: ${{ github.sha }}
@@ -87,6 +105,7 @@ jobs:
             downloads/production-sync-test.json
             downloads/production-freshness-guard.json
             downloads/production-deploy-guard-report.json
+            downloads/forum-persistence-d1-test.json
             downloads/final-production-reconcile.json
             downloads/conclusion-integrity-report.json
             downloads/deploy-manifest.json

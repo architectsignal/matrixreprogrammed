@@ -1,0 +1,115 @@
+name: Phase 10 Geographic Power Atlas
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/phase10-geographic-power-atlas
+      - main
+    paths:
+      - 'data/geographic-power-atlas-seed.json'
+      - 'geographic-power-atlas.js'
+      - 'scripts/build-geographic-power-atlas.js'
+      - 'scripts/geographic-power-atlas-test.js'
+      - 'scripts/geographic-power-atlas-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/geographic-power-atlas.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/geographic-power-atlas-seed.json'
+      - 'geographic-power-atlas.js'
+      - 'scripts/build-geographic-power-atlas.js'
+      - 'scripts/geographic-power-atlas-test.js'
+      - 'scripts/geographic-power-atlas-output-test.js'
+      - 'scripts/build-cloudflare-output.js'
+      - '.github/workflows/geographic-power-atlas.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: geographic-power-atlas-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[geographic-atlas]')
+    name: Build and verify evidence-led geographic atlas
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate atlas source files
+        run: |
+          node --check scripts/build-geographic-power-atlas.js
+          node --check scripts/geographic-power-atlas-test.js
+          node --check scripts/geographic-power-atlas-output-test.js
+          node --check geographic-power-atlas.js
+          node -e "JSON.parse(require('fs').readFileSync('data/geographic-power-atlas-seed.json')); console.log('atlas seed valid')"
+
+      - name: Build geographic power atlas
+        run: node scripts/build-geographic-power-atlas.js
+
+      - name: Run geography, precision and evidence gates
+        run: node scripts/geographic-power-atlas-test.js
+
+      - name: Build guarded Cloudflare output and search
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Verify exact deployable atlas output
+        run: node scripts/geographic-power-atlas-output-test.js
+
+      - name: Commit generated public atlas routes
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "matrix-geographic-atlas-bot"
+          git config user.email "actions@github.com"
+          git add \
+            geographic-power-atlas.html \
+            data/geographic-power-atlas.json \
+            data/geographic-power-atlas.geojson \
+            downloads/geographic-power-atlas.csv \
+            index.html \
+            research-tools.html \
+            sitemap.xml \
+            llms.txt \
+            || true
+          if git diff --cached --quiet; then
+            echo "No generated geographic atlas changes to commit."
+            exit 0
+          fi
+          git commit -m "Build Geographic Power Atlas [geographic-atlas] [deploy]"
+          git push || (git pull --rebase --autostash && git push)
+
+      - name: Upload Phase 10 reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geographic-power-atlas-${{ github.run_id }}
+          path: |
+            downloads/geographic-power-atlas-build.json
+            downloads/geographic-power-atlas-test.json
+            downloads/geographic-power-atlas-output-test.json
+          if-no-files-found: ignore
+          retention-days: 60

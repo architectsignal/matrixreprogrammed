@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-12T06:18:43.062Z",
-    "filesScanned": 3892,
-    "highIssues": 2236,
+    "updated": "2026-07-12T06:48:38.287Z",
+    "filesScanned": 3987,
+    "highIssues": 2268,
     "reviewIssues": 8,
-    "intakeAreas": 2160,
+    "intakeAreas": 2174,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -985,6 +985,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/conclusions-engine.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/control-brain.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1357,6 +1363,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/daily-investigation-conclusions.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/daily-missing-records.html",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1621,6 +1633,18 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/document-extraction-index.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/document-library.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/dossier-packs.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1700,6 +1724,12 @@
     {
       "severity": "high",
       "file": "_site/data/entity-observations.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/entity-registry.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1789,13 +1819,37 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/evidence-network-map.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/evidence-pull-list.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
+      "file": "_site/data/evidence-reader-manifest.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/evidence-task-engine.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/evidence-timeline.json",
+      "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/evidence-timeline.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1897,6 +1951,24 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/investigation-knowledge-graph.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/investigation-ledger.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/investigation-source-registry.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/jurisdictional-power-theory.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1958,6 +2030,84 @@
     {
       "severity": "high",
       "file": "_site/data/main-player-profiles.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-activity.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-berkshire/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-goldman-sachs/2025-12-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-goldman-sachs/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-state-street/2025-12-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-state-street/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-vanguard/2025-09-30.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-holdings/manager-vanguard/2025-12-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-position-changes/manager-blackrock/2024-06-30.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-position-changes/manager-goldman-sachs/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-position-changes/manager-jpmorgan/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-position-changes/manager-state-street/2026-03-31.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/market-position-changes/manager-vanguard/2025-12-31.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2167,6 +2317,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/relationship-registry.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/review-dashboard.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2287,7 +2443,7 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/source-cards.json",
+      "file": "_site/data/source-document-links.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2449,6 +2605,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/document-library.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/dossier-larry-fink.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2588,18 +2750,6 @@
     {
       "severity": "high",
       "file": "_site/downloads/daily-command-brief.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/daily-drop.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/daily-drop.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2851,18 +3001,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/downloads/live-intel-latest.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/live-intel-latest.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/downloads/logo-symbolism-dossiers.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2871,144 +3009,6 @@
       "severity": "high",
       "file": "_site/downloads/machine-digest.md",
       "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/machine-digest.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/machine-intelligence.md",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/master-evidence-source-registry.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/mission-source-priority-index.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/network-search.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/network-search.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/outcome-briefings.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/policy-convergence-timer-map.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/policy-convergence-tracker.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/policy-convergence-tracker.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/power-architecture-watchlist.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/probability-snapshot.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/public-copy-scrubber-report.md",
-      "pattern": "/author note/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/public-copy-scrubber-report.md",
-      "pattern": "/do not show/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/public-copy-scrubber-report.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/public-record-intake.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/reader-conclusions.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/sec-filing-feed.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/secret-societies-tracker.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/seven-day-intel.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/share-kit-crime-state-overlap.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/share-kit-crime-state-overlap.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/share-kit-war-machine.json",
-      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
@@ -5513,6 +5513,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/daily-investigation-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/daily-missing-records.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5626,6 +5633,13 @@
     },
     {
       "file": "_site/distribution-social-threads.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/document-library.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5787,6 +5801,13 @@
     },
     {
       "file": "_site/entity-exposure-index.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-registry.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6346,6 +6367,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/evidence-network-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/evidence-policy.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6360,7 +6388,21 @@
       "status": "ok"
     },
     {
+      "file": "_site/evidence-reader.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/evidence-task-engine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/evidence-timeline.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6976,6 +7018,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/investigation-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/investigations.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7579,6 +7628,20 @@
     },
     {
       "file": "_site/map-war-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/market-activity.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/market-watchlist.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8740,6 +8803,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/relationship-registry.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/religious-path.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -9280,6 +9350,13 @@
     },
     {
       "file": "_site/source-cbp-statistics.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/source-changes.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10512,6 +10589,13 @@
     },
     {
       "file": "_site/war-conflict-hub.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/weekly-investigation-report.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13906,7 +13990,21 @@
       "status": "ok"
     },
     {
+      "file": "evidence-reader.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "evidence-task-engine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "evidence-timeline.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

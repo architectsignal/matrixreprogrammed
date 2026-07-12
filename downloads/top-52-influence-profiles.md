@@ -1,6 +1,6 @@
 # Top 52 Influence Profiles
 
-Generated: 2026-07-12T06:18:34.098Z
+Generated: 2026-07-12T06:48:29.661Z
 
 ## Elon Musk
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.

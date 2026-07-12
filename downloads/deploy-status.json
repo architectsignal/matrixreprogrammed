@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "buildSha": "a4f208d06baa4406919fdc2a0ee45d92bec50546",
-  "buildShortSha": "a4f208d06baa",
-  "generatedAt": "2026-07-12T06:18:21.148Z",
+  "buildSha": "bac87274dde39d6251ea6e163d7aa9954cc7cbd9",
+  "buildShortSha": "bac87274dde3",
+  "generatedAt": "2026-07-12T06:48:18.643Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
-  "routeAliasCount": 62,
+  "routeAliasCount": 65,
   "aliasCount": 19,
   "aliases": [
     {
@@ -345,7 +345,7 @@
       "marker": "FOLLOW THE FILES.",
       "exists": true,
       "markerPresent": true,
-      "hash": "1b92afdfdce82725"
+      "hash": "9e4975625f2a1436"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "15ec16ee91b53ddf"
+      "hash": "797aeebb50b760b8"
     },
     {
       "name": "Epstein Command Center",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "8733960490734369"
+      "hash": "c846f3d4f8cb4704"
     },
     {
       "name": "Dark Speculation Board",
@@ -433,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "bd213af4d99767dc"
+      "hash": "75f76871e158bfbb"
     },
     {
       "name": "Hard Board Routes",
@@ -441,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "bd213af4d99767dc"
+      "hash": "75f76871e158bfbb"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -453,10 +453,10 @@
     }
   ],
   "hashes": {
-    "worker": "bd213af4d99767dc",
+    "worker": "75f76871e158bfbb",
     "package": "f20eb7a27e5bc82a",
     "epsteinFiles": "5e348d09a92645b2",
-    "liveIntel": "15ec16ee91b53ddf"
+    "liveIntel": "797aeebb50b760b8"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

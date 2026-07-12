@@ -1,4 +1,5 @@
 {
+  // Inner compatibility Worker retained behind the strict boundary: "main": "src/worker-forum-persistence.js"
   "name": "matrixreprogrammed",
   "main": "src/worker-production.js",
   "compatibility_date": "2026-06-28",

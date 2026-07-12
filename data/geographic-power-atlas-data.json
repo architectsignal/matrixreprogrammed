@@ -1,0 +1,1246 @@
+{
+  "type": "FeatureCollection",
+  "name": "Matrix Geographic Power Atlas",
+  "generatedAt": "2026-07-12T09:24:55.388Z",
+  "evidenceBoundary": "A mapped point establishes only the registered geographic scope stated by its precision class and cited public source. It does not prove control, coordination, presence at a particular time, ownership, wrongdoing or a relationship between nearby points.",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "sec-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0091,
+          38.8977
+        ]
+      },
+      "properties": {
+        "id": "sec-hq",
+        "name": "U.S. Securities and Exchange Commission",
+        "category": "regulator",
+        "role": "securities regulator",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.sec.gov/contact-information/sec-directory",
+        "sourceTitle": "SEC directory and contact information",
+        "sourceDomains": [
+          "sec.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 16083,
+        "gradeA": 15259,
+        "gradeB": 824,
+        "ungraded": 0,
+        "sourceIds": [
+          "sec-form13f",
+          "sec-litigation-releases",
+          "sec-current-filings",
+          "sec-form4"
+        ],
+        "firstRecordDate": "2025-12-31T00:00:00.000Z",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for U.S. Securities and Exchange Commission. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "federal-reserve-board",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0457,
+          38.8936
+        ]
+      },
+      "properties": {
+        "id": "federal-reserve-board",
+        "name": "Board of Governors of the Federal Reserve System",
+        "category": "central-bank",
+        "role": "central bank governance",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.federalreserve.gov/aboutthefed/contact-us-topics.htm",
+        "sourceTitle": "Federal Reserve contact information",
+        "sourceDomains": [
+          "federalreserve.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for Board of Governors of the Federal Reserve System. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us-treasury",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0341,
+          38.8974
+        ]
+      },
+      "properties": {
+        "id": "us-treasury",
+        "name": "United States Department of the Treasury",
+        "category": "government",
+        "role": "treasury and financial policy",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://home.treasury.gov/utility/contact",
+        "sourceTitle": "U.S. Treasury contact information",
+        "sourceDomains": [
+          "treasury.gov",
+          "home.treasury.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 184,
+        "gradeA": 180,
+        "gradeB": 4,
+        "ungraded": 0,
+        "sourceIds": [
+          "treasury-ofac-recent-actions"
+        ],
+        "firstRecordDate": "2026-07-11",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for United States Department of the Treasury. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "us-doj",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0251,
+          38.8939
+        ]
+      },
+      "properties": {
+        "id": "us-doj",
+        "name": "United States Department of Justice",
+        "category": "justice",
+        "role": "federal justice department",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.justice.gov/contact-us",
+        "sourceTitle": "Department of Justice contact information",
+        "sourceDomains": [
+          "justice.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 1730,
+        "gradeA": 175,
+        "gradeB": 1555,
+        "ungraded": 0,
+        "sourceIds": [
+          "doj-epstein-disclosures",
+          "doj-oig-reports",
+          "doj-justice-news"
+        ],
+        "firstRecordDate": "2026-07-11",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for United States Department of Justice. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fbi-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0259,
+          38.8957
+        ]
+      },
+      "properties": {
+        "id": "fbi-hq",
+        "name": "Federal Bureau of Investigation Headquarters",
+        "category": "law-enforcement",
+        "role": "federal law enforcement",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.fbi.gov/contact-us/fbi-headquarters",
+        "sourceTitle": "FBI Headquarters contact page",
+        "sourceDomains": [
+          "fbi.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 4,
+        "gradeA": 0,
+        "gradeB": 4,
+        "ungraded": 0,
+        "sourceIds": [
+          "fbi-vault-recent"
+        ],
+        "firstRecordDate": "2026-07-12",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for Federal Bureau of Investigation Headquarters. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cia-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.1467,
+          38.9517
+        ]
+      },
+      "properties": {
+        "id": "cia-hq",
+        "name": "Central Intelligence Agency Headquarters",
+        "category": "intelligence",
+        "role": "foreign intelligence",
+        "country": "United States",
+        "city": "Langley area, Virginia",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.cia.gov/contact-cia/",
+        "sourceTitle": "CIA public contact page",
+        "sourceDomains": [
+          "cia.gov"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 4,
+        "gradeA": 0,
+        "gradeB": 4,
+        "ungraded": 0,
+        "sourceIds": [
+          "cia-reading-room"
+        ],
+        "firstRecordDate": "2026-07-12",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered City-level location for Central Intelligence Agency Headquarters. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nsa-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.7436,
+          39.1082
+        ]
+      },
+      "properties": {
+        "id": "nsa-hq",
+        "name": "National Security Agency",
+        "category": "intelligence",
+        "role": "signals intelligence and cybersecurity",
+        "country": "United States",
+        "city": "Fort Meade area, Maryland",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.nsa.gov/about/contact-us/",
+        "sourceTitle": "NSA public contact page",
+        "sourceDomains": [
+          "nsa.gov"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered City-level location for National Security Agency. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gao-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0199,
+          38.8995
+        ]
+      },
+      "properties": {
+        "id": "gao-hq",
+        "name": "U.S. Government Accountability Office",
+        "category": "oversight",
+        "role": "public audit and oversight",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.gao.gov/about/contact-us",
+        "sourceTitle": "GAO contact information",
+        "sourceDomains": [
+          "gao.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 4,
+        "gradeA": 0,
+        "gradeB": 4,
+        "ungraded": 0,
+        "sourceIds": [
+          "gao-reports"
+        ],
+        "firstRecordDate": "2026-07-12",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for U.S. Government Accountability Office. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fincen",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.2653,
+          38.9012
+        ]
+      },
+      "properties": {
+        "id": "fincen",
+        "name": "Financial Crimes Enforcement Network",
+        "category": "financial-intelligence",
+        "role": "financial intelligence unit",
+        "country": "United States",
+        "city": "Vienna, Virginia",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.fincen.gov/contact",
+        "sourceTitle": "FinCEN contact information",
+        "sourceDomains": [
+          "fincen.gov"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered City-level location for Financial Crimes Enforcement Network. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "un-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.968,
+          40.7494
+        ]
+      },
+      "properties": {
+        "id": "un-hq",
+        "name": "United Nations Headquarters",
+        "category": "intergovernmental",
+        "role": "multilateral governance",
+        "country": "United States",
+        "city": "New York",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.un.org/en/about-us/contact-us",
+        "sourceTitle": "United Nations contact information",
+        "sourceDomains": [
+          "un.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for United Nations Headquarters. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "imf-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0443,
+          38.8988
+        ]
+      },
+      "properties": {
+        "id": "imf-hq",
+        "name": "International Monetary Fund",
+        "category": "financial-institution",
+        "role": "international monetary cooperation",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.imf.org/en/About/contact-us",
+        "sourceTitle": "IMF contact information",
+        "sourceDomains": [
+          "imf.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for International Monetary Fund. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "world-bank-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0426,
+          38.8993
+        ]
+      },
+      "properties": {
+        "id": "world-bank-hq",
+        "name": "World Bank Group",
+        "category": "financial-institution",
+        "role": "international development finance",
+        "country": "United States",
+        "city": "Washington, DC",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.worldbank.org/en/about/contacts",
+        "sourceTitle": "World Bank contacts",
+        "sourceDomains": [
+          "worldbank.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for World Bank Group. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "eu-commission",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3805,
+          50.843
+        ]
+      },
+      "properties": {
+        "id": "eu-commission",
+        "name": "European Commission",
+        "category": "government",
+        "role": "European Union executive",
+        "country": "Belgium",
+        "city": "Brussels",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://commission.europa.eu/about-european-commission/contact_en",
+        "sourceTitle": "European Commission contact information",
+        "sourceDomains": [
+          "ec.europa.eu",
+          "commission.europa.eu",
+          "europa.eu"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 94,
+        "gradeA": 15,
+        "gradeB": 79,
+        "ungraded": 0,
+        "sourceIds": [
+          "eppo-news"
+        ],
+        "firstRecordDate": "2026-07-11",
+        "lastRecordDate": "2026-07-12T08:39:12.941Z",
+        "establishes": "The cited public source supports the registered Public campus location for European Commission. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "european-parliament-brussels",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3745,
+          50.8389
+        ]
+      },
+      "properties": {
+        "id": "european-parliament-brussels",
+        "name": "European Parliament — Brussels",
+        "category": "parliament",
+        "role": "European Union legislature",
+        "country": "Belgium",
+        "city": "Brussels",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.europarl.europa.eu/at-your-service/en/contact",
+        "sourceTitle": "European Parliament contact information",
+        "sourceDomains": [
+          "europarl.europa.eu"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for European Parliament — Brussels. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nato-hq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4298,
+          50.8798
+        ]
+      },
+      "properties": {
+        "id": "nato-hq",
+        "name": "NATO Headquarters",
+        "category": "security-alliance",
+        "role": "collective defence alliance",
+        "country": "Belgium",
+        "city": "Brussels",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.nato.int/cps/en/natohq/contact.htm",
+        "sourceTitle": "NATO contact information",
+        "sourceDomains": [
+          "nato.int"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for NATO Headquarters. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "europol",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2824,
+          52.0787
+        ]
+      },
+      "properties": {
+        "id": "europol",
+        "name": "Europol",
+        "category": "law-enforcement",
+        "role": "European law-enforcement cooperation",
+        "country": "Netherlands",
+        "city": "The Hague",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.europol.europa.eu/about-europol/contact",
+        "sourceTitle": "Europol contact information",
+        "sourceDomains": [
+          "europol.europa.eu"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for Europol. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "icc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3582,
+          52.1079
+        ]
+      },
+      "properties": {
+        "id": "icc",
+        "name": "International Criminal Court",
+        "category": "justice",
+        "role": "international criminal court",
+        "country": "Netherlands",
+        "city": "The Hague",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.icc-cpi.int/contact",
+        "sourceTitle": "ICC contact information",
+        "sourceDomains": [
+          "icc-cpi.int"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for International Criminal Court. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "icj",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2955,
+          52.0866
+        ]
+      },
+      "properties": {
+        "id": "icj",
+        "name": "International Court of Justice",
+        "category": "justice",
+        "role": "principal judicial organ of the United Nations",
+        "country": "Netherlands",
+        "city": "The Hague",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.icj-cij.org/contact",
+        "sourceTitle": "ICJ contact information",
+        "sourceDomains": [
+          "icj-cij.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for International Court of Justice. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "interpol",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.8497,
+          45.7827
+        ]
+      },
+      "properties": {
+        "id": "interpol",
+        "name": "INTERPOL General Secretariat",
+        "category": "law-enforcement",
+        "role": "international police cooperation",
+        "country": "France",
+        "city": "Lyon",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.interpol.int/Who-we-are/Contact-INTERPOL",
+        "sourceTitle": "INTERPOL contact information",
+        "sourceDomains": [
+          "interpol.int"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for INTERPOL General Secretariat. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "oecd",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2663,
+          48.861
+        ]
+      },
+      "properties": {
+        "id": "oecd",
+        "name": "Organisation for Economic Co-operation and Development",
+        "category": "intergovernmental",
+        "role": "economic policy cooperation",
+        "country": "France",
+        "city": "Paris",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.oecd.org/contact/",
+        "sourceTitle": "OECD contact information",
+        "sourceDomains": [
+          "oecd.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for Organisation for Economic Co-operation and Development. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "fatf",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.266,
+          48.8612
+        ]
+      },
+      "properties": {
+        "id": "fatf",
+        "name": "Financial Action Task Force",
+        "category": "financial-governance",
+        "role": "anti-money-laundering standards",
+        "country": "France",
+        "city": "Paris",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.fatf-gafi.org/en/contact-us.html",
+        "sourceTitle": "FATF contact information",
+        "sourceDomains": [
+          "fatf-gafi.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for Financial Action Task Force. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.591,
+          47.5487
+        ]
+      },
+      "properties": {
+        "id": "bis",
+        "name": "Bank for International Settlements",
+        "category": "financial-institution",
+        "role": "central-bank cooperation",
+        "country": "Switzerland",
+        "city": "Basel",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.bis.org/about/contact.htm",
+        "sourceTitle": "BIS contact information",
+        "sourceDomains": [
+          "bis.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for Bank for International Settlements. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "who",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1341,
+          46.2324
+        ]
+      },
+      "properties": {
+        "id": "who",
+        "name": "World Health Organization",
+        "category": "intergovernmental",
+        "role": "international public health",
+        "country": "Switzerland",
+        "city": "Geneva",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.who.int/about/contact-us",
+        "sourceTitle": "WHO contact information",
+        "sourceDomains": [
+          "who.int"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for World Health Organization. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "wto",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1405,
+          46.2232
+        ]
+      },
+      "properties": {
+        "id": "wto",
+        "name": "World Trade Organization",
+        "category": "intergovernmental",
+        "role": "international trade governance",
+        "country": "Switzerland",
+        "city": "Geneva",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.wto.org/english/info_e/cont_e.htm",
+        "sourceTitle": "WTO contact information",
+        "sourceDomains": [
+          "wto.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for World Trade Organization. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "iaea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.4169,
+          48.2348
+        ]
+      },
+      "properties": {
+        "id": "iaea",
+        "name": "International Atomic Energy Agency",
+        "category": "intergovernmental",
+        "role": "nuclear safeguards and cooperation",
+        "country": "Austria",
+        "city": "Vienna",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.iaea.org/contact",
+        "sourceTitle": "IAEA contact information",
+        "sourceDomains": [
+          "iaea.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for International Atomic Energy Agency. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "unodc",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.4165,
+          48.2345
+        ]
+      },
+      "properties": {
+        "id": "unodc",
+        "name": "United Nations Office on Drugs and Crime",
+        "category": "intergovernmental",
+        "role": "crime, drugs and corruption programmes",
+        "country": "Austria",
+        "city": "Vienna",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.unodc.org/unodc/en/contact-us.html",
+        "sourceTitle": "UNODC contact information",
+        "sourceDomains": [
+          "unodc.org"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for United Nations Office on Drugs and Crime. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ecb",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.7452,
+          50.1095
+        ]
+      },
+      "properties": {
+        "id": "ecb",
+        "name": "European Central Bank",
+        "category": "central-bank",
+        "role": "euro-area monetary authority",
+        "country": "Germany",
+        "city": "Frankfurt",
+        "precision": "public-campus",
+        "precisionLabel": "Public campus",
+        "maximumUncertaintyMetres": 1500,
+        "sourceUrl": "https://www.ecb.europa.eu/services/contact/html/index.en.html",
+        "sourceTitle": "ECB contact information",
+        "sourceDomains": [
+          "ecb.europa.eu"
+        ],
+        "evidenceGrade": "A",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Public campus location for European Central Bank. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gchq",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.126,
+          51.8991
+        ]
+      },
+      "properties": {
+        "id": "gchq",
+        "name": "Government Communications Headquarters",
+        "category": "intelligence",
+        "role": "signals intelligence and cyber security",
+        "country": "United Kingdom",
+        "city": "Cheltenham",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.gchq.gov.uk/contact",
+        "sourceTitle": "GCHQ public contact page",
+        "sourceDomains": [
+          "gchq.gov.uk"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered City-level location for Government Communications Headquarters. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "mi5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1257,
+          51.495
+        ]
+      },
+      "properties": {
+        "id": "mi5",
+        "name": "Security Service (MI5)",
+        "category": "intelligence",
+        "role": "domestic security intelligence",
+        "country": "United Kingdom",
+        "city": "London",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.mi5.gov.uk/contact-us",
+        "sourceTitle": "MI5 public contact page",
+        "sourceDomains": [
+          "mi5.gov.uk"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered City-level location for Security Service (MI5). Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "sis",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1246,
+          51.4872
+        ]
+      },
+      "properties": {
+        "id": "sis",
+        "name": "Secret Intelligence Service (MI6)",
+        "category": "intelligence",
+        "role": "foreign intelligence",
+        "country": "United Kingdom",
+        "city": "London",
+        "precision": "city-centroid",
+        "precisionLabel": "City-level",
+        "maximumUncertaintyMetres": 25000,
+        "sourceUrl": "https://www.sis.gov.uk/contact-us.html",
+        "sourceTitle": "SIS public contact page",
+        "sourceDomains": [
+          "sis.gov.uk"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered City-level location for Secret Intelligence Service (MI6). Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "port-rotterdam",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.2867,
+          51.916
+        ]
+      },
+      "properties": {
+        "id": "port-rotterdam",
+        "name": "Port of Rotterdam",
+        "category": "infrastructure",
+        "role": "maritime logistics hub",
+        "country": "Netherlands",
+        "city": "Rotterdam",
+        "precision": "jurisdiction-centroid",
+        "precisionLabel": "Jurisdiction-level",
+        "maximumUncertaintyMetres": 150000,
+        "sourceUrl": "https://www.portofrotterdam.com/en/contact",
+        "sourceTitle": "Port of Rotterdam contact information",
+        "sourceDomains": [
+          "portofrotterdam.com"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Jurisdiction-level location for Port of Rotterdam. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "port-singapore",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8,
+          1.264
+        ]
+      },
+      "properties": {
+        "id": "port-singapore",
+        "name": "Port of Singapore",
+        "category": "infrastructure",
+        "role": "maritime logistics hub",
+        "country": "Singapore",
+        "city": "Singapore",
+        "precision": "jurisdiction-centroid",
+        "precisionLabel": "Jurisdiction-level",
+        "maximumUncertaintyMetres": 150000,
+        "sourceUrl": "https://www.mpa.gov.sg/contact-us",
+        "sourceTitle": "Maritime and Port Authority of Singapore contact information",
+        "sourceDomains": [
+          "mpa.gov.sg"
+        ],
+        "evidenceGrade": "B",
+        "reviewStatus": "registry-defined",
+        "recordCount": 0,
+        "gradeA": 0,
+        "gradeB": 0,
+        "ungraded": 0,
+        "sourceIds": [],
+        "firstRecordDate": "",
+        "lastRecordDate": "",
+        "establishes": "The cited public source supports the registered Jurisdiction-level location for Port of Singapore. Matching Matrix records show source-domain representation, not physical presence.",
+        "doesNotEstablish": "The point does not prove control, coordination, ownership, wrongdoing, attendance, operational activity, or a relationship with nearby points."
+      }
+    }
+  ]
+}

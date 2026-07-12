@@ -17,7 +17,7 @@ const start = '<!-- osint-tools-home:start -->';
 const end = '<!-- osint-tools-home:end -->';
 const card = `${start}<section id="osint-tools-home" class="section wrap"><div class="eyebrow">Member Research Tools</div><h2>EMAIL & DIGITAL FOOTPRINT RESEARCH.</h2><p class="lead">Verified members can submit controlled, single-email checks through Holehe and passive SpiderFoot. The breach-exposure tool is restricted to authenticated administrators.</p><p><strong>Boundary:</strong> account, footprint and breach signals are leads—not proof of identity, ownership, current use, wrongdoing or criminal conduct.</p><div class="cta-row"><a class="btn" href="research-tools.html">Open Research Tools</a><a class="btn alt" href="member-login.html">Member Login</a><a class="btn alt" href="https://emailosint.org/" target="_blank" rel="noopener noreferrer nofollow">External Email OSINT ↗</a></div></section>${end}`;
 if (index.includes(start) && index.includes(end)) {
-  index = index.replace(new RegExp(`${start}[\\s\\S]*?${end}`), card);
+  index = index.replace(new RegExp(`${start}[\s\S]*?${end}`), card);
 } else if (index.includes('<!-- power-deck-home-link:start -->')) {
   index = index.replace('<!-- power-deck-home-link:start -->', `${card}<!-- power-deck-home-link:start -->`);
 } else {
@@ -64,3 +64,11 @@ fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), J
   visibilityPatched
 }, null, 2));
 console.log('Canonical Research Tools page, homepage route and visibility policy applied.');
+
+// Phase 10 must run after the canonical Research Tools template is restored.
+require('./build-geographic-power-atlas.js');
+require('./prepare-geographic-power-atlas-output.js');
+require('./patch-main-navigation-safety-links.js');
+for (const report of ['geographic-power-atlas-build.json','geographic-power-atlas-test.json','geographic-power-atlas-output-test.json']) {
+  fs.rmSync(path.join(root,'downloads',report), { force:true });
+}

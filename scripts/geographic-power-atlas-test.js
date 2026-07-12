@@ -1,0 +1,42 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd();
+const seed=JSON.parse(fs.readFileSync(path.join(root,'data','geographic-power-atlas-seed.json'),'utf8'));
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'data','geographic-power-atlas.json'),'utf8'));
+const geo=JSON.parse(fs.readFileSync(path.join(root,'data','geographic-power-atlas.geojson'),'utf8'));
+const runtime=fs.readFileSync(path.join(root,'geographic-power-atlas.js'),'utf8');
+const builder=fs.readFileSync(path.join(root,'scripts','build-geographic-power-atlas.js'),'utf8');
+const checks=[]; const add=(name,ok,detail='')=>checks.push({name,ok:Boolean(ok),detail});
+const ids=new Set();
+add('seed has deep location registry',Array.isArray(seed.locations)&&seed.locations.length>=30,`${seed.locations?.length||0} locations`);
+add('evidence boundary is explicit',/does not prove control|does not prove.*coordination/i.test(seed.evidenceBoundary||''));
+add('automatic geocoding prohibited',/never geocodes|never geocode/i.test(seed.generatedPolicy||''));
+add('MapLibre pinned',seed.engines?.maplibre?.version==='6.0.0-20');
+add('PMTiles pinned',seed.engines?.pmtiles?.version==='4.4.1');
+for(const item of seed.locations||[]){
+  add(`unique id ${item.id}`,Boolean(item.id)&&!ids.has(item.id)); ids.add(item.id);
+  add(`valid coordinates ${item.id}`,Array.isArray(item.coordinates)&&item.coordinates.length===2&&Number.isFinite(item.coordinates[0])&&Number.isFinite(item.coordinates[1])&&item.coordinates[0]>=-180&&item.coordinates[0]<=180&&item.coordinates[1]>=-90&&item.coordinates[1]<=90);
+  add(`registered precision ${item.id}`,Boolean(seed.precisionClasses?.[item.precision]));
+  add(`official HTTPS source ${item.id}`,/^https:\/\//.test(item.sourceUrl||''));
+  add(`source domains ${item.id}`,Array.isArray(item.sourceDomains)&&item.sourceDomains.length>0&&item.sourceDomains.every(value=>/^[a-z0-9.-]+$/i.test(value)));
+  add(`no personal location category ${item.id}`,!/(home|residence|personal-address|private-address)/i.test(`${item.category} ${item.role}`));
+}
+add('generated feature count matches seed',geo.features?.length===seed.locations.length,`${geo.features?.length||0}/${seed.locations.length}`);
+add('all generated features are points',(geo.features||[]).every(feature=>feature.geometry?.type==='Point'));
+add('all features have limitations',(geo.features||[]).every(feature=>/does not prove/i.test(feature.properties?.doesNotEstablish||'')));
+add('precision labels generated',(geo.features||[]).every(feature=>feature.properties?.precisionLabel&&feature.properties?.maximumUncertaintyMetres));
+add('manifest reports all locations',manifest.counts?.locations===seed.locations.length);
+add('runtime imports pinned MapLibre',runtime.includes('maplibre-gl@6.0.0-20'));
+add('runtime imports pinned PMTiles',runtime.includes('pmtiles@4.4.1'));
+add('PMTiles restricted to same origin',runtime.includes('url.origin === location.origin')&&runtime.includes('/\\.pmtiles'));
+add('accessible location list present',runtime.includes('power-atlas-list')&&runtime.includes("card.tabIndex=0"));
+const executableGeocoderPattern=/(nominatim\.openstreetmap|api\.mapbox\.com\/geocoding|maps\.googleapis\.com\/maps\/api\/geocode|new\s+(?:Mapbox)?Geocoder|import[^\n]+geocoder|require\([^)]*geocoder)/i;
+add('map has no automatic geocoder',!executableGeocoderPattern.test(runtime+builder));
+add('builder aggregates by source domain',builder.includes('domainMatches')&&builder.includes('sourceDomains'));
+add('builder does not expose private diagnostics',!builder.includes('source-snapshots'));
+add('PMTiles sources are fail closed',(seed.pmtilesSources||[]).every(source=>!source.enabled||(/^\//.test(source.url||'')&&/\.pmtiles$/i.test(source.url||''))));
+const report={ok:checks.every(check=>check.ok),generatedAt:new Date().toISOString(),checks};
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
+fs.writeFileSync(path.join(root,'downloads','geographic-power-atlas-test.json'),JSON.stringify(report,null,2));
+if(!report.ok){checks.filter(check=>!check.ok).forEach(check=>console.error(`FAILED: ${check.name}${check.detail?` — ${check.detail}`:''}`));process.exit(1);}
+console.log(`Geographic Power Atlas safety test passed: ${checks.length} checks across ${seed.locations.length} locations.`);

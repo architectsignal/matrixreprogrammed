@@ -1,9 +1,9 @@
 # Cloudflare Workers deployment configuration
 # Production deploy path: GitHub Actions runs npm run build then npx wrangler deploy.
-# The build command creates the static site in _site; src/worker.js handles backend routes and bundled assets.
+# The forum persistence wrapper intercepts forum routes and delegates all other routes to src/worker.js.
 
 name = "matrixreprogrammed"
-main = "src/worker.js"
+main = "src/worker-forum-persistence.js"
 compatibility_date = "2026-06-25"
 keep_vars = true
 
@@ -17,13 +17,12 @@ directory = "./_site"
 binding = "ASSETS"
 run_worker_first = true
 
-# Public Signal Board storage.
-# Cloudflare KV namespace title: matrixreprogrammed-forum-posts
+# Compatibility mirror and recovery source for historical forum posts.
 [[kv_namespaces]]
 binding = "FORUM_POSTS"
 id = "99996d87016d4285a833707cbda5232f"
 
-# Authoritative membership, consent, session and PayPal subscription database.
+# Authoritative membership, forum, consent, session and PayPal database.
 [[d1_databases]]
 binding = "MEMBERS_DB"
 database_name = "matrix-members"

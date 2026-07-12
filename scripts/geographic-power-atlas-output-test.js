@@ -23,8 +23,10 @@ const startNavMatch=startHere.match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'
 const startNav=startNavMatch?.[1]||'';
 add('Start Here navigation includes Security Tools',startNav.includes('href="security-privacy.html"')&&startNav.includes('>Security Tools</a>'));
 add('Start Here navigation includes Dark Web Safety',startNav.includes('href="dark-web-safety.html"')&&startNav.includes('>Dark Web Safety</a>'));
-add('Start Here has visible safety cards',startHere.includes('id="start-here-safety"')&&startHere.includes('Open Security Tools')&&startHere.includes('Open Dark Web Safety'));
-add('Start Here safety cards are not hidden',!/id="start-here-safety"[^>]*(internal-only|commercial-internal)/i.test(startHere));
+add('Start Here has visible safety cards',startHere.includes('Open Security Tools')&&startHere.includes('Open Dark Web Safety'));
+add('Start Here grid is not hidden',!/<section class=["'][^"']*commercial-internal[^"']*["'][^>]*>[\s\S]*?Open Security Tools/i.test(startHere));
+const ids=[...startHere.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match=>match[2]);
+add('Start Here IDs are unique',new Set(ids).size===ids.length,`${ids.length-new Set(ids).size} duplicate IDs`);
 add('search contains atlas',read('search-index.json').includes('geographic-power-atlas'));
 add('sitemap contains atlas',read('sitemap.xml').includes('/geographic-power-atlas.html'));
 add('llms contains atlas',read('llms.txt').includes('Geographic Power Atlas'));

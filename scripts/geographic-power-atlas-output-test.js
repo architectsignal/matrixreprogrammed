@@ -19,7 +19,8 @@ const primaryNav=(home.match(/<div class="nav-primary">([\s\S]*?)<\/div>/i)||[])
 add('Security Tools promoted to primary tab bar',primaryNav.includes('href="security-privacy.html"')&&primaryNav.includes('>Security Tools</a>'));
 add('Dark Web Safety promoted to primary tab bar',primaryNav.includes('href="dark-web-safety.html"')&&primaryNav.includes('>Dark Web Safety</a>'));
 add('primary safety tabs are not hidden',!/(security-privacy\.html|dark-web-safety\.html)[^>]*(internal-only|commercial-internal)/i.test(primaryNav));
-const startNav=(startHere.match(/<nav class="nav">([\s\S]*?)<\/nav>/i)||[])[1]||'';
+const startNavMatch=startHere.match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i);
+const startNav=startNavMatch?.[1]||'';
 add('Start Here navigation includes Security Tools',startNav.includes('href="security-privacy.html"')&&startNav.includes('>Security Tools</a>'));
 add('Start Here navigation includes Dark Web Safety',startNav.includes('href="dark-web-safety.html"')&&startNav.includes('>Dark Web Safety</a>'));
 add('Start Here has visible safety cards',startHere.includes('id="start-here-safety"')&&startHere.includes('Open Security Tools')&&startHere.includes('Open Dark Web Safety'));

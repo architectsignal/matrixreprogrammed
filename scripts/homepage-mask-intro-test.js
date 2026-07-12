@@ -30,7 +30,7 @@ const css = read('homepage-mask-intro.css');
 const js = read('homepage-mask-intro.js');
 
 for (const [token, expected] of [
-  ['data-homepage-mask-intro aria-label', 1],
+  ['data-homepage-mask-intro data-phase="eye"', 1],
   ['data-homepage-mask-intro-style', 1],
   ['data-homepage-mask-preload=', 2],
   ['data-homepage-mask-intro-runtime', 1],

@@ -18,9 +18,7 @@ process.on('uncaughtException', error => {
   console.error(report.error);
   process.exit(1);
 });
-process.on('unhandledRejection', error => {
-  throw error;
-});
+process.on('unhandledRejection', error => { throw error; });
 function run(script, optional = false) {
   const file = path.join(root, script);
   if (!fs.existsSync(file)) {
@@ -77,7 +75,8 @@ run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
 
 const critical = [
-  'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js', 'assets/homepage-mask.svg',
+  'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js',
+  'assets/intro-eye.svg', 'assets/intro-mask.svg',
   'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
@@ -91,7 +90,9 @@ critical.forEach(copy);
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
 requireMarker('index.html', 'data-homepage-mask-intro');
-requireMarker('index.html', 'assets/homepage-mask.svg');
+requireMarker('index.html', 'assets/intro-eye.svg');
+requireMarker('index.html', 'assets/intro-mask.svg');
+requireMarker('index.html', 'homepage-intro__burn');
 requireMarker('index.html', 'homepage-mask-intro.js');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
@@ -102,10 +103,15 @@ requireMarker('membership.html', '€9');
 requireMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
-requireMarker('homepage-mask-intro.js', 'sessionStorage');
-requireMarker('homepage-mask-intro.js', '3600');
-requireMarker('homepage-mask-intro.css', 'mask-intro-dissolve');
-requireMarker('assets/homepage-mask.svg', 'Ivory anonymous mask');
+requireMarker('homepage-mask-intro.js', 'matrix-homepage-intro-seen-v2');
+requireMarker('homepage-mask-intro.js', 'eye: 3000');
+requireMarker('homepage-mask-intro.js', 'burn: 1100');
+requireMarker('homepage-mask-intro.js', 'mask: 3000');
+requireMarker('homepage-mask-intro.css', 'intro-eye-burn');
+requireMarker('homepage-mask-intro.css', 'intro-fire-ring');
+requireMarker('homepage-mask-intro.css', 'intro-mask-dissolve');
+requireMarker('assets/intro-eye.svg', 'Eye of Providence seal');
+requireMarker('assets/intro-mask.svg', 'Anonymous revolutionary mask');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');

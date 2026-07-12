@@ -1,0 +1,28 @@
+const fs=require('fs');
+const path=require('path');
+const root=process.cwd(); const site=path.join(root,'_site');
+const checks=[]; const add=(name,ok,detail='')=>checks.push({name,ok:Boolean(ok),detail});
+const exists=rel=>fs.existsSync(path.join(site,rel)); const read=rel=>exists(rel)?fs.readFileSync(path.join(site,rel),'utf8'):'';
+for(const rel of ['geographic-power-atlas.html','geographic-power-atlas','geographic-power-atlas.js','data/geographic-power-atlas.json','data/geographic-power-atlas.geojson','data/geographic-power-atlas-seed.json','downloads/geographic-power-atlas.csv','index.html','research-tools.html','search-index.json','sitemap.xml','llms.txt']) add(`deployable ${rel}`,exists(rel),exists(rel)?'present':'missing');
+const page=read('geographic-power-atlas.html'); const runtime=read('geographic-power-atlas.js'); const home=read('index.html'); const tools=read('research-tools.html');
+add('page title marker',page.includes('GEOGRAPHIC POWER ATLAS.'));
+add('page is publicly visible',!/<div class="page[^"]*(commercial-internal|internal-only)/i.test(page));
+add('MapLibre pinned in page',page.includes('maplibre-gl@6.0.0-20'));
+add('PMTiles pinned in runtime',runtime.includes('pmtiles@4.4.1'));
+add('same-origin PMTiles gate',runtime.includes('url.origin === location.origin'));
+add('precision boundary visible',/PRECISION IS PART OF THE EVIDENCE/i.test(page));
+add('proximity warning visible',/Nearby points are not evidence/i.test(page));
+add('homepage atlas route',home.includes('Open Geographic Power Atlas'));
+add('research tools atlas route',tools.includes('geographic-power-atlas.html'));
+add('search contains atlas',read('search-index.json').includes('geographic-power-atlas'));
+add('sitemap contains atlas',read('sitemap.xml').includes('/geographic-power-atlas.html'));
+add('llms contains atlas',read('llms.txt').includes('Geographic Power Atlas'));
+const geo=JSON.parse(read('data/geographic-power-atlas.geojson')||'{}');
+add('deployable GeoJSON has at least 30 points',Array.isArray(geo.features)&&geo.features.length>=30,`${geo.features?.length||0}`);
+add('no private or personal address fields',(geo.features||[]).every(feature=>!Object.keys(feature.properties||{}).some(key=>/(homeAddress|privateAddress|personalAddress)/i.test(key))));
+add('every point has precision and source',(geo.features||[]).every(feature=>feature.properties?.precision&&/^https:\/\//.test(feature.properties?.sourceUrl||'')));
+for(const rel of ['downloads/geographic-power-atlas-build.json','downloads/geographic-power-atlas-test.json','downloads/geographic-power-atlas-output-test.json']) add(`private report excluded ${rel}`,!exists(rel));
+const report={ok:checks.every(check=>check.ok),generatedAt:new Date().toISOString(),checks};
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true}); fs.writeFileSync(path.join(root,'downloads','geographic-power-atlas-output-test.json'),JSON.stringify(report,null,2));
+if(!report.ok){checks.filter(check=>!check.ok).forEach(check=>console.error(`FAILED: ${check.name}${check.detail?` — ${check.detail}`:''}`));process.exit(1);}
+console.log(`Geographic Power Atlas deployable output passed: ${checks.length} checks.`);

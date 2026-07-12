@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
@@ -14,23 +13,25 @@ function read(file) {
 function write(file, value) {
   fs.writeFileSync(path.join(root, file), value);
 }
-function hash(file) {
-  const value = read(file);
-  return value ? crypto.createHash('sha256').update(value).digest('hex').slice(0, 16) : 'missing';
-}
-function envCommit() {
-  return process.env.CF_PAGES_COMMIT_SHA || process.env.CF_COMMIT_SHA || process.env.GITHUB_SHA || process.env.COMMIT_SHA || 'local-build';
-}
-function short(value) { return String(value || '').slice(0, 12); }
-function esc(value) { return String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function runRepairScript(label, relPath, skipEnv) {
   const scriptPath = path.join(root, relPath);
   if (!fs.existsSync(scriptPath) || process.env[skipEnv] === '1') return;
-  const result = spawnSync(process.execPath, [scriptPath], { cwd: root, stdio: 'pipe', encoding: 'utf8' });
-  repairs.push({ type: label, status: result.status === 0 ? 'ok' : 'failed', stdout: String(result.stdout || '').slice(0, 500), stderr: String(result.stderr || '').slice(0, 500) });
+  const result = spawnSync(process.execPath, [scriptPath], {
+    cwd: root,
+    stdio: 'pipe',
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 40 * 1024 * 1024
+  });
+  repairs.push({
+    type: label,
+    status: result.status === 0 ? 'ok' : 'failed',
+    stdout: String(result.stdout || '').slice(-1000),
+    stderr: String(result.stderr || '').slice(-1000)
+  });
+  if (result.status !== 0) throw new Error(`${relPath} failed: ${result.stderr || result.stdout}`);
 }
 
-const buildSha = envCommit();
 const generatedAt = new Date().toISOString();
 const repairs = [];
 
@@ -66,47 +67,27 @@ if (blackFiles && blackFiles.includes('forEach(x=>series(wrap,s))')) {
   repairs.push({ type: 'black-files-render-callback', file: 'black-files.html' });
 }
 
-const modules = [
-  { name: 'Homepage', route: '/', file: 'index.html', hash: hash('index.html') },
-  { name: 'All-seeing eye gate', route: '/', file: 'index.html', hash: hash('index.html') },
-  { name: 'Power Conclusions', route: '/power-conclusions.html', file: 'power-conclusions.html', hash: hash('power-conclusions.html') },
-  { name: 'Reader Conclusions', route: '/reader-conclusions.html', file: 'reader-conclusions.html', hash: hash('reader-conclusions.html') },
-  { name: 'Evidence Hunter', route: '/evidence-hunter.html', file: 'evidence-hunter.html', hash: hash('evidence-hunter.html') },
-  { name: 'Who Holds Power', route: '/who-holds-power.html', file: 'who-holds-power.html', hash: hash('who-holds-power.html') },
-  { name: 'Convergence Map', route: '/one-world-convergence.html', file: 'one-world-convergence.html', hash: hash('one-world-convergence.html') },
-  { name: 'Accountability Watch', route: '/accountability-watch.html', file: 'accountability-watch.html', hash: hash('accountability-watch.html') },
-  { name: 'Dark Speculation Lab', route: '/dark-speculation-lab.html', file: 'dark-speculation-lab.html', hash: hash('dark-speculation-lab.html') },
-  { name: 'Dark Speculation Forum', route: '/dark-speculation-forum.html', file: 'dark-speculation-forum.html', hash: hash('dark-speculation-forum.html') },
-  { name: 'Evidence Vault', route: '/evidence-vault.html', file: 'evidence-vault.html', hash: hash('evidence-vault.html') },
-  { name: 'Books', route: '/books.html', file: 'books.html', hash: hash('books.html') },
-  { name: 'Download Center', route: '/download-center.html', file: 'download-center.html', hash: hash('download-center.html') },
-  { name: 'SEC Filing Feed', route: '/sec-filing-feed.html', file: 'sec-filing-feed.html', hash: hash('sec-filing-feed.html') },
-  { name: 'Probability Lab', route: '/probability-lab.html', file: 'probability-lab.html', hash: hash('probability-lab.html') },
-  { name: 'Probability Snapshot', route: '/probability-snapshot.html', file: 'probability-snapshot.html', hash: hash('probability-snapshot.html') },
-  { name: 'Forum Worker', route: '/forum-health', file: 'src/worker.js', hash: hash('src/worker.js') },
-  { name: 'Cloudflare Assets', route: '/deploy-status', file: 'scripts/build-cloudflare-output.js', hash: hash('scripts/build-cloudflare-output.js') }
-];
+/*
+ * Production health is deliberately not generated here.
+ * This script is an early legacy-content repair pass and can be called by several old build paths.
+ * The only owner of deploy-health.json and deploy-health.html is
+ * scripts/build-production-health.js, which runs after every legacy generator from
+ * scripts/final-production-reconcile.js and binds the result to the exact deploy commit.
+ */
+repairs.push({
+  type: 'production-health-ownership',
+  owner: 'scripts/build-production-health.js',
+  status: 'preserved',
+  reason: 'Legacy repair passes must not overwrite strict Worker, D1 or deferred-payment proof.'
+});
 
-const health = {
+const report = {
   ok: true,
-  buildSha,
-  buildShortSha: short(buildSha),
   generatedAt,
-  target: 'Cloudflare Worker / _site assets',
-  workerScript: 'src/worker.js',
-  assetOutput: '_site',
-  homepageExpectedMarker: 'FOLLOW THE FILES.',
-  routes: ['/','/forum-health','/deploy-status','/deploy-status.json','/search','/books','/live-intel','/power-conclusions','/reader-conclusions','/evidence-hunter','/who-holds-power','/one-world-convergence','/accountability-watch','/epstein-files','/sec-filing-feed.html','/probability-lab.html','/probability-snapshot.html'],
-  modules,
-  repairs
+  repairs,
+  productionHealthOwner: 'scripts/build-production-health.js',
+  productionHealthGeneration: 'deferred until final-production-reconcile',
+  boundary: 'This repair script may repair public content only. It cannot publish deployment health, change the Worker entrypoint or activate payment UI.'
 };
-write('deploy-health.json', JSON.stringify(health, null, 2));
-write('downloads/deploy-health.json', JSON.stringify(health, null, 2));
-repairs.push({ type: 'deploy-health-json', files: ['deploy-health.json', 'downloads/deploy-health.json'] });
-
-const healthHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Deploy Health | Matrix Reprogrammed</title><meta name="description" content="Matrix Reprogrammed deployment health dashboard for Cloudflare, homepage state, forum, feeds and reader conversion routes." /><link rel="stylesheet" href="styles.css" /></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="deploy-status.html">Deploy Status</a><a href="power-conclusions.html">Power Conclusions</a><a href="reader-conclusions.html">Reader Conclusions</a><a href="evidence-hunter.html">Evidence Hunter</a><a href="books.html">Books</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Cloudflare Health Check</div><h1>DEPLOY HEALTH.</h1><p class="lead">This page shows whether the live build should contain the homepage, forum routes, reader conclusions, evidence hunter, filing feed, probability snapshot and reader conversion paths.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="downloads/deploy-health.json">Download Health</a><a class="btn alt" href="forum-health">Forum Health</a></div></section><section class="section wrap split"><div class="terminal">DEPLOY HEALTH\n&gt; Build: ${esc(short(buildSha))}\n&gt; Generated: ${esc(generatedAt)}\n&gt; Reader conclusions: ${hash('reader-conclusions.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Evidence hunter: ${hash('evidence-hunter.html') !== 'missing' ? 'READY' : 'PENDING'}\n&gt; Overall: READY</div><aside class="card redline"><h2>What to check live</h2><p>Open Reader Conclusions and Evidence Hunter. These are regenerated through the repair step during build.</p><a class="btn" href="reader-conclusions.html">Open Conclusions</a><a class="btn alt" href="evidence-hunter.html">Open Evidence Hunter</a></aside></section><section class="section wrap"><h2>Module Checks</h2><div class="grid">${modules.map(item => `<article class="card redline"><span class="label">Ready</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p></article>`).join('')}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — deploy health ${esc(short(buildSha))}</p></footer></div><script src="matrix.js"></script></body></html>`;
-write('deploy-health.html', healthHtml);
-repairs.push({ type: 'deploy-health-html', file: 'deploy-health.html' });
-
-write('downloads/generated-site-repair-report.json', JSON.stringify({ ok: true, generatedAt, repairs }, null, 2));
-console.log(`Generated site artifact repair complete: ${repairs.length} repair group(s).`);
+write('downloads/generated-site-repair-report.json', JSON.stringify(report, null, 2));
+console.log(`Generated site artifact repair complete: ${repairs.length} repair group(s). Production health preserved for final reconciliation.`);

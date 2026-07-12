@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "version": 1,
+  "generatedAt": null,
+  "algorithm": "SHA-256",
+  "signing": {
+    "system": "Sigstore Cosign",
+    "mode": "keyless GitHub OIDC",
+    "bundleUrl": "data/evidence-integrity-manifest.sigstore.json",
+    "certificateIdentityRegexp": "^https://github.com/architectsignal/matrixreprogrammed/.github/workflows/evidence-archive-verification.yml@refs/heads/main$",
+    "certificateOidcIssuer": "https://token.actions.githubusercontent.com",
+    "status": "awaiting-workflow-signature"
+  },
+  "evidenceBoundary": "Integrity verification establishes that the published bytes match the signed manifest. It does not establish the truth of every statement inside a source or archive.",
+  "files": []
+}

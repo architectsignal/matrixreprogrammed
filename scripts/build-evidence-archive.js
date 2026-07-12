@@ -31,8 +31,10 @@ const registry = readJson(registryPath, { sources: [] });
 const sourceMap = new Map((registry.sources || []).map(source => [source.id, source]));
 const prior = readJson(archiveManifestPath, { archives: [] });
 const maxBytes = Math.min(Number(policy.maxArchiveBytes || 23000000), 24000000);
+const maxTotalBytes = Math.max(maxBytes, Math.min(Number(policy.maxTotalArchiveBytes || 60000000), 100000000));
 const now = new Date().toISOString();
 const rejected = [];
+const pruned = [];
 const archives = [];
 
 for (const name of fs.readdirSync(archiveDir).filter(name => name.endsWith('.wacz')).sort()) {
@@ -88,10 +90,33 @@ for (const name of fs.readdirSync(archiveDir).filter(name => name.endsWith('.wac
   });
 }
 
-const combined = [...archives, ...(prior.archives || [])]
-  .filter((item, index, list) => item.sha256 && list.findIndex(other => other.sha256 === item.sha256) === index)
-  .sort((a, b) => String(b.capturedAt).localeCompare(String(a.capturedAt)))
-  .slice(0, 250);
+const candidates = [...archives, ...(prior.archives || [])]
+  .filter((item, index, list) => item.sha256 && item.replayUrl && fs.existsSync(path.join(root, item.replayUrl)) && list.findIndex(other => other.sha256 === item.sha256) === index)
+  .sort((a, b) => String(b.capturedAt).localeCompare(String(a.capturedAt)));
+const combined = [];
+const seenSource = new Set();
+let totalBytes = 0;
+for (const item of candidates) {
+  if (seenSource.has(item.sourceId)) {
+    pruned.push({ id: item.id, sourceId: item.sourceId, replayUrl: item.replayUrl, bytes: item.bytes, reason: 'superseded-by-newer-capture' });
+    continue;
+  }
+  if (totalBytes + Number(item.bytes || 0) > maxTotalBytes) {
+    pruned.push({ id: item.id, sourceId: item.sourceId, replayUrl: item.replayUrl, bytes: item.bytes, reason: 'total-public-archive-size-limit' });
+    continue;
+  }
+  combined.push(item);
+  seenSource.add(item.sourceId);
+  totalBytes += Number(item.bytes || 0);
+}
+const retained = new Set(combined.map(item => item.replayUrl));
+for (const item of pruned) {
+  const file = path.join(root, item.replayUrl || '');
+  if (item.replayUrl && item.replayUrl.startsWith('web-archives/') && !retained.has(item.replayUrl) && fs.existsSync(file)) {
+    fs.rmSync(file, { force: true });
+    fs.rmSync(`${file}.metadata.json`, { force: true });
+  }
+}
 
 const manifest = {
   ok: rejected.length === 0,
@@ -102,14 +127,16 @@ const manifest = {
   replayEngine: 'ReplayWeb.page',
   replayEngineVersion: policy.replayWebPageVersion,
   format: 'WACZ',
+  retention: 'Latest deployable capture per approved source, bounded by the total public archive size limit. Prior signed versions remain in Git history and workflow artifacts.',
   legalScope: policy.legalScope,
   limits: {
     maxSourcesPerRun: policy.maxSourcesPerRun,
     maxPagesPerSource: policy.maxPagesPerSource,
     maxArchiveBytes: maxBytes,
-    maxTotalArchiveBytes: policy.maxTotalArchiveBytes
+    maxTotalArchiveBytes: maxTotalBytes
   },
   archives: combined,
+  pruned,
   rejected
 };
 writeJson(archiveManifestPath, manifest);
@@ -155,10 +182,11 @@ writeJson(path.join(downloadsDir, 'phase8-evidence-archive-build.json'), {
   generatedAt: now,
   archives: combined.length,
   newArchives: archives.length,
+  pruned,
   rejected,
   protectedFiles: integrity.files.length,
-  totalPublicArchiveBytes: combined.reduce((sum, item) => sum + Number(item.bytes || 0), 0),
+  totalPublicArchiveBytes: totalBytes,
   evidenceBoundary: integrity.evidenceBoundary
 });
-console.log(`Phase 8 archive manifests ready: ${combined.length} archive(s), ${integrity.files.length} integrity record(s), ${rejected.length} rejected.`);
+console.log(`Phase 8 archive manifests ready: ${combined.length} archive(s), ${integrity.files.length} integrity record(s), ${pruned.length} pruned, ${rejected.length} rejected.`);
 if (rejected.length) process.exitCode = 1;

@@ -12,6 +12,8 @@ on:
       - 'scripts/final-production-reconcile.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
+      - 'scripts/update-live-intel.js'
+      - 'scripts/record-live-intel-check.js'
       - 'scripts/production-freshness-guard.js'
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
@@ -27,6 +29,8 @@ on:
       - 'scripts/final-production-reconcile.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
       - 'scripts/build-deploy-manifest.js'
+      - 'scripts/update-live-intel.js'
+      - 'scripts/record-live-intel-check.js'
       - 'scripts/production-freshness-guard.js'
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
@@ -54,6 +58,10 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Check Live Intel feeds for assurance
+        run: |
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
       - name: Build normal site
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'

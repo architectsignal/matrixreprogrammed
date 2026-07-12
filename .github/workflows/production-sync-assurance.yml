@@ -84,6 +84,8 @@ jobs:
         run: npm run build
       - name: Verify D1-authoritative forum persistence wiring
         run: node scripts/forum-persistence-d1-test.js
+      - name: Bundle Worker without deploying
+        run: npx wrangler@latest deploy --dry-run
       - name: Reconcile final production output
         env:
           DEPLOY_COMMIT_SHA: ${{ github.sha }}

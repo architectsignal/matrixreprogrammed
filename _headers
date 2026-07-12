@@ -26,6 +26,21 @@
   Cache-Control: no-store, max-age=0
   Content-Type: application/json; charset=utf-8
 
+/deploy-health.html
+  Cache-Control: no-store, max-age=0
+
+/deploy-health
+  Cache-Control: no-store, max-age=0
+
+/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+
+/downloads/deploy-health.json
+  Cache-Control: no-store, max-age=0
+  Content-Type: application/json; charset=utf-8
+  Content-Disposition: attachment
+
 /
   Cache-Control: no-cache, max-age=0, must-revalidate
 

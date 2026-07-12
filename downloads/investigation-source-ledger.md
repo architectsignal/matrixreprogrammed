@@ -1,6 +1,6 @@
 # Investigation Source Ledger
 
-Generated: 2026-07-12T13:55:40.514Z
+Generated: 2026-07-12T19:30:22.275Z
 
 - U.S. Department of Justice — Epstein Disclosures: fetched; last success 2026-07-12T07:38:48.644Z; https://www.justice.gov/epstein/doj-disclosures
 - U.S. Department of Justice — Justice News: fetched; last success 2026-07-12T07:38:48.644Z; https://www.justice.gov/news

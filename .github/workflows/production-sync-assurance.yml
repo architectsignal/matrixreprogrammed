@@ -9,6 +9,9 @@ on:
       - '.github/workflows/deploy.yml'
       - '.github/workflows/deploy-production.yml'
       - '.github/workflows/production-sync-assurance.yml'
+      - '.github/workflows/full-system-audit.yml'
+      - '.github/workflows/site-wide-master-audit.yml'
+      - '.github/workflows/live-functionality-test.yml'
       - '.github/workflows/daily-investigation-machine.yml'
       - 'src/worker.js'
       - 'src/worker-forum-persistence.js'
@@ -20,6 +23,8 @@ on:
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/cloudflare-focused-pressure-wrapper.js'
       - 'scripts/site-function-harmony-test.js'
+      - 'scripts/full-system-audit.js'
+      - 'scripts/live-functionality-test.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -50,6 +55,9 @@ on:
       - '.github/workflows/deploy.yml'
       - '.github/workflows/deploy-production.yml'
       - '.github/workflows/production-sync-assurance.yml'
+      - '.github/workflows/full-system-audit.yml'
+      - '.github/workflows/site-wide-master-audit.yml'
+      - '.github/workflows/live-functionality-test.yml'
       - 'src/worker.js'
       - 'src/worker-forum-persistence.js'
       - 'src/worker-production.js'
@@ -60,6 +68,8 @@ on:
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/cloudflare-focused-pressure-wrapper.js'
       - 'scripts/site-function-harmony-test.js'
+      - 'scripts/full-system-audit.js'
+      - 'scripts/live-functionality-test.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -104,6 +114,14 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
+      - name: Validate current auxiliary audit syntax and boundaries
+        run: |
+          node --check scripts/full-system-audit.js
+          node --check scripts/live-functionality-test.js
+          grep -q "paymentStatus: 'deferred'" scripts/live-functionality-test.js
+          grep -q "Cloudflare D1 MEMBERS_DB" scripts/live-functionality-test.js
+          ! grep -q "paypal-membership-test-runner.js" scripts/full-system-audit.js
+          ! grep -q "Deploy Production$" .github/workflows/live-functionality-test.yml
       - name: Check Live Intel feeds for assurance
         run: |
           node scripts/update-live-intel.js

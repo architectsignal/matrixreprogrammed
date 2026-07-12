@@ -1,0 +1,102 @@
+{
+  "version": 2,
+  "currency": "EUR",
+  "billingPeriod": "month",
+  "updated": "2026-07-12",
+  "status": "coming-soon",
+  "boundary": "Membership access is being prepared. No payment should be taken until checkout, delivery, cancellation and account-access systems are live and verified.",
+  "tiers": [
+    {
+      "id": "supporter",
+      "name": "Supporter",
+      "price": 3,
+      "summary": "A low-cost way to support the project and receive the core weekly member layer.",
+      "includes": [],
+      "benefits": [
+        "Weekly member intelligence brief",
+        "Member newsletter and editorial notes",
+        "Member-only public-source drops",
+        "Early access to selected free reports",
+        "Sample premium intelligence reports",
+        "Member archive of published weekly briefs",
+        "Supporter updates on new investigations and releases",
+        "Access to supporter-only announcements and surveys"
+      ],
+      "access": [
+        "Weekly Brief archive",
+        "Member Newsletter",
+        "Selected Source Drops",
+        "Sample Reports",
+        "Supporter Updates"
+      ]
+    },
+    {
+      "id": "intelligence-member",
+      "name": "Intelligence Member",
+      "price": 6,
+      "summary": "The complete day-to-day intelligence layer for readers who want the full evidence-led system.",
+      "includes": ["Everything in Supporter"],
+      "benefits": [
+        "Premium daily intelligence brief",
+        "Full card intelligence and card evidence notes",
+        "Full public source ledger",
+        "Deeper evidence-bounded dossiers",
+        "Downloadable intelligence card decks",
+        "Weekly control-structure map",
+        "Missing-record and disclosure-gap queue",
+        "Source-change and evidence-update summaries",
+        "Member-only timelines, maps and investigation routes",
+        "Downloadable PDF and CSV member releases",
+        "Early access to new intelligence tools and reports"
+      ],
+      "access": [
+        "Everything in Supporter",
+        "Premium Daily Brief",
+        "Card Intelligence",
+        "Full Source Ledger",
+        "Deep Dossiers",
+        "Downloadable Decks",
+        "Weekly Control Map",
+        "Missing-Record Queue",
+        "Member Timelines and Maps"
+      ]
+    },
+    {
+      "id": "research-pro",
+      "name": "Research Pro",
+      "price": 9,
+      "summary": "The advanced research and export layer for investigators, writers and serious public-record researchers.",
+      "includes": ["Everything in Intelligence Member and Supporter"],
+      "benefits": [
+        "Advanced public-record search and research filters",
+        "Full dossier exports",
+        "Monthly PDF intelligence report",
+        "Source-route and evidence-path maps",
+        "Policy and regulatory tracker",
+        "Jurisdiction and institutional tracker",
+        "Card-score movement and evidence-change reports",
+        "Priority source and record requests",
+        "Advanced Data Laboratory presets and exports",
+        "Evidence Archive citation and bibliography exports",
+        "Research queue and investigation-status access",
+        "Early beta access to new research tools",
+        "Downloadable research bundles in PDF, CSV and JSON where available"
+      ],
+      "access": [
+        "Everything in Intelligence Member",
+        "Advanced Search",
+        "Full Dossier Exports",
+        "Monthly Intelligence PDF",
+        "Source Route Maps",
+        "Policy Tracker",
+        "Jurisdiction Tracker",
+        "Card Movement Reports",
+        "Priority Source Requests",
+        "Advanced Data Lab",
+        "Citation and Bibliography Exports",
+        "Research Tool Betas"
+      ],
+      "requestBoundary": "Priority requests enter a review queue. They do not guarantee that a record exists, can be lawfully obtained, or will support a requested conclusion."
+    }
+  ]
+}

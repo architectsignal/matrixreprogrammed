@@ -10,17 +10,27 @@ const check = (label, ok) => { if (!ok) failures.push(label); };
 for (const rel of [
   'src/worker.js',
   'src/worker-forum-persistence.js',
+  'src/worker-production.js',
   'wrangler.toml',
   'wrangler.jsonc',
   'migrations/0004_forum_persistence.sql'
 ]) check(`missing ${rel}`, exists(rel));
 
 if (!failures.length) {
+  const strict = read('src/worker-production.js');
   const wrapper = read('src/worker-forum-persistence.js');
   const legacy = read('src/worker.js');
   const toml = read('wrangler.toml');
   const jsonc = read('wrangler.jsonc');
   const migration = read('migrations/0004_forum_persistence.sql');
+
+  check('strict Worker does not delegate normal traffic', strict.includes("return forumWorker.fetch(request, env, ctx)"));
+  check('strict Worker does not reject non-forum traffic', strict.includes('if (!forumRoutes.has(path))'));
+  check('strict Worker accepts a missing D1 binding', strict.includes('members-db-binding-unavailable'));
+  check('strict Worker accepts a legacy forum response', strict.includes('non-authoritative-forum-response-blocked'));
+  check('strict Worker does not verify forum origin', strict.includes("origin !== 'cloudflare-worker-forum-d1'"));
+  check('strict Worker does not verify D1 health fields', strict.includes("health?.d1Connected === true") && strict.includes("health?.backend === 'src/worker-forum-persistence.js'"));
+  check('strict Worker does not return a 503 boundary', strict.includes('status: 503'));
 
   check('wrapper does not delegate non-forum traffic', wrapper.includes("return legacyWorker.fetch(request, env, ctx)"));
   check('wrapper missing D1 schema bootstrap', wrapper.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
@@ -33,8 +43,8 @@ if (!failures.length) {
   check('wrapper missing explicit failed persistence response', wrapper.includes('the post was not accepted as persistent'));
   check('wrapper missing board-specific routes', ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive','/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'].every(route => wrapper.includes(route)));
   check('legacy Worker lost non-forum asset delegation', legacy.includes('env.ASSETS.fetch'));
-  check('wrangler.toml not using persistence wrapper', toml.includes('main = "src/worker-forum-persistence.js"'));
-  check('wrangler.jsonc not using persistence wrapper', jsonc.includes('"main": "src/worker-forum-persistence.js"'));
+  check('wrangler.toml not using strict production Worker', toml.includes('main = "src/worker-production.js"'));
+  check('wrangler.jsonc not using strict production Worker', jsonc.includes('"main": "src/worker-production.js"'));
   check('MEMBERS_DB binding missing', toml.includes('binding = "MEMBERS_DB"') && jsonc.includes('"binding": "MEMBERS_DB"'));
   check('FORUM_POSTS recovery mirror missing', toml.includes('FORUM_POSTS') && jsonc.includes('FORUM_POSTS'));
   check('forum_posts migration missing', migration.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
@@ -47,8 +57,8 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  persistenceModel: 'Cloudflare D1 is authoritative; KV is a compatibility mirror and migration source.',
-  boundary: 'The test rejects a forum implementation that reads only posts:index or reports success without an authoritative D1 write.'
+  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; KV is a compatibility mirror and migration source.',
+  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, reads limited to posts:index or success without an authoritative D1 write.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-persistence-d1-test.json'), JSON.stringify(report, null, 2));
@@ -58,4 +68,4 @@ if (failures.length) {
   process.exit(1);
 }
 console.log('FORUM D1 PERSISTENCE TEST PASSED');
-console.log('Verified D1-authoritative writes and reads, KV recovery, board routes, migration schema, failure semantics and legacy Worker delegation.');
+console.log('Verified strict D1 failure semantics, authoritative writes and reads, KV recovery, board routes, migration schema and legacy delegation only outside the forum boundary.');

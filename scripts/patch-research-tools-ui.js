@@ -68,6 +68,7 @@ console.log('Canonical Research Tools page, homepage route and visibility policy
 // Phase 10 must run after the canonical Research Tools template is restored.
 require('./build-geographic-power-atlas.js');
 require('./prepare-geographic-power-atlas-output.js');
+require('./patch-main-navigation-safety-links.js');
 for (const report of ['geographic-power-atlas-build.json','geographic-power-atlas-test.json','geographic-power-atlas-output-test.json']) {
   fs.rmSync(path.join(root,'downloads',report), { force:true });
 }

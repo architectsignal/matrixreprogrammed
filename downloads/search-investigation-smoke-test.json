@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-12T06:49:04.112Z",
+  "generatedAt": "2026-07-12T07:39:28.114Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1461 entries"
+      "detail": "1463 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1461 unique routes"
+      "detail": "1463 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=ec24f811962be678d371bfc7, daily-investigation-conclusions.html?finding=source-change-ec24f811962be678d371bfc7"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=3074e1c1bea52f04ac59408f, source-changes.html?change=ec24f811962be678d371bfc7"
     }
   ],
   "failures": []

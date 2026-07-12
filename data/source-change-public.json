@@ -1,14 +1,56 @@
 {
-  "updated": "2026-07-11T12:51:22.471Z",
+  "updated": "2026-07-12T07:38:58.516Z",
   "summary": {
     "registeredSources": 20,
     "checkedThisRun": 12,
     "changesThisRun": 1,
-    "retainedChanges": 1,
+    "retainedChanges": 2,
     "unavailableSources": 0
   },
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
   "changes": [
+    {
+      "id": "3074e1c1bea52f04ac59408f",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-12T07:38:58.516Z",
+      "detectedAt": "2026-07-12T07:38:58.516Z",
+      "changeType": "content-changed",
+      "previousHash": "84d6d57472187aba6dc84ea655d0d4f8d7c2325b250a7c386c72f0c4bbba0fce",
+      "currentHash": "a35afe033303a6cc8ba827800d59c245038a4e3152466f2a5403029f0876168d",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sun, 12 Jul 2026 03:38:58 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-12T03:38:58-04:00 4 - HANNAH ALISON L."
+      ],
+      "removals": [
+        "Latest Filings - Sat, 11 Jul 2026 08:51:22 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-11T08:51:22-04:00 4 - HANNAH ALISON L."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "ec24f811962be678d371bfc7",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

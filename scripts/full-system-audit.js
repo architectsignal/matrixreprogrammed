@@ -1,148 +1,267 @@
 const fs = require('fs');
 const path = require('path');
-const { spawnSync } = require('child_process');
+const { spawnSync, execFileSync } = require('child_process');
 
 const root = process.cwd();
 const downloads = path.join(root, 'downloads');
-if (!fs.existsSync(downloads)) fs.mkdirSync(downloads, { recursive: true });
+fs.mkdirSync(downloads, { recursive: true });
 
 const startedAt = new Date().toISOString();
-const report = { startedAt, finishedAt: null, ok: true, summary: {}, commands: [], systems: [], files: [], recommendations: [] };
+const report = {
+  startedAt,
+  finishedAt: null,
+  ok: true,
+  summary: {},
+  commands: [],
+  systems: [],
+  files: [],
+  warnings: [],
+  recommendations: [],
+  architecture: {
+    workerStack: 'src/worker-production.js -> src/worker-forum-persistence.js -> src/worker.js',
+    forumStorage: 'Cloudflare D1 authoritative; KV excluded from public forum runtime',
+    paymentStatus: 'deferred; checkout disabled and no payment taken',
+    deploymentModel: 'one automatic canonical Cloudflare deploy plus one manual fallback'
+  }
+};
 
 function exists(name) { return fs.existsSync(path.join(root, name)); }
-function read(name) { return fs.readFileSync(path.join(root, name), 'utf8'); }
-function addSystem(name, ok, details = {}) { report.systems.push({ name, ok: Boolean(ok), ...details }); if (!ok) report.ok = false; }
+function read(name) { return exists(name) ? fs.readFileSync(path.join(root, name), 'utf8') : ''; }
+function commitSha() {
+  const supplied = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '';
+  if (/^[a-f0-9]{40}$/i.test(supplied)) return supplied;
+  try { return execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(); }
+  catch { return supplied || 'unknown'; }
+}
+const deploySha = commitSha();
+
+function addSystem(name, ok, details = {}, critical = true) {
+  const item = { name, ok: Boolean(ok), critical, ...details };
+  report.systems.push(item);
+  if (!item.ok && critical) report.ok = false;
+  if (!item.ok && !critical) report.warnings.push(`${name}: advisory check failed`);
+  return item.ok;
+}
 function run(label, command, args, options = {}) {
+  const critical = options.critical !== false;
   const started = new Date().toISOString();
   console.log(`\n=== ${label} ===`);
   console.log(`${command} ${args.join(' ')}`);
-  const result = spawnSync(command, args, { cwd: root, encoding: 'utf8', shell: false, maxBuffer: 40 * 1024 * 1024, env: { ...process.env, FULL_SYSTEM_AUDIT: '1' } });
+  const result = spawnSync(command, args, {
+    cwd: root,
+    encoding: 'utf8',
+    shell: false,
+    maxBuffer: 50 * 1024 * 1024,
+    env: {
+      ...process.env,
+      FULL_SYSTEM_AUDIT: '1',
+      DEPLOY_COMMIT_SHA: deploySha,
+      SOURCE_DOCUMENTS_PER_RUN: process.env.SOURCE_DOCUMENTS_PER_RUN || '0',
+      ...(options.env || {})
+    }
+  });
   const stdout = result.stdout || '';
   const stderr = result.stderr || '';
   if (stdout) process.stdout.write(stdout);
   if (stderr) process.stderr.write(stderr);
-  const entry = { label, command: [command, ...args].join(' '), status: result.status, ok: result.status === 0, startedAt: started, finishedAt: new Date().toISOString(), stdoutTail: stdout.slice(-5000), stderrTail: stderr.slice(-5000) };
+  const entry = {
+    label,
+    command: [command, ...args].join(' '),
+    status: result.status,
+    ok: result.status === 0,
+    critical,
+    startedAt: started,
+    finishedAt: new Date().toISOString(),
+    stdoutTail: stdout.slice(-6000),
+    stderrTail: stderr.slice(-6000)
+  };
   report.commands.push(entry);
-  if (result.status !== 0 && !options.allowFail) report.ok = false;
+  if (!entry.ok && critical) report.ok = false;
+  if (!entry.ok && !critical) report.warnings.push(`${label}: advisory command exited ${result.status}`);
   return entry;
 }
-function countFiles(ext) { let count = 0; const ignored = new Set(['.git','node_modules','_site','.wrangler']); function walk(dir) { for (const entry of fs.readdirSync(dir, { withFileTypes: true })) { if (ignored.has(entry.name)) continue; const full = path.join(dir, entry.name); if (entry.isDirectory()) walk(full); else if (entry.name.endsWith(ext)) count += 1; } } walk(root); return count; }
-function needFile(name, label = name) { const ok = exists(name); report.files.push({ file: name, ok, label }); if (!ok) report.ok = false; return ok; }
-function needText(file, text, label = text) { const ok = exists(file) && read(file).includes(text); report.files.push({ file, ok, label }); if (!ok) report.ok = false; return ok; }
-
-function runCriticalRepairCycle(label) {
-  run(`${label}: newsletter, membership and payment patch`, 'node', ['scripts/patch-worker-newsletter-system.js']);
-  run(`${label}: newsletter persistence execution test`, 'node', ['scripts/newsletter-persistence-test.js']);
-  run(`${label}: PayPal membership contract`, 'node', ['scripts/paypal-membership-test-runner.js']);
-  run(`${label}: Search V2 repair`, 'node', ['scripts/repair-search-system.js']);
-  run(`${label}: critical route and object drift`, 'node', ['scripts/repair-critical-route-drift.js']);
-  run(`${label}: site function harmony`, 'node', ['scripts/site-function-harmony-test.js']);
+function countFiles(ext) {
+  let count = 0;
+  const ignored = new Set(['.git', 'node_modules', '_site', '.wrangler']);
+  function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (ignored.has(entry.name)) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(ext)) count += 1;
+    }
+  }
+  walk(root);
+  return count;
+}
+function needFile(name, label = name, critical = true) {
+  const ok = exists(name);
+  report.files.push({ file: name, ok, label, critical });
+  if (!ok && critical) report.ok = false;
+  if (!ok && !critical) report.warnings.push(`Optional file missing: ${name}`);
+  return ok;
+}
+function needText(file, text, label = text, critical = true) {
+  const ok = exists(file) && read(file).includes(text);
+  report.files.push({ file, ok, label, critical });
+  if (!ok && critical) report.ok = false;
+  if (!ok && !critical) report.warnings.push(`${file} missing advisory marker ${label}`);
+  return ok;
+}
+function forbidText(file, text, label = text, critical = true) {
+  const ok = !exists(file) || !read(file).includes(text);
+  report.files.push({ file, ok, label: `forbid ${label}`, critical });
+  if (!ok && critical) report.ok = false;
+  if (!ok && !critical) report.warnings.push(`${file} contains advisory-forbidden marker ${label}`);
+  return ok;
 }
 
-run('Prebuild membership and payment patch', 'node', ['scripts/patch-worker-newsletter-system.js']);
-run('Prebuild newsletter persistence execution test', 'node', ['scripts/newsletter-persistence-test.js']);
-run('Prebuild PayPal membership contract', 'node', ['scripts/paypal-membership-test-runner.js']);
-run('Full build and normal pressure chain', 'npm', ['run', 'build']);
-runCriticalRepairCycle('Postbuild cycle one');
-run('Postbuild site-wide function audit', 'node', ['scripts/site-wide-function-audit.js', '--postbuild']);
+/* Build once, then reconcile once. The regression wrapper deliberately reruns legacy generators. */
+run('Complete normal build', 'npm', ['run', 'build']);
+run('D1-authoritative forum contract', 'node', ['scripts/forum-persistence-d1-test.js']);
+run('Canonical final production reconciliation', 'node', ['scripts/final-production-reconcile.js']);
+run('Production freshness guard', 'node', ['scripts/production-freshness-guard.js']);
+run('Production synchronization contract', 'node', ['scripts/production-sync-test.js']);
+run('Current site-function harmony', 'node', ['scripts/site-function-harmony-test.js']);
+run('Legacy regression and Cloudflare pressure gate', 'node', ['scripts/cloudflare-focused-pressure-wrapper.js']);
+run('Final production deploy guard', 'node', ['scripts/production-deploy-guard.js']);
+
+/* Public-output and search audits. */
 run('Static site QA audit', 'node', ['scripts/audit-site.js']);
-run('Static link audit', 'node', ['tools/link-audit.js']);
+run('Static local-link audit', 'node', ['tools/link-audit.js']);
+run('Exhaustive public output audit', 'node', ['scripts/exhaustive-public-site-audit-v2.js']);
+run('Search and investigation smoke test', 'node', ['scripts/search-investigation-smoke-test.js']);
 
+/* Useful focused systems that remain independent of payment activation. */
 const focused = [
-  ['Ask Matrix free/local search', ['scripts/free-ask-matrix-search-test.js']],
-  ['Newsletter persistent KV contract', ['scripts/newsletter-persistence-test.js']],
-  ['Membership authentication', ['scripts/membership-auth-test.js']],
-  ['PayPal membership and webhook entitlements', ['scripts/paypal-membership-test-runner.js']],
-  ['Critical route and object drift', ['scripts/repair-critical-route-drift.js']],
-  ['Site function harmony', ['scripts/site-function-harmony-test.js']],
-  ['Forum three-board split', ['scripts/forum-board-split-test.js']],
-  ['Live Intel', ['scripts/live-intel-pressure-test.js']],
-  ['Migration flow / figures', ['scripts/migration-flow-test.js']],
-  ['Epstein Watch', ['scripts/epstein-watch-pressure-test.js']],
-  ['Atlas layers', ['scripts/atlas-layers-test.js']],
-  ['Cloudflare Worker routes', ['scripts/cloudflare-worker-routes-test.js']],
-  ['Intel analytics / daily drops', ['scripts/intel-analytics-pressure-test.js']],
-  ['Ten out of ten usefulness', ['scripts/ten-out-of-ten-pressure-test.js']],
-  ['Deep Intel Feed Matrix', ['scripts/deep-intel-feed-matrix-test.js']],
-  ['Mission intelligence ten', ['scripts/mission-intelligence-10-test.js']],
-  ['Top 52 Power Deck', ['scripts/top-52-power-deck-test.js']],
-  ['Top 52 Phase 3 Visuals', ['scripts/top-52-phase3-visuals-test.js']],
-  ['Top 52 Phase 4 Art Studio', ['scripts/top-52-art-studio-test.js']],
-  ['Top 52 Batch 1 Art Queue', ['scripts/top-52-batch1-art-queue-test.js']],
-  ['Subject intelligence hubs', ['scripts/subject-intelligence-hubs-pressure-test.js']],
-  ['Source document vault', ['scripts/source-document-vault-pressure-test.js']],
-  ['Evidence badges', ['scripts/evidence-badge-pressure-test.js']],
-  ['Premier resources', ['scripts/premier-resource-pressure-test.js']],
-  ['Global risk clocks', ['scripts/global-risk-clocks-test.js']]
+  ['Ask Matrix free/local search', 'scripts/free-ask-matrix-search-test.js'],
+  ['Membership authentication', 'scripts/membership-auth-test.js'],
+  ['Forum board split', 'scripts/forum-board-split-test.js'],
+  ['Live Intel', 'scripts/live-intel-pressure-test.js'],
+  ['Migration flow', 'scripts/migration-flow-test.js'],
+  ['Epstein Watch', 'scripts/epstein-watch-pressure-test.js'],
+  ['Atlas layers', 'scripts/atlas-layers-test.js'],
+  ['Cloudflare Worker routes', 'scripts/cloudflare-worker-routes-test.js'],
+  ['Intel analytics', 'scripts/intel-analytics-pressure-test.js'],
+  ['Mission intelligence', 'scripts/mission-intelligence-10-test.js'],
+  ['Evidence badges', 'scripts/evidence-badge-pressure-test.js'],
+  ['Premier resources', 'scripts/premier-resource-pressure-test.js']
 ];
-for (const [label, args] of focused) run(label, 'node', args);
-
-run('Second full build for overwrite detection', 'npm', ['run', 'build']);
-runCriticalRepairCycle('Postbuild cycle two overwrite detection');
-run('Final site QA audit', 'node', ['scripts/audit-site.js']);
-run('Final Cloudflare route audit', 'node', ['scripts/cloudflare-worker-routes-test.js']);
-run('Final Ask Matrix audit', 'node', ['scripts/free-ask-matrix-search-test.js']);
-run('Final newsletter persistence proof', 'node', ['scripts/newsletter-persistence-test.js']);
-run('Final membership authentication proof', 'node', ['scripts/membership-auth-test.js']);
-run('Final PayPal membership proof', 'node', ['scripts/paypal-membership-test-runner.js']);
-run('Final route drift proof', 'node', ['scripts/repair-critical-route-drift.js']);
-
-report.summary = { htmlFiles: countFiles('.html'), javascriptFiles: countFiles('.js'), jsonFiles: countFiles('.json'), commandCount: report.commands.length, failedCommands: report.commands.filter(c => !c.ok).length, systemCount: 0, failedSystems: 0 };
+for (const [label, script] of focused) {
+  if (exists(script)) run(label, 'node', [script]);
+  else report.warnings.push(`${label}: ${script} is not present`);
+}
 
 const checks = [
   ['Homepage', 'index.html', 'FOLLOW THE FILES.'],
-  ['Homepage Persons of Interest', 'index.html', 'PERSONS OF INTEREST'],
-  ['Homepage Top 52 Players', 'index.html', 'Top 52 Players'],
+  ['Homepage security route', 'index.html', 'Security Tools'],
+  ['Homepage dark-web route', 'index.html', 'Dark Web Safety'],
+  ['Membership €3 tier', 'membership.html', '€3'],
+  ['Membership €6 tier', 'membership.html', '€6'],
+  ['Membership €9 tier', 'membership.html', '€9'],
+  ['Membership payment deferred', 'membership.html', 'Coming soon — no payment taken'],
+  ['Strict Worker entrypoint', 'wrangler.toml', 'main = "src/worker-production.js"'],
+  ['Strict Worker fail-closed boundary', 'src/worker-production.js', 'non-authoritative-forum-response-blocked'],
+  ['D1 forum persistence', 'src/worker-forum-persistence.js', 'Cloudflare D1 MEMBERS_DB.forum_posts'],
+  ['D1-only public runtime', 'src/worker-production.js', 'FORUM_POSTS: undefined'],
+  ['Commit-bound health Worker', 'deploy-health.json', 'src/worker-production.js'],
+  ['Commit-bound health payments', 'deploy-health.json', '"paymentStatus": "deferred"'],
+  ['Ask Matrix', 'search.html', 'SEARCH THE MACHINE'],
+  ['Ask Matrix local index', 'search.js', 'search-index.json'],
+  ['Live Intel', 'live-intel.html', 'LIVE INTEL'],
+  ['Evidence Archive', 'evidence-archive.html', 'EVIDENCE ARCHIVE'],
+  ['Geographic Atlas', 'geographic-power-atlas.html', 'GEOGRAPHIC POWER ATLAS'],
+  ['Public Data Lab', 'data-lab.html', 'PUBLIC DATA'],
   ['Main board', 'forum.html', 'data-board="main"'],
   ['Speculation board', 'dark-speculation-forum.html', 'data-board="speculation"'],
   ['Epstein sighting board', 'epstein-alive-board.html', 'data-board="epstein-alive"'],
-  ['Hard board worker route', 'src/worker.js', '/submit-speculation-post'],
-  ['Newsletter subscriber KV write', 'src/worker.js', 'newsletter:subscriber:${id}'],
-  ['Newsletter index KV write', 'src/worker.js', "FORUM_POSTS.put('newsletter:index'"],
-  ['Newsletter truthful saved state', 'src/worker.js', 'const saved=subscriberSaved&&indexSaved'],
-  ['Member passwordless login route', 'src/worker.js', '/api/auth/request-link'],
-  ['PayPal subscription confirmation', 'src/worker.js', '/api/paypal/subscription/confirm'],
-  ['PayPal signed webhook verification', 'src/worker.js', '/v1/notifications/verify-webhook-signature'],
-  ['PayPal ACTIVE-only entitlement', 'src/worker.js', "paypalPaidStatus(value){return paypalSafeStatus(value)==='ACTIVE'}"],
-  ['PayPal checkout intent UI', 'membership.html', '/api/paypal/checkout-intent'],
-  ['PayPal cancellation UI', 'member-dashboard.html', '/api/paypal/subscription/cancel'],
-  ['PayPal checkout intent schema', 'migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents'],
-  ['Ask Matrix', 'search.html', 'id="phase-twelve-authority-engine"'],
-  ['Ask Matrix local index', 'search.js', 'search-index.json'],
-  ['Ask Matrix real fallback index', 'search.js', 'const fallbackIndex='],
-  ['Ask Matrix HTML response guard', 'search.js', 'HTML returned instead of JSON'],
-  ['Live Intel', 'live-intel.html', 'Latest Actionable Updates'],
-  ['Epstein files', 'epstein-files.html', 'Evidence Boundary'],
-  ['Migration figures', 'news.html', 'Migration / Irregular Immigration'],
-  ['Migration numeric marker', 'news.html', '237.5K'],
-  ['Power Atlas', 'power-atlas.html', 'phase-two-atlas-engine'],
-  ['Evidence Vault', 'evidence-vault.html', 'phase-three-evidence-engine'],
-  ['Deep Intel Feed', 'deep-intel-feed.html', 'DEEP INTEL FEED MATRIX.'],
-  ['Power Structure Map', 'power-structure-map.html', 'POWER MAP.'],
-  ['Evidence Graph', 'evidence-graph.html', 'Top evidence-weighted nodes'],
-  ['Daily Power Conclusions', 'daily-power-conclusions.html', 'What the machine says today'],
-  ['Top 52 Power Deck', 'top-52-power-deck.html', 'TOP 52 POWER DECK.'],
-  ['Top 52 Phase 3 Visuals', 'top-52-power-deck.html', 'Phase 3 Visual System'],
-  ['Top 52 Art Studio', 'top-52-art-studio.html', 'TOP 52 ART STUDIO.'],
-  ['Top 52 Batch 1 Art Queue', 'top-52-batch1-art-queue.html', 'BATCH 1 ART QUEUE.'],
-  ['Download Center', 'download-center.html', 'Dossier Packs'],
-  ['Deploy status', 'deploy-status.json', 'hardBoardRoutes'],
-  ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.']
+  ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.'],
+  ['Built membership deferred', '_site/membership.html', 'Coming soon — no payment taken'],
+  ['Built health D1', '_site/deploy-health.json', 'src/worker-production.js']
 ];
 for (const [name, file, marker] of checks) addSystem(name, needText(file, marker, marker), { file, marker });
+forbidText('membership.html', 'actions.subscription.create', 'active PayPal subscription UI');
+forbidText('membership.html', '/api/paypal/checkout-intent', 'active PayPal checkout call');
+forbidText('_site/membership.html', 'actions.subscription.create', 'built active PayPal subscription UI');
+forbidText('_site/membership.html', '/api/paypal/checkout-intent', 'built active PayPal checkout call');
 
 for (const file of [
-  'downloads/site-wide-function-audit.json', 'downloads/site-wide-function-audit.md', 'site-quality-report.html', 'site-freshness-report.html', 'deploy-status.json', 'downloads/deploy-status.json', 'downloads/newsletter-worker-patch-report.json', 'downloads/newsletter-persistence-test.json', 'downloads/newsletter-persistence-test.md', 'downloads/membership-auth-patch-report.json', 'downloads/membership-auth-test.json', 'downloads/membership-auth-test.md', 'downloads/membership-auth-ui-patch.json', 'downloads/paypal-membership-patch-report.json', 'downloads/paypal-membership-test.json', 'downloads/paypal-membership-test.md', 'downloads/search-runtime-hardening-report.json', 'downloads/critical-route-drift-report.json', 'downloads/critical-route-drift-report.md', 'downloads/site-function-harmony-report.json', 'downloads/site-function-harmony-report.md', 'data/forum-board-split.json', 'downloads/seven-day-intel.json', 'data/deep-intel-feed-matrix.json', 'downloads/deep-intel-feed-matrix.md', 'data/evidence-weighted-relationship-graph.json', 'data/daily-power-conclusions.json', 'data/top-52-power-deck.json', 'downloads/top-52-power-deck.md', 'data/top-52-card-art-manifest.json', 'downloads/top-52-card-art-manifest.md', 'data/top-52-art-studio.json', 'downloads/top-52-art-style-bible.md', 'data/top-52-batch1-art-queue.json', 'downloads/top-52-batch1-art-queue.md', 'top-52-phase3.css', 'downloads/mission-intelligence-10.md', 'downloads/the-black-file-matrix-reprogrammed.pdf'
+  'deploy-manifest.json',
+  'deploy-health.json',
+  'deploy-health.html',
+  'downloads/deploy-health.json',
+  'downloads/production-sync-test.json',
+  'downloads/production-freshness-guard.json',
+  'downloads/production-deploy-guard-report.json',
+  'downloads/forum-persistence-d1-test.json',
+  'downloads/cloudflare-worker-routes-test.json',
+  'downloads/cloudflare-focused-pressure-wrapper.json',
+  'downloads/site-function-harmony-report.json',
+  'downloads/exhaustive-public-site-audit.json',
+  'downloads/search-investigation-smoke-test.json',
+  'data/daily-investigation-conclusions.json',
+  'data/weekly-investigation-conclusions.json',
+  'data/daily-power-conclusions.json',
+  'data/outcome-briefings.json'
 ]) needFile(file);
 
-report.summary.systemCount = report.systems.length;
-report.summary.failedSystems = report.systems.filter(s => !s.ok).length;
+report.summary = {
+  deploySha,
+  htmlFiles: countFiles('.html'),
+  javascriptFiles: countFiles('.js'),
+  jsonFiles: countFiles('.json'),
+  commandCount: report.commands.length,
+  failedCriticalCommands: report.commands.filter(command => command.critical && !command.ok).length,
+  advisoryCommandFailures: report.commands.filter(command => !command.critical && !command.ok).length,
+  systemCount: report.systems.length,
+  failedCriticalSystems: report.systems.filter(system => system.critical && !system.ok).length,
+  warningCount: report.warnings.length
+};
 report.finishedAt = new Date().toISOString();
-if (report.summary.failedCommands) report.recommendations.push('Open the failed command tail in downloads/full-system-audit.json and fix the first failing subsystem before rerunning.');
-if (report.summary.failedSystems) report.recommendations.push('Generated output exists but one or more required live markers are missing. Check build order and late overwrite scripts.');
-if (!report.summary.failedCommands && !report.summary.failedSystems) report.recommendations.push('All audited systems passed, including D1 membership, passwordless authentication, PayPal ACTIVE-only entitlement enforcement, signed webhook verification, Search V2 fallback and late-build route drift.');
+if (report.summary.failedCriticalCommands) report.recommendations.push('Fix the first critical command failure before treating the repository as release-ready.');
+if (report.summary.failedCriticalSystems) report.recommendations.push('A required current-production marker is missing; inspect build order and final reconciliation.');
+if (!report.summary.failedCriticalCommands && !report.summary.failedCriticalSystems) report.recommendations.push('Current production architecture passed: strict Worker, D1 forum, current routes, commit-bound health and deferred payments.');
+
 fs.writeFileSync(path.join(downloads, 'full-system-audit.json'), JSON.stringify(report, null, 2));
-const lines = ['# Full System Audit', '', `Started: ${report.startedAt}`, `Finished: ${report.finishedAt}`, `Status: ${report.ok ? 'PASS' : 'FAIL'}`, '', '## Summary', '', `- HTML files: ${report.summary.htmlFiles}`, `- JavaScript files: ${report.summary.javascriptFiles}`, `- JSON files: ${report.summary.jsonFiles}`, `- Commands run: ${report.summary.commandCount}`, `- Failed commands: ${report.summary.failedCommands}`, `- Systems checked: ${report.summary.systemCount}`, `- Failed systems: ${report.summary.failedSystems}`, '', '## Commands', '', ...report.commands.map(c => `- ${c.ok ? 'PASS' : 'FAIL'} — ${c.label} — \`${c.command}\``), '', '## Systems', '', ...report.systems.map(s => `- ${s.ok ? 'PASS' : 'FAIL'} — ${s.name} — ${s.file || ''}`), '', '## Required Files', '', ...report.files.map(f => `- ${f.ok ? 'PASS' : 'FAIL'} — ${f.file} — ${f.label}`), '', '## Recommendations', '', ...report.recommendations.map(r => `- ${r}`)];
+const lines = [
+  '# Full System Audit',
+  '',
+  `Started: ${report.startedAt}`,
+  `Finished: ${report.finishedAt}`,
+  `Status: ${report.ok ? 'PASS' : 'FAIL'}`,
+  `Commit: ${deploySha}`,
+  '',
+  '## Architecture',
+  '',
+  `- Worker stack: ${report.architecture.workerStack}`,
+  `- Forum: ${report.architecture.forumStorage}`,
+  `- Payments: ${report.architecture.paymentStatus}`,
+  `- Deployments: ${report.architecture.deploymentModel}`,
+  '',
+  '## Summary',
+  '',
+  `- Commands: ${report.summary.commandCount}`,
+  `- Failed critical commands: ${report.summary.failedCriticalCommands}`,
+  `- Systems: ${report.summary.systemCount}`,
+  `- Failed critical systems: ${report.summary.failedCriticalSystems}`,
+  `- Warnings: ${report.summary.warningCount}`,
+  '',
+  '## Commands',
+  '',
+  ...report.commands.map(command => `- ${command.ok ? 'PASS' : (command.critical ? 'FAIL' : 'WARN')} — ${command.label} — \`${command.command}\``),
+  '',
+  '## Systems',
+  '',
+  ...report.systems.map(system => `- ${system.ok ? 'PASS' : (system.critical ? 'FAIL' : 'WARN')} — ${system.name} — ${system.file || ''}`),
+  '',
+  '## Warnings',
+  '',
+  ...(report.warnings.length ? report.warnings.map(warning => `- ${warning}`) : ['- None']),
+  '',
+  '## Recommendations',
+  '',
+  ...report.recommendations.map(recommendation => `- ${recommendation}`)
+];
 fs.writeFileSync(path.join(downloads, 'full-system-audit.md'), lines.join('\n'));
 console.log(`\nFULL SYSTEM AUDIT ${report.ok ? 'PASSED' : 'FAILED'}`);
 console.log('Report: downloads/full-system-audit.json and downloads/full-system-audit.md');

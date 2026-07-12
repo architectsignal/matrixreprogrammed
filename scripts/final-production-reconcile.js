@@ -49,6 +49,7 @@ run('scripts/build-outcome-briefings.js');
 run('scripts/build-daily-brain-brief.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/repair-public-site-errors.js', true);
+run('scripts/enforce-production-cache-policy.js');
 
 const critical = [
   'index.html', 'start-here.html', 'live-intel.html', 'daily-power-conclusions.html',
@@ -69,6 +70,8 @@ requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');
 requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');
+requireMarker('_headers', '/deploy-manifest.json');
+requireMarker('_headers', 'Cache-Control: no-store');
 run('scripts/build-deploy-manifest.js');
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-production-reconcile.json'), JSON.stringify(report, null, 2));

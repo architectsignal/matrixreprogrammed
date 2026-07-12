@@ -24,6 +24,7 @@ const home = read('index.html');
 const search = read('search-index.json');
 add('security page marker', security.includes('SECURITY, PRIVACY & OSINT SAFETY.'), `${security.length} bytes`);
 add('dark web page marker', dark.includes('DARK WEB SAFETY & LAWFUL ONION RESOURCES.'), `${dark.length} bytes`);
+add('public pages are not hidden as internal', !/<div class="page[^"]*commercial-internal/i.test(security) && !/<div class="page[^"]*commercial-internal/i.test(dark));
 add('homepage security link', home.includes('Open Security & Anonymity Hub'));
 add('homepage dark web link', home.includes('Open Dark Web Safety Guide'));
 add('search contains security page', search.includes('security-privacy.html') || search.includes('security-privacy'));

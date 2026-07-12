@@ -52,6 +52,7 @@ jobs:
           node scripts/repair-investigation-source-registry.js
           node scripts/run-investigation-machine.js daily
           node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
           node scripts/update-seven-day-intel.js
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js

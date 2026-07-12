@@ -2,29 +2,19 @@ name: Site-Wide Master Audit
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'scripts/**'
-      - 'data/**'
-      - 'src/**'
-      - '.github/workflows/**'
-      - 'package.json'
-      - 'wrangler.toml'
-      - 'netlify.toml'
-      - '**.html'
-      - '**.css'
-      - '**.js'
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Production Deploy
+    types:
+      - completed
   schedule:
-    # Daily master audit after the daily refresh and normal pressure-test windows.
     - cron: '17 10 * * *'
 
 permissions:
   contents: read
 
 concurrency:
-  group: site-wide-master-audit-${{ github.ref }}
+  group: site-wide-master-audit-${{ github.event.workflow_run.head_sha || github.ref }}
   cancel-in-progress: true
 
 env:
@@ -32,30 +22,64 @@ env:
 
 jobs:
   master-audit:
-    name: Build twice, audit twice, pressure-test critical routes
+    name: Canonical build, reconciliation and regression-resistant critical routes
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
 
     steps:
-      - name: Checkout repository
+      - name: Checkout audited commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install locked dependencies
+        run: npm ci
 
-      - name: Prebuild syntax, package, JSON, and workflow audit
-        run: npm run audit:master:prebuild
-
-      - name: First full build and pressure-test chain
+      - name: Build complete site once
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: First postbuild master audit
-        run: npm run audit:master:postbuild
+      - name: Verify D1-authoritative forum contract
+        run: node scripts/forum-persistence-d1-test.js
+
+      - name: Reconcile the exact audited commit
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: node scripts/final-production-reconcile.js
+
+      - name: Verify freshness and synchronization
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          node scripts/production-freshness-guard.js
+          node scripts/production-sync-test.js
+
+      - name: Deliberately rerun legacy chain and prove no regression
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: node scripts/cloudflare-focused-pressure-wrapper.js
+
+      - name: Run final deploy guard
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: node scripts/production-deploy-guard.js
+
+      - name: Audit public output and local links
+        run: |
+          node scripts/audit-site.js
+          node tools/link-audit.js
+          node scripts/exhaustive-public-site-audit-v2.js
 
       - name: Ask Matrix focused pressure test
         run: npm run pressure-test:ask-matrix
@@ -69,57 +93,35 @@ jobs:
       - name: Epstein Watch focused pressure test
         run: npm run pressure-test:epstein-watch
 
-      - name: Cloudflare Worker focused pressure test
-        run: node scripts/cloudflare-focused-pressure-wrapper.js
-
       - name: Ten Out Of Ten focused pressure test
         run: npm run pressure-test:ten
 
       - name: Intel Analytics focused pressure test
         run: npm run pressure-test:intel-analytics
 
-      - name: Second full build to catch order-dependent overwrites
-        run: npm run build
-
-      - name: Second postbuild master audit
-        run: npm run audit:master:postbuild
-
-      - name: Second Ask Matrix focused pressure test
-        run: npm run pressure-test:ask-matrix
-
-      - name: Second Live Intel focused pressure test
-        run: npm run pressure-test:live-intel
-
-      - name: Second Migration Flow focused pressure test
-        run: npm run pressure-test:migration-flow
-
-      - name: Second Epstein Watch focused pressure test
-        run: npm run pressure-test:epstein-watch
-
-      - name: Second Cloudflare Worker focused pressure test
-        run: node scripts/cloudflare-focused-pressure-wrapper.js
-
-      - name: Second Ten Out Of Ten focused pressure test
-        run: npm run pressure-test:ten
-
-      - name: Second Intel Analytics focused pressure test
-        run: npm run pressure-test:intel-analytics
-
       - name: Upload master audit reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: site-wide-master-audit-reports
+          name: site-wide-master-audit-reports-${{ github.event.workflow_run.head_sha || github.sha }}
           path: |
             downloads/site-wide-function-audit.json
             downloads/site-wide-function-audit.md
+            downloads/cloudflare-focused-pressure-wrapper.json
             downloads/cloudflare-focused-pressure-report.json
             downloads/cloudflare-focused-pressure-report.md
+            downloads/exhaustive-public-site-audit.json
+            downloads/exhaustive-public-site-audit.md
+            downloads/production-sync-test.json
+            downloads/production-freshness-guard.json
+            downloads/production-deploy-guard-report.json
+            downloads/forum-persistence-d1-test.json
+            downloads/site-function-harmony-report.json
+            downloads/deploy-health.json
+            downloads/deploy-manifest.json
             site-quality-report.html
             site-freshness-report.html
             data/site-quality-report.json
             data/site-freshness-report.json
-            deploy-status.json
-            downloads/deploy-status.json
           if-no-files-found: ignore
           retention-days: 14

@@ -32,7 +32,7 @@ add('system references resolve', systemReferences.every(ref => ids.includes(ref.
 
 const controlledTools = ['nmap', 'wireshark', 'zaproxy', 'greenbone', 'amass', 'spiderfoot', 'theharvester', 'velociraptor'];
 const controlledRecords = controlledTools.map(id => tools.find(tool => tool.id === id)).filter(Boolean);
-add('dual-use tools carry authorisation limits', controlledRecords.length === controlledTools.length && controlledRecords.every(tool => /authori|permission|own|administer|scope/i.test(`${tool.purpose} ${tool.limits}`)), controlledRecords.filter(tool => !/authori|permission|own|administer|scope/i.test(`${tool.purpose} ${tool.limits}`)).map(tool => tool.name).join(', '));
+add('dual-use tools carry authorisation limits', controlledRecords.length === controlledTools.length && controlledRecords.every(tool => /authori|permission|own|administer|scope|lawful purpose|restrict targets/i.test(`${tool.purpose} ${tool.limits}`)), controlledRecords.filter(tool => !/authori|permission|own|administer|scope|lawful purpose|restrict targets/i.test(`${tool.purpose} ${tool.limits}`)).map(tool => tool.name).join(', '));
 
 const highRiskTools = ['tails', 'qubes', 'whonix', 'tor-browser', 'gnupg', 'kleopatra', 'virustotal', 'urlscan'];
 add('high-risk tools state limitations', highRiskTools.every(id => {

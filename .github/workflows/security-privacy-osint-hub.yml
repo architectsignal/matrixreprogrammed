@@ -15,6 +15,7 @@ on:
       - 'scripts/build-dark-web-safety.js'
       - 'scripts/security-privacy-hub-test.js'
       - 'scripts/dark-web-safety-test.js'
+      - 'scripts/security-hub-output-test.js'
       - '.github/workflows/security-privacy-osint-hub.yml'
   pull_request:
     branches:
@@ -28,6 +29,7 @@ on:
       - 'scripts/build-dark-web-safety.js'
       - 'scripts/security-privacy-hub-test.js'
       - 'scripts/dark-web-safety-test.js'
+      - 'scripts/security-hub-output-test.js'
       - '.github/workflows/security-privacy-osint-hub.yml'
 
 permissions:
@@ -68,6 +70,7 @@ jobs:
           node --check scripts/build-dark-web-safety.js
           node --check scripts/security-privacy-hub-test.js
           node --check scripts/dark-web-safety-test.js
+          node --check scripts/security-hub-output-test.js
           node --check security-privacy.js
           node --check dark-web-safety.js
           node -e "JSON.parse(require('fs').readFileSync('data/security-privacy-tools.json')); JSON.parse(require('fs').readFileSync('data/dark-web-safety.json')); console.log('registries valid')"
@@ -88,22 +91,7 @@ jobs:
         run: node scripts/build-cloudflare-output.js
 
       - name: Verify deployable routes and safety boundaries
-        run: |
-          test -f _site/security-privacy.html
-          test -f _site/security-privacy
-          test -f _site/security-privacy.js
-          test -f _site/dark-web-safety.html
-          test -f _site/dark-web-safety
-          test -f _site/dark-web-safety.js
-          test -f _site/data/security-privacy-tools.json
-          test -f _site/data/dark-web-safety.json
-          grep -q 'SECURITY, PRIVACY & OSINT SAFETY' _site/security-privacy.html
-          grep -q 'DARK WEB SAFETY & LAWFUL ONION RESOURCES' _site/dark-web-safety.html
-          grep -q 'Open Security & Anonymity Hub' _site/index.html
-          grep -q 'Open Dark Web Safety Guide' _site/index.html
-          grep -q 'security-privacy.html' _site/search-index.json
-          grep -q 'dark-web-safety.html' _site/search-index.json
-          ! grep -Eiq 'href=["'"'][^"'"']*(carding|ransomware|hitman|stolen-data|illicit-market)[^"'"']*["'"']' _site/dark-web-safety.html
+        run: node scripts/security-hub-output-test.js
 
       - name: Commit generated public routes
         if: github.event_name == 'push'
@@ -138,5 +126,6 @@ jobs:
             downloads/security-privacy-hub-test.json
             downloads/dark-web-safety-build.json
             downloads/dark-web-safety-test.json
+            downloads/security-hub-output-test.json
           if-no-files-found: ignore
           retention-days: 60

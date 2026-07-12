@@ -10,6 +10,7 @@ on:
       - 'data/geographic-power-atlas-seed.json'
       - 'geographic-power-atlas.js'
       - 'scripts/build-geographic-power-atlas.js'
+      - 'scripts/prepare-geographic-power-atlas-output.js'
       - 'scripts/geographic-power-atlas-test.js'
       - 'scripts/geographic-power-atlas-output-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -21,6 +22,7 @@ on:
       - 'data/geographic-power-atlas-seed.json'
       - 'geographic-power-atlas.js'
       - 'scripts/build-geographic-power-atlas.js'
+      - 'scripts/prepare-geographic-power-atlas-output.js'
       - 'scripts/geographic-power-atlas-test.js'
       - 'scripts/geographic-power-atlas-output-test.js'
       - 'scripts/build-cloudflare-output.js'
@@ -61,6 +63,7 @@ jobs:
       - name: Validate atlas source files
         run: |
           node --check scripts/build-geographic-power-atlas.js
+          node --check scripts/prepare-geographic-power-atlas-output.js
           node --check scripts/geographic-power-atlas-test.js
           node --check scripts/geographic-power-atlas-output-test.js
           node --input-type=module --check < geographic-power-atlas.js
@@ -89,6 +92,7 @@ jobs:
             geographic-power-atlas.html \
             data/geographic-power-atlas.json \
             data/geographic-power-atlas.geojson \
+            data/geographic-power-atlas-data.json \
             downloads/geographic-power-atlas.csv \
             index.html \
             research-tools.html \

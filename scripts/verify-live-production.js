@@ -21,11 +21,21 @@ const routeMarkers = {
   '/evidence-archive': 'EVIDENCE ARCHIVE'
 };
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
-async function fetchText(route) {
+async function fetchText(route, options = {}) {
   const join = route.includes('?') ? '&' : '?';
-  const response = await fetch(`${siteUrl}${route}${join}deployment_check=${Date.now()}`, { redirect: 'follow', headers: { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixProductionVerifier/1.0' } });
+  const response = await fetch(`${siteUrl}${route}${join}deployment_check=${Date.now()}`, {
+    redirect: 'follow',
+    ...options,
+    headers: {
+      'cache-control': 'no-cache',
+      pragma: 'no-cache',
+      'user-agent': 'MatrixProductionVerifier/1.0',
+      ...(options.headers || {})
+    }
+  });
   return { status: response.status, ok: response.ok, text: await response.text(), headers: Object.fromEntries(response.headers.entries()) };
 }
+function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
   const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/1.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -45,11 +55,62 @@ function freshnessChecks(payloads) {
   }
   return results;
 }
+async function forumHealth() {
+  const response = await fetchText('/forum-health');
+  return { response, data: parseJson(response.text) };
+}
+async function verifyForumPersistence() {
+  const before = await forumHealth();
+  const beforeCount = Number(before.data?.storedPostCount);
+  const healthReady = before.response.ok
+    && before.data?.persistent === true
+    && before.data?.d1Connected === true
+    && String(before.data?.authoritativeStorage || '').includes('D1')
+    && Number.isFinite(beforeCount);
+  if (!healthReady) return { ok: false, stage: 'health-before', beforeStatus: before.response.status, before: before.data };
+
+  const probeBody = {
+    title: `Health check ${expectedSha.slice(0, 12)}`,
+    message: 'Automated deployment persistence health check. Hidden from public feeds by the synthetic-record filter.',
+    category: 'health check',
+    name: 'Matrix System Check'
+  };
+  const submitted = await fetchText('/submit-main-post', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(probeBody)
+  });
+  const submission = parseJson(submitted.text);
+  const writeOk = submitted.ok
+    && submission?.saved === true
+    && submission?.persistent === true
+    && String(submission?.storage || '').includes('D1')
+    && Boolean(submission?.post?.id);
+  if (!writeOk) return { ok: false, stage: 'write', beforeCount, submitStatus: submitted.status, submission };
+
+  let after = null;
+  for (let check = 1; check <= 5; check++) {
+    after = await forumHealth();
+    const afterCount = Number(after.data?.storedPostCount);
+    if (after.response.ok && Number.isFinite(afterCount) && afterCount >= beforeCount + 1) {
+      return {
+        ok: true,
+        stage: 'd1-write-read',
+        beforeCount,
+        afterCount,
+        postId: submission.post.id,
+        storage: submission.storage,
+        publicFeedVisibility: 'hidden synthetic health check'
+      };
+    }
+    await sleep(500);
+  }
+  return { ok: false, stage: 'read-after-write', beforeCount, postId: submission.post.id, afterStatus: after?.response?.status, after: after?.data };
+}
 async function verifyOnce() {
   const mainSha = await currentMainSha();
   const manifestResponse = await fetchText('/deploy-manifest.json');
-  let manifest = null;
-  try { manifest = JSON.parse(manifestResponse.text); } catch {}
+  const manifest = parseJson(manifestResponse.text);
   const routeResults = [];
   for (const [route, marker] of Object.entries(routeMarkers)) {
     const response = await fetchText(route);
@@ -58,12 +119,14 @@ async function verifyOnce() {
   const payloads = {};
   for (const item of policy.datasets || []) {
     const response = await fetchText(`/${item.file}`);
-    try { payloads[item.file] = JSON.parse(response.text); } catch {}
+    payloads[item.file] = parseJson(response.text);
   }
   const freshness = freshnessChecks(payloads);
   const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha && manifest.commitSha === mainSha);
-  const ok = manifestResponse.ok && manifestMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, routeResults, freshness };
+  const coreOk = manifestResponse.ok && manifestMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
+  const forumPersistence = coreOk ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
+  const ok = coreOk && forumPersistence.ok;
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, routeResults, freshness, forumPersistence };
 }
 
 (async () => {
@@ -74,7 +137,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
-      console.log(`Live production verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
+      console.log(`Live production and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

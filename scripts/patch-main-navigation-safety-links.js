@@ -24,9 +24,9 @@ html = html.replace(navMatch[0], `<div class="nav-primary">${links}</div>`);
 fs.writeFileSync(indexPath, html);
 
 let startHere = fs.readFileSync(startHerePath, 'utf8');
-const startNav = startHere.match(/<nav class="nav">([\s\S]*?)<\/nav>/i);
+const startNav = startHere.match(/(<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>)([\s\S]*?)<\/nav>/i);
 if (!startNav) throw new Error('Start Here navigation not found.');
-let startLinks = startNav[1]
+let startLinks = startNav[2]
   .replace(/<a href="security-privacy\.html">Security Tools<\/a>/gi, '')
   .replace(/<a href="dark-web-safety\.html">Dark Web Safety<\/a>/gi, '');
 if (/<a href="search\.html">Search<\/a>/i.test(startLinks)) {
@@ -34,7 +34,7 @@ if (/<a href="search\.html">Search<\/a>/i.test(startLinks)) {
 } else {
   startLinks += promoted;
 }
-startHere = startHere.replace(startNav[0], `<nav class="nav">${startLinks}</nav>`);
+startHere = startHere.replace(startNav[0], `${startNav[1]}${startLinks}</nav>`);
 
 const cardsStart = '<!-- start-here-safety:start -->';
 const cardsEnd = '<!-- start-here-safety:end -->';

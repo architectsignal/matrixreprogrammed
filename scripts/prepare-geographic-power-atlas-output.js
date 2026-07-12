@@ -13,4 +13,5 @@ for(const rel of ['geographic-power-atlas.html','geographic-power-atlas.js','res
   const after=before.replace(/data\/geographic-power-atlas\.geojson/g,'data/geographic-power-atlas-data.json');
   if(after!==before) fs.writeFileSync(file,after);
 }
+require('./patch-start-here-safety-links.js');
 console.log(`Deployable atlas data prepared: ${parsed.features.length} GeoJSON features in data/geographic-power-atlas-data.json.`);

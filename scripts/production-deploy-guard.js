@@ -27,30 +27,32 @@ function duplicateIds(html) {
 }
 
 const requiredSource = [
-  'index.html', 'start-here.html', 'live-intel.html', 'daily-power-conclusions.html',
+  'index.html', 'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html',
   'security-privacy.html', 'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'deploy-manifest.json', 'data/production-freshness-policy.json', 'data/live-intel.json',
-  'data/daily-power-conclusions.json', 'data/daily-investigation-conclusions.json',
-  'data/daily-brain-brief.json', 'data/outcome-briefings.json', 'src/worker.js',
-  'src/worker-forum-persistence.js', 'migrations/0004_forum_persistence.sql',
-  'scripts/forum-persistence-d1-test.js', 'wrangler.toml', 'wrangler.jsonc'
+  'evidence-archive.html', 'search.html', 'deploy-manifest.json', 'deploy-health.html', 'deploy-health.json',
+  'data/production-freshness-policy.json', 'data/live-intel.json', 'data/daily-power-conclusions.json',
+  'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json', 'data/outcome-briefings.json',
+  'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-production.js',
+  'migrations/0004_forum_persistence.sql', 'scripts/forum-persistence-d1-test.js',
+  'scripts/build-production-health.js', 'wrangler.toml', 'wrangler.jsonc'
 ];
 const requiredBuilt = [
-  'index.html', 'index', 'start-here.html', 'start-here', 'live-intel.html', 'live-intel',
-  'daily-power-conclusions.html', 'daily-power-conclusions',
+  'index.html', 'index', 'start-here.html', 'start-here', 'membership.html', 'membership',
+  'live-intel.html', 'live-intel', 'daily-power-conclusions.html', 'daily-power-conclusions',
   'daily-investigation-conclusions.html', 'daily-investigation-conclusions',
   'daily-brain-brief.html', 'daily-brain-brief', 'outcome-briefings.html', 'outcome-briefings',
   'security-privacy.html', 'security-privacy', 'dark-web-safety.html', 'dark-web-safety',
   'geographic-power-atlas.html', 'geographic-power-atlas', 'data-lab.html', 'data-lab',
-  'evidence-archive.html', 'evidence-archive', 'deploy-manifest.json', 'deploy-manifest',
-  'data/live-intel.json', 'data/daily-power-conclusions.json',
+  'evidence-archive.html', 'evidence-archive', 'search.html', 'search',
+  'deploy-manifest.json', 'deploy-manifest', 'deploy-health.html', 'deploy-health', 'deploy-health.json',
+  'downloads/deploy-health.json', 'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json', 'data/outcome-briefings.json'
 ];
 requiredSource.forEach(need);
 requiredBuilt.forEach(needSite);
 
-for (const rel of ['index.html', 'start-here.html', 'live-intel.html', 'daily-power-conclusions.html', 'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html']) {
+for (const rel of ['index.html', 'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html', 'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html', 'deploy-health.html']) {
   if (exists(rel)) {
     const duplicates = duplicateIds(read(rel));
     if (duplicates.length) hard.push(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
@@ -63,8 +65,10 @@ for (const rel of ['index.html', 'start-here.html', 'live-intel.html', 'daily-po
 
 requireText('index.html', 'Security Tools');
 requireText('index.html', 'Dark Web Safety');
-requireText('start-here.html', 'Open Security Tools');
-requireText('start-here.html', 'Open Dark Web Safety');
+requireText('membership.html', 'Coming soon — no payment taken');
+requireText('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
+requireText('deploy-health.html', 'Payments: DEFERRED / NO PAYMENT TAKEN');
+requireText('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED', true);
 for (const rel of ['daily-power-conclusions.html', 'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html']) {
   requireText(rel, '<!-- conclusion-integrity:start -->');
   requireText(rel, '<!-- conclusion-integrity:start -->', true);
@@ -73,9 +77,19 @@ for (const rel of ['daily-power-conclusions.html', 'daily-investigation-conclusi
 const expectedSha = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const manifest = exists('deploy-manifest.json') ? parse('deploy-manifest.json') : null;
 const builtManifest = siteExists('deploy-manifest.json') ? parse('deploy-manifest.json', true) : null;
+const health = exists('deploy-health.json') ? parse('deploy-health.json') : null;
+const builtHealth = siteExists('deploy-health.json') ? parse('deploy-health.json', true) : null;
 if (manifest && expectedSha && manifest.commitSha !== expectedSha) hard.push(`source deploy manifest SHA ${manifest.commitSha} does not match expected ${expectedSha}`);
 if (builtManifest && expectedSha && builtManifest.commitSha !== expectedSha) hard.push(`built deploy manifest SHA ${builtManifest.commitSha} does not match expected ${expectedSha}`);
 if (manifest && builtManifest && manifest.commitSha !== builtManifest.commitSha) hard.push('source and built deploy manifests disagree');
+for (const [label, item] of [['source', health], ['built', builtHealth]]) {
+  if (!item) continue;
+  if (!item.ok) hard.push(`${label} production health reports not ready`);
+  if (expectedSha && item.buildSha !== expectedSha) hard.push(`${label} production health SHA ${item.buildSha} does not match expected ${expectedSha}`);
+  if (item.manifestSha !== expectedSha) hard.push(`${label} production health manifest SHA ${item.manifestSha} does not match expected ${expectedSha}`);
+  if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} production health does not name strict Worker`);
+  if (item.paymentStatus !== 'deferred') hard.push(`${label} production health does not keep payments deferred`);
+}
 
 const freshnessReport = exists('downloads/production-freshness-guard.json') ? parse('downloads/production-freshness-guard.json') : null;
 if (!freshnessReport) hard.push('production freshness report missing');
@@ -85,24 +99,29 @@ for (const text of ['env.ASSETS.fetch', '/api/membership/signup', '/api/paypal/w
   if (!read('src/worker.js').includes(text)) hard.push(`src/worker.js missing delegated route marker ${text}`);
 }
 for (const text of [
+  "import forumWorker from './worker-forum-persistence.js'",
+  'members-db-binding-unavailable',
+  'non-authoritative-forum-response-blocked',
+  "origin !== 'cloudflare-worker-forum-d1'",
+  "return forumWorker.fetch(request, env, ctx)"
+]) {
+  if (!read('src/worker-production.js').includes(text)) hard.push(`strict production Worker missing ${text}`);
+}
+for (const text of [
   "import legacyWorker from './worker.js'",
-  '/forum-health',
-  '/forum-feed-main',
-  '/submit-main-post',
-  'CREATE TABLE IF NOT EXISTS forum_posts',
-  'Cloudflare D1 MEMBERS_DB.forum_posts',
-  'kv_forum_migration_v1',
-  'return legacyWorker.fetch(request, env, ctx)'
+  '/forum-health', '/forum-feed-main', '/submit-main-post',
+  'CREATE TABLE IF NOT EXISTS forum_posts', 'Cloudflare D1 MEMBERS_DB.forum_posts',
+  'kv_forum_migration_v1', 'return legacyWorker.fetch(request, env, ctx)'
 ]) {
   if (!read('src/worker-forum-persistence.js').includes(text)) hard.push(`forum persistence wrapper missing ${text}`);
 }
 for (const text of ['CREATE TABLE IF NOT EXISTS forum_posts', 'CREATE TABLE IF NOT EXISTS forum_reports', 'idx_forum_posts_board_created']) {
   if (!read('migrations/0004_forum_persistence.sql').includes(text)) hard.push(`forum persistence migration missing ${text}`);
 }
-for (const text of ['main = "src/worker-forum-persistence.js"', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"', 'directory = "./_site"', 'run_worker_first = true']) {
+for (const text of ['main = "src/worker-production.js"', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"', 'directory = "./_site"', 'run_worker_first = true']) {
   if (!read('wrangler.toml').includes(text)) hard.push(`wrangler.toml missing ${text}`);
 }
-for (const text of ['"main": "src/worker-forum-persistence.js"', '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"']) {
+for (const text of ['"main": "src/worker-production.js"', '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"']) {
   if (!read('wrangler.jsonc').includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
 }
 if (siteExists('_redirects')) hard.push('_site/_redirects must not be deployed for Worker assets');
@@ -113,17 +132,20 @@ const report = {
   expectedSha,
   manifestSha: manifest?.commitSha || null,
   builtManifestSha: builtManifest?.commitSha || null,
+  healthSha: health?.buildSha || null,
+  builtHealthSha: builtHealth?.buildSha || null,
   hardIssues: hard,
   softIssues: soft,
-  forumPersistence: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; FORUM_POSTS KV is a mirror and recovery source.',
-  boundary: 'Deployment is blocked on missing critical routes, stale intelligence, duplicate IDs, absent confidence cards, invalid manifests, SHA drift or non-authoritative forum storage.'
+  forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
+  paymentStatus: 'Deferred; membership checkout remains disabled and no payment is taken.',
+  boundary: 'Deployment is blocked on missing critical routes, stale intelligence, duplicate IDs, absent confidence cards, invalid manifests, health/SHA drift, legacy forum fallback or activated payments.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nForum storage: ${report.forumPersistence}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with D1-authoritative forums.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with strict D1 forums and payments deferred.`);

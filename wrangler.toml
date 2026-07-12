@@ -1,9 +1,9 @@
 # Cloudflare Workers deployment configuration
 # Production deploy path: GitHub Actions runs npm run build then npx wrangler deploy.
-# The forum persistence wrapper intercepts forum routes and delegates all other routes to src/worker.js.
+# The strict production wrapper blocks false-success forum responses and delegates all other traffic.
 
 name = "matrixreprogrammed"
-main = "src/worker-forum-persistence.js"
+main = "src/worker-production.js"
 compatibility_date = "2026-06-25"
 keep_vars = true
 
@@ -22,7 +22,7 @@ run_worker_first = true
 binding = "FORUM_POSTS"
 id = "99996d87016d4285a833707cbda5232f"
 
-# Authoritative membership, forum, consent, session and PayPal database.
+# Authoritative membership, forum, consent, session and future payment database.
 [[d1_databases]]
 binding = "MEMBERS_DB"
 database_name = "matrix-members"

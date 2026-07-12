@@ -1,0 +1,142 @@
+name: Security Privacy and Dark Web Safety Hub
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/security-privacy-osint-hub
+      - main
+    paths:
+      - 'data/security-privacy-tools.json'
+      - 'data/dark-web-safety.json'
+      - 'security-privacy.js'
+      - 'dark-web-safety.js'
+      - 'scripts/build-security-privacy-hub.js'
+      - 'scripts/build-dark-web-safety.js'
+      - 'scripts/security-privacy-hub-test.js'
+      - 'scripts/dark-web-safety-test.js'
+      - '.github/workflows/security-privacy-osint-hub.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/security-privacy-tools.json'
+      - 'data/dark-web-safety.json'
+      - 'security-privacy.js'
+      - 'dark-web-safety.js'
+      - 'scripts/build-security-privacy-hub.js'
+      - 'scripts/build-dark-web-safety.js'
+      - 'scripts/security-privacy-hub-test.js'
+      - 'scripts/dark-web-safety-test.js'
+      - '.github/workflows/security-privacy-osint-hub.yml'
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: security-privacy-osint-hub-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[security-hub]')
+    name: Build and verify public security safety system
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout current revision
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate builders and registries
+        run: |
+          node --check scripts/build-security-privacy-hub.js
+          node --check scripts/build-dark-web-safety.js
+          node --check scripts/security-privacy-hub-test.js
+          node --check scripts/dark-web-safety-test.js
+          node --check security-privacy.js
+          node --check dark-web-safety.js
+          node -e "JSON.parse(require('fs').readFileSync('data/security-privacy-tools.json')); JSON.parse(require('fs').readFileSync('data/dark-web-safety.json')); console.log('registries valid')"
+
+      - name: Build both public safety pages
+        run: |
+          node scripts/build-security-privacy-hub.js
+          node scripts/build-dark-web-safety.js
+
+      - name: Run safety and quality gates
+        run: |
+          node scripts/security-privacy-hub-test.js
+          node scripts/dark-web-safety-test.js
+
+      - name: Build guarded Cloudflare output and search
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Verify deployable routes and safety boundaries
+        run: |
+          test -f _site/security-privacy.html
+          test -f _site/security-privacy
+          test -f _site/security-privacy.js
+          test -f _site/dark-web-safety.html
+          test -f _site/dark-web-safety
+          test -f _site/dark-web-safety.js
+          test -f _site/data/security-privacy-tools.json
+          test -f _site/data/dark-web-safety.json
+          grep -q 'SECURITY, PRIVACY & OSINT SAFETY' _site/security-privacy.html
+          grep -q 'DARK WEB SAFETY & LAWFUL ONION RESOURCES' _site/dark-web-safety.html
+          grep -q 'Open Security & Anonymity Hub' _site/index.html
+          grep -q 'Open Dark Web Safety Guide' _site/index.html
+          grep -q 'security-privacy.html' _site/search-index.json
+          grep -q 'dark-web-safety.html' _site/search-index.json
+          ! grep -Eiq 'href=["'"'][^"'"']*(carding|ransomware|hitman|stolen-data|illicit-market)[^"'"']*["'"']' _site/dark-web-safety.html
+
+      - name: Commit generated public routes
+        if: github.event_name == 'push'
+        id: commit
+        run: |
+          git config user.name "matrix-security-hub-bot"
+          git config user.email "actions@github.com"
+          git add \
+            security-privacy.html \
+            dark-web-safety.html \
+            index.html \
+            research-tools.html \
+            sitemap.xml \
+            llms.txt \
+            || true
+          if git diff --cached --quiet; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "No generated public safety changes to commit."
+            exit 0
+          fi
+          git commit -m "Build security privacy and dark web safety hubs [security-hub] [deploy]"
+          git push || (git pull --rebase --autostash && git push)
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload safety reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-privacy-osint-hub-${{ github.run_id }}
+          path: |
+            downloads/security-privacy-hub-build.json
+            downloads/security-privacy-hub-test.json
+            downloads/dark-web-safety-build.json
+            downloads/dark-web-safety-test.json
+          if-no-files-found: ignore
+          retention-days: 60

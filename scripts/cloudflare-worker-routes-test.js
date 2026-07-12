@@ -44,7 +44,6 @@ const forbidIncludes = (file, text, label = text) => {
 
 if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with Worker assets');
 
-/* Strict production boundary. */
 for (const marker of [
   "import forumWorker from './worker-forum-persistence.js'",
   'members-db-binding-unavailable',
@@ -56,7 +55,6 @@ for (const marker of [
   'return forumWorker.fetch(request, env, ctx)'
 ]) requireIncludes('src/worker-production.js', marker, `strict production marker ${marker}`);
 
-/* D1-authoritative forum layer with KV retained only for migration and recovery. */
 for (const marker of [
   "import legacyWorker from './worker.js'",
   '/forum-health',
@@ -80,7 +78,6 @@ for (const marker of [
   "return legacyWorker.fetch(request, env, ctx)"
 ]) requireIncludes('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 
-/* Legacy application Worker remains available only behind the two boundaries. */
 for (const marker of [
   'const routeAliases = {',
   'routeAliases[originalPath]',
@@ -98,7 +95,6 @@ forbidIncludes('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin const
 forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin URL');
 forbidIncludes('src/worker.js', 'clientSecret:', 'payment secret in response payload');
 
-/* Payments remain deliberately dormant. Backend/schema code may stay for later activation. */
 for (const marker of [
   '<!-- membership-tiers:start -->',
   '€3',
@@ -122,7 +118,6 @@ requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NO
 requireIncludes('src/worker.js', '/api/paypal/webhook', 'dormant payment webhook backend');
 requireIncludes('src/worker.js', '/v1/notifications/verify-webhook-signature', 'dormant webhook verification backend');
 
-/* Active Cloudflare wiring must point to the strict boundary. */
 for (const marker of [
   'main = "src/worker-production.js"',
   'directory = "./_site"',
@@ -158,6 +153,18 @@ requireIncludes('scripts/build-production-health.js', "workerScript: 'src/worker
 requireIncludes('scripts/build-production-health.js', "paymentStatus: 'deferred'", 'deferred payment health status');
 requireIncludes('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
 forbidIncludes('scripts/repair-generated-site-artifacts.js', "workerScript: 'src/worker.js'", 'legacy health Worker identity');
+
+const report = {
+  ok: problems.length === 0,
+  generatedAt: new Date().toISOString(),
+  problems,
+  workerEntrypoint: 'src/worker-production.js',
+  forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
+  paymentStatus: 'deferred',
+  boundary: 'No public checkout or subscription creation UI is permitted until payment activation is deliberately released.'
+};
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
 
 if (problems.length) {
   console.error('\nCLOUDFLARE WORKER ROUTES TEST FAILED\n');

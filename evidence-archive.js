@@ -16,6 +16,7 @@ const elements = {
   cite: document.querySelector('#archive-cite'),
   verificationStatus: document.querySelector('#archive-verification-status'),
   integritySummary: document.querySelector('#integrity-summary'),
+  sigstoreBundle: document.querySelector('#sigstore-bundle-link'),
   copyVerify: document.querySelector('#copy-verify-command'),
   changeSelect: document.querySelector('#change-select'),
   diffMode: document.querySelector('#diff-mode'),
@@ -27,7 +28,7 @@ const elements = {
   downloadBibliography: document.querySelector('#download-bibliography')
 };
 
-const state = { archives: [], changes: [], activeArchive: null, activeChange: null, integrity: null };
+const state = { archives: [], changes: [], activeArchive: null, activeChange: null, integrity: null, sigstoreBundleAvailable: false };
 const params = new URLSearchParams(location.search);
 const normalize = value => String(value || '').toLowerCase().trim();
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
@@ -120,6 +121,11 @@ async function loadIntegrity() {
       bundleValidShape = Boolean(bundle.mediaType || bundle.verificationMaterial || bundle.dsseEnvelope || bundle.messageSignature);
     }
   } catch {}
+  state.sigstoreBundleAvailable = bundleValidShape;
+  if (elements.sigstoreBundle) {
+    elements.sigstoreBundle.disabled = !bundleValidShape;
+    elements.sigstoreBundle.textContent = bundleValidShape ? 'Open Sigstore bundle' : 'Sigstore bundle pending';
+  }
   const signing = state.integrity.signing || {};
   elements.integritySummary.innerHTML = `<strong>${state.integrity.files?.length || 0}</strong> protected file hashes · SHA-256 · Sigstore status: <span class="${bundleValidShape ? 'status-good' : 'status-warn'}">${bundleValidShape ? 'signed bundle published' : esc(signing.status || 'awaiting workflow signature')}</span> · generated ${esc(state.integrity.generatedAt || 'unknown')}.`;
 }
@@ -173,6 +179,7 @@ elements.cite?.addEventListener('click', createCitation);
 elements.citationStyle?.addEventListener('change', createCitation);
 elements.copyCitation?.addEventListener('click', () => copyText(elements.citationOutput.value, elements.verificationStatus, 'Citation copied.'));
 elements.downloadBibliography?.addEventListener('click', () => downloadBibliography(state.archives, elements.citationStyle.value));
+elements.sigstoreBundle?.addEventListener('click', () => { if (state.sigstoreBundleAvailable) location.href = 'data/evidence-integrity-manifest.sigstore.json'; });
 elements.copyVerify?.addEventListener('click', () => copyText(verificationCommand(), elements.integritySummary, 'Cosign verification command copied.'));
 elements.changeSelect?.addEventListener('change', showChange);
 elements.diffMode?.addEventListener('change', showChange);

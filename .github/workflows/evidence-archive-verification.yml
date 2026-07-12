@@ -3,7 +3,7 @@ name: Evidence Archive Verification
 on:
   workflow_dispatch:
   schedule:
-    - cron: '35 6 * * *'
+    - cron: '35 6 * * 0'
   push:
     branches:
       - main

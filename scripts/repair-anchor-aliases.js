@@ -2,6 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+
+// Run the Phase 10 public-route repair before the standard build reaches its
+// every-page link audit. This keeps the canonical atlas asset, main tabs and
+// Start Here safety cards present outside the Cloudflare-only build path too.
+if (fs.existsSync(path.join(root, 'data', 'geographic-power-atlas-seed.json'))) {
+  require('./build-geographic-power-atlas.js');
+  require('./prepare-geographic-power-atlas-output.js');
+  require('./patch-main-navigation-safety-links.js');
+}
+
 const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);
 const report = {
   ok: true,

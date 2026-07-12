@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Security, Privacy & OSINT Safety Hub | Matrix Reprogrammed</title>
+  <meta name="description" content="A complete free security, privacy, anonymity and lawful OSINT system: Tails, Tor, secure messaging, local PGP, password safety, encryption, metadata removal, breach checks and defensive tools." />
+  <meta property="og:title" content="Security, Privacy & OSINT Safety Hub" />
+  <meta property="og:description" content="Threat models, complete protection systems and vetted free tools for anonymity, secure communication, defensive monitoring and lawful OSINT." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fixes.css" />
+  <style>
+    .security-warning{border-left:4px solid #d8b56a;background:rgba(216,181,106,.08);padding:1rem 1.15rem;border-radius:10px}.security-danger{border-left-color:#b71919;background:rgba(183,25,25,.1)}
+    .security-controls{position:sticky;top:.5rem;z-index:8;display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(2,minmax(150px,.7fr)) auto auto;gap:.65rem;align-items:center;padding:1rem;border:1px solid rgba(216,181,106,.28);border-radius:14px;background:rgba(5,5,5,.96);backdrop-filter:blur(8px)}
+    .security-controls input,.security-controls select{width:100%;box-sizing:border-box;padding:.78rem;border:1px solid rgba(216,181,106,.34);border-radius:9px;background:#090806;color:#f3e6bd}.security-result{font-size:.82rem;color:#d8b56a}
+    .security-systems{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.security-system-card ol{padding-left:1.2rem}.security-system-card li{margin:.45rem 0}.security-system-card button[aria-pressed="true"]{box-shadow:0 0 0 2px #d8b56a}
+    .security-tool-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.security-tool-card{display:flex;flex-direction:column;gap:.35rem;transition:border-color .2s,transform .2s,box-shadow .2s}.security-tool-card .btn{margin-top:auto;align-self:flex-start}.security-tool-card.system-recommended{border-color:#d8b56a;box-shadow:0 0 0 2px rgba(216,181,106,.22),0 0 28px rgba(216,181,106,.13);transform:translateY(-2px)}
+    .security-tool-top{display:flex;justify-content:space-between;gap:.7rem;align-items:center}.security-level{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#c8b98c}.security-purpose{font-size:1.04rem}.security-limit{padding:.75rem;border-left:3px solid rgba(183,25,25,.7);background:rgba(183,25,25,.08)}
+    .security-badges{display:flex;flex-wrap:wrap;gap:.35rem;margin:.3rem 0 .8rem}.security-badges span{font-size:.7rem;border:1px solid rgba(216,181,106,.25);border-radius:999px;padding:.22rem .5rem;color:#c8b98c}.security-category[hidden],.security-tool-card[hidden]{display:none!important}
+    .security-protocol{counter-reset:protocol}.security-protocol article{position:relative;padding-left:4rem}.security-protocol article:before{counter-increment:protocol;content:counter(protocol);position:absolute;left:1rem;top:1rem;width:2rem;height:2rem;border:1px solid #d8b56a;border-radius:50%;display:grid;place-items:center;color:#d8b56a;font-weight:800}
+    .security-source-note{font-size:.82rem;color:#c8b98c}.security-jump{display:flex;flex-wrap:wrap;gap:.45rem}.security-jump a{border:1px solid rgba(216,181,106,.25);border-radius:999px;padding:.35rem .65rem;text-decoration:none}
+    @media(max-width:900px){.security-controls{position:static;grid-template-columns:1fr}.security-tool-grid,.security-systems{grid-template-columns:1fr}}
+    @media print{canvas,.signal-face,.veil,.topbar,.security-controls,.btn{display:none!important}.page{background:#fff;color:#000}.card{break-inside:avoid;border-color:#999;background:#fff;color:#000}.security-limit,.security-warning{background:#fff;color:#000}}
+  </style>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
+<body>
+  <canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div>
+  <div class="page commercial-internal">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
+      <nav class="nav"><a href="security-privacy.html" aria-current="page">Security Hub</a><a href="dark-web-safety.html">Dark Web Safety</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="search.html">Search</a></nav>
+    </header>
+    <main>
+      <section class="hero wrap">
+        <div class="eyebrow">Free defensive system · privacy · anonymity · lawful OSINT</div>
+        <h1>SECURITY, PRIVACY & OSINT SAFETY.</h1>
+        <p class="lead">A complete protection map for choosing the right operating system, browser, messenger, email workflow, password system, encryption, metadata cleaner, breach check, defensive monitor and public-record research tool.</p>
+        <p class="security-warning"><strong>Core boundary:</strong> Privacy tools reduce specific risks; they do not make a person invisible, invulnerable or immune from identification. Anonymity is a process built from threat modelling, compartmentation, endpoint security and disciplined behaviour. Use network, scanning and OSINT tools only on systems you own, administer, have explicit permission to test, or for lawful public-record research.</p>
+        <div class="cta-row"><a class="btn" href="#complete-systems">Choose a Complete System</a><a class="btn alt" href="#tool-registry">Browse All Tools</a><button class="btn alt" id="security-print" type="button">Print / Save Guide</button></div>
+      </section>
+
+      <section class="section wrap">
+        <div class="eyebrow">Understand the layers</div><h2>PRIVACY IS NOT ONE SWITCH.</h2>
+        <div class="grid"><article class="card"><h3>Privacy</h3><p>Reduces unnecessary collection and exposure. It does not automatically hide identity.</p></article><article class="card"><h3>Anonymity</h3><p>Requires separation between activity and identity, not merely a different browser or IP address.</p></article><article class="card"><h3>Encryption</h3><p>Protects content and stored data. It does not hide every sender, recipient, time, device or access pattern.</p></article><article class="card"><h3>Tor</h3><p>Separates a user IP from destinations when used correctly. Personal logins and endpoint compromise can still identify the user.</p></article><article class="card"><h3>VPN</h3><p>Moves network trust to another provider. No free VPN is recommended as an anonymity solution.</p></article><article class="card"><h3>OSINT</h3><p>Uses lawful public records and verification. It does not authorise account access, harassment, impersonation or intrusive testing.</p></article></div>
+      </section>
+
+      <section class="section wrap security-warning security-danger">
+        <h2>DO NOT USE ONLINE PGP KEY GENERATORS.</h2>
+        <p>A website that creates a private key can copy it before giving it to you. Generate PGP keys locally with GnuPG or Kleopatra, create a revocation certificate, protect the private key with a strong passphrase, keep an offline backup and verify fingerprints through a second trusted channel. For most conversations, use a modern end-to-end encrypted messenger instead.</p>
+      </section>
+
+      <section class="section wrap" id="complete-systems">
+        <div class="eyebrow">Build by threat model</div><h2>COMPLETE PROTECTION SYSTEMS.</h2>
+        <p class="lead">Choose the closest threat model. The page will highlight the components that belong together. Do not install every tool or combine anonymity systems without understanding the result.</p>
+        <p id="security-system-status" class="security-source-note">No system is selected.</p>
+        <div class="grid security-systems">
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>Everyday Protection</h3>
+  <p><strong>Threat model:</strong> Account takeover, phishing, routine tracking, lost devices and common malware.</p>
+  <ol><li>Use a maintained operating system and automatic security updates.</li><li>Use Bitwarden or KeePassXC with a unique password for every account.</li><li>Use Aegis, 2FAS or Ente Auth for time-based codes; prefer passkeys or hardware keys where available.</li><li>Use Signal for sensitive conversations and encrypt important files before cloud storage.</li><li>Keep an encrypted, tested backup with restic or BorgBackup.</li></ol>
+  <button class="btn alt" type="button" data-security-system="everyday" data-system-title="Everyday Protection" data-tool-ids='[&quot;bitwarden&quot;,&quot;keepassxc&quot;,&quot;aegis&quot;,&quot;2fas&quot;,&quot;ente-auth&quot;,&quot;signal&quot;,&quot;cryptomator&quot;,&quot;restic&quot;,&quot;borgbackup&quot;,&quot;ublock-origin&quot;]' aria-pressed="false">Highlight this system</button>
+</article>
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>Private OSINT Research</h3>
+  <p><strong>Threat model:</strong> Cross-site tracking, identity contamination, malicious documents, metadata leakage and accidental contact with a subject.</p>
+  <ol><li>Use a dedicated operating-system account or isolated virtual machine for research.</li><li>Use Tor Browser when IP separation is needed; never sign into personal accounts in that session.</li><li>Open untrusted documents through Dangerzone and inspect metadata with ExifTool or MAT2.</li><li>Use aliases for registrations and OnionShare for controlled file transfer.</li><li>Record URLs, access dates, hashes and evidence boundaries for every important source.</li></ol>
+  <button class="btn alt" type="button" data-security-system="private-research" data-system-title="Private OSINT Research" data-tool-ids='[&quot;tor-browser&quot;,&quot;onionshare&quot;,&quot;dangerzone&quot;,&quot;mat2&quot;,&quot;exiftool&quot;,&quot;simplelogin&quot;,&quot;addy&quot;,&quot;wayback&quot;,&quot;bellingcat-toolkit&quot;]' aria-pressed="false">Highlight this system</button>
+</article>
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>High-Risk Anonymous Research</h3>
+  <p><strong>Threat model:</strong> Targeted surveillance, hostile networks, device seizure, censorship or a serious need to separate research identity from everyday identity.</p>
+  <ol><li>Read EFF Surveillance Self-Defense and Security in a Box before choosing tools.</li><li>Use Tails for an amnesic portable workflow or Qubes OS with Whonix for long-term compartmentation.</li><li>Use Tor bridges or Snowflake where Tor is blocked; do not torrent or add extensions.</li><li>Keep personal phones, accounts, writing habits, usernames and schedules outside the anonymous compartment.</li><li>Use Access Now&#39;s Digital Security Helpline when a real person or organisation is under active threat.</li></ol>
+  <button class="btn alt" type="button" data-security-system="high-risk" data-system-title="High-Risk Anonymous Research" data-tool-ids='[&quot;eff-ssd&quot;,&quot;security-in-a-box&quot;,&quot;tails&quot;,&quot;qubes&quot;,&quot;whonix&quot;,&quot;tor-browser&quot;,&quot;snowflake&quot;,&quot;simplex&quot;,&quot;briar&quot;,&quot;access-now&quot;]' aria-pressed="false">Highlight this system</button>
+</article>
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>Secure Communication</h3>
+  <p><strong>Threat model:</strong> Message interception, account compromise, contact discovery and unsafe file exchange.</p>
+  <ol><li>Prefer modern end-to-end encrypted messengers over ordinary email for sensitive conversations.</li><li>Verify important contacts using safety numbers, security codes or a second trusted channel.</li><li>Enable registration locks, disappearing messages where appropriate and device-screen protection.</li><li>Use PGP only where interoperability requires it and both parties understand key verification.</li><li>Remember that recipients can copy, photograph or disclose any message they can read.</li></ol>
+  <button class="btn alt" type="button" data-security-system="secure-comms" data-system-title="Secure Communication" data-tool-ids='[&quot;signal&quot;,&quot;simplex&quot;,&quot;briar&quot;,&quot;onionshare&quot;,&quot;thunderbird&quot;,&quot;gnupg&quot;,&quot;kleopatra&quot;]' aria-pressed="false">Highlight this system</button>
+</article>
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>Home &amp; Small-Office Defence</h3>
+  <p><strong>Threat model:</strong> Malware, unwanted outbound connections, weak services, malicious domains and unpatched devices.</p>
+  <ol><li>Inventory devices and remove services you do not need.</li><li>Use Pi-hole or AdGuard Home for network-level blocking, but do not mistake DNS blocking for anonymity.</li><li>Use OpenSnitch or Portmaster to understand outbound application connections.</li><li>Use Nmap only against networks you own or have permission to assess.</li><li>Use Lynis, ClamAV and verified backups as part of a repeatable maintenance routine.</li></ol>
+  <button class="btn alt" type="button" data-security-system="home-network" data-system-title="Home &amp; Small-Office Defence" data-tool-ids='[&quot;pihole&quot;,&quot;adguard-home&quot;,&quot;opensnitch&quot;,&quot;portmaster&quot;,&quot;nmap&quot;,&quot;lynis&quot;,&quot;clamav&quot;,&quot;wireshark&quot;,&quot;restic&quot;]' aria-pressed="false">Highlight this system</button>
+</article>
+<article class="card security-system-card">
+  <span class="label">Complete protection route</span>
+  <h3>Website &amp; Server Defence</h3>
+  <p><strong>Threat model:</strong> Exposed services, weak TLS, vulnerable web applications, brute force, malicious traffic and incomplete logs.</p>
+  <ol><li>Run external configuration checks with Mozilla Observatory, SSL Labs and Security Headers.</li><li>Use Fail2ban or CrowdSec to respond to repeated malicious authentication attempts.</li><li>Use Suricata or Zeek for network visibility and Wazuh or osquery for endpoint telemetry.</li><li>Use OWASP ZAP and Greenbone only with explicit authorisation and controlled scope.</li><li>Patch quickly, minimise privileges, protect backups and rehearse incident recovery.</li></ol>
+  <button class="btn alt" type="button" data-security-system="server-operator" data-system-title="Website &amp; Server Defence" data-tool-ids='[&quot;mozilla-observatory&quot;,&quot;ssllabs&quot;,&quot;security-headers&quot;,&quot;fail2ban&quot;,&quot;crowdsec&quot;,&quot;suricata&quot;,&quot;zeek&quot;,&quot;wazuh&quot;,&quot;osquery&quot;,&quot;zaproxy&quot;,&quot;greenbone&quot;]' aria-pressed="false">Highlight this system</button>
+</article></div>
+      </section>
+
+      <section class="section wrap">
+        <div class="eyebrow">Non-negotiable operating rules</div><h2>THE HUMAN LAYER.</h2>
+        <ol><li>Start with a threat model: identify what you are protecting, from whom, for how long and what failure would cost.</li><li>Privacy is not the same as anonymity. Encryption protects content; it does not automatically hide identity, contacts, timing or device metadata.</li><li>A VPN moves trust from an internet provider to a VPN provider. It is not a substitute for Tor and no free VPN is recommended here.</li><li>Incognito or private-browser mode mainly limits local history. It does not hide an IP address from websites, employers, networks or providers.</li><li>Do not install extra extensions in Tor Browser. Extra extensions can make a browser fingerprint more unique or bypass protections.</li><li>Never use a website that generates a private PGP key for you. Generate keys locally with GnuPG or Kleopatra and keep the private key offline.</li><li>Never upload sensitive documents, confidential URLs or unpublished evidence to public malware scanners. Public scanners may share samples and metadata.</li><li>Separate research identities from personal identities. Do not log into personal accounts from an anonymous research environment.</li><li>Keep operating systems, browsers and security tools updated. A stale privacy tool can become a security liability.</li><li>No tool replaces judgment, lawful authority, source verification or safe handling of vulnerable people.</li></ol>
+      </section>
+
+      <section class="section wrap" id="tool-registry">
+        <div class="eyebrow">Curated registry · official links only</div><h2>VETTED FREE TOOL DIRECTORY.</h2>
+        <p class="lead">The directory prioritises maintained open-source projects, nonprofit safety resources and a small number of widely used free public checks. Every entry states what it does and what it cannot establish.</p>
+        <div class="security-controls" role="search">
+          <input id="security-tool-search" type="search" placeholder="Search Tor, PGP, email, firewall, OSINT…" aria-label="Search security tools" />
+          <select id="security-category-filter" aria-label="Filter by category"><option value="all">All categories</option><option value="learn">Threat Modelling &amp; Digital Safety</option><option value="operating-systems">Secure &amp; Anonymous Operating Systems</option><option value="network-anonymity">Anonymous Browsing, Censorship Resistance &amp; File Transfer</option><option value="communications">Secure Messaging &amp; Calls</option><option value="email-pgp">Email Safety, Aliases &amp; PGP</option><option value="passwords-auth">Passwords, Passkeys &amp; Multi-Factor Authentication</option><option value="encryption-backup">Disk, File Encryption &amp; Backups</option><option value="file-safety">Metadata Removal, Dangerous Documents &amp; Secure Cleanup</option><option value="self-checks">Privacy, Breach, Phishing &amp; File Checks</option><option value="network-defence">Device, Network &amp; Incident Defence</option><option value="website-security">Website &amp; Server Security Checks</option><option value="osint">Lawful OSINT &amp; Source Verification</option><option value="verification">Download, Signature &amp; Integrity Verification</option></select>
+          <select id="security-level-filter" aria-label="Filter by skill level"><option value="all">All skill levels</option><option value="Advanced">Advanced</option><option value="All">All</option><option value="High risk">High risk</option><option value="Intermediate">Intermediate</option></select>
+          <button class="btn alt" id="security-clear-filters" type="button">Clear</button>
+          <span id="security-result-count" class="security-result">84 vetted tools shown</span>
+        </div>
+        <div class="security-jump" style="margin-top:1rem"><a href="#category-learn">Threat Modelling &amp; Digital Safety</a><a href="#category-operating-systems">Secure &amp; Anonymous Operating Systems</a><a href="#category-network-anonymity">Anonymous Browsing, Censorship Resistance &amp; File Transfer</a><a href="#category-communications">Secure Messaging &amp; Calls</a><a href="#category-email-pgp">Email Safety, Aliases &amp; PGP</a><a href="#category-passwords-auth">Passwords, Passkeys &amp; Multi-Factor Authentication</a><a href="#category-encryption-backup">Disk, File Encryption &amp; Backups</a><a href="#category-file-safety">Metadata Removal, Dangerous Documents &amp; Secure Cleanup</a><a href="#category-self-checks">Privacy, Breach, Phishing &amp; File Checks</a><a href="#category-network-defence">Device, Network &amp; Incident Defence</a><a href="#category-website-security">Website &amp; Server Security Checks</a><a href="#category-osint">Lawful OSINT &amp; Source Verification</a><a href="#category-verification">Download, Signature &amp; Integrity Verification</a></div>
+      </section>
+
+      
+<section class="section wrap security-category" id="category-learn" data-security-category="learn">
+  <div class="eyebrow">Protection layer</div>
+  <h2>1. Threat Modelling &amp; Digital Safety</h2>
+  <p class="lead">Start here. These guides explain risk, identity separation, safer communication and emergency response before software choices are made.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-eff-ssd" data-security-tool data-tool-id="eff-ssd" data-category="learn" data-level="All" data-search="EFF Surveillance Self-Defense Threat modelling and practical surveillance defence. Clear guides from a leading digital-rights organisation covering passwords, encryption, protests, phones, metadata and communications. Guidance must be adapted to local law, device condition and the actual adversary. Free guide Open educational resource All Web 1. Threat Modelling &amp; Digital Safety">
+  <div class="security-tool-top"><span class="label">Free guide</span><span class="security-level">All</span></div>
+  <h3>EFF Surveillance Self-Defense</h3>
+  <p class="security-purpose">Threat modelling and practical surveillance defence.</p>
+  <p><strong>Why it belongs:</strong> Clear guides from a leading digital-rights organisation covering passwords, encryption, protests, phones, metadata and communications.</p>
+  <p class="security-limit"><strong>Limits:</strong> Guidance must be adapted to local law, device condition and the actual adversary.</p>
+  <div class="security-badges"><span>Open educational resource</span><span>Web</span></div>
+  <a class="btn alt" href="https://ssd.eff.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-security-in-a-box" data-security-tool data-tool-id="security-in-a-box" data-category="learn" data-level="All" data-search="Security in a Box Step-by-step digital security for activists and human-rights defenders. Organises protection around what a person needs to defend rather than around fashionable tools. No checklist can replace individual risk assessment or emergency support. Free guide Open educational resource All Web 1. Threat Modelling &amp; Digital Safety">
+  <div class="security-tool-top"><span class="label">Free guide</span><span class="security-level">All</span></div>
+  <h3>Security in a Box</h3>
+  <p class="security-purpose">Step-by-step digital security for activists and human-rights defenders.</p>
+  <p><strong>Why it belongs:</strong> Organises protection around what a person needs to defend rather than around fashionable tools.</p>
+  <p class="security-limit"><strong>Limits:</strong> No checklist can replace individual risk assessment or emergency support.</p>
+  <div class="security-badges"><span>Open educational resource</span><span>Web</span></div>
+  <a class="btn alt" href="https://securityinabox.org/en/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-privacy-guides" data-security-tool data-tool-id="privacy-guides" data-category="learn" data-level="All" data-search="Privacy Guides Maintained privacy recommendations with technical criteria. Useful for comparing operating systems, browsers, messengers, encryption and account services. Recommendations change; verify the current project page before migrating critical data. Free guide Community project All Web 1. Threat Modelling &amp; Digital Safety">
+  <div class="security-tool-top"><span class="label">Free guide</span><span class="security-level">All</span></div>
+  <h3>Privacy Guides</h3>
+  <p class="security-purpose">Maintained privacy recommendations with technical criteria.</p>
+  <p><strong>Why it belongs:</strong> Useful for comparing operating systems, browsers, messengers, encryption and account services.</p>
+  <p class="security-limit"><strong>Limits:</strong> Recommendations change; verify the current project page before migrating critical data.</p>
+  <div class="security-badges"><span>Community project</span><span>Web</span></div>
+  <a class="btn alt" href="https://www.privacyguides.org/en/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-digital-first-aid" data-security-tool data-tool-id="digital-first-aid" data-category="learn" data-level="All" data-search="Digital First Aid Kit Initial response when an account, website or device may be compromised. Provides calm triage paths for common digital emergencies. It is not a substitute for forensic preservation, legal advice or a qualified incident responder. Free guide Collaborative resource All Web 1. Threat Modelling &amp; Digital Safety">
+  <div class="security-tool-top"><span class="label">Free guide</span><span class="security-level">All</span></div>
+  <h3>Digital First Aid Kit</h3>
+  <p class="security-purpose">Initial response when an account, website or device may be compromised.</p>
+  <p><strong>Why it belongs:</strong> Provides calm triage paths for common digital emergencies.</p>
+  <p class="security-limit"><strong>Limits:</strong> It is not a substitute for forensic preservation, legal advice or a qualified incident responder.</p>
+  <div class="security-badges"><span>Collaborative resource</span><span>Web</span></div>
+  <a class="btn alt" href="https://digitalfirstaid.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-access-now" data-security-tool data-tool-id="access-now" data-category="learn" data-level="High risk" data-search="Access Now Digital Security Helpline Human support for civil society, journalists, activists and human-rights defenders under digital threat. Real incidents often need confidential, contextual help rather than another software download. Eligibility and response scope apply; use the official secure contact route. Free support for eligible users Nonprofit service High risk Web 1. Threat Modelling &amp; Digital Safety">
+  <div class="security-tool-top"><span class="label">Free support for eligible users</span><span class="security-level">High risk</span></div>
+  <h3>Access Now Digital Security Helpline</h3>
+  <p class="security-purpose">Human support for civil society, journalists, activists and human-rights defenders under digital threat.</p>
+  <p><strong>Why it belongs:</strong> Real incidents often need confidential, contextual help rather than another software download.</p>
+  <p class="security-limit"><strong>Limits:</strong> Eligibility and response scope apply; use the official secure contact route.</p>
+  <div class="security-badges"><span>Nonprofit service</span><span>Web</span></div>
+  <a class="btn alt" href="https://www.accessnow.org/help/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-operating-systems" data-security-category="operating-systems">
+  <div class="eyebrow">Protection layer</div>
+  <h2>2. Secure &amp; Anonymous Operating Systems</h2>
+  <p class="lead">The operating system controls every application above it. Use an amnesic system for temporary anonymity or compartmentation for persistent work.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-tails" data-security-tool data-tool-id="tails" data-category="operating-systems" data-level="Intermediate" data-search="Tails Portable, amnesic operating system that routes internet connections through Tor. Strong defaults reduce traces on the host computer and reduce opportunities for accidental non-Tor traffic. Hardware, firmware, personal logins, writing style and operational mistakes can still identify a user. Persistent Storage is detectable even when encrypted. Free Free and open source Intermediate Bootable USB x86-64 2. Secure &amp; Anonymous Operating Systems">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Tails</h3>
+  <p class="security-purpose">Portable, amnesic operating system that routes internet connections through Tor.</p>
+  <p><strong>Why it belongs:</strong> Strong defaults reduce traces on the host computer and reduce opportunities for accidental non-Tor traffic.</p>
+  <p class="security-limit"><strong>Limits:</strong> Hardware, firmware, personal logins, writing style and operational mistakes can still identify a user. Persistent Storage is detectable even when encrypted.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Bootable USB</span><span>x86-64</span></div>
+  <a class="btn alt" href="https://tails.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-qubes" data-security-tool data-tool-id="qubes" data-category="operating-systems" data-level="Advanced" data-search="Qubes OS Security by compartmentalising work into isolated virtual machines. Separates personal, work, untrusted-document and anonymous activities so one compromise has a smaller blast radius. Requires compatible hardware, disciplined use and a significant learning curve. Qubes is not anonymous by default. Free Free and open source Advanced Compatible x86-64 hardware 2. Secure &amp; Anonymous Operating Systems">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Qubes OS</h3>
+  <p class="security-purpose">Security by compartmentalising work into isolated virtual machines.</p>
+  <p><strong>Why it belongs:</strong> Separates personal, work, untrusted-document and anonymous activities so one compromise has a smaller blast radius.</p>
+  <p class="security-limit"><strong>Limits:</strong> Requires compatible hardware, disciplined use and a significant learning curve. Qubes is not anonymous by default.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Compatible x86-64 hardware</span></div>
+  <a class="btn alt" href="https://www.qubes-os.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-whonix" data-security-tool data-tool-id="whonix" data-category="operating-systems" data-level="Advanced" data-search="Whonix Two-part Tor gateway and workstation designed to reduce IP and DNS leaks. Separates network routing from applications and integrates particularly well with Qubes OS. A compromised host, identity contamination or malicious documents can still defeat the intended separation. Free Free and open source Advanced Qubes KVM VirtualBox 2. Secure &amp; Anonymous Operating Systems">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Whonix</h3>
+  <p class="security-purpose">Two-part Tor gateway and workstation designed to reduce IP and DNS leaks.</p>
+  <p><strong>Why it belongs:</strong> Separates network routing from applications and integrates particularly well with Qubes OS.</p>
+  <p class="security-limit"><strong>Limits:</strong> A compromised host, identity contamination or malicious documents can still defeat the intended separation.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Qubes</span><span>KVM</span><span>VirtualBox</span></div>
+  <a class="btn alt" href="https://www.whonix.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-grapheneos" data-security-tool data-tool-id="grapheneos" data-category="operating-systems" data-level="Intermediate" data-search="GrapheneOS Hardened mobile operating system with exploit mitigations and permission controls. A strong choice for reducing mobile attack surface while retaining practical smartphone use. Hardware support is limited. It is a security-focused mobile OS, not an anonymity system by itself. Free Open source Intermediate Supported Google Pixel devices 2. Secure &amp; Anonymous Operating Systems">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>GrapheneOS</h3>
+  <p class="security-purpose">Hardened mobile operating system with exploit mitigations and permission controls.</p>
+  <p><strong>Why it belongs:</strong> A strong choice for reducing mobile attack surface while retaining practical smartphone use.</p>
+  <p class="security-limit"><strong>Limits:</strong> Hardware support is limited. It is a security-focused mobile OS, not an anonymity system by itself.</p>
+  <div class="security-badges"><span>Open source</span><span>Supported Google Pixel devices</span></div>
+  <a class="btn alt" href="https://grapheneos.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-kicksecure" data-security-tool data-tool-id="kicksecure" data-category="operating-systems" data-level="Advanced" data-search="Kicksecure Hardened Debian-based operating system used as the security foundation beneath Whonix. Useful where system hardening and documentation are needed without forcing all traffic through Tor. Hardening reduces risk but does not guarantee immunity from malware or targeted exploitation. Free Free and open source Advanced Linux Virtual machines 2. Secure &amp; Anonymous Operating Systems">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Kicksecure</h3>
+  <p class="security-purpose">Hardened Debian-based operating system used as the security foundation beneath Whonix.</p>
+  <p><strong>Why it belongs:</strong> Useful where system hardening and documentation are needed without forcing all traffic through Tor.</p>
+  <p class="security-limit"><strong>Limits:</strong> Hardening reduces risk but does not guarantee immunity from malware or targeted exploitation.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>Virtual machines</span></div>
+  <a class="btn alt" href="https://www.kicksecure.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-network-anonymity" data-security-category="network-anonymity">
+  <div class="eyebrow">Protection layer</div>
+  <h2>3. Anonymous Browsing, Censorship Resistance &amp; File Transfer</h2>
+  <p class="lead">Use Tor for anonymity, hardened browsers for ordinary anti-tracking, and OnionShare for direct Tor-based transfer. Do not combine tools blindly.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-tor-browser" data-security-tool data-tool-id="tor-browser" data-category="network-anonymity" data-level="All" data-search="Tor Browser Routes browsing through Tor and standardises browser fingerprinting protections. The default choice when a user needs to separate their IP address from websites and resist tracking or censorship. Do not torrent, add extensions, open downloaded documents while online, or sign into identifying accounts. Tor cannot prevent endpoint compromise or behaviour-based identification. Free Free and open source All Windows macOS Linux Android 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Tor Browser</h3>
+  <p class="security-purpose">Routes browsing through Tor and standardises browser fingerprinting protections.</p>
+  <p><strong>Why it belongs:</strong> The default choice when a user needs to separate their IP address from websites and resist tracking or censorship.</p>
+  <p class="security-limit"><strong>Limits:</strong> Do not torrent, add extensions, open downloaded documents while online, or sign into identifying accounts. Tor cannot prevent endpoint compromise or behaviour-based identification.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Android</span></div>
+  <a class="btn alt" href="https://www.torproject.org/download/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-orbot" data-security-tool data-tool-id="orbot" data-category="network-anonymity" data-level="Intermediate" data-search="Orbot Routes supported mobile application traffic through Tor. Useful for censorship resistance and Tor access on mobile devices. Not every application handles proxies safely. Prefer Tor Browser for web anonymity and verify which apps are actually routed. Free Free and open source Intermediate Android iOS 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Orbot</h3>
+  <p class="security-purpose">Routes supported mobile application traffic through Tor.</p>
+  <p><strong>Why it belongs:</strong> Useful for censorship resistance and Tor access on mobile devices.</p>
+  <p class="security-limit"><strong>Limits:</strong> Not every application handles proxies safely. Prefer Tor Browser for web anonymity and verify which apps are actually routed.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Android</span><span>iOS</span></div>
+  <a class="btn alt" href="https://orbot.app/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-snowflake" data-security-tool data-tool-id="snowflake" data-category="network-anonymity" data-level="All" data-search="Tor Snowflake Helps users connect to Tor where direct Tor access is blocked. Uses temporary volunteer proxies to make censorship blocking more difficult. It improves reachability, not endpoint security, identity discipline or protection from global traffic analysis. Free Free and open source All Tor Browser Web extension Standalone proxy 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Tor Snowflake</h3>
+  <p class="security-purpose">Helps users connect to Tor where direct Tor access is blocked.</p>
+  <p><strong>Why it belongs:</strong> Uses temporary volunteer proxies to make censorship blocking more difficult.</p>
+  <p class="security-limit"><strong>Limits:</strong> It improves reachability, not endpoint security, identity discipline or protection from global traffic analysis.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Tor Browser</span><span>Web extension</span><span>Standalone proxy</span></div>
+  <a class="btn alt" href="https://snowflake.torproject.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-mullvad-browser" data-security-tool data-tool-id="mullvad-browser" data-category="network-anonymity" data-level="All" data-search="Mullvad Browser Anti-fingerprinting browser developed with the Tor Project for ordinary non-Tor browsing. Reduces tracking and fingerprint uniqueness without requiring a Tor connection. It does not hide an IP address unless used with a separate network service. Do not confuse it with Tor Browser. Free browser Open source All Windows macOS Linux 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free browser</span><span class="security-level">All</span></div>
+  <h3>Mullvad Browser</h3>
+  <p class="security-purpose">Anti-fingerprinting browser developed with the Tor Project for ordinary non-Tor browsing.</p>
+  <p><strong>Why it belongs:</strong> Reduces tracking and fingerprint uniqueness without requiring a Tor connection.</p>
+  <p class="security-limit"><strong>Limits:</strong> It does not hide an IP address unless used with a separate network service. Do not confuse it with Tor Browser.</p>
+  <div class="security-badges"><span>Open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://mullvad.net/en/browser" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-librewolf" data-security-tool data-tool-id="librewolf" data-category="network-anonymity" data-level="All" data-search="LibreWolf Privacy-hardened Firefox derivative for everyday browsing. Removes telemetry and applies stronger privacy defaults while retaining normal web compatibility. A customised everyday browser is not an anonymity browser and may develop a unique fingerprint. Free Free and open source All Windows macOS Linux 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>LibreWolf</h3>
+  <p class="security-purpose">Privacy-hardened Firefox derivative for everyday browsing.</p>
+  <p><strong>Why it belongs:</strong> Removes telemetry and applies stronger privacy defaults while retaining normal web compatibility.</p>
+  <p class="security-limit"><strong>Limits:</strong> A customised everyday browser is not an anonymity browser and may develop a unique fingerprint.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://librewolf.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-ublock-origin" data-security-tool data-tool-id="ublock-origin" data-category="network-anonymity" data-level="All" data-search="uBlock Origin Efficient content blocker for trackers, malicious advertising and unwanted scripts. Reduces exposure to tracking and malvertising with transparent filter lists. It cannot hide an IP address or repair an already compromised device. Install only the genuine project extension. Free Free and open source All Firefox Chromium-compatible browsers 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>uBlock Origin</h3>
+  <p class="security-purpose">Efficient content blocker for trackers, malicious advertising and unwanted scripts.</p>
+  <p><strong>Why it belongs:</strong> Reduces exposure to tracking and malvertising with transparent filter lists.</p>
+  <p class="security-limit"><strong>Limits:</strong> It cannot hide an IP address or repair an already compromised device. Install only the genuine project extension.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Firefox</span><span>Chromium-compatible browsers</span></div>
+  <a class="btn alt" href="https://github.com/gorhill/uBlock" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-onionshare" data-security-tool data-tool-id="onionshare" data-category="network-anonymity" data-level="Intermediate" data-search="OnionShare Share files, receive files, host a temporary site or chat over Tor onion services. Avoids placing files on a conventional cloud server and can provide a direct controlled transfer route. A recipient can still redistribute files. Protect the sharing address and understand the chosen mode before use. Free Free and open source Intermediate Windows macOS Linux 3. Anonymous Browsing, Censorship Resistance &amp; File Transfer">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>OnionShare</h3>
+  <p class="security-purpose">Share files, receive files, host a temporary site or chat over Tor onion services.</p>
+  <p><strong>Why it belongs:</strong> Avoids placing files on a conventional cloud server and can provide a direct controlled transfer route.</p>
+  <p class="security-limit"><strong>Limits:</strong> A recipient can still redistribute files. Protect the sharing address and understand the chosen mode before use.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://onionshare.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-communications" data-security-category="communications">
+  <div class="eyebrow">Protection layer</div>
+  <h2>4. Secure Messaging &amp; Calls</h2>
+  <p class="lead">Modern end-to-end encrypted messaging is generally safer and easier than PGP email. Verify contacts and secure the device holding the messages.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-signal" data-security-tool data-tool-id="signal" data-category="communications" data-level="All" data-search="Signal End-to-end encrypted messages, calls and groups with strong defaults. Widely reviewed, easy to use and designed to minimise stored communication content. Registration normally uses a phone number, and device compromise or unsafe backups can expose messages. Usernames reduce number sharing but do not remove registration requirements. Free Open source clients and server All Android iOS Desktop 4. Secure Messaging &amp; Calls">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Signal</h3>
+  <p class="security-purpose">End-to-end encrypted messages, calls and groups with strong defaults.</p>
+  <p><strong>Why it belongs:</strong> Widely reviewed, easy to use and designed to minimise stored communication content.</p>
+  <p class="security-limit"><strong>Limits:</strong> Registration normally uses a phone number, and device compromise or unsafe backups can expose messages. Usernames reduce number sharing but do not remove registration requirements.</p>
+  <div class="security-badges"><span>Open source clients and server</span><span>Android</span><span>iOS</span><span>Desktop</span></div>
+  <a class="btn alt" href="https://signal.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-simplex" data-security-tool data-tool-id="simplex" data-category="communications" data-level="Intermediate" data-search="SimpleX Chat End-to-end encrypted messaging without permanent user identifiers. Reduces reliance on phone numbers, email addresses and global account identifiers. Smaller network, less mature operational familiarity and contact-link handling still require care. Free Free and open source Intermediate Android iOS Desktop 4. Secure Messaging &amp; Calls">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>SimpleX Chat</h3>
+  <p class="security-purpose">End-to-end encrypted messaging without permanent user identifiers.</p>
+  <p><strong>Why it belongs:</strong> Reduces reliance on phone numbers, email addresses and global account identifiers.</p>
+  <p class="security-limit"><strong>Limits:</strong> Smaller network, less mature operational familiarity and contact-link handling still require care.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Android</span><span>iOS</span><span>Desktop</span></div>
+  <a class="btn alt" href="https://simplex.chat/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-briar" data-security-tool data-tool-id="briar" data-category="communications" data-level="Intermediate" data-search="Briar Peer-to-peer encrypted messaging that can synchronise through Tor, Bluetooth or Wi-Fi. Designed for activists and environments where internet access may be blocked or unreliable. Android-focused, both parties need the application, and device seizure remains a serious risk. Free Free and open source Intermediate Android 4. Secure Messaging &amp; Calls">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Briar</h3>
+  <p class="security-purpose">Peer-to-peer encrypted messaging that can synchronise through Tor, Bluetooth or Wi-Fi.</p>
+  <p><strong>Why it belongs:</strong> Designed for activists and environments where internet access may be blocked or unreliable.</p>
+  <p class="security-limit"><strong>Limits:</strong> Android-focused, both parties need the application, and device seizure remains a serious risk.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Android</span></div>
+  <a class="btn alt" href="https://briarproject.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-jitsi" data-security-tool data-tool-id="jitsi" data-category="communications" data-level="All" data-search="Jitsi Meet Open-source video meetings with self-hosting available. Useful when a group needs a browser-based meeting without a proprietary account ecosystem. Public instances have their own operators and metadata. Confirm end-to-end encryption mode and do not assume a public room is anonymous. Free software Free and open source All Web Mobile Self-hosted 4. Secure Messaging &amp; Calls">
+  <div class="security-tool-top"><span class="label">Free software</span><span class="security-level">All</span></div>
+  <h3>Jitsi Meet</h3>
+  <p class="security-purpose">Open-source video meetings with self-hosting available.</p>
+  <p><strong>Why it belongs:</strong> Useful when a group needs a browser-based meeting without a proprietary account ecosystem.</p>
+  <p class="security-limit"><strong>Limits:</strong> Public instances have their own operators and metadata. Confirm end-to-end encryption mode and do not assume a public room is anonymous.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Web</span><span>Mobile</span><span>Self-hosted</span></div>
+  <a class="btn alt" href="https://jitsi.org/jitsi-meet/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-email-pgp" data-security-category="email-pgp">
+  <div class="eyebrow">Protection layer</div>
+  <h2>5. Email Safety, Aliases &amp; PGP</h2>
+  <p class="lead">Email exposes metadata and is difficult to make anonymous. Use aliases for compartmentation, modern encrypted mail where practical, and local PGP only when necessary.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-thunderbird" data-security-tool data-tool-id="thunderbird" data-category="email-pgp" data-level="All" data-search="Thunderbird Desktop and mobile email client with built-in OpenPGP support. Keeps mail management in a maintained open-source client and supports local key handling. Email headers, correspondents and timing remain visible to providers. Encryption requires correct key verification by both parties. Free Free and open source All Windows macOS Linux Android 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Thunderbird</h3>
+  <p class="security-purpose">Desktop and mobile email client with built-in OpenPGP support.</p>
+  <p><strong>Why it belongs:</strong> Keeps mail management in a maintained open-source client and supports local key handling.</p>
+  <p class="security-limit"><strong>Limits:</strong> Email headers, correspondents and timing remain visible to providers. Encryption requires correct key verification by both parties.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Android</span></div>
+  <a class="btn alt" href="https://www.thunderbird.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-proton-mail" data-security-tool data-tool-id="proton-mail" data-category="email-pgp" data-level="All" data-search="Proton Mail Encrypted email service with a free account tier. Makes encrypted mail between service users accessible and provides additional privacy features. Email is not anonymous by default; account recovery, destination providers, metadata and device identifiers still matter. Free tier Open-source clients; hosted service All Web Mobile Desktop 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free tier</span><span class="security-level">All</span></div>
+  <h3>Proton Mail</h3>
+  <p class="security-purpose">Encrypted email service with a free account tier.</p>
+  <p><strong>Why it belongs:</strong> Makes encrypted mail between service users accessible and provides additional privacy features.</p>
+  <p class="security-limit"><strong>Limits:</strong> Email is not anonymous by default; account recovery, destination providers, metadata and device identifiers still matter.</p>
+  <div class="security-badges"><span>Open-source clients; hosted service</span><span>Web</span><span>Mobile</span><span>Desktop</span></div>
+  <a class="btn alt" href="https://proton.me/mail" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-tuta" data-security-tool data-tool-id="tuta" data-category="email-pgp" data-level="All" data-search="Tuta Mail Encrypted email and calendar with a free account option. Provides an alternative encrypted mail ecosystem with its own open-source clients. Messages to ordinary email services cannot gain the same metadata and content protections without a shared encrypted workflow. Free tier Open-source clients; hosted service All Web Mobile Desktop 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free tier</span><span class="security-level">All</span></div>
+  <h3>Tuta Mail</h3>
+  <p class="security-purpose">Encrypted email and calendar with a free account option.</p>
+  <p><strong>Why it belongs:</strong> Provides an alternative encrypted mail ecosystem with its own open-source clients.</p>
+  <p class="security-limit"><strong>Limits:</strong> Messages to ordinary email services cannot gain the same metadata and content protections without a shared encrypted workflow.</p>
+  <div class="security-badges"><span>Open-source clients; hosted service</span><span>Web</span><span>Mobile</span><span>Desktop</span></div>
+  <a class="btn alt" href="https://tuta.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-simplelogin" data-security-tool data-tool-id="simplelogin" data-category="email-pgp" data-level="All" data-search="SimpleLogin Create email aliases that forward without exposing a primary address. Reduces address reuse and makes it easier to disable an alias after a breach or unwanted contact. Forwarding services can see routing metadata. Do not use one alias across identities that must remain separate. Free tier Open source All Web Browser extensions Mobile 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free tier</span><span class="security-level">All</span></div>
+  <h3>SimpleLogin</h3>
+  <p class="security-purpose">Create email aliases that forward without exposing a primary address.</p>
+  <p><strong>Why it belongs:</strong> Reduces address reuse and makes it easier to disable an alias after a breach or unwanted contact.</p>
+  <p class="security-limit"><strong>Limits:</strong> Forwarding services can see routing metadata. Do not use one alias across identities that must remain separate.</p>
+  <div class="security-badges"><span>Open source</span><span>Web</span><span>Browser extensions</span><span>Mobile</span></div>
+  <a class="btn alt" href="https://simplelogin.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-addy" data-security-tool data-tool-id="addy" data-category="email-pgp" data-level="All" data-search="addy.io Disposable and compartmented email aliases. Useful for reducing spam, breach correlation and unnecessary disclosure of a main address. Aliases protect the destination address, not message content, device identity or behavioural patterns. Free tier Open source All Web Browser extensions Mobile clients 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free tier</span><span class="security-level">All</span></div>
+  <h3>addy.io</h3>
+  <p class="security-purpose">Disposable and compartmented email aliases.</p>
+  <p><strong>Why it belongs:</strong> Useful for reducing spam, breach correlation and unnecessary disclosure of a main address.</p>
+  <p class="security-limit"><strong>Limits:</strong> Aliases protect the destination address, not message content, device identity or behavioural patterns.</p>
+  <div class="security-badges"><span>Open source</span><span>Web</span><span>Browser extensions</span><span>Mobile clients</span></div>
+  <a class="btn alt" href="https://addy.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-gnupg" data-security-tool data-tool-id="gnupg" data-category="email-pgp" data-level="Advanced" data-search="GnuPG Local OpenPGP encryption, signing and key management. The standard open implementation for generating and controlling PGP keys locally. PGP is easy to misuse and does not hide email metadata. Create a revocation certificate, protect backups and verify fingerprints out of band. Free Free and open source Advanced Windows macOS Linux Command line 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>GnuPG</h3>
+  <p class="security-purpose">Local OpenPGP encryption, signing and key management.</p>
+  <p><strong>Why it belongs:</strong> The standard open implementation for generating and controlling PGP keys locally.</p>
+  <p class="security-limit"><strong>Limits:</strong> PGP is easy to misuse and does not hide email metadata. Create a revocation certificate, protect backups and verify fingerprints out of band.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Command line</span></div>
+  <a class="btn alt" href="https://gnupg.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-kleopatra" data-security-tool data-tool-id="kleopatra" data-category="email-pgp" data-level="Intermediate" data-search="Gpg4win / Kleopatra Graphical OpenPGP certificate and file encryption management. Provides a safer local alternative to dangerous online PGP key-generator websites. Users still need to understand fingerprints, trust, revocation and secure private-key storage. Free Free and open source Intermediate Windows 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Gpg4win / Kleopatra</h3>
+  <p class="security-purpose">Graphical OpenPGP certificate and file encryption management.</p>
+  <p><strong>Why it belongs:</strong> Provides a safer local alternative to dangerous online PGP key-generator websites.</p>
+  <p class="security-limit"><strong>Limits:</strong> Users still need to understand fingerprints, trust, revocation and secure private-key storage.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span></div>
+  <a class="btn alt" href="https://www.gpg4win.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-mailvelope" data-security-tool data-tool-id="mailvelope" data-category="email-pgp" data-level="Advanced" data-search="Mailvelope OpenPGP integration for supported webmail services. Can add local browser-based PGP handling where a desktop client is not practical. Browser-extension and webmail complexity increases the attack surface. Prefer a dedicated mail client for high-risk use. Free Free and open source Advanced Browser extension 5. Email Safety, Aliases &amp; PGP">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Mailvelope</h3>
+  <p class="security-purpose">OpenPGP integration for supported webmail services.</p>
+  <p><strong>Why it belongs:</strong> Can add local browser-based PGP handling where a desktop client is not practical.</p>
+  <p class="security-limit"><strong>Limits:</strong> Browser-extension and webmail complexity increases the attack surface. Prefer a dedicated mail client for high-risk use.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Browser extension</span></div>
+  <a class="btn alt" href="https://mailvelope.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-passwords-auth" data-security-category="passwords-auth">
+  <div class="eyebrow">Protection layer</div>
+  <h2>6. Passwords, Passkeys &amp; Multi-Factor Authentication</h2>
+  <p class="lead">The biggest improvement for most people is unique passwords plus phishing-resistant authentication. Keep recovery codes offline.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-bitwarden" data-security-tool data-tool-id="bitwarden" data-category="passwords-auth" data-level="All" data-search="Bitwarden Synchronised password and passkey management. Makes unique credentials practical across devices and supports secure sharing and auditing features. Cloud access concentrates value in the vault. Use a strong master passphrase, MFA and protected recovery material. Strong free tier Open source All Web Desktop Mobile Browser extensions 6. Passwords, Passkeys &amp; Multi-Factor Authentication">
+  <div class="security-tool-top"><span class="label">Strong free tier</span><span class="security-level">All</span></div>
+  <h3>Bitwarden</h3>
+  <p class="security-purpose">Synchronised password and passkey management.</p>
+  <p><strong>Why it belongs:</strong> Makes unique credentials practical across devices and supports secure sharing and auditing features.</p>
+  <p class="security-limit"><strong>Limits:</strong> Cloud access concentrates value in the vault. Use a strong master passphrase, MFA and protected recovery material.</p>
+  <div class="security-badges"><span>Open source</span><span>Web</span><span>Desktop</span><span>Mobile</span><span>Browser extensions</span></div>
+  <a class="btn alt" href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-keepassxc" data-security-tool data-tool-id="keepassxc" data-category="passwords-auth" data-level="All" data-search="KeePassXC Local encrypted password database without a required hosted account. Gives the user direct control over the database and sync method. The user is responsible for backups, safe synchronisation and avoiding database loss or conflicting copies. Free Free and open source All Windows macOS Linux 6. Passwords, Passkeys &amp; Multi-Factor Authentication">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>KeePassXC</h3>
+  <p class="security-purpose">Local encrypted password database without a required hosted account.</p>
+  <p><strong>Why it belongs:</strong> Gives the user direct control over the database and sync method.</p>
+  <p class="security-limit"><strong>Limits:</strong> The user is responsible for backups, safe synchronisation and avoiding database loss or conflicting copies.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://keepassxc.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-aegis" data-security-tool data-tool-id="aegis" data-category="passwords-auth" data-level="All" data-search="Aegis Authenticator Encrypted local TOTP/HOTP code manager. Supports vault encryption and export, avoiding dependence on a closed authenticator. TOTP codes can still be phished in real time. Protect encrypted exports and recovery codes. Free Free and open source All Android 6. Passwords, Passkeys &amp; Multi-Factor Authentication">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Aegis Authenticator</h3>
+  <p class="security-purpose">Encrypted local TOTP/HOTP code manager.</p>
+  <p><strong>Why it belongs:</strong> Supports vault encryption and export, avoiding dependence on a closed authenticator.</p>
+  <p class="security-limit"><strong>Limits:</strong> TOTP codes can still be phished in real time. Protect encrypted exports and recovery codes.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Android</span></div>
+  <a class="btn alt" href="https://getaegis.app/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-2fas" data-security-tool data-tool-id="2fas" data-category="passwords-auth" data-level="All" data-search="2FAS Auth User-friendly two-factor code management. A practical cross-platform choice with browser integration and no paid requirement for core use. Browser integration must be secured, and TOTP is weaker than passkeys or hardware security keys against phishing. Free Open source All Android iOS Browser extension 6. Passwords, Passkeys &amp; Multi-Factor Authentication">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>2FAS Auth</h3>
+  <p class="security-purpose">User-friendly two-factor code management.</p>
+  <p><strong>Why it belongs:</strong> A practical cross-platform choice with browser integration and no paid requirement for core use.</p>
+  <p class="security-limit"><strong>Limits:</strong> Browser integration must be secured, and TOTP is weaker than passkeys or hardware security keys against phishing.</p>
+  <div class="security-badges"><span>Open source</span><span>Android</span><span>iOS</span><span>Browser extension</span></div>
+  <a class="btn alt" href="https://2fas.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-ente-auth" data-security-tool data-tool-id="ente-auth" data-category="passwords-auth" data-level="All" data-search="Ente Auth End-to-end encrypted authenticator with multi-device access. Useful when encrypted synchronisation and recoverability are important. Protect the Ente account, recovery key and every enrolled device. Free Open source All Android iOS Desktop Web 6. Passwords, Passkeys &amp; Multi-Factor Authentication">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Ente Auth</h3>
+  <p class="security-purpose">End-to-end encrypted authenticator with multi-device access.</p>
+  <p><strong>Why it belongs:</strong> Useful when encrypted synchronisation and recoverability are important.</p>
+  <p class="security-limit"><strong>Limits:</strong> Protect the Ente account, recovery key and every enrolled device.</p>
+  <div class="security-badges"><span>Open source</span><span>Android</span><span>iOS</span><span>Desktop</span><span>Web</span></div>
+  <a class="btn alt" href="https://ente.io/auth/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-encryption-backup" data-security-category="encryption-backup">
+  <div class="eyebrow">Protection layer</div>
+  <h2>7. Disk, File Encryption &amp; Backups</h2>
+  <p class="lead">Encryption protects stored content only when devices are locked and keys are safe. A tested backup is part of security, not an optional extra.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-veracrypt" data-security-tool data-tool-id="veracrypt" data-category="encryption-backup" data-level="Intermediate" data-search="VeraCrypt Encrypted containers, partitions and system drives. Mature tool for protecting substantial local collections and removable media. Mounted volumes are accessible to malware and anyone controlling the unlocked device. Hidden-volume use has complex limitations. Free Free and open source Intermediate Windows macOS Linux 7. Disk, File Encryption &amp; Backups">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>VeraCrypt</h3>
+  <p class="security-purpose">Encrypted containers, partitions and system drives.</p>
+  <p><strong>Why it belongs:</strong> Mature tool for protecting substantial local collections and removable media.</p>
+  <p class="security-limit"><strong>Limits:</strong> Mounted volumes are accessible to malware and anyone controlling the unlocked device. Hidden-volume use has complex limitations.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://www.veracrypt.fr/en/Home.html" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-cryptomator" data-security-tool data-tool-id="cryptomator" data-category="encryption-backup" data-level="All" data-search="Cryptomator Encrypt individual files before storing them in a cloud-synchronised folder. Cloud-friendly design avoids placing plaintext file content and names in ordinary storage. Cloud providers still see account, timing, size and synchronisation metadata. Protect recovery material. Free desktop apps Free and open source All Windows macOS Linux Mobile apps 7. Disk, File Encryption &amp; Backups">
+  <div class="security-tool-top"><span class="label">Free desktop apps</span><span class="security-level">All</span></div>
+  <h3>Cryptomator</h3>
+  <p class="security-purpose">Encrypt individual files before storing them in a cloud-synchronised folder.</p>
+  <p><strong>Why it belongs:</strong> Cloud-friendly design avoids placing plaintext file content and names in ordinary storage.</p>
+  <p class="security-limit"><strong>Limits:</strong> Cloud providers still see account, timing, size and synchronisation metadata. Protect recovery material.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Mobile apps</span></div>
+  <a class="btn alt" href="https://cryptomator.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-age" data-security-tool data-tool-id="age" data-category="encryption-backup" data-level="Advanced" data-search="age Modern, simple file encryption for scripts and technical users. Small, auditable design with straightforward recipient and passphrase modes. Command-line mistakes, lost keys or insecure shell history can undermine protection. Free Free and open source Advanced Windows macOS Linux Command line 7. Disk, File Encryption &amp; Backups">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>age</h3>
+  <p class="security-purpose">Modern, simple file encryption for scripts and technical users.</p>
+  <p><strong>Why it belongs:</strong> Small, auditable design with straightforward recipient and passphrase modes.</p>
+  <p class="security-limit"><strong>Limits:</strong> Command-line mistakes, lost keys or insecure shell history can undermine protection.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Command line</span></div>
+  <a class="btn alt" href="https://age-encryption.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-restic" data-security-tool data-tool-id="restic" data-category="encryption-backup" data-level="Advanced" data-search="restic Encrypted, deduplicated backups to local or remote storage. Strong fit for automated, verifiable backups across many storage backends. Backups are useful only when restoration is tested and credentials are stored separately. Free Free and open source Advanced Windows macOS Linux BSD 7. Disk, File Encryption &amp; Backups">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>restic</h3>
+  <p class="security-purpose">Encrypted, deduplicated backups to local or remote storage.</p>
+  <p><strong>Why it belongs:</strong> Strong fit for automated, verifiable backups across many storage backends.</p>
+  <p class="security-limit"><strong>Limits:</strong> Backups are useful only when restoration is tested and credentials are stored separately.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>BSD</span></div>
+  <a class="btn alt" href="https://restic.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-borgbackup" data-security-tool data-tool-id="borgbackup" data-category="encryption-backup" data-level="Advanced" data-search="BorgBackup Encrypted, compressed and deduplicated backups. Efficient for repeated versioned backups and append-only remote repositories. Requires careful repository-key management, monitoring and restore testing. Free Free and open source Advanced Linux macOS BSD 7. Disk, File Encryption &amp; Backups">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>BorgBackup</h3>
+  <p class="security-purpose">Encrypted, compressed and deduplicated backups.</p>
+  <p><strong>Why it belongs:</strong> Efficient for repeated versioned backups and append-only remote repositories.</p>
+  <p class="security-limit"><strong>Limits:</strong> Requires careful repository-key management, monitoring and restore testing.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>macOS</span><span>BSD</span></div>
+  <a class="btn alt" href="https://www.borgbackup.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-file-safety" data-security-category="file-safety">
+  <div class="eyebrow">Protection layer</div>
+  <h2>8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup</h2>
+  <p class="lead">Documents and images can reveal names, devices, locations and editing history. Untrusted files can exploit readers before their content is assessed.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-mat2" data-security-tool data-tool-id="mat2" data-category="file-safety" data-level="Intermediate" data-search="MAT2 Remove metadata from many common file formats. Purpose-built for metadata minimisation before publication or transfer. Some formats cannot be perfectly cleaned without conversion. Always inspect the output and keep the original separately. Free Free and open source Intermediate Linux Command line Desktop integrations 8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>MAT2</h3>
+  <p class="security-purpose">Remove metadata from many common file formats.</p>
+  <p><strong>Why it belongs:</strong> Purpose-built for metadata minimisation before publication or transfer.</p>
+  <p class="security-limit"><strong>Limits:</strong> Some formats cannot be perfectly cleaned without conversion. Always inspect the output and keep the original separately.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>Command line</span><span>Desktop integrations</span></div>
+  <a class="btn alt" href="https://0xacab.org/jvoisin/mat2" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-exiftool" data-security-tool data-tool-id="exiftool" data-category="file-safety" data-level="Advanced" data-search="ExifTool Inspect, edit and remove extensive image, document, audio and video metadata. One of the most comprehensive tools for identifying hidden metadata fields. Removing visible metadata does not remove visual clues, file hashes, cloud logs or all proprietary data structures. Free Free and open source Advanced Windows macOS Linux 8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>ExifTool</h3>
+  <p class="security-purpose">Inspect, edit and remove extensive image, document, audio and video metadata.</p>
+  <p><strong>Why it belongs:</strong> One of the most comprehensive tools for identifying hidden metadata fields.</p>
+  <p class="security-limit"><strong>Limits:</strong> Removing visible metadata does not remove visual clues, file hashes, cloud logs or all proprietary data structures.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://exiftool.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-dangerzone" data-security-tool data-tool-id="dangerzone" data-category="file-safety" data-level="All" data-search="Dangerzone Convert potentially malicious documents into safer PDFs inside isolated containers. Reduces risk from active content, embedded scripts and document exploits before reading. Conversion can alter formatting and cannot make a compromised host safe. Preserve originals as evidence without opening them directly. Free Free and open source All Windows macOS Linux Qubes 8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>Dangerzone</h3>
+  <p class="security-purpose">Convert potentially malicious documents into safer PDFs inside isolated containers.</p>
+  <p><strong>Why it belongs:</strong> Reduces risk from active content, embedded scripts and document exploits before reading.</p>
+  <p class="security-limit"><strong>Limits:</strong> Conversion can alter formatting and cannot make a compromised host safe. Preserve originals as evidence without opening them directly.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Qubes</span></div>
+  <a class="btn alt" href="https://dangerzone.rocks/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-bleachbit" data-security-tool data-tool-id="bleachbit" data-category="file-safety" data-level="All" data-search="BleachBit Remove caches, temporary files and application traces. Useful for routine cleanup and reducing unnecessary local data retention. Deletion on SSDs, snapshots, cloud sync and backups is complicated. Cleanup is not a substitute for full-disk encryption or an amnesic OS. Free Free and open source All Windows Linux 8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>BleachBit</h3>
+  <p class="security-purpose">Remove caches, temporary files and application traces.</p>
+  <p><strong>Why it belongs:</strong> Useful for routine cleanup and reducing unnecessary local data retention.</p>
+  <p class="security-limit"><strong>Limits:</strong> Deletion on SSDs, snapshots, cloud sync and backups is complicated. Cleanup is not a substitute for full-disk encryption or an amnesic OS.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>Linux</span></div>
+  <a class="btn alt" href="https://www.bleachbit.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-nwipe" data-security-tool data-tool-id="nwipe" data-category="file-safety" data-level="Advanced" data-search="nwipe Erase traditional hard drives and block devices. Useful for decommissioning magnetic drives through a documented wipe process. Repeated overwriting is not reliable for many SSDs and flash devices because of wear levelling. Use manufacturer secure erase or encryption-key destruction where appropriate. Free Free and open source Advanced Linux Bootable environments 8. Metadata Removal, Dangerous Documents &amp; Secure Cleanup">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>nwipe</h3>
+  <p class="security-purpose">Erase traditional hard drives and block devices.</p>
+  <p><strong>Why it belongs:</strong> Useful for decommissioning magnetic drives through a documented wipe process.</p>
+  <p class="security-limit"><strong>Limits:</strong> Repeated overwriting is not reliable for many SSDs and flash devices because of wear levelling. Use manufacturer secure erase or encryption-key destruction where appropriate.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>Bootable environments</span></div>
+  <a class="btn alt" href="https://github.com/martijnvanbrummelen/nwipe" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-self-checks" data-security-category="self-checks">
+  <div class="eyebrow">Protection layer</div>
+  <h2>9. Privacy, Breach, Phishing &amp; File Checks</h2>
+  <p class="lead">Use these to identify exposure and suspicious material. Public scanning services are not private evidence lockers.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-cover-your-tracks" data-security-tool data-tool-id="cover-your-tracks" data-category="self-checks" data-level="All" data-search="EFF Cover Your Tracks Test tracker blocking and browser fingerprint uniqueness. Shows why blocking cookies alone does not prevent browser fingerprinting. A test result is a snapshot and does not prove anonymity across all sites or sessions. Free service EFF research tool All Web 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>EFF Cover Your Tracks</h3>
+  <p class="security-purpose">Test tracker blocking and browser fingerprint uniqueness.</p>
+  <p><strong>Why it belongs:</strong> Shows why blocking cookies alone does not prevent browser fingerprinting.</p>
+  <p class="security-limit"><strong>Limits:</strong> A test result is a snapshot and does not prove anonymity across all sites or sessions.</p>
+  <div class="security-badges"><span>EFF research tool</span><span>Web</span></div>
+  <a class="btn alt" href="https://coveryourtracks.eff.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-tor-check" data-security-tool data-tool-id="tor-check" data-category="self-checks" data-level="All" data-search="Tor Check Confirm whether a browser request appears to exit through Tor. Useful as a basic connection sanity check before sensitive browsing. A positive result does not prove that every application or later request uses Tor safely. Free service Tor Project service All Web 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>Tor Check</h3>
+  <p class="security-purpose">Confirm whether a browser request appears to exit through Tor.</p>
+  <p><strong>Why it belongs:</strong> Useful as a basic connection sanity check before sensitive browsing.</p>
+  <p class="security-limit"><strong>Limits:</strong> A positive result does not prove that every application or later request uses Tor safely.</p>
+  <div class="security-badges"><span>Tor Project service</span><span>Web</span></div>
+  <a class="btn alt" href="https://check.torproject.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-hibp" data-security-tool data-tool-id="hibp" data-category="self-checks" data-level="All" data-search="Have I Been Pwned Check whether an email address appears in known breach datasets. Provides a practical signal for password replacement and account review. Absence does not prove safety; presence does not show who used an address or whether every listed field is accurate. Free lookup and alerts Public service All Web 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free lookup and alerts</span><span class="security-level">All</span></div>
+  <h3>Have I Been Pwned</h3>
+  <p class="security-purpose">Check whether an email address appears in known breach datasets.</p>
+  <p><strong>Why it belongs:</strong> Provides a practical signal for password replacement and account review.</p>
+  <p class="security-limit"><strong>Limits:</strong> Absence does not prove safety; presence does not show who used an address or whether every listed field is accurate.</p>
+  <div class="security-badges"><span>Public service</span><span>Web</span></div>
+  <a class="btn alt" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-mozilla-monitor" data-security-tool data-tool-id="mozilla-monitor" data-category="self-checks" data-level="All" data-search="Mozilla Monitor Breach notifications and exposure guidance. Accessible way to monitor known breach exposure and get remediation steps. Coverage depends on known datasets; data-broker removal features and availability vary by region. Free core service Mozilla service All Web 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free core service</span><span class="security-level">All</span></div>
+  <h3>Mozilla Monitor</h3>
+  <p class="security-purpose">Breach notifications and exposure guidance.</p>
+  <p><strong>Why it belongs:</strong> Accessible way to monitor known breach exposure and get remediation steps.</p>
+  <p class="security-limit"><strong>Limits:</strong> Coverage depends on known datasets; data-broker removal features and availability vary by region.</p>
+  <div class="security-badges"><span>Mozilla service</span><span>Web</span></div>
+  <a class="btn alt" href="https://monitor.mozilla.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-virustotal" data-security-tool data-tool-id="virustotal" data-category="self-checks" data-level="Intermediate" data-search="VirusTotal Check hashes, public URLs and non-sensitive files against multiple security engines. Useful for triaging common malware and reputation signals. Uploads and submitted URLs may be shared with security partners. Never upload confidential, personal, privileged or unpublished evidence. Free public analysis Hosted multi-scanner service Intermediate Web API limits 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free public analysis</span><span class="security-level">Intermediate</span></div>
+  <h3>VirusTotal</h3>
+  <p class="security-purpose">Check hashes, public URLs and non-sensitive files against multiple security engines.</p>
+  <p><strong>Why it belongs:</strong> Useful for triaging common malware and reputation signals.</p>
+  <p class="security-limit"><strong>Limits:</strong> Uploads and submitted URLs may be shared with security partners. Never upload confidential, personal, privileged or unpublished evidence.</p>
+  <div class="security-badges"><span>Hosted multi-scanner service</span><span>Web</span><span>API limits</span></div>
+  <a class="btn alt" href="https://www.virustotal.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-urlscan" data-security-tool data-tool-id="urlscan" data-category="self-checks" data-level="Intermediate" data-search="urlscan.io Render and inspect suspicious websites, requests, domains and page resources. Allows safer remote observation of a web page&#39;s network behaviour. Public scans expose the submitted URL and result. Use private scanning only when your account and policy support it; never submit secret links. Free public scans Hosted service Intermediate Web API limits 9. Privacy, Breach, Phishing &amp; File Checks">
+  <div class="security-tool-top"><span class="label">Free public scans</span><span class="security-level">Intermediate</span></div>
+  <h3>urlscan.io</h3>
+  <p class="security-purpose">Render and inspect suspicious websites, requests, domains and page resources.</p>
+  <p><strong>Why it belongs:</strong> Allows safer remote observation of a web page&#39;s network behaviour.</p>
+  <p class="security-limit"><strong>Limits:</strong> Public scans expose the submitted URL and result. Use private scanning only when your account and policy support it; never submit secret links.</p>
+  <div class="security-badges"><span>Hosted service</span><span>Web</span><span>API limits</span></div>
+  <a class="btn alt" href="https://urlscan.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-network-defence" data-security-category="network-defence">
+  <div class="eyebrow">Protection layer</div>
+  <h2>10. Device, Network &amp; Incident Defence</h2>
+  <p class="lead">These are defensive administration tools. Use scanners and packet tools only on systems you own, operate or have explicit written authority to assess.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-wireshark" data-security-tool data-tool-id="wireshark" data-category="network-defence" data-level="Advanced" data-search="Wireshark Capture and analyse network protocols and traffic. Essential for diagnosing unexpected connections, insecure protocols and incident timelines. Captures may contain credentials, personal data and third-party communications. Obtain authority and protect capture files. Free Free and open source Advanced Windows macOS Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Wireshark</h3>
+  <p class="security-purpose">Capture and analyse network protocols and traffic.</p>
+  <p><strong>Why it belongs:</strong> Essential for diagnosing unexpected connections, insecure protocols and incident timelines.</p>
+  <p class="security-limit"><strong>Limits:</strong> Captures may contain credentials, personal data and third-party communications. Obtain authority and protect capture files.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-nmap" data-security-tool data-tool-id="nmap" data-category="network-defence" data-level="Advanced" data-search="Nmap Inventory hosts, ports and services on authorised networks. Helps defenders discover forgotten or exposed services before attackers do. Scanning systems without permission can violate law, policy or service terms. Do not use it for unauthorised targeting. Free Free and open source Advanced Windows macOS Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Nmap</h3>
+  <p class="security-purpose">Inventory hosts, ports and services on authorised networks.</p>
+  <p><strong>Why it belongs:</strong> Helps defenders discover forgotten or exposed services before attackers do.</p>
+  <p class="security-limit"><strong>Limits:</strong> Scanning systems without permission can violate law, policy or service terms. Do not use it for unauthorised targeting.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://nmap.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-opensnitch" data-security-tool data-tool-id="opensnitch" data-category="network-defence" data-level="Intermediate" data-search="OpenSnitch Application-level outbound firewall and connection visibility. Makes unexpected application connections visible and controllable. Blocking without understanding can break updates and create false confidence; malware with high privileges may bypass controls. Free Free and open source Intermediate Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>OpenSnitch</h3>
+  <p class="security-purpose">Application-level outbound firewall and connection visibility.</p>
+  <p><strong>Why it belongs:</strong> Makes unexpected application connections visible and controllable.</p>
+  <p class="security-limit"><strong>Limits:</strong> Blocking without understanding can break updates and create false confidence; malware with high privileges may bypass controls.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span></div>
+  <a class="btn alt" href="https://github.com/evilsocket/opensnitch" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-portmaster" data-security-tool data-tool-id="portmaster" data-category="network-defence" data-level="Intermediate" data-search="Portmaster Application firewall, DNS controls and connection monitoring. Provides an accessible view of which applications connect where. Some network features are paid; local filtering is not anonymity and cannot protect a compromised kernel. Free core application Open source Intermediate Windows Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free core application</span><span class="security-level">Intermediate</span></div>
+  <h3>Portmaster</h3>
+  <p class="security-purpose">Application firewall, DNS controls and connection monitoring.</p>
+  <p><strong>Why it belongs:</strong> Provides an accessible view of which applications connect where.</p>
+  <p class="security-limit"><strong>Limits:</strong> Some network features are paid; local filtering is not anonymity and cannot protect a compromised kernel.</p>
+  <div class="security-badges"><span>Open source</span><span>Windows</span><span>Linux</span></div>
+  <a class="btn alt" href="https://safing.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-pihole" data-security-tool data-tool-id="pihole" data-category="network-defence" data-level="Intermediate" data-search="Pi-hole Network-wide DNS sinkhole for ads, trackers and known unwanted domains. Protects devices that cannot run browser extensions and centralises block lists. DNS blocking can be bypassed, may break services and does not hide traffic destinations from the network resolver or provider. Free Free and open source Intermediate Linux server Raspberry Pi Containers 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Pi-hole</h3>
+  <p class="security-purpose">Network-wide DNS sinkhole for ads, trackers and known unwanted domains.</p>
+  <p><strong>Why it belongs:</strong> Protects devices that cannot run browser extensions and centralises block lists.</p>
+  <p class="security-limit"><strong>Limits:</strong> DNS blocking can be bypassed, may break services and does not hide traffic destinations from the network resolver or provider.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux server</span><span>Raspberry Pi</span><span>Containers</span></div>
+  <a class="btn alt" href="https://pi-hole.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-adguard-home" data-security-tool data-tool-id="adguard-home" data-category="network-defence" data-level="Intermediate" data-search="AdGuard Home Network DNS filtering and parental/security policies. Cross-platform alternative for centralised domain blocking and encrypted upstream DNS. Blocking rules require maintenance and do not provide anonymity or malware immunity. Free Free and open source Intermediate Windows macOS Linux Routers 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>AdGuard Home</h3>
+  <p class="security-purpose">Network DNS filtering and parental/security policies.</p>
+  <p><strong>Why it belongs:</strong> Cross-platform alternative for centralised domain blocking and encrypted upstream DNS.</p>
+  <p class="security-limit"><strong>Limits:</strong> Blocking rules require maintenance and do not provide anonymity or malware immunity.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Routers</span></div>
+  <a class="btn alt" href="https://adguard.com/en/adguard-home/overview.html" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-fail2ban" data-security-tool data-tool-id="fail2ban" data-category="network-defence" data-level="Advanced" data-search="Fail2ban Temporarily block sources producing repeated suspicious log events. Simple protection against repeated password guessing and noisy automated attacks. It depends on correct logs and filters, does not fix weak passwords and can be evaded by distributed attacks. Free Free and open source Advanced Linux BSD 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Fail2ban</h3>
+  <p class="security-purpose">Temporarily block sources producing repeated suspicious log events.</p>
+  <p><strong>Why it belongs:</strong> Simple protection against repeated password guessing and noisy automated attacks.</p>
+  <p class="security-limit"><strong>Limits:</strong> It depends on correct logs and filters, does not fix weak passwords and can be evaded by distributed attacks.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>BSD</span></div>
+  <a class="btn alt" href="https://www.fail2ban.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-crowdsec" data-security-tool data-tool-id="crowdsec" data-category="network-defence" data-level="Advanced" data-search="CrowdSec Collaborative detection and response for malicious behaviour. Combines local log analysis with community threat intelligence and reusable remediation components. Community intelligence and automated blocking need careful tuning to avoid false positives and privacy issues. Free community edition Open source engine Advanced Linux Windows Containers Cloud 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free community edition</span><span class="security-level">Advanced</span></div>
+  <h3>CrowdSec</h3>
+  <p class="security-purpose">Collaborative detection and response for malicious behaviour.</p>
+  <p><strong>Why it belongs:</strong> Combines local log analysis with community threat intelligence and reusable remediation components.</p>
+  <p class="security-limit"><strong>Limits:</strong> Community intelligence and automated blocking need careful tuning to avoid false positives and privacy issues.</p>
+  <div class="security-badges"><span>Open source engine</span><span>Linux</span><span>Windows</span><span>Containers</span><span>Cloud</span></div>
+  <a class="btn alt" href="https://www.crowdsec.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-suricata" data-security-tool data-tool-id="suricata" data-category="network-defence" data-level="Advanced" data-search="Suricata Network intrusion detection, prevention and security monitoring. High-performance inspection with rule-based alerts and protocol logging. Requires placement, rule maintenance, storage and skilled analysis; encryption limits visibility. Free Free and open source Advanced Linux BSD Windows 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Suricata</h3>
+  <p class="security-purpose">Network intrusion detection, prevention and security monitoring.</p>
+  <p><strong>Why it belongs:</strong> High-performance inspection with rule-based alerts and protocol logging.</p>
+  <p class="security-limit"><strong>Limits:</strong> Requires placement, rule maintenance, storage and skilled analysis; encryption limits visibility.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>BSD</span><span>Windows</span></div>
+  <a class="btn alt" href="https://suricata.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-zeek" data-security-tool data-tool-id="zeek" data-category="network-defence" data-level="Advanced" data-search="Zeek Network security monitoring and rich protocol metadata. Excellent for building incident timelines and understanding normal versus unusual network behaviour. Produces substantial sensitive logs and requires analysis expertise rather than providing automatic verdicts. Free Free and open source Advanced Linux BSD macOS 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Zeek</h3>
+  <p class="security-purpose">Network security monitoring and rich protocol metadata.</p>
+  <p><strong>Why it belongs:</strong> Excellent for building incident timelines and understanding normal versus unusual network behaviour.</p>
+  <p class="security-limit"><strong>Limits:</strong> Produces substantial sensitive logs and requires analysis expertise rather than providing automatic verdicts.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>BSD</span><span>macOS</span></div>
+  <a class="btn alt" href="https://zeek.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-wazuh" data-security-tool data-tool-id="wazuh" data-category="network-defence" data-level="Advanced" data-search="Wazuh Endpoint security monitoring, file integrity, vulnerability and log analysis. Provides an integrated defensive monitoring stack without a mandatory licence fee. Operationally heavy; alerts, storage, upgrades and access control require dedicated administration. Free self-hosted platform Open source Advanced Servers Endpoints Cloud 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free self-hosted platform</span><span class="security-level">Advanced</span></div>
+  <h3>Wazuh</h3>
+  <p class="security-purpose">Endpoint security monitoring, file integrity, vulnerability and log analysis.</p>
+  <p><strong>Why it belongs:</strong> Provides an integrated defensive monitoring stack without a mandatory licence fee.</p>
+  <p class="security-limit"><strong>Limits:</strong> Operationally heavy; alerts, storage, upgrades and access control require dedicated administration.</p>
+  <div class="security-badges"><span>Open source</span><span>Servers</span><span>Endpoints</span><span>Cloud</span></div>
+  <a class="btn alt" href="https://wazuh.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-osquery" data-security-tool data-tool-id="osquery" data-category="network-defence" data-level="Advanced" data-search="osquery Query endpoint state using SQL-style tables. Powerful for inventory, threat hunting and checking persistence or configuration across endpoints. It is a data collection engine, not a complete detection platform. Protect logs and deployment keys. Free Free and open source Advanced Windows macOS Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>osquery</h3>
+  <p class="security-purpose">Query endpoint state using SQL-style tables.</p>
+  <p><strong>Why it belongs:</strong> Powerful for inventory, threat hunting and checking persistence or configuration across endpoints.</p>
+  <p class="security-limit"><strong>Limits:</strong> It is a data collection engine, not a complete detection platform. Protect logs and deployment keys.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://osquery.io/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-lynis" data-security-tool data-tool-id="lynis" data-category="network-defence" data-level="Intermediate" data-search="Lynis Local security auditing and hardening recommendations. Fast way to identify missing controls, weak configuration and maintenance gaps. Recommendations require context and can create disruption if applied blindly. Free community edition Open source Intermediate Linux macOS Unix 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free community edition</span><span class="security-level">Intermediate</span></div>
+  <h3>Lynis</h3>
+  <p class="security-purpose">Local security auditing and hardening recommendations.</p>
+  <p><strong>Why it belongs:</strong> Fast way to identify missing controls, weak configuration and maintenance gaps.</p>
+  <p class="security-limit"><strong>Limits:</strong> Recommendations require context and can create disruption if applied blindly.</p>
+  <div class="security-badges"><span>Open source</span><span>Linux</span><span>macOS</span><span>Unix</span></div>
+  <a class="btn alt" href="https://cisofy.com/lynis/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-clamav" data-security-tool data-tool-id="clamav" data-category="network-defence" data-level="Intermediate" data-search="ClamAV Malware scanning for files, mail gateways and servers. Useful as one layer in document intake and server workflows. Detection is not complete and real-time endpoint protection varies by platform. Never rely on a single scanner. Free Free and open source Intermediate Linux macOS Windows builds 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>ClamAV</h3>
+  <p class="security-purpose">Malware scanning for files, mail gateways and servers.</p>
+  <p><strong>Why it belongs:</strong> Useful as one layer in document intake and server workflows.</p>
+  <p class="security-limit"><strong>Limits:</strong> Detection is not complete and real-time endpoint protection varies by platform. Never rely on a single scanner.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>macOS</span><span>Windows builds</span></div>
+  <a class="btn alt" href="https://www.clamav.net/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-yara" data-security-tool data-tool-id="yara" data-category="network-defence" data-level="Advanced" data-search="YARA Identify malware and suspicious files using pattern rules. Widely used by defenders to classify known families and indicators. Rules can miss variants or generate false positives; execution and sample handling require a safe lab. Free Free and open source Advanced Windows macOS Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>YARA</h3>
+  <p class="security-purpose">Identify malware and suspicious files using pattern rules.</p>
+  <p><strong>Why it belongs:</strong> Widely used by defenders to classify known families and indicators.</p>
+  <p class="security-limit"><strong>Limits:</strong> Rules can miss variants or generate false positives; execution and sample handling require a safe lab.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://virustotal.github.io/yara/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-velociraptor" data-security-tool data-tool-id="velociraptor" data-category="network-defence" data-level="Advanced" data-search="Velociraptor Endpoint visibility, forensic collection and incident response. Lets authorised responders query and collect evidence across managed endpoints. Extremely powerful administrative access; protect credentials, define scope and preserve chain of custody. Free Free and open source Advanced Windows macOS Linux 10. Device, Network &amp; Incident Defence">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Velociraptor</h3>
+  <p class="security-purpose">Endpoint visibility, forensic collection and incident response.</p>
+  <p><strong>Why it belongs:</strong> Lets authorised responders query and collect evidence across managed endpoints.</p>
+  <p class="security-limit"><strong>Limits:</strong> Extremely powerful administrative access; protect credentials, define scope and preserve chain of custody.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://docs.velociraptor.app/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-website-security" data-security-category="website-security">
+  <div class="eyebrow">Protection layer</div>
+  <h2>11. Website &amp; Server Security Checks</h2>
+  <p class="lead">External configuration checks are safe starting points. Active vulnerability testing must be authorised and carefully scoped.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-mozilla-observatory" data-security-tool data-tool-id="mozilla-observatory" data-category="website-security" data-level="All" data-search="Mozilla Observatory Check web security headers and defensive configuration. Clear grading and recommendations for common browser-side protections. A strong score does not prove the application or server is free from vulnerabilities. Free service Open source scanner All Web 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>Mozilla Observatory</h3>
+  <p class="security-purpose">Check web security headers and defensive configuration.</p>
+  <p><strong>Why it belongs:</strong> Clear grading and recommendations for common browser-side protections.</p>
+  <p class="security-limit"><strong>Limits:</strong> A strong score does not prove the application or server is free from vulnerabilities.</p>
+  <div class="security-badges"><span>Open source scanner</span><span>Web</span></div>
+  <a class="btn alt" href="https://observatory.mozilla.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-ssllabs" data-security-tool data-tool-id="ssllabs" data-category="website-security" data-level="All" data-search="Qualys SSL Labs Server Test Assess public TLS protocol, certificate and cipher configuration. Widely understood baseline for HTTPS deployment quality. Tests public endpoints and publishes/cache results; it does not assess application logic or private services. Free service Hosted service All Web 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>Qualys SSL Labs Server Test</h3>
+  <p class="security-purpose">Assess public TLS protocol, certificate and cipher configuration.</p>
+  <p><strong>Why it belongs:</strong> Widely understood baseline for HTTPS deployment quality.</p>
+  <p class="security-limit"><strong>Limits:</strong> Tests public endpoints and publishes/cache results; it does not assess application logic or private services.</p>
+  <div class="security-badges"><span>Hosted service</span><span>Web</span></div>
+  <a class="btn alt" href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-security-headers" data-security-tool data-tool-id="security-headers" data-category="website-security" data-level="All" data-search="Security Headers Quick review of important HTTP response headers. Simple way to detect missing CSP, HSTS and related protections. Header presence is not proof of correct policy design or application security. Free service Hosted service All Web 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>Security Headers</h3>
+  <p class="security-purpose">Quick review of important HTTP response headers.</p>
+  <p><strong>Why it belongs:</strong> Simple way to detect missing CSP, HSTS and related protections.</p>
+  <p class="security-limit"><strong>Limits:</strong> Header presence is not proof of correct policy design or application security.</p>
+  <div class="security-badges"><span>Hosted service</span><span>Web</span></div>
+  <a class="btn alt" href="https://securityheaders.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-zaproxy" data-security-tool data-tool-id="zaproxy" data-category="website-security" data-level="Advanced" data-search="OWASP ZAP Intercepting proxy and web-application security testing for authorised systems. Leading open-source defensive tool for developers and website owners. Active scans can disrupt services and generate intrusive requests. Use only with written authorisation and a defined test window. Free Free and open source Advanced Windows macOS Linux Containers 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>OWASP ZAP</h3>
+  <p class="security-purpose">Intercepting proxy and web-application security testing for authorised systems.</p>
+  <p><strong>Why it belongs:</strong> Leading open-source defensive tool for developers and website owners.</p>
+  <p class="security-limit"><strong>Limits:</strong> Active scans can disrupt services and generate intrusive requests. Use only with written authorisation and a defined test window.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>Containers</span></div>
+  <a class="btn alt" href="https://www.zaproxy.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-greenbone" data-security-tool data-tool-id="greenbone" data-category="website-security" data-level="Advanced" data-search="Greenbone Community Edition / OpenVAS Vulnerability assessment for authorised networks and hosts. Comprehensive open-source scanning and vulnerability-management foundation. Scans can be noisy and disruptive; findings require validation, patch context and permission. Free community edition Open source components Advanced Linux Containers Virtual appliance builds 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free community edition</span><span class="security-level">Advanced</span></div>
+  <h3>Greenbone Community Edition / OpenVAS</h3>
+  <p class="security-purpose">Vulnerability assessment for authorised networks and hosts.</p>
+  <p><strong>Why it belongs:</strong> Comprehensive open-source scanning and vulnerability-management foundation.</p>
+  <p class="security-limit"><strong>Limits:</strong> Scans can be noisy and disruptive; findings require validation, patch context and permission.</p>
+  <div class="security-badges"><span>Open source components</span><span>Linux</span><span>Containers</span><span>Virtual appliance builds</span></div>
+  <a class="btn alt" href="https://greenbone.github.io/docs/latest/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-amass" data-security-tool data-tool-id="amass" data-category="website-security" data-level="Advanced" data-search="OWASP Amass Map an organisation&#39;s internet-facing assets and DNS relationships. Helps authorised defenders discover forgotten subdomains and infrastructure exposure. Collect only lawful public data or assets in scope. Do not use results to access systems without permission. Free Free and open source Advanced Windows macOS Linux 11. Website &amp; Server Security Checks">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>OWASP Amass</h3>
+  <p class="security-purpose">Map an organisation&#39;s internet-facing assets and DNS relationships.</p>
+  <p><strong>Why it belongs:</strong> Helps authorised defenders discover forgotten subdomains and infrastructure exposure.</p>
+  <p class="security-limit"><strong>Limits:</strong> Collect only lawful public data or assets in scope. Do not use results to access systems without permission.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://owasp.org/www-project-amass/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-osint" data-security-category="osint">
+  <div class="eyebrow">Protection layer</div>
+  <h2>12. Lawful OSINT &amp; Source Verification</h2>
+  <p class="lead">Use public records to verify claims, not to harass, stalk, impersonate or access accounts. Keep provenance, uncertainty and corrections visible.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-bellingcat-toolkit" data-security-tool data-tool-id="bellingcat-toolkit" data-category="osint" data-level="All" data-search="Bellingcat Online Investigation Toolkit Curated tools for maps, images, companies, transport, archives and verification. Investigation-focused organisation and practical categorisation for public-interest research. Third-party tools have different privacy terms and accuracy. Verify important findings with primary records. Free guide and directory Public resource All Web 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free guide and directory</span><span class="security-level">All</span></div>
+  <h3>Bellingcat Online Investigation Toolkit</h3>
+  <p class="security-purpose">Curated tools for maps, images, companies, transport, archives and verification.</p>
+  <p><strong>Why it belongs:</strong> Investigation-focused organisation and practical categorisation for public-interest research.</p>
+  <p class="security-limit"><strong>Limits:</strong> Third-party tools have different privacy terms and accuracy. Verify important findings with primary records.</p>
+  <div class="security-badges"><span>Public resource</span><span>Web</span></div>
+  <a class="btn alt" href="https://bellingcat.gitbook.io/toolkit" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-osint-framework" data-security-tool data-tool-id="osint-framework" data-category="osint" data-level="Intermediate" data-search="OSINT Framework Navigate a large directory of public-information research resources. Good discovery map when the researcher knows the data type but not the available source. A listing is not an endorsement; many external tools collect data or have commercial limits. Free directory Community resource Intermediate Web 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free directory</span><span class="security-level">Intermediate</span></div>
+  <h3>OSINT Framework</h3>
+  <p class="security-purpose">Navigate a large directory of public-information research resources.</p>
+  <p><strong>Why it belongs:</strong> Good discovery map when the researcher knows the data type but not the available source.</p>
+  <p class="security-limit"><strong>Limits:</strong> A listing is not an endorsement; many external tools collect data or have commercial limits.</p>
+  <div class="security-badges"><span>Community resource</span><span>Web</span></div>
+  <a class="btn alt" href="https://osintframework.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-spiderfoot" data-security-tool data-tool-id="spiderfoot" data-category="osint" data-level="Advanced" data-search="SpiderFoot Automate collection and correlation of public OSINT signals. Broad module ecosystem and graphable results for defensive exposure review. Automation creates false positives and large amounts of personal data. Restrict targets, lawful purpose, retention and publication. Free self-hosted edition Free and open source Advanced Linux Windows macOS Containers 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free self-hosted edition</span><span class="security-level">Advanced</span></div>
+  <h3>SpiderFoot</h3>
+  <p class="security-purpose">Automate collection and correlation of public OSINT signals.</p>
+  <p><strong>Why it belongs:</strong> Broad module ecosystem and graphable results for defensive exposure review.</p>
+  <p class="security-limit"><strong>Limits:</strong> Automation creates false positives and large amounts of personal data. Restrict targets, lawful purpose, retention and publication.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>Windows</span><span>macOS</span><span>Containers</span></div>
+  <a class="btn alt" href="https://github.com/smicallef/spiderfoot" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-theharvester" data-security-tool data-tool-id="theharvester" data-category="osint" data-level="Advanced" data-search="theHarvester Collect public domain, email, host and service references for authorised security assessment. Useful for understanding an organisation&#39;s exposed public footprint. Do not turn public addresses into harassment or credential attacks. Results may be stale, incorrect or belong to unrelated people. Free Free and open source Advanced Linux macOS Containers 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>theHarvester</h3>
+  <p class="security-purpose">Collect public domain, email, host and service references for authorised security assessment.</p>
+  <p><strong>Why it belongs:</strong> Useful for understanding an organisation&#39;s exposed public footprint.</p>
+  <p class="security-limit"><strong>Limits:</strong> Do not turn public addresses into harassment or credential attacks. Results may be stale, incorrect or belong to unrelated people.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Linux</span><span>macOS</span><span>Containers</span></div>
+  <a class="btn alt" href="https://github.com/laramies/theHarvester" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-sherlock" data-security-tool data-tool-id="sherlock" data-category="osint" data-level="Intermediate" data-search="Sherlock Check whether a username appears across public websites. Can help an individual audit username reuse or researchers locate public leads. Username matches do not prove common ownership or identity. Do not use it for stalking, harassment or account access. Free Free and open source Intermediate Windows macOS Linux 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Intermediate</span></div>
+  <h3>Sherlock</h3>
+  <p class="security-purpose">Check whether a username appears across public websites.</p>
+  <p><strong>Why it belongs:</strong> Can help an individual audit username reuse or researchers locate public leads.</p>
+  <p class="security-limit"><strong>Limits:</strong> Username matches do not prove common ownership or identity. Do not use it for stalking, harassment or account access.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span></div>
+  <a class="btn alt" href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-wayback" data-security-tool data-tool-id="wayback" data-category="osint" data-level="All" data-search="Internet Archive Wayback Machine View preserved historical versions of public websites. Essential for tracking removed pages, changed claims and historical context. Coverage is incomplete and captures may omit scripts, files or restricted pages. A capture proves content availability, not truth. Free service Nonprofit archive service All Web 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free service</span><span class="security-level">All</span></div>
+  <h3>Internet Archive Wayback Machine</h3>
+  <p class="security-purpose">View preserved historical versions of public websites.</p>
+  <p><strong>Why it belongs:</strong> Essential for tracking removed pages, changed claims and historical context.</p>
+  <p class="security-limit"><strong>Limits:</strong> Coverage is incomplete and captures may omit scripts, files or restricted pages. A capture proves content availability, not truth.</p>
+  <div class="security-badges"><span>Nonprofit archive service</span><span>Web</span></div>
+  <a class="btn alt" href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-aleph" data-security-tool data-tool-id="aleph" data-category="osint" data-level="Intermediate" data-search="OCCRP Aleph Search public records, leaks and entity relationships assembled for investigative work. Strong source for cross-border company, person, document and relationship research. Records need jurisdictional context and source verification; association is not proof of wrongdoing. Free public search Open-source platform and public service Intermediate Web 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free public search</span><span class="security-level">Intermediate</span></div>
+  <h3>OCCRP Aleph</h3>
+  <p class="security-purpose">Search public records, leaks and entity relationships assembled for investigative work.</p>
+  <p><strong>Why it belongs:</strong> Strong source for cross-border company, person, document and relationship research.</p>
+  <p class="security-limit"><strong>Limits:</strong> Records need jurisdictional context and source verification; association is not proof of wrongdoing.</p>
+  <div class="security-badges"><span>Open-source platform and public service</span><span>Web</span></div>
+  <a class="btn alt" href="https://aleph.occrp.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-opencorporates" data-security-tool data-tool-id="opencorporates" data-category="osint" data-level="All" data-search="OpenCorporates Search official company-registry-derived records across jurisdictions. Useful starting point for legal entities, officers, addresses and registry links. Coverage and freshness differ by jurisdiction. Similar names and registered-office addresses do not prove control or misconduct. Free public search Open company-data service All Web 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free public search</span><span class="security-level">All</span></div>
+  <h3>OpenCorporates</h3>
+  <p class="security-purpose">Search official company-registry-derived records across jurisdictions.</p>
+  <p><strong>Why it belongs:</strong> Useful starting point for legal entities, officers, addresses and registry links.</p>
+  <p class="security-limit"><strong>Limits:</strong> Coverage and freshness differ by jurisdiction. Similar names and registered-office addresses do not prove control or misconduct.</p>
+  <div class="security-badges"><span>Open company-data service</span><span>Web</span></div>
+  <a class="btn alt" href="https://opencorporates.com/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-opensanctions" data-security-tool data-tool-id="opensanctions" data-category="osint" data-level="Intermediate" data-search="OpenSanctions Search sanctions, politically exposed persons and related public lists. Normalises many official watchlists and provides source links. A match can be a false positive or historical listing. Verify identity, dates, list status and legal effect in the original authority record. Free public search and open datasets Open source Intermediate Web Data downloads 12. Lawful OSINT &amp; Source Verification">
+  <div class="security-tool-top"><span class="label">Free public search and open datasets</span><span class="security-level">Intermediate</span></div>
+  <h3>OpenSanctions</h3>
+  <p class="security-purpose">Search sanctions, politically exposed persons and related public lists.</p>
+  <p><strong>Why it belongs:</strong> Normalises many official watchlists and provides source links.</p>
+  <p class="security-limit"><strong>Limits:</strong> A match can be a false positive or historical listing. Verify identity, dates, list status and legal effect in the original authority record.</p>
+  <div class="security-badges"><span>Open source</span><span>Web</span><span>Data downloads</span></div>
+  <a class="btn alt" href="https://www.opensanctions.org/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+<section class="section wrap security-category" id="category-verification" data-security-category="verification">
+  <div class="eyebrow">Protection layer</div>
+  <h2>13. Download, Signature &amp; Integrity Verification</h2>
+  <p class="lead">Download software only from official sources. Verify hashes and signatures when a project publishes them, especially for anonymity tools.</p>
+  <div class="grid security-tool-grid">
+<article class="card security-tool-card" id="tool-minisign" data-security-tool data-tool-id="minisign" data-category="verification" data-level="Advanced" data-search="Minisign Small public-key tool for signing and verifying files. Simple format and implementation for project releases and evidence bundles. Verification is meaningful only when the public key was obtained through a trusted independent route. Free Free and open source Advanced Windows macOS Linux BSD 13. Download, Signature &amp; Integrity Verification">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Minisign</h3>
+  <p class="security-purpose">Small public-key tool for signing and verifying files.</p>
+  <p><strong>Why it belongs:</strong> Simple format and implementation for project releases and evidence bundles.</p>
+  <p class="security-limit"><strong>Limits:</strong> Verification is meaningful only when the public key was obtained through a trusted independent route.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>BSD</span></div>
+  <a class="btn alt" href="https://jedisct1.github.io/minisign/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-sigstore" data-security-tool data-tool-id="sigstore" data-category="verification" data-level="Advanced" data-search="Sigstore Cosign Sign and verify software artefacts and files with transparency-log support. Useful for reproducible publication chains and modern keyless CI signing. Identity policy, OIDC issuer and certificate checks must be explicit; a valid signature does not prove content is safe or true. Free Free and open source Advanced Windows macOS Linux CI systems 13. Download, Signature &amp; Integrity Verification">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">Advanced</span></div>
+  <h3>Sigstore Cosign</h3>
+  <p class="security-purpose">Sign and verify software artefacts and files with transparency-log support.</p>
+  <p><strong>Why it belongs:</strong> Useful for reproducible publication chains and modern keyless CI signing.</p>
+  <p class="security-limit"><strong>Limits:</strong> Identity policy, OIDC issuer and certificate checks must be explicit; a valid signature does not prove content is safe or true.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span><span>macOS</span><span>Linux</span><span>CI systems</span></div>
+  <a class="btn alt" href="https://docs.sigstore.dev/cosign/" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article>
+<article class="card security-tool-card" id="tool-openhashtab" data-security-tool data-tool-id="openhashtab" data-category="verification" data-level="All" data-search="OpenHashTab Calculate and compare file hashes from Windows file properties. Makes checksum verification accessible before installing downloaded software. A matching hash only proves byte equality with the published value; obtain the expected hash from a trustworthy source. Free Free and open source All Windows 13. Download, Signature &amp; Integrity Verification">
+  <div class="security-tool-top"><span class="label">Free</span><span class="security-level">All</span></div>
+  <h3>OpenHashTab</h3>
+  <p class="security-purpose">Calculate and compare file hashes from Windows file properties.</p>
+  <p><strong>Why it belongs:</strong> Makes checksum verification accessible before installing downloaded software.</p>
+  <p class="security-limit"><strong>Limits:</strong> A matching hash only proves byte equality with the published value; obtain the expected hash from a trustworthy source.</p>
+  <div class="security-badges"><span>Free and open source</span><span>Windows</span></div>
+  <a class="btn alt" href="https://github.com/namazso/OpenHashTab" target="_blank" rel="noopener noreferrer">Open official source ↗</a>
+</article></div>
+</section>
+
+      <section class="section wrap">
+        <div class="eyebrow">Research discipline</div><h2>OSINT COMPARTMENTATION PROTOCOL.</h2>
+        <div class="grid security-protocol">
+          <article class="card"><h3>Define lawful purpose</h3><p>Write the public-interest question, permitted scope, retention period and publication boundary before collecting personal data.</p></article>
+          <article class="card"><h3>Separate identities</h3><p>Use a dedicated operating-system account, browser profile or virtual machine. Never mix personal logins with a research identity that must remain separate.</p></article>
+          <article class="card"><h3>Reduce active contact</h3><p>Prefer primary records and passive public sources. Do not probe accounts, send reset requests, test credentials or interact with a subject without authority.</p></article>
+          <article class="card"><h3>Quarantine files</h3><p>Hash originals, preserve provenance, open copies through Dangerzone or an isolated environment and inspect metadata before publication.</p></article>
+          <article class="card"><h3>Separate fact from inference</h3><p>A matching username, address, company officer or sanctions-name result is a lead. Verify identity, date, jurisdiction and source context.</p></article>
+          <article class="card"><h3>Correct and minimise</h3><p>Publish only what is necessary, redact vulnerable third parties, state limitations and provide a route for sourced corrections.</p></article>
+        </div>
+      </section>
+
+      <section class="section wrap security-warning">
+        <h2>WHEN A PERSON IS UNDER ACTIVE THREAT.</h2>
+        <p>Do not improvise a complicated anonymity stack during an emergency. Preserve essential evidence, move to a known-safe device if possible, stop unnecessary account activity and contact a qualified digital-security responder such as the Access Now Digital Security Helpline. Immediate physical danger requires local emergency and trusted-person support as well as digital measures.</p>
+        <div class="cta-row"><a class="btn" href="https://www.accessnow.org/help/" target="_blank" rel="noopener noreferrer">Access Now Helpline ↗</a><a class="btn alt" href="https://digitalfirstaid.org/" target="_blank" rel="noopener noreferrer">Digital First Aid ↗</a><a class="btn alt" href="https://ssd.eff.org/" target="_blank" rel="noopener noreferrer">EFF SSD ↗</a></div>
+      </section>
+
+      <section class="section wrap">
+        <p class="security-source-note"><strong>Selection policy:</strong> entries must provide meaningful free access, have a defensible public reputation, solve a distinct protection problem and link to an official project or authoritative service. Inclusion is not a guarantee, endorsement of every feature or substitute for current security advisories. Registry version 1, reviewed 2026-07-12.</p>
+      </section>
+    <!-- dark-web-security-route:start --><section class="section wrap dark-warning dark-safe" id="dark-web-security-route"><div class="eyebrow">Tor & Onion Services</div><h2>DARK WEB SAFETY GUIDE.</h2><p class="lead">Open the lawful onion directory, twelve-step Tor workflow, Tails and file-quarantine guidance, non-clickable danger watch and public enforcement lessons.</p><div class="cta-row"><a class="btn" href="dark-web-safety.html">Open Dark Web Safety</a></div></section><!-- dark-web-security-route:end --></main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — secure the device, separate the identity, verify the source.</p><p class="warning">Defensive tools and public-record research only. No unauthorised access, credential attacks, exploitation, stalking or harassment.</p></footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script src="security-privacy.js"></script>
+<script src="investigation-pulse.js"></script><script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Sell / Capture","Site Brain Router","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Mission + Money Engine","Capture System","Monetisation Dashboard"]}</script></body>
+</html>

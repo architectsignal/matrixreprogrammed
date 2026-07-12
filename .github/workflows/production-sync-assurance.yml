@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
       - '.github/workflows/production-sync-assurance.yml'
       - '.github/workflows/daily-investigation-machine.yml'
       - 'src/worker.js'
@@ -17,6 +18,8 @@ on:
       - 'migrations/0004_forum_persistence.sql'
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
+      - 'scripts/cloudflare-focused-pressure-wrapper.js'
+      - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
       - 'scripts/patch-homepage-mask-intro.js'
@@ -44,6 +47,7 @@ on:
       - main
     paths:
       - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
       - '.github/workflows/production-sync-assurance.yml'
       - 'src/worker.js'
       - 'src/worker-forum-persistence.js'
@@ -53,6 +57,8 @@ on:
       - 'migrations/0004_forum_persistence.sql'
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
+      - 'scripts/cloudflare-focused-pressure-wrapper.js'
+      - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
       - 'scripts/patch-homepage-mask-intro.js'
@@ -86,7 +92,7 @@ concurrency:
 jobs:
   assure:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v4
         with:
@@ -116,6 +122,10 @@ jobs:
         run: node scripts/production-freshness-guard.js
       - name: Static production synchronization assurance
         run: node scripts/production-sync-test.js
+      - name: Verify legacy generators cannot regress release state
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+        run: node scripts/cloudflare-focused-pressure-wrapper.js
       - name: Production deploy guard
         env:
           DEPLOY_COMMIT_SHA: ${{ github.sha }}
@@ -130,6 +140,8 @@ jobs:
             downloads/production-freshness-guard.json
             downloads/production-deploy-guard-report.json
             downloads/forum-persistence-d1-test.json
+            downloads/cloudflare-focused-pressure-wrapper.json
+            downloads/generated-site-repair-report.json
             downloads/final-production-reconcile.json
             downloads/homepage-mask-intro-test.json
             downloads/homepage-mask-intro-report.json

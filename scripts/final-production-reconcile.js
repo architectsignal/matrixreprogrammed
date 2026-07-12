@@ -39,9 +39,16 @@ function requireMarker(rel, marker) {
   const duplicates = duplicateIds(text);
   if (duplicates.length) throw new Error(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
 }
+function rejectMarker(rel, marker) {
+  const text = fs.readFileSync(path.join(root, rel), 'utf8');
+  const ok = !text.includes(marker);
+  report.checks.push({ rel, rejectedMarker: marker, ok });
+  if (!ok) throw new Error(`${rel} contains forbidden legacy marker: ${marker}`);
+}
 
 if (!fs.existsSync(site)) throw new Error('_site does not exist; run the normal build first.');
 run('scripts/patch-main-navigation-safety-links.js');
+run('scripts/patch-membership-tiers.js');
 run('scripts/build-live-intel-machine.js');
 run('scripts/build-mission-intelligence-10.js');
 run('scripts/build-investigation-pages.js');
@@ -52,11 +59,11 @@ run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
 
 const critical = [
-  'index.html', 'start-here.html', 'live-intel.html', 'daily-power-conclusions.html',
+  'index.html', 'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', '_headers', 'data/live-intel.json',
+  'evidence-archive.html', '_headers', 'data/membership-tiers.json', 'data/live-intel.json',
   'data/daily-power-conclusions.json', 'data/daily-investigation-conclusions.json',
   'data/weekly-investigation-conclusions.json', 'data/daily-brain-brief.json',
   'data/outcome-briefings.json', 'data/production-freshness-policy.json'
@@ -66,6 +73,13 @@ requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
+requireMarker('membership.html', '<!-- membership-tiers:start -->');
+requireMarker('membership.html', '€3');
+requireMarker('membership.html', '€6');
+requireMarker('membership.html', '€9');
+requireMarker('membership.html', 'Coming soon — no payment taken');
+rejectMarker('membership.html', '€19/month');
+rejectMarker('membership.html', '€49/month');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');

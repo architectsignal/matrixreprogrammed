@@ -1,0 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+const file = path.join(process.cwd(), 'data', 'live-intel.json');
+if (!fs.existsSync(file)) throw new Error('data/live-intel.json is missing after Live Intel update.');
+const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+const checkedAt = new Date().toISOString();
+data.lastCheckedAt = checkedAt;
+data.checkStatus = 'feeds-checked';
+if (!data.updated) data.updated = checkedAt;
+fs.writeFileSync(file, JSON.stringify(data, null, 2));
+console.log(`Live Intel successful check recorded at ${checkedAt}; content timestamp remains ${data.updated}.`);

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const problems = [];
@@ -16,6 +17,24 @@ const forbidIncludes = (file, text, label = text) => {
   if (read(file).includes(text)) fail(`${file}: should not contain ${label}`);
 };
 
+/*
+ * Several legacy builders still generate the former PayPal sales page during the long normal build.
+ * Rebuild the canonical payment-deferred page before validating or copying deployable output.
+ */
+const membershipPatch = spawnSync(process.execPath, [path.join(root, 'scripts', 'patch-membership-tiers.js')], {
+  cwd: root,
+  encoding: 'utf8',
+  stdio: 'pipe',
+  maxBuffer: 20 * 1024 * 1024,
+  env: process.env
+});
+if (membershipPatch.status !== 0) fail(`canonical membership rebuild failed: ${membershipPatch.stderr || membershipPatch.stdout}`);
+if (exists('membership.html') && exists('_site')) {
+  fs.copyFileSync(path.join(root, 'membership.html'), path.join(root, '_site', 'membership.html'));
+  const extensionless = path.join(root, '_site', 'membership');
+  if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(path.join(root, 'membership.html'), extensionless);
+}
+
 [
   'src/worker.js',
   'src/worker-forum-persistence.js',
@@ -31,6 +50,7 @@ const forbidIncludes = (file, text, label = text) => {
   'scripts/build-production-health.js',
   'scripts/final-production-reconcile.js',
   'scripts/forum-persistence-d1-test.js',
+  'scripts/patch-membership-tiers.js',
   'scripts/repair-generated-site-artifacts.js',
   '_site/index.html',
   '_site/index',
@@ -158,6 +178,11 @@ const report = {
   ok: problems.length === 0,
   generatedAt: new Date().toISOString(),
   problems,
+  canonicalMembershipPatch: {
+    status: membershipPatch.status,
+    stdout: String(membershipPatch.stdout || '').slice(-1000),
+    stderr: String(membershipPatch.stderr || '').slice(-1000)
+  },
   workerEntrypoint: 'src/worker-production.js',
   forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
   paymentStatus: 'deferred',
@@ -174,4 +199,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked strict production routing, D1-authoritative forums, KV recovery, application assets, disabled payment UI, active bindings and single-owner commit-bound health.');
+console.log('Checked strict production routing, D1-authoritative forums, KV recovery, application assets, canonical disabled payment UI, active bindings and single-owner commit-bound health.');

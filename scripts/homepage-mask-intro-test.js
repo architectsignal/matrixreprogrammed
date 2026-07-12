@@ -5,28 +5,22 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const failures = [];
 function fail(message) { failures.push(message); }
-function read(rel, encoding = 'utf8') {
+function read(rel) {
   const file = path.join(root, rel);
-  if (!fs.existsSync(file)) { fail(`missing ${rel}`); return encoding === 'utf8' ? '' : Buffer.alloc(0); }
-  return fs.readFileSync(file, encoding);
+  if (!fs.existsSync(file)) { fail(`missing ${rel}`); return ''; }
+  return fs.readFileSync(file, 'utf8');
 }
 function count(text, token) { return String(text).split(token).length - 1; }
 
-const image = read('assets/homepage-mask.webp', null);
-if (image.length < 10000) fail(`mask asset is unexpectedly small: ${image.length} bytes`);
-if (image.slice(0, 4).toString('ascii') !== 'RIFF' || image.slice(8, 12).toString('ascii') !== 'WEBP') fail('mask asset is not a valid WebP RIFF container');
-let dimensions = null;
-const vp8x = image.indexOf(Buffer.from('VP8X'));
-if (vp8x >= 0 && image.length >= vp8x + 18) {
-  const flags = image[vp8x + 8];
-  const width = 1 + image[vp8x + 12] + (image[vp8x + 13] << 8) + (image[vp8x + 14] << 16);
-  const height = 1 + image[vp8x + 15] + (image[vp8x + 16] << 8) + (image[vp8x + 17] << 16);
-  dimensions = { width, height, alpha: Boolean(flags & 0x10) };
-  if (!dimensions.alpha) fail('mask WebP does not advertise an alpha channel');
-  if (width < 200 || height < 240) fail(`mask dimensions are too small: ${width}x${height}`);
-} else {
-  fail('mask WebP has no readable VP8X dimensions');
-}
+const image = read('assets/homepage-mask.svg');
+if (image.length < 8000) fail(`mask SVG is unexpectedly small: ${image.length} characters`);
+if (!image.startsWith('<svg') && !image.startsWith('<?xml')) fail('mask asset is not SVG');
+if (!image.includes('viewBox="0 0 900 1100"')) fail('mask SVG does not expose the intended scalable dimensions');
+if (/<rect[^>]+(?:fill="#(?:000|000000)"|fill="black")/i.test(image)) fail('mask SVG includes a black background rectangle instead of transparency');
+if (!image.includes('filter id="surface"')) fail('mask SVG is missing engraved surface detail');
+if (!image.includes('filter id="shadow"')) fail('mask SVG is missing dimensional shadow treatment');
+if (count(image, '<path') < 20) fail('mask SVG does not contain enough vector detail');
+if (!image.includes('Ivory anonymous mask')) fail('mask SVG title is missing');
 
 const html = read('index.html');
 const css = read('homepage-mask-intro.css');
@@ -41,9 +35,11 @@ for (const [token, expected] of [
   const actual = count(html, token);
   if (actual !== expected) fail(`expected ${expected} occurrence(s) of ${token}, found ${actual}`);
 }
-if (!html.includes('assets/homepage-mask.webp')) fail('homepage does not render the mask asset');
+if (!html.includes('assets/homepage-mask.svg')) fail('homepage does not render the SVG mask asset');
+if (!html.includes('type="image/svg+xml"')) fail('homepage does not preload the mask as SVG');
 if (!js.includes('sessionStorage')) fail('intro is not limited to one display per session');
 if (!js.includes('3600')) fail('intro hold duration is not 3.6 seconds');
+if (!js.includes('1200')) fail('intro dissolve duration is not 1.2 seconds');
 if (!js.includes('asset-error')) fail('intro has no image-load failure escape');
 if (!js.includes('Escape')) fail('intro has no keyboard escape path');
 if (!css.includes('@media(prefers-reduced-motion:reduce)')) fail('reduced-motion fallback is missing');
@@ -61,12 +57,14 @@ for (const legacy of ['€19/month', '€49/month']) if (membership.includes(leg
 if (!membership.includes('Everything in Supporter')) fail('Intelligence Member is not explicitly cumulative');
 if (!membership.includes('Everything in Intelligence Member and Supporter')) fail('Research Pro is not explicitly cumulative');
 if (count(membership, 'Coming soon — no payment taken') !== 3) fail('all three membership buttons must remain disabled and truthful');
+if (!membership.includes('WHAT EACH LEVEL OPENS.')) fail('membership comparison table is missing');
 
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  maskBytes: image.length,
-  dimensions,
+  maskCharacters: image.length,
+  vectorPaths: count(image, '<path'),
+  transparentBackground: !/<rect[^>]+(?:fill="#(?:000|000000)"|fill="black")/i.test(image),
   failures
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -75,4 +73,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`RELEASE UI FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Homepage mask and membership release test passed (${dimensions.width}x${dimensions.height}, ${image.length} bytes).`);
+console.log(`Homepage mask and membership release test passed (${report.vectorPaths} vector paths, ${image.length} characters).`);

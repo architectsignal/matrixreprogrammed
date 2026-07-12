@@ -14,4 +14,5 @@ for(const rel of ['geographic-power-atlas.html','geographic-power-atlas.js','res
   if(after!==before) fs.writeFileSync(file,after);
 }
 require('./patch-start-here-safety-links.js');
+require('./repair-public-site-errors.js');
 console.log(`Deployable atlas data prepared: ${parsed.features.length} GeoJSON features in data/geographic-power-atlas-data.json.`);

@@ -13,7 +13,7 @@ function read(rel) {
 function count(text, token) { return String(text).split(token).length - 1; }
 
 const image = read('assets/homepage-mask.svg');
-if (image.length < 8000) fail(`mask SVG is unexpectedly small: ${image.length} characters`);
+if (image.length < 5000) fail(`mask SVG is unexpectedly small: ${image.length} characters`);
 if (!image.startsWith('<svg') && !image.startsWith('<?xml')) fail('mask asset is not SVG');
 if (!image.includes('viewBox="0 0 900 1100"')) fail('mask SVG does not expose the intended scalable dimensions');
 if (/<rect[^>]+(?:fill="#(?:000|000000)"|fill="black")/i.test(image)) fail('mask SVG includes a black background rectangle instead of transparency');

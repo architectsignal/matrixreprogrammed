@@ -49,6 +49,7 @@ function rejectMarker(rel, marker) {
 if (!fs.existsSync(site)) throw new Error('_site does not exist; run the normal build first.');
 run('scripts/patch-main-navigation-safety-links.js');
 run('scripts/patch-membership-tiers.js');
+run('scripts/patch-homepage-mask-intro.js');
 run('scripts/build-live-intel-machine.js');
 run('scripts/build-mission-intelligence-10.js');
 run('scripts/build-investigation-pages.js');
@@ -59,7 +60,8 @@ run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
 
 const critical = [
-  'index.html', 'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
+  'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js', 'assets/homepage-mask.webp',
+  'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
@@ -71,6 +73,9 @@ const critical = [
 critical.forEach(copy);
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
+requireMarker('index.html', 'data-homepage-mask-intro');
+requireMarker('index.html', 'assets/homepage-mask.webp');
+requireMarker('index.html', 'homepage-mask-intro.js');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
 requireMarker('membership.html', '<!-- membership-tiers:start -->');
@@ -80,6 +85,9 @@ requireMarker('membership.html', '€9');
 requireMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
+requireMarker('homepage-mask-intro.js', 'sessionStorage');
+requireMarker('homepage-mask-intro.js', '3600');
+requireMarker('homepage-mask-intro.css', 'mask-intro-dissolve');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');

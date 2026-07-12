@@ -16,6 +16,7 @@ on:
       - 'scripts/extend-search-with-investigations.js'
       - 'scripts/repair-investigation-source-registry.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/record-live-intel-check.js'
       - 'scripts/production-freshness-guard.js'
       - 'data/production-freshness-policy.json'
       - 'data/investigation-source-registry.json'
@@ -80,6 +81,7 @@ jobs:
       - name: Refresh Live Intel and all conclusion surfaces
         run: |
           node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
           node scripts/update-seven-day-intel.js
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js

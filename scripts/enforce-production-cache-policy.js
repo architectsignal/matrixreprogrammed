@@ -1,4 +1,8 @@
-/*
+const fs = require('fs');
+const path = require('path');
+
+const root = process.cwd();
+const headers = `/*
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
@@ -41,6 +45,12 @@
 /daily-investigation-conclusions
   Cache-Control: no-cache, max-age=0, must-revalidate
 
+/daily-brain-brief
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/outcome-briefings
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
 /security-privacy
   Cache-Control: no-cache, max-age=0, must-revalidate
 
@@ -51,6 +61,9 @@
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /data-lab
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/evidence-archive
   Cache-Control: no-cache, max-age=0, must-revalidate
 
 /downloads/*.pdf
@@ -75,3 +88,10 @@
 /feeds/*.json
   Content-Type: application/feed+json
   Cache-Control: public, max-age=300, must-revalidate
+`;
+fs.writeFileSync(path.join(root, '_headers'), headers);
+const site = path.join(root, '_site');
+if (fs.existsSync(site)) fs.writeFileSync(path.join(site, '_headers'), headers);
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'production-cache-policy.json'), JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), criticalHtml: 'no-cache', liveJson: 'no-cache', deployManifest: 'no-store', unversionedAssets: '5-minute revalidation' }, null, 2));
+console.log('Final production cache policy enforced after legacy generators.');

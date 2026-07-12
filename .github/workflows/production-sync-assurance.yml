@@ -1,0 +1,115 @@
+name: Production Synchronisation Assurance
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/production-sync-assurance.yml'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - 'src/worker.js'
+      - 'src/worker-forum-persistence.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - 'migrations/0004_forum_persistence.sql'
+      - 'scripts/forum-persistence-d1-test.js'
+      - 'scripts/cloudflare-worker-routes-test.js'
+      - 'scripts/final-production-reconcile.js'
+      - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/build-deploy-manifest.js'
+      - 'scripts/update-live-intel.js'
+      - 'scripts/record-live-intel-check.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'scripts/verify-live-production.js'
+      - 'scripts/production-sync-test.js'
+      - 'scripts/production-deploy-guard.js'
+      - 'data/production-freshness-policy.json'
+      - 'package.json'
+      - '_headers'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/production-sync-assurance.yml'
+      - 'src/worker.js'
+      - 'src/worker-forum-persistence.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - 'migrations/0004_forum_persistence.sql'
+      - 'scripts/forum-persistence-d1-test.js'
+      - 'scripts/cloudflare-worker-routes-test.js'
+      - 'scripts/final-production-reconcile.js'
+      - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/build-deploy-manifest.js'
+      - 'scripts/update-live-intel.js'
+      - 'scripts/record-live-intel-check.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'scripts/verify-live-production.js'
+      - 'scripts/production-sync-test.js'
+      - 'scripts/production-deploy-guard.js'
+      - 'data/production-freshness-policy.json'
+      - 'package.json'
+      - '_headers'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-sync-assurance-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  assure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Check Live Intel feeds for assurance
+        run: |
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+      - name: Build normal site
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: npm run build
+      - name: Verify D1-authoritative forum persistence wiring
+        run: node scripts/forum-persistence-d1-test.js
+      - name: Bundle Worker without deploying
+        run: npx wrangler@latest deploy --dry-run
+      - name: Reconcile final production output
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+        run: node scripts/final-production-reconcile.js
+      - name: Verify repository and built data freshness
+        run: node scripts/production-freshness-guard.js
+      - name: Static production synchronization assurance
+        run: node scripts/production-sync-test.js
+      - name: Production deploy guard
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+        run: node scripts/production-deploy-guard.js
+      - name: Upload assurance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-sync-assurance-${{ github.run_id }}
+          path: |
+            downloads/production-sync-test.json
+            downloads/production-freshness-guard.json
+            downloads/production-deploy-guard-report.json
+            downloads/forum-persistence-d1-test.json
+            downloads/final-production-reconcile.json
+            downloads/conclusion-integrity-report.json
+            downloads/deploy-manifest.json
+          if-no-files-found: ignore
+          retention-days: 30

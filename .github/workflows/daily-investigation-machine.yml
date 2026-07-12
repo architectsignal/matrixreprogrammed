@@ -15,6 +15,10 @@ on:
       - 'scripts/build-cloudflare-output.js'
       - 'scripts/extend-search-with-investigations.js'
       - 'scripts/repair-investigation-source-registry.js'
+      - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/record-live-intel-check.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'data/production-freshness-policy.json'
       - 'data/investigation-source-registry.json'
       - 'evidence-archive/**'
   schedule:
@@ -28,14 +32,13 @@ env:
 
 concurrency:
   group: daily-investigation-machine
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   investigate:
-    name: Search records, preserve source changes and publish daily conclusions
+    name: Search records, preserve changes and publish evidence-bounded conclusions
     runs-on: ubuntu-latest
-    timeout-minutes: 65
-
+    timeout-minutes: 70
     steps:
       - name: Checkout current main
         uses: actions/checkout@v4
@@ -67,7 +70,7 @@ jobs:
           SOURCE_MONITOR_TIMEOUT_MS: '25000'
         run: node scripts/monitor-source-changes.js daily
 
-      - name: Harden preservation, retain failure history and download linked evidence
+      - name: Harden preservation and download linked evidence
         env:
           INVESTIGATION_MODE: daily
           SOURCE_DOCUMENTS_PER_RUN: '4'
@@ -75,13 +78,18 @@ jobs:
           SOURCE_DOCUMENT_TIMEOUT_MS: '35000'
         run: node scripts/harden-source-change-preservation.js daily
 
-      - name: Refresh wider live intelligence and conclusions
+      - name: Refresh Live Intel and all conclusion surfaces
         run: |
           node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
           node scripts/update-seven-day-intel.js
           node scripts/build-outcome-briefings.js
           node scripts/build-daily-brain-brief.js
           node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
+          node scripts/production-freshness-guard.js
 
       - name: Rebuild and verify search and preservation
         run: |
@@ -113,6 +121,8 @@ jobs:
             data/source-change-public.json \
             data/source-snapshots \
             data/live-intel.json \
+            data/daily-power-conclusions.json \
+            data/evidence-weighted-relationship-graph.json \
             data/outcome-briefings.json \
             data/daily-brain-brief.json \
             evidence-archive \
@@ -121,9 +131,11 @@ jobs:
             weekly-investigation-report.html \
             investigation-source-ledger.html \
             source-changes.html \
-            investigation-pulse.js \
+            daily-power-conclusions.html \
+            live-intel.html \
             daily-brain-brief.html \
             outcome-briefings.html \
+            investigation-pulse.js \
             search.html \
             search.js \
             search-index.json \
@@ -139,12 +151,14 @@ jobs:
             downloads/search-investigation-smoke-test.json \
             downloads/final-investigation-hardening.json \
             downloads/search-system-repair-report.json \
+            downloads/conclusion-integrity-report.json \
+            downloads/production-freshness-guard.json \
             || true
           if git diff --cached --quiet; then
             echo "No meaningful daily investigation changes to commit."
             exit 0
           fi
-          git commit -m "Daily investigation conclusions $(date -u +%F) [deploy]"
+          git commit -m "Daily investigation and confidence cards $(date -u +%F) [deploy]"
           git push || (git pull --rebase --autostash origin main && git push)
 
       - name: Upload investigation reports
@@ -161,6 +175,8 @@ jobs:
             downloads/search-investigation-smoke-test.json
             downloads/daily-investigation-conclusions.md
             downloads/investigation-source-ledger.md
+            downloads/conclusion-integrity-report.json
+            downloads/production-freshness-guard.json
             data/investigation-source-pulls/daily-latest.json
           if-no-files-found: ignore
           retention-days: 30

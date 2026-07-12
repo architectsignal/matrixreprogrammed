@@ -4,54 +4,123 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '35 */6 * * *'
   workflow_dispatch:
 
 concurrency:
   group: matrixreprogrammed-production
-  cancel-in-progress: false
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
-  build-guard-deploy:
-    name: Build, guard, and deploy Worker assets
+  refresh-build-guard-deploy-verify:
+    name: Refresh, build, deploy and prove live main
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    permissions:
-      contents: read
+    timeout-minutes: 110
     steps:
-      - name: Checkout
+      - name: Checkout latest main, never an obsolete queued SHA
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
-      - name: Setup Node
+      - name: Record exact main commit to deploy
+        run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
+          cache: npm
 
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
+      - name: Install locked dependencies
+        run: npm ci
 
-      - name: Build site and Worker assets
+      - name: Refresh investigation, Live Intel and conclusion data
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        run: |
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
+
+      - name: Build complete site and Worker assets
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
+      - name: Verify D1-authoritative forum persistence wiring
+        run: node scripts/forum-persistence-d1-test.js
+
+      - name: Reconcile latest pages after every legacy generator
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+        run: node scripts/final-production-reconcile.js
+
+      - name: Fail closed on stale data
+        run: node scripts/production-freshness-guard.js
+
+      - name: Production synchronization test
+        run: node scripts/production-sync-test.js
+
       - name: Production deploy guard
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: node scripts/production-deploy-guard.js
 
-      - name: Confirm Cloudflare token is configured
+      - name: Confirm Cloudflare credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "CLOUDFLARE_API_TOKEN secret is missing. Build and guards passed, but deployment is blocked."
-            exit 1
-          fi
-          echo "Cloudflare API token is configured."
+          test -n "$CLOUDFLARE_API_TOKEN" || (echo 'CLOUDFLARE_API_TOKEN is missing' && exit 1)
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo 'CLOUDFLARE_ACCOUNT_ID is missing' && exit 1)
 
-      - name: Deploy to Cloudflare Workers with bundled _site assets
+      - name: Deploy exact reconciled _site and D1 forum Worker to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npx wrangler@latest deploy
 
-      - name: Deployment summary
-        run: |
-          echo "Production deployment completed."
-          echo "Built _site assets, verified no marker leak, verified Amazon fallback, and verified FORUM_POSTS routes before deploy."
+      - name: Verify live routes, freshness, forum D1 write/read and main SHA
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LIVE_VERIFY_ATTEMPTS: '36'
+          LIVE_VERIFY_DELAY_MS: '10000'
+        run: node scripts/verify-live-production.js
+
+      - name: Upload production proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-proof-${{ github.run_id }}
+          path: |
+            downloads/deploy-manifest.json
+            downloads/production-freshness-guard.json
+            downloads/production-sync-test.json
+            downloads/production-deploy-guard-report.json
+            downloads/forum-persistence-d1-test.json
+            downloads/final-production-reconcile.json
+            downloads/conclusion-integrity-report.json
+            downloads/live-production-verification.json
+          if-no-files-found: ignore
+          retention-days: 60

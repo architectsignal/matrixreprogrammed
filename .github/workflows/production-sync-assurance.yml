@@ -62,6 +62,8 @@ jobs:
         env:
           DEPLOY_COMMIT_SHA: ${{ github.sha }}
         run: node scripts/final-production-reconcile.js
+      - name: Verify repository and built data freshness
+        run: node scripts/production-freshness-guard.js
       - name: Static production synchronization assurance
         run: node scripts/production-sync-test.js
       - name: Production deploy guard
@@ -75,6 +77,7 @@ jobs:
           name: production-sync-assurance-${{ github.run_id }}
           path: |
             downloads/production-sync-test.json
+            downloads/production-freshness-guard.json
             downloads/production-deploy-guard-report.json
             downloads/final-production-reconcile.json
             downloads/conclusion-integrity-report.json

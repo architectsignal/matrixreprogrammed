@@ -31,7 +31,7 @@ const modules = [
   { name: 'Geographic Power Atlas', route: '/geographic-power-atlas', file: 'geographic-power-atlas.html', markers: ['GEOGRAPHIC POWER ATLAS'] },
   { name: 'Public Data Laboratory', route: '/data-lab', file: 'data-lab.html', markers: ['PUBLIC DATA'] },
   { name: 'Evidence Archive', route: '/evidence-archive', file: 'evidence-archive.html', markers: ['EVIDENCE ARCHIVE'] },
-  { name: 'Ask Matrix search', route: '/search', file: 'search.html', markers: ['ASK MATRIX'] },
+  { name: 'Search the Machine', route: '/search', file: 'search.html', markers: ['SEARCH THE MACHINE'] },
   { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1'] },
   { name: 'D1 forum persistence Worker', route: '/forum-health', file: 'src/worker-forum-persistence.js', markers: ['Cloudflare D1 MEMBERS_DB.forum_posts', 'd1Connected: true', 'storedPostCount'] },
   { name: 'Cloudflare D1 binding', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = true'] }

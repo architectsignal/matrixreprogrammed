@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "version": 1,
+  "generatedAt": null,
+  "engine": "Browsertrix Crawler",
+  "engineVersion": "1.13.2",
+  "replayEngine": "ReplayWeb.page",
+  "replayEngineVersion": "2.4.6",
+  "format": "WACZ",
+  "status": "awaiting-first-approved-capture",
+  "retention": "Latest deployable capture per approved source, bounded by the total public archive size limit. Prior signed versions remain in Git history and workflow artifacts.",
+  "legalScope": {
+    "publicOnly": true,
+    "noAuthentication": true,
+    "noPaywalls": true,
+    "noPersonalAccounts": true,
+    "noCircumvention": true,
+    "respectSourceRestrictions": true,
+    "purpose": "Preserve approved public-interest records for evidence review, change verification, citation and correction.",
+    "boundary": "Capture proves what the approved public URL returned at the recorded time. It does not authenticate every statement, establish intent, remove legal context or convert allegations into proven wrongdoing."
+  },
+  "limits": {
+    "maxSourcesPerRun": 3,
+    "maxPagesPerSource": 3,
+    "maxArchiveBytes": 23000000,
+    "maxTotalArchiveBytes": 60000000
+  },
+  "archives": [],
+  "pruned": [],
+  "rejected": []
+}

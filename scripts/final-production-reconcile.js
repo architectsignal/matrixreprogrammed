@@ -50,8 +50,10 @@ function requireMarker(rel, marker) {
   const ok = text.includes(marker);
   report.checks.push({ rel, marker, ok });
   if (!ok) throw new Error(`${rel} missing required marker: ${marker}`);
-  const duplicates = duplicateIds(text);
-  if (duplicates.length) throw new Error(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
+  if (rel.endsWith('.html')) {
+    const duplicates = duplicateIds(text);
+    if (duplicates.length) throw new Error(`${rel} duplicate IDs: ${duplicates.join(', ')}`);
+  }
 }
 function rejectMarker(rel, marker) {
   const text = fs.readFileSync(path.join(root, rel), 'utf8');
@@ -73,6 +75,8 @@ run('scripts/build-daily-brain-brief.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
+run('scripts/build-deploy-manifest.js');
+run('scripts/build-production-health.js');
 
 const critical = [
   'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js',
@@ -81,12 +85,15 @@ const critical = [
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', '_headers', 'data/membership-tiers.json', 'data/live-intel.json',
-  'data/daily-power-conclusions.json', 'data/daily-investigation-conclusions.json',
-  'data/weekly-investigation-conclusions.json', 'data/daily-brain-brief.json',
-  'data/outcome-briefings.json', 'data/production-freshness-policy.json'
+  'evidence-archive.html', 'search.html', '_headers', 'data/membership-tiers.json',
+  'data/live-intel.json', 'data/daily-power-conclusions.json',
+  'data/daily-investigation-conclusions.json', 'data/weekly-investigation-conclusions.json',
+  'data/daily-brain-brief.json', 'data/outcome-briefings.json',
+  'data/production-freshness-policy.json', 'deploy-manifest.json',
+  'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
 ];
 critical.forEach(copy);
+
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
 requireMarker('index.html', 'data-homepage-mask-intro');
@@ -117,7 +124,12 @@ requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');
 requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');
 requireMarker('_headers', '/deploy-manifest.json');
+requireMarker('_headers', '/deploy-health.json');
 requireMarker('_headers', 'Cache-Control: no-store');
-run('scripts/build-deploy-manifest.js');
+requireMarker('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
+requireMarker('deploy-health.html', 'Payments: DEFERRED / NO PAYMENT TAKEN');
+requireMarker('deploy-health.json', 'src/worker-production.js');
+requireMarker('deploy-health.json', '"paymentStatus": "deferred"');
+
 persistReport();
 console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied after legacy generators.`);

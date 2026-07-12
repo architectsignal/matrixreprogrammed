@@ -21,6 +21,10 @@ function requireText(rel, text, fromSite = false) {
   const available = fromSite ? siteExists(rel) : exists(rel);
   if (!available || !(fromSite ? siteRead(rel) : read(rel)).includes(text)) hard.push(`${fromSite ? '_site/' : ''}${rel} missing ${text}`);
 }
+function forbidText(rel, text, fromSite = false) {
+  const available = fromSite ? siteExists(rel) : exists(rel);
+  if (available && (fromSite ? siteRead(rel) : read(rel)).includes(text)) hard.push(`${fromSite ? '_site/' : ''}${rel} contains forbidden ${text}`);
+}
 function duplicateIds(html) {
   const ids = [...String(html).matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
   return [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
@@ -35,7 +39,10 @@ const requiredSource = [
   'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json', 'data/outcome-briefings.json',
   'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-production.js',
   'migrations/0004_forum_persistence.sql', 'scripts/forum-persistence-d1-test.js',
-  'scripts/build-production-health.js', 'wrangler.toml', 'wrangler.jsonc'
+  'scripts/build-production-health.js', 'scripts/final-production-reconcile.js',
+  'scripts/repair-generated-site-artifacts.js', 'scripts/cloudflare-focused-pressure-wrapper.js',
+  '.github/workflows/deploy.yml', '.github/workflows/deploy-production.yml',
+  'wrangler.toml', 'wrangler.jsonc'
 ];
 const requiredBuilt = [
   'index.html', 'index', 'start-here.html', 'start-here', 'membership.html', 'membership',
@@ -65,7 +72,15 @@ for (const rel of ['index.html', 'start-here.html', 'membership.html', 'live-int
 
 requireText('index.html', 'Security Tools');
 requireText('index.html', 'Dark Web Safety');
-requireText('membership.html', 'Coming soon — no payment taken');
+for (const marker of ['<!-- membership-tiers:start -->', '€3', '€6', '€9', 'Coming soon — no payment taken', 'No payment is being taken yet.']) {
+  requireText('membership.html', marker);
+  requireText('membership.html', marker, true);
+}
+forbidText('membership.html', 'actions.subscription.create');
+forbidText('membership.html', '/api/paypal/checkout-intent');
+forbidText('membership.html', '/api/paypal/subscription/confirm');
+forbidText('membership.html', 'actions.subscription.create', true);
+forbidText('membership.html', '/api/paypal/checkout-intent', true);
 requireText('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
 requireText('deploy-health.html', 'Payments: DEFERRED / NO PAYMENT TAKEN');
 requireText('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED', true);
@@ -89,6 +104,7 @@ for (const [label, item] of [['source', health], ['built', builtHealth]]) {
   if (item.manifestSha !== expectedSha) hard.push(`${label} production health manifest SHA ${item.manifestSha} does not match expected ${expectedSha}`);
   if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} production health does not name strict Worker`);
   if (item.paymentStatus !== 'deferred') hard.push(`${label} production health does not keep payments deferred`);
+  if (!String(item.paymentMessage || '').includes('no payment is taken')) hard.push(`${label} production health does not state that no payment is taken`);
 }
 
 const freshnessReport = exists('downloads/production-freshness-guard.json') ? parse('downloads/production-freshness-guard.json') : null;
@@ -124,6 +140,24 @@ for (const text of ['main = "src/worker-production.js"', 'binding = "FORUM_POSTS
 for (const text of ['"main": "src/worker-production.js"', '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"']) {
   if (!read('wrangler.jsonc').includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
 }
+
+/* Prevent future regression to competing deploys or legacy health ownership. */
+const canonicalDeploy = read('.github/workflows/deploy.yml');
+const fallbackDeploy = read('.github/workflows/deploy-production.yml');
+const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
+const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
+if (!/cancel-in-progress:\s*true/.test(canonicalDeploy)) hard.push('canonical deploy must cancel stale runs');
+if (!canonicalDeploy.includes('verify-live-production.js')) hard.push('canonical deploy missing live verification');
+if (/^\s*push:/m.test(fallbackDeploy)) hard.push('manual fallback deploy must not trigger on push');
+if (!fallbackDeploy.includes('workflow_dispatch:')) hard.push('manual fallback deploy missing workflow_dispatch');
+if (!fallbackDeploy.includes('group: matrixreprogrammed-production')) hard.push('manual fallback deploy must share canonical concurrency group');
+if (fallbackDeploy.includes('paypal-membership') || fallbackDeploy.includes('0002_paypal_subscriptions.sql')) hard.push('manual fallback deploy must not activate payment workflow');
+if (!legacyRepair.includes("productionHealthOwner: 'scripts/build-production-health.js'")) hard.push('legacy repair does not acknowledge canonical health owner');
+if (legacyRepair.includes("workerScript: 'src/worker.js'") || legacyRepair.includes("write('deploy-health.json'")) hard.push('legacy repair still writes obsolete production health');
+if (!regressionWrapper.includes('final-production-reconcile.js')) hard.push('Cloudflare regression wrapper missing final reconciliation');
+if (regressionWrapper.includes('paypal-membership-test-runner.js')) hard.push('Cloudflare regression wrapper still hard-gates PayPal');
+if (!regressionWrapper.includes('Coming soon — no payment taken')) hard.push('Cloudflare regression wrapper does not enforce deferred payments');
+
 if (siteExists('_redirects')) hard.push('_site/_redirects must not be deployed for Worker assets');
 
 const report = {
@@ -136,16 +170,18 @@ const report = {
   builtHealthSha: builtHealth?.buildSha || null,
   hardIssues: hard,
   softIssues: soft,
+  deploymentModel: 'One automatic canonical deploy and one manual fallback using the same strict gates.',
+  productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   paymentStatus: 'Deferred; membership checkout remains disabled and no payment is taken.',
-  boundary: 'Deployment is blocked on missing critical routes, stale intelligence, duplicate IDs, absent confidence cards, invalid manifests, health/SHA drift, legacy forum fallback or activated payments.'
+  boundary: 'Deployment is blocked on competing automatic workflows, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or activated payment UI.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with strict D1 forums and payments deferred.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with one automatic deploy, strict D1 forums and payments deferred.`);

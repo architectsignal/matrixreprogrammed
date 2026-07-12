@@ -19,6 +19,7 @@ on:
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/cloudflare-focused-pressure-wrapper.js'
+      - 'scripts/site-function-harmony-test.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -58,6 +59,7 @@ on:
       - 'scripts/forum-persistence-d1-test.js'
       - 'scripts/cloudflare-worker-routes-test.js'
       - 'scripts/cloudflare-focused-pressure-wrapper.js'
+      - 'scripts/site-function-harmony-test.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -142,6 +144,7 @@ jobs:
             downloads/forum-persistence-d1-test.json
             downloads/cloudflare-worker-routes-test.json
             downloads/cloudflare-focused-pressure-wrapper.json
+            downloads/site-function-harmony-report.json
             downloads/generated-site-repair-report.json
             downloads/final-production-reconcile.json
             downloads/homepage-mask-intro-test.json

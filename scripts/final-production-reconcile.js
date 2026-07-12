@@ -4,7 +4,23 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
+const reportPath = path.join(root, 'downloads', 'final-production-reconcile.json');
 const report = { ok: true, generatedAt: new Date().toISOString(), commands: [], copied: [], checks: [] };
+function persistReport() {
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+}
+process.on('uncaughtException', error => {
+  report.ok = false;
+  report.failedAt = new Date().toISOString();
+  report.error = String(error && error.stack ? error.stack : error);
+  persistReport();
+  console.error(report.error);
+  process.exit(1);
+});
+process.on('unhandledRejection', error => {
+  throw error;
+});
 function run(script, optional = false) {
   const file = path.join(root, script);
   if (!fs.existsSync(file)) {
@@ -12,7 +28,7 @@ function run(script, optional = false) {
     throw new Error(`Missing reconciliation script: ${script}`);
   }
   const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', env: process.env });
-  report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-1000), stderr: String(result.stderr || '').slice(-1000) });
+  report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-3000), stderr: String(result.stderr || '').slice(-3000) });
   if (result.status !== 0) throw new Error(`${script} failed: ${result.stderr || result.stdout}`);
 }
 function copy(rel) {
@@ -97,6 +113,5 @@ requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');
 requireMarker('_headers', '/deploy-manifest.json');
 requireMarker('_headers', 'Cache-Control: no-store');
 run('scripts/build-deploy-manifest.js');
-fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
-fs.writeFileSync(path.join(root, 'downloads', 'final-production-reconcile.json'), JSON.stringify(report, null, 2));
+persistReport();
 console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied after legacy generators.`);

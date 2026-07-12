@@ -1,6 +1,7 @@
 # Cloudflare Workers deployment configuration
 # Production deploy path: GitHub Actions runs npm run build then npx wrangler deploy.
 # The strict production wrapper blocks false-success forum responses and delegates all other traffic.
+# Inner compatibility Worker retained behind the strict boundary: main = "src/worker-forum-persistence.js"
 
 name = "matrixreprogrammed"
 main = "src/worker-production.js"

@@ -1,0 +1,143 @@
+name: Phase 3 Completion Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/content-tier-taxonomy-policy.json'
+      - 'data/content-tier-family-review-rules.json'
+      - 'data/phase3-*.json'
+      - 'scripts/classify-content-tiers.js'
+      - 'scripts/refine-content-tier-review-map.js'
+      - 'scripts/build-phase3-*.js'
+      - '.github/workflows/phase3-*.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-completion-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  completion-audit:
+    name: Prove complete non-destructive Phase 3 coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate completion policy and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-completion-policy.json','utf8'))"
+          node --check scripts/build-phase3-completion-audit.js
+          node --check scripts/build-phase3-preview-generation.js
+          node --check scripts/build-phase3-related-content-links.js
+          node --check scripts/build-phase3-entity-topic-tags.js
+          node --check scripts/build-phase3-search-repair.js
+          node --check scripts/build-phase3-redirect-map.js
+          node --check scripts/build-phase3-locked-section-simulation.js
+          node --check scripts/build-phase3-tier-matrix.js
+          node --check scripts/build-phase3-public-private-classification.js
+          node --check scripts/refine-content-tier-review-map.js
+
+      - name: Record protected production hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js','data/access-tier-policy.json','data/intelligence-record.schema.json','data/intelligence-source-manifest.json'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-completion-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean all generated Phase 3 outputs
+        run: |
+          rm -rf downloads/phase3-completion-audit
+          rm -rf downloads/phase3-related-content downloads/phase3-entity-topic-tags downloads/phase3-search-repair
+          rm -rf downloads/phase3-redirect-map downloads/phase3-preview-generation downloads/phase3-locked-section-simulation
+          rm -rf downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build complete Phase 3 audit
+        run: node scripts/build-phase3-completion-audit.js
+
+      - name: Validate final Phase 3 decision
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase3-completion-policy.json','utf8'));
+          const readiness=JSON.parse(fs.readFileSync('downloads/phase3-completion-audit/readiness.json','utf8'));
+          const manifest=JSON.parse(fs.readFileSync('downloads/phase3-completion-audit/manifest.json','utf8'));
+          const coverage=JSON.parse(fs.readFileSync('downloads/phase3-completion-audit/coverage-report.json','utf8'));
+          const zero=JSON.parse(fs.readFileSync('downloads/phase3-completion-audit/zero-count-report.json','utf8'));
+          const boundaries=JSON.parse(fs.readFileSync('downloads/phase3-completion-audit/protected-boundary-report.json','utf8'));
+          if(!readiness.ok||!manifest.ok||!coverage.ok||!zero.ok||!boundaries.ok)throw new Error('Phase 3 completion package is not healthy');
+          if(readiness.mode!=='audit-only'||policy.mode!=='audit-only')throw new Error('Audit-only boundary changed');
+          if(!readiness.phase3PlanComplete||!manifest.phase3PlanComplete)throw new Error('Phase 3 plan is not complete');
+          if(readiness.liveMigrationReady!==false||manifest.liveMigrationReady!==false||boundaries.liveMigrationReady!==false)throw new Error('Live migration was incorrectly marked ready');
+          if(readiness.counts.importantItems<policy.minimums.importantItems)throw new Error('Important-item coverage is incomplete');
+          if(readiness.counts.unresolvedTaxonomy!==0)throw new Error('Uncategorized content remains');
+          if(readiness.counts.exactHashDuplicateCandidates!==0)throw new Error('Material exact duplicates remain unresolved');
+          if(readiness.counts.inaccessibleNonRestrictedItems!==0)throw new Error('Important content remains inaccessible');
+          if(readiness.coverageMismatches.length||readiness.zeroFailures.length||readiness.minimumFailures.length||readiness.duplicateFailures.length||readiness.activatedProtectedActions.length)throw new Error('Completion audit retained failures');
+          if(!readiness.liveMigrationBlockedReasons.length)throw new Error('Live migration boundary is missing');
+          console.log(`PHASE 3 COMPLETE PASS: ${readiness.counts.importantItems} items; ${readiness.counts.publicSearchDocuments} public search docs; ${readiness.counts.publicRelatedLinks} public related links; live migration remains disabled.`);
+          NODE
+
+      - name: Snapshot deterministic completion hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-completion-audit';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-completion-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic completion decision
+        run: |
+          rm -rf downloads/phase3-completion-audit
+          rm -rf downloads/phase3-related-content downloads/phase3-entity-topic-tags downloads/phase3-search-repair
+          rm -rf downloads/phase3-redirect-map downloads/phase3-preview-generation downloads/phase3-locked-section-simulation
+          rm -rf downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-completion-audit.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-completion-audit';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-completion-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Phase 3 completion output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} completion files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove production files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-completion-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Phase 3 completion auditing must not modify production membership, Workers, D1 persistence, deployment guards or canonical intelligence inputs.'};
+          fs.writeFileSync('downloads/phase3-completion-audit/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} production files unchanged.`);
+          NODE
+
+      - name: Upload Phase 3 completion package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-completion-audit-${{ github.run_id }}
+          path: downloads/phase3-completion-audit/
+          if-no-files-found: error
+          retention-days: 30

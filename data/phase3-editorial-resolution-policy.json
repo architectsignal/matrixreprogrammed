@@ -1,0 +1,339 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "report-only",
+  "purpose": "Resolve the remaining migration-review items into safe canonical categories, subcategories, tiers and editorial ownership without activating route, search or access changes.",
+  "principles": [
+    "High-confidence path families receive exact canonical categories.",
+    "Generated build, audit, campaign and operational outputs default to internal review rather than public intelligence.",
+    "Evidence-oriented records remain public unless a separate privacy or legal review restricts them.",
+    "Ambiguous content receives a content-type category and an editorial review flag; it does not remain uncategorized.",
+    "A resolved category is a migration recommendation, not proof that the current page is publication-ready.",
+    "No route, content, search document or entitlement is changed by this resolver."
+  ],
+  "rules": [
+    {
+      "id": "generated-operational-downloads",
+      "priority": 1200,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["campaign-", "share-kit-", "install-log", "build-report", "runtime-report", "repair", "patch", "audit", "deploy", "cleanup", "retry", "worker", "wiring", "scrubber", "governor", "maintenance", "public-visibility", "site-quality", "site-freshness", "search-v3", "art-queue", "style-bible", "generated-art", "card-art", "phase6-", "phase8-", "strategy-visibility"],
+      "requireAllGroups": true,
+      "category": "internal",
+      "subcategory": "generated_audit",
+      "recommendedTier": "internal_only",
+      "confidence": "high",
+      "editorialOwner": "operations_owner"
+    },
+    {
+      "id": "campaign-and-growth-pages",
+      "priority": 1180,
+      "fileStartsWithAny": ["launch-", "monetisation-", "sales-", "upgrade-", "update-lane-distribution-", "update-lane-funnels-"],
+      "category": "internal",
+      "subcategory": "build_support",
+      "recommendedTier": "internal_only",
+      "confidence": "high",
+      "editorialOwner": "operations_owner"
+    },
+    {
+      "id": "build-and-review-operations",
+      "priority": 1170,
+      "fileEqualsAny": ["auto-evidence-pipeline.html", "brain.html", "claim-classifier.html", "conclusion-engine.html", "conclusions-engine.html", "full-vrc-review-batch-002.html", "information-gathering-system.html", "investigation-machine.html", "machine-intelligence.html", "review-dashboard.html", "review-lanes.html", "schema-claim-taxonomy.html", "schema-crawler-map.html", "schema-site-graph.html", "site-brain-router.html", "site-freshness-report.html", "site-intelligence-core.html", "site-population-audit.html", "top-52-art-studio.html", "top-52-batch1-art-queue.html", "top-52-generated-art.html", "update-monitor.html"],
+      "category": "internal",
+      "subcategory": "build_support",
+      "recommendedTier": "internal_only",
+      "confidence": "high",
+      "editorialOwner": "operations_owner"
+    },
+    {
+      "id": "reports-billionaires",
+      "priority": 1100,
+      "fileStartsWithAny": ["reports/billionaire-"],
+      "category": "power_mapping",
+      "subcategory": "people_index",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "reports-contractors",
+      "priority": 1100,
+      "fileStartsWithAny": ["reports/contractor-"],
+      "category": "power_mapping",
+      "subcategory": "corporate_and_ownership",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "reports-entities-institutions",
+      "priority": 1100,
+      "fileStartsWithAny": ["reports/entity-", "reports/institution-"],
+      "category": "power_mapping",
+      "subcategory": "institution_index",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "reports-subject-banking",
+      "priority": 1110,
+      "fileStartsWithAny": ["reports/subject-"],
+      "fileContainsAny": ["banking", "payment-rails", "gold-reserve", "custody-systems"],
+      "requireAllGroups": true,
+      "category": "control_structure",
+      "subcategory": "monetary_control",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "control_structure_editor"
+    },
+    {
+      "id": "reports-subject-identity",
+      "priority": 1110,
+      "fileStartsWithAny": ["reports/subject-"],
+      "fileContainsAny": ["digital-id", "access-systems"],
+      "requireAllGroups": true,
+      "category": "control_structure",
+      "subcategory": "identity_and_access",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "control_structure_editor"
+    },
+    {
+      "id": "reports-subject-health-data",
+      "priority": 1110,
+      "fileStartsWithAny": ["reports/subject-"],
+      "fileContainsAny": ["health-data", "emergency-systems"],
+      "requireAllGroups": true,
+      "category": "control_structure",
+      "subcategory": "technology_and_surveillance",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "control_structure_editor"
+    },
+    {
+      "id": "reports-subject-foundations",
+      "priority": 1110,
+      "fileStartsWithAny": ["reports/subject-"],
+      "fileContainsAny": ["foundation", "ngo-policy"],
+      "requireAllGroups": true,
+      "category": "power_mapping",
+      "subcategory": "think_tanks_and_foundations",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "reports-subject-contractors",
+      "priority": 1110,
+      "fileStartsWithAny": ["reports/subject-"],
+      "fileContainsAny": ["private-contractor"],
+      "requireAllGroups": true,
+      "category": "power_mapping",
+      "subcategory": "corporate_and_ownership",
+      "recommendedTier": "intelligence_6",
+      "confidence": "high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "reports-general",
+      "priority": 1000,
+      "fileStartsWithAny": ["reports/"],
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium_high",
+      "editorialOwner": "intelligence_editor"
+    },
+    {
+      "id": "evidence-downloads",
+      "priority": 1050,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["evidence", "source", "court", "declassified", "record", "filing", "disclosure", "epstein"],
+      "requireAllGroups": true,
+      "category": "evidence",
+      "subcategory": "evidence_vault",
+      "recommendedTier": "public",
+      "confidence": "medium_high",
+      "editorialOwner": "evidence_editor"
+    },
+    {
+      "id": "speculation-downloads",
+      "priority": 1040,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["speculation", "speculative", "theory-lab", "probability", "prediction"],
+      "requireAllGroups": true,
+      "category": "interpretation",
+      "subcategory": "speculation_review",
+      "recommendedTier": "research_pro_9",
+      "confidence": "medium_high",
+      "editorialOwner": "interpretation_editor"
+    },
+    {
+      "id": "intelligence-downloads",
+      "priority": 1020,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["black-file", "dossier", "intel", "brief", "control-map", "elite-report", "reader-conclusions", "subject-", "power-deck"],
+      "requireAllGroups": true,
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium",
+      "editorialOwner": "intelligence_editor"
+    },
+    {
+      "id": "remaining-downloads-internal-review",
+      "priority": 900,
+      "fileStartsWithAny": ["downloads/"],
+      "category": "internal",
+      "subcategory": "generated_audit",
+      "recommendedTier": "internal_only",
+      "confidence": "medium",
+      "editorialOwner": "operations_owner"
+    },
+    {
+      "id": "trust-method-pages",
+      "priority": 1000,
+      "fileEqualsAny": ["dark-web-safety.html", "power-research-method.html", "subject-trust-evidence-method.html", "trust-association-boundary.html", "trust-claim-labels.html", "trust-editorial-standards.html"],
+      "category": "trust_and_legal",
+      "subcategory": "methodology",
+      "recommendedTier": "public",
+      "confidence": "high",
+      "editorialOwner": "trust_editor"
+    },
+    {
+      "id": "member-and-newsletter-pages",
+      "priority": 990,
+      "fileEqualsAny": ["forum.html", "members.html", "newsletter.html", "black-file-thank-you.html", "thank-you-evidence-starter.html", "thank-you-intel-weekly.html", "thank-you-power-map.html"],
+      "category": "membership",
+      "subcategory": "account_and_auth",
+      "recommendedTier": "registered",
+      "confidence": "medium_high",
+      "editorialOwner": "membership_editor"
+    },
+    {
+      "id": "commercial-decks-and-store",
+      "priority": 980,
+      "fileEqualsAny": ["institution-deck.html", "jurisdictions-of-power-deck.html", "policy-deck.html", "power-families-deck.html", "secret-societies-deck.html", "think-tanks-deck.html", "top-52-power-deck.html", "store.html"],
+      "category": "commercial",
+      "subcategory": "card_decks",
+      "recommendedTier": "separate_product",
+      "confidence": "high",
+      "editorialOwner": "commercial_editor"
+    },
+    {
+      "id": "public-media-and-download-entry",
+      "priority": 970,
+      "fileEqualsAny": ["free-downloads.html", "podcast.html", "transmissions.html", "search.html", "start-here.html"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "recommendedTier": "public",
+      "confidence": "medium_high",
+      "editorialOwner": "intelligence_editor"
+    },
+    {
+      "id": "evidence-and-trust-hubs",
+      "priority": 960,
+      "fileContainsAny": ["evidence-trust", "document-library", "auto-evidence", "contradiction-watch", "missing-files", "mission-source-priority"],
+      "category": "evidence",
+      "subcategory": "evidence_vault",
+      "recommendedTier": "public",
+      "confidence": "medium_high",
+      "editorialOwner": "evidence_editor"
+    },
+    {
+      "id": "interpretation-and-theory-pages",
+      "priority": 950,
+      "fileContainsAny": ["theory", "speculative", "speculation", "prediction", "probability", "dark-psychology", "masonic-esoteric", "symbolic-power", "dog-architect"],
+      "category": "interpretation",
+      "subcategory": "speculation_review",
+      "recommendedTier": "research_pro_9",
+      "confidence": "medium_high",
+      "editorialOwner": "interpretation_editor"
+    },
+    {
+      "id": "power-mapping-pages",
+      "priority": 940,
+      "fileContainsAny": ["billionaire", "elite-family", "entities", "entity-registry", "entity-relationship", "entity-timelines", "follow-the-money", "institution-control", "institution-profile", "institution-tracker", "main-player", "who-holds-power", "power-families", "elite-access", "cross-reference-map"],
+      "category": "power_mapping",
+      "subcategory": "people_index",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium_high",
+      "editorialOwner": "power_mapping_editor"
+    },
+    {
+      "id": "control-structure-pages",
+      "priority": 930,
+      "fileContainsAny": ["agenda-2030", "gold-reserve", "gold.html", "market-activity", "palantir-watch", "medical-policy", "intelligence-network", "war-machine", "survival-war", "migration-flow"],
+      "category": "control_structure",
+      "subcategory": "global_convergence",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium",
+      "editorialOwner": "control_structure_editor"
+    },
+    {
+      "id": "intelligence-and-feed-pages",
+      "priority": 920,
+      "fileContainsAny": ["intel-", "intelligence-dossiers", "investigations", "latest-public-drops", "news.html", "feed-", "findings-dashboard", "machine-digest", "weekly-investigation", "power-conclusions", "power-dossiers", "card-intelligence", "entity-daily-briefs", "brief-", "verified-record-cards"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium_high",
+      "editorialOwner": "intelligence_editor"
+    },
+    {
+      "id": "crime-state-paths-and-maps",
+      "priority": 910,
+      "fileContainsAny": ["crime-state", "wrongdoing-tracker"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium_high",
+      "editorialOwner": "intelligence_editor"
+    },
+    {
+      "id": "war-security-paths",
+      "priority": 905,
+      "fileContainsAny": ["war-contractors", "path-survival-war", "path-war-", "authority-intelligence", "authority-war-machine"],
+      "category": "control_structure",
+      "subcategory": "intelligence_and_security",
+      "recommendedTier": "intelligence_6",
+      "confidence": "medium_high",
+      "editorialOwner": "control_structure_editor"
+    },
+    {
+      "id": "subject-and-path-hubs",
+      "priority": 880,
+      "fileStartsWithAny": ["subject-", "path-", "authority-"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "recommendedTier": "public",
+      "confidence": "medium",
+      "editorialOwner": "intelligence_editor"
+    }
+  ],
+  "fallbackByContentType": {
+    "map_or_graph": {"category": "power_mapping", "subcategory": "institution_index", "recommendedTier": "intelligence_6", "confidence": "low", "editorialOwner": "power_mapping_editor"},
+    "tracker": {"category": "control_structure", "subcategory": "global_convergence", "recommendedTier": "intelligence_6", "confidence": "low", "editorialOwner": "control_structure_editor"},
+    "brief": {"category": "intelligence", "subcategory": "investigations", "recommendedTier": "intelligence_6", "confidence": "low", "editorialOwner": "intelligence_editor"},
+    "card": {"category": "intelligence", "subcategory": "investigations", "recommendedTier": "intelligence_6", "confidence": "low", "editorialOwner": "intelligence_editor"},
+    "timeline": {"category": "power_mapping", "subcategory": "people_index", "recommendedTier": "intelligence_6", "confidence": "low", "editorialOwner": "power_mapping_editor"},
+    "download_bundle": {"category": "internal", "subcategory": "generated_audit", "recommendedTier": "internal_only", "confidence": "low", "editorialOwner": "operations_owner"},
+    "landing_page": {"category": "intelligence", "subcategory": "investigations", "recommendedTier": "public", "confidence": "low", "editorialOwner": "intelligence_editor"},
+    "hub": {"category": "intelligence", "subcategory": "investigations", "recommendedTier": "public", "confidence": "low", "editorialOwner": "intelligence_editor"}
+  },
+  "reviewFlags": {
+    "lowConfidence": "phase3-resolved-low-confidence-editorial-review",
+    "fallbackUsed": "phase3-content-type-fallback-review",
+    "invalidResolution": "phase3-invalid-editorial-resolution"
+  },
+  "protectedBoundaries": {
+    "contentMutation": false,
+    "routeMovement": false,
+    "searchMutation": false,
+    "navigationMutation": false,
+    "accessEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "paymentActivation": false
+  }
+}

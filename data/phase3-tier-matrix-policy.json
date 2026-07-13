@@ -1,0 +1,318 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "report-only",
+  "purpose": "Define cumulative fields, sections, tools, downloads and delivery rights for every Phase 3 content item without changing evidence status or enforcing access.",
+  "exitCondition": "Every important item has a deterministic tier matrix, required public safety surface, minimum entitlement, delivery decision and download decision; higher tiers are cumulative and never change factual status.",
+  "tierOrder": [
+    "public",
+    "registered",
+    "supporter_3",
+    "intelligence_6",
+    "research_pro_9"
+  ],
+  "accessClassMinimumTier": {
+    "public_core": "public",
+    "public_preview": "public",
+    "registered_private": "registered",
+    "supporter_private": "supporter_3",
+    "intelligence_private": "intelligence_6",
+    "research_pro_private": "research_pro_9"
+  },
+  "viewStates": [
+    "full",
+    "preview",
+    "metadata_only",
+    "commercial_landing",
+    "access_denied",
+    "internal_only",
+    "restricted_review"
+  ],
+  "publicSafetySections": [
+    "title",
+    "summary",
+    "record_status_or_claim_class",
+    "primary_source_identity",
+    "evidence_grade_where_applicable",
+    "established_facts_or_document_description",
+    "factual_conclusion_scope",
+    "evidence_boundary",
+    "association_boundary",
+    "speculation_or_research_hint_label",
+    "material_counter_evidence",
+    "correction_withdrawal_or_supersession_notice",
+    "freshness_and_review_status",
+    "public_related_content",
+    "upgrade_explanation_when_deeper_content_exists"
+  ],
+  "neverPaywallSections": [
+    "correction_notice",
+    "withdrawal_notice",
+    "supersession_notice",
+    "evidence_downgrade",
+    "association_is_not_proof_boundary",
+    "speculation_label",
+    "contradictory_official_record_affecting_public_claim",
+    "dismissal_acquittal_reversal_or_legal_correction",
+    "privacy_or_victim_protection_notice"
+  ],
+  "tierBundles": {
+    "public": {
+      "label": "Public",
+      "requiresAccount": false,
+      "sections": [
+        "public_overview",
+        "source_identity",
+        "record_status",
+        "established_facts",
+        "concise_factual_conclusion",
+        "mission_relevance_summary",
+        "public_boundaries",
+        "corrections_and_counter_evidence",
+        "public_entity_and_topic_tags",
+        "public_related_content"
+      ],
+      "tools": [
+        "public_search",
+        "public_section_navigation",
+        "source_ledger_access",
+        "evidence_methodology_access"
+      ],
+      "downloads": [
+        "selected_public_html",
+        "selected_public_pdf"
+      ],
+      "delivery": {
+        "web": true,
+        "search": true,
+        "email": false,
+        "dashboard": false,
+        "api": false
+      }
+    },
+    "registered": {
+      "label": "Free Registered",
+      "requiresAccount": true,
+      "sections": [
+        "watch_next_summary",
+        "release_notifications",
+        "saved_public_items",
+        "reading_history",
+        "followed_public_topics",
+        "newsletter_preferences"
+      ],
+      "tools": [
+        "registered_dashboard",
+        "save_and_follow",
+        "preference_centre"
+      ],
+      "downloads": [
+        "account_linked_public_downloads"
+      ],
+      "delivery": {
+        "web": true,
+        "search": true,
+        "email": true,
+        "dashboard": true,
+        "api": false
+      }
+    },
+    "supporter_3": {
+      "label": "Supporter",
+      "requiresAccount": true,
+      "sections": [
+        "expanded_mechanism_summary",
+        "expanded_mission_link",
+        "elite_control_relevance_summary",
+        "counter_hypothesis_summary",
+        "missing_evidence_summary",
+        "weekly_member_brief",
+        "weekly_archive",
+        "selected_source_change_summary",
+        "editorial_notes"
+      ],
+      "tools": [
+        "supporter_dashboard",
+        "weekly_archive",
+        "basic_followed_topic_updates"
+      ],
+      "downloads": [
+        "selected_weekly_pdf",
+        "selected_source_bundle"
+      ],
+      "delivery": {
+        "web": true,
+        "search": true,
+        "email": true,
+        "dashboard": true,
+        "api": false
+      }
+    },
+    "intelligence_6": {
+      "label": "Intelligence Member",
+      "requiresAccount": true,
+      "sections": [
+        "full_entities",
+        "money_and_authority_routes",
+        "full_mechanism_of_power",
+        "full_mission_assessment",
+        "full_convergence_assessment",
+        "separately_labelled_speculative_conclusion",
+        "full_counter_analysis",
+        "missing_evidence_and_falsifiers",
+        "watch_next",
+        "daily_intelligence",
+        "detailed_dossiers",
+        "member_timelines_maps_and_graphs",
+        "source_change_and_evidence_delta_summary"
+      ],
+      "tools": [
+        "intelligence_dashboard",
+        "member_watchlists",
+        "entity_and_institution_following",
+        "member_search_filters",
+        "member_archive"
+      ],
+      "downloads": [
+        "member_pdf",
+        "selected_csv",
+        "intelligence_card_bundle"
+      ],
+      "delivery": {
+        "web": true,
+        "search": true,
+        "email": true,
+        "dashboard": true,
+        "api": false
+      }
+    },
+    "research_pro_9": {
+      "label": "Research Pro",
+      "requiresAccount": true,
+      "sections": [
+        "full_source_metadata",
+        "provenance_and_hash_history",
+        "evidence_delta_and_version_ledger",
+        "advanced_convergence_tracker",
+        "advanced_speculation_and_falsification",
+        "complete_source_routes",
+        "policy_and_jurisdiction_trackers",
+        "research_queue",
+        "investigation_status",
+        "legacy_mapping_and_migration_metadata"
+      ],
+      "tools": [
+        "research_pro_dashboard",
+        "advanced_search_filters",
+        "data_lab",
+        "source_route_map",
+        "citation_export",
+        "advanced_watchlists",
+        "priority_source_request_queue"
+      ],
+      "downloads": [
+        "full_dossier_pdf",
+        "csv_export",
+        "json_export",
+        "citation_export",
+        "research_bundle",
+        "evidence_pack_where_lawful"
+      ],
+      "delivery": {
+        "web": true,
+        "search": true,
+        "email": true,
+        "dashboard": true,
+        "api": true
+      }
+    }
+  },
+  "contentTypeOverrides": {
+    "legal_or_trust_page": {
+      "minimumTier": "public",
+      "publicView": "full"
+    },
+    "source_record": {
+      "minimumTier": "public",
+      "publicView": "full"
+    },
+    "evidence_document": {
+      "minimumTier": "public",
+      "publicView": "full",
+      "exception": "Restricted, victim-protection, privacy or legal-hold material follows restricted review."
+    },
+    "account_page": {
+      "minimumTier": "registered",
+      "publicView": "metadata_only",
+      "exception": "Login, registration, confirmation and unsubscribe entry routes remain public entry surfaces."
+    },
+    "internal_report": {
+      "minimumTier": null,
+      "publicView": "access_denied"
+    },
+    "book_or_product": {
+      "minimumTier": null,
+      "publicView": "commercial_landing"
+    },
+    "historical_version": {
+      "minimumTier": "public",
+      "publicView": "metadata_only",
+      "exception": "Correction, withdrawal and supersession notices remain public; underlying restricted data stays restricted."
+    }
+  },
+  "interpretiveRules": {
+    "research_hint": {
+      "publicLabelRequired": "speculative research hint — association not proof",
+      "factualStatusMutableByTier": false
+    },
+    "scenario_analysis": {
+      "publicLabelRequired": "speculative scenario analysis — not a factual forecast",
+      "factualStatusMutableByTier": false
+    },
+    "speculative": {
+      "publicLabelRequired": "speculative — not established fact",
+      "factualStatusMutableByTier": false
+    },
+    "disputed": {
+      "publicLabelRequired": "disputed claim — not established fact",
+      "factualStatusMutableByTier": false
+    }
+  },
+  "separateProductRules": {
+    "membershipDoesNotGrantPurchase": true,
+    "publicLandingVisible": true,
+    "purchasedFilesRequireProductEntitlement": true,
+    "productEntitlementIsNotMembershipTier": true
+  },
+  "internalRules": {
+    "membershipDoesNotGrantAccess": true,
+    "requiresInternalRole": true,
+    "mustNotLeakToSearchFeedsOrPublicBundles": true
+  },
+  "restrictedRules": {
+    "membershipDoesNotGrantAccess": true,
+    "requiresRestrictedReviewerRole": true,
+    "mustNotLeakToSearchFeedsOrPublicBundles": true,
+    "publicNoticeMayRemainWhenRequiredByLawTrustOrVictimProtection": true
+  },
+  "matrixInvariants": [
+    "Tiers are cumulative in the declared order.",
+    "Public safety sections are present on every public preview.",
+    "Higher tiers never change claim class, record status, evidence grade, factual conclusion scope or interpretive label.",
+    "Corrections, withdrawals, supersessions and material public counter-evidence remain public.",
+    "Paid items have a public companion preview before locked-section enforcement.",
+    "Internal and restricted content are not unlocked by membership.",
+    "Separate-product entitlement is distinct from membership entitlement.",
+    "No matrix row activates authentication, entitlement enforcement, email delivery or payment."
+  ],
+  "protectedBoundaries": {
+    "lockedSectionEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "emailDeliveryActivation": false,
+    "paymentActivation": false,
+    "routeMovement": false,
+    "searchRemoval": false,
+    "contentMutation": false
+  }
+}

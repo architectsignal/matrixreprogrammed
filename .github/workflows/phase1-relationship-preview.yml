@@ -1,0 +1,128 @@
+name: Phase 1 Relationship Graph Canonical Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-relationship-canonical-previews.js'
+      - 'data/evidence-weighted-relationship-graph.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - '.github/workflows/phase1-relationship-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-relationship-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Validate non-destructive relationship graph previews
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate adapter syntax
+        run: node --check scripts/build-relationship-canonical-previews.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/evidence-weighted-relationship-graph.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'membership.html'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads/canonical-relationship-preview', { recursive: true });
+          fs.writeFileSync('downloads/canonical-relationship-preview/source-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build relationship graph canonical previews
+        run: node scripts/build-relationship-canonical-previews.js
+
+      - name: Validate association boundaries and structure
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const output = JSON.parse(fs.readFileSync('downloads/canonical-relationship-preview/relationship-graph.canonical-preview.json', 'utf8'));
+          if (output.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (output.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (output.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (!output.records.length || output.recordCount !== output.records.length) throw new Error('Relationship preview count invalid');
+          if (output.sourceEdgeCount && output.recordCount !== output.sourceEdgeCount) throw new Error('Not every graph edge was mapped');
+          const required = schema.required || [];
+          let inspected = 0;
+          for (const record of output.records) {
+            inspected += 1;
+            for (const field of required) {
+              if (record[field] === undefined || record[field] === null) throw new Error(`${record.id}: missing ${field}`);
+            }
+            if (record.recordType !== 'relationship_update') throw new Error(`${record.id}: invalid record type`);
+            if (record.status !== 'review') throw new Error(`${record.id}: graph hint published prematurely`);
+            if (record.missionAssessment.outcome !== 'insufficient_evidence') throw new Error(`${record.id}: graph hint over-promoted`);
+            if (record.evidence.claimClass !== 'supported_inference') throw new Error(`${record.id}: graph hint claim class invalid`);
+            if (record.evidence.confidence !== 'very_low') throw new Error(`${record.id}: graph hint confidence too high`);
+            if (record.delivery.includeInConvergenceTracker !== false) throw new Error(`${record.id}: unverified edge entered convergence tracker`);
+            if (record.delivery.includeInNewsletter !== false) throw new Error(`${record.id}: unverified edge entered newsletter`);
+            if (!record.speculativeConclusion.falsifiers.length) throw new Error(`${record.id}: falsifiers missing`);
+            if (!record.missingEvidence.length || !record.watchNext.length) throw new Error(`${record.id}: evidence route missing`);
+            if (!/association is not guilt/i.test(record.evidence.associationBoundary)) throw new Error(`${record.id}: association boundary missing`);
+            if (!/does not prove elite coordination/i.test(record.missionAssessment.boundary)) throw new Error(`${record.id}: mission boundary unsafe`);
+            if (record.entities.length !== 2) throw new Error(`${record.id}: edge entity mapping incomplete`);
+          }
+          console.log(`RELATIONSHIP PREVIEW PASS: ${inspected} graph hints retained as hypotheses.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/canonical-relationship-preview/source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Relationship preview generation must not modify the graph, schema, tier policy or membership page.'
+          };
+          fs.writeFileSync('downloads/canonical-relationship-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload relationship preview package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-relationship-preview-${{ github.run_id }}
+          path: downloads/canonical-relationship-preview/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,153 @@
+name: Phase 2 Conclusion Adversarial Boundaries
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/conclusion-engine/**'
+      - 'scripts/test-conclusion-engine-adversarial.js'
+      - 'tests/fixtures/conclusion-engine-adversarial.json'
+      - 'data/conclusion-engine-policy.json'
+      - '.github/workflows/phase2-conclusion-adversarial.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-conclusion-adversarial-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  adversarial-boundaries:
+    name: Preserve speculation while blocking factual overclaim
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy, fixture and code syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/conclusion-engine-policy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('tests/fixtures/conclusion-engine-adversarial.json','utf8'))"
+          node --check scripts/conclusion-engine/core.js
+          node --check scripts/conclusion-engine/generate.js
+          node --check scripts/conclusion-engine/hardening.js
+          node --check scripts/conclusion-engine/quality.js
+          node --check scripts/test-conclusion-engine-adversarial.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/conclusion-engine-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-source-manifest.json',
+            'scripts/conclusion-engine/core.js',
+            'scripts/conclusion-engine/generate.js',
+            'scripts/conclusion-engine/hardening.js',
+            'scripts/conclusion-engine/quality.js',
+            'tests/fixtures/conclusion-engine-adversarial.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-adversarial-protected-before.json', JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Run adversarial boundary pack
+        run: node scripts/test-conclusion-engine-adversarial.js
+
+      - name: Validate retention and presentation results
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('downloads/phase2-conclusion-adversarial/adversarial-report.json','utf8'));
+          if (!report.ok || report.failedCount !== 0 || report.passedCount !== report.caseCount) throw new Error(report.errors.join('\n') || 'Adversarial pack failed');
+          if (report.retainedCount !== report.caseCount) throw new Error('An adversarial graph or speculative record was removed');
+          if (report.factualSurfaceEligibleCount !== 0) throw new Error('An adversarial interpretive record reached a factual surface');
+          const byId = new Map(report.results.map(result => [result.id,result]));
+          for (const result of report.results) {
+            if (!result.presentation.retained || !result.presentation.removalProhibited) throw new Error(`${result.id}: retention guarantee missing`);
+            if (result.presentation.factualSurfaceEligible) throw new Error(`${result.id}: factual presentation was permitted`);
+            if (!result.presentation.label.toLowerCase().includes('speculative')) throw new Error(`${result.id}: explicit speculative label missing`);
+            if (result.speculativeConclusion.label !== 'speculative') throw new Error(`${result.id}: generated speculative label missing`);
+            if (result.convergence.vectors.some(vector => vector.coordinationStatus === 'documented')) throw new Error(`${result.id}: documented coordination survived adversarial hardening`);
+            if (result.missingEvidence.some(item => !item.likelyCustodian || !item.lawfulAcquisitionRoutes?.length || !item.confirmationIndicators?.length || !item.falsificationIndicators?.length)) throw new Error(`${result.id}: operational missing-evidence fields incomplete`);
+          }
+          const graph = byId.get('graph-overclaim-primary-source');
+          if (graph.presentation.class !== 'research_hint' || graph.presentation.speculativeOrResearchSurfaceEligible !== true || graph.convergence.vectors.some(vector => vector.score !== 0)) throw new Error('Graph overclaim was not retained as a zero-score speculative research hint');
+          const missingLabel = byId.get('graph-association-missing-label');
+          if (missingLabel.presentation.speculativeOrResearchSurfaceEligible !== false || missingLabel.publicationState !== 'needs_editorial_review') throw new Error('Unlabelled graph association was delivered before correction');
+          const withdrawn = byId.get('withdrawn-speculation-preserved');
+          if (withdrawn.presentation.retainedAs !== 'retained_with_withdrawal_notice' || withdrawn.presentation.speculativeOrResearchSurfaceEligible !== false) throw new Error('Withdrawn speculation archive boundary failed');
+          console.log(`ADVERSARIAL PASS: ${report.caseCount} interpretive records retained, labelled and blocked from factual presentation.`);
+          NODE
+
+      - name: Snapshot deterministic hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-adversarial';
+          const files = fs.readdirSync(root).sort();
+          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-adversarial-first.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic output
+        run: |
+          node scripts/test-conclusion-engine-adversarial.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-adversarial';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-adversarial-first.json','utf8'));
+          const files = fs.readdirSync(root).sort();
+          const after = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) throw new Error('Adversarial output is not deterministic');
+          console.log(`DETERMINISM PASS: ${files.length} adversarial reports reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-adversarial-protected-before.json','utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push(file);
+          }
+          const report = {ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Adversarial testing must not mutate engine inputs, production files, Workers, membership or payment state.'};
+          fs.writeFileSync('downloads/phase2-conclusion-adversarial/non-mutation-report.json',JSON.stringify(report,null,2));
+          if (changed.length) throw new Error(changed.join('\n'));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload adversarial report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-conclusion-adversarial-${{ github.run_id }}
+          path: downloads/phase2-conclusion-adversarial/
+          if-no-files-found: error
+          retention-days: 30

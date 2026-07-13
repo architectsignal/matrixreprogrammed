@@ -1,0 +1,454 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "report-only",
+  "purpose": "Provide one canonical taxonomy for every page, report, card, document, source, entity, relationship, dashboard, download, newsletter item, product and internal operational surface before migration or tier enforcement.",
+  "objective": "Move every important content item into the correct section and tier without breaking existing routes, evidence boundaries, search discovery or historical versions.",
+  "exitCondition": "No important item is uncategorised, materially duplicated or inaccessible through navigation and search.",
+  "principles": [
+    "Every important item receives one primary category, one primary subcategory and one canonical content type.",
+    "Items may carry secondary categories and topics, but they keep one canonical owner and route identity.",
+    "Truth status is independent from access tier; premium depth cannot upgrade speculation into fact.",
+    "Graph associations, scenarios and speculation remain preserved under explicit interpretive labels.",
+    "Corrections, contradictions, withdrawals, supersessions and public evidence boundaries remain publicly reachable wherever they qualify a public claim.",
+    "Existing URLs remain stable until redirect, navigation, search and related-content previews pass.",
+    "Duplicates are consolidated only after canonical ownership, inbound links, search references and historical value are known.",
+    "Internal and operational artifacts are classified, not automatically deleted.",
+    "Sensitive or victim-protection material receives a restricted classification rather than being forced into a normal paid tier.",
+    "Every migration decision remains report-only until the complete Phase 3 preview is approved."
+  ],
+  "importanceRules": {
+    "importantWhenAny": [
+      "publicly_routable",
+      "indexed_or_index_candidate",
+      "linked_from_navigation",
+      "linked_from_another_content_item",
+      "canonical_intelligence_record",
+      "evidence_or_source_record",
+      "entity_or_relationship_record",
+      "newsletter_or_daily_weekly_delivery_item",
+      "member_dashboard_or_tool",
+      "downloadable_document_or_bundle",
+      "commercial_or_legal_route",
+      "historical_version_required_for_transparency"
+    ],
+    "unimportantCandidates": [
+      "temporary_build_cache",
+      "generated_retry_marker",
+      "duplicate_machine_log_without_unique_evidence",
+      "disposable local preview artifact"
+    ],
+    "unimportantCandidatesStillRequireAudit": true
+  },
+  "primaryCategories": {
+    "intelligence": {
+      "label": "Intelligence",
+      "purpose": "Time-bounded findings, investigations, briefs, dossiers and monitored developments.",
+      "subcategories": {
+        "live_intel": "Incoming leads and source-linked live updates.",
+        "daily_drops": "Daily evidence-led developments and conclusions.",
+        "weekly_reports": "Weekly synthesis, changes and forward watch.",
+        "investigations": "Structured investigations and research programmes.",
+        "dossiers": "Deep multi-record intelligence products.",
+        "outcome_briefings": "Scenario and outcome analysis with explicit boundaries.",
+        "missing_records": "Records required to confirm, narrow or falsify claims.",
+        "source_changes": "Preserved source changes, removals, corrections and deltas."
+      },
+      "defaultEditorialOwner": "intelligence_editor"
+    },
+    "evidence": {
+      "label": "Evidence",
+      "purpose": "Primary records, preserved sources, provenance, legal status and documentary boundaries.",
+      "subcategories": {
+        "evidence_vault": "Preserved evidence and public-document access.",
+        "source_ledger": "Source identities, hashes, captures and status history.",
+        "court_and_regulatory": "Court, regulator, law and official-action records.",
+        "declassified_files": "Declassified and archival government records.",
+        "epstein_files": "Epstein-related records with legal-status, victim-protection and association boundaries.",
+        "leaks_and_provenance": "Authenticated and unverified leaks with provenance controls.",
+        "evidence_policy": "Evidence grading, corrections, sourcing and claim-class policy."
+      },
+      "defaultEditorialOwner": "evidence_editor"
+    },
+    "power_mapping": {
+      "label": "Power Mapping",
+      "purpose": "People, institutions, ownership, money, jurisdictions and documented network relationships.",
+      "subcategories": {
+        "people_index": "People profiles and role histories.",
+        "institution_index": "Institution, agency and organisation profiles.",
+        "family_and_network_index": "Family, lineage and network profiles with historical boundaries.",
+        "corporate_and_ownership": "Corporate structures, holdings and beneficial ownership.",
+        "money_routes": "Payments, grants, procurement, lobbying and capital routes.",
+        "government_and_jurisdictions": "Government, legal jurisdiction and enforcement maps.",
+        "think_tanks_and_foundations": "Think tanks, foundations, funding and policy routes.",
+        "elite_networks": "Orders, associations and elite networks with membership and association boundaries."
+      },
+      "defaultEditorialOwner": "power_map_editor"
+    },
+    "control_structure": {
+      "label": "Control Structure",
+      "purpose": "Documented capacities and systems that can centralise authority, access, money, data, narrative or enforcement.",
+      "subcategories": {
+        "monetary_control": "Currency, banking, reserves, settlement and programmable-money systems.",
+        "identity_and_access": "Identity, credentials, biometrics, eligibility and permissions.",
+        "media_and_narrative": "Visibility, ranking, moderation, disclosure and narrative systems.",
+        "intelligence_and_security": "Intelligence, military, policing, border and security architecture.",
+        "emergency_power": "Exceptional powers, emergency systems and normalisation risk.",
+        "legal_and_regulatory_control": "Law, regulation, standards, treaties and enforcement convergence.",
+        "technology_and_surveillance": "Data, platforms, cloud, AI, monitoring and surveillance systems.",
+        "global_convergence": "Cross-vector political, monetary, identity, security, legal and ethical convergence."
+      },
+      "defaultEditorialOwner": "control_structure_editor"
+    },
+    "interpretation": {
+      "label": "Interpretation",
+      "purpose": "Mission conclusions, counter-hypotheses, historical parallels, predictions and clearly labelled speculation.",
+      "subcategories": {
+        "mission_conclusions": "Evidence-bounded conclusions linked to the site mission.",
+        "speculation_review": "Speculative interpretations and research hints with falsifiers.",
+        "competing_explanations": "Counter-hypotheses and ordinary explanations.",
+        "historical_parallels": "Historical comparisons that do not prove present coordination.",
+        "predictions_and_watchlists": "Conditional forecasts, watch indicators and falsification routes."
+      },
+      "defaultEditorialOwner": "interpretation_editor"
+    },
+    "membership": {
+      "label": "Membership",
+      "purpose": "Account entry, dashboards, preferences, member tools and entitlement-controlled workflow.",
+      "subcategories": {
+        "membership_public": "Public membership explanation and pricing.",
+        "account_and_auth": "Registration, login, verification and sessions.",
+        "registered_dashboard": "Free registered dashboard and preferences.",
+        "supporter_dashboard": "Supporter €3 dashboard and archive.",
+        "intelligence_dashboard": "Intelligence €6 dashboard, follows and watchlists.",
+        "research_pro_dashboard": "Research Pro €9 tools, exports and advanced analysis.",
+        "preferences_and_billing": "Preferences, consent, billing and subscription lifecycle."
+      },
+      "defaultEditorialOwner": "membership_product_owner"
+    },
+    "commercial": {
+      "label": "Commercial",
+      "purpose": "Books, standalone reports, card decks, services, offers and products.",
+      "subcategories": {
+        "books": "Books and author catalogue.",
+        "digital_reports": "Standalone digital reports and evidence packs.",
+        "card_decks": "Card decks and collectible products.",
+        "research_services": "Commissioned and custom research services.",
+        "store_and_offers": "Store, offers, funnels and product landing pages."
+      },
+      "defaultEditorialOwner": "commercial_owner"
+    },
+    "trust_and_legal": {
+      "label": "Trust and Legal",
+      "purpose": "Mission, methodology, legal terms, privacy, corrections and support.",
+      "subcategories": {
+        "about_and_mission": "About, mission and editorial identity.",
+        "methodology": "Research, sourcing and analytical methodology.",
+        "privacy_and_terms": "Privacy, terms, consent and legal notices.",
+        "corrections_and_boundaries": "Corrections, withdrawals, association boundaries and claim status.",
+        "contact_and_support": "Contact, support and complaint routes."
+      },
+      "defaultEditorialOwner": "trust_and_legal_owner"
+    },
+    "internal": {
+      "label": "Internal Operations",
+      "purpose": "Administration, build support, audits, tests and operational controls.",
+      "subcategories": {
+        "admin": "Administrative interfaces and protected controls.",
+        "test_and_debug": "Test, debug and compatibility surfaces.",
+        "generated_audit": "Generated audits, reports and verification outputs.",
+        "build_support": "Build, campaign, distribution, artwork and deployment operations."
+      },
+      "defaultEditorialOwner": "technical_owner"
+    },
+    "restricted": {
+      "label": "Restricted",
+      "purpose": "Material requiring privacy, victim-protection, legal, security or consent restrictions.",
+      "subcategories": {
+        "victim_protection": "Victim identities, sensitive testimony and protected records.",
+        "personal_data": "Private personal data and consent-restricted information.",
+        "legal_hold": "Material withheld due to legal review or preservation obligations.",
+        "security_sensitive": "Credentials, secrets, exploit paths and operational security material."
+      },
+      "defaultEditorialOwner": "restricted_content_owner"
+    },
+    "migration_review": {
+      "label": "Migration Review",
+      "purpose": "Temporary review state only; not an acceptable final category for an important item.",
+      "subcategories": {
+        "needs_editorial_owner": "No owner or category assigned.",
+        "possible_duplicate": "Potential duplicate requiring canonical-owner review.",
+        "route_conflict": "Conflicting route or content ownership.",
+        "sensitive_review": "Possible restricted material requiring review."
+      },
+      "defaultEditorialOwner": "phase3_migration_owner"
+    }
+  },
+  "canonicalContentTypes": {
+    "hub": "Navigation and discovery hub.",
+    "landing_page": "Public explanatory or acquisition page.",
+    "canonical_intelligence_record": "Canonical evidence-led record.",
+    "daily_drop": "Daily intelligence publication.",
+    "weekly_report": "Weekly intelligence publication.",
+    "investigation": "Structured investigation.",
+    "dossier": "Deep multi-record dossier.",
+    "brief": "Evidence, entity, policy or outcome brief.",
+    "card": "Compact evidence, entity, relationship or conclusion card.",
+    "source_record": "Source identity and provenance record.",
+    "evidence_document": "Primary or preserved evidence document.",
+    "source_change": "Source delta, correction, removal or replacement record.",
+    "entity_profile": "Person, institution, company or organisation profile.",
+    "relationship_record": "Documented association or speculative research hint.",
+    "topic_page": "Topic or control-vector overview.",
+    "timeline": "Chronological evidence or entity timeline.",
+    "map_or_graph": "Power, ownership, relationship or geographic map.",
+    "tracker": "Ongoing watch, convergence or status tracker.",
+    "dashboard": "Public or member dashboard.",
+    "research_tool": "Search, export, comparison or analysis tool.",
+    "newsletter_issue": "Daily or weekly email issue and web archive.",
+    "download_bundle": "PDF, JSON, CSV, ZIP or evidence package.",
+    "book_or_product": "Book, deck, service or standalone product.",
+    "legal_or_trust_page": "Mission, methodology, corrections, privacy, terms or support.",
+    "account_page": "Registration, login, profile or preferences.",
+    "internal_report": "Audit, test, build or operational report.",
+    "redirect_stub": "Temporary route-preservation stub.",
+    "historical_version": "Archived, corrected, withdrawn or superseded version."
+  },
+  "accessClasses": {
+    "public_core": {
+      "visibility": "public",
+      "description": "Complete public content required for trust, evidence boundaries, navigation, legal access or acquisition."
+    },
+    "public_preview": {
+      "visibility": "public",
+      "description": "Public evidence-bounded preview of a deeper member item."
+    },
+    "registered_private": {
+      "visibility": "private",
+      "minimumTier": "registered",
+      "description": "Free registered account content and personal workflow."
+    },
+    "supporter_private": {
+      "visibility": "private",
+      "minimumTier": "supporter_3",
+      "description": "Supporter member depth and archive access."
+    },
+    "intelligence_private": {
+      "visibility": "private",
+      "minimumTier": "intelligence_6",
+      "description": "Detailed briefs, network analysis, daily intelligence and member tools."
+    },
+    "research_pro_private": {
+      "visibility": "private",
+      "minimumTier": "research_pro_9",
+      "description": "Advanced analysis, source bundles, exports, convergence tools and research workflow."
+    },
+    "separate_product": {
+      "visibility": "commercial",
+      "description": "Standalone purchase or service outside normal membership entitlement."
+    },
+    "internal_only": {
+      "visibility": "internal",
+      "description": "Administrative, build, audit, campaign or operational material."
+    },
+    "restricted_sensitive": {
+      "visibility": "restricted",
+      "description": "Privacy, victim-protection, legal, security or consent restricted material."
+    }
+  },
+  "claimPresentationClasses": {
+    "factual_analysis": "Evidence-qualified factual or official conclusion.",
+    "supported_inference": "Evidence-supported inference that remains non-factual.",
+    "research_hint": "Speculative graph or association route; association is not proof.",
+    "scenario_analysis": "Speculative scenario; not a factual forecast.",
+    "speculative": "Speculative interpretation; not established fact.",
+    "disputed": "Disputed claim with visible counter-records.",
+    "withdrawn": "Withdrawn content retained for historical transparency.",
+    "superseded": "Superseded content linked to its replacement.",
+    "correction": "Corrected content linked to the prior version."
+  },
+  "entityTypes": [
+    "person",
+    "company",
+    "government",
+    "agency",
+    "court",
+    "regulator",
+    "bank",
+    "fund",
+    "foundation",
+    "ngo",
+    "international_body",
+    "contractor",
+    "media",
+    "religious_body",
+    "technology_platform",
+    "family",
+    "secret_society_or_order",
+    "jurisdiction",
+    "event",
+    "document",
+    "policy",
+    "programme",
+    "other"
+  ],
+  "topicFamilies": {
+    "power_mechanisms": [
+      "legal_authority",
+      "financial_control",
+      "ownership",
+      "procurement",
+      "appointment",
+      "identity_and_access",
+      "data_and_surveillance",
+      "narrative_and_visibility",
+      "security_and_enforcement",
+      "institutional_implementation"
+    ],
+    "convergence_vectors": [
+      "political_governance",
+      "monetary_control",
+      "digital_identity_and_access",
+      "surveillance_and_data",
+      "emergency_power",
+      "information_and_narrative",
+      "corporate_institutional_convergence",
+      "security_architecture",
+      "religious_or_ethical_convergence",
+      "legal_and_regulatory_convergence"
+    ],
+    "record_status": [
+      "court_record",
+      "regulator_record",
+      "law_or_regulation",
+      "contract_or_procurement",
+      "official_dataset",
+      "official_report",
+      "declassified_record",
+      "authenticated_leak",
+      "unverified_leak",
+      "credible_reporting",
+      "analysis",
+      "speculation"
+    ],
+    "mission_topics": [
+      "elite_control",
+      "institutional_convergence",
+      "one_world_governance",
+      "one_world_currency",
+      "religious_or_ethical_convergence",
+      "digital_identity",
+      "emergency_governance",
+      "information_control",
+      "public_private_power",
+      "accountability_gap"
+    ]
+  },
+  "routeConventions": {
+    "canonicalRoutePattern": "/{primaryCategory}/{subcategory}/{slug}/",
+    "entityRoutePattern": "/power-mapping/{entityType}/{slug}/",
+    "evidenceRoutePattern": "/evidence/{evidenceSubcategory}/{slug}/",
+    "intelligenceRoutePattern": "/intelligence/{contentType}/{slug}/",
+    "interpretationRoutePattern": "/interpretation/{presentationClass}/{slug}/",
+    "memberRoutePattern": "/members/{tier}/{feature}/",
+    "historicalVersionPattern": "/archive/{canonicalId}/{versionHash}/",
+    "previewPattern": "/__preview/phase3/{accessClass}/{canonicalId}/",
+    "redirectRule": "Existing route remains canonical or receives a permanent redirect only after inbound links, search references and navigation are migrated.",
+    "slugRule": "Stable lowercase ASCII slug; do not encode evidence status or tier into the canonical identity."
+  },
+  "canonicalIdentity": {
+    "requiredFields": [
+      "canonicalId",
+      "sourcePath",
+      "contentType",
+      "primaryCategory",
+      "primarySubcategory",
+      "accessClass",
+      "editorialOwner",
+      "canonicalRoute",
+      "searchStatus",
+      "navigationStatus"
+    ],
+    "optionalFields": [
+      "secondaryCategories",
+      "entityIds",
+      "topicIds",
+      "relatedCanonicalIds",
+      "duplicateOf",
+      "historicalVersions",
+      "redirectFrom",
+      "sensitivityFlags",
+      "publicPreviewOf"
+    ]
+  },
+  "migrationStates": [
+    "inventory_only",
+    "taxonomy_assigned",
+    "privacy_classified",
+    "tier_assigned",
+    "preview_generated",
+    "redirect_planned",
+    "search_repaired",
+    "related_content_linked",
+    "entity_topic_tagged",
+    "ready_for_review",
+    "approved_for_migration",
+    "migrated",
+    "verified"
+  ],
+  "duplicateRules": {
+    "materialDuplicateWhen": [
+      "same_canonical_subject_and_purpose",
+      "substantially_same_body_or_dataset",
+      "same_source_record_republished_without_distinct_editorial_value",
+      "same_generated_output_under_multiple routes"
+    ],
+    "notAutomaticallyDuplicateWhen": [
+      "same_basename_only",
+      "public_preview_and_member_depth",
+      "current_and_historical_version",
+      "correction_and_prior_version",
+      "same_entity_with_distinct_timeline_or evidence role",
+      "same source cited by multiple investigations"
+    ],
+    "consolidationRequires": [
+      "canonical_owner",
+      "inbound_link_inventory",
+      "search_reference_inventory",
+      "navigation_reference_inventory",
+      "historical_value_review",
+      "redirect_plan",
+      "content_and_evidence_preservation"
+    ]
+  },
+  "accessibilityRequirements": {
+    "everyImportantItemRequires": [
+      "canonical_route_or_archive_route",
+      "search_index_decision",
+      "navigation_or_related_content_entry",
+      "editorial_owner",
+      "access_class",
+      "evidence_or_interpretation_label_where_applicable"
+    ],
+    "paidItemsRequire": [
+      "public_preview",
+      "public evidence boundary",
+      "visible correction and withdrawal state",
+      "upgrade route without factual-status change"
+    ],
+    "internalItemsRequire": [
+      "authenticated_or_build-only access decision",
+      "public replacement route when the item currently serves public navigation"
+    ]
+  },
+  "protectedBoundaries": {
+    "routeMovement": false,
+    "redirectActivation": false,
+    "contentDeletion": false,
+    "paywallEnforcement": false,
+    "searchRemoval": false,
+    "navigationRemoval": false,
+    "paymentActivation": false,
+    "canonicalMutation": false
+  }
+}

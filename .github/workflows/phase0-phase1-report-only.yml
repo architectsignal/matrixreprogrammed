@@ -1,0 +1,170 @@
+name: Phase 0 and Phase 1 Report-Only Assurance
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/PROJECT_DIRECTIVE_PHASE_0_1.md'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'scripts/phase0-system-inventory.js'
+      - 'scripts/validate-intelligence-records.js'
+      - '.github/workflows/phase0-phase1-report-only.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase0-phase1-report-only-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  assure:
+    name: Inventory, schema and non-mutation assurance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate JavaScript syntax
+        run: |
+          node --check scripts/phase0-system-inventory.js
+          node --check scripts/validate-intelligence-records.js
+
+      - name: Validate Phase 0 and Phase 1 JSON files
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const files = [
+            'data/intelligence-record.schema.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-source-manifest.json'
+          ];
+          for (const file of files) {
+            const parsed = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (!parsed || typeof parsed !== 'object') throw new Error(`${file} is not a JSON object`);
+            console.log(`VALID JSON: ${file}`);
+          }
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const required = new Set(schema.required || []);
+          for (const field of ['solidConclusion', 'missionAssessment', 'speculativeConclusion', 'counterAnalysis', 'access', 'freshness']) {
+            if (!required.has(field)) throw new Error(`Canonical schema missing required field: ${field}`);
+          }
+          const policy = JSON.parse(fs.readFileSync('data/access-tier-policy.json', 'utf8'));
+          if (policy.paymentStatus !== 'deferred') throw new Error('Payment status must remain deferred');
+          if (policy.enforcementMode !== 'report-only') throw new Error('Tier enforcement must remain report-only');
+          for (const tier of ['public', 'registered', 'supporter_3', 'intelligence_6', 'research_pro_9']) {
+            if (!policy.tiers?.[tier]) throw new Error(`Tier policy missing ${tier}`);
+          }
+          NODE
+
+      - name: Record source hashes before report-only execution
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const files = [
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js',
+            ...manifest.sources.map(source => source.path)
+          ];
+          const result = {};
+          for (const file of [...new Set(files)]) {
+            result[file] = fs.existsSync(file)
+              ? crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+              : null;
+          }
+          fs.mkdirSync('downloads', { recursive: true });
+          fs.writeFileSync('downloads/phase01-source-hashes-before.json', JSON.stringify(result, null, 2));
+          NODE
+
+      - name: Run Phase 0 inventory in report-only mode
+        run: node scripts/phase0-system-inventory.js
+
+      - name: Run Phase 1 legacy coverage validator in report-only mode
+        run: node scripts/validate-intelligence-records.js
+
+      - name: Prove protected and legacy source files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/phase01-source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = fs.existsSync(file)
+              ? crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+              : null;
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          fs.writeFileSync('downloads/phase01-non-mutation-report.json', JSON.stringify({
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Phase 0 and Phase 1 report-only scripts must never modify protected production or legacy intelligence source files.'
+          }, null, 2));
+          if (changed.length) {
+            console.error(JSON.stringify(changed, null, 2));
+            process.exit(1);
+          }
+          console.log(`NON-MUTATION PASS: ${Object.keys(before).length} protected and source files unchanged.`);
+          NODE
+
+      - name: Verify reports and safety boundaries
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const required = [
+            'downloads/phase0-system-inventory.json',
+            'downloads/phase0-system-inventory.md',
+            'downloads/phase1-intelligence-schema-report.json',
+            'downloads/phase1-intelligence-schema-report.md',
+            'downloads/phase01-non-mutation-report.json'
+          ];
+          for (const file of required) {
+            if (!fs.existsSync(file)) throw new Error(`Missing report: ${file}`);
+          }
+          const inventory = JSON.parse(fs.readFileSync(required[0], 'utf8'));
+          const schema = JSON.parse(fs.readFileSync(required[2], 'utf8'));
+          const mutation = JSON.parse(fs.readFileSync(required[4], 'utf8'));
+          if (inventory.mode !== 'report-only') throw new Error('Phase 0 inventory is not report-only');
+          if (schema.mode !== 'report-only') throw new Error('Phase 1 validator is not report-only');
+          if (schema.paymentStatus !== 'deferred') throw new Error('Phase 1 report changed payment boundary');
+          if (!mutation.ok) throw new Error('Non-mutation report failed');
+          console.log(`PHASE 0 FILES: ${inventory.summary.totalFiles}`);
+          console.log(`PHASE 1 RECORDS: ${schema.summary.totalRecords}`);
+          console.log(`MAPPED COVERAGE: ${schema.summary.mappedCoveragePercent}%`);
+          NODE
+
+      - name: Upload Phase 0 and Phase 1 reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase0-phase1-report-only-${{ github.run_id }}
+          path: |
+            downloads/phase0-system-inventory.json
+            downloads/phase0-system-inventory.md
+            downloads/phase1-intelligence-schema-report.json
+            downloads/phase1-intelligence-schema-report.md
+            downloads/phase01-source-hashes-before.json
+            downloads/phase01-non-mutation-report.json
+          if-no-files-found: error
+          retention-days: 30

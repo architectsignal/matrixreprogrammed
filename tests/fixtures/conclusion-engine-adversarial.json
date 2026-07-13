@@ -1,0 +1,146 @@
+{
+  "version": "1.0.0",
+  "purpose": "Adversarial fixtures proving that graph associations, scenarios and speculation are preserved with explicit labels while being blocked from factual publication surfaces.",
+  "cases": [
+    {
+      "id": "graph-overclaim-primary-source",
+      "description": "A graph edge is deliberately mislabelled as an established fact and given a maximum convergence score.",
+      "record": {
+        "recordType": "relationship_update",
+        "claimClass": "established_fact",
+        "sourceAuthority": "primary",
+        "evidenceGrade": "A",
+        "confidence": "very_high",
+        "solidText": "This graph association proves that Person Alpha secretly controls Institution Beta as part of a master plan.",
+        "mechanismDescription": "Person Alpha and Institution Beta appear in the same relationship graph because they attended the same event.",
+        "authorityHolders": ["Person Alpha"],
+        "implementationRoutes": ["Shared event attendance"],
+        "missionOutcome": "direct_support",
+        "vectorScore": 5,
+        "coordinationStatus": "documented",
+        "speculativeLabel": "speculative"
+      },
+      "expected": {
+        "presentationClass": "research_hint",
+        "retainedAs": "retained_as_speculative_research_hint",
+        "state": "needs_evidence",
+        "factualSurfaceEligible": false,
+        "speculativeOrResearchSurfaceEligible": true,
+        "maximumConvergenceScore": 0,
+        "generatedConclusionIncludes": "research hint"
+      }
+    },
+    {
+      "id": "scenario-overclaim-secondary-source",
+      "description": "A scenario is written as a certain future one-world system and given documented coordination without primary records.",
+      "record": {
+        "recordType": "scenario",
+        "claimClass": "scenario_analysis",
+        "sourceAuthority": "secondary",
+        "evidenceGrade": "C",
+        "confidence": "high",
+        "solidText": "This scenario definitely proves that a one world currency and government will be imposed.",
+        "mechanismDescription": "The site model compares possible monetary, identity and governance convergence routes.",
+        "authorityHolders": ["Scenario model"],
+        "implementationRoutes": ["Modelled future pathway"],
+        "missionOutcome": "direct_support",
+        "vectorScore": 5,
+        "coordinationStatus": "documented",
+        "speculativeLabel": "speculative"
+      },
+      "expected": {
+        "presentationClass": "scenario_analysis",
+        "retainedAs": "retained_as_speculative_scenario_analysis",
+        "state": "needs_evidence",
+        "factualSurfaceEligible": false,
+        "speculativeOrResearchSurfaceEligible": true,
+        "maximumConvergenceScore": 2,
+        "generatedConclusionIncludes": "speculative scenario analysis"
+      }
+    },
+    {
+      "id": "speculation-overclaim-secondary-source",
+      "description": "A speculative interpretation uses certainty language and attempts to publish as a factual control conclusion.",
+      "record": {
+        "recordType": "speculation_review",
+        "claimClass": "speculative_interpretation",
+        "sourceAuthority": "secondary",
+        "evidenceGrade": "D",
+        "confidence": "very_low",
+        "solidText": "The available material certainly proves a hidden command structure controls every institution.",
+        "mechanismDescription": "The interpretation proposes a possible institutional coordination route for further research.",
+        "authorityHolders": ["Unidentified actors"],
+        "implementationRoutes": ["Hypothesised coordination route"],
+        "missionOutcome": "indirect_support",
+        "vectorScore": 4,
+        "coordinationStatus": "inferred",
+        "speculativeLabel": "speculative"
+      },
+      "expected": {
+        "presentationClass": "speculative",
+        "retainedAs": "retained_as_speculative_analysis",
+        "state": "needs_evidence",
+        "factualSurfaceEligible": false,
+        "speculativeOrResearchSurfaceEligible": true,
+        "maximumConvergenceScore": 1,
+        "generatedSpeculationLabel": "speculative"
+      }
+    },
+    {
+      "id": "graph-association-missing-label",
+      "description": "A graph association is preserved but cannot be delivered even to a research surface until its source speculation label is corrected.",
+      "record": {
+        "recordType": "relationship_update",
+        "claimClass": "documented_association",
+        "sourceAuthority": "primary",
+        "evidenceGrade": "B",
+        "confidence": "medium",
+        "solidText": "A source records attendance by Person Gamma and Organisation Delta at the same conference.",
+        "mechanismDescription": "The graph records shared conference attendance only.",
+        "authorityHolders": ["Conference organiser"],
+        "implementationRoutes": ["Attendance register"],
+        "missionOutcome": "contextual_connection",
+        "vectorScore": 3,
+        "coordinationStatus": "documented",
+        "speculativeLabel": "fact"
+      },
+      "expected": {
+        "presentationClass": "research_hint",
+        "retainedAs": "retained_as_speculative_research_hint",
+        "state": "needs_editorial_review",
+        "factualSurfaceEligible": false,
+        "speculativeOrResearchSurfaceEligible": false,
+        "maximumConvergenceScore": 0,
+        "generatedSpeculationLabel": "speculative"
+      }
+    },
+    {
+      "id": "withdrawn-speculation-preserved",
+      "description": "A withdrawn speculative interpretation remains in the archive with a withdrawal notice and cannot be delivered as current analysis.",
+      "record": {
+        "recordType": "speculation_review",
+        "claimClass": "speculative_interpretation",
+        "sourceAuthority": "secondary",
+        "evidenceGrade": "E",
+        "confidence": "very_low",
+        "status": "withdrawn",
+        "solidText": "A withdrawn interpretation previously proposed a hidden financial route.",
+        "mechanismDescription": "The proposed route was not established and has been withdrawn.",
+        "authorityHolders": ["Unidentified actors"],
+        "implementationRoutes": ["Unverified financial route"],
+        "missionOutcome": "insufficient_evidence",
+        "vectorScore": 1,
+        "coordinationStatus": "not_shown",
+        "speculativeLabel": "speculative"
+      },
+      "expected": {
+        "presentationClass": "speculative",
+        "retainedAs": "retained_with_withdrawal_notice",
+        "state": "withdrawn",
+        "factualSurfaceEligible": false,
+        "speculativeOrResearchSurfaceEligible": false,
+        "retained": true
+      }
+    }
+  ]
+}

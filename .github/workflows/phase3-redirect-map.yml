@@ -1,0 +1,136 @@
+name: Phase 3 Redirect Map
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-redirect-policy.json'
+      - 'data/phase3-canonical-taxonomy.json'
+      - 'data/phase3-public-private-policy.json'
+      - 'scripts/build-phase3-redirect-map.js'
+      - 'scripts/build-phase3-public-private-classification.js'
+      - '.github/workflows/phase3-redirect-map.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-redirect-map-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  redirect-map:
+    name: Plan collision-free redirects and preserve references
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-redirect-policy.json','utf8'))"
+          node --check scripts/build-phase3-redirect-map.js
+          node --check scripts/build-phase3-public-private-classification.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['data/phase3-redirect-policy.json','data/phase3-canonical-taxonomy.json','data/phase3-public-private-policy.json','membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-redirect-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated classification and redirect outputs
+        run: |
+          rm -rf downloads/phase3-redirect-map downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build redirect map
+        run: node scripts/build-phase3-redirect-map.js
+
+      - name: Validate collision, chain, loop and rollback safety
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase3-redirect-policy.json','utf8'));
+          const classification=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase3-redirect-map/redirect-map.json','utf8'));
+          const references=JSON.parse(fs.readFileSync('downloads/phase3-redirect-map/reference-map.json','utf8'));
+          const collisions=JSON.parse(fs.readFileSync('downloads/phase3-redirect-map/collision-report.json','utf8'));
+          const review=JSON.parse(fs.readFileSync('downloads/phase3-redirect-map/review-queue.json','utf8'));
+          if(!report.ok||!references.ok||!collisions.ok||!review.ok) throw new Error('Redirect-map package is not healthy');
+          if(report.mode!=='plan-only'||policy.mode!=='plan-only') throw new Error('Plan-only boundary changed');
+          if(report.rows.length!==classification.rows.length||report.summary.totalItems!==classification.rows.length) throw new Error('Classification coverage is incomplete');
+          if(new Set(report.rows.map(row=>row.canonicalId)).size!==report.rows.length) throw new Error('Canonical IDs are not unique');
+          if(new Set(report.rows.map(row=>row.finalCanonicalRoute)).size!==report.rows.length) throw new Error('Final canonical destinations are not unique');
+          if(report.summary.destinationCollisions!==0||report.summary.redirectChains!==0||report.summary.redirectLoops!==0||report.summary.unresolved!==0) throw new Error('Collision, chain, loop or unresolved route remains');
+          if(collisions.destinationCollisions.length||collisions.redirectChains.length||collisions.redirectLoops.length) throw new Error('Collision report is not clear');
+          const allowed=new Set(policy.decisionTypes);
+          for(const row of report.rows){
+            if(!allowed.has(row.decision)) throw new Error(`${row.sourcePath}: invalid route decision`);
+            if(!row.currentRoute||!row.finalCanonicalRoute||!row.rollback||!row.rollback.contentHash) throw new Error(`${row.sourcePath}: route or rollback data missing`);
+            if(row.redirectActivated!==false||row.routeMoved!==false) throw new Error(`${row.sourcePath}: redirect or move activated`);
+            if(row.decision==='plan_permanent_redirect'&&row.plannedStatusCode!==301) throw new Error(`${row.sourcePath}: permanent redirect lacks 301 plan`);
+            if(row.decision==='plan_asset_route_migration'&&row.plannedStatusCode!==308) throw new Error(`${row.sourcePath}: asset migration lacks 308 plan`);
+            if(row.decision==='keep_current_canonical'&&row.currentRoute!==row.finalCanonicalRoute) throw new Error(`${row.sourcePath}: keep decision changes route`);
+            if(row.decision==='plan_internalisation_after_public_replacement'&&!row.reviewFlags.includes('public_replacement_required_before_internalisation')) throw new Error(`${row.sourcePath}: internalisation lacks replacement requirement`);
+          }
+          if(references.records.length!==report.rows.length) throw new Error('Reference-map coverage is incomplete');
+          if(review.recordCount!==report.summary.reviewQueue) throw new Error('Redirect review queue coverage mismatch');
+          if(report.redirectActivation!==false||report.routeMovement!==false||report.fileMovement!==false||report.searchMutation!==false||report.navigationMutation!==false||report.contentDeletion!==false||report.paymentActivation!==false) throw new Error('A protected action was activated');
+          console.log(`PHASE 3 REDIRECT PASS: ${report.rows.length} route decisions; ${report.summary.collisionAdjusted} collision adjustments; zero loops or chains.`);
+          NODE
+
+      - name: Snapshot deterministic map hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-redirect-map';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-redirect-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic redirect plan
+        run: |
+          rm -rf downloads/phase3-redirect-map downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-redirect-map.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-redirect-map';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-redirect-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Redirect map is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} redirect-map files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');const before=JSON.parse(fs.readFileSync('/tmp/phase3-redirect-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Redirect planning must not alter policies, membership, Workers, existing routes or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-redirect-map/non-mutation-report.json',JSON.stringify(report,null,2));if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload redirect-map reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-redirect-map-${{ github.run_id }}
+          path: downloads/phase3-redirect-map/
+          if-no-files-found: error
+          retention-days: 30

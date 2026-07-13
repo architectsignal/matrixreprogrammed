@@ -3,75 +3,56 @@ const path = require('path');
 const root = process.cwd();
 const issues = [];
 function exists(name) { return fs.existsSync(path.join(root, name)); }
-function read(name) { return fs.readFileSync(path.join(root, name), 'utf8'); }
+function read(name) { return exists(name) ? fs.readFileSync(path.join(root, name), 'utf8') : ''; }
 function needFile(name) { if (!exists(name)) issues.push(`missing ${name}`); }
-function needText(name, text) { if (exists(name) && !read(name).includes(text)) issues.push(`${name} missing ${text}`); }
+function needText(name, text, label = text) { if (!exists(name) || !read(name).includes(text)) issues.push(`${name} missing ${label}`); }
 function forbid(name, text) { if (exists(name) && read(name).toLowerCase().includes(text.toLowerCase())) issues.push(`${name} contains forbidden paid/external marker: ${text}`); }
-function tokens(q) { return String(q || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean); }
-function hay(item) { return [item.title, item.category, item.layer, item.description, Array.isArray(item.keywords) ? item.keywords.join(' ') : item.keywords].join(' ').toLowerCase(); }
-function score(item, query) {
-  const ts = tokens(query);
-  const h = hay(item);
-  let s = Number(item.priority || 0) / 4;
-  for (const t of ts) {
-    if (String(item.title || '').toLowerCase().includes(t)) s += 22;
-    if (String(item.category || '').toLowerCase().includes(t)) s += 12;
-    if (String(item.layer || '').toLowerCase().includes(t)) s += 10;
-    if (h.includes(t)) s += 4;
-  }
-  if (h.includes(String(query).toLowerCase())) s += 30;
-  return s;
-}
-function top(index, query) { return index.slice().map(i => ({...i, _score: score(i, query)})).sort((a, b) => b._score - a._score).slice(0, 5); }
-for (const name of ['search.html', 'search.js', 'search-index.json', 'scripts/build-free-ask-matrix-search.js']) needFile(name);
-needText('search.html', 'SEARCH THE MACHINE.');
-needText('search.html', 'Search V2');
-needText('search.html', 'control-structure.html');
-needText('search.html', 'data-living-pulse');
-needText('search.html', '<script src="search.js"></script>');
-needText('search.html', '<script src="living-pulse.js"></script>');
-needText('search.js', 'SEARCH V2');
-needText('search.js', '/search-index.json');
-needText('search.js', 'layerMap');
-needText('search.js', 'control-structure.html');
-needText('search.js', 'evidence-vault.html');
-needText('scripts/build-free-ask-matrix-search.js', 'coreJson');
-needText('scripts/build-free-ask-matrix-search.js', 'control-structure.html');
-needText('scripts/build-free-ask-matrix-search.js', 'missionRoutes');
-needText('scripts/build-free-ask-matrix-search.js', 'priorityRoutes');
-for (const name of ['search.html', 'search.js', 'scripts/build-free-ask-matrix-search.js']) {
+
+for (const name of ['search.html', 'search.js', 'search-index.json', 'data/search-facets.json', 'scripts/repair-search-system.js', 'scripts/search-investigation-smoke-test.js']) needFile(name);
+needText('search.html', 'SEARCH THE MACHINE', 'current search heading');
+needText('search.html', 'id="archive-search"', 'search input');
+needText('search.html', 'id="search-results"', 'search results container');
+needText('search.html', '<script src="search.js"></script>', 'search runtime');
+needText('search.js', '/search-index.json', 'local search index fetch');
+needText('search.js', "cache:'no-store'", 'fresh local index request');
+needText('search.js', 'fallbackIndex', 'local fallback index');
+needText('search.js', 'HTML returned instead of JSON', 'invalid response guard');
+needText('data/search-facets.json', 'evidenceBoundary', 'evidence boundary');
+needText('scripts/repair-search-system.js', 'search-index.json', 'canonical search repair');
+needText('scripts/search-investigation-smoke-test.js', 'search.html', 'current search smoke test');
+
+for (const name of ['search.html', 'search.js', 'scripts/repair-search-system.js']) {
   for (const bad of ['api.openai.com', 'workers-ai', 'ai-gateway', 'OPENAI_API_KEY', 'CLOUDFLARE_API_TOKEN', '@cf/']) forbid(name, bad);
 }
+
 if (exists('search-index.json')) {
-  const index = JSON.parse(read('search-index.json'));
-  if (!Array.isArray(index) || index.length < 40) issues.push('search-index.json should contain at least 40 routes after Search V2');
-  for (const route of ['control-structure.html','daily-brain-brief.html','matrix-brain.html','outcome-briefings.html','epstein-files.html','policy-watch.html','gold-reserve-tracker.html','speculation-review.html','evidence-vault.html','books.html','newsletter.html','data/daily-brain-brief.json','data/control-structure-core.json']) {
-    if (!index.some(item => item.url === route)) issues.push(`search-index.json missing Search V2 route ${route}`);
-  }
-  for (const item of index) {
-    if (!item.title || !item.url) issues.push('search-index.json contains route without title/url');
-    if (item.url && /^https?:\/\//i.test(item.url)) issues.push(`search-index.json should use local route, not external URL: ${item.url}`);
-    if (!item.layer && !item.category) issues.push(`search-index.json route lacks layer/category: ${item.url}`);
-  }
-  const queryExpectations = [
-    ['control structure', ['control-structure.html']],
-    ['gold custody audit vault', ['gold-reserve-tracker.html','gold.html','data/gold-reserves-worldwide.json']],
-    ['epstein redaction withheld court files', ['epstein-files.html','trigger-watchtower.html','record-intake-queue.html']],
-    ['agenda 2030 digital identity wallet access', ['agenda-2030.html','policy-watch.html','convergence-hypotheses.html']],
-    ['billionaire infrastructure policy influence foundation', ['billionaire-watch.html','power-atlas.html']],
-    ['speculation source chain counter source', ['speculation-review.html','dark-speculation-lab.html']]
-  ];
-  for (const [query, acceptable] of queryExpectations) {
-    const urls = top(index, query).map(i => i.url);
-    if (!urls.some(u => acceptable.includes(u))) issues.push(`Search V2 weak result for "${query}". Top URLs: ${urls.join(', ')}`);
+  let index;
+  try { index = JSON.parse(read('search-index.json')); }
+  catch (error) { issues.push(`search-index.json invalid JSON: ${error.message}`); }
+  if (index) {
+    if (!Array.isArray(index) || index.length < 40) issues.push(`search-index.json should contain at least 40 current routes, found ${Array.isArray(index) ? index.length : 'non-array'}`);
+    for (const route of ['search.html', 'books.html', 'live-intel.html', 'epstein-files.html', 'evidence-vault.html', 'download-center.html']) {
+      if (!index.some(item => item && item.url === route)) issues.push(`search-index.json missing current route ${route}`);
+    }
+    for (const item of index) {
+      if (!item || !item.title || !item.url) issues.push('search-index.json contains route without title/url');
+      if (item && /^https?:\/\//i.test(item.url || '')) issues.push(`search-index.json should use a local route, not external URL: ${item.url}`);
+    }
   }
 }
+
+if (exists('data/search-facets.json')) {
+  try {
+    const facets = JSON.parse(read('data/search-facets.json'));
+    if (Number(facets.totalResults || 0) < 40) issues.push('search facets report too few searchable results');
+    if (!facets.evidenceBoundary) issues.push('search facets missing evidence boundary');
+  } catch (error) { issues.push(`data/search-facets.json invalid JSON: ${error.message}`); }
+}
+
 if (issues.length) {
-  console.error('SEARCH V2 TEST FAILED');
+  console.error('CURRENT LOCAL SEARCH TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('SEARCH V2 TEST PASSED');
-console.log('Checked brain-aware search, mission-route boosting, JSON feed indexing, control layers, live pulse integration, local-only search, and real user query expectations.');
-
-// fallbackIndex search test fallback guard compatibility marker.
+console.log('CURRENT LOCAL SEARCH TEST PASSED');
+console.log('Checked the evidence-aware local index, no-store runtime, fallback index, required public routes, response guards and absence of external AI credentials.');

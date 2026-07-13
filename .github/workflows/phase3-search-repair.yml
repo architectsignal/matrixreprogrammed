@@ -1,0 +1,153 @@
+name: Phase 3 Search Index Repair
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-canonical-taxonomy.json'
+      - 'data/phase3-public-private-policy.json'
+      - 'data/phase3-tier-matrix-policy.json'
+      - 'data/phase3-redirect-policy.json'
+      - 'data/phase3-search-repair-policy.json'
+      - 'scripts/build-phase3-public-private-classification.js'
+      - 'scripts/build-phase3-tier-matrix.js'
+      - 'scripts/build-phase3-redirect-map.js'
+      - 'scripts/build-phase3-search-repair.js'
+      - '.github/workflows/phase3-search-repair.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-search-repair-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  search-repair:
+    name: Build non-enforcing canonical search repair plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policies and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-search-repair-policy.json','utf8'))"
+          node --check scripts/build-phase3-search-repair.js
+          node --check scripts/build-phase3-redirect-map.js
+          node --check scripts/build-phase3-tier-matrix.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['data/phase3-canonical-taxonomy.json','data/phase3-public-private-policy.json','data/phase3-tier-matrix-policy.json','data/phase3-redirect-policy.json','data/phase3-search-repair-policy.json','membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-search-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated outputs
+        run: |
+          rm -rf downloads/phase3-search-repair downloads/phase3-redirect-map downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build search repair plan
+        run: node scripts/build-phase3-search-repair.js
+
+      - name: Validate canonical search coverage and isolation
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase3-search-repair-policy.json','utf8'));
+          const classification=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
+          const redirect=JSON.parse(fs.readFileSync('downloads/phase3-redirect-map/redirect-map.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/search-repair-plan.json','utf8'));
+          const publicIndex=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/public-search-index.json','utf8'));
+          const authIndex=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/authenticated-search-index.json','utf8'));
+          const noindex=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/noindex-manifest.json','utf8'));
+          const aliases=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/route-aliases.json','utf8'));
+          const competition=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/competition-report.json','utf8'));
+          if(!report.ok||!publicIndex.ok||!authIndex.ok||!noindex.ok||!aliases.ok||!competition.ok)throw new Error('Search repair package is not healthy');
+          if(report.mode!=='plan-only'||policy.mode!=='plan-only')throw new Error('Plan-only boundary changed');
+          if(report.summary.totalItems!==classification.rows.length||report.actions.length!==classification.rows.length)throw new Error('Search coverage incomplete');
+          if(new Set(report.actions.map(row=>row.canonicalId)).size!==report.actions.length)throw new Error('Search action IDs are not unique');
+          if(new Set(publicIndex.records.map(row=>row.canonicalId)).size!==publicIndex.recordCount)throw new Error('Duplicate public search IDs');
+          if(new Set(publicIndex.records.map(row=>row.canonicalRoute)).size!==publicIndex.recordCount)throw new Error('Competing public canonical routes');
+          const forbidden=['protectedBody','memberOnlySections','privateDownloads','privateApiPayload','personalAccountData','internalOperationsData','restrictedSensitiveData'];
+          for(const record of publicIndex.records){
+            for(const key of forbidden)if(Object.prototype.hasOwnProperty.call(record,key))throw new Error(`${record.canonicalId}: forbidden public field ${key}`);
+            if(record.memberSectionsIncluded||record.privateDownloadsIncluded||record.internalDataIncluded||record.restrictedDataIncluded)throw new Error(`${record.canonicalId}: private data leaked into public index`);
+            if(!record.interpretiveLabel||!record.factualStatusInvariantKey)throw new Error(`${record.canonicalId}: evidence boundary metadata missing`);
+          }
+          const classById=new Map(classification.rows.map(row=>[row.canonicalId,row]));
+          for(const record of publicIndex.records){
+            const source=classById.get(record.canonicalId);
+            if(!source)throw new Error(`${record.canonicalId}: classification source missing`);
+            if(['internal_only','restricted_sensitive','registered_private'].includes(source.targetAccessClass))throw new Error(`${record.canonicalId}: non-public item leaked to public search`);
+          }
+          for(const alias of aliases.records){
+            if(alias.indexAsDocument!==false||alias.redirectActivated!==false)throw new Error(`${alias.aliasRoute}: alias became active document or redirect`);
+            if(alias.aliasRoute===alias.canonicalRoute)throw new Error(`${alias.aliasRoute}: self alias`);
+          }
+          if(redirect.summary.redirectLoops||redirect.summary.redirectChains||redirect.summary.canonicalRouteCollisions)throw new Error('Redirect map is unsafe for search repair');
+          if(report.summary.privateLeakage||report.summary.competingCanonicalRoutes||report.summary.duplicatePublicIds||report.summary.unresolved)throw new Error('Search repair safety counts are not zero');
+          if(Object.values({searchMutation:report.searchMutation,searchRemoval:report.searchRemoval,routeMovement:report.routeMovement,redirectActivation:report.redirectActivation,lockedSectionEnforcement:report.lockedSectionEnforcement,authenticationActivation:report.authenticationActivation,entitlementActivation:report.entitlementActivation,paymentActivation:report.paymentActivation,contentMutation:report.contentMutation}).some(Boolean))throw new Error('Protected action activated');
+          console.log(`PHASE 3 SEARCH PASS: ${publicIndex.recordCount} public documents; ${authIndex.recordCount} authenticated documents; ${noindex.recordCount} noindex items; ${aliases.recordCount} aliases.`);
+          NODE
+
+      - name: Snapshot deterministic output hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');
+          const root='downloads/phase3-search-repair';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-search-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic search plan
+        run: |
+          rm -rf downloads/phase3-search-repair downloads/phase3-redirect-map downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-search-repair.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');
+          const root='downloads/phase3-search-repair';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-search-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Search repair output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} search-repair files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-search-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Search repair planning must not change routes, live indexes, membership, Workers or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-search-repair/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload search repair reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-search-repair-${{ github.run_id }}
+          path: downloads/phase3-search-repair/
+          if-no-files-found: error
+          retention-days: 30

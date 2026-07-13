@@ -1,0 +1,212 @@
+name: Phase 2B Static Publishing Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-phase2b-preview-publishing.js'
+      - 'scripts/build-phase2-tier-projections.js'
+      - 'scripts/build-*-canonical-previews.js'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'data/access-tier-policy.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'docs/PHASE_2B_PREVIEW_PUBLISHING_LAYER.md'
+      - '.github/workflows/phase2b-preview-publishing.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2b-preview-publishing-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Build isolated static dashboards, feeds and record pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate preview publisher syntax
+        run: |
+          node --check scripts/build-phase2b-preview-publishing.js
+          node --check scripts/build-phase2-tier-projections.js
+          node --check scripts/build-canonical-preview-bundle.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const files = [
+            ...manifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js',
+            'scripts/build-canonical-preview-bundle.js',
+            'scripts/build-phase2-tier-projections.js'
+          ];
+          const unique = [...new Set(files)];
+          const hashes = Object.fromEntries(unique.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.writeFileSync('/tmp/phase2b-protected-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build first static publishing preview
+        run: node scripts/build-phase2b-preview-publishing.js
+
+      - name: Validate preview structure and isolation
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const root = 'downloads/phase2-publishing-preview';
+          const manifest = JSON.parse(fs.readFileSync(path.join(root, 'publishing-manifest.json'), 'utf8'));
+          const routes = JSON.parse(fs.readFileSync(path.join(root, 'route-manifest.json'), 'utf8'));
+          const projection = JSON.parse(fs.readFileSync('downloads/phase2-tier-projections/projection-manifest.json', 'utf8'));
+          const tiers = ['public', 'registered', 'supporter_3', 'intelligence_6', 'research_pro_9'];
+          const expectedRecords = projection.canonicalRecordCount;
+          const expectedRecordPages = expectedRecords * tiers.length;
+          const expectedHtmlPages = expectedRecordPages + tiers.length + 1;
+          const expectedRoutes = expectedHtmlPages + tiers.length;
+          if (!manifest.ok || !routes.ok) throw new Error('Publishing preview is not healthy');
+          if (manifest.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (manifest.namespace !== '/__preview/canonical/' || routes.namespace !== '/__preview/canonical/') throw new Error('Preview namespace changed');
+          if (manifest.paymentStatus !== 'deferred' || manifest.enforcementMode !== 'report-only') throw new Error('Payment or enforcement boundary changed');
+          if (manifest.canonicalRecordCount !== expectedRecords) throw new Error('Canonical record count mismatch');
+          if (manifest.dashboardCount !== 5 || manifest.feedCount !== 5) throw new Error('Dashboard or feed count mismatch');
+          if (manifest.recordPageCount !== expectedRecordPages) throw new Error(`Expected ${expectedRecordPages} record pages, received ${manifest.recordPageCount}`);
+          if (manifest.htmlPageCount !== expectedHtmlPages) throw new Error(`Expected ${expectedHtmlPages} HTML pages, received ${manifest.htmlPageCount}`);
+          if (manifest.routeCount !== expectedRoutes || routes.routeCount !== expectedRoutes) throw new Error(`Expected ${expectedRoutes} preview routes`);
+          if (manifest.errors.length) throw new Error(manifest.errors.join('\n'));
+          const routeSet = new Set();
+          for (const route of routes.routes) {
+            if (!route.route.startsWith('/__preview/canonical/')) throw new Error(`Route escaped preview namespace: ${route.route}`);
+            if (routeSet.has(route.route)) throw new Error(`Duplicate preview route: ${route.route}`);
+            routeSet.add(route.route);
+            if (!fs.existsSync(path.join(root, route.outputFile))) throw new Error(`Missing output file: ${route.outputFile}`);
+          }
+          for (const tier of tiers) {
+            const feedPath = path.join(root, 'site', '__preview', 'canonical', 'feeds', `${tier}.json`);
+            const dashboardPath = path.join(root, 'site', '__preview', 'canonical', 'dashboard', `${tier}.html`);
+            const feed = JSON.parse(fs.readFileSync(feedPath, 'utf8'));
+            const dashboard = fs.readFileSync(dashboardPath, 'utf8');
+            if (!feed.ok || feed.recordCount !== expectedRecords || feed.cards.length !== expectedRecords) throw new Error(`${tier}: feed incomplete`);
+            if (!dashboard.includes('noindex,nofollow,noarchive')) throw new Error(`${tier}: dashboard is indexable`);
+            if (/<form/i.test(dashboard) || /paypal|createSubscription|checkout-intent|\/api\//i.test(dashboard)) throw new Error(`${tier}: active functionality leaked into dashboard`);
+            const ids = new Set(feed.cards.map(card => card.id));
+            if (ids.size !== expectedRecords) throw new Error(`${tier}: feed IDs are not unique`);
+            for (const card of feed.cards) {
+              if (!card.route.startsWith(`../records/${tier}/`)) throw new Error(`${tier}/${card.id}: invalid preview record route`);
+              if (!card.conclusionBoundary || !card.missionBoundary || !card.associationBoundary) throw new Error(`${tier}/${card.id}: public safety boundary missing from feed`);
+            }
+          }
+          const indexPath = path.join(root, 'site', '__preview', 'canonical', 'index.html');
+          const index = fs.readFileSync(indexPath, 'utf8');
+          if (!index.includes('Preview only') || !index.includes('noindex,nofollow,noarchive')) throw new Error('Preview index boundary missing');
+          console.log(`PHASE 2B STRUCTURE PASS: ${expectedRecordPages} record pages, 5 dashboards, 5 feeds.`);
+          NODE
+
+      - name: Snapshot first deterministic hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-publishing-preview';
+          function walk(dir, out = []) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const target = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(target, out);
+              else out.push(target);
+            }
+            return out;
+          }
+          const hashes = Object.fromEntries(walk(root).sort().map(file => [
+            file.split(path.sep).join('/'),
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.writeFileSync('/tmp/phase2b-first-output-hashes.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Rebuild and prove deterministic output
+        run: |
+          node scripts/build-phase2b-preview-publishing.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-publishing-preview';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2b-first-output-hashes.json', 'utf8'));
+          function walk(dir, out = []) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const target = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(target, out);
+              else out.push(target);
+            }
+            return out;
+          }
+          const after = Object.fromEntries(walk(root).sort().map(file => [
+            file.split(path.sep).join('/'),
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before), ...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Preview output is not deterministic:\n${changed.slice(0, 100).join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} preview files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2b-protected-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'The Phase 2B preview publisher must not modify legacy intelligence, membership, Workers, deployment guards, canonical policies or projection inputs.'
+          };
+          fs.writeFileSync('downloads/phase2-publishing-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload static publishing preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2b-static-publishing-preview-${{ github.run_id }}
+          path: downloads/phase2-publishing-preview/
+          if-no-files-found: error
+          retention-days: 30

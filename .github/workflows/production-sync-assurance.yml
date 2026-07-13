@@ -25,6 +25,10 @@ on:
       - 'scripts/site-function-harmony-test.js'
       - 'scripts/full-system-audit.js'
       - 'scripts/live-functionality-test.js'
+      - 'scripts/free-ask-matrix-search-test.js'
+      - 'scripts/premier-resource-pressure-test.js'
+      - 'scripts/evidence-badge-pressure-test.js'
+      - 'scripts/patch-power-entities-route.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -39,6 +43,7 @@ on:
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
+      - 'power-entities.html'
       - 'homepage-mask-intro.css'
       - 'homepage-mask-intro.js'
       - 'assets/intro-eye.svg'
@@ -70,6 +75,10 @@ on:
       - 'scripts/site-function-harmony-test.js'
       - 'scripts/full-system-audit.js'
       - 'scripts/live-functionality-test.js'
+      - 'scripts/free-ask-matrix-search-test.js'
+      - 'scripts/premier-resource-pressure-test.js'
+      - 'scripts/evidence-badge-pressure-test.js'
+      - 'scripts/patch-power-entities-route.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -84,6 +93,7 @@ on:
       - 'scripts/verify-live-production.js'
       - 'scripts/production-sync-test.js'
       - 'scripts/production-deploy-guard.js'
+      - 'power-entities.html'
       - 'homepage-mask-intro.css'
       - 'homepage-mask-intro.js'
       - 'assets/intro-eye.svg'
@@ -118,8 +128,14 @@ jobs:
         run: |
           node --check scripts/full-system-audit.js
           node --check scripts/live-functionality-test.js
+          node --check scripts/free-ask-matrix-search-test.js
+          node --check scripts/premier-resource-pressure-test.js
+          node --check scripts/evidence-badge-pressure-test.js
+          node --check scripts/patch-power-entities-route.js
           grep -q "paymentStatus: 'deferred'" scripts/live-functionality-test.js
           grep -q "Cloudflare D1 MEMBERS_DB" scripts/live-functionality-test.js
+          grep -q "power-entities.html" scripts/final-production-reconcile.js
+          grep -q "What to watch next" scripts/patch-conclusion-integrity-cards.js
           ! grep -q "paypal-membership-test-runner.js" scripts/full-system-audit.js
           ! grep -q "Deploy Production$" .github/workflows/live-functionality-test.yml
       - name: Check Live Intel feeds for assurance
@@ -163,6 +179,10 @@ jobs:
             downloads/cloudflare-worker-routes-test.json
             downloads/cloudflare-focused-pressure-wrapper.json
             downloads/site-function-harmony-report.json
+            downloads/free-ask-matrix-search-test.json
+            downloads/premier-resource-pressure-test.json
+            downloads/evidence-badge-pressure-test.json
+            downloads/power-entities-route-report.json
             downloads/generated-site-repair-report.json
             downloads/final-production-reconcile.json
             downloads/homepage-mask-intro-test.json

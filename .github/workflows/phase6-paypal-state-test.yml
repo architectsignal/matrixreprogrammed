@@ -1,0 +1,139 @@
+name: Phase 6 PayPal Subscription State Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - agent/phase5-auth-dashboards-clean
+      - agent/phase5-auth-dashboards
+      - agent/phase4-email-lifecycle
+      - main
+    paths:
+      - 'data/phase6-paypal-policy.json'
+      - 'data/phase6-paypal-webhook-coverage.json'
+      - 'migrations/phase6_paypal_subscriptions.sql'
+      - 'migrations/phase6_paypal_failure_counter_fix.sql'
+      - 'src/worker-paypal-subscriptions.js'
+      - 'src/worker-production.js'
+      - 'membership.html'
+      - 'paypal-membership.js'
+      - 'billing-dashboard.html'
+      - 'billing-dashboard.js'
+      - 'admin-payment-dashboard.html'
+      - 'admin-payment-dashboard.js'
+      - 'scripts/phase6-paypal-state-test.mjs'
+      - 'scripts/phase6-paypal-state-runner.mjs'
+      - '.github/workflows/phase6-paypal-state-test.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase6-paypal-state-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sandbox-state-machine:
+    name: Prove all PayPal states before live activation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy, schema and application syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase6-paypal-policy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/phase6-paypal-webhook-coverage.json','utf8'))"
+          node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-production.js
+          node --check paypal-membership.js
+          node --check billing-dashboard.js
+          node --check admin-payment-dashboard.js
+          node --check scripts/phase6-paypal-state-test.mjs
+          node --check scripts/phase6-paypal-state-runner.mjs
+          grep -q "paypal_subscription_transitions" migrations/phase6_paypal_subscriptions.sql
+          grep -q "paypal_runtime_settings" migrations/phase6_paypal_subscriptions.sql
+          grep -q "paypal_preserve_failure_count_on_failed_snapshot" migrations/phase6_paypal_failure_counter_fix.sql
+
+      - name: Record protected Phase 4 and Phase 5 hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['src/worker-email-lifecycle.js','src/worker-member-experience.js','src/worker-forum-persistence.js','migrations/phase4_email_lifecycle.sql','migrations/phase5_member_experience.sql','migrations/phase5_member_experience_timestamp_fix.sql','data/phase4-email-lifecycle-policy.json','data/phase5-auth-entitlement-policy.json','member-dashboard.html','member-dashboard-app.js','wrangler.toml'];
+          const hashes=Object.fromEntries(files.filter(fs.existsSync).map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase6-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Run complete PayPal sandbox state machine
+        run: node scripts/phase6-paypal-state-runner.mjs
+
+      - name: Validate Phase 6 exit evidence
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase6-paypal-policy.json','utf8'));
+          const coverage=JSON.parse(fs.readFileSync('data/phase6-paypal-webhook-coverage.json','utf8'));
+          const summary=JSON.parse(fs.readFileSync('downloads/phase6-paypal-state-test/summary.json','utf8'));
+          const lifecycle=JSON.parse(fs.readFileSync('downloads/phase6-paypal-state-test/lifecycle.json','utf8'));
+          if(!summary.ok||!lifecycle.ok)throw new Error('Phase 6 proof package is not healthy');
+          if(summary.stagesPassed!==15||summary.requiredStages!==15||lifecycle.stages.length!==15||lifecycle.stages.some(stage=>stage.passed!==true))throw new Error('All 15 payment states did not pass');
+          if(JSON.stringify(summary.pricesEur)!==JSON.stringify(['3.00','6.00','9.00']))throw new Error('Locked membership prices changed');
+          if(summary.productsCreated!==3||summary.plansCreated!==3)throw new Error('Three sandbox products and plans were not proven');
+          if(summary.webhookEvents<10||summary.verifiedWebhooks<10||summary.transitions<10||summary.paymentRecords<5)throw new Error('Payment event or transition coverage is incomplete');
+          if(summary.sandboxCheckoutEnabledAtEnd!==false||summary.productionCheckoutEnabled!==false)throw new Error('Checkout activation remained enabled after the test');
+          if(summary.realPayPalCalls!==false||summary.realCharges!==false||summary.productionMigrationExecution!==false)throw new Error('A protected real-world boundary changed');
+          for(const surface of policy.requiredSurfaces)if(!fs.existsSync(surface))throw new Error(`Required payment surface missing: ${surface}`);
+          const routeSurface=['src/worker-paypal-subscriptions.js','src/worker-production.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
+          for(const route of policy.requiredRoutes)if(!routeSurface.includes(route))throw new Error(`Required PayPal route missing: ${route}`);
+          for(const event of policy.requiredWebhookEvents)if(!coverage.events[event])throw new Error(`Required webhook state is not covered: ${event}`);
+          console.log(`PHASE 6 EXIT PASS: ${summary.stagesPassed}/15 sandbox payment states; ${Object.keys(coverage.events).length} webhook events mapped; live switch remains off.`);
+          NODE
+
+      - name: Snapshot first deterministic result
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase6-paypal-state-test';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase6-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic state model
+        run: |
+          node scripts/phase6-paypal-state-runner.mjs
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase6-paypal-state-test';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase6-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Phase 6 output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} Phase 6 files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase6-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,realPayPalCalls:false,realCharges:false,productionCheckoutEnabled:false,productionMigrationExecution:false,boundary:'Phase 6 tests must not modify Phase 4 email, Phase 5 member entitlements, forum persistence, deployment configuration or production data.'};
+          fs.writeFileSync('downloads/phase6-paypal-state-test/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Phase 6 proof package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase6-paypal-state-test-${{ github.run_id }}
+          path: downloads/phase6-paypal-state-test/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-preview-only",
+  "mode": "preview-only",
+  "purpose": "Generate isolated static previews for every Phase 3 item, category and target access class without changing existing routes, content, search, navigation, authentication, entitlements or payment.",
+  "namespace": "/__preview/phase3/",
+  "exitCondition": "Every important item has a reachable public or review preview, appears in a category and access hub, and exposes no section beyond its simulated access decision.",
+  "previewSurfaces": {
+    "programme_index": true,
+    "category_hubs": true,
+    "access_class_hubs": true,
+    "public_item_preview": true,
+    "target_access_preview": true,
+    "migration_review_queue": true,
+    "internal_review_hub": true,
+    "restricted_review_hub": true,
+    "commercial_hub": true,
+    "machine_readable_manifest": true
+  },
+  "publicItemRules": {
+    "public_core": "Show the complete structural public preview and public safety checklist.",
+    "public_preview": "Show public metadata, safety fields, evidence boundaries and the required tier explanation.",
+    "registered_private": "Show public entry metadata and login requirement only.",
+    "supporter_private": "Show the public preview and Supporter requirement.",
+    "intelligence_private": "Show the public preview and Intelligence Member requirement.",
+    "research_pro_private": "Show the public preview and Research Pro requirement.",
+    "separate_product": "Show a public product landing preview without purchased files.",
+    "internal_only": "Do not create a public item page; create an internal review record only.",
+    "restricted_sensitive": "Do not create a public item page; create a restricted review record only."
+  },
+  "targetPreviewRules": {
+    "privatePreviewsShowStructureNotProtectedBody": true,
+    "privatePreviewsListUnlockedSections": true,
+    "privatePreviewsListToolsDownloadsAndDelivery": true,
+    "internalPreviewsShowClassificationAndReplacementRequirements": true,
+    "restrictedPreviewsShowClassificationAndReviewRequirements": true,
+    "separateProductPreviewsShowPurchaseBoundary": true,
+    "factualStatusInvariantVisible": true,
+    "interpretiveBoundaryVisible": true
+  },
+  "htmlSafetyRules": {
+    "noindex": true,
+    "noForms": true,
+    "noExecutableScripts": true,
+    "noApiCalls": true,
+    "noAuthenticationCalls": true,
+    "noPaymentCode": true,
+    "noEntitlementEnforcement": true,
+    "noPrivateSourceBody": true,
+    "noExternalAssetRequirement": true
+  },
+  "navigationRules": {
+    "everyPublicPreviewLinkedFromCategoryHub": true,
+    "everyTargetPreviewLinkedFromAccessHub": true,
+    "everyItemLinkedFromProgrammeManifest": true,
+    "everyMigrationReviewItemLinkedFromReviewQueue": true,
+    "noOrphanPreviewRoutes": true
+  },
+  "protectedBoundaries": {
+    "routeMovement": false,
+    "redirectActivation": false,
+    "searchMutation": false,
+    "navigationMutation": false,
+    "lockedSectionEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "emailDeliveryActivation": false,
+    "paymentActivation": false,
+    "contentMutation": false
+  }
+}

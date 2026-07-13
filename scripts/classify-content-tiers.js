@@ -7,7 +7,7 @@ const outputDir = path.join(root, 'downloads');
 const policyPath = 'data/content-tier-taxonomy-policy.json';
 const ignoredDirs = new Set(['.git', 'node_modules', '_site', '.wrangler']);
 const supportedDocumentExtensions = new Set(['.pdf', '.csv', '.zip', '.docx']);
-const generatedJsonPrefixes = [
+const generatedOutputPrefixes = [
   'downloads/phase0-',
   'downloads/phase1-',
   'downloads/phase2-',
@@ -20,7 +20,7 @@ const generatedJsonPrefixes = [
   'downloads/conclusion-engine-preview/',
   'downloads/evidence-delta-preview/'
 ];
-const generatedJsonNames = new Set([
+const generatedOutputNames = new Set([
   'non-mutation-report.json',
   'source-hashes-before.json',
   'source-hashes-after.json',
@@ -48,10 +48,10 @@ function walk(dir, out = []) {
   }
   return out;
 }
-function isGeneratedJsonOutput(file) {
+function isGeneratedOutput(file) {
   const lower = file.toLowerCase();
-  if (generatedJsonPrefixes.some(prefix => lower.startsWith(prefix))) return true;
-  return generatedJsonNames.has(path.basename(lower));
+  if (generatedOutputPrefixes.some(prefix => lower.startsWith(prefix))) return true;
+  return generatedOutputNames.has(path.basename(lower));
 }
 function hashFile(rel) {
   return crypto.createHash('sha256').update(fs.readFileSync(full(rel))).digest('hex').slice(0, 16);
@@ -97,11 +97,13 @@ const policy = readJson(policyPath);
 if (policy.paymentStatus !== 'deferred') throw new Error('Content classification requires deferred payments.');
 if (policy.enforcementMode !== 'report-only') throw new Error('Content classification requires report-only enforcement.');
 
-const files = walk(root).filter(file => {
+const walkedFiles = walk(root);
+const files = walkedFiles.filter(file => {
+  if (isGeneratedOutput(file)) return false;
   const ext = path.extname(file).toLowerCase();
   if (ext === '.html') return true;
   if (supportedDocumentExtensions.has(ext)) return true;
-  return ext === '.json' && file.startsWith('downloads/') && !isGeneratedJsonOutput(file);
+  return ext === '.json' && file.startsWith('downloads/');
 });
 const rules = [...policy.rules].sort((a, b) => Number(b.priority || 0) - Number(a.priority || 0));
 const rows = [];
@@ -166,11 +168,14 @@ for (const file of files) {
   });
 }
 
+const ignoredGeneratedOutputs = walkedFiles.filter(file => isGeneratedOutput(file));
 const summary = {
   totalClassified: rows.length,
   htmlRoutes: rows.filter(row => row.fileType === 'html_route').length,
   documentsAndDownloads: rows.filter(row => row.fileType === 'download_or_document').length,
-  ignoredGeneratedJsonOutputs: walk(root).filter(file => path.extname(file).toLowerCase() === '.json' && file.startsWith('downloads/') && isGeneratedJsonOutput(file)).length,
+  ignoredGeneratedOutputs: ignoredGeneratedOutputs.length,
+  ignoredGeneratedHtmlOutputs: ignoredGeneratedOutputs.filter(file => path.extname(file).toLowerCase() === '.html').length,
+  ignoredGeneratedJsonOutputs: ignoredGeneratedOutputs.filter(file => path.extname(file).toLowerCase() === '.json').length,
   byTier: countBy(rows, row => row.recommendedTier),
   byCategory: countBy(rows, row => row.category),
   bySubcategory: countBy(rows, row => row.subcategory),
@@ -190,7 +195,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   paymentStatus: policy.paymentStatus,
   enforcementMode: policy.enforcementMode,
-  inventoryBoundary: 'Generated report, audit, preview and simulation JSON outputs are excluded from classification so the inventory cannot recursively ingest itself.',
+  inventoryBoundary: 'Generated report, audit, preview and simulation outputs are excluded from classification regardless of file type, so chained builds cannot recursively ingest their own HTML or JSON artifacts.',
   boundary: 'This classifier recommends categories and access tiers only. It does not move, rename, hide, delete, redirect, paywall, publish, authenticate or change any route.',
   summary,
   conflicts,
@@ -218,6 +223,8 @@ const lines = [
   `- Files classified: ${summary.totalClassified}`,
   `- HTML routes: ${summary.htmlRoutes}`,
   `- Documents and downloads: ${summary.documentsAndDownloads}`,
+  `- Generated outputs excluded: ${summary.ignoredGeneratedOutputs}`,
+  `- Generated HTML outputs excluded: ${summary.ignoredGeneratedHtmlOutputs}`,
   `- Generated JSON outputs excluded: ${summary.ignoredGeneratedJsonOutputs}`,
   `- Uncategorized: ${summary.uncategorized}`,
   `- Internal candidates: ${summary.internalCandidates}`,
@@ -244,6 +251,6 @@ const lines = [
 ];
 fs.writeFileSync(path.join(outputDir, 'phase0-content-tier-classification.md'), lines.join('\n'));
 
-console.log(`PHASE 0 CONTENT CLASSIFICATION: ${summary.totalClassified} files; ${summary.uncategorized} uncategorized; ${summary.samePriorityConflicts} same-priority conflicts; ${summary.ignoredGeneratedJsonOutputs} generated JSON outputs ignored.`);
+console.log(`PHASE 0 CONTENT CLASSIFICATION: ${summary.totalClassified} files; ${summary.uncategorized} uncategorized; ${summary.samePriorityConflicts} same-priority conflicts; ${summary.ignoredGeneratedOutputs} generated outputs ignored.`);
 console.log('Reports: downloads/phase0-content-tier-classification.json and downloads/phase0-content-tier-classification.md');
 if (conflicts.length) process.exitCode = 1;

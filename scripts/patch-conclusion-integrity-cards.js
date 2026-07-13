@@ -22,7 +22,10 @@ function replaceIntegrity(html, section) {
 }
 function sourceList(items) { return `<ul>${array(items).filter(Boolean).map(item => `<li>${esc(item)}</li>`).join('')}</ul>`; }
 function card(item) {
-  return `<article class="card redline conclusion-integrity-card"><span class="label">${esc(item.classification)} · confidence ${esc(item.confidence)}</span><h3>${esc(item.title)}</h3><p>${esc(cleanSentence(item.conclusion))}</p><p><strong>Evidence basis:</strong> ${esc(item.evidenceBasis)}</p><p><strong>Supporting records/signals:</strong> ${esc(item.supportingCount)}</p><p><strong>Freshness:</strong> ${esc(pretty(item.freshness))}</p><p><strong>Scoring or decision rule:</strong> ${esc(item.formula)}</p><p><strong>Counter-evidence status:</strong> ${esc(item.counterEvidence)}</p><p><strong>Limitation:</strong> ${esc(item.limitation)}</p><details><summary>Source inputs</summary>${sourceList(item.sources)}</details>${item.route ? `<a class="btn alt" href="${esc(item.route)}">Inspect evidence route</a>` : ''}</article>`;
+  const mechanism = item.mechanism || item.formula || 'The route is produced by the stated evidence and ranking rule.';
+  const implication = item.implication || 'The result identifies where readers should concentrate source verification; it does not establish guilt or hidden coordination.';
+  const nextWatch = item.nextWatch || 'Verify the linked route against the named source inputs, monitor newer primary records, and record any contradiction or downgrade condition.';
+  return `<article class="card redline conclusion-integrity-card"><span class="label">${esc(item.classification)} · confidence ${esc(item.confidence)}</span><h3>${esc(item.title)}</h3><p>${esc(cleanSentence(item.conclusion))}</p><p><strong>Evidence basis:</strong> ${esc(item.evidenceBasis)}</p><p><strong>Supporting records/signals:</strong> ${esc(item.supportingCount)}</p><p><strong>Freshness:</strong> ${esc(pretty(item.freshness))}</p><p><strong>Mechanism:</strong> ${esc(mechanism)}</p><p><strong>Scoring or decision rule:</strong> ${esc(item.formula)}</p><p><strong>Why it matters / implication:</strong> ${esc(implication)}</p><p><strong>Counter-evidence status:</strong> ${esc(item.counterEvidence)}</p><p><strong>Limitation:</strong> ${esc(item.limitation)}</p><p><strong>What to watch next:</strong> ${esc(nextWatch)}</p><details><summary>Source inputs</summary>${sourceList(item.sources)}</details>${item.route ? `<a class="btn alt" href="${esc(item.route)}">Inspect evidence route</a>` : ''}</article>`;
 }
 function section(title, lead, items) {
   return `${markerStart}<section id="conclusion-integrity" class="section wrap"><style id="conclusion-integrity-style">.conclusion-integrity-card .label{text-transform:uppercase}.conclusion-integrity-card details{margin:.75rem 0}.conclusion-integrity-card summary{cursor:pointer;font-weight:700}</style><div class="eyebrow">Evidence And Confidence Layer</div><h2>${esc(title)}</h2><p class="lead">${esc(lead)}</p><div class="grid">${items.map(card).join('')}</div><p><strong>Boundary:</strong> confidence describes the strength of the stated method and available records. It is not a probability that a person or institution is guilty, corrupt or secretly coordinated.</p></section>${markerEnd}`;
@@ -55,15 +58,18 @@ function powerIntegrity() {
       supportingCount: isMissing ? 1 : Math.max(1, Number(graph.nodeCount || 0)),
       freshness: product.updated,
       formula: isMissing ? 'First unresolved record in the current missing-record queue.' : 'Base 20 + note signals + route signal + category signal + capped matching brain score; maximum 100.',
+      mechanism: isMissing ? 'The unresolved source queue elevates the first record gap that could confirm, narrow or falsify the current route.' : 'The machine combines route presence, evidence signals, category weight and capped brain score to rank which documented lane deserves review first.',
+      implication: isMissing ? 'Resolving this record gap could materially upgrade or downgrade a published route.' : 'A high rank directs reader attention and research effort; it does not prove real-world control, intent or wrongdoing.',
       counterEvidence: isMissing ? 'The missing record itself may confirm, narrow or falsify the route.' : 'Not systematically collected by this ranking. Open the evidence route and missing-record queue before drawing a substantive conclusion.',
       limitation: isMissing ? 'Priority does not establish that the absent record contains wrongdoing.' : 'Rank position measures the site model, not real-world control, guilt, intent or coordination.',
+      nextWatch: isMissing ? 'Obtain the named primary record, preserve its date and scope, and update the conclusion when it confirms, narrows or contradicts the route.' : 'Open the named source inputs, verify the strongest primary record, and monitor contradictory filings, corrections or newer official data.',
       sources
     };
   });
-  product.integrityVersion = 1;
+  product.integrityVersion = 2;
   product.conclusions = array(product.conclusions).map((item, index) => ({ ...item, text: cleanSentence(item.text), integrity: integrity[index] }));
   write('data/daily-power-conclusions.json', JSON.stringify(product, null, 2));
-  write('daily-power-conclusions.html', replaceIntegrity(read('daily-power-conclusions.html'), section('HOW STRONG IS EACH MACHINE CONCLUSION?', 'Every ranking is labelled as fact, official finding, inference, heuristic or missing-record priority, with the input files and limitations shown.', integrity)));
+  write('daily-power-conclusions.html', replaceIntegrity(read('daily-power-conclusions.html'), section('HOW STRONG IS EACH MACHINE CONCLUSION?', 'Every ranking shows its mechanism, implication, evidence class, source inputs, limitation and the next record to verify.', integrity)));
   return integrity.length;
 }
 
@@ -83,14 +89,17 @@ function investigationIntegrity(kind) {
     supportingCount: 1 + array(finding.wrongdoingIndicators).length,
     freshness: finding.published || product.generatedAt,
     formula: 'Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.',
+    mechanism: 'The investigation engine combines source authority, legal status, severity, recency and corroborating indicators without converting allegations into findings.',
+    implication: 'The result identifies a source-led development that may change an investigation route or its evidential status.',
     counterEvidence: finding.counterpoint || 'Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.',
     limitation: finding.evidenceBoundary || product.boundary || 'The source establishes only its exact stated scope.',
+    nextWatch: 'Monitor the linked primary source, appeals, corrections, later rulings and any record that changes the stated legal or evidential status.',
     sources: [finding.itemUrl || finding.sourceUrl, dataFile, 'data/investigation-source-registry.json', 'data/investigation-ledger.json']
   }));
-  product.integrityVersion = 1;
+  product.integrityVersion = 2;
   product.strongestFindings = array(product.strongestFindings).map((item, index) => ({ ...item, integrity: integrity[index] }));
   write(dataFile, JSON.stringify(product, null, 2));
-  write(htmlFile, replaceIntegrity(read(htmlFile), section(`${kind.toUpperCase()} CONCLUSION CONFIDENCE CARDS`, 'Each published finding shows its legal/evidential status, direct source, freshness, counter-evidence requirement and exact limitation.', integrity.length ? integrity : [{ title: 'No threshold finding', conclusion: 'No new finding crossed the publication threshold.', classification: 'neutral result', confidence: 'not applicable', evidenceBasis: 'Registered sources were checked, but no finding met the current threshold.', supportingCount: 0, freshness: product.generatedAt, formula: 'No qualifying finding.', counterEvidence: 'Continue monitoring the source ledger.', limitation: 'Absence of a published finding does not prove absence of wrongdoing.', sources: [dataFile], route: 'investigation-source-ledger.html' }])));
+  write(htmlFile, replaceIntegrity(read(htmlFile), section(`${kind.toUpperCase()} CONCLUSION CONFIDENCE CARDS`, 'Each published finding shows its mechanism, implication, legal status, direct source, counter-evidence requirement, limitation and next watch condition.', integrity.length ? integrity : [{ title: 'No threshold finding', conclusion: 'No new finding crossed the publication threshold.', classification: 'neutral result', confidence: 'not applicable', evidenceBasis: 'Registered sources were checked, but no finding met the current threshold.', supportingCount: 0, freshness: product.generatedAt, formula: 'No qualifying finding.', mechanism: 'The publication threshold was not met by the current source set.', implication: 'No new route should be promoted from this cycle.', counterEvidence: 'Continue monitoring the source ledger.', limitation: 'Absence of a published finding does not prove absence of wrongdoing.', nextWatch: 'Check the next scheduled source sweep and any newly registered primary records.', sources: [dataFile], route: 'investigation-source-ledger.html' }]));
   return integrity.length;
 }
 
@@ -108,14 +117,17 @@ function brainIntegrity() {
     supportingCount: Number(brain.summary?.signalCount || 0),
     freshness: brain.updated,
     formula: 'Synthesis of outcome, probability, signal, policy, reserve and disclosure feeds; not a criminal or factual verdict.',
+    mechanism: 'The brief combines current signals, scenarios, outcome feeds and disclosure records into a ranked synthesis.',
+    implication: 'The synthesis identifies the routes most likely to deserve immediate source review, not a guaranteed outcome.',
     counterEvidence: 'Downgrade conditions, missing records and contradictory official records must remain visible in the linked source routes.',
     limitation: brain.boundary || 'This is a briefing synthesis, not proof of intent or coordination.',
+    nextWatch: 'Monitor the linked source feeds, downgrade conditions and missing-record queue for any change to the synthesis.',
     sources: ['data/daily-brain-brief.json', 'data/outcome-briefings.json', 'data/probability-lab-core.json']
   }));
-  brain.integrityVersion = 1;
+  brain.integrityVersion = 2;
   brain.integrity = items;
   write('data/daily-brain-brief.json', JSON.stringify(brain, null, 2));
-  write('daily-brain-brief.html', replaceIntegrity(read('daily-brain-brief.html'), section('DAILY BRAIN CONFIDENCE CARDS', 'The daily synthesis is separated from primary records and shows the data volume, freshness and downgrade boundary behind each conclusion.', items)));
+  write('daily-brain-brief.html', replaceIntegrity(read('daily-brain-brief.html'), section('DAILY BRAIN CONFIDENCE CARDS', 'The daily synthesis is separated from primary records and shows mechanism, implication, data volume, freshness, limitation and next watch condition.', items)));
   return items.length;
 }
 
@@ -133,14 +145,17 @@ function outcomeIntegrity() {
     supportingCount: array(brief.records).length,
     freshness: outcomes.updated,
     formula: 'Current situation + named records + institutional mechanism + explicit watch conditions.',
+    mechanism: 'The scenario links the current situation to named institutions, record types and an explicit institutional mechanism.',
+    implication: 'The briefing identifies a plausible route and the records that would make it more or less likely; it is not a prediction guarantee.',
     counterEvidence: `Watch conditions: ${array(brief.watch).join('; ') || 'not stated'}.`,
     limitation: outcomes.boundary || 'A scenario briefing is not a prediction guarantee or proof of a hidden plan.',
+    nextWatch: array(brief.watch).join('; ') || 'Monitor the named records and institutions for confirming or contradictory developments.',
     sources: ['data/outcome-briefings.json', ...array(brief.records)]
   }));
-  outcomes.integrityVersion = 1;
+  outcomes.integrityVersion = 2;
   outcomes.briefings = array(outcomes.briefings).map((item, index) => ({ ...item, integrity: items[index] }));
   write('data/outcome-briefings.json', JSON.stringify(outcomes, null, 2));
-  write('outcome-briefings.html', replaceIntegrity(read('outcome-briefings.html'), section('OUTCOME BRIEFING CONFIDENCE CARDS', 'Scenario language is displayed separately from established facts, with named record requirements and watch conditions.', items)));
+  write('outcome-briefings.html', replaceIntegrity(read('outcome-briefings.html'), section('OUTCOME BRIEFING CONFIDENCE CARDS', 'Scenario language is separated from established facts, with mechanism, implication, record requirements, limitations and watch conditions.', items)));
   return items.length;
 }
 

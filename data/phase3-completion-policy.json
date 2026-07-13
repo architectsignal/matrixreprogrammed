@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "audit-only",
+  "purpose": "Provide one final fail-closed Phase 3 readiness decision across taxonomy, public/private classification, tiers, locked sections, previews, redirects, search, tags and related-content navigation.",
+  "exitCondition": "No important item is uncategorized, materially duplicated or inaccessible through navigation and search; all access and evidence boundaries remain intact; no live migration or service activation has occurred.",
+  "requiredPackages": [
+    "classification",
+    "tier_matrix",
+    "locked_section_simulation",
+    "preview_generation",
+    "redirect_map",
+    "search_repair",
+    "entity_topic_tags",
+    "related_content"
+  ],
+  "requiredZeroCounts": [
+    "unresolvedTaxonomy",
+    "exactHashDuplicateCandidates",
+    "lockedSectionLeakage",
+    "previewOrphans",
+    "previewSafetyErrors",
+    "redirectLoops",
+    "redirectChains",
+    "redirectCollisions",
+    "searchCompetingRoutes",
+    "searchDuplicateIds",
+    "searchPrivateLeakage",
+    "searchUnresolved",
+    "tagMissingTopics",
+    "tagInvalidTopics",
+    "relatedPublicLeakage",
+    "relatedDuplicateTargets",
+    "inaccessibleNonRestrictedItems"
+  ],
+  "minimums": {
+    "importantItems": 1700,
+    "publicSearchDocuments": 300,
+    "authenticatedSearchDocuments": 500,
+    "publicPreviewPages": 300,
+    "topicTaggedItems": 1700,
+    "publicRelatedLinks": 1000,
+    "authenticatedRelatedLinks": 5000
+  },
+  "allowedOutstandingReview": [
+    "low_confidence_category_review",
+    "public_preview_copy_review",
+    "internal_route_replacement_review",
+    "restricted_content_review",
+    "tag_entity_review",
+    "related_link_quality_review"
+  ],
+  "protectedBoundaries": {
+    "liveMigrationReady": false,
+    "routeMovement": false,
+    "redirectActivation": false,
+    "searchMutation": false,
+    "navigationMutation": false,
+    "contentMutation": false,
+    "lockedSectionEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "emailDeliveryActivation": false,
+    "paymentActivation": false
+  }
+}

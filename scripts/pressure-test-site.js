@@ -69,7 +69,10 @@ if (deployStatus) {
 }
 if (deployHealth) {
   if (!deployHealth.ok) hard.push('deploy-health.json ok should be true');
-  if (!Array.isArray(deployHealth.routes) || !deployHealth.routes.includes('/forum-health')) hard.push('deploy-health.json missing /forum-health route');
+  const legacyRoutes = Array.isArray(deployHealth.routes) ? deployHealth.routes : [];
+  const checkedRoutes = Array.isArray(deployHealth.checks) ? deployHealth.checks.filter(item => item && item.exists !== false && item.markerPresent !== false).map(item => item.route) : [];
+  const verifiedRoutes = new Set([...legacyRoutes, ...checkedRoutes]);
+  if (!verifiedRoutes.has('/forum-health')) hard.push('deploy-health.json missing verified /forum-health route');
 }
 
 // Generated book pages must exist for published books, but older atlas/evidence copy expectations are soft.

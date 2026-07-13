@@ -1,4 +1,5 @@
 import forumWorker from './worker-forum-persistence.js';
+import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -32,14 +33,20 @@ const jsonHeaders = {
   'X-Matrix-Origin': 'cloudflare-worker-production-boundary'
 };
 
-function unavailable(reason, detail = '') {
+function unavailable(reason, detail = '', subsystem = 'forum') {
+  const authoritativeStorage = subsystem === 'email'
+    ? 'Cloudflare D1 MEMBERS_DB email lifecycle tables'
+    : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+  const error = subsystem === 'email'
+    ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
+    : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
     saved: false,
     d1Connected: false,
-    authoritativeStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts',
-    error: 'Forum storage is unavailable. No legacy success response was accepted.',
+    authoritativeStorage,
+    error,
     reason,
     detail: String(detail || '').slice(0, 300),
     checkedAt: new Date().toISOString()
@@ -55,17 +62,14 @@ function d1OnlyForumEnv(env) {
    * D1 is the production forum database. The historical KV namespace is optional
    * migration/recovery infrastructure and must never be able to block forum startup,
    * reads, writes or health checks when its daily quota is exhausted.
-   *
-   * KV data can be migrated later through a controlled maintenance run. Public forum
-   * traffic is deliberately isolated from KV so it remains available on D1 alone.
    */
   return { ...env, FORUM_POSTS: undefined };
 }
 
 async function validateForumResponse(path, response) {
-  const origin = response.headers.get('x-matrix-origin');
-  if (origin !== 'cloudflare-worker-forum-d1') {
-    return unavailable('non-authoritative-forum-response-blocked', `Origin was ${origin || 'missing'}`);
+  const responseOrigin = response.headers.get('x-matrix-origin');
+  if (responseOrigin !== 'cloudflare-worker-forum-d1') {
+    return unavailable('non-authoritative-forum-response-blocked', `Origin was ${responseOrigin || 'missing'}`);
   }
   if (path === '/forum-health') {
     let health;
@@ -80,9 +84,25 @@ async function validateForumResponse(path, response) {
   return response;
 }
 
+async function validateEmailResponse(response) {
+  const responseOrigin = response.headers.get('x-matrix-origin');
+  if (responseOrigin !== 'cloudflare-worker-email-lifecycle') {
+    return unavailable('non-authoritative-email-response-blocked', `Origin was ${responseOrigin || 'missing'}`, 'email');
+  }
+  return response;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+    if (emailRoutes.has(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');
+      try {
+        return validateEmailResponse(await emailWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('email-worker-exception', error?.message || error, 'email');
+      }
+    }
     if (!forumRoutes.has(path)) return forumWorker.fetch(request, env, ctx);
     if (!hasD1(env)) return unavailable('members-db-binding-unavailable');
     try {
@@ -91,5 +111,10 @@ export default {
     } catch (error) {
       return unavailable('forum-worker-exception', error?.message || error);
     }
+  },
+
+  async scheduled(event, env, ctx) {
+    if (!hasD1(env)) return;
+    return emailWorker.scheduled(event, env, ctx);
   }
 };

@@ -1,0 +1,145 @@
+name: Phase 4 Email Lifecycle Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - agent/phase-0-1-inventory-schema
+      - main
+    paths:
+      - 'src/worker-email-lifecycle.js'
+      - 'src/worker-production.js'
+      - 'newsletter.js'
+      - 'newsletter.html'
+      - 'email-status.html'
+      - 'subscriber-dashboard.html'
+      - 'admin-campaign-monitor.html'
+      - 'data/phase4-email-*.json'
+      - 'migrations/phase4_email_lifecycle*.sql'
+      - 'scripts/phase4-email-lifecycle-test.mjs'
+      - '.github/workflows/phase4-email-lifecycle-test.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase4-email-lifecycle-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  clean-account-lifecycle:
+    name: Complete clean subscriber lifecycle with mocked Brevo
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate implementation syntax and required surfaces
+        run: |
+          node --check src/worker-email-lifecycle.js
+          node --check src/worker-production.js
+          node --check newsletter.js
+          node --check scripts/phase4-email-lifecycle-test.mjs
+          test -f newsletter.html
+          test -f email-status.html
+          test -f subscriber-dashboard.html
+          test -f admin-campaign-monitor.html
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['src/worker-email-lifecycle.js','src/worker-production.js','src/worker-forum-persistence.js','src/worker.js','newsletter.js','newsletter.html','membership.html','wrangler.toml','data/access-tier-policy.json'];
+          const hashes=Object.fromEntries(files.filter(fs.existsSync).map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase4-lifecycle-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated lifecycle reports
+        run: rm -rf downloads/phase4-email-lifecycle-test
+
+      - name: Run complete clean-account lifecycle
+        run: node scripts/phase4-email-lifecycle-test.mjs
+
+      - name: Assert every requested Phase 4 deliverable
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const report=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-test/lifecycle-test.json','utf8'));
+          const steps=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-test/steps.json','utf8'));
+          const manifest=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-test/manifest.json','utf8'));
+          if(!report.ok||!steps.ok||!manifest.ok)throw new Error('Clean-account lifecycle package is not healthy');
+          const required=[
+            'signup-d1-provider-verification-delivery',
+            'verification-welcome-segments',
+            'subscriber-dashboard-preferences',
+            'daily-segment-campaign-send',
+            'delivery-event-recording-idempotency',
+            'subscriber-and-admin-dashboards',
+            'unsubscribe-immediate-suppression',
+            'explicit-resubscribe-lifecycle',
+            'daily-weekly-automated-sends',
+            'bounce-complaint-suppression-path',
+            'provider-failure-no-false-success'
+          ];
+          const passed=new Set(steps.records.filter(item=>item.passed).map(item=>item.name));
+          for(const name of required)if(!passed.has(name))throw new Error(`Required lifecycle step failed or missing: ${name}`);
+          if(report.summary.passed!==report.summary.steps||report.summary.steps!==required.length)throw new Error('Lifecycle did not pass every required step');
+          if(report.summary.members<2||report.summary.consentRecords<3)throw new Error('D1 subscriber or consent fixtures are incomplete');
+          if(report.summary.providerContacts<2||report.summary.providerContactCalls<3)throw new Error('Brevo contact synchronization coverage is incomplete');
+          if(report.summary.providerEmailCalls<6)throw new Error('Verification, welcome and campaign delivery coverage is incomplete');
+          if(report.summary.campaigns<4||report.summary.deliveries<3)throw new Error('Daily/weekly campaign coverage is incomplete');
+          if(report.summary.deliveryEvents<2)throw new Error('Provider delivery-event coverage is incomplete');
+          if(report.summary.suppressions<1)throw new Error('Unsubscribe/bounce suppression coverage is incomplete');
+          if(Object.values(report.protectedBoundaries).some(Boolean))throw new Error('A live or production action was activated during fixture testing');
+          console.log(`PHASE 4 LIFECYCLE PASS: ${report.summary.passed}/${report.summary.steps} steps; ${report.summary.campaigns} campaigns; ${report.summary.deliveryEvents} events.`);
+          NODE
+
+      - name: Snapshot deterministic lifecycle hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-test';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase4-lifecycle-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic lifecycle
+        run: |
+          rm -rf downloads/phase4-email-lifecycle-test
+          node scripts/phase4-email-lifecycle-test.mjs
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-test';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase4-lifecycle-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Lifecycle output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} lifecycle files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove sources and production boundaries were not mutated by tests
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase4-lifecycle-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'The clean-account fixture must not mutate source files, live D1, Brevo, payments or production deployment state.'};
+          fs.writeFileSync('downloads/phase4-email-lifecycle-test/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected source files unchanged.`);
+          NODE
+
+      - name: Upload Phase 4 lifecycle proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-email-lifecycle-test-${{ github.run_id }}
+          path: downloads/phase4-email-lifecycle-test/
+          if-no-files-found: error
+          retention-days: 30

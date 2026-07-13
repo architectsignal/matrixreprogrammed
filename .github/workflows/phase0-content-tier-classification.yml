@@ -1,0 +1,160 @@
+name: Phase 0 Content Category And Tier Classification
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/content-tier-taxonomy-policy.json'
+      - 'scripts/classify-content-tiers.js'
+      - '**/*.html'
+      - '**/*.pdf'
+      - '**/*.csv'
+      - '**/*.zip'
+      - '**/*.docx'
+      - '.github/workflows/phase0-content-tier-classification.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase0-content-tier-classification-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  classify:
+    name: Classify routes without enforcing or moving them
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate classifier and policy
+        run: |
+          node --check scripts/classify-content-tiers.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/content-tier-taxonomy-policy.json', 'utf8'));
+          if (policy.status !== 'phase-0-report-only') throw new Error('Taxonomy policy is not report-only');
+          if (policy.paymentStatus !== 'deferred') throw new Error('Payment status must remain deferred');
+          if (policy.enforcementMode !== 'report-only') throw new Error('Tier enforcement must remain report-only');
+          const tiers = new Set(policy.tiers || []);
+          for (const tier of ['public', 'registered', 'supporter_3', 'intelligence_6', 'research_pro_9', 'separate_product', 'internal_only']) {
+            if (!tiers.has(tier)) throw new Error(`Missing tier: ${tier}`);
+          }
+          if (!policy.fallback || policy.fallback.tier !== 'public') throw new Error('Unmatched routes must remain public pending review');
+          NODE
+
+      - name: Record classifiable file hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = process.cwd();
+          const ignored = new Set(['.git', 'node_modules', '_site', '.wrangler']);
+          const documentExtensions = new Set(['.pdf', '.csv', '.zip', '.docx']);
+          const files = [];
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              if (ignored.has(entry.name)) continue;
+              const target = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(target);
+              else {
+                const rel = path.relative(root, target).split(path.sep).join('/');
+                const ext = path.extname(rel).toLowerCase();
+                if (ext === '.html' || documentExtensions.has(ext) || (ext === '.json' && rel.startsWith('downloads/'))) files.push(rel);
+              }
+            }
+          }
+          walk(root);
+          const hashes = Object.fromEntries(files.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads', { recursive: true });
+          fs.writeFileSync('downloads/phase0-content-tier-source-hashes.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Run report-only content classifier
+        run: node scripts/classify-content-tiers.js
+
+      - name: Validate classification output
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/content-tier-taxonomy-policy.json', 'utf8'));
+          const report = JSON.parse(fs.readFileSync('downloads/phase0-content-tier-classification.json', 'utf8'));
+          const tiers = new Set(policy.tiers);
+          const categories = new Set(Object.keys(policy.categories));
+          if (!report.ok) throw new Error('Same-priority taxonomy conflicts remain');
+          if (report.mode !== 'report-only') throw new Error('Classifier mode changed');
+          if (report.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (report.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (report.summary.htmlRoutes < 1000) throw new Error(`Unexpectedly low route count: ${report.summary.htmlRoutes}`);
+          if (report.rows.length !== report.summary.totalClassified) throw new Error('Classification count mismatch');
+          if (report.summary.samePriorityConflicts !== 0 || report.conflicts.length !== 0) throw new Error('Classification conflicts remain');
+          for (const row of report.rows) {
+            if (!tiers.has(row.recommendedTier)) throw new Error(`${row.file}: invalid tier ${row.recommendedTier}`);
+            if (!categories.has(row.category)) throw new Error(`${row.file}: invalid category ${row.category}`);
+            if (row.status !== 'recommendation_only') throw new Error(`${row.file}: classification was enforced`);
+            if (['supporter_3', 'intelligence_6', 'research_pro_9'].includes(row.recommendedTier) && !row.publicPreviewRequired) {
+              throw new Error(`${row.file}: paid route lacks public preview requirement`);
+            }
+            if (row.recommendedTier === 'internal_only' && !row.reviewFlags.includes('internal-candidate-review-before-route-change')) {
+              throw new Error(`${row.file}: internal candidate lacks review boundary`);
+            }
+            if (row.category === 'uncategorized' && row.recommendedTier !== 'public') {
+              throw new Error(`${row.file}: unmatched route was hidden instead of kept public`);
+            }
+          }
+          console.log(`CONTENT CLASSIFICATION PASS: ${report.summary.totalClassified} files; ${report.summary.htmlRoutes} HTML routes; ${report.summary.uncategorized} need editorial ownership.`);
+          NODE
+
+      - name: Prove classifiable files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/phase0-content-tier-source-hashes.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = fs.existsSync(file)
+              ? crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+              : null;
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'The Phase 0 classifier must not modify, move, delete, hide, redirect or paywall any classified route or document.'
+          };
+          fs.writeFileSync('downloads/phase0-content-tier-non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} classified files unchanged.`);
+          NODE
+
+      - name: Upload classification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase0-content-tier-classification-${{ github.run_id }}
+          path: |
+            downloads/phase0-content-tier-classification.json
+            downloads/phase0-content-tier-classification.md
+            downloads/phase0-content-tier-source-hashes.json
+            downloads/phase0-content-tier-non-mutation-report.json
+          if-no-files-found: warn
+          retention-days: 30

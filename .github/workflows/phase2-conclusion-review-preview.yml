@@ -1,0 +1,177 @@
+name: Phase 2 Conclusion Editorial Review Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-phase2-conclusion-review-preview.js'
+      - 'scripts/build-phase2-conclusion-engine-preview.js'
+      - 'scripts/conclusion-engine/**'
+      - 'data/conclusion-engine-policy.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'docs/PHASE_2_CONCLUSION_ENGINE_ROADMAP.md'
+      - '.github/workflows/phase2-conclusion-review-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-conclusion-review-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review-preview:
+    name: Build isolated side-by-side conclusion review pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate review publisher syntax
+        run: |
+          node --check scripts/build-phase2-conclusion-review-preview.js
+          node --check scripts/build-phase2-conclusion-engine-preview.js
+          node --check scripts/conclusion-engine/core.js
+          node --check scripts/conclusion-engine/generate.js
+          node --check scripts/conclusion-engine/quality.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const sourceManifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json','utf8'));
+          const files = [
+            ...sourceManifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'data/conclusion-engine-policy.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js',
+            'scripts/build-canonical-preview-bundle.js',
+            'scripts/build-phase2-conclusion-engine-preview.js'
+          ];
+          const unique = [...new Set(files)];
+          const hashes = Object.fromEntries(unique.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-conclusion-review-protected-before.json', JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Build first editorial review preview
+        run: node scripts/build-phase2-conclusion-review-preview.js
+
+      - name: Validate editorial review coverage and isolation
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const root = 'downloads/phase2-conclusion-review-preview';
+          const manifest = JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
+          const routes = JSON.parse(fs.readFileSync(path.join(root,'route-manifest.json'),'utf8'));
+          const feed = JSON.parse(fs.readFileSync(path.join(root,'review-feed.json'),'utf8'));
+          const engine = JSON.parse(fs.readFileSync('downloads/phase2-conclusion-engine-preview/engine-records.json','utf8'));
+          if (!manifest.ok || !routes.ok || !feed.ok || !engine.ok) throw new Error('Review preview is not healthy');
+          if (manifest.mode !== 'report-only' || manifest.publicationEnforcement !== false || manifest.paymentActivation !== false) throw new Error('Review-only boundary changed');
+          if (manifest.namespace !== '/__preview/conclusion-review/' || routes.namespace !== manifest.namespace) throw new Error('Review namespace changed');
+          if (manifest.engineRecordCount !== engine.recordCount || manifest.canonicalRecordCount !== engine.recordCount || feed.recordCount !== engine.recordCount) throw new Error('Review coverage is incomplete');
+          if (manifest.recordPageCount !== engine.recordCount || manifest.htmlPageCount !== engine.recordCount + 1 || manifest.routeCount !== engine.recordCount + 2) throw new Error('Review page or route count mismatch');
+          if (manifest.errors.length) throw new Error(manifest.errors.join('\n'));
+          if (new Set(feed.cards.map(card => card.id)).size !== engine.recordCount) throw new Error('Review feed IDs are not unique');
+          const engineById = new Map(engine.records.map(record => [record.id,record]));
+          for (const card of feed.cards) {
+            const record = engineById.get(card.id);
+            if (!record) throw new Error(`${card.id}: engine record missing`);
+            if (card.publicationState !== record.publication.state || card.candidateFlagCount !== 0) throw new Error(`${card.id}: review summary mismatch`);
+            if (!card.route.startsWith('records/')) throw new Error(`${card.id}: invalid review route`);
+          }
+          const routeSet = new Set();
+          for (const route of routes.routes) {
+            if (!route.route.startsWith('/__preview/conclusion-review/')) throw new Error(`Route escaped review namespace: ${route.route}`);
+            if (routeSet.has(route.route)) throw new Error(`Duplicate route: ${route.route}`);
+            routeSet.add(route.route);
+            const target = path.join(root,route.outputFile);
+            if (!fs.existsSync(target)) throw new Error(`Missing review file: ${route.outputFile}`);
+            if (route.outputFile.endsWith('.html')) {
+              const html = fs.readFileSync(target,'utf8');
+              if (!html.includes('noindex,nofollow,noarchive')) throw new Error(`${route.outputFile}: noindex missing`);
+              if (/<script|<form/i.test(html) || /paypal|createSubscription|checkout-intent|\/api\//i.test(html)) throw new Error(`${route.outputFile}: active functionality detected`);
+            }
+          }
+          const publishable = engine.records.filter(record => record.publication.state === 'publishable_preview').length;
+          const held = engine.recordCount - publishable;
+          if ((manifest.stateCounts.publishable_preview || 0) !== publishable) throw new Error('Publishable preview count mismatch');
+          if (publishable !== 40 || held !== 213) throw new Error(`Expected conservative checkpoint of 40 publishable and 213 held, received ${publishable}/${held}`);
+          console.log(`CONCLUSION REVIEW PASS: ${engine.recordCount} side-by-side records; ${publishable} publishable previews; ${held} held.`);
+          NODE
+
+      - name: Snapshot first deterministic hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-review-preview';
+          function walk(dir,out=[]) { for (const entry of fs.readdirSync(dir,{withFileTypes:true})) { const target=path.join(dir,entry.name); if(entry.isDirectory()) walk(target,out); else out.push(target); } return out; }
+          const hashes = Object.fromEntries(walk(root).sort().map(file => [file.split(path.sep).join('/'), crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-conclusion-review-first-hashes.json', JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic review pages
+        run: |
+          node scripts/build-phase2-conclusion-review-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-review-preview';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-conclusion-review-first-hashes.json','utf8'));
+          function walk(dir,out=[]) { for (const entry of fs.readdirSync(dir,{withFileTypes:true})) { const target=path.join(dir,entry.name); if(entry.isDirectory()) walk(target,out); else out.push(target); } return out; }
+          const after = Object.fromEntries(walk(root).sort().map(file => [file.split(path.sep).join('/'), crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before),...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Review output is not deterministic:\n${changed.slice(0,100).join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} conclusion-review files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-conclusion-review-protected-before.json','utf8'));
+          const changed = [];
+          for (const [file,expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({file,expected,actual});
+          }
+          const report = {ok:changed.length===0,generatedAt:new Date().toISOString(),checkedFiles:Object.keys(before).length,changed,boundary:'The conclusion review publisher must not modify legacy intelligence, canonical records, conclusion-engine inputs, membership, Workers or deployment guards.'};
+          fs.writeFileSync('downloads/phase2-conclusion-review-preview/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length) throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload conclusion editorial review preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-conclusion-review-preview-${{ github.run_id }}
+          path: downloads/phase2-conclusion-review-preview/
+          if-no-files-found: error
+          retention-days: 30

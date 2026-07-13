@@ -1,0 +1,126 @@
+name: Phase 1 Daily Power Canonical Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-daily-power-canonical-previews.js'
+      - 'data/daily-power-conclusions.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - '.github/workflows/phase1-daily-power-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-daily-power-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Validate non-destructive Daily Power previews
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate adapter syntax
+        run: node --check scripts/build-daily-power-canonical-previews.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/daily-power-conclusions.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'membership.html'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads/canonical-daily-power-preview', { recursive: true });
+          fs.writeFileSync('downloads/canonical-daily-power-preview/source-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build Daily Power canonical previews
+        run: node scripts/build-daily-power-canonical-previews.js
+
+      - name: Validate model-output boundaries and structure
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const output = JSON.parse(fs.readFileSync('downloads/canonical-daily-power-preview/daily-power.canonical-preview.json', 'utf8'));
+          if (output.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (output.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (output.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (!output.records.length || output.recordCount !== output.records.length) throw new Error('Daily Power preview count invalid');
+          const required = schema.required || [];
+          let inspected = 0;
+          for (const record of output.records) {
+            inspected += 1;
+            for (const field of required) {
+              if (record[field] === undefined || record[field] === null) throw new Error(`${record.id}: missing ${field}`);
+            }
+            if (record.status !== 'review') throw new Error(`${record.id}: model output published prematurely`);
+            if (record.evidence.claimClass !== 'scenario_analysis') throw new Error(`${record.id}: ranking treated as external fact`);
+            if (record.evidence.confidence !== 'very_low') throw new Error(`${record.id}: model confidence too high`);
+            if (record.speculativeConclusion.label !== 'speculative') throw new Error(`${record.id}: speculation label missing`);
+            if (!record.speculativeConclusion.falsifiers.length) throw new Error(`${record.id}: falsifiers missing`);
+            if (!/site-model ranking or mission lens/i.test(record.solidConclusion.boundary)) throw new Error(`${record.id}: site-model boundary missing`);
+            if (!/does not prove elite coordination/i.test(record.missionAssessment.boundary)) throw new Error(`${record.id}: control boundary unsafe`);
+            for (const vector of record.missionAssessment.convergenceVectors) {
+              if (vector.score > 2) throw new Error(`${record.id}: convergence score too high`);
+              if (vector.coordinationStatus !== 'not_shown') throw new Error(`${record.id}: coordination overclaimed`);
+            }
+          }
+          console.log(`DAILY POWER PREVIEW PASS: ${inspected} model outputs validated.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/canonical-daily-power-preview/source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Daily Power preview generation must not modify the source output, schema, tier policy or membership page.'
+          };
+          fs.writeFileSync('downloads/canonical-daily-power-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Daily Power preview package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-daily-power-preview-${{ github.run_id }}
+          path: downloads/canonical-daily-power-preview/
+          if-no-files-found: error
+          retention-days: 30

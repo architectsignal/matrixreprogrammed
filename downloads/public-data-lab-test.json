@@ -1,0 +1,198 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-13T06:38:52.388Z",
+  "datasets": 4,
+  "presets": 9,
+  "checks": [
+    {
+      "name": "registry parses",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "approved dataset coverage",
+      "ok": true,
+      "detail": "4 datasets"
+    },
+    {
+      "name": "reproducible preset coverage",
+      "ok": true,
+      "detail": "9 presets"
+    },
+    {
+      "name": "unique dataset ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "unique SQL view names",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "safe SQL view identifiers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "same-origin public downloads only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no internal or private dataset paths",
+      "ok": true,
+      "detail": "downloads/investigation-entities.csv, downloads/investigation-relationships.csv, downloads/market-activity.csv, downloads/evidence-network-map.csv"
+    },
+    {
+      "name": "all approved files exist and contain data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all provenance routes are public JSON",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every dataset states evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preset references resolve",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preset SQL is read only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preset SQL has no file readers or remote URLs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "strict result cap",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "strict query timeout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pinned DuckDB-Wasm version",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pinned Perspective version",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page generated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "page carries evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "query editor and controls rendered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "accessible table and Perspective fallback rendered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all datasets rendered with downloads",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "all presets rendered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "module runtime wired",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime limits to SELECT and WITH",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime blocks write statements",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime blocks direct file readers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime blocks arbitrary URLs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime wraps hard row limit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime enforces timeout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime retains accessible fallback",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runtime exports capped CSV",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage route present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "main navigation route present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "research tools route connected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sitemap route present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "llms route present",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

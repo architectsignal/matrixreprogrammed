@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-12T06:48:47.718Z",
+  "generatedAt": "2026-07-13T06:38:53.926Z",
   "totals": {
-    "entities": 3853,
-    "relationships": 5777,
-    "coreRelationships": 5217,
-    "officialRelationships": 5726,
-    "reviewedRelationships": 527,
-    "weakMentions": 560,
+    "entities": 4670,
+    "relationships": 6891,
+    "coreRelationships": 5884,
+    "officialRelationships": 6791,
+    "reviewedRelationships": 840,
+    "weakMentions": 1007,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
@@ -28,22 +28,22 @@
     {
       "name": "substantial entity graph",
       "ok": true,
-      "detail": "3853 nodes"
+      "detail": "4670 nodes"
     },
     {
       "name": "substantial relationship graph",
       "ok": true,
-      "detail": "5777 edges"
+      "detail": "6891 edges"
     },
     {
       "name": "relationship totals agree",
       "ok": true,
-      "detail": "5777 / 5777"
+      "detail": "6891 / 6891"
     },
     {
       "name": "entity totals agree",
       "ok": true,
-      "detail": "3853 / 3853"
+      "detail": "4670 / 4670"
     },
     {
       "name": "no orphan relationships",
@@ -68,17 +68,17 @@
     {
       "name": "core view exists",
       "ok": true,
-      "detail": "5217 core edges"
+      "detail": "5884 core edges"
     },
     {
       "name": "official view exists",
       "ok": true,
-      "detail": "5726 official edges"
+      "detail": "6791 official edges"
     },
     {
       "name": "weak mentions are separated",
       "ok": true,
-      "detail": "560 weak mentions"
+      "detail": "1007 weak mentions"
     },
     {
       "name": "relationship filter metadata",

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-12T06:18:43.271Z",
+  "generatedAt": "2026-07-13T06:38:38.567Z",
   "repairs": [
     {
       "type": "sec-filing-feed",
@@ -41,15 +41,13 @@
       ]
     },
     {
-      "type": "deploy-health-json",
-      "files": [
-        "deploy-health.json",
-        "downloads/deploy-health.json"
-      ]
-    },
-    {
-      "type": "deploy-health-html",
-      "file": "deploy-health.html"
+      "type": "production-health-ownership",
+      "owner": "scripts/build-production-health.js",
+      "status": "preserved",
+      "reason": "Legacy repair passes must not overwrite strict Worker, D1 or deferred-payment proof."
     }
-  ]
+  ],
+  "productionHealthOwner": "scripts/build-production-health.js",
+  "productionHealthGeneration": "deferred until final-production-reconcile",
+  "boundary": "This repair script may repair public content only. It cannot publish deployment health, change the Worker entrypoint or activate payment UI."
 }

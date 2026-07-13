@@ -436,6 +436,8 @@ Branded Download PDF Index:
 - /downloads/control-map-daily.pdf: branded auto-updated mini-book PDF.
 - /downloads/controlled-opposition-deck.pdf: branded auto-updated mini-book PDF.
 - /downloads/convergence-control-lenses.pdf: branded auto-updated mini-book PDF.
+- /downloads/cytoscape-network-map-report.pdf: branded auto-updated mini-book PDF.
+- /downloads/cytoscape-network-map-test.pdf: branded auto-updated mini-book PDF.
 - /downloads/daily-brain-brief.pdf: branded auto-updated mini-book PDF.
 - /downloads/daily-brief-master.pdf: branded auto-updated mini-book PDF.
 - /downloads/daily-command-brief.pdf: branded auto-updated mini-book PDF.
@@ -475,13 +477,11 @@ Branded Download PDF Index:
 - /downloads/epstein-source-ledger.pdf: branded auto-updated mini-book PDF.
 - /downloads/epstein-source-watch.pdf: branded auto-updated mini-book PDF.
 - /downloads/epstein-timeline-map.pdf: branded auto-updated mini-book PDF.
+- /downloads/evidence-network-map-build.pdf: branded auto-updated mini-book PDF.
+- /downloads/evidence-network-map-wiring.pdf: branded auto-updated mini-book PDF.
 - /downloads/evidence-pull-list.pdf: branded auto-updated mini-book PDF.
 - /downloads/evidence-task-engine.pdf: branded auto-updated mini-book PDF.
 - /downloads/final-investigation-hardening.pdf: branded auto-updated mini-book PDF.
-- /downloads/follow-the-money-tracking-manual.pdf: branded auto-updated mini-book PDF.
-- /downloads/follow-the-money-watch.pdf: branded auto-updated mini-book PDF.
-- /downloads/forum-posts.pdf: branded auto-updated mini-book PDF.
-- /downloads/generated-site-repair-report.pdf: branded auto-updated mini-book PDF.
 
 Subject Intelligence Hubs:
 - /subject-index.html: generated index of crawlable subject intelligence pages linked to subject PDF mini-books.
@@ -516,6 +516,10 @@ Newsletter Capture:
 - /newsletter-signup: Cloudflare Worker endpoint that stores subscribers in FORUM_POSTS KV.
 - /newsletter-health: health check for subscriber storage.
 - /newsletter-send-weekly: admin weekly digest sender/preview endpoint.
+<!-- geographic-power-atlas:start -->
+- Geographic Power Atlas: geographic-power-atlas.html
+- Geographic atlas GeoJSON: data/geographic-power-atlas-data.json
+<!-- geographic-power-atlas:end -->
 
 Deploy Health:
 - /deploy-health.html: Cloudflare deploy health, homepage state, hidden-eye gate state, marker leak check, and conversion route verification.
@@ -535,6 +539,10 @@ Intel Vault:
 - /top-52-generated-art.html: generated Power Deck card artwork gallery and asset status.
 
 - Member research tools: https://matrixreprogrammed.com/research-tools.html
+Evidence Archive & Verification: https://matrixreprogrammed.com/evidence-archive.html
+Integrity Manifest: https://matrixreprogrammed.com/data/evidence-integrity-manifest.json
+
+- [Public Data Laboratory](https://matrixreprogrammed.com/data-lab.html): Read-only DuckDB-Wasm SQL and optional Perspective exploration over approved public entity, relationship, SEC market and evidence-network datasets.
 
 - Structured entity registry: https://matrixreprogrammed.com/entity-registry.html
 - Sourced relationship registry: https://matrixreprogrammed.com/relationship-registry.html

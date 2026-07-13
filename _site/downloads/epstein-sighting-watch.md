@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-12T06:18:15.977Z
+Generated: 2026-07-13T06:38:07.227Z
 
 ## Official Boundary
 
@@ -59,16 +59,6 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 
 Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
 
-### Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' AOL.com
-
 ### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
 - Type: sighting-claim
 - Status: unverified-claim
@@ -78,6 +68,26 @@ Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thin
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
+
+### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+
+### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+Trump administration hindering investigation into Epstein’s ranch Nine.com.au
 
 ### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
 - Type: sighting-claim
@@ -89,12 +99,12 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 
 NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 
-### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-- Type: related-claim-traffic
+### Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
+- Type: sighting-claim
 - Status: unverified-claim
 - Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
+- Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-Trump administration hindering investigation into Epstein’s ranch Nine.com.au
+Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' AOL.com

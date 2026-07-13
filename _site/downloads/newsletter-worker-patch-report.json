@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-11T06:28:59.665Z",
+  "generatedAt": "2026-07-12T06:48:58.024Z",
   "changed": false,
   "required": [
     "env.FORUM_POSTS.put(`newsletter:subscriber:${id}`",
@@ -13,5 +13,7 @@
   "authIntegrated": true,
   "paypalIntegrated": true,
   "membershipUiIntegrated": true,
-  "mode": "D1 membership capture, passwordless authentication and PayPal subscription enforcement"
+  "osintIntegrated": true,
+  "researchToolsUiIntegrated": true,
+  "mode": "D1 membership, passwordless authentication, PayPal subscriptions and encrypted member/admin OSINT tools"
 }

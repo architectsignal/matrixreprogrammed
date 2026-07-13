@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "updated": "2026-07-12",
+  "title": "Matrix Public Data Laboratory",
+  "engines": {
+    "duckdbWasm": "1.33.0",
+    "perspective": "4.5.2"
+  },
+  "boundary": "The laboratory lets readers reproduce counts, filters, joins and aggregations over approved public datasets. Query output reflects the selected records and code; it does not prove causation, motive, coordination, identity, present ownership or wrongdoing. Machine-extracted and machine-classified records remain subject to their stated review status and source limitations.",
+  "limits": {
+    "maxRows": 1000,
+    "defaultRows": 250,
+    "queryTimeoutMs": 12000,
+    "maxSqlCharacters": 6000,
+    "allowedStarts": ["SELECT", "WITH"]
+  },
+  "datasets": [
+    {
+      "id": "entities",
+      "title": "Entity Registry",
+      "table": "entities",
+      "path": "downloads/investigation-entities.csv",
+      "fileName": "investigation-entities.csv",
+      "format": "csv",
+      "rowEstimate": 4670,
+      "provenancePath": "data/entity-registry.json",
+      "description": "Structured people, companies, agencies, contracts, cases, findings and other entities with review status and evidence counts.",
+      "boundary": "An entity record establishes that the named item appears in the structured registry. It does not establish guilt, ownership, control, identity equivalence or a substantive relationship beyond cited evidence.",
+      "defaultSql": "SELECT type, COUNT(*) AS records, SUM(TRY_CAST(evidence_count AS BIGINT)) AS evidence_references FROM entities GROUP BY type ORDER BY records DESC"
+    },
+    {
+      "id": "relationships",
+      "title": "Relationship Registry",
+      "table": "relationships",
+      "path": "downloads/investigation-relationships.csv",
+      "fileName": "investigation-relationships.csv",
+      "format": "csv",
+      "rowEstimate": 5777,
+      "provenancePath": "data/relationship-registry.json",
+      "description": "Evidence-linked relationships, mentions, filing subjects, source changes and other documented edges.",
+      "boundary": "A relationship row records what a cited source states or what a parser observed. Mention, proximity and association do not establish control, coordination, payment, intent or wrongdoing.",
+      "defaultSql": "SELECT type, evidence_grade, COUNT(*) AS records FROM relationships GROUP BY type, evidence_grade ORDER BY records DESC"
+    },
+    {
+      "id": "market_activity",
+      "title": "SEC Market Activity",
+      "table": "market_activity",
+      "path": "downloads/market-activity.csv",
+      "fileName": "market-activity.csv",
+      "format": "csv",
+      "rowEstimate": 4239,
+      "provenancePath": "data/market-activity.json",
+      "description": "Official Form 4 transactions and Form 13F position changes collected from SEC EDGAR.",
+      "boundary": "SEC filings report transactions or quarter-end positions under specific disclosure rules. They do not establish motive, investment merit, current ownership, coordination or wrongdoing; 13F changes do not reveal exact trade dates or execution prices.",
+      "defaultSql": "SELECT issuer, action, COUNT(*) AS records, SUM(TRY_CAST(reportedValue AS DOUBLE)) AS reported_value FROM market_activity GROUP BY issuer, action ORDER BY reported_value DESC NULLS LAST"
+    },
+    {
+      "id": "evidence_network",
+      "title": "Evidence Network Export",
+      "table": "evidence_network",
+      "path": "downloads/evidence-network-map.csv",
+      "fileName": "evidence-network-map.csv",
+      "format": "csv",
+      "rowEstimate": 5000,
+      "provenancePath": "data/evidence-network-map.json",
+      "description": "Public network-map export connecting evidence-led nodes and edges used by the visual investigation map.",
+      "boundary": "Network position and connectivity describe the exported graph. Centrality, density and proximity do not establish hierarchy, command, conspiracy, motive or unlawful conduct.",
+      "defaultSql": "SELECT * FROM evidence_network"
+    }
+  ],
+  "presets": [
+    {
+      "id": "entity-types",
+      "title": "Entities by type",
+      "description": "Count registry records and attached evidence references by entity type.",
+      "datasetIds": ["entities"],
+      "plugin": "Datagrid",
+      "sql": "SELECT type, COUNT(*) AS records, SUM(TRY_CAST(evidence_count AS BIGINT)) AS evidence_references FROM entities GROUP BY type ORDER BY records DESC"
+    },
+    {
+      "id": "high-evidence-entities",
+      "title": "Highest evidence-count entities",
+      "description": "Surface records with the largest number of attached evidence references without treating volume as proof.",
+      "datasetIds": ["entities"],
+      "plugin": "Datagrid",
+      "sql": "SELECT name, type, review_status, TRY_CAST(evidence_count AS BIGINT) AS evidence_count, first_seen, last_seen FROM entities ORDER BY evidence_count DESC NULLS LAST, name"
+    },
+    {
+      "id": "relationship-types",
+      "title": "Relationship types and grades",
+      "description": "Compare relationship categories by evidence grade and review status.",
+      "datasetIds": ["relationships"],
+      "plugin": "Datagrid",
+      "sql": "SELECT type, evidence_grade, review_status, COUNT(*) AS records FROM relationships GROUP BY type, evidence_grade, review_status ORDER BY records DESC"
+    },
+    {
+      "id": "relationship-sources",
+      "title": "Most represented relationship sources",
+      "description": "Count relationship records by public source while retaining grade and status distinctions.",
+      "datasetIds": ["relationships"],
+      "plugin": "Datagrid",
+      "sql": "SELECT source_title, evidence_grade, COUNT(*) AS records FROM relationships GROUP BY source_title, evidence_grade ORDER BY records DESC"
+    },
+    {
+      "id": "named-relationship-join",
+      "title": "Relationship edges with entity names",
+      "description": "Join relationship endpoints to the entity registry for reproducible edge inspection.",
+      "datasetIds": ["relationships", "entities"],
+      "plugin": "Datagrid",
+      "sql": "SELECT r.type, COALESCE(a.name, r.\"from\") AS from_name, COALESCE(b.name, r.\"to\") AS to_name, r.evidence_grade, r.factual_status, r.source_title, r.source_url, r.does_not_establish FROM relationships r LEFT JOIN entities a ON a.id = r.\"from\" LEFT JOIN entities b ON b.id = r.\"to\" ORDER BY r.retrieval_date DESC NULLS LAST"
+    },
+    {
+      "id": "market-by-issuer",
+      "title": "Market disclosures by issuer and action",
+      "description": "Aggregate reported SEC records by issuer and action category.",
+      "datasetIds": ["market_activity"],
+      "plugin": "Datagrid",
+      "sql": "SELECT issuer, ticker, action, COUNT(*) AS records, SUM(TRY_CAST(shares AS DOUBLE)) AS reported_shares, SUM(TRY_CAST(reportedValue AS DOUBLE)) AS reported_value FROM market_activity GROUP BY issuer, ticker, action ORDER BY reported_value DESC NULLS LAST"
+    },
+    {
+      "id": "largest-reported-values",
+      "title": "Largest reported market values",
+      "description": "Inspect the largest values reported in the source export with filing links attached.",
+      "datasetIds": ["market_activity"],
+      "plugin": "Datagrid",
+      "sql": "SELECT recordType, subject, issuer, ticker, action, transactionDate, periodEnd, filingDate, TRY_CAST(shares AS DOUBLE) AS shares, TRY_CAST(reportedValue AS DOUBLE) AS reported_value, factualStatus, sourceUrl FROM market_activity WHERE TRY_CAST(reportedValue AS DOUBLE) IS NOT NULL ORDER BY reported_value DESC"
+    },
+    {
+      "id": "market-monthly",
+      "title": "Market records by month",
+      "description": "Group Form 4 and 13F-derived records by the available transaction or period date.",
+      "datasetIds": ["market_activity"],
+      "plugin": "Datagrid",
+      "sql": "SELECT SUBSTR(COALESCE(NULLIF(transactionDate, ''), NULLIF(periodEnd, ''), filingDate), 1, 7) AS month, recordType, action, COUNT(*) AS records, SUM(TRY_CAST(reportedValue AS DOUBLE)) AS reported_value FROM market_activity GROUP BY month, recordType, action ORDER BY month DESC, records DESC"
+    },
+    {
+      "id": "evidence-network-preview",
+      "title": "Evidence network rows",
+      "description": "Open the public network-map export for filtering and schema inspection.",
+      "datasetIds": ["evidence_network"],
+      "plugin": "Datagrid",
+      "sql": "SELECT * FROM evidence_network"
+    }
+  ]
+}

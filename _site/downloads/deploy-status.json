@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "buildSha": "a4f208d06baa4406919fdc2a0ee45d92bec50546",
-  "buildShortSha": "a4f208d06baa",
-  "generatedAt": "2026-07-12T06:18:21.148Z",
+  "buildSha": "9b282fa1ad9613637586a972ad343ad334a9c2e6",
+  "buildShortSha": "9b282fa1ad96",
+  "generatedAt": "2026-07-13T06:38:13.770Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
   "assetOutput": "_site",
-  "routeAliasCount": 62,
+  "routeAliasCount": 65,
   "aliasCount": 19,
   "aliases": [
     {
@@ -345,7 +345,7 @@
       "marker": "FOLLOW THE FILES.",
       "exists": true,
       "markerPresent": true,
-      "hash": "1b92afdfdce82725"
+      "hash": "5815cad263bdb952"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "15ec16ee91b53ddf"
+      "hash": "4f992e4188299d71"
     },
     {
       "name": "Epstein Command Center",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "8733960490734369"
+      "hash": "b75e171588674a53"
     },
     {
       "name": "Dark Speculation Board",
@@ -433,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "bd213af4d99767dc"
+      "hash": "75f76871e158bfbb"
     },
     {
       "name": "Hard Board Routes",
@@ -441,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "bd213af4d99767dc"
+      "hash": "75f76871e158bfbb"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -449,14 +449,14 @@
       "marker": "_site",
       "exists": true,
       "markerPresent": true,
-      "hash": "40d960d9d3fdc43f"
+      "hash": "09994411ac7fb2a0"
     }
   ],
   "hashes": {
-    "worker": "bd213af4d99767dc",
-    "package": "f20eb7a27e5bc82a",
+    "worker": "75f76871e158bfbb",
+    "package": "19f929becea3e11b",
     "epsteinFiles": "5e348d09a92645b2",
-    "liveIntel": "15ec16ee91b53ddf"
+    "liveIntel": "4f992e4188299d71"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

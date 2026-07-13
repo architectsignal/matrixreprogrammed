@@ -7,7 +7,7 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-12T06:17:48.501Z",
+  "liveIntelUpdated": "2026-07-13T06:37:37.586Z",
   "latestDropsUpdated": "2026-07-08T09:00:00.000Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Trust And Evidence Pack",
@@ -79,7 +79,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=trust-evidence",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=trust-evidence",
   "liveIntelWindow": {
-    "updated": "2026-07-12T06:17:48.501Z",
+    "updated": "2026-07-13T06:37:37.586Z",
     "itemCount": 12,
     "items": [
       {
@@ -219,14 +219,46 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "declassified-files-2026-07-09-26",
+        "id": "declassified-files-2026-07-11-25",
+        "lane": "declassified-files",
+        "laneTitle": "Declassified Files And Public Archives",
+        "sourceLabel": "Google News / declassified files",
+        "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
+        "published": "2026-07-11T04:00:07.000Z",
+        "fetchedAt": "2026-07-13T06:37:40.472Z",
+        "summary": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
+        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New public-record signal: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
+        "rumbleShortTitle": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aeria",
+        "rumbleLongTitle": "Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
+        "socialThread": [
+          "1/ Fresh declassified-files lead: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault-index.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "books.html",
+        "offerRoute": "download-center.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "declassified-files-2026-07-09-27",
         "lane": "declassified-files",
         "laneTitle": "Declassified Files And Public Archives",
         "sourceLabel": "Google News / declassified files",
         "title": "NASA insider hints bigger UFO file release as declassification ramps up - Cybernews",
         "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5",
         "published": "2026-07-09T09:48:03.000Z",
-        "fetchedAt": "2026-07-12T06:17:51.005Z",
+        "fetchedAt": "2026-07-13T06:37:40.473Z",
         "summary": "NASA insider hints bigger UFO file release as declassification ramps up Cybernews",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -258,7 +290,7 @@
         "title": "NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News",
         "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5",
         "published": "2026-07-09T13:30:11.000Z",
-        "fetchedAt": "2026-07-12T06:17:51.006Z",
+        "fetchedAt": "2026-07-13T06:37:40.473Z",
         "summary": "NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
@@ -451,40 +483,6 @@
         "archiveReason": "not-current-feed-item",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
-      },
-      {
-        "id": "epstein-files-2026-06-26-5-questions-keeping-the-epstein-files-alive-newsweek",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "5 Questions Keeping the Epstein Files Alive - Newsweek",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5",
-        "published": "2026-06-26T11:58:00.000Z",
-        "fetchedAt": "2026-07-06T08:02:25.608Z",
-        "summary": "5 Questions Keeping the Epstein Files Alive Newsweek",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: 5 Questions Keeping the Epstein Files Alive - Newsweek. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "5 Questions Keeping the Epstein Files Alive - Newsweek",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — 5 Questions Keeping the Epstein Files Alive - Newsweek",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: 5 Questions Keeping the Epstein Files Alive - Newsweek",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "archived-intel-vault",
-        "archivedAt": "2026-07-06T08:02:25.608Z",
-        "archiveReason": "expired-after-7-day-window",
-        "sourceType": "intel-vault",
-        "freshness": "archived historical lead"
       }
     ]
   },
@@ -585,6 +583,11 @@
       "kind": "Google News / control structure"
     },
     {
+      "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
+      "route": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
+      "kind": "Google News / declassified files"
+    },
+    {
       "title": "NASA insider hints bigger UFO file release as declassification ramps up - Cybernews",
       "route": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5",
       "kind": "Google News / declassified files"
@@ -617,11 +620,6 @@
     {
       "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
       "route": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
-      "kind": "Google News / Epstein timeline and files"
-    },
-    {
-      "title": "5 Questions Keeping the Epstein Files Alive - Newsweek",
-      "route": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5",
       "kind": "Google News / Epstein timeline and files"
     }
   ],

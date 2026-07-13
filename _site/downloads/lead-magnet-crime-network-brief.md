@@ -40,13 +40,13 @@ The reader knows how to follow crime-network records without turning association
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
+- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
+- 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
+  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.

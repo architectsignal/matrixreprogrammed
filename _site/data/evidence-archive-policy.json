@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "enabled": true,
+  "browsertrixVersion": "1.13.2",
+  "replayWebPageVersion": "2.4.6",
+  "citationJsVersion": "0.7.21",
+  "jsdiffVersion": "8.0.2",
+  "archiveDirectory": "web-archives",
+  "maxSourcesPerRun": 3,
+  "maxPagesPerSource": 3,
+  "maxArchiveBytes": 23000000,
+  "maxTotalArchiveBytes": 60000000,
+  "maxSecondsPerSource": 420,
+  "approvedSourceIds": [
+    "doj-justice-news",
+    "doj-oig-reports",
+    "sec-litigation-releases"
+  ],
+  "allowedSchemes": [
+    "https:"
+  ],
+  "blockedHostSuffixes": [
+    ".local",
+    ".internal",
+    ".localhost"
+  ],
+  "blockedPathPatterns": [
+    "/login",
+    "/signin",
+    "/account",
+    "/checkout",
+    "/admin"
+  ],
+  "legalScope": {
+    "publicOnly": true,
+    "noAuthentication": true,
+    "noPaywalls": true,
+    "noPersonalAccounts": true,
+    "noCircumvention": true,
+    "respectSourceRestrictions": true,
+    "purpose": "Preserve approved public-interest records for evidence review, change verification, citation and correction.",
+    "boundary": "Capture proves what the approved public URL returned at the recorded time. It does not authenticate every statement, establish intent, remove legal context or convert allegations into proven wrongdoing."
+  }
+}

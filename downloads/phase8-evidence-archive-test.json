@@ -1,0 +1,234 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-13T06:38:52.307Z",
+  "checks": [
+    {
+      "name": "required:data/evidence-archive-policy.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:data/evidence-archive-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:data/evidence-integrity-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:data/evidence-citations.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:evidence-archive.html",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:evidence-archive.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:evidence-citation.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:source-change-diff.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:replay/sw.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:scripts/prepare-browsertrix-crawl.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:scripts/build-evidence-archive.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "required:scripts/patch-phase8-evidence-archive.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-enabled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-approved-sources",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-public-only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-cloudflare-safe-size",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-pinned-browsertrix",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "policy-pinned-replay",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "replay-component",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public-boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-controls",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "diff-controls",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "citation-controls",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "service-worker-pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "jsdiff-pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "citation-pin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest-engine",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest-boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-algorithm",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-signing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-file:data/evidence-archive-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-hash:data/evidence-archive-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-file:data/source-change-public.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-hash:data/source-change-public.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-file:data/evidence-reader-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-hash:data/evidence-reader-manifest.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-file:data/evidence-timeline.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-hash:data/evidence-timeline.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-file:data/relationship-registry.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity-hash:data/relationship-registry.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cloudflare-phase8-build",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cloudflare-phase8-test",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cloudflare-wacz-extension",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cloudflare-required-route",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "failures": [],
+  "archives": 0,
+  "protectedFiles": 5
+}

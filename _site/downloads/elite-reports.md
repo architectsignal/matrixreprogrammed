@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-12T06:18:34.026Z
+Generated: 2026-07-13T06:38:26.619Z
 
 ## Daily Revelation Report
 
-Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
+Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
 
 Source: daily-command-brief.html
 

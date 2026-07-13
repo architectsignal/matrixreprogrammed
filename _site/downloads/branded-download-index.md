@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-12T06:18:12.940Z
+Updated: 2026-07-13T06:38:04.486Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -63,11 +63,13 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf (custom PDF preserved)
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf (custom PDF preserved)
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf (custom PDF preserved)
+- Cytoscape Network Map Report: downloads/cytoscape-network-map-report.pdf (custom PDF preserved)
+- Cytoscape Network Map Test: downloads/cytoscape-network-map-test.pdf (custom PDF preserved)
 - Daily Brain Brief: downloads/daily-brain-brief.pdf (custom PDF preserved)
 - Deep Daily Control Brief: downloads/daily-brief-master.pdf (custom PDF preserved)
 - Daily Command Brief: downloads/daily-command-brief.pdf (custom PDF preserved)
 - Matrix Reprogrammed Daily Drop: downloads/daily-drop.pdf (custom PDF preserved)
-- Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf
+- Daily Investigation Conclusions: downloads/daily-investigation-conclusions.pdf (custom PDF preserved)
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf (custom PDF preserved)
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf (custom PDF preserved)
 - Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf (custom PDF preserved)
@@ -102,9 +104,13 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Epstein Source Ledger: downloads/epstein-source-ledger.pdf (custom PDF preserved)
 - Epstein Source Watch: downloads/epstein-source-watch.pdf (custom PDF preserved)
 - Epstein Timeline + Cross-Reference Map: downloads/epstein-timeline-map.pdf (custom PDF preserved)
+- Evidence Network Map Build: downloads/evidence-network-map-build.pdf (custom PDF preserved)
+- Evidence Network Map Wiring: downloads/evidence-network-map-wiring.pdf (custom PDF preserved)
 - Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf (custom PDF preserved)
 - Evidence Task Engine: downloads/evidence-task-engine.pdf (custom PDF preserved)
-- Final Investigation Hardening: downloads/final-investigation-hardening.pdf
+- Final Investigation Hardening: downloads/final-investigation-hardening.pdf (custom PDF preserved)
+- Final Public Editorial Hardening: downloads/final-public-editorial-hardening.pdf (custom PDF preserved)
+- Final Public Route Cleanup: downloads/final-public-route-cleanup.pdf (custom PDF preserved)
 - Follow The Money Tracking Manual: downloads/follow-the-money-tracking-manual.pdf (custom PDF preserved)
 - Follow The Money Watch: downloads/follow-the-money-watch.pdf (custom PDF preserved)
 - Forum Posts Export: downloads/forum-posts.pdf (custom PDF preserved)
@@ -112,8 +118,8 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf (custom PDF preserved)
 - Matrix Reprogrammed Intel Drop Vault: downloads/intel-drop-vault.pdf (custom PDF preserved)
 - Intel Vault: downloads/intel-vault.pdf (custom PDF preserved)
-- Investigation Machine Run Report: downloads/investigation-machine-run-report.pdf
-- Investigation Source Ledger: downloads/investigation-source-ledger.pdf
+- Investigation Machine Run Report: downloads/investigation-machine-run-report.pdf (custom PDF preserved)
+- Investigation Source Ledger: downloads/investigation-source-ledger.pdf (custom PDF preserved)
 - Latest Public-Source Drops: downloads/latest-public-drops.pdf (custom PDF preserved)
 - The Black File Starter Brief: downloads/lead-magnet-black-file-brief.pdf (custom PDF preserved)
 - Crime Network Starter Brief: downloads/lead-magnet-crime-network-brief.pdf (custom PDF preserved)
@@ -125,8 +131,10 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Logo Symbolism Dossiers: downloads/logo-symbolism-dossiers.pdf (custom PDF preserved)
 - Machine Digest: downloads/machine-digest.pdf (custom PDF preserved)
 - Machine Intelligence: downloads/machine-intelligence.pdf (custom PDF preserved)
+- Market Activity Test: downloads/market-activity-test.pdf (custom PDF preserved)
 - Master Brief Engine: downloads/master-brief-engine.pdf (custom PDF preserved)
 - Master Evidence Source Registry: downloads/master-evidence-source-registry.pdf (custom PDF preserved)
+- Membership Access Copy Report: downloads/membership-access-copy-report.pdf (custom PDF preserved)
 - Membership Auth Patch Report: downloads/membership-auth-patch-report.pdf (custom PDF preserved)
 - Membership Auth Ui Patch: downloads/membership-auth-ui-patch.pdf (custom PDF preserved)
 - Membership Foundation Patch Report: downloads/membership-foundation-patch-report.pdf (custom PDF preserved)
@@ -144,9 +152,15 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Starter Library Offer: downloads/offer-starter-library.pdf (custom PDF preserved)
 - Trust Before Darkness Offer: downloads/offer-trust-before-darkness.pdf (custom PDF preserved)
 - Trust And Evidence Kit Offer: downloads/offer-trust-evidence-kit.pdf (custom PDF preserved)
+- Open Source Research Suite Test: downloads/open-source-research-suite-test.pdf (custom PDF preserved)
+- Open Source Research Wiring: downloads/open-source-research-wiring.pdf (custom PDF preserved)
+- Osint Tools Test: downloads/osint-tools-test.pdf (custom PDF preserved)
+- Osint Worker Patch Report: downloads/osint-worker-patch-report.pdf (custom PDF preserved)
 - Outcome Briefings: downloads/outcome-briefings.pdf (custom PDF preserved)
 - Page Quality Audit: downloads/page-quality-audit.pdf (custom PDF preserved)
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf (custom PDF preserved)
+- Phase6 Data Integration: downloads/phase6-data-integration.pdf (custom PDF preserved)
+- Phase6 Worker Patch: downloads/phase6-worker-patch.pdf (custom PDF preserved)
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
@@ -155,6 +169,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Probability Snapshot: downloads/probability-snapshot.pdf (custom PDF preserved)
 - Public Copy Scrubber Report: downloads/public-copy-scrubber-report.pdf (custom PDF preserved)
 - Public Copy Visibility Test: downloads/public-copy-visibility-test.pdf (custom PDF preserved)
+- Public Network Map Test: downloads/public-network-map-test.pdf (custom PDF preserved)
 - Public Record Intake Manifest: downloads/public-record-intake.pdf (custom PDF preserved)
 - Public Visibility Report: downloads/public-visibility-report.pdf (custom PDF preserved)
 - Public Weekly Signup Report: downloads/public-weekly-signup-report.pdf (custom PDF preserved)
@@ -162,13 +177,15 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Reader Conclusions: downloads/reader-conclusions.pdf (custom PDF preserved)
 - Reader Experience Governor: downloads/reader-experience-governor-report.pdf (custom PDF preserved)
 - Reader Page Repair: downloads/reader-page-repair.pdf (custom PDF preserved)
+- Research Tools Ui Patch: downloads/research-tools-ui-patch.pdf (custom PDF preserved)
+- Restore Public Core Routes: downloads/restore-public-core-routes.pdf (custom PDF preserved)
 - Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf (custom PDF preserved)
-- Search Investigation Smoke Test: downloads/search-investigation-smoke-test.pdf
+- Search Investigation Smoke Test: downloads/search-investigation-smoke-test.pdf (custom PDF preserved)
 - Search Runtime Hardening Report: downloads/search-runtime-hardening-report.pdf (custom PDF preserved)
 - Search System Repair Report: downloads/search-system-repair-report.pdf (custom PDF preserved)
-- Search V3 Build Report: downloads/search-v3-build-report.pdf
-- Search V3 Quality Test: downloads/search-v3-quality-test.pdf
-- Search V3 Runtime Report: downloads/search-v3-runtime-report.pdf
+- Search V3 Build Report: downloads/search-v3-build-report.pdf (custom PDF preserved)
+- Search V3 Quality Test: downloads/search-v3-quality-test.pdf (custom PDF preserved)
+- Search V3 Runtime Report: downloads/search-v3-runtime-report.pdf (custom PDF preserved)
 - SEC Filing Feed: downloads/sec-filing-feed.pdf (custom PDF preserved)
 - Secondary Deck Artwork: downloads/secondary-deck-artwork.pdf (custom PDF preserved)
 - Secret Societies and Orders Tracker: downloads/secret-societies-tracker.pdf (custom PDF preserved)
@@ -189,16 +206,16 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Site Quality Report: downloads/site-quality-report.pdf (custom PDF preserved)
 - Site Relationship Map: downloads/site-relationship-map.pdf (custom PDF preserved)
 - Source Cards: downloads/source-cards.pdf (custom PDF preserved)
-- Source Change Monitor Report: downloads/source-change-monitor-report.pdf
-- Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf
-- Source Change Preservation Hardening Test: downloads/source-change-preservation-hardening-test.pdf
-- Source Change Preservation Test: downloads/source-change-preservation-test.pdf
+- Source Change Monitor Report: downloads/source-change-monitor-report.pdf (custom PDF preserved)
+- Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf (custom PDF preserved)
+- Source Change Preservation Hardening Test: downloads/source-change-preservation-hardening-test.pdf (custom PDF preserved)
+- Source Change Preservation Test: downloads/source-change-preservation-test.pdf (custom PDF preserved)
 - Source Document Vault: downloads/source-document-vault.pdf (custom PDF preserved)
 - Speculation / Needs Review: downloads/speculation-needs-review-public.pdf (custom PDF preserved)
 - Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf (custom PDF preserved)
 - Speculative Conclusions: downloads/speculative-conclusions.pdf (custom PDF preserved)
-- Structured Investigation Data Build: downloads/structured-investigation-data-build.pdf
-- Structured Investigation Data Test: downloads/structured-investigation-data-test.pdf
+- Structured Investigation Data Build: downloads/structured-investigation-data-build.pdf (custom PDF preserved)
+- Structured Investigation Data Test: downloads/structured-investigation-data-test.pdf (custom PDF preserved)
 - Crime-State Overlap Brief: downloads/subject-crime-state-overlap.pdf
 - D.O.G The Architect Initiation Map: downloads/subject-dog-architect.pdf
 - Epstein / Black File Source Map: downloads/subject-epstein-black-file.pdf
@@ -221,6 +238,6 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Transparent Maintenance Report: downloads/transparent-maintenance-report.pdf (custom PDF preserved)
 - Update Cadence Report: downloads/update-cadence-report.pdf (custom PDF preserved)
 - Verified Record Cards: downloads/verified-record-cards.pdf (custom PDF preserved)
-- Weekly Investigation Report: downloads/weekly-investigation-report.pdf
+- Weekly Investigation Report: downloads/weekly-investigation-report.pdf (custom PDF preserved)
 - Matrix Reprogrammed Weekly Signal Drop: downloads/weekly-newsletter-latest.pdf (custom PDF preserved)
 - Wrongdoing Tracker / Public-Record Case Engine: downloads/wrongdoing-tracker.pdf (custom PDF preserved)

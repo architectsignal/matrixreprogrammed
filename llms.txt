@@ -516,6 +516,10 @@ Newsletter Capture:
 - /newsletter-signup: Cloudflare Worker endpoint that stores subscribers in FORUM_POSTS KV.
 - /newsletter-health: health check for subscriber storage.
 - /newsletter-send-weekly: admin weekly digest sender/preview endpoint.
+<!-- geographic-power-atlas:start -->
+- Geographic Power Atlas: geographic-power-atlas.html
+- Geographic atlas GeoJSON: data/geographic-power-atlas-data.json
+<!-- geographic-power-atlas:end -->
 
 Deploy Health:
 - /deploy-health.html: Cloudflare deploy health, homepage state, hidden-eye gate state, marker leak check, and conversion route verification.
@@ -535,6 +539,10 @@ Intel Vault:
 - /top-52-generated-art.html: generated Power Deck card artwork gallery and asset status.
 
 - Member research tools: https://matrixreprogrammed.com/research-tools.html
+Evidence Archive & Verification: https://matrixreprogrammed.com/evidence-archive.html
+Integrity Manifest: https://matrixreprogrammed.com/data/evidence-integrity-manifest.json
+
+- [Public Data Laboratory](https://matrixreprogrammed.com/data-lab.html): Read-only DuckDB-Wasm SQL and optional Perspective exploration over approved public entity, relationship, SEC market and evidence-network datasets.
 
 - Structured entity registry: https://matrixreprogrammed.com/entity-registry.html
 - Sourced relationship registry: https://matrixreprogrammed.com/relationship-registry.html
@@ -545,15 +553,3 @@ Intel Vault:
 
 - Evidence Reader: https://matrixreprogrammed.com/evidence-reader.html
 - Evidence Timeline: https://matrixreprogrammed.com/evidence-timeline.html
-
-- [Security, Privacy & OSINT Safety Hub](https://matrixreprogrammed.com/security-privacy.html): Threat models and vetted free tools for anonymity, secure communication, defensive monitoring, evidence handling and lawful OSINT.
-
-- [Dark Web Safety & Lawful Onion Resources](https://matrixreprogrammed.com/dark-web-safety.html): A defensive Tor workflow, verified official onion services, hostile-file guidance and a non-clickable illicit-market risk watch.
-Evidence Archive & Verification: https://matrixreprogrammed.com/evidence-archive.html
-Integrity Manifest: https://matrixreprogrammed.com/data/evidence-integrity-manifest.json
-
-- [Public Data Laboratory](https://matrixreprogrammed.com/data-lab.html): Read-only DuckDB-Wasm SQL and optional Perspective exploration over approved public entity, relationship, SEC market and evidence-network datasets.
-<!-- geographic-power-atlas:start -->
-- Geographic Power Atlas: geographic-power-atlas.html
-- Geographic atlas GeoJSON: data/geographic-power-atlas-data.json
-<!-- geographic-power-atlas:end -->

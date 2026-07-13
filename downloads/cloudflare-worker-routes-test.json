@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-13T06:39:08.925Z",
+  "problems": [],
+  "canonicalMembershipPatch": {
+    "status": 0,
+    "stdout": "Membership page rebuilt canonically: €3, €6, €9 with 32 listed benefits.\n",
+    "stderr": ""
+  },
+  "workerEntrypoint": "src/worker-production.js",
+  "forumStorage": "Cloudflare D1 authoritative with KV compatibility/recovery only",
+  "paymentStatus": "deferred",
+  "boundary": "No public checkout or subscription creation UI is permitted until payment activation is deliberately released."
+}

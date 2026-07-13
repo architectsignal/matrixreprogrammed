@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "updated": "2026-07-12",
+  "title": "Security, Privacy & OSINT Safety Hub",
+  "mission": "Give readers a complete, free, evidence-based defensive system for reducing tracking, account compromise, malware exposure, metadata leakage and operational mistakes while conducting lawful public-record research.",
+  "coreBoundary": "Privacy tools reduce specific risks; they do not make a person invisible, invulnerable or immune from identification. Anonymity is a process built from threat modelling, compartmentation, endpoint security and disciplined behaviour. Use network, scanning and OSINT tools only on systems you own, administer, have explicit permission to test, or for lawful public-record research.",
+  "rules": [
+    "Start with a threat model: identify what you are protecting, from whom, for how long and what failure would cost.",
+    "Privacy is not the same as anonymity. Encryption protects content; it does not automatically hide identity, contacts, timing or device metadata.",
+    "A VPN moves trust from an internet provider to a VPN provider. It is not a substitute for Tor and no free VPN is recommended here.",
+    "Incognito or private-browser mode mainly limits local history. It does not hide an IP address from websites, employers, networks or providers.",
+    "Do not install extra extensions in Tor Browser. Extra extensions can make a browser fingerprint more unique or bypass protections.",
+    "Never use a website that generates a private PGP key for you. Generate keys locally with GnuPG or Kleopatra and keep the private key offline.",
+    "Never upload sensitive documents, confidential URLs or unpublished evidence to public malware scanners. Public scanners may share samples and metadata.",
+    "Separate research identities from personal identities. Do not log into personal accounts from an anonymous research environment.",
+    "Keep operating systems, browsers and security tools updated. A stale privacy tool can become a security liability.",
+    "No tool replaces judgment, lawful authority, source verification or safe handling of vulnerable people."
+  ],
+  "systems": [
+    {
+      "id": "everyday",
+      "title": "Everyday Protection",
+      "threatModel": "Account takeover, phishing, routine tracking, lost devices and common malware.",
+      "steps": [
+        "Use a maintained operating system and automatic security updates.",
+        "Use Bitwarden or KeePassXC with a unique password for every account.",
+        "Use Aegis, 2FAS or Ente Auth for time-based codes; prefer passkeys or hardware keys where available.",
+        "Use Signal for sensitive conversations and encrypt important files before cloud storage.",
+        "Keep an encrypted, tested backup with restic or BorgBackup."
+      ],
+      "toolIds": ["bitwarden", "keepassxc", "aegis", "2fas", "ente-auth", "signal", "cryptomator", "restic", "borgbackup", "ublock-origin"]
+    },
+    {
+      "id": "private-research",
+      "title": "Private OSINT Research",
+      "threatModel": "Cross-site tracking, identity contamination, malicious documents, metadata leakage and accidental contact with a subject.",
+      "steps": [
+        "Use a dedicated operating-system account or isolated virtual machine for research.",
+        "Use Tor Browser when IP separation is needed; never sign into personal accounts in that session.",
+        "Open untrusted documents through Dangerzone and inspect metadata with ExifTool or MAT2.",
+        "Use aliases for registrations and OnionShare for controlled file transfer.",
+        "Record URLs, access dates, hashes and evidence boundaries for every important source."
+      ],
+      "toolIds": ["tor-browser", "onionshare", "dangerzone", "mat2", "exiftool", "simplelogin", "addy", "wayback", "bellingcat-toolkit"]
+    },
+    {
+      "id": "high-risk",
+      "title": "High-Risk Anonymous Research",
+      "threatModel": "Targeted surveillance, hostile networks, device seizure, censorship or a serious need to separate research identity from everyday identity.",
+      "steps": [
+        "Read EFF Surveillance Self-Defense and Security in a Box before choosing tools.",
+        "Use Tails for an amnesic portable workflow or Qubes OS with Whonix for long-term compartmentation.",
+        "Use Tor bridges or Snowflake where Tor is blocked; do not torrent or add extensions.",
+        "Keep personal phones, accounts, writing habits, usernames and schedules outside the anonymous compartment.",
+        "Use Access Now's Digital Security Helpline when a real person or organisation is under active threat."
+      ],
+      "toolIds": ["eff-ssd", "security-in-a-box", "tails", "qubes", "whonix", "tor-browser", "snowflake", "simplex", "briar", "access-now"]
+    },
+    {
+      "id": "secure-comms",
+      "title": "Secure Communication",
+      "threatModel": "Message interception, account compromise, contact discovery and unsafe file exchange.",
+      "steps": [
+        "Prefer modern end-to-end encrypted messengers over ordinary email for sensitive conversations.",
+        "Verify important contacts using safety numbers, security codes or a second trusted channel.",
+        "Enable registration locks, disappearing messages where appropriate and device-screen protection.",
+        "Use PGP only where interoperability requires it and both parties understand key verification.",
+        "Remember that recipients can copy, photograph or disclose any message they can read."
+      ],
+      "toolIds": ["signal", "simplex", "briar", "onionshare", "thunderbird", "gnupg", "kleopatra"]
+    },
+    {
+      "id": "home-network",
+      "title": "Home & Small-Office Defence",
+      "threatModel": "Malware, unwanted outbound connections, weak services, malicious domains and unpatched devices.",
+      "steps": [
+        "Inventory devices and remove services you do not need.",
+        "Use Pi-hole or AdGuard Home for network-level blocking, but do not mistake DNS blocking for anonymity.",
+        "Use OpenSnitch or Portmaster to understand outbound application connections.",
+        "Use Nmap only against networks you own or have permission to assess.",
+        "Use Lynis, ClamAV and verified backups as part of a repeatable maintenance routine."
+      ],
+      "toolIds": ["pihole", "adguard-home", "opensnitch", "portmaster", "nmap", "lynis", "clamav", "wireshark", "restic"]
+    },
+    {
+      "id": "server-operator",
+      "title": "Website & Server Defence",
+      "threatModel": "Exposed services, weak TLS, vulnerable web applications, brute force, malicious traffic and incomplete logs.",
+      "steps": [
+        "Run external configuration checks with Mozilla Observatory, SSL Labs and Security Headers.",
+        "Use Fail2ban or CrowdSec to respond to repeated malicious authentication attempts.",
+        "Use Suricata or Zeek for network visibility and Wazuh or osquery for endpoint telemetry.",
+        "Use OWASP ZAP and Greenbone only with explicit authorisation and controlled scope.",
+        "Patch quickly, minimise privileges, protect backups and rehearse incident recovery."
+      ],
+      "toolIds": ["mozilla-observatory", "ssllabs", "security-headers", "fail2ban", "crowdsec", "suricata", "zeek", "wazuh", "osquery", "zaproxy", "greenbone"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "learn",
+      "title": "1. Threat Modelling & Digital Safety",
+      "summary": "Start here. These guides explain risk, identity separation, safer communication and emergency response before software choices are made.",
+      "tools": [
+        {"id":"eff-ssd","name":"EFF Surveillance Self-Defense","url":"https://ssd.eff.org/","access":"Free guide","openSource":"Open educational resource","platforms":["Web"],"level":"All","purpose":"Threat modelling and practical surveillance defence.","why":"Clear guides from a leading digital-rights organisation covering passwords, encryption, protests, phones, metadata and communications.","limits":"Guidance must be adapted to local law, device condition and the actual adversary."},
+        {"id":"security-in-a-box","name":"Security in a Box","url":"https://securityinabox.org/en/","access":"Free guide","openSource":"Open educational resource","platforms":["Web"],"level":"All","purpose":"Step-by-step digital security for activists and human-rights defenders.","why":"Organises protection around what a person needs to defend rather than around fashionable tools.","limits":"No checklist can replace individual risk assessment or emergency support."},
+        {"id":"privacy-guides","name":"Privacy Guides","url":"https://www.privacyguides.org/en/","access":"Free guide","openSource":"Community project","platforms":["Web"],"level":"All","purpose":"Maintained privacy recommendations with technical criteria.","why":"Useful for comparing operating systems, browsers, messengers, encryption and account services.","limits":"Recommendations change; verify the current project page before migrating critical data."},
+        {"id":"digital-first-aid","name":"Digital First Aid Kit","url":"https://digitalfirstaid.org/","access":"Free guide","openSource":"Collaborative resource","platforms":["Web"],"level":"All","purpose":"Initial response when an account, website or device may be compromised.","why":"Provides calm triage paths for common digital emergencies.","limits":"It is not a substitute for forensic preservation, legal advice or a qualified incident responder."},
+        {"id":"access-now","name":"Access Now Digital Security Helpline","url":"https://www.accessnow.org/help/","access":"Free support for eligible users","openSource":"Nonprofit service","platforms":["Web"],"level":"High risk","purpose":"Human support for civil society, journalists, activists and human-rights defenders under digital threat.","why":"Real incidents often need confidential, contextual help rather than another software download.","limits":"Eligibility and response scope apply; use the official secure contact route."}
+      ]
+    },
+    {
+      "id": "operating-systems",
+      "title": "2. Secure & Anonymous Operating Systems",
+      "summary": "The operating system controls every application above it. Use an amnesic system for temporary anonymity or compartmentation for persistent work.",
+      "tools": [
+        {"id":"tails","name":"Tails","url":"https://tails.net/","access":"Free","openSource":"Free and open source","platforms":["Bootable USB","x86-64"],"level":"Intermediate","purpose":"Portable, amnesic operating system that routes internet connections through Tor.","why":"Strong defaults reduce traces on the host computer and reduce opportunities for accidental non-Tor traffic.","limits":"Hardware, firmware, personal logins, writing style and operational mistakes can still identify a user. Persistent Storage is detectable even when encrypted."},
+        {"id":"qubes","name":"Qubes OS","url":"https://www.qubes-os.org/","access":"Free","openSource":"Free and open source","platforms":["Compatible x86-64 hardware"],"level":"Advanced","purpose":"Security by compartmentalising work into isolated virtual machines.","why":"Separates personal, work, untrusted-document and anonymous activities so one compromise has a smaller blast radius.","limits":"Requires compatible hardware, disciplined use and a significant learning curve. Qubes is not anonymous by default."},
+        {"id":"whonix","name":"Whonix","url":"https://www.whonix.org/","access":"Free","openSource":"Free and open source","platforms":["Qubes","KVM","VirtualBox"],"level":"Advanced","purpose":"Two-part Tor gateway and workstation designed to reduce IP and DNS leaks.","why":"Separates network routing from applications and integrates particularly well with Qubes OS.","limits":"A compromised host, identity contamination or malicious documents can still defeat the intended separation."},
+        {"id":"grapheneos","name":"GrapheneOS","url":"https://grapheneos.org/","access":"Free","openSource":"Open source","platforms":["Supported Google Pixel devices"],"level":"Intermediate","purpose":"Hardened mobile operating system with exploit mitigations and permission controls.","why":"A strong choice for reducing mobile attack surface while retaining practical smartphone use.","limits":"Hardware support is limited. It is a security-focused mobile OS, not an anonymity system by itself."},
+        {"id":"kicksecure","name":"Kicksecure","url":"https://www.kicksecure.com/","access":"Free","openSource":"Free and open source","platforms":["Linux","Virtual machines"],"level":"Advanced","purpose":"Hardened Debian-based operating system used as the security foundation beneath Whonix.","why":"Useful where system hardening and documentation are needed without forcing all traffic through Tor.","limits":"Hardening reduces risk but does not guarantee immunity from malware or targeted exploitation."}
+      ]
+    },
+    {
+      "id": "network-anonymity",
+      "title": "3. Anonymous Browsing, Censorship Resistance & File Transfer",
+      "summary": "Use Tor for anonymity, hardened browsers for ordinary anti-tracking, and OnionShare for direct Tor-based transfer. Do not combine tools blindly.",
+      "tools": [
+        {"id":"tor-browser","name":"Tor Browser","url":"https://www.torproject.org/download/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Android"],"level":"All","purpose":"Routes browsing through Tor and standardises browser fingerprinting protections.","why":"The default choice when a user needs to separate their IP address from websites and resist tracking or censorship.","limits":"Do not torrent, add extensions, open downloaded documents while online, or sign into identifying accounts. Tor cannot prevent endpoint compromise or behaviour-based identification."},
+        {"id":"orbot","name":"Orbot","url":"https://orbot.app/","access":"Free","openSource":"Free and open source","platforms":["Android","iOS"],"level":"Intermediate","purpose":"Routes supported mobile application traffic through Tor.","why":"Useful for censorship resistance and Tor access on mobile devices.","limits":"Not every application handles proxies safely. Prefer Tor Browser for web anonymity and verify which apps are actually routed."},
+        {"id":"snowflake","name":"Tor Snowflake","url":"https://snowflake.torproject.org/","access":"Free","openSource":"Free and open source","platforms":["Tor Browser","Web extension","Standalone proxy"],"level":"All","purpose":"Helps users connect to Tor where direct Tor access is blocked.","why":"Uses temporary volunteer proxies to make censorship blocking more difficult.","limits":"It improves reachability, not endpoint security, identity discipline or protection from global traffic analysis."},
+        {"id":"mullvad-browser","name":"Mullvad Browser","url":"https://mullvad.net/en/browser","access":"Free browser","openSource":"Open source","platforms":["Windows","macOS","Linux"],"level":"All","purpose":"Anti-fingerprinting browser developed with the Tor Project for ordinary non-Tor browsing.","why":"Reduces tracking and fingerprint uniqueness without requiring a Tor connection.","limits":"It does not hide an IP address unless used with a separate network service. Do not confuse it with Tor Browser."},
+        {"id":"librewolf","name":"LibreWolf","url":"https://librewolf.net/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"All","purpose":"Privacy-hardened Firefox derivative for everyday browsing.","why":"Removes telemetry and applies stronger privacy defaults while retaining normal web compatibility.","limits":"A customised everyday browser is not an anonymity browser and may develop a unique fingerprint."},
+        {"id":"ublock-origin","name":"uBlock Origin","url":"https://github.com/gorhill/uBlock","access":"Free","openSource":"Free and open source","platforms":["Firefox","Chromium-compatible browsers"],"level":"All","purpose":"Efficient content blocker for trackers, malicious advertising and unwanted scripts.","why":"Reduces exposure to tracking and malvertising with transparent filter lists.","limits":"It cannot hide an IP address or repair an already compromised device. Install only the genuine project extension."},
+        {"id":"onionshare","name":"OnionShare","url":"https://onionshare.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Intermediate","purpose":"Share files, receive files, host a temporary site or chat over Tor onion services.","why":"Avoids placing files on a conventional cloud server and can provide a direct controlled transfer route.","limits":"A recipient can still redistribute files. Protect the sharing address and understand the chosen mode before use."}
+      ]
+    },
+    {
+      "id": "communications",
+      "title": "4. Secure Messaging & Calls",
+      "summary": "Modern end-to-end encrypted messaging is generally safer and easier than PGP email. Verify contacts and secure the device holding the messages.",
+      "tools": [
+        {"id":"signal","name":"Signal","url":"https://signal.org/","access":"Free","openSource":"Open source clients and server","platforms":["Android","iOS","Desktop"],"level":"All","purpose":"End-to-end encrypted messages, calls and groups with strong defaults.","why":"Widely reviewed, easy to use and designed to minimise stored communication content.","limits":"Registration normally uses a phone number, and device compromise or unsafe backups can expose messages. Usernames reduce number sharing but do not remove registration requirements."},
+        {"id":"simplex","name":"SimpleX Chat","url":"https://simplex.chat/","access":"Free","openSource":"Free and open source","platforms":["Android","iOS","Desktop"],"level":"Intermediate","purpose":"End-to-end encrypted messaging without permanent user identifiers.","why":"Reduces reliance on phone numbers, email addresses and global account identifiers.","limits":"Smaller network, less mature operational familiarity and contact-link handling still require care."},
+        {"id":"briar","name":"Briar","url":"https://briarproject.org/","access":"Free","openSource":"Free and open source","platforms":["Android"],"level":"Intermediate","purpose":"Peer-to-peer encrypted messaging that can synchronise through Tor, Bluetooth or Wi-Fi.","why":"Designed for activists and environments where internet access may be blocked or unreliable.","limits":"Android-focused, both parties need the application, and device seizure remains a serious risk."},
+        {"id":"jitsi","name":"Jitsi Meet","url":"https://jitsi.org/jitsi-meet/","access":"Free software","openSource":"Free and open source","platforms":["Web","Mobile","Self-hosted"],"level":"All","purpose":"Open-source video meetings with self-hosting available.","why":"Useful when a group needs a browser-based meeting without a proprietary account ecosystem.","limits":"Public instances have their own operators and metadata. Confirm end-to-end encryption mode and do not assume a public room is anonymous."}
+      ]
+    },
+    {
+      "id": "email-pgp",
+      "title": "5. Email Safety, Aliases & PGP",
+      "summary": "Email exposes metadata and is difficult to make anonymous. Use aliases for compartmentation, modern encrypted mail where practical, and local PGP only when necessary.",
+      "tools": [
+        {"id":"thunderbird","name":"Thunderbird","url":"https://www.thunderbird.net/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Android"],"level":"All","purpose":"Desktop and mobile email client with built-in OpenPGP support.","why":"Keeps mail management in a maintained open-source client and supports local key handling.","limits":"Email headers, correspondents and timing remain visible to providers. Encryption requires correct key verification by both parties."},
+        {"id":"proton-mail","name":"Proton Mail","url":"https://proton.me/mail","access":"Free tier","openSource":"Open-source clients; hosted service","platforms":["Web","Mobile","Desktop"],"level":"All","purpose":"Encrypted email service with a free account tier.","why":"Makes encrypted mail between service users accessible and provides additional privacy features.","limits":"Email is not anonymous by default; account recovery, destination providers, metadata and device identifiers still matter."},
+        {"id":"tuta","name":"Tuta Mail","url":"https://tuta.com/","access":"Free tier","openSource":"Open-source clients; hosted service","platforms":["Web","Mobile","Desktop"],"level":"All","purpose":"Encrypted email and calendar with a free account option.","why":"Provides an alternative encrypted mail ecosystem with its own open-source clients.","limits":"Messages to ordinary email services cannot gain the same metadata and content protections without a shared encrypted workflow."},
+        {"id":"simplelogin","name":"SimpleLogin","url":"https://simplelogin.io/","access":"Free tier","openSource":"Open source","platforms":["Web","Browser extensions","Mobile"],"level":"All","purpose":"Create email aliases that forward without exposing a primary address.","why":"Reduces address reuse and makes it easier to disable an alias after a breach or unwanted contact.","limits":"Forwarding services can see routing metadata. Do not use one alias across identities that must remain separate."},
+        {"id":"addy","name":"addy.io","url":"https://addy.io/","access":"Free tier","openSource":"Open source","platforms":["Web","Browser extensions","Mobile clients"],"level":"All","purpose":"Disposable and compartmented email aliases.","why":"Useful for reducing spam, breach correlation and unnecessary disclosure of a main address.","limits":"Aliases protect the destination address, not message content, device identity or behavioural patterns."},
+        {"id":"gnupg","name":"GnuPG","url":"https://gnupg.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Command line"],"level":"Advanced","purpose":"Local OpenPGP encryption, signing and key management.","why":"The standard open implementation for generating and controlling PGP keys locally.","limits":"PGP is easy to misuse and does not hide email metadata. Create a revocation certificate, protect backups and verify fingerprints out of band."},
+        {"id":"kleopatra","name":"Gpg4win / Kleopatra","url":"https://www.gpg4win.org/","access":"Free","openSource":"Free and open source","platforms":["Windows"],"level":"Intermediate","purpose":"Graphical OpenPGP certificate and file encryption management.","why":"Provides a safer local alternative to dangerous online PGP key-generator websites.","limits":"Users still need to understand fingerprints, trust, revocation and secure private-key storage."},
+        {"id":"mailvelope","name":"Mailvelope","url":"https://mailvelope.com/","access":"Free","openSource":"Free and open source","platforms":["Browser extension"],"level":"Advanced","purpose":"OpenPGP integration for supported webmail services.","why":"Can add local browser-based PGP handling where a desktop client is not practical.","limits":"Browser-extension and webmail complexity increases the attack surface. Prefer a dedicated mail client for high-risk use."}
+      ]
+    },
+    {
+      "id": "passwords-auth",
+      "title": "6. Passwords, Passkeys & Multi-Factor Authentication",
+      "summary": "The biggest improvement for most people is unique passwords plus phishing-resistant authentication. Keep recovery codes offline.",
+      "tools": [
+        {"id":"bitwarden","name":"Bitwarden","url":"https://bitwarden.com/","access":"Strong free tier","openSource":"Open source","platforms":["Web","Desktop","Mobile","Browser extensions"],"level":"All","purpose":"Synchronised password and passkey management.","why":"Makes unique credentials practical across devices and supports secure sharing and auditing features.","limits":"Cloud access concentrates value in the vault. Use a strong master passphrase, MFA and protected recovery material."},
+        {"id":"keepassxc","name":"KeePassXC","url":"https://keepassxc.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"All","purpose":"Local encrypted password database without a required hosted account.","why":"Gives the user direct control over the database and sync method.","limits":"The user is responsible for backups, safe synchronisation and avoiding database loss or conflicting copies."},
+        {"id":"aegis","name":"Aegis Authenticator","url":"https://getaegis.app/","access":"Free","openSource":"Free and open source","platforms":["Android"],"level":"All","purpose":"Encrypted local TOTP/HOTP code manager.","why":"Supports vault encryption and export, avoiding dependence on a closed authenticator.","limits":"TOTP codes can still be phished in real time. Protect encrypted exports and recovery codes."},
+        {"id":"2fas","name":"2FAS Auth","url":"https://2fas.com/","access":"Free","openSource":"Open source","platforms":["Android","iOS","Browser extension"],"level":"All","purpose":"User-friendly two-factor code management.","why":"A practical cross-platform choice with browser integration and no paid requirement for core use.","limits":"Browser integration must be secured, and TOTP is weaker than passkeys or hardware security keys against phishing."},
+        {"id":"ente-auth","name":"Ente Auth","url":"https://ente.io/auth/","access":"Free","openSource":"Open source","platforms":["Android","iOS","Desktop","Web"],"level":"All","purpose":"End-to-end encrypted authenticator with multi-device access.","why":"Useful when encrypted synchronisation and recoverability are important.","limits":"Protect the Ente account, recovery key and every enrolled device."}
+      ]
+    },
+    {
+      "id": "encryption-backup",
+      "title": "7. Disk, File Encryption & Backups",
+      "summary": "Encryption protects stored content only when devices are locked and keys are safe. A tested backup is part of security, not an optional extra.",
+      "tools": [
+        {"id":"veracrypt","name":"VeraCrypt","url":"https://www.veracrypt.fr/en/Home.html","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Intermediate","purpose":"Encrypted containers, partitions and system drives.","why":"Mature tool for protecting substantial local collections and removable media.","limits":"Mounted volumes are accessible to malware and anyone controlling the unlocked device. Hidden-volume use has complex limitations."},
+        {"id":"cryptomator","name":"Cryptomator","url":"https://cryptomator.org/","access":"Free desktop apps","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Mobile apps"],"level":"All","purpose":"Encrypt individual files before storing them in a cloud-synchronised folder.","why":"Cloud-friendly design avoids placing plaintext file content and names in ordinary storage.","limits":"Cloud providers still see account, timing, size and synchronisation metadata. Protect recovery material."},
+        {"id":"age","name":"age","url":"https://age-encryption.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Command line"],"level":"Advanced","purpose":"Modern, simple file encryption for scripts and technical users.","why":"Small, auditable design with straightforward recipient and passphrase modes.","limits":"Command-line mistakes, lost keys or insecure shell history can undermine protection."},
+        {"id":"restic","name":"restic","url":"https://restic.net/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","BSD"],"level":"Advanced","purpose":"Encrypted, deduplicated backups to local or remote storage.","why":"Strong fit for automated, verifiable backups across many storage backends.","limits":"Backups are useful only when restoration is tested and credentials are stored separately."},
+        {"id":"borgbackup","name":"BorgBackup","url":"https://www.borgbackup.org/","access":"Free","openSource":"Free and open source","platforms":["Linux","macOS","BSD"],"level":"Advanced","purpose":"Encrypted, compressed and deduplicated backups.","why":"Efficient for repeated versioned backups and append-only remote repositories.","limits":"Requires careful repository-key management, monitoring and restore testing."}
+      ]
+    },
+    {
+      "id": "file-safety",
+      "title": "8. Metadata Removal, Dangerous Documents & Secure Cleanup",
+      "summary": "Documents and images can reveal names, devices, locations and editing history. Untrusted files can exploit readers before their content is assessed.",
+      "tools": [
+        {"id":"mat2","name":"MAT2","url":"https://0xacab.org/jvoisin/mat2","access":"Free","openSource":"Free and open source","platforms":["Linux","Command line","Desktop integrations"],"level":"Intermediate","purpose":"Remove metadata from many common file formats.","why":"Purpose-built for metadata minimisation before publication or transfer.","limits":"Some formats cannot be perfectly cleaned without conversion. Always inspect the output and keep the original separately."},
+        {"id":"exiftool","name":"ExifTool","url":"https://exiftool.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Inspect, edit and remove extensive image, document, audio and video metadata.","why":"One of the most comprehensive tools for identifying hidden metadata fields.","limits":"Removing visible metadata does not remove visual clues, file hashes, cloud logs or all proprietary data structures."},
+        {"id":"dangerzone","name":"Dangerzone","url":"https://dangerzone.rocks/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Qubes"],"level":"All","purpose":"Convert potentially malicious documents into safer PDFs inside isolated containers.","why":"Reduces risk from active content, embedded scripts and document exploits before reading.","limits":"Conversion can alter formatting and cannot make a compromised host safe. Preserve originals as evidence without opening them directly."},
+        {"id":"bleachbit","name":"BleachBit","url":"https://www.bleachbit.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","Linux"],"level":"All","purpose":"Remove caches, temporary files and application traces.","why":"Useful for routine cleanup and reducing unnecessary local data retention.","limits":"Deletion on SSDs, snapshots, cloud sync and backups is complicated. Cleanup is not a substitute for full-disk encryption or an amnesic OS."},
+        {"id":"nwipe","name":"nwipe","url":"https://github.com/martijnvanbrummelen/nwipe","access":"Free","openSource":"Free and open source","platforms":["Linux","Bootable environments"],"level":"Advanced","purpose":"Erase traditional hard drives and block devices.","why":"Useful for decommissioning magnetic drives through a documented wipe process.","limits":"Repeated overwriting is not reliable for many SSDs and flash devices because of wear levelling. Use manufacturer secure erase or encryption-key destruction where appropriate."}
+      ]
+    },
+    {
+      "id": "self-checks",
+      "title": "9. Privacy, Breach, Phishing & File Checks",
+      "summary": "Use these to identify exposure and suspicious material. Public scanning services are not private evidence lockers.",
+      "tools": [
+        {"id":"cover-your-tracks","name":"EFF Cover Your Tracks","url":"https://coveryourtracks.eff.org/","access":"Free service","openSource":"EFF research tool","platforms":["Web"],"level":"All","purpose":"Test tracker blocking and browser fingerprint uniqueness.","why":"Shows why blocking cookies alone does not prevent browser fingerprinting.","limits":"A test result is a snapshot and does not prove anonymity across all sites or sessions."},
+        {"id":"tor-check","name":"Tor Check","url":"https://check.torproject.org/","access":"Free service","openSource":"Tor Project service","platforms":["Web"],"level":"All","purpose":"Confirm whether a browser request appears to exit through Tor.","why":"Useful as a basic connection sanity check before sensitive browsing.","limits":"A positive result does not prove that every application or later request uses Tor safely."},
+        {"id":"hibp","name":"Have I Been Pwned","url":"https://haveibeenpwned.com/","access":"Free lookup and alerts","openSource":"Public service","platforms":["Web"],"level":"All","purpose":"Check whether an email address appears in known breach datasets.","why":"Provides a practical signal for password replacement and account review.","limits":"Absence does not prove safety; presence does not show who used an address or whether every listed field is accurate."},
+        {"id":"mozilla-monitor","name":"Mozilla Monitor","url":"https://monitor.mozilla.org/","access":"Free core service","openSource":"Mozilla service","platforms":["Web"],"level":"All","purpose":"Breach notifications and exposure guidance.","why":"Accessible way to monitor known breach exposure and get remediation steps.","limits":"Coverage depends on known datasets; data-broker removal features and availability vary by region."},
+        {"id":"virustotal","name":"VirusTotal","url":"https://www.virustotal.com/","access":"Free public analysis","openSource":"Hosted multi-scanner service","platforms":["Web","API limits"],"level":"Intermediate","purpose":"Check hashes, public URLs and non-sensitive files against multiple security engines.","why":"Useful for triaging common malware and reputation signals.","limits":"Uploads and submitted URLs may be shared with security partners. Never upload confidential, personal, privileged or unpublished evidence."},
+        {"id":"urlscan","name":"urlscan.io","url":"https://urlscan.io/","access":"Free public scans","openSource":"Hosted service","platforms":["Web","API limits"],"level":"Intermediate","purpose":"Render and inspect suspicious websites, requests, domains and page resources.","why":"Allows safer remote observation of a web page's network behaviour.","limits":"Public scans expose the submitted URL and result. Use private scanning only when your account and policy support it; never submit secret links."}
+      ]
+    },
+    {
+      "id": "network-defence",
+      "title": "10. Device, Network & Incident Defence",
+      "summary": "These are defensive administration tools. Use scanners and packet tools only on systems you own, operate or have explicit written authority to assess.",
+      "tools": [
+        {"id":"wireshark","name":"Wireshark","url":"https://www.wireshark.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Capture and analyse network protocols and traffic.","why":"Essential for diagnosing unexpected connections, insecure protocols and incident timelines.","limits":"Captures may contain credentials, personal data and third-party communications. Obtain authority and protect capture files."},
+        {"id":"nmap","name":"Nmap","url":"https://nmap.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Inventory hosts, ports and services on authorised networks.","why":"Helps defenders discover forgotten or exposed services before attackers do.","limits":"Scanning systems without permission can violate law, policy or service terms. Do not use it for unauthorised targeting."},
+        {"id":"opensnitch","name":"OpenSnitch","url":"https://github.com/evilsocket/opensnitch","access":"Free","openSource":"Free and open source","platforms":["Linux"],"level":"Intermediate","purpose":"Application-level outbound firewall and connection visibility.","why":"Makes unexpected application connections visible and controllable.","limits":"Blocking without understanding can break updates and create false confidence; malware with high privileges may bypass controls."},
+        {"id":"portmaster","name":"Portmaster","url":"https://safing.io/","access":"Free core application","openSource":"Open source","platforms":["Windows","Linux"],"level":"Intermediate","purpose":"Application firewall, DNS controls and connection monitoring.","why":"Provides an accessible view of which applications connect where.","limits":"Some network features are paid; local filtering is not anonymity and cannot protect a compromised kernel."},
+        {"id":"pihole","name":"Pi-hole","url":"https://pi-hole.net/","access":"Free","openSource":"Free and open source","platforms":["Linux server","Raspberry Pi","Containers"],"level":"Intermediate","purpose":"Network-wide DNS sinkhole for ads, trackers and known unwanted domains.","why":"Protects devices that cannot run browser extensions and centralises block lists.","limits":"DNS blocking can be bypassed, may break services and does not hide traffic destinations from the network resolver or provider."},
+        {"id":"adguard-home","name":"AdGuard Home","url":"https://adguard.com/en/adguard-home/overview.html","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Routers"],"level":"Intermediate","purpose":"Network DNS filtering and parental/security policies.","why":"Cross-platform alternative for centralised domain blocking and encrypted upstream DNS.","limits":"Blocking rules require maintenance and do not provide anonymity or malware immunity."},
+        {"id":"fail2ban","name":"Fail2ban","url":"https://www.fail2ban.org/","access":"Free","openSource":"Free and open source","platforms":["Linux","BSD"],"level":"Advanced","purpose":"Temporarily block sources producing repeated suspicious log events.","why":"Simple protection against repeated password guessing and noisy automated attacks.","limits":"It depends on correct logs and filters, does not fix weak passwords and can be evaded by distributed attacks."},
+        {"id":"crowdsec","name":"CrowdSec","url":"https://www.crowdsec.net/","access":"Free community edition","openSource":"Open source engine","platforms":["Linux","Windows","Containers","Cloud"],"level":"Advanced","purpose":"Collaborative detection and response for malicious behaviour.","why":"Combines local log analysis with community threat intelligence and reusable remediation components.","limits":"Community intelligence and automated blocking need careful tuning to avoid false positives and privacy issues."},
+        {"id":"suricata","name":"Suricata","url":"https://suricata.io/","access":"Free","openSource":"Free and open source","platforms":["Linux","BSD","Windows"],"level":"Advanced","purpose":"Network intrusion detection, prevention and security monitoring.","why":"High-performance inspection with rule-based alerts and protocol logging.","limits":"Requires placement, rule maintenance, storage and skilled analysis; encryption limits visibility."},
+        {"id":"zeek","name":"Zeek","url":"https://zeek.org/","access":"Free","openSource":"Free and open source","platforms":["Linux","BSD","macOS"],"level":"Advanced","purpose":"Network security monitoring and rich protocol metadata.","why":"Excellent for building incident timelines and understanding normal versus unusual network behaviour.","limits":"Produces substantial sensitive logs and requires analysis expertise rather than providing automatic verdicts."},
+        {"id":"wazuh","name":"Wazuh","url":"https://wazuh.com/","access":"Free self-hosted platform","openSource":"Open source","platforms":["Servers","Endpoints","Cloud"],"level":"Advanced","purpose":"Endpoint security monitoring, file integrity, vulnerability and log analysis.","why":"Provides an integrated defensive monitoring stack without a mandatory licence fee.","limits":"Operationally heavy; alerts, storage, upgrades and access control require dedicated administration."},
+        {"id":"osquery","name":"osquery","url":"https://osquery.io/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Query endpoint state using SQL-style tables.","why":"Powerful for inventory, threat hunting and checking persistence or configuration across endpoints.","limits":"It is a data collection engine, not a complete detection platform. Protect logs and deployment keys."},
+        {"id":"lynis","name":"Lynis","url":"https://cisofy.com/lynis/","access":"Free community edition","openSource":"Open source","platforms":["Linux","macOS","Unix"],"level":"Intermediate","purpose":"Local security auditing and hardening recommendations.","why":"Fast way to identify missing controls, weak configuration and maintenance gaps.","limits":"Recommendations require context and can create disruption if applied blindly."},
+        {"id":"clamav","name":"ClamAV","url":"https://www.clamav.net/","access":"Free","openSource":"Free and open source","platforms":["Linux","macOS","Windows builds"],"level":"Intermediate","purpose":"Malware scanning for files, mail gateways and servers.","why":"Useful as one layer in document intake and server workflows.","limits":"Detection is not complete and real-time endpoint protection varies by platform. Never rely on a single scanner."},
+        {"id":"yara","name":"YARA","url":"https://virustotal.github.io/yara/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Identify malware and suspicious files using pattern rules.","why":"Widely used by defenders to classify known families and indicators.","limits":"Rules can miss variants or generate false positives; execution and sample handling require a safe lab."},
+        {"id":"velociraptor","name":"Velociraptor","url":"https://docs.velociraptor.app/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Endpoint visibility, forensic collection and incident response.","why":"Lets authorised responders query and collect evidence across managed endpoints.","limits":"Extremely powerful administrative access; protect credentials, define scope and preserve chain of custody."}
+      ]
+    },
+    {
+      "id": "website-security",
+      "title": "11. Website & Server Security Checks",
+      "summary": "External configuration checks are safe starting points. Active vulnerability testing must be authorised and carefully scoped.",
+      "tools": [
+        {"id":"mozilla-observatory","name":"Mozilla Observatory","url":"https://observatory.mozilla.org/","access":"Free service","openSource":"Open source scanner","platforms":["Web"],"level":"All","purpose":"Check web security headers and defensive configuration.","why":"Clear grading and recommendations for common browser-side protections.","limits":"A strong score does not prove the application or server is free from vulnerabilities."},
+        {"id":"ssllabs","name":"Qualys SSL Labs Server Test","url":"https://www.ssllabs.com/ssltest/","access":"Free service","openSource":"Hosted service","platforms":["Web"],"level":"All","purpose":"Assess public TLS protocol, certificate and cipher configuration.","why":"Widely understood baseline for HTTPS deployment quality.","limits":"Tests public endpoints and publishes/cache results; it does not assess application logic or private services."},
+        {"id":"security-headers","name":"Security Headers","url":"https://securityheaders.com/","access":"Free service","openSource":"Hosted service","platforms":["Web"],"level":"All","purpose":"Quick review of important HTTP response headers.","why":"Simple way to detect missing CSP, HSTS and related protections.","limits":"Header presence is not proof of correct policy design or application security."},
+        {"id":"zaproxy","name":"OWASP ZAP","url":"https://www.zaproxy.org/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","Containers"],"level":"Advanced","purpose":"Intercepting proxy and web-application security testing for authorised systems.","why":"Leading open-source defensive tool for developers and website owners.","limits":"Active scans can disrupt services and generate intrusive requests. Use only with written authorisation and a defined test window."},
+        {"id":"greenbone","name":"Greenbone Community Edition / OpenVAS","url":"https://greenbone.github.io/docs/latest/","access":"Free community edition","openSource":"Open source components","platforms":["Linux","Containers","Virtual appliance builds"],"level":"Advanced","purpose":"Vulnerability assessment for authorised networks and hosts.","why":"Comprehensive open-source scanning and vulnerability-management foundation.","limits":"Scans can be noisy and disruptive; findings require validation, patch context and permission."},
+        {"id":"amass","name":"OWASP Amass","url":"https://owasp.org/www-project-amass/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Advanced","purpose":"Map an organisation's internet-facing assets and DNS relationships.","why":"Helps authorised defenders discover forgotten subdomains and infrastructure exposure.","limits":"Collect only lawful public data or assets in scope. Do not use results to access systems without permission."}
+      ]
+    },
+    {
+      "id": "osint",
+      "title": "12. Lawful OSINT & Source Verification",
+      "summary": "Use public records to verify claims, not to harass, stalk, impersonate or access accounts. Keep provenance, uncertainty and corrections visible.",
+      "tools": [
+        {"id":"bellingcat-toolkit","name":"Bellingcat Online Investigation Toolkit","url":"https://bellingcat.gitbook.io/toolkit","access":"Free guide and directory","openSource":"Public resource","platforms":["Web"],"level":"All","purpose":"Curated tools for maps, images, companies, transport, archives and verification.","why":"Investigation-focused organisation and practical categorisation for public-interest research.","limits":"Third-party tools have different privacy terms and accuracy. Verify important findings with primary records."},
+        {"id":"osint-framework","name":"OSINT Framework","url":"https://osintframework.com/","access":"Free directory","openSource":"Community resource","platforms":["Web"],"level":"Intermediate","purpose":"Navigate a large directory of public-information research resources.","why":"Good discovery map when the researcher knows the data type but not the available source.","limits":"A listing is not an endorsement; many external tools collect data or have commercial limits."},
+        {"id":"spiderfoot","name":"SpiderFoot","url":"https://github.com/smicallef/spiderfoot","access":"Free self-hosted edition","openSource":"Free and open source","platforms":["Linux","Windows","macOS","Containers"],"level":"Advanced","purpose":"Automate collection and correlation of public OSINT signals.","why":"Broad module ecosystem and graphable results for defensive exposure review.","limits":"Automation creates false positives and large amounts of personal data. Restrict targets, lawful purpose, retention and publication."},
+        {"id":"theharvester","name":"theHarvester","url":"https://github.com/laramies/theHarvester","access":"Free","openSource":"Free and open source","platforms":["Linux","macOS","Containers"],"level":"Advanced","purpose":"Collect public domain, email, host and service references for authorised security assessment.","why":"Useful for understanding an organisation's exposed public footprint.","limits":"Do not turn public addresses into harassment or credential attacks. Results may be stale, incorrect or belong to unrelated people."},
+        {"id":"sherlock","name":"Sherlock","url":"https://github.com/sherlock-project/sherlock","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux"],"level":"Intermediate","purpose":"Check whether a username appears across public websites.","why":"Can help an individual audit username reuse or researchers locate public leads.","limits":"Username matches do not prove common ownership or identity. Do not use it for stalking, harassment or account access."},
+        {"id":"wayback","name":"Internet Archive Wayback Machine","url":"https://web.archive.org/","access":"Free service","openSource":"Nonprofit archive service","platforms":["Web"],"level":"All","purpose":"View preserved historical versions of public websites.","why":"Essential for tracking removed pages, changed claims and historical context.","limits":"Coverage is incomplete and captures may omit scripts, files or restricted pages. A capture proves content availability, not truth."},
+        {"id":"aleph","name":"OCCRP Aleph","url":"https://aleph.occrp.org/","access":"Free public search","openSource":"Open-source platform and public service","platforms":["Web"],"level":"Intermediate","purpose":"Search public records, leaks and entity relationships assembled for investigative work.","why":"Strong source for cross-border company, person, document and relationship research.","limits":"Records need jurisdictional context and source verification; association is not proof of wrongdoing."},
+        {"id":"opencorporates","name":"OpenCorporates","url":"https://opencorporates.com/","access":"Free public search","openSource":"Open company-data service","platforms":["Web"],"level":"All","purpose":"Search official company-registry-derived records across jurisdictions.","why":"Useful starting point for legal entities, officers, addresses and registry links.","limits":"Coverage and freshness differ by jurisdiction. Similar names and registered-office addresses do not prove control or misconduct."},
+        {"id":"opensanctions","name":"OpenSanctions","url":"https://www.opensanctions.org/","access":"Free public search and open datasets","openSource":"Open source","platforms":["Web","Data downloads"],"level":"Intermediate","purpose":"Search sanctions, politically exposed persons and related public lists.","why":"Normalises many official watchlists and provides source links.","limits":"A match can be a false positive or historical listing. Verify identity, dates, list status and legal effect in the original authority record."}
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "13. Download, Signature & Integrity Verification",
+      "summary": "Download software only from official sources. Verify hashes and signatures when a project publishes them, especially for anonymity tools.",
+      "tools": [
+        {"id":"minisign","name":"Minisign","url":"https://jedisct1.github.io/minisign/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","BSD"],"level":"Advanced","purpose":"Small public-key tool for signing and verifying files.","why":"Simple format and implementation for project releases and evidence bundles.","limits":"Verification is meaningful only when the public key was obtained through a trusted independent route."},
+        {"id":"sigstore","name":"Sigstore Cosign","url":"https://docs.sigstore.dev/cosign/","access":"Free","openSource":"Free and open source","platforms":["Windows","macOS","Linux","CI systems"],"level":"Advanced","purpose":"Sign and verify software artefacts and files with transparency-log support.","why":"Useful for reproducible publication chains and modern keyless CI signing.","limits":"Identity policy, OIDC issuer and certificate checks must be explicit; a valid signature does not prove content is safe or true."},
+        {"id":"openhashtab","name":"OpenHashTab","url":"https://github.com/namazso/OpenHashTab","access":"Free","openSource":"Free and open source","platforms":["Windows"],"level":"All","purpose":"Calculate and compare file hashes from Windows file properties.","why":"Makes checksum verification accessible before installing downloaded software.","limits":"A matching hash only proves byte equality with the published value; obtain the expected hash from a trustworthy source."}
+      ]
+    }
+  ]
+}

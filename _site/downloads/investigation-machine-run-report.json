@@ -1,14 +1,14 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-07-11T12:51:11.789Z",
+  "checkedAt": "2026-07-12T07:38:48.644Z",
   "selectedSources": 12,
   "fetchedSources": 12,
   "skippedSources": 0,
   "failedSources": 0,
   "parsedItems": 506,
   "newOrSeenFindings": 506,
-  "ledgerFindings": 506,
+  "ledgerFindings": 818,
   "results": [
     {
       "sourceId": "doj-epstein-disclosures",
@@ -18,8 +18,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/epstein/doj-disclosures",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 90275,
-      "bodyHash": "3bc29ec5cc25da2f27a89506f27a42c8ada1ba39f6726aea37933966b6b8154e",
+      "bytes": 90490,
+      "bodyHash": "8ff06d43d7cd23ae8733a9352b3d8189d02988481afd94a0993332db10af9eeb",
       "itemCount": 80,
       "error": ""
     },
@@ -31,8 +31,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2195,
-      "bodyHash": "ccbfa5c024aa27da8214fdaa29769c1544cd584fd0c709e51d320f3166026d40",
+      "bytes": 2196,
+      "bodyHash": "54254a01f23b5782e35714a0431f53a176679f83a2d810ff11358b0a95c5aa71",
       "itemCount": 1,
       "error": ""
     },
@@ -45,7 +45,7 @@
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62370,
-      "bodyHash": "30a29279a9391539d92dd8401838f5391f49da89042645bc9e467d0760c6bff0",
+      "bodyHash": "9ef39873ac735e83b850bc41a177b468730764e5a977faf265bf77e4958fb770",
       "itemCount": 14,
       "error": ""
     },
@@ -58,7 +58,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22812,
-      "bodyHash": "b16231b5930ebdc53b1ec3691600194417b3fd8b577a8c1b1cf1657e56d93fbd",
+      "bodyHash": "160dfbce9627322fb1bf25bba1b0390fdd972a339bff4f757d4bcbc07693b8de",
       "itemCount": 40,
       "error": ""
     },
@@ -96,8 +96,8 @@
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 58483,
-      "bodyHash": "6ded275f8737c60d1da29bfa40280f93fd7d7017c4cd0a8e37f85d74dd702c48",
+      "bytes": 59153,
+      "bodyHash": "a869e2c7ace62e23fc7428111d09b9ddad501b46dd80e6a92b5713355d581c8e",
       "itemCount": 100,
       "error": ""
     },
@@ -110,7 +110,7 @@
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 43119,
-      "bodyHash": "a46062ec08c0cc87eb5496831c9463f7b56ac2f6f76ad03437e6bd33be040905",
+      "bodyHash": "4ac8183028ec4c62e4ff2a05b1f43d9621ff76d66d23ae55f20416f517acdb53",
       "itemCount": 19,
       "error": ""
     },
@@ -149,7 +149,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 101899,
-      "bodyHash": "ab2fb987466541546ec2dde0e7444ed497e92f480508feebe6eade812dac3ea9",
+      "bodyHash": "a659e287a5c524b97983399af600b6fc75d8a8073b10c11c064a9327f688ea5e",
       "itemCount": 16,
       "error": ""
     },

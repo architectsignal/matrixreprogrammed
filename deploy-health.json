@@ -1,179 +1,101 @@
 {
   "ok": true,
-  "buildSha": "a4f208d06baa4406919fdc2a0ee45d92bec50546",
-  "buildShortSha": "a4f208d06baa",
-  "generatedAt": "2026-07-12T06:18:43.271Z",
-  "target": "Cloudflare Worker / _site assets",
-  "workerScript": "src/worker.js",
-  "assetOutput": "_site",
-  "homepageExpectedMarker": "FOLLOW THE FILES.",
-  "routes": [
-    "/",
-    "/forum-health",
-    "/deploy-status",
-    "/deploy-status.json",
-    "/search",
-    "/books",
-    "/live-intel",
-    "/power-conclusions",
-    "/reader-conclusions",
-    "/evidence-hunter",
-    "/who-holds-power",
-    "/one-world-convergence",
-    "/accountability-watch",
-    "/epstein-files",
-    "/sec-filing-feed.html",
-    "/probability-lab.html",
-    "/probability-snapshot.html"
+  "buildSha": "9b282fa1ad9613637586a972ad343ad334a9c2e6",
+  "buildShortSha": "9b282fa1ad96",
+  "generatedAt": "2026-07-13T06:38:26.326Z",
+  "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
+  "routeToCheck": "https://matrixreprogrammed.com/deploy-health.html",
+  "homepageShouldContain": [
+    "machine-three-doors",
+    "all-seeing-eye-gate"
   ],
-  "modules": [
+  "homepageShouldNotContain": [
+    "preservedaftervisiblede-duplication",
+    "new-intelligence-toolspreserved",
+    "reader-usefulness-routepreserved"
+  ],
+  "markerLeak": false,
+  "checks": [
     {
       "name": "Homepage",
       "route": "/",
       "file": "index.html",
-      "hash": "46a4c3e25a07c15d"
+      "marker": "machine-three-doors",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "b8ba9b9aa6658d80"
     },
     {
       "name": "All-seeing eye gate",
       "route": "/",
       "file": "index.html",
-      "hash": "46a4c3e25a07c15d"
-    },
-    {
-      "name": "Power Conclusions",
-      "route": "/power-conclusions.html",
-      "file": "power-conclusions.html",
-      "hash": "b0b8f9e81a356b5a"
-    },
-    {
-      "name": "Reader Conclusions",
-      "route": "/reader-conclusions.html",
-      "file": "reader-conclusions.html",
-      "hash": "09df9841b133b931"
-    },
-    {
-      "name": "Evidence Hunter",
-      "route": "/evidence-hunter.html",
-      "file": "evidence-hunter.html",
-      "hash": "832f1a8cfa6a3eb7"
-    },
-    {
-      "name": "Who Holds Power",
-      "route": "/who-holds-power.html",
-      "file": "who-holds-power.html",
-      "hash": "2506e7a8e366996b"
-    },
-    {
-      "name": "Convergence Map",
-      "route": "/one-world-convergence.html",
-      "file": "one-world-convergence.html",
-      "hash": "1351b883b2334724"
-    },
-    {
-      "name": "Accountability Watch",
-      "route": "/accountability-watch.html",
-      "file": "accountability-watch.html",
-      "hash": "0bded53b26fbee06"
+      "marker": "all-seeing-eye-gate",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "b8ba9b9aa6658d80"
     },
     {
       "name": "Dark Speculation Lab",
       "route": "/dark-speculation-lab.html",
       "file": "dark-speculation-lab.html",
-      "hash": "cb2fb576145d5f50"
+      "marker": "CLASSIFIED, NOT CONFIRMED",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "a1eab62495e0e573"
     },
     {
       "name": "Dark Speculation Forum",
       "route": "/dark-speculation-forum.html",
       "file": "dark-speculation-forum.html",
-      "hash": "b9d0545ecea15fcb"
+      "marker": "DROP THE LINK",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "5b678499dd9646ba"
     },
     {
       "name": "Evidence Vault",
       "route": "/evidence-vault.html",
       "file": "evidence-vault.html",
-      "hash": "946acf57f6ad8347"
+      "marker": "Evidence",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "4c6dbf33e1c69195"
     },
     {
       "name": "Books",
       "route": "/books.html",
       "file": "books.html",
-      "hash": "5d8edab2c6b66ea9"
+      "marker": "Books",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "e6623346946ac9b9"
     },
     {
       "name": "Download Center",
       "route": "/download-center.html",
       "file": "download-center.html",
-      "hash": "56765aa91531b256"
-    },
-    {
-      "name": "SEC Filing Feed",
-      "route": "/sec-filing-feed.html",
-      "file": "sec-filing-feed.html",
-      "hash": "2412b29aee99d4da"
-    },
-    {
-      "name": "Probability Lab",
-      "route": "/probability-lab.html",
-      "file": "probability-lab.html",
-      "hash": "f65aecb4b619b2a1"
-    },
-    {
-      "name": "Probability Snapshot",
-      "route": "/probability-snapshot.html",
-      "file": "probability-snapshot.html",
-      "hash": "7e6158181d48c713"
+      "marker": "DOWNLOAD",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "09d0aaea57417717"
     },
     {
       "name": "Forum Worker",
       "route": "/forum-health",
       "file": "src/worker.js",
-      "hash": "bd213af4d99767dc"
+      "marker": "FORUM_POSTS",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "75f76871e158bfbb"
     },
     {
       "name": "Cloudflare Assets",
       "route": "/deploy-status",
       "file": "scripts/build-cloudflare-output.js",
-      "hash": "40d960d9d3fdc43f"
-    }
-  ],
-  "repairs": [
-    {
-      "type": "sec-filing-feed",
-      "status": "ok",
-      "stdout": "SEC filing feed generated: 9/9\n",
-      "stderr": ""
-    },
-    {
-      "type": "probability-snapshot",
-      "status": "ok",
-      "stdout": "Probability snapshot generated: 14 scenarios, 20 signals.\n",
-      "stderr": ""
-    },
-    {
-      "type": "reader-page-repair",
-      "status": "ok",
-      "stdout": "Generated reader page repair complete: 0 files.\n",
-      "stderr": ""
-    },
-    {
-      "type": "reader-conclusions-layer",
-      "status": "ok",
-      "stdout": "Reader conclusions layer built.\n",
-      "stderr": ""
-    },
-    {
-      "type": "public-copy-scrubber",
-      "status": "ok",
-      "stdout": "Conclusion depth audit complete: 8 weak page(s).\nPublic copy scrubber complete: 1 file(s) cleaned, 62 review issue(s).\n",
-      "stderr": ""
-    },
-    {
-      "type": "homepage-compatibility-markers",
-      "inserted": [
-        "Power Conclusions",
-        "Reader Conclusions",
-        "Evidence Hunter"
-      ]
+      "marker": "_site",
+      "exists": true,
+      "markerPresent": true,
+      "hash": "09994411ac7fb2a0"
     }
   ]
 }

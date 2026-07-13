@@ -6,67 +6,28 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /*.html
-  Cache-Control: no-cache, max-age=0, must-revalidate
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
 
 /*.css
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /*.js
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
-/data/*.json
-  Cache-Control: no-cache, max-age=0, must-revalidate
-  Content-Type: application/json; charset=utf-8
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
 
-/deploy-manifest.json
-  Cache-Control: no-store, max-age=0
-  Content-Type: application/json; charset=utf-8
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
 
-/deploy-manifest
-  Cache-Control: no-store, max-age=0
-  Content-Type: application/json; charset=utf-8
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
 
-/deploy-health.html
-  Cache-Control: no-store, max-age=0
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
 
-/deploy-health
-  Cache-Control: no-store, max-age=0
-
-/deploy-health.json
-  Cache-Control: no-store, max-age=0
-  Content-Type: application/json; charset=utf-8
-
-/downloads/deploy-health.json
-  Cache-Control: no-store, max-age=0
-  Content-Type: application/json; charset=utf-8
-  Content-Disposition: attachment
-
-/
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/start-here
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/live-intel
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/daily-power-conclusions
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/daily-investigation-conclusions
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/security-privacy
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/dark-web-safety
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/geographic-power-atlas
-  Cache-Control: no-cache, max-age=0, must-revalidate
-
-/data-lab
-  Cache-Control: no-cache, max-age=0, must-revalidate
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
 
 /downloads/*.pdf
   Content-Disposition: attachment
@@ -76,17 +37,22 @@
 /downloads/*.json
   Content-Disposition: attachment
   Content-Type: application/json
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /downloads/*.md
   Content-Disposition: attachment
   Content-Type: text/markdown
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
+
+/downloads/*.txt
+  Content-Disposition: attachment
+  Content-Type: text/plain
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /feeds/*.xml
   Content-Type: application/xml
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600
 
 /feeds/*.json
   Content-Type: application/feed+json
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=600, stale-while-revalidate=3600

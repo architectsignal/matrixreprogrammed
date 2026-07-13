@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-12T06:47:50.653Z
+Updated: 2026-07-13T06:37:37.586Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -52,20 +52,20 @@ Updated: 2026-07-12T06:47:50.653Z
   - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Short title: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Longform title: Epstein Files, Timeline And Court Records — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
   - Short title: Epstein moved millions through mysterious Virgin Islands bank right befo
   - Longform title: Epstein Files, Timeline And Court Records — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
-  - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
-  - Short title: Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Wh
-  - Longform title: Epstein Files, Timeline And Court Records — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal'
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-09 — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
@@ -76,12 +76,12 @@ Updated: 2026-07-12T06:47:50.653Z
   - Longform title: Epstein Files, Timeline And Court Records — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
-  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
+  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
@@ -92,6 +92,22 @@ Updated: 2026-07-12T06:47:50.653Z
   - Longform title: Epstein Files, Timeline And Court Records — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
+  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Short title: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aeria
+  - Longform title: Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: download-center.html
 - 2026-07-09 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
   - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
   - Evidence: Seven-day public-record lead
@@ -107,4 +123,44 @@ Updated: 2026-07-12T06:47:50.653Z
   - Short title: NSA revives 'Tailored Access Operations' name for elite hacking unit - T
   - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-10 — Panama Profile - InSight Crime
+  - Source: https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Panama Profile - InSight Crime
+  - Short title: Panama Profile - InSight Crime
+  - Longform title: Crime State Overlap — Panama Profile - InSight Crime
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-crime-dossiers.html
+- 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
+  - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
+  - Short title: Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Wh
+  - Longform title: Epstein Files, Timeline And Court Records — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal'
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
+  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
+  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
+  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
+  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
+  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
+  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+  - Evidence: Official EU implementation timeline / regulatory governance lane
+  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
+  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
+  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
+  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
+  - Source: https://www.who.int/health-topics/who-pandemic-agreement
+  - Evidence: Official WHO treaty/implementation-process lane
+  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
+  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
+  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
+  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
   - Offer: offer-starter-library.html

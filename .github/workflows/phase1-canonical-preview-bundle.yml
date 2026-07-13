@@ -92,8 +92,9 @@ jobs:
           const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
           const index = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/index.json', 'utf8'));
           const packageData = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/canonical-records.json', 'utf8'));
+          const mergeReport = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/merge-report.json', 'utf8'));
           const required = schema.required || [];
-          if (!index.ok || !packageData.ok) throw new Error('Combined preview bundle is not healthy');
+          if (!index.ok || !packageData.ok || !mergeReport.ok) throw new Error('Combined preview bundle is not healthy');
           if (index.mode !== 'preview-only') throw new Error('Preview mode changed');
           if (index.paymentStatus !== 'deferred' || policy.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
           if (index.enforcementMode !== 'report-only' || policy.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
@@ -108,12 +109,22 @@ jobs:
             'daily-power-conclusions': JSON.parse(fs.readFileSync('data/daily-power-conclusions.json', 'utf8')).conclusions.length,
             'relationship-graph': JSON.parse(fs.readFileSync('data/evidence-weighted-relationship-graph.json', 'utf8')).edges.length
           };
-          const expectedTotal = Object.values(sources).reduce((sum, count) => sum + count, 0);
-          if (index.summary.totalRecords !== expectedTotal || packageData.recordCount !== expectedTotal) throw new Error(`Expected ${expectedTotal} records, received ${packageData.recordCount}`);
-          if (index.summary.uniqueIds !== expectedTotal || index.summary.duplicateIds !== 0) throw new Error('Canonical IDs are not unique');
-          if (index.summary.publicSafetyBoundaryCount !== expectedTotal) throw new Error('One or more records lacks public safety boundaries');
-          if (packageData.records.length !== expectedTotal) throw new Error('Combined record array is incomplete');
+          const expectedRawProjections = Object.values(sources).reduce((sum, count) => sum + count, 0);
+          if (index.summary.rawProjectionCount !== expectedRawProjections || packageData.rawProjectionCount !== expectedRawProjections) {
+            throw new Error(`Expected ${expectedRawProjections} raw projections, received ${packageData.rawProjectionCount}`);
+          }
+          if (index.summary.mergeConflictCount !== 0 || mergeReport.mergeConflicts.length !== 0) throw new Error('Material duplicate projection conflicts exist');
+          if (index.summary.canonicalDuplicateIds !== 0 || index.canonicalDuplicateIds.length !== 0) throw new Error('Canonical duplicate IDs remain');
+          const expectedCanonicalRecords = expectedRawProjections - index.summary.duplicateProjectionCount;
+          if (index.summary.totalRecords !== expectedCanonicalRecords || packageData.recordCount !== expectedCanonicalRecords) {
+            throw new Error(`Expected ${expectedCanonicalRecords} canonical records, received ${packageData.recordCount}`);
+          }
+          if (index.summary.uniqueIds !== expectedCanonicalRecords) throw new Error('Canonical IDs are not unique');
+          if (index.summary.publicSafetyBoundaryCount !== expectedCanonicalRecords) throw new Error('One or more records lacks public safety boundaries');
+          if (packageData.records.length !== expectedCanonicalRecords) throw new Error('Combined canonical record array is incomplete');
+          if (mergeReport.rawProjectionCount !== expectedRawProjections || mergeReport.canonicalRecordCount !== expectedCanonicalRecords) throw new Error('Merge report counts are inconsistent');
           const ids = new Set();
+          const recordsById = new Map(packageData.records.map(record => [record.id, record]));
           for (const record of packageData.records) {
             if (ids.has(record.id)) throw new Error(`Duplicate ID: ${record.id}`);
             ids.add(record.id);
@@ -127,15 +138,29 @@ jobs:
             if (!record.access.publicFields.includes('solidConclusion.boundary')) throw new Error(`${record.id}: solid boundary is not public`);
             if (!record.access.publicFields.includes('missionAssessment.boundary')) throw new Error(`${record.id}: mission boundary is not public`);
             if (!record.access.publicFields.includes('evidence.associationBoundary')) throw new Error(`${record.id}: association boundary is not public`);
-            if (record.previewSourceId === 'live-intel' && record.delivery.includeInConvergenceTracker) throw new Error(`${record.id}: Live Intel lead entered convergence tracker`);
-            if (record.previewSourceId === 'relationship-graph' && (record.delivery.includeInConvergenceTracker || record.delivery.includeInNewsletter)) throw new Error(`${record.id}: graph hint entered restricted delivery`);
-            if (['outcome-briefings', 'daily-brain', 'daily-power-conclusions', 'relationship-graph'].includes(record.previewSourceId) && record.status !== 'review') throw new Error(`${record.id}: analytical preview published prematurely`);
+            const sourceIds = record.previewSourceIds || [record.previewSourceId];
+            if (sourceIds.includes('live-intel') && record.delivery.includeInConvergenceTracker) throw new Error(`${record.id}: Live Intel lead entered convergence tracker`);
+            if (sourceIds.includes('relationship-graph') && (record.delivery.includeInConvergenceTracker || record.delivery.includeInNewsletter)) throw new Error(`${record.id}: graph hint entered restricted delivery`);
+            if (sourceIds.some(source => ['outcome-briefings', 'daily-brain', 'daily-power-conclusions', 'relationship-graph'].includes(source)) && record.status !== 'review') {
+              throw new Error(`${record.id}: analytical preview published prematurely`);
+            }
+          }
+          for (const duplicateId of index.duplicateProjectionIds) {
+            const record = recordsById.get(duplicateId);
+            if (!record) throw new Error(`${duplicateId}: merged record missing`);
+            const sourceIds = record.previewSourceIds || [];
+            if (!sourceIds.includes('daily-investigation') || !sourceIds.includes('weekly-investigation')) {
+              throw new Error(`${duplicateId}: duplicate projection was not a daily/weekly merge`);
+            }
+            if (record.recordType !== 'finding') throw new Error(`${duplicateId}: merged delivery projection is not a canonical finding`);
+            if (!record.delivery.includeInDailyDrop || !record.delivery.includeInWeeklyReport) throw new Error(`${duplicateId}: merged delivery channels incomplete`);
+            if (!record.legacy?.projections || record.legacy.projections.length < 2) throw new Error(`${duplicateId}: legacy projection provenance incomplete`);
           }
           for (const [source, expected] of Object.entries(sources)) {
             if (index.sourceCounts[source] !== expected) throw new Error(`${source}: expected ${expected}, received ${index.sourceCounts[source]}`);
           }
           if (!policy.neverPaywall.includes('Evidence downgrade affecting a public conclusion')) throw new Error('Never-paywall evidence downgrade rule missing');
-          console.log(`CANONICAL BUNDLE PASS: ${expectedTotal} records across seven assured sources.`);
+          console.log(`CANONICAL BUNDLE PASS: ${expectedRawProjections} projections merged into ${expectedCanonicalRecords} canonical records across seven assured sources.`);
           NODE
 
       - name: Prove protected files were not changed

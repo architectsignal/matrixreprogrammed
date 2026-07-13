@@ -5,7 +5,7 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const startedAt = new Date().toISOString();
 const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-const result = spawnSync(npmCommand, ['run', 'build:legacy'], {
+const result = spawnSync(npmCommand, ['run', 'build'], {
   cwd: root,
   encoding: 'utf8',
   stdio: 'pipe',
@@ -20,10 +20,10 @@ const report = {
   finishedAt: new Date().toISOString(),
   status: result.status,
   signal: result.signal || null,
-  command: 'npm run build:legacy',
+  command: 'npm run build',
   stdoutTail: stdout.slice(-24000),
   stderrTail: stderr.slice(-24000),
-  boundary: 'This wrapper preserves the existing fail-fast build chain while retaining the exact final output in a workflow artifact.'
+  boundary: 'This optional diagnostic wrapper runs the canonical fail-fast build and retains its exact final output in an artifact.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'build-pipeline-report.json'), JSON.stringify(report, null, 2));

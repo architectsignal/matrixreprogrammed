@@ -3,11 +3,11 @@ const path = require('path');
 
 const root = process.cwd();
 const pagePath = path.join(root, 'membership.html');
-const templatePath = path.join(root, 'templates', 'phase6-membership.html');
+const templatePath = path.join(root, 'templates', 'phase6-membership.template');
 const registryPath = path.join(root, 'data', 'membership-tiers.json');
 const reportPath = path.join(root, 'downloads', 'membership-tiers-report.json');
 
-if (!fs.existsSync(templatePath)) throw new Error('templates/phase6-membership.html is missing');
+if (!fs.existsSync(templatePath)) throw new Error('templates/phase6-membership.template is missing');
 if (!fs.existsSync(registryPath)) throw new Error('data/membership-tiers.json is missing');
 
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
@@ -50,7 +50,7 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   mode: 'phase6-restore-protected-template',
-  template: 'templates/phase6-membership.html',
+  template: 'templates/phase6-membership.template',
   freeTier: true,
   prices: expectedPrices,
   checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',

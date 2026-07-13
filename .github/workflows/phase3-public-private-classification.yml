@@ -8,6 +8,7 @@ on:
     paths:
       - 'data/phase3-canonical-taxonomy.json'
       - 'data/phase3-public-private-policy.json'
+      - 'data/phase3-editorial-resolution-policy.json'
       - 'data/content-tier-taxonomy-policy.json'
       - 'data/content-tier-family-review-rules.json'
       - 'scripts/build-phase3-public-private-classification.js'
@@ -26,7 +27,7 @@ jobs:
   classify:
     name: Classify all inventoried items without enforcement
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
 
     steps:
       - name: Checkout proposed branch
@@ -39,10 +40,11 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Validate taxonomy, policy and script syntax
+      - name: Validate taxonomy, policies and scripts
         run: |
           node -e "JSON.parse(require('fs').readFileSync('data/phase3-canonical-taxonomy.json','utf8'))"
           node -e "JSON.parse(require('fs').readFileSync('data/phase3-public-private-policy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-editorial-resolution-policy.json','utf8'))"
           node --check scripts/build-phase3-public-private-classification.js
           node --check scripts/classify-content-tiers.js
           node --check scripts/refine-content-tier-review-map.js
@@ -50,21 +52,9 @@ jobs:
       - name: Record protected file hashes
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const crypto = require('crypto');
-          const files = [
-            'data/phase3-canonical-taxonomy.json',
-            'data/phase3-public-private-policy.json',
-            'data/content-tier-taxonomy-policy.json',
-            'data/content-tier-family-review-rules.json',
-            'data/access-tier-policy.json',
-            'membership.html',
-            'wrangler.toml',
-            'src/worker-production.js',
-            'src/worker-forum-persistence.js',
-            'scripts/final-production-reconcile.js'
-          ];
-          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['data/phase3-canonical-taxonomy.json','data/phase3-public-private-policy.json','data/phase3-editorial-resolution-policy.json','data/content-tier-taxonomy-policy.json','data/content-tier-family-review-rules.json','data/access-tier-policy.json','membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
           fs.writeFileSync('/tmp/phase3-public-private-protected-before.json',JSON.stringify(hashes,null,2));
           NODE
 
@@ -80,57 +70,53 @@ jobs:
       - name: Validate complete access classification
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const taxonomy = JSON.parse(fs.readFileSync('data/phase3-canonical-taxonomy.json','utf8'));
-          const policy = JSON.parse(fs.readFileSync('data/phase3-public-private-policy.json','utf8'));
-          const refined = JSON.parse(fs.readFileSync('downloads/phase2a-route-family-review-map.json','utf8'));
-          const report = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
-          const publicItems = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/public-items.json','utf8'));
-          const privateItems = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/private-items.json','utf8'));
-          const internal = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/internal-and-restricted-items.json','utf8'));
-          const review = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/review-queue.json','utf8'));
-          if (!report.ok || !publicItems.ok || !privateItems.ok || !internal.ok || !review.ok) throw new Error('Phase 3 access classification is not healthy');
-          if (report.mode !== 'report-only' || taxonomy.mode !== 'report-only' || policy.mode !== 'report-only') throw new Error('Report-only boundary changed');
-          if (report.summary.totalItems !== refined.rows.length || report.rows.length !== refined.rows.length) throw new Error('Refined inventory coverage is incomplete');
-          if (new Set(report.rows.map(row => row.canonicalId)).size !== report.rows.length) throw new Error('Canonical content IDs are not unique');
-          if (new Set(report.rows.map(row => row.sourcePath)).size !== report.rows.length) throw new Error('Source paths are not unique');
-          const allowedAccess = new Set(Object.keys(taxonomy.accessClasses));
-          const allowedTypes = new Set(Object.keys(taxonomy.canonicalContentTypes));
-          const allowedCategories = new Set(Object.keys(taxonomy.primaryCategories));
-          for (const row of report.rows) {
-            if (!row.important) throw new Error(`${row.sourcePath}: important flag missing`);
-            if (!allowedCategories.has(row.primaryCategory)) throw new Error(`${row.sourcePath}: unknown category ${row.primaryCategory}`);
-            if (!taxonomy.primaryCategories[row.primaryCategory].subcategories[row.primarySubcategory]) throw new Error(`${row.sourcePath}: unknown subcategory ${row.primarySubcategory}`);
-            if (!allowedTypes.has(row.contentType)) throw new Error(`${row.sourcePath}: unknown content type ${row.contentType}`);
-            if (!allowedAccess.has(row.currentAccessClass) || !allowedAccess.has(row.targetAccessClass)) throw new Error(`${row.sourcePath}: unknown access class`);
-            if (!row.editorialOwner || !row.proposedCanonicalRoute || !row.searchDecision || !row.navigationDecision) throw new Error(`${row.sourcePath}: canonical ownership or discovery decision missing`);
-            if (row.enforcementState !== 'recommendation_only') throw new Error(`${row.sourcePath}: classification was enforced`);
-            if (Object.values(row.protectedActions).some(Boolean)) throw new Error(`${row.sourcePath}: protected action changed`);
-            if (policy.paidAccessClasses.includes(row.targetAccessClass)) {
-              if (!row.publicPreview.required || row.publicPreview.accessClass !== 'public_preview' || row.currentAccessClass !== 'public_preview') throw new Error(`${row.sourcePath}: paid item lacks public-preview pairing`);
-              if (!row.publicCompanionSearchDecision || !row.publicCompanionNavigationDecision) throw new Error(`${row.sourcePath}: public companion discovery decision missing`);
+          const fs=require('fs');
+          const taxonomy=JSON.parse(fs.readFileSync('data/phase3-canonical-taxonomy.json','utf8'));
+          const policy=JSON.parse(fs.readFileSync('data/phase3-public-private-policy.json','utf8'));
+          const editorial=JSON.parse(fs.readFileSync('data/phase3-editorial-resolution-policy.json','utf8'));
+          const refined=JSON.parse(fs.readFileSync('downloads/phase2a-route-family-review-map.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
+          const publicItems=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/public-items.json','utf8'));
+          const privateItems=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/private-items.json','utf8'));
+          const internal=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/internal-and-restricted-items.json','utf8'));
+          const review=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/review-queue.json','utf8'));
+          if(!report.ok||!publicItems.ok||!privateItems.ok||!internal.ok||!review.ok)throw new Error('Phase 3 access classification is not healthy');
+          if(report.mode!=='report-only'||taxonomy.mode!=='report-only'||policy.mode!=='report-only'||editorial.mode!=='report-only')throw new Error('Report-only boundary changed');
+          if(refined.summary.unresolvedAfterFamilyReview!==0||report.summary.unresolvedTaxonomy!==0)throw new Error('Uncategorized content remains');
+          if(report.summary.totalItems!==refined.rows.length||report.rows.length!==refined.rows.length)throw new Error('Refined inventory coverage is incomplete');
+          if(new Set(report.rows.map(row=>row.canonicalId)).size!==report.rows.length)throw new Error('Canonical content IDs are not unique');
+          if(new Set(report.rows.map(row=>row.sourcePath)).size!==report.rows.length)throw new Error('Source paths are not unique');
+          const allowedAccess=new Set(Object.keys(taxonomy.accessClasses));const allowedTypes=new Set(Object.keys(taxonomy.canonicalContentTypes));const allowedCategories=new Set(Object.keys(taxonomy.primaryCategories));
+          for(const row of report.rows){
+            if(!row.important)throw new Error(`${row.sourcePath}: important flag missing`);
+            if(row.primaryCategory==='migration_review'||row.primarySubcategory==='needs_editorial_owner')throw new Error(`${row.sourcePath}: unresolved taxonomy remains`);
+            if(!allowedCategories.has(row.primaryCategory))throw new Error(`${row.sourcePath}: unknown category ${row.primaryCategory}`);
+            if(!taxonomy.primaryCategories[row.primaryCategory].subcategories[row.primarySubcategory])throw new Error(`${row.sourcePath}: unknown subcategory ${row.primarySubcategory}`);
+            if(!allowedTypes.has(row.contentType))throw new Error(`${row.sourcePath}: unknown content type ${row.contentType}`);
+            if(!allowedAccess.has(row.currentAccessClass)||!allowedAccess.has(row.targetAccessClass))throw new Error(`${row.sourcePath}: unknown access class`);
+            if(!row.editorialOwner||!row.proposedCanonicalRoute||!row.searchDecision||!row.navigationDecision)throw new Error(`${row.sourcePath}: canonical ownership or discovery decision missing`);
+            if(row.enforcementState!=='recommendation_only')throw new Error(`${row.sourcePath}: classification was enforced`);
+            if(Object.values(row.protectedActions).some(Boolean))throw new Error(`${row.sourcePath}: protected action changed`);
+            if(policy.paidAccessClasses.includes(row.targetAccessClass)){
+              if(!row.publicPreview.required||row.publicPreview.accessClass!=='public_preview'||row.currentAccessClass!=='public_preview')throw new Error(`${row.sourcePath}: paid item lacks public-preview pairing`);
+              if(!row.publicCompanionSearchDecision||!row.publicCompanionNavigationDecision)throw new Error(`${row.sourcePath}: public companion discovery decision missing`);
             }
-            if (row.targetAccessClass === 'restricted_sensitive' && !row.reviewFlags.includes(policy.reviewFlags.restrictedCandidate)) throw new Error(`${row.sourcePath}: restricted candidate lacks review flag`);
-            if (row.primaryCategory === 'migration_review' && !row.reviewFlags.includes(policy.reviewFlags.uncategorized)) throw new Error(`${row.sourcePath}: unresolved taxonomy lacks owner flag`);
-            if (row.targetAccessClass === 'internal_only' && row.fileType === 'html_route' && !row.reviewFlags.includes(policy.reviewFlags.internalPublicRoute)) throw new Error(`${row.sourcePath}: internal route lacks public-replacement review`);
+            if(row.targetAccessClass==='restricted_sensitive'&&!row.reviewFlags.includes(policy.reviewFlags.restrictedCandidate))throw new Error(`${row.sourcePath}: restricted candidate lacks review flag`);
+            if(row.targetAccessClass==='internal_only'&&row.fileType==='html_route'&&!row.reviewFlags.includes(policy.reviewFlags.internalPublicRoute))throw new Error(`${row.sourcePath}: internal route lacks public-replacement review`);
           }
-          const partitionCount = publicItems.recordCount + privateItems.recordCount + internal.recordCount;
-          const expectedPublic = report.rows.filter(row => ['public_core','public_preview','separate_product'].includes(row.currentAccessClass)).length;
-          const expectedPrivate = report.rows.filter(row => ['registered_private','supporter_private','intelligence_private','research_pro_private'].includes(row.targetAccessClass)).length;
-          const expectedInternal = report.rows.filter(row => ['internal_only','restricted_sensitive'].includes(row.targetAccessClass)).length;
-          if (publicItems.recordCount !== expectedPublic || privateItems.recordCount !== expectedPrivate || internal.recordCount !== expectedInternal) throw new Error('Access-class package counts do not match classification');
-          if (report.visibilityEnforcement !== false || report.routeMovement !== false || report.redirectActivation !== false || report.searchRemoval !== false || report.navigationRemoval !== false || report.authenticationActivation !== false || report.entitlementActivation !== false || report.paymentActivation !== false) throw new Error('A protected Phase 3 action was activated');
-          console.log(`PHASE 3 ACCESS PASS: ${report.rows.length} items; ${report.summary.publicPreviewCompanionsRequired} public previews required; ${report.summary.unresolvedTaxonomy} still need taxonomy ownership.`);
+          const expectedPublic=report.rows.filter(row=>['public_core','public_preview','separate_product'].includes(row.currentAccessClass)).length;
+          const expectedPrivate=report.rows.filter(row=>['registered_private','supporter_private','intelligence_private','research_pro_private'].includes(row.targetAccessClass)).length;
+          const expectedInternal=report.rows.filter(row=>['internal_only','restricted_sensitive'].includes(row.targetAccessClass)).length;
+          if(publicItems.recordCount!==expectedPublic||privateItems.recordCount!==expectedPrivate||internal.recordCount!==expectedInternal)throw new Error('Access-class package counts do not match classification');
+          if(report.visibilityEnforcement!==false||report.routeMovement!==false||report.redirectActivation!==false||report.searchRemoval!==false||report.navigationRemoval!==false||report.authenticationActivation!==false||report.entitlementActivation!==false||report.paymentActivation!==false)throw new Error('A protected Phase 3 action was activated');
+          console.log(`PHASE 3 ACCESS PASS: ${report.rows.length} items; zero uncategorized; ${report.summary.publicPreviewCompanionsRequired} public previews required.`);
           NODE
 
       - name: Snapshot deterministic classification hashes
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const crypto = require('crypto');
-          const root = 'downloads/phase3-public-private-classification';
-          const hashes = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-public-private-classification';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
           fs.writeFileSync('/tmp/phase3-public-private-first-hashes.json',JSON.stringify(hashes,null,2));
           NODE
 
@@ -141,33 +127,21 @@ jobs:
           rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
           node scripts/build-phase3-public-private-classification.js
           node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const crypto = require('crypto');
-          const root = 'downloads/phase3-public-private-classification';
-          const before = JSON.parse(fs.readFileSync('/tmp/phase3-public-private-first-hashes.json','utf8'));
-          const after = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
-          if (JSON.stringify(before) !== JSON.stringify(after)) {
-            const changed = [...new Set([...Object.keys(before),...Object.keys(after)])].filter(file => before[file] !== after[file]);
-            throw new Error(`Phase 3 public/private output is not deterministic:\n${changed.join('\n')}`);
-          }
-          console.log(`DETERMINISM PASS: ${Object.keys(after).length} Phase 3 classification files reproduced byte-for-byte.`);
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-public-private-classification';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-public-private-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Phase 3 classification is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} classification files reproduced byte-for-byte.`);
           NODE
 
       - name: Prove protected files were not changed
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const crypto = require('crypto');
-          const before = JSON.parse(fs.readFileSync('/tmp/phase3-public-private-protected-before.json','utf8'));
-          const changed = [];
-          for (const [file,expected] of Object.entries(before)) {
-            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-            if (actual !== expected) changed.push({file,expected,actual});
-          }
-          const report = {ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Phase 3 access classification must not alter taxonomy inputs, membership, Workers, routes or deployment guards.'};
+          const fs=require('fs');const crypto=require('crypto');const before=JSON.parse(fs.readFileSync('/tmp/phase3-public-private-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Phase 3 access classification must not alter taxonomy inputs, membership, Workers, routes or deployment guards.'};
           fs.writeFileSync('downloads/phase3-public-private-classification/non-mutation-report.json',JSON.stringify(report,null,2));
-          if(changed.length) throw new Error(JSON.stringify(changed,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
           console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
           NODE
 

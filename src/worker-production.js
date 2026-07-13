@@ -72,9 +72,9 @@ function d1OnlyForumEnv(env) {
 }
 
 async function validateForumResponse(path, response) {
-  const responseOrigin = response.headers.get('x-matrix-origin');
-  if (responseOrigin !== 'cloudflare-worker-forum-d1') {
-    return unavailable('non-authoritative-forum-response-blocked', `Origin was ${responseOrigin || 'missing'}`);
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-forum-d1') {
+    return unavailable('non-authoritative-forum-response-blocked', `Origin was ${origin || 'missing'}`);
   }
   if (path === '/forum-health') {
     let health;
@@ -90,17 +90,17 @@ async function validateForumResponse(path, response) {
 }
 
 async function validateEmailResponse(response) {
-  const responseOrigin = response.headers.get('x-matrix-origin');
-  if (responseOrigin !== 'cloudflare-worker-email-lifecycle') {
-    return unavailable('non-authoritative-email-response-blocked', `Origin was ${responseOrigin || 'missing'}`, 'email');
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-email-lifecycle') {
+    return unavailable('non-authoritative-email-response-blocked', `Origin was ${origin || 'missing'}`, 'email');
   }
   return response;
 }
 
 async function validateMemberResponse(response) {
-  const responseOrigin = response.headers.get('x-matrix-origin');
-  if (responseOrigin !== 'cloudflare-worker-member-experience') {
-    return unavailable('non-authoritative-member-response-blocked', `Origin was ${responseOrigin || 'missing'}`, 'member');
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-member-experience') {
+    return unavailable('non-authoritative-member-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
   }
   return response;
 }

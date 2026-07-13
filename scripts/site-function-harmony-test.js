@@ -21,16 +21,18 @@ function parseJson(file, required = true) {
 
 const criticalFiles = [
   'index.html', 'search.html', 'search.js', 'search-index.json', 'books.html', 'live-intel.html',
-  'epstein-files.html', 'forum.html', 'forum.js', 'membership.html', 'download-center.html',
+  'epstein-files.html', 'forum.html', 'forum.js', 'membership.html', 'paypal-membership.js',
+  'member-dashboard.html', 'member-dashboard-app.js', 'billing-dashboard.html', 'billing-dashboard.js',
+  'admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'download-center.html',
   'deploy-status.html', 'deploy-status.json', 'matrix.js', 'styles.css', 'fixes.css',
   'wrangler.toml', 'wrangler.jsonc', 'src/worker.js', 'src/worker-forum-persistence.js',
-  'src/worker-production.js', 'scripts/build-free-ask-matrix-search.js',
-  'scripts/build-cloudflare-output.js', 'scripts/build-production-health.js',
-  'scripts/final-production-reconcile.js', 'scripts/repair-generated-site-artifacts.js'
+  'src/worker-member-experience.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',
+  'scripts/build-free-ask-matrix-search.js', 'scripts/build-cloudflare-output.js',
+  'scripts/build-production-health.js', 'scripts/final-production-reconcile.js',
+  'scripts/repair-generated-site-artifacts.js'
 ];
 criticalFiles.forEach(needFile);
 
-/* Search / Ask Matrix. */
 needText('search.html', 'id="archive-search"', 'search input');
 needText('search.html', 'id="search-results"', 'search results container');
 needText('search.html', '<script src="search.js"></script>', 'search script include');
@@ -41,27 +43,27 @@ needText('search.js', 'HTML returned instead of JSON', 'HTML instead of JSON gua
 needSoftText('search.html', 'id="ask-answer"', 'answer status panel');
 forbidSoftText('search.js', '(b.keywords||[]).slice', 'legacy leaked keyword-slice pattern');
 
-/* Active Worker stack: strict boundary -> D1 forum -> legacy application/assets. */
 for (const [file, text, label] of [
   ['src/worker-production.js', "import forumWorker from './worker-forum-persistence.js'", 'strict forum delegation'],
+  ['src/worker-production.js', "import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js'", 'strict member delegation'],
+  ['src/worker-production.js', "import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'", 'strict PayPal delegation'],
   ['src/worker-production.js', 'members-db-binding-unavailable', 'missing D1 fail-closed response'],
   ['src/worker-production.js', 'non-authoritative-forum-response-blocked', 'legacy forum response rejection'],
-  ['src/worker-production.js', "origin !== 'cloudflare-worker-forum-d1'", 'authoritative origin check'],
+  ['src/worker-production.js', 'non-authoritative-paypal-response-blocked', 'unverified PayPal response rejection'],
+  ['src/worker-production.js', "origin !== 'cloudflare-worker-forum-d1'", 'forum authoritative origin check'],
+  ['src/worker-production.js', "origin !== 'cloudflare-worker-paypal-subscriptions'", 'PayPal authoritative origin check'],
   ['src/worker-forum-persistence.js', "import legacyWorker from './worker.js'", 'application Worker delegation'],
   ['src/worker-forum-persistence.js', '/forum-health', 'D1 forum health route'],
-  ['src/worker-forum-persistence.js', '/forum-feed-main', 'D1 main board route'],
-  ['src/worker-forum-persistence.js', '/forum-feed-speculation', 'D1 speculation route'],
-  ['src/worker-forum-persistence.js', '/forum-feed-epstein-alive', 'D1 Epstein board route'],
-  ['src/worker-forum-persistence.js', '/submit-main-post', 'D1 main submit endpoint'],
   ['src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'authoritative D1 post insert'],
-  ['src/worker-forum-persistence.js', "FROM forum_posts WHERE status='live'", 'authoritative D1 feed query'],
   ['src/worker-forum-persistence.js', 'Cloudflare D1 MEMBERS_DB.forum_posts', 'D1 persistence wording'],
   ['src/worker-forum-persistence.js', 'D1 authoritative; KV compatibility mirror', 'KV recovery boundary'],
+  ['src/worker-paypal-subscriptions.js', '/api/paypal/checkout-intent', 'PayPal checkout intent'],
+  ['src/worker-paypal-subscriptions.js', '/api/paypal/webhook', 'verified PayPal webhook'],
+  ['src/worker-paypal-subscriptions.js', 'PAYPAL_SANDBOX_ENABLED', 'sandbox environment switch'],
+  ['src/worker-paypal-subscriptions.js', 'PAYPAL_PRODUCTION_ENABLED', 'production environment switch'],
+  ['src/worker-paypal-subscriptions.js', 'paypal_runtime_settings', 'D1 checkout switch'],
   ['src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch'],
-  ['src/worker.js', 'routeAliases[originalPath]', 'original route alias lookup'],
-  ['src/worker.js', 'routeAliases[normalizedPath]', 'normalized route alias lookup'],
   ['wrangler.toml', 'main = "src/worker-production.js"', 'strict production entrypoint'],
-  ['wrangler.toml', 'binding = "FORUM_POSTS"', 'FORUM_POSTS compatibility binding'],
   ['wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding'],
   ['wrangler.toml', 'directory = "./_site"', 'Cloudflare asset output directory'],
   ['wrangler.toml', 'run_worker_first = true', 'Worker-first routing']
@@ -69,7 +71,6 @@ for (const [file, text, label] of [
 forbidSoftText('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin');
 forbidSoftText('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 
-/* Forum pages/forms. */
 for (const file of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html']) {
   if (exists(file)) {
     needText(file, 'forum.js', `${file} forum script`);
@@ -78,34 +79,30 @@ for (const file of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-
   else soft.push(`missing optional board page: ${file}`);
 }
 for (const [text, label] of [
-  ['/forum-feed-main', 'frontend main feed'],
-  ['/forum-feed-speculation', 'frontend speculation feed'],
-  ['/forum-feed-epstein-alive', 'frontend Epstein feed'],
-  ['/submit-main-post', 'frontend main submit'],
-  ['/submit-speculation-post', 'frontend speculation submit'],
-  ['/submit-epstein-alive-post', 'frontend Epstein submit'],
-  ['/report-main-post', 'frontend main report route'],
-  ['persistent !== true', 'frontend refuses non-persistent save'],
-  ['Signal posted live and saved persistently', 'persistent success message'],
-  ["cache:'no-store'", 'forum no-store fetches']
+  ['/forum-feed-main', 'frontend main feed'], ['/forum-feed-speculation', 'frontend speculation feed'],
+  ['/forum-feed-epstein-alive', 'frontend Epstein feed'], ['/submit-main-post', 'frontend main submit'],
+  ['/submit-speculation-post', 'frontend speculation submit'], ['/submit-epstein-alive-post', 'frontend Epstein submit'],
+  ['/report-main-post', 'frontend main report route'], ['persistent !== true', 'frontend refuses non-persistent save'],
+  ['Signal posted live and saved persistently', 'persistent success message'], ["cache:'no-store'", 'forum no-store fetches']
 ]) needText('forum.js', text, label);
 for (const [text, label] of [
-  ['saveLocalPosts', 'browser-only post persistence'],
-  ['syncPendingLocalPosts', 'local retry sync'],
-  ['localOnly', 'local-only marker'],
-  ['Not posted live yet. Saved only on this device', 'non-persistent save message']
+  ['saveLocalPosts', 'browser-only post persistence'], ['syncPendingLocalPosts', 'local retry sync'],
+  ['localOnly', 'local-only marker'], ['Not posted live yet. Saved only on this device', 'non-persistent save message']
 ]) forbidSoftText('forum.js', text, label);
 
-/* Payment remains explicitly deferred in source and deployable output. */
 for (const file of ['membership.html', '_site/membership.html']) {
-  for (const marker of ['<!-- membership-tiers:start -->', '€3', '€6', '€9', 'Coming soon — no payment taken']) needText(file, marker, `deferred membership marker ${marker}`);
-  forbidText(file, 'actions.subscription.create', 'active payment subscription creation');
-  forbidText(file, '/api/paypal/checkout-intent', 'active payment checkout intent');
+  for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) needText(file, marker, `server-gated membership marker ${marker}`);
+  forbidText(file, 'Coming soon — no payment taken', 'obsolete deferred membership page');
   forbidText(file, '€19/month', 'legacy €19 tier');
   forbidText(file, '€49/month', 'legacy €49 tier');
 }
+for (const file of ['paypal-membership.js', '_site/paypal-membership.js']) {
+  needText(file, '/api/paypal/checkout-intent', 'PayPal checkout intent runtime');
+  needText(file, '/api/paypal/subscription/confirm', 'PayPal confirmation runtime');
+}
+needText('billing-dashboard.html', 'billing-dashboard.js', 'member billing dashboard');
+needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'admin payment dashboard');
 
-/* Downloads and machine-readable resources. */
 for (const file of ['downloads/forum-posts.json', 'downloads/forum-posts.md', 'downloads/deploy-status.json', 'llms.txt', 'robots.txt', 'sitemap.xml']) needFile(file);
 needSoftText('robots.txt', 'search-index.json', 'search index allowed in robots');
 needSoftText('llms.txt', 'Ask Matrix Search', 'Ask Matrix route in llms');
@@ -116,12 +113,11 @@ if (deployStatus) {
   if (!deployStatus.workerScript) hard.push('deploy-status.json missing workerScript');
   if (!deployStatus.assetOutput) hard.push('deploy-status.json missing assetOutput');
 }
-/* Build-stage deploy-health may be provisional. Only final-production-reconcile may publish production health. */
 needText('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'canonical health ownership');
 forbidText('scripts/repair-generated-site-artifacts.js', "write('deploy-health.json'", 'legacy production-health write');
 needText('scripts/final-production-reconcile.js', 'build-production-health.js', 'final production health generation');
 needText('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
-needText('scripts/build-production-health.js', "paymentStatus: 'deferred'", 'deferred payment health status');
+needText('scripts/build-production-health.js', "paymentStatus: 'sandbox-ready-disabled'", 'server-gated payment health status');
 
 const searchIndex = exists('search-index.json') ? parseJson('search-index.json') : null;
 if (searchIndex) {
@@ -135,7 +131,7 @@ if (searchIndex) {
 }
 
 if (exists('_site')) {
-  for (const file of ['_site/index.html', '_site/search.html', '_site/search.js', '_site/search-index.json', '_site/forum.html', '_site/membership.html']) needFile(file);
+  for (const file of ['_site/index.html', '_site/search.html', '_site/search.js', '_site/search-index.json', '_site/forum.html', '_site/membership.html', '_site/paypal-membership.js', '_site/billing-dashboard.html', '_site/admin-payment-dashboard.html']) needFile(file);
   for (const file of ['_site/index', '_site/search', '_site/forum', '_site/membership']) needSoftFile(file);
   if (exists('_site/_redirects')) hard.push('_site/_redirects must not be deployed with Worker assets');
 }
@@ -151,11 +147,11 @@ const report = {
   generatedAt: new Date().toISOString(),
   hardIssues: hard,
   softIssues: soft,
-  workerStack: 'src/worker-production.js -> src/worker-forum-persistence.js -> src/worker.js',
+  workerStack: 'strict production boundary -> email/member/PayPal workers -> D1 forum -> static application',
   forumStorage: 'Cloudflare D1 authoritative; KV compatibility and recovery only.',
-  paymentStatus: 'Deferred; no public checkout or subscription creation UI.',
+  paymentStatus: 'PayPal sandbox-ready behind runtime, plan and D1 activation gates; checkout disabled by default.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
-  boundary: 'Site harmony blocks missing search/assets, broken strict Worker routing, non-D1 forum persistence, malformed output, payment UI activation or legacy health ownership.'
+  boundary: 'Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, unverified PayPal responses or unguarded checkout activation.'
 };
 fs.writeFileSync(path.join(root, 'downloads', 'site-function-harmony-report.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(path.join(root, 'downloads', 'site-function-harmony-report.md'), `# Site Function Harmony Report\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nWorker stack: ${report.workerStack}\nForum: ${report.forumStorage}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(item => `- ${item}`).join('\n') || '- None'}\n\n## Soft Review\n${soft.map(item => `- ${item}`).join('\n') || '- None'}\n`);
@@ -167,4 +163,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log(`Checked search, strict Worker routing, D1 forums, disabled payments, downloads and Cloudflare output. Soft review items: ${soft.length}.`);
+console.log(`Checked search, strict Worker routing, D1 forums, server-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);

@@ -1,9 +1,51 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "phase-2-report-only",
   "mode": "report-only",
   "purpose": "Deterministic conclusion-engine policy for evidence conclusions, power mechanisms, mission links, elite-control analysis, convergence scoring, speculation, counter-hypotheses, missing evidence, repetition detection and publication gates.",
   "exitCondition": "No published item can confuse documented fact, allegation, inference, model output or speculation.",
+  "retentionPrinciple": "Graph associations, research hints, scenarios and speculative interpretations are preserved rather than removed. They must be explicitly labelled and routed only to appropriate research or speculative surfaces until stronger evidence changes their status.",
+  "presentationClasses": {
+    "evidence_analysis": {
+      "label": "evidence analysis",
+      "factualSurfaceEligible": true,
+      "speculativeSurfaceEligible": false
+    },
+    "research_hint": {
+      "label": "research hint — association not proof",
+      "factualSurfaceEligible": false,
+      "speculativeSurfaceEligible": true
+    },
+    "scenario_analysis": {
+      "label": "scenario analysis — not a factual forecast",
+      "factualSurfaceEligible": false,
+      "speculativeSurfaceEligible": true
+    },
+    "speculative": {
+      "label": "speculative — not established fact",
+      "factualSurfaceEligible": false,
+      "speculativeSurfaceEligible": true
+    },
+    "disputed": {
+      "label": "disputed claim",
+      "factualSurfaceEligible": false,
+      "speculativeSurfaceEligible": true
+    },
+    "unsupported": {
+      "label": "unsupported claim",
+      "factualSurfaceEligible": false,
+      "speculativeSurfaceEligible": false
+    }
+  },
+  "retentionRules": {
+    "default": "retained",
+    "relationship_update": "retained_as_research_hint",
+    "scenario": "retained_as_scenario_analysis",
+    "speculation_review": "retained_as_speculative_analysis",
+    "withdrawn": "retained_with_withdrawal_notice",
+    "superseded": "retained_with_supersession_notice",
+    "archived": "retained_as_archive"
+  },
   "publicationStates": [
     "draft",
     "review",
@@ -125,6 +167,8 @@
   },
   "requiredSeparation": {
     "speculationLabel": "speculative",
+    "researchHintLabel": "research_hint",
+    "scenarioLabel": "scenario_analysis",
     "solidBoundaryRequired": true,
     "missionBoundaryRequired": true,
     "associationBoundaryRequired": true,

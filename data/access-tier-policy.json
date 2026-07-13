@@ -1,0 +1,301 @@
+{
+  "version": "1.0.0",
+  "status": "phase-1-report-only",
+  "updated": "2026-07-13",
+  "purpose": "Canonical cumulative access policy for Matrix Reprogrammed intelligence records. A record exists once; entitlements reveal fields, sections, tools and downloads without changing evidential status.",
+  "paymentStatus": "deferred",
+  "paymentBoundary": "Prices and planned benefits may be visible, but checkout, billing and paid entitlement activation remain disabled until the complete sandbox lifecycle and failure tests pass.",
+  "principles": [
+    "Access level never upgrades an allegation, inference or speculation into fact.",
+    "Public readers must receive enough source and boundary information to understand and trust the work.",
+    "Higher tiers add depth, tools, exports and structured analysis rather than hiding corrections or contradictory evidence.",
+    "Corrections, withdrawals, association boundaries and material counter-evidence must never be paywalled away from a public claim they qualify.",
+    "One canonical record should serve all tiers. Independently edited tier copies are forbidden unless generated deterministically from the canonical record.",
+    "Separate commercial products such as books, card decks and commissioned research are not automatically included in the monthly tiers."
+  ],
+  "tierOrder": [
+    "public",
+    "registered",
+    "supporter_3",
+    "intelligence_6",
+    "research_pro_9",
+    "separate_product"
+  ],
+  "tiers": {
+    "public": {
+      "label": "Public",
+      "priceEurMonthly": 0,
+      "requiresAccount": false,
+      "includesLowerTiers": [],
+      "defaultFields": [
+        "id",
+        "recordType",
+        "title",
+        "summary",
+        "status",
+        "trigger.description",
+        "trigger.eventDate",
+        "sources.id",
+        "sources.title",
+        "sources.publisher",
+        "sources.url",
+        "sources.authority",
+        "recordStatus",
+        "establishedFacts",
+        "solidConclusion.text",
+        "solidConclusion.scope",
+        "solidConclusion.confidence",
+        "solidConclusion.boundary",
+        "missionAssessment.outcome",
+        "missionAssessment.missionRelevance",
+        "missionAssessment.boundary",
+        "evidence.grade",
+        "evidence.claimClass",
+        "evidence.associationBoundary",
+        "freshness.updatedAt",
+        "freshness.lastReviewedAt",
+        "freshness.reviewStatus"
+      ],
+      "content": [
+        "Public headline and summary",
+        "Primary source links",
+        "Evidence grade and claim class",
+        "Established facts and scope boundary",
+        "Concise solid conclusion",
+        "Concise mission relevance",
+        "Material corrections and counter-evidence",
+        "Selected public investigations and reports"
+      ],
+      "tools": [
+        "Public search",
+        "Public source ledger routes",
+        "Public evidence and methodology pages"
+      ],
+      "downloads": [
+        "Selected public HTML and PDF releases"
+      ]
+    },
+    "registered": {
+      "label": "Free Registered",
+      "priceEurMonthly": 0,
+      "requiresAccount": true,
+      "includesLowerTiers": ["public"],
+      "defaultFields": [
+        "watchNext.indicator",
+        "watchNext.reason",
+        "delivery.includeInDailyDrop",
+        "delivery.includeInWeeklyReport"
+      ],
+      "content": [
+        "Free Daily Control Brief email",
+        "Public weekly digest archive",
+        "Release notifications",
+        "Saved public items",
+        "Reading history",
+        "Followed public topics",
+        "Newsletter and notification preferences"
+      ],
+      "tools": [
+        "Basic account dashboard",
+        "Save and follow controls",
+        "Preference centre"
+      ],
+      "downloads": [
+        "Public downloads associated with the account"
+      ]
+    },
+    "supporter_3": {
+      "label": "Supporter",
+      "priceEurMonthly": 3,
+      "requiresAccount": true,
+      "includesLowerTiers": ["public", "registered"],
+      "defaultFields": [
+        "mechanismOfPower.description",
+        "mechanismOfPower.authorityHolder",
+        "mechanismOfPower.implementationRoute",
+        "missionAssessment.eliteControlRelevance",
+        "missionAssessment.overallConfidence",
+        "counterAnalysis.assessment",
+        "missingEvidence.record",
+        "missingEvidence.whyItMatters"
+      ],
+      "content": [
+        "Complete weekly member intelligence brief",
+        "Member newsletter and editorial notes",
+        "Member-only public-source drops",
+        "Expanded mission and elite-control relevance",
+        "Selected source-change summaries",
+        "Early access to selected public reports",
+        "Member archive of weekly briefs",
+        "Supporter announcements and surveys"
+      ],
+      "tools": [
+        "Supporter dashboard",
+        "Weekly archive",
+        "Basic followed-topic updates"
+      ],
+      "downloads": [
+        "Selected weekly brief PDFs",
+        "Selected source-drop bundles"
+      ]
+    },
+    "intelligence_6": {
+      "label": "Intelligence Member",
+      "priceEurMonthly": 6,
+      "requiresAccount": true,
+      "includesLowerTiers": ["public", "registered", "supporter_3"],
+      "defaultFields": [
+        "entities",
+        "moneyAndAuthority",
+        "mechanismOfPower",
+        "missionAssessment",
+        "speculativeConclusion.text",
+        "speculativeConclusion.conditions",
+        "speculativeConclusion.falsifiers",
+        "speculativeConclusion.confidence",
+        "speculativeConclusion.boundary",
+        "counterAnalysis",
+        "missingEvidence",
+        "watchNext",
+        "evidence.corroborationCount"
+      ],
+      "content": [
+        "Premium daily intelligence brief",
+        "Complete intelligence cards and evidence notes",
+        "Detailed mechanism-of-power analysis",
+        "Full mission and convergence assessment",
+        "Separately labelled speculative conclusion",
+        "Counter-analysis and falsification conditions",
+        "Deeper evidence-bounded dossiers",
+        "Missing-record and disclosure-gap queue",
+        "Source-change and evidence-update summaries",
+        "Member timelines, maps and investigation routes",
+        "Weekly control-structure map"
+      ],
+      "tools": [
+        "Intelligence dashboard",
+        "Member watchlists",
+        "Entity and institution following",
+        "Member search filters",
+        "Member archive and investigation routes"
+      ],
+      "downloads": [
+        "Member PDF reports",
+        "Selected CSV intelligence exports",
+        "Downloadable intelligence card decks"
+      ]
+    },
+    "research_pro_9": {
+      "label": "Research Pro",
+      "priceEurMonthly": 9,
+      "requiresAccount": true,
+      "includesLowerTiers": ["public", "registered", "supporter_3", "intelligence_6"],
+      "defaultFields": [
+        "sources",
+        "legacy",
+        "delivery",
+        "access",
+        "freshness.supersedes",
+        "freshness.supersededBy"
+      ],
+      "content": [
+        "Full dossier layer",
+        "Global Convergence Tracker",
+        "Advanced Dark Speculation Lab records",
+        "Complete source routes and evidence paths",
+        "Policy and regulatory tracker",
+        "Jurisdiction and institutional tracker",
+        "Card-score movement and evidence-change reports",
+        "Monthly PDF intelligence report",
+        "Advanced prediction, falsification and downgrade tracking",
+        "Research queue and investigation-status access",
+        "Early beta access to research tools"
+      ],
+      "tools": [
+        "Research Pro dashboard",
+        "Advanced public-record search filters",
+        "Advanced Data Laboratory presets",
+        "Source-route and evidence-path maps",
+        "Citation and bibliography export",
+        "Advanced watchlists",
+        "Priority source-request queue subject to editorial review"
+      ],
+      "downloads": [
+        "Full dossier PDFs",
+        "CSV and JSON research exports",
+        "Citation and bibliography exports",
+        "Research bundles and evidence packs where lawful and available"
+      ]
+    },
+    "separate_product": {
+      "label": "Separate Product or Service",
+      "priceEurMonthly": null,
+      "requiresAccount": false,
+      "includesLowerTiers": [],
+      "defaultFields": [],
+      "content": [
+        "Books",
+        "Premium card decks",
+        "Standalone dossier bundles",
+        "Commissioned research",
+        "Special editions and collector products"
+      ],
+      "tools": [],
+      "downloads": [
+        "Product-specific files according to purchase terms"
+      ]
+    }
+  },
+  "mandatoryPublicSafetyFields": [
+    "solidConclusion.boundary",
+    "missionAssessment.boundary",
+    "evidence.claimClass",
+    "evidence.associationBoundary",
+    "freshness.reviewStatus"
+  ],
+  "neverPaywall": [
+    "Material correction to a public claim",
+    "Withdrawal or supersession notice",
+    "Association-is-not-guilt boundary",
+    "Evidence downgrade affecting a public conclusion",
+    "Contradictory official record affecting a public conclusion",
+    "Privacy or victim-protection notice",
+    "Legal status showing dismissal, acquittal, reversal or correction"
+  ],
+  "deliveryDefaults": {
+    "public": {
+      "email": false,
+      "dashboard": false,
+      "search": true
+    },
+    "registered": {
+      "email": true,
+      "dashboard": true,
+      "search": true
+    },
+    "supporter_3": {
+      "email": true,
+      "dashboard": true,
+      "search": true
+    },
+    "intelligence_6": {
+      "email": true,
+      "dashboard": true,
+      "search": true
+    },
+    "research_pro_9": {
+      "email": true,
+      "dashboard": true,
+      "search": true
+    }
+  },
+  "enforcementMode": "report-only",
+  "activationConditions": [
+    "Canonical record migration is tested against existing generators.",
+    "Tier field projections are deterministic and covered by regression tests.",
+    "Authentication and entitlement checks fail closed.",
+    "Payment remains disabled until sandbox lifecycle tests pass.",
+    "Current production reconciliation and deployment guards remain green.",
+    "No correction, contradiction or evidence boundary is hidden by tier projection."
+  ]
+}

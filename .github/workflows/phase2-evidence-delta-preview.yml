@@ -51,7 +51,7 @@ jobs:
           node --check scripts/build-phase2-conclusion-engine-preview.js
           node --check scripts/conclusion-engine/generate.js
           node --check scripts/conclusion-engine/quality.js
-          node --check scripts/conclusion-engine/boundaries.js
+          node --check scripts/conclusion-engine/hardening.js
 
       - name: Record protected source hashes
         run: |

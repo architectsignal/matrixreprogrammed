@@ -1,0 +1,171 @@
+name: Phase 1 Canonical Preview Bundle
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-*-canonical-previews.js'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'data/daily-investigation-conclusions.json'
+      - 'data/weekly-investigation-conclusions.json'
+      - 'data/live-intel.json'
+      - 'data/outcome-briefings.json'
+      - 'data/daily-brain-brief.json'
+      - 'data/daily-power-conclusions.json'
+      - 'data/evidence-weighted-relationship-graph.json'
+      - '.github/workflows/phase1-canonical-preview-bundle.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-canonical-preview-bundle-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bundle:
+    name: Build and validate the full canonical preview layer
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate adapter syntax
+        run: |
+          node --check scripts/build-investigation-canonical-previews.js
+          node --check scripts/build-live-intel-canonical-previews.js
+          node --check scripts/build-outcome-canonical-previews.js
+          node --check scripts/build-daily-brain-canonical-previews.js
+          node --check scripts/build-daily-power-canonical-previews.js
+          node --check scripts/build-relationship-canonical-previews.js
+          node --check scripts/build-canonical-preview-bundle.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const files = [
+            ...manifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js'
+          ];
+          const hashes = Object.fromEntries([...new Set(files)].map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads/canonical-preview-bundle', { recursive: true });
+          fs.writeFileSync('downloads/canonical-preview-bundle/source-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build combined canonical preview bundle
+        run: node scripts/build-canonical-preview-bundle.js
+
+      - name: Validate combined coverage and safety
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const policy = JSON.parse(fs.readFileSync('data/access-tier-policy.json', 'utf8'));
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const index = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/index.json', 'utf8'));
+          const packageData = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/canonical-records.json', 'utf8'));
+          const required = schema.required || [];
+          if (!index.ok || !packageData.ok) throw new Error('Combined preview bundle is not healthy');
+          if (index.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (index.paymentStatus !== 'deferred' || policy.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (index.enforcementMode !== 'report-only' || policy.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (!manifest.allConfiguredSourcesPreviewAssured) throw new Error('Manifest does not mark all configured sources assured');
+          if (index.summary.configuredSources !== 7 || index.summary.assuredManifestSources !== 7) throw new Error('Seven-source coverage is incomplete');
+          const sources = {
+            'daily-investigation': JSON.parse(fs.readFileSync('data/daily-investigation-conclusions.json', 'utf8')).strongestFindings.length,
+            'weekly-investigation': JSON.parse(fs.readFileSync('data/weekly-investigation-conclusions.json', 'utf8')).strongestFindings.length,
+            'live-intel': JSON.parse(fs.readFileSync('data/live-intel.json', 'utf8')).items.length,
+            'outcome-briefings': JSON.parse(fs.readFileSync('data/outcome-briefings.json', 'utf8')).briefings.length,
+            'daily-brain': JSON.parse(fs.readFileSync('data/daily-brain-brief.json', 'utf8')).sectionBriefings.length,
+            'daily-power-conclusions': JSON.parse(fs.readFileSync('data/daily-power-conclusions.json', 'utf8')).conclusions.length,
+            'relationship-graph': JSON.parse(fs.readFileSync('data/evidence-weighted-relationship-graph.json', 'utf8')).edges.length
+          };
+          const expectedTotal = Object.values(sources).reduce((sum, count) => sum + count, 0);
+          if (index.summary.totalRecords !== expectedTotal || packageData.recordCount !== expectedTotal) throw new Error(`Expected ${expectedTotal} records, received ${packageData.recordCount}`);
+          if (index.summary.uniqueIds !== expectedTotal || index.summary.duplicateIds !== 0) throw new Error('Canonical IDs are not unique');
+          if (index.summary.publicSafetyBoundaryCount !== expectedTotal) throw new Error('One or more records lacks public safety boundaries');
+          if (packageData.records.length !== expectedTotal) throw new Error('Combined record array is incomplete');
+          const ids = new Set();
+          for (const record of packageData.records) {
+            if (ids.has(record.id)) throw new Error(`Duplicate ID: ${record.id}`);
+            ids.add(record.id);
+            for (const field of required) {
+              if (record[field] === undefined || record[field] === null) throw new Error(`${record.id}: missing ${field}`);
+            }
+            if (!record.solidConclusion.boundary || !record.missionAssessment.boundary || !record.evidence.associationBoundary) throw new Error(`${record.id}: safety boundary incomplete`);
+            if (record.speculativeConclusion.label !== 'speculative' || !record.speculativeConclusion.falsifiers.length) throw new Error(`${record.id}: speculation discipline incomplete`);
+            if (!record.counterAnalysis.alternativeExplanations.length) throw new Error(`${record.id}: counter-analysis missing`);
+            if (!record.missingEvidence.length || !record.watchNext.length) throw new Error(`${record.id}: evidence or watch route missing`);
+            if (!record.access.publicFields.includes('solidConclusion.boundary')) throw new Error(`${record.id}: solid boundary is not public`);
+            if (!record.access.publicFields.includes('missionAssessment.boundary')) throw new Error(`${record.id}: mission boundary is not public`);
+            if (!record.access.publicFields.includes('evidence.associationBoundary')) throw new Error(`${record.id}: association boundary is not public`);
+            if (record.previewSourceId === 'live-intel' && record.delivery.includeInConvergenceTracker) throw new Error(`${record.id}: Live Intel lead entered convergence tracker`);
+            if (record.previewSourceId === 'relationship-graph' && (record.delivery.includeInConvergenceTracker || record.delivery.includeInNewsletter)) throw new Error(`${record.id}: graph hint entered restricted delivery`);
+            if (['outcome-briefings', 'daily-brain', 'daily-power-conclusions', 'relationship-graph'].includes(record.previewSourceId) && record.status !== 'review') throw new Error(`${record.id}: analytical preview published prematurely`);
+          }
+          for (const [source, expected] of Object.entries(sources)) {
+            if (index.sourceCounts[source] !== expected) throw new Error(`${source}: expected ${expected}, received ${index.sourceCounts[source]}`);
+          }
+          if (!policy.neverPaywall.includes('Evidence downgrade affecting a public conclusion')) throw new Error('Never-paywall evidence downgrade rule missing');
+          console.log(`CANONICAL BUNDLE PASS: ${expectedTotal} records across seven assured sources.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'The combined canonical preview build must not modify legacy intelligence, membership, Workers, deployment guards, schema, tier policy or source manifest.'
+          };
+          fs.writeFileSync('downloads/canonical-preview-bundle/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload combined preview bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-canonical-preview-bundle-${{ github.run_id }}
+          path: downloads/canonical-preview-bundle/
+          if-no-files-found: error
+          retention-days: 30

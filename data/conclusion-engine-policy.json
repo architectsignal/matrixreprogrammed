@@ -1,0 +1,147 @@
+{
+  "version": "1.0.0",
+  "status": "phase-2-report-only",
+  "mode": "report-only",
+  "purpose": "Deterministic conclusion-engine policy for evidence conclusions, power mechanisms, mission links, elite-control analysis, convergence scoring, speculation, counter-hypotheses, missing evidence, repetition detection and publication gates.",
+  "exitCondition": "No published item can confuse documented fact, allegation, inference, model output or speculation.",
+  "publicationStates": [
+    "draft",
+    "review",
+    "publishable_preview",
+    "needs_evidence",
+    "needs_editorial_review",
+    "stale",
+    "downgraded",
+    "superseded",
+    "withdrawn"
+  ],
+  "confidence": {
+    "order": ["very_low", "low", "medium", "high", "very_high"],
+    "scores": {"very_low": 1, "low": 2, "medium": 3, "high": 4, "very_high": 5}
+  },
+  "evidenceGradeScores": {"A": 5, "B": 4, "C": 3, "D": 2, "E": 1, "ungraded": 0},
+  "sourceAuthorityScores": {"primary": 5, "official": 4, "secondary": 3, "lead_only": 1, "unknown": 0},
+  "claimRules": {
+    "established_fact": {"maxConfidence": "very_high", "requiresPrimary": true, "canPublish": true},
+    "official_finding": {"maxConfidence": "high", "requiresPrimary": true, "canPublish": true},
+    "documented_association": {"maxConfidence": "medium", "requiresPrimary": true, "canPublish": true},
+    "supported_inference": {"maxConfidence": "medium", "requiresPrimary": false, "canPublish": false},
+    "scenario_analysis": {"maxConfidence": "very_low", "requiresPrimary": false, "canPublish": false},
+    "speculative_interpretation": {"maxConfidence": "very_low", "requiresPrimary": false, "canPublish": false},
+    "disputed_claim": {"maxConfidence": "low", "requiresPrimary": false, "canPublish": false},
+    "unsupported_claim": {"maxConfidence": "very_low", "requiresPrimary": false, "canPublish": false}
+  },
+  "recordTypeRules": {
+    "signal": {"defaultState": "needs_evidence", "maxConvergenceScore": 0},
+    "source_change": {"defaultState": "review", "maxConvergenceScore": 1},
+    "document": {"defaultState": "review", "maxConvergenceScore": 1},
+    "finding": {"defaultState": "review", "maxConvergenceScore": 3},
+    "intelligence_card": {"defaultState": "review", "maxConvergenceScore": 3},
+    "brief": {"defaultState": "review", "maxConvergenceScore": 2},
+    "daily_drop": {"defaultState": "review", "maxConvergenceScore": 3},
+    "weekly_report": {"defaultState": "review", "maxConvergenceScore": 3},
+    "dossier": {"defaultState": "review", "maxConvergenceScore": 4},
+    "entity_update": {"defaultState": "review", "maxConvergenceScore": 2},
+    "relationship_update": {"defaultState": "needs_evidence", "maxConvergenceScore": 0},
+    "scenario": {"defaultState": "review", "maxConvergenceScore": 2},
+    "speculation_review": {"defaultState": "review", "maxConvergenceScore": 1}
+  },
+  "freshnessDays": {
+    "lead_only": 14,
+    "scenario_analysis": 30,
+    "relationship_update": 90,
+    "official_finding": 365,
+    "established_fact": 365,
+    "default": 180
+  },
+  "convergenceVectors": [
+    "political_governance",
+    "monetary_control",
+    "digital_identity_and_access",
+    "surveillance_and_data",
+    "emergency_power",
+    "information_and_narrative",
+    "corporate_institutional_convergence",
+    "security_architecture",
+    "religious_or_ethical_convergence",
+    "legal_and_regulatory_convergence"
+  ],
+  "convergenceRules": {
+    "minimum": 0,
+    "maximum": 5,
+    "ungradedMaximum": 2,
+    "leadOnlyMaximum": 0,
+    "scenarioMaximum": 2,
+    "relationshipMaximum": 0,
+    "documentedCoordinationRequiresPrimary": true,
+    "documentedCoordinationRequiresClaimClass": ["established_fact", "official_finding", "documented_association"]
+  },
+  "specificity": {
+    "titleConclusionJaccardMaximum": 0.72,
+    "summaryConclusionJaccardMaximum": 0.88,
+    "minimumConclusionTokens": 8,
+    "minimumRecordSpecificTokens": 1,
+    "exactRepeatMinimumRecords": 3,
+    "exactRepeatRatioWarning": 0.03,
+    "fieldEqualityForbidden": [
+      ["solidConclusion.text", "mechanismOfPower.description"],
+      ["solidConclusion.text", "missionAssessment.missionRelevance"],
+      ["mechanismOfPower.description", "missionAssessment.missionRelevance"]
+    ]
+  },
+  "genericPhrases": [
+    "wider control structure",
+    "elite control",
+    "one world",
+    "global control",
+    "hidden command structure",
+    "unified command",
+    "power map",
+    "mission relevant",
+    "broader control structure connection",
+    "requires source review",
+    "does not establish wrongdoing",
+    "track the chain",
+    "research route"
+  ],
+  "unsupportedCertaintyTerms": [
+    "proves",
+    "definitely",
+    "certainly",
+    "undeniably",
+    "clearly controls",
+    "secretly controls",
+    "all part of",
+    "master plan"
+  ],
+  "mechanismDimensions": {
+    "legal_authority": ["law", "legal", "regulator", "court", "order", "mandate", "authority"],
+    "financial_control": ["payment", "ownership", "fund", "bank", "grant", "procurement", "currency", "reserve"],
+    "identity_and_access": ["identity", "access", "credential", "biometric", "eligibility", "permission"],
+    "data_and_surveillance": ["data", "surveillance", "monitoring", "cloud", "platform", "database"],
+    "narrative_and_visibility": ["media", "ranking", "moderation", "visibility", "redaction", "disclosure"],
+    "security_and_enforcement": ["police", "military", "security", "intelligence", "sanction", "enforcement"],
+    "institutional_implementation": ["contract", "vendor", "implementation", "infrastructure", "standards", "compliance"]
+  },
+  "requiredSeparation": {
+    "speculationLabel": "speculative",
+    "solidBoundaryRequired": true,
+    "missionBoundaryRequired": true,
+    "associationBoundaryRequired": true,
+    "counterHypothesisRequired": true,
+    "falsifierRequired": true
+  },
+  "publicationGates": [
+    "fact_speculation_separation",
+    "source_and_claim_compatibility",
+    "mechanism_specificity",
+    "mission_specificity",
+    "counter_hypothesis",
+    "missing_evidence_and_falsifiers",
+    "repetition_and_generic_language",
+    "confidence_cap",
+    "freshness",
+    "correction_and_supersession",
+    "convergence_discipline"
+  ]
+}

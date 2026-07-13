@@ -5,7 +5,6 @@ const {spawnSync}=require('child_process');
 
 const root=process.cwd();
 const outputDir=process.env.PHASE3_COMPLETION_OUTPUT_DIR?path.resolve(process.env.PHASE3_COMPLETION_OUTPUT_DIR):path.join(root,'downloads','phase3-completion-audit');
-const policyPath=path.join(root,'data','phase3-completion-policy.json');
 
 function readJson(rel){return JSON.parse(fs.readFileSync(path.join(root,rel),'utf8'));}
 function stableValue(value){if(Array.isArray(value))return value.map(stableValue);if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().map(key=>[key,stableValue(value[key])]));return value;}
@@ -52,6 +51,7 @@ const counts={
   redirectChains:redirect.summary.redirectChains,
   redirectCollisions:redirect.summary.destinationCollisions,
   redirectUnresolved:redirect.summary.unresolved,
+  resolvedProposedRouteCollisions:redirect.summary.collisionAdjusted,
   searchCompetingRoutes:search.summary.competingCanonicalRoutes,
   searchDuplicateIds:search.summary.duplicatePublicIds,
   searchPrivateLeakage:search.summary.privateLeakage,
@@ -103,21 +103,18 @@ const protectedStates={
   related:protectedActions({navigationMutation:related.navigationMutation,contentMutation:related.contentMutation,routeMovement:related.routeMovement,searchMutation:related.searchMutation,relationshipAssertion:related.relationshipAssertion,lockedSectionEnforcement:related.lockedSectionEnforcement,authenticationActivation:related.authenticationActivation,entitlementActivation:related.entitlementActivation,paymentActivation:related.paymentActivation})
 };
 const activatedProtectedActions=Object.entries(protectedStates).filter(([,actions])=>actions.length).map(([packageName,actions])=>({package:packageName,actions}));
-
 const zeroFailures=[];
 for(const key of policy.requiredZeroCounts){if(Number(counts[key]||0)!==0)zeroFailures.push({metric:key,value:counts[key]});}
 if(counts.redirectUnresolved!==0)zeroFailures.push({metric:'redirectUnresolved',value:counts.redirectUnresolved});
 const minimumFailures=[];
 for(const [metric,minimum] of Object.entries(policy.minimums)){if(Number(counts[metric]||0)<minimum)minimumFailures.push({metric,value:counts[metric],minimum});}
 const duplicateCanonicalRoutes={
-  classification:classification.rows.length-new Set(classification.rows.map(row=>row.proposedCanonicalRoute)).size,
-  redirect:redirect.rows.length-new Set(redirect.rows.map(row=>row.finalCanonicalRoute)).size,
+  redirectFinal:redirect.rows.length-new Set(redirect.rows.map(row=>row.finalCanonicalRoute)).size,
   publicSearch:publicSearch.records.length-new Set(publicSearch.records.map(row=>row.canonicalRoute)).size
 };
 const duplicateFailures=Object.entries(duplicateCanonicalRoutes).filter(([,count])=>count>0).map(([surface,count])=>({surface,count}));
 const inaccessible=relatedDiscoverability.inaccessibleNonRestricted||[];
 const complete=Object.values(packageHealth).every(Boolean)&&coverageMismatches.length===0&&zeroFailures.length===0&&minimumFailures.length===0&&duplicateFailures.length===0&&activatedProtectedActions.length===0&&inaccessible.length===0;
-
 const readiness={
   ok:complete,
   mode:'audit-only',

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "phase-1-report-only",
   "purpose": "Maps current legacy intelligence outputs to the canonical intelligence record without changing the source files.",
   "rules": [
@@ -7,7 +7,7 @@
     "Legacy data is never rewritten by the report-only validator.",
     "Field aliases help measure migration gaps; they do not manufacture evidence.",
     "Strict validation remains disabled until source-specific adapters are reviewed.",
-    "Generated reports belong in downloads and must not be treated as source evidence."
+    "Generated reports and canonical previews belong in downloads and must not be treated as source evidence."
   ],
   "sources": [
     {
@@ -16,6 +16,8 @@
       "recordArrayPaths": ["strongestFindings"],
       "recordType": "daily_drop",
       "priority": "critical",
+      "previewStatus": "implemented_and_assured",
+      "previewAdapter": "scripts/build-investigation-canonical-previews.js",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/production-freshness-guard.js",
@@ -43,6 +45,8 @@
       "recordArrayPaths": ["strongestFindings"],
       "recordType": "weekly_report",
       "priority": "critical",
+      "previewStatus": "implemented_and_assured",
+      "previewAdapter": "scripts/build-investigation-canonical-previews.js",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/production-freshness-guard.js",
@@ -70,6 +74,8 @@
       "recordArrayPaths": ["conclusions"],
       "recordType": "finding",
       "priority": "critical",
+      "previewStatus": "planned",
+      "previewAdapter": null,
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/build-mission-intelligence-10.js",
@@ -94,27 +100,25 @@
     {
       "id": "daily-brain",
       "path": "data/daily-brain-brief.json",
-      "recordArrayPaths": ["integrity"],
+      "recordArrayPaths": ["sectionBriefings"],
       "recordType": "brief",
       "priority": "high",
+      "previewStatus": "implemented_pending_assurance",
+      "previewAdapter": "scripts/build-daily-brain-canonical-previews.js",
       "protectedBy": [
         "scripts/build-daily-brain-brief.js",
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/final-production-reconcile.js"
       ],
       "aliases": {
-        "id": ["id", "title"],
-        "title": ["title"],
-        "summary": ["conclusion"],
-        "sources": ["sources"],
-        "solidConclusion": ["conclusion", "limitation"],
-        "mechanismOfPower": ["mechanism", "formula"],
-        "missionAssessment": ["implication"],
-        "speculativeConclusion": ["speculativeConclusion"],
-        "counterAnalysis": ["counterEvidence"],
-        "watchNext": ["nextWatch"],
-        "evidence": ["classification", "confidence", "evidenceBasis", "supportingCount"],
-        "freshness": ["freshness"]
+        "id": ["id", "section", "headline"],
+        "title": ["headline", "title"],
+        "summary": ["meaning", "headline"],
+        "solidConclusion": ["meaning"],
+        "mechanismOfPower": ["meaning"],
+        "missionAssessment": ["meaning"],
+        "speculativeConclusion": ["likely"],
+        "watchNext": ["likely"]
       }
     },
     {
@@ -123,6 +127,8 @@
       "recordArrayPaths": ["briefings"],
       "recordType": "scenario",
       "priority": "high",
+      "previewStatus": "implemented_pending_assurance",
+      "previewAdapter": "scripts/build-outcome-canonical-previews.js",
       "protectedBy": [
         "scripts/build-outcome-briefings.js",
         "scripts/patch-conclusion-integrity-cards.js",
@@ -150,6 +156,8 @@
       "recordArrayPaths": ["items", "signals", "updates", "records"],
       "recordType": "signal",
       "priority": "high",
+      "previewStatus": "implemented_and_assured",
+      "previewAdapter": "scripts/build-live-intel-canonical-previews.js",
       "protectedBy": [
         "scripts/update-live-intel.js",
         "scripts/record-live-intel-check.js",
@@ -177,6 +185,8 @@
       "recordArrayPaths": ["relationships", "edges", "links", "nodes"],
       "recordType": "relationship_update",
       "priority": "medium",
+      "previewStatus": "planned",
+      "previewAdapter": null,
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js"
       ],

@@ -1,0 +1,190 @@
+name: Phase 3 Locked Section Simulation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-locked-section-policy.json'
+      - 'data/phase3-tier-matrix-policy.json'
+      - 'scripts/build-phase3-locked-section-simulation.js'
+      - 'scripts/build-phase3-tier-matrix.js'
+      - 'scripts/build-phase3-public-private-classification.js'
+      - '.github/workflows/phase3-locked-section-simulation.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-lock-simulation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  simulate:
+    name: Prove fail-closed section and channel decisions
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policies and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-locked-section-policy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-tier-matrix-policy.json','utf8'))"
+          node --check scripts/build-phase3-locked-section-simulation.js
+          node --check scripts/build-phase3-tier-matrix.js
+          node --check scripts/build-phase3-public-private-classification.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/phase3-locked-section-policy.json',
+            'data/phase3-tier-matrix-policy.json',
+            'data/phase3-public-private-policy.json',
+            'data/phase3-canonical-taxonomy.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-lock-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated upstream and simulation outputs
+        run: |
+          rm -rf downloads/phase3-locked-section-simulation downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build locked-section simulation
+        run: node scripts/build-phase3-locked-section-simulation.js
+
+      - name: Validate fail-closed decisions and channel isolation
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/phase3-locked-section-policy.json','utf8'));
+          const tier = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/tier-matrix.json','utf8'));
+          const report = JSON.parse(fs.readFileSync('downloads/phase3-locked-section-simulation/locked-section-decisions.json','utf8'));
+          const leakage = JSON.parse(fs.readFileSync('downloads/phase3-locked-section-simulation/leakage-report.json','utf8'));
+          const principal = JSON.parse(fs.readFileSync('downloads/phase3-locked-section-simulation/principal-channel-matrix.json','utf8'));
+          if (!report.ok || !leakage.ok || !principal.ok) throw new Error('Locked-section simulation is not healthy');
+          if (report.mode !== 'simulation-only' || policy.mode !== 'simulation-only') throw new Error('Simulation-only boundary changed');
+          if (report.rows.length !== tier.rows.length || principal.recordCount !== tier.rows.length) throw new Error('Tier-matrix coverage is incomplete');
+          const contexts = Object.keys(policy.accessContexts);
+          const channels = policy.channels;
+          const expectedDecisions = report.rows.length * contexts.length * channels.length;
+          if (report.summary.totalDecisions !== expectedDecisions) throw new Error(`Expected ${expectedDecisions} decisions, received ${report.summary.totalDecisions}`);
+          if (report.summary.leakageFailures !== 0 || leakage.failureCount !== 0) throw new Error('Protected-section leakage remains');
+          const byClass = {};
+          for (const row of report.rows) {
+            byClass[row.targetAccessClass] = byClass[row.targetAccessClass] || [];
+            byClass[row.targetAccessClass].push(row);
+            if (Object.values(row.protectedActions).some(Boolean)) throw new Error(`${row.sourcePath}: protected action activated`);
+            if (Object.keys(row.contexts).length !== contexts.length || contexts.some(name => !row.contexts[name])) throw new Error(`${row.sourcePath}: access contexts incomplete`);
+            for (const name of contexts) {
+              const decisions = row.contexts[name];
+              if (Object.keys(decisions).length !== channels.length || channels.some(channel => !decisions[channel])) throw new Error(`${row.sourcePath}: channels incomplete for ${name}`);
+              if (decisions.public_search.state === 'allow_full' && row.targetAccessClass !== 'public_core') throw new Error(`${row.sourcePath}: protected depth leaked into public search`);
+              if (decisions.source_markup.state === 'allow_full' && row.targetAccessClass !== 'public_core') throw new Error(`${row.sourcePath}: protected depth leaked into source markup`);
+              if (decisions.embedded_data.state === 'allow_full' && row.targetAccessClass !== 'public_core') throw new Error(`${row.sourcePath}: protected depth leaked into embedded data`);
+            }
+            if (row.contexts.unknown.page.state !== 'deny_unknown') throw new Error(`${row.sourcePath}: unknown context did not fail closed`);
+            if (row.targetAccessClass === 'public_core' && row.contexts.anonymous.page.state !== 'allow_full') throw new Error(`${row.sourcePath}: public core denied to anonymous visitor`);
+            if (['supporter_private','intelligence_private','research_pro_private'].includes(row.targetAccessClass)) {
+              if (row.contexts.anonymous.page.state !== 'allow_public_preview') throw new Error(`${row.sourcePath}: anonymous paid route lacks public preview`);
+              if (!['deny_upgrade','deny_login'].includes(row.contexts.anonymous.section.state)) throw new Error(`${row.sourcePath}: anonymous protected section did not fail closed`);
+              if (row.contexts.expired_member.page.state !== 'allow_public_preview') throw new Error(`${row.sourcePath}: expired member did not fall back to preview`);
+              if (row.contexts.expired_member.section.state !== 'deny_inactive') throw new Error(`${row.sourcePath}: expired member opened protected section`);
+            }
+            if (row.targetAccessClass === 'internal_only') {
+              if (row.contexts.anonymous.page.state !== 'deny_operations') throw new Error(`${row.sourcePath}: operations item exposed publicly`);
+              if (row.contexts.operations_reviewer.page.state !== 'allow_operations') throw new Error(`${row.sourcePath}: operations reviewer denied`);
+              if (row.contexts.research_pro.page.state === 'allow_operations') throw new Error(`${row.sourcePath}: membership implied operations role`);
+            }
+            if (row.targetAccessClass === 'restricted_sensitive') {
+              if (row.contexts.anonymous.page.state !== 'deny_sensitive') throw new Error(`${row.sourcePath}: sensitive item exposed publicly`);
+              if (row.contexts.sensitive_content_reviewer.page.state !== 'allow_sensitive_review') throw new Error(`${row.sourcePath}: sensitive reviewer denied`);
+              if (row.contexts.research_pro.page.state === 'allow_sensitive_review') throw new Error(`${row.sourcePath}: membership implied sensitive role`);
+            }
+            if (row.targetAccessClass === 'separate_product') {
+              if (row.contexts.research_pro.download.state !== 'deny_purchase') throw new Error(`${row.sourcePath}: membership granted product file`);
+              if (row.contexts.matching_product_purchase.download.state !== 'allow_product_file') throw new Error(`${row.sourcePath}: matching product purchase denied`);
+              if (row.contexts.nonmatching_product_purchase.download.state !== 'deny_purchase') throw new Error(`${row.sourcePath}: nonmatching product purchase granted file`);
+            }
+          }
+          if (report.enforcement !== false || report.authentication !== false || report.entitlements !== false || report.emailDelivery !== false || report.payment !== false || report.routeMovement !== false || report.searchMutation !== false || report.contentMutation !== false) throw new Error('A protected system was activated');
+          console.log(`PHASE 3 LOCK PASS: ${report.summary.totalDecisions} deterministic decisions; zero leakage failures.`);
+          NODE
+
+      - name: Snapshot deterministic simulation hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase3-locked-section-simulation';
+          const hashes = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-lock-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic simulation
+        run: |
+          rm -rf downloads/phase3-locked-section-simulation downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-locked-section-simulation.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase3-locked-section-simulation';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase3-lock-first-hashes.json','utf8'));
+          const after = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before),...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Locked-section simulation is not deterministic:\n${changed.join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} lock-simulation files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase3-lock-protected-before.json','utf8'));
+          const changed = [];
+          for (const [file,expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({file,expected,actual});
+          }
+          const report = {ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Locked-section simulation must not alter policies, membership, Workers, routes or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-locked-section-simulation/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length) throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Phase 3 locked-section simulation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-locked-section-simulation-${{ github.run_id }}
+          path: downloads/phase3-locked-section-simulation/
+          if-no-files-found: error
+          retention-days: 30

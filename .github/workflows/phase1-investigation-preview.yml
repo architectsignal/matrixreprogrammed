@@ -1,0 +1,139 @@
+name: Phase 1 Canonical Investigation Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-investigation-canonical-previews.js'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - 'data/daily-investigation-conclusions.json'
+      - 'data/weekly-investigation-conclusions.json'
+      - '.github/workflows/phase1-investigation-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-investigation-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Build and validate non-destructive investigation previews
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate adapter syntax
+        run: node --check scripts/build-investigation-canonical-previews.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/daily-investigation-conclusions.json',
+            'data/weekly-investigation-conclusions.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'membership.html'
+          ];
+          const result = Object.fromEntries(files.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads/canonical-intelligence-preview', { recursive: true });
+          fs.writeFileSync('downloads/canonical-intelligence-preview/source-hashes-before.json', JSON.stringify(result, null, 2));
+          NODE
+
+      - name: Build canonical previews
+        run: node scripts/build-investigation-canonical-previews.js
+
+      - name: Validate canonical preview structure
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const root = 'downloads/canonical-intelligence-preview';
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const policy = JSON.parse(fs.readFileSync('data/access-tier-policy.json', 'utf8'));
+          const index = JSON.parse(fs.readFileSync(path.join(root, 'index.json'), 'utf8'));
+          if (index.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (index.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (index.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (!index.totalRecords) throw new Error('No canonical preview records generated');
+          const required = schema.required || [];
+          const allowedTiers = new Set(schema.$defs.tier.enum);
+          const allowedOutcomes = new Set(schema.properties.missionAssessment.properties.outcome.enum);
+          const allowedClaims = new Set(schema.properties.evidence.properties.claimClass.enum);
+          let inspected = 0;
+          for (const source of index.sources) {
+            const output = JSON.parse(fs.readFileSync(path.join(root, source.outputFile), 'utf8'));
+            if (output.recordCount !== output.records.length) throw new Error(`${source.id}: record count mismatch`);
+            for (const record of output.records) {
+              inspected += 1;
+              for (const field of required) {
+                if (record[field] === undefined || record[field] === null) throw new Error(`${record.id}: missing ${field}`);
+              }
+              if (!record.sources.length) throw new Error(`${record.id}: no sources`);
+              if (!record.establishedFacts.length) throw new Error(`${record.id}: no established facts`);
+              if (!record.watchNext.length) throw new Error(`${record.id}: no watch conditions`);
+              if (record.speculativeConclusion.label !== 'speculative') throw new Error(`${record.id}: speculation label missing`);
+              if (!record.speculativeConclusion.falsifiers.length) throw new Error(`${record.id}: speculation has no falsifiers`);
+              if (!allowedOutcomes.has(record.missionAssessment.outcome)) throw new Error(`${record.id}: invalid mission outcome`);
+              if (!allowedClaims.has(record.evidence.claimClass)) throw new Error(`${record.id}: invalid claim class`);
+              if (!allowedTiers.has(record.access.minimumTier)) throw new Error(`${record.id}: invalid minimum tier`);
+              if (!record.solidConclusion.boundary || !record.evidence.associationBoundary) throw new Error(`${record.id}: evidence boundary missing`);
+              if (/proof of coordinated elite control/i.test(record.speculativeConclusion.text)) throw new Error(`${record.id}: speculation overclaims`);
+            }
+          }
+          if (inspected !== index.totalRecords) throw new Error('Index total does not match inspected records');
+          if (!policy.neverPaywall?.length) throw new Error('Never-paywall protections missing');
+          console.log(`CANONICAL PREVIEW PASS: ${inspected} records validated.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/canonical-intelligence-preview/source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Canonical preview generation must not modify legacy intelligence, schema, tier policy or membership files.'
+          };
+          fs.writeFileSync('downloads/canonical-intelligence-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload preview package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-canonical-investigation-preview-${{ github.run_id }}
+          path: downloads/canonical-intelligence-preview/
+          if-no-files-found: error
+          retention-days: 30

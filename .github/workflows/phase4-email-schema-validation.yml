@@ -1,0 +1,156 @@
+name: Phase 4 Email Schema Validation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - agent/phase-0-1-inventory-schema
+      - main
+    paths:
+      - 'data/phase4-email-schema-contract.json'
+      - 'migrations/phase4_email_lifecycle.sql'
+      - 'migrations/phase4_email_lifecycle_portability.sql'
+      - 'scripts/validate_phase4_email_schema.py'
+      - '.github/workflows/phase4-email-schema-validation.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase4-email-schema-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-schema:
+    name: Validate additive email schema in memory
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Validate contract and Python syntax
+        run: |
+          python -m json.tool data/phase4-email-schema-contract.json >/dev/null
+          python -m py_compile scripts/validate_phase4_email_schema.py
+
+      - name: Record protected production hashes
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          files=[Path(p) for p in ['src/worker-production.js','src/worker-forum-persistence.js','src/worker.js','wrangler.toml','newsletter.js','membership.html','data/access-tier-policy.json'] if Path(p).exists()]
+          hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+          Path('/tmp/phase4-schema-protected-before.json').write_text(json.dumps(hashes,sort_keys=True,indent=2))
+          PY
+
+      - name: Clean generated schema reports
+        run: rm -rf downloads/phase4-email-schema-validation
+
+      - name: Validate schema and lifecycle fixtures in memory
+        run: python scripts/validate_phase4_email_schema.py
+
+      - name: Assert schema, fixture and safety results
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          contract=json.loads(Path('data/phase4-email-schema-contract.json').read_text())
+          report=json.loads(Path('downloads/phase4-email-schema-validation/schema-validation.json').read_text())
+          fixtures=json.loads(Path('downloads/phase4-email-schema-validation/fixture-results.json').read_text())
+          manifest=json.loads(Path('downloads/phase4-email-schema-validation/manifest.json').read_text())
+          if not report['ok'] or not fixtures['ok'] or not manifest['ok']:
+              raise SystemExit('Schema validation package is not healthy')
+          if report['mode']!='in-memory-validation-only' or contract['mode']!='schema-contract-only':
+              raise SystemExit('Schema validation boundary changed')
+          if report['summary']['expectedTables']!=len(contract['tables']):
+              raise SystemExit('Table contract coverage mismatch')
+          if report['summary']['expectedViews']!=len(contract['requiredViews']):
+              raise SystemExit('View contract coverage mismatch')
+          if report['summary']['failedFixtures'] or report['summary']['foreignKeyViolations']:
+              raise SystemExit('Schema fixtures or foreign keys failed')
+          if report['segmentKeys']!=sorted(contract['tables']['email_segments']['seedKeys']):
+              raise SystemExit('Canonical email segments changed')
+          if report['missingTables'] or report['missingViews']:
+              raise SystemExit('Required schema objects are missing')
+          for protected in ['migrationExecutedAgainstD1','workerMutation','providerMutation','subscriberMutation','liveEmailSend','campaignScheduling','paymentActivation']:
+              if report[protected]:
+                  raise SystemExit(f'Protected action activated: {protected}')
+          required_fixtures={
+              'verified-subscribed-member-is-eligible',
+              'active-segment-member-is-campaign-candidate',
+              'active-suppression-removes-eligibility',
+              'explicit-new-consent-can-clear-suppression',
+              'outbox-idempotency-key-blocks-duplicate-send',
+              'provider-event-idempotency-blocks-duplicate-webhook-event',
+              'delivery-metrics-view-aggregates-events',
+              'provider-reconciliation-identifies-sync-required',
+              'webhook-request-idempotency-blocks-replay'
+          }
+          actual={item['name'] for item in fixtures['records'] if item['passed']}
+          if not required_fixtures.issubset(actual):
+              raise SystemExit(f'Missing passing fixtures: {sorted(required_fixtures-actual)}')
+          print(f"PHASE 4 SCHEMA PASS: {report['summary']['actualTables']} tables, {report['summary']['actualViews']} views, {fixtures['recordCount']} fixtures.")
+          PY
+
+      - name: Snapshot deterministic schema-report hashes
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          root=Path('downloads/phase4-email-schema-validation')
+          hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.iterdir())}
+          Path('/tmp/phase4-schema-first-hashes.json').write_text(json.dumps(hashes,sort_keys=True,indent=2))
+          PY
+
+      - name: Rebuild and prove deterministic schema reports
+        run: |
+          rm -rf downloads/phase4-email-schema-validation
+          python scripts/validate_phase4_email_schema.py
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          before=json.loads(Path('/tmp/phase4-schema-first-hashes.json').read_text())
+          root=Path('downloads/phase4-email-schema-validation')
+          after={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.iterdir())}
+          if before!=after:
+              changed=sorted(set(before)|set(after))
+              changed=[name for name in changed if before.get(name)!=after.get(name)]
+              raise SystemExit('Schema reports are not deterministic: '+', '.join(changed))
+          print(f'DETERMINISM PASS: {len(after)} schema-report files reproduced byte-for-byte.')
+          PY
+
+      - name: Prove production files were not changed
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          before=json.loads(Path('/tmp/phase4-schema-protected-before.json').read_text())
+          changed=[]
+          for file,expected in before.items():
+              actual=hashlib.sha256(Path(file).read_bytes()).hexdigest()
+              if actual!=expected:
+                  changed.append({'file':file,'expected':expected,'actual':actual})
+          report={'ok':not changed,'checkedFiles':len(before),'changed':changed,'boundary':'In-memory schema validation must not change Workers, forms, access policy, D1 or provider state.'}
+          Path('downloads/phase4-email-schema-validation/non-mutation-report.json').write_text(json.dumps(report,sort_keys=True,indent=2))
+          if changed:
+              raise SystemExit(json.dumps(changed,indent=2))
+          print(f"NON-MUTATION PASS: {len(before)} production files unchanged.")
+          PY
+
+      - name: Upload Phase 4 schema reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-email-schema-validation-${{ github.run_id }}
+          path: downloads/phase4-email-schema-validation/
+          if-no-files-found: error
+          retention-days: 30

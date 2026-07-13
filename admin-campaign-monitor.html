@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Email Campaign Monitor | Matrix Reprogrammed</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>
+    .monitor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.monitor-card{padding:1rem;border:1px solid rgba(216,181,106,.3);border-radius:14px;background:rgba(7,6,3,.86)}table{width:100%;border-collapse:collapse;font-size:.82rem}th,td{padding:.55rem;border-bottom:1px solid rgba(216,181,106,.18);text-align:left}.scroll{overflow:auto}.admin-controls{display:flex;gap:.6rem;flex-wrap:wrap}.admin-controls input,.admin-controls select,.admin-controls textarea{background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);padding:.65rem;border-radius:10px}.admin-controls textarea{width:100%;min-height:100px}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a></header>
+    <main class="wrap section">
+      <div class="eyebrow">Protected administration</div>
+      <h1>EMAIL CAMPAIGN MONITOR.</h1>
+      <section class="monitor-card">
+        <label>Admin API token <input type="password" id="admin-token" autocomplete="off"></label>
+        <button class="btn" id="connect" type="button">Connect</button>
+        <p id="connection-status" aria-live="polite">No admin request has been made.</p>
+      </section>
+      <section class="monitor-grid" id="health-grid"></section>
+      <section class="monitor-card">
+        <h2>Automation controls</h2>
+        <div class="admin-controls"><button class="btn" data-run="daily" type="button">Run daily automation</button><button class="btn" data-run="weekly" type="button">Run weekly automation</button><button class="btn alt" id="process-outbox" type="button">Process retry outbox</button></div>
+        <p id="automation-status" aria-live="polite"></p>
+      </section>
+      <section class="monitor-card">
+        <h2>Create reviewed campaign</h2>
+        <form id="campaign-form" class="admin-controls">
+          <select name="kind"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="release">Release</option><option value="monthly">Monthly</option></select>
+          <select name="segmentKey"><option value="public_daily_brief">Public daily</option><option value="public_weekly_digest">Public weekly</option><option value="registered_release_notices">Registered releases</option><option value="supporter_weekly_member_brief">Supporter weekly</option><option value="intelligence_daily_member_brief">Intelligence daily</option><option value="research_pro_reports">Research Pro</option></select>
+          <input name="subject" placeholder="Subject" required>
+          <textarea name="textContent" placeholder="Plain-text content" required></textarea>
+          <textarea name="htmlContent" placeholder="HTML content" required></textarea>
+          <label><input type="checkbox" name="sendNow"> Queue and send now</label>
+          <button class="btn" type="submit">Create campaign</button>
+        </form>
+        <p id="campaign-status" aria-live="polite"></p>
+      </section>
+      <section class="monitor-card scroll"><h2>Campaigns</h2><table><thead><tr><th>Created</th><th>Kind</th><th>Segment</th><th>Subject</th><th>Status</th><th>Recipients</th><th>Delivered</th><th>Failed</th></tr></thead><tbody id="campaign-rows"></tbody></table></section>
+    </main>
+  </div>
+  <script>
+  (function(){
+    const tokenInput=document.getElementById('admin-token');
+    const connection=document.getElementById('connection-status');
+    const healthGrid=document.getElementById('health-grid');
+    const campaignRows=document.getElementById('campaign-rows');
+    const automationStatus=document.getElementById('automation-status');
+    const campaignStatus=document.getElementById('campaign-status');
+    tokenInput.value=sessionStorage.getItem('matrixEmailAdminToken')||'';
+    function headers(json){const result={'X-Admin-Token':tokenInput.value};if(json)result['Content-Type']='application/json';return result}
+    async function api(path,options){const response=await fetch(path,{...options,headers:{...headers(Boolean(options&&options.body)),...(options&&options.headers||{})}});const data=await response.json();if(!response.ok||!data.ok)throw new Error(data.error||'Admin request failed');return data}
+    function card(title,value){return '<article class="monitor-card"><strong>'+title+'</strong><div>'+value+'</div></article>'}
+    async function refresh(){
+      sessionStorage.setItem('matrixEmailAdminToken',tokenInput.value);
+      connection.textContent='Loading protected email state...';
+      try{
+        const health=await api('/api/email/admin/health');
+        const campaigns=await api('/api/email/admin/campaigns');
+        connection.textContent='Connected. D1 schema: '+(health.schemaReady?'ready':'not ready')+' · Brevo: '+(health.brevoConfigured?'configured':'not configured')+' · Automation: '+(health.automationEnabled?'enabled':'disabled');
+        healthGrid.innerHTML=card('Members',JSON.stringify(health.memberCounts))+card('Outbox',JSON.stringify(health.outbox))+card('Campaign states',JSON.stringify(health.campaigns))+card('Provider sync',JSON.stringify(health.provider))+card('Delivery events',JSON.stringify(health.events));
+        campaignRows.innerHTML=campaigns.campaigns.map(function(item){return '<tr><td>'+String(item.created_at||'')+'</td><td>'+item.kind+'</td><td>'+String(item.segment_key||'')+'</td><td>'+String(item.subject||'')+'</td><td>'+item.status+'</td><td>'+Number(item.delivery_count||item.recipient_count||0)+'</td><td>'+Number(item.delivered_count||0)+'</td><td>'+Number(item.failed_delivery_count||item.failed_count||0)+'</td></tr>'}).join('');
+      }catch(error){connection.textContent=error.message}
+    }
+    document.getElementById('connect').addEventListener('click',refresh);
+    document.querySelectorAll('[data-run]').forEach(function(button){button.addEventListener('click',async function(){automationStatus.textContent='Running '+button.dataset.run+' automation...';try{const data=await api('/api/email/admin/run-automation',{method:'POST',body:JSON.stringify({kind:button.dataset.run})});automationStatus.textContent=JSON.stringify(data.result);await refresh()}catch(error){automationStatus.textContent=error.message}})});
+    document.getElementById('process-outbox').addEventListener('click',async function(){automationStatus.textContent='Processing outbox...';try{const data=await api('/api/email/admin/process-outbox',{method:'POST',body:JSON.stringify({limit:250})});automationStatus.textContent=JSON.stringify(data);await refresh()}catch(error){automationStatus.textContent=error.message}});
+    document.getElementById('campaign-form').addEventListener('submit',async function(event){event.preventDefault();const form=event.currentTarget;const payload={kind:form.kind.value,segmentKey:form.segmentKey.value,subject:form.subject.value,textContent:form.textContent.value,htmlContent:form.htmlContent.value,sendNow:form.sendNow.checked};campaignStatus.textContent='Creating campaign...';try{const data=await api('/api/email/admin/campaigns',{method:'POST',body:JSON.stringify(payload)});campaignStatus.textContent='Campaign '+data.campaign.id+' created. Recipients: '+data.queued.recipientCount+'; sent: '+data.delivery.sent+'; retry: '+data.delivery.retry+'.';await refresh()}catch(error){campaignStatus.textContent=error.message}});
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+{
+  "version": "1.0.0",
+  "status": "design-only",
+  "mode": "schema-contract-only",
+  "authoritativeDatabase": "Cloudflare D1 MEMBERS_DB",
+  "provider": "brevo",
+  "purpose": "Define the authoritative subscriber, consent, preference, provider, campaign, delivery, event and suppression data model without executing a migration.",
+  "compatibility": {
+    "existingTablesPreserved": [
+      "members",
+      "email_consents",
+      "magic_links",
+      "member_sessions",
+      "subscriptions",
+      "audit_log",
+      "forum_posts",
+      "forum_reports",
+      "forum_meta"
+    ],
+    "existingMemberIdentity": "members.id",
+    "existingEmailVerification": "magic_links with purpose verify_email remains valid for account verification",
+    "kvRole": "Compatibility and recovery only; KV must not be authoritative for email eligibility or campaign state.",
+    "destructiveChanges": false
+  },
+  "stateRules": [
+    "members.status controls account access and is not a substitute for marketing consent.",
+    "members.marketing_status is the high-level send eligibility state and must agree with consent, preferences and suppression records.",
+    "email_consents is append-only evidence of consent grants and withdrawals.",
+    "email_preferences controls topic and cadence choices but cannot override an active suppression.",
+    "email_suppressions always wins over segment membership and campaign selection.",
+    "provider contact state is mirrored locally and never treated as authoritative without reconciliation.",
+    "campaign content is versioned and hashed before recipient selection.",
+    "delivery and provider events are append-only and idempotent.",
+    "resubscribe requires a new explicit consent record and cannot merely clear a suppression silently."
+  ],
+  "tables": {
+    "email_preferences": {
+      "primaryKey": ["member_id"],
+      "foreignKeys": [{"columns": ["member_id"], "references": "members(id)", "onDelete": "CASCADE"}],
+      "columns": {
+        "member_id": "TEXT NOT NULL",
+        "public_daily_brief": "INTEGER NOT NULL DEFAULT 0 CHECK(public_daily_brief IN (0,1))",
+        "public_weekly_digest": "INTEGER NOT NULL DEFAULT 1 CHECK(public_weekly_digest IN (0,1))",
+        "release_notices": "INTEGER NOT NULL DEFAULT 1 CHECK(release_notices IN (0,1))",
+        "supporter_weekly_member_brief": "INTEGER NOT NULL DEFAULT 1 CHECK(supporter_weekly_member_brief IN (0,1))",
+        "intelligence_daily_member_brief": "INTEGER NOT NULL DEFAULT 1 CHECK(intelligence_daily_member_brief IN (0,1))",
+        "research_pro_reports": "INTEGER NOT NULL DEFAULT 1 CHECK(research_pro_reports IN (0,1))",
+        "locale": "TEXT NOT NULL DEFAULT 'en'",
+        "timezone": "TEXT NOT NULL DEFAULT 'Europe/Paris'",
+        "digest_day": "INTEGER CHECK(digest_day BETWEEN 0 AND 6)",
+        "digest_hour": "INTEGER CHECK(digest_hour BETWEEN 0 AND 23)",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["updated_at"]
+    },
+    "email_action_tokens": {
+      "primaryKey": ["id"],
+      "foreignKeys": [{"columns": ["member_id"], "references": "members(id)", "onDelete": "CASCADE"}],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "member_id": "TEXT NOT NULL",
+        "token_hash": "TEXT NOT NULL UNIQUE",
+        "purpose": "TEXT NOT NULL CHECK(purpose IN ('verify_marketing','preferences','unsubscribe','resubscribe'))",
+        "scope_json": "TEXT NOT NULL DEFAULT '{}'",
+        "expires_at": "TEXT NOT NULL",
+        "used_at": "TEXT",
+        "revoked_at": "TEXT",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["member_id,purpose,created_at", "expires_at", "used_at"]
+    },
+    "email_provider_contacts": {
+      "primaryKey": ["member_id", "provider"],
+      "foreignKeys": [{"columns": ["member_id"], "references": "members(id)", "onDelete": "CASCADE"}],
+      "columns": {
+        "member_id": "TEXT NOT NULL",
+        "provider": "TEXT NOT NULL DEFAULT 'brevo'",
+        "provider_contact_id": "TEXT",
+        "sync_status": "TEXT NOT NULL CHECK(sync_status IN ('pending','synced','retry','failed','suppressed'))",
+        "provider_state_json": "TEXT NOT NULL DEFAULT '{}'",
+        "local_state_hash": "TEXT NOT NULL",
+        "last_synced_at": "TEXT",
+        "last_checked_at": "TEXT",
+        "last_error": "TEXT",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["sync_status,updated_at", "provider_contact_id"]
+    },
+    "email_segments": {
+      "primaryKey": ["id"],
+      "unique": [["segment_key"]],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "segment_key": "TEXT NOT NULL",
+        "label": "TEXT NOT NULL",
+        "minimum_tier": "TEXT NOT NULL",
+        "marketing": "INTEGER NOT NULL DEFAULT 1 CHECK(marketing IN (0,1))",
+        "active": "INTEGER NOT NULL DEFAULT 1 CHECK(active IN (0,1))",
+        "rules_json": "TEXT NOT NULL DEFAULT '{}'",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "seedKeys": [
+        "public_daily_brief",
+        "public_weekly_digest",
+        "registered_release_notices",
+        "supporter_weekly_member_brief",
+        "intelligence_daily_member_brief",
+        "research_pro_reports",
+        "transactional_account",
+        "suppressed_do_not_send"
+      ]
+    },
+    "email_segment_memberships": {
+      "primaryKey": ["segment_id", "member_id"],
+      "foreignKeys": [
+        {"columns": ["segment_id"], "references": "email_segments(id)", "onDelete": "CASCADE"},
+        {"columns": ["member_id"], "references": "members(id)", "onDelete": "CASCADE"}
+      ],
+      "columns": {
+        "segment_id": "TEXT NOT NULL",
+        "member_id": "TEXT NOT NULL",
+        "state": "TEXT NOT NULL CHECK(state IN ('eligible','active','paused','removed','suppressed'))",
+        "source": "TEXT NOT NULL",
+        "reason": "TEXT",
+        "eligible_at": "TEXT",
+        "activated_at": "TEXT",
+        "removed_at": "TEXT",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["member_id,state", "segment_id,state"]
+    },
+    "email_campaign_content_versions": {
+      "primaryKey": ["id"],
+      "unique": [["content_hash"]],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "campaign_kind": "TEXT NOT NULL",
+        "subject": "TEXT NOT NULL",
+        "preheader": "TEXT NOT NULL DEFAULT ''",
+        "html_content": "TEXT NOT NULL",
+        "text_content": "TEXT NOT NULL",
+        "canonical_record_ids_json": "TEXT NOT NULL DEFAULT '[]'",
+        "content_hash": "TEXT NOT NULL",
+        "evidence_checkpoint_at": "TEXT NOT NULL",
+        "fact_speculation_boundary_verified": "INTEGER NOT NULL DEFAULT 0 CHECK(fact_speculation_boundary_verified IN (0,1))",
+        "reviewed_by": "TEXT",
+        "reviewed_at": "TEXT",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["campaign_kind,created_at", "reviewed_at"]
+    },
+    "email_campaigns": {
+      "primaryKey": ["id"],
+      "foreignKeys": [
+        {"columns": ["segment_id"], "references": "email_segments(id)", "onDelete": "RESTRICT"},
+        {"columns": ["content_version_id"], "references": "email_campaign_content_versions(id)", "onDelete": "RESTRICT"}
+      ],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "campaign_key": "TEXT NOT NULL UNIQUE",
+        "kind": "TEXT NOT NULL CHECK(kind IN ('verification','login','welcome','daily','weekly','release','monthly','test'))",
+        "segment_id": "TEXT",
+        "content_version_id": "TEXT NOT NULL",
+        "status": "TEXT NOT NULL CHECK(status IN ('draft','review','test_sent','scheduled','sending','sent','partially_failed','failed','cancelled'))",
+        "provider": "TEXT NOT NULL DEFAULT 'brevo'",
+        "provider_campaign_id": "TEXT",
+        "scheduled_at": "TEXT",
+        "started_at": "TEXT",
+        "completed_at": "TEXT",
+        "recipient_count": "INTEGER NOT NULL DEFAULT 0",
+        "sent_count": "INTEGER NOT NULL DEFAULT 0",
+        "failed_count": "INTEGER NOT NULL DEFAULT 0",
+        "last_error": "TEXT",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["status,scheduled_at", "kind,created_at", "provider_campaign_id"]
+    },
+    "email_outbox": {
+      "primaryKey": ["id"],
+      "foreignKeys": [
+        {"columns": ["member_id"], "references": "members(id)", "onDelete": "CASCADE"},
+        {"columns": ["campaign_id"], "references": "email_campaigns(id)", "onDelete": "SET NULL"}
+      ],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "member_id": "TEXT NOT NULL",
+        "campaign_id": "TEXT",
+        "message_kind": "TEXT NOT NULL",
+        "recipient_email_hash": "TEXT NOT NULL",
+        "payload_json": "TEXT NOT NULL",
+        "idempotency_key": "TEXT NOT NULL UNIQUE",
+        "status": "TEXT NOT NULL CHECK(status IN ('pending','sending','sent','retry','failed','cancelled'))",
+        "attempt_count": "INTEGER NOT NULL DEFAULT 0",
+        "available_at": "TEXT NOT NULL",
+        "locked_at": "TEXT",
+        "provider_message_id": "TEXT",
+        "last_error": "TEXT",
+        "updated_at": "TEXT NOT NULL",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["status,available_at", "member_id,created_at", "campaign_id,status"]
+    },
+    "email_deliveries": {
+      "primaryKey": ["id"],
+      "foreignKeys": [
+        {"columns": ["campaign_id"], "references": "email_campaigns(id)", "onDelete": "CASCADE"},
+        {"columns": ["member_id"], "references": "members(id)", "onDelete": "SET NULL"}
+      ],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "campaign_id": "TEXT NOT NULL",
+        "member_id": "TEXT",
+        "recipient_email_hash": "TEXT NOT NULL",
+        "provider_message_id": "TEXT",
+        "status": "TEXT NOT NULL",
+        "queued_at": "TEXT NOT NULL",
+        "sent_at": "TEXT",
+        "delivered_at": "TEXT",
+        "opened_at": "TEXT",
+        "clicked_at": "TEXT",
+        "failed_at": "TEXT",
+        "last_event_at": "TEXT",
+        "failure_reason": "TEXT",
+        "updated_at": "TEXT NOT NULL"
+      },
+      "indexes": ["campaign_id,status", "member_id,status", "provider_message_id"]
+    },
+    "email_events": {
+      "primaryKey": ["id"],
+      "unique": [["provider", "provider_event_id"]],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "provider": "TEXT NOT NULL DEFAULT 'brevo'",
+        "provider_event_id": "TEXT NOT NULL",
+        "provider_message_id": "TEXT",
+        "campaign_id": "TEXT",
+        "member_id": "TEXT",
+        "event_type": "TEXT NOT NULL",
+        "event_at": "TEXT NOT NULL",
+        "payload_hash": "TEXT NOT NULL",
+        "payload_json": "TEXT NOT NULL",
+        "processed_at": "TEXT",
+        "processing_status": "TEXT NOT NULL CHECK(processing_status IN ('received','processed','ignored_duplicate','failed'))",
+        "processing_error": "TEXT",
+        "created_at": "TEXT NOT NULL"
+      },
+      "indexes": ["provider_message_id,event_at", "campaign_id,event_type", "member_id,event_type"]
+    },
+    "email_suppressions": {
+      "primaryKey": ["id"],
+      "foreignKeys": [{"columns": ["member_id"], "references": "members(id)", "onDelete": "SET NULL"}],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "member_id": "TEXT",
+        "recipient_email_hash": "TEXT NOT NULL",
+        "scope": "TEXT NOT NULL CHECK(scope IN ('all_marketing','segment','provider'))",
+        "segment_key": "TEXT",
+        "reason": "TEXT NOT NULL CHECK(reason IN ('unsubscribe','hard_bounce','complaint','admin','legal','provider','deleted_account'))",
+        "source": "TEXT NOT NULL",
+        "active": "INTEGER NOT NULL DEFAULT 1 CHECK(active IN (0,1))",
+        "suppressed_at": "TEXT NOT NULL",
+        "cleared_at": "TEXT",
+        "cleared_by_consent_id": "TEXT",
+        "updated_at": "TEXT NOT NULL"
+      },
+      "indexes": ["recipient_email_hash,active", "member_id,active", "scope,segment_key,active"]
+    },
+    "email_webhook_receipts": {
+      "primaryKey": ["id"],
+      "unique": [["provider", "request_id"]],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "provider": "TEXT NOT NULL DEFAULT 'brevo'",
+        "request_id": "TEXT NOT NULL",
+        "signature_valid": "INTEGER NOT NULL CHECK(signature_valid IN (0,1))",
+        "payload_hash": "TEXT NOT NULL",
+        "event_count": "INTEGER NOT NULL DEFAULT 0",
+        "processing_status": "TEXT NOT NULL CHECK(processing_status IN ('received','processed','partially_failed','rejected'))",
+        "received_at": "TEXT NOT NULL",
+        "processed_at": "TEXT",
+        "last_error": "TEXT"
+      },
+      "indexes": ["received_at", "processing_status,received_at"]
+    },
+    "email_reconciliation_runs": {
+      "primaryKey": ["id"],
+      "columns": {
+        "id": "TEXT NOT NULL",
+        "provider": "TEXT NOT NULL DEFAULT 'brevo'",
+        "scope": "TEXT NOT NULL",
+        "status": "TEXT NOT NULL CHECK(status IN ('running','complete','partial','failed'))",
+        "local_count": "INTEGER NOT NULL DEFAULT 0",
+        "provider_count": "INTEGER NOT NULL DEFAULT 0",
+        "matched_count": "INTEGER NOT NULL DEFAULT 0",
+        "mismatch_count": "INTEGER NOT NULL DEFAULT 0",
+        "result_json": "TEXT NOT NULL DEFAULT '{}'",
+        "started_at": "TEXT NOT NULL",
+        "completed_at": "TEXT",
+        "last_error": "TEXT"
+      },
+      "indexes": ["status,started_at", "provider,started_at"]
+    }
+  },
+  "requiredViews": {
+    "email_eligible_members": "Verified active members with subscribed marketing status, no active all-marketing suppression and at least one enabled preference.",
+    "email_campaign_recipient_candidates": "Eligible members joined to active segment memberships, filtered by minimum tier and campaign kind.",
+    "email_delivery_metrics": "Campaign delivery totals calculated from append-only delivery and event records.",
+    "email_provider_reconciliation": "Local and provider states with mismatch reasons and next action."
+  },
+  "protectedBoundaries": {
+    "migrationExecuted": false,
+    "workerMutation": false,
+    "providerMutation": false,
+    "subscriberMutation": false,
+    "liveEmailSend": false,
+    "campaignScheduling": false,
+    "paymentActivation": false
+  }
+}

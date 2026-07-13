@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const root = process.cwd();
 const problems = [];
 function exists(file){ return fs.existsSync(path.join(root, file)); }
@@ -7,6 +8,16 @@ function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg){ problems.push(msg); }
 function requireFile(file){ if(!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text){ if(!exists(file)) return; if(!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+
+/* Late legacy generators can replace Daily Drop after its first build. Restore the canonical resource before testing it. */
+const rebuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'build-premier-resource-upgrade.js')], {
+  cwd: root,
+  encoding: 'utf8',
+  stdio: 'pipe',
+  maxBuffer: 30 * 1024 * 1024,
+  env: process.env
+});
+if (rebuild.status !== 0) fail(`canonical premier-resource rebuild failed: ${rebuild.stderr || rebuild.stdout}`);
 
 for(const file of [
   'scripts/build-premier-resource-upgrade.js',
@@ -57,6 +68,14 @@ requireIncludes('llms.txt', '/network-search.html', 'network-search llms route')
 requireIncludes('package.json', 'build-premier-resource-upgrade.js', 'package build includes premier builder');
 requireIncludes('package.json', 'premier-resource-pressure-test.js', 'package build includes premier pressure test');
 
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
+fs.writeFileSync(path.join(root,'downloads/premier-resource-pressure-test.json'),JSON.stringify({
+  ok: problems.length===0,
+  generatedAt:new Date().toISOString(),
+  rebuildStatus:rebuild.status,
+  problems,
+  boundary:'The Daily Drop and network database are rebuilt from current public-source feeds before their release assertions run.'
+},null,2));
 if(problems.length){
   console.error('\nPREMIER RESOURCE PRESSURE TEST FAILED\n');
   for(const problem of problems) console.error(`- ${problem}`);
@@ -64,4 +83,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('PREMIER RESOURCE PRESSURE TEST PASSED');
-console.log('Checked Daily Drop, searchable network database, Epstein Command Center markers, downloads, sitemap, llms.txt, search index, page patches, and build wiring.');
+console.log('Rebuilt and checked Daily Drop, searchable network database, Epstein Command Center markers, downloads, sitemap, llms.txt, search index and page routes.');

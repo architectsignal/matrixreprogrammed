@@ -1,0 +1,221 @@
+name: Phase 2 Evidence Delta Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/evidence-delta-policy.json'
+      - 'scripts/evidence-delta/**'
+      - 'scripts/build-phase2-evidence-delta-preview.js'
+      - 'scripts/build-phase2-evidence-delta-fixtures.js'
+      - 'scripts/build-phase2-conclusion-engine-preview.js'
+      - 'scripts/conclusion-engine/**'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'data/intelligence-record.schema.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'docs/PHASE_2_CONCLUSION_ENGINE_ROADMAP.md'
+      - '.github/workflows/phase2-evidence-delta-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-evidence-delta-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evidence-delta:
+    name: Preserve versions and re-evaluate changed evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy and engine syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/evidence-delta-policy.json','utf8'))"
+          node --check scripts/evidence-delta/core.js
+          node --check scripts/build-phase2-evidence-delta-preview.js
+          node --check scripts/build-phase2-evidence-delta-fixtures.js
+          node --check scripts/build-phase2-conclusion-engine-preview.js
+          node --check scripts/conclusion-engine/generate.js
+          node --check scripts/conclusion-engine/quality.js
+          node --check scripts/conclusion-engine/boundaries.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const sourceManifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json','utf8'));
+          const files = [
+            ...sourceManifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'data/conclusion-engine-policy.json',
+            'data/evidence-delta-policy.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js',
+            'scripts/build-canonical-preview-bundle.js'
+          ];
+          const unique = [...new Set(files)];
+          const hashes = Object.fromEntries(unique.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-evidence-delta-protected-before.json', JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Build deterministic evidence-delta fixtures
+        run: node scripts/build-phase2-evidence-delta-fixtures.js
+
+      - name: Validate no-change baseline
+        env:
+          EVIDENCE_DELTA_PREVIOUS_PACKAGE: downloads/phase2-evidence-delta-fixtures/previous-package.json
+          EVIDENCE_DELTA_CURRENT_PACKAGE: downloads/phase2-evidence-delta-fixtures/previous-package.json
+          EVIDENCE_DELTA_OUTPUT_DIR: downloads/phase2-evidence-delta-baseline
+        run: |
+          node scripts/build-phase2-evidence-delta-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const manifest = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-baseline/manifest.json','utf8'));
+          const delta = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-baseline/delta-records.json','utf8'));
+          const queue = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-baseline/re-evaluation-queue.json','utf8'));
+          if (!manifest.ok || !delta.ok || !queue.ok) throw new Error('No-change evidence-delta baseline is not healthy');
+          if (manifest.summary.changedRecordCount !== 0 || manifest.summary.reEvaluationQueueCount !== 0 || queue.recordCount !== 0) throw new Error('Identical packages produced false evidence deltas');
+          if (manifest.summary.unionRecordCount !== manifest.summary.previousRecordCount || manifest.summary.currentRecordCount !== manifest.summary.previousRecordCount) throw new Error('No-change baseline coverage mismatch');
+          if (!delta.records.every(record => record.changeState === 'unchanged' && record.versions.length >= 2)) throw new Error('No-change baseline did not preserve both version roles');
+          if (manifest.publicationEnforcement !== false || manifest.emailDelivery !== false || manifest.entitlementActivation !== false || manifest.paymentActivation !== false || manifest.canonicalMutation !== false) throw new Error('No-change baseline activated a protected system');
+          console.log(`NO-CHANGE PASS: ${manifest.summary.unionRecordCount} records preserved with zero false deltas.`);
+          NODE
+
+      - name: Build changed evidence-delta preview
+        env:
+          EVIDENCE_DELTA_PREVIOUS_PACKAGE: downloads/phase2-evidence-delta-fixtures/previous-package.json
+          EVIDENCE_DELTA_CURRENT_PACKAGE: downloads/phase2-evidence-delta-fixtures/current-package.json
+          EVIDENCE_DELTA_OUTPUT_DIR: downloads/phase2-evidence-delta-preview
+        run: node scripts/build-phase2-evidence-delta-preview.js
+
+      - name: Validate change classification, retention and conclusion impact
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/evidence-delta-policy.json','utf8'));
+          const expectations = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-fixtures/expectations.json','utf8'));
+          const manifest = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-preview/manifest.json','utf8'));
+          const delta = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-preview/delta-records.json','utf8'));
+          const queue = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-preview/re-evaluation-queue.json','utf8'));
+          const ledger = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-preview/version-ledger.json','utf8'));
+          const impact = JSON.parse(fs.readFileSync('downloads/phase2-evidence-delta-preview/conclusion-impact.json','utf8'));
+          if (!manifest.ok || !delta.ok || !queue.ok || !ledger.ok || !impact.ok) throw new Error('Changed evidence-delta package is not healthy');
+          if (manifest.mode !== 'report-only' || policy.mode !== 'report-only') throw new Error('Report-only boundary changed');
+          if (manifest.summary.unionRecordCount !== expectations.expectedUnionRecordCount) throw new Error(`Expected union ${expectations.expectedUnionRecordCount}, received ${manifest.summary.unionRecordCount}`);
+          if (manifest.summary.changedRecordCount !== expectations.cases.length || queue.recordCount !== expectations.cases.length) throw new Error(`Expected ${expectations.cases.length} changed/review records, received ${manifest.summary.changedRecordCount}/${queue.recordCount}`);
+          if (manifest.publicationEnforcement !== false || manifest.emailDelivery !== false || manifest.entitlementActivation !== false || manifest.paymentActivation !== false || manifest.canonicalMutation !== false) throw new Error('Evidence delta activated a protected system');
+          const byId = new Map(delta.records.map(record => [record.id,record]));
+          const severityOrder = policy.severityOrder;
+          for (const expected of expectations.cases) {
+            const record = byId.get(expected.id);
+            if (!record) throw new Error(`${expected.id}: delta record missing`);
+            if (record.changeState !== expected.expectedChangeState) throw new Error(`${expected.id}: expected ${expected.expectedChangeState}, received ${record.changeState}`);
+            for (const type of expected.expectedDeltaTypes) if (!record.deltaTypes.includes(type)) throw new Error(`${expected.id}: missing delta type ${type}`);
+            if (severityOrder.indexOf(record.severity) < severityOrder.indexOf(expected.minimumSeverity)) throw new Error(`${expected.id}: severity ${record.severity} below ${expected.minimumSeverity}`);
+            if (expected.expectedTerminalState && record.impact.terminalState !== expected.expectedTerminalState) throw new Error(`${expected.id}: terminal state mismatch`);
+            if (expected.expectedPresentationClass && record.impact.presentation.presentationClass !== expected.expectedPresentationClass) throw new Error(`${expected.id}: presentation class mismatch`);
+            if (expected.expectedSpeculativeEligible !== undefined && record.impact.presentation.currentSpeculativeOrResearchSurfaceEligible !== expected.expectedSpeculativeEligible) throw new Error(`${expected.id}: speculative eligibility mismatch`);
+            if (record.impact.presentation.factualSurfaceEligible !== false) throw new Error(`${expected.id}: changed record remained factually eligible`);
+            if (!record.impact.reviewRequired) throw new Error(`${expected.id}: material change did not enter review`);
+          }
+          const graph = expectations.cases.find(item => item.expectedPresentationClass === 'research_hint');
+          const graphRecord = byId.get(graph.id);
+          if (!graphRecord.impact.speculativeConclusion.requiredLabel.includes('association not proof')) throw new Error('Graph association label lost');
+          if (!graphRecord.impact.speculativeConclusion.archiveSurfaceEligible || !graphRecord.versions.every(version => version.retained)) throw new Error('Graph association versions were not retained');
+          const withdrawn = expectations.cases.find(item => item.expectedTerminalState === 'withdrawn');
+          const withdrawnRecord = byId.get(withdrawn.id);
+          if (withdrawnRecord.impact.presentation.currentSpeculativeOrResearchSurfaceEligible !== false || withdrawnRecord.impact.presentation.archiveSurfaceEligible !== true || !withdrawnRecord.impact.requiredNotice.includes('withdrawn')) throw new Error('Withdrawn speculation retention boundary failed');
+          const removed = expectations.cases.find(item => item.expectedChangeState === 'missing_from_current');
+          const removedRecord = byId.get(removed.id);
+          if (removedRecord.versions.length !== 1 || removedRecord.versions[0].role !== 'previous' || !removedRecord.impact.presentation.archiveSurfaceEligible) throw new Error('Removed record historical version was not preserved');
+          const added = expectations.cases.find(item => item.expectedChangeState === 'new');
+          const addedRecord = byId.get(added.id);
+          if (addedRecord.versions.length !== 1 || addedRecord.versions[0].role !== 'current') throw new Error('New record current version was not preserved');
+          if (ledger.recordCount !== manifest.summary.unionRecordCount || new Set(ledger.records.map(record => record.id)).size !== ledger.recordCount) throw new Error('Version ledger coverage or uniqueness failed');
+          if (impact.recordCount !== expectations.cases.length) throw new Error('Conclusion impact report coverage failed');
+          console.log(`EVIDENCE DELTA PASS: ${manifest.summary.unionRecordCount} records retained; ${manifest.summary.changedRecordCount} material changes returned to review.`);
+          NODE
+
+      - name: Snapshot deterministic output hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-evidence-delta-preview';
+          function walk(dir,out=[]) { for (const entry of fs.readdirSync(dir,{withFileTypes:true})) { const target=path.join(dir,entry.name); if(entry.isDirectory()) walk(target,out); else out.push(target); } return out; }
+          const hashes = Object.fromEntries(walk(root).sort().map(file => [path.relative(root,file).split(path.sep).join('/'), crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-evidence-delta-first-hashes.json', JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic evidence-delta output
+        env:
+          EVIDENCE_DELTA_PREVIOUS_PACKAGE: downloads/phase2-evidence-delta-fixtures/previous-package.json
+          EVIDENCE_DELTA_CURRENT_PACKAGE: downloads/phase2-evidence-delta-fixtures/current-package.json
+          EVIDENCE_DELTA_OUTPUT_DIR: downloads/phase2-evidence-delta-preview
+        run: |
+          node scripts/build-phase2-evidence-delta-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-evidence-delta-preview';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-evidence-delta-first-hashes.json','utf8'));
+          function walk(dir,out=[]) { for (const entry of fs.readdirSync(dir,{withFileTypes:true})) { const target=path.join(dir,entry.name); if(entry.isDirectory()) walk(target,out); else out.push(target); } return out; }
+          const after = Object.fromEntries(walk(root).sort().map(file => [path.relative(root,file).split(path.sep).join('/'), crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before),...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Evidence-delta output is not deterministic:\n${changed.slice(0,100).join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} evidence-delta files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-evidence-delta-protected-before.json','utf8'));
+          const changed = [];
+          for (const [file,expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({file,expected,actual});
+          }
+          const report = {ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Evidence-delta preview must not mutate canonical inputs, legacy intelligence, membership, Workers, deployment guards or payment state.'};
+          fs.writeFileSync('downloads/phase2-evidence-delta-preview/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length) throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload evidence-delta reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-evidence-delta-${{ github.run_id }}
+          path: |
+            downloads/phase2-evidence-delta-preview/
+            downloads/phase2-evidence-delta-baseline/
+            downloads/phase2-evidence-delta-fixtures/
+          if-no-files-found: error
+          retention-days: 30

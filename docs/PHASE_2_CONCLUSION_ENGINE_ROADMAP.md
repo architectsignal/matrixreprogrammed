@@ -209,8 +209,7 @@ Preserved source records
 
 - draft
 - review
-- publishable
-- published
+- publishable_preview
 - needs_evidence
 - needs_editorial_review
 - stale
@@ -218,7 +217,7 @@ Preserved source records
 - superseded
 - withdrawn
 
-Only `publishable` records may enter live publishing after the later activation phase.
+Only evidence-qualified records may reach `publishable_preview`, and that remains a review state rather than live publication.
 
 ## Mandatory fail-closed rules
 
@@ -234,19 +233,49 @@ A record cannot become publishable when:
 - Confidence cannot be explained from the evidence.
 - The conclusion implies coordination that the sources do not establish.
 
-## Implementation sequence after Phase 2B
+## Implemented protected checkpoint
 
-1. Define conclusion-engine policy, output contracts and controlled vocabularies.
-2. Build deterministic evidence and conclusion input normalisation.
-3. Add evidence-based conclusion and mechanism analyzers.
-4. Add mission, elite-control and convergence analyzers.
-5. Add counter-hypothesis, missing-evidence and speculation analyzers.
-6. Add repetition, generic-language and unsupported-certainty detection.
-7. Add confidence, freshness, correction and supersession gates.
-8. Run in report-only mode across all canonical records.
-9. Compare new conclusions with current outputs and produce an editorial review queue.
-10. Permit publishing only after the exit condition and regression suite pass.
+The report-only engine currently:
+
+- Covers all canonical records.
+- Generates evidence-based candidate conclusions.
+- Classifies documented, partially documented, analytical-model and unestablished mechanisms.
+- Produces mission and elite-control analyses.
+- Produces ten-vector convergence assessments with evidence caps.
+- Produces separately labelled speculative conclusions.
+- Produces counter-hypotheses, missing-record requirements and falsifiers.
+- Detects headline restatement, repeated boilerplate, duplicated analysis fields, generic control-language and unsupported certainty.
+- Applies confidence, freshness, correction, supersession and publication gates.
+- Produces a side-by-side editorial review package.
+- Does not replace canonical records or activate publishing.
+
+### Verified checkpoint
+
+The first full protected run analyzed 253 canonical records:
+
+- 40 evidence-qualified records reached `publishable_preview`.
+- 213 records remained held for evidence or review.
+- 0 generated candidate records failed repetition or generic-language gates.
+- 0 records failed fact/speculation separation.
+- 12 records required a confidence downgrade.
+- 42 records contained a documented mechanism.
+- 21 records were analytical-model mechanisms.
+- 190 records had no established external mechanism.
+- 13 records retained limited active convergence vectors under conservative caps.
+
+These counts describe the current preview dataset and must be recalculated whenever source records change.
+
+## Remaining Phase 2 work
+
+1. Review the side-by-side editorial package.
+2. Add explicit custodian and lawful acquisition fields to missing-evidence output where source metadata supports them.
+3. Improve mechanism extraction for primary contracts, laws, ownership records and implementation systems.
+4. Improve counter-hypothesis evidence routing rather than relying only on descriptive alternatives.
+5. Add evidence-delta handling so corrections and new records automatically re-evaluate conclusions.
+6. Add candidate overlay previews to the tier publisher without replacing canonical text.
+7. Run adversarial fixtures that intentionally attempt to blur fact and speculation.
+8. Keep all conclusion-engine outputs report-only until the exit condition and production regression suite pass.
 
 ## Safety boundary
 
-This roadmap does not activate live publishing, authentication, entitlements, email delivery or payments. The conclusion engine must first run in report-only mode and preserve all current production files and routes.
+This roadmap and implementation do not activate live publishing, authentication, entitlements, email delivery or payments. The conclusion engine remains report-only and preserves all current production files and routes.

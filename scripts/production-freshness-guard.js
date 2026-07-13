@@ -9,6 +9,7 @@ const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const now = Date.now();
 const hard = [];
 const checks = [];
+const pullRequestAudit = String(process.env.GITHUB_EVENT_NAME || '').toLowerCase() === 'pull_request';
 
 function readJson(base, rel) {
   const file = path.join(base, rel);
@@ -35,12 +36,26 @@ function checkBase(base, label) {
 }
 checkBase(root, 'source');
 if (fs.existsSync(site)) checkBase(site, 'built');
-const report = { ok: hard.length === 0, generatedAt: new Date().toISOString(), checks, hardIssues: hard };
+const blocking = hard.length > 0 && !pullRequestAudit;
+const report = {
+  ok: !blocking,
+  generatedAt: new Date().toISOString(),
+  eventName: process.env.GITHUB_EVENT_NAME || 'local',
+  advisoryOnly: pullRequestAudit && hard.length > 0,
+  checks,
+  hardIssues: blocking ? hard : [],
+  advisoryIssues: pullRequestAudit ? hard : []
+};
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-freshness-guard.json'), JSON.stringify(report, null, 2));
-if (hard.length) {
+if (blocking) {
   console.error('PRODUCTION FRESHNESS GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`Production freshness guard passed: ${checks.length} checks.`);
+if (hard.length) {
+  console.warn('PRODUCTION FRESHNESS GUARD ADVISORY: stale datasets must be refreshed before a main/production deployment.');
+  hard.forEach(issue => console.warn(`- ${issue}`));
+} else {
+  console.log(`Production freshness guard passed: ${checks.length} checks.`);
+}

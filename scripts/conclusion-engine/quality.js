@@ -41,6 +41,24 @@ function qualityAnalysis(record, generated, sourceExactCounts, candidateExactCou
   const candidateRepeatCounts = Object.fromEntries(fieldPaths.map(fieldPath => [fieldPath, candidateExactCounts[fieldPath][normalized(candidateFields[fieldPath])] || 0]));
   return { source: inspectTextSet(record, sourceFields, sourceRepeatCounts, generated.mechanism.status, false, policy), candidate: inspectTextSet(record, candidateFields, candidateRepeatCounts, generated.mechanism.status, true, policy) };
 }
+
+function presentationClass(record) {
+  const claimClass = record.evidence?.claimClass || 'unsupported_claim';
+  if (record.recordType === 'relationship_update') return 'research_hint';
+  if (record.recordType === 'scenario' || claimClass === 'scenario_analysis') return 'scenario_analysis';
+  if (record.recordType === 'speculation_review' || claimClass === 'speculative_interpretation') return 'speculative';
+  if (claimClass === 'disputed_claim') return 'disputed';
+  if (claimClass === 'unsupported_claim') return 'unsupported';
+  return 'evidence_analysis';
+}
+
+function retentionStatus(record, policy) {
+  if (record.status === 'withdrawn') return policy.retentionRules.withdrawn;
+  if (record.freshness?.supersededBy) return policy.retentionRules.superseded;
+  if (record.status === 'archived') return policy.retentionRules.archived;
+  return policy.retentionRules[record.recordType] || policy.retentionRules.default;
+}
+
 function gateAnalysis(record, generated, quality, policy, now) {
   const claimClass = record.evidence?.claimClass || 'unsupported_claim';
   const claimRule = policy.claimRules[claimClass] || policy.claimRules.unsupported_claim;
@@ -50,6 +68,8 @@ function gateAnalysis(record, generated, quality, policy, now) {
   const ageDays = dateAgeDays(record.freshness?.lastReviewedAt || record.freshness?.updatedAt, now);
   const freshnessLimit = policy.freshnessDays[authority] ?? policy.freshnessDays[claimClass] ?? policy.freshnessDays[record.recordType] ?? policy.freshnessDays.default;
   const stale = ageDays === null || ageDays > freshnessLimit;
+  const classification = presentationClass(record);
+  const presentationPolicy = policy.presentationClasses[classification] || policy.presentationClasses.unsupported;
   const gates = {
     fact_speculation_separation: record.speculativeConclusion?.label === policy.requiredSeparation.speculationLabel && Boolean(record.solidConclusion?.boundary) && Boolean(record.speculativeConclusion?.boundary),
     source_and_claim_compatibility: sourceIds(record).length > 0 && (!claimRule.requiresPrimary || authority === 'primary'),
@@ -71,7 +91,34 @@ function gateAnalysis(record, generated, quality, policy, now) {
   else if (!gates.fact_speculation_separation || !gates.repetition_and_generic_language) state = 'needs_editorial_review';
   else if (!gates.source_and_claim_compatibility || generated.mechanism.status === 'unestablished' || !claimRule.canPublish) state = 'needs_evidence';
   else if (failed.length) state = 'review';
-  return { gates, failed, state, currentConfidence, recommendedConfidence, confidenceDowngradeRequired: currentConfidence !== recommendedConfidence, ageDays, freshnessLimitDays: freshnessLimit, stale, sourceAuthority: authority, claimClass, evidenceGrade: record.evidence?.grade || 'ungraded' };
+  const retainedAs = retentionStatus(record, policy);
+  const labelledResearchSurfaceEligible = presentationPolicy.speculativeSurfaceEligible && gates.fact_speculation_separation && !['withdrawn','superseded'].includes(state);
+  const factualSurfaceEligible = presentationPolicy.factualSurfaceEligible && state === 'publishable_preview';
+  return {
+    gates,
+    failed,
+    state,
+    currentConfidence,
+    recommendedConfidence,
+    confidenceDowngradeRequired: currentConfidence !== recommendedConfidence,
+    ageDays,
+    freshnessLimitDays: freshnessLimit,
+    stale,
+    sourceAuthority: authority,
+    claimClass,
+    evidenceGrade: record.evidence?.grade || 'ungraded',
+    presentation: {
+      class: classification,
+      label: presentationPolicy.label,
+      retained: true,
+      retainedAs,
+      removalProhibited: true,
+      factualSurfaceEligible,
+      speculativeOrResearchSurfaceEligible: labelledResearchSurfaceEligible,
+      factualBoundary: factualSurfaceEligible ? 'Eligible only as evidence analysis after all gates pass.' : 'Not eligible for presentation as established fact.',
+      researchBoundary: labelledResearchSurfaceEligible ? `Retained and displayable only with the explicit label “${presentationPolicy.label}”.` : 'Retained for archive and editorial review but not currently deliverable.'
+    }
+  };
 }
 
-module.exports = { minConfidence, candidateFieldValue, inspectTextSet, qualityAnalysis, gateAnalysis };
+module.exports = { minConfidence, candidateFieldValue, inspectTextSet, qualityAnalysis, presentationClass, retentionStatus, gateAnalysis };

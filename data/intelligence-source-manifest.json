@@ -1,6 +1,7 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "phase-1-report-only",
+  "allConfiguredSourcesPreviewAssured": true,
   "purpose": "Maps current legacy intelligence outputs to the canonical intelligence record without changing the source files.",
   "rules": [
     "Missing files are reported, not created.",
@@ -18,6 +19,7 @@
       "priority": "critical",
       "previewStatus": "implemented_and_assured",
       "previewAdapter": "scripts/build-investigation-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-investigation-preview.yml",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/production-freshness-guard.js",
@@ -47,6 +49,7 @@
       "priority": "critical",
       "previewStatus": "implemented_and_assured",
       "previewAdapter": "scripts/build-investigation-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-investigation-preview.yml",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/production-freshness-guard.js",
@@ -74,8 +77,9 @@
       "recordArrayPaths": ["conclusions"],
       "recordType": "finding",
       "priority": "critical",
-      "previewStatus": "planned",
-      "previewAdapter": null,
+      "previewStatus": "implemented_and_assured",
+      "previewAdapter": "scripts/build-daily-power-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-daily-power-preview.yml",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js",
         "scripts/build-mission-intelligence-10.js",
@@ -103,8 +107,9 @@
       "recordArrayPaths": ["sectionBriefings"],
       "recordType": "brief",
       "priority": "high",
-      "previewStatus": "implemented_pending_assurance",
+      "previewStatus": "implemented_and_assured",
       "previewAdapter": "scripts/build-daily-brain-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-daily-brain-preview.yml",
       "protectedBy": [
         "scripts/build-daily-brain-brief.js",
         "scripts/patch-conclusion-integrity-cards.js",
@@ -127,8 +132,9 @@
       "recordArrayPaths": ["briefings"],
       "recordType": "scenario",
       "priority": "high",
-      "previewStatus": "implemented_pending_assurance",
+      "previewStatus": "implemented_and_assured",
       "previewAdapter": "scripts/build-outcome-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-outcome-preview.yml",
       "protectedBy": [
         "scripts/build-outcome-briefings.js",
         "scripts/patch-conclusion-integrity-cards.js",
@@ -158,6 +164,7 @@
       "priority": "high",
       "previewStatus": "implemented_and_assured",
       "previewAdapter": "scripts/build-live-intel-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-live-intel-preview.yml",
       "protectedBy": [
         "scripts/update-live-intel.js",
         "scripts/record-live-intel-check.js",
@@ -182,11 +189,12 @@
     {
       "id": "relationship-graph",
       "path": "data/evidence-weighted-relationship-graph.json",
-      "recordArrayPaths": ["relationships", "edges", "links", "nodes"],
+      "recordArrayPaths": ["edges"],
       "recordType": "relationship_update",
       "priority": "medium",
-      "previewStatus": "planned",
-      "previewAdapter": null,
+      "previewStatus": "implemented_and_assured",
+      "previewAdapter": "scripts/build-relationship-canonical-previews.js",
+      "previewWorkflow": ".github/workflows/phase1-relationship-preview.yml",
       "protectedBy": [
         "scripts/patch-conclusion-integrity-cards.js"
       ],

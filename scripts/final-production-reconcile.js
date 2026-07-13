@@ -76,6 +76,8 @@ run('scripts/build-daily-brain-brief.js');
 run('scripts/build-premier-resource-upgrade.js');
 /* Apply the claim-classifier routes after Daily Drop and Live Intel have their final content. */
 run('scripts/build-evidence-badge-system.js');
+/* Register the public entity gateway after the search index and public discovery files exist. */
+run('scripts/patch-power-entities-route.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
@@ -101,6 +103,7 @@ const critical = [
   'downloads/daily-drop.json', 'downloads/daily-drop.md',
   'downloads/network-search.json', 'downloads/network-search.md',
   'downloads/claim-classifier.json', 'downloads/claim-classifier.md',
+  'downloads/power-entities-route-report.json',
   'deploy-manifest.json', 'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
 ];
 critical.forEach(copy);
@@ -131,6 +134,9 @@ requireMarker('homepage-mask-intro.css', 'intro-mask-dissolve');
 requireMarker('assets/intro-eye.svg', 'Eye of Providence seal');
 requireMarker('assets/intro-mask.svg', 'Anonymous revolutionary mask');
 requireMarker('power-entities.html', 'POWER ENTITIES.');
+requireMarker('search-index.json', 'power-entities.html');
+requireMarker('sitemap.xml', '/power-entities.html');
+requireMarker('llms.txt', '/power-entities.html');
 requireMarker('daily-drop.html', 'WHAT CHANGED TODAY?');
 requireMarker('daily-drop.html', 'evidence-badge-system-route');
 requireMarker('network-search.html', 'PEOPLE. ENTITIES. RECORDS. BOUNDARIES.');

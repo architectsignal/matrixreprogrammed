@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "status": "sandbox-first-protected-implementation",
+  "objective": "Convert verified Matrix Reprogrammed memberships into a real PayPal subscription system while preserving fail-closed entitlement, webhook authenticity, idempotency and complete billing-state history.",
+  "exitCondition": "Supporter, Intelligence and Research Pro subscriptions must pass plan bootstrap, checkout, approval, activation, renewal, failed payment, recovery, suspension, cancellation, expiry, refund, reversal, duplicate webhook, reconciliation and production-switch tests before live checkout can be enabled.",
+  "tiers": {
+    "supporter": {"label":"Supporter","priceEurMonthly":"3.00","runtimeTier":"supporter_3"},
+    "intelligence": {"label":"Intelligence Member","priceEurMonthly":"6.00","runtimeTier":"intelligence_6"},
+    "research_pro": {"label":"Research Pro","priceEurMonthly":"9.00","runtimeTier":"research_pro_9"}
+  },
+  "currency": "EUR",
+  "billingInterval": {"intervalUnit":"MONTH","intervalCount":1},
+  "paymentPreferences": {
+    "autoBillOutstanding": true,
+    "setupFee": "0.00",
+    "setupFeeFailureAction": "CONTINUE",
+    "paymentFailureThreshold": 2
+  },
+  "principles": [
+    "PayPal is the payment processor; D1 is the authoritative local membership and entitlement ledger.",
+    "Checkout approval is not paid access. Access begins only after PayPal reports an ACTIVE subscription or a verified completed subscription payment consistent with the plan.",
+    "Webhook events are processed only after signature verification and event-id deduplication.",
+    "The raw webhook event must be preserved before parsing and included unchanged in PayPal postback verification.",
+    "Each state transition is recorded append-only before the current subscription row is updated.",
+    "A first failed payment records past-due state but does not silently invent a cancellation. Suspension, expiry, reversal or refund hold removes paid entitlement.",
+    "Cancellation retains access only through a verified paid current_period_end; otherwise access is removed immediately.",
+    "Refund and reversal events create a billing hold until reconciliation proves another paid period.",
+    "Monthly membership never grants separate-product access.",
+    "Live checkout requires independent environment and D1 activation switches. Either switch being off must block live checkout.",
+    "Webhooks and reconciliation continue to operate when new checkout is disabled so existing billing state remains accurate."
+  ],
+  "environments": {
+    "sandbox": {
+      "apiBase":"https://api-m.sandbox.paypal.com",
+      "clientSdkBase":"https://www.paypal.com/sdk/js",
+      "environmentSwitch":"PAYPAL_SANDBOX_ENABLED",
+      "databaseSwitch":"sandbox_checkout_enabled"
+    },
+    "live": {
+      "apiBase":"https://api-m.paypal.com",
+      "clientSdkBase":"https://www.paypal.com/sdk/js",
+      "environmentSwitch":"PAYPAL_PRODUCTION_ENABLED",
+      "databaseSwitch":"production_checkout_enabled"
+    }
+  },
+  "requiredWebhookEvents": [
+    "BILLING.SUBSCRIPTION.CREATED",
+    "BILLING.SUBSCRIPTION.ACTIVATED",
+    "BILLING.SUBSCRIPTION.UPDATED",
+    "BILLING.SUBSCRIPTION.SUSPENDED",
+    "BILLING.SUBSCRIPTION.CANCELLED",
+    "BILLING.SUBSCRIPTION.EXPIRED",
+    "BILLING.SUBSCRIPTION.PAYMENT.FAILED",
+    "PAYMENT.SALE.COMPLETED",
+    "PAYMENT.SALE.REFUNDED",
+    "PAYMENT.SALE.REVERSED",
+    "PAYMENT.CAPTURE.REFUNDED",
+    "PAYMENT.CAPTURE.REVERSED"
+  ],
+  "localBillingStates": [
+    "pending_approval",
+    "approved",
+    "active",
+    "past_due",
+    "suspended",
+    "cancelled_period_end",
+    "cancelled",
+    "expired",
+    "refund_hold",
+    "reversal_hold",
+    "unknown"
+  ],
+  "entitlementRules": {
+    "active": true,
+    "cancelled_period_end": true,
+    "pending_approval": false,
+    "approved": false,
+    "past_due": true,
+    "suspended": false,
+    "cancelled": false,
+    "expired": false,
+    "refund_hold": false,
+    "reversal_hold": false,
+    "unknown": false,
+    "cancelledPeriodEndRequiresFuturePeriodEnd": true,
+    "pastDueMaximumFailuresBeforeHold": 2
+  },
+  "requiredRoutes": [
+    "/api/paypal/config",
+    "/api/paypal/checkout-intent",
+    "/api/paypal/subscription/confirm",
+    "/api/paypal/subscription",
+    "/api/paypal/subscription/cancel",
+    "/api/paypal/webhook",
+    "/api/paypal/admin/health",
+    "/api/paypal/admin/plans/bootstrap",
+    "/api/paypal/admin/subscriptions",
+    "/api/paypal/admin/events",
+    "/api/paypal/admin/reconcile",
+    "/api/paypal/admin/activation"
+  ],
+  "requiredDataObjects": [
+    "subscriptions",
+    "paypal_checkout_intents",
+    "payment_webhook_events",
+    "paypal_products",
+    "paypal_plans",
+    "paypal_subscription_transitions",
+    "paypal_payment_records",
+    "paypal_runtime_settings",
+    "paypal_reconciliation_runs",
+    "audit_log"
+  ],
+  "requiredSurfaces": [
+    "membership.html",
+    "billing-dashboard.html",
+    "admin-payment-dashboard.html"
+  ],
+  "activation": {
+    "sandboxRequires": [
+      "PAYPAL_CLIENT_ID",
+      "PAYPAL_CLIENT_SECRET",
+      "PAYPAL_WEBHOOK_ID",
+      "PAYPAL_SANDBOX_ENABLED=true",
+      "paypal_runtime_settings.sandbox_checkout_enabled=1"
+    ],
+    "liveRequires": [
+      "PAYPAL_ENVIRONMENT=live",
+      "PAYPAL_CLIENT_ID",
+      "PAYPAL_CLIENT_SECRET",
+      "PAYPAL_WEBHOOK_ID",
+      "PAYPAL_PRODUCTION_ENABLED=true",
+      "paypal_runtime_settings.production_checkout_enabled=1",
+      "PAYPAL_LIVE_ACTIVATION_CONFIRMATION=MATRIX_PAYPAL_LIVE_CONFIRMED"
+    ],
+    "liveActivationPhrase":"ACTIVATE MATRIX PAYPAL LIVE",
+    "defaultSandboxEnabled": false,
+    "defaultProductionEnabled": false
+  },
+  "protectedBoundaries": {
+    "realPayPalCallsDuringCi": false,
+    "realChargesDuringCi": false,
+    "productionActivationDuringCi": false,
+    "productionMigrationExecutionDuringCi": false,
+    "rawCredentialsInClient": false,
+    "unverifiedWebhookProcessing": false
+  }
+}

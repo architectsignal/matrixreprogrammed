@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Billing Dashboard | Matrix Reprogrammed</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="fixes.css">
+  <style>body{background:#070707;color:#f2e8ca}.shell{max-width:980px;margin:auto;padding:28px 18px 70px}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.value{font-size:1.25rem;color:#d8b56a;font-weight:850}.status{min-height:1.4rem;font-weight:700}.good{color:#9ddd9d}.warning{color:#e2c27a}.danger{color:#ff9b8f}.actions{display:flex;gap:10px;flex-wrap:wrap}</style>
+</head>
+<body>
+  <main class="shell">
+    <header><div class="eyebrow">Verified PayPal Billing</div><h1>BILLING DASHBOARD.</h1><p id="billing-status" class="status">Checking your billing state…</p><div class="actions"><a class="btn alt" href="member-dashboard.html">Member dashboard</a><a class="btn alt" href="membership.html">Membership options</a></div></header>
+    <div id="billing-content" hidden>
+      <section id="no-subscription" class="panel" hidden><h2>No PayPal subscription found</h2><p>Your free registered account remains active. Choose a paid tier only when checkout is enabled.</p><a class="btn" href="membership.html">View membership</a></section>
+      <section id="subscription-panel" hidden>
+        <div class="grid">
+          <article class="panel"><h2>Tier</h2><p id="billing-tier" class="value">—</p></article>
+          <article class="panel"><h2>Billing state</h2><p id="billing-state" class="value">—</p></article>
+          <article class="panel"><h2>Environment</h2><p id="billing-environment" class="value">—</p></article>
+          <article class="panel"><h2>Entitlement</h2><p id="billing-access" class="warning">—</p></article>
+          <article class="panel"><h2>Next billing / period end</h2><p id="billing-next">—</p></article>
+          <article class="panel"><h2>Last payment</h2><p id="billing-last">—</p></article>
+          <article class="panel"><h2>Payment failures</h2><p id="billing-failures">0</p></article>
+          <article class="panel"><h2>Billing holds</h2><p id="billing-holds">None</p></article>
+        </div>
+        <section class="panel"><h2>Cancel subscription</h2><p>Cancellation is sent to PayPal. Access remains only when the server can verify a future paid period end; otherwise it is removed immediately.</p><button id="cancel-button" class="btn" type="button">Cancel PayPal subscription</button></section>
+      </section>
+    </div>
+  </main>
+  <script src="billing-dashboard.js"></script>
+</body>
+</html>

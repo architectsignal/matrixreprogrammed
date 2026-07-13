@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Payment Administration | Matrix Reprogrammed</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="fixes.css">
+  <style>body{background:#070707;color:#f2e8ca}.shell{max-width:1500px;margin:auto;padding:28px 18px 70px}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.count{font-size:1.8rem;color:#d8b56a;font-weight:900}.status{min-height:1.4rem;font-weight:700}.good{color:#9ddd9d}.warning{color:#e2c27a}.danger{color:#ff9b8f}.actions{display:flex;gap:10px;flex-wrap:wrap}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.form-grid input,.form-grid select,.form-grid textarea{width:100%;box-sizing:border-box;background:#050505;color:#f2e8ca;border:1px solid rgba(216,181,106,.3);border-radius:10px;padding:10px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px;border-bottom:1px solid rgba(216,181,106,.18);vertical-align:top}.scroll{overflow:auto}.boundary{border-left:3px solid #d8b56a;padding-left:12px;color:#c8bb95}</style>
+</head>
+<body>
+  <main class="shell">
+    <header><div class="eyebrow">Administrator Only</div><h1>PAYPAL SUBSCRIPTION CONTROL.</h1><p id="payment-admin-status" class="status">Checking the payment ledger…</p><div class="actions"><a class="btn alt" href="admin-member-dashboard.html">Member administration</a><a class="btn alt" href="member-dashboard.html">Member dashboard</a></div></header>
+    <div id="payment-admin-content" hidden>
+      <section class="grid">
+        <article class="panel"><h2>Environment</h2><div id="payment-environment" class="count">—</div></article>
+        <article class="panel"><h2>Checkout</h2><div id="payment-checkout" class="count">—</div></article>
+        <article class="panel"><h2>Plans</h2><div id="payment-plans" class="count">—</div></article>
+        <article class="panel"><h2>Subscriptions</h2><div id="payment-subscriptions" class="count">0</div></article>
+        <article class="panel"><h2>Webhook events</h2><div id="payment-events" class="count">0</div></article>
+        <article class="panel"><h2>State transitions</h2><div id="payment-transitions" class="count">0</div></article>
+        <article class="panel"><h2>Payment records</h2><div id="payment-payments" class="count">0</div></article>
+      </section>
+
+      <section class="panel">
+        <h2>Plan and reconciliation controls</h2>
+        <p class="boundary">Plan bootstrap is idempotent. Reconciliation reads PayPal and updates the local billing ledger. Neither action enables live checkout.</p>
+        <div class="actions"><button id="bootstrap-plans" class="btn" type="button">Create or confirm PayPal plans</button><button id="reconcile-paypal" class="btn alt" type="button">Reconcile subscriptions</button></div>
+      </section>
+
+      <section class="panel">
+        <h2>Protected checkout switch</h2>
+        <p class="boundary">The D1 switch is only one gate. Sandbox also requires <code>PAYPAL_SANDBOX_ENABLED=true</code>. Live requires the production environment switch, confirmation secret and the exact activation phrase.</p>
+        <form id="activation-form" class="form-grid">
+          <label>Environment<select name="environment"><option value="sandbox">Sandbox</option><option value="live">Live</option></select></label>
+          <label>Action<select name="enabled"><option value="false">Disable checkout</option><option value="true">Enable checkout</option></select></label>
+          <label>Reason<input name="reason" required maxlength="500" placeholder="Sandbox lifecycle approved"></label>
+          <label>Live phrase<input name="phrase" placeholder="Required only for live activation"></label>
+          <button class="btn" type="submit">Apply protected switch</button>
+        </form>
+      </section>
+
+      <section class="panel"><h2>Subscriptions and entitlement state</h2><div class="scroll"><table><thead><tr><th>Member</th><th>Tier</th><th>Billing state</th><th>Entitled</th><th>Failures</th><th>Period end</th><th>Last event</th></tr></thead><tbody id="payment-subscription-rows"></tbody></table></div></section>
+      <section class="panel"><h2>Webhook log</h2><div class="scroll"><table><thead><tr><th>Event ID</th><th>Type</th><th>Status</th><th>Received</th><th>Error</th></tr></thead><tbody id="payment-event-rows"></tbody></table></div></section>
+      <section class="panel"><h2>Entitlement transitions</h2><div class="scroll"><table><thead><tr><th>Subscription</th><th>Event</th><th>State</th><th>Entitlement</th><th>Reason</th><th>Recorded</th></tr></thead><tbody id="payment-transition-rows"></tbody></table></div></section>
+    </div>
+  </main>
+  <script src="admin-payment-dashboard.js"></script>
+</body>
+</html>

@@ -29,6 +29,7 @@ on:
       - 'scripts/premier-resource-pressure-test.js'
       - 'scripts/evidence-badge-pressure-test.js'
       - 'scripts/patch-power-entities-route.js'
+      - 'scripts/run-build-pipeline.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -79,6 +80,7 @@ on:
       - 'scripts/premier-resource-pressure-test.js'
       - 'scripts/evidence-badge-pressure-test.js'
       - 'scripts/patch-power-entities-route.js'
+      - 'scripts/run-build-pipeline.js'
       - 'scripts/repair-generated-site-artifacts.js'
       - 'scripts/final-production-reconcile.js'
       - 'scripts/build-production-health.js'
@@ -132,10 +134,12 @@ jobs:
           node --check scripts/premier-resource-pressure-test.js
           node --check scripts/evidence-badge-pressure-test.js
           node --check scripts/patch-power-entities-route.js
+          node --check scripts/run-build-pipeline.js
           grep -q "paymentStatus: 'deferred'" scripts/live-functionality-test.js
           grep -q "Cloudflare D1 MEMBERS_DB" scripts/live-functionality-test.js
           grep -q "power-entities.html" scripts/final-production-reconcile.js
           grep -q "What to watch next" scripts/patch-conclusion-integrity-cards.js
+          grep -q '"build": "node scripts/run-build-pipeline.js"' package.json
           ! grep -q "paypal-membership-test-runner.js" scripts/full-system-audit.js
           ! grep -q "Deploy Production$" .github/workflows/live-functionality-test.yml
       - name: Check Live Intel feeds for assurance
@@ -172,6 +176,7 @@ jobs:
         with:
           name: production-sync-assurance-${{ github.run_id }}
           path: |
+            downloads/build-pipeline-report.json
             downloads/production-sync-test.json
             downloads/production-freshness-guard.json
             downloads/production-deploy-guard-report.json

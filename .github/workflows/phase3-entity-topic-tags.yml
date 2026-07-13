@@ -1,0 +1,144 @@
+name: Phase 3 Entity And Topic Tags
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-canonical-taxonomy.json'
+      - 'data/phase3-public-private-policy.json'
+      - 'data/phase3-entity-topic-tagging-policy.json'
+      - 'scripts/build-phase3-public-private-classification.js'
+      - 'scripts/build-phase3-entity-topic-tags.js'
+      - '.github/workflows/phase3-entity-topic-tags.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-entity-topic-tags-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tags:
+    name: Build controlled non-assertive entity and topic tags
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate tagging policy and script
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-entity-topic-tagging-policy.json','utf8'))"
+          node --check scripts/build-phase3-entity-topic-tags.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['data/phase3-canonical-taxonomy.json','data/phase3-public-private-policy.json','data/phase3-entity-topic-tagging-policy.json','membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-tags-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated outputs
+        run: |
+          rm -rf downloads/phase3-entity-topic-tags downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build controlled tags
+        run: node scripts/build-phase3-entity-topic-tags.js
+
+      - name: Validate tag coverage, provenance and boundaries
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase3-entity-topic-tagging-policy.json','utf8'));
+          const classification=JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/item-tags.json','utf8'));
+          const publicIndex=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/public-tag-index.json','utf8'));
+          const entities=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/entity-catalog.json','utf8'));
+          const catalog=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/tag-catalog.json','utf8'));
+          const review=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/tag-review-queue.json','utf8'));
+          if(!report.ok||!publicIndex.ok||!entities.ok||!catalog.ok||!review.ok)throw new Error('Tag package is not healthy');
+          if(report.mode!=='plan-only'||policy.mode!=='plan-only')throw new Error('Plan-only boundary changed');
+          if(report.rows.length!==classification.rows.length||report.summary.totalItems!==classification.rows.length)throw new Error('Tag coverage incomplete');
+          if(new Set(report.rows.map(row=>row.canonicalId)).size!==report.rows.length)throw new Error('Tag IDs are not unique');
+          const allowedTopics=new Set(policy.topicTags);const allowedEntityTypes=new Set(policy.allowedEntityTypes);
+          for(const row of report.rows){
+            if(!row.topicTags.length)throw new Error(`${row.canonicalId}: topic tags missing`);
+            for(const tag of row.topicTags)if(!allowedTopics.has(tag))throw new Error(`${row.canonicalId}: uncontrolled topic ${tag}`);
+            if(!row.tagProvenance.length)throw new Error(`${row.canonicalId}: tag provenance missing`);
+            if(!allowedEntityTypes.has(row.entityTag.type))throw new Error(`${row.canonicalId}: invalid entity type`);
+            if(!row.entityTag.associationBoundary||!row.interpretiveLabel)throw new Error(`${row.canonicalId}: boundary label missing`);
+            if(row.relationshipAssertion||row.factualStatusMutation||row.contentMutation||row.routeMovement||row.searchMutation||row.navigationMutation)throw new Error(`${row.canonicalId}: protected mutation or relationship assertion activated`);
+          }
+          const classById=new Map(classification.rows.map(row=>[row.canonicalId,row]));
+          for(const row of publicIndex.records){
+            const source=classById.get(row.canonicalId);if(!source)throw new Error(`${row.canonicalId}: public tag source missing`);
+            if(['registered_private','internal_only','restricted_sensitive'].includes(source.targetAccessClass))throw new Error(`${row.canonicalId}: private tag leaked publicly`);
+            if(!row.associationBoundary||!row.interpretiveLabel)throw new Error(`${row.canonicalId}: public tag boundary missing`);
+          }
+          for(const entity of entities.records){
+            if(!entity.itemIds.length||entity.itemCount!==entity.itemIds.length)throw new Error(`${entity.entityId}: entity coverage mismatch`);
+            if(!entity.associationBoundary.includes('does not establish'))throw new Error(`${entity.entityId}: association boundary weakened`);
+          }
+          if(catalog.recordCount!==policy.topicTags.length)throw new Error('Controlled tag catalog incomplete');
+          if(review.recordCount!==report.summary.entityReviewItems)throw new Error('Tag review queue mismatch');
+          if(Object.values({tagEnforcement:report.tagEnforcement,contentMutation:report.contentMutation,routeMovement:report.routeMovement,searchMutation:report.searchMutation,navigationMutation:report.navigationMutation,relationshipAssertion:report.relationshipAssertion,lockedSectionEnforcement:report.lockedSectionEnforcement,authenticationActivation:report.authenticationActivation,entitlementActivation:report.entitlementActivation,paymentActivation:report.paymentActivation}).some(Boolean))throw new Error('Protected action activated');
+          console.log(`PHASE 3 TAG PASS: ${report.summary.totalItems} items; ${report.summary.uniqueEntities} unique entity subjects; ${review.recordCount} review items.`);
+          NODE
+
+      - name: Snapshot deterministic output hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-entity-topic-tags';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-tags-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic tags
+        run: |
+          rm -rf downloads/phase3-entity-topic-tags downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-entity-topic-tags.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-entity-topic-tags';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-tags-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Tag output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} tag files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-tags-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Tag planning must not modify content, routes, search, membership, Workers or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-entity-topic-tags/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload tag reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-entity-topic-tags-${{ github.run_id }}
+          path: downloads/phase3-entity-topic-tags/
+          if-no-files-found: error
+          retention-days: 30

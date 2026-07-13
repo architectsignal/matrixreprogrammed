@@ -62,6 +62,11 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
+      - name: Refresh Live Intel before evaluating freshness
+        run: |
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+
       - name: Run current full system audit
         env:
           DEPLOY_COMMIT_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}

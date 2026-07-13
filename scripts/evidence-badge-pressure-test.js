@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const root = process.cwd();
 const problems = [];
 function exists(file){ return fs.existsSync(path.join(root, file)); }
@@ -7,6 +8,16 @@ function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg){ problems.push(msg); }
 function requireFile(file){ if(!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label = text){ if(!exists(file)) return; if(!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+
+/* Late content builders can replace Live Intel and other reader pages. Restore the classifier routes before testing them. */
+const rebuild = spawnSync(process.execPath, [path.join(root, 'scripts', 'build-evidence-badge-system.js')], {
+  cwd: root,
+  encoding: 'utf8',
+  stdio: 'pipe',
+  maxBuffer: 30 * 1024 * 1024,
+  env: process.env
+});
+if (rebuild.status !== 0) fail(`canonical evidence-badge rebuild failed: ${rebuild.stderr || rebuild.stdout}`);
 
 for(const file of [
   'scripts/build-evidence-badge-system.js',
@@ -19,7 +30,12 @@ for(const file of [
   'epstein-files.html',
   'daily-drop.html',
   'network-search.html',
+  'live-intel.html',
   'evidence-vault.html',
+  'download-center.html',
+  'news.html',
+  'books.html',
+  'black-file.html',
   'search-index.json',
   'sitemap.xml',
   'llms.txt',
@@ -46,6 +62,14 @@ requireIncludes('llms.txt', '/claim-classifier.html', 'claim classifier llms rou
 requireIncludes('package.json', 'build-evidence-badge-system.js', 'package build includes evidence badge builder');
 requireIncludes('package.json', 'evidence-badge-pressure-test.js', 'package build includes evidence badge test');
 
+fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
+fs.writeFileSync(path.join(root,'downloads/evidence-badge-pressure-test.json'),JSON.stringify({
+  ok: problems.length===0,
+  generatedAt:new Date().toISOString(),
+  rebuildStatus:rebuild.status,
+  problems,
+  boundary:'The claim classifier and evidence-badge routes are rebuilt after late page generators and before release assertions.'
+},null,2));
 if(problems.length){
   console.error('\nEVIDENCE BADGE PRESSURE TEST FAILED\n');
   for(const problem of problems) console.error(`- ${problem}`);
@@ -53,4 +77,4 @@ if(problems.length){
   process.exit(1);
 }
 console.log('EVIDENCE BADGE PRESSURE TEST PASSED');
-console.log('Checked claim classifier page, evidence badges, source hierarchy, claim rules, downloads, page patches, sitemap, llms.txt, search index, and build wiring.');
+console.log('Rebuilt and checked the claim classifier, evidence badges, source hierarchy, claim rules, page routes, sitemap, llms.txt and search index.');

@@ -139,7 +139,7 @@ jobs:
           grep -q "Cloudflare D1 MEMBERS_DB" scripts/live-functionality-test.js
           grep -q "power-entities.html" scripts/final-production-reconcile.js
           grep -q "What to watch next" scripts/patch-conclusion-integrity-cards.js
-          grep -q '"build": "node scripts/run-build-pipeline.js"' package.json
+          grep -q '"build:diagnostic": "node scripts/run-build-pipeline.js"' package.json
           ! grep -q "paypal-membership-test-runner.js" scripts/full-system-audit.js
           ! grep -q "Deploy Production$" .github/workflows/live-functionality-test.yml
       - name: Check Live Intel feeds for assurance

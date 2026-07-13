@@ -1,0 +1,304 @@
+{
+  "version": "1.0.0",
+  "status": "phase-0-report-only",
+  "paymentStatus": "deferred",
+  "enforcementMode": "report-only",
+  "purpose": "Classify existing site routes into mission categories and recommend access tiers without changing, moving, deleting, hiding or paywalling any current page.",
+  "principles": [
+    "Classification is a recommendation until route ownership, authentication, entitlement and public-preview behaviour are proven.",
+    "Corrections, withdrawals, evidence downgrades, association boundaries and contradictory records must remain publicly visible wherever a public claim appears.",
+    "A higher tier adds depth, tools, exports and workflow value; it does not make speculation more factual.",
+    "Existing URLs remain stable during classification. Redirects, consolidation and deletions require a separate reviewed migration.",
+    "Books, offers, card decks and standalone products remain separate commercial routes unless explicitly bundled later.",
+    "Admin, test, debug and generated audit surfaces should be reviewed for internal-only treatment rather than deleted automatically."
+  ],
+  "categories": {
+    "intelligence": [
+      "live_intel",
+      "daily_drops",
+      "weekly_reports",
+      "investigations",
+      "dossiers",
+      "outcome_briefings",
+      "missing_records",
+      "source_changes"
+    ],
+    "evidence": [
+      "evidence_vault",
+      "source_ledger",
+      "court_and_regulatory",
+      "declassified_files",
+      "epstein_files",
+      "leaks_and_provenance",
+      "evidence_policy"
+    ],
+    "power_mapping": [
+      "people_index",
+      "institution_index",
+      "family_and_network_index",
+      "corporate_and_ownership",
+      "money_routes",
+      "government_and_jurisdictions",
+      "think_tanks_and_foundations",
+      "elite_networks"
+    ],
+    "control_structure": [
+      "monetary_control",
+      "identity_and_access",
+      "media_and_narrative",
+      "intelligence_and_security",
+      "emergency_power",
+      "legal_and_regulatory_control",
+      "technology_and_surveillance",
+      "global_convergence"
+    ],
+    "interpretation": [
+      "mission_conclusions",
+      "speculation_review",
+      "competing_explanations",
+      "historical_parallels",
+      "predictions_and_watchlists"
+    ],
+    "membership": [
+      "membership_public",
+      "account_and_auth",
+      "registered_dashboard",
+      "supporter_dashboard",
+      "intelligence_dashboard",
+      "research_pro_dashboard",
+      "preferences_and_billing"
+    ],
+    "commercial": [
+      "books",
+      "digital_reports",
+      "card_decks",
+      "research_services",
+      "store_and_offers"
+    ],
+    "trust_and_legal": [
+      "about_and_mission",
+      "methodology",
+      "privacy_and_terms",
+      "corrections_and_boundaries",
+      "contact_and_support"
+    ],
+    "internal": [
+      "admin",
+      "test_and_debug",
+      "generated_audit",
+      "build_support"
+    ],
+    "uncategorized": [
+      "needs_editorial_owner"
+    ]
+  },
+  "tiers": [
+    "public",
+    "registered",
+    "supporter_3",
+    "intelligence_6",
+    "research_pro_9",
+    "separate_product",
+    "internal_only"
+  ],
+  "rules": [
+    {
+      "id": "internal-test-debug",
+      "priority": 1000,
+      "pathContainsAny": ["test", "debug", "audit-report", "pressure-test", "compat-marker", "build-log", "admin-"],
+      "category": "internal",
+      "subcategory": "test_and_debug",
+      "tier": "internal_only",
+      "confidence": "medium",
+      "rationale": "Test, diagnostic and build-support surfaces should be reviewed as internal rather than exposed or deleted automatically."
+    },
+    {
+      "id": "legal-trust-public",
+      "priority": 950,
+      "pathContainsAny": ["privacy", "terms", "evidence-policy", "methodology", "trust-center", "correction", "about", "contact"],
+      "category": "trust_and_legal",
+      "subcategory": "methodology",
+      "tier": "public",
+      "confidence": "high",
+      "rationale": "Trust, methodology, legal and correction routes must remain public."
+    },
+    {
+      "id": "membership-public",
+      "priority": 940,
+      "pathEqualsAny": ["membership.html", "member-login.html", "login.html", "register.html"],
+      "category": "membership",
+      "subcategory": "membership_public",
+      "tier": "public",
+      "confidence": "high",
+      "rationale": "Pricing, account entry and membership explanation must remain publicly reachable while checkout is deferred."
+    },
+    {
+      "id": "research-pro-dashboard",
+      "priority": 930,
+      "pathContainsAny": ["research-pro", "data-lab", "convergence-tracker", "source-route-map", "citation-export", "advanced-watchlist"],
+      "category": "membership",
+      "subcategory": "research_pro_dashboard",
+      "tier": "research_pro_9",
+      "confidence": "medium_high",
+      "rationale": "Advanced research tools, structured exports and convergence analysis fit the Research Pro layer."
+    },
+    {
+      "id": "intelligence-dashboard",
+      "priority": 920,
+      "pathContainsAny": ["intelligence-dashboard", "member-dashboard", "watchlist", "saved-search", "followed-entities"],
+      "category": "membership",
+      "subcategory": "intelligence_dashboard",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Watchlists, entity following and member intelligence tools fit the Intelligence Member layer."
+    },
+    {
+      "id": "registered-account",
+      "priority": 910,
+      "pathContainsAny": ["account", "preferences", "reading-history", "saved-items", "newsletter-preferences", "confirm-subscription", "unsubscribe"],
+      "category": "membership",
+      "subcategory": "account_and_auth",
+      "tier": "registered",
+      "confidence": "medium_high",
+      "rationale": "Personal settings, saved public items and email preferences require a free registered account."
+    },
+    {
+      "id": "separate-products",
+      "priority": 900,
+      "pathStartsWithAny": ["book-", "books/", "offers/", "products/", "card-decks/", "video-packages/"],
+      "pathContainsAny": ["amazon-store", "offer-", "book-", "card-deck", "collector", "store-books"],
+      "category": "commercial",
+      "subcategory": "store_and_offers",
+      "tier": "separate_product",
+      "confidence": "high",
+      "rationale": "Books, offers, card decks and standalone products remain separate commercial purchases."
+    },
+    {
+      "id": "advanced-speculation",
+      "priority": 850,
+      "pathContainsAny": ["dark-speculation-lab", "speculation-forum", "prediction-lab", "probability-lab"],
+      "category": "interpretation",
+      "subcategory": "speculation_review",
+      "tier": "research_pro_9",
+      "confidence": "medium_high",
+      "rationale": "Advanced hypothesis, prediction and falsification tools belong in the Research Pro layer with public safety boundaries retained."
+    },
+    {
+      "id": "full-dossiers-and-exports",
+      "priority": 840,
+      "pathContainsAny": ["dossier-pack", "full-dossier", "evidence-pack", "source-document-vault", "download-center", "data-export"],
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "tier": "research_pro_9",
+      "confidence": "medium",
+      "rationale": "Complete evidence bundles and structured exports provide Research Pro workflow value."
+    },
+    {
+      "id": "detailed-briefs-maps",
+      "priority": 820,
+      "pathStartsWithAny": ["entity-briefs/", "entity-timelines/", "entity-exposure/", "institution-briefs/", "contractor-briefs/", "billionaire-briefs/", "elite-families/", "orders/", "main-players/"],
+      "pathContainsAny": ["network-map", "power-atlas", "evidence-graph", "relationship-graph", "private-contractor-tracker", "big-three-asset-managers"],
+      "category": "power_mapping",
+      "subcategory": "people_index",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Detailed entity, institution, ownership and network views fit the Intelligence Member layer while public previews retain evidence boundaries."
+    },
+    {
+      "id": "member-weekly",
+      "priority": 800,
+      "pathContainsAny": ["weekly-intelligence", "weekly-report", "member-newsletter", "weekly-brief"],
+      "category": "intelligence",
+      "subcategory": "weekly_reports",
+      "tier": "supporter_3",
+      "confidence": "medium_high",
+      "rationale": "Complete weekly member synthesis and archive access fit the Supporter layer."
+    },
+    {
+      "id": "premium-daily",
+      "priority": 790,
+      "pathContainsAny": ["premium-daily", "daily-intelligence-brief", "member-daily-drop"],
+      "category": "intelligence",
+      "subcategory": "daily_drops",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Complete daily intelligence, mechanisms, mission conclusions and counter-analysis fit the Intelligence Member layer."
+    },
+    {
+      "id": "free-daily-and-optin",
+      "priority": 780,
+      "pathContainsAny": ["free-brief", "daily-control-brief", "optin-", "newsletter-signup"],
+      "category": "membership",
+      "subcategory": "registered_dashboard",
+      "tier": "registered",
+      "confidence": "medium_high",
+      "rationale": "Email briefs and saved public delivery routes fit free registration."
+    },
+    {
+      "id": "evidence-public",
+      "priority": 700,
+      "pathContainsAny": ["evidence-vault", "source-ledger", "source-card", "court-record", "declassified", "epstein-files", "missing-record", "disclosure", "record-intake", "archive"],
+      "category": "evidence",
+      "subcategory": "evidence_vault",
+      "tier": "public",
+      "confidence": "medium_high",
+      "rationale": "Core source routes, evidence boundaries and disclosure tracking should remain publicly inspectable."
+    },
+    {
+      "id": "live-intel-public",
+      "priority": 690,
+      "pathContainsAny": ["live-intel", "intel-desk", "daily-drops", "deep-intel-feed"],
+      "category": "intelligence",
+      "subcategory": "live_intel",
+      "tier": "public",
+      "confidence": "medium",
+      "rationale": "Public signal summaries and source routes support trust and acquisition; deeper fields may later be projected by tier."
+    },
+    {
+      "id": "control-structure-public",
+      "priority": 680,
+      "pathContainsAny": ["power-structure", "policy-watch", "identity", "cbdc", "surveillance", "media-narrative", "emergency-power", "risk-clock", "timers"],
+      "category": "control_structure",
+      "subcategory": "global_convergence",
+      "tier": "public",
+      "confidence": "medium",
+      "rationale": "Public control-structure explainers and trackers support the mission; advanced evidence paths and exports can be layered later."
+    },
+    {
+      "id": "speculation-public-review",
+      "priority": 670,
+      "pathContainsAny": ["speculation-review", "controlled-opposition", "historical-parallel", "outcome-briefing"],
+      "category": "interpretation",
+      "subcategory": "speculation_review",
+      "tier": "public",
+      "confidence": "medium",
+      "rationale": "Public methodology and selected speculation reviews should show what is unproven, what would falsify it and what records are missing."
+    },
+    {
+      "id": "homepage-hubs-public",
+      "priority": 100,
+      "pathEqualsAny": ["index.html", "books.html", "videos.html"],
+      "pathContainsAny": ["hub", "index", "map-index", "subject-intelligence"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "tier": "public",
+      "confidence": "low",
+      "rationale": "Navigation hubs and top-level discovery routes should remain public."
+    }
+  ],
+  "fallback": {
+    "category": "uncategorized",
+    "subcategory": "needs_editorial_owner",
+    "tier": "public",
+    "confidence": "low",
+    "rationale": "No deterministic rule matched. Keep public until an editorial owner reviews the route; do not hide it automatically."
+  },
+  "activationConditions": [
+    "Every route has an editorial owner and reviewed category.",
+    "Tier previews are deterministic and preserve public safety fields.",
+    "Authentication and entitlement checks fail closed.",
+    "Email, dashboard and payment lifecycle tests pass before enforcement.",
+    "Redirects and consolidations preserve incoming links and search routes.",
+    "No route is removed solely because its basename appears elsewhere."
+  ]
+}

@@ -1,0 +1,208 @@
+name: Phase 2 Canonical Tier Projection Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/PHASE_2_CANONICAL_PUBLISHING_PREVIEW.md'
+      - 'scripts/build-phase2-tier-projections.js'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'scripts/build-*-canonical-previews.js'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'data/daily-investigation-conclusions.json'
+      - 'data/weekly-investigation-conclusions.json'
+      - 'data/live-intel.json'
+      - 'data/outcome-briefings.json'
+      - 'data/daily-brain-brief.json'
+      - 'data/daily-power-conclusions.json'
+      - 'data/evidence-weighted-relationship-graph.json'
+      - '.github/workflows/phase2-tier-projection-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-tier-projection-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  project:
+    name: Build deterministic cumulative tier projections
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate Phase 2 syntax and boundaries
+        run: |
+          node --check scripts/build-phase2-tier-projections.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/access-tier-policy.json', 'utf8'));
+          if (policy.paymentStatus !== 'deferred') throw new Error('Payments must remain deferred');
+          if (policy.enforcementMode !== 'report-only') throw new Error('Entitlement enforcement must remain report-only');
+          const directive = fs.readFileSync('docs/PHASE_2_CANONICAL_PUBLISHING_PREVIEW.md', 'utf8');
+          for (const phrase of ['preview-only', 'One intelligence item exists once', 'payments remain disabled']) {
+            if (!directive.includes(phrase)) throw new Error(`Phase 2 directive missing: ${phrase}`);
+          }
+          NODE
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const files = [
+            ...manifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js'
+          ];
+          const hashes = Object.fromEntries([...new Set(files)].map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads', { recursive: true });
+          fs.writeFileSync('downloads/phase2-protected-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build first tier projection set
+        run: node scripts/build-phase2-tier-projections.js
+
+      - name: Validate cumulative projections and factual invariants
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const base = 'downloads/phase2-tier-projections';
+          const tiers = ['public', 'registered', 'supporter_3', 'intelligence_6', 'research_pro_9'];
+          const policy = JSON.parse(fs.readFileSync('data/access-tier-policy.json', 'utf8'));
+          const manifest = JSON.parse(fs.readFileSync(path.join(base, 'projection-manifest.json'), 'utf8'));
+          if (!manifest.ok || manifest.mode !== 'preview-only') throw new Error('Phase 2 manifest is not healthy');
+          if (manifest.paymentStatus !== 'deferred' || manifest.enforcementMode !== 'report-only') throw new Error('Payment or enforcement boundary changed');
+          if (manifest.canonicalRecordCount !== 253 || manifest.rawProjectionCount !== 273) throw new Error(`Unexpected Phase 1 coverage: ${manifest.canonicalRecordCount}/${manifest.rawProjectionCount}`);
+          if (JSON.stringify(manifest.tierOrder) !== JSON.stringify(tiers)) throw new Error('Tier order changed');
+          const packages = Object.fromEntries(tiers.map(tier => [tier, JSON.parse(fs.readFileSync(path.join(base, `${tier}.json`), 'utf8'))]));
+          const publicById = new Map(packages.public.records.map(record => [record.id, record]));
+          for (const tier of tiers) {
+            const pkg = packages[tier];
+            if (!pkg.ok || pkg.mode !== 'preview-only') throw new Error(`${tier}: package is not preview-only`);
+            if (pkg.recordCount !== 253 || pkg.records.length !== 253) throw new Error(`${tier}: incomplete record count`);
+            if (pkg.paymentStatus !== 'deferred' || pkg.enforcementMode !== 'report-only') throw new Error(`${tier}: payment boundary changed`);
+            const ids = pkg.records.map(record => record.id);
+            if (new Set(ids).size !== ids.length) throw new Error(`${tier}: duplicate ids`);
+            if (JSON.stringify(ids) !== JSON.stringify(packages.public.records.map(record => record.id))) throw new Error(`${tier}: record order or membership changed`);
+            for (const record of pkg.records) {
+              const publicRecord = publicById.get(record.id);
+              for (const field of policy.mandatoryPublicSafetyFields) {
+                const get = (source, dotted) => dotted.split('.').reduce((value, key) => value == null ? undefined : value[key], source);
+                if (get(record, field) === undefined) throw new Error(`${tier}/${record.id}: missing ${field}`);
+              }
+              if (record.counterAnalysis?.contradictoryEvidence === undefined) throw new Error(`${tier}/${record.id}: public counter-evidence channel missing`);
+              if (record.recordType !== publicRecord.recordType || record.status !== publicRecord.status) throw new Error(`${tier}/${record.id}: record classification changed by tier`);
+              if (record.evidence?.claimClass !== publicRecord.evidence?.claimClass) throw new Error(`${tier}/${record.id}: claim class changed by tier`);
+              if (record.solidConclusion?.boundary !== publicRecord.solidConclusion?.boundary) throw new Error(`${tier}/${record.id}: conclusion boundary changed by tier`);
+              if (record.missionAssessment?.boundary !== publicRecord.missionAssessment?.boundary) throw new Error(`${tier}/${record.id}: mission boundary changed by tier`);
+              if (record.evidence?.associationBoundary !== publicRecord.evidence?.associationBoundary) throw new Error(`${tier}/${record.id}: association boundary changed by tier`);
+            }
+          }
+          const isObject = value => value && typeof value === 'object' && !Array.isArray(value);
+          const subset = (lower, higher) => {
+            if (Array.isArray(lower)) return Array.isArray(higher) && lower.length === higher.length && lower.every((item, index) => subset(item, higher[index]));
+            if (isObject(lower)) return isObject(higher) && Object.keys(lower).every(key => Object.prototype.hasOwnProperty.call(higher, key) && subset(lower[key], higher[key]));
+            return JSON.stringify(lower) === JSON.stringify(higher);
+          };
+          for (let index = 0; index < tiers.length - 1; index += 1) {
+            const lower = packages[tiers[index]].records;
+            const higher = packages[tiers[index + 1]].records;
+            for (let recordIndex = 0; recordIndex < lower.length; recordIndex += 1) {
+              if (!subset(lower[recordIndex], higher[recordIndex])) throw new Error(`${lower[recordIndex].id}: ${tiers[index]} is not cumulative into ${tiers[index + 1]}`);
+            }
+          }
+          if (!fs.existsSync(path.join(base, 'preview.html'))) throw new Error('HTML publishing preview missing');
+          console.log('PHASE 2 STRUCTURE PASS: 253 records across five cumulative tiers.');
+          NODE
+
+      - name: Snapshot first deterministic hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const base = 'downloads/phase2-tier-projections';
+          const files = fs.readdirSync(base).filter(name => !name.endsWith('non-mutation-report.json')).sort();
+          const hashes = Object.fromEntries(files.map(name => [name, crypto.createHash('sha256').update(fs.readFileSync(path.join(base, name))).digest('hex')]));
+          fs.writeFileSync('downloads/phase2-tier-hashes-first.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Rebuild and prove deterministic output
+        run: |
+          node scripts/build-phase2-tier-projections.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const expected = JSON.parse(fs.readFileSync('downloads/phase2-tier-hashes-first.json', 'utf8'));
+          const changed = [];
+          for (const [name, hash] of Object.entries(expected)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(path.join('downloads/phase2-tier-projections', name))).digest('hex');
+            if (actual !== hash) changed.push({ name, expected: hash, actual });
+          }
+          if (changed.length) throw new Error(`Non-deterministic Phase 2 output:\n${JSON.stringify(changed, null, 2)}`);
+          console.log(`DETERMINISM PASS: ${Object.keys(expected).length} generated files unchanged across rebuild.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/phase2-protected-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Phase 2 preview must not modify canonical sources, current pages, membership, Workers, databases, authentication, entitlement, payment or production guard files.'
+          };
+          fs.writeFileSync(path.join('downloads/phase2-tier-projections', 'non-mutation-report.json'), JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Phase 2 publishing preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-tier-projection-preview-${{ github.run_id }}
+          path: |
+            downloads/phase2-tier-projections/
+            downloads/phase2-tier-hashes-first.json
+            downloads/phase2-protected-hashes-before.json
+          if-no-files-found: error
+          retention-days: 30

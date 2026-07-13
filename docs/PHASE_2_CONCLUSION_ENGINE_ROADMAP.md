@@ -12,6 +12,21 @@ No published item can confuse documented fact, allegation, inference, model outp
 
 A record must fail closed and remain unpublished when its evidence class, factual conclusion, speculative conclusion or public boundary cannot be distinguished reliably.
 
+## Interpretive retention caveat
+
+Graph associations, relationship hints, scenarios and speculative interpretations are preserved rather than removed. Failure of factual-publication gates means the item remains a labelled research or speculative record, not that it is deleted.
+
+Required labels include:
+
+- `speculative research hint — association not proof`
+- `speculative scenario analysis — not a factual forecast`
+- `speculative — not established fact`
+- `disputed claim — not established fact`
+
+Every interpretive record must carry a retention status and remain blocked from factual surfaces until the required evidence exists. Graph associations remain zero-score research hints in the convergence tracker until independent records establish an authority and implementation route.
+
+See `docs/PHASE_2_INTERPRETIVE_RETENTION_POLICY.md`.
+
 ## Required deliverables
 
 ### 1. Evidence-based conclusion generator
@@ -247,34 +262,39 @@ The report-only engine currently:
 - Detects headline restatement, repeated boilerplate, duplicated analysis fields, generic control-language and unsupported certainty.
 - Applies confidence, freshness, correction, supersession and publication gates.
 - Produces a side-by-side editorial review package.
+- Preserves graph associations, scenarios and speculation with explicit labels and retention states.
 - Does not replace canonical records or activate publishing.
 
 ### Verified checkpoint
 
-The first full protected run analyzed 253 canonical records:
+The protected engine analyzes 253 canonical records and retains all 253 records:
 
-- 40 evidence-qualified records reached `publishable_preview`.
-- 213 records remained held for evidence or review.
-- 0 generated candidate records failed repetition or generic-language gates.
-- 0 records failed fact/speculation separation.
-- 12 records required a confidence downgrade.
-- 42 records contained a documented mechanism.
-- 21 records were analytical-model mechanisms.
-- 190 records had no established external mechanism.
-- 13 records retained limited active convergence vectors under conservative caps.
+- 40 evidence-qualified records reach `publishable_preview`.
+- 213 records remain held for evidence or review.
+- 172 relationship-graph records remain `speculative research hint — association not proof`.
+- 211 records are eligible for a labelled speculative or research surface.
+- 40 records are eligible for factual preview surfaces.
+- 0 records are removed by the conclusion engine.
+- 0 generated candidate records fail repetition or generic-language gates.
+- 0 records fail fact/speculation separation.
+- 12 records require a confidence downgrade.
+- 42 records contain a documented mechanism.
+- 21 records are analytical-model mechanisms.
+- 190 records have no established external mechanism.
+- 13 records retain limited active convergence vectors under conservative caps.
+
+The dedicated adversarial suite also passes five hostile fixtures while preserving all five and allowing none onto factual surfaces.
 
 These counts describe the current preview dataset and must be recalculated whenever source records change.
 
 ## Remaining Phase 2 work
 
 1. Review the side-by-side editorial package.
-2. Add explicit custodian and lawful acquisition fields to missing-evidence output where source metadata supports them.
-3. Improve mechanism extraction for primary contracts, laws, ownership records and implementation systems.
-4. Improve counter-hypothesis evidence routing rather than relying only on descriptive alternatives.
-5. Add evidence-delta handling so corrections and new records automatically re-evaluate conclusions.
-6. Add candidate overlay previews to the tier publisher without replacing canonical text.
-7. Run adversarial fixtures that intentionally attempt to blur fact and speculation.
-8. Keep all conclusion-engine outputs report-only until the exit condition and production regression suite pass.
+2. Improve mechanism extraction for primary contracts, laws, ownership records and implementation systems.
+3. Improve counter-hypothesis evidence routing as additional source metadata becomes available.
+4. Add evidence-delta handling so corrections and new records automatically re-evaluate conclusions.
+5. Add candidate overlay previews to the tier publisher without replacing canonical text.
+6. Keep all conclusion-engine outputs report-only until the exit condition and production regression suite pass.
 
 ## Safety boundary
 

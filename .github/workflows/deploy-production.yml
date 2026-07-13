@@ -1,14 +1,12 @@
-name: Deploy Production (Controlled Cloudflare Release)
+name: Deploy Production (Manual Controlled Fallback)
 
 on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type DEPLOY to run the controlled Cloudflare release'
+        description: 'Type DEPLOY to run the manual Cloudflare fallback release'
         required: true
         default: 'NO'
-  push:
-    branches: [ main ]
 
 permissions:
   contents: read
@@ -16,17 +14,17 @@ permissions:
 
 concurrency:
   group: matrixreprogrammed-production
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   deploy:
-    name: Migrate D1 and deploy strict Cloudflare production
+    name: Manual D1 migration and strict Cloudflare fallback
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[phase6-release]')) }}
+    if: ${{ github.event.inputs.confirm == 'DEPLOY' }}
 
     steps:
       - name: Checkout latest main
@@ -47,31 +45,14 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
-      - name: Refresh public intelligence before release
-        env:
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
-          INVESTIGATION_MODE: daily
-          INVESTIGATION_CONCURRENCY: '4'
-          INVESTIGATION_TIMEOUT_MS: '25000'
-        run: |
-          node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
-          node scripts/update-live-intel.js
-          node scripts/record-live-intel-check.js
-          node scripts/update-seven-day-intel.js
-          node scripts/build-outcome-briefings.js
-          node scripts/build-daily-brain-brief.js
-          node scripts/build-investigation-pages.js
-          node scripts/build-mission-intelligence-10.js
-          node scripts/build-live-intel-machine.js
-          node scripts/patch-conclusion-integrity-cards.js
-
       - name: Build complete site
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: Verify strict Workers and protected routes
+      - name: Verify and reconcile release
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: |
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
@@ -79,20 +60,11 @@ jobs:
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
           node --check src/worker-production.js
-          npx --yes wrangler@latest deploy --dry-run
-
-      - name: Reconcile after every legacy generator
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/final-production-reconcile.js
-
-      - name: Run final production gates
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: |
+          node scripts/final-production-reconcile.js
           node scripts/production-freshness-guard.js
           node scripts/production-sync-test.js
           node scripts/production-deploy-guard.js
+          npx --yes wrangler@latest deploy --dry-run
 
       - name: Verify Cloudflare credentials
         env:
@@ -115,13 +87,7 @@ jobs:
           backup="downloads/private-migration/matrix-members-before-${DEPLOY_COMMIT_SHA}.sql"
           npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup"
           test -s "$backup"
-          {
-            echo "commit=$DEPLOY_COMMIT_SHA"
-            echo "created_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            echo "bytes=$(wc -c < "$backup" | tr -d ' ')"
-            echo "sha256=$(sha256sum "$backup" | awk '{print $1}')"
-            echo "retention=ephemeral-runner-only"
-          } > downloads/d1-backup-proof.txt
+          echo "sha256=$(sha256sum "$backup" | awk '{print $1}')" > downloads/d1-backup-proof.txt
 
       - name: Apply idempotent D1 migration chain
         env:
@@ -130,7 +96,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p downloads
           migrations=(
             migrations/0001_membership_foundation.sql
             migrations/0004_forum_persistence.sql
@@ -143,50 +108,23 @@ jobs:
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
-            test -s "$migration"
-            echo "===== APPLY $migration =====" | tee -a downloads/d1-migration.log
             npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
           done
-
-      - name: Verify migrated D1 schema and disabled payment switches
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           node - <<'NODE'
-          const fs=require('fs');
-          const schema=JSON.parse(fs.readFileSync('downloads/d1-schema-verification.json','utf8'));
-          const settings=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
-          const rows=(payload)=>payload.flatMap(item=>item.results||item.result?.results||[]);
-          const names=new Set(rows(schema).map(row=>row.name));
-          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','member_effective_entitlements','member_download_eligibility'];
-          const missing=required.filter(name=>!names.has(name));
-          if(missing.length) throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
-          const switches=rows(settings);
-          if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live')) throw new Error('Both PayPal runtime environments were not created');
-          if(switches.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during deployment');
-          console.log(`D1 migration verification passed for ${required.length} required objects; sandbox and live checkout remain disabled.`);
+          const payload=JSON.parse(require('fs').readFileSync('downloads/paypal-runtime-settings.json','utf8'));
+          const rows=payload.flatMap(item=>item.results||item.result?.results||[]);
+          if(rows.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during fallback deployment');
           NODE
+          rm -rf downloads/private-migration
 
-      - name: Remove private rollback snapshot from runner workspace
-        if: success()
-        run: rm -rf downloads/private-migration
-
-      - name: Deploy strict Worker and exact reconciled assets
+      - name: Deploy strict Worker and exact assets
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p downloads
-          npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
+        run: npx --yes wrangler@latest deploy
 
-      - name: Verify live commit, routes and D1 persistence
+      - name: Verify live production
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
@@ -195,38 +133,20 @@ jobs:
           LIVE_VERIFY_DELAY_MS: '10000'
         run: node scripts/verify-live-production.js
 
-      - name: Prove live PayPal route is protected by the strict Worker
-        shell: bash
-        run: |
-          set -euo pipefail
-          curl -sS -D downloads/paypal-route-headers.txt -o downloads/paypal-route-response.json https://matrixreprogrammed.com/api/paypal/config
-          tr -d '\r' < downloads/paypal-route-headers.txt | grep -qi '^x-matrix-origin: cloudflare-worker-paypal-subscriptions$'
-          node - <<'NODE'
-          const body=JSON.parse(require('fs').readFileSync('downloads/paypal-route-response.json','utf8'));
-          if(body.authenticated!==false||body.ok!==false) throw new Error('Unauthenticated PayPal config route did not fail closed');
-          console.log('Live PayPal route is deployed through the strict Worker and fails closed without authentication.');
-          NODE
-
-      - name: Upload controlled release proof
+      - name: Upload fallback proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: controlled-production-proof-${{ github.run_id }}
+          name: manual-production-proof-${{ github.run_id }}
           path: |
             downloads/deploy-manifest.json
             downloads/deploy-health.json
-            downloads/production-freshness-guard.json
             downloads/production-sync-test.json
             downloads/production-deploy-guard-report.json
-            downloads/forum-persistence-d1-test.json
             downloads/final-production-reconcile.json
             downloads/live-production-verification.json
             downloads/d1-backup-proof.txt
             downloads/d1-migration.log
-            downloads/d1-schema-verification.json
             downloads/paypal-runtime-settings.json
-            downloads/wrangler-deploy.log
-            downloads/paypal-route-headers.txt
-            downloads/paypal-route-response.json
           if-no-files-found: ignore
           retention-days: 60

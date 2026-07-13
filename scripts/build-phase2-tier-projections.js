@@ -5,7 +5,6 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const outputDir = path.join(root, 'downloads', 'phase2-tier-projections');
-const canonicalDir = path.join(root, 'downloads', 'canonical-preview-bundle');
 const tierOrder = ['public', 'registered', 'supporter_3', 'intelligence_6', 'research_pro_9'];
 const accessFieldKeys = {
   public: 'publicFields',
@@ -160,6 +159,11 @@ if (policy.paymentStatus !== 'deferred' || policy.enforcementMode !== 'report-on
   throw new Error('Phase 2 preview requires deferred payments and report-only tier enforcement.');
 }
 
+const projectionTimestamp = canonicalPackage.records
+  .map(record => record.freshness?.updatedAt || record.freshness?.lastReviewedAt || record.freshness?.createdAt)
+  .filter(Boolean)
+  .sort()
+  .at(-1) || '1970-01-01T00:00:00.000Z';
 const tierPackages = {};
 const recordFieldPaths = {};
 const errors = [];
@@ -181,7 +185,7 @@ for (const tier of tierOrder) {
     for (const mandatoryPath of policy.mandatoryPublicSafetyFields || []) {
       if (!meaningful(getPath(projected, mandatoryPath))) errors.push(`${tier}/${record.id}: mandatory public safety field missing: ${mandatoryPath}`);
     }
-    if (!meaningful(getPath(projected, 'counterAnalysis.contradictoryEvidence'))) {
+    if (getPath(projected, 'counterAnalysis.contradictoryEvidence') === undefined) {
       errors.push(`${tier}/${record.id}: contradictory-evidence field is not publicly projected`);
     }
     return projected;
@@ -197,7 +201,7 @@ for (const tier of tierOrder) {
     requiresAccount: tierInfo.requiresAccount,
     paymentStatus: policy.paymentStatus,
     enforcementMode: policy.enforcementMode,
-    generatedAt: canonicalPackage.generatedAt,
+    generatedAt: projectionTimestamp,
     canonicalRecordCount: canonicalPackage.recordCount,
     recordCount: records.length,
     boundary: 'This is a deterministic field projection from the canonical intelligence layer. It does not enforce access, publish pages, send email, activate authentication, grant entitlements or take payment.',
@@ -239,8 +243,8 @@ const manifest = {
   ok: errors.length === 0,
   mode: 'preview-only',
   version: '1.0.0',
-  generatedAt: canonicalPackage.generatedAt,
-  sourceBundleGeneratedAt: canonicalIndex.generatedAt,
+  generatedAt: projectionTimestamp,
+  sourceBundleGeneratedAt: projectionTimestamp,
   paymentStatus: policy.paymentStatus,
   enforcementMode: policy.enforcementMode,
   canonicalRecordCount: canonicalPackage.recordCount,

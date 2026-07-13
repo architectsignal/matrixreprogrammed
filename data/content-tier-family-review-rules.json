@@ -1,0 +1,281 @@
+{
+  "version": "1.0.0",
+  "status": "review-only",
+  "paymentStatus": "deferred",
+  "enforcementMode": "report-only",
+  "purpose": "Resolve high-confidence route families left uncategorized by the first classifier without moving, hiding, redirecting or paywalling any current route.",
+  "principles": [
+    "Rules apply only to rows still uncategorized after the base taxonomy classifier.",
+    "A recommendation to a paid tier requires a public preview and visible evidence boundaries before enforcement.",
+    "Ambiguous routes remain public and require an editorial owner.",
+    "Operational, campaign, generated audit and artwork pipeline pages are internal candidates only; they are not deleted automatically.",
+    "Existing URLs remain unchanged."
+  ],
+  "rules": [
+    {
+      "id": "institution-directory",
+      "priority": 950,
+      "fileStartsWithAny": ["institutions/"],
+      "category": "power_mapping",
+      "subcategory": "institution_index",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Institution profile directories are detailed power-mapping routes and require a public evidence-bounded preview before member depth is enforced."
+    },
+    {
+      "id": "family-directories",
+      "priority": 950,
+      "fileStartsWithAny": ["black-nobility/", "power-families/"],
+      "category": "power_mapping",
+      "subcategory": "family_and_network_index",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Family and lineage profiles belong in the network-mapping layer; historical association must not be presented as present-day guilt or command."
+    },
+    {
+      "id": "jurisdiction-directory",
+      "priority": 950,
+      "fileStartsWithAny": ["jurisdictions-of-power/"],
+      "category": "power_mapping",
+      "subcategory": "government_and_jurisdictions",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Jurisdiction profiles map legal authority, enforcement and institutional routes."
+    },
+    {
+      "id": "orders-directory",
+      "priority": 950,
+      "fileStartsWithAny": ["secret-societies/"],
+      "category": "power_mapping",
+      "subcategory": "elite_networks",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Secret-society and elite-network profiles require documented-membership and association boundaries."
+    },
+    {
+      "id": "think-tank-directory",
+      "priority": 950,
+      "fileStartsWithAny": ["think-tanks/"],
+      "category": "power_mapping",
+      "subcategory": "think_tanks_and_foundations",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Think-tank profiles map funding, appointments, reports and policy influence routes."
+    },
+    {
+      "id": "top-52-directory",
+      "priority": 950,
+      "fileStartsWithAny": ["top-52/"],
+      "category": "power_mapping",
+      "subcategory": "people_index",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Top-profile routes are detailed entity cards and should be served through the canonical intelligence layer."
+    },
+    {
+      "id": "policy-directory",
+      "priority": 940,
+      "fileStartsWithAny": ["policy/"],
+      "category": "control_structure",
+      "subcategory": "legal_and_regulatory_control",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Detailed policy routes belong to legal and regulatory control analysis with a public summary and primary-source boundary."
+    },
+    {
+      "id": "atlas-and-subject-directories",
+      "priority": 930,
+      "fileStartsWithAny": ["atlas-lanes/", "subject-briefs/"],
+      "category": "power_mapping",
+      "subcategory": "institution_index",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Atlas lanes and subject briefs are structured power-mapping routes."
+    },
+    {
+      "id": "public-answer-pages",
+      "priority": 920,
+      "fileStartsWithAny": ["answer-"],
+      "category": "trust_and_legal",
+      "subcategory": "methodology",
+      "tier": "public",
+      "confidence": "high",
+      "rationale": "Plain-language answer pages support public understanding, evidence literacy and search discovery."
+    },
+    {
+      "id": "atlas-pages",
+      "priority": 910,
+      "fileStartsWithAny": ["atlas-"],
+      "category": "power_mapping",
+      "subcategory": "institution_index",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Detailed atlas pages fit member power mapping while retaining a public preview."
+    },
+    {
+      "id": "named-dossiers",
+      "priority": 910,
+      "fileStartsWithAny": ["dossier-"],
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Named dossier pages are deep intelligence products with public claim and evidence boundaries."
+    },
+    {
+      "id": "big-three-directory",
+      "priority": 910,
+      "fileStartsWithAny": ["big-three/"],
+      "category": "power_mapping",
+      "subcategory": "corporate_and_ownership",
+      "tier": "intelligence_6",
+      "confidence": "high",
+      "rationale": "Asset-manager profiles belong in ownership, holdings, proxy-voting and mandate analysis."
+    },
+    {
+      "id": "epstein-route-family",
+      "priority": 900,
+      "fileStartsWithAny": ["epstein-", "black-file-epstein-"],
+      "category": "evidence",
+      "subcategory": "epstein_files",
+      "tier": "public",
+      "confidence": "high",
+      "rationale": "Epstein-related routes must retain public source, legal-status, victim-protection and association boundaries."
+    },
+    {
+      "id": "source-and-evidence-family",
+      "priority": 900,
+      "fileStartsWithAny": ["source-", "evidence-"],
+      "category": "evidence",
+      "subcategory": "source_ledger",
+      "tier": "public",
+      "confidence": "high",
+      "rationale": "Source and evidence routes remain publicly inspectable."
+    },
+    {
+      "id": "control-convergence-family",
+      "priority": 890,
+      "fileStartsWithAny": ["control-", "convergence-", "one-world-"],
+      "category": "control_structure",
+      "subcategory": "global_convergence",
+      "tier": "public",
+      "confidence": "medium_high",
+      "rationale": "Control and convergence explainers should remain public; advanced evidence paths may be layered later."
+    },
+    {
+      "id": "daily-intelligence-family",
+      "priority": 880,
+      "fileStartsWithAny": ["daily-"],
+      "category": "intelligence",
+      "subcategory": "daily_drops",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Complete daily synthesis fits the Intelligence tier while public evidence and conclusion boundaries remain visible."
+    },
+    {
+      "id": "thematic-dashboards",
+      "priority": 870,
+      "fileStartsWithAny": ["dashboard-"],
+      "category": "intelligence",
+      "subcategory": "investigations",
+      "tier": "public",
+      "confidence": "medium_high",
+      "rationale": "Existing thematic dashboards are discovery and monitoring routes, not authenticated member dashboards unless separately proven."
+    },
+    {
+      "id": "black-file-intelligence",
+      "priority": 860,
+      "fileEqualsAny": ["black-file.html", "black-files.html", "black-file-expose.html", "black-file-theory.html"],
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "tier": "intelligence_6",
+      "confidence": "medium_high",
+      "rationale": "Black File editorial routes are dossier surfaces with required public boundaries."
+    },
+    {
+      "id": "separate-research-and-book-products",
+      "priority": 1000,
+      "fileEqualsAny": ["custom-research.html", "crime-dossiers.html", "dog-the-architect.html", "black-nobility-deck.html"],
+      "category": "commercial",
+      "subcategory": "research_services",
+      "tier": "separate_product",
+      "confidence": "high",
+      "rationale": "Commissioned research, books and standalone decks remain separate products."
+    },
+    {
+      "id": "campaign-and-distribution-operations",
+      "priority": 980,
+      "fileStartsWithAny": ["campaign-", "distribution-", "funnel-", "share-"],
+      "fileEqualsAny": ["conversion-funnel.html"],
+      "category": "internal",
+      "subcategory": "build_support",
+      "tier": "internal_only",
+      "confidence": "high",
+      "rationale": "Campaign, funnel and distribution operations are internal candidates and must be reviewed before any route change."
+    },
+    {
+      "id": "artwork-production-operations",
+      "priority": 980,
+      "fileStartsWithAny": ["card-artwork-batches/", "top-52-art/"],
+      "fileContainsAny": ["card-artwork", "card-production-pipeline", "card-batch-tracker", "card-system-health"],
+      "category": "internal",
+      "subcategory": "build_support",
+      "tier": "internal_only",
+      "confidence": "high",
+      "rationale": "Artwork queues, batches and production-health pages are operational candidates, not public intelligence products."
+    },
+    {
+      "id": "deploy-and-site-operations",
+      "priority": 980,
+      "fileStartsWithAny": ["deploy-", "site-audit", "site-health", "site-quality"],
+      "category": "internal",
+      "subcategory": "generated_audit",
+      "tier": "internal_only",
+      "confidence": "high",
+      "rationale": "Deployment and site-health outputs are internal operational candidates."
+    },
+    {
+      "id": "generated-download-audits",
+      "priority": 970,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["audit", "repair-report", "install-log", "deploy-status", "deploy-health", "retry-marker", "run-report", "hardening", "cleanup-report", "source-hashes", "non-mutation-report"],
+      "requireAllChecks": true,
+      "category": "internal",
+      "subcategory": "generated_audit",
+      "tier": "internal_only",
+      "confidence": "high",
+      "rationale": "Generated audits and build reports are internal candidates; the underlying public evidence remains separately accessible."
+    },
+    {
+      "id": "downloaded-evidence-files",
+      "priority": 900,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["epstein", "evidence", "source", "court", "declassified", "record", "filing", "disclosure"],
+      "requireAllChecks": true,
+      "category": "evidence",
+      "subcategory": "evidence_vault",
+      "tier": "public",
+      "confidence": "medium_high",
+      "rationale": "Evidence-oriented downloads should remain publicly inspectable unless privacy, legal or victim-protection review requires restriction."
+    },
+    {
+      "id": "downloaded-intelligence-products",
+      "priority": 850,
+      "fileStartsWithAny": ["downloads/"],
+      "fileContainsAny": ["daily", "weekly", "brief", "dossier", "intel", "control-map", "convergence", "tracker"],
+      "requireAllChecks": true,
+      "category": "intelligence",
+      "subcategory": "dossiers",
+      "tier": "intelligence_6",
+      "confidence": "medium",
+      "rationale": "Generated intelligence reports and dossiers fit the Intelligence tier with public evidence and boundary previews."
+    }
+  ],
+  "fallback": {
+    "category": "uncategorized",
+    "subcategory": "needs_editorial_owner",
+    "tier": "public",
+    "confidence": "low",
+    "rationale": "No high-confidence route-family rule matched. Keep public and assign an editorial owner before any route or tier change."
+  }
+}

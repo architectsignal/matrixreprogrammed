@@ -84,7 +84,11 @@ run('scripts/build-production-health.js');
 const critical = [
   'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js',
   'assets/intro-eye.svg', 'assets/intro-mask.svg',
-  'start-here.html', 'membership.html', 'live-intel.html', 'daily-power-conclusions.html',
+  'start-here.html', 'membership.html', 'paypal-membership.js',
+  'member-dashboard.html', 'member-dashboard-app.js',
+  'billing-dashboard.html', 'billing-dashboard.js',
+  'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
+  'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
@@ -106,13 +110,20 @@ requireMarker('index.html', 'homepage-intro__burn');
 requireMarker('index.html', 'homepage-mask-intro.js');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
-requireMarker('membership.html', '<!-- membership-tiers:start -->');
+requireMarker('membership.html', 'Free Member');
 requireMarker('membership.html', '€3');
 requireMarker('membership.html', '€6');
 requireMarker('membership.html', '€9');
-requireMarker('membership.html', 'Coming soon — no payment taken');
+requireMarker('membership.html', 'paypal-membership.js');
+requireMarker('membership.html', 'paypal-membership-status');
+requireMarker('membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.');
+rejectMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
+requireMarker('paypal-membership.js', '/api/paypal/checkout-intent');
+requireMarker('paypal-membership.js', '/api/paypal/subscription/confirm');
+requireMarker('billing-dashboard.html', 'billing-dashboard.js');
+requireMarker('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 requireMarker('homepage-mask-intro.js', 'matrix-homepage-intro-seen-v2');
 requireMarker('homepage-mask-intro.js', 'eye: 3000');
 requireMarker('homepage-mask-intro.js', 'burn: 1100');
@@ -132,9 +143,9 @@ requireMarker('_headers', '/deploy-manifest.json');
 requireMarker('_headers', '/deploy-health.json');
 requireMarker('_headers', 'Cache-Control: no-store');
 requireMarker('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
-requireMarker('deploy-health.html', 'Payments: DEFERRED / NO PAYMENT TAKEN');
+requireMarker('deploy-health.html', 'Payments: SANDBOX READY / CHECKOUT DISABLED');
 requireMarker('deploy-health.json', 'src/worker-production.js');
-requireMarker('deploy-health.json', '"paymentStatus": "deferred"');
+requireMarker('deploy-health.json', '"paymentStatus": "sandbox-ready-disabled"');
 
 persistReport();
 console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied after legacy generators.`);

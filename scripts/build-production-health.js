@@ -24,7 +24,10 @@ const buildSha = commitSha();
 const manifest = parse('deploy-manifest.json');
 const modules = [
   { name: 'Homepage eye-to-mask sequence', route: '/', file: 'index.html', markers: ['data-homepage-mask-intro', 'assets/intro-eye.svg', 'assets/intro-mask.svg'] },
-  { name: 'Membership tiers', route: '/membership', file: 'membership.html', markers: ['<!-- membership-tiers:start -->', '€3', '€6', '€9', 'Coming soon — no payment taken'] },
+  { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status'] },
+  { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js'] },
+  { name: 'Payment administration', route: '/admin-payment-dashboard', file: 'admin-payment-dashboard.html', markers: ['admin-payment-dashboard.js'] },
+  { name: 'PayPal subscription Worker', route: '/api/paypal/config', file: 'src/worker-paypal-subscriptions.js', markers: ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', 'PAYPAL_SANDBOX_ENABLED', 'paypal_runtime_settings'] },
   { name: 'Live Intel', route: '/live-intel', file: 'live-intel.html', markers: ['LIVE INTEL'] },
   { name: 'Security and privacy', route: '/security-privacy', file: 'security-privacy.html', markers: ['SECURITY'] },
   { name: 'Dark web safety', route: '/dark-web-safety', file: 'dark-web-safety.html', markers: ['DARK WEB SAFETY'] },
@@ -32,7 +35,7 @@ const modules = [
   { name: 'Public Data Laboratory', route: '/data-lab', file: 'data-lab.html', markers: ['PUBLIC DATA'] },
   { name: 'Evidence Archive', route: '/evidence-archive', file: 'evidence-archive.html', markers: ['EVIDENCE ARCHIVE'] },
   { name: 'Search the Machine', route: '/search', file: 'search.html', markers: ['SEARCH THE MACHINE'] },
-  { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1'] },
+  { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1', 'cloudflare-worker-paypal-subscriptions'] },
   { name: 'D1 forum persistence Worker', route: '/forum-health', file: 'src/worker-forum-persistence.js', markers: ['Cloudflare D1 MEMBERS_DB.forum_posts', 'd1Connected: true', 'storedPostCount'] },
   { name: 'Cloudflare D1 binding', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = true'] }
 ].map(item => {
@@ -42,9 +45,12 @@ const modules = [
 });
 
 const manifestMatches = Boolean(manifest && manifest.commitSha === buildSha);
-const paymentDeferred = read('membership.html').includes('Coming soon — no payment taken');
+const membership = read('membership.html');
+const paymentReadyDisabled = membership.includes('paypal-membership.js')
+  && membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')
+  && !membership.includes('Coming soon — no payment taken');
 const health = {
-  ok: modules.every(item => item.ready) && manifestMatches && paymentDeferred,
+  ok: modules.every(item => item.ready) && manifestMatches && paymentReadyDisabled,
   buildSha,
   buildShortSha: buildSha.slice(0, 12),
   generatedAt: new Date().toISOString(),
@@ -52,8 +58,9 @@ const health = {
   workerScript: 'src/worker-production.js',
   forumStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; KV is compatibility and recovery only.',
   forumFailureMode: 'Fail closed. Legacy forum responses cannot report success when D1 is missing or unhealthy.',
-  paymentStatus: 'deferred',
-  paymentMessage: 'Membership prices and benefits are published; checkout remains disabled and no payment is taken.',
+  paymentStatus: 'sandbox-ready-disabled',
+  paymentMessage: 'PayPal subscription code is deployed behind server-side gates; checkout remains disabled until Cloudflare configuration, D1 activation and verified plans agree.',
+  checkoutDefault: 'disabled',
   manifestSha: manifest?.commitSha || null,
   manifestMatches,
   routes: modules.map(item => item.route),
@@ -65,11 +72,17 @@ fs.writeFileSync(full('deploy-health.json'), json);
 fs.writeFileSync(path.join(downloads, 'deploy-health.json'), json);
 
 const cards = modules.map(item => `<article class="card ${item.ready ? 'redline' : ''}"><span class="label">${item.ready ? 'Ready' : 'Blocked'}</span><h3>${esc(item.name)}</h3><p><strong>Route:</strong> ${esc(item.route)}</p><p><strong>File:</strong> ${esc(item.file)}</p><p><strong>Hash:</strong> ${esc(item.hash)}</p>${item.missingMarkers.length ? `<p><strong>Missing:</strong> ${esc(item.missingMarkers.join(', '))}</p>` : ''}</article>`).join('');
-const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Production Health | Matrix Reprogrammed</title><meta name="description" content="Commit-bound Cloudflare production health, D1 forum persistence and payment-deferred status." /><meta name="robots" content="noindex,nofollow,noarchive" /><link rel="stylesheet" href="styles.css" /></head><body><div class="page"><header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="live-intel.html">Live Intel</a><a href="research-tools.html">Research Tools</a><a href="membership.html">Membership</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Commit-bound production proof</div><h1>PRODUCTION HEALTH.</h1><p class="lead">This page is regenerated after every legacy builder and tied to the exact GitHub commit deployed to Cloudflare.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="forum-health">Open D1 Forum Health</a></div></section><section class="section wrap split"><div class="terminal">PRODUCTION HEALTH\n&gt; Commit: ${esc(health.buildShortSha)}\n&gt; Generated: ${esc(health.generatedAt)}\n&gt; Forum: D1 AUTHORITATIVE / FAIL CLOSED\n&gt; Payments: DEFERRED / NO PAYMENT TAKEN\n&gt; Manifest match: ${health.manifestMatches ? 'YES' : 'NO'}\n&gt; Overall: ${health.ok ? 'READY' : 'BLOCKED'}</div><aside class="card redline"><div class="pill">Payments later</div><h2>The membership system stays pre-launch.</h2><p>Prices and benefits remain visible, but checkout stays disabled until payment and member-delivery testing is deliberately activated.</p></aside></section><section class="section wrap"><h2>Production checks</h2><div class="grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — production health ${esc(health.buildShortSha)}</p></footer></div></body></html>`;
+const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Production Health | Matrix Reprogrammed</title><meta name="description" content="Commit-bound Cloudflare production health, D1 persistence and server-gated PayPal readiness." /><meta name="robots" content="noindex,nofollow,noarchive" /><link rel="stylesheet" href="styles.css" /></head><body><div class="page"><header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="index.html">Home</a><a href="live-intel.html">Live Intel</a><a href="research-tools.html">Research Tools</a><a href="membership.html">Membership</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Commit-bound production proof</div><h1>PRODUCTION HEALTH.</h1><p class="lead">This page is regenerated after every legacy builder and tied to the exact GitHub commit deployed to Cloudflare.</p><div class="cta-row"><a class="btn" href="deploy-health.json">Open Health JSON</a><a class="btn alt" href="forum-health">Open D1 Forum Health</a></div></section><section class="section wrap split"><div class="terminal">PRODUCTION HEALTH
+&gt; Commit: ${esc(health.buildShortSha)}
+&gt; Generated: ${esc(health.generatedAt)}
+&gt; Forum: D1 AUTHORITATIVE / FAIL CLOSED
+&gt; Payments: SANDBOX READY / CHECKOUT DISABLED
+&gt; Manifest match: ${health.manifestMatches ? 'YES' : 'NO'}
+&gt; Overall: ${health.ok ? 'READY' : 'BLOCKED'}</div><aside class="card redline"><div class="pill">Server-gated billing</div><h2>PayPal is deployed but closed by default.</h2><p>The Free Member tier is active. Paid checkout opens only when the configured environment, credentials, three verified plans and the D1 activation switch all agree.</p></aside></section><section class="section wrap"><h2>Production checks</h2><div class="grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — production health ${esc(health.buildShortSha)}</p></footer></div></body></html>`;
 fs.writeFileSync(full('deploy-health.html'), html);
 
 if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));
   process.exit(1);
 }
-console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, payments deferred.`);
+console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, PayPal sandbox-ready and checkout disabled.`);

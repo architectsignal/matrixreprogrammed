@@ -26,13 +26,7 @@ function run(label, file, hardFailure = false, env = {}) {
     maxBuffer: 40 * 1024 * 1024,
     env: { ...process.env, ...env }
   });
-  steps.push({
-    label,
-    file,
-    status: result.status,
-    stdout: String(result.stdout || '').slice(-3000),
-    stderr: String(result.stderr || '').slice(-3000)
-  });
+  steps.push({ label, file, status: result.status, stdout: String(result.stdout || '').slice(-3000), stderr: String(result.stderr || '').slice(-3000) });
   if (result.status !== 0) (hardFailure ? hard : soft).push(`${label}: ${file} exited ${result.status}`);
 }
 function needFile(value) { if (!exists(value)) hard.push(`missing source file: ${value}`); }
@@ -70,24 +64,34 @@ run('production deploy guard', 'scripts/production-deploy-guard.js', true, { DEP
 
 for (const value of [
   'index.html', 'search.html', 'search.js', 'search-index.json', 'books.html', 'live-intel.html',
-  'forum.html', 'forum.js', 'membership.html', 'deploy-health.html', 'deploy-health.json',
-  'deploy-manifest.json', 'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-production.js',
+  'forum.html', 'forum.js', 'membership.html', 'paypal-membership.js',
+  'member-dashboard.html', 'member-dashboard-app.js', 'billing-dashboard.html', 'billing-dashboard.js',
+  'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
+  'deploy-health.html', 'deploy-health.json', 'deploy-manifest.json', 'src/worker.js',
+  'src/worker-forum-persistence.js', 'src/worker-member-experience.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',
   'wrangler.toml', 'wrangler.jsonc', '_headers', 'migrations/0004_forum_persistence.sql',
+  'migrations/phase5_member_experience.sql', 'migrations/phase6_paypal_subscriptions.sql',
   'scripts/build-production-health.js', 'scripts/final-production-reconcile.js'
 ]) needFile(value);
 for (const value of [
   'index.html', 'index', 'search.html', 'search', 'search.js', 'search-index.json',
   'books.html', 'books', 'live-intel.html', 'live-intel', 'forum.html', 'forum',
-  'membership.html', 'membership', 'deploy-health.html', 'deploy-health',
-  'deploy-health.json', 'deploy-manifest.json'
+  'membership.html', 'membership', 'paypal-membership.js',
+  'member-dashboard.html', 'member-dashboard-app.js',
+  'billing-dashboard.html', 'billing-dashboard.js',
+  'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
+  'deploy-health.html', 'deploy-health', 'deploy-health.json', 'deploy-manifest.json'
 ]) needSite(value);
 if (siteExists('_redirects')) hard.push('_site/_redirects must not exist for Worker assets deployment');
 
 for (const marker of [
   "import forumWorker from './worker-forum-persistence.js'",
+  "import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'",
   'members-db-binding-unavailable',
   'non-authoritative-forum-response-blocked',
-  "origin !== 'cloudflare-worker-forum-d1'"
+  'non-authoritative-paypal-response-blocked',
+  "origin !== 'cloudflare-worker-forum-d1'",
+  "origin !== 'cloudflare-worker-paypal-subscriptions'"
 ]) needText('src/worker-production.js', marker, `strict Worker marker ${marker}`);
 for (const marker of [
   'Cloudflare D1 MEMBERS_DB.forum_posts',
@@ -95,17 +99,29 @@ for (const marker of [
   'kv_forum_migration_v1',
   'D1 authoritative; KV compatibility mirror'
 ]) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
+for (const marker of [
+  'cloudflare-worker-paypal-subscriptions',
+  '/api/paypal/checkout-intent',
+  '/api/paypal/subscription/confirm',
+  '/api/paypal/webhook',
+  'PAYPAL_SANDBOX_ENABLED',
+  'PAYPAL_PRODUCTION_ENABLED',
+  'paypal_runtime_settings'
+]) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
 needText('src/worker.js', 'env.ASSETS.fetch', 'legacy asset fetch behind strict boundary');
 
-for (const file of ['membership.html']) {
-  for (const marker of ['<!-- membership-tiers:start -->', '€3', '€6', '€9', 'Coming soon — no payment taken', 'No payment is being taken yet.']) needText(file, marker, `deferred membership marker ${marker}`);
-  forbidText(file, 'actions.subscription.create', 'active PayPal subscription creation');
-  forbidText(file, '/api/paypal/checkout-intent', 'active PayPal checkout intent');
-  forbidText(file, '/api/paypal/subscription/confirm', 'active PayPal subscription confirmation');
+for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) {
+  needText('membership.html', marker, `server-gated membership marker ${marker}`);
+  needSiteText('membership.html', marker, `built server-gated membership marker ${marker}`);
 }
-for (const marker of ['€3', '€6', '€9', 'Coming soon — no payment taken']) needSiteText('membership.html', marker, `built deferred membership marker ${marker}`);
-forbidSiteText('membership.html', 'actions.subscription.create', 'built active PayPal subscription creation');
-forbidSiteText('membership.html', '/api/paypal/checkout-intent', 'built active PayPal checkout intent');
+forbidText('membership.html', 'Coming soon — no payment taken', 'obsolete deferred membership page');
+forbidSiteText('membership.html', 'Coming soon — no payment taken', 'built obsolete deferred membership page');
+for (const marker of ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
+  needText('paypal-membership.js', marker, `PayPal membership runtime ${marker}`);
+  needSiteText('paypal-membership.js', marker, `built PayPal membership runtime ${marker}`);
+}
+needText('billing-dashboard.html', 'billing-dashboard.js', 'billing dashboard runtime');
+needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'payment admin runtime');
 
 for (const marker of [
   'main = "src/worker-production.js"',
@@ -125,8 +141,9 @@ for (const [label, item] of [['source', health], ['built', builtHealth]]) {
   if (!item) continue;
   if (!item.ok) hard.push(`${label} deploy-health.json should be ready`);
   if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} deploy health must identify strict Worker`);
-  if (item.paymentStatus !== 'deferred') hard.push(`${label} deploy health must keep payments deferred`);
-  if (!String(item.paymentMessage || '').includes('no payment is taken')) hard.push(`${label} deploy health must state no payment is taken`);
+  if (item.paymentStatus !== 'sandbox-ready-disabled') hard.push(`${label} deploy health must identify sandbox-ready disabled payments`);
+  if (item.checkoutDefault !== 'disabled') hard.push(`${label} deploy health must keep checkout disabled by default`);
+  if (!String(item.paymentMessage || '').includes('checkout remains disabled')) hard.push(`${label} deploy health must describe server-side activation gates`);
   if (deploySha && item.buildSha !== deploySha) hard.push(`${label} deploy health SHA ${item.buildSha} does not match ${deploySha}`);
 }
 if (manifest && deploySha && manifest.commitSha !== deploySha) hard.push(`deploy manifest SHA ${manifest.commitSha} does not match ${deploySha}`);
@@ -146,8 +163,8 @@ const report = {
   softIssues: soft,
   steps,
   forumStorage: 'Cloudflare D1 is authoritative behind the strict production Worker; KV is migration and compatibility only.',
-  paymentStatus: 'Deferred; checkout UI is disabled and no payment is taken.',
-  boundary: 'This pressure gate blocks stale Worker entrypoints, false-success forum fallbacks, health/manifest drift, active payment UI and legacy generator regression.'
+  paymentStatus: 'PayPal code is deployed behind server-side sandbox/live gates; checkout is disabled by default.',
+  boundary: 'This pressure gate blocks stale Worker entrypoints, false-success forum fallbacks, health/manifest drift, unguarded payment activation and legacy generator regression.'
 };
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-wrapper.json'), JSON.stringify(report, null, 2));
 fs.writeFileSync(fp('downloads/cloudflare-focused-pressure-report.json'), JSON.stringify(report, null, 2));
@@ -158,4 +175,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE FOCUSED PRESSURE PASSED');
-console.log('Strict D1 forum production is reconciled, commit-bound and payment-deferred.');
+console.log('Strict D1 forum and server-gated PayPal production are reconciled and commit-bound.');

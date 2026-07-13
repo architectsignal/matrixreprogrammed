@@ -1,6 +1,7 @@
 import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
+import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -39,12 +40,16 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
     ? 'Cloudflare D1 MEMBERS_DB email lifecycle tables'
     : subsystem === 'member'
       ? 'Cloudflare D1 MEMBERS_DB member, session and entitlement tables'
-      : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+      : subsystem === 'paypal'
+        ? 'Cloudflare D1 MEMBERS_DB PayPal billing ledger'
+        : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
       ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
-      : 'Forum storage is unavailable. No legacy success response was accepted.';
+      : subsystem === 'paypal'
+        ? 'PayPal billing storage is unavailable. No legacy or unverified payment response was accepted.'
+        : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -105,6 +110,14 @@ async function validateMemberResponse(response) {
   return response;
 }
 
+async function validatePayPalResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-paypal-subscriptions') {
+    return unavailable('non-authoritative-paypal-response-blocked', `Origin was ${origin || 'missing'}`, 'paypal');
+  }
+  return response;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
@@ -114,6 +127,14 @@ export default {
         return validateEmailResponse(await emailWorker.fetch(request, env, ctx));
       } catch (error) {
         return unavailable('email-worker-exception', error?.message || error, 'email');
+      }
+    }
+    if (isPayPalRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'paypal');
+      try {
+        return validatePayPalResponse(await paypalWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('paypal-worker-exception', error?.message || error, 'paypal');
       }
     }
     if (isMemberExperienceRoute(path)) {

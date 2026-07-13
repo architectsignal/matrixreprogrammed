@@ -1,10 +1,10 @@
-name: Deploy Production (Manual Fallback)
+name: Deploy Production (Manual Controlled Fallback)
 
 on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type DEPLOY to run the manual fallback release'
+        description: 'Type DEPLOY to run the manual Cloudflare fallback release'
         required: true
         default: 'NO'
 
@@ -21,9 +21,9 @@ env:
 
 jobs:
   deploy:
-    name: Manual strict-D1 Cloudflare fallback deploy
+    name: Manual D1 migration and strict Cloudflare fallback
     runs-on: ubuntu-latest
-    timeout-minutes: 110
+    timeout-minutes: 120
     if: ${{ github.event.inputs.confirm == 'DEPLOY' }}
 
     steps:
@@ -45,48 +45,26 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
-      - name: Refresh public intelligence before release
-        env:
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
-          INVESTIGATION_MODE: daily
-          INVESTIGATION_CONCURRENCY: '4'
-          INVESTIGATION_TIMEOUT_MS: '25000'
-        run: |
-          node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
-          node scripts/update-live-intel.js
-          node scripts/record-live-intel-check.js
-          node scripts/update-seven-day-intel.js
-          node scripts/build-outcome-briefings.js
-          node scripts/build-daily-brain-brief.js
-          node scripts/build-investigation-pages.js
-          node scripts/build-mission-intelligence-10.js
-          node scripts/build-live-intel-machine.js
-          node scripts/patch-conclusion-integrity-cards.js
-
       - name: Build complete site
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: Verify strict Worker and D1 forum wiring
+      - name: Verify and reconcile release
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: |
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
-          npx wrangler@latest deploy --dry-run
-
-      - name: Reconcile after every legacy generator
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/final-production-reconcile.js
-
-      - name: Run final production gates
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: |
+          node --check src/worker-email-lifecycle.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-production.js
+          node scripts/final-production-reconcile.js
           node scripts/production-freshness-guard.js
           node scripts/production-sync-test.js
           node scripts/production-deploy-guard.js
+          npx --yes wrangler@latest deploy --dry-run
 
       - name: Verify Cloudflare credentials
         env:
@@ -95,28 +73,58 @@ jobs:
         run: |
           test -n "$CLOUDFLARE_API_TOKEN" || (echo 'CLOUDFLARE_API_TOKEN is missing' && exit 1)
           test -n "$CLOUDFLARE_ACCOUNT_ID" || (echo 'CLOUDFLARE_ACCOUNT_ID is missing' && exit 1)
+          npx --yes wrangler@latest whoami
+          npx --yes wrangler@latest d1 info matrix-members
 
-      - name: Apply idempotent forum D1 schema
+      - name: Export private D1 rollback snapshot
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
-          set -o pipefail
-          mkdir -p downloads
-          npx --yes wrangler@latest d1 execute matrix-members --remote --file=./migrations/0004_forum_persistence.sql 2>&1 | tee downloads/forum-d1-migration.log
+          set -euo pipefail
+          mkdir -p downloads/private-migration
+          backup="downloads/private-migration/matrix-members-before-${DEPLOY_COMMIT_SHA}.sql"
+          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup"
+          test -s "$backup"
+          echo "sha256=$(sha256sum "$backup" | awk '{print $1}')" > downloads/d1-backup-proof.txt
 
-      - name: Deploy strict Worker and exact reconciled assets
+      - name: Apply idempotent D1 migration chain
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
-          set -o pipefail
-          mkdir -p downloads
-          npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
+          set -euo pipefail
+          migrations=(
+            migrations/0001_membership_foundation.sql
+            migrations/0004_forum_persistence.sql
+            migrations/phase4_email_lifecycle.sql
+            migrations/phase4_email_lifecycle_portability.sql
+            migrations/phase5_member_experience.sql
+            migrations/phase5_member_experience_timestamp_fix.sql
+            migrations/phase6_paypal_subscriptions.sql
+            migrations/phase6_paypal_failure_counter_fix.sql
+          )
+          : > downloads/d1-migration.log
+          for migration in "${migrations[@]}"; do
+            npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
+          done
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
+          node - <<'NODE'
+          const payload=JSON.parse(require('fs').readFileSync('downloads/paypal-runtime-settings.json','utf8'));
+          const rows=payload.flatMap(item=>item.results||item.result?.results||[]);
+          if(rows.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during fallback deployment');
+          NODE
+          rm -rf downloads/private-migration
 
-      - name: Verify live commit, routes, D1 persistence and deferred payments
+      - name: Deploy strict Worker and exact assets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@latest deploy
+
+      - name: Verify live production
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
@@ -125,7 +133,7 @@ jobs:
           LIVE_VERIFY_DELAY_MS: '10000'
         run: node scripts/verify-live-production.js
 
-      - name: Upload manual fallback proof
+      - name: Upload fallback proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -133,13 +141,12 @@ jobs:
           path: |
             downloads/deploy-manifest.json
             downloads/deploy-health.json
-            downloads/production-freshness-guard.json
             downloads/production-sync-test.json
             downloads/production-deploy-guard-report.json
-            downloads/forum-persistence-d1-test.json
             downloads/final-production-reconcile.json
             downloads/live-production-verification.json
-            downloads/forum-d1-migration.log
-            downloads/wrangler-deploy.log
+            downloads/d1-backup-proof.txt
+            downloads/d1-migration.log
+            downloads/paypal-runtime-settings.json
           if-no-files-found: ignore
           retention-days: 60

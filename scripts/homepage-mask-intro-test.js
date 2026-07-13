@@ -65,18 +65,27 @@ for (const rel of ['homepage-mask-intro.js', 'scripts/patch-homepage-mask-intro.
   if (result.status !== 0) fail(`${rel} syntax check failed: ${String(result.stderr || result.stdout).trim()}`);
 }
 
+/* The intro release test also protects the current cumulative membership surface. */
 const membership = read('membership.html');
-for (const price of ['€3', '€6', '€9']) if (!membership.includes(price)) fail(`membership page missing ${price}`);
-for (const legacy of ['€19/month', '€49/month']) if (membership.includes(legacy)) fail(`membership page still contains ${legacy}`);
-if (!membership.includes('Everything in Supporter')) fail('Intelligence Member is not explicitly cumulative');
-if (!membership.includes('Everything in Intelligence Member and Supporter')) fail('Research Pro is not explicitly cumulative');
-if (count(membership, 'Coming soon — no payment taken') !== 3) fail('all three membership buttons must remain disabled and truthful');
+for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status']) {
+  if (!membership.includes(marker)) fail(`membership page missing ${marker}`);
+}
+for (const legacy of ['€19/month', '€49/month', 'Coming soon — no payment taken']) {
+  if (membership.includes(legacy)) fail(`membership page still contains obsolete marker: ${legacy}`);
+}
+if (!membership.includes('Everything in Supporter and Free Member')) fail('Intelligence Member is not explicitly cumulative');
+if (!membership.includes('Everything in Intelligence Member, Supporter and Free Member')) fail('Research Pro is not explicitly cumulative');
+if (!membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')) fail('membership page does not explain the server-side activation boundary');
+for (const slot of ['paypal-button-supporter', 'paypal-button-intelligence', 'paypal-button-research_pro']) {
+  if (!membership.includes(slot)) fail(`membership page missing ${slot}`);
+}
 
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   sequence: { eyeMs: 3000, burnMs: 1100, maskMs: 3000, dissolveMs: 1200 },
   assets: { eye, mask, transparentBackground: true },
+  membership: { freeTier: true, paidPrices: [3, 6, 9], checkoutDefault: 'server-gated-disabled' },
   failures
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -85,4 +94,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`INTRO RELEASE FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Eye → burn → mask intro test passed (${eye.paths + mask.paths} vector paths).`);
+console.log(`Eye → burn → mask intro test passed (${eye.paths + mask.paths} vector paths); current membership surface also verified.`);

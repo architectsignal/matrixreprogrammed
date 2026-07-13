@@ -75,6 +75,7 @@ run('scripts/build-daily-brain-brief.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/repair-public-site-errors.js', true);
 run('scripts/build-evidence-badge-system.js');
+run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/build-premier-resource-upgrade.js');
 run('scripts/enforce-production-cache-policy.js');
 run('scripts/build-deploy-manifest.js');
@@ -125,6 +126,8 @@ requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');
 requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');
+requireMarker('daily-drop.html', 'id="evidence-badge-system-route"');
+requireMarker('network-search.html', 'id="evidence-badge-system-route"');
 requireMarker('_headers', '/deploy-manifest.json');
 requireMarker('_headers', '/deploy-health.json');
 requireMarker('_headers', 'Cache-Control: no-store');

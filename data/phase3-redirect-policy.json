@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "plan-only",
+  "purpose": "Plan collision-free canonical routes and redirects for every Phase 3 item while preserving existing URLs, inbound links, navigation, search references, historical versions and rollback routes.",
+  "exitCondition": "Every important current route has a reviewed keep, redirect, asset-migration, internalisation or restricted-review decision; no destination collision, redirect loop or orphaned inbound reference remains.",
+  "decisionTypes": [
+    "keep_current_canonical",
+    "plan_permanent_redirect",
+    "plan_asset_route_migration",
+    "plan_internalisation_after_public_replacement",
+    "plan_restricted_review",
+    "plan_product_route_review",
+    "plan_manual_route_review"
+  ],
+  "rules": {
+    "doNotActivateRedirects": true,
+    "preserveCurrentRouteUntilVerification": true,
+    "resolveDestinationCollisionsWithCanonicalIdSuffix": true,
+    "sameCurrentAndDestinationMeansKeep": true,
+    "htmlCanonicalMovesUsePermanentRedirectAfterApproval": true,
+    "documentAndDownloadMovesRequireAssetMigrationReview": true,
+    "internalPublicRoutesRequirePublicReplacementBeforeInternalisation": true,
+    "restrictedRoutesRequireHumanReview": true,
+    "separateProductsRemainPublicCommercialRoutes": true,
+    "historicalCorrectionWithdrawalAndSupersessionRoutesRemainReachable": true,
+    "redirectChainsForbidden": true,
+    "redirectLoopsForbidden": true,
+    "destinationCollisionsForbidden": true,
+    "unresolvedCurrentRouteForbiddenAtExit": true
+  },
+  "referenceSources": {
+    "htmlLinks": true,
+    "htmlNavigationLinks": true,
+    "searchAndIndexJson": true,
+    "sitemapAndManifestFiles": true,
+    "canonicalAndAlternateLinks": true
+  },
+  "routeNormalization": {
+    "rootIndex": "/",
+    "stripQueryAndFragment": true,
+    "decodeUriComponents": true,
+    "normaliseBackslashes": true,
+    "normaliseDuplicateSlashes": true,
+    "preserveExternalUrlsAsExternal": true
+  },
+  "collisionStrategy": {
+    "suffixSeparator": "--",
+    "suffixLength": 8,
+    "suffixSource": "canonicalIdHash",
+    "keepFirstUnsuffixed": false,
+    "allCollidingRoutesReceiveSuffix": true
+  },
+  "rollbackRequirements": [
+    "current_route",
+    "destination_route",
+    "source_path",
+    "content_hash",
+    "inbound_reference_list",
+    "navigation_reference_list",
+    "search_reference_list",
+    "activation_commit",
+    "rollback_commit"
+  ],
+  "protectedBoundaries": {
+    "redirectActivation": false,
+    "routeMovement": false,
+    "fileMovement": false,
+    "searchMutation": false,
+    "navigationMutation": false,
+    "contentDeletion": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "paymentActivation": false
+  }
+}

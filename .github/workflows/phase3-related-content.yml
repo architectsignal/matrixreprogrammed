@@ -1,0 +1,158 @@
+name: Phase 3 Related Content Links
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-canonical-taxonomy.json'
+      - 'data/phase3-public-private-policy.json'
+      - 'data/phase3-tier-matrix-policy.json'
+      - 'data/phase3-redirect-policy.json'
+      - 'data/phase3-search-repair-policy.json'
+      - 'data/phase3-entity-topic-tagging-policy.json'
+      - 'data/phase3-related-content-policy.json'
+      - 'scripts/build-phase3-search-repair.js'
+      - 'scripts/build-phase3-entity-topic-tags.js'
+      - 'scripts/build-phase3-related-content-links.js'
+      - '.github/workflows/phase3-related-content.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-related-content-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  related-content:
+    name: Build access-safe related-content plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-related-content-policy.json','utf8'))"
+          node --check scripts/build-phase3-related-content-links.js
+          node --check scripts/build-phase3-entity-topic-tags.js
+          node --check scripts/build-phase3-search-repair.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['data/phase3-canonical-taxonomy.json','data/phase3-public-private-policy.json','data/phase3-tier-matrix-policy.json','data/phase3-search-repair-policy.json','data/phase3-entity-topic-tagging-policy.json','data/phase3-related-content-policy.json','membership.html','wrangler.toml','src/worker-production.js','src/worker-forum-persistence.js','scripts/final-production-reconcile.js'];
+          const hashes=Object.fromEntries(files.map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-related-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated outputs
+        run: |
+          rm -rf downloads/phase3-related-content downloads/phase3-entity-topic-tags downloads/phase3-search-repair downloads/phase3-redirect-map downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build related-content plan
+        run: node scripts/build-phase3-related-content-links.js
+
+      - name: Validate relevance, access safety and discoverability
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase3-related-content-policy.json','utf8'));
+          const tags=JSON.parse(fs.readFileSync('downloads/phase3-entity-topic-tags/item-tags.json','utf8'));
+          const publicSearch=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/public-search-index.json','utf8'));
+          const authSearch=JSON.parse(fs.readFileSync('downloads/phase3-search-repair/authenticated-search-index.json','utf8'));
+          const tier=JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/tier-matrix.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase3-related-content/related-content-plan.json','utf8'));
+          const publicLinks=JSON.parse(fs.readFileSync('downloads/phase3-related-content/public-related-links.json','utf8'));
+          const authLinks=JSON.parse(fs.readFileSync('downloads/phase3-related-content/authenticated-related-links.json','utf8'));
+          const discoverability=JSON.parse(fs.readFileSync('downloads/phase3-related-content/discoverability-report.json','utf8'));
+          const orphan=JSON.parse(fs.readFileSync('downloads/phase3-related-content/orphan-review-queue.json','utf8'));
+          if(!report.ok||!publicLinks.ok||!authLinks.ok||!discoverability.ok||!orphan.ok)throw new Error('Related-content package is not healthy');
+          if(report.mode!=='plan-only'||policy.mode!=='plan-only')throw new Error('Plan-only boundary changed');
+          if(report.summary.totalItems!==tags.rows.length||discoverability.recordCount!==tags.rows.length)throw new Error('Related-content coverage incomplete');
+          if(publicLinks.recordCount!==publicSearch.recordCount)throw new Error('Public related source coverage mismatch');
+          if(authLinks.recordCount!==authSearch.recordCount)throw new Error('Authenticated related source coverage mismatch');
+          const publicIds=new Set(publicSearch.records.map(row=>row.canonicalId));
+          const tierById=new Map(tier.rows.map(row=>[row.canonicalId,row]));
+          for(const record of publicLinks.records){
+            if(record.linkCount!==record.links.length||record.links.length>policy.limits.publicLinksPerItem)throw new Error(`${record.canonicalId}: public link count invalid`);
+            if(new Set(record.links.map(link=>link.canonicalId)).size!==record.links.length)throw new Error(`${record.canonicalId}: duplicate public related target`);
+            for(const link of record.links){
+              if(!publicIds.has(link.canonicalId))throw new Error(`${record.canonicalId}: private target leaked publicly`);
+              if(link.protectedBodyIncluded||link.entitlementBypass||link.navigationActivated)throw new Error(`${record.canonicalId}: protected public link action activated`);
+              if(!link.associationBoundary.includes('does not establish'))throw new Error(`${record.canonicalId}: relationship boundary weakened`);
+              if(!link.reasons.length||link.score<policy.limits.minimumScore)throw new Error(`${record.canonicalId}: irrelevant public link`);
+            }
+          }
+          for(const record of authLinks.records){
+            const sourceTier=tierById.get(record.canonicalId);if(!sourceTier)throw new Error(`${record.canonicalId}: source tier missing`);
+            for(const memberTier of policy.authenticatedTiers){
+              const view=record.byTier[memberTier];if(!view)throw new Error(`${record.canonicalId}: ${memberTier} view missing`);
+              if(view.links.length>policy.limits.authenticatedLinksPerTierPerItem)throw new Error(`${record.canonicalId}: too many ${memberTier} links`);
+              if(new Set(view.links.map(link=>link.canonicalId)).size!==view.links.length)throw new Error(`${record.canonicalId}: duplicate ${memberTier} target`);
+              for(const link of view.links){const target=tierById.get(link.canonicalId);if(!target||target.views[memberTier]?.state!=='full')throw new Error(`${record.canonicalId}: ${memberTier} link bypasses entitlement`);if(link.entitlementBypass||link.navigationActivated)throw new Error(`${record.canonicalId}: protected authenticated action activated`);}
+            }
+          }
+          if(discoverability.inaccessibleNonRestricted.length||report.summary.inaccessibleNonRestrictedItems)throw new Error('Important non-restricted items remain inaccessible');
+          if(report.summary.publicLeakage||report.summary.duplicatePublicTargets)throw new Error('Related-content public safety failed');
+          if(orphan.recordCount!==report.summary.orphanReviewItems)throw new Error('Orphan review queue mismatch');
+          if(Object.values({navigationMutation:report.navigationMutation,contentMutation:report.contentMutation,routeMovement:report.routeMovement,searchMutation:report.searchMutation,relationshipAssertion:report.relationshipAssertion,lockedSectionEnforcement:report.lockedSectionEnforcement,authenticationActivation:report.authenticationActivation,entitlementActivation:report.entitlementActivation,paymentActivation:report.paymentActivation}).some(Boolean))throw new Error('Protected action activated');
+          console.log(`PHASE 3 RELATED PASS: ${report.summary.publicLinks} public links; ${report.summary.authenticatedLinks} member links; ${orphan.recordCount} review items.`);
+          NODE
+
+      - name: Snapshot deterministic output hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-related-content';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-related-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic related links
+        run: |
+          rm -rf downloads/phase3-related-content downloads/phase3-entity-topic-tags downloads/phase3-search-repair downloads/phase3-redirect-map downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-related-content-links.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase3-related-content';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-related-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Related output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} related-content files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase3-related-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Related-content planning must not modify live navigation, content, search, routes, membership, Workers or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-related-content/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload related-content reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-related-content-${{ github.run_id }}
+          path: downloads/phase3-related-content/
+          if-no-files-found: error
+          retention-days: 30

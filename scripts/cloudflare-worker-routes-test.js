@@ -18,8 +18,8 @@ const forbidIncludes = (file, text, label = text) => {
 };
 
 /*
- * Several legacy builders still generate the former PayPal sales page during the long normal build.
- * Rebuild the canonical payment-deferred page before validating or copying deployable output.
+ * Legacy generators still create former membership pages during the long build.
+ * Restore the protected Phase 6 page before validating or copying deployable output.
  */
 const membershipPatch = spawnSync(process.execPath, [path.join(root, 'scripts', 'patch-membership-tiers.js')], {
   cwd: root,
@@ -33,19 +33,31 @@ if (exists('membership.html') && exists('_site')) {
   fs.copyFileSync(path.join(root, 'membership.html'), path.join(root, '_site', 'membership.html'));
   const extensionless = path.join(root, '_site', 'membership');
   if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(path.join(root, 'membership.html'), extensionless);
+  if (exists('paypal-membership.js')) fs.copyFileSync(path.join(root, 'paypal-membership.js'), path.join(root, '_site', 'paypal-membership.js'));
 }
 
 [
   'src/worker.js',
   'src/worker-forum-persistence.js',
+  'src/worker-member-experience.js',
+  'src/worker-paypal-subscriptions.js',
   'src/worker-production.js',
   'wrangler.toml',
   'wrangler.jsonc',
   '_headers',
   'membership.html',
+  'paypal-membership.js',
+  'billing-dashboard.html',
+  'billing-dashboard.js',
+  'admin-payment-dashboard.html',
+  'admin-payment-dashboard.js',
+  'templates/phase6-membership.html',
   'data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql',
   'migrations/0004_forum_persistence.sql',
+  'migrations/phase5_member_experience.sql',
+  'migrations/phase6_paypal_subscriptions.sql',
+  'migrations/phase6_paypal_failure_counter_fix.sql',
   'scripts/build-cloudflare-output.js',
   'scripts/build-production-health.js',
   'scripts/final-production-reconcile.js',
@@ -58,6 +70,7 @@ if (exists('membership.html') && exists('_site')) {
   '_site/search',
   '_site/membership.html',
   '_site/membership',
+  '_site/paypal-membership.js',
   '_site/forum.html',
   '_site/forum'
 ].forEach(requireFile);
@@ -66,12 +79,16 @@ if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with
 
 for (const marker of [
   "import forumWorker from './worker-forum-persistence.js'",
+  "import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'",
   'members-db-binding-unavailable',
   'non-authoritative-forum-response-blocked',
+  'non-authoritative-paypal-response-blocked',
   "origin !== 'cloudflare-worker-forum-d1'",
+  "origin !== 'cloudflare-worker-paypal-subscriptions'",
   "health?.d1Connected === true",
   "health?.backend === 'src/worker-forum-persistence.js'",
   'status: 503',
+  'isPayPalRoute(path)',
   'return forumWorker.fetch(request, env, ctx)'
 ]) requireIncludes('src/worker-production.js', marker, `strict production marker ${marker}`);
 
@@ -99,6 +116,21 @@ for (const marker of [
 ]) requireIncludes('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 
 for (const marker of [
+  'cloudflare-worker-paypal-subscriptions',
+  '/api/paypal/config',
+  '/api/paypal/checkout-intent',
+  '/api/paypal/subscription/confirm',
+  '/api/paypal/subscription/cancel',
+  '/api/paypal/webhook',
+  '/api/paypal/admin/activation',
+  '/v1/notifications/verify-webhook-signature',
+  'PAYPAL_SANDBOX_ENABLED',
+  'PAYPAL_PRODUCTION_ENABLED',
+  'PAYPAL_LIVE_ACTIVATION_CONFIRMATION',
+  'paypal_runtime_settings'
+]) requireIncludes('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
+
+for (const marker of [
   'const routeAliases = {',
   'routeAliases[originalPath]',
   'routeAliases[normalizedPath]',
@@ -116,27 +148,37 @@ forbidIncludes('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages ori
 forbidIncludes('src/worker.js', 'clientSecret:', 'payment secret in response payload');
 
 for (const marker of [
-  '<!-- membership-tiers:start -->',
+  'Free Member',
+  '€0',
   '€3',
   '€6',
   '€9',
-  'No payment is being taken yet.',
-  'Coming soon — no payment taken',
-  'disabled aria-disabled="true"'
+  'paypal-membership.js',
+  'paypal-membership-status',
+  'paypal-button-supporter',
+  'paypal-button-intelligence',
+  'paypal-button-research_pro',
+  'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
 ]) {
-  requireIncludes('membership.html', marker, `deferred membership marker ${marker}`);
-  requireIncludes('_site/membership.html', marker, `built deferred membership marker ${marker}`);
+  requireIncludes('membership.html', marker, `server-gated membership marker ${marker}`);
+  requireIncludes('_site/membership.html', marker, `built server-gated membership marker ${marker}`);
 }
-for (const file of ['membership.html', '_site/membership.html']) {
-  forbidIncludes(file, 'actions.subscription.create', 'active PayPal subscription creation');
-  forbidIncludes(file, '/api/paypal/checkout-intent', 'active PayPal checkout-intent call');
-  forbidIncludes(file, '/api/paypal/subscription/confirm', 'active PayPal confirmation call');
+for (const file of ['membership.html', '_site/membership.html', 'templates/phase6-membership.html']) {
+  forbidIncludes(file, 'Coming soon — no payment taken', 'obsolete deferred membership page');
   forbidIncludes(file, '€19/month', 'legacy €19 tier');
   forbidIncludes(file, '€49/month', 'legacy €49 tier');
 }
-requireIncludes('migrations/0001_membership_foundation.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_intents', 'dormant future payment schema');
-requireIncludes('src/worker.js', '/api/paypal/webhook', 'dormant payment webhook backend');
-requireIncludes('src/worker.js', '/v1/notifications/verify-webhook-signature', 'dormant webhook verification backend');
+for (const marker of ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
+  requireIncludes('paypal-membership.js', marker, `PayPal membership runtime ${marker}`);
+  requireIncludes('_site/paypal-membership.js', marker, `built PayPal membership runtime ${marker}`);
+}
+requireIncludes('billing-dashboard.html', 'billing-dashboard.js', 'member billing dashboard runtime');
+requireIncludes('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'administrator payment dashboard runtime');
+
+for (const marker of ['paypal_runtime_settings', 'paypal_products', 'paypal_plans', 'paypal_subscription_transitions', 'paypal_payment_records']) {
+  requireIncludes('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
+}
+requireIncludes('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot', 'PayPal failure counter correction');
 
 for (const marker of [
   'main = "src/worker-production.js"',
@@ -168,9 +210,10 @@ for (const marker of [
 requireIncludes('_headers', 'Strict-Transport-Security', 'HSTS header');
 requireIncludes('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
 requireIncludes('scripts/final-production-reconcile.js', 'build-production-health.js', 'final commit-bound health generation');
-requireIncludes('scripts/final-production-reconcile.js', 'Coming soon — no payment taken', 'final deferred-payment guard');
+requireIncludes('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
+requireIncludes('scripts/final-production-reconcile.js', 'SANDBOX READY / CHECKOUT DISABLED', 'final server-gated payment guard');
 requireIncludes('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
-requireIncludes('scripts/build-production-health.js', "paymentStatus: 'deferred'", 'deferred payment health status');
+requireIncludes('scripts/build-production-health.js', "paymentStatus: 'sandbox-ready-disabled'", 'sandbox-ready disabled payment health status');
 requireIncludes('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
 forbidIncludes('scripts/repair-generated-site-artifacts.js', "workerScript: 'src/worker.js'", 'legacy health Worker identity');
 
@@ -185,8 +228,8 @@ const report = {
   },
   workerEntrypoint: 'src/worker-production.js',
   forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
-  paymentStatus: 'deferred',
-  boundary: 'No public checkout or subscription creation UI is permitted until payment activation is deliberately released.'
+  paymentStatus: 'sandbox-ready-disabled',
+  boundary: 'PayPal routes and browser UI may be deployed, but checkout remains fail-closed until environment, credentials, verified plans and the D1 activation switch agree.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
@@ -199,4 +242,4 @@ if (problems.length) {
 }
 
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked strict production routing, D1-authoritative forums, KV recovery, application assets, canonical disabled payment UI, active bindings and single-owner commit-bound health.');
+console.log('Checked strict production routing, D1-authoritative forums, protected Phase 6 membership restoration, PayPal fail-closed gates, active bindings and single-owner commit-bound health.');

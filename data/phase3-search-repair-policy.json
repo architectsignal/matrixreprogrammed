@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "plan-only",
+  "purpose": "Build canonical public and authenticated search documents, map obsolete routes to canonical destinations, and prevent private, internal, restricted or duplicate content from leaking into public search.",
+  "exitCondition": "Every important item has one explicit search state; every public item or preview is discoverable through one canonical document; private, internal and restricted items are represented safely; obsolete routes do not compete with canonical routes.",
+  "searchStates": [
+    "public_index",
+    "public_preview_index",
+    "commercial_index",
+    "authenticated_index",
+    "authenticated_noindex",
+    "internal_noindex",
+    "restricted_noindex",
+    "historical_index",
+    "historical_noindex"
+  ],
+  "publicDocumentFields": [
+    "canonicalId",
+    "canonicalRoute",
+    "title",
+    "summary",
+    "contentType",
+    "primaryCategory",
+    "primarySubcategory",
+    "accessClass",
+    "minimumTier",
+    "publicViewState",
+    "interpretiveBoundaryRule",
+    "publicSafetySections",
+    "currentReviewStatus"
+  ],
+  "privateFieldsForbiddenInPublicIndex": [
+    "protectedBody",
+    "memberOnlySections",
+    "privateDownloads",
+    "privateApiPayload",
+    "personalAccountData",
+    "internalOperationsData",
+    "restrictedSensitiveData"
+  ],
+  "rules": {
+    "onePublicDocumentPerCanonicalId": true,
+    "onePublicDocumentPerCanonicalRoute": true,
+    "publicCoreIsIndexed": true,
+    "publicPreviewIsIndexed": true,
+    "separateProductLandingIsIndexed": true,
+    "registeredPrivateIsNotPubliclyIndexed": true,
+    "paidPrivateUsesPublicPreviewDocumentOnly": true,
+    "internalIsNeverPubliclyIndexed": true,
+    "restrictedIsNeverPubliclyIndexed": true,
+    "authenticatedSearchUsesTierFilteredStructuralMetadata": true,
+    "oldRoutesBecomeAliasesNotCompetingDocuments": true,
+    "correctionWithdrawalAndSupersessionNoticesRemainSearchableWhenPublic": true,
+    "graphAndSpeculationLabelsRemainVisibleInSearchMetadata": true,
+    "searchDocumentsNeverChangeFactualStatus": true,
+    "canonicalRouteComesFromReviewedRedirectPlan": true
+  },
+  "repairActions": [
+    "keep_canonical_document",
+    "create_public_preview_document",
+    "create_commercial_document",
+    "create_authenticated_document",
+    "replace_old_route_with_alias",
+    "remove_obsolete_competing_document",
+    "mark_internal_noindex",
+    "mark_restricted_noindex",
+    "manual_search_review"
+  ],
+  "authenticatedTiers": ["registered", "supporter_3", "intelligence_6", "research_pro_9"],
+  "protectedBoundaries": {
+    "searchMutation": false,
+    "searchRemoval": false,
+    "routeMovement": false,
+    "redirectActivation": false,
+    "lockedSectionEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "paymentActivation": false,
+    "contentMutation": false
+  }
+}

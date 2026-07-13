@@ -3,6 +3,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 const { readJson, sha256, writeJson, writeText, normalized, getPath, countBy } = require('./conclusion-engine/core');
 const { generateRecordAnalysis } = require('./conclusion-engine/generate');
+const { enforceInterpretiveBoundaries } = require('./conclusion-engine/hardening');
 const { candidateFieldValue, qualityAnalysis, gateAnalysis } = require('./conclusion-engine/quality');
 
 const root = process.cwd();
@@ -43,7 +44,7 @@ const records = packageData.records;
 const generatedAt = latestSourceCheckpoint(records);
 const now = Date.parse(generatedAt);
 const sourceExactCounts = Object.fromEntries(qualityFieldPaths.map(fieldPath => [fieldPath, countBy(records.filter(record => normalized(getPath(record, fieldPath))), record => normalized(getPath(record, fieldPath)))]));
-const baseAnalyses = records.map(record => ({ record, generated: generateRecordAnalysis(record, policy) }));
+const baseAnalyses = records.map(record => ({ record, generated: enforceInterpretiveBoundaries(record, generateRecordAnalysis(record, policy), policy) }));
 const candidateExactCounts = Object.fromEntries(qualityFieldPaths.map(fieldPath => [fieldPath, countBy(baseAnalyses.filter(item => normalized(candidateFieldValue(item.generated, fieldPath))), item => normalized(candidateFieldValue(item.generated, fieldPath)))]));
 const analyses = baseAnalyses.map(({ record, generated }) => {
   const quality = qualityAnalysis(record, generated, sourceExactCounts, candidateExactCounts, policy);
@@ -64,14 +65,19 @@ const analyses = baseAnalyses.map(({ record, generated }) => {
 
 const reviewQueue = analyses.filter(item => item.publication.state !== 'publishable_preview').sort((a,b) => b.publication.failed.length - a.publication.failed.length || b.quality.candidate.flags.length - a.quality.candidate.flags.length || a.title.localeCompare(b.title));
 const genericReport = analyses.filter(item => item.quality.source.flags.length || item.quality.candidate.flags.length).map(item => ({ id: item.id, title: item.title, recordType: item.recordType, sourceFlags: item.quality.source.flags, candidateFlags: item.quality.candidate.flags, sourceRepeatCounts: item.quality.source.repeatCounts, candidateRepeatCounts: item.quality.candidate.repeatCounts, sourceFieldEqualities: item.quality.source.fieldEqualities, candidateFieldEqualities: item.quality.candidate.fieldEqualities, genericMatches: item.quality.source.genericMatches, candidateConclusion: item.generated.evidenceBasedConclusion.candidateText }));
-const convergenceReview = analyses.map(item => ({ id: item.id, title: item.title, recordType: item.recordType, claimClass: item.publication.claimClass, authority: item.publication.sourceAuthority, totalScore: item.generated.convergence.totalScore, activeVectors: item.generated.convergence.activeVectors, vectors: item.generated.convergence.vectors.filter(vector => vector.score > 0) })).filter(item => item.activeVectors || records.find(record => record.id === item.id)?.delivery?.includeInConvergenceTracker);
+const convergenceReview = analyses.map(item => ({ id: item.id, title: item.title, recordType: item.recordType, claimClass: item.publication.claimClass, authority: item.publication.sourceAuthority, presentationClass: item.publication.presentation.class, totalScore: item.generated.convergence.totalScore, activeVectors: item.generated.convergence.activeVectors, vectors: item.generated.convergence.vectors.filter(vector => vector.score > 0) })).filter(item => item.activeVectors || records.find(record => record.id === item.id)?.delivery?.includeInConvergenceTracker);
 const summary = {
   recordCount: analyses.length,
   byPublicationState: countBy(analyses, item => item.publication.state),
+  byPresentationClass: countBy(analyses, item => item.publication.presentation.class),
+  byRetentionStatus: countBy(analyses, item => item.publication.presentation.retainedAs),
   byClaimClass: countBy(analyses, item => item.publication.claimClass),
   bySourceAuthority: countBy(analyses, item => item.publication.sourceAuthority),
   byEvidenceGrade: countBy(analyses, item => item.publication.evidenceGrade),
   byRecordType: countBy(analyses, item => item.recordType),
+  retainedRecords: analyses.filter(item => item.publication.presentation.retained).length,
+  factualSurfaceEligibleRecords: analyses.filter(item => item.publication.presentation.factualSurfaceEligible).length,
+  speculativeOrResearchSurfaceEligibleRecords: analyses.filter(item => item.publication.presentation.speculativeOrResearchSurfaceEligible).length,
   sourceRecordsWithQualityFlags: analyses.filter(item => item.quality.source.flags.length).length,
   candidateRecordsWithQualityFlags: analyses.filter(item => item.quality.candidate.flags.length).length,
   recordsRequiringConfidenceDowngrade: analyses.filter(item => item.publication.confidenceDowngradeRequired).length,
@@ -84,8 +90,16 @@ const summary = {
   factSpeculationSeparationFailures: analyses.filter(item => !item.publication.gates.fact_speculation_separation).length,
   candidateGenericOrRepetitionFailures: analyses.filter(item => !item.publication.gates.repetition_and_generic_language).length
 };
+const relationshipRecords = analyses.filter(item => item.recordType === 'relationship_update');
+const interpretiveBoundaryHealthy = relationshipRecords.every(item =>
+  item.publication.presentation.class === 'research_hint' &&
+  item.publication.presentation.retained &&
+  !item.publication.presentation.factualSurfaceEligible &&
+  item.generated.speculativeConclusion.label === 'speculative' &&
+  item.generated.convergence.vectors.every(vector => vector.score === 0 && vector.coordinationStatus === 'not_shown')
+);
 const manifest = {
-  ok: analyses.length === records.length && analyses.every(item => item.generated.speculativeConclusion.label === 'speculative'),
+  ok: analyses.length === records.length && analyses.every(item => item.generated.speculativeConclusion.label === 'speculative' && item.publication.presentation.retained) && interpretiveBoundaryHealthy,
   mode: 'report-only',
   version: policy.version,
   generatedAt,
@@ -96,7 +110,7 @@ const manifest = {
   paymentActivation: false,
   summary,
   outputHashes: {},
-  boundary: 'This engine generates candidate conclusions and quality decisions for review only. It does not change canonical records, publish pages, send email, grant access or take payment.'
+  boundary: 'This engine generates candidate conclusions and quality decisions for review only. Graph associations, scenarios and speculation are retained with explicit labels; they are not removed or presented as established fact. The engine does not change canonical records, publish pages, send email, grant access or take payment.'
 };
 
 fs.rmSync(outputDir, { recursive: true, force: true });
@@ -110,6 +124,9 @@ const lines = [
   '## Safety boundary', '', manifest.boundary, '',
   '## Coverage', '',
   `- Canonical records: ${summary.recordCount}`,
+  `- Retained records: ${summary.retainedRecords}`,
+  `- Factual-surface eligible records: ${summary.factualSurfaceEligibleRecords}`,
+  `- Speculative/research-surface eligible records: ${summary.speculativeOrResearchSurfaceEligibleRecords}`,
   `- Source records with quality flags: ${summary.sourceRecordsWithQualityFlags}`,
   `- Candidate records with quality flags: ${summary.candidateRecordsWithQualityFlags}`,
   `- Fact/speculation separation failures: ${summary.factSpeculationSeparationFailures}`,
@@ -123,11 +140,13 @@ const lines = [
   `- Records with active convergence vectors: ${summary.convergenceActiveRecords}`, '',
   '## Publication states', '',
   ...Object.entries(summary.byPublicationState).map(([key,value]) => `- ${key}: ${value}`), '',
+  '## Presentation classes', '',
+  ...Object.entries(summary.byPresentationClass).map(([key,value]) => `- ${key}: ${value}`), '',
   '## Exit condition', '', policy.exitCondition
 ];
 writeText(outputDir, 'summary.md', lines.join('\n') + '\n');
 for (const file of ['engine-records.json','review-queue.json','generic-language-report.json','convergence-review.json','summary.md']) manifest.outputHashes[file] = sha256(fs.readFileSync(path.join(outputDir,file)));
 writeJson(outputDir, 'manifest.json', manifest);
-console.log(`PHASE 2 CONCLUSION ENGINE PREVIEW: ${analyses.length} records; ${reviewQueue.length} require review or evidence.`);
+console.log(`PHASE 2 CONCLUSION ENGINE PREVIEW: ${analyses.length} records retained; ${reviewQueue.length} require review or evidence.`);
 console.log(`Output: ${outputDir}`);
 if (!manifest.ok) process.exit(1);

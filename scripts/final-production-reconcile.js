@@ -68,6 +68,8 @@ run('scripts/patch-membership-tiers.js');
 run('scripts/patch-homepage-mask-intro.js');
 run('scripts/homepage-mask-intro-test.js');
 run('scripts/build-live-intel-machine.js');
+run('scripts/build-evidence-badge-system.js');
+run('scripts/build-premier-resource-upgrade.js');
 run('scripts/build-mission-intelligence-10.js');
 run('scripts/build-investigation-pages.js');
 run('scripts/build-outcome-briefings.js');

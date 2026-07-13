@@ -72,6 +72,10 @@ run('scripts/build-mission-intelligence-10.js');
 run('scripts/build-investigation-pages.js');
 run('scripts/build-outcome-briefings.js');
 run('scripts/build-daily-brain-brief.js');
+/* Rebuild reader-facing command resources after every feed and legacy page generator. */
+run('scripts/build-premier-resource-upgrade.js');
+/* Apply the claim-classifier routes after Daily Drop and Live Intel have their final content. */
+run('scripts/build-evidence-badge-system.js');
 run('scripts/patch-conclusion-integrity-cards.js');
 run('scripts/repair-public-site-errors.js', true);
 run('scripts/enforce-production-cache-policy.js');
@@ -85,12 +89,19 @@ const critical = [
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', 'search.html', '_headers', 'data/membership-tiers.json',
+  'evidence-archive.html', 'search.html', 'power-entities.html',
+  'daily-drop.html', 'network-search.html', 'claim-classifier.html',
+  'epstein-files.html', 'evidence-vault.html', 'download-center.html',
+  'news.html', 'books.html', 'black-file.html',
+  'search-index.json', 'sitemap.xml', 'llms.txt', '_headers', 'data/membership-tiers.json',
   'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/weekly-investigation-conclusions.json',
   'data/daily-brain-brief.json', 'data/outcome-briefings.json',
-  'data/production-freshness-policy.json', 'deploy-manifest.json',
-  'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
+  'data/production-freshness-policy.json',
+  'downloads/daily-drop.json', 'downloads/daily-drop.md',
+  'downloads/network-search.json', 'downloads/network-search.md',
+  'downloads/claim-classifier.json', 'downloads/claim-classifier.md',
+  'deploy-manifest.json', 'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
 ];
 critical.forEach(copy);
 
@@ -119,7 +130,16 @@ requireMarker('homepage-mask-intro.css', 'intro-fire-ring');
 requireMarker('homepage-mask-intro.css', 'intro-mask-dissolve');
 requireMarker('assets/intro-eye.svg', 'Eye of Providence seal');
 requireMarker('assets/intro-mask.svg', 'Anonymous revolutionary mask');
+requireMarker('power-entities.html', 'POWER ENTITIES.');
+requireMarker('daily-drop.html', 'WHAT CHANGED TODAY?');
+requireMarker('daily-drop.html', 'evidence-badge-system-route');
+requireMarker('network-search.html', 'PEOPLE. ENTITIES. RECORDS. BOUNDARIES.');
+requireMarker('claim-classifier.html', 'CLAIM CLASSIFIER.');
+requireMarker('live-intel.html', 'evidence-badge-system-route');
+requireMarker('index.html', 'daily-drop-command-route');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
+requireMarker('daily-power-conclusions.html', '<strong>Mechanism:</strong>');
+requireMarker('daily-power-conclusions.html', '<strong>What to watch next:</strong>');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');
 requireMarker('outcome-briefings.html', '<!-- conclusion-integrity:start -->');

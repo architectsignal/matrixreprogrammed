@@ -42,7 +42,7 @@ function enforceScenarioBoundary(record, generated, policy) {
   generated.evidenceBasedConclusion.confidence = 'very_low';
   generated.mechanism.status = 'analytical_model';
   generated.mission.outcome = 'insufficient_evidence';
-  generated.mission.candidateText = `The scenario is retained to test possible mission-relevant pathways, but it cannot establish that the modelled authorities, implementation routes or convergence outcome will occur.`;
+  generated.mission.candidateText = `The scenario “${subject}” is retained to test possible mission-relevant pathways, but it cannot establish that the modelled authorities, implementation routes or convergence outcome will occur.`;
   generated.mission.eliteControl.status = 'model_only';
   generated.mission.eliteControl.coordinationStatus = 'not_shown';
   setConvergenceBoundary(generated, policy.convergenceRules.scenarioMaximum, 'This score represents a speculative scenario route only and cannot be reported as documented convergence movement.');
@@ -59,7 +59,7 @@ function enforceSpeculationBoundary(record, generated, policy) {
   generated.evidenceBasedConclusion.confidence = 'very_low';
   if (generated.mechanism.status === 'documented') generated.mechanism.status = 'partially_documented';
   generated.mission.outcome = 'insufficient_evidence';
-  generated.mission.candidateText = `The interpretation may guide research into the site mission, but it remains speculative until primary records establish a concrete authority and implementation route.`;
+  generated.mission.candidateText = `The interpretation “${subject}” may guide research into the site mission, but it remains speculative until primary records establish a concrete authority and implementation route.`;
   generated.mission.eliteControl.coordinationStatus = 'not_shown';
   setConvergenceBoundary(generated, policy.recordTypeRules.speculation_review.maxConvergenceScore, 'This score is a speculative research indicator only and is not documented convergence movement.');
   generated.speculativeConclusion.label = policy.requiredSeparation.speculationLabel;

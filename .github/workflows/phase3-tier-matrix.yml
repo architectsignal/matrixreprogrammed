@@ -1,0 +1,193 @@
+name: Phase 3 Tier Matrix
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/phase3-canonical-taxonomy.json'
+      - 'data/phase3-public-private-policy.json'
+      - 'data/phase3-tier-matrix-policy.json'
+      - 'scripts/build-phase3-public-private-classification.js'
+      - 'scripts/build-phase3-tier-matrix.js'
+      - 'scripts/classify-content-tiers.js'
+      - 'scripts/refine-content-tier-review-map.js'
+      - '.github/workflows/phase3-tier-matrix.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase3-tier-matrix-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tier-matrix:
+    name: Build cumulative non-enforcing tier matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate matrix policy and scripts
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-canonical-taxonomy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-public-private-policy.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('data/phase3-tier-matrix-policy.json','utf8'))"
+          node --check scripts/build-phase3-public-private-classification.js
+          node --check scripts/build-phase3-tier-matrix.js
+
+      - name: Record protected file hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/phase3-canonical-taxonomy.json',
+            'data/phase3-public-private-policy.json',
+            'data/phase3-tier-matrix-policy.json',
+            'data/access-tier-policy.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-tier-matrix-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated classification and matrix outputs
+        run: |
+          rm -rf downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+
+      - name: Build tier matrix
+        run: node scripts/build-phase3-tier-matrix.js
+
+      - name: Validate cumulative access and invariant safety
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/phase3-tier-matrix-policy.json','utf8'));
+          const classification = JSON.parse(fs.readFileSync('downloads/phase3-public-private-classification/classification.json','utf8'));
+          const report = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/tier-matrix.json','utf8'));
+          const definitions = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/tier-definitions.json','utf8'));
+          const safety = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/public-safety-matrix.json','utf8'));
+          const delivery = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/delivery-download-matrix.json','utf8'));
+          const review = JSON.parse(fs.readFileSync('downloads/phase3-tier-matrix/review-queue.json','utf8'));
+          if (!report.ok || !definitions.ok || !safety.ok || !delivery.ok || !review.ok) throw new Error('Tier matrix package is not healthy');
+          if (report.mode !== 'report-only' || policy.mode !== 'report-only') throw new Error('Report-only boundary changed');
+          if (report.rows.length !== classification.rows.length || report.summary.totalItems !== classification.rows.length) throw new Error('Classification coverage is incomplete');
+          if (new Set(report.rows.map(row => row.canonicalId)).size !== report.rows.length) throw new Error('Tier matrix canonical IDs are not unique');
+          if (definitions.tiers.length !== policy.tierOrder.length || definitions.tiers.map(tier => tier.tier).join('|') !== policy.tierOrder.join('|')) throw new Error('Tier definition order changed');
+          const allowedStates = new Set(policy.viewStates);
+          const index = Object.fromEntries(policy.tierOrder.map((tier,i) => [tier,i]));
+          for (let i = 1; i < definitions.tiers.length; i++) {
+            const lower = definitions.tiers[i-1].cumulative;
+            const higher = definitions.tiers[i].cumulative;
+            for (const field of ['sections','tools','downloads']) {
+              const higherSet = new Set(higher[field]);
+              for (const value of lower[field]) if (!higherSet.has(value)) throw new Error(`${definitions.tiers[i].tier}: cumulative ${field} lost ${value}`);
+            }
+          }
+          for (const row of report.rows) {
+            if (!row.factualStatusInvariant || row.factualStatusInvariant.mutableByTier !== false || !row.factualStatusInvariant.invariantKey) throw new Error(`${row.sourcePath}: factual-status invariant missing`);
+            if (Object.keys(row.views).join('|') !== policy.tierOrder.join('|')) throw new Error(`${row.sourcePath}: incomplete tier views`);
+            if (Object.values(row.protectedActions).some(Boolean)) throw new Error(`${row.sourcePath}: protected action activated`);
+            for (const tier of policy.tierOrder) {
+              const view = row.views[tier];
+              if (!allowedStates.has(view.state)) throw new Error(`${row.sourcePath}: invalid ${tier} view ${view.state}`);
+              if (!Array.isArray(view.sections) || !Array.isArray(view.tools) || !Array.isArray(view.downloads)) throw new Error(`${row.sourcePath}: incomplete ${tier} view payload`);
+            }
+            if (row.targetAccessClass === 'public_core' && row.views.public.state !== 'full') throw new Error(`${row.sourcePath}: public core is not full publicly`);
+            if (row.publicPreviewRequired) {
+              if (row.views.public.state !== 'preview') throw new Error(`${row.sourcePath}: paid target lacks public preview`);
+              const publicSections = new Set(row.views.public.sections);
+              for (const section of policy.publicSafetySections) if (!publicSections.has(section)) throw new Error(`${row.sourcePath}: public preview lost ${section}`);
+            }
+            if (row.minimumTier) {
+              const minimumIndex = index[row.minimumTier];
+              for (const tier of policy.tierOrder) {
+                if (index[tier] < minimumIndex && row.views[tier].state === 'full') throw new Error(`${row.sourcePath}: ${tier} received full access before ${row.minimumTier}`);
+                if (index[tier] >= minimumIndex && !['full','commercial_landing'].includes(row.views[tier].state) && !['internal_only','restricted_sensitive','separate_product'].includes(row.targetAccessClass)) throw new Error(`${row.sourcePath}: ${tier} did not inherit full access`);
+              }
+            }
+            if (row.targetAccessClass === 'internal_only' && policy.tierOrder.some(tier => row.views[tier].state !== 'internal_only')) throw new Error(`${row.sourcePath}: internal item leaked into membership`);
+            if (row.targetAccessClass === 'restricted_sensitive' && policy.tierOrder.some(tier => row.views[tier].state !== 'restricted_review')) throw new Error(`${row.sourcePath}: restricted item leaked into membership`);
+            if (row.targetAccessClass === 'separate_product' && policy.tierOrder.some(tier => row.views[tier].state !== 'commercial_landing')) throw new Error(`${row.sourcePath}: separate product was bundled into membership`);
+          }
+          if (safety.recordCount !== report.rows.filter(row => row.publicPreviewRequired || row.targetAccessClass === 'public_core').length) throw new Error('Public safety matrix coverage mismatch');
+          if (delivery.recordCount !== report.rows.length) throw new Error('Delivery/download matrix coverage mismatch');
+          if (review.recordCount !== report.summary.reviewQueue) throw new Error('Tier review queue coverage mismatch');
+          if (report.lockedSectionEnforcement !== false || report.authenticationActivation !== false || report.entitlementActivation !== false || report.emailDeliveryActivation !== false || report.paymentActivation !== false || report.routeMovement !== false || report.searchRemoval !== false || report.contentMutation !== false) throw new Error('A protected action was activated');
+          console.log(`PHASE 3 TIER PASS: ${report.rows.length} items; ${report.summary.publicPreviewRequired} public previews; ${report.summary.reviewQueue} review flags.`);
+          NODE
+
+      - name: Snapshot deterministic matrix hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase3-tier-matrix';
+          const hashes = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase3-tier-matrix-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic matrix
+        run: |
+          rm -rf downloads/phase3-tier-matrix downloads/phase3-public-private-classification
+          rm -f downloads/phase0-content-tier-classification.json downloads/phase0-content-tier-classification.md
+          rm -f downloads/phase2a-route-family-review-map.json downloads/phase2a-route-family-review-map.md
+          node scripts/build-phase3-tier-matrix.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase3-tier-matrix';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase3-tier-matrix-first-hashes.json','utf8'));
+          const after = Object.fromEntries(fs.readdirSync(root).sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before),...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Tier matrix output is not deterministic:\n${changed.join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} tier-matrix files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase3-tier-matrix-protected-before.json','utf8'));
+          const changed = [];
+          for (const [file,expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({file,expected,actual});
+          }
+          const report = {ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Tier matrix generation must not alter taxonomy, membership, Workers, routes or deployment guards.'};
+          fs.writeFileSync('downloads/phase3-tier-matrix/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length) throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Phase 3 tier matrix
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-tier-matrix-${{ github.run_id }}
+          path: downloads/phase3-tier-matrix/
+          if-no-files-found: error
+          retention-days: 30

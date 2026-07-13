@@ -1,7 +1,7 @@
 {
   "ok": true,
   "title": "Card Artwork Inbox",
-  "updated": "2026-07-13T06:38:28.390Z",
+  "updated": "2026-07-13T08:36:44.271Z",
   "purpose": "Drop source URLs or data URIs here and the artwork workflow installs them into the correct card asset paths automatically.",
   "rule": "Each pending item needs deckId, cardId, and either sourceUrl or sourceDataUri. The installer writes an installed image asset, replaces the expected SVG card wrapper, updates logs, and leaves evidence/dossier data unchanged.",
   "acceptedDeckIds": [

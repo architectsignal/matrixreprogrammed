@@ -12,6 +12,7 @@ const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
+const liveVerifier = read('scripts/verify-live-production.js');
 
 check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js'));
 check('canonical deploy workflow cancels stale deployment', /cancel-in-progress:\s*true/.test(canonicalDeploy));
@@ -22,7 +23,7 @@ for (const migration of ['phase4_email_lifecycle.sql','phase4_email_lifecycle_po
   check(`canonical deploy applies ${migration}`, canonicalDeploy.includes(migration));
 }
 check('canonical deploy verifies disabled PayPal switches', canonicalDeploy.includes('paypal-runtime-settings.json') && canonicalDeploy.includes('checkout must remain disabled during deployment'));
-check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('cloudflare-worker-paypal-subscriptions') && canonicalDeploy.includes('/api/paypal/config'));
+check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 
 check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*push:/m.test(fallbackDeploy));
 check('fallback deploy shares production concurrency', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*true/.test(fallbackDeploy));
@@ -34,9 +35,9 @@ check('regression wrapper runs final reconciliation', regressionWrapper.includes
 check('regression wrapper tests server-gated PayPal', regressionWrapper.includes('sandbox-ready-disabled') && regressionWrapper.includes('paypal-membership.js') && regressionWrapper.includes('PAYPAL_SANDBOX_ENABLED'));
 check('regression wrapper tests strict Worker', regressionWrapper.includes('src/worker-production.js') && regressionWrapper.includes('non-authoritative-forum-response-blocked') && regressionWrapper.includes('non-authoritative-paypal-response-blocked'));
 
-check('live verifier proves forum D1 write/read', read('scripts/verify-live-production.js').includes('verifyForumPersistence') && read('scripts/verify-live-production.js').includes('/submit-main-post') && read('scripts/verify-live-production.js').includes('storedPostCount'));
-check('live verifier proves health SHA', read('scripts/verify-live-production.js').includes('/deploy-health.json') && read('scripts/verify-live-production.js').includes('healthMatches'));
-check('live verifier proves PayPal fail-closed boundary', read('scripts/verify-live-production.js').includes('verifyPayPalBoundary') && read('scripts/verify-live-production.js').includes('cloudflare-worker-paypal-subscriptions'));
+check('live verifier proves forum D1 write/read', liveVerifier.includes('verifyForumPersistence') && liveVerifier.includes('/submit-main-post') && liveVerifier.includes('storedPostCount'));
+check('live verifier proves health SHA', liveVerifier.includes('/deploy-health.json') && liveVerifier.includes('healthMatches'));
+check('live verifier proves PayPal fail-closed boundary', liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 check('freshness policy exists', exists('data/production-freshness-policy.json'));
 check('source deployment manifest exists', exists('deploy-manifest.json'));
 check('built deployment manifest exists', fs.existsSync(path.join(site, 'deploy-manifest.json')));

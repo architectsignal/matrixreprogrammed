@@ -8,6 +8,7 @@ on:
     paths:
       - 'data/content-tier-taxonomy-policy.json'
       - 'data/content-tier-family-review-rules.json'
+      - 'data/phase3-editorial-resolution-policy.json'
       - 'scripts/classify-content-tiers.js'
       - 'scripts/refine-content-tier-review-map.js'
       - '.github/workflows/phase2a-route-family-review.yml'
@@ -21,9 +22,9 @@ concurrency:
 
 jobs:
   review-map:
-    name: Refine route families without enforcement
+    name: Resolve route families and editorial ownership without enforcement
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout proposed branch
@@ -36,97 +37,70 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Validate review rules and script
+      - name: Validate review and editorial rules
         run: |
           node --check scripts/refine-content-tier-review-map.js
           node - <<'NODE'
-          const fs = require('fs');
-          const policy = JSON.parse(fs.readFileSync('data/content-tier-family-review-rules.json', 'utf8'));
-          if (policy.paymentStatus !== 'deferred') throw new Error('Payments must remain deferred');
-          if (policy.enforcementMode !== 'report-only') throw new Error('Enforcement must remain report-only');
-          if (!Array.isArray(policy.rules) || policy.rules.length < 20) throw new Error('Family review rules are incomplete');
-          const ids = policy.rules.map(rule => rule.id);
-          if (new Set(ids).size !== ids.length) throw new Error('Duplicate family rule ids');
+          const fs=require('fs');
+          const family=JSON.parse(fs.readFileSync('data/content-tier-family-review-rules.json','utf8'));
+          const editorial=JSON.parse(fs.readFileSync('data/phase3-editorial-resolution-policy.json','utf8'));
+          if(family.paymentStatus!=='deferred'||family.enforcementMode!=='report-only')throw new Error('Family review boundary changed');
+          if(editorial.mode!=='report-only')throw new Error('Editorial resolution boundary changed');
+          if(!Array.isArray(family.rules)||family.rules.length<20)throw new Error('Family review rules are incomplete');
+          if(!Array.isArray(editorial.rules)||editorial.rules.length<20)throw new Error('Editorial resolution rules are incomplete');
+          const ids=[...family.rules.map(rule=>`family:${rule.id}`),...editorial.rules.map(rule=>`editorial:${rule.id}`)];
+          if(new Set(ids).size!==ids.length)throw new Error('Duplicate rule ids');
           NODE
 
       - name: Record classifiable source hashes
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const crypto = require('crypto');
-          const root = process.cwd();
-          const ignored = new Set(['.git', 'node_modules', '_site', '.wrangler']);
-          const extensions = new Set(['.html', '.pdf', '.csv', '.zip', '.docx']);
-          const files = [];
-          function walk(dir) {
-            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-              if (ignored.has(entry.name)) continue;
-              const target = path.join(dir, entry.name);
-              if (entry.isDirectory()) walk(target);
-              else {
-                const rel = path.relative(root, target).split(path.sep).join('/');
-                const ext = path.extname(rel).toLowerCase();
-                if (extensions.has(ext) || (ext === '.json' && rel.startsWith('downloads/'))) files.push(rel);
-              }
-            }
-          }
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root=process.cwd();
+          const ignored=new Set(['.git','node_modules','_site','.wrangler']);const extensions=new Set(['.html','.pdf','.csv','.zip','.docx']);const files=[];
+          function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(ignored.has(entry.name))continue;const target=path.join(dir,entry.name);if(entry.isDirectory())walk(target);else{const rel=path.relative(root,target).split(path.sep).join('/');const ext=path.extname(rel).toLowerCase();if(extensions.has(ext)||(ext==='.json'&&rel.startsWith('downloads/')))files.push(rel);}}}
           walk(root);
-          const hashes = Object.fromEntries(files.sort().map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
-          fs.mkdirSync('downloads', { recursive: true });
-          fs.writeFileSync('downloads/phase2a-source-hashes-before.json', JSON.stringify(hashes, null, 2));
+          const hashes=Object.fromEntries(files.sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.mkdirSync('downloads',{recursive:true});fs.writeFileSync('downloads/phase2a-source-hashes-before.json',JSON.stringify(hashes,null,2));
           NODE
 
-      - name: Build refined route-family review map
+      - name: Build resolved route-family review map
         run: node scripts/refine-content-tier-review-map.js
 
-      - name: Validate review-only migration map
+      - name: Validate complete review-only migration map
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const report = JSON.parse(fs.readFileSync('downloads/phase2a-route-family-review-map.json', 'utf8'));
-          if (!report.ok || report.mode !== 'report-only') throw new Error('Route-family map is not healthy');
-          if (report.paymentStatus !== 'deferred' || report.enforcementMode !== 'report-only') throw new Error('Payment or enforcement boundary changed');
-          if (report.summary.totalRows < 1700) throw new Error('Route inventory unexpectedly incomplete');
-          if (report.summary.baseUncategorized < 1000) throw new Error('Base uncategorized baseline unexpectedly changed');
-          if (report.summary.refinedByFamilyRules < 500) throw new Error(`Too few high-confidence family resolutions: ${report.summary.refinedByFamilyRules}`);
-          if (report.summary.unresolvedAfterFamilyReview >= report.summary.baseUncategorized) throw new Error('Family review did not reduce the editorial queue');
-          if (report.summary.samePriorityConflicts !== 0 || report.conflicts.length !== 0) throw new Error('Family classification conflicts exist');
-          for (const row of report.rows) {
-            if (['supporter_3', 'intelligence_6', 'research_pro_9'].includes(row.recommendedTier)) {
-              if (!row.publicPreviewRequired) throw new Error(`${row.file}: paid recommendation lacks public preview requirement`);
-              if (!row.reviewFlags.includes('public-preview-required-before-tier-enforcement') && row.reviewStage === 'family_refinement') {
-                throw new Error(`${row.file}: paid family recommendation lacks enforcement boundary`);
-              }
+          const fs=require('fs');
+          const report=JSON.parse(fs.readFileSync('downloads/phase2a-route-family-review-map.json','utf8'));
+          if(!report.ok||report.mode!=='report-only')throw new Error('Route-family map is not healthy');
+          if(report.paymentStatus!=='deferred'||report.enforcementMode!=='report-only')throw new Error('Payment or enforcement boundary changed');
+          if(report.summary.totalRows<1700)throw new Error('Route inventory unexpectedly incomplete');
+          if(report.summary.baseUncategorized<1000)throw new Error('Base uncategorized baseline unexpectedly changed');
+          if(report.summary.refinedByFamilyRules<500)throw new Error(`Too few family resolutions: ${report.summary.refinedByFamilyRules}`);
+          if(report.summary.resolvedByEditorialRules<1)throw new Error('Editorial rules did not resolve any routes');
+          if(report.summary.unresolvedAfterFamilyReview!==0)throw new Error(`${report.summary.unresolvedAfterFamilyReview} routes remain uncategorized`);
+          if(report.summary.samePriorityConflicts!==0||report.conflicts.length!==0)throw new Error('Classification conflicts exist');
+          for(const row of report.rows){
+            if(row.category==='uncategorized'||row.subcategory==='needs_editorial_owner')throw new Error(`${row.file}: unresolved taxonomy remains`);
+            if(!row.category||!row.subcategory||!row.recommendedTier)throw new Error(`${row.file}: category, subcategory or tier missing`);
+            if(['supporter_3','intelligence_6','research_pro_9'].includes(row.recommendedTier)){
+              if(!row.publicPreviewRequired)throw new Error(`${row.file}: paid recommendation lacks public preview requirement`);
+              if(!row.reviewFlags.includes('public-preview-required-before-tier-enforcement'))throw new Error(`${row.file}: paid recommendation lacks enforcement boundary`);
             }
-            if (row.recommendedTier === 'internal_only' && row.reviewStage === 'family_refinement' && !row.reviewFlags.includes('internal-candidate-review-before-route-change')) {
-              throw new Error(`${row.file}: internal candidate lacks route-change review flag`);
-            }
-            if (row.category === 'uncategorized' && row.recommendedTier !== 'public') throw new Error(`${row.file}: unresolved route must remain public`);
-            if (row.status !== 'recommendation_only' && row.status !== 'review_recommendation_only') throw new Error(`${row.file}: unexpected enforcement status`);
+            if(row.recommendedTier==='internal_only'&&!row.reviewFlags.includes('internal-candidate-review-before-route-change'))throw new Error(`${row.file}: internal candidate lacks route-change review`);
+            if(row.reviewStage==='editorial_fallback'&&!row.reviewFlags.includes('phase3-content-type-fallback-review'))throw new Error(`${row.file}: fallback resolution lacks review flag`);
+            if(row.status!=='recommendation_only'&&row.status!=='review_recommendation_only')throw new Error(`${row.file}: unexpected enforcement status`);
           }
-          console.log(`PHASE 2A REVIEW PASS: ${report.summary.refinedByFamilyRules} route-family recommendations; ${report.summary.unresolvedAfterFamilyReview} remain for editorial ownership.`);
+          console.log(`PHASE 2A REVIEW PASS: ${report.summary.refinedByFamilyRules} family, ${report.summary.resolvedByEditorialRules} editorial, ${report.summary.resolvedByContentFallback} fallback, zero uncategorized.`);
           NODE
 
       - name: Prove current files were not changed
         run: |
           node - <<'NODE'
-          const fs = require('fs');
-          const crypto = require('crypto');
-          const before = JSON.parse(fs.readFileSync('downloads/phase2a-source-hashes-before.json', 'utf8'));
-          const changed = [];
-          for (const [file, expected] of Object.entries(before)) {
-            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-            if (actual !== expected) changed.push({ file, expected, actual });
-          }
-          const report = {
-            ok: changed.length === 0,
-            checkedFiles: Object.keys(before).length,
-            changed,
-            boundary: 'The route-family review map must not alter, move, hide, delete, redirect or paywall any existing route or document.'
-          };
-          fs.writeFileSync('downloads/phase2a-route-family-non-mutation-report.json', JSON.stringify(report, null, 2));
-          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          const fs=require('fs');const crypto=require('crypto');const before=JSON.parse(fs.readFileSync('downloads/phase2a-source-hashes-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Route-family and editorial resolution must not alter, move, hide, delete, redirect or paywall existing routes or documents.'};
+          fs.writeFileSync('downloads/phase2a-route-family-non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
           console.log(`NON-MUTATION PASS: ${report.checkedFiles} existing files unchanged.`);
           NODE
 

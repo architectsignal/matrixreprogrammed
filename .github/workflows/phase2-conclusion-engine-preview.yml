@@ -1,0 +1,189 @@
+name: Phase 2 Conclusion Engine Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-phase2-conclusion-engine-preview.js'
+      - 'scripts/conclusion-engine/**'
+      - 'data/conclusion-engine-policy.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/intelligence-source-manifest.json'
+      - 'data/access-tier-policy.json'
+      - 'scripts/build-*-canonical-previews.js'
+      - 'scripts/build-canonical-preview-bundle.js'
+      - 'docs/PHASE_2_CONCLUSION_ENGINE_ROADMAP.md'
+      - '.github/workflows/phase2-conclusion-engine-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase2-conclusion-engine-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  conclusion-engine:
+    name: Generate and validate evidence-bounded conclusions
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy and engine syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/conclusion-engine-policy.json','utf8'))"
+          node --check scripts/conclusion-engine/core.js
+          node --check scripts/conclusion-engine/generate.js
+          node --check scripts/conclusion-engine/quality.js
+          node --check scripts/build-phase2-conclusion-engine-preview.js
+          node --check scripts/build-canonical-preview-bundle.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const manifest = JSON.parse(fs.readFileSync('data/intelligence-source-manifest.json', 'utf8'));
+          const files = [
+            ...manifest.sources.map(source => source.path),
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'data/intelligence-source-manifest.json',
+            'data/conclusion-engine-policy.json',
+            'membership.html',
+            'wrangler.toml',
+            'src/worker-production.js',
+            'src/worker-forum-persistence.js',
+            'scripts/final-production-reconcile.js',
+            'scripts/patch-conclusion-integrity-cards.js',
+            'scripts/build-canonical-preview-bundle.js'
+          ];
+          const unique = [...new Set(files)];
+          const hashes = Object.fromEntries(unique.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-conclusion-protected-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build first conclusion engine preview
+        run: node scripts/build-phase2-conclusion-engine-preview.js
+
+      - name: Validate conclusion engine outputs and gates
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = JSON.parse(fs.readFileSync('data/conclusion-engine-policy.json', 'utf8'));
+          const canonical = JSON.parse(fs.readFileSync('downloads/canonical-preview-bundle/canonical-records.json', 'utf8'));
+          const manifest = JSON.parse(fs.readFileSync('downloads/phase2-conclusion-engine-preview/manifest.json', 'utf8'));
+          const engine = JSON.parse(fs.readFileSync('downloads/phase2-conclusion-engine-preview/engine-records.json', 'utf8'));
+          const reviewQueue = JSON.parse(fs.readFileSync('downloads/phase2-conclusion-engine-preview/review-queue.json', 'utf8'));
+          if (!manifest.ok || !engine.ok) throw new Error('Conclusion engine preview is not healthy');
+          if (manifest.mode !== 'report-only' || engine.mode !== 'report-only' || policy.mode !== 'report-only') throw new Error('Report-only boundary changed');
+          if (manifest.publicationEnforcement !== false || manifest.paymentActivation !== false) throw new Error('Publication or payment was activated');
+          if (manifest.analysisRecordCount !== canonical.recordCount || engine.recordCount !== canonical.recordCount || engine.records.length !== canonical.recordCount) throw new Error('Canonical coverage is incomplete');
+          if (new Set(engine.records.map(record => record.id)).size !== canonical.recordCount) throw new Error('Conclusion engine IDs are not unique');
+          const allowedStates = new Set(policy.publicationStates);
+          const allowedVectors = new Set(policy.convergenceVectors);
+          const publishable = [];
+          for (const record of engine.records) {
+            if (!allowedStates.has(record.publication.state)) throw new Error(`${record.id}: invalid publication state`);
+            if (record.generated.speculativeConclusion.label !== 'speculative') throw new Error(`${record.id}: speculation label missing`);
+            if (!record.generated.speculativeConclusion.boundary || !record.generated.evidenceBasedConclusion.boundary || !record.generated.mission.boundary) throw new Error(`${record.id}: fact/speculation boundary incomplete`);
+            if (!record.generated.counterAndMissing.counterHypothesis.alternativeExplanations.length) throw new Error(`${record.id}: counter-hypothesis missing`);
+            if (!record.generated.counterAndMissing.missingEvidence.length || !record.generated.counterAndMissing.falsifiers.length) throw new Error(`${record.id}: missing-evidence or falsification route absent`);
+            if (record.generated.convergence.vectors.length !== policy.convergenceVectors.length) throw new Error(`${record.id}: convergence vector coverage incomplete`);
+            for (const vector of record.generated.convergence.vectors) {
+              if (!allowedVectors.has(vector.vector)) throw new Error(`${record.id}: unknown convergence vector ${vector.vector}`);
+              if (vector.score < 0 || vector.score > 5 || vector.score > vector.cap) throw new Error(`${record.id}: convergence score breached its cap`);
+              if (!vector.upgradeCondition || !vector.downgradeCondition) throw new Error(`${record.id}: convergence upgrade/downgrade condition missing`);
+              if (vector.coordinationStatus === 'documented' && record.publication.sourceAuthority !== 'primary') throw new Error(`${record.id}: coordination marked documented without primary authority`);
+            }
+            if (record.quality.candidate.flags.length) throw new Error(`${record.id}: candidate conclusion remains generic or repetitive: ${record.quality.candidate.flags.join(', ')}`);
+            if (!record.publication.gates.fact_speculation_separation || !record.publication.gates.repetition_and_generic_language || !record.publication.gates.convergence_discipline) throw new Error(`${record.id}: mandatory safety gate failed`);
+            if (record.publication.state === 'publishable_preview') {
+              publishable.push(record);
+              if (record.publication.sourceAuthority !== 'primary') throw new Error(`${record.id}: non-primary record became publishable`);
+              if (!policy.claimRules[record.publication.claimClass]?.canPublish) throw new Error(`${record.id}: non-publishable claim class became publishable`);
+              if (!['documented','partially_documented'].includes(record.generated.mechanism.status)) throw new Error(`${record.id}: publishable record lacks a documented mechanism`);
+            }
+            if (['signal','relationship_update','scenario','brief'].includes(record.recordType) && record.publication.state === 'publishable_preview') throw new Error(`${record.id}: lead, graph hint or scenario became publishable`);
+          }
+          if (!publishable.length) throw new Error('No evidence-qualified candidate reached publishable preview');
+          const expectedQueue = engine.records.filter(record => record.publication.state !== 'publishable_preview').length;
+          if (reviewQueue.recordCount !== expectedQueue || reviewQueue.records.length !== expectedQueue) throw new Error('Review queue is incomplete');
+          if (manifest.summary.factSpeculationSeparationFailures !== 0) throw new Error('Fact/speculation separation failures remain');
+          if (manifest.summary.candidateGenericOrRepetitionFailures !== 0 || manifest.summary.candidateRecordsWithQualityFlags !== 0) throw new Error('Generated candidates remain generic or repetitive');
+          console.log(`CONCLUSION ENGINE PASS: ${engine.recordCount} records; ${publishable.length} evidence-qualified previews; ${expectedQueue} held for evidence or review.`);
+          NODE
+
+      - name: Snapshot first deterministic hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-engine-preview';
+          const files = fs.readdirSync(root).filter(file => fs.statSync(path.join(root,file)).isFile()).sort();
+          const hashes = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase2-conclusion-first-output-hashes.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Rebuild and prove deterministic output
+        run: |
+          node scripts/build-phase2-conclusion-engine-preview.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const crypto = require('crypto');
+          const root = 'downloads/phase2-conclusion-engine-preview';
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-conclusion-first-output-hashes.json', 'utf8'));
+          const files = fs.readdirSync(root).filter(file => fs.statSync(path.join(root,file)).isFile()).sort();
+          const after = Object.fromEntries(files.map(file => [file, crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if (JSON.stringify(before) !== JSON.stringify(after)) {
+            const changed = [...new Set([...Object.keys(before), ...Object.keys(after)])].filter(file => before[file] !== after[file]);
+            throw new Error(`Conclusion engine output is not deterministic:\n${changed.join('\n')}`);
+          }
+          console.log(`DETERMINISM PASS: ${files.length} conclusion-engine files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('/tmp/phase2-conclusion-protected-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'The report-only conclusion engine must not modify legacy intelligence, canonical inputs, membership, Workers, deployment guards or payment state.'
+          };
+          fs.writeFileSync('downloads/phase2-conclusion-engine-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload conclusion engine preview
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-conclusion-engine-preview-${{ github.run_id }}
+          path: downloads/phase2-conclusion-engine-preview/
+          if-no-files-found: error
+          retention-days: 30

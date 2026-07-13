@@ -104,7 +104,8 @@ jobs:
           }
           for (const row of report.rows) {
             if (!row.factualStatusInvariant || row.factualStatusInvariant.mutableByTier !== false || !row.factualStatusInvariant.invariantKey) throw new Error(`${row.sourcePath}: factual-status invariant missing`);
-            if (Object.keys(row.views).join('|') !== policy.tierOrder.join('|')) throw new Error(`${row.sourcePath}: incomplete tier views`);
+            const viewKeys = Object.keys(row.views);
+            if (viewKeys.length !== policy.tierOrder.length || policy.tierOrder.some(tier => !row.views[tier])) throw new Error(`${row.sourcePath}: incomplete tier views`);
             if (Object.values(row.protectedActions).some(Boolean)) throw new Error(`${row.sourcePath}: protected action activated`);
             for (const tier of policy.tierOrder) {
               const view = row.views[tier];

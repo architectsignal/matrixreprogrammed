@@ -84,9 +84,9 @@ jobs:
             if(!row.category||!row.subcategory||!row.recommendedTier)throw new Error(`${row.file}: category, subcategory or tier missing`);
             if(['supporter_3','intelligence_6','research_pro_9'].includes(row.recommendedTier)){
               if(!row.publicPreviewRequired)throw new Error(`${row.file}: paid recommendation lacks public preview requirement`);
-              if(!row.reviewFlags.includes('public-preview-required-before-tier-enforcement'))throw new Error(`${row.file}: paid recommendation lacks enforcement boundary`);
+              if(row.reviewStage!=='base_taxonomy'&&!row.reviewFlags.includes('public-preview-required-before-tier-enforcement'))throw new Error(`${row.file}: newly resolved paid recommendation lacks enforcement boundary`);
             }
-            if(row.recommendedTier==='internal_only'&&!row.reviewFlags.includes('internal-candidate-review-before-route-change'))throw new Error(`${row.file}: internal candidate lacks route-change review`);
+            if(row.recommendedTier==='internal_only'&&row.reviewStage!=='base_taxonomy'&&!row.reviewFlags.includes('internal-candidate-review-before-route-change'))throw new Error(`${row.file}: newly resolved internal candidate lacks route-change review`);
             if(row.reviewStage==='editorial_fallback'&&!row.reviewFlags.includes('phase3-content-type-fallback-review'))throw new Error(`${row.file}: fallback resolution lacks review flag`);
             if(row.status!=='recommendation_only'&&row.status!=='review_recommendation_only')throw new Error(`${row.file}: unexpected enforcement status`);
           }

@@ -1,5 +1,6 @@
 import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
+import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -36,10 +37,14 @@ const jsonHeaders = {
 function unavailable(reason, detail = '', subsystem = 'forum') {
   const authoritativeStorage = subsystem === 'email'
     ? 'Cloudflare D1 MEMBERS_DB email lifecycle tables'
-    : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+    : subsystem === 'member'
+      ? 'Cloudflare D1 MEMBERS_DB member, session and entitlement tables'
+      : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
-    : 'Forum storage is unavailable. No legacy success response was accepted.';
+    : subsystem === 'member'
+      ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
+      : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -92,6 +97,14 @@ async function validateEmailResponse(response) {
   return response;
 }
 
+async function validateMemberResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-member-experience') {
+    return unavailable('non-authoritative-member-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
@@ -101,6 +114,14 @@ export default {
         return validateEmailResponse(await emailWorker.fetch(request, env, ctx));
       } catch (error) {
         return unavailable('email-worker-exception', error?.message || error, 'email');
+      }
+    }
+    if (isMemberExperienceRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateMemberResponse(await memberWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('member-worker-exception', error?.message || error, 'member');
       }
     }
     if (!forumRoutes.has(path)) return forumWorker.fetch(request, env, ctx);

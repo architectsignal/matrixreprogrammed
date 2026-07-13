@@ -1,0 +1,64 @@
+name: Phase 5 Guarded Full Build Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'member-dashboard.html'
+      - 'member-dashboard-app.js'
+      - 'admin-member-dashboard.html'
+      - 'admin-member-dashboard.js'
+      - 'access-denied.html'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-production.js'
+      - 'scripts/phase5-*'
+      - 'migrations/phase5_*'
+      - 'data/phase5-*'
+      - '.github/workflows/phase5-guarded-build-test.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  guarded-build:
+    name: Build complete guarded Cloudflare output
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run guarded build with concise failure output
+        shell: bash
+        run: |
+          mkdir -p downloads/phase5-guarded-build
+          set +e
+          SOURCE_DOCUMENTS_PER_RUN=0 node scripts/build-cloudflare-output.js > downloads/phase5-guarded-build/build.log 2>&1
+          status=$?
+          set -e
+          if [ "$status" -ne 0 ]; then
+            echo '--- FINAL GUARDED BUILD OUTPUT ---'
+            tail -n 160 downloads/phase5-guarded-build/build.log
+            exit "$status"
+          fi
+          tail -n 40 downloads/phase5-guarded-build/build.log
+          test -f _site/member-dashboard.html
+          test -f _site/member-dashboard-app.js
+          test -f _site/admin-member-dashboard.html
+          test -f _site/access-denied.html
+      - name: Upload guarded build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5-guarded-build-${{ github.run_id }}
+          path: downloads/phase5-guarded-build/
+          if-no-files-found: error
+          retention-days: 30

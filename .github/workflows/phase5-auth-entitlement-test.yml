@@ -1,0 +1,137 @@
+name: Phase 5 Authentication and Entitlement Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - agent/phase4-email-lifecycle
+      - agent/phase-0-1-inventory-schema
+      - main
+    paths:
+      - 'data/phase5-auth-entitlement-policy.json'
+      - 'migrations/phase5_member_experience.sql'
+      - 'migrations/phase5_member_experience_timestamp_fix.sql'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-production.js'
+      - 'src/worker.js'
+      - 'member-dashboard.html'
+      - 'member-dashboard-app.js'
+      - 'access-denied.html'
+      - 'admin-member-dashboard.html'
+      - 'admin-member-dashboard.js'
+      - 'scripts/phase5-auth-entitlement-test.mjs'
+      - 'scripts/phase5-auth-entitlement-runner.mjs'
+      - '.github/workflows/phase5-auth-entitlement-test.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase5-auth-entitlement-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  entitlement-matrix:
+    name: Prove every tier sees exactly its allowed experience
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy, schema and application syntax
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase5-auth-entitlement-policy.json','utf8'))"
+          node --check src/worker-member-experience.js
+          node --check src/worker-production.js
+          node --check member-dashboard-app.js
+          node --check admin-member-dashboard.js
+          node --check scripts/phase5-auth-entitlement-test.mjs
+          node --check scripts/phase5-auth-entitlement-runner.mjs
+          grep -q "member_effective_entitlements" migrations/phase5_member_experience.sql
+          grep -q "member_download_eligibility" migrations/phase5_member_experience.sql
+          grep -q "datetime(g.starts_at)" migrations/phase5_member_experience_timestamp_fix.sql
+          grep -q "datetime(pg.starts_at)" migrations/phase5_member_experience_timestamp_fix.sql
+
+      - name: Record protected Phase 4 and production hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['src/worker-email-lifecycle.js','newsletter.js','newsletter.html','subscriber-dashboard.html','admin-campaign-monitor.html','migrations/phase4_email_lifecycle.sql','migrations/phase4_email_lifecycle_portability.sql','data/phase4-email-lifecycle-policy.json','src/worker-forum-persistence.js','wrangler.toml','data/access-tier-policy.json'];
+          const hashes=Object.fromEntries(files.filter(fs.existsSync).map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase5-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Run complete authentication and entitlement matrix
+        run: node scripts/phase5-auth-entitlement-runner.mjs
+
+      - name: Validate exit condition and no-leak evidence
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase5-auth-entitlement-policy.json','utf8'));
+          const summary=JSON.parse(fs.readFileSync('downloads/phase5-auth-entitlement-test/summary.json','utf8'));
+          const lifecycle=JSON.parse(fs.readFileSync('downloads/phase5-auth-entitlement-test/lifecycle.json','utf8'));
+          if(!summary.ok||!lifecycle.ok)throw new Error('Phase 5 package is not healthy');
+          if(summary.stagesPassed!==11||summary.requiredStages!==11||lifecycle.stages.length!==11||lifecycle.stages.some(stage=>stage.passed!==true))throw new Error('The complete Phase 5 lifecycle did not pass');
+          const required=['anonymous','registered','supporter_3','intelligence_6','research_pro_9','admin'];
+          for(const tier of required)if(!summary.tiersTested.includes(tier))throw new Error(`Missing access fixture: ${tier}`);
+          if(summary.paymentActivation!==false||summary.productionMigrationExecution!==false)throw new Error('Protected payment or migration boundary changed');
+          if(summary.deniedDownloadEvents<2)throw new Error('Denied download logging was not proven');
+          if(summary.passwordlessProviderCalls!==1)throw new Error('Passwordless login delivery count mismatch');
+          for(const surface of policy.requiredSurfaces)if(!fs.existsSync(surface))throw new Error(`Required surface missing: ${surface}`);
+          const routeSurface=['src/worker.js','src/worker-member-experience.js','src/worker-production.js'].map(file=>fs.readFileSync(file,'utf8')).join('\n');
+          for(const route of policy.requiredRoutes)if(!routeSurface.includes(route))throw new Error(`Required authentication/member route missing: ${route}`);
+          const forbidden=policy.deniedResponse.forbiddenFields;
+          const test=fs.readFileSync('scripts/phase5-auth-entitlement-test.mjs','utf8');
+          for(const key of forbidden)if(!test.includes(key))throw new Error(`No-leak assertion missing for ${key}`);
+          console.log(`PHASE 5 EXIT PASS: ${summary.stagesPassed}/11 stages across ${summary.tiersTested.length} access classes.`);
+          NODE
+
+      - name: Snapshot first deterministic result
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase5-auth-entitlement-test';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase5-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic lifecycle
+        run: |
+          node scripts/phase5-auth-entitlement-runner.mjs
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase5-auth-entitlement-test';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase5-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Phase 5 output is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} Phase 5 files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase5-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,paymentActivation:false,productionMigrationExecution:false,boundary:'Phase 5 tests must not modify the Phase 4 email service, forum persistence, current access policy, deployment configuration or production data.'};
+          fs.writeFileSync('downloads/phase5-auth-entitlement-test/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Phase 5 proof package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5-auth-entitlement-test-${{ github.run_id }}
+          path: downloads/phase5-auth-entitlement-test/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,4 +1,4 @@
-name: Deploy Production (Manual Controlled Release)
+name: Deploy Production (Controlled Cloudflare Release)
 
 on:
   workflow_dispatch:
@@ -7,6 +7,8 @@ on:
         description: 'Type DEPLOY to run the controlled Cloudflare release'
         required: true
         default: 'NO'
+  push:
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -24,7 +26,7 @@ jobs:
     name: Migrate D1 and deploy strict Cloudflare production
     runs-on: ubuntu-latest
     timeout-minutes: 120
-    if: ${{ github.event.inputs.confirm == 'DEPLOY' }}
+    if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.confirm == 'DEPLOY') || (github.event_name == 'push' && contains(github.event.head_commit.message, '[phase6-release]')) }}
 
     steps:
       - name: Checkout latest main

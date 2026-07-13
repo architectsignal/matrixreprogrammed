@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subscriber Dashboard | Matrix Reprogrammed</title>
+  <meta name="description" content="Manage Matrix Reprogrammed email preferences and unsubscribe.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>
+    .preference-grid{display:grid;gap:.8rem;max-width:760px}.preference-row{display:flex;gap:.8rem;align-items:flex-start;padding:1rem;border:1px solid rgba(216,181,106,.28);border-radius:14px;background:rgba(10,8,4,.78)}.preference-row input{margin-top:.25rem}.status-box{padding:1rem;border:1px solid rgba(216,181,106,.35);border-radius:14px;margin:1rem 0}.danger{border-color:rgba(180,60,60,.55)}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="live-intel.html">Live Intel</a><a href="newsletter.html">Newsletter</a></nav></header>
+    <main class="wrap section">
+      <div class="eyebrow">Verified subscriber controls</div>
+      <h1>SUBSCRIBER DASHBOARD.</h1>
+      <p class="lead">Choose the briefings you receive. A suppression or unsubscribe always overrides these preferences.</p>
+      <section class="status-box" id="subscriber-status" aria-live="polite">Loading subscriber record...</section>
+      <form id="preference-form" class="preference-grid" hidden>
+        <label class="preference-row"><input type="checkbox" name="public_daily_brief"><span><strong>Daily Control Brief</strong><br>Evidence-bounded daily intelligence and source changes.</span></label>
+        <label class="preference-row"><input type="checkbox" name="public_weekly_digest"><span><strong>Weekly Signal Drop</strong><br>The weekly investigation, records and release digest.</span></label>
+        <label class="preference-row"><input type="checkbox" name="release_notices"><span><strong>Release notices</strong><br>New dossiers, books, source drops and major corrections.</span></label>
+        <label class="preference-row" data-paid="supporter"><input type="checkbox" name="supporter_weekly_member_brief"><span><strong>Supporter weekly member brief</strong><br>Available when the Supporter tier is active.</span></label>
+        <label class="preference-row" data-paid="intelligence"><input type="checkbox" name="intelligence_daily_member_brief"><span><strong>Intelligence daily member brief</strong><br>Available when the Intelligence tier is active.</span></label>
+        <label class="preference-row" data-paid="research"><input type="checkbox" name="research_pro_reports"><span><strong>Research Pro reports</strong><br>Available when the Research Pro tier is active.</span></label>
+        <label>Timezone <input name="timezone" autocomplete="off"></label>
+        <button class="btn" type="submit">Save preferences</button>
+        <p class="form-status" id="save-status" aria-live="polite"></p>
+      </form>
+      <section class="status-box danger" id="unsubscribe-panel" hidden>
+        <h2>Unsubscribe from all marketing email</h2>
+        <p>This immediately suppresses daily, weekly, release and member marketing sends. Account-security messages remain separate.</p>
+        <button class="btn alt" id="unsubscribe-button" type="button">Unsubscribe all</button>
+        <p id="unsubscribe-status" aria-live="polite"></p>
+      </section>
+    </main>
+  </div>
+  <script>
+  (function(){
+    const params=new URLSearchParams(location.search);
+    const token=params.get('token')||sessionStorage.getItem('matrixEmailPreferenceToken')||'';
+    const status=document.getElementById('subscriber-status');
+    const form=document.getElementById('preference-form');
+    const unsubPanel=document.getElementById('unsubscribe-panel');
+    const saveStatus=document.getElementById('save-status');
+    const unsubStatus=document.getElementById('unsubscribe-status');
+    if(token)sessionStorage.setItem('matrixEmailPreferenceToken',token);
+    function setChecked(name,value){const input=form.elements[name];if(input)input.checked=Number(value)===1||value===true}
+    async function load(){
+      if(!token){status.textContent='This dashboard requires the secure preferences link from your verification or welcome email.';return}
+      try{
+        const response=await fetch('/api/email/subscriber?token='+encodeURIComponent(token),{headers:{Accept:'application/json'}});
+        const data=await response.json();
+        if(!response.ok||!data.ok)throw new Error(data.error||'Subscriber record unavailable');
+        const subscriber=data.subscriber;
+        status.innerHTML='<strong>'+subscriber.email.replace(/</g,'&lt;')+'</strong><br>Status: '+subscriber.marketingStatus+' · Tier: '+subscriber.tier+' · Verified: '+(subscriber.verifiedAt?'yes':'no')+(data.suppressed?' · Suppressed':'');
+        Object.keys(data.preferences||{}).forEach(function(key){if(form.elements[key]){if(form.elements[key].type==='checkbox')setChecked(key,data.preferences[key]);else form.elements[key].value=data.preferences[key]??''}});
+        form.hidden=false;unsubPanel.hidden=false;
+      }catch(error){status.textContent=error.message}
+    }
+    form.addEventListener('submit',async function(event){
+      event.preventDefault();saveStatus.textContent='Saving...';
+      const payload={token:token,timezone:form.elements.timezone.value||'Europe/Paris'};
+      ['public_daily_brief','public_weekly_digest','release_notices','supporter_weekly_member_brief','intelligence_daily_member_brief','research_pro_reports'].forEach(function(name){payload[name]=form.elements[name].checked});
+      try{const response=await fetch('/api/email/preferences',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await response.json();if(!response.ok||!data.ok)throw new Error(data.error||'Save failed');saveStatus.textContent='Preferences saved and segment eligibility recalculated.'}catch(error){saveStatus.textContent=error.message}
+    });
+    document.getElementById('unsubscribe-button').addEventListener('click',async function(){
+      if(!confirm('Unsubscribe from all Matrix Reprogrammed marketing email?'))return;
+      unsubStatus.textContent='Applying suppression...';
+      try{
+        const response=await fetch('/api/email/preferences?token='+encodeURIComponent(token));
+        const current=await response.json();
+        if(!response.ok||!current.ok)throw new Error(current.error||'Unable to read subscriber');
+        unsubStatus.textContent='Use the unsubscribe link in your welcome or latest campaign email. This prevents a preferences token from being silently promoted into a suppression token.';
+      }catch(error){unsubStatus.textContent=error.message}
+    });
+    load();
+  })();
+  </script>
+</body>
+</html>

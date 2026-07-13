@@ -1,0 +1,135 @@
+name: Phase 4 Email Lifecycle Inventory
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - agent/phase-0-1-inventory-schema
+      - main
+    paths:
+      - 'data/phase4-email-lifecycle-policy.json'
+      - 'scripts/phase4-email-lifecycle-inventory.js'
+      - 'src/**'
+      - 'newsletter.js'
+      - 'newsletter.html'
+      - 'membership.html'
+      - 'member-*.html'
+      - 'wrangler.toml'
+      - 'migrations/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase4-email-inventory-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    name: Audit complete email lifecycle without sending
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate policy and scanner
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/phase4-email-lifecycle-policy.json','utf8'))"
+          node --check scripts/phase4-email-lifecycle-inventory.js
+
+      - name: Record protected production hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const files=['src/worker-production.js','src/worker-forum-persistence.js','src/worker.js','wrangler.toml','newsletter.js','newsletter.html','membership.html','data/access-tier-policy.json'];
+          const hashes=Object.fromEntries(files.filter(fs.existsSync).map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+          fs.writeFileSync('/tmp/phase4-email-protected-before.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Clean generated inventory
+        run: rm -rf downloads/phase4-email-lifecycle-inventory
+
+      - name: Build lifecycle inventory
+        run: node scripts/phase4-email-lifecycle-inventory.js
+
+      - name: Validate inventory boundaries and completed foundation
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');
+          const policy=JSON.parse(fs.readFileSync('data/phase4-email-lifecycle-policy.json','utf8'));
+          const report=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-inventory/inventory.json','utf8'));
+          const manifest=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-inventory/manifest.json','utf8'));
+          const gaps=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-inventory/route-and-schema-gap-report.json','utf8'));
+          const forms=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-inventory/form-and-consent-report.json','utf8'));
+          const blockers=JSON.parse(fs.readFileSync('downloads/phase4-email-lifecycle-inventory/activation-blockers.json','utf8'));
+          if(!report.ok||!manifest.ok||!gaps.ok||!forms.ok||!blockers.ok)throw new Error('Phase 4 inventory package is not healthy');
+          if(report.mode!=='audit-only'||policy.mode!=='audit-only')throw new Error('Audit-only boundary changed');
+          if(report.summary.filesInspected<1000)throw new Error('Repository inventory unexpectedly incomplete');
+          if(report.summary.emailForms<1)throw new Error('No email capture forms detected');
+          if(new Set(report.stages.map(item=>item.stage)).size!==policy.requiredLifecycleStages.length)throw new Error('Lifecycle stage coverage is incomplete');
+          for(const stage of policy.requiredLifecycleStages)if(!report.stages.some(item=>item.stage===stage))throw new Error(`Lifecycle stage missing: ${stage}`);
+          const incomplete=report.stages.filter(item=>item.status!=='implemented');
+          if(incomplete.length)throw new Error(`Lifecycle stages are not fully implemented:\n${incomplete.map(item=>`${item.stage}: ${item.status}`).join('\n')}`);
+          if(report.summary.implementedStages!==policy.requiredLifecycleStages.length||report.summary.partialStages!==0||report.summary.missingStages!==0)throw new Error('Completed lifecycle counts are inconsistent');
+          if(blockers.recordCount!==0||report.summary.activationBlockers!==0)throw new Error(`Activation blockers remain: ${(blockers.blockers||[]).join(', ')}`);
+          if(report.risks.stalePublicCopy.length||report.risks.provider.length)throw new Error('Stale public copy or provider lifecycle risks remain');
+          const shared=fs.readFileSync('newsletter.js','utf8');
+          if(!/function ensureConsent\(/.test(shared)||!/consent\.type=['"]checkbox['"]/.test(shared)||!/consent\.required=true/.test(shared)||!/Boolean\(consent\.checked\)/.test(shared))throw new Error('Shared explicit-consent runtime is incomplete');
+          if(gaps.requiredRoutes.some(item=>!item.present))throw new Error(`Required routes missing: ${gaps.requiredRoutes.filter(item=>!item.present).map(item=>item.route).join(', ')}`);
+          if(gaps.requiredObjects.some(item=>!item.present))throw new Error(`Required data objects missing: ${gaps.requiredObjects.filter(item=>!item.present).map(item=>item.object).join(', ')}`);
+          if(gaps.requiredSurfaces.some(item=>!item.present))throw new Error(`Required surfaces missing: ${gaps.requiredSurfaces.filter(item=>!item.present).map(item=>item.surface).join(', ')}`);
+          if(Object.values({liveEmailSend:report.liveEmailSend,providerContactMutation:report.providerContactMutation,campaignCreation:report.campaignCreation,campaignScheduling:report.campaignScheduling,subscriberMutation:report.subscriberMutation,d1MigrationExecution:report.d1MigrationExecution,workerMutation:report.workerMutation,paymentActivation:report.paymentActivation}).some(Boolean))throw new Error('Protected Phase 4 action activated');
+          if(Object.values({liveEmailSend:manifest.liveEmailSend,providerContactMutation:manifest.providerContactMutation,subscriberMutation:manifest.subscriberMutation,paymentActivation:manifest.paymentActivation}).some(Boolean))throw new Error('Manifest boundary changed');
+          console.log(`PHASE 4 INVENTORY PASS: ${report.summary.implementedStages}/${policy.requiredLifecycleStages.length} stages implemented; zero blockers; activation disabled.`);
+          NODE
+
+      - name: Snapshot deterministic inventory hashes
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-inventory';
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          fs.writeFileSync('/tmp/phase4-email-first-hashes.json',JSON.stringify(hashes,null,2));
+          NODE
+
+      - name: Rebuild and prove deterministic inventory
+        run: |
+          rm -rf downloads/phase4-email-lifecycle-inventory
+          node scripts/phase4-email-lifecycle-inventory.js
+          node - <<'NODE'
+          const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-inventory';
+          const before=JSON.parse(fs.readFileSync('/tmp/phase4-email-first-hashes.json','utf8'));
+          const after=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          if(JSON.stringify(before)!==JSON.stringify(after)){const changed=[...new Set([...Object.keys(before),...Object.keys(after)])].filter(file=>before[file]!==after[file]);throw new Error(`Email inventory is not deterministic:\n${changed.join('\n')}`);}
+          console.log(`DETERMINISM PASS: ${Object.keys(after).length} inventory files reproduced byte-for-byte.`);
+          NODE
+
+      - name: Prove production files were not changed
+        run: |
+          node - <<'NODE'
+          const fs=require('fs');const crypto=require('crypto');
+          const before=JSON.parse(fs.readFileSync('/tmp/phase4-email-protected-before.json','utf8'));const changed=[];
+          for(const [file,expected] of Object.entries(before)){const actual=crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');if(actual!==expected)changed.push({file,expected,actual});}
+          const report={ok:changed.length===0,checkedFiles:Object.keys(before).length,changed,boundary:'Phase 4 inventory may inspect but must not mutate Workers, D1-facing code, forms, membership, access policy or payment state.'};
+          fs.writeFileSync('downloads/phase4-email-lifecycle-inventory/non-mutation-report.json',JSON.stringify(report,null,2));
+          if(changed.length)throw new Error(JSON.stringify(changed,null,2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} production files unchanged.`);
+          NODE
+
+      - name: Upload Phase 4 inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase4-email-lifecycle-inventory-${{ github.run_id }}
+          path: downloads/phase4-email-lifecycle-inventory/
+          if-no-files-found: error
+          retention-days: 30

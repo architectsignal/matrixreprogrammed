@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "status": "phase-2-report-only",
   "mode": "report-only",
   "purpose": "Deterministic conclusion-engine policy for evidence conclusions, power mechanisms, mission links, elite-control analysis, convergence scoring, speculation, counter-hypotheses, missing evidence, repetition detection and publication gates.",
@@ -12,12 +12,12 @@
       "speculativeSurfaceEligible": false
     },
     "research_hint": {
-      "label": "research hint — association not proof",
+      "label": "speculative research hint — association not proof",
       "factualSurfaceEligible": false,
       "speculativeSurfaceEligible": true
     },
     "scenario_analysis": {
-      "label": "scenario analysis — not a factual forecast",
+      "label": "speculative scenario analysis — not a factual forecast",
       "factualSurfaceEligible": false,
       "speculativeSurfaceEligible": true
     },
@@ -27,20 +27,20 @@
       "speculativeSurfaceEligible": true
     },
     "disputed": {
-      "label": "disputed claim",
+      "label": "disputed claim — not established fact",
       "factualSurfaceEligible": false,
       "speculativeSurfaceEligible": true
     },
     "unsupported": {
-      "label": "unsupported claim",
+      "label": "unsupported claim — retained for review",
       "factualSurfaceEligible": false,
       "speculativeSurfaceEligible": false
     }
   },
   "retentionRules": {
     "default": "retained",
-    "relationship_update": "retained_as_research_hint",
-    "scenario": "retained_as_scenario_analysis",
+    "relationship_update": "retained_as_speculative_research_hint",
+    "scenario": "retained_as_speculative_scenario_analysis",
     "speculation_review": "retained_as_speculative_analysis",
     "withdrawn": "retained_with_withdrawal_notice",
     "superseded": "retained_with_supersession_notice",

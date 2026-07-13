@@ -20,6 +20,19 @@ function runCanonicalBundle() {
   return path.join(root, 'downloads', 'canonical-preview-bundle', 'canonical-records.json');
 }
 
+function latestSourceCheckpoint(records) {
+  const timestamps = records
+    .flatMap(record => [
+      record.freshness?.lastReviewedAt,
+      record.freshness?.updatedAt,
+      record.freshness?.createdAt,
+      record.trigger?.detectedAt
+    ])
+    .map(value => Date.parse(value || ''))
+    .filter(Number.isFinite);
+  return timestamps.length ? new Date(Math.max(...timestamps)).toISOString() : '1970-01-01T00:00:00.000Z';
+}
+
 const canonicalPath = runCanonicalBundle();
 const policyPath = policyOverride ? path.resolve(policyOverride) : path.join(root, 'data', 'conclusion-engine-policy.json');
 const packageData = readJson(canonicalPath);
@@ -27,8 +40,8 @@ const policy = readJson(policyPath);
 if (!packageData.ok) throw new Error('Canonical package is not healthy.');
 if (policy.mode !== 'report-only') throw new Error('Conclusion engine must remain report-only.');
 const records = packageData.records;
-const generatedAt = packageData.generatedAt || new Date().toISOString();
-const now = Date.parse(generatedAt) || Date.now();
+const generatedAt = latestSourceCheckpoint(records);
+const now = Date.parse(generatedAt);
 const sourceExactCounts = Object.fromEntries(qualityFieldPaths.map(fieldPath => [fieldPath, countBy(records.filter(record => normalized(getPath(record, fieldPath))), record => normalized(getPath(record, fieldPath)))]));
 const baseAnalyses = records.map(record => ({ record, generated: generateRecordAnalysis(record, policy) }));
 const candidateExactCounts = Object.fromEntries(qualityFieldPaths.map(fieldPath => [fieldPath, countBy(baseAnalyses.filter(item => normalized(candidateFieldValue(item.generated, fieldPath))), item => normalized(candidateFieldValue(item.generated, fieldPath)))]));

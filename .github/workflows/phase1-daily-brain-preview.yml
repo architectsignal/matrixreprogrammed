@@ -1,0 +1,128 @@
+name: Phase 1 Daily Brain Canonical Preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-daily-brain-canonical-previews.js'
+      - 'data/daily-brain-brief.json'
+      - 'data/intelligence-record.schema.json'
+      - 'data/access-tier-policy.json'
+      - '.github/workflows/phase1-daily-brain-preview.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-daily-brain-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Validate non-destructive Daily Brain previews
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout proposed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate adapter syntax
+        run: node --check scripts/build-daily-brain-canonical-previews.js
+
+      - name: Record protected source hashes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const files = [
+            'data/daily-brain-brief.json',
+            'data/access-tier-policy.json',
+            'data/intelligence-record.schema.json',
+            'membership.html'
+          ];
+          const hashes = Object.fromEntries(files.map(file => [
+            file,
+            crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+          ]));
+          fs.mkdirSync('downloads/canonical-daily-brain-preview', { recursive: true });
+          fs.writeFileSync('downloads/canonical-daily-brain-preview/source-hashes-before.json', JSON.stringify(hashes, null, 2));
+          NODE
+
+      - name: Build Daily Brain canonical previews
+        run: node scripts/build-daily-brain-canonical-previews.js
+
+      - name: Validate synthesis boundaries and structure
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const schema = JSON.parse(fs.readFileSync('data/intelligence-record.schema.json', 'utf8'));
+          const output = JSON.parse(fs.readFileSync('downloads/canonical-daily-brain-preview/daily-brain.canonical-preview.json', 'utf8'));
+          if (output.mode !== 'preview-only') throw new Error('Preview mode changed');
+          if (output.paymentStatus !== 'deferred') throw new Error('Payment boundary changed');
+          if (output.enforcementMode !== 'report-only') throw new Error('Tier enforcement changed');
+          if (!output.records.length || output.recordCount !== output.records.length) throw new Error('Daily Brain preview count invalid');
+          const required = schema.required || [];
+          const allowedVectors = new Set(schema.$defs.convergenceVector.properties.vector.enum);
+          let inspected = 0;
+          for (const record of output.records) {
+            inspected += 1;
+            for (const field of required) {
+              if (record[field] === undefined || record[field] === null) throw new Error(`${record.id}: missing ${field}`);
+            }
+            if (record.recordType !== 'brief') throw new Error(`${record.id}: not a brief`);
+            if (record.status !== 'review') throw new Error(`${record.id}: synthesis published prematurely`);
+            if (record.evidence.claimClass !== 'scenario_analysis') throw new Error(`${record.id}: invalid claim class`);
+            if (record.speculativeConclusion.label !== 'speculative') throw new Error(`${record.id}: speculation label missing`);
+            if (!record.speculativeConclusion.falsifiers.length) throw new Error(`${record.id}: falsifiers missing`);
+            if (!record.counterAnalysis.alternativeExplanations.length) throw new Error(`${record.id}: counter-analysis missing`);
+            if (!/not proof of coordinated elite control/i.test(record.missionAssessment.boundary)) throw new Error(`${record.id}: mission boundary unsafe`);
+            for (const vector of record.missionAssessment.convergenceVectors) {
+              if (!allowedVectors.has(vector.vector)) throw new Error(`${record.id}: invalid convergence vector`);
+              if (vector.score > 2) throw new Error(`${record.id}: preview convergence score too high`);
+              if (vector.coordinationStatus !== 'not_shown') throw new Error(`${record.id}: coordination overclaimed`);
+            }
+          }
+          console.log(`DAILY BRAIN PREVIEW PASS: ${inspected} synthesis records validated.`);
+          NODE
+
+      - name: Prove protected files were not changed
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const before = JSON.parse(fs.readFileSync('downloads/canonical-daily-brain-preview/source-hashes-before.json', 'utf8'));
+          const changed = [];
+          for (const [file, expected] of Object.entries(before)) {
+            const actual = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            if (actual !== expected) changed.push({ file, expected, actual });
+          }
+          const report = {
+            ok: changed.length === 0,
+            generatedAt: new Date().toISOString(),
+            checkedFiles: Object.keys(before).length,
+            changed,
+            boundary: 'Daily Brain preview generation must not modify the source brief, schema, tier policy or membership page.'
+          };
+          fs.writeFileSync('downloads/canonical-daily-brain-preview/non-mutation-report.json', JSON.stringify(report, null, 2));
+          if (changed.length) throw new Error(JSON.stringify(changed, null, 2));
+          console.log(`NON-MUTATION PASS: ${report.checkedFiles} protected files unchanged.`);
+          NODE
+
+      - name: Upload Daily Brain preview package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-daily-brain-preview-${{ github.run_id }}
+          path: downloads/canonical-daily-brain-preview/
+          if-no-files-found: error
+          retention-days: 30

@@ -73,6 +73,40 @@
     X-Robots-Tag = "noindex, nofollow, noarchive"
     Cache-Control = "no-store"
 
+[[headers]]
+  for = "/downloads/*.pdf"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "application/pdf"
+
+[[headers]]
+  for = "/downloads/*.json"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "application/json"
+
+[[headers]]
+  for = "/downloads/*.md"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "text/markdown"
+
+[[headers]]
+  for = "/downloads/*.txt"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Content-Type = "text/plain"
+
+[[headers]]
+  for = "/feeds/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[headers]]
+  for = "/feeds/*.json"
+  [headers.values]
+    Content-Type = "application/feed+json"
+
 # Netlify is not used for production. These route contracts are retained because
 # the repository's pressure tests validate them alongside the Cloudflare routes.
 [[redirects]]

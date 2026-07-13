@@ -3,16 +3,17 @@ const path = require('path');
 
 const root = process.cwd();
 const pagePath = path.join(root, 'membership.html');
+const templatePath = path.join(root, 'templates', 'phase6-membership.html');
 const registryPath = path.join(root, 'data', 'membership-tiers.json');
 const reportPath = path.join(root, 'downloads', 'membership-tiers-report.json');
 
-if (!fs.existsSync(pagePath)) throw new Error('membership.html is missing');
+if (!fs.existsSync(templatePath)) throw new Error('templates/phase6-membership.html is missing');
 if (!fs.existsSync(registryPath)) throw new Error('data/membership-tiers.json is missing');
 
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
 const tiers = Array.isArray(registry.tiers) ? registry.tiers : [];
 const expectedPrices = [3, 6, 9];
-const html = fs.readFileSync(pagePath, 'utf8');
+const html = fs.readFileSync(templatePath, 'utf8');
 const failures = [];
 
 if (tiers.length !== 3) failures.push(`expected 3 paid membership tiers, found ${tiers.length}`);
@@ -32,21 +33,24 @@ for (const marker of [
   'billing-dashboard.html',
   'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
 ]) {
-  if (!html.includes(marker)) failures.push(`membership.html missing Phase 6 marker: ${marker}`);
+  if (!html.includes(marker)) failures.push(`Phase 6 membership template missing marker: ${marker}`);
 }
 
 for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken']) {
-  if (html.includes(forbidden)) failures.push(`membership.html contains obsolete marker: ${forbidden}`);
+  if (html.includes(forbidden)) failures.push(`Phase 6 membership template contains obsolete marker: ${forbidden}`);
 }
 
 const ids = [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
-if (duplicateIds.length) failures.push(`membership.html duplicate IDs: ${duplicateIds.join(', ')}`);
+if (duplicateIds.length) failures.push(`Phase 6 membership template duplicate IDs: ${duplicateIds.join(', ')}`);
+
+if (!failures.length) fs.writeFileSync(pagePath, html);
 
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  mode: 'phase6-preserve-server-gated-paypal-membership',
+  mode: 'phase6-restore-protected-template',
+  template: 'templates/phase6-membership.html',
   freeTier: true,
   prices: expectedPrices,
   checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',
@@ -62,4 +66,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('Membership page preserved: Free Member plus server-gated PayPal tiers at €3, €6 and €9.');
+console.log('Membership page restored from protected Phase 6 template: Free Member plus server-gated PayPal tiers at €3, €6 and €9.');

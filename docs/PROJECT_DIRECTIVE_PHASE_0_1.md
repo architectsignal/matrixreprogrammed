@@ -1,19 +1,19 @@
-# Matrix Reprogrammed — Locked Phase 0 and Phase 1 Directive
+# Matrix Reprogrammed — Locked Delivery Directive
 
-Status: LOCKED PROJECT DIRECTION
-Owner: Matrix Reprogrammed
-Scope: Phase 0 inventory and Phase 1 canonical intelligence model
+Status: LOCKED PROJECT DIRECTION  
+Owner: Matrix Reprogrammed  
+Scope: protected Phase 0 through Phase 2 programme and later operational activation  
 Change rule: preserve first, optimise second, replace only after proof
 
 ## Mission
 
-Matrix Reprogrammed is being developed as an evidence-led intelligence publishing and membership system. It must ingest public records, source updates, official releases, documents, datasets and relevant reporting; preserve the underlying source trail; produce defensible conclusions; explain the mechanism of power; connect findings to the site's mission; and provide a separately labelled speculative assessment of how a development may relate to elite control, institutional convergence, one-world governance, monetary centralisation, digital identity, surveillance, emergency power, information control, religious or ethical convergence, and other long-term control structures.
+Matrix Reprogrammed is being developed as an evidence-led intelligence publishing and membership system. It must ingest public records, source updates, official releases, documents, datasets, relevant reporting, submissions, corrections and counter-evidence; preserve the underlying source trail; produce defensible conclusions; explain mechanisms of power; connect findings to the site's mission; and provide a separately labelled speculative assessment of how a development may relate to elite control, institutional convergence, one-world governance, monetary centralisation, digital identity, surveillance, emergency power, information control, religious or ethical convergence and other long-term control structures.
 
-The system must not force every event to confirm the mission hypothesis. It must record supporting evidence, contradictory evidence, neutral context, uncertainty and missing records. The site's credibility depends on preserving the boundary between established fact, supported inference, scenario analysis, speculation and unsupported claims.
+The system must not force every event to confirm the mission hypothesis. It must record supporting evidence, contradictory evidence, neutral context, uncertainty and missing records. Credibility depends on preserving the boundary between established fact, official finding, documented association, supported inference, allegation, scenario analysis, model output, speculation and unsupported claims.
 
-## Non-negotiable preservation rule
+## Non-negotiable preservation rules
 
-Do not break, replace or weaken working production systems while Phase 0 and Phase 1 are being built.
+Do not break, replace or weaken working production systems while protected phases are being built.
 
 The following remain protected until a replacement is proven through compatibility tests, regression tests and production verification:
 
@@ -27,13 +27,13 @@ The following remain protected until a replacement is proven through compatibili
 - The current payment-deferred state: checkout disabled and no payment taken.
 - Existing newsletter capture and membership-foundation work, even where incomplete.
 
-No destructive migration, route removal, database deletion, payment activation or entitlement activation is permitted during Phase 0 and the report-only portion of Phase 1.
+No destructive migration, route removal, database deletion, payment activation or entitlement activation is permitted during report-only and preview-only work.
 
-## Phase 0 objective
+## Phase 0 — Inventory and protection
 
-Create a complete, machine-readable inventory of the present system before further structural changes.
+Create a complete, machine-readable inventory of the present system before structural changes.
 
-The inventory must cover:
+The inventory covers:
 
 - Public HTML routes and generated pages.
 - Data files and intelligence feeds.
@@ -47,50 +47,54 @@ The inventory must cover:
 - Daily drops, weekly reports, outcome briefs, dossiers, cards, maps and downloads.
 - Production health, freshness, synchronization and regression protections.
 
-Each component should be classified as one of:
+Components are classified as working, protected, partial, dormant, duplicated, obsolete candidate, missing, unsafe to modify without migration or requiring live verification.
 
-- working
-- protected
-- partial
-- dormant
-- duplicated
-- obsolete candidate
-- missing
-- unsafe to modify without migration
-- requires live verification
+Phase 0 reports inspect and recommend only. They do not move, hide, delete, redirect or paywall routes.
 
-Phase 0 reports must not mutate production content. They may only inspect and report.
+## Phase 1 — Canonical intelligence layer
 
-## Phase 1 objective
+Establish one canonical intelligence-record model that future cards, briefs, dossiers, drops, newsletters, dashboard items and reports can use without creating conflicting copies.
 
-Establish one canonical intelligence-record model that future cards, briefs, dossiers, drops, newsletters, dashboard items and reports can use without creating separate conflicting copies.
+Every complete intelligence record supports:
 
-Every complete intelligence record must support:
+- Trigger or change.
+- Primary records and source chain.
+- Record status.
+- Established facts.
+- Named entities.
+- Money and authority routes.
+- Mechanism of power.
+- Solid evidence-based conclusion.
+- Direct mission relevance.
+- Elite-control relevance.
+- Global-convergence assessment.
+- Separately labelled speculative conclusion.
+- Counter-analysis and contradictory evidence.
+- Missing evidence.
+- Watch-next and falsification conditions.
+- Evidence grade and conclusion confidence.
+- Freshness and review status.
+- Access tier and delivery permissions.
 
-- trigger or change
-- primary records and source chain
-- record status
-- established facts
-- named entities
-- money and authority routes
-- mechanism of power
-- solid evidence-based conclusion
-- direct mission relevance
-- elite-control relevance
-- global-convergence assessment
-- separately labelled speculative conclusion
-- counter-analysis and contradictory evidence
-- missing evidence
-- watch-next conditions
-- evidence grade and conclusion confidence
-- freshness and review status
-- access tier and delivery permissions
+The canonical model preserves both evidence and interpretation. It never upgrades speculation into fact merely because a record is assigned to a premium tier.
 
-The canonical model must preserve both evidence and interpretation. It must never upgrade speculation into fact merely because a record is assigned to a premium tier.
+### Seven mapped source families
+
+The current compatibility layer covers:
+
+- Daily investigations.
+- Weekly investigations.
+- Live Intel.
+- Outcome Briefings.
+- Daily Brain.
+- Daily Power Conclusions.
+- Evidence-weighted relationship graph.
+
+Duplicate daily and weekly delivery appearances are merged into one canonical finding while retaining both provenance routes.
 
 ## Mission outcome labels
 
-Every important record should be capable of receiving one mission outcome:
+Every important record can receive one mission outcome:
 
 - direct_support
 - indirect_support
@@ -98,7 +102,7 @@ Every important record should be capable of receiving one mission outcome:
 - contradictory_evidence
 - insufficient_evidence
 
-These labels describe the relationship between the evidence and the mission hypothesis. They do not establish guilt, conspiracy, hidden coordination or criminal intent.
+These labels describe the relationship between evidence and the mission hypothesis. They do not establish guilt, conspiracy, hidden coordination or criminal intent.
 
 ## Global convergence vectors
 
@@ -106,7 +110,7 @@ Each relevant record may be scored from 0 to 5 against:
 
 - political_governance
 - monetary_control
-- digital_identity
+- digital_identity_and_access
 - surveillance_and_data
 - emergency_power
 - information_and_narrative
@@ -115,7 +119,9 @@ Each relevant record may be scored from 0 to 5 against:
 - religious_or_ethical_convergence
 - legal_and_regulatory_convergence
 
-Scores must include a rationale, evidence basis and confidence. A high score means strong relevance to that control vector, not proof of a single centrally directed plan.
+Scores require a rationale, evidence basis, coordination status, confidence, upgrade condition and downgrade condition. A high score means relevance to that control vector, not proof of a single centrally directed plan.
+
+Unverified leads, relationship hints and scenario-only records cannot enter the convergence tracker as established movement.
 
 ## Access tiers
 
@@ -123,27 +129,81 @@ The canonical access order is cumulative:
 
 1. public
 2. registered
-3. supporter_3
-4. intelligence_6
-5. research_pro_9
+3. supporter_3 — €3 monthly planned
+4. intelligence_6 — €6 monthly planned
+5. research_pro_9 — €9 monthly planned
 6. separate_product
 
-A record should exist once. Entitlements control which fields, sections, downloads and tools are visible. The system should not maintain five independently edited versions of the same factual record.
+A record exists once. Entitlements control which fields, sections, downloads and tools are visible. The system must not maintain five independently edited factual versions.
 
-## Validation rollout
+Membership controls depth, workflow, tools, exports and convenience—not truth. Corrections, withdrawals, contradictory records and association boundaries that qualify a public claim remain public.
 
-Phase 1 validation begins in report-only mode.
+## Phase 2 — Deterministic publishing and conclusion engine
 
-Report-only validation must:
+### Tier projections
 
-- inspect existing outputs without changing them
-- show which canonical fields are already present
-- show missing fields and legacy aliases
-- identify migration risk
-- produce JSON and Markdown reports
-- exit successfully unless strict mode is explicitly requested
+The canonical layer produces deterministic cumulative Public, Free Registered, Supporter, Intelligence Member and Research Pro views.
 
-Strict validation may be introduced only after existing generators have been mapped, compatibility adapters have been tested and production outputs remain unchanged.
+Access projection changes visibility only. It cannot change record status, claim class, evidence grade, conclusion wording, confidence, mission outcome or public safety boundaries.
+
+### Static publishing preview
+
+Static noindexed dashboards, feeds and record pages are generated beneath an isolated preview namespace. They contain no forms, authentication calls, email capture, entitlement checks, checkout or payment code.
+
+### Rebuilt conclusion engine
+
+Every important update must contain a useful, evidence-bounded conclusion rather than generic synthesis.
+
+The report-only conclusion engine provides:
+
+1. Evidence-based conclusion generation.
+2. Mechanism-of-power analysis.
+3. Mission-link analysis.
+4. Elite-control analysis.
+5. Ten-vector convergence scoring.
+6. Separately labelled speculative conclusion.
+7. Counter-hypothesis.
+8. Missing-evidence and falsification section.
+9. Repetition and generic-language detection.
+10. Confidence and freshness gates.
+
+The processing order is:
+
+```text
+Preserved source records
+→ claim and record-status classification
+→ established facts
+→ evidence-based conclusion
+→ mechanism-of-power analysis
+→ mission-link analysis
+→ elite-control analysis
+→ convergence-vector scoring
+→ counter-hypothesis
+→ missing evidence and falsifiers
+→ separately labelled speculative conclusion
+→ repetition and generic-language checks
+→ confidence and freshness gates
+→ tier projection
+→ publishing eligibility decision
+```
+
+### Conclusion-engine exit condition
+
+No published item can confuse documented fact, allegation, inference, model output or speculation.
+
+A record fails closed and remains held when:
+
+- Factual and speculative conclusions are not structurally separate.
+- A source-backed public boundary is missing.
+- A relationship is based only on association or graph proximity.
+- A convergence score lacks an evidence basis or downgrade condition.
+- The conclusion repeats generic language without a record-specific mechanism.
+- Material contradictory evidence has not been addressed.
+- The record is stale, superseded, corrected or withdrawn.
+- Confidence cannot be explained from evidence.
+- The conclusion implies coordination not established by sources.
+
+Only evidence-qualified records may reach `publishable_preview`. That status is still not live publication.
 
 ## Payment boundary
 
@@ -153,28 +213,29 @@ Membership prices and benefits may remain visible. Checkout, paid entitlement gr
 
 Optimisation means:
 
-- reducing duplication
-- making data structures consistent
-- improving evidence traceability
-- improving conclusions and mission relevance
-- improving tier routing
-- making failures visible
-- preserving working features
-- adding compatibility layers before replacement
+- Reducing duplication.
+- Making data structures consistent.
+- Improving evidence traceability.
+- Improving conclusions and mission relevance.
+- Improving tier routing.
+- Making failures visible.
+- Preserving working features.
+- Adding compatibility layers before replacement.
 
 Optimisation does not mean deleting old systems before their responsibilities have been identified and safely migrated.
 
-## Merge boundary
+## Protected merge boundary
 
-Phase 0 and Phase 1 work remains on a protected branch and draft pull request until:
+The programme remains on a protected branch and draft pull request until:
 
-- the inventory report runs successfully
-- the protection map is complete
-- the canonical schema is valid JSON Schema
-- the tier policy is internally consistent
-- report-only validation runs without mutating source files
-- current production guards remain present
-- no checkout or paid entitlement path is activated
-- conflicts with other active production work are resolved
+- Inventory and protection reports are reviewed.
+- Canonical schemas and tier policies are valid.
+- All adapters and previews are deterministic.
+- Report-only and preview-only builds do not mutate protected files.
+- Conclusion candidates pass fact/speculation, repetition, confidence, freshness and convergence gates.
+- Current production guards remain present.
+- No checkout or paid entitlement path is activated.
+- Conflicts with active production work are resolved.
+- Later authentication, email, dashboard and payment lifecycles are separately tested.
 
-This directive is the controlling design document for Phase 0 and Phase 1.
+This directive is the controlling design document for the protected Matrix Reprogrammed delivery programme.

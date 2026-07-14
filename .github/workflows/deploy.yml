@@ -64,7 +64,11 @@ jobs:
       - name: Build complete site and Worker assets
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: npm run build
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          npm run build 2>&1 | tee downloads/production-build.log
 
       - name: Verify D1-authoritative forum, member, PayPal, bootstrap and rehearsal wiring
         run: |
@@ -178,7 +182,7 @@ jobs:
           console.log(`D1 migration verification passed for ${required.length} required objects; sandbox and live checkout remain disabled.`);
           NODE
 
-      - name: Remove private rollback snapshot from runner workspace
+      - name: Remove private D1 rollback snapshot from runner workspace
         if: success()
         run: rm -rf downloads/private-migration
 
@@ -211,6 +215,7 @@ jobs:
         with:
           name: production-proof-${{ github.run_id }}
           path: |
+            downloads/production-build.log
             downloads/deploy-manifest.json
             downloads/deploy-health.json
             downloads/production-freshness-guard.json

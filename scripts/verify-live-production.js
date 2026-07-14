@@ -35,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/4.0',
+      'user-agent': 'MatrixProductionVerifier/5.0',
       ...(options.headers || {})
     }
   });
@@ -43,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/4.0' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -121,6 +121,36 @@ async function verifyPayPalBoundary() {
     data
   };
 }
+async function verifyBootstrapBoundary() {
+  const response = await fetchText('/api/paypal/bootstrap-health');
+  const data = parseJson(response.text);
+  const prices = Array.isArray(data?.prices) ? data.prices : [];
+  const expected = { supporter: '3.00', intelligence: '6.00', research_pro: '9.00' };
+  const pricesValid = Object.entries(expected).every(([tier, amount]) => {
+    const row = prices.find(item => item.tier === tier);
+    return row
+      && String(row.amount) === amount
+      && String(row.currency).toUpperCase() === 'EUR'
+      && String(row.status).toUpperCase() === 'ACTIVE';
+  });
+  return {
+    ok: response.status === 200
+      && response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-bootstrap'
+      && data?.ok === true
+      && data?.ready === true
+      && data?.environment === 'sandbox'
+      && data?.configured === true
+      && data?.sandboxSwitchEnabled === true
+      && data?.productionSwitchDisabled === true
+      && data?.plansReady === true
+      && Number(data?.planCount) === 3
+      && pricesValid
+      && data?.liveChargingEnabled === false,
+    status: response.status,
+    origin: response.headers['x-matrix-origin'] || null,
+    data
+  };
+}
 async function verifyRehearsalBoundary() {
   const readinessResponse = await fetchText('/api/paypal/admin/rehearsal/readiness');
   const readiness = parseJson(readinessResponse.text);
@@ -140,16 +170,8 @@ async function verifyRehearsalBoundary() {
       && checkout?.ok === false
       && checkout?.rehearsalRequired === true
       && checkout?.liveChargingEnabled === false,
-    readiness: {
-      status: readinessResponse.status,
-      origin: readinessResponse.headers['x-matrix-origin'] || null,
-      data: readiness
-    },
-    checkout: {
-      status: checkoutResponse.status,
-      origin: checkoutResponse.headers['x-matrix-origin'] || null,
-      data: checkout
-    }
+    readiness: { status: readinessResponse.status, origin: readinessResponse.headers['x-matrix-origin'] || null, data: readiness },
+    checkout: { status: checkoutResponse.status, origin: checkoutResponse.headers['x-matrix-origin'] || null, data: checkout }
   };
 }
 async function verifyOnce() {
@@ -183,10 +205,11 @@ async function verifyOnce() {
   );
   const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
-  const rehearsalBoundary = coreOk && paypalBoundary.ok ? await verifyRehearsalBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
-  const forumPersistence = coreOk && paypalBoundary.ok && rehearsalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core, PayPal or rehearsal boundary not proven yet' };
-  const ok = coreOk && paypalBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, rehearsalBoundary, forumPersistence };
+  const bootstrapBoundary = coreOk && paypalBoundary.ok ? await verifyBootstrapBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
+  const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ok ? await verifyRehearsalBoundary() : { ok: false, skipped: true, reason: 'core, PayPal or bootstrap readiness not proven yet' };
+  const forumPersistence = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core, PayPal, bootstrap or rehearsal boundary not proven yet' };
+  const ok = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
 }
 
 (async () => {
@@ -197,7 +220,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
-      console.log(`Live production, commit-bound health, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
+      console.log(`Live production, autonomous sandbox plans, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

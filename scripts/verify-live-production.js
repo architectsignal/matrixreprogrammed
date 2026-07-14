@@ -35,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/5.0',
+      'user-agent': 'MatrixProductionVerifier/5.1',
       ...(options.headers || {})
     }
   });
@@ -43,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.0' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.1' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -191,7 +191,11 @@ async function verifyOnce() {
     payloads[item.file] = parseJson(response.text);
   }
   const freshness = freshnessChecks(payloads);
-  const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha && manifest.commitSha === mainSha);
+  // The workflow must verify the exact SHA it checked out and deployed. `main`
+  // may legitimately advance during a long build because data-generation jobs
+  // commit refreshed public outputs without triggering a replacement deploy.
+  const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha);
+  const mainAdvancedDuringRun = Boolean(mainSha && mainSha !== expectedSha);
   const healthMatches = Boolean(
     healthResponse.ok
     && health?.ok === true
@@ -209,7 +213,7 @@ async function verifyOnce() {
   const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ok ? await verifyRehearsalBoundary() : { ok: false, skipped: true, reason: 'core, PayPal or bootstrap readiness not proven yet' };
   const forumPersistence = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core, PayPal, bootstrap or rehearsal boundary not proven yet' };
   const ok = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
 }
 
 (async () => {
@@ -220,7 +224,8 @@ async function verifyOnce() {
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
-      console.log(`Live production, autonomous sandbox plans, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
+      const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
+      console.log(`Live production, autonomous sandbox plans, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

@@ -14,6 +14,14 @@
       "zone_name": "matrixreprogrammed.com"
     }
   ],
+  "triggers": {
+    "crons": ["0 * * * *"]
+  },
+  "vars": {
+    "PAYPAL_ENVIRONMENT": "sandbox",
+    "PAYPAL_SANDBOX_ENABLED": "true",
+    "PAYPAL_PRODUCTION_ENABLED": "false"
+  },
   "assets": {
     "binding": "ASSETS",
     "directory": "_site",

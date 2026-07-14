@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-14T05:53:17.711Z",
-    "filesScanned": 4079,
-    "highIssues": 2324,
-    "reviewIssues": 8,
-    "intakeAreas": 2192,
+    "updated": "2026-07-14T07:29:48.930Z",
+    "filesScanned": 4125,
+    "highIssues": 2339,
+    "reviewIssues": 7,
+    "intakeAreas": 2199,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -1531,6 +1531,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/conclusion-engine-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/conclusion-engine.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1550,6 +1556,12 @@
     {
       "severity": "high",
       "file": "_site/data/content-routes.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/content-tier-taxonomy-policy.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1981,6 +1993,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/intelligence-record.schema.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/investigation-knowledge-graph.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2210,6 +2228,42 @@
     {
       "severity": "high",
       "file": "_site/data/outcome-briefings.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-canonical-taxonomy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-editorial-resolution-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-entity-topic-tagging-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-preview-generation-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-public-private-policy.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/phase3-tier-matrix-policy.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2653,6 +2707,24 @@
     },
     {
       "severity": "high",
+      "file": "_site/docs/PHASE_2_CONCLUSION_ENGINE_ROADMAP.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/docs/PHASE_2_INTERPRETIVE_RETENTION_POLICY.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/docs/PROJECT_DIRECTIVE_PHASE_0_1.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/docs/matrix-reprogrammed-master-upgrade-spec.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2809,6 +2881,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/downloads/daily-drop.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/downloads/dark-speculation-deep-dossiers.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2932,84 +3010,6 @@
       "file": "_site/downloads/epstein-email-signals.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-email-signals.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-file-cockpit.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-file-cockpit.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-network-architecture.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-network-architecture.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-network-deep-dive.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-network-deep-dive.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-people-index.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/epstein-people-index.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/evidence-pull-list.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/follow-the-money-tracking-manual.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/follow-the-money-watch.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "review",
-      "file": "_site/downloads/forum-posts.json",
-      "pattern": "/dummy/i",
-      "note": "Review whether this text is intentionally visible."
     }
   ],
   "intake": [
@@ -3021,7 +3021,35 @@
       "status": "ok"
     },
     {
+      "file": "_site/access-denied.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/accountability-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/admin-campaign-monitor.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/admin-member-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/admin-payment-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3610,6 +3638,13 @@
     },
     {
       "file": "_site/big-three/blackrock.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billing-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5787,6 +5822,13 @@
     },
     {
       "file": "_site/elite-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/email-status.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8397,6 +8439,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/power-entities.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/power-families/adani-family.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -9650,6 +9699,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/subscriber-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/surveillance-hub.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10687,6 +10743,13 @@
     },
     {
       "file": "admin-payment-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "admin-paypal-rehearsal.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14732,13 +14795,6 @@
       "status": "ok"
     },
     {
-      "file": "investigation-source-ledger.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "investigations.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -16602,13 +16658,6 @@
     },
     {
       "file": "search.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "sec-filing-feed.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

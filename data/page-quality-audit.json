@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-14T05:53:08.403Z",
-  "filesScanned": 520,
+  "updated": "2026-07-14T07:29:39.430Z",
+  "filesScanned": 521,
   "highIssues": 0,
-  "reviewIssues": 9,
+  "reviewIssues": 10,
   "issues": [
     {
       "file": "access-denied.html",
@@ -22,6 +22,11 @@
     },
     {
       "file": "admin-payment-dashboard.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "admin-paypal-rehearsal.html",
       "severity": "review",
       "issue": "missing meta description"
     },

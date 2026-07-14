@@ -2,6 +2,10 @@ import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
+import rehearsalWorker, {
+  isPayPalSandboxRehearsalRoute,
+  enforceSandboxRehearsalGate
+} from './worker-paypal-sandbox-rehearsal.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -42,14 +46,18 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
       ? 'Cloudflare D1 MEMBERS_DB member, session and entitlement tables'
       : subsystem === 'paypal'
         ? 'Cloudflare D1 MEMBERS_DB PayPal billing ledger'
-        : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+        : subsystem === 'paypal-rehearsal'
+          ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
+          : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
       ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
       : subsystem === 'paypal'
         ? 'PayPal billing storage is unavailable. No legacy or unverified payment response was accepted.'
-        : 'Forum storage is unavailable. No legacy success response was accepted.';
+        : subsystem === 'paypal-rehearsal'
+          ? 'PayPal sandbox rehearsal controls are unavailable. Checkout remains closed.'
+          : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -61,6 +69,25 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
     detail: String(detail || '').slice(0, 300),
     checkedAt: new Date().toISOString()
   }, null, 2), { status: 503, headers: jsonHeaders });
+}
+
+function sandboxCheckoutClosed(reason = 'sandbox-checkout-requires-active-rehearsal') {
+  return new Response(JSON.stringify({
+    ok: false,
+    configured: true,
+    environment: 'sandbox',
+    checkoutEnabled: false,
+    rehearsalRequired: true,
+    liveChargingEnabled: false,
+    error: 'Sandbox checkout opens only during an active, time-limited Phase 7 rehearsal.',
+    reason
+  }, null, 2), {
+    status: 503,
+    headers: {
+      ...jsonHeaders,
+      'X-Matrix-Origin': 'cloudflare-worker-paypal-sandbox-rehearsal'
+    }
+  });
 }
 
 function hasD1(env) {
@@ -118,6 +145,14 @@ async function validatePayPalResponse(response) {
   return response;
 }
 
+async function validateRehearsalResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-paypal-sandbox-rehearsal') {
+    return unavailable('non-authoritative-paypal-rehearsal-response-blocked', `Origin was ${origin || 'missing'}`, 'paypal-rehearsal');
+  }
+  return response;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
@@ -129,8 +164,26 @@ export default {
         return unavailable('email-worker-exception', error?.message || error, 'email');
       }
     }
+    if (isPayPalSandboxRehearsalRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'paypal-rehearsal');
+      try {
+        return validateRehearsalResponse(await rehearsalWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('paypal-rehearsal-worker-exception', error?.message || error, 'paypal-rehearsal');
+      }
+    }
     if (isPayPalRoute(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'paypal');
+      if (path === '/api/paypal/checkout-intent'
+        && request.method === 'POST'
+        && String(env?.PAYPAL_ENVIRONMENT || 'sandbox').toLowerCase() !== 'live') {
+        try {
+          const gate = await enforceSandboxRehearsalGate(env);
+          if (!gate.allowed) return sandboxCheckoutClosed(gate.reason);
+        } catch (error) {
+          return unavailable('paypal-rehearsal-gate-exception', error?.message || error, 'paypal-rehearsal');
+        }
+      }
       try {
         return validatePayPalResponse(await paypalWorker.fetch(request, env, ctx));
       } catch (error) {
@@ -157,6 +210,9 @@ export default {
 
   async scheduled(event, env, ctx) {
     if (!hasD1(env)) return;
-    return emailWorker.scheduled(event, env, ctx);
+    await Promise.all([
+      emailWorker.scheduled(event, env, ctx),
+      rehearsalWorker.scheduled(event, env, ctx)
+    ]);
   }
 };

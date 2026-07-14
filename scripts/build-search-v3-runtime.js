@@ -10,8 +10,17 @@ const reportPath = path.join(root, 'downloads', 'search-v3-runtime-report.json')
 const indexPath = path.join(root, 'search-index.json');
 const facetsPath = path.join(root, 'data', 'search-facets.json');
 const maxDeployableSearchBytes = 24 * 1024 * 1024;
+const targetSearchBytes = 20 * 1024 * 1024;
+
+const compactionProfiles = [
+  { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96 },
+  { id: 'compact', title: 160, description: 120, listItems: 6, listChars: 48, scalar: 80 },
+  { id: 'tight', title: 144, description: 96, listItems: 5, listChars: 40, scalar: 72 },
+  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 }
+];
 
 function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
+function bounded(value, max) { return clean(value).slice(0, max); }
 function facetCounts(records, field) {
   const counter = new Map();
   for (const record of records) {
@@ -23,42 +32,110 @@ function facetCounts(records, field) {
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([value, count]) => ({ value, count }));
 }
+function listValues(value) {
+  const values = Array.isArray(value) ? value : value == null || value === '' ? [] : [value];
+  const flattened = [];
+  for (const item of values) {
+    if (item && typeof item === 'object') flattened.push(...Object.values(item));
+    else flattened.push(item);
+  }
+  return flattened;
+}
+function compactList(value, profile) {
+  return [...new Set(listValues(value).map(item => bounded(item, profile.listChars)).filter(Boolean))].slice(0, profile.listItems);
+}
+function compactRecord(record, profile) {
+  const url = String(record?.url || '').trim();
+  if (!url) return null;
+  const output = {
+    searchVersion: 3,
+    title: bounded(record.title || url, profile.title),
+    url,
+    sourceType: bounded(record.sourceType || 'route', profile.scalar),
+    resultKind: bounded(record.resultKind || 'route', profile.scalar),
+    statusClass: bounded(record.statusClass || 'context', profile.scalar),
+    primarySource: record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true'
+  };
+  const scalarFields = [
+    'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',
+    'reviewStatus', 'jurisdiction', 'entityType', 'entity'
+  ];
+  for (const field of scalarFields) {
+    const value = bounded(record[field], profile.scalar);
+    if (value) output[field] = value;
+  }
+  const description = bounded(record.description, profile.description);
+  if (description) output.description = description;
+  for (const field of ['keywords', 'aliases', 'identifiers', 'exactTerms']) {
+    const values = compactList(record[field], profile);
+    if (values.length) output[field] = values;
+  }
+  for (const field of ['date', 'publicationDate', 'retrievalDate']) {
+    const value = bounded(record[field], 40);
+    if (value) output[field] = value;
+  }
+  const sourceUrl = String(record.sourceUrl || '').trim();
+  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);
+  const priority = Number(record.priority || 0);
+  if (Number.isFinite(priority) && priority) output.priority = priority;
+  return output;
+}
+function serializeWithProfile(records, profile) {
+  const compacted = records.map(record => compactRecord(record, profile)).filter(Boolean);
+  const serialized = JSON.stringify(compacted);
+  return { compacted, serialized, bytes: Buffer.byteLength(serialized), profile };
+}
 function compactSearchIndex() {
   let records = [];
   try { records = JSON.parse(fs.readFileSync(indexPath, 'utf8')); } catch {}
   if (!Array.isArray(records)) throw new Error('Search V3 runtime build failed: search-index.json is not an array.');
   const before = records.length;
-  records = records.filter(record => {
-    if (record?.sourceType !== 'structured-relationship') return true;
-    const text = `${record.category || ''} ${record.title || ''} ${record.factualStatus || ''}`;
-    return !/reportedTransaction|reportedPositionChange|reported transaction|reported position change/i.test(text);
-  });
-  const serialized = JSON.stringify(records);
-  const bytes = Buffer.byteLength(serialized);
-  if (bytes > maxDeployableSearchBytes) {
-    throw new Error(`Search V3 runtime build failed: compact index is ${Math.ceil(bytes / 1024 / 1024)} MiB, above the 24 MiB deployment guard.`);
+  const originalUrls = new Set(records.map(record => String(record?.url || '').trim()).filter(Boolean));
+  let selected = null;
+  for (const profile of compactionProfiles) {
+    const candidate = serializeWithProfile(records, profile);
+    selected = candidate;
+    if (candidate.bytes <= targetSearchBytes) break;
   }
-  fs.writeFileSync(indexPath, serialized);
+  if (!selected || selected.bytes > maxDeployableSearchBytes) {
+    const bytes = selected?.bytes || 0;
+    throw new Error(`Search V3 runtime build failed: adaptively compacted index is ${Math.ceil(bytes / 1024 / 1024)} MiB, above the 24 MiB deployment guard.`);
+  }
+  const compactedUrls = new Set(selected.compacted.map(record => record.url));
+  const missingUrls = [...originalUrls].filter(url => !compactedUrls.has(url));
+  if (missingUrls.length) throw new Error(`Search V3 runtime build failed: adaptive compaction lost ${missingUrls.length} searchable URL(s).`);
+  fs.writeFileSync(indexPath, selected.serialized);
   let priorFacets = {};
   try { priorFacets = JSON.parse(fs.readFileSync(facetsPath, 'utf8')); } catch {}
   const facets = {
     ...priorFacets,
     searchVersion: 3,
     updated: new Date().toISOString(),
-    totalResults: records.length,
+    totalResults: selected.compacted.length,
     evidenceBoundary: priorFacets.evidenceBoundary || 'Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.',
     filters: {
-      evidenceGrade: facetCounts(records, 'evidenceGrade'),
-      sourceType: facetCounts(records, 'sourceType'),
-      statusClass: facetCounts(records, 'statusClass'),
-      jurisdiction: facetCounts(records, 'jurisdiction'),
-      entityType: facetCounts(records, 'entityType'),
-      resultKind: facetCounts(records, 'resultKind')
+      evidenceGrade: facetCounts(selected.compacted, 'evidenceGrade'),
+      sourceType: facetCounts(selected.compacted, 'sourceType'),
+      statusClass: facetCounts(selected.compacted, 'statusClass'),
+      jurisdiction: facetCounts(selected.compacted, 'jurisdiction'),
+      entityType: facetCounts(selected.compacted, 'entityType'),
+      resultKind: facetCounts(selected.compacted, 'resultKind')
     }
   };
   fs.mkdirSync(path.dirname(facetsPath), { recursive: true });
   fs.writeFileSync(facetsPath, JSON.stringify(facets, null, 2));
-  return { before, after: records.length, removedDuplicateMarketRelationships: before - records.length, bytes, facetTotal: facets.totalResults };
+  return {
+    before,
+    after: selected.compacted.length,
+    removedDuplicateMarketRelationships: 0,
+    invalidRecordsRemoved: before - selected.compacted.length,
+    originalUniqueUrls: originalUrls.size,
+    preservedUniqueUrls: compactedUrls.size,
+    bytes: selected.bytes,
+    targetBytes: targetSearchBytes,
+    compactionProfile: selected.profile.id,
+    facetTotal: facets.totalResults
+  };
 }
 
 if (!fs.existsSync(pagePath) || !fs.existsSync(templatePath)) {
@@ -110,7 +187,7 @@ const requiredRuntime = ['SEARCH V3','SEARCH V2 compatibility','investigationQue
 const missingPage = requiredPage.filter(marker => !html.includes(marker));
 const missingRuntime = requiredRuntime.filter(marker => !runtime.includes(marker));
 const report = {
-  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0 && compactStats.bytes <= maxDeployableSearchBytes && compactStats.facetTotal === compactStats.after,
+  ok: syntax.status === 0 && missingPage.length === 0 && missingRuntime.length === 0 && compactStats.bytes <= maxDeployableSearchBytes && compactStats.facetTotal === compactStats.after && compactStats.originalUniqueUrls === compactStats.preservedUniqueUrls,
   generatedAt: new Date().toISOString(),
   missingPage,
   missingRuntime,
@@ -119,8 +196,9 @@ const report = {
   compactIndex: {
     ...compactStats,
     mebibytes: Number((compactStats.bytes / 1024 / 1024).toFixed(2)),
+    targetMebibytes: 20,
     deploymentLimitMebibytes: 24,
-    evidenceBoundary: 'Only duplicate verbose market relationship records are removed. Compact official filing results remain searchable, and the complete relationships remain available in the public graph and registries.'
+    evidenceBoundary: 'No valid searchable URL is removed. Only fields unused by the Search V3 browser runtime are discarded, while display text and keyword arrays are bounded adaptively. Complete records remain available in their source pages, graph, registries and document library.'
   }
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -132,4 +210,4 @@ if (!report.ok) {
   if (!report.syntaxOk) console.error(report.syntaxError);
   process.exit(1);
 }
-console.log(`Search V3 runtime built with evidence filters and a ${report.compactIndex.mebibytes} MiB deployable index; ${compactStats.removedDuplicateMarketRelationships} duplicate market relationship records removed and facets synchronized.`);
+console.log(`Search V3 runtime built with evidence filters and a ${report.compactIndex.mebibytes} MiB deployable index using the ${compactStats.compactionProfile} profile; ${compactStats.preservedUniqueUrls} searchable URLs preserved and facets synchronized.`);

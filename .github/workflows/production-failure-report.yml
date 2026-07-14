@@ -1,4 +1,4 @@
-name: Production Failure Reporter
+name: Production Deployment Reporter
 
 on:
   workflow_run:
@@ -13,13 +13,13 @@ permissions:
   issues: write
 
 jobs:
-  report-production-failure:
-    name: Publish sanitized production failure evidence
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+  report-production-result:
+    name: Publish sanitized production deployment status
+    if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Download production proof artifact
+      - name: Download and sanitize production proof
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_ID: ${{ github.event.workflow_run.id }}
@@ -28,45 +28,70 @@ jobs:
           set -euo pipefail
           mkdir -p proof
           artifact_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}/artifacts" --jq '.artifacts[] | select(.name | startswith("production-proof-")) | .id' | head -n 1)"
-          if [ -z "$artifact_id" ]; then
-            printf 'No production-proof artifact was available for run %s.\n' "$RUN_ID" > proof/production-build-tail.txt
-            exit 0
+          if [ -n "$artifact_id" ]; then
+            gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" > proof.zip
+            unzip -o proof.zip -d proof >/dev/null
           fi
-          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" > proof.zip
-          unzip -o proof.zip -d proof >/dev/null
           if [ -s proof/production-build.log ]; then
             tail -n 180 proof/production-build.log \
               | sed -E 's/(TOKEN|SECRET|PASSWORD|AUTHORIZATION|CLIENT_SECRET)[=:][^[:space:]]+/\1=[REDACTED]/Ig' \
               > proof/production-build-tail.txt
           else
-            printf 'The proof artifact did not contain production-build.log.\n' > proof/production-build-tail.txt
+            printf 'No production build log was available for run %s.\n' "$RUN_ID" > proof/production-build-tail.txt
           fi
+          : > proof/production-success-proof.txt
+          if [ -s proof/production-deploy-receipt.json ]; then
+            echo 'Production deployment receipt:' >> proof/production-success-proof.txt
+            jq '{ok,generatedAt,commit,environment,deploymentTarget,d1,paypal,liveVerification}' proof/production-deploy-receipt.json >> proof/production-success-proof.txt 2>/dev/null || cat proof/production-deploy-receipt.json >> proof/production-success-proof.txt
+          fi
+          if [ -s proof/live-production-verification.json ]; then
+            echo >> proof/production-success-proof.txt
+            echo 'Live production verification:' >> proof/production-success-proof.txt
+            jq '{ok,checkedAt,expectedSha,mainSha,manifestMatches,healthMatches,paypalBoundary,forumPersistence}' proof/live-production-verification.json >> proof/production-success-proof.txt 2>/dev/null || true
+          fi
+          if [ ! -s proof/production-success-proof.txt ]; then
+            printf 'The run completed without a readable production receipt artifact.\n' > proof/production-success-proof.txt
+          fi
+          sed -E -i 's/(TOKEN|SECRET|PASSWORD|AUTHORIZATION|CLIENT_SECRET)[=:][^[:space:]]+/\1=[REDACTED]/Ig' proof/production-success-proof.txt
 
-      - name: Open one actionable failure issue
+      - name: Update the production status issue
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_ID: ${{ github.event.workflow_run.id }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
         shell: bash
         run: |
           set -euo pipefail
-          title="Production deployment failure: run ${RUN_ID}"
-          existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "${title} in:title" --json number --jq '.[0].number // empty')"
-          if [ -n "$existing" ]; then
-            exit 0
+          title="Production deployment status"
+          existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state all --limit 100 --json number,title --jq '.[] | select(.title=="Production deployment status") | .number' | head -n 1)"
+          if [ "$CONCLUSION" = "success" ]; then
+            heading="## Production deployment succeeded"
+            detail_heading="## Sanitized deployment proof"
+            detail_file="proof/production-success-proof.txt"
+          else
+            heading="## Production deployment failed"
+            detail_heading="## Sanitized build-log tail"
+            detail_file="proof/production-build-tail.txt"
           fi
           {
-            echo "## Production deployment failed"
+            echo "$heading"
             echo
             echo "- Run: ${RUN_URL}"
             echo "- Commit: \`${HEAD_SHA}\`"
-            echo "- Safety state: PayPal production charging remains disabled."
+            echo "- Conclusion: **${CONCLUSION}**"
+            echo "- Safety state: PayPal production charging remains disabled unless a separately verified live-activation change is merged."
             echo
-            echo "## Sanitized build-log tail"
+            echo "$detail_heading"
             echo
             echo '```text'
-            cat proof/production-build-tail.txt
+            cat "$detail_file"
             echo '```'
           } > proof/issue.md
-          gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file proof/issue.md
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --repo "$GITHUB_REPOSITORY" --title "$title" --body-file proof/issue.md
+            gh issue reopen "$existing" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 || true
+          else
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file proof/issue.md
+          fi

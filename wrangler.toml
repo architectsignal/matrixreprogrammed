@@ -13,6 +13,11 @@ routes = [
   { pattern = "www.matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" }
 ]
 
+[vars]
+PAYPAL_ENVIRONMENT = "sandbox"
+PAYPAL_SANDBOX_ENABLED = "true"
+PAYPAL_PRODUCTION_ENABLED = "false"
+
 [assets]
 directory = "./_site"
 binding = "ASSETS"
@@ -23,7 +28,7 @@ run_worker_first = true
 binding = "FORUM_POSTS"
 id = "99996d87016d4285a833707cbda5232f"
 
-# Authoritative membership, forum, consent, session and future payment database.
+# Authoritative membership, forum, consent, session and payment database.
 [[d1_databases]]
 binding = "MEMBERS_DB"
 database_name = "matrix-members"

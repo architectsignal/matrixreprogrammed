@@ -78,6 +78,7 @@ run('scripts/build-evidence-badge-system.js');
 run('scripts/build-premier-resource-upgrade.js');
 run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/enforce-production-cache-policy.js');
+run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 run('scripts/build-deploy-manifest.js');
 run('scripts/build-production-health.js');
 
@@ -88,6 +89,7 @@ const critical = [
   'member-dashboard.html', 'member-dashboard-app.js',
   'billing-dashboard.html', 'billing-dashboard.js',
   'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
+  'admin-paypal-rehearsal.html', 'admin-paypal-rehearsal.js',
   'live-intel.html', 'daily-power-conclusions.html',
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
@@ -124,6 +126,13 @@ requireMarker('paypal-membership.js', '/api/paypal/checkout-intent');
 requireMarker('paypal-membership.js', '/api/paypal/subscription/confirm');
 requireMarker('billing-dashboard.html', 'billing-dashboard.js');
 requireMarker('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
+requireMarker('admin-payment-dashboard.js', 'admin-paypal-rehearsal.html');
+requireMarker('admin-paypal-rehearsal.html', 'PAYPAL SANDBOX REHEARSAL.');
+requireMarker('admin-paypal-rehearsal.html', 'maximum 45-minute window');
+requireMarker('admin-paypal-rehearsal.html', 'admin-paypal-rehearsal.js');
+requireMarker('admin-paypal-rehearsal.js', '/api/paypal/admin/rehearsal/start');
+requireMarker('admin-paypal-rehearsal.js', '/api/paypal/admin/rehearsal/complete');
+requireMarker('admin-paypal-rehearsal.js', '/api/paypal/admin/rehearsal/abort');
 requireMarker('homepage-mask-intro.js', 'matrix-homepage-intro-seen-v2');
 requireMarker('homepage-mask-intro.js', 'eye: 3000');
 requireMarker('homepage-mask-intro.js', 'burn: 1100');

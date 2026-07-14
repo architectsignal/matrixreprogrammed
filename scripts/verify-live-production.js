@@ -14,6 +14,7 @@ const routeMarkers = {
   '/membership': 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.',
   '/billing-dashboard': 'billing-dashboard.js',
   '/admin-payment-dashboard': 'admin-payment-dashboard.js',
+  '/admin-paypal-rehearsal': 'PAYPAL SANDBOX REHEARSAL.',
   '/live-intel': 'LIVE INTEL',
   '/daily-power-conclusions': '<!-- conclusion-integrity:start -->',
   '/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->',
@@ -34,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/3.0',
+      'user-agent': 'MatrixProductionVerifier/4.0',
       ...(options.headers || {})
     }
   });
@@ -42,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/3.0' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/4.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -120,6 +121,37 @@ async function verifyPayPalBoundary() {
     data
   };
 }
+async function verifyRehearsalBoundary() {
+  const readinessResponse = await fetchText('/api/paypal/admin/rehearsal/readiness');
+  const readiness = parseJson(readinessResponse.text);
+  const checkoutResponse = await fetchText('/api/paypal/checkout-intent', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ tier: 'supporter' })
+  });
+  const checkout = parseJson(checkoutResponse.text);
+  return {
+    ok: readinessResponse.status === 401
+      && readinessResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-rehearsal'
+      && readiness?.ok === false
+      && readiness?.authenticated === false
+      && checkoutResponse.status === 503
+      && checkoutResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-rehearsal'
+      && checkout?.ok === false
+      && checkout?.rehearsalRequired === true
+      && checkout?.liveChargingEnabled === false,
+    readiness: {
+      status: readinessResponse.status,
+      origin: readinessResponse.headers['x-matrix-origin'] || null,
+      data: readiness
+    },
+    checkout: {
+      status: checkoutResponse.status,
+      origin: checkoutResponse.headers['x-matrix-origin'] || null,
+      data: checkout
+    }
+  };
+}
 async function verifyOnce() {
   const mainSha = await currentMainSha();
   const manifestResponse = await fetchText('/deploy-manifest.json');
@@ -151,9 +183,10 @@ async function verifyOnce() {
   );
   const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
-  const forumPersistence = coreOk && paypalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
-  const ok = coreOk && paypalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, forumPersistence };
+  const rehearsalBoundary = coreOk && paypalBoundary.ok ? await verifyRehearsalBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
+  const forumPersistence = coreOk && paypalBoundary.ok && rehearsalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core, PayPal or rehearsal boundary not proven yet' };
+  const ok = coreOk && paypalBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, rehearsalBoundary, forumPersistence };
 }
 
 (async () => {
@@ -164,7 +197,7 @@ async function verifyOnce() {
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
-      console.log(`Live production, commit-bound health, PayPal fail-closed boundary and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
+      console.log(`Live production, commit-bound health, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

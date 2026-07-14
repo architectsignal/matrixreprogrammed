@@ -66,13 +66,15 @@ jobs:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: Verify D1-authoritative forum, member and PayPal wiring
+      - name: Verify D1-authoritative forum, member, PayPal and rehearsal wiring
         run: |
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
+          node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
           npx --yes wrangler@latest deploy --dry-run
 
@@ -138,6 +140,7 @@ jobs:
             migrations/phase5_member_experience_timestamp_fix.sql
             migrations/phase6_paypal_subscriptions.sql
             migrations/phase6_paypal_failure_counter_fix.sql
+            migrations/phase7_paypal_sandbox_rehearsal.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -153,7 +156,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           node - <<'NODE'
           const fs=require('fs');
@@ -161,7 +164,7 @@ jobs:
           const settings=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
           const rows=(payload)=>payload.flatMap(item=>item.results||item.result?.results||[]);
           const names=new Set(rows(schema).map(row=>row.name));
-          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','member_effective_entitlements','member_download_eligibility'];
+          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','member_effective_entitlements','member_download_eligibility'];
           const missing=required.filter(name=>!names.has(name));
           if(missing.length) throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
           const switches=rows(settings);
@@ -183,7 +186,7 @@ jobs:
           set -euo pipefail
           npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
 
-      - name: Verify live routes, health SHA, PayPal fail-closed boundary, forum D1 write/read and main SHA
+      - name: Verify live routes, health SHA, PayPal fail-closed boundary, rehearsal boundary, forum D1 write/read and main SHA
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
@@ -207,6 +210,7 @@ jobs:
             downloads/final-production-reconcile.json
             downloads/conclusion-integrity-report.json
             downloads/live-production-verification.json
+            downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/d1-backup-proof.txt
             downloads/d1-migration.log
             downloads/d1-schema-verification.json

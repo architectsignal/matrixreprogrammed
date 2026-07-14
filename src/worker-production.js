@@ -2,6 +2,7 @@ import forumWorker from './worker-forum-persistence.js';
 import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
+import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
 import rehearsalWorker, {
   isPayPalSandboxRehearsalRoute,
   enforceSandboxRehearsalGate
@@ -46,18 +47,22 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
       ? 'Cloudflare D1 MEMBERS_DB member, session and entitlement tables'
       : subsystem === 'paypal'
         ? 'Cloudflare D1 MEMBERS_DB PayPal billing ledger'
-        : subsystem === 'paypal-rehearsal'
-          ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
-          : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+        : subsystem === 'paypal-bootstrap'
+          ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox bootstrap status ledger'
+          : subsystem === 'paypal-rehearsal'
+            ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
+            : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
       ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
       : subsystem === 'paypal'
         ? 'PayPal billing storage is unavailable. No legacy or unverified payment response was accepted.'
-        : subsystem === 'paypal-rehearsal'
-          ? 'PayPal sandbox rehearsal controls are unavailable. Checkout remains closed.'
-          : 'Forum storage is unavailable. No legacy success response was accepted.';
+        : subsystem === 'paypal-bootstrap'
+          ? 'PayPal sandbox plan readiness is unavailable. Checkout remains closed.'
+          : subsystem === 'paypal-rehearsal'
+            ? 'PayPal sandbox rehearsal controls are unavailable. Checkout remains closed.'
+            : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -95,11 +100,6 @@ function hasD1(env) {
 }
 
 function d1OnlyForumEnv(env) {
-  /*
-   * D1 is the production forum database. The historical KV namespace is optional
-   * migration/recovery infrastructure and must never be able to block forum startup,
-   * reads, writes or health checks when its daily quota is exhausted.
-   */
   return { ...env, FORUM_POSTS: undefined };
 }
 
@@ -145,6 +145,14 @@ async function validatePayPalResponse(response) {
   return response;
 }
 
+async function validateBootstrapResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-paypal-sandbox-bootstrap') {
+    return unavailable('non-authoritative-paypal-bootstrap-response-blocked', `Origin was ${origin || 'missing'}`, 'paypal-bootstrap');
+  }
+  return response;
+}
+
 async function validateRehearsalResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-paypal-sandbox-rehearsal') {
@@ -162,6 +170,14 @@ export default {
         return validateEmailResponse(await emailWorker.fetch(request, env, ctx));
       } catch (error) {
         return unavailable('email-worker-exception', error?.message || error, 'email');
+      }
+    }
+    if (isPayPalSandboxBootstrapRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'paypal-bootstrap');
+      try {
+        return validateBootstrapResponse(await bootstrapWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('paypal-bootstrap-worker-exception', error?.message || error, 'paypal-bootstrap');
       }
     }
     if (isPayPalSandboxRehearsalRoute(path)) {
@@ -212,6 +228,7 @@ export default {
     if (!hasD1(env)) return;
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),
+      bootstrapWorker.scheduled(event, env, ctx),
       rehearsalWorker.scheduled(event, env, ctx)
     ]);
   }

@@ -48,12 +48,17 @@ function compactRecord(record, profile) {
   const url = String(record?.url || '').trim();
   if (!url) return null;
   const output = {
+    searchVersion: 3,
     title: bounded(record.title || url, profile.title),
-    url
+    url,
+    sourceType: bounded(record.sourceType || 'route', profile.scalar),
+    resultKind: bounded(record.resultKind || 'route', profile.scalar),
+    statusClass: bounded(record.statusClass || 'context', profile.scalar),
+    primarySource: record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true'
   };
   const scalarFields = [
-    'category', 'layer', 'sourceType', 'resultKind', 'sourceAuthority', 'evidenceGrade',
-    'factualStatus', 'statusClass', 'reviewStatus', 'jurisdiction', 'entityType', 'entity'
+    'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',
+    'reviewStatus', 'jurisdiction', 'entityType', 'entity'
   ];
   for (const field of scalarFields) {
     const value = bounded(record[field], profile.scalar);
@@ -73,7 +78,6 @@ function compactRecord(record, profile) {
   if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);
   const priority = Number(record.priority || 0);
   if (Number.isFinite(priority) && priority) output.priority = priority;
-  if (record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true') output.primarySource = true;
   return output;
 }
 function serializeWithProfile(records, profile) {

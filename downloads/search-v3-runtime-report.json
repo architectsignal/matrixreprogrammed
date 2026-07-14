@@ -1,18 +1,24 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-14T05:53:38.749Z",
+  "generatedAt": "2026-07-14T09:12:24.128Z",
   "missingPage": [],
   "missingRuntime": [],
   "syntaxOk": true,
   "syntaxError": null,
   "compactIndex": {
-    "before": 18080,
-    "after": 13841,
-    "removedDuplicateMarketRelationships": 4239,
-    "bytes": 21902964,
-    "facetTotal": 13841,
-    "mebibytes": 20.89,
+    "before": 18311,
+    "after": 18311,
+    "removedDuplicateMarketRelationships": 0,
+    "invalidRecordsRemoved": 0,
+    "originalUniqueUrls": 18311,
+    "preservedUniqueUrls": 18311,
+    "bytes": 20909192,
+    "targetBytes": 20971520,
+    "compactionProfile": "balanced",
+    "facetTotal": 18311,
+    "mebibytes": 19.94,
+    "targetMebibytes": 20,
     "deploymentLimitMebibytes": 24,
-    "evidenceBoundary": "Only duplicate verbose market relationship records are removed. Compact official filing results remain searchable, and the complete relationships remain available in the public graph and registries."
+    "evidenceBoundary": "No valid searchable URL is removed. Only fields unused by the Search V3 browser runtime are discarded, while display text and keyword arrays are bounded adaptively. Complete records remain available in their source pages, graph, registries and document library."
   }
 }

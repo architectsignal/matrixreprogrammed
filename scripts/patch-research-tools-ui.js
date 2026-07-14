@@ -13,7 +13,7 @@ require('./patch-osint-self-report.js');
 
 let canonicalTools = fs.readFileSync(templatePath, 'utf8');
 canonicalTools = canonicalTools
-  .replace('research-tools.js"></script>', 'research-tools.js?v=3.1.0"></script>')
+  .replace('research-tools.js"></script>', 'research-tools.js?v=3.1.0"></script><script src="research-tools-ui-v3.js?v=3.1.0"></script>')
   .replace('Checks whether an address produces account-registration signals across supported services. Recovery emails, phone fragments and raw provider responses are removed.', 'Checks whether an address produces account-registration signals across supported services. Important findings are explained in plain English; full provider catalogues stay collapsed until opened.')
   .replace('Administrator-only breach exposure review. Passwords, hashes, recovery data, phone numbers, IP addresses and raw breach rows are never returned to the browser.', 'Administrator-only breach exposure review. Verified-self reports show recognisable masked identifiers, affected sources, dates, counts and every detected data category while reusable secret values remain withheld.');
 fs.writeFileSync(toolsPath, canonicalTools);
@@ -62,7 +62,7 @@ if (fs.existsSync(llmsPath)) {
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), JSON.stringify({
-  ok: canonicalTools.includes('data-tool-form="holehe"') && canonicalTools.includes('data-tool-form="spiderfoot"') && canonicalTools.includes('data-tool-form="h8mail"') && canonicalTools.includes('research-tools.js?v=3.1.0') && index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
+  ok: canonicalTools.includes('data-tool-form="holehe"') && canonicalTools.includes('data-tool-form="spiderfoot"') && canonicalTools.includes('data-tool-form="h8mail"') && canonicalTools.includes('research-tools-ui-v3.js?v=3.1.0') && index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
   generatedAt: new Date().toISOString(),
   homepageRoute: 'research-tools.html',
   externalRoute: 'https://emailosint.org/',

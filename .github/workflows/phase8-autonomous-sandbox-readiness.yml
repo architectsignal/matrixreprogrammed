@@ -1,0 +1,70 @@
+name: Phase 8 Autonomous Sandbox Readiness
+
+on:
+  pull_request:
+    paths:
+      - 'src/worker-paypal-sandbox-bootstrap*.js'
+      - 'src/worker-production.js'
+      - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
+      - 'scripts/phase8-autonomous-sandbox-readiness-test.mjs'
+      - 'scripts/verify-live-production.js'
+      - 'scripts/build-production-deploy-receipt.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
+      - '.github/workflows/phase8-autonomous-sandbox-readiness.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/worker-paypal-sandbox-bootstrap*.js'
+      - 'src/worker-production.js'
+      - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
+      - 'scripts/phase8-autonomous-sandbox-readiness-test.mjs'
+      - 'scripts/verify-live-production.js'
+      - 'scripts/build-production-deploy-receipt.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
+      - '.github/workflows/phase8-autonomous-sandbox-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase8-autonomous-sandbox-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Prove sandbox-only autonomous readiness
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Syntax checks
+        run: |
+          node --check src/worker-paypal-sandbox-bootstrap-v2.js
+          node --check src/worker-paypal-sandbox-bootstrap.js
+          node --check src/worker-production.js
+          node --check scripts/build-production-deploy-receipt.js
+      - name: Phase 8 deterministic mock
+        run: node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+      - name: Cloudflare dry run
+        run: npx --yes wrangler@latest deploy --dry-run
+      - name: Upload Phase 8 proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase8-autonomous-sandbox-readiness-${{ github.run_id }}
+          path: downloads/phase8-autonomous-sandbox-readiness-test.json
+          if-no-files-found: ignore
+          retention-days: 60

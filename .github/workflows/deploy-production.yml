@@ -57,11 +57,15 @@ jobs:
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
           node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
+          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-paypal-sandbox-bootstrap-v2.js
+          node --check src/worker-paypal-sandbox-bootstrap.js
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
+          node --check scripts/build-production-deploy-receipt.js
           node scripts/final-production-reconcile.js
           node scripts/production-freshness-guard.js
           node scripts/production-sync-test.js
@@ -108,22 +112,24 @@ jobs:
             migrations/phase6_paypal_subscriptions.sql
             migrations/phase6_paypal_failure_counter_fix.sql
             migrations/phase7_paypal_sandbox_rehearsal.sql
+            migrations/phase8_paypal_sandbox_bootstrap.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
             npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
           done
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary') ORDER BY type,name;" --json > downloads/phase7-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health') ORDER BY type,name;" --json > downloads/payment-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           node - <<'NODE'
           const fs=require('fs');
           const payload=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
-          const schema=JSON.parse(fs.readFileSync('downloads/phase7-schema-verification.json','utf8'));
+          const schema=JSON.parse(fs.readFileSync('downloads/payment-schema-verification.json','utf8'));
           const rows=value=>value.flatMap(item=>item.results||item.result?.results||[]);
           if(rows(payload).some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during fallback deployment');
           const names=new Set(rows(schema).map(row=>row.name));
-          const missing=['paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary'].filter(name=>!names.has(name));
-          if(missing.length) throw new Error(`Phase 7 schema missing: ${missing.join(', ')}`);
+          const required=['paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health'];
+          const missing=required.filter(name=>!names.has(name));
+          if(missing.length) throw new Error(`Payment schema missing: ${missing.join(', ')}`);
           NODE
           rm -rf downloads/private-migration
 
@@ -142,6 +148,11 @@ jobs:
           LIVE_VERIFY_DELAY_MS: '10000'
         run: node scripts/verify-live-production.js
 
+      - name: Build sanitized production deployment receipt
+        env:
+          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+        run: node scripts/build-production-deploy-receipt.js
+
       - name: Upload fallback proof
         if: always()
         uses: actions/upload-artifact@v4
@@ -155,9 +166,11 @@ jobs:
             downloads/final-production-reconcile.json
             downloads/live-production-verification.json
             downloads/phase7-paypal-sandbox-rehearsal-test.json
+            downloads/phase8-autonomous-sandbox-readiness-test.json
+            downloads/production-deploy-receipt.json
             downloads/d1-backup-proof.txt
             downloads/d1-migration.log
-            downloads/phase7-schema-verification.json
+            downloads/payment-schema-verification.json
             downloads/paypal-runtime-settings.json
           if-no-files-found: ignore
           retention-days: 60

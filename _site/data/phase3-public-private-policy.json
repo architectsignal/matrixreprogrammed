@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "report-only",
+  "purpose": "Classify every inventoried content item as public core, public preview, private membership content, separate product, internal only or restricted sensitive without changing current route behaviour.",
+  "exitCondition": "Every important item has an explicit current visibility, target access class, public-preview decision, search decision, navigation decision and editorial owner.",
+  "tierToAccessClass": {
+    "public": "public_core",
+    "registered": "registered_private",
+    "supporter_3": "supporter_private",
+    "intelligence_6": "intelligence_private",
+    "research_pro_9": "research_pro_private",
+    "separate_product": "separate_product",
+    "internal_only": "internal_only"
+  },
+  "paidAccessClasses": [
+    "supporter_private",
+    "intelligence_private",
+    "research_pro_private"
+  ],
+  "publicCoreCategories": [
+    "trust_and_legal",
+    "evidence"
+  ],
+  "publicCoreSubcategories": [
+    "membership_public",
+    "about_and_mission",
+    "methodology",
+    "privacy_and_terms",
+    "corrections_and_boundaries",
+    "contact_and_support",
+    "evidence_policy",
+    "source_ledger",
+    "court_and_regulatory",
+    "declassified_files",
+    "epstein_files",
+    "leaks_and_provenance"
+  ],
+  "publicEntryRoutes": [
+    "index.html",
+    "membership.html",
+    "member-login.html",
+    "login.html",
+    "register.html",
+    "books.html",
+    "videos.html"
+  ],
+  "privateSubcategories": {
+    "registered_private": [
+      "account_and_auth",
+      "registered_dashboard"
+    ],
+    "supporter_private": [
+      "supporter_dashboard"
+    ],
+    "intelligence_private": [
+      "intelligence_dashboard"
+    ],
+    "research_pro_private": [
+      "research_pro_dashboard"
+    ]
+  },
+  "restrictedPathMarkers": [
+    "victim-protected",
+    "protected-victim",
+    "minor-protected",
+    "personal-data-private",
+    "legal-hold-private",
+    "security-sensitive",
+    "private-credentials"
+  ],
+  "restrictedContentMarkers": [
+    "victim identity — do not publish",
+    "protected personal data — do not publish",
+    "legal hold — restricted",
+    "security sensitive — restricted",
+    "private credentials — do not publish"
+  ],
+  "internalPathMarkers": [
+    "admin-",
+    "debug-",
+    "test-",
+    "site-audit",
+    "pressure-test",
+    "deploy-",
+    "campaign-",
+    "distribution-",
+    "funnel-",
+    "card-artwork-batches/",
+    "top-52-art/"
+  ],
+  "publicPreviewRequirements": {
+    "requiredForAccessClasses": [
+      "supporter_private",
+      "intelligence_private",
+      "research_pro_private"
+    ],
+    "requiredFields": [
+      "title",
+      "summary",
+      "record_status_or_claim_class",
+      "evidence_boundary",
+      "correction_or_withdrawal_state",
+      "factual_conclusion_scope",
+      "upgrade_explanation"
+    ],
+    "mustRemainPublic": [
+      "correction_notice",
+      "withdrawal_notice",
+      "supersession_notice",
+      "association_boundary",
+      "speculation_label",
+      "contradictory_evidence_affecting_public_claim",
+      "source_identity_for_public_claim"
+    ]
+  },
+  "currentRouteRules": {
+    "paidTargetRemainsPublicPreviewUntilEnforcement": true,
+    "registeredAccountPagesMayRemainPublicEntryButPrivateAfterAuthentication": true,
+    "internalCandidatesRemainUnchangedUntilReplacementNavigationExists": true,
+    "restrictedCandidatesRequireHumanReviewBeforeVisibilityChange": true,
+    "separateProductsRemainPublicCommercialRoutes": true
+  },
+  "searchDecisions": {
+    "public_core": "index_candidate",
+    "public_preview": "index_candidate",
+    "registered_private": "authenticated_noindex",
+    "supporter_private": "authenticated_noindex",
+    "intelligence_private": "authenticated_noindex",
+    "research_pro_private": "authenticated_noindex",
+    "separate_product": "index_candidate",
+    "internal_only": "noindex_internal",
+    "restricted_sensitive": "noindex_restricted"
+  },
+  "navigationDecisions": {
+    "public_core": "public_section_or_related_navigation",
+    "public_preview": "public_section_with_upgrade_route",
+    "registered_private": "authenticated_dashboard_navigation",
+    "supporter_private": "authenticated_dashboard_navigation",
+    "intelligence_private": "authenticated_dashboard_navigation",
+    "research_pro_private": "authenticated_dashboard_navigation",
+    "separate_product": "public_commercial_navigation",
+    "internal_only": "internal_navigation_only",
+    "restricted_sensitive": "restricted_navigation_only"
+  },
+  "contentTypeRules": [
+    {"whenCategory": "internal", "contentType": "internal_report"},
+    {"whenCategory": "commercial", "contentType": "book_or_product"},
+    {"whenCategory": "trust_and_legal", "contentType": "legal_or_trust_page"},
+    {"whenSubcategoryAny": ["account_and_auth", "preferences_and_billing"], "contentType": "account_page"},
+    {"whenSubcategoryContains": "dashboard", "contentType": "dashboard"},
+    {"whenSubcategory": "daily_drops", "contentType": "daily_drop"},
+    {"whenSubcategory": "weekly_reports", "contentType": "weekly_report"},
+    {"whenSubcategory": "dossiers", "contentType": "dossier"},
+    {"whenSubcategory": "investigations", "contentType": "investigation"},
+    {"whenSubcategory": "outcome_briefings", "contentType": "brief"},
+    {"whenSubcategory": "source_changes", "contentType": "source_change"},
+    {"whenSubcategory": "source_ledger", "contentType": "source_record"},
+    {"whenCategory": "evidence", "contentType": "evidence_document"},
+    {"whenCategory": "power_mapping", "contentType": "entity_profile"},
+    {"whenSubcategory": "predictions_and_watchlists", "contentType": "tracker"},
+    {"whenCategory": "interpretation", "contentType": "topic_page"},
+    {"whenExtensionAny": [".pdf", ".docx", ".csv", ".zip", ".json"], "contentType": "download_bundle"}
+  ],
+  "reviewFlags": {
+    "uncategorized": "phase3-editorial-owner-required",
+    "paidWithoutPublicPreview": "phase3-public-preview-required",
+    "paidWithoutSafetyBoundary": "phase3-public-safety-boundary-required",
+    "restrictedCandidate": "phase3-restricted-content-review-required",
+    "internalPublicRoute": "phase3-public-replacement-before-internalisation",
+    "activePaymentMarker": "phase3-active-payment-marker-review",
+    "authMarkerOnPublicCore": "phase3-auth-boundary-review",
+    "classificationConflict": "phase3-access-classification-conflict"
+  },
+  "protectedBoundaries": {
+    "visibilityEnforcement": false,
+    "routeMovement": false,
+    "redirectActivation": false,
+    "searchRemoval": false,
+    "navigationRemoval": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "paymentActivation": false,
+    "contentDeletion": false
+  }
+}

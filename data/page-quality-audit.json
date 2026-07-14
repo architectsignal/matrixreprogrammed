@@ -1,10 +1,35 @@
 {
   "ok": true,
-  "updated": "2026-07-13T08:36:44.989Z",
-  "filesScanned": 512,
+  "updated": "2026-07-14T05:53:08.403Z",
+  "filesScanned": 520,
   "highIssues": 0,
-  "reviewIssues": 4,
+  "reviewIssues": 9,
   "issues": [
+    {
+      "file": "access-denied.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "admin-campaign-monitor.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "admin-member-dashboard.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "admin-payment-dashboard.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
+    {
+      "file": "billing-dashboard.html",
+      "severity": "review",
+      "issue": "missing meta description"
+    },
     {
       "file": "controlled-opposition-profile.html",
       "severity": "review",

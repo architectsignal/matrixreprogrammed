@@ -1,6 +1,6 @@
 # Epstein Source Ledger
 
-Updated: 2026-07-13T08:36:45.445Z
+Updated: 2026-07-14T05:53:08.881Z
 
 ## System placeholder — add verified public file
 Type: official release

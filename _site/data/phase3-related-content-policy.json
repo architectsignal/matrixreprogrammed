@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "status": "phase-3-report-only",
+  "mode": "plan-only",
+  "purpose": "Create deterministic, access-safe related-content links from canonical categories, controlled topics and same-subject labels without asserting real-world relationships or changing live navigation.",
+  "exitCondition": "Every public or member-discoverable important item has relevant, access-compatible navigation links or an explicit orphan-review reason; no link leaks protected content or converts shared tags into a factual association.",
+  "principles": [
+    "Related-content links are navigation recommendations, not evidence of association, coordination, wrongdoing or control.",
+    "Public pages may link only to public core, public preview or public commercial landing documents.",
+    "Authenticated links are filtered by tier and never bypass locked-section decisions.",
+    "Internal and restricted items never appear on public related-content surfaces.",
+    "Graph and speculative items remain visibly labelled when recommended.",
+    "Same-subject links mean the deterministic subject label matches; they do not establish that two different entities are connected.",
+    "Existing page HTML, menus, indexes, routes and access controls remain unchanged during planning."
+  ],
+  "limits": {
+    "publicLinksPerItem": 8,
+    "authenticatedLinksPerTierPerItem": 12,
+    "commercialLinksPerItem": 2,
+    "minimumScore": 20,
+    "minimumPublicLinksWhenCandidatesExist": 3,
+    "minimumAuthenticatedLinksWhenCandidatesExist": 3,
+    "maximumSameSubcategoryLinks": 3,
+    "maximumSameContentTypeLinks": 4
+  },
+  "scores": {
+    "samePrimarySubcategory": 38,
+    "samePrimaryCategory": 16,
+    "sameSubjectLabel": 34,
+    "sharedTopicPerTag": 12,
+    "sharedTopicMaximum": 36,
+    "complementaryContentType": 18,
+    "sameInterpretiveBoundary": 4,
+    "sameAccessClass": 3,
+    "commercialPenalty": -8,
+    "manualReviewPenalty": -10
+  },
+  "complementaryContentTypes": {
+    "intelligence_record": ["evidence_document", "source_record", "entity_profile", "institution_profile", "timeline", "map_or_atlas"],
+    "evidence_document": ["intelligence_record", "source_record", "dossier", "timeline"],
+    "source_record": ["intelligence_record", "evidence_document", "dossier"],
+    "entity_profile": ["intelligence_record", "evidence_document", "timeline", "map_or_atlas"],
+    "institution_profile": ["intelligence_record", "evidence_document", "timeline", "map_or_atlas"],
+    "timeline": ["intelligence_record", "evidence_document", "entity_profile", "institution_profile"],
+    "map_or_atlas": ["intelligence_record", "entity_profile", "institution_profile", "tracker_or_dashboard"],
+    "tracker_or_dashboard": ["intelligence_record", "map_or_atlas", "timeline"],
+    "report_or_dossier": ["evidence_document", "source_record", "entity_profile", "institution_profile"],
+    "dossier": ["evidence_document", "source_record", "entity_profile", "institution_profile"],
+    "interpretive_analysis": ["intelligence_record", "evidence_document", "historical_reference"],
+    "historical_reference": ["interpretive_analysis", "evidence_document"],
+    "commercial_product": ["commercial_product"]
+  },
+  "reasonLabels": {
+    "same_primary_subcategory": "Same canonical section",
+    "same_primary_category": "Same mission category",
+    "same_subject_label": "Same deterministic subject label — not proof of an external relationship",
+    "shared_topic": "Shared controlled topic",
+    "complementary_content_type": "Complementary evidence or analysis format",
+    "same_interpretive_boundary": "Same evidence or speculation boundary",
+    "commercial_related": "Related separate product"
+  },
+  "authenticatedTiers": ["registered", "supporter_3", "intelligence_6", "research_pro_9"],
+  "tierOrder": ["public", "registered", "supporter_3", "intelligence_6", "research_pro_9"],
+  "protectedBoundaries": {
+    "navigationMutation": false,
+    "contentMutation": false,
+    "routeMovement": false,
+    "searchMutation": false,
+    "relationshipAssertion": false,
+    "lockedSectionEnforcement": false,
+    "authenticationActivation": false,
+    "entitlementActivation": false,
+    "paymentActivation": false
+  }
+}

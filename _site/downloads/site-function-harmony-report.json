@@ -1,9 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-12T06:49:04.154Z",
+  "generatedAt": "2026-07-13T06:39:10.483Z",
   "hardIssues": [],
-  "softIssues": [
-    "scripts/repair-search-system.js missing search repair copy guard"
-  ],
-  "boundary": "Site function harmony blocks true deploy breakers only: missing critical files, invalid core JSON, broken search/worker/forum routes, or malformed Cloudflare output. Copy/template drift is recorded as soft review."
+  "softIssues": [],
+  "workerStack": "src/worker-production.js -> src/worker-forum-persistence.js -> src/worker.js",
+  "forumStorage": "Cloudflare D1 authoritative; KV compatibility and recovery only.",
+  "paymentStatus": "Deferred; no public checkout or subscription creation UI.",
+  "productionHealthOwner": "scripts/build-production-health.js via final-production-reconcile.js",
+  "boundary": "Site harmony blocks missing search/assets, broken strict Worker routing, non-D1 forum persistence, malformed output, payment UI activation or legacy health ownership."
 }

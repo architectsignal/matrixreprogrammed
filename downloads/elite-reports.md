@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-13T08:36:32.557Z
+Generated: 2026-07-14T05:53:05.956Z
 
 ## Daily Revelation Report
 
-Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
 
 Source: daily-command-brief.html
 

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-13T06:37:37.586Z
+Updated: 2026-07-14T05:52:18.997Z
 Items: 12
 
 - 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
@@ -106,10 +106,10 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
+- 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
+  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
   - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -140,7 +140,7 @@ Items: 12
 - Google News / Epstein sighting and alive claims: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION — https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
 - Google News / Epstein sighting and alive claims: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News — https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
 - Google News / Epstein sighting and alive claims: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo — https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-- Google News / Epstein sighting and alive claims: Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald — https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
+- Google News / declassified files: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 — https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
 
 ## Book Routes
 

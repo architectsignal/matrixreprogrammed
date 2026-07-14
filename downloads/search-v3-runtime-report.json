@@ -1,17 +1,17 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-13T10:34:53.707Z",
+  "generatedAt": "2026-07-14T05:53:38.749Z",
   "missingPage": [],
   "missingRuntime": [],
   "syntaxOk": true,
   "syntaxError": null,
   "compactIndex": {
-    "before": 18072,
-    "after": 13833,
+    "before": 18080,
+    "after": 13841,
     "removedDuplicateMarketRelationships": 4239,
-    "bytes": 21886433,
-    "facetTotal": 13833,
-    "mebibytes": 20.87,
+    "bytes": 21902964,
+    "facetTotal": 13841,
+    "mebibytes": 20.89,
     "deploymentLimitMebibytes": 24,
     "evidenceBoundary": "Only duplicate verbose market relationship records are removed. Compact official filing results remain searchable, and the complete relationships remain available in the public graph and registries."
   }

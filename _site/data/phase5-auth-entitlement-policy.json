@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "status": "protected-implementation",
+  "objective": "Give every Matrix Reprogrammed user a reliable passwordless account and an entitlement-controlled dashboard experience in which every tier sees exactly what it should and nothing it should not.",
+  "exitCondition": "Anonymous, registered, Supporter, Intelligence, Research Pro and administrator fixtures must receive exactly their allowed records, tools, downloads and controls across every API and dashboard surface, with no protected metadata or body leakage in denied responses.",
+  "principles": [
+    "Extend the existing passwordless login and matrix_session implementation rather than creating a second authentication system.",
+    "Authentication proves identity; entitlement separately proves access.",
+    "A member tier label alone cannot grant paid access.",
+    "Paid access requires an active subscription or an explicit unexpired audited access grant.",
+    "Higher tiers inherit lower-tier membership capabilities cumulatively.",
+    "Separate products and administrator functions do not inherit from monthly membership tiers.",
+    "Every denied API response fails closed and returns no protected body, storage key, download path or hidden metadata.",
+    "Payments remain disabled until their separate lifecycle is activated and verified.",
+    "Corrections, withdrawals and evidence boundaries remain public even when the related deep content is private."
+  ],
+  "tierOrder": [
+    "anonymous",
+    "registered",
+    "supporter_3",
+    "intelligence_6",
+    "research_pro_9"
+  ],
+  "runtimeTierAliases": {
+    "free": "registered",
+    "registered": "registered",
+    "supporter": "supporter_3",
+    "supporter_3": "supporter_3",
+    "intelligence": "intelligence_6",
+    "intelligence_6": "intelligence_6",
+    "research_pro": "research_pro_9",
+    "research_pro_9": "research_pro_9"
+  },
+  "tierRank": {
+    "anonymous": 0,
+    "registered": 1,
+    "supporter_3": 2,
+    "intelligence_6": 3,
+    "research_pro_9": 4
+  },
+  "tierCapabilities": {
+    "anonymous": [
+      "public_pages",
+      "public_search",
+      "passwordless_login_request"
+    ],
+    "registered": [
+      "free_dashboard",
+      "session_controls",
+      "saved_public_content",
+      "followed_public_topics",
+      "public_download_history",
+      "public_weekly_archive",
+      "newsletter_preferences"
+    ],
+    "supporter_3": [
+      "supporter_dashboard",
+      "supporter_weekly_archive",
+      "supporter_downloads",
+      "supporter_announcements",
+      "basic_follow_updates"
+    ],
+    "intelligence_6": [
+      "intelligence_dashboard",
+      "premium_daily_archive",
+      "member_watchlists",
+      "entity_following",
+      "intelligence_downloads",
+      "member_investigation_routes"
+    ],
+    "research_pro_9": [
+      "research_dashboard",
+      "advanced_watchlists",
+      "research_downloads",
+      "citation_exports",
+      "evidence_path_exports",
+      "research_queue",
+      "priority_source_requests"
+    ]
+  },
+  "separateCapabilities": {
+    "admin": [
+      "admin_dashboard",
+      "member_search",
+      "grant_management",
+      "session_revocation",
+      "archive_management",
+      "download_catalog_management",
+      "entitlement_audit"
+    ],
+    "separate_product": [
+      "product_specific_download"
+    ]
+  },
+  "paidAccessSources": [
+    "active_subscription",
+    "audited_access_grant"
+  ],
+  "allowedSubscriptionStatuses": [
+    "active",
+    "trialing"
+  ],
+  "allowedGrantStatuses": [
+    "active"
+  ],
+  "sessionPolicy": {
+    "cookieName": "matrix_session",
+    "absoluteLifetimeDays": 30,
+    "idleRefreshMinutes": 15,
+    "maximumActiveSessionsPerMember": 10,
+    "listOwnSessions": true,
+    "revokeOwnSession": true,
+    "revokeOtherOwnSessions": true,
+    "adminRevokeAnySession": true,
+    "storeRawSessionToken": false,
+    "requiredCookieFlags": [
+      "HttpOnly",
+      "Secure",
+      "SameSite=Lax",
+      "Path=/"
+    ]
+  },
+  "requiredDataObjects": [
+    "members",
+    "magic_links",
+    "member_sessions",
+    "subscriptions",
+    "member_access_grants",
+    "member_saved_items",
+    "member_entity_follows",
+    "member_watch_items",
+    "member_archive_entries",
+    "member_download_catalog",
+    "member_download_events",
+    "member_activity_history",
+    "audit_log"
+  ],
+  "requiredRoutes": [
+    "/api/auth/request-link",
+    "/api/auth/verify",
+    "/api/auth/logout",
+    "/api/member/me",
+    "/api/member/dashboard",
+    "/api/member/sessions",
+    "/api/member/sessions/revoke-others",
+    "/api/member/saved",
+    "/api/member/follows",
+    "/api/member/watchlists",
+    "/api/member/archive",
+    "/api/member/downloads",
+    "/api/member/admin/summary",
+    "/api/member/admin/members",
+    "/api/member/admin/grants"
+  ],
+  "requiredSurfaces": [
+    "member-login.html",
+    "member-dashboard.html",
+    "access-denied.html",
+    "admin-member-dashboard.html"
+  ],
+  "deniedResponse": {
+    "anonymousStatus": 401,
+    "authenticatedInsufficientTierStatus": 403,
+    "fields": [
+      "ok",
+      "authenticated",
+      "error",
+      "requiredTier",
+      "currentTier",
+      "upgradeUrl"
+    ],
+    "forbiddenFields": [
+      "body",
+      "html",
+      "content",
+      "storageKey",
+      "assetPath",
+      "providerReference",
+      "hiddenMetadata"
+    ]
+  },
+  "downloadPolicy": {
+    "protectedStorageBinding": "MEMBER_ASSETS",
+    "publicAssetFallbackAllowed": false,
+    "logEveryAttempt": true,
+    "contentDispositionAttachment": true,
+    "noStore": true,
+    "separateProductRequiresExplicitGrant": true
+  },
+  "protectedBoundaries": {
+    "paymentActivation": false,
+    "automaticPaidGranting": false,
+    "productionMigrationExecution": false,
+    "liveSessionMutationDuringCi": false,
+    "realMemberMutationDuringCi": false
+  }
+}

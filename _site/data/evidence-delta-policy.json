@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "status": "phase-2-report-only",
+  "mode": "report-only",
+  "purpose": "Compare prior and current canonical evidence states, preserve both versions, identify affected factual and speculative conclusions, and force material changes back through review without deleting graph associations, scenarios or speculative analysis.",
+  "exitCondition": "Every material source, fact, correction, contradiction, withdrawal or supersession change produces a preserved version, an explicit delta classification and a fail-closed re-evaluation decision.",
+  "comparisonSections": [
+    "status",
+    "trigger",
+    "sources",
+    "recordStatus",
+    "establishedFacts",
+    "entities",
+    "moneyAndAuthority",
+    "mechanismOfPower",
+    "solidConclusion",
+    "missionAssessment",
+    "speculativeConclusion",
+    "counterAnalysis",
+    "missingEvidence",
+    "watchNext",
+    "evidence",
+    "freshness"
+  ],
+  "deltaTypes": {
+    "new_record": {"severity": "high", "reviewRequired": true},
+    "record_missing_from_current": {"severity": "critical", "reviewRequired": true},
+    "source_added": {"severity": "medium", "reviewRequired": true},
+    "source_removed": {"severity": "high", "reviewRequired": true},
+    "source_modified": {"severity": "high", "reviewRequired": true},
+    "primary_source_removed": {"severity": "critical", "reviewRequired": true},
+    "record_status_changed": {"severity": "high", "reviewRequired": true},
+    "established_fact_added": {"severity": "medium", "reviewRequired": true},
+    "established_fact_removed": {"severity": "high", "reviewRequired": true},
+    "established_fact_modified": {"severity": "high", "reviewRequired": true},
+    "mechanism_changed": {"severity": "high", "reviewRequired": true},
+    "factual_conclusion_changed": {"severity": "high", "reviewRequired": true},
+    "mission_assessment_changed": {"severity": "medium", "reviewRequired": true},
+    "speculative_conclusion_changed": {"severity": "medium", "reviewRequired": true},
+    "contradiction_added": {"severity": "critical", "reviewRequired": true},
+    "contradiction_removed": {"severity": "high", "reviewRequired": true},
+    "correction": {"severity": "critical", "reviewRequired": true},
+    "withdrawal": {"severity": "critical", "reviewRequired": true},
+    "supersession": {"severity": "critical", "reviewRequired": true},
+    "claim_class_changed": {"severity": "high", "reviewRequired": true},
+    "evidence_grade_changed": {"severity": "high", "reviewRequired": true},
+    "confidence_changed": {"severity": "medium", "reviewRequired": true},
+    "freshness_changed": {"severity": "low", "reviewRequired": false},
+    "watch_conditions_changed": {"severity": "low", "reviewRequired": false},
+    "entity_or_association_changed": {"severity": "medium", "reviewRequired": true},
+    "money_or_authority_changed": {"severity": "high", "reviewRequired": true},
+    "missing_evidence_changed": {"severity": "low", "reviewRequired": false},
+    "other_material_change": {"severity": "medium", "reviewRequired": true}
+  },
+  "severityOrder": ["none", "low", "medium", "high", "critical"],
+  "automaticActions": {
+    "critical": {
+      "factualSurfaceEligible": false,
+      "confidenceAction": "downgrade_and_recalculate",
+      "convergenceAction": "recalculate",
+      "editorialState": "needs_editorial_review"
+    },
+    "high": {
+      "factualSurfaceEligible": false,
+      "confidenceAction": "recalculate",
+      "convergenceAction": "recalculate",
+      "editorialState": "review"
+    },
+    "medium": {
+      "factualSurfaceEligible": false,
+      "confidenceAction": "recalculate",
+      "convergenceAction": "recalculate_if_affected",
+      "editorialState": "review"
+    },
+    "low": {
+      "factualSurfaceEligible": false,
+      "confidenceAction": "verify_freshness",
+      "convergenceAction": "preserve_unless_affected",
+      "editorialState": "review"
+    },
+    "none": {
+      "factualSurfaceEligible": true,
+      "confidenceAction": "preserve",
+      "convergenceAction": "preserve",
+      "editorialState": "unchanged"
+    }
+  },
+  "retentionRules": {
+    "retainPreviousVersion": true,
+    "retainCurrentVersion": true,
+    "retainRemovedRecordAsHistoricalVersion": true,
+    "retainGraphAssociations": true,
+    "retainScenarios": true,
+    "retainSpeculativeAnalysis": true,
+    "retainedInterpretiveLabelRequired": true,
+    "withdrawnContentRemainsArchived": true,
+    "supersededContentRemainsArchived": true,
+    "correctionsRemainLinkedToPriorVersion": true
+  },
+  "presentationRules": {
+    "relationship_update": {
+      "presentationClass": "research_hint",
+      "requiredLabel": "speculative research hint — association not proof",
+      "factualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": true
+    },
+    "scenario": {
+      "presentationClass": "scenario_analysis",
+      "requiredLabel": "speculative scenario analysis — not a factual forecast",
+      "factualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": true
+    },
+    "speculation_review": {
+      "presentationClass": "speculative",
+      "requiredLabel": "speculative — not established fact",
+      "factualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": true
+    }
+  },
+  "terminalStateRules": {
+    "withdrawn": {
+      "currentFactualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": false,
+      "archiveSurfaceEligible": true,
+      "requiredNotice": "withdrawn — retained for historical transparency"
+    },
+    "superseded": {
+      "currentFactualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": false,
+      "archiveSurfaceEligible": true,
+      "requiredNotice": "superseded — consult the replacement record"
+    },
+    "missing_from_current": {
+      "currentFactualSurfaceEligible": false,
+      "currentSpeculativeOrResearchSurfaceEligible": false,
+      "archiveSurfaceEligible": true,
+      "requiredNotice": "missing from current package — previous version retained pending review"
+    }
+  },
+  "protectedBoundaries": {
+    "publicationEnforcement": false,
+    "emailDelivery": false,
+    "entitlementActivation": false,
+    "paymentActivation": false,
+    "canonicalMutation": false,
+    "legacySourceMutation": false
+  }
+}

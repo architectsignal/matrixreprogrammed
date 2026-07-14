@@ -1,14 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-13T06:39:08.925Z",
+  "generatedAt": "2026-07-14T05:53:49.186Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
-    "stdout": "Membership page rebuilt canonically: €3, €6, €9 with 32 listed benefits.\n",
+    "stdout": "Membership page restored from protected Phase 6 template: Free Member plus server-gated PayPal tiers at €3, €6 and €9.\n",
     "stderr": ""
   },
   "workerEntrypoint": "src/worker-production.js",
   "forumStorage": "Cloudflare D1 authoritative with KV compatibility/recovery only",
-  "paymentStatus": "deferred",
-  "boundary": "No public checkout or subscription creation UI is permitted until payment activation is deliberately released."
+  "paymentStatus": "sandbox-ready-disabled",
+  "boundary": "PayPal routes and browser UI may be deployed, but checkout remains fail-closed until environment, credentials, verified plans and the D1 activation switch agree."
 }

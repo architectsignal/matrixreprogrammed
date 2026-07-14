@@ -3,14 +3,14 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 2727
-Flagged pages: 2181
-High priority pages: 731
-Medium priority pages: 1444
+Scanned pages: 2740
+Flagged pages: 2194
+High priority pages: 737
+Medium priority pages: 1452
 Pages with missing rules: 217
 Auto-update eligible figures: 2
 Manual-review figures: 50
-Missing-rule figures: 545
+Missing-rule figures: 560
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -40,9 +40,9 @@ Missing-rule figures: 545
 - one-world-religion-theory.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- _site/entity-registry.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - black-file-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - one-world-currency-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
+- _site/news.html: 27 figure/stat markers; 2 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -72,7 +72,6 @@ Missing-rule figures: 545
 - one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-atlas.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
-- _site/entity-registry.html: 3 figure(s) need source rules.
 - black-file-theory.html: 3 figure(s) need source rules.
 - one-world-currency-theory.html: 3 figure(s) need source rules.
 - _site/news.html: 2 figure(s) need source rules.
@@ -84,6 +83,7 @@ Missing-rule figures: 545
 - _site/card-dossier-standard.html: 2 figure(s) need source rules.
 - _site/conclusion-engine.html: 2 figure(s) need source rules.
 - _site/dark-speculation-forum.html: 2 figure(s) need source rules.
+- _site/entity-registry.html: 2 figure(s) need source rules.
 - _site/forum.html: 2 figure(s) need source rules.
 
 ## Auto-Update Boundary

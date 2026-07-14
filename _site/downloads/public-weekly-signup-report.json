@@ -1,7 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-12T06:49:02.539Z",
-  "changed": [],
+  "generatedAt": "2026-07-13T06:39:08.634Z",
+  "changed": [
+    "index.html",
+    "_site/index.html",
+    "_site/index"
+  ],
   "publicFormId": "public-weekly-signal-form",
   "submitLabel": "Join Weekly Signal",
   "endpointOwner": "newsletter.js → /api/membership/signup",

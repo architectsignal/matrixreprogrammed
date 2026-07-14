@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-13T06:37:37.586Z
+Updated: 2026-07-14T05:52:18.997Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -28,12 +28,12 @@ Updated: 2026-07-13T06:37:37.586Z
   - Longform title: Epstein Files, Timeline And Court Records — Why the House’s Epstein investigation isn't going away - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-09 — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
-  - Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
-  - Short title: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New
-  - Longform title: Epstein Files, Timeline And Court Records — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
@@ -52,30 +52,6 @@ Updated: 2026-07-13T06:37:37.586Z
   - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Short title: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Longform title: Epstein Files, Timeline And Court Records — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-06 — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Short title: Epstein moved millions through mysterious Virgin Islands bank right befo
-  - Longform title: Epstein Files, Timeline And Court Records — Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-09 — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
-  - Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
-  - Short title: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's p
-  - Longform title: Epstein Files, Timeline And Court Records — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St.
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
   - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
   - Evidence: Seven-day public-record lead
@@ -92,14 +68,6 @@ Updated: 2026-07-13T06:37:37.586Z
   - Longform title: Epstein Files, Timeline And Court Records — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
-  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
   - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
   - Evidence: Seven-day public-record lead
@@ -108,7 +76,7 @@ Updated: 2026-07-13T06:37:37.586Z
   - Longform title: Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: download-center.html
-- 2026-07-09 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+- 2026-07-10 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
   - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
@@ -132,6 +100,22 @@ Updated: 2026-07-13T06:37:37.586Z
   - Longform title: Crime State Overlap — Panama Profile - InSight Crime
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-crime-dossiers.html
+- 2026-07-09 — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Short title: New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New
+  - Longform title: Epstein Files, Timeline And Court Records — New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-09 — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+  - Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+  - Short title: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's p
+  - Longform title: Epstein Files, Timeline And Court Records — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St.
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-08 — Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
   - Evidence: Seven-day public-record lead
@@ -147,6 +131,22 @@ Updated: 2026-07-13T06:37:37.586Z
   - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
   - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
   - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
+  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Short title: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Longform title: Epstein Files, Timeline And Court Records — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
   - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai

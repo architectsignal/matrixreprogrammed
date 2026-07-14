@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-13T06:38:08.104Z
+Generated: 2026-07-14T05:52:46.776Z
 
 ## Open Routes
 
@@ -16,11 +16,11 @@ Generated: 2026-07-13T06:38:08.104Z
 - Date: 2026-07-09T08:45:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
 Why the House’s Epstein investigation isn't going away Politico
-### New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-09T16:46:28.000Z
-- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
-New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times
+- Date: 2026-07-13T15:19:49.000Z
+- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties WTVB
 ### Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-09T09:00:25.000Z
@@ -31,21 +31,6 @@ Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congr
 - Date: 2026-07-07T16:35:40.000Z
 - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
 DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit The New Republic
-### Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T18:18:16.000Z
-- Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-Todd Blanche & The Epstein Files: A Timeline Public Citizen
-### Epstein moved millions through mysterious Virgin Islands bank right before arrest - Miami Herald
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-06T09:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE92N2w3UHN6UEhNZmtCSmU3NXhJemxvbEJGbFVoWEtLZ0R3aTh5WDBxdzdpOVg4bEIwVmlFSnppVVdrVXR1MG9wUTJRdEl6bHRIb3V6VnFtcDM0bUNGUWhlVHU5RFVadnVtUlRRVEZkaENCRXJyeWfSAXZBVV95cUxPRk1vemZnMWNUSktDX3haQ2xmVGhRbzJSN1ZoZ3hJX3VDTVVtc2lHeWs5Q19OOXJ5N1dEUEJZVE5tQVh0a1ZuUXJZTkFsamQzU091MEh1RXhiUVVuSGpQb09NaXF5c0RETXhTbm5qbkJ3eWR3Y3p3?oc=5
-Epstein moved millions through mysterious Virgin Islands bank right before arrest Miami Herald
-### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-09T06:33:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
-Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
 ### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-07T20:13:13.000Z
@@ -53,14 +38,9 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
 ### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-10T00:32:14.000Z
+- Date: 2026-07-10T00:28:19.000Z
 - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
 Trump administration hindering investigation into Epstein’s ranch Nine.com.au
-### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T21:24:42.000Z
-- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
 ### Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
 - Lane: Declassified Files And Public Archives
 - Date: 2026-07-11T04:00:07.000Z
@@ -68,7 +48,7 @@ NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private
 Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com
 ### NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
 - Lane: Declassified Files And Public Archives
-- Date: 2026-07-09T09:48:03.000Z
+- Date: 2026-07-10T07:00:00.000Z
 - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
 NASA insider hints bigger UFO file release as declassification ramps up Cybernews
 ### NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
@@ -81,6 +61,16 @@ NSA revives 'Tailored Access Operations' name for elite hacking unit The Record 
 - Date: 2026-07-10T20:48:39.000Z
 - Source: https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5
 Panama Profile InSight Crime
+### New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-09T16:46:28.000Z
+- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
+New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times
+### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-09T06:33:00.000Z
+- Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
+Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
 ### Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-08T21:02:11.000Z
@@ -91,6 +81,16 @@ Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thin
 - Date: 2026-07-08T00:00:00.000Z
 - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
 The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
+### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-07T21:24:42.000Z
+- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
+NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
+### Todd Blanche & The Epstein Files: A Timeline - Public Citizen
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-07T18:18:16.000Z
+- Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
+Todd Blanche & The Epstein Files: A Timeline Public Citizen
 ### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
 - Lane: AI Governance / EU AI Act / Cybersecurity
 - Date: 2026-07-07T00:00:00.000Z

@@ -1,33 +1,30 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-13T06:39:08.909Z",
-  "mode": "canonical-full-page-rebuild",
+  "generatedAt": "2026-07-14T05:53:49.170Z",
+  "mode": "phase6-restore-protected-template",
+  "template": "templates/phase6-membership.template",
+  "freeTier": true,
   "prices": [
     3,
     6,
     9
   ],
+  "checkoutDefault": "disabled-until-runtime-and-d1-gates-pass",
   "tiers": [
     {
       "id": "supporter",
       "name": "Supporter",
-      "price": 3,
-      "benefits": 8,
-      "access": 5
+      "price": 3
     },
     {
       "id": "intelligence-member",
       "name": "Intelligence Member",
-      "price": 6,
-      "benefits": 11,
-      "access": 9
+      "price": 6
     },
     {
       "id": "research-pro",
       "name": "Research Pro",
-      "price": 9,
-      "benefits": 13,
-      "access": 12
+      "price": 9
     }
   ],
   "failures": []

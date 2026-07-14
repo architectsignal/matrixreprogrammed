@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-13T06:38:04.486Z
+Updated: 2026-07-14T05:52:42.941Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -57,6 +57,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Case Status Dashboard: downloads/case-status-dashboard.pdf (custom PDF preserved)
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf (custom PDF preserved)
 - WWIII Escalation Clock: downloads/clock-wall.pdf (custom PDF preserved)
+- Cloudflare Worker Routes Test: downloads/cloudflare-worker-routes-test.pdf
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf (custom PDF preserved)
 - Conclusion Depth Audit: downloads/conclusion-depth-audit.pdf (custom PDF preserved)
 - Control Brain V2: downloads/control-brain-v2.pdf (custom PDF preserved)
@@ -138,6 +139,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Membership Auth Patch Report: downloads/membership-auth-patch-report.pdf (custom PDF preserved)
 - Membership Auth Ui Patch: downloads/membership-auth-ui-patch.pdf (custom PDF preserved)
 - Membership Foundation Patch Report: downloads/membership-foundation-patch-report.pdf (custom PDF preserved)
+- Membership Tiers Report: downloads/membership-tiers-report.pdf
 - Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf (custom PDF preserved)
 - Mission Health Audit: downloads/mission-health-audit.pdf (custom PDF preserved)
 - Mission Intelligence 10: downloads/mission-intelligence-10.pdf (custom PDF preserved)
@@ -161,6 +163,9 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf (custom PDF preserved)
 - Phase6 Data Integration: downloads/phase6-data-integration.pdf (custom PDF preserved)
 - Phase6 Worker Patch: downloads/phase6-worker-patch.pdf (custom PDF preserved)
+- Phase8 Evidence Archive Build: downloads/phase8-evidence-archive-build.pdf
+- Phase8 Evidence Archive Test: downloads/phase8-evidence-archive-test.pdf
+- Phase8 Wiring: downloads/phase8-wiring.pdf
 - Policy Convergence Timer Map: downloads/policy-convergence-timer-map.pdf (custom PDF preserved)
 - Public Policy Convergence Tracker: downloads/policy-convergence-tracker.pdf (custom PDF preserved)
 - Power Architecture Watchlist: downloads/power-architecture-watchlist.pdf (custom PDF preserved)
@@ -169,8 +174,11 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Probability Snapshot: downloads/probability-snapshot.pdf (custom PDF preserved)
 - Public Copy Scrubber Report: downloads/public-copy-scrubber-report.pdf (custom PDF preserved)
 - Public Copy Visibility Test: downloads/public-copy-visibility-test.pdf (custom PDF preserved)
+- Public Data Lab Build: downloads/public-data-lab-build.pdf
+- Public Data Lab Test: downloads/public-data-lab-test.pdf
 - Public Network Map Test: downloads/public-network-map-test.pdf (custom PDF preserved)
 - Public Record Intake Manifest: downloads/public-record-intake.pdf (custom PDF preserved)
+- Public Site Error Repair: downloads/public-site-error-repair.pdf
 - Public Visibility Report: downloads/public-visibility-report.pdf (custom PDF preserved)
 - Public Weekly Signup Report: downloads/public-weekly-signup-report.pdf (custom PDF preserved)
 - Readable User Briefs: downloads/readable-user-briefs.pdf (custom PDF preserved)

@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-13T06:38:38.360Z",
-    "filesScanned": 4010,
-    "highIssues": 2290,
+    "updated": "2026-07-14T05:53:17.711Z",
+    "filesScanned": 4079,
+    "highIssues": 2324,
     "reviewIssues": 8,
-    "intakeAreas": 2179,
+    "intakeAreas": 2192,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -1399,6 +1399,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/dark-web-safety.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/agenda-2030-policy-watch.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1616,6 +1622,12 @@
     {
       "severity": "high",
       "file": "_site/data/dark-speculation-expansion.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/dark-web-safety.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1874,6 +1886,24 @@
     {
       "severity": "high",
       "file": "_site/data/full-vrc-review-batch-002.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/geographic-power-atlas-data.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/geographic-power-atlas-seed.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/geographic-power-atlas.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2281,6 +2311,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/public-data-lab.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/public-interest-anti-corruption-charter.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2365,6 +2401,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/security-privacy-tools.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/share-kits.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2438,6 +2480,12 @@
     {
       "severity": "high",
       "file": "_site/data/site-relationship-map.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/source-cards.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2570,6 +2618,12 @@
     {
       "severity": "high",
       "file": "_site/data/verified-source-cards-batch-001.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data-lab.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2956,60 +3010,6 @@
       "file": "_site/downloads/forum-posts.json",
       "pattern": "/dummy/i",
       "note": "Review whether this text is intentionally visible."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/global-risk-clocks-linked.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/intel-drop-vault.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/intel-drop-vault.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/intel-vault.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/intel-vault.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/latest-public-drops.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/latest-public-drops.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/logo-symbolism-dossiers.md",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/downloads/machine-digest.md",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
   "intake": [
@@ -5548,6 +5548,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/dark-web-safety.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/dashboard-conflict.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5577,6 +5584,13 @@
     },
     {
       "file": "_site/dashboard-migration.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/data-lab.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6318,6 +6332,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/evidence-archive.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/evidence-hunter.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6529,6 +6550,13 @@
     },
     {
       "file": "_site/funnel-power-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/geographic-power-atlas.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9258,6 +9286,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/security-privacy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/share-center.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10623,7 +10658,35 @@
       "status": "ok"
     },
     {
+      "file": "access-denied.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "accountability-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "admin-campaign-monitor.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "admin-member-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "admin-payment-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11212,6 +11275,13 @@
     },
     {
       "file": "big-three/blackrock.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "billing-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13389,6 +13459,13 @@
     },
     {
       "file": "elite-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "email-status.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -16006,6 +16083,13 @@
       "status": "ok"
     },
     {
+      "file": "power-entities.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "power-families/adani-family.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -17260,6 +17344,13 @@
     },
     {
       "file": "subject-trust-evidence-method.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "subscriber-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

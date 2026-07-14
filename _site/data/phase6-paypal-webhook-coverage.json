@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "events": {
+    "BILLING.SUBSCRIPTION.CREATED": {
+      "handler": "subscription-family-sync",
+      "effect": "Creates or synchronises a pending or approved local subscription without paid entitlement unless PayPal already reports ACTIVE."
+    },
+    "BILLING.SUBSCRIPTION.ACTIVATED": {
+      "handler": "subscription-family-sync",
+      "effect": "Sets active billing state, clears failure and payment holds, and grants the configured tier."
+    },
+    "BILLING.SUBSCRIPTION.UPDATED": {
+      "handler": "subscription-family-sync",
+      "effect": "Reconciles provider plan, status, payer and billing period without trusting the webhook resource alone."
+    },
+    "BILLING.SUBSCRIPTION.SUSPENDED": {
+      "handler": "subscription-family-sync",
+      "effect": "Sets suspended billing state and removes paid entitlement."
+    },
+    "BILLING.SUBSCRIPTION.CANCELLED": {
+      "handler": "subscription-family-sync",
+      "effect": "Retains access only when a future paid period end is verified; otherwise removes entitlement."
+    },
+    "BILLING.SUBSCRIPTION.EXPIRED": {
+      "handler": "subscription-family-sync",
+      "effect": "Sets expired billing state and removes paid entitlement."
+    },
+    "BILLING.SUBSCRIPTION.PAYMENT.FAILED": {
+      "handler": "payment-failure-threshold",
+      "effect": "Records consecutive failures; first failure is past due, the configured second failure suspends entitlement."
+    },
+    "PAYMENT.SALE.COMPLETED": {
+      "handler": "verified-renewal",
+      "effect": "Records the payment, clears failure/refund/reversal holds and restores active entitlement."
+    },
+    "PAYMENT.SALE.REFUNDED": {
+      "handler": "refund-family-hold",
+      "effect": "Records the refund and places the subscription on refund hold pending reconciliation or a new verified payment."
+    },
+    "PAYMENT.SALE.REVERSED": {
+      "handler": "reversal-family-hold",
+      "effect": "Records the reversal and removes paid entitlement pending reconciliation."
+    },
+    "PAYMENT.CAPTURE.REFUNDED": {
+      "handler": "refund-family-hold",
+      "effect": "Uses the same verified refund-hold path as a refunded sale."
+    },
+    "PAYMENT.CAPTURE.REVERSED": {
+      "handler": "reversal-family-hold",
+      "effect": "Uses the same verified reversal-hold path as a reversed sale."
+    }
+  },
+  "boundary": "The coverage map documents explicit routing through generic, tested event-family handlers. It does not bypass signature verification, event deduplication, provider reconciliation or append-only transition recording."
+}

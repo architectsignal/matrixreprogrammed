@@ -1,0 +1,511 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matrixreprogrammed.com/schemas/intelligence-record.schema.json",
+  "title": "Matrix Reprogrammed Canonical Intelligence Record",
+  "description": "Canonical evidence-led record for cards, briefs, dossiers, daily drops, weekly reports, newsletters and member dashboards. Access level never changes evidential status.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "recordType",
+    "title",
+    "status",
+    "trigger",
+    "sources",
+    "establishedFacts",
+    "mechanismOfPower",
+    "solidConclusion",
+    "missionAssessment",
+    "speculativeConclusion",
+    "counterAnalysis",
+    "missingEvidence",
+    "watchNext",
+    "evidence",
+    "access",
+    "freshness"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "recordType": {
+      "type": "string",
+      "enum": [
+        "signal",
+        "source_change",
+        "document",
+        "finding",
+        "intelligence_card",
+        "brief",
+        "daily_drop",
+        "weekly_report",
+        "dossier",
+        "entity_update",
+        "relationship_update",
+        "scenario",
+        "speculation_review"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "summary": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "review",
+        "published",
+        "updated",
+        "corrected",
+        "archived",
+        "withdrawn"
+      ]
+    },
+    "trigger": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["description", "detectedAt"],
+      "properties": {
+        "description": { "type": "string", "minLength": 5 },
+        "detectedAt": { "type": "string", "format": "date-time" },
+        "eventDate": { "type": ["string", "null"], "format": "date" },
+        "changeType": {
+          "type": "string",
+          "enum": [
+            "new_record",
+            "source_changed",
+            "official_action",
+            "court_action",
+            "policy_change",
+            "financial_change",
+            "appointment",
+            "contract_or_procurement",
+            "document_release",
+            "correction",
+            "contradiction",
+            "other"
+          ]
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "recordStatus": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "final_judgment",
+          "conviction",
+          "guilty_plea",
+          "sentence",
+          "regulator_order",
+          "law_or_regulation",
+          "official_dataset",
+          "official_report",
+          "audit_finding",
+          "contract",
+          "filing",
+          "charge_or_indictment",
+          "investigation",
+          "allegation",
+          "testimony",
+          "declassified_record",
+          "authenticated_leak",
+          "unverified_leak",
+          "credible_reporting",
+          "analysis",
+          "speculation",
+          "unknown"
+        ]
+      }
+    },
+    "establishedFacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["statement", "sourceIds", "boundary"],
+        "properties": {
+          "statement": { "type": "string", "minLength": 5 },
+          "sourceIds": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          },
+          "boundary": { "type": "string", "minLength": 5 },
+          "factStatus": {
+            "type": "string",
+            "enum": ["established", "officially_reported", "documented", "disputed", "unresolved"]
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "entityType", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string", "minLength": 2 },
+          "entityType": {
+            "type": "string",
+            "enum": [
+              "person",
+              "company",
+              "government",
+              "agency",
+              "court",
+              "regulator",
+              "bank",
+              "fund",
+              "foundation",
+              "ngo",
+              "international_body",
+              "contractor",
+              "media",
+              "religious_body",
+              "technology_platform",
+              "other"
+            ]
+          },
+          "role": { "type": "string" },
+          "sourceIds": { "type": "array", "items": { "type": "string" } },
+          "associationBoundary": { "type": "string" }
+        }
+      }
+    },
+    "moneyAndAuthority": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["routeType", "description", "sourceIds"],
+        "properties": {
+          "routeType": {
+            "type": "string",
+            "enum": [
+              "legal_authority",
+              "office",
+              "ownership",
+              "beneficial_ownership",
+              "contract",
+              "payment",
+              "grant",
+              "lobbying",
+              "proxy_vote",
+              "procurement",
+              "appointment",
+              "regulatory_action",
+              "access_rule",
+              "implementation_system",
+              "data_control",
+              "custody",
+              "other"
+            ]
+          },
+          "description": { "type": "string", "minLength": 5 },
+          "amount": { "type": ["number", "string", "null"] },
+          "currency": { "type": ["string", "null"] },
+          "sourceIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "boundary": { "type": "string" }
+        }
+      }
+    },
+    "mechanismOfPower": {
+      "type": "object",
+      "required": ["description", "authorityHolder", "implementationRoute", "evidenceBasis", "limitation"],
+      "properties": {
+        "description": { "type": "string", "minLength": 10 },
+        "authorityHolder": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "implementationRoute": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "affectedGroups": { "type": "array", "items": { "type": "string" } },
+        "evidenceBasis": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "limitation": { "type": "string", "minLength": 5 }
+      }
+    },
+    "solidConclusion": {
+      "type": "object",
+      "required": ["text", "scope", "confidence", "sourceIds", "boundary"],
+      "properties": {
+        "text": { "type": "string", "minLength": 10 },
+        "scope": { "type": "string", "minLength": 5 },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "sourceIds": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "boundary": { "type": "string", "minLength": 5 }
+      }
+    },
+    "missionAssessment": {
+      "type": "object",
+      "required": ["outcome", "missionRelevance", "eliteControlRelevance", "convergenceVectors", "overallConfidence", "boundary"],
+      "properties": {
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "direct_support",
+            "indirect_support",
+            "contextual_connection",
+            "contradictory_evidence",
+            "insufficient_evidence"
+          ]
+        },
+        "missionRelevance": { "type": "string", "minLength": 10 },
+        "eliteControlRelevance": { "type": "string", "minLength": 10 },
+        "overallConfidence": { "$ref": "#/$defs/confidence" },
+        "convergenceVectors": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/convergenceVector" }
+        },
+        "boundary": { "type": "string", "minLength": 10 }
+      }
+    },
+    "speculativeConclusion": {
+      "type": "object",
+      "required": ["label", "text", "conditions", "falsifiers", "confidence", "boundary"],
+      "properties": {
+        "label": { "type": "string", "const": "speculative" },
+        "text": { "type": "string", "minLength": 10 },
+        "conditions": { "type": "array", "items": { "type": "string" } },
+        "falsifiers": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "boundary": { "type": "string", "minLength": 10 }
+      }
+    },
+    "counterAnalysis": {
+      "type": "object",
+      "required": ["alternativeExplanations", "contradictoryEvidence", "assessment"],
+      "properties": {
+        "alternativeExplanations": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "contradictoryEvidence": { "type": "array", "items": { "type": "string" } },
+        "assessment": { "type": "string", "minLength": 10 }
+      }
+    },
+    "missingEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["record", "whyItMatters", "effectIfFound"],
+        "properties": {
+          "record": { "type": "string", "minLength": 3 },
+          "whyItMatters": { "type": "string", "minLength": 5 },
+          "effectIfFound": {
+            "type": "string",
+            "enum": ["confirm", "upgrade", "narrow", "contradict", "falsify", "contextualise"]
+          },
+          "requestRoute": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "watchNext": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["indicator", "reason", "upgradeCondition", "downgradeCondition"],
+        "properties": {
+          "indicator": { "type": "string", "minLength": 3 },
+          "reason": { "type": "string", "minLength": 5 },
+          "upgradeCondition": { "type": "string", "minLength": 5 },
+          "downgradeCondition": { "type": "string", "minLength": 5 },
+          "reviewDate": { "type": ["string", "null"], "format": "date" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["grade", "confidence", "claimClass", "associationBoundary"],
+      "properties": {
+        "grade": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D", "E", "ungraded"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "claimClass": {
+          "type": "string",
+          "enum": [
+            "established_fact",
+            "official_finding",
+            "documented_association",
+            "supported_inference",
+            "scenario_analysis",
+            "speculative_interpretation",
+            "disputed_claim",
+            "unsupported_claim"
+          ]
+        },
+        "corroborationCount": { "type": "integer", "minimum": 0 },
+        "associationBoundary": { "type": "string", "minLength": 5 }
+      }
+    },
+    "access": {
+      "type": "object",
+      "required": ["minimumTier", "publicFields", "emailVisibility", "dashboardVisibility", "downloadPermissions"],
+      "properties": {
+        "minimumTier": { "$ref": "#/$defs/tier" },
+        "publicFields": { "type": "array", "items": { "type": "string" } },
+        "registeredFields": { "type": "array", "items": { "type": "string" } },
+        "supporterFields": { "type": "array", "items": { "type": "string" } },
+        "intelligenceFields": { "type": "array", "items": { "type": "string" } },
+        "researchProFields": { "type": "array", "items": { "type": "string" } },
+        "emailVisibility": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/tier" }
+        },
+        "dashboardVisibility": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/tier" }
+        },
+        "downloadPermissions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["format", "minimumTier"],
+            "properties": {
+              "format": { "type": "string", "enum": ["html", "pdf", "csv", "json", "zip", "none"] },
+              "minimumTier": { "$ref": "#/$defs/tier" }
+            }
+          }
+        },
+        "embargoUntil": { "type": ["string", "null"], "format": "date-time" }
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "required": ["createdAt", "updatedAt", "lastReviewedAt", "reviewStatus"],
+      "properties": {
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "lastReviewedAt": { "type": "string", "format": "date-time" },
+        "reviewStatus": {
+          "type": "string",
+          "enum": ["current", "review_due", "stale", "superseded", "withdrawn"]
+        },
+        "supersedes": { "type": ["string", "null"] },
+        "supersededBy": { "type": ["string", "null"] }
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "includeInDailyDrop": { "type": "boolean" },
+        "includeInWeeklyReport": { "type": "boolean" },
+        "includeInNewsletter": { "type": "boolean" },
+        "includeInSearch": { "type": "boolean" },
+        "includeInEntityCards": { "type": "boolean" },
+        "includeInConvergenceTracker": { "type": "boolean" }
+      }
+    },
+    "legacy": {
+      "type": "object",
+      "description": "Temporary compatibility metadata. This permits report-only mapping without altering legacy files.",
+      "properties": {
+        "sourceFile": { "type": "string" },
+        "sourcePath": { "type": "string" },
+        "legacyId": { "type": ["string", "number", "null"] },
+        "aliasesApplied": { "type": "array", "items": { "type": "string" } },
+        "migrationStatus": {
+          "type": "string",
+          "enum": ["unmapped", "mapped", "partial", "canonical", "excluded"]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "sourceType", "url", "publisher", "retrievedAt", "authority", "status"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 2 },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "court",
+            "law",
+            "regulator",
+            "government",
+            "official_dataset",
+            "official_report",
+            "contract",
+            "corporate_filing",
+            "declassified_archive",
+            "authenticated_leak",
+            "unverified_leak",
+            "credible_reporting",
+            "academic",
+            "testimony",
+            "other"
+          ]
+        },
+        "url": { "type": "string", "format": "uri" },
+        "publisher": { "type": "string", "minLength": 2 },
+        "publishedAt": { "type": ["string", "null"], "format": "date-time" },
+        "retrievedAt": { "type": "string", "format": "date-time" },
+        "authority": {
+          "type": "string",
+          "enum": ["primary", "official_secondary", "independent_secondary", "lead_only", "unknown"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["preserved", "live", "changed", "removed", "unavailable", "unverified"]
+        },
+        "hash": { "type": ["string", "null"] },
+        "archivePath": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["very_low", "low", "medium", "medium_high", "high", "not_applicable"]
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["public", "registered", "supporter_3", "intelligence_6", "research_pro_9", "separate_product"]
+    },
+    "convergenceVector": {
+      "type": "object",
+      "required": ["vector", "score", "rationale", "evidenceBasis", "confidence"],
+      "properties": {
+        "vector": {
+          "type": "string",
+          "enum": [
+            "political_governance",
+            "monetary_control",
+            "digital_identity",
+            "surveillance_and_data",
+            "emergency_power",
+            "information_and_narrative",
+            "corporate_institutional_convergence",
+            "security_architecture",
+            "religious_or_ethical_convergence",
+            "legal_and_regulatory_convergence"
+          ]
+        },
+        "score": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "rationale": { "type": "string", "minLength": 5 },
+        "evidenceBasis": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "coordinationStatus": {
+          "type": "string",
+          "enum": ["documented", "partly_documented", "inferred", "not_shown", "contradicted"]
+        }
+      }
+    }
+  }
+}

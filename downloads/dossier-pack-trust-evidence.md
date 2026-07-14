@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-13T06:37:37.586Z
+Updated: 2026-07-14T05:52:18.997Z
 Items: 12
 
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
@@ -76,7 +76,7 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-09 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+- 2026-07-10 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
   - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.

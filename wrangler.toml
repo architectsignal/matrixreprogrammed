@@ -13,6 +13,9 @@ routes = [
   { pattern = "www.matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" }
 ]
 
+[triggers]
+crons = ["0 * * * *"]
+
 [vars]
 PAYPAL_ENVIRONMENT = "sandbox"
 PAYPAL_SANDBOX_ENABLED = "true"

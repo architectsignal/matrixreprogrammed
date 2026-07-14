@@ -9,7 +9,7 @@
 
   const style = document.createElement('style');
   style.textContent = `
-    .email-intel-report{display:grid;gap:1rem;color:#f3e6bd}.email-intel-head{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.email-intel-head h3{margin:.1rem 0}.email-intel-badge{display:inline-flex;align-items:center;border:1px solid rgba(216,181,106,.45);border-radius:999px;padding:.35rem .7rem;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}.email-intel-badge[data-risk=low]{border-color:#4f9f70;color:#a8e7bd}.email-intel-badge[data-risk=moderate]{border-color:#d2a74e;color:#f1d28d}.email-intel-badge[data-risk=high],.email-intel-badge[data-risk=critical]{border-color:#c75d55;color:#ffafa7}.email-intel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.7rem}.email-intel-stat{padding:.85rem;border:1px solid rgba(216,181,106,.22);border-radius:12px;background:rgba(216,181,106,.055)}.email-intel-stat strong{display:block;font-size:1.5rem;color:#d8b56a}.email-intel-stat span{font-size:.8rem;color:#c8bb95}.email-intel-section{border-top:1px solid rgba(216,181,106,.18);padding-top:.85rem}.email-intel-section h4{margin:0 0 .55rem}.email-intel-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}.email-intel-item{display:grid;grid-template-columns:minmax(105px,180px) 1fr;gap:.7rem;padding:.65rem .75rem;border:1px solid rgba(216,181,106,.16);border-radius:10px;background:rgba(0,0,0,.24)}.email-intel-item strong{overflow-wrap:anywhere}.email-intel-item span{color:#c8bb95}.email-intel-actions{margin:.3rem 0 0;padding-left:1.15rem}.email-intel-actions li{margin:.35rem 0}.email-intel-note{padding:.75rem;border-left:3px solid #d8b56a;background:rgba(216,181,106,.07);color:#d8cfb1}.email-intel-details{border:1px solid rgba(216,181,106,.18);border-radius:10px;padding:.7rem}.email-intel-details summary{cursor:pointer;font-weight:800}.email-intel-details pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:.76rem}.email-intel-empty{color:#c8bb95;font-style:italic}@media(max-width:560px){.email-intel-item{grid-template-columns:1fr}}
+    .email-intel-report{display:grid;gap:1rem;color:#f3e6bd}.email-intel-head{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.email-intel-head h3{margin:.1rem 0}.email-intel-badge{display:inline-flex;align-items:center;border:1px solid rgba(216,181,106,.45);border-radius:999px;padding:.35rem .7rem;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}.email-intel-badge[data-risk=low]{border-color:#4f9f70;color:#a8e7bd}.email-intel-badge[data-risk=medium],.email-intel-badge[data-risk=moderate]{border-color:#d2a74e;color:#f1d28d}.email-intel-badge[data-risk=high],.email-intel-badge[data-risk=critical]{border-color:#c75d55;color:#ffafa7}.email-intel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.7rem}.email-intel-stat{padding:.85rem;border:1px solid rgba(216,181,106,.22);border-radius:12px;background:rgba(216,181,106,.055)}.email-intel-stat strong{display:block;font-size:1.5rem;color:#d8b56a}.email-intel-stat span{font-size:.8rem;color:#c8bb95}.email-intel-section{border-top:1px solid rgba(216,181,106,.18);padding-top:.85rem}.email-intel-section h4{margin:0 0 .55rem}.email-intel-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}.email-intel-item{display:grid;grid-template-columns:minmax(105px,180px) 1fr;gap:.7rem;padding:.65rem .75rem;border:1px solid rgba(216,181,106,.16);border-radius:10px;background:rgba(0,0,0,.24)}.email-intel-item strong{overflow-wrap:anywhere}.email-intel-item span{color:#c8bb95}.email-intel-actions{margin:.3rem 0 0;padding-left:1.15rem}.email-intel-actions li{margin:.35rem 0}.email-intel-note{padding:.75rem;border-left:3px solid #d8b56a;background:rgba(216,181,106,.07);color:#d8cfb1}.email-intel-details{border:1px solid rgba(216,181,106,.18);border-radius:10px;padding:.7rem}.email-intel-details summary{cursor:pointer;font-weight:800}.email-intel-details pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:.76rem}.email-intel-empty{color:#c8bb95;font-style:italic}@media(max-width:560px){.email-intel-item{grid-template-columns:1fr}}
   `;
   document.head.appendChild(style);
 
@@ -74,6 +74,16 @@
     append(details, node('summary', 'Sanitised technical data'), node('pre', JSON.stringify(result || {}, null, 2)));
     return details;
   }
+  function runMetadata(result) {
+    const meta = object(result.meta);
+    const items = [];
+    if (meta.lookup_id) items.push({ name: 'Lookup ID', detail: meta.lookup_id });
+    if (meta.duration_ms !== undefined) items.push({ name: 'Duration', detail: `${meta.duration_ms} ms` });
+    if (meta.module_timeout_ms !== undefined) items.push({ name: 'Module timeout', detail: `${meta.module_timeout_ms} ms` });
+    if (meta.timed_out !== undefined) items.push({ name: 'Timed out', detail: meta.timed_out ? 'Yes — partial results may be shown.' : 'No' });
+    if (meta.version !== undefined) items.push({ name: 'Report version', detail: String(meta.version) });
+    return items;
+  }
   function reportShell(job, title, riskLevel, riskText) {
     const report = node('div', '', 'email-intel-report');
     const head = node('div', '', 'email-intel-head');
@@ -94,8 +104,9 @@
     const anomalies = array(result.parserAnomalies);
     const checked = Number(result.servicesChecked || result.counts?.checked || possible.length + absent.length + inconclusive.length);
     const risk = object(result.riskAssessment);
-    const level = risk.level || (possible.length >= 8 ? 'moderate' : 'low');
-    const report = reportShell(job, 'Email account-signal report', level, risk.summary || `${possible.length} possible account signal${possible.length === 1 ? '' : 's'} found across ${checked} checked services.`);
+    const ai = object(result.ai_summary);
+    const level = risk.level || ai.risk || (possible.length >= 8 ? 'medium' : 'low');
+    const report = reportShell(job, 'Email account-signal report', level, risk.summary || ai.headline || `${possible.length} possible account signal${possible.length === 1 ? '' : 's'} found across ${checked} checked services.`);
     const stats = node('div', '', 'email-intel-grid');
     append(stats, stat('Services checked', checked), stat('Possible accounts', possible.length), stat('No-account signals', absent.length), stat('Inconclusive', inconclusive.length));
     report.appendChild(stats);
@@ -104,6 +115,8 @@
     report.appendChild(section('Providers that gave no reliable answer', itemList(inconclusive, 'The check was blocked, rate-limited, changed, unavailable, or returned an unrecognised response. No account conclusion can be drawn.')));
     if (anomalies.length) report.appendChild(section('Parser anomalies', itemList(anomalies, 'The runner could not classify this line confidently; ignore it until independently verified.')));
     report.appendChild(section('Recommended actions', actionList(array(risk.actions || result.recommendedActions))));
+    const metaItems = runMetadata(result);
+    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
     report.appendChild(node('p', 'Account-registration signals may be stale, shared, incorrect, or caused by provider behaviour. Verify each important result directly.', 'email-intel-note'));
     report.appendChild(technicalDetails(result));
     return report;
@@ -115,7 +128,8 @@
     const domains = array(result.publicDomainsObserved);
     const modules = array(result.modulesReporting);
     const totalEvents = Object.values(counts).reduce((sum, value) => sum + (Number(value) || 0), 0);
-    const report = reportShell(job, 'Passive digital-footprint report', result.riskAssessment?.level || 'informational', result.riskAssessment?.summary || `${totalEvents} sanitised public-data events were grouped into ${Object.keys(counts).length} event types.`);
+    const ai = object(result.ai_summary);
+    const report = reportShell(job, 'Passive digital-footprint report', result.riskAssessment?.level || ai.risk || 'informational', result.riskAssessment?.summary || ai.headline || `${totalEvents} sanitised public-data events were grouped into ${Object.keys(counts).length} event types.`);
     const stats = node('div', '', 'email-intel-grid');
     append(stats, stat('Sanitised events', totalEvents), stat('Event types', Object.keys(counts).length), stat('Public domains', domains.length), stat('Modules reporting', modules.length));
     report.appendChild(stats);
@@ -124,6 +138,8 @@
     report.appendChild(section('Public domains observed', itemList(domains, 'A public domain appeared in passive scan output; this does not prove control, ownership, or wrongdoing.')));
     report.appendChild(section('Collection modules', itemList(modules, 'Passive SpiderFoot module that contributed a sanitised event.')));
     report.appendChild(section('Recommended actions', actionList(array(result.recommendedActions || result.riskAssessment?.actions))));
+    const metaItems = runMetadata(result);
+    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
     report.appendChild(node('p', 'Only passive modules were requested. External modules may be unavailable, rate-limited, or require separate API keys.', 'email-intel-note'));
     report.appendChild(technicalDetails(result));
     return report;
@@ -136,20 +152,25 @@
     const sources = array(result.servicesReporting);
     const classes = array(result.dataClasses || result.exposureClasses);
     const dates = object(result.exposureDates);
+    const stealer = object(result.stealer_logs);
+    const ai = object(result.ai_summary);
     const positiveIndicators = Object.entries(indicators).filter(([, value]) => value === true || Number(value) > 0);
     const risk = object(result.riskAssessment);
-    const level = risk.level || (indicators.authenticationMaterial || indicators.digestMaterial ? 'high' : breaches.length ? 'moderate' : 'low');
-    const report = reportShell(job, 'Breach exposure report', level, risk.summary || `${breaches.length} sanitised breach or dataset reference${breaches.length === 1 ? '' : 's'} reported.`);
+    const level = risk.level || ai.risk || (stealer.present ? 'critical' : indicators.authenticationMaterial || indicators.digestMaterial ? 'high' : breaches.length ? 'medium' : 'low');
+    const report = reportShell(job, 'Breach exposure report', level, risk.summary || ai.headline || `${breaches.length} sanitised breach or dataset reference${breaches.length === 1 ? '' : 's'} reported.`);
     const stats = node('div', '', 'email-intel-grid');
-    append(stats, stat('Breach references', breaches.length), stat('Exposure classes', classes.length || positiveIndicators.length), stat('Source records', Number(result.sourceRecordCount || indicators.sourceRowsObserved || 0)), stat('Reporting services', sources.length));
+    append(stats, stat('Breach references', breaches.length), stat('Exposure classes', classes.length || positiveIndicators.length), stat('Infostealer indicators', Number(stealer.count || 0)), stat('Source records', Number(result.sourceRecordCount || indicators.sourceRowsObserved || 0)));
     report.appendChild(stats);
-    const indicatorItems = positiveIndicators.map(([key, value]) => ({ name: titleCase(key), detail: typeof value === 'boolean' ? 'Detected in source data; underlying sensitive value was discarded.' : `${value} sanitised occurrence${Number(value) === 1 ? '' : 's'} observed.` }));
+    const indicatorItems = positiveIndicators.map(([key, value]) => ({ name: titleCase(key), detail: typeof value === 'boolean' ? 'Detected in source data; underlying sensitive value was discarded.' : `${value} sanitised occurrence${Number(value) === 1 ? '' : 's'} observed; underlying sensitive value was discarded.` }));
     report.appendChild(section('Sensitive-data categories detected', itemList(indicatorItems, 'Category detected; underlying value was not retained.')));
+    report.appendChild(section('Infostealer indicators', itemList([{ name: stealer.present ? 'Detected' : 'Not detected', detail: stealer.present ? `${Number(stealer.count || 0)} infostealer-related indicator(s) were reported. Raw records and credentials were discarded.` : 'No infostealer-related indicator was reported by the configured source.' }], 'Infostealer status.')));
     report.appendChild(section('Exposure classes', itemList(classes, 'Type of information reported by a breach source; no secret value is displayed or stored.')));
     report.appendChild(section('Breach or dataset references', itemList(breaches, 'Sanitised source name. A reference does not prove current compromise or ownership.')));
     if (dates.earliest || dates.latest) report.appendChild(section('Exposure date range', itemList([{ name: 'Earliest reported', detail: dates.earliest || 'Unknown' }, { name: 'Latest reported', detail: dates.latest || 'Unknown' }], 'Reported date.')));
     report.appendChild(section('Recommended actions', actionList(array(result.recommendedActions || risk.actions))));
-    report.appendChild(node('p', 'Passwords, digests, recovery values, telephone numbers, network addresses, and raw breach rows are never returned. The report records only whether those categories were detected.', 'email-intel-note'));
+    const metaItems = runMetadata(result);
+    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
+    report.appendChild(node('p', 'Passwords, digests, recovery values, telephone numbers, network addresses, and raw breach rows are never returned. The report records whether those categories were detected and how many sanitised indicators were observed.', 'email-intel-note'));
     report.appendChild(technicalDetails(result));
     return report;
   }
@@ -264,7 +285,8 @@
       await loadJobs();
     } catch (error) {
       if (error.status === 401) { setText(authState, 'Member login required'); setText(runnerState, 'Tools locked'); forms.forEach(form => setFormEnabled(form, false)); return; }
-      setText(authState, 'Membership check failed'); setText(runnerState, error.message);
+      setText(authState, 'Membership check failed');
+      setText(runnerState, error.message);
     }
   }
 

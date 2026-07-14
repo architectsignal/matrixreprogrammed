@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>PayPal Sandbox Rehearsal | Matrix Reprogrammed</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>
+    body{background:#070707;color:#f2e8ca}.shell{max-width:1320px;margin:auto;padding:28px 18px 70px}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.status{min-height:1.4rem;font-weight:800}.good{color:#9ddd9d}.warning{color:#e2c27a}.danger{color:#ff9b8f}.actions{display:flex;gap:10px;flex-wrap:wrap}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.form-grid input,.form-grid select{width:100%;box-sizing:border-box;background:#050505;color:#f2e8ca;border:1px solid rgba(216,181,106,.3);border-radius:10px;padding:10px}.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(216,181,106,.14)}.check strong{min-width:210px}.pill{display:inline-block;border:1px solid rgba(216,181,106,.35);border-radius:999px;padding:.25rem .6rem}.boundary{border-left:3px solid #d8b56a;padding-left:12px;color:#c8bb95}.terminal{white-space:pre-wrap;word-break:break-word;background:#020202;border:1px solid rgba(216,181,106,.22);border-radius:14px;padding:14px;max-height:360px;overflow:auto}.hidden{display:none!important}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="eyebrow">Administrator Only · Phase 7</div>
+      <h1>PAYPAL SANDBOX REHEARSAL.</h1>
+      <p class="lead">Open a short, auditable sandbox checkout window. A passing rehearsal must prove purchase, verified webhook, entitlement activation, payment record and cancellation before checkout closes again.</p>
+      <p id="rehearsal-status" class="status">Checking sandbox readiness…</p>
+      <div class="actions"><a class="btn alt" href="admin-payment-dashboard.html">Payment administration</a><a class="btn alt" href="membership.html">Membership page</a><a class="btn alt" href="billing-dashboard.html">Billing dashboard</a></div>
+    </header>
+
+    <section class="panel">
+      <h2>Safety boundary</h2>
+      <p class="boundary"><strong>No live charging:</strong> this control room accepts only the PayPal sandbox environment. Production remains disabled. Every rehearsal has a maximum 45-minute window; expiry, abort or successful completion closes checkout automatically.</p>
+      <div class="grid">
+        <article><span class="pill">Environment</span><h3 id="rehearsal-environment">—</h3></article>
+        <article><span class="pill">Readiness</span><h3 id="rehearsal-ready">—</h3></article>
+        <article><span class="pill">Checkout</span><h3 id="rehearsal-checkout">Closed</h3></article>
+        <article><span class="pill">Active run</span><h3 id="rehearsal-active-run">None</h3></article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Release-readiness checks</h2>
+      <div id="rehearsal-readiness-checks"></div>
+    </section>
+
+    <section class="panel" id="rehearsal-start-panel">
+      <h2>Start timed sandbox rehearsal</h2>
+      <p>Use a PayPal sandbox buyer account and a dedicated Matrix test-member email. The rehearsal must begin with checkout closed.</p>
+      <form id="rehearsal-start-form" class="form-grid">
+        <label>Target tier<select name="tier"><option value="supporter">Supporter €3</option><option value="intelligence">Intelligence €6</option><option value="research_pro">Research Pro €9</option></select></label>
+        <label>Matrix test-member email<input type="email" name="email" required autocomplete="off" placeholder="sandbox-member@example.com"></label>
+        <label>Window<select name="durationMinutes"><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option></select></label>
+        <label>Exact phrase<input name="phrase" required autocomplete="off" value="START MATRIX PAYPAL SANDBOX REHEARSAL"></label>
+        <button class="btn" type="submit">Open sandbox rehearsal</button>
+      </form>
+    </section>
+
+    <section class="panel hidden" id="rehearsal-active-panel">
+      <h2>Active rehearsal</h2>
+      <div class="grid">
+        <article><strong>Run ID</strong><p id="run-id">—</p></article>
+        <article><strong>Target</strong><p id="run-target">—</p></article>
+        <article><strong>Test member</strong><p id="run-email">—</p></article>
+        <article><strong>Expires</strong><p id="run-expires">—</p></article>
+      </div>
+      <div class="actions"><a class="btn" href="membership.html">1. Complete sandbox purchase</a><a class="btn alt" href="billing-dashboard.html">2. Verify and cancel subscription</a><button id="refresh-rehearsal" class="btn alt" type="button">3. Refresh evidence</button></div>
+      <h3>Required evidence chain</h3>
+      <div id="rehearsal-evidence-checks"></div>
+      <div class="actions">
+        <button id="complete-rehearsal" class="btn" type="button">Complete and close checkout</button>
+        <button id="abort-rehearsal" class="btn alt" type="button">Abort and close checkout</button>
+      </div>
+      <pre id="rehearsal-evidence-log" class="terminal"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Previous rehearsals</h2>
+      <div id="rehearsal-history" class="terminal">No history loaded.</div>
+    </section>
+  </main>
+  <script src="admin-paypal-rehearsal.js"></script>
+</body>
+</html>

@@ -4118,8 +4118,6 @@
     "url": "newsletter.html",
     "description": "Free briefing and newsletter route.",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "information-narrative",
       "Information / Narrative",
       "elite-networks",
@@ -4979,6 +4977,22 @@
       "Security / Emergency Power",
       "disclosure-black-files",
       "Disclosure / Black Files"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "access-denied.html",
+    "title": "Access Required | Matrix Reprogrammed",
+    "category": "Identity / Access",
+    "layer": "identity-access",
+    "url": "access-denied.html",
+    "description": "Access Required | Matrix Reprogrammed Entitlement Check THIS SECTION IS NOT INCLUDED IN YOUR CURRENT ACCESS. The server denied the request before returning any protected content or hidden metadata. Current access: Unknown Required access: Higher membership Vie",
+    "keywords": [
+      "identity-access",
+      "Identity / Access",
+      "speculation-review",
+      "Speculation Review"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -8047,6 +8061,24 @@
       "Disclosure / Black Files",
       "speculation-review",
       "Speculation Review"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "billing-dashboard.html",
+    "title": "Billing Dashboard | Matrix Reprogrammed",
+    "category": "Money / Reserves",
+    "layer": "money-reserves",
+    "url": "billing-dashboard.html",
+    "description": "Billing Dashboard | Matrix Reprogrammed Verified PayPal Billing BILLING DASHBOARD. Checking your billing state… Member dashboard Membership options No PayPal subscription found Your free registered account remains active. Choose a paid tier only when checkout ",
+    "keywords": [
+      "money-reserves",
+      "Money / Reserves",
+      "identity-access",
+      "Identity / Access",
+      "information-narrative",
+      "Information / Narrative"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -13872,6 +13904,35 @@
       "speculation-review",
       "Speculation Review"
     ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "admin-campaign-monitor.html",
+    "title": "Email Campaign Monitor | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "admin-campaign-monitor.html",
+    "description": "Email Campaign Monitor | Matrix Reprogrammed MATRIX REPROGRAMMED Protected administration EMAIL CAMPAIGN MONITOR. Admin API token Connect No admin request has been made. Automation controls Run daily automation Run weekly automation Process retry outbox Create",
+    "keywords": [
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "email-status.html",
+    "title": "Email Status | Matrix Reprogrammed",
+    "category": "Site Route",
+    "layer": "general",
+    "url": "email-status.html",
+    "description": "Matrix Reprogrammed email verification and subscription status.",
+    "keywords": [],
     "priority": 10,
     "sourceType": "html"
   },
@@ -22986,25 +23047,47 @@
     "sourceType": "html"
   },
   {
-    "key": "member-dashboard.html",
-    "title": "Member Dashboard | Matrix Reprogrammed",
-    "category": "Information / Narrative",
-    "layer": "information-narrative",
-    "url": "member-dashboard.html",
-    "description": "Your Matrix Reprogrammed membership status, PayPal subscription and account controls.",
+    "key": "admin-member-dashboard.html",
+    "title": "Member Administration | Matrix Reprogrammed",
+    "category": "Speculation Review",
+    "layer": "speculation-review",
+    "url": "admin-member-dashboard.html",
+    "description": "Member Administration | Matrix Reprogrammed Administrator Only MEMBER & ENTITLEMENT CONTROL. Checking administrator access… Member dashboard 0 members 0 active sessions 0 active grants 0 saved items 0 follows 0 watchlists 0 denied downloads Tier distribution M",
     "keywords": [
-      "money-reserves",
-      "Money / Reserves",
       "identity-access",
       "Identity / Access",
       "information-narrative",
       "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
       "Disclosure / Black Files",
       "speculation-review",
       "Speculation Review"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "member-dashboard.html",
+    "title": "Member Dashboard | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "member-dashboard.html",
+    "description": "Your secure Matrix Reprogrammed account, archive, saved content, follows, watchlists and downloads.",
+    "keywords": [
+      "identity-access",
+      "Identity / Access",
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -23063,7 +23146,7 @@
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "url": "membership.html",
-    "description": "Paid access to premium briefs, ledgers, decks, reports and research tools.",
+    "description": "Matrix Reprogrammed membership: Free Member, Supporter €3, Intelligence Member €6 and Research Pro €9 per month.",
     "keywords": [
       "money-reserves",
       "Money / Reserves",
@@ -23076,9 +23159,7 @@
       "elite-networks",
       "Elite Networks",
       "disclosure-black-files",
-      "Disclosure / Black Files",
-      "speculation-review",
-      "Speculation Review"
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -25999,6 +26080,24 @@
       "Disclosure / Black Files",
       "speculation-review",
       "Speculation Review"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "admin-payment-dashboard.html",
+    "title": "Payment Administration | Matrix Reprogrammed",
+    "category": "Money / Reserves",
+    "layer": "money-reserves",
+    "url": "admin-payment-dashboard.html",
+    "description": "Payment Administration | Matrix Reprogrammed Administrator Only PAYPAL SUBSCRIPTION CONTROL. Checking the payment ledger… Member administration Member dashboard Environment — Checkout — Plans — Subscriptions 0 Webhook events 0 State transitions 0 Payment recor",
+    "keywords": [
+      "money-reserves",
+      "Money / Reserves",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"
@@ -30155,6 +30254,26 @@
       "Disclosure / Black Files",
       "speculation-review",
       "Speculation Review"
+    ],
+    "priority": 10,
+    "sourceType": "html"
+  },
+  {
+    "key": "subscriber-dashboard.html",
+    "title": "Subscriber Dashboard | Matrix Reprogrammed",
+    "category": "Information / Narrative",
+    "layer": "information-narrative",
+    "url": "subscriber-dashboard.html",
+    "description": "Manage Matrix Reprogrammed email preferences and unsubscribe.",
+    "keywords": [
+      "information-narrative",
+      "Information / Narrative",
+      "security-emergency",
+      "Security / Emergency Power",
+      "elite-networks",
+      "Elite Networks",
+      "disclosure-black-files",
+      "Disclosure / Black Files"
     ],
     "priority": 10,
     "sourceType": "html"

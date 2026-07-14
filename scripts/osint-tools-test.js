@@ -14,11 +14,14 @@ function containsAll(text, values) { return values.every(value => text.includes(
 for (const file of [
   'research-tools.html',
   'research-tools.js',
+  'research-tools-ui-v3.js',
   'migrations/0002_osint_tools.sql',
   'tools/osint_runner.py',
+  'tools/osint_runner_v3.py',
   'tools/osint-requirements.txt',
   'tools/OSINT_RUNNER_SETUP.md',
   'scripts/patch-osint-tools-system.js',
+  'scripts/patch-osint-self-report.js',
   'scripts/patch-research-tools-ui.js',
   'src/worker.js'
 ]) check(`required file ${file}`, fs.existsSync(path.join(root, file)), 'missing');
@@ -30,6 +33,7 @@ check('member tools identified', page.includes('Member Tool · Holehe') && page.
 check('lawful-use confirmations required', (page.match(/name="confirmLawfulUse"/g) || []).length === 3 && (page.match(/name="confirmNoMinor"/g) || []).length === 3);
 check('evidence boundary visible', /do not prove identity|not prove identity/i.test(page) && /wrongdoing or criminal conduct/i.test(page));
 check('external Email OSINT linked safely', page.includes('https://emailosint.org/') && page.includes('noopener noreferrer nofollow'));
+check('cache-busted report interface loaded', page.includes('research-tools-ui-v3.js?v=3.1.0'));
 
 const client = read('research-tools.js');
 check('client uses member-authenticated APIs', containsAll(client, ['/api/tools/config', '/api/tools/jobs', "credentials: 'same-origin'"]));
@@ -41,6 +45,14 @@ check('report shows risk and actions', containsAll(client, ['email-intel-badge',
 check('sanitised technical appendix retained', client.includes('Sanitised technical data') && client.includes('technicalDetails'));
 check('sensitive category knowledge displayed', containsAll(client, ['Sensitive-data categories detected', 'underlying sensitive value was discarded', 'stealer_logs']));
 check('raw secret values are not requested by client', !/passwordValue|rawBreach|recoveryValue|phoneFragment|ipAddressValue/.test(client));
+
+const clientV3 = read('research-tools-ui-v3.js');
+check('v3 converts raw JSON into reports', containsAll(clientV3, ['parseRaw', 'renderAccount', 'renderExposure', 'MutationObserver']));
+check('v3 prioritises useful findings', containsAll(clientV3, ['What matters', 'Possible account associations', 'Complete exposure inventory', 'Priority remediation']));
+check('v3 collapses provider catalogues', containsAll(clientV3, ['providers were inconclusive', 'services returned no-account responses', 'intel-v3-details']));
+check('v3 displays verified-self masked clues', containsAll(clientV3, ['Verified-self detail', 'Recognisable masked clues', 'same value appeared']));
+check('v3 avoids persistent target storage', !/localStorage|sessionStorage|indexedDB/.test(clientV3));
+check('v3 never asks for raw values', !/passwordValue|rawBreach|recoveryValue|phoneFragment|ipAddressValue/.test(clientV3));
 
 const migration = read('migrations/0002_osint_tools.sql');
 check('encrypted D1 job fields present', containsAll(migration, ['target_hash', 'target_ciphertext', 'target_iv', 'lawful_purpose', 'consent_version']));
@@ -58,6 +70,9 @@ check('sensitive result keys removed', worker.includes('osintSanitizeResult') &&
 check('completed targets cleared', worker.includes("target_ciphertext='',target_iv=''"));
 check('runner bearer token required', worker.includes('OSINT_RUNNER_TOKEN') && worker.includes("startsWith('bearer ')"));
 check('CORS accepts private runner headers', worker.includes('authorization,x-runner-id'));
+check('verified-self ownership uses verified member mailbox hash', containsAll(worker, ['email_verified_at', 'memberHash=await authHash', "disclosureMode:revealSelf?'verified-self':'standard'"]));
+check('recognition clues hidden outside verified-self mode', worker.includes("delete result.recognitionHints"));
+check('verified-self views are audited', worker.includes('osint.self_report.viewed'));
 
 const runner = read('tools/osint_runner.py');
 check('runner supports all three tools', containsAll(runner, ['def run_holehe', 'def run_spiderfoot', 'def run_h8mail']));
@@ -75,6 +90,14 @@ check('infostealer knowledge retained without rows', containsAll(runner, ['steal
 check('deterministic risk summary present', containsAll(runner, ['deterministic-risk-engine', 'risk_reason', 'recommendedActions']));
 check('target email omitted from result schema', !/"email"\s*:\s*target/.test(runner));
 
+const runnerV3 = read('tools/osint_runner_v3.py');
+check('v3 runner imports existing private runner contract', containsAll(runnerV3, ['import osint_runner as base', 'base.run_h8mail = run_h8mail_enriched', 'base.main()']));
+check('v3 masks recognisable identifiers', containsAll(runnerV3, ['mask_mail', 'mask_tel', 'mask_network', 'recognitionHints']));
+check('v3 reports source date and counts', containsAll(runnerV3, ['reportedDate', 'occurrences', 'sameValueCount', 'nearest_metadata']));
+check('v3 classifies authentication material without returning it', containsAll(runnerV3, ['Authentication value present', 'value withheld', 'digest_description']));
+check('v3 uses hidden h8mail output', runnerV3.includes('"--hide"') && runnerV3.includes('TemporaryDirectory'));
+check('v3 never prints target', !/print\([^\n]*target/.test(runnerV3));
+
 const homepage = read('index.html');
 check('homepage links research tools', homepage.includes('osint-tools-home:start') && homepage.includes('href="research-tools.html"'));
 check('homepage keeps evidence boundary', homepage.includes('account, footprint and breach signals are leads'));
@@ -82,7 +105,7 @@ check('homepage keeps evidence boundary', homepage.includes('account, footprint 
 const build = read('scripts/build-cloudflare-output.js');
 check('Cloudflare build requires tools page and client', build.includes('research-tools.html') && build.includes('research-tools.js'));
 check('Cloudflare build runs OSINT tests', build.includes('osint-tools-test.js'));
-check('private runner code is not a public required asset', !build.includes("'tools/osint_runner.py'"));
+check('private runner code is not a public required asset', !build.includes("'tools/osint_runner.py'") && !build.includes("'tools/osint_runner_v3.py'"));
 
 const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), checks, failures };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

@@ -27,7 +27,10 @@ const modules = [
   { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status'] },
   { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js'] },
   { name: 'Payment administration', route: '/admin-payment-dashboard', file: 'admin-payment-dashboard.html', markers: ['admin-payment-dashboard.js'] },
+  { name: 'Phase 7 sandbox rehearsal control room', route: '/admin-paypal-rehearsal', file: 'admin-paypal-rehearsal.html', markers: ['PAYPAL SANDBOX REHEARSAL.', 'maximum 45-minute window', 'admin-paypal-rehearsal.js'] },
   { name: 'PayPal subscription Worker', route: '/api/paypal/config', file: 'src/worker-paypal-subscriptions.js', markers: ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', 'PAYPAL_SANDBOX_ENABLED', 'paypal_runtime_settings'] },
+  { name: 'Phase 7 rehearsal Worker', route: '/api/paypal/admin/rehearsal/readiness', file: 'src/worker-paypal-sandbox-rehearsal.js', markers: ['cloudflare-worker-paypal-sandbox-rehearsal', 'START MATRIX PAYPAL SANDBOX REHEARSAL', 'expireStaleRuns', 'liveChargingEnabled: false'] },
+  { name: 'Phase 7 rehearsal D1 ledger', route: '/api/paypal/admin/rehearsals', file: 'migrations/phase7_paypal_sandbox_rehearsal.sql', markers: ['paypal_sandbox_rehearsal_runs', 'paypal_sandbox_rehearsal_evidence', 'paypal_active_sandbox_rehearsal', 'checkout_enabled=0'] },
   { name: 'Live Intel', route: '/live-intel', file: 'live-intel.html', markers: ['LIVE INTEL'] },
   { name: 'Security and privacy', route: '/security-privacy', file: 'security-privacy.html', markers: ['SECURITY'] },
   { name: 'Dark web safety', route: '/dark-web-safety', file: 'dark-web-safety.html', markers: ['DARK WEB SAFETY'] },
@@ -35,9 +38,9 @@ const modules = [
   { name: 'Public Data Laboratory', route: '/data-lab', file: 'data-lab.html', markers: ['PUBLIC DATA'] },
   { name: 'Evidence Archive', route: '/evidence-archive', file: 'evidence-archive.html', markers: ['EVIDENCE ARCHIVE'] },
   { name: 'Search the Machine', route: '/search', file: 'search.html', markers: ['SEARCH THE MACHINE'] },
-  { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1', 'cloudflare-worker-paypal-subscriptions'] },
+  { name: 'Strict production Worker', route: '/forum-health', file: 'src/worker-production.js', markers: ['non-authoritative-forum-response-blocked', 'members-db-binding-unavailable', 'cloudflare-worker-forum-d1', 'cloudflare-worker-paypal-subscriptions', 'cloudflare-worker-paypal-sandbox-rehearsal'] },
   { name: 'D1 forum persistence Worker', route: '/forum-health', file: 'src/worker-forum-persistence.js', markers: ['Cloudflare D1 MEMBERS_DB.forum_posts', 'd1Connected: true', 'storedPostCount'] },
-  { name: 'Cloudflare D1 binding', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = true'] }
+  { name: 'Cloudflare D1 binding', route: '/forum-health', file: 'wrangler.toml', markers: ['main = "src/worker-production.js"', 'binding = "MEMBERS_DB"', 'run_worker_first = true', 'PAYPAL_SANDBOX_ENABLED = "true"', 'PAYPAL_PRODUCTION_ENABLED = "false"'] }
 ].map(item => {
   const text = read(item.file);
   const missingMarkers = item.markers.filter(marker => !text.includes(marker));
@@ -61,6 +64,10 @@ const health = {
   paymentStatus: 'sandbox-ready-disabled',
   paymentMessage: 'PayPal subscription code is deployed behind server-side gates; checkout remains disabled until Cloudflare configuration, D1 activation and verified plans agree.',
   checkoutDefault: 'disabled',
+  rehearsalStatus: 'timed-sandbox-only',
+  rehearsalWindowMaxMinutes: 45,
+  rehearsalMessage: 'Sandbox checkout may open only inside an administrator-started Phase 7 rehearsal. Expiry, abort or completion closes checkout automatically.',
+  productionPaymentsEnabled: false,
   manifestSha: manifest?.commitSha || null,
   manifestMatches,
   routes: modules.map(item => item.route),
@@ -77,12 +84,14 @@ const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta
 &gt; Generated: ${esc(health.generatedAt)}
 &gt; Forum: D1 AUTHORITATIVE / FAIL CLOSED
 &gt; Payments: SANDBOX READY / CHECKOUT DISABLED
+&gt; Rehearsal: TIMED SANDBOX ONLY / 45 MIN MAX
+&gt; Live charging: DISABLED
 &gt; Manifest match: ${health.manifestMatches ? 'YES' : 'NO'}
-&gt; Overall: ${health.ok ? 'READY' : 'BLOCKED'}</div><aside class="card redline"><div class="pill">Server-gated billing</div><h2>PayPal is deployed but closed by default.</h2><p>The Free Member tier is active. Paid checkout opens only when the configured environment, credentials, three verified plans and the D1 activation switch all agree.</p></aside></section><section class="section wrap"><h2>Production checks</h2><div class="grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — production health ${esc(health.buildShortSha)}</p></footer></div></body></html>`;
+&gt; Overall: ${health.ok ? 'READY' : 'BLOCKED'}</div><aside class="card redline"><div class="pill">Phase 7 controlled billing test</div><h2>PayPal is deployed but closed by default.</h2><p>The Free Member tier is active. Sandbox checkout can open only during a timed administrator rehearsal. Production charging remains disabled.</p></aside></section><section class="section wrap"><h2>Production checks</h2><div class="grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — production health ${esc(health.buildShortSha)}</p></footer></div></body></html>`;
 fs.writeFileSync(full('deploy-health.html'), html);
 
 if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));
   process.exit(1);
 }
-console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, PayPal sandbox-ready and checkout disabled.`);
+console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, Phase 7 timed sandbox rehearsal ready, live charging disabled.`);

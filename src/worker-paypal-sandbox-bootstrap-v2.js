@@ -197,7 +197,7 @@ async function saveProduct(env, tier, productId, definition) {
   const current = now();
   await env.MEMBERS_DB.prepare(
     `INSERT INTO paypal_products (id,environment,tier,provider_product_id,name,description,status,created_at,updated_at)
-     VALUES (?,'sandbox',?,?,?,?,?,'active',?,?)
+     VALUES (?,'sandbox',?,?,?,?,'active',?,?)
      ON CONFLICT(environment,tier) DO UPDATE SET provider_product_id=excluded.provider_product_id,
        name=excluded.name,description=excluded.description,status='active',updated_at=excluded.updated_at`
   ).bind(uid('paypal-product'), tier, productId, `Matrix Reprogrammed ${definition.label}`, `Monthly ${definition.label} membership`, current, current).run();
@@ -209,7 +209,7 @@ async function savePlan(env, tier, productId, planId, definition, status) {
     `INSERT INTO paypal_plans (
       id,environment,tier,provider_product_id,provider_plan_id,amount_value,currency_code,
       interval_unit,interval_count,status,payment_failure_threshold,created_at,updated_at
-    ) VALUES (?,'sandbox',?,?,?,?,?,'EUR','MONTH',1,?,2,?,?)
+    ) VALUES (?,'sandbox',?,?,?,?,'EUR','MONTH',1,?,2,?,?)
     ON CONFLICT(environment,tier) DO UPDATE SET provider_product_id=excluded.provider_product_id,
       provider_plan_id=excluded.provider_plan_id,amount_value=excluded.amount_value,currency_code='EUR',
       interval_unit='MONTH',interval_count=1,status=excluded.status,payment_failure_threshold=2,

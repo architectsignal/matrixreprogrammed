@@ -36,6 +36,11 @@ check('client uses member-authenticated APIs', containsAll(client, ['/api/tools/
 check('client does not persist targets locally', !/localStorage|sessionStorage|indexedDB/.test(client));
 check('client reveals admin card only for admin role', client.includes("role === 'admin'") && client.includes('adminCard.hidden = false'));
 check('client clears submitted form', client.includes('form.reset()'));
+check('human-readable report renderer present', containsAll(client, ['renderHolehe', 'renderSpiderFoot', 'renderH8mail', 'Email account-signal report', 'Breach exposure report']));
+check('report shows risk and actions', containsAll(client, ['email-intel-badge', 'Recommended actions', 'riskAssessment']));
+check('sanitised technical appendix retained', client.includes('Sanitised technical data') && client.includes('technicalDetails'));
+check('sensitive category knowledge displayed', containsAll(client, ['Sensitive-data categories detected', 'underlying sensitive value was discarded', 'stealer_logs']));
+check('raw secret values are not requested by client', !/passwordValue|rawBreach|recoveryValue|phoneFragment|ipAddressValue/.test(client));
 
 const migration = read('migrations/0002_osint_tools.sql');
 check('encrypted D1 job fields present', containsAll(migration, ['target_hash', 'target_ciphertext', 'target_iv', 'lawful_purpose', 'consent_version']));
@@ -56,12 +61,19 @@ check('CORS accepts private runner headers', worker.includes('authorization,x-ru
 
 const runner = read('tools/osint_runner.py');
 check('runner supports all three tools', containsAll(runner, ['def run_holehe', 'def run_spiderfoot', 'def run_h8mail']));
+check('runner v2 marker present', runner.includes('VERSION = "2.0.0"') && runner.includes('report_version'));
 check('runner never logs target', !/print\([^\n]*target/.test(runner));
 check('runner strips sensitive outputs', runner.includes('BLOCKED_KEYS') && runner.includes('[redacted-email]') && runner.includes('[redacted-phone]'));
 check('h8mail uses hidden JSON output', runner.includes('"--hide"') && runner.includes('"-j"'));
 check('SpiderFoot uses passive scan', runner.includes('"usecase": "passive"'));
-check('raw breach rows not returned', runner.includes('raw breach rows are discarded'));
+check('raw breach rows not returned', /raw breach rows are never returned/i.test(runner));
 check('private polling API used', containsAll(runner, ['/api/admin/tools/jobs/next', '/api/admin/tools/heartbeat', '/result', '/fail']));
+check('API parity response lanes present', containsAll(runner, ['"accounts"', '"validator"', '"data_breaches"', '"stealer_logs"', '"ai_summary"', '"meta"']));
+check('timing metadata present', containsAll(runner, ['duration_ms', 'module_timeout_ms', 'completed', 'timed_out', 'lookup_id']));
+check('sensitive category classifier present', containsAll(runner, ['authenticationMaterial', 'digestMaterial', 'recoveryData', 'telephoneData', 'networkAddressData']));
+check('infostealer knowledge retained without rows', containsAll(runner, ['stealer_count', '"present": stealer_count > 0', '"results": []']));
+check('deterministic risk summary present', containsAll(runner, ['deterministic-risk-engine', 'risk_reason', 'recommendedActions']));
+check('target email omitted from result schema', !/"email"\s*:\s*target/.test(runner));
 
 const homepage = read('index.html');
 check('homepage links research tools', homepage.includes('osint-tools-home:start') && homepage.includes('href="research-tools.html"'));

@@ -1,0 +1,72 @@
+name: Production Failure Reporter
+
+on:
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Production Deploy
+    types:
+      - completed
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+jobs:
+  report-production-failure:
+    name: Publish sanitized production failure evidence
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download production proof artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p proof
+          artifact_id="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}/artifacts" --jq '.artifacts[] | select(.name | startswith("production-proof-")) | .id' | head -n 1)"
+          if [ -z "$artifact_id" ]; then
+            printf 'No production-proof artifact was available for run %s.\n' "$RUN_ID" > proof/production-build-tail.txt
+            exit 0
+          fi
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}/zip" > proof.zip
+          unzip -o proof.zip -d proof >/dev/null
+          if [ -s proof/production-build.log ]; then
+            tail -n 180 proof/production-build.log \
+              | sed -E 's/(TOKEN|SECRET|PASSWORD|AUTHORIZATION|CLIENT_SECRET)[=:][^[:space:]]+/\1=[REDACTED]/Ig' \
+              > proof/production-build-tail.txt
+          else
+            printf 'The proof artifact did not contain production-build.log.\n' > proof/production-build-tail.txt
+          fi
+
+      - name: Open one actionable failure issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          title="Production deployment failure: run ${RUN_ID}"
+          existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "${title} in:title" --json number --jq '.[0].number // empty')"
+          if [ -n "$existing" ]; then
+            exit 0
+          fi
+          {
+            echo "## Production deployment failed"
+            echo
+            echo "- Run: ${RUN_URL}"
+            echo "- Commit: \`${HEAD_SHA}\`"
+            echo "- Safety state: PayPal production charging remains disabled."
+            echo
+            echo "## Sanitized build-log tail"
+            echo
+            echo '```text'
+            cat proof/production-build-tail.txt
+            echo '```'
+          } > proof/issue.md
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --body-file proof/issue.md

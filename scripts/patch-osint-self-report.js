@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const root = process.cwd();
 const workerPath = path.join(root, 'src', 'worker.js');
 if (!fs.existsSync(workerPath)) throw new Error('src/worker.js not found');
@@ -9,10 +10,13 @@ const oldPublicJob = "function osintPublicJob(row){if(!row)return null;return{id
 const newPublicJob = "function osintPublicJob(row,revealSelf=false){if(!row)return null;let result=row.result_json?osintParseJson(row.result_json,{}):null;if(result&&typeof result==='object'&&!revealSelf&&Object.prototype.hasOwnProperty.call(result,'recognitionHints')){result={...result};delete result.recognitionHints}return{id:row.id,tool:row.tool,status:row.status,accessLevel:row.access_level,targetReference:String(row.target_hash||'').slice(0,12),purpose:row.lawful_purpose,createdAt:row.created_at,claimedAt:row.claimed_at,completedAt:row.completed_at,expiresAt:row.expires_at,summary:row.result_summary||'',error:row.error_message||'',selfVerified:Boolean(revealSelf),disclosureMode:revealSelf?'verified-self':'standard',result}}";
 if (source.includes(oldPublicJob)) source = source.replace(oldPublicJob, newPublicJob);
 
-source = source.replace(
-  "if(!osintValidEmail(target))return json({ok:false,error:'A single valid email address is required'},400);",
-  "if(!osintValidEmail(target))return json({ok:false,error:'A single valid email address is required'},400);const selfVerified=Boolean(required.auth.member.email_verified_at&&String(required.auth.member.email||'').trim().toLowerCase()===target);"
-);
+const verifiedDeclaration = "const selfVerified=Boolean(required.auth.member.email_verified_at&&String(required.auth.member.email||'').trim().toLowerCase()===target);";
+if (!source.includes(verifiedDeclaration)) {
+  source = source.replace(
+    "if(!osintValidEmail(target))return json({ok:false,error:'A single valid email address is required'},400);",
+    "if(!osintValidEmail(target))return json({ok:false,error:'A single valid email address is required'},400);" + verifiedDeclaration
+  );
+}
 
 const oldCreateReturn = "return json({ok:true,accepted:true,job:osintPublicJob({id:jobId,tool,status:'queued',access_level:policy.access,target_hash:targetHash,lawful_purpose:purpose,created_at:createdAt,expires_at:expiresAt})},202)";
 const newCreateReturn = "return json({ok:true,accepted:true,selfVerified,job:osintPublicJob({id:jobId,tool,status:'queued',access_level:policy.access,target_hash:targetHash,lawful_purpose:purpose,created_at:createdAt,expires_at:expiresAt},selfVerified)},202)";
@@ -29,4 +33,14 @@ source = source.replace(
 );
 
 fs.writeFileSync(workerPath, source);
+const syntax = spawnSync(process.execPath, ['--check', workerPath], { encoding: 'utf8' });
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'osint-worker-patch-report.json'), JSON.stringify({
+  ok: syntax.status === 0,
+  generatedAt: new Date().toISOString(),
+  verifiedSelfGate: source.includes("disclosureMode:revealSelf?'verified-self':'standard'"),
+  recognitionHintsHiddenByDefault: source.includes('delete result.recognitionHints'),
+  error: syntax.status === 0 ? null : String(syntax.stderr || syntax.stdout || 'Worker syntax check failed').slice(0, 2000)
+}, null, 2));
+if (syntax.status !== 0) throw new Error(String(syntax.stderr || syntax.stdout || 'Worker syntax check failed'));
 console.log('Verified-self OSINT report gate applied.');

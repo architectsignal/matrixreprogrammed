@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T14:09:00.538Z",
+  "updated": "2026-07-15T19:35:59.857Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -1751,6 +1751,12 @@
       ],
       "latest_records": [
         {
+          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
           "title": "Sawas v. Elzanaty",
           "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
           "grade": "charged / sued",
@@ -1779,15 +1785,12 @@
           "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
           "grade": "charged / sued",
           "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Khan v. Jewish Women International",
-          "url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
         }
       ],
       "top_entities": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Supreme Court of Rhode Island",
+        "2025-0045-Appeal.",
         "Sawas v. Elzanaty",
         "Appellate Division of the Supreme Court of the State of New York",
         "2021-00294",
@@ -1801,10 +1804,7 @@
         "2024-07773",
         "Biddle v. Biddle",
         "Court of Appeals of North Carolina",
-        "25-581",
-        "Khan v. Jewish Women International",
-        "Connecticut Appellate Court",
-        "AC48383"
+        "25-581"
       ],
       "relationship_candidates": [],
       "missing_records": [

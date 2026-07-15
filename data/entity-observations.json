@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T14:08:46.807Z",
+  "updated": "2026-07-15T19:35:43.202Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
@@ -119,8 +119,8 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-1",
-        "courtlistener-court-records-10883674-4"
+        "courtlistener-court-records-10919908-2",
+        "courtlistener-court-records-10883674-5"
       ],
       "last_seen": "2026-07-01"
     },
@@ -557,6 +557,60 @@
       "last_seen": "2026-07-15"
     },
     {
+      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
+      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "last_seen": "2026-07-15"
+    },
+    {
+      "id": "supreme-court-of-rhode-island",
+      "name": "Supreme Court of Rhode Island",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "last_seen": "2026-07-15"
+    },
+    {
+      "id": "2025-0045-appeal",
+      "name": "2025-0045-Appeal.",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "last_seen": "2026-07-15"
+    },
+    {
       "id": "sawas-v-elzanaty",
       "name": "Sawas v. Elzanaty",
       "count": 1,
@@ -570,7 +624,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-1"
+        "courtlistener-court-records-10919908-2"
       ],
       "last_seen": "2026-07-08"
     },
@@ -588,7 +642,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919908-1"
+        "courtlistener-court-records-10919908-2"
       ],
       "last_seen": "2026-07-08"
     },
@@ -606,7 +660,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-2"
+        "courtlistener-court-records-10919846-3"
       ],
       "last_seen": "2026-07-08"
     },
@@ -624,7 +678,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-2"
+        "courtlistener-court-records-10919846-3"
       ],
       "last_seen": "2026-07-08"
     },
@@ -642,7 +696,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10919846-2"
+        "courtlistener-court-records-10919846-3"
       ],
       "last_seen": "2026-07-08"
     },
@@ -660,7 +714,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-3"
+        "courtlistener-court-records-10917016-4"
       ],
       "last_seen": "2026-07-07"
     },
@@ -678,7 +732,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-3"
+        "courtlistener-court-records-10917016-4"
       ],
       "last_seen": "2026-07-07"
     },
@@ -696,7 +750,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10917016-3"
+        "courtlistener-court-records-10917016-4"
       ],
       "last_seen": "2026-07-07"
     },
@@ -714,7 +768,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-4"
+        "courtlistener-court-records-10883674-5"
       ],
       "last_seen": "2026-07-01"
     },
@@ -732,7 +786,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883674-4"
+        "courtlistener-court-records-10883674-5"
       ],
       "last_seen": "2026-07-01"
     },
@@ -750,7 +804,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-5"
+        "courtlistener-court-records-10883331-6"
       ],
       "last_seen": "2026-07-01"
     },
@@ -768,7 +822,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-5"
+        "courtlistener-court-records-10883331-6"
       ],
       "last_seen": "2026-07-01"
     },
@@ -786,63 +840,9 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10883331-5"
+        "courtlistener-court-records-10883331-6"
       ],
       "last_seen": "2026-07-01"
-    },
-    {
-      "id": "khan-v-jewish-women-international",
-      "name": "Khan v. Jewish Women International",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10914068-6"
-      ],
-      "last_seen": "2026-06-30"
-    },
-    {
-      "id": "connecticut-appellate-court",
-      "name": "Connecticut Appellate Court",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10914068-6"
-      ],
-      "last_seen": "2026-06-30"
-    },
-    {
-      "id": "ac48383",
-      "name": "AC48383",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10914068-6"
-      ],
-      "last_seen": "2026-06-30"
     },
     {
       "id": "republic-of-rwanda",

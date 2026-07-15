@@ -1,0 +1,49 @@
+name: Member Payment Email Assurance
+
+on:
+  push:
+    branches:
+      - main
+      - 'agent/**'
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  assure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Verify member, PayPal and email delivery wiring
+        run: node scripts/member-payment-email-delivery-test.js
+
+      - name: Syntax-check strict workers
+        run: |
+          node --check src/worker-production.js
+          node --check src/worker-report-delivery.js
+          node --check scripts/build-production-deploy-receipt.js
+
+      - name: Bundle Cloudflare Worker without deploying
+        run: npx --yes wrangler@latest deploy --dry-run
+
+      - name: Upload assurance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: member-payment-email-assurance-${{ github.run_id }}
+          path: downloads/member-payment-email-delivery-test.json
+          if-no-files-found: ignore
+          retention-days: 30

@@ -11,16 +11,21 @@ function assert(name, condition, detail = '') { condition ? pass(name, detail) :
 function readJson(file, fallback = null) { try { return JSON.parse(fs.readFileSync(path.join(root, file), 'utf8')); } catch { return fallback; } }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 
+const graphPath = path.join(root, 'data/evidence-network-map.json');
 const graph = readJson('data/evidence-network-map.json', {});
 const nodes = graph.elements?.nodes || [];
 const edges = graph.elements?.edges || [];
 const nodeIds = new Set(nodes.map(node => node?.data?.id).filter(Boolean));
+const graphBytes = fs.existsSync(graphPath) ? fs.statSync(graphPath).size : 0;
+const cloudflareSafetyTarget = 24 * 1024 * 1024;
 assert('graph schema version', graph.schemaVersion === '2.0.0', graph.schemaVersion || 'missing');
 assert('graph evidence boundary', /does not convert|does not.*guilt|not.*guilt/i.test(graph.boundary || ''), graph.boundary || 'missing');
 assert('substantial entity graph', nodes.length >= 100, `${nodes.length} nodes`);
 assert('substantial relationship graph', edges.length >= 100, `${edges.length} edges`);
 assert('relationship totals agree', graph.totals?.relationships === edges.length, `${graph.totals?.relationships} / ${edges.length}`);
 assert('entity totals agree', graph.totals?.entities === nodes.length, `${graph.totals?.entities} / ${nodes.length}`);
+assert('browser graph remains below Cloudflare safety target', graphBytes > 0 && graphBytes <= cloudflareSafetyTarget, `${(graphBytes / 1024 / 1024).toFixed(2)} MiB / 24 MiB`);
+assert('browser graph uses compact serialization', fs.existsSync(graphPath) && !/^\{\s*\n/.test(read('data/evidence-network-map.json')), 'compact JSON required');
 
 let orphaned = 0;
 let missingEvidence = 0;
@@ -47,6 +52,9 @@ assert('entity filter metadata', Array.isArray(graph.filters?.entityTypes) && gr
 for (const file of ['evidence-network-map.html','evidence-network-map.js','downloads/evidence-network-map.csv','downloads/evidence-network-map-build.json']) {
   assert(`output ${file}`, fs.existsSync(path.join(root, file)), fs.existsSync(path.join(root, file)) ? 'present' : 'missing');
 }
+const buildReport = readJson('downloads/evidence-network-map-build.json', {});
+assert('build report records compact serialization', buildReport.serialization === 'compact-json', buildReport.serialization || 'missing');
+assert('build report confirms deployable size', buildReport.withinCloudflareTarget === true && Number(buildReport.graphBytes) === graphBytes, `${buildReport.graphBytes || 0} / ${graphBytes}`);
 if (fs.existsSync(path.join(root, 'evidence-network-map.js'))) {
   const syntax = spawnSync(process.execPath, ['--check', path.join(root, 'evidence-network-map.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
   assert('runtime syntax', syntax.status === 0, syntax.stderr || syntax.stdout || 'valid');
@@ -67,7 +75,7 @@ if (fs.existsSync(path.join(root, 'downloads/evidence-network-map.csv'))) {
 const relationshipPage = fs.existsSync(path.join(root, 'relationship-registry.html')) ? read('relationship-registry.html') : '';
 if (relationshipPage) assert('stable relationship anchors', relationshipPage.includes('id="relationship-'), 'relationship anchors present');
 
-const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), totals: graph.totals || {}, checks, failures };
+const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), totals: graph.totals || {}, graphBytes, cloudflareSafetyTarget, checks, failures };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads/public-network-map-test.json'), JSON.stringify(report, null, 2));
 if (failures.length) {
@@ -75,4 +83,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Public network map test passed: ${checks.length} checks across ${nodes.length} entities and ${edges.length} sourced relationships.`);
+console.log(`Public network map test passed: ${checks.length} checks across ${nodes.length} entities and ${edges.length} sourced relationships; browser graph ${(graphBytes / 1024 / 1024).toFixed(2)} MiB.`);

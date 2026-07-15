@@ -1,0 +1,32 @@
+name: D1 Export Command Assurance
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
+      - '.github/workflows/d1-export-command-assurance.yml'
+      - 'scripts/d1-export-command-test.js'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/deploy-production.yml'
+      - '.github/workflows/d1-export-command-assurance.yml'
+      - 'scripts/d1-export-command-test.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify automatic and fallback D1 rollback exports
+        run: node scripts/d1-export-command-test.js

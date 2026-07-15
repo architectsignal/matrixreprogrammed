@@ -1,0 +1,78 @@
+name: Mission Readiness Assurance
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'agent/mission-readiness-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mission-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Apply deterministic tier and report patches
+        run: node scripts/patch-osint-tool-tiers.js
+
+      - name: Run mission readiness regression
+        run: node scripts/mission-readiness-test.js
+
+      - name: Syntax-check critical Workers and builders
+        run: |
+          node --check src/worker.js
+          node --check src/worker-production.js
+          node --check src/worker-access-gate.js
+          node --check src/worker-report-delivery.js
+          node --check scripts/build-mission-timers.js
+          node --check scripts/build-production-deploy-receipt.js
+
+      - name: Build and audit complete site
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: npm run build
+
+      - name: Re-run mission gate after all legacy generators
+        run: |
+          node scripts/patch-osint-tool-tiers.js
+          node scripts/mission-readiness-test.js
+          node scripts/global-risk-clocks-test.js
+          node scripts/cloudflare-worker-routes-test.js
+          node scripts/site-wide-function-audit.js --postbuild
+
+      - name: Bundle Cloudflare Worker without deploying
+        run: npx --yes wrangler@latest deploy --dry-run
+
+      - name: Upload mission proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mission-readiness-${{ github.run_id }}
+          path: |
+            downloads/mission-readiness-test.json
+            downloads/global-risk-clocks-test.json
+            downloads/site-wide-function-audit.json
+            downloads/site-audit.json
+            downloads/pressure-test-report.json
+          if-no-files-found: ignore
+          retention-days: 60

@@ -18,10 +18,15 @@ canonicalTools = canonicalTools
   .replace('Administrator-only breach exposure review. Passwords, hashes, recovery data, phone numbers, IP addresses and raw breach rows are never returned to the browser.', 'Administrator-only breach exposure review. Verified-self reports show recognisable masked identifiers, affected sources, dates, counts and every detected data category while reusable secret values remain withheld.');
 fs.writeFileSync(toolsPath, canonicalTools);
 
+// The canonical template intentionally remains generic. Apply the current
+// entitlement, verified-self and single-renderer policy after every restore.
+require('./patch-osint-tool-tiers.js');
+canonicalTools = fs.readFileSync(toolsPath, 'utf8');
+
 let index = fs.readFileSync(indexPath, 'utf8');
 const start = '<!-- osint-tools-home:start -->';
 const end = '<!-- osint-tools-home:end -->';
-const card = `${start}<section id="osint-tools-home" class="section wrap"><div class="eyebrow">Member Research Tools</div><h2>EMAIL & DIGITAL FOOTPRINT RESEARCH.</h2><p class="lead">Verified members can submit controlled, single-email checks through Holehe and passive SpiderFoot. Verified-self breach reports add recognisable masked identifiers, source dates and complete exposure categories.</p><p><strong>Boundary:</strong> account, footprint and breach signals are leads—not proof of identity, ownership, current use, wrongdoing or criminal conduct.</p><div class="cta-row"><a class="btn" href="research-tools.html">Open Research Tools</a><a class="btn alt" href="member-login.html">Member Login</a><a class="btn alt" href="https://emailosint.org/" target="_blank" rel="noopener noreferrer nofollow">External Email OSINT ↗</a></div></section>${end}`;
+const card = `${start}<section id="osint-tools-home" class="section wrap"><div class="eyebrow">Member Research Tools</div><h2>EMAIL & DIGITAL FOOTPRINT RESEARCH.</h2><p class="lead">Verified members can submit controlled, single-email checks through Holehe and passive SpiderFoot. Intelligence members can run verified-self breach exposure reviews through h8mail.</p><p><strong>Boundary:</strong> account, footprint and breach signals are leads—not proof of identity, ownership, current use, wrongdoing or criminal conduct.</p><div class="cta-row"><a class="btn" href="research-tools.html">Open Research Tools</a><a class="btn alt" href="member-login.html">Member Login</a><a class="btn alt" href="https://emailosint.org/" target="_blank" rel="noopener noreferrer nofollow">External Email OSINT ↗</a></div></section>${end}`;
 if (index.includes(start) && index.includes(end)) {
   index = index.replace(new RegExp(`${start}[\s\S]*?${end}`), card);
 } else if (index.includes('<!-- power-deck-home-link:start -->')) {
@@ -62,15 +67,24 @@ if (fs.existsSync(llmsPath)) {
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'research-tools-ui-patch.json'), JSON.stringify({
-  ok: canonicalTools.includes('data-tool-form="holehe"') && canonicalTools.includes('data-tool-form="spiderfoot"') && canonicalTools.includes('data-tool-form="h8mail"') && canonicalTools.includes('research-tools-ui-v3.js?v=3.1.0') && index.includes(start) && index.includes('href="research-tools.html"') && index.includes('https://emailosint.org/'),
+  ok: canonicalTools.includes('data-tool-form="holehe"')
+    && canonicalTools.includes('data-tool-form="spiderfoot"')
+    && canonicalTools.includes('data-tool-form="h8mail"')
+    && canonicalTools.includes('Intelligence Tool · h8mail')
+    && canonicalTools.includes('research-tools-ui-v3.js?v=3.1.0')
+    && index.includes(start)
+    && index.includes('href="research-tools.html"')
+    && index.includes('https://emailosint.org/'),
   generatedAt: new Date().toISOString(),
   homepageRoute: 'research-tools.html',
   externalRoute: 'https://emailosint.org/',
   canonicalTemplate: path.relative(root, templatePath).replace(/\\/g, '/'),
-  reportUiVersion: '3.1.0',
+  reportUiVersion: '3.1.0-single-authoritative-renderer',
+  h8mailMinimumTier: 'intelligence_6',
+  h8mailMemberScope: 'verified-self',
   visibilityPatched
 }, null, 2));
-console.log('Canonical Research Tools page, verified-self route and visibility policy applied.');
+console.log('Canonical Research Tools page, Intelligence verified-self tiers and visibility policy applied.');
 
 // Phase 10 must run after the canonical Research Tools template is restored.
 require('./build-geographic-power-atlas.js');

@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-15T06:31:20.255Z",
+  "generatedAt": "2026-07-15T09:19:49.415Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 18312,
-    "primarySources": 16569,
-    "relationships": 7031
+    "results": 18576,
+    "primarySources": 16833,
+    "relationships": 7187
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "18312 results"
+      "detail": "18576 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "18312/18312"
+      "detail": "18576/18576"
     },
     {
       "name": "normalised field sourceType",
@@ -102,12 +102,12 @@
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-129f617bbb0bdb6948bb, relationship-registry.html?relationship=relationship-6a0745820f39a0144a58, relationship-registry.html?relationship=relationship-908e0b51b56322bb91cf, relationship-registry.html?relationship=relationship-204240ac9c3460c79b16, entity-registry.html#entity-source-doj-epstein-disclosures"
+      "detail": "relationship-registry.html?relationship=relationship-129f617bbb0bdb6948bb, relationship-registry.html?relationship=relationship-6a0745820f39a0144a58, entity-registry.html#entity-source-doj-epstein-disclosures, entity-registry.html#entity-finding-3cd0cc6ceb7b17f7b4a18d82, entity-registry.html#entity-finding-3369f7cbbbd92ca2343c48c2"
     },
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-abc97a28d6fe671506a2, relationship-registry.html?relationship=relationship-9a89feea7a952a1de418, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=f13f54ab0933616b2db8fa91, daily-investigation-conclusions.html?finding=ae8bec742bcfd76417dda139"
+      "detail": "relationship-registry.html?relationship=relationship-abc97a28d6fe671506a2, relationship-registry.html?relationship=relationship-9a89feea7a952a1de418, daily-investigation-conclusions.html?finding=f13f54ab0933616b2db8fa91, daily-investigation-conclusions.html?finding=ae8bec742bcfd76417dda139, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17"
     },
     {
       "name": "query government contracts",
@@ -122,7 +122,7 @@
     {
       "name": "query public corruption conviction",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-28da55eff6f3f940f79a, relationship-registry.html?relationship=relationship-a501333db2700612b8d4, investigation-source-ledger.html?source=eppo-news, daily-investigation-conclusions.html?finding=b0752a5b5c6b0c9e38ca00c0, daily-investigation-conclusions.html?finding=96b05c92e631496231657f3b"
+      "detail": "relationship-registry.html?relationship=relationship-28da55eff6f3f940f79a, relationship-registry.html?relationship=relationship-a501333db2700612b8d4, daily-investigation-conclusions.html?finding=b0752a5b5c6b0c9e38ca00c0, daily-investigation-conclusions.html?finding=96b05c92e631496231657f3b, relationship-registry.html?relationship=relationship-2b7286b6958d84d823b8"
     },
     {
       "name": "query inspector-general misconduct",
@@ -132,7 +132,7 @@
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-acb1c1b3a9aa83a58f48, relationship-registry.html?relationship=relationship-d5a176afbe490dd97dec, relationship-registry.html?relationship=relationship-e87b3dbb5485f916a153, relationship-registry.html?relationship=relationship-9980550384069fdc5fe7, relationship-registry.html?relationship=relationship-1a2b50c22edeea979e78"
+      "detail": "relationship-registry.html?relationship=relationship-d5a176afbe490dd97dec, relationship-registry.html?relationship=relationship-acb1c1b3a9aa83a58f48, relationship-registry.html?relationship=relationship-e87b3dbb5485f916a153, relationship-registry.html?relationship=relationship-9980550384069fdc5fe7, relationship-registry.html?relationship=relationship-1a2b50c22edeea979e78"
     },
     {
       "name": "query missing record redaction log",
@@ -147,7 +147,7 @@
     {
       "name": "dedicated source-change result ranks for missing-record intent",
       "ok": true,
-      "detail": "source-change:source-changes.html?change=3074e1c1bea52f04ac59408f, source-change:source-changes.html?change=ec24f811962be678d371bfc7, source-change:entity-registry.html#entity-missing-record-3074e1c1bea52f04ac59408f, source-change:entity-registry.html#entity-missing-record-ec24f811962be678d371bfc7, source-change:relationship-registry.html?relationship=relationship-7d73a70dda5f82f5855a, source-change:relationship-registry.html?relationship=relationship-7b55179222457acb1d02, source-record:relationship-registry.html?relationship=relationship-8eb1a6043604b265df86, source-record:relationship-registry.html?relationship=relationship-3ab51091c67c104b2a1b, source-change:daily-investigation-conclusions.html?finding=source-change-3074e1c1bea52f04ac59408f, source-change:daily-investigation-conclusions.html?finding=source-change-ec24f811962be678d371bfc7"
+      "detail": "source-change:source-changes.html?change=3074e1c1bea52f04ac59408f, source-change:source-changes.html?change=ec24f811962be678d371bfc7, source-change:entity-registry.html#entity-missing-record-3074e1c1bea52f04ac59408f, source-change:entity-registry.html#entity-missing-record-ec24f811962be678d371bfc7, source-change:relationship-registry.html?relationship=relationship-7d73a70dda5f82f5855a, source-change:relationship-registry.html?relationship=relationship-7b55179222457acb1d02, source-change:daily-investigation-conclusions.html?finding=source-change-3074e1c1bea52f04ac59408f, source-change:daily-investigation-conclusions.html?finding=source-change-ec24f811962be678d371bfc7, source-record:entity-registry.html#entity-finding-11aa9e482fe4809776fb7285, source-record:entity-registry.html#entity-finding-b68c1d0dacb092399a8fddea"
     },
     {
       "name": "Grade B filter returns results",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "18312 vs 18312"
+      "detail": "18576 vs 18576"
     },
     {
       "name": "facet evidenceGrade",

@@ -117,6 +117,9 @@ needText('scripts/build-production-health.js', "paymentStatus: 'sandbox-ready-di
 needText('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
 forbidText('scripts/repair-generated-site-artifacts.js', "workerScript: 'src/worker.js'", 'legacy health Worker identity');
 
+need('src/worker-email-lifecycle.js');
+needText('src/worker-email-lifecycle.js', "function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}", 'authoritative email redirect origin header');
+
 const report = {
   ok: problems.length === 0,
   generatedAt: new Date().toISOString(),

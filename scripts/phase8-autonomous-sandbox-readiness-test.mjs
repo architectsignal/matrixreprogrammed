@@ -153,7 +153,7 @@ try {
   const wrangler = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
   const production = fs.readFileSync(path.join(root, 'src/worker-production.js'), 'utf8');
   check('Phase 8 migration defines status table and health view', migration.includes('paypal_sandbox_bootstrap_status') && migration.includes('paypal_sandbox_bootstrap_health'));
-  check('Cloudflare hourly cron configured', wrangler.includes('crons = ["0 * * * *"]'));
+  check('Cloudflare report and bootstrap schedules configured', wrangler.includes('"5 6 * * *"') && wrangler.includes('"15 7 * * 1"'));
   check('strict production boundary validates bootstrap origin', production.includes('cloudflare-worker-paypal-sandbox-bootstrap') && production.includes('non-authoritative-paypal-bootstrap-response-blocked'));
   check('scheduled handler runs bootstrap and rehearsal safety', production.includes('bootstrapWorker.scheduled') && production.includes('rehearsalWorker.scheduled'));
 } finally {

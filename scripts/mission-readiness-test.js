@@ -65,8 +65,16 @@ check('asset access policy is active fail closed', policy.status === 'active-fai
 check('public evidence remains open', Array.isArray(policy.publicEvidencePatterns) && policy.publicEvidencePatterns.includes('public-record'));
 check('h8mail is Intelligence verified-self', policy.toolTiers?.h8mail_verified_self === 'intelligence_6');
 check('administrator h8mail scope remains distinct', policy.toolTiers?.h8mail_documented_admin_scope === 'admin');
-check('server-side access gate reads D1 entitlements', includesAll(accessGate, ['member_effective_entitlements', 'fail', 'minimumTier']));
-check('production Worker applies protected asset gate', includesAll(production, ['classifyProtectedAsset', 'enforceProtectedAssetAccess']));
+check('server-side access gate reads D1 entitlements and fails closed', includesAll(accessGate, [
+  'member_effective_entitlements',
+  'Protected content remains closed',
+  'requiredTier'
+]));
+check('production Worker applies protected asset gate', includesAll(production, [
+  'protectedAssetTier',
+  'enforceProtectedAssetAccess',
+  'protected-asset-gate-exception'
+]));
 
 check('Holehe is registered tier', worker.includes("holehe:{label:'Email account signals',access:'member',minimumTier:'registered'"));
 check('SpiderFoot is Intelligence tier', worker.includes("spiderfoot:{label:'Passive digital footprint scan',access:'member',minimumTier:'intelligence_6'"));

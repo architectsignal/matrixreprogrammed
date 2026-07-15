@@ -1,0 +1,43 @@
+name: Final Stabilization Diagnostics
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Build canonical site
+        run: |
+          mkdir -p diagnostics
+          set +e
+          npm run build > diagnostics/build.log 2>&1
+          echo $? > diagnostics/build.exit
+          set -e
+      - name: Capture focused audit output
+        run: |
+          set +e
+          node scripts/live-intel-pressure-test.js > diagnostics/live-intel.log 2>&1
+          echo $? > diagnostics/live-intel.exit
+          node scripts/link-audit.js > diagnostics/link-audit.log 2>&1
+          echo $? > diagnostics/link-audit.exit
+          node scripts/mission-readiness-test.js > diagnostics/mission-readiness.log 2>&1
+          echo $? > diagnostics/mission-readiness.exit
+          set -e
+      - name: Upload complete diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-stabilization-diagnostics
+          path: diagnostics/
+          if-no-files-found: error

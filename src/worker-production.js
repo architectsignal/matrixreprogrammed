@@ -11,6 +11,10 @@ import {
   queuePendingVerifiedSelfReports,
   queueVerifiedSelfReport
 } from './worker-report-delivery.js';
+import {
+  enforceProtectedAssetAccess,
+  protectedAssetTier
+} from './worker-access-gate.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -55,7 +59,9 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
           ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox bootstrap status ledger'
           : subsystem === 'paypal-rehearsal'
             ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
-            : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+            : subsystem === 'asset-gate'
+              ? 'Cloudflare D1 MEMBERS_DB effective entitlements'
+              : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
@@ -66,7 +72,9 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
           ? 'PayPal sandbox plan readiness is unavailable. Checkout remains closed.'
           : subsystem === 'paypal-rehearsal'
             ? 'PayPal sandbox rehearsal controls are unavailable. Checkout remains closed.'
-            : 'Forum storage is unavailable. No legacy success response was accepted.';
+            : subsystem === 'asset-gate'
+              ? 'Protected content entitlement could not be verified. Access remains closed.'
+              : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -185,6 +193,17 @@ async function validateRehearsalResponse(response) {
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    const minimumTier = protectedAssetTier(path);
+    if (minimumTier) {
+      try {
+        const denied = await enforceProtectedAssetAccess(request, env, minimumTier);
+        if (denied) return denied;
+      } catch (error) {
+        return unavailable('protected-asset-gate-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
     if (emailRoutes.has(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');
       try {

@@ -22,7 +22,7 @@ async function fetchBoundary(route) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionReceipt/3.0'
+      'user-agent': 'MatrixProductionReceipt/4.0'
     }
   });
   const text = await response.text();
@@ -35,6 +35,7 @@ async function fetchBoundary(route) {
 
 (async () => {
   const live = readJson('downloads/live-production-verification.json') || {};
+  const rollback = readJson('downloads/d1-rollback-proof.json') || {};
   const schema = readJson('downloads/d1-schema-verification.json') || [];
   const settings = readJson('downloads/paypal-runtime-settings.json') || [];
   const bootstrap = live.bootstrapBoundary || {};
@@ -58,6 +59,13 @@ async function fetchBoundary(route) {
   const names = new Set(schemaRows.map(row => row.name));
   const missingObjects = requiredObjects.filter(name => !names.has(name));
   const checkoutClosed = settingRows.length >= 2 && settingRows.every(row => Number(row.checkout_enabled) === 0);
+  const rollbackPointCreated = rollback.ok === true
+    && rollback.database === 'matrix-members'
+    && rollback.method === 'Cloudflare D1 Time Travel bookmark'
+    && typeof rollback.bookmark === 'string'
+    && rollback.bookmark.trim().length >= 8
+    && typeof rollback.restoreCommand === 'string'
+    && rollback.restoreCommand.includes(rollback.bookmark);
 
   const bootstrapReady = bootstrap.ready === true
     && bootstrap.ok === true
@@ -106,8 +114,10 @@ async function fetchBoundary(route) {
     && wrangler.includes('"5 6 * * *"')
     && wrangler.includes('"15 7 * * 1"');
 
-  const accessTiersWired = productionWorker.includes('classifyProtectedAsset')
+  const accessTiersWired = productionWorker.includes('protectedAssetTier')
+    && productionWorker.includes('enforceProtectedAssetAccess')
     && accessGate.includes('member_effective_entitlements')
+    && accessGate.includes('member_download_eligibility')
     && accessPolicy.includes('active-fail-closed')
     && accessPolicy.includes('h8mail_verified_self')
     && accessPolicy.includes('intelligence_6');
@@ -130,7 +140,7 @@ async function fetchBoundary(route) {
     && timerPage.includes('What would lower it');
 
   const receipt = {
-    schemaVersion: 3,
+    schemaVersion: 4,
     repository: process.env.GITHUB_REPOSITORY || 'architectsignal/matrixreprogrammed',
     workflow: process.env.GITHUB_WORKFLOW || 'Matrix Reprogrammed Production Deploy',
     runId: process.env.GITHUB_RUN_ID || null,
@@ -146,7 +156,10 @@ async function fetchBoundary(route) {
     },
     d1: {
       database: 'matrix-members',
-      rollbackSnapshotCreated: exists('downloads/d1-backup-proof.txt'),
+      rollbackPointCreated,
+      rollbackMethod: rollback.method || null,
+      rollbackBookmarkRecorded: Boolean(rollback.bookmark),
+      restoreCommandRecorded: Boolean(rollback.restoreCommand),
       migrationLogCreated: exists('downloads/d1-migration.log'),
       requiredObjects: requiredObjects.length,
       verifiedObjects: requiredObjects.length - missingObjects.length,
@@ -209,6 +222,7 @@ async function fetchBoundary(route) {
       h8mailMemberScopeVerifiedSelfOnly: worker.includes('selfOnlyForMembers:true')
     },
     ok: live.ok === true
+      && rollbackPointCreated
       && missingObjects.length === 0
       && checkoutClosed
       && paypal.ok === true
@@ -229,7 +243,7 @@ async function fetchBoundary(route) {
     console.error(JSON.stringify(receipt, null, 2));
     process.exit(1);
   }
-  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with member, email, PayPal, forum, timer and mission-tier boundaries verified.`);
+  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with Time Travel rollback, member, email, PayPal, forum, timer and mission-tier boundaries verified.`);
 })().catch(error => {
   console.error(error.stack || error.message);
   process.exit(1);

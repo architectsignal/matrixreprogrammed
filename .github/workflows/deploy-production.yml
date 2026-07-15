@@ -66,6 +66,7 @@ jobs:
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
           node --check scripts/build-production-deploy-receipt.js
+          node scripts/d1-export-command-test.js
           node scripts/final-production-reconcile.js
           node scripts/production-freshness-guard.js
           node scripts/production-sync-test.js
@@ -91,7 +92,7 @@ jobs:
           set -euo pipefail
           mkdir -p downloads/private-migration
           backup="downloads/private-migration/matrix-members-before-${DEPLOY_COMMIT_SHA}.sql"
-          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup" --yes
+          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup" --skip-confirmation
           test -s "$backup"
           echo "sha256=$(sha256sum "$backup" | awk '{print $1}')" > downloads/d1-backup-proof.txt
 
@@ -168,6 +169,7 @@ jobs:
             downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/phase8-autonomous-sandbox-readiness-test.json
             downloads/production-deploy-receipt.json
+            downloads/d1-export-command-test.json
             downloads/d1-backup-proof.txt
             downloads/d1-migration.log
             downloads/payment-schema-verification.json

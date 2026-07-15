@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "updated": "2026-07-15",
   "status": "active-fail-closed",
   "purpose": "Classify every Matrix Reprogrammed page, download and PDF while keeping primary public evidence, corrections and claim boundaries open. Higher tiers add compiled analysis, archives, investigation tools and research exports.",
@@ -20,9 +20,12 @@
     {"route": "/downloads/probability-snapshot.md", "minimumTier": "intelligence_6", "reason": "Compiled intelligence forecast export; public methodology remains open."}
   ],
   "patternRules": [
-    {"pattern": "^/downloads/(supporter|weekly-(brief|archive)|signal-drop|source-drop-bundle)[^/]*\\.(pdf|md|json|csv)$", "minimumTier": "supporter_3", "reason": "Weekly member brief, archive or source-drop bundle."},
-    {"pattern": "^/downloads/(daily-(command|intel|intelligence)|intelligence-(brief|report)|in-depth-report|elite-report|member-report|intelligence-card-deck)[^/]*\\.(pdf|md|json|csv)$", "minimumTier": "intelligence_6", "reason": "Daily or in-depth intelligence product."},
-    {"pattern": "^/downloads/(research|full-dossier|citation|bibliography|evidence-path|source-pack|research-bundle|data-export|network-export)[^/]*\\.(pdf|md|json|csv|zip)$", "minimumTier": "research_pro_9", "reason": "Full dossier, evidence pack or research export."}
+    {"pattern": "^/downloads/(lead-magnet|public-weekly-signup|free-brief)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "registered", "reason": "Verified-account lead magnet or introductory report."},
+    {"pattern": "^/downloads/(supporter|weekly-(brief|archive)|signal-drop|source-drop-bundle|share-kit|campaign)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "supporter_3", "reason": "Weekly member brief, archive, source-drop bundle or member sharing pack."},
+    {"pattern": "^/downloads/(daily-(command|intel|intelligence|brain|brief)|intelligence-(brief|report)|in-depth-report|elite-report|member-report|intelligence-card-deck|dossier-pack|offer-(crime|intelligence)|dark-speculation|entity-daily|atlas-lane|logo-symbolism|private-contractor|subject-intelligence)[^/]*\\.(pdf|md|json|csv|txt)$", "minimumTier": "intelligence_6", "reason": "Daily, dossier, compiled intelligence or thematic analysis product."},
+    {"pattern": "^/downloads/(research|full-dossier|citation|bibliography|evidence-path|source-pack|research-bundle|data-export|network-export|offer-full-archive)[^/]*\\.(pdf|md|json|csv|txt|zip)$", "minimumTier": "research_pro_9", "reason": "Full dossier, evidence pack, archive or research export."},
+    {"pattern": "^/downloads/[^/]*(audit|patch|build|test|repair|maintenance|visibility|quality|freshness|function-harmony|update-cadence|pressure-test|monitor-report|system-repair|runtime-hardening|worker|foundation|tiers-report)[^/]*\\.(pdf|md|json|csv|txt|zip)$", "minimumTier": "research_pro_9", "reason": "Advanced operational, quality, build or system-verification report."},
+    {"pattern": "^/downloads/[^/]*(brief|report|dossier|research|archive|export|pack|bundle|snapshot|timer|probability|intelligence|member)[^/]*\\.(pdf|md|json|csv|txt|zip)$", "minimumTier": "research_pro_9", "reason": "Compiled value-added output defaults to the highest research tier unless a lower explicit rule applies."}
   ],
   "publicEvidencePatterns": [
     "approved-public-pdf",

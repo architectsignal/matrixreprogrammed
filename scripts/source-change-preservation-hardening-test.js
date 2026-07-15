@@ -41,7 +41,10 @@ check('daily conclusions connected', daily.summary?.meaningfulSourceChanges === 
 check('public page shows limits and next record', page.includes('What is not established') && page.includes('Next record required') && page.includes('Alternative explanation'));
 check('public feed excludes diagnostics', !publicData.changes.some(item => Object.prototype.hasOwnProperty.call(item, 'error') || Object.prototype.hasOwnProperty.call(item, 'failureHistory')));
 const build = fs.existsSync(path.join(root, 'scripts/build-cloudflare-output.js')) ? fs.readFileSync(path.join(root, 'scripts/build-cloudflare-output.js'), 'utf8') : '';
-check('Cloudflare blocks evidence archive', build.includes("'evidence-archive'") && build.includes('private evidence archive'));
+check('Cloudflare blocks evidence archive',
+  build.includes("blockedDirs = new Set")
+  && build.includes("'evidence-archive'")
+  && build.includes("private evidence-archive directory exposed"));
 check('Cloudflare blocks snapshot diagnostics', build.includes("'source-snapshots'") && build.includes('source-snapshot-index.json') && build.includes('source-change-ledger.json'));
 
 fs.rmSync(fixture, { recursive: true, force: true });

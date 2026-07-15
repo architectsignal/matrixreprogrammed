@@ -23,34 +23,42 @@ for (const file of [
   'scripts/patch-osint-tools-system.js',
   'scripts/patch-osint-self-report.js',
   'scripts/patch-research-tools-ui.js',
+  'scripts/patch-osint-tool-tiers.js',
   'src/worker.js'
 ]) check(`required file ${file}`, fs.existsSync(path.join(root, file)), 'missing');
 
 const page = read('research-tools.html');
 check('three open-source tools shown', containsAll(page, ['data-tool-form="holehe"', 'data-tool-form="spiderfoot"', 'data-tool-form="h8mail"']));
-check('h8mail is administrator-only', page.includes('Administrator Only · h8mail') && page.includes('data-admin-tool hidden'));
-check('member tools identified', page.includes('Member Tool · Holehe') && page.includes('Member Tool · SpiderFoot'));
+check('h8mail is Intelligence verified-self', page.includes('Intelligence Tool · h8mail') && page.includes('data-h8mail-tool') && page.includes('own verified email'));
+check('Holehe and SpiderFoot tier labels identified', page.includes('Registered Tool · Holehe') && page.includes('Intelligence Tool · SpiderFoot'));
 check('lawful-use confirmations required', (page.match(/name="confirmLawfulUse"/g) || []).length === 3 && (page.match(/name="confirmNoMinor"/g) || []).length === 3);
 check('evidence boundary visible', /do not prove identity|not prove identity/i.test(page) && /wrongdoing or criminal conduct/i.test(page));
 check('external Email OSINT linked safely', page.includes('https://emailosint.org/') && page.includes('noopener noreferrer nofollow'));
-check('cache-busted report interface loaded', page.includes('research-tools-ui-v3.js?v=3.1.0'));
+check('cache-busted compatibility interface loaded', page.includes('research-tools-ui-v3.js?v=3.1.0'));
 
 const client = read('research-tools.js');
 check('client uses member-authenticated APIs', containsAll(client, ['/api/tools/config', '/api/tools/jobs', "credentials: 'same-origin'"]));
 check('client does not persist targets locally', !/localStorage|sessionStorage|indexedDB/.test(client));
-check('client reveals admin card only for admin role', client.includes("role === 'admin'") && client.includes('adminCard.hidden = false'));
+check('client uses server-returned tier gates', containsAll(client, ['toolConfig?.allowed', 'config.member?.tier', 'Intelligence membership required']));
 check('client clears submitted form', client.includes('form.reset()'));
-check('human-readable report renderer present', containsAll(client, ['renderHolehe', 'renderSpiderFoot', 'renderH8mail', 'Email account-signal report', 'Breach exposure report']));
-check('report shows risk and actions', containsAll(client, ['email-intel-badge', 'Recommended actions', 'riskAssessment']));
-check('sanitised technical appendix retained', client.includes('Sanitised technical data') && client.includes('technicalDetails'));
-check('sensitive category knowledge displayed', containsAll(client, ['Sensitive-data categories detected', 'underlying sensitive value was discarded', 'stealer_logs']));
+check('single human-readable report renderer present', containsAll(client, [
+  'renderHolehe',
+  'renderSpiderFoot',
+  'renderH8mail',
+  'Email account-signal decision brief',
+  'Passive footprint decision brief',
+  'Defensive exposure decision brief'
+]));
+check('report explains priority and actions', containsAll(client, ['decision-badge', 'What to do next', 'riskAssessment', 'priorityMeaning']));
+check('sanitised technical appendix retained but collapsed', containsAll(client, ['Sanitised technical appendix', 'decision-details', 'technical(result)']));
+check('sensitive category knowledge displayed safely', containsAll(client, ['Exposure categories to address', 'underlying value withheld', 'stealer_logs']));
+check('provider catalogues are collapsed', containsAll(client, ['no-account responses — lower priority', 'services gave no reliable answer', 'details(']));
+check('completed jobs can be reopened', containsAll(client, ['Open clear report', 'openJob(job)', 'restoreLatest']));
 check('raw secret values are not requested by client', !/passwordValue|rawBreach|recoveryValue|phoneFragment|ipAddressValue/.test(client));
 
 const clientV3 = read('research-tools-ui-v3.js');
-check('v3 converts raw JSON into reports', containsAll(clientV3, ['parseRaw', 'renderAccount', 'renderExposure', 'MutationObserver']));
-check('v3 prioritises useful findings', containsAll(clientV3, ['What matters', 'Possible account associations', 'Complete exposure inventory', 'Priority remediation']));
-check('v3 collapses provider catalogues', containsAll(clientV3, ['providers were inconclusive', 'services returned no-account responses', 'intel-v3-details']));
-check('v3 displays verified-self masked clues', containsAll(clientV3, ['Verified-self detail', 'Recognisable masked clues', 'same value appeared']));
+check('v3 compatibility asset defers to authoritative renderer', containsAll(clientV3, ['__MATRIX_RESEARCH_UI_AUTHORITATIVE__', 'authoritative result', 'exactly once']));
+check('v3 no longer duplicates report rendering', !/MutationObserver|renderAccount|renderExposure|parseRaw/.test(clientV3));
 check('v3 avoids persistent target storage', !/localStorage|sessionStorage|indexedDB/.test(clientV3));
 check('v3 never asks for raw values', !/passwordValue|rawBreach|recoveryValue|phoneFragment|ipAddressValue/.test(clientV3));
 
@@ -65,13 +73,17 @@ check('member role loaded from D1', worker.includes('display_name,role,status') 
 check('member and admin routes present', containsAll(worker, ["originalPath==='/api/tools/config'", "originalPath==='/api/tools/jobs'", '/api/admin/tools/jobs/next', '/api/admin/tools/heartbeat']));
 check('targets encrypted with AES-GCM', worker.includes("name:'AES-GCM'") && worker.includes('target_ciphertext') && worker.includes('target_iv'));
 check('member rate limits enforced', worker.includes('dailyLimit:5') && worker.includes('dailyLimit:2') && worker.includes('dailyLimit:10'));
-check('h8mail admin gate enforced', worker.includes("policy.access==='admin'&&!osintIsAdmin"));
+check('Holehe registered tier enforced', worker.includes("holehe:{label:'Email account signals',access:'member',minimumTier:'registered'"));
+check('SpiderFoot Intelligence tier enforced', worker.includes("spiderfoot:{label:'Passive digital footprint scan',access:'member',minimumTier:'intelligence_6'"));
+check('h8mail Intelligence tier enforced', worker.includes("h8mail:{label:'Breach exposure review',access:'member',minimumTier:'intelligence_6',selfOnlyForMembers:true"));
+check('h8mail verified-self member boundary enforced', worker.includes('This Intelligence tool may review only your own verified account email'));
+check('administrator investigation scope remains available', worker.includes("if(policy.selfOnlyForMembers&&!osintIsAdmin(required.auth.member)&&!selfVerified)"));
 check('sensitive result keys removed', worker.includes('osintSanitizeResult') && /password\|passwd\|credential/.test(worker));
 check('completed targets cleared', worker.includes("target_ciphertext='',target_iv=''"));
 check('runner bearer token required', worker.includes('OSINT_RUNNER_TOKEN') && worker.includes("startsWith('bearer ')"));
 check('CORS accepts private runner headers', worker.includes('authorization,x-runner-id'));
 check('verified-self ownership uses verified member mailbox hash', containsAll(worker, ['email_verified_at', 'memberHash=await authHash', "disclosureMode:revealSelf?'verified-self':'standard'"]));
-check('recognition clues hidden outside verified-self mode', worker.includes("delete result.recognitionHints"));
+check('recognition clues hidden outside verified-self mode', worker.includes('delete result.recognitionHints'));
 check('verified-self views are audited', worker.includes('osint.self_report.viewed'));
 
 const runner = read('tools/osint_runner.py');
@@ -101,6 +113,7 @@ check('v3 never prints target', !/print\([^\n]*target/.test(runnerV3));
 const homepage = read('index.html');
 check('homepage links research tools', homepage.includes('osint-tools-home:start') && homepage.includes('href="research-tools.html"'));
 check('homepage keeps evidence boundary', homepage.includes('account, footprint and breach signals are leads'));
+check('homepage explains Intelligence h8mail access', homepage.includes('Intelligence members') && homepage.includes('h8mail'));
 
 const build = read('scripts/build-cloudflare-output.js');
 check('Cloudflare build requires tools page and client', build.includes('research-tools.html') && build.includes('research-tools.js'));

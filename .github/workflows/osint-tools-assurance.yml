@@ -16,6 +16,7 @@ on:
       - 'tools/OSINT_RUNNER_SETUP.md'
       - 'scripts/patch-osint-tools-system.js'
       - 'scripts/patch-research-tools-ui.js'
+      - 'scripts/patch-osint-tool-tiers.js'
       - 'scripts/osint-tools-test.js'
       - 'scripts/patch-worker-newsletter-system.js'
       - 'scripts/build-cloudflare-output.js'
@@ -34,6 +35,7 @@ on:
       - 'tools/OSINT_RUNNER_SETUP.md'
       - 'scripts/patch-osint-tools-system.js'
       - 'scripts/patch-research-tools-ui.js'
+      - 'scripts/patch-osint-tool-tiers.js'
       - 'scripts/osint-tools-test.js'
       - 'scripts/patch-worker-newsletter-system.js'
       - 'scripts/build-cloudflare-output.js'
@@ -72,6 +74,7 @@ jobs:
         run: |
           node --check scripts/patch-osint-tools-system.js
           node --check scripts/patch-research-tools-ui.js
+          node --check scripts/patch-osint-tool-tiers.js
           node --check scripts/osint-tools-test.js
           node --check scripts/patch-worker-newsletter-system.js
           python -m py_compile tools/osint_runner.py
@@ -93,6 +96,7 @@ jobs:
         run: |
           node scripts/patch-worker-newsletter-system.js
           node scripts/patch-research-tools-ui.js
+          node scripts/patch-osint-tool-tiers.js
           node --check src/worker.js
 
       - name: Run gated tools contract tests
@@ -106,9 +110,10 @@ jobs:
           test -f _site/research-tools.html
           test -f _site/research-tools
           test -f _site/research-tools.js
-          grep -q 'Member Tool · Holehe' _site/research-tools.html
-          grep -q 'Member Tool · SpiderFoot' _site/research-tools.html
-          grep -q 'Administrator Only · h8mail' _site/research-tools.html
+          grep -q 'Registered Tool · Holehe' _site/research-tools.html
+          grep -q 'Intelligence Tool · SpiderFoot' _site/research-tools.html
+          grep -q 'Intelligence Tool · h8mail' _site/research-tools.html
+          grep -q 'Members may review only their own verified email' _site/research-tools.html
           grep -q 'https://emailosint.org/' _site/index.html
           test ! -e _site/tools
           test ! -e _site/downloads/osint-tools-test.json
@@ -118,7 +123,8 @@ jobs:
         run: |
           grep -q "originalPath==='/api/tools/config'" src/worker.js
           grep -q "originalPath==='/api/admin/tools/jobs/next'" src/worker.js
-          grep -q "policy.access==='admin'&&!osintIsAdmin" src/worker.js
+          grep -q "h8mail:{label:'Breach exposure review',access:'member',minimumTier:'intelligence_6',selfOnlyForMembers:true" src/worker.js
+          grep -q "This Intelligence tool may review only your own verified account email" src/worker.js
           grep -q "name:'AES-GCM'" src/worker.js
           grep -q "target_ciphertext='',target_iv=''" src/worker.js
           if git grep -n 'MATRIX_OSINT_RUNNER_TOKEN=' -- ':!tools/OSINT_RUNNER_SETUP.md' ':!.github/workflows/osint-tools-assurance.yml'; then

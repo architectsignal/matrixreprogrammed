@@ -1,10 +1,1071 @@
 {
-  "updated": "2026-07-14T08:26:31.287Z",
+  "updated": "2026-07-15T08:32:55.434Z",
   "mode": "daily",
   "schemaVersion": 1,
   "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
-  "documentCount": 34,
+  "documentCount": 46,
   "documents": [
+    {
+      "id": "ad60db0eb67a22b37fee13d7",
+      "sha256": "ad60db0eb67a22b37fee13d7f03570fd7369b429540c5617a2f2e58b49bb0033",
+      "title": ".",
+      "originalFileName": "comp26523.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 590442,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/complaints/2026/comp26523.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26523.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26523.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Wed, 08 Apr 2026 16:42:15 GMT"
+        }
+      ],
+      "metadata": {
+        "title": ".",
+        "author": "Jennifer L. Rediehs",
+        "creator": "Acrobat PDFMaker 26 for Word",
+        "producer": "Adobe PDF Library 26.1.119; modified using iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Tue Apr  7 20:16:49 2026 UTC",
+        "moddate": "Tue Apr  7 21:02:56 2026 UTC",
+        "custom_metadata": "no",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 27,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "590442 bytes",
+        "optimized": "yes",
+        "pdf_version": "1.4"
+      },
+      "identifiers": [
+        {
+          "type": "case-or-docket",
+          "value": "26-cv-02174"
+        }
+      ],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 48660,
+        "wordCount": 7802,
+        "alphaWords": 6518,
+        "alphaRatio": 0.877,
+        "textHash": "d5617efec5d7423fa0bf977dc3fedba1d73da41e52339fc80efb821d4b92ad73",
+        "textPath": "data/document-text/ad60db0eb67a22b37fee13d7f03570fd7369b429540c5617a2f2e58b49bb0033.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "ad60db0eb67a22b37fee13d7f03570fd7369b429540c5617a2f2e58b49bb0033",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/ad60db0eb67a22b37fee13d7f03570fd7369b429540c5617a2f2e58b49bb0033.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "7d412ed49e0acf6ace5bde05",
+      "sha256": "7d412ed49e0acf6ace5bde05e9f83cd921dccbbadcc7e951a07a07984bda650e",
+      "title": "SEC Complaint",
+      "originalFileName": "comp26542.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 204858,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/complaints/2026/comp26542.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26542.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26542.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Tue, 28 Apr 2026 19:54:49 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "subject": "",
+        "keywords": "",
+        "author": "Felker, Charles J. (Josh)",
+        "creator": "Acrobat PDFMaker 26 for Word",
+        "producer": "Adobe PDF Library 26.1.183; modified using iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Tue Apr 28 15:05:12 2026 UTC",
+        "moddate": "Tue Apr 28 19:54:42 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 13,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "204858 bytes",
+        "optimized": "yes",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [
+        {
+          "type": "case-or-docket",
+          "value": "3:26-cv-1357"
+        }
+      ],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 20063,
+        "wordCount": 3304,
+        "alphaWords": 2773,
+        "alphaRatio": 0.8903,
+        "textHash": "9effb04abf62db843a5c04c0c9bc25c27b7c46edb52524d5ed4878b14ef6ab77",
+        "textPath": "data/document-text/7d412ed49e0acf6ace5bde05e9f83cd921dccbbadcc7e951a07a07984bda650e.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "7d412ed49e0acf6ace5bde05e9f83cd921dccbbadcc7e951a07a07984bda650e",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/7d412ed49e0acf6ace5bde05e9f83cd921dccbbadcc7e951a07a07984bda650e.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "eb4eff5b17755ae304591cd1",
+      "sha256": "eb4eff5b17755ae304591cd1be767f02d9920e2ca21c2050d80d1f6ac085cfb8",
+      "title": "2026-14250.pdf",
+      "originalFileName": "2026-14250.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 205004,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14250.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "federal-register-latest",
+          "sourceLabel": "Federal Register — Latest Documents",
+          "sourcePageUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+          "documentUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14250.pdf",
+          "finalUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14250.pdf",
+          "lane": "oversight-audit",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Wed, 15 Jul 2026 05:19:43 GMT"
+        }
+      ],
+      "metadata": {
+        "creator": "govinfo, U. S. Government Publishing Office",
+        "producer": "iText® Core 9.4.0 (production version) ©2000-2025 Apryse Group NV, Government Publishing Office",
+        "creationdate": "Wed Jul 15 05:17:20 2026 UTC",
+        "moddate": "Wed Jul 15 05:18:33 2026 UTC",
+        "custom_metadata": "no",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "AcroForm",
+        "javascript": "no",
+        "pages": 2,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "205004 bytes",
+        "optimized": "no",
+        "pdf_version": "1.7"
+      },
+      "identifiers": [
+        {
+          "type": "case-or-docket",
+          "value": "2:26"
+        },
+        {
+          "type": "case-or-docket",
+          "value": "RM2018"
+        }
+      ],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 12261,
+        "wordCount": 1887,
+        "alphaWords": 1621,
+        "alphaRatio": 0.8818,
+        "textHash": "ccab815f4924f54160aafa2d3b1f267205ae2106ff7eadf4adf54dd96400bcfa",
+        "textPath": "data/document-text/eb4eff5b17755ae304591cd1be767f02d9920e2ca21c2050d80d1f6ac085cfb8.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "eb4eff5b17755ae304591cd1be767f02d9920e2ca21c2050d80d1f6ac085cfb8",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/eb4eff5b17755ae304591cd1be767f02d9920e2ca21c2050d80d1f6ac085cfb8.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "e88df3c61ac31c845eb7b488",
+      "sha256": "e88df3c61ac31c845eb7b4884d074eede3e2e319ac3d1f16567a7d12d3155046",
+      "title": "2026-14179.pdf",
+      "originalFileName": "2026-14179.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 208595,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14179.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "federal-register-latest",
+          "sourceLabel": "Federal Register — Latest Documents",
+          "sourcePageUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+          "documentUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14179.pdf",
+          "finalUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14179.pdf",
+          "lane": "oversight-audit",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Wed, 15 Jul 2026 05:19:39 GMT"
+        }
+      ],
+      "metadata": {
+        "creator": "govinfo, U. S. Government Publishing Office",
+        "producer": "iText® Core 9.4.0 (production version) ©2000-2025 Apryse Group NV, Government Publishing Office",
+        "creationdate": "Wed Jul 15 05:17:20 2026 UTC",
+        "moddate": "Wed Jul 15 05:18:11 2026 UTC",
+        "custom_metadata": "no",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "AcroForm",
+        "javascript": "no",
+        "pages": 2,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "208595 bytes",
+        "optimized": "no",
+        "pdf_version": "1.7"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 13448,
+        "wordCount": 2012,
+        "alphaWords": 1855,
+        "alphaRatio": 0.9308,
+        "textHash": "eedd651dbd984448785a1c58640803efb56bed438157c73a6768a6797a2626e5",
+        "textPath": "data/document-text/e88df3c61ac31c845eb7b4884d074eede3e2e319ac3d1f16567a7d12d3155046.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "e88df3c61ac31c845eb7b4884d074eede3e2e319ac3d1f16567a7d12d3155046",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/e88df3c61ac31c845eb7b4884d074eede3e2e319ac3d1f16567a7d12d3155046.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "d94a88a208bf7b190bf683c3",
+      "sha256": "d94a88a208bf7b190bf683c3f25876c144a28db0154d23ae8d998211707c7aa8",
+      "title": "Final Judgment - Titanium Capital LLC",
+      "originalFileName": "judg26512-titanium-capital-llc.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 245918,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "investigation-ledger",
+          "discoveredAt": "2026-07-11T12:51:11.789Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Mon, 30 Mar 2026 16:30:16 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "subject": "",
+        "creator": "Acrobat PDFMaker 25 for Word",
+        "producer": "Adobe PDF Library 25.1.5; modified using iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Sun Feb 15 17:14:06 2026 UTC",
+        "moddate": "Mon Mar 30 16:16:23 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 7,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "245918 bytes",
+        "optimized": "no",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [
+        {
+          "type": "case-or-docket",
+          "value": "9:23-CV-81558-WPD"
+        }
+      ],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 9694,
+        "wordCount": 1559,
+        "alphaWords": 1375,
+        "alphaRatio": 0.9086,
+        "textHash": "66e1451ab05c588b3eaa105c549cae0aed11a6b5b4c120b1f2483da7258f6ec5",
+        "textPath": "data/document-text/d94a88a208bf7b190bf683c3f25876c144a28db0154d23ae8d998211707c7aa8.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "d94a88a208bf7b190bf683c3f25876c144a28db0154d23ae8d998211707c7aa8",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/d94a88a208bf7b190bf683c3f25876c144a28db0154d23ae8d998211707c7aa8.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "e4005f3921a3d30b4c7927cf",
+      "sha256": "e4005f3921a3d30b4c7927cfa7489d44fd3d6def146e61e47483d515dd74f663",
+      "title": "Robert L. Murray, Jr.",
+      "originalFileName": "comp26550.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 953268,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/complaints/2026/comp26550.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26550.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26550.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Tue, 05 May 2026 20:24:33 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "Robert L. Murray, Jr.",
+        "subject": "SEC Complaint",
+        "keywords": "\"Release No. LR-26550; Date: 2026-05-05\"",
+        "author": "U.S. Securities and Exchange Commission",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 22.0 (Windows)",
+        "creationdate": "Tue Oct 18 01:04:16 2022 UTC",
+        "moddate": "Tue May  5 20:21:21 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 15,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "953268 bytes",
+        "optimized": "no",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 23531,
+        "wordCount": 5518,
+        "alphaWords": 2014,
+        "alphaRatio": 0.2618,
+        "textHash": "9f1cd0135abc8b76b7f24a23ff0fa8342a833255ca6802b90a76580e4095a4e5",
+        "textPath": "data/document-text/e4005f3921a3d30b4c7927cfa7489d44fd3d6def146e61e47483d515dd74f663.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "e4005f3921a3d30b4c7927cfa7489d44fd3d6def146e61e47483d515dd74f663",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/e4005f3921a3d30b4c7927cfa7489d44fd3d6def146e61e47483d515dd74f663.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "40e4fd583cd30e927da99ccf",
+      "sha256": "40e4fd583cd30e927da99ccf822abb1196408243e053034a314fdcbc08b05206",
+      "title": "Epstein Files Transparency Act -Production of Department Materials",
+      "originalFileName": "dl",
+      "mimeType": "application/pdf",
+      "bytes": 272836,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.justice.gov/letter-to-congress.pdf",
+        "https://www.justice.gov/opa/media/1426091/dl"
+      ],
+      "provenance": [
+        {
+          "sourceId": "doj-epstein-disclosures",
+          "sourceLabel": "U.S. Department of Justice — Epstein Disclosures",
+          "sourcePageUrl": "https://www.justice.gov/epstein/doj-disclosures",
+          "documentUrl": "https://www.justice.gov/letter-to-congress.pdf",
+          "finalUrl": "https://www.justice.gov/opa/media/1426091/dl",
+          "lane": "epstein-disclosure",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Fri, 30 Jan 2026 16:07:05 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "Epstein Files Transparency Act -Production of Department Materials",
+        "subject": "Epstein Files Transparency Act -Production of Department Materials",
+        "author": "U.S. Department of Justice",
+        "creator": "Hewlett-Packard MFP",
+        "producer": "Adobe Acrobat (32-bit) 25 Paper Capture Plug-in with ClearScan",
+        "creationdate": "Fri Jan 30 15:47:13 2026 UTC",
+        "moddate": "Fri Jan 30 16:02:56 2026 UTC",
+        "custom_metadata": "no",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "AcroForm",
+        "javascript": "no",
+        "pages": 6,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "272836 bytes",
+        "optimized": "yes",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 17962,
+        "wordCount": 2665,
+        "alphaWords": 2539,
+        "alphaRatio": 0.9649,
+        "textHash": "12202fc2c7336f106be0db5df99dad56235a9315eea1e7d149c62e4ccc50396c",
+        "textPath": "data/document-text/40e4fd583cd30e927da99ccf822abb1196408243e053034a314fdcbc08b05206.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "40e4fd583cd30e927da99ccf822abb1196408243e053034a314fdcbc08b05206",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/40e4fd583cd30e927da99ccf822abb1196408243e053034a314fdcbc08b05206.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "b3880103932d509af03ec87b",
+      "sha256": "b3880103932d509af03ec87b7f183d3ff47ef7866e192ed4be8218861b199205",
+      "title": "SEC Complaint",
+      "originalFileName": "comp26533.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 269825,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/complaints/2026/comp26533.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26533.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26533.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Tue, 21 Apr 2026 18:54:25 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "subject": "",
+        "keywords": "",
+        "author": "Preissler, Ann Marie (Everdell)",
+        "creator": "Acrobat PDFMaker 26 for Word",
+        "producer": "Adobe PDF Library 26.1.183; modified using iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Mon Apr 20 17:07:50 2026 UTC",
+        "moddate": "Tue Apr 21 18:54:18 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 16,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "269825 bytes",
+        "optimized": "yes",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [
+        {
+          "type": "case-or-docket",
+          "value": "26-cv-03213"
+        }
+      ],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 25592,
+        "wordCount": 4179,
+        "alphaWords": 3586,
+        "alphaRatio": 0.8972,
+        "textHash": "65701d4cfc652d4f5eae79c10d39057b997be3c5429e79a4ba7fed835bc4c465",
+        "textPath": "data/document-text/b3880103932d509af03ec87b7f183d3ff47ef7866e192ed4be8218861b199205.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "b3880103932d509af03ec87b7f183d3ff47ef7866e192ed4be8218861b199205",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/b3880103932d509af03ec87b7f183d3ff47ef7866e192ed4be8218861b199205.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "dc72c058a7ecd04f8478055d",
+      "sha256": "dc72c058a7ecd04f8478055dd54d30a9f5af44911458d812014cd73242e81a9d",
+      "title": "SEC Complaint",
+      "originalFileName": "comp26540.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 951837,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/complaints/2026/comp26540.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26540.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/complaints/2026/comp26540.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Mon, 27 Apr 2026 16:12:20 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "subject": "",
+        "creator": "PScript5.dll Version 5.2.2",
+        "producer": "Acrobat Distiller 20.0 (Windows)",
+        "creationdate": "Tue Nov  3 19:37:32 2020 UTC",
+        "moddate": "Mon Apr 27 16:11:59 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 20,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "951837 bytes",
+        "optimized": "no",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 34756,
+        "wordCount": 5314,
+        "alphaWords": 4668,
+        "alphaRatio": 0.9187,
+        "textHash": "31fea77757685128ba9360faff482ffca6f9d1da7b1fe9dfaccc0b9368d7bd01",
+        "textPath": "data/document-text/dc72c058a7ecd04f8478055dd54d30a9f5af44911458d812014cd73242e81a9d.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "dc72c058a7ecd04f8478055dd54d30a9f5af44911458d812014cd73242e81a9d",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/dc72c058a7ecd04f8478055dd54d30a9f5af44911458d812014cd73242e81a9d.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "3e7c31dc539b4a97ade27b09",
+      "sha256": "3e7c31dc539b4a97ade27b098d912fcbac8128efa5f40dcb2e9636c2c3698205",
+      "title": "Shaukat Shamim",
+      "originalFileName": "consent26584-shamim.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 1846514,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/consent26584-shamim.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/litreleases/2026/consent26584-shamim.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/litreleases/2026/consent26584-shamim.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Mon, 13 Jul 2026 19:24:54 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "Shaukat Shamim",
+        "subject": "Consent",
+        "keywords": "\"Release No. LR-26584; Date: 2026-07-13\"",
+        "author": "U.S. Securities and Exchange Commission",
+        "creator": "Hewlett-Packard MFP",
+        "producer": "iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Mon Jul  6 04:03:57 2026 UTC",
+        "moddate": "Mon Jul 13 19:18:03 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 5,
+        "encrypted": "no",
+        "page_size": "792 x 612 pts (letter)",
+        "page_rot": "270",
+        "file_size": "1846514 bytes",
+        "optimized": "no",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "ocrmypdf+tesseract",
+        "ocrUsed": true,
+        "ocrStatus": "completed-low-text",
+        "meaningfulText": false,
+        "textChars": 313,
+        "wordCount": 65,
+        "alphaWords": 30,
+        "alphaRatio": 0.5385,
+        "textHash": "dd52a149312ca8f134492c36f040fa5e76180c0dd625bfb2d96ff077b9b422d7",
+        "textPath": "data/document-text/3e7c31dc539b4a97ade27b098d912fcbac8128efa5f40dcb2e9636c2c3698205.txt",
+        "textTruncated": false,
+        "ocrConfidence": {
+          "value": 92.3,
+          "scale": "0-100",
+          "method": "Tesseract TSV weighted word confidence",
+          "sampledPages": 5,
+          "totalPages": 5,
+          "wordsSampled": 1321,
+          "limitation": "Confidence covers all rendered pages but is not a calibrated accuracy guarantee."
+        },
+        "limitations": [
+          "OCR completed but the extracted text did not cross the meaningful-text threshold. Search recall may be incomplete.",
+          "The final text is below the publication pipeline meaningful-text threshold."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "3e7c31dc539b4a97ade27b098d912fcbac8128efa5f40dcb2e9636c2c3698205",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/3e7c31dc539b4a97ade27b098d912fcbac8128efa5f40dcb2e9636c2c3698205.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "d8aa0169b419aa211a4517c6",
+      "sha256": "d8aa0169b419aa211a4517c69a3f7b4c8a03d93d06334cce6ed2ce119c9924ae",
+      "title": "2026-14184.pdf",
+      "originalFileName": "2026-14184.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 209125,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14184.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "federal-register-latest",
+          "sourceLabel": "Federal Register — Latest Documents",
+          "sourcePageUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+          "documentUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14184.pdf",
+          "finalUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14184.pdf",
+          "lane": "oversight-audit",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Wed, 15 Jul 2026 05:19:39 GMT"
+        }
+      ],
+      "metadata": {
+        "creator": "govinfo, U. S. Government Publishing Office",
+        "producer": "iText® Core 9.4.0 (production version) ©2000-2025 Apryse Group NV, Government Publishing Office",
+        "creationdate": "Wed Jul 15 05:17:20 2026 UTC",
+        "moddate": "Wed Jul 15 05:18:05 2026 UTC",
+        "custom_metadata": "no",
+        "metadata_stream": "yes",
+        "tagged": "no",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "AcroForm",
+        "javascript": "no",
+        "pages": 2,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "209125 bytes",
+        "optimized": "no",
+        "pdf_version": "1.7"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 13514,
+        "wordCount": 2032,
+        "alphaWords": 1852,
+        "alphaRatio": 0.9242,
+        "textHash": "716c78fa587b66e29efbff01b7034d8b2ac339964e6cc30b82c6901200ed1f3f",
+        "textPath": "data/document-text/d8aa0169b419aa211a4517c69a3f7b4c8a03d93d06334cce6ed2ce119c9924ae.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "d8aa0169b419aa211a4517c69a3f7b4c8a03d93d06334cce6ed2ce119c9924ae",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/d8aa0169b419aa211a4517c69a3f7b4c8a03d93d06334cce6ed2ce119c9924ae.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
+    {
+      "id": "d621f986e44255246946f766",
+      "sha256": "d621f986e44255246946f766e903a3b5c0d62d762d16ca32af9c8babc8ac64aa",
+      "title": "Memorandum of Law ISO Motion to Compel as to the Defendants",
+      "originalFileName": "order26511-memorandum-law-iso-motion-compel-defendants.pdf",
+      "mimeType": "application/pdf",
+      "bytes": 270709,
+      "firstSeen": "2026-07-15T08:32:55.434Z",
+      "lastSeen": "2026-07-15T08:32:55.434Z",
+      "retrievals": 1,
+      "sourceUrls": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/order26511-memorandum-law-iso-motion-compel-defendants.pdf"
+      ],
+      "provenance": [
+        {
+          "sourceId": "sec-litigation-releases",
+          "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+          "sourcePageUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "documentUrl": "https://www.sec.gov/files/litigation/litreleases/2026/order26511-memorandum-law-iso-motion-compel-defendants.pdf",
+          "finalUrl": "https://www.sec.gov/files/litigation/litreleases/2026/order26511-memorandum-law-iso-motion-compel-defendants.pdf",
+          "lane": "government-enforcement",
+          "authority": "primary-official",
+          "discoveredFrom": "source-monitor",
+          "discoveredAt": "2026-07-12T07:38:58.516Z",
+          "retrievedAt": "2026-07-15T08:32:55.434Z",
+          "httpStatus": 200,
+          "etag": "",
+          "lastModified": "Fri, 27 Mar 2026 21:22:14 GMT"
+        }
+      ],
+      "metadata": {
+        "title": "Memorandum of Law ISO Motion to Compel as to the Defendants",
+        "creator": "Acrobat PDFMaker 25 for Word",
+        "producer": "Adobe PDF Library 25.1.40; modified using iText® Core 7.2.3 (production version) ©2000-2022 iText Group NV, Administrative Office of the United States Courts",
+        "creationdate": "Fri Mar 27 15:43:50 2026 UTC",
+        "moddate": "Fri Mar 27 21:13:39 2026 UTC",
+        "custom_metadata": "yes",
+        "metadata_stream": "yes",
+        "tagged": "yes",
+        "userproperties": "no",
+        "suspects": "no",
+        "form": "none",
+        "javascript": "no",
+        "pages": 17,
+        "encrypted": "no",
+        "page_size": "612 x 792 pts (letter)",
+        "page_rot": "0",
+        "file_size": "270709 bytes",
+        "optimized": "no",
+        "pdf_version": "1.6"
+      },
+      "identifiers": [],
+      "extraction": {
+        "method": "pdftotext",
+        "ocrUsed": false,
+        "ocrStatus": "not-needed",
+        "meaningfulText": true,
+        "textChars": 33287,
+        "wordCount": 4800,
+        "alphaWords": 3879,
+        "alphaRatio": 0.7471,
+        "textHash": "a22eaa7cdfc1c2c24e7b25948391dcc28759f2ec5c3b175c72d88d28412c7dbc",
+        "textPath": "data/document-text/d621f986e44255246946f766e903a3b5c0d62d762d16ca32af9c8babc8ac64aa.txt",
+        "textTruncated": false,
+        "ocrConfidence": null,
+        "limitations": [
+          "Native PDF text extraction can lose reading order, columns, tables, footnotes and embedded-image text."
+        ]
+      },
+      "evidenceGrade": "B",
+      "reviewStatus": "unreviewed-source-document",
+      "publicationStatus": "searchable-source-record-not-finding",
+      "evidenceBoundary": "Extracted document text is an unreviewed source record. Searchability does not make an allegation true, establish guilt, authenticate every statement, or convert the document into a published finding.",
+      "preservation": {
+        "originalSha256": "d621f986e44255246946f766e903a3b5c0d62d762d16ca32af9c8babc8ac64aa",
+        "method": "github-actions-artifact",
+        "artifactName": "pdf-evidence-29401050010",
+        "workflowRunId": "29401050010",
+        "repository": "architectsignal/matrixreprogrammed",
+        "retentionDays": 90,
+        "artifactPath": "document-archive/d621f986e44255246946f766e903a3b5c0d62d762d16ca32af9c8babc8ac64aa.pdf",
+        "limitation": "The original PDF is retained in a GitHub Actions artifact for 90 days; the SHA-256, provenance, metadata and extracted text remain in the repository."
+      }
+    },
     {
       "id": "3e8f28b4de6256d1501a0325",
       "sha256": "3e8f28b4de6256d1501a0325b35ebd4b392d50ddd530931dc72ea32188d21ec6",
@@ -3045,5 +4106,5 @@
     }
   ],
   "identifierSchemaVersion": 2,
-  "identifierQualityUpdated": "2026-07-14T08:27:01.652Z"
+  "identifierQualityUpdated": "2026-07-15T08:33:10.263Z"
 }

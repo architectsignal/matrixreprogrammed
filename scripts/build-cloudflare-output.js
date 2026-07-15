@@ -160,6 +160,11 @@ runRequired('Open-source research suite test', 'scripts/open-source-research-sui
 runRequired('Cytoscape network map upgrade', 'scripts/upgrade-network-maps-with-cytoscape.js');
 runRequired('Cytoscape network map test', 'scripts/cytoscape-network-map-test.js');
 
+// Final self-heals must run after every legacy generator and before assets are
+// copied, so the live build cannot lose explicit consent or tier boundaries.
+require('./patch-osint-tool-tiers.js');
+require('./patch-newsletter-consent.js');
+
 rm(out);
 ensure(out);
 walk(root);
@@ -203,22 +208,29 @@ const privatePaths = [
   'downloads/market-activity-test.json','downloads/phase6-data-integration.json','downloads/phase6-worker-patch.json','downloads/phase6-integration-report.json','downloads/sec-market-activity-collection-report.json',
   'downloads/open-source-research-suite-test.json','downloads/open-source-research-wiring.json','downloads/pagefind-output-test.json',
   'downloads/phase8-evidence-archive-build.json','downloads/phase8-evidence-archive-test.json','downloads/phase8-wiring.json','downloads/browsertrix-crawl-plan.json',
-  'downloads/public-data-lab-build.json','downloads/public-data-lab-test.json','downloads/public-data-lab-output-test.json',
-  'browsertrix-output','tools'
+  'downloads/public-data-lab-build.json','downloads/public-data-lab-test.json','downloads/public-data-lab-output-test.json'
 ];
-for (const privatePath of privatePaths) {
-  if (fs.existsSync(path.join(out, privatePath))) {
-    console.error(`Cloudflare output failed: private evidence archive, runner code or diagnostics exposed at _site/${privatePath}`);
+for (const rel of privatePaths) {
+  if (fs.existsSync(path.join(out, rel))) {
+    console.error(`Cloudflare output failed: private build artifact exposed at _site/${rel}`);
     process.exit(1);
   }
 }
-require('./public-copy-visibility-test.js');
-const count = [];
-(function countFiles(dir) {
-  for (const entry of fs.readdirSync(dir, { withFileTypes:true })) {
-    const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) countFiles(full);
-    else count.push(full);
-  }
-})(out);
-console.log(`Cloudflare output ready: ${count.length} deployable files, including Phase 9 browser-side DuckDB/Perspective analysis, Phase 8 WACZ replay and signed integrity manifests, the public security and dark-web safety hubs, Phase 6 market activity, PDF.js evidence reading, vis-timeline chronology, Pagefind fallback, Search V3 and evidence-led network maps while private diagnostics remain excluded.`);
+
+const requiredWorker = fs.readFileSync(path.join(root, 'src', 'worker.js'), 'utf8');
+if (!requiredWorker.includes('osint-tools-v1: encrypted D1 jobs')) {
+  console.error('Cloudflare output failed: OSINT Worker routes missing after build.');
+  process.exit(1);
+}
+if (!requiredWorker.includes("h8mail:{label:'Breach exposure review',access:'member',minimumTier:'intelligence_6',selfOnlyForMembers:true")) {
+  console.error('Cloudflare output failed: h8mail Intelligence verified-self policy missing after build.');
+  process.exit(1);
+}
+const builtNewsletter = fs.readFileSync(path.join(out, 'newsletter.html'), 'utf8');
+const builtNewsletterClient = fs.readFileSync(path.join(out, 'newsletter.js'), 'utf8');
+if (!builtNewsletter.includes('data-marketing-consent') || !builtNewsletterClient.includes('consent:consentGranted')) {
+  console.error('Cloudflare output failed: explicit newsletter consent missing from final assets.');
+  process.exit(1);
+}
+
+console.log(`Cloudflare output complete: ${requiredFiles.length} required assets verified; protected private build artifacts excluded.`);

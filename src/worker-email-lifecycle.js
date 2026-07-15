@@ -29,7 +29,7 @@ let deterministicCounter=0;
 function clean(value,max=1000){return String(value??'').replace(/<[^>]*>/g,'').replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,max)}
 function html(value){return String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}
 function json(data,status=200,extra={}){return new Response(JSON.stringify(data,null,2),{status,headers:{...jsonHeaders,...extra}})}
-function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store'}})}
+function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}
 function bool(value,fallback=false){if(value===undefined||value===null||value==='')return fallback;return value===true||value===1||['1','true','yes','on'].includes(String(value).trim().toLowerCase())}
 function validEmail(value){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value||'').trim())}
 function hasD1(env){return Boolean(env?.MEMBERS_DB&&typeof env.MEMBERS_DB.prepare==='function')}

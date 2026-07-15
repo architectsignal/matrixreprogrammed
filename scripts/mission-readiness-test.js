@@ -101,7 +101,8 @@ check('timer builder is in normal build validation', pkg.scripts?.build?.include
 check('tier patch runs before every npm build', pkg.scripts?.prebuild === 'node scripts/patch-osint-tool-tiers.js');
 check('tier patch runs again before Cloudflare output', pkg.scripts?.build?.includes('patch-osint-tool-tiers.js'));
 check('production receipt certifies mission systems', includesAll(receipt, [
-  'schemaVersion: 3',
+  'schemaVersion: 4',
+  'Cloudflare D1 Time Travel bookmark',
   'protectedAssetTiersWired',
   'osintToolTiersWired',
   'timersExplained',

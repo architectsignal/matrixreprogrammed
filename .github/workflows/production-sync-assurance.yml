@@ -27,6 +27,8 @@ on:
       - 'scripts/homepage-mask-intro-test.js'
       - 'scripts/patch-membership-tiers.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/build-mission-brief-conclusions.js'
+      - 'scripts/build-homepage-command-surface.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/update-live-intel.js'
       - 'scripts/record-live-intel-check.js'
@@ -67,6 +69,8 @@ on:
       - 'scripts/homepage-mask-intro-test.js'
       - 'scripts/patch-membership-tiers.js'
       - 'scripts/patch-conclusion-integrity-cards.js'
+      - 'scripts/build-mission-brief-conclusions.js'
+      - 'scripts/build-homepage-command-surface.js'
       - 'scripts/build-deploy-manifest.js'
       - 'scripts/update-live-intel.js'
       - 'scripts/record-live-intel-check.js'
@@ -104,10 +108,24 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - name: Check Live Intel feeds for assurance
+      - name: Refresh investigation, Live Intel and conclusions before assurance
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
         run: |
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
           node scripts/update-live-intel.js
           node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
       - name: Build normal site
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
@@ -115,7 +133,7 @@ jobs:
       - name: Verify D1-authoritative forum persistence wiring
         run: node scripts/forum-persistence-d1-test.js
       - name: Bundle strict Worker without deploying
-        run: npx wrangler@latest deploy --dry-run
+        run: npx --yes wrangler@latest deploy --dry-run
       - name: Reconcile final production output
         env:
           DEPLOY_COMMIT_SHA: ${{ github.sha }}
@@ -153,5 +171,7 @@ jobs:
             downloads/conclusion-integrity-report.json
             downloads/deploy-manifest.json
             downloads/deploy-health.json
+            data/speculative-intelligence-synthesis.json
+            downloads/speculative-intelligence-synthesis.md
           if-no-files-found: ignore
           retention-days: 30

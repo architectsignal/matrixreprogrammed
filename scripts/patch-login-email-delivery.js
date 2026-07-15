@@ -86,7 +86,8 @@ async function sendProviderEmail(env,payload){
   }catch(error){return{configured:true,sent:false,error:clean(error&&error.message,500),payloadLengths:checked.lengths}}
 }
 `;
-lifecycle = replaceBetween(lifecycle, 'async function sendProviderEmail(', 'async function processOutbox(', providerSender, 'sendProviderEmail');
+const providerStart = lifecycle.includes('function emailPayloadCheck(') ? 'function emailPayloadCheck(' : 'async function sendProviderEmail(';
+lifecycle = replaceBetween(lifecycle, providerStart, 'async function processOutbox(', providerSender, 'sendProviderEmail');
 const oldParse = "let payload={};try{payload=JSON.parse(row.payload_json||'{}')}catch{}const delivery=await sendProviderEmail(env,payload);";
 const safeParse = "let payload=null;let payloadError='';try{payload=JSON.parse(row.payload_json||'')}catch{payloadError='invalid-outbox-payload-json'}const delivery=payloadError?{configured:providerConfigured(env),sent:false,permanent:true,error:payloadError}:await sendProviderEmail(env,payload);";
 if (!lifecycle.includes(safeParse)) {

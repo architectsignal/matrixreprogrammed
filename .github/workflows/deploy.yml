@@ -121,7 +121,7 @@ jobs:
           set -euo pipefail
           mkdir -p downloads/private-migration
           backup="downloads/private-migration/matrix-members-before-${DEPLOY_COMMIT_SHA}.sql"
-          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup"
+          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup" --yes
           test -s "$backup"
           {
             echo "commit=$DEPLOY_COMMIT_SHA"

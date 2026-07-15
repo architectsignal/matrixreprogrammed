@@ -28,11 +28,11 @@ jobs:
       - name: Capture focused audit output
         run: |
           set +e
-          node scripts/live-intel-pressure-test.js > diagnostics/live-intel.log 2>&1
+          npm run pressure-test:live-intel > diagnostics/live-intel.log 2>&1
           echo $? > diagnostics/live-intel.exit
-          node scripts/link-audit.js > diagnostics/link-audit.log 2>&1
+          npm run link-audit > diagnostics/link-audit.log 2>&1
           echo $? > diagnostics/link-audit.exit
-          node scripts/mission-readiness-test.js > diagnostics/mission-readiness.log 2>&1
+          npm run mission-readiness > diagnostics/mission-readiness.log 2>&1
           echo $? > diagnostics/mission-readiness.exit
           set -e
       - name: Upload complete diagnostics

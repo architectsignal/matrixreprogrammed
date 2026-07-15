@@ -11,9 +11,9 @@ const ageDays = value => asDate(value) ? Math.floor((Date.now() - asDate(value))
 const route = value => clean(value,800) || 'daily-command-brief.html';
 
 require('./build-clock-wall.js');
+const synthesis = require('./build-speculative-intelligence-synthesis.js');
 const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');
 const wall=readJson('data/clock-wall.json',{clocks:[]});
-const synthesis=readJson('data/speculative-intelligence-synthesis.json',{});
 const daily=readJson('data/daily-power-conclusions.json',{conclusions:[]});
 const master=readJson('data/daily-brief-master.json',{});
 const engine=readJson('data/conclusion-engine.json',{conclusions:[]});

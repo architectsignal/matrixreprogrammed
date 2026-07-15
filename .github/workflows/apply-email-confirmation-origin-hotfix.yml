@@ -1,0 +1,63 @@
+name: Apply Email Confirmation Origin Hotfix
+
+on:
+  push:
+    branches:
+      - fix/email-confirmation-origin-header
+    paths:
+      - .github/workflows/apply-email-confirmation-origin-hotfix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/email-confirmation-origin-header
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Patch authoritative email redirects and route regression
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          worker_path = Path('src/worker-email-lifecycle.js')
+          worker = worker_path.read_text()
+          old = "function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store'}})}"
+          new = "function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}"
+          if old not in worker and new not in worker:
+              raise SystemExit('Email redirect helper anchor not found')
+          worker = worker.replace(old, new)
+          worker_path.write_text(worker)
+
+          test_path = Path('scripts/cloudflare-worker-routes-test.js')
+          test = test_path.read_text()
+          test = test.replace(
+              "'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-member-experience.js',\n   'src/worker-paypal-subscriptions.js', 'src/worker-production.js',",
+              "'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-member-experience.js',\n   'src/worker-email-lifecycle.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',"
+          )
+          anchor = "for (const marker of [\n   'Cloudflare D1 MEMBERS_DB.forum_posts'"
+          block = "for (const marker of [\n  \"function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}\",\n  '/api/email/verify', '/api/email/unsubscribe', 'cloudflare-worker-email-lifecycle'\n]) needText('src/worker-email-lifecycle.js', marker, `authoritative email redirect marker ${marker}`);\n\n"
+          if block not in test:
+              if anchor not in test:
+                  raise SystemExit('Cloudflare route test anchor not found')
+              test = test.replace(anchor, block + anchor)
+          test_path.write_text(test)
+          PY
+      - name: Verify syntax and route contract
+        run: |
+          node --check src/worker-email-lifecycle.js
+          node scripts/cloudflare-worker-routes-test.js
+      - name: Remove one-shot workflow and commit hotfix
+        run: |
+          rm .github/workflows/apply-email-confirmation-origin-hotfix.yml
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add src/worker-email-lifecycle.js scripts/cloudflare-worker-routes-test.js .github/workflows/apply-email-confirmation-origin-hotfix.yml
+          git commit -m "Preserve authoritative origin on email confirmation redirects"
+          git push origin HEAD:fix/email-confirmation-origin-header

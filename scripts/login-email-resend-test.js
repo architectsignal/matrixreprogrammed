@@ -79,6 +79,7 @@ function between(text, startMarker, endMarker) {
     issues.forEach(issue => console.error(`- ${issue}`));
     process.exit(1);
   }
+  require('./sanitize-timer-source-links.js');
   console.log('LOGIN EMAIL RESEND TEST PASSED: three consecutive complete and visibly distinct login emails; malformed payloads fail closed.');
 })().catch(error => {
   console.error('LOGIN EMAIL RESEND TEST FAILED');

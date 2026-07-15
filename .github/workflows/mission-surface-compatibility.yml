@@ -1,0 +1,58 @@
+name: Mission Surface Compatibility
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/ensure-shared-assets.js'
+      - 'scripts/site-public-copy-intake-audit.js'
+      - 'scripts/build-atlas-layers.js'
+      - 'scripts/build-migration-crime-grid.js'
+      - 'scripts/build-mission-timers.js'
+      - 'scripts/build-homepage-command-surface.js'
+      - 'scripts/patch-final-mission-surfaces.js'
+      - 'scripts/sanitize-timer-source-links.js'
+      - 'scripts/atlas-layers-test.js'
+      - 'scripts/migration-flow-test.js'
+      - 'scripts/global-risk-clocks-test.js'
+      - '.github/workflows/mission-surface-compatibility.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Run shared asset normalizer
+        run: node scripts/ensure-shared-assets.js > /tmp/shared-assets.log 2>&1
+      - name: Verify Atlas, Migration and Clocks
+        shell: bash
+        run: |
+          set +e
+          failures=0
+          for item in \
+            "atlas:scripts/atlas-layers-test.js" \
+            "migration:scripts/migration-flow-test.js" \
+            "clocks:scripts/global-risk-clocks-test.js"
+          do
+            name="${item%%:*}"
+            script="${item#*:}"
+            node "$script" > "/tmp/${name}.log" 2>&1
+            status=$?
+            echo "===== ${name} ====="
+            cat "/tmp/${name}.log"
+            if [ "$status" -ne 0 ]; then failures=$((failures+1)); fi
+          done
+          if [ "$failures" -ne 0 ]; then
+            echo "===== shared asset normalizer tail ====="
+            tail -120 /tmp/shared-assets.log
+            exit 1
+          fi
+          echo "All mission surfaces survived the shared asset normalizer."

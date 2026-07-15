@@ -30,22 +30,22 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Full build and pressure tests
         run: npm run build
 
       - name: Atlas Layers test
         if: always()
-        run: npm run pressure-test:atlas-layers
+        run: node scripts/atlas-layers-test.js
 
       - name: Migration Flow test
         if: always()
-        run: npm run pressure-test:migration-flow
+        run: node scripts/migration-flow-test.js
 
       - name: Risk Clocks and Forum Cloudflare test
         if: always()
-        run: npm run pressure-test:global-risk-clocks
+        run: node scripts/global-risk-clocks-test.js
 
       - name: Update cadence audit
         if: always()

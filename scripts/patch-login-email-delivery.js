@@ -20,29 +20,35 @@ let authWorker = read(authWorkerPath);
 const authSendEmail = `async function authSendEmail(env,member,link,purpose){
   if(!authMailConfigured(env))return{configured:false,sent:false,error:'transactional email not configured'};
   const verify=purpose==='verify_email';
-  const subject=verify?'Verify your Matrix Reprogrammed membership':'Your Matrix Reprogrammed login link';
+  const requestRef=crypto.randomUUID().slice(0,8).toUpperCase();
+  const requestedAt=new Date().toISOString();
+  const subjectBase=verify?'Verify your Matrix Reprogrammed membership':'Your Matrix Reprogrammed login link';
+  const subject=subjectBase+' · '+requestRef;
   const heading=verify?'Verify your email':'Sign in to your member account';
   const action=verify?'Verify membership':'Sign in securely';
   const recipientEmail=String(member&&member.email||'').trim();
   const recipientName=String(member&&member.display_name||member&&member.name||'Member');
   const safeName=authHtml(recipientName);
   const safeLink=authHtml(link);
-  const htmlContent='<!doctype html><html><body style="background:#050505;color:#f3e6bd;font-family:Arial,sans-serif;padding:28px"><div style="max-width:620px;margin:auto;border:1px solid #8d7137;border-radius:18px;padding:28px;background:#0b0905"><h1 style="color:#d8b56a">'+heading+'</h1><p>Hello '+safeName+',</p><p>Use the secure one-time link below. It expires in 15 minutes and can only be used once.</p><p><a href="'+safeLink+'" style="display:inline-block;padding:14px 20px;border-radius:12px;background:#d8b56a;color:#090702;text-decoration:none;font-weight:bold">'+action+'</a></p><p style="font-size:13px;color:#b9aa82">If you did not request this, ignore this email. Matrix Reprogrammed never asks for a password through this link.</p></div></body></html>';
-  const textContent=heading+'\\n\\nHello '+recipientName+',\\n\\nOpen this one-time link within 15 minutes:\\n'+link+'\\n\\nIf you did not request this, ignore this email.';
+  const safeRef=authHtml(requestRef);
+  const safeRequestedAt=authHtml(requestedAt);
+  const htmlContent='<!doctype html><html><body style="background:#050505;color:#f3e6bd;font-family:Arial,sans-serif;padding:28px"><div style="max-width:620px;margin:auto;border:1px solid #8d7137;border-radius:18px;padding:28px;background:#0b0905"><h1 style="color:#d8b56a">'+heading+'</h1><p>Hello '+safeName+',</p><p>Use the secure one-time link below. It expires in 15 minutes and can only be used once.</p><p><a href="'+safeLink+'" style="display:inline-block;padding:14px 20px;border-radius:12px;background:#d8b56a;color:#090702;text-decoration:none;font-weight:bold">'+action+'</a></p><p style="font-size:13px;color:#d8c89d"><strong>Request reference:</strong> '+safeRef+'<br><strong>Requested:</strong> '+safeRequestedAt+'</p><p style="font-size:13px;color:#b9aa82">Each request creates a new link. Only the newest link remains valid. If Gmail groups similar messages, use this reference to identify the latest email.</p><p style="font-size:13px;color:#b9aa82">If you did not request this, ignore this email. Matrix Reprogrammed never asks for a password through this link.</p></div></body></html>';
+  const textContent=heading+'\\n\\nHello '+recipientName+',\\n\\nOpen this one-time link within 15 minutes:\\n'+link+'\\n\\nRequest reference: '+requestRef+'\\nRequested: '+requestedAt+'\\n\\nEach request creates a new link. Only the newest link remains valid.\\n\\nIf you did not request this, ignore this email.';
   const payload={
     sender:{email:String(env.MEMBERS_FROM_EMAIL),name:String(env.MEMBERS_FROM_NAME||'Matrix Reprogrammed')},
     to:[{email:recipientEmail,name:recipientName}],
-    subject,htmlContent,textContent
+    subject,htmlContent,textContent,
+    headers:{'X-Matrix-Login-Reference':requestRef}
   };
   const payloadLengths={subject:subject.length,html:htmlContent.length,text:textContent.length,link:String(link||'').length};
-  if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(recipientEmail)||subject.trim().length<4||htmlContent.trim().length<80||textContent.trim().length<30||!String(link||'').startsWith('https://')){
-    return{configured:true,sent:false,permanent:true,error:'invalid-or-empty-login-email-payload',payloadLengths};
+  if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(recipientEmail)||subject.trim().length<4||htmlContent.trim().length<80||textContent.trim().length<30||!String(link||'').startsWith('https://')||requestRef.length!==8){
+    return{configured:true,sent:false,permanent:true,error:'invalid-or-empty-login-email-payload',payloadLengths,requestRef,requestedAt};
   }
   try{
     const response=await fetch('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{accept:'application/json','content-type':'application/json','api-key':String(env.BREVO_API_KEY)},body:JSON.stringify(payload)});
     const responseText=await response.text();let providerPayload={};try{providerPayload=JSON.parse(responseText||'{}')}catch{}
-    return{configured:true,sent:response.status===201,messageId:providerPayload.messageId||null,status:response.status,error:response.status===201?null:cleanText(providerPayload.message||responseText||'email provider rejected request',500),payloadLengths};
-  }catch(error){return{configured:true,sent:false,error:cleanText(error&&error.message,500),payloadLengths}}
+    return{configured:true,sent:response.status===201,messageId:providerPayload.messageId||null,status:response.status,error:response.status===201?null:cleanText(providerPayload.message||responseText||'email provider rejected request',500),payloadLengths,requestRef,requestedAt};
+  }catch(error){return{configured:true,sent:false,error:cleanText(error&&error.message,500),payloadLengths,requestRef,requestedAt}}
 }
 `;
 authWorker = replaceBetween(authWorker, 'async function authSendEmail(', 'async function authIssueLink(', authSendEmail, 'authSendEmail');
@@ -57,7 +63,7 @@ const authRequestHandler = `async function handleAuthRequestLink(request,env){
   if(member){
     const purpose=member.email_verified_at?'login':'verify_email';
     const delivery=await authIssueLink(request,env,member,purpose);
-    await env.MEMBERS_DB.prepare("INSERT INTO audit_log (id,actor_id,action,target_type,target_id,metadata_json,created_at) VALUES (?,?,?,?,?,?,?)").bind(authId('audit'),member.id,'auth.magic_link.delivery','member',member.id,JSON.stringify({purpose,sent:Boolean(delivery.sent),configured:Boolean(delivery.configured),providerStatus:delivery.status||null,messageId:delivery.messageId||null,error:delivery.error||null,payloadLengths:delivery.payloadLengths||null}),new Date().toISOString()).run().catch(()=>null);
+    await env.MEMBERS_DB.prepare("INSERT INTO audit_log (id,actor_id,action,target_type,target_id,metadata_json,created_at) VALUES (?,?,?,?,?,?,?)").bind(authId('audit'),member.id,'auth.magic_link.delivery','member',member.id,JSON.stringify({purpose,sent:Boolean(delivery.sent),configured:Boolean(delivery.configured),providerStatus:delivery.status||null,messageId:delivery.messageId||null,error:delivery.error||null,payloadLengths:delivery.payloadLengths||null,requestRef:delivery.requestRef||null,requestedAt:delivery.requestedAt||null}),new Date().toISOString()).run().catch(()=>null);
   }
   return json({ok:true,accepted:true,message:'If a matching member account exists, a complete one-time login email has been sent.'},202)
 }
@@ -80,7 +86,7 @@ async function sendProviderEmail(env,payload){
   const checked=emailPayloadCheck(payload);
   if(!checked.ok)return{configured:true,sent:false,permanent:true,error:'invalid-or-empty-transactional-email-payload',payloadLengths:checked.lengths};
   try{
-    const response=await providerFetch(env)('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{accept:'application/json','content-type':'application/json','api-key':String(env.BREVO_API_KEY)},body:JSON.stringify({sender:{email:String(env.MEMBERS_FROM_EMAIL),name:String(env.MEMBERS_FROM_NAME||'Matrix Reprogrammed')},to:[payload.to],subject:checked.subject,htmlContent:checked.htmlContent,textContent:checked.textContent})});
+    const response=await providerFetch(env)('https://api.brevo.com/v3/smtp/email',{method:'POST',headers:{accept:'application/json','content-type':'application/json','api-key':String(env.BREVO_API_KEY)},body:JSON.stringify({sender:{email:String(env.MEMBERS_FROM_EMAIL),name:String(env.MEMBERS_FROM_NAME||'Matrix Reprogrammed')},to:[payload.to],subject:checked.subject,htmlContent:checked.htmlContent,textContent:checked.textContent,headers:payload.headers||undefined})});
     const text=await response.text();let data={};try{data=JSON.parse(text||'{}')}catch{}
     return{configured:true,sent:response.status===201,status:response.status,messageId:data.messageId||null,error:response.status===201?null:clean(data.message||text||'Brevo rejected email',500),payloadLengths:checked.lengths};
   }catch(error){return{configured:true,sent:false,error:clean(error&&error.message,500),payloadLengths:checked.lengths}}
@@ -98,4 +104,4 @@ lifecycle = lifecycle.replace('if(attempts>=5){failed+=1;', 'if(delivery.permane
 write(lifecyclePath, lifecycle);
 
 require('./login-email-resend-test.js');
-console.log('Passwordless login email delivery hardened: complete payload required on every request; malformed outbox messages fail closed.');
+console.log('Passwordless login email delivery hardened: every request has a unique subject and visible request reference; malformed payloads fail closed.');

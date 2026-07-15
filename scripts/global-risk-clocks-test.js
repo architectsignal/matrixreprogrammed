@@ -1,4 +1,4 @@
-require('./build-mission-timers.js');
+require('./build-homepage-command-surface.js');
 
 const fs = require('fs');
 const path = require('path');
@@ -23,16 +23,22 @@ function routeExists(route = '') {
 needFile('data/global-risk-clocks.json');
 needFile('data/clock-wall.json');
 needFile('data/reader-interpretation-standard.json');
+needFile('data/homepage-command-surface.json');
 needFile('downloads/timer-synthesis.md');
 needFile('data/epstein-homepage-alerts.json');
 needFile('timers.html');
+needFile('index.html');
 needFile('scripts/build-mission-timers.js');
-needFile('scripts/patch-homepage-alerts.js');
+needFile('scripts/build-clock-wall.js');
+needFile('scripts/build-homepage-command-surface.js');
 needText('timers.html', 'MISSION TIMERS.');
 needText('timers.html', 'pressure indexes, not predictions');
+needText('timers.html', 'What changed:');
+needText('timers.html', 'Open deeper information');
 needText('timers.html', 'What this means');
 needText('timers.html', 'How it is calculated');
 needText('timers.html', 'Control-system relevance');
+needText('timers.html', 'Speculation angle');
 needText('timers.html', 'What would raise it');
 needText('timers.html', 'What would lower it');
 needText('timers.html', 'Missing records');
@@ -41,9 +47,15 @@ needText('timers.html', 'one-world government');
 needText('timers.html', 'data/clock-wall.json');
 needText('timers.html', 'downloads/timer-synthesis.md');
 needNoText('timers.html', 'Static page, not a live counter');
-needNoText('timers.html', 'Speculative pressure score');
-needText('scripts/patch-homepage-alerts.js', 'Number(clock.score) >= 90');
-needText('scripts/patch-homepage-alerts.js', 'expiresAt');
+needNoText('timers.html', 'Connected systems');
+needText('index.html', 'homepage-command-surface');
+needText('index.html', 'What the evidence is pointing toward now');
+needText('index.html', 'Clearly labelled speculation');
+needText('index.html', 'Risk clocks over 90%');
+needText('index.html', 'Seven-day window only');
+needNoText('index.html', 'Top Moments Now');
+needText('scripts/build-homepage-command-surface.js', 'Number(clock.score) > 90');
+needText('scripts/build-homepage-command-surface.js', 'ageDays(item.published) <= 7');
 
 warnFile('forum.html');
 warnFile('dark-speculation-forum.html');
@@ -72,6 +84,7 @@ for (const phrase of ['backend unavailable', 'Backend detail', 'Cloudflare Stati
 
 const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/global-risk-clocks.json')) : {};
 const wall = exists('data/clock-wall.json') ? JSON.parse(read('data/clock-wall.json')) : {};
+const homepage = exists('data/homepage-command-surface.json') ? JSON.parse(read('data/homepage-command-surface.json')) : {};
 if (!Array.isArray(data.clocks) || data.clocks.length !== 12) issues.push('global risk clocks must contain 12 clocks');
 if (!Array.isArray(wall.clocks) || wall.clocks.length !== 12) issues.push('clock wall must contain 12 clocks');
 if (wall.scoreType !== 'pressureIndex') issues.push('clock wall must declare pressureIndex score type');
@@ -79,10 +92,11 @@ if (!wall.scoreDefinition || !/not the probability/i.test(wall.scoreDefinition))
 if (!Number.isFinite(Number(wall.candidateSignalCount))) issues.push('clock wall must report candidate signal count');
 if (!Number.isFinite(Number(wall.sourceFileCount))) issues.push('clock wall must report source file count');
 
+const sourceLookup = new Map((data.clocks || []).map(clock => [clock.slug, Number(clock.score)]));
 for (const clock of wall.clocks || []) {
   if (!clock.title || typeof clock.score !== 'number' || !clock.nextRoute) issues.push('clock missing title, score or nextRoute');
   if (clock.nextRoute && !routeExists(clock.nextRoute)) issues.push(`${clock.title} route target missing: ${clock.nextRoute}`);
-  if (clock.score >= 90 && clock.homepageEligible !== true) issues.push(`${clock.title} is 90+ but homepageEligible is not true`);
+  if (sourceLookup.has(clock.slug) && sourceLookup.get(clock.slug) !== Number(clock.score)) issues.push(`${clock.title} score differs from canonical global-risk-clocks data`);
   for (const field of ['scoreBand', 'scoreMeaning', 'scoreDefinition', 'scoreMethod', 'calculationBasis', 'plainEnglishConclusion', 'controlSystemMeaning', 'lastMovement', 'boundary']) {
     if (!String(clock[field] || '').trim()) issues.push(`${clock.title} missing ${field}`);
   }
@@ -91,6 +105,18 @@ for (const clock of wall.clocks || []) {
   }
   if (!/not proof|does not by itself prove|not event probability/i.test(`${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} lacks a clear claim boundary`);
   if (!/one-world government|one world government/i.test(`${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} does not bound one-world-government interpretation`);
+}
+
+if (homepage.rules?.clockThreshold !== 'strictly greater than 90') issues.push('homepage clock threshold is not strictly greater than 90');
+if (!String(homepage.evidenceConclusion || '').trim()) issues.push('homepage missing evidence conclusion');
+if (!String(homepage.speculation || '').trim()) issues.push('homepage missing labelled speculation');
+if (!String(homepage.counterpoint || '').trim()) issues.push('homepage missing counterpoint');
+const expectedCritical = (wall.clocks || []).filter(clock => Number(clock.score) > 90).map(clock => `${clock.slug}:${clock.score}`).sort();
+const actualCritical = (homepage.criticalClocks || []).map(clock => `${clock.slug}:${clock.score}`).sort();
+if (JSON.stringify(expectedCritical) !== JSON.stringify(actualCritical)) issues.push('homepage critical clocks do not exactly match canonical clocks over 90');
+for (const item of homepage.latestNews || []) {
+  const age = Math.floor((Date.now() - Date.parse(item.published || 0)) / 86400000);
+  if (!Number.isFinite(age) || age > 7) issues.push(`homepage contains stale news: ${item.title || 'untitled'}`);
 }
 
 const epstein = exists('data/epstein-homepage-alerts.json') ? JSON.parse(read('data/epstein-homepage-alerts.json')) : {};
@@ -102,10 +128,9 @@ if (forumWarnings.length) {
   console.warn('MISSION TIMERS / FORUM CLOUDFLARE WARNING');
   for (const warning of forumWarnings) console.warn(`- ${warning}`);
 }
-
 if (issues.length) {
   console.error('MISSION TIMERS TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`MISSION TIMERS TEST PASSED: ${wall.clocks.length} clocks, ${wall.candidateSignalCount} candidate signals, ${wall.sourceFileCount} source files.`);
+console.log(`MISSION TIMERS TEST PASSED: ${wall.clocks.length} canonical clocks, ${homepage.criticalClocks.length} homepage clocks over 90, ${homepage.latestNews.length} current news items.`);

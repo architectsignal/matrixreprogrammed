@@ -85,4 +85,5 @@ patchTimers();
 patchMigrationNews();
 ensureEpsteinTimeline();
 patchQueryOnlyLinks();
-console.log('Final mission surfaces reconciled: timers, migration summary, Epstein timeline and query-only links.');
+require('./sanitize-timer-source-links.js');
+console.log('Final mission surfaces reconciled: timers, migration summary, Epstein timeline, query-only links and timer source routes.');

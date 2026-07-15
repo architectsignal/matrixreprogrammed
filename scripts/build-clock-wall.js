@@ -1,1 +1,114 @@
-const fs=require('fs');const path=require('path');const root=process.cwd();const fp=p=>path.join(root,p);const j=(p,f)=>{try{return JSON.parse(fs.readFileSync(fp(p),'utf8'))}catch{return f}};const w=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const clean=s=>String(s??'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();const clocks=(j('data/global-risk-clocks.json',{clocks:[]}).clocks||[]);const feeds=[['Daily Brief','daily-command-brief.html'],['Brain','control-brain.html'],['Reports','elite-reports.html'],['Entities','entities.html'],['Evidence','evidence-vault.html'],['Search','search.html'],['Live Intel','live-intel.html'],['Records','daily-missing-records.html'],['Review','contradiction-watch.html'],['Source Vault','source-document-vault.html'],['File Route','epstein-files.html'],['Original Clock Data','data/global-risk-clocks.json']];const wall=clocks.map(c=>({title:c.title,score:Math.min(100,Number(c.score||0)+5),baseScore:Number(c.score||0),window:c.window,route:c.nextRoute||'live-intel.html',summary:clean(c.signals).slice(0,280),feeds}));w('data/clock-wall.json',JSON.stringify({ok:true,updated:new Date().toISOString(),wall},null,2));w('downloads/clock-wall.md',wall.map(c=>'# '+c.title+'\nPulse: '+c.score+'%\nRoute: '+c.route).join('\n\n'));function card(c){return `<article class="clock-card"><div class="clock-meta"><span>${c.score}%</span><span>${e(c.window||'watch')}</span></div><h2>${e(c.title)}</h2><div class="clock-ring" style="--p:${c.score}"><strong>${c.score}%</strong></div><p>${e(c.summary)}</p><h3>Connected systems</h3><ul>${c.feeds.map(f=>`<li><a href="${e(f[1])}">${e(f[0])}</a></li>`).join('')}</ul><a class="btn" href="${e(c.route)}">Open primary route</a></article>`}const compat='<section hidden aria-hidden="true"><h2>GLOBAL RISK CLOCKS.</h2><p>RISK SIGNAL LANE</p><p>Static page, not a live counter</p><p>WWIII Escalation Clock</p><p>AI Breakout Clock</p><p>Surveillance State Clock</p><p>Machine Convergence</p><a href="data/global-risk-clocks.json">data/global-risk-clocks.json</a><a href="live-intel.html">live-intel.html</a><a href="epstein-files.html">epstein-files.html</a><a href="evidence-vault.html">evidence-vault.html</a></section>';const html=`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Risk Timers | Matrix Reprogrammed</title><meta name="description" content="Cinematic clock wall for Matrix Reprogrammed."/><link rel="stylesheet" href="styles.css"/><style>.clock-hero{padding:2rem 1rem}.clock-hero-box{border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:2rem;background:radial-gradient(circle at 30% 0,rgba(255,0,0,.35),transparent 36%),linear-gradient(135deg,rgba(12,0,0,.96),rgba(0,0,0,.92));box-shadow:0 0 80px rgba(255,0,0,.18)}.clock-hero h1{font-size:clamp(2.4rem,6vw,6rem);line-height:.88}.clock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(315px,1fr));gap:1rem}.clock-card{border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:1.1rem;background:linear-gradient(150deg,rgba(12,12,12,.96),rgba(28,0,0,.78));box-shadow:0 0 50px rgba(255,0,0,.12)}.clock-meta{display:flex;justify-content:space-between}.clock-meta span{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.35rem .65rem}.clock-ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;margin:1rem 0;background:conic-gradient(rgba(255,0,0,.95) calc(var(--p)*1%),rgba(255,255,255,.08) 0)}.clock-ring strong{font-size:2rem}.clock-card a{color:#fff}</style></head><body><canvas id="matrix"></canvas><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a><nav class="nav"><a href="daily-command-brief.html">Daily Brief</a><a href="control-brain.html">Brain</a><a href="elite-reports.html">Reports</a><a href="evidence-vault.html">Evidence</a><a href="epstein-files.html">Files</a></nav></header><main><section class="clock-hero wrap"><div class="clock-hero-box"><div class="eyebrow">GLOBAL RISK CLOCKS.</div><h1>RISK TIMERS.</h1><p class="lead">The clock wall now links each timer to the main reports, brain, records, source routes and live updates.</p><div class="cta-row"><a class="btn" href="data/clock-wall.json">Machine Data</a><a class="btn alt" href="data/global-risk-clocks.json">Clock Data</a><a class="btn alt" href="control-brain.html">Brain</a><a class="btn alt" href="elite-reports.html">Reports</a></div></div></section><section class="section wrap split"><div class="terminal">RISK SIGNAL LANE\n&gt; Static page, not a live counter\n&gt; Machine Convergence\n&gt; Connected reports, records and evidence routes</div><aside class="card redline"><h2>Boundary</h2><p>These clocks are reader signal routes. They point to source pages and reports; they are not certainty claims.</p><a class="btn alt" href="epstein-files.html">Open File Route</a></aside></section><section class="section wrap"><h2>Cinematic clock wall</h2><div class="clock-grid">${wall.map(card).join('')}</div></section>${compat}</main><footer class="footer wrap"><p><strong>Risk Timers:</strong> connected command clock wall.</p></footer></div><script src="matrix.js"></script></body></html>`;w('timers.html',html);function hcard(c){return `<article class="card redline"><span class="label">Critical Clock · ${c.score}%</span><h3>${e(c.title)}</h3><p>${e((c.window?c.window+' · ':'')+c.summary)}</p><a class="btn" href="${e(c.route)}">Open Clock</a></article>`}const home=fp('index.html');if(fs.existsSync(home)){let idx=fs.readFileSync(home,'utf8');idx=idx.replace(/<section id="homepage-critical-clocks"[\s\S]*?<\/section>/,'');const hot=wall.filter(c=>Number(c.score)>=90).sort((a,b)=>b.score-a.score);if(hot.length){const sec=`<section id="homepage-critical-clocks" class="section wrap"><div class="eyebrow">Synced Clock Wall</div><h2>Critical Clocks 90%+</h2><p class="lead">These are the same pulse scores used on the main Risk Timers page. Every clock at 90% or above is shown here.</p><div class="grid">${hot.map(hcard).join('')}</div><div class="cta-row"><a class="btn alt" href="timers.html">Open All Risk Timers</a><a class="btn alt" href="data/clock-wall.json">Clock Wall Data</a></div></section>`;idx=idx.includes('<section id="top-moments-now"')?idx.replace('<section id="top-moments-now"',sec+'<section id="top-moments-now"'):idx.replace('</main>',sec+'</main>')}fs.writeFileSync(home,idx)}console.log('Clock wall built and homepage clocks synced: '+wall.length+' clocks.');
+const fs = require('fs');
+const path = require('path');
+
+const root = process.cwd();
+const file = value => path.join(root, value);
+const readJson = (relative, fallback = {}) => {
+  try { return JSON.parse(fs.readFileSync(file(relative), 'utf8')); } catch { return fallback; }
+};
+const write = (relative, value) => {
+  fs.mkdirSync(path.dirname(file(relative)), { recursive: true });
+  fs.writeFileSync(file(relative), value);
+};
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[character]);
+const clean = (value, max = 4000) => String(value ?? '')
+  .replace(/<[^>]*>/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .slice(0, max);
+const list = (items, empty = 'No item recorded in this build.') => {
+  const values = (items || []).map(item => clean(item, 700)).filter(Boolean);
+  return values.length ? values.map(item => `<li>${escapeHtml(item)}</li>`).join('') : `<li>${escapeHtml(empty)}</li>`;
+};
+const linkList = routes => [...new Set((routes || []).filter(Boolean))]
+  .slice(0, 10)
+  .map(route => `<a href="${escapeHtml(route)}">${escapeHtml(String(route).replace(/\.html.*$/, '').replace(/^.*\//, '').replace(/[-_]/g, ' ') || 'source')}</a>`)
+  .join('');
+
+require('./build-mission-timers.js');
+const wall = readJson('data/clock-wall.json', { clocks: [] });
+const clocks = Array.isArray(wall.clocks) ? wall.clocks : [];
+
+function latestChange(clock) {
+  const latestDrop = (clock.latestDrops || [])[0];
+  const latestInput = (clock.evidenceInputs || [])[0];
+  const latest = latestDrop || latestInput;
+  const movement = clean(clock.lastMovement || `Held at ${clock.score}.`, 300);
+  if (!latest?.title) return movement;
+  const date = clean(latest.published || latest.date || '', 80);
+  return `${movement} Latest source-led change${date ? ` (${date.slice(0, 10)})` : ''}: ${clean(latest.title, 280)}`;
+}
+
+function speculation(clock) {
+  const themes = (clock.missionThemes || []).map(item => item.label).filter(Boolean);
+  const lane = themes.length ? themes.join(', ') : 'the systems named in this clock';
+  return `If the documented pattern continues, the likely direction is greater dependence on, integration of, or enforcement through ${lane}. That could increase the practical leverage of institutions controlling identity, money, data, platforms, health, security or access infrastructure. This is a trajectory inference, not proof of a coordinated final plan, one-world government, one-world currency or one-world religion.`;
+}
+
+function timerCard(clock) {
+  const sources = (clock.evidenceInputs || []).slice(0, 6).map(item => {
+    const title = escapeHtml(item.title || 'Source record');
+    const level = item.evidenceLevel ? ` — ${escapeHtml(item.evidenceLevel)}` : '';
+    const route = item.route ? ` · <a href="${escapeHtml(item.route)}">open</a>` : '';
+    return `<li><strong>${title}</strong>${level}${route}</li>`;
+  }).join('') || '<li>No fresh direct source matched this build. The clock remains an editorial watch lane.</li>';
+  const themes = (clock.missionThemes || []).map(item => `<li><strong>${escapeHtml(item.label)}:</strong> ${escapeHtml(item.question || '')}</li>`).join('') || '<li>General system-pressure relevance; no single control theme assigned.</li>';
+  return `<article class="clock-card" id="${escapeHtml(clock.slug || '')}">
+    <div class="clock-summary">
+      <div class="clock-ring" style="--p:${Number(clock.score || 0)}"><strong>${Number(clock.score || 0)}%</strong></div>
+      <div class="clock-heading">
+        <div class="clock-meta"><span>${escapeHtml(clock.scoreBand || clock.status || 'Watch')}</span><span>${escapeHtml(clock.window || 'Review window not set')}</span></div>
+        <h2>${escapeHtml(clock.title)}</h2>
+        <p class="clock-change"><strong>What changed:</strong> ${escapeHtml(latestChange(clock))}</p>
+      </div>
+    </div>
+    <details class="clock-detail">
+      <summary>Open deeper information</summary>
+      <div class="clock-detail-body">
+        <section><h3>What this means</h3><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
+        <section><h3>How it is calculated</h3><p>${escapeHtml(clock.calculationBasis || clock.scoreMethod || '')}</p></section>
+        <section><h3>Control-system relevance</h3><p>${escapeHtml(clock.controlSystemMeaning || '')}</p><ul>${themes}</ul></section>
+        <section class="speculation-panel"><h3>Speculation angle</h3><p><strong>Likely trajectory if the pattern continues:</strong> ${escapeHtml(speculation(clock))}</p></section>
+        <section class="clock-columns"><div><h3>What would raise it</h3><ul>${list(clock.whatRaises)}</ul></div><div><h3>What would lower it</h3><ul>${list(clock.whatLowers)}</ul></div></section>
+        <section><h3>Evidence feeding this timer</h3><ul>${sources}</ul></section>
+        <section><h3>Missing records</h3><ul>${list(clock.missingEvidence)}</ul></section>
+        <section><h3>Useful next actions</h3><ol>${list(clock.usefulNextActions)}</ol></section>
+        <p class="clock-boundary"><strong>Boundary:</strong> ${escapeHtml(clock.boundary || 'This is a pressure index, not event probability or proof of motive.')}</p>
+        <div class="clock-links">${linkList(clock.sourceRoutes)}</div>
+      </div>
+    </details>
+  </article>`;
+}
+
+const cards = clocks.map(timerCard).join('');
+const timerHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Mission Timers | Matrix Reprogrammed</title><meta name="description" content="Clean evidence-fed risk clocks with deeper mission analysis available on demand."><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="fixes.css"><link rel="stylesheet" href="reader-experience.css"><style>
+.timer-hero{padding:2rem 1rem}.timer-hero-box{border:1px solid rgba(216,181,106,.35);border-radius:28px;padding:2rem;background:radial-gradient(circle at 30% 0,rgba(180,0,0,.25),transparent 38%),linear-gradient(135deg,rgba(12,0,0,.96),rgba(0,0,0,.94))}
+.timer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1rem;align-items:start}.clock-card{border:1px solid rgba(216,181,106,.25);border-radius:22px;padding:1.1rem;background:linear-gradient(150deg,rgba(12,12,12,.97),rgba(28,0,0,.72));box-shadow:0 18px 55px rgba(0,0,0,.28)}
+.clock-summary{display:grid;grid-template-columns:112px 1fr;gap:1rem;align-items:center}.clock-ring{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(rgba(210,40,35,.95) calc(var(--p)*1%),rgba(255,255,255,.08) 0)}.clock-ring strong{font-size:1.55rem}.clock-meta{display:flex;gap:.45rem;flex-wrap:wrap}.clock-meta span{border:1px solid rgba(216,181,106,.35);border-radius:999px;padding:.3rem .58rem;font-size:.82rem}.clock-heading h2{margin:.55rem 0}.clock-change{margin:0;color:#eee0bb}
+.clock-detail{margin-top:1rem;border-top:1px solid rgba(216,181,106,.22);padding-top:.85rem}.clock-detail summary{cursor:pointer;font-weight:800;color:#f0d28b;list-style-position:inside}.clock-detail-body{display:grid;gap:.9rem;padding-top:.9rem}.clock-detail-body section,.clock-boundary{padding:.85rem;border:1px solid rgba(216,181,106,.16);border-radius:12px;background:rgba(255,255,255,.025)}.speculation-panel{border-color:rgba(190,55,55,.5)!important;background:rgba(120,0,0,.12)!important}.clock-columns{display:grid!important;grid-template-columns:1fr 1fr;gap:.8rem}.clock-links{display:flex;gap:.45rem;flex-wrap:wrap}.clock-links a{border:1px solid rgba(216,181,106,.25);border-radius:999px;padding:.3rem .55rem}
+@media(max-width:680px){.clock-summary{grid-template-columns:1fr}.clock-ring{margin:auto}.clock-columns{grid-template-columns:1fr!important}}
+</style></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a><nav class="nav"><a href="daily-command-brief.html">Daily Brief</a><a href="control-system-tracker.html">Control Tracker</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav></header><main><section class="timer-hero wrap"><div class="timer-hero-box"><div class="eyebrow">Evidence synthesis · updated ${escapeHtml(wall.updated || '')}</div><h1>MISSION TIMERS.</h1><p class="lead">Each card stays clean: the clock, percentage and what changed. Open the deeper-information tab for evidence, calculation, control-system relevance, speculation, counterpoints, missing records and next actions.</p><p><strong>Important:</strong> these percentages are pressure indexes, not predictions that an event has the same percentage chance of occurring.</p><div class="cta-row"><a class="btn" href="data/clock-wall.json">Open Machine Data</a><a class="btn alt" href="downloads/timer-synthesis.md">Download Synthesis</a><a class="btn alt" href="evidence-vault.html">Verify Evidence</a></div></div></section><section class="section wrap"><h2>Current visual synthesis</h2><div class="timer-grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — source first, claim second, usefulness always.</p></footer></div><script src="matrix.js"></script><script src="analytics.js"></script></body></html>`;
+write('timers.html', timerHtml);
+
+function homepageCard(clock) {
+  return `<article class="critical-clock-mini"><a href="timers.html#${escapeHtml(clock.slug || '')}"><span>${escapeHtml(clock.title)}</span><strong>${Number(clock.score || 0)}%</strong></a></article>`;
+}
+
+const homepagePath = file('index.html');
+if (fs.existsSync(homepagePath)) {
+  let homepage = fs.readFileSync(homepagePath, 'utf8');
+  homepage = homepage.replace(/<section id="homepage-critical-clocks"[\s\S]*?<\/section>/, '');
+  homepage = homepage.replace(/<article class="card redline"><span class="label">Clock · \d+%<\/span>[\s\S]*?<\/article>/, '');
+  const critical = clocks.filter(clock => Number(clock.score) > 90).sort((a, b) => Number(b.score) - Number(a.score));
+  if (critical.length) {
+    const section = `<section id="homepage-critical-clocks" class="section wrap"><div class="eyebrow">Synced Risk Timers</div><h2>Critical Clocks Over 90%</h2><div class="critical-clock-mini-grid">${critical.map(homepageCard).join('')}</div><div class="cta-row"><a class="btn alt" href="timers.html">Open All Risk Timers</a></div><style>.critical-clock-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}.critical-clock-mini{border:1px solid rgba(216,181,106,.28);border-radius:16px;background:rgba(20,4,4,.78)}.critical-clock-mini a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;text-decoration:none}.critical-clock-mini strong{font-size:1.7rem;color:#f0d28b}</style></section>`;
+    homepage = homepage.includes('<section id="top-moments-now"')
+      ? homepage.replace('<section id="top-moments-now"', `${section}<section id="top-moments-now"`)
+      : homepage.replace('</main>', `${section}</main>`);
+  }
+  fs.writeFileSync(homepagePath, homepage);
+}
+
+console.log(`Clean timer wall built: ${clocks.length} clocks; homepage shows ${clocks.filter(clock => Number(clock.score) > 90).length} canonical clocks over 90%.`);

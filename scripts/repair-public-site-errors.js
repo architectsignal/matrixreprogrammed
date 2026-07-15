@@ -24,7 +24,7 @@ function patchHtml(file,renameDuplicateIds){const before=fs.readFileSync(file,'u
   if(html!==before){fs.writeFileSync(file,html);report.filesChanged++;if(file.startsWith(path.join(root,'_site')))report.siteFilesChanged++;report.changes.push(path.relative(root,file).replace(/\\/g,'/'))}}
 function patchData(file){if(!fs.existsSync(file))return;const before=fs.readFileSync(file,'utf8');let text=before;for(const [oldValue,newValue] of replacements)text=text.split(oldValue).join(newValue);for(const item of unavailableAmazon){text=text.replace(new RegExp(`"amazon_us"\\s*:\\s*"${escapeRegex(item.us)}"`,'g'),`"amazon_us":null,"amazon_us_status":"unavailable_404_checked_2026-07-15"`);text=text.replace(new RegExp(`"amazonUs"\\s*:\\s*"${escapeRegex(item.us)}"`,'g'),`"amazonUs":null,"amazonUsStatus":"unavailable_404_checked_2026-07-15"`)}if(text!==before){fs.writeFileSync(file,text);report.filesChanged++;report.dataFilesChanged++;report.changes.push(path.relative(root,file).replace(/\\/g,'/'))}}
 for(const file of walk(root,blockedRoot))patchHtml(file,true);
-for(const file of walk(path.join(root,'_site')))patchHtml(file,false);
+for(const file of walk(path.join(root,'_site')))patchHtml(file,true);
 for(const rel of ['data/kdp_asin_map.json','data/content-routes.json','data/conclusions-engine-batch-001.json','_site/data/kdp_asin_map.json','_site/data/content-routes.json','_site/data/conclusions-engine-batch-001.json'])patchData(path.join(root,rel));
 fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
 fs.writeFileSync(path.join(root,'downloads','public-site-error-repair.json'),JSON.stringify(report,null,2));

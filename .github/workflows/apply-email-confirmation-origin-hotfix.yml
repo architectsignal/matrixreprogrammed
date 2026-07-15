@@ -1,9 +1,12 @@
 name: Apply Email Confirmation Origin Hotfix
 
 on:
-  push:
+  pull_request:
     branches:
-      - fix/email-confirmation-origin-header
+      - main
+    types:
+      - opened
+      - synchronize
     paths:
       - .github/workflows/apply-email-confirmation-origin-hotfix.yml
 
@@ -12,6 +15,7 @@ permissions:
 
 jobs:
   patch:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'fix/email-confirmation-origin-header'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

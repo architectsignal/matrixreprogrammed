@@ -35,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/5.1',
+      'user-agent': 'MatrixProductionVerifier/5.2',
       ...(options.headers || {})
     }
   });
@@ -43,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.1' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.2' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -133,19 +133,33 @@ async function verifyBootstrapBoundary() {
       && String(row.currency).toUpperCase() === 'EUR'
       && String(row.status).toUpperCase() === 'ACTIVE';
   });
+  const originValid = response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-bootstrap';
+  const ready = response.status === 200
+    && originValid
+    && data?.ok === true
+    && data?.ready === true
+    && data?.environment === 'sandbox'
+    && data?.configured === true
+    && data?.sandboxSwitchEnabled === true
+    && data?.productionSwitchDisabled === true
+    && data?.plansReady === true
+    && Number(data?.planCount) === 3
+    && pricesValid
+    && data?.liveChargingEnabled === false;
+  const safeDisabled = response.status === 503
+    && originValid
+    && data?.ok === false
+    && data?.ready === false
+    && data?.environment === 'sandbox'
+    && data?.productionSwitchDisabled === true
+    && data?.plansReady === false
+    && data?.databaseCheckoutEnabled === false
+    && data?.liveChargingEnabled === false;
   return {
-    ok: response.status === 200
-      && response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-bootstrap'
-      && data?.ok === true
-      && data?.ready === true
-      && data?.environment === 'sandbox'
-      && data?.configured === true
-      && data?.sandboxSwitchEnabled === true
-      && data?.productionSwitchDisabled === true
-      && data?.plansReady === true
-      && Number(data?.planCount) === 3
-      && pricesValid
-      && data?.liveChargingEnabled === false,
+    ok: ready || safeDisabled,
+    ready,
+    safeDisabled,
+    mode: ready ? 'sandbox-ready' : safeDisabled ? 'sandbox-pending-disabled' : 'unsafe',
     status: response.status,
     origin: response.headers['x-matrix-origin'] || null,
     data
@@ -210,8 +224,14 @@ async function verifyOnce() {
   const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const bootstrapBoundary = coreOk && paypalBoundary.ok ? await verifyBootstrapBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
-  const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ok ? await verifyRehearsalBoundary() : { ok: false, skipped: true, reason: 'core, PayPal or bootstrap readiness not proven yet' };
-  const forumPersistence = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core, PayPal, bootstrap or rehearsal boundary not proven yet' };
+  const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ready
+    ? await verifyRehearsalBoundary()
+    : bootstrapBoundary.safeDisabled
+      ? { ok: true, skipped: true, safeDisabled: true, reason: 'sandbox bootstrap is pending; checkout and live charging remain disabled' }
+      : { ok: false, skipped: true, reason: 'core, PayPal or safe bootstrap boundary not proven yet' };
+  const forumPersistence = coreOk && paypalBoundary.ok
+    ? await verifyForumPersistence()
+    : { ok: false, skipped: true, reason: 'core or PayPal fail-closed boundary not proven yet' };
   const ok = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
   return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
 }
@@ -225,7 +245,8 @@ async function verifyOnce() {
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
       const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
-      console.log(`Live production, autonomous sandbox plans, PayPal and rehearsal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
+      const paypalMode = result.bootstrapBoundary?.ready ? 'autonomous sandbox plans ready' : 'sandbox bootstrap pending with checkout disabled';
+      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

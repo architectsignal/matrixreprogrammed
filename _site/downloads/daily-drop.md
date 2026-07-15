@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-07-14T05:52:41.897Z
+Updated: 2026-07-15T05:53:18.634Z
 
 ## Status
 
-- Live Intel items: 18
+- Live Intel items: 17
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -16,20 +16,20 @@ Updated: 2026-07-14T05:52:41.897Z
   - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
   - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxNWXlITUpYS3hFcFNCWS1CejhhaW9PYmNGTXNneGNTbmd5d3lQMXkzNGFHOFpmQ3R5MFVXWEZNdXFtTUZRYmtIc2RBdXNsazJHVkdDcFpPWDQ3aTFlU1RoNlhGeHlLY283cmFqRGhBZmR2RWR0SVM0NUJONERvYXRwaTdDS3E?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
@@ -48,6 +48,10 @@ Updated: 2026-07-14T05:52:41.897Z
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - 2026-07-10 — Panama Profile - InSight Crime
   - Source: https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5
   - Evidence: Seven-day public-record lead
@@ -64,7 +68,3 @@ Updated: 2026-07-14T05:52:41.897Z
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.

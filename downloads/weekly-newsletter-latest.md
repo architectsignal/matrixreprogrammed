@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-14T05:52:46.776Z
+Generated: 2026-07-15T05:53:22.423Z
 
 ## Open Routes
 
@@ -16,26 +16,26 @@ Generated: 2026-07-14T05:52:46.776Z
 - Date: 2026-07-09T08:45:00.000Z
 - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
 Why the House’s Epstein investigation isn't going away Politico
-### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-13T15:19:49.000Z
-- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties WTVB
+- Date: 2026-07-13T14:49:05.000Z
+- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-13T11:22:40.000Z
+- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties SRN News
 ### Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-09T09:00:25.000Z
 - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxNWXlITUpYS3hFcFNCWS1CejhhaW9PYmNGTXNneGNTbmd5d3lQMXkzNGFHOFpmQ3R5MFVXWEZNdXFtTUZRYmtIc2RBdXNsazJHVkdDcFpPWDQ3aTFlU1RoNlhGeHlLY283cmFqRGhBZmR2RWR0SVM0NUJONERvYXRwaTdDS3E?oc=5
 Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details CNN
-### DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
+### Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T16:35:40.000Z
-- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit The New Republic
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T20:13:13.000Z
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+- Date: 2026-07-14T18:33:29.000Z
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters
 ### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-10T00:28:19.000Z
@@ -56,6 +56,11 @@ NASA insider hints bigger UFO file release as declassification ramps up Cybernew
 - Date: 2026-07-09T13:30:11.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News
+### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-13T15:19:49.000Z
+- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties WTVB
 ### Panama Profile - InSight Crime
 - Lane: Crime State Overlap
 - Date: 2026-07-10T20:48:39.000Z
@@ -81,16 +86,6 @@ Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thin
 - Date: 2026-07-08T00:00:00.000Z
 - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
 The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
-### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T21:24:42.000Z
-- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News
-### Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-07T18:18:16.000Z
-- Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-Todd Blanche & The Epstein Files: A Timeline Public Citizen
 ### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
 - Lane: AI Governance / EU AI Act / Cybersecurity
 - Date: 2026-07-07T00:00:00.000Z

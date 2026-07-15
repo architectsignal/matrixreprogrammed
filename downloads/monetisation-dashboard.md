@@ -1,6 +1,6 @@
 # Monetisation Dashboard
 
-Updated: 2026-07-14T07:29:38.937Z
+Updated: 2026-07-15T05:53:41.638Z
 
 Logic: Traffic → email capture → free brief/download → membership/report/deck/book/custom research.
 

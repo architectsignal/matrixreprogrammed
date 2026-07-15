@@ -1,17 +1,18 @@
 # Page Quality Audit
 
-Updated: 2026-07-14T05:53:08.403Z
+Updated: 2026-07-15T05:53:42.100Z
 
-Files scanned: 520
+Files scanned: 522
 
 High issues: 0
 
-Review issues: 9
+Review issues: 10
 
 - review: access-denied.html — missing meta description
 - review: admin-campaign-monitor.html — missing meta description
 - review: admin-member-dashboard.html — missing meta description
 - review: admin-payment-dashboard.html — missing meta description
+- review: admin-paypal-rehearsal.html — missing meta description
 - review: billing-dashboard.html — missing meta description
 - review: controlled-opposition-profile.html — missing meta description
 - review: institution-profile.html — missing meta description

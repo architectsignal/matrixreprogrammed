@@ -1,0 +1,220 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-15T05:54:24.251Z",
+  "phase": 7,
+  "name": "PayPal sandbox rehearsal",
+  "checks": [
+    {
+      "name": "migration contains CREATE TABLE IF NOT EXISTS paypal_sandbox_rehearsal_runs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "migration contains CREATE TABLE IF NOT EXISTS paypal_sandbox_rehearsal_evidence",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "migration contains CREATE UNIQUE INDEX IF NOT EXISTS idx_paypal_sandbox_one_active",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "migration contains CREATE VIEW paypal_active_sandbox_rehearsal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "migration contains CREATE VIEW paypal_sandbox_rehearsal_summary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "migration contains SET checkout_enabled=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains cloudflare-worker-paypal-sandbox-rehearsal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains START MATRIX PAYPAL SANDBOX REHEARSAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains COMPLETE MATRIX PAYPAL SANDBOX REHEARSAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains ABORT MATRIX PAYPAL SANDBOX REHEARSAL",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains Math.min(45",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains activeEntitlementObserved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains verifiedWebhookObserved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains paymentCount",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains cancellationObserved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains expireStaleRuns",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains closeOrphanedCheckout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Worker contains liveChargingEnabled: false",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "production boundary imports rehearsal Worker",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "production boundary checks rehearsal route origin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "production boundary gates checkout intent",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "production boundary schedules automatic closure",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "wrangler explicitly selects sandbox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "wrangler enables sandbox environment switch",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "wrangler keeps production disabled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin page contains PAYPAL SANDBOX REHEARSAL.",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin page contains maximum 45-minute window",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin page contains admin-paypal-rehearsal.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin page contains Complete and close checkout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin page contains Abort and close checkout",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin runtime calls /api/paypal/admin/rehearsal/readiness",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin runtime calls /api/paypal/admin/rehearsal/start",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin runtime calls /api/paypal/admin/rehearsal/status",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin runtime calls /api/paypal/admin/rehearsal/complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "admin runtime calls /api/paypal/admin/rehearsal/abort",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical deployment applies Phase 7 migration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical deployment syntax-checks rehearsal Worker",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical deployment runs Phase 7 test",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical deployment verifies checkout disabled after migration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sandbox gate remains closed without active run",
+      "ok": true,
+      "detail": "{\"allowed\":false,\"reason\":\"sandbox-checkout-requires-active-rehearsal\",\"run\":null}"
+    },
+    {
+      "name": "sandbox gate opens only for active timed run",
+      "ok": true,
+      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-15T06:09:24.251Z\"}}"
+    },
+    {
+      "name": "sandbox rehearsal gate does not control live routing",
+      "ok": true,
+      "detail": "{\"allowed\":true,\"reason\":\"not-sandbox\",\"run\":null}"
+    }
+  ],
+  "failures": [],
+  "safetyBoundary": "Sandbox checkout is allowed only during an active timed rehearsal; production remains disabled; expiry and abort close checkout."
+}

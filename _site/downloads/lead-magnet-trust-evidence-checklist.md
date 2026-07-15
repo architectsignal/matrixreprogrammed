@@ -25,8 +25,13 @@ The reader can navigate controversial material without confusing source, theory,
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -35,13 +40,8 @@ The reader can navigate controversial material without confusing source, theory,
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.

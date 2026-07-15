@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-14T06:38:11.170Z
+Generated: 2026-07-15T05:53:21.551Z
 
 ## Official Boundary
 
@@ -49,15 +49,15 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-- Type: sighting-claim
+### Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+- Type: related-claim-traffic
 - Status: unverified-claim
 - Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island Yahoo
+Warren Buffett cuts off donations to Gates Foundation following Epstein revelations Reuters
 
 ### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
 - Type: related-claim-traffic
@@ -88,13 +88,3 @@ Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private i
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' AOL.com
-
-### NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island Fox News

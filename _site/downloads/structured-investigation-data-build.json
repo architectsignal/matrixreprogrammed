@@ -1,41 +1,41 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-14T05:53:30.021Z",
+  "generatedAt": "2026-07-15T05:54:03.388Z",
   "schemaVersion": "1.1.0",
   "totals": {
-    "entities": 2051,
-    "relationships": 2652,
+    "entities": 2131,
+    "relationships": 2792,
     "findings": 818,
-    "documents": 24,
+    "documents": 34,
     "missingRecords": 2
   },
   "countsByType": {
-    "Person": 8,
-    "Organization": 27,
-    "Company": 63,
-    "GovernmentAgency": 213,
+    "Person": 11,
+    "Organization": 33,
+    "Company": 72,
+    "GovernmentAgency": 250,
     "Contractor": 31,
     "Foundation": 16,
-    "Trust": 2,
+    "Trust": 5,
     "Contract": 201,
     "Payment": 14,
     "Sanction": 40,
     "CourtCase": 318,
     "Investigation": 198,
-    "Document": 24,
+    "Document": 34,
     "Finding": 818,
     "MissingRecord": 2,
     "Source": 20,
-    "LegalAuthority": 56,
+    "LegalAuthority": 68,
     "Decision": 0,
     "PublicGroup": 0
   },
   "countsByRelationship": {
     "published": 818,
     "operatedBy": 20,
-    "retrievedFrom": 24,
-    "supports": 24,
-    "mentions": 1007,
+    "retrievedFrom": 34,
+    "supports": 34,
+    "mentions": 1127,
     "subjectOf": 757,
     "affiliatedWith": 0,
     "owns": 0,
@@ -65,5 +65,5 @@
     "relationship-registry.html"
   ],
   "software": "Node.js with FollowTheMoney-compatible concepts; no paid service or external database required.",
-  "refinedAt": "2026-07-14T05:53:30.444Z"
+  "refinedAt": "2026-07-15T05:54:03.815Z"
 }

@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-13T06:39:10.483Z",
+  "generatedAt": "2026-07-14T05:53:50.711Z",
   "hardIssues": [],
   "softIssues": [],
-  "workerStack": "src/worker-production.js -> src/worker-forum-persistence.js -> src/worker.js",
+  "workerStack": "strict production boundary -> email/member/PayPal workers -> D1 forum -> static application",
   "forumStorage": "Cloudflare D1 authoritative; KV compatibility and recovery only.",
-  "paymentStatus": "Deferred; no public checkout or subscription creation UI.",
+  "paymentStatus": "PayPal sandbox-ready behind runtime, plan and D1 activation gates; checkout disabled by default.",
   "productionHealthOwner": "scripts/build-production-health.js via final-production-reconcile.js",
-  "boundary": "Site harmony blocks missing search/assets, broken strict Worker routing, non-D1 forum persistence, malformed output, payment UI activation or legacy health ownership."
+  "boundary": "Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, unverified PayPal responses or unguarded checkout activation."
 }

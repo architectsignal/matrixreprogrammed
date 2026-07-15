@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-14T05:53:08.176Z
+Updated: 2026-07-15T05:53:41.873Z
 
-Inputs: 2186
+Inputs: 2203
 
-Routed sources: 2186
+Routed sources: 2203
 
 Conclusions: 14
 
-Missing-record queue: 2186
+Missing-record queue: 2203
 
 ## Conclusions
 ### Institution dossier
@@ -121,6 +121,17 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### People dossier
+Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Correction / counter-evidence
 Conclusion: 5 source route(s) currently point to Correction / counter-evidence. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -147,17 +158,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### People dossier
-Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-14T07:29:48.930Z",
-    "filesScanned": 4125,
-    "highIssues": 2339,
-    "reviewIssues": 7,
-    "intakeAreas": 2199,
+    "updated": "2026-07-15T05:53:51.831Z",
+    "filesScanned": 4129,
+    "highIssues": 2338,
+    "reviewIssues": 8,
+    "intakeAreas": 2202,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -14298,6 +14298,13 @@
       "status": "ok"
     },
     {
+      "file": "gateway-process.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "geographic-power-atlas.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14789,6 +14796,13 @@
     },
     {
       "file": "investigation-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "investigation-source-ledger.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -16658,6 +16672,13 @@
     },
     {
       "file": "search.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "sec-filing-feed.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

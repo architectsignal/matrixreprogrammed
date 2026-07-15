@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-14T05:53:06.755Z",
+  "updated": "2026-07-15T05:53:40.504Z",
   "title": "Deep Intel Feed Matrix",
   "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
   "lanes": [
@@ -529,7 +529,16 @@
       ]
     },
     {
-      "title": "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB",
+      "title": "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
+      ]
+    },
+    {
+      "title": "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -547,16 +556,7 @@
       ]
     },
     {
-      "title": "DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo",
+      "title": "Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters",
       "route": "live-intel.html",
       "source": "epstein-files",
       "score": 72,
@@ -598,6 +598,15 @@
       "score": 72,
       "tags": [
         "control-system"
+      ]
+    },
+    {
+      "title": "Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB",
+      "route": "live-intel.html",
+      "source": "epstein-files",
+      "score": 72,
+      "tags": [
+        "epstein-files"
       ]
     },
     {
@@ -643,24 +652,6 @@
       "score": 72,
       "tags": [
         "control-system"
-      ]
-    },
-    {
-      "title": "NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Todd Blanche & The Epstein Files: A Timeline - Public Citizen",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
       ]
     },
     {
@@ -729,7 +720,7 @@
   ],
   "brainInjection": {
     "layer": "evidence-and-records",
-    "nodeCount": 65
+    "nodeCount": 64
   },
   "missionPriorityIndex": true
 }

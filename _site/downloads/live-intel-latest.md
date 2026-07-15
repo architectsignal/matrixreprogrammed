@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-14T05:52:18.997Z
+Updated: 2026-07-15T05:52:53.471Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -28,12 +28,20 @@ Updated: 2026-07-14T05:52:18.997Z
   - Longform title: Epstein Files, Timeline And Court Records — Why the House’s Epstein investigation isn't going away - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
-  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
   - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
@@ -44,20 +52,12 @@ Updated: 2026-07-14T05:52:18.997Z
   - Longform title: Epstein Files, Timeline And Court Records — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key de
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
+- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Short title: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit -
-  - Longform title: Epstein Files, Timeline And Court Records — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Short title: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Longform title: Epstein Files, Timeline And Court Records — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
+  - Video hook: New public-record signal: Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Short title: Warren Buffett cuts off donations to Gates Foundation following Epstein
+  - Longform title: Epstein Files, Timeline And Court Records — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
@@ -90,6 +90,14 @@ Updated: 2026-07-14T05:52:18.997Z
   - Video hook: New public-record signal: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Short title: NSA revives 'Tailored Access Operations' name for elite hacking unit - T
   - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-10 — Panama Profile - InSight Crime
@@ -131,22 +139,6 @@ Updated: 2026-07-14T05:52:18.997Z
   - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
   - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
   - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Short title: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's
-  - Longform title: Epstein Files, Timeline And Court Records — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox Ne
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Short title: Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Longform title: Epstein Files, Timeline And Court Records — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
   - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai

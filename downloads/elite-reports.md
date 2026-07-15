@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-14T07:29:25.766Z
+Generated: 2026-07-15T05:53:39.745Z
 
 ## Daily Revelation Report
 
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
 
 Source: daily-command-brief.html
 

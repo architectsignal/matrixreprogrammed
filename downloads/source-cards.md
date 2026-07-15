@@ -12,11 +12,21 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
 
-## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
 
 - Date: 2026-07-13
 - Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
+- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
+
+- Date: 2026-07-13
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
 - Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
@@ -32,21 +42,11 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
 
-## DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
+## Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
 
-- Date: 2026-07-07
+- Date: 2026-07-14
 - Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-
-- Date: 2026-07-07
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
 - Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
@@ -91,6 +91,16 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 - Next: atlas-index.html
+
+## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+
+- Date: 2026-07-13
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
+- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
 
 ## Panama Profile - InSight Crime
 
@@ -141,26 +151,6 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A readiness target is not a final launch. Track legislation, pilots, wallet design, holding limits, privacy design, bank costs, merchant rules, and adoption requirements separately.
 - Next: control-system-tracker.html#programmable-money
-
-## NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-
-- Date: 2026-07-07
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-
-- Date: 2026-07-07
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-- Record supports: This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
 
 ## EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
 

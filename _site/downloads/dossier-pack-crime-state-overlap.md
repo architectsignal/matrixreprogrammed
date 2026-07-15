@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-14T05:52:18.997Z
+Updated: 2026-07-15T05:52:53.471Z
 Items: 12
 
 - 2026-06-26 — Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal
@@ -96,20 +96,20 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-07 — NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News
-  - Source: https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-07 — Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-27 — Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1
   - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
@@ -138,9 +138,9 @@ Items: 12
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein sighting and alive claims: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION — https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
-- Google News / Epstein sighting and alive claims: NEVER-BEFORE-SEEN footage reveals the innerworkings of Jeffrey Epstein's private island - Fox News — https://news.google.com/rss/articles/CBMiVkFVX3lxTE92eVdpdDFrYTZGR3ZIc2hlWFlTbjEzLUJqSlF4RllGSE42MWUza2JkMERtajFiLWl5LWJoLUllcWV2OUZuN01Meld6WnpaaEhjbkVYVnRR?oc=5
-- Google News / Epstein sighting and alive claims: Never-Before-Seen Video From Jeffrey Epstein's Pedophile Island - Yahoo — https://news.google.com/rss/articles/CBMikAFBVV95cUxONnJBVTJHa29uNzhoRFE5RDVDdmtuRS04aUhuSFI1YlBQMk9Vbm43M2QxLWdmTzJjUXgtWncxQUx1UG9uZUViQ1FpQTBVaDI5N3RiSlNrWWtGc0dscm10Ti1YcG9ZaWdZd0pfTEJMMy1BXzRwcVpqUFBtcFhmLVVuSHVWWjZweUhjU3FxM0pnVlk?oc=5
 - Google News / declassified files: Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1 — https://news.google.com/rss/articles/CBMimAFBVV95cUxQTVZZVUtvdlNUalpxUU1HZTN2Q2JHeHdlb0J1SC1qR0VZdVRhNkNGcWRzalVpZ1E3aTh5QmRDQkZmZDR0eWQ5b0JfVGRraEtJQ2V1LUpDZTJCbEhOYlJRak8wLVFZWU5zU3BVT0VvWnJsRE9kS0VIOGlGUGRMc1NQcEl5eTljek5uRGhaWU91elF5VV82SjZtTg?oc=5
+- Google News / control structure: Kenya considers linking national ID database to CCTV facial recognition network - Biometric Update — https://news.google.com/rss/articles/CBMiugFBVV95cUxOU0NmTXhkSk0waTdNekFWcXk2cV9uUWtNRVJ1MGpiUGw1TmFYMUdfaFhEbC1ucTJMdm9BckZ6dHQ4dXBvM1RMYVJvOW9YWGpRaHZWRHQwRFRLRmtDX2dhQi1QWXlSMndiRF9aUmhNeVFnazk5UXJLWDZVRWN1ZzRnb1lqX1VWOVhVNlB3b2tXYTVCN3NzMl94ZVVyc1A5U2hkRGtVNHFzOHdLUkFQSnZJXzhtakh0Z2FicGc?oc=5
+- Google News / Epstein timeline and files: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News — https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
 
 ## Book Routes
 

@@ -1,10 +1,10 @@
 # Site Function Harmony Report
 
-Generated: 2026-07-13T06:39:10.483Z
+Generated: 2026-07-14T05:53:50.711Z
 Result: PASS
-Worker stack: src/worker-production.js -> src/worker-forum-persistence.js -> src/worker.js
+Worker stack: strict production boundary -> email/member/PayPal workers -> D1 forum -> static application
 Forum: Cloudflare D1 authoritative; KV compatibility and recovery only.
-Payments: Deferred; no public checkout or subscription creation UI.
+Payments: PayPal sandbox-ready behind runtime, plan and D1 activation gates; checkout disabled by default.
 
 ## Hard Issues
 - None

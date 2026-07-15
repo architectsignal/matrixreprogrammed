@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-14T07:29:48.930Z
+Updated: 2026-07-15T05:53:51.831Z
 
-Files scanned: 4125
+Files scanned: 4129
 
-High issues: 2339
+High issues: 2338
 
-Review issues: 7
+Review issues: 8
 
-Intake areas: 2199
+Intake areas: 2202
 
 Weak intake areas: 0
 

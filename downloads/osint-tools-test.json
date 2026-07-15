@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-14T05:53:43.035Z",
+  "generatedAt": "2026-07-15T05:54:16.448Z",
   "checks": [
     {
       "name": "required file research-tools.html",
@@ -13,12 +13,22 @@
       "detail": "missing"
     },
     {
+      "name": "required file research-tools-ui-v3.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
       "name": "required file migrations/0002_osint_tools.sql",
       "ok": true,
       "detail": "missing"
     },
     {
       "name": "required file tools/osint_runner.py",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file tools/osint_runner_v3.py",
       "ok": true,
       "detail": "missing"
     },
@@ -34,6 +44,11 @@
     },
     {
       "name": "required file scripts/patch-osint-tools-system.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
+      "name": "required file scripts/patch-osint-self-report.js",
       "ok": true,
       "detail": "missing"
     },
@@ -78,6 +93,11 @@
       "detail": ""
     },
     {
+      "name": "cache-busted report interface loaded",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "client uses member-authenticated APIs",
       "ok": true,
       "detail": ""
@@ -94,6 +114,61 @@
     },
     {
       "name": "client clears submitted form",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "human-readable report renderer present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "report shows risk and actions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sanitised technical appendix retained",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitive category knowledge displayed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "raw secret values are not requested by client",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 converts raw JSON into reports",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 prioritises useful findings",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 collapses provider catalogues",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 displays verified-self masked clues",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 avoids persistent target storage",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 never asks for raw values",
       "ok": true,
       "detail": ""
     },
@@ -163,7 +238,27 @@
       "detail": ""
     },
     {
+      "name": "verified-self ownership uses verified member mailbox hash",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "recognition clues hidden outside verified-self mode",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "verified-self views are audited",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "name": "runner supports all three tools",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "runner v2 marker present",
       "ok": true,
       "detail": ""
     },
@@ -194,6 +289,66 @@
     },
     {
       "name": "private polling API used",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "API parity response lanes present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "timing metadata present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sensitive category classifier present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "infostealer knowledge retained without rows",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deterministic risk summary present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "target email omitted from result schema",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 runner imports existing private runner contract",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 masks recognisable identifiers",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 reports source date and counts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 classifies authentication material without returning it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 uses hidden h8mail output",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "v3 never prints target",
       "ok": true,
       "detail": ""
     },

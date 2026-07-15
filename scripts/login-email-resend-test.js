@@ -51,12 +51,13 @@ function between(text, startMarker, endMarker) {
 
   check('login request records delivery diagnostics', worker.includes("'auth.magic_link.delivery'") && worker.includes('payloadLengths:delivery.payloadLengths'));
   check('shared sender rejects empty payloads', lifecycle.includes('invalid-or-empty-transactional-email-payload'));
+  check('shared sender validator declared exactly once', (lifecycle.match(/function emailPayloadCheck\(/g) || []).length === 1);
   check('invalid outbox JSON fails closed', lifecycle.includes("payloadError='invalid-outbox-payload-json'") && lifecycle.includes('delivery.permanent||attempts>=5'));
 
   const report = {
     ok: issues.length === 0,
     generatedAt: new Date().toISOString(),
-    purpose: 'Prove repeated passwordless login requests always produce complete subject, HTML and text payloads and that malformed queued emails never reach Brevo.',
+    purpose: 'Prove repeated passwordless login requests always produce complete subject, HTML and text payloads, repeated builds remain idempotent, and malformed queued emails never reach Brevo.',
     checks,
     issues,
     payloadLengths: sentPayloads.map(payload => ({ subject: payload.subject.length, html: payload.htmlContent.length, text: payload.textContent.length }))
@@ -68,7 +69,7 @@ function between(text, startMarker, endMarker) {
     issues.forEach(issue => console.error(`- ${issue}`));
     process.exit(1);
   }
-  console.log('LOGIN EMAIL RESEND TEST PASSED: three consecutive complete login emails; malformed payloads fail closed.');
+  console.log('LOGIN EMAIL RESEND TEST PASSED: three consecutive complete login emails; repeated builds remain idempotent; malformed payloads fail closed.');
 })().catch(error => {
   console.error('LOGIN EMAIL RESEND TEST FAILED');
   console.error(error && error.stack || error);

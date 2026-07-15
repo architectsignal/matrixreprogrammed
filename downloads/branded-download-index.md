@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-15T05:53:19.035Z
+Updated: 2026-07-15T06:30:30.423Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -163,6 +163,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf (custom PDF preserved)
 - Phase6 Data Integration: downloads/phase6-data-integration.pdf (custom PDF preserved)
 - Phase6 Worker Patch: downloads/phase6-worker-patch.pdf (custom PDF preserved)
+- PayPal sandbox rehearsal: downloads/phase7-paypal-sandbox-rehearsal-test.pdf
 - Phase8 Evidence Archive Build: downloads/phase8-evidence-archive-build.pdf (custom PDF preserved)
 - Phase8 Evidence Archive Test: downloads/phase8-evidence-archive-test.pdf (custom PDF preserved)
 - Phase8 Wiring: downloads/phase8-wiring.pdf (custom PDF preserved)

@@ -3,14 +3,14 @@
 Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.
 
 Source rules: 8
-Scanned pages: 2750
-Flagged pages: 2204
-High priority pages: 750
-Medium priority pages: 1448
-Pages with missing rules: 218
-Auto-update eligible figures: 2
+Scanned pages: 2752
+Flagged pages: 2206
+High priority pages: 751
+Medium priority pages: 1450
+Pages with missing rules: 219
+Auto-update eligible figures: 3
 Manual-review figures: 50
-Missing-rule figures: 562
+Missing-rule figures: 579
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -40,9 +40,9 @@ Missing-rule figures: 562
 - one-world-religion-theory.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-atlas.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- _site/admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - admin-paypal-rehearsal.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 - black-file-theory.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
-- membership.html: 3 figure/stat markers; 3 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -72,9 +72,9 @@ Missing-rule figures: 562
 - one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-atlas.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
+- _site/admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 - admin-paypal-rehearsal.html: 3 figure(s) need source rules.
 - black-file-theory.html: 3 figure(s) need source rules.
-- membership.html: 3 figure(s) need source rules.
 - one-world-currency-theory.html: 3 figure(s) need source rules.
 - _site/news.html: 2 figure(s) need source rules.
 - news.html: 2 figure(s) need source rules.

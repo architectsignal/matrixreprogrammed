@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-15T05:54:24.251Z",
+  "generatedAt": "2026-07-15T06:31:27.727Z",
   "phase": 7,
   "name": "PayPal sandbox rehearsal",
   "checks": [
@@ -207,7 +207,7 @@
     {
       "name": "sandbox gate opens only for active timed run",
       "ok": true,
-      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-15T06:09:24.251Z\"}}"
+      "detail": "{\"allowed\":true,\"reason\":\"active-timed-sandbox-rehearsal\",\"run\":{\"id\":\"paypal-sandbox-rehearsal-test\",\"status\":\"active\",\"expires_at\":\"2026-07-15T06:46:27.726Z\"}}"
     },
     {
       "name": "sandbox rehearsal gate does not control live routing",

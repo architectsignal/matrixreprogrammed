@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-15T05:53:22.423Z
+Generated: 2026-07-15T06:30:33.718Z
 
 ## Open Routes
 
@@ -56,43 +56,13 @@ NASA insider hints bigger UFO file release as declassification ramps up Cybernew
 - Date: 2026-07-09T13:30:11.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News
-### Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - WTVB
+### Todd Blanche & The Epstein Files: A Timeline - Public Citizen
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-13T15:19:49.000Z
-- Source: https://news.google.com/rss/articles/CBMipAFBVV95cUxNRm4xRUwyZi1NSDRpQmJySG1qeTgxbXJkbHJlM3RRaXVDbFh3aTFBZmlEVXRjWmdNX0hsYkV6SnRPTFJkSWRoRThiVWJpX0lIal9UeDBBNGNHdFY3S1VPbC1fajNBaFlHSTM0bkJNYkpVbzAteTBRWVdlaDk2UEpRVzFjRjdpdDlmRkdPVjc2YWtoRmJPQ2xycnBWaF91eHpOZVBiaw?oc=5
-Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties WTVB
-### Panama Profile - InSight Crime
-- Lane: Crime State Overlap
-- Date: 2026-07-10T20:48:39.000Z
-- Source: https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5
-Panama Profile InSight Crime
-### New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry - The New York Times
+- Date: 2026-07-07T18:18:16.000Z
+- Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
+Todd Blanche & The Epstein Files: A Timeline Public Citizen
+### DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-09T16:46:28.000Z
-- Source: https://news.google.com/rss/articles/CBMihwFBVV95cUxNeWRCUU8tQklvWnEzUEFPa29yRUhEU2FyQnVKNXpSby0zNWdtRTlaRkdfWmg5OXA1Y0dWakM3TUY4LWt4VEZkREpKWGxLUU1LR2F4SWJIRzFBd19WS1BtdXhidGxZNHBnejMxTU5BbkZ1N1JwUmswcjlXdnR2VjhTTzZGRDRxRUE?oc=5
-New Mexico Accuses D.O.J. of Obstructing Epstein Ranch Inquiry The New York Times
-### Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-09T06:33:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5
-Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION
-### Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' - AOL.com
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-08T21:02:11.000Z
-- Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE1zZHRNOUhhdmxuT1Vockt6M1VWa0dGQmxXQlh6UzhBNXp6THZZUUh4WlByTUtCaDJyblU1MlZNTGgyT0dJbGNKRWVxcWlsckp5eC1wdjRLRXVheGg5Y09PV3g2MVJvaG5xejBQS0pNZzBwQlBHQ2VZ?oc=5
-Jeffrey Epstein Look-alike Breaks Silence After Viral Sighting: 'This Whole Thing Is Phenomenal' AOL.com
-### ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-- Lane: CBDC / Digital Euro / Sovereign Payment Rails
-- Date: 2026-07-08T00:00:00.000Z
-- Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.
-### EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-- Lane: AI Governance / EU AI Act / Cybersecurity
-- Date: 2026-07-07T00:00:00.000Z
-- Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.
-### WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-- Lane: WHO Pandemic Agreement / PABS / Global Health Governance
-- Date: 2026-07-06T00:00:00.000Z
-- Source: https://www.who.int/health-topics/who-pandemic-agreement
-WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.
+- Date: 2026-07-07T16:35:40.000Z
+- Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
+DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit The New Republic

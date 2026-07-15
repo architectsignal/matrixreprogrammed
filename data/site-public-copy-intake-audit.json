@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-15T05:53:51.831Z",
-    "filesScanned": 4129,
-    "highIssues": 2338,
+    "updated": "2026-07-15T06:31:01.400Z",
+    "filesScanned": 4136,
+    "highIssues": 2330,
     "reviewIssues": 8,
-    "intakeAreas": 2202,
+    "intakeAreas": 2204,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -2881,12 +2881,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/downloads/daily-drop.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/downloads/dark-speculation-deep-dossiers.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -3010,6 +3004,12 @@
       "file": "_site/downloads/epstein-email-signals.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/epstein-email-signals.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
   "intake": [
@@ -3050,6 +3050,13 @@
     },
     {
       "file": "_site/admin-payment-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/admin-paypal-rehearsal.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6592,6 +6599,13 @@
     },
     {
       "file": "_site/funnel-power-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/gateway-process.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

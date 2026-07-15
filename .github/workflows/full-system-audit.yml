@@ -61,9 +61,29 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Refresh investigation, Live Intel and conclusions before audit
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        run: |
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
 
       - name: Run full system audit
         run: node scripts/full-system-audit.js
@@ -127,6 +147,8 @@ jobs:
             downloads/critical-route-drift-report.md
             downloads/site-function-harmony-report.json
             downloads/site-function-harmony-report.md
+            downloads/speculative-intelligence-synthesis.md
+            data/speculative-intelligence-synthesis.json
             data/card-dossier-intelligence-pack-audit.json
             downloads/card-dossier-intelligence-pack-audit.md
             site-quality-report.html

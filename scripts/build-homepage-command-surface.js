@@ -3,123 +3,48 @@ const path = require('path');
 
 const root = process.cwd();
 const file = value => path.join(root, value);
-const readJson = (relative, fallback = {}) => {
-  try { return JSON.parse(fs.readFileSync(file(relative), 'utf8')); } catch { return fallback; }
-};
-const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
-  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-})[character]);
-const clean = (value, max = 4000) => String(value ?? '')
-  .replace(/<[^>]*>/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim()
-  .slice(0, max);
-const asDate = value => {
-  const stamp = Date.parse(value || '');
-  return Number.isFinite(stamp) ? stamp : 0;
-};
+const readJson = (relative, fallback = {}) => { try { return JSON.parse(fs.readFileSync(file(relative), 'utf8')); } catch { return fallback; } };
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' })[character]);
+const clean = (value, max = 4000) => String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+const asDate = value => { const stamp=Date.parse(value||''); return Number.isFinite(stamp)?stamp:0; };
 const ageDays = value => asDate(value) ? Math.floor((Date.now() - asDate(value)) / 86400000) : 9999;
-const route = value => clean(value, 800) || 'daily-command-brief.html';
+const route = value => clean(value,800) || 'daily-command-brief.html';
 
-// Restore the canonical timer page and homepage clock scores after all legacy generators.
 require('./build-clock-wall.js');
+const synthesis = require('./build-speculative-intelligence-synthesis.js');
+const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');
+const wall=readJson('data/clock-wall.json',{clocks:[]});
+const daily=readJson('data/daily-power-conclusions.json',{conclusions:[]});
+const master=readJson('data/daily-brief-master.json',{});
+const engine=readJson('data/conclusion-engine.json',{conclusions:[]});
+const drops=readJson('data/latest-public-drops.json',{drops:[]});
+const sevenDay=readJson('downloads/seven-day-intel.json',{feedResults:[]});
+const clocks=Array.isArray(wall.clocks)?wall.clocks:[];
+const critical=clocks.filter(clock => Number(clock.score) > 90).sort((a,b)=>Number(b.score)-Number(a.score));
+const conclusionRows=Array.isArray(daily.conclusions)?daily.conclusions:[];
+const strongestRoute=conclusionRows.find(item=>/strongest route/i.test(item.title||''))||conclusionRows[0]||null;
+const highestClock=critical[0]||clocks.slice().sort((a,b)=>Number(b.score)-Number(a.score))[0]||null;
+const engineConclusion=(engine.conclusions||[]).find(item=>/strongest public signal|mission conclusion/i.test(item.title||''))||null;
+const evidenceConclusion=clean(synthesis?.evidenceLayer?.conclusion || [master.mainConclusion?.text,strongestRoute?.text,highestClock?`${highestClock.title} is the highest current canonical pressure index at ${highestClock.score}%.`:'',engineConclusion?.conclusion].filter(Boolean).join(' '),1800)||'The site has not yet produced a source-linked mission conclusion for this build.';
+const speculation=clean(synthesis?.speculativeLayer?.leadingTrajectory || 'If the current documented pattern continues, the likely direction is deeper interoperability between identity, money, data, platforms, health and security systems. This is a labelled trajectory inference, not proof of a coordinated one-world government, currency, religion or single secret controller.',1800);
+const counterpoint=clean(synthesis?.uncertaintyLayer?.counterpoint || 'The conclusion weakens if systems remain optional, decentralised, interoperable, transparent, subject to democratic control and effective appeal.',900);
+const confidence=Number(synthesis?.inferenceLayer?.confidenceScore||0);
+const confidenceBand=clean(synthesis?.inferenceLayer?.confidenceBand||'not yet calculated',120);
+const actors=(synthesis?.inferenceLayer?.actorMap||[]).slice(0,8);
+const scenarios=(synthesis?.speculativeLayer?.scenarios||[]).slice(0,4);
+const actorCards=actors.map(actor=>`<li><strong>${escapeHtml(actor.name)}</strong> — ${escapeHtml(actor.roleGroup)}</li>`).join('')||'<li>No actor map has been generated for this build.</li>';
+const scenarioLines=scenarios.map(s=>`<li><strong>${escapeHtml(s.title)}:</strong> ${escapeHtml(s.plausibilityBand)}</li>`).join('')||'<li>Scenario matrix pending.</li>';
 
-const indexPath = file('index.html');
-if (!fs.existsSync(indexPath)) throw new Error('index.html is required');
-
-const wall = readJson('data/clock-wall.json', { clocks: [] });
-const daily = readJson('data/daily-power-conclusions.json', { conclusions: [] });
-const master = readJson('data/daily-brief-master.json', {});
-const engine = readJson('data/conclusion-engine.json', { conclusions: [] });
-const drops = readJson('data/latest-public-drops.json', { drops: [] });
-const sevenDay = readJson('downloads/seven-day-intel.json', { feedResults: [] });
-
-const clocks = Array.isArray(wall.clocks) ? wall.clocks : [];
-const critical = clocks
-  .filter(clock => Number(clock.score) > 90)
-  .sort((a, b) => Number(b.score) - Number(a.score));
-
-const conclusionRows = Array.isArray(daily.conclusions) ? daily.conclusions : [];
-const convergence = conclusionRows.filter(item => /one-world|elite-control|convergence/i.test(`${item.title} ${item.text}`));
-const strongestRoute = conclusionRows.find(item => /strongest route/i.test(item.title || '')) || conclusionRows[0] || null;
-const highestClock = critical[0] || clocks.slice().sort((a, b) => Number(b.score) - Number(a.score))[0] || null;
-const mainConclusion = master.mainConclusion || null;
-const engineConclusion = (engine.conclusions || []).find(item => /strongest public signal|mission conclusion/i.test(item.title || '')) || null;
-
-const evidenceConclusion = clean([
-  mainConclusion?.text,
-  strongestRoute?.text,
-  highestClock ? `${highestClock.title} is the highest current canonical pressure index at ${highestClock.score}%.` : '',
-  engineConclusion?.conclusion
-].filter(Boolean).join(' '), 1800) || 'The site has not yet produced a source-linked mission conclusion for this build.';
-
-const convergenceNames = critical.map(clock => clock.title.replace(/ Clock$/i, '')).slice(0, 4);
-const speculation = clean(`If the current documented pattern continues, the likely direction is deeper interoperability between ${convergenceNames.length ? convergenceNames.join(', ') : 'identity, money, data, platforms, health and security systems'}. The most important risk is not necessarily one openly declared world authority, but a de facto governance layer created when international standards, public-private infrastructure and access systems become difficult to avoid or exit. This could move practical control upward toward institutions and vendors that operate the identity, payment, AI, health, security and information rails. This is a labelled trajectory inference. It does not prove a coordinated one-world government, one-world currency, one-world religion or single secret controller.`, 1800);
-
-const counterpoint = 'The conclusion weakens if systems remain optional, decentralised, interoperable, transparent, subject to democratic control and effective appeal, or if primary records show that the apparent connections are merely parallel policy development rather than integrated control infrastructure.';
-
-const newsCandidates = [];
-for (const item of drops.drops || []) newsCandidates.push({
-  title: item.title,
-  published: item.published,
-  sourceLabel: item.sourceLabel,
-  summary: item.summary || item.whyItMatters,
-  url: item.url,
-  route: item.evidenceRoute || item.nextRoute || 'live-intel.html',
-  evidence: item.evidenceLevel || 'Public-source lead',
-  boundary: item.evidenceBoundary || drops.boundary
-});
-for (const item of sevenDay.feedResults || []) newsCandidates.push({
-  title: item.title,
-  published: item.published,
-  sourceLabel: item.sourceLabel,
-  summary: item.summary || '',
-  url: item.url,
-  route: 'live-intel.html',
-  evidence: 'Current reporting lead',
-  boundary: 'Reporting is a discovery lead until checked against primary or official records.'
-});
-const seen = new Set();
-const latestNews = newsCandidates
-  .filter(item => item.title && item.published && ageDays(item.published) <= 7)
-  .sort((a, b) => asDate(b.published) - asDate(a.published))
-  .filter(item => {
-    const key = clean(item.title, 300).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-    if (!key || seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  })
-  .slice(0, 6);
-
-const clockCards = critical.map(clock => `<article class="home-clock"><a href="timers.html#${escapeHtml(clock.slug || '')}"><span>${escapeHtml(clock.title)}</span><strong>${Number(clock.score)}%</strong></a></article>`).join('') || '<p>No canonical timer is currently above 90%.</p>';
-const newsCards = latestNews.map(item => `<article class="home-news-card"><div class="home-news-meta"><span>${escapeHtml(String(item.published).slice(0, 10))}</span><span>${escapeHtml(item.sourceLabel || item.evidence)}</span></div><h3>${escapeHtml(item.title)}</h3>${item.summary ? `<p>${escapeHtml(clean(item.summary, 360))}</p>` : ''}<p class="home-boundary"><strong>Boundary:</strong> ${escapeHtml(clean(item.boundary, 320))}</p><div class="cta-row"><a class="btn" href="${escapeHtml(route(item.route))}">Open Analysis</a>${item.url ? `<a class="btn alt" href="${escapeHtml(item.url)}" rel="noopener noreferrer">Source</a>` : ''}</div></article>`).join('') || '<article class="home-news-card"><h3>No verified current news item in the seven-day window.</h3><p>The homepage will not fill this space with stale material.</p></article>';
-
-const section = `<!-- homepage-command-surface:start --><section id="homepage-command-surface" class="section wrap"><div class="command-hero"><div class="eyebrow">Current Mission Conclusion · ${escapeHtml(String(wall.updated || new Date().toISOString()).slice(0, 10))}</div><h2>What the evidence is pointing toward now</h2><p class="command-conclusion">${escapeHtml(evidenceConclusion)}</p><div class="command-grid"><article class="command-panel"><span class="label">Evidence-led conclusion</span><h3>Why this matters to the mission</h3><p>The current evidence should be read as a map of where practical leverage is concentrating: who writes standards, owns infrastructure, supplies public systems, controls identity and payment rails, shapes information access, and benefits when separate systems converge.</p><a class="btn" href="daily-command-brief.html">Open Full Daily Brief</a></article><article class="command-panel speculation"><span class="label">Clearly labelled speculation</span><h3>Likely trajectory if the pattern continues</h3><p>${escapeHtml(speculation)}</p><p class="home-boundary"><strong>Counterpoint:</strong> ${escapeHtml(counterpoint)}</p><a class="btn alt" href="conclusion-engine.html">Open Conclusion Engine</a></article></div></div><div class="command-block"><div class="command-title"><div><span class="eyebrow">Canonical scores only</span><h2>Risk clocks over 90%</h2></div><a class="btn alt" href="timers.html">Open All Timers</a></div><div class="home-clock-grid">${clockCards}</div></div><div class="command-block"><div class="command-title"><div><span class="eyebrow">Seven-day window only</span><h2>Latest news and source changes</h2></div><a class="btn alt" href="live-intel.html">Open Live Intel</a></div><div class="home-news-grid">${newsCards}</div></div><style>.command-hero,.command-block{border:1px solid rgba(216,181,106,.28);border-radius:24px;padding:1.25rem;margin-bottom:1rem;background:linear-gradient(145deg,rgba(20,4,4,.9),rgba(0,0,0,.94));box-shadow:0 20px 70px rgba(0,0,0,.28)}.command-conclusion{font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.65}.command-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.command-panel{border:1px solid rgba(216,181,106,.18);border-radius:16px;padding:1rem;background:rgba(255,255,255,.025)}.command-panel.speculation{border-color:rgba(190,55,55,.5);background:rgba(120,0,0,.12)}.command-title{display:flex;justify-content:space-between;gap:1rem;align-items:end;flex-wrap:wrap}.home-clock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}.home-clock{border:1px solid rgba(216,181,106,.3);border-radius:16px;background:rgba(20,4,4,.75)}.home-clock a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;text-decoration:none}.home-clock strong{font-size:1.75rem;color:#f0d28b}.home-news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:.85rem}.home-news-card{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem;background:rgba(255,255,255,.025)}.home-news-meta{display:flex;gap:.5rem;justify-content:space-between;font-size:.8rem;color:#c9ba91}.home-boundary{font-size:.86rem;color:#bfb18c}@media(max-width:760px){.command-grid{grid-template-columns:1fr}}</style></section><!-- homepage-command-surface:end -->`;
-
-let homepage = fs.readFileSync(indexPath, 'utf8');
-homepage = homepage.replace(/<!-- homepage-command-surface:start -->[\s\S]*?<!-- homepage-command-surface:end -->/g, '');
-homepage = homepage.replace(/<section id="top-moments-now"[\s\S]*?<\/section>/g, '');
-const mainMatch = homepage.match(/<main[^>]*>/i);
-if (!mainMatch) throw new Error('Homepage main element not found');
-homepage = homepage.replace(mainMatch[0], `${mainMatch[0]}${section}`);
-fs.writeFileSync(indexPath, homepage);
-
-const output = {
-  ok: true,
-  updated: new Date().toISOString(),
-  purpose: 'Keep the homepage focused on the latest evidence-led mission conclusion, clearly labelled speculation, canonical clocks over 90%, and current news within seven days.',
-  evidenceConclusion,
-  speculation,
-  counterpoint,
-  criticalClocks: critical.map(clock => ({ slug: clock.slug, title: clock.title, score: clock.score })),
-  latestNews,
-  rules: {
-    clockThreshold: 'strictly greater than 90',
-    clockSource: 'data/clock-wall.json canonical scores',
-    newsFreshnessDays: 7,
-    staleNewsAllowed: false,
-    speculationMustBeLabelled: true
-  }
-};
-fs.writeFileSync(file('data/homepage-command-surface.json'), JSON.stringify(output, null, 2));
-console.log(`Homepage command surface built: ${critical.length} clocks over 90%, ${latestNews.length} current news items.`);
+const newsCandidates=[];
+for(const item of drops.drops||[]) newsCandidates.push({title:item.title,published:item.published,sourceLabel:item.sourceLabel,summary:item.summary||item.whyItMatters,url:item.url,route:item.evidenceRoute||item.nextRoute||'live-intel.html',evidence:item.evidenceLevel||'Public-source lead',boundary:item.evidenceBoundary||drops.boundary});
+for(const item of sevenDay.feedResults||[]) newsCandidates.push({title:item.title,published:item.published,sourceLabel:item.sourceLabel,summary:item.summary||'',url:item.url,route:'live-intel.html',evidence:'Current reporting lead',boundary:'Reporting is a discovery lead until checked against primary or official records.'});
+const seen=new Set();
+const latestNews=newsCandidates.filter(item=>item.title&&item.published&&ageDays(item.published) <= 7).sort((a,b)=>asDate(b.published)-asDate(a.published)).filter(item=>{const key=clean(item.title,300).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(!key||seen.has(key))return false;seen.add(key);return true;}).slice(0,6);
+const clockCards=critical.map(clock=>`<article class="home-clock"><a href="timers.html#${escapeHtml(clock.slug||'')}"><span>${escapeHtml(clock.title)}</span><strong>${Number(clock.score)}%</strong></a></article>`).join('')||'<p>No canonical timer is currently above 90%.</p>';
+const newsCards=latestNews.map(item=>`<article class="home-news-card"><div class="home-news-meta"><span>${escapeHtml(String(item.published).slice(0,10))}</span><span>${escapeHtml(item.sourceLabel||item.evidence)}</span></div><h3>${escapeHtml(item.title)}</h3>${item.summary?`<p>${escapeHtml(clean(item.summary,360))}</p>`:''}<p class="home-boundary"><strong>Boundary:</strong> ${escapeHtml(clean(item.boundary,320))}</p><div class="cta-row"><a class="btn" href="${escapeHtml(route(item.route))}">Open Analysis</a>${item.url?`<a class="btn alt" href="${escapeHtml(item.url)}" rel="noopener noreferrer">Source</a>`:''}</div></article>`).join('')||'<article class="home-news-card"><h3>No verified current news item in the seven-day window.</h3><p>The homepage will not fill this space with stale material.</p></article>';
+const section=`<!-- homepage-command-surface:start --><section id="homepage-command-surface" class="section wrap"><div class="command-hero"><div class="eyebrow">Current Mission Conclusion · ${escapeHtml(String(wall.updated||new Date().toISOString()).slice(0,10))}</div><h2>What the evidence is pointing toward now</h2><p class="command-conclusion">${escapeHtml(evidenceConclusion)}</p><div class="confidence-strip"><strong>Analytic confidence: ${confidence}/100</strong><span>${escapeHtml(confidenceBand)}</span><small>Pattern support — not event probability.</small></div><div class="command-grid"><article class="command-panel"><span class="label">Evidence-led conclusion</span><h3>Who is involved and why it matters</h3><ul>${actorCards}</ul><p class="home-boundary">These are documented roles in the current records, not proof of guilt, shared motive or central command.</p><a class="btn" href="daily-command-brief.html">Open Full Daily Brief</a></article><article class="command-panel speculation"><span class="label">Clearly labelled speculation</span><h3>Likely trajectory if the pattern continues</h3><p>${escapeHtml(speculation)}</p><ul>${scenarioLines}</ul><p class="home-boundary"><strong>Counterpoint:</strong> ${escapeHtml(counterpoint)}</p><a class="btn alt" href="data/speculative-intelligence-synthesis.json">Open Scenario Matrix</a></article></div></div><div class="command-block"><div class="command-title"><div><span class="eyebrow">Canonical scores only</span><h2>Risk clocks over 90%</h2></div><a class="btn alt" href="timers.html">Open All Timers</a></div><div class="home-clock-grid">${clockCards}</div></div><div class="command-block"><div class="command-title"><div><span class="eyebrow">Seven-day window only</span><h2>Latest news and source changes</h2></div><a class="btn alt" href="live-intel.html">Open Live Intel</a></div><div class="home-news-grid">${newsCards}</div></div><style>.command-hero,.command-block{border:1px solid rgba(216,181,106,.28);border-radius:24px;padding:1.25rem;margin-bottom:1rem;background:linear-gradient(145deg,rgba(20,4,4,.9),rgba(0,0,0,.94));box-shadow:0 20px 70px rgba(0,0,0,.28)}.command-conclusion{font-size:clamp(1.05rem,2vw,1.35rem);line-height:1.65}.confidence-strip{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;border:1px solid rgba(216,181,106,.25);border-radius:14px;padding:.75rem;margin:1rem 0}.confidence-strip small{color:#c9ba91}.command-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.command-panel{border:1px solid rgba(216,181,106,.18);border-radius:16px;padding:1rem;background:rgba(255,255,255,.025)}.command-panel.speculation{border-color:rgba(190,55,55,.5);background:rgba(120,0,0,.12)}.command-title{display:flex;justify-content:space-between;gap:1rem;align-items:end;flex-wrap:wrap}.home-clock-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}.home-clock{border:1px solid rgba(216,181,106,.3);border-radius:16px;background:rgba(20,4,4,.75)}.home-clock a{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;text-decoration:none}.home-clock strong{font-size:1.75rem;color:#f0d28b}.home-news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:.85rem}.home-news-card{border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem;background:rgba(255,255,255,.025)}.home-news-meta{display:flex;gap:.5rem;justify-content:space-between;font-size:.8rem;color:#c9ba91}.home-boundary{font-size:.86rem;color:#bfb18c}@media(max-width:760px){.command-grid{grid-template-columns:1fr}}</style></section><!-- homepage-command-surface:end -->`;
+let homepage=fs.readFileSync(indexPath,'utf8').replace(/<!-- homepage-command-surface:start -->[\s\S]*?<!-- homepage-command-surface:end -->/g,'').replace(/<section id="top-moments-now"[\s\S]*?<\/section>/g,'');
+const mainMatch=homepage.match(/<main[^>]*>/i);if(!mainMatch)throw new Error('Homepage main element not found');homepage=homepage.replace(mainMatch[0],`${mainMatch[0]}${section}`);fs.writeFileSync(indexPath,homepage);
+const output={ok:true,updated:new Date().toISOString(),purpose:'Keep the homepage focused on the latest evidence-led conclusion, documented actor roles, bounded trajectory speculation, canonical clocks over 90%, and current news within seven days.',evidenceConclusion,speculation,counterpoint,analyticConfidence:{score:confidence,band:confidenceBand,meaning:'Pattern support, not event probability.'},actors:actors.map(a=>({name:a.name,documentedRole:a.documentedRole,roleGroup:a.roleGroup})),scenarios:scenarios.map(s=>({id:s.id,title:s.title,status:s.status,plausibilityBand:s.plausibilityBand})),criticalClocks:critical.map(clock=>({slug:clock.slug,title:clock.title,score:clock.score})),latestNews,rules:{clockThreshold:'strictly greater than 90',clockSource:'data/clock-wall.json canonical scores',newsFreshnessDays:7,staleNewsAllowed:false,speculationMustBeLabelled:true,confidenceIsProbability:false}};
+fs.writeFileSync(file('data/homepage-command-surface.json'),JSON.stringify(output,null,2));
+console.log(`Homepage command surface built: ${critical.length} clocks over 90%, ${latestNews.length} current news items, ${actors.length} actor roles and ${scenarios.length} bounded scenarios.`);

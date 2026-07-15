@@ -72,7 +72,17 @@ function ensureEpsteinTimeline() {
   fs.writeFileSync(file('epstein-timeline.html'), html);
 }
 
+function patchQueryOnlyLinks() {
+  for (const name of fs.readdirSync(root).filter(name => /^dossier-pack-.*\.html$/i.test(name))) {
+    const page = file(name);
+    const before = fs.readFileSync(page, 'utf8');
+    const after = before.replace(/href=(["'])\?([^"']+)\1/g, `href=$1${name}?$2$1`);
+    if (after !== before) fs.writeFileSync(page, after);
+  }
+}
+
 patchTimers();
 patchMigrationNews();
 ensureEpsteinTimeline();
-console.log('Final mission surfaces reconciled: timers, migration summary and Epstein timeline route.');
+patchQueryOnlyLinks();
+console.log('Final mission surfaces reconciled: timers, migration summary, Epstein timeline and query-only links.');

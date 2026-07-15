@@ -47,6 +47,8 @@ write(workerFile, worker);
 
 let page = read(pageFile);
 page = page.replace('administrator-only breach exposure review', 'Intelligence-tier verified-self breach exposure review');
+page = page.replace('Member Tool · Holehe', 'Registered Tool · Holehe');
+page = page.replace('Member Tool · SpiderFoot', 'Intelligence Tool · SpiderFoot');
 page = page.replace('<article class="card redline" data-admin-tool hidden><span class="label">Administrator Only · h8mail</span>', '<article class="card redline" data-h8mail-tool><span class="label">Intelligence Tool · h8mail</span>');
 page = page.replace('Administrator-only breach exposure review. Verified-self reports show recognisable masked identifiers, affected sources, dates, counts and every detected data category while reusable secret values remain withheld.', 'Intelligence members can review their own verified email for breach-exposure signals. Administrators may use the wider documented-investigation scope. Reports show masked identifiers, affected sources, dates, counts and detected data categories while reusable secret values remain withheld.');
 page = page.replace('placeholder="State the case, authority or public-interest purpose."', 'placeholder="State the defensive self-review purpose. Administrators should state the documented case authority."');

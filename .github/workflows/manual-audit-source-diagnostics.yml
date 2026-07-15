@@ -1,0 +1,47 @@
+name: Manual Audit Source Diagnostics
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find exact source occurrences and verify replacement routes
+        shell: bash
+        run: |
+          mkdir -p diagnostics
+          {
+            echo '=== B0G4HLSLHL ==='
+            grep -RIn --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=_site 'B0G4HLSLHL' . || true
+            echo '=== B0GZBQBN1Z ==='
+            grep -RIn --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=_site 'B0GZBQBN1Z' . || true
+            echo '=== OLD BIS URL ==='
+            grep -RIn --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=_site 'https://www.bis.org/topic/cbdc.htm' . || true
+            echo '=== FORUM HEALTH LINKS ==='
+            grep -RIn --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=_site 'href="forum-health"\|href="/forum-health"' . || true
+          } > diagnostics/source-occurrences.txt
+          {
+            for url in \
+              'https://www.amazon.co.uk/dp/B0G4HLSLHL' \
+              'https://www.amazon.co.uk/dp/B0GZBQBN1Z' \
+              'https://www.bis.org/about/bisih/topics/cbdc.htm' \
+              'https://www.bis.org/about/bisih/topics/cbdc/' \
+              'https://www.bis.org/topic/fintech/cbdc.htm' \
+              'https://www.bis.org/about/bisih/topics/cbdc/mcbdc_bridge.htm'
+            do
+              status=$(curl -L -A 'Mozilla/5.0 MatrixAuditDiagnostics/1.0' -o /dev/null -sS --max-time 20 -w '%{http_code}' "$url" || true)
+              echo "$status $url"
+            done
+          } > diagnostics/url-status.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: manual-audit-source-diagnostics
+          path: diagnostics/
+          if-no-files-found: error

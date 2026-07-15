@@ -117,7 +117,10 @@ async function fetchBoundary(route) {
   const accessTiersWired = productionWorker.includes('protectedAssetTier')
     && productionWorker.includes('enforceProtectedAssetAccess')
     && accessGate.includes('member_effective_entitlements')
-    && accessGate.includes('member_download_eligibility')
+    && accessGate.includes('tierRank')
+    && accessGate.includes('requiredTier')
+    && accessPolicy.includes('"exactRules"')
+    && accessPolicy.includes('"patternRules"')
     && accessPolicy.includes('active-fail-closed')
     && accessPolicy.includes('h8mail_verified_self')
     && accessPolicy.includes('intelligence_6');

@@ -1,6 +1,8 @@
 const fs=require('fs');
 const path=require('path');
 const root=process.cwd();
+const timerSanitizer=path.join(root,'scripts','sanitize-timer-source-links.js');
+if(fs.existsSync(path.join(root,'timers.html'))&&fs.existsSync(timerSanitizer))require(timerSanitizer);
 const ignore=new Set(['.git','node_modules','_site']);
 const workerRoutes=new Set(['forum-health','deploy-status','search','forum-feed-main','forum-feed-speculation','forum-feed-epstein-alive','submit-forum-post','submit-speculation-post','submit-epstein-alive-post']);
 function walk(dir,out=[]){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(ignore.has(e.name))continue;const f=path.join(dir,e.name);if(e.isDirectory())walk(f,out);else if(e.isFile()&&e.name.endsWith('.html'))out.push(f)}return out}

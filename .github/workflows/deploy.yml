@@ -113,24 +113,33 @@ jobs:
           npx --yes wrangler@latest whoami
           npx --yes wrangler@latest d1 info matrix-members
 
-      - name: Export private D1 rollback snapshot
+      - name: Capture D1 Time Travel rollback bookmark
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p downloads/private-migration
-          backup="downloads/private-migration/matrix-members-before-${DEPLOY_COMMIT_SHA}.sql"
-          npx --yes wrangler@latest d1 export matrix-members --remote --output "$backup" --skip-confirmation
-          test -s "$backup"
-          {
-            echo "commit=$DEPLOY_COMMIT_SHA"
-            echo "created_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            echo "bytes=$(wc -c < "$backup" | tr -d ' ')"
-            echo "sha256=$(sha256sum "$backup" | awk '{print $1}')"
-            echo "retention=ephemeral-runner-only"
-          } > downloads/d1-backup-proof.txt
+          mkdir -p downloads
+          npx --yes wrangler@latest d1 time-travel info matrix-members --json > downloads/d1-time-travel-bookmark.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const source='downloads/d1-time-travel-bookmark.json';
+          const payload=JSON.parse(fs.readFileSync(source,'utf8'));
+          if(!payload || typeof payload.bookmark!=='string' || payload.bookmark.trim().length<8) throw new Error('Cloudflare D1 Time Travel did not return a valid rollback bookmark');
+          const proof={
+            ok:true,
+            commit:process.env.DEPLOY_COMMIT_SHA,
+            createdAt:new Date().toISOString(),
+            database:'matrix-members',
+            method:'Cloudflare D1 Time Travel bookmark',
+            bookmark:payload.bookmark,
+            restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,
+            retentionBoundary:'Cloudflare Time Travel retention applies; capture a new bookmark before every migration chain.'
+          };
+          fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify(proof,null,2));
+          console.log(`D1 rollback point captured: ${payload.bookmark}`);
+          NODE
 
       - name: Apply idempotent D1 migration chain
         env:
@@ -172,20 +181,18 @@ jobs:
           const fs=require('fs');
           const schema=JSON.parse(fs.readFileSync('downloads/d1-schema-verification.json','utf8'));
           const settings=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
+          const rollback=JSON.parse(fs.readFileSync('downloads/d1-rollback-proof.json','utf8'));
           const rows=(payload)=>payload.flatMap(item=>item.results||item.result?.results||[]);
           const names=new Set(rows(schema).map(row=>row.name));
           const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility'];
           const missing=required.filter(name=>!names.has(name));
           if(missing.length) throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
+          if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing');
           const switches=rows(settings);
           if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live')) throw new Error('Both PayPal runtime environments were not created');
           if(switches.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during deployment');
-          console.log(`D1 migration verification passed for ${required.length} required objects; sandbox and live checkout remain disabled.`);
+          console.log(`D1 migration verification passed for ${required.length} required objects; rollback bookmark is valid; sandbox and live checkout remain disabled.`);
           NODE
-
-      - name: Remove private D1 rollback snapshot from runner workspace
-        if: success()
-        run: rm -rf downloads/private-migration
 
       - name: Deploy exact reconciled _site and strict D1 forum and PayPal Worker to Cloudflare
         env:
@@ -230,7 +237,8 @@ jobs:
             downloads/phase8-autonomous-sandbox-readiness-test.json
             downloads/production-deploy-receipt.json
             downloads/d1-export-command-test.json
-            downloads/d1-backup-proof.txt
+            downloads/d1-time-travel-bookmark.json
+            downloads/d1-rollback-proof.json
             downloads/d1-migration.log
             downloads/d1-schema-verification.json
             downloads/paypal-runtime-settings.json

@@ -18,16 +18,18 @@ check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includ
 check('canonical deploy workflow cancels stale deployment', /cancel-in-progress:\s*true/.test(canonicalDeploy));
 check('canonical deploy workflow verifies live SHA', canonicalDeploy.includes('verify-live-production.js'));
 check('canonical deploy workflow deploys strict Worker', canonicalDeploy.includes('strict D1 forum and PayPal Worker') && canonicalDeploy.includes('npx --yes wrangler@latest deploy'));
-check('canonical deploy backs up D1', canonicalDeploy.includes('d1 export matrix-members --remote') && canonicalDeploy.includes('d1-backup-proof.txt'));
+check('canonical deploy captures D1 Time Travel rollback', canonicalDeploy.includes('d1 time-travel info matrix-members --json') && canonicalDeploy.includes('d1-rollback-proof.json') && canonicalDeploy.includes('restoreCommand') && !canonicalDeploy.includes('d1 export matrix-members --remote'));
 for (const migration of ['phase4_email_lifecycle.sql','phase4_email_lifecycle_portability.sql','phase5_member_experience.sql','phase5_member_experience_timestamp_fix.sql','phase6_paypal_subscriptions.sql','phase6_paypal_failure_counter_fix.sql']) {
   check(`canonical deploy applies ${migration}`, canonicalDeploy.includes(migration));
 }
+check('canonical deploy verifies rollback before release', canonicalDeploy.includes("if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing')"));
 check('canonical deploy verifies disabled PayPal switches', canonicalDeploy.includes('paypal-runtime-settings.json') && canonicalDeploy.includes('checkout must remain disabled during deployment'));
 check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 
 check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*push:/m.test(fallbackDeploy));
 check('fallback deploy shares production concurrency', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*true/.test(fallbackDeploy));
 check('fallback deploy uses final reconciliation', fallbackDeploy.includes('final-production-reconcile.js') && fallbackDeploy.includes('verify-live-production.js'));
+check('fallback deploy captures D1 Time Travel rollback', fallbackDeploy.includes('d1 time-travel info matrix-members --json') && fallbackDeploy.includes('d1-rollback-proof.json') && fallbackDeploy.includes('restoreCommand') && !fallbackDeploy.includes('d1 export matrix-members --remote'));
 check('fallback deploy does not activate PayPal', !fallbackDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') && !fallbackDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE'));
 
 check('legacy repair cannot publish health', legacyRepair.includes("productionHealthOwner: 'scripts/build-production-health.js'") && !legacyRepair.includes("workerScript: 'src/worker.js'") && !legacyRepair.includes("write('deploy-health.json'"));
@@ -68,6 +70,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   failures,
   deploymentModel: 'One automatic canonical Cloudflare production deploy; one manual fallback using the same gates.',
+  rollbackModel: 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'D1 authoritative behind a strict fail-closed Worker with KV recovery mirror and live write/read proof.',
   paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled during migration and deployment.'
@@ -78,4 +81,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`FAILED: ${item}`));
   process.exit(1);
 }
-console.log('Production synchronization assurance passed: automatic Cloudflare deploy, D1 migration chain, strict forums and server-gated PayPal.');
+console.log('Production synchronization assurance passed: automatic Cloudflare deploy, Time Travel rollback, D1 migration chain, strict forums and server-gated PayPal.');

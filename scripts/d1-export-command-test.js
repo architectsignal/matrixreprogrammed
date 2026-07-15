@@ -17,28 +17,30 @@ function check(name, condition) {
 for (const relative of workflows) {
   const full = path.join(root, relative);
   const text = fs.existsSync(full) ? fs.readFileSync(full, 'utf8') : '';
-  const lines = text.split(/\r?\n/).filter(line => /wrangler@latest\s+d1\s+export\s+matrix-members/.test(line));
+  const bookmarkLines = text.split(/\r?\n/).filter(line => /wrangler@latest\s+d1\s+time-travel\s+info\s+matrix-members/.test(line));
+  const exportLines = text.split(/\r?\n/).filter(line => /wrangler@latest\s+d1\s+export\s+matrix-members/.test(line));
   check(`${relative} exists`, Boolean(text));
-  check(`${relative} has exactly one D1 export command`, lines.length === 1);
-  const command = lines[0] || '';
-  check(`${relative} exports the remote database`, /\s--remote(?:\s|$)/.test(command));
-  check(`${relative} writes an explicit output file`, /\s--output(?:\s|$)/.test(command));
-  check(`${relative} uses Wrangler export skip-confirmation`, /\s--skip-confirmation(?:\s|$)/.test(command));
-  check(`${relative} does not use execute-only --yes after export`, !/d1\s+export[^\n]*\s--yes(?:\s|$)/.test(command));
+  check(`${relative} captures exactly one D1 Time Travel bookmark`, bookmarkLines.length === 1);
+  const command = bookmarkLines[0] || '';
+  check(`${relative} requests machine-readable bookmark JSON`, /\s--json(?:\s|$)/.test(command));
+  check(`${relative} validates a bookmark before migrations`, /bookmark/.test(text) && /d1-rollback-proof\.json/.test(text));
+  check(`${relative} avoids blocking remote SQL export during production`, exportLines.length === 0);
+  check(`${relative} keeps migrations after rollback capture`, text.indexOf('d1 time-travel info matrix-members') < text.indexOf('Apply idempotent D1 migration chain'));
 }
 
 const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
-  purpose: 'Prevent production D1 rollback exports from using the d1 execute --yes flag. Wrangler d1 export requires --skip-confirmation (-y).',
+  purpose: 'Require a validated D1 Time Travel bookmark before production migrations and prevent the remote SQL export service from blocking deployment.',
+  rollbackMethod: 'Cloudflare D1 Time Travel bookmark',
   checks,
   issues
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'd1-export-command-test.json'), JSON.stringify(report, null, 2));
 if (!report.ok) {
-  console.error('D1 EXPORT COMMAND TEST FAILED');
+  console.error('D1 ROLLBACK COMMAND TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('D1 EXPORT COMMAND TEST PASSED: automatic and manual rollback exports use --skip-confirmation.');
+console.log('D1 ROLLBACK COMMAND TEST PASSED: automatic and manual releases require a validated Time Travel bookmark before migrations.');

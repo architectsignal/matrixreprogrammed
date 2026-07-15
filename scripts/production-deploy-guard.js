@@ -170,7 +170,8 @@ const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
 if (!/cancel-in-progress:\s*true/.test(canonicalDeploy)) hard.push('canonical deploy must cancel stale runs');
 if (!canonicalDeploy.includes('verify-live-production.js')) hard.push('canonical deploy missing live verification');
-if (!canonicalDeploy.includes('d1 export matrix-members --remote')) hard.push('canonical deploy missing D1 rollback export');
+if (!canonicalDeploy.includes('d1 time-travel info matrix-members --json') || !canonicalDeploy.includes('d1-rollback-proof.json') || !canonicalDeploy.includes('restoreCommand') || canonicalDeploy.includes('d1 export matrix-members --remote')) hard.push('canonical deploy missing validated D1 Time Travel rollback');
+if (!fallbackDeploy.includes('d1 time-travel info matrix-members --json') || !fallbackDeploy.includes('d1-rollback-proof.json') || !fallbackDeploy.includes('restoreCommand') || fallbackDeploy.includes('d1 export matrix-members --remote')) hard.push('manual fallback missing validated D1 Time Travel rollback');
 if (!canonicalDeploy.includes('phase6_paypal_subscriptions.sql')) hard.push('canonical deploy missing Phase 6 D1 migration');
 if (!canonicalDeploy.includes('checkout must remain disabled during deployment')) hard.push('canonical deploy does not prove disabled PayPal switches');
 if (/^\s*push:/m.test(fallbackDeploy)) hard.push('manual fallback deploy must not trigger on push');
@@ -196,17 +197,18 @@ const report = {
   hardIssues: hard,
   softIssues: soft,
   deploymentModel: 'One automatic canonical deploy and one manual fallback using the same strict gates.',
+  rollbackModel: 'Validated Cloudflare D1 Time Travel bookmark captured before migrations with an exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled by default.',
-  boundary: 'Deployment is blocked on competing automatic workflows, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or unguarded payment activation.'
+  boundary: 'Deployment is blocked on competing automatic workflows, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with one automatic deploy, strict D1 forums and server-gated PayPal.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with Time Travel rollback, one automatic deploy, strict D1 forums and server-gated PayPal.`);

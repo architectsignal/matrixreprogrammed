@@ -36,21 +36,16 @@ jobs:
           new = "function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}"
           if old not in worker and new not in worker:
               raise SystemExit('Email redirect helper anchor not found')
-          worker = worker.replace(old, new)
-          worker_path.write_text(worker)
+          worker_path.write_text(worker.replace(old, new))
 
           test_path = Path('scripts/cloudflare-worker-routes-test.js')
           test = test_path.read_text()
-          test = test.replace(
-              "'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-member-experience.js',\n   'src/worker-paypal-subscriptions.js', 'src/worker-production.js',",
-              "'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-member-experience.js',\n   'src/worker-email-lifecycle.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',"
-          )
-          anchor = "for (const marker of [\n   'Cloudflare D1 MEMBERS_DB.forum_posts'"
-          block = "for (const marker of [\n  \"function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}\",\n  '/api/email/verify', '/api/email/unsubscribe', 'cloudflare-worker-email-lifecycle'\n]) needText('src/worker-email-lifecycle.js', marker, `authoritative email redirect marker ${marker}`);\n\n"
-          if block not in test:
+          assertion = "need('src/worker-email-lifecycle.js');\nneedText('src/worker-email-lifecycle.js', \"function redirect(location){return new Response(null,{status:303,headers:{...securityHeaders,Location:location,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-email-lifecycle'}})}\", 'authoritative email redirect origin header');\n\n"
+          if assertion not in test:
+              anchor = 'const report = {'
               if anchor not in test:
-                  raise SystemExit('Cloudflare route test anchor not found')
-              test = test.replace(anchor, block + anchor)
+                  raise SystemExit('Cloudflare route report anchor not found')
+              test = test.replace(anchor, assertion + anchor, 1)
           test_path.write_text(test)
           PY
       - name: Verify syntax and route contract

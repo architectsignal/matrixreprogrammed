@@ -18,7 +18,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 150
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,6 +46,7 @@ jobs:
           node --check src/worker-report-delivery.js
           node --check scripts/build-mission-timers.js
           node --check scripts/build-production-deploy-receipt.js
+          node --check scripts/mission-acceptance-audit.js
 
       - name: Build and audit complete site
         env:
@@ -55,10 +56,14 @@ jobs:
       - name: Re-run mission gate after all legacy generators
         run: |
           node scripts/patch-osint-tool-tiers.js
+          node scripts/patch-newsletter-consent.js
           node scripts/mission-readiness-test.js
           node scripts/global-risk-clocks-test.js
           node scripts/cloudflare-worker-routes-test.js
           node scripts/site-wide-function-audit.js --postbuild
+
+      - name: Audit every page link download tool and mission route
+        run: node scripts/mission-acceptance-audit.js
 
       - name: Bundle Cloudflare Worker without deploying
         run: npx --yes wrangler@latest deploy --dry-run
@@ -70,9 +75,12 @@ jobs:
           name: mission-readiness-${{ github.run_id }}
           path: |
             downloads/mission-readiness-test.json
+            downloads/mission-acceptance-audit.json
+            downloads/mission-acceptance-audit.md
             downloads/global-risk-clocks-test.json
             downloads/site-wide-function-audit.json
             downloads/site-audit.json
             downloads/pressure-test-report.json
+            downloads/newsletter-consent-patch.json
           if-no-files-found: ignore
           retention-days: 60

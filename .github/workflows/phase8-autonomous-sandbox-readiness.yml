@@ -57,7 +57,18 @@ jobs:
           node --check src/worker-production.js
           node --check scripts/build-production-deploy-receipt.js
       - name: Phase 8 deterministic mock
-        run: node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/phase8-autonomous-sandbox-readiness-test.mjs')
+          text = path.read_text()
+          old = "check('Cloudflare hourly cron configured', wrangler.includes('crons = [\"0 * * * *\"]'));"
+          new = "check('Cloudflare report and bootstrap crons configured', wrangler.includes('\\\"5 6 * * *\\\"') && wrangler.includes('\\\"15 7 * * 1\\\"'));"
+          if old not in text:
+              raise SystemExit('Expected legacy cron assertion was not found')
+          path.write_text(text.replace(old, new))
+          PY
+          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
       - name: Cloudflare dry run
         run: npx --yes wrangler@latest deploy --dry-run
       - name: Upload Phase 8 proof

@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "updated": "2026-07-15",
+  "status": "active-fail-closed",
+  "purpose": "Classify every Matrix Reprogrammed page, download and PDF while keeping primary public evidence, corrections and claim boundaries open. Higher tiers add compiled analysis, archives, investigation tools and research exports.",
+  "tierOrder": ["public", "registered", "supporter_3", "intelligence_6", "research_pro_9", "separate_product"],
+  "principles": [
+    "Primary public records, evidence methodology, material corrections and claim boundaries remain public.",
+    "A higher tier adds depth and utility; it never converts speculation into fact.",
+    "Every protected static asset is checked server-side against D1 effective entitlements.",
+    "Unknown or unverified entitlement state fails closed for protected assets.",
+    "Books, collector products and commissioned work remain separate products unless explicitly included."
+  ],
+  "exactRules": [
+    {"route": "/downloads/the-black-file-matrix-reprogrammed.pdf", "minimumTier": "registered", "reason": "Verified-account lead magnet and report delivery route."},
+    {"route": "/downloads/seven-day-intel.json", "minimumTier": "registered", "reason": "Verified-account seven-day digest export."},
+    {"route": "/downloads/intel-vault.json", "minimumTier": "registered", "reason": "Verified-account historical digest export."},
+    {"route": "/downloads/intel-vault.md", "minimumTier": "registered", "reason": "Verified-account historical digest export."},
+    {"route": "/downloads/timer-synthesis.md", "minimumTier": "supporter_3", "reason": "Compiled member synthesis; public timers and source routes remain open."},
+    {"route": "/downloads/probability-snapshot.md", "minimumTier": "intelligence_6", "reason": "Compiled intelligence forecast export; public methodology remains open."}
+  ],
+  "patternRules": [
+    {"pattern": "^/downloads/(supporter|weekly-(brief|archive)|signal-drop|source-drop-bundle)[^/]*\\.(pdf|md|json|csv)$", "minimumTier": "supporter_3", "reason": "Weekly member brief, archive or source-drop bundle."},
+    {"pattern": "^/downloads/(daily-(command|intel|intelligence)|intelligence-(brief|report)|in-depth-report|elite-report|member-report|intelligence-card-deck)[^/]*\\.(pdf|md|json|csv)$", "minimumTier": "intelligence_6", "reason": "Daily or in-depth intelligence product."},
+    {"pattern": "^/downloads/(research|full-dossier|citation|bibliography|evidence-path|source-pack|research-bundle|data-export|network-export)[^/]*\\.(pdf|md|json|csv|zip)$", "minimumTier": "research_pro_9", "reason": "Full dossier, evidence pack or research export."}
+  ],
+  "publicEvidencePatterns": [
+    "approved-public-pdf",
+    "source-document",
+    "public-record",
+    "court-record",
+    "official-record",
+    "declassified",
+    "foia",
+    "evidence-source",
+    "exhibit"
+  ],
+  "neverPaywallPatterns": [
+    "correction",
+    "withdrawal",
+    "supersession",
+    "evidence-policy",
+    "methodology",
+    "privacy",
+    "victim-protection",
+    "dismissal",
+    "acquittal",
+    "reversal"
+  ],
+  "toolTiers": {
+    "public_search": "public",
+    "newsletter_preferences": "registered",
+    "holehe_verified_self": "registered",
+    "spiderfoot_passive_scan": "intelligence_6",
+    "h8mail_breach_review": "admin",
+    "data_lab_basic": "public",
+    "data_lab_advanced_presets": "research_pro_9",
+    "citation_exports": "research_pro_9",
+    "member_watchlists": "intelligence_6",
+    "advanced_watchlists": "research_pro_9"
+  },
+  "deliveryTiers": {
+    "email_verification": "registered",
+    "free_daily_control_brief": "registered",
+    "complete_weekly_member_brief": "supporter_3",
+    "premium_daily_intelligence": "intelligence_6",
+    "monthly_full_research_report": "research_pro_9",
+    "verified_self_tool_report": "registered"
+  }
+}

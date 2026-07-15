@@ -173,7 +173,14 @@ const graph = {
   elements: { nodes, edges }
 };
 
-fs.writeFileSync(path.join(dataDir, 'evidence-network-map.json'), JSON.stringify(graph, null, 2));
+const graphPath = path.join(dataDir, 'evidence-network-map.json');
+// This file is loaded directly by the browser and must stay below Cloudflare's
+// single-asset ceiling. Minification removes formatting only; every entity,
+// relationship, evidence field and boundary remains available.
+fs.writeFileSync(graphPath, JSON.stringify(graph));
+const graphBytes = fs.statSync(graphPath).size;
+const cloudflareTargetBytes = 24 * 1024 * 1024;
+
 const csvRows = [[
   'relationship_id','from_id','from_name','from_type','relationship_type','to_id','to_name','to_type','source_title','source_url','date','publication_date','retrieval_date','evidence_grade','factual_status','review_status','extraction_method','confidence','what_is_established','what_is_not_established'
 ]];
@@ -189,7 +196,7 @@ for (const edge of edges) {
 }
 fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map.csv'), csvRows.map(row => row.map(csvCell).join(',')).join('\n'));
 fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSON.stringify({
-  ok: true,
+  ok: graphBytes <= cloudflareTargetBytes,
   generatedAt: graph.generatedAt,
   schemaVersion: graph.schemaVersion,
   totals: graph.totals,
@@ -198,6 +205,15 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   dataRoute: 'data/evidence-network-map.json',
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
+  serialization: 'compact-json',
+  graphBytes,
+  graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
+  cloudflareTargetBytes,
+  withinCloudflareTarget: graphBytes <= cloudflareTargetBytes,
   boundary: graph.boundary
 }, null, 2));
-console.log(`Phase 5 evidence network built: ${graph.totals.entities} entities, ${graph.totals.relationships} sourced relationships, ${graph.totals.coreRelationships} core relationships.`);
+if (graphBytes > cloudflareTargetBytes) {
+  console.error(`Evidence network map exceeds the 24 MiB Cloudflare safety target: ${(graphBytes / 1024 / 1024).toFixed(2)} MiB.`);
+  process.exit(1);
+}
+console.log(`Phase 5 evidence network built: ${graph.totals.entities} entities, ${graph.totals.relationships} sourced relationships, ${graph.totals.coreRelationships} core relationships; compact browser graph ${(graphBytes / 1024 / 1024).toFixed(2)} MiB.`);

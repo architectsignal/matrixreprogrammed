@@ -40,7 +40,7 @@ fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'd1-export-command-test.json'), JSON.stringify(report, null, 2));
 if (!report.ok) {
   console.error('D1 ROLLBACK COMMAND TEST FAILED');
-  for (const issue of issues) console.error(`- ${issue}`));
+  for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
 console.log('D1 ROLLBACK COMMAND TEST PASSED: automatic and manual releases require a validated Time Travel bookmark before migrations.');

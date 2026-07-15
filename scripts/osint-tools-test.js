@@ -30,7 +30,7 @@ for (const file of [
 const page = read('research-tools.html');
 check('three open-source tools shown', containsAll(page, ['data-tool-form="holehe"', 'data-tool-form="spiderfoot"', 'data-tool-form="h8mail"']));
 check('h8mail is Intelligence verified-self', page.includes('Intelligence Tool · h8mail') && page.includes('data-h8mail-tool') && page.includes('own verified email'));
-check('member tools identified', page.includes('Member Tool · Holehe') && page.includes('Member Tool · SpiderFoot'));
+check('Holehe and SpiderFoot tier labels identified', page.includes('Registered Tool · Holehe') && page.includes('Intelligence Tool · SpiderFoot'));
 check('lawful-use confirmations required', (page.match(/name="confirmLawfulUse"/g) || []).length === 3 && (page.match(/name="confirmNoMinor"/g) || []).length === 3);
 check('evidence boundary visible', /do not prove identity|not prove identity/i.test(page) && /wrongdoing or criminal conduct/i.test(page));
 check('external Email OSINT linked safely', page.includes('https://emailosint.org/') && page.includes('noopener noreferrer nofollow'));

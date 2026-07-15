@@ -1,10 +1,18 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const pagePath = path.join(root, 'newsletter.html');
 const clientPath = path.join(root, 'newsletter.js');
 if (!fs.existsSync(pagePath)) throw new Error('newsletter.html not found');
+
+function runRequired(label, script) {
+  const result = spawnSync(process.execPath, [path.join(root, script)], { cwd: root, encoding: 'utf8', stdio: 'pipe', env: process.env });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${label} failed with exit ${result.status || 1}`);
+}
 
 const consentLabel = `<label class="newsletter-consent">
             <input type="checkbox" name="marketingConsent" data-marketing-consent required>
@@ -17,8 +25,6 @@ const formMatch = html.match(/<form\b[^>]*(?:data-newsletter-form|id=["']newslet
 if (!formMatch) throw new Error('Canonical newsletter form not found');
 let form = formMatch[0];
 
-// Remove any generated or legacy marketing-consent fragments before adding the
-// canonical explicit checkbox exactly once.
 form = form.replace(/<label\b[^>]*class=["'][^"']*newsletter-consent[^"']*["'][^>]*>[\s\S]*?<\/label>/gi, '');
 form = form.replace(/<input\b[^>]*(?:name=["']marketingConsent["']|data-marketing-consent)[^>]*>/gi, '');
 const submitButton = form.match(/<(?:button|input)\b[^>]*type=["']submit["'][^>]*>(?:[\s\S]*?<\/button>)?/i);
@@ -116,3 +122,10 @@ fs.writeFileSync(path.join(root, 'downloads', 'newsletter-consent-patch.json'), 
 }, null, 2));
 if (!ok) throw new Error(`Newsletter consent self-heal failed: ${JSON.stringify(checks)}`);
 console.log('Newsletter explicit consent, verification and preference wording applied.');
+
+// This script is the final self-heal called by every Cloudflare build. Rebuild the
+// authoritative mission surfaces here so older generators cannot overwrite them.
+runRequired('Final Atlas Layers build', 'scripts/build-atlas-layers.js');
+runRequired('Final migration country grid', 'scripts/build-migration-crime-grid.js');
+runRequired('Final mission timer synthesis', 'scripts/build-mission-timers.js');
+runRequired('Final mission surface reconciliation', 'scripts/patch-final-mission-surfaces.js');

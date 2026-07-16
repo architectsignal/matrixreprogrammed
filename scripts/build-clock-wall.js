@@ -22,7 +22,16 @@ const list = (items, empty = 'No item recorded in this build.') => {
   const values = (items || []).map(item => clean(item, 700)).filter(Boolean);
   return values.length ? values.map(item => `<li>${escapeHtml(item)}</li>`).join('') : `<li>${escapeHtml(empty)}</li>`;
 };
-const linkList = routes => [...new Set((routes || []).filter(Boolean))]
+function safeRoute(value) {
+  const route = clean(value, 1600);
+  if (!route || /\s/.test(route) || /[<>"']/.test(route)) return '';
+  if (/^https?:\/\//i.test(route)) {
+    try { return new URL(route).href; } catch { return ''; }
+  }
+  if (/^(?:\/|\.\/|\.\.\/)?[a-z0-9][a-z0-9._~!$&()*+,;=:@%\/-]*(?:\?[a-z0-9._~!$&'()*+,;=:@%\/?-]*)?(?:#[a-z0-9._~!$&'()*+,;=:@%\/?-]*)?$/i.test(route)) return route;
+  return '';
+}
+const linkList = routes => [...new Set((routes || []).map(safeRoute).filter(Boolean))]
   .slice(0, 10)
   .map(route => `<a href="${escapeHtml(route)}">${escapeHtml(String(route).replace(/\.html.*$/, '').replace(/^.*\//, '').replace(/[-_]/g, ' ') || 'source')}</a>`)
   .join('');
@@ -47,7 +56,8 @@ function timerCard(clock) {
     const title = escapeHtml(item.title || 'Source record');
     const level = item.evidenceLevel ? ` — ${escapeHtml(item.evidenceLevel)}` : '';
     const published = item.published ? ` · ${escapeHtml(String(item.published).slice(0, 10))}` : '';
-    const route = item.route ? ` · <a href="${escapeHtml(item.route)}">open</a>` : '';
+    const safe = safeRoute(item.route);
+    const route = safe ? ` · <a href="${escapeHtml(safe)}">open</a>` : '';
     return `<li><strong>${title}</strong>${level}${published}${route}</li>`;
   }).join('') || '<li>No fresh direct source matched this build. The clock remains an editorial watch lane.</li>';
   const themes = (clock.missionThemes || []).map(item => `<li><strong>${escapeHtml(item.label)}:</strong> ${escapeHtml(item.question || '')}</li>`).join('') || '<li>General system-pressure relevance; no single control theme assigned.</li>';

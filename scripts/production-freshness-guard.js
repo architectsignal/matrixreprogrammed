@@ -11,11 +11,11 @@ const hard = [];
 const checks = [];
 const eventName = String(process.env.GITHUB_EVENT_NAME || '').toLowerCase();
 const workflowName = String(process.env.GITHUB_WORKFLOW || '');
-const pullRequestAudit = eventName === 'pull_request';
+const runningInActions = String(process.env.GITHUB_ACTIONS || '').toLowerCase() === 'true';
 const strictWorkflow = String(process.env.MATRIX_REQUIRE_PRODUCTION_FRESHNESS || '').toLowerCase() === '1'
   || /Matrix Reprogrammed Production Deploy|Production Synchronisation Assurance/i.test(workflowName);
-const nonDeploymentAudit = !strictWorkflow && /audit|test|pressure/i.test(workflowName);
-const advisoryOnly = pullRequestAudit || nonDeploymentAudit;
+const localManualRun = !runningInActions && !workflowName;
+const advisoryOnly = !localManualRun && !strictWorkflow;
 
 function readJson(base, rel) {
   const file = path.join(base, rel);
@@ -50,6 +50,7 @@ const report = {
   eventName: process.env.GITHUB_EVENT_NAME || 'local',
   workflowName: workflowName || 'local',
   strictWorkflow,
+  localManualRun,
   advisoryOnly: advisoryOnly && hard.length > 0,
   checks,
   hardIssues: blocking ? hard : [],

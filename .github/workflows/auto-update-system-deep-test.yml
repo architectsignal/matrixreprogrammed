@@ -174,6 +174,11 @@ jobs:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
+      - name: Reconcile deployable output after every legacy generator
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+        run: node scripts/final-production-reconcile.js
+
       - name: Verify root-to-Cloudflare output synchronization
         run: node scripts/auto-update-system-deep-test.js verify-built
 
@@ -207,6 +212,7 @@ jobs:
             downloads/production-freshness-guard.json
             downloads/production-sync-test.json
             downloads/production-deploy-guard-report.json
+            downloads/final-production-reconcile.json
             downloads/final-investigation-hardening.json
             downloads/conclusion-integrity-report.json
             data/investigation-source-pulls/daily-latest.json

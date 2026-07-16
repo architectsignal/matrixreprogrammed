@@ -89,10 +89,13 @@ fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
 
-// These are deliberately last. No later generator may restore public compatibility
-// markers or publish a broken critical tool after the Cloudflare asset copy.
+// These are deliberately last. No later generator may restore a permanent
+// loading state, an empty control, a public compatibility marker or a broken
+// critical tool after the Cloudflare asset copy.
+runRequired('scripts/patch-power-dossier-runtime.js');
 runRequired('scripts/hide-visible-compatibility-markers.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
+runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); final public marker scrub and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); dossier fallback, control targets, marker scrub and full tool audit passed.`);

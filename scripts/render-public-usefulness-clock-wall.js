@@ -53,7 +53,7 @@ function card(clock) {
     <div class="clock-summary" data-clock-summary-only="true"><div class="clock-ring" style="--p:${score}" aria-label="${score} percent pressure index"><strong>${score}%</strong></div><div class="clock-heading"><span class="clock-band">${escapeHtml(clock.scoreBand || clock.status || 'Watch')}</span><h3>${escapeHtml(clock.title)}</h3><p class="clock-change">${escapeHtml(clock.lastMovement || `Held at ${score}. No source-linked trigger justified a change in this build.`)}</p></div></div>
     <details class="clock-detail"><summary>Open deeper information</summary><div class="clock-detail-body">
       <section><h4>What changed:</h4><p>${escapeHtml(clock.lastMovement || '')}</p></section>
-      <section><h4>What this means</h4><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
+      <section><h3>What this score means</h3><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
       <section><h4>How it is calculated</h4><p>${escapeHtml(clock.calculationBasis || clock.scoreMethod || '')}</p><p><strong>Update engine:</strong> ${escapeHtml(updateStatus)}. ${escapeHtml(updateReason)}</p></section>
       <section><h4>Control-system relevance</h4><p>${escapeHtml(clock.controlSystemMeaning || '')}</p><ul>${themes}</ul></section>
       <section class="speculation-panel"><h4>Speculation angle</h4><p><strong>Likely trajectory if the pattern continues:</strong> ${escapeHtml(speculation(clock))}</p></section>

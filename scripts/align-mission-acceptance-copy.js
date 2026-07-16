@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const roots = [root, path.join(root, '_site')].filter((value, index, all) => all.indexOf(value) === index && fs.existsSync(value));
@@ -53,6 +54,18 @@ function readFirst(routes) {
   return '';
 }
 
+function runRequired(script, args = []) {
+  const result = spawnSync(process.execPath, [path.join(root, script), ...args], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 1024 * 1024 * 20
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${script} ${args.join(' ')} failed`);
+}
+
 const timers = readFirst(['timers.html', 'timers']);
 const newsletterHtml = readFirst(['newsletter.html', 'newsletter']);
 const newsletterJs = readFirst(['newsletter.js']);
@@ -75,4 +88,11 @@ fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment
   checks
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated).`);
+
+// These are deliberately last. No later generator may restore public compatibility
+// markers or publish a broken critical tool after the Cloudflare asset copy.
+runRequired('scripts/hide-visible-compatibility-markers.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
+runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
+
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); final public marker scrub and full tool audit passed.`);

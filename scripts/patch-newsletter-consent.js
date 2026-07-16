@@ -152,5 +152,6 @@ runRequired('Final Atlas Layers build', 'scripts/build-atlas-layers.js');
 runRequired('Final migration country grid', 'scripts/build-migration-crime-grid.js');
 runRequired('Final compact mission timer synthesis', 'scripts/build-clock-wall.js');
 runRequired('Final mission surface reconciliation', 'scripts/patch-final-mission-surfaces.js');
+runRequired('AI speculative conclusions integrity pass', 'scripts/patch-ai-speculative-conclusions.js');
 runRequired('Living intelligence regression test', 'scripts/living-intelligence-regression-test.js');
 runRequired('Final Search V3 deployment compaction', 'scripts/build-search-v3-runtime.js');

@@ -54,10 +54,18 @@ function cleanNameArray(values) {
   return clean;
 }
 function cleanObject(value) {
-  if (Array.isArray(value)) return value.map(cleanObject).filter(item => item !== undefined);
+  if (Array.isArray(value)) {
+    return value.map(cleanObject).filter(item => {
+      if (typeof item === 'string' && isInvalidName(item)) {
+        stats.invalidStringsRemoved++;
+        return false;
+      }
+      return item !== undefined;
+    });
+  }
   if (!value || typeof value !== 'object') return value;
   for (const [key, current] of Object.entries(value)) {
-    if (['entity_names', 'institution_names', 'entities', 'institutions', 'people', 'organizations', 'organisations'].includes(key) && Array.isArray(current)) {
+    if (['entity_names', 'institution_names'].includes(key) && Array.isArray(current)) {
       value[key] = cleanNameArray(current);
       continue;
     }
@@ -86,7 +94,7 @@ function cleanNamedCollection(container, key) {
     if (invalid) stats.invalidObjectsRemoved++;
     return !invalid;
   }).map(cleanObject);
-  if (container[key].length !== before) container.count = container[key].length;
+  if (container[key].length !== before && Object.prototype.hasOwnProperty.call(container, 'count')) container.count = container[key].length;
 }
 function sanitizeJson(relative, namedKeys = []) {
   const data = readJson(relative);
@@ -114,12 +122,11 @@ function patchHtml(relative) {
     /<article\b[^>]*>[\s\S]*?<h3>\s*<\/h3>[\s\S]*?<\/article>/gi
   ];
   for (const pattern of patterns) {
-    html = html.replace(pattern, match => {
+    html = html.replace(pattern, () => {
       stats.htmlCardsRemoved++;
       return '';
     });
   }
-  html = html.replace(/\[object Object\]/g, 'Unresolved entity');
   if (html !== before) {
     fs.writeFileSync(file, html);
     changed.push(relative);

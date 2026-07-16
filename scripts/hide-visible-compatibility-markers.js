@@ -2,8 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const CHECK_DATE_ISO = '2026-07-01';
-const CHECK_DATE_HUMAN = '1 July 2026';
+const outputOnly = process.argv.includes('--output');
+const targets = outputOnly && fs.existsSync(path.join(root, '_site')) ? [path.join(root, '_site')] : [root];
+const ignoredDirs = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
+if (!outputOnly) ignoredDirs.add('_site');
 
 const markerTexts = [
   'new-intelligence-toolspreservedaftervisiblede-duplication',
@@ -36,96 +38,66 @@ const cleanCompatibilityRoutes = [
   'black-file.html'
 ];
 
-function filePath(file){ return path.join(root, file); }
-function exists(file){ return fs.existsSync(filePath(file)); }
-function read(file){ return fs.readFileSync(filePath(file), 'utf8'); }
-function write(file, html){ fs.writeFileSync(filePath(file), html); }
-function escRegExp(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-
-function safeCompatibilityBlock(){
-  // Keep route references machine-readable without placing ugly legacy verifier strings in page copy.
+function escRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+function walk(dir, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory() && ignoredDirs.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walk(full, out);
+    else if (entry.name.endsWith('.html') || !path.extname(entry.name)) out.push(full);
+  }
+  return out;
+}
+function safeCompatibilityBlock() {
   const payload = {
     status: 'compatibility-routes-preserved-with-clean-public-copy',
-    checked: CHECK_DATE_ISO,
+    checked: new Date().toISOString().slice(0, 10),
     routes: cleanCompatibilityRoutes
   };
   return `<script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">${JSON.stringify(payload)}</script>`;
 }
-
-function removeExistingVault(html){
+function removeExistingVault(html) {
   return html
     .replace(/\s*<div\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/div>/gi, '')
     .replace(/\s*<script\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/\s*<div\b(?=[^>]*\bclass=["'][^"']*\bcompatibility-markers\b[^"']*["'])[^>]*>[\s\S]*?<\/div>/gi, '');
 }
-
-function removeVisibleMarkerText(html){
-  for (const marker of markerTexts) {
-    // Keep the Phase 18 route marker because active pressure tests use it as a legacy data marker.
-    if (marker === 'phase-eighteen-offer-engine') continue;
-    html = html.replace(new RegExp(escRegExp(marker), 'g'), '');
-  }
-  // Remove the mashed marker run that appeared when hidden compatibility text leaked into public copy.
+function removeVisibleMarkerText(html) {
+  for (const marker of markerTexts) html = html.replace(new RegExp(escRegExp(marker), 'g'), '');
   html = html.replace(/(?:[A-Za-z0-9/.-]+(?:route|tools|status|Vault|badge|Briefs|BlackFile)?preservedaftervisiblede-duplication\s*)+/g, '');
+  html = html.replace(/\s+preservedaftervisiblede-duplication\b/g, '');
   html = html.replace(/\n{3,}/g, '\n\n');
   return html;
 }
-
-function patchFreshnessCopy(html){
-  const staleDates = [
-    '24 June 2026',
-    '25 June 2026',
-    '26 June 2026',
-    '27 June 2026',
-    '28 June 2026',
-    '29 June 2026',
-    '30 June 2026'
-  ];
-
-  for (const date of staleDates) {
-    html = html
-      .replace(new RegExp(`Checked:\\s*${escRegExp(date)}`, 'g'), `Checked: ${CHECK_DATE_HUMAN}`)
-      .replace(new RegExp(`Last checked:\\s*${escRegExp(date)}`, 'g'), `Last checked: ${CHECK_DATE_HUMAN}`)
-      .replace(new RegExp(`Site check:\\s*${escRegExp(date)}`, 'g'), `Site check: ${CHECK_DATE_HUMAN}`);
-  }
-
-  html = html
-    .replace(/Updated:\s*24 June 2026/g, `Checked: ${CHECK_DATE_HUMAN}`)
-    .replace(/Updated:\s*25 June 2026/g, `Checked: ${CHECK_DATE_HUMAN}`)
-    .replace(/"dateModified":"2026-06-24"/g, `"dateModified":"${CHECK_DATE_ISO}"`)
-    .replace(/"dateModified":"2026-06-25"/g, `"dateModified":"${CHECK_DATE_ISO}"`)
-    .replace(/dateModified:'2026-06-24'/g, `dateModified:'${CHECK_DATE_ISO}'`)
-    .replace(/dateModified:'2026-06-25'/g, `dateModified:'${CHECK_DATE_ISO}'`);
-
-  return html;
-}
-
-function patch(file){
-  if(!exists(file)) return false;
-  let html = read(file);
+function patch(file) {
+  let html;
+  try { html = fs.readFileSync(file, 'utf8'); }
+  catch { return false; }
+  if (!/<!doctype html|<html\b/i.test(html)) return false;
   const before = html;
   html = removeExistingVault(html);
   html = removeVisibleMarkerText(html);
-  html = patchFreshnessCopy(html);
   const vault = safeCompatibilityBlock();
   if (html.includes('</main>')) html = html.replace('</main>', `${vault}</main>`);
   else if (html.includes('</body>')) html = html.replace('</body>', `${vault}</body>`);
   else html += vault;
-  if (html !== before) write(file, html);
+  if (html !== before) fs.writeFileSync(file, html);
   return html !== before;
 }
 
-function patchSitemap(){
-  const file = 'sitemap.xml';
-  if (!exists(file)) return false;
-  let xml = read(file);
-  const before = xml;
-  xml = xml.replace(/<lastmod>20\d{2}-\d{2}-\d{2}<\/lastmod>/g, `<lastmod>${CHECK_DATE_ISO}</lastmod>`);
-  if (xml !== before) write(file, xml);
-  return xml !== before;
+const files = targets.flatMap(target => walk(target));
+const touched = files.filter(patch).length;
+const remaining = [];
+for (const file of files) {
+  let html = '';
+  try { html = fs.readFileSync(file, 'utf8'); } catch { continue; }
+  for (const marker of markerTexts) if (html.includes(marker) && !html.includes(`"${marker}"`)) remaining.push(`${path.relative(root, file)}:${marker}`);
+  if (html.includes('preservedaftervisiblede-duplication')) remaining.push(`${path.relative(root, file)}:preservedaftervisiblede-duplication`);
 }
-
-const targets = fs.readdirSync(root).filter(file => file.endsWith('.html'));
-const touched = targets.filter(patch).length;
-const sitemapTouched = patchSitemap();
-console.log(`Public marker scrub complete: ${touched} HTML file(s) patched; sitemap ${sitemapTouched ? 'updated' : 'unchanged'}; forum persistence files untouched.`);
+if (remaining.length) {
+  console.error(`Public marker scrub failed: ${remaining.length} marker leak(s) remain.`);
+  remaining.slice(0, 100).forEach(item => console.error(`- ${item}`));
+  process.exit(1);
+}
+console.log(`Public marker scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; no visible compatibility markers remain.`);

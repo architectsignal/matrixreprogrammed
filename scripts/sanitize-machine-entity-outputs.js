@@ -99,7 +99,7 @@ function sanitizeJson(relative, namedKeys = []) {
 function removeGeneratedFile(relative) {
   const file = at(relative);
   if (!fs.existsSync(file)) return;
-  fs.rmSync(file, { force: true });
+  fs.rmSync(file, { force: true, recursive: true });
   removedFiles.push(display(relative));
 }
 function patchHtml(relative) {
@@ -109,7 +109,7 @@ function patchHtml(relative) {
   let html = before;
   const patterns = [
     /<article\b[^>]*>[\s\S]*?<h3>\s*\[object Object\]\s*<\/h3>[\s\S]*?<\/article>/gi,
-    /<article\b[^>]*>[\s\S]*?href=["'][^"']*object-object\.html[^"']*["'][\s\S]*?<\/article>/gi,
+    /<article\b[^>]*>[\s\S]*?href=["'][^"']*object-object(?:\.html)?[^"']*["'][\s\S]*?<\/article>/gi,
     /<article\b[^>]*>[\s\S]*?<h3>\s*<\/h3>[\s\S]*?<\/article>/gi
   ];
   for (const pattern of patterns) html = html.replace(pattern, () => { stats.htmlCardsRemoved++; return ''; });
@@ -136,16 +136,34 @@ sanitizeJson('data/entity-exposure-index.json', ['entities', 'profiles']);
 sanitizeJson('data/main-player-profiles.json', ['profiles', 'players']);
 sanitizeJson('data/entity-relationship-scores.json', ['entities', 'relationships']);
 sanitizeSearchIndex();
-removeGeneratedFile('entity-briefs/object-object.html');
-removeGeneratedFile('entity-timelines/object-object.html');
+for (const relative of [
+  'entity-briefs/object-object.html',
+  'entity-briefs/object-object',
+  'entity-timelines/object-object.html',
+  'entity-timelines/object-object',
+  'entity-exposure/object-object.html',
+  'entity-exposure/object-object'
+]) removeGeneratedFile(relative);
 for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html']) patchHtml(page);
 
 const remaining = [];
-for (const relative of ['data/record-events.json', 'data/entity-observations.json', 'data/entity-daily-briefs.json', 'machine-digest.html', 'entity-daily-briefs.html', 'search-index.json']) {
+for (const relative of [
+  'data/record-events.json',
+  'data/entity-observations.json',
+  'data/entity-daily-briefs.json',
+  'data/entity-exposure-index.json',
+  'machine-digest.html',
+  'entity-daily-briefs.html',
+  'entity-exposure-index.html',
+  'search-index.json'
+]) {
   const file = at(relative);
   if (!fs.existsSync(file)) continue;
   const text = fs.readFileSync(file, 'utf8');
-  if (/\[object Object\]/i.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
+  if (/\[object Object\]/i.test(text) || /object-object/i.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
+}
+for (const relative of ['entity-briefs/object-object.html', 'entity-timelines/object-object.html', 'entity-exposure/object-object.html']) {
+  if (fs.existsSync(at(relative))) remaining.push(display(relative));
 }
 const report = {
   ok: remaining.length === 0,
@@ -153,7 +171,7 @@ const report = {
   mode: outputOnly ? 'cloudflare-output' : 'source-tree',
   base: path.relative(root, base) || '.',
   changed: [...new Set(changed)], removedFiles, stats, remaining,
-  boundary: 'Malformed object coercions and blank generated entities are excluded from public outputs. Valid court identifiers, company tickers and institutional names are preserved.'
+  boundary: 'Malformed object coercions, blank generated entities and object-object routes are excluded from public outputs. Valid court identifiers, company tickers and institutional names are preserved.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);

@@ -144,7 +144,9 @@ if (!ok) throw new Error(`Newsletter consent self-heal failed: ${JSON.stringify(
 console.log('Newsletter consent and form-specific Daily / Weekly preferences applied.');
 
 // This script is the final self-heal called by every Cloudflare build. Rebuild the
-// authoritative mission surfaces here so older generators cannot overwrite them.
+// authoritative current intelligence and mission surfaces here so older generators
+// cannot overwrite fresh feeds, named actors, compact clocks or newsletter delivery.
+runRequired('Final authoritative current-intelligence refresh', 'scripts/finalize-current-intelligence.js');
 runRequired('Daily Control Brief lifecycle patch', 'scripts/patch-daily-control-brief-delivery.js');
 runRequired('Final Atlas Layers build', 'scripts/build-atlas-layers.js');
 runRequired('Final migration country grid', 'scripts/build-migration-crime-grid.js');

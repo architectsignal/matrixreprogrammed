@@ -1,0 +1,54 @@
+name: Investigation Deploy Handoff
+
+on:
+  workflow_run:
+    workflows:
+      - Daily Investigation Machine
+      - Weekly Investigation Machine
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: investigation-deploy-handoff
+  cancel-in-progress: false
+
+jobs:
+  dispatch-production:
+    name: Dispatch guarded production deployment after a healthy update
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch production workflow on latest main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Matrix Reprogrammed Production Deploy" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main
+
+      - name: Record handoff proof
+        run: |
+          mkdir -p downloads
+          cat > downloads/investigation-deploy-handoff.json <<JSON
+          {
+            "ok": true,
+            "generatedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "upstreamWorkflow": "${{ github.event.workflow_run.name }}",
+            "upstreamRunId": "${{ github.event.workflow_run.id }}",
+            "upstreamConclusion": "${{ github.event.workflow_run.conclusion }}",
+            "upstreamHeadSha": "${{ github.event.workflow_run.head_sha }}",
+            "deploymentWorkflow": "Matrix Reprogrammed Production Deploy",
+            "deploymentRef": "main",
+            "boundary": "This workflow only dispatches the existing guarded production pipeline after a successful investigation run. The production workflow still performs freshness, synchronization, D1, deployment and live-SHA checks."
+          }
+          JSON
+
+      - name: Upload handoff proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: investigation-deploy-handoff-${{ github.run_id }}
+          path: downloads/investigation-deploy-handoff.json
+          retention-days: 30

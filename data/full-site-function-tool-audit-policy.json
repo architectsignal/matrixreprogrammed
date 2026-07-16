@@ -1,23 +1,26 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-07-16",
   "name": "Full Site Function and Tool Audit",
-  "purpose": "Validate every public HTML surface, local route, linked asset, JavaScript syntax contract, JSON feed, download route, form surface and critical interactive tool before Cloudflare deployment.",
+  "purpose": "Validate every public HTML surface, local route, linked asset, JavaScript syntax contract, JSON feed, download route, form surface and critical interactive tool before Cloudflare deployment, then verify the critical routes again against the live Worker deployment.",
   "criticalTools": [
     "Geographic Power Atlas",
     "Search V3 and Ask Matrix",
     "Evidence Network Map",
     "Evidence Timeline",
     "Public Data Laboratory",
-    "Research Tools",
+    "Research Tools and private runner status",
     "Mission Timers",
     "AI Speculative Conclusions",
     "Membership and PayPal boundary",
     "Passwordless member login",
     "Member dashboard",
     "Billing dashboard",
-    "Signal Board forums",
-    "Download Center"
+    "Signal Board forums and D1 health",
+    "Download Center",
+    "Machine Digest",
+    "Entity Daily Briefs",
+    "Power Dossiers"
   ],
   "hardFailureRules": [
     "Missing critical page, script or data feed",
@@ -27,12 +30,30 @@
     "Missing required DOM control",
     "Leaked internal compatibility marker",
     "Obsolete paid-tier wording or prices",
-    "Fragile Geographic Power Atlas runtime restored"
+    "Fragile Geographic Power Atlas runtime restored",
+    "Malformed entity output such as [object Object]",
+    "Blank generated entity title",
+    "Live route missing its expected marker",
+    "Live Worker response missing its origin header"
+  ],
+  "automaticRepairs": [
+    "Use stable MapLibre dynamic import with an accessible-list-first fallback",
+    "Fall back from the preferred atlas JSON alias to the canonical GeoJSON",
+    "Remove malformed entity names and generated object-object pages",
+    "Remove visible compatibility and repair markers after all generators finish",
+    "Reject legacy €19 and €49 membership copy",
+    "Preserve the free-evidence and monthly-donation membership promise"
   ],
   "warningRules": [
     "Broken noncritical legacy-page local target",
     "Form without an obvious submit control or JavaScript hook",
-    "Noncritical script fetch target requiring manual review"
+    "Noncritical script fetch target requiring manual review",
+    "Third-party browser library unavailable while a local accessible fallback remains"
   ],
-  "boundary": "Static and postbuild audits validate the shipped site bundle. Authenticated transactions, PayPal sandbox behavior, email delivery, D1 writes and third-party services also require live environment checks."
+  "liveVerification": {
+    "script": "scripts/live-site-verification.js",
+    "scope": "Homepage, major navigation, search, Atlas, maps, timeline, data lab, research tools, timers, speculation, membership, member surfaces, forums, downloads, machine outputs, dossier data and Worker health.",
+    "readOnly": true
+  },
+  "boundary": "Static and postbuild audits validate the shipped site bundle. Live verification validates public read routes and Worker responses. Authenticated transactions, PayPal sandbox approval, email delivery, D1 writes and private runner execution require valid test accounts and configured external services."
 }

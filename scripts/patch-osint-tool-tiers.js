@@ -73,5 +73,6 @@ const deliveryTierFinal = `${deliveryTierAnchor}\n  const tierRank = { registere
 if (!delivery.includes("reason: 'current-membership-tier-required'")) delivery = replaceRequired(delivery, deliveryTierAnchor, deliveryTierFinal, 'report delivery tier boundary');
 write(deliveryFile, delivery);
 
+require('./patch-geographic-power-atlas-runtime.js');
 require('./patch-login-email-delivery.js');
 console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope.');

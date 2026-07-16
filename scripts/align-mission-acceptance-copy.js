@@ -19,9 +19,7 @@ function patch(relative, transform) {
 }
 
 function patchTimer(html) {
-  return html
-    .replace(/<h3>What this means<\/h3>/g, '<h3>What this score means</h3>')
-    .replace(/<h3>What this score means<\/h3>/g, '<h3>What this score means</h3>');
+  return html.replace(/<(h[1-6])>What this means<\/\1>/gi, '<$1>What this score means</$1>');
 }
 
 function patchNewsletterHtml(html) {

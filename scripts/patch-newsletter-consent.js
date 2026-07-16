@@ -153,3 +153,4 @@ runRequired('Final migration country grid', 'scripts/build-migration-crime-grid.
 runRequired('Final compact mission timer synthesis', 'scripts/build-clock-wall.js');
 runRequired('Final mission surface reconciliation', 'scripts/patch-final-mission-surfaces.js');
 runRequired('Living intelligence regression test', 'scripts/living-intelligence-regression-test.js');
+runRequired('Final Search V3 deployment compaction', 'scripts/build-search-v3-runtime.js');

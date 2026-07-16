@@ -7,18 +7,16 @@ const targets = outputOnly && fs.existsSync(path.join(root, '_site')) ? [path.jo
 const ignoredDirs = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
 if (!outputOnly) ignoredDirs.add('_site');
 
-const markerTexts = [
+// Only remove the malformed legacy compatibility tokens. Do not remove legitimate
+// public routes such as downloads/forum-posts.json, or stable section identifiers.
+const malformedTokens = [
   'new-intelligence-toolspreservedaftervisiblede-duplication',
   'AuthorityHubroutepreservedaftervisiblede-duplication',
   'SchemaIndexroutepreservedaftervisiblede-duplication',
-  'downloads/forum-posts.json',
   'FeedCenterroutepreservedaftervisiblede-duplication',
   'ShareCenterroutepreservedaftervisiblede-duplication',
   'LaunchRoomroutepreservedaftervisiblede-duplication',
   'OfferCenterroutepreservedaftervisiblede-duplication',
-  'phase-eighteen-offer-engine',
-  'UsefulFreeBriefs',
-  'ReadTheBlackFile',
   'DailyDroproutepreservedaftervisiblede-duplication',
   'Evidencebadgeroutepreservedaftervisiblede-duplication',
   'SourceDocumentVaultroutepreservedaftervisiblede-duplication',
@@ -64,8 +62,11 @@ function removeExistingVault(html) {
     .replace(/\s*<div\b(?=[^>]*\bclass=["'][^"']*\bcompatibility-markers\b[^"']*["'])[^>]*>[\s\S]*?<\/div>/gi, '');
 }
 function removeVisibleMarkerText(html) {
-  for (const marker of markerTexts) html = html.replace(new RegExp(escRegExp(marker), 'g'), '');
-  html = html.replace(/(?:[A-Za-z0-9/.-]+(?:route|tools|status|Vault|badge|Briefs|BlackFile)?preservedaftervisiblede-duplication\s*)+/g, '');
+  // Compatibility leaks were emitted as plain text nodes. Remove the whole text
+  // node when it contains the malformed suffix, leaving surrounding markup intact.
+  html = html.replace(/>([^<]*preservedaftervisiblede-duplication[^<]*)</gi, '><');
+  html = html.replace(/<!--[\s\S]*?preservedaftervisiblede-duplication[\s\S]*?-->/gi, '');
+  for (const token of malformedTokens) html = html.replace(new RegExp(escRegExp(token), 'g'), '');
   html = html.replace(/\s+preservedaftervisiblede-duplication\b/g, '');
   html = html.replace(/\n{3,}/g, '\n\n');
   return html;
@@ -92,7 +93,7 @@ const remaining = [];
 for (const file of files) {
   let html = '';
   try { html = fs.readFileSync(file, 'utf8'); } catch { continue; }
-  for (const marker of markerTexts) if (html.includes(marker) && !html.includes(`"${marker}"`)) remaining.push(`${path.relative(root, file)}:${marker}`);
+  for (const token of malformedTokens) if (html.includes(token)) remaining.push(`${path.relative(root, file)}:${token}`);
   if (html.includes('preservedaftervisiblede-duplication')) remaining.push(`${path.relative(root, file)}:preservedaftervisiblede-duplication`);
 }
 if (remaining.length) {
@@ -100,4 +101,4 @@ if (remaining.length) {
   remaining.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Public marker scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; no visible compatibility markers remain.`);
+console.log(`Public marker scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; valid public routes preserved.`);

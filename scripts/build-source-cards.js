@@ -11,6 +11,19 @@ function writeJson(file, data) { fs.writeFileSync(path.join(root, file), JSON.st
 function esc(value='') { return String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function slug(value='') { return String(value).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90); }
 function clean(value='') { return String(value || '').replace(/\s+/g, ' ').trim(); }
+function safeSourceUrl(value, fallback = 'evidence-vault.html') {
+  const candidate = clean(value);
+  if (/^https?:\/\/[^\s<>"']+$/i.test(candidate)) return candidate;
+  if (/^(?:\.\/|\/)?[a-z0-9][a-z0-9._~!$&'()*+,;=:@%\/-]*\.html(?:[?#][^\s<>"']*)?$/i.test(candidate)) return candidate.replace(/^\.\//, '');
+  const alternate = clean(fallback);
+  if (/^(?:\.\/|\/)?[a-z0-9][a-z0-9._~!$&'()*+,;=:@%\/-]*\.html(?:[?#][^\s<>"']*)?$/i.test(alternate)) return alternate.replace(/^\.\//, '');
+  return 'evidence-vault.html';
+}
+function safeHtmlRoute(value, fallback) {
+  const candidate = clean(value);
+  if (/^(?:\.\/|\/)?[a-z0-9][a-z0-9._~!$&'()*+,;=:@%\/-]*\.html(?:[?#][^\s<>"']*)?$/i.test(candidate)) return candidate.replace(/^\.\//, '');
+  return fallback;
+}
 function classify(item) {
   const text = [item.title, item.evidenceLevel, item.summary, item.evidenceBoundary].join(' ').toLowerCase();
   if (/conviction|plea|court finding|sentence/.test(text)) return 'Court finding / conviction lane';
@@ -34,25 +47,26 @@ function sourceCardsFromLiveIntel() {
   const live = readJson('data/live-intel.json', { items: [] });
   return (live.items || []).filter(item => item && item.title && item.url).slice(0, 40).map(item => {
     const evidenceClass = classify(item);
+    const evidenceRoute = safeHtmlRoute(item.evidenceRoute, 'evidence-vault.html');
     return {
       id: item.id || slug(`${item.lane}-${item.title}`),
       lane: item.lane || 'public-record',
       date: String(item.published || item.date || '').slice(0,10) || 'undated',
       claim: item.title,
       sourceLabel: item.sourceLabel || item.laneTitle || 'Source',
-      sourceUrl: item.url,
+      sourceUrl: safeSourceUrl(item.url, evidenceRoute),
       summary: clean(item.summary || item.title),
       evidenceClass,
       recordSupports: clean(item.whyItMatters || item.summary || 'The linked source supports a public-record lead that should be checked before sharing.'),
       notProven: 'This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.',
       evidenceBoundary: boundaryFor(item, evidenceClass),
       peopleEntities: item.people || [],
-      nextSourceToOpen: item.evidenceRoute || 'evidence-vault.html',
-      evidenceRoute: item.evidenceRoute || 'evidence-vault.html',
-      bookRoute: item.bookRoute || 'books.html',
-      videoRoute: item.videoRoute || 'videos.html',
-      optinRoute: item.optinRoute || 'optin-center.html',
-      offerRoute: item.offerRoute || 'offer-center.html'
+      nextSourceToOpen: evidenceRoute,
+      evidenceRoute,
+      bookRoute: safeHtmlRoute(item.bookRoute, 'books.html'),
+      videoRoute: safeHtmlRoute(item.videoRoute, 'videos.html'),
+      optinRoute: safeHtmlRoute(item.optinRoute, 'optin-center.html'),
+      offerRoute: safeHtmlRoute(item.offerRoute, 'offer-center.html')
     };
   });
 }

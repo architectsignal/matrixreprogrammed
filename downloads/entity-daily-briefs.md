@@ -1,8 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-16T06:33:54.950Z
+Updated: 2026-07-16T08:34:01.668Z
 
-Briefs generated: 41
+Briefs generated: 58
 
 ## Health and Human Services Department
 
@@ -134,6 +134,16 @@ Evidence: documented public-record association
 
 Watch next: Check whether new federal-register-policy records repeat this name.
 
+## Appellate Division of the Supreme Court of the State of New York
+
+At a glance: Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## National Aeronautics and Space Administration
 
 At a glance: National Aeronautics and Space Administration is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
@@ -174,6 +184,86 @@ Evidence: documented public-record association
 
 Watch next: Watch General Services Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
+## 2021-00294
+
+At a glance: 2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2021-00294 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 2024-07773
+
+At a glance: 2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2024-07773 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 2025-0045-Appeal.
+
+At a glance: 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2025-0045-Appeal. across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 25-113
+
+At a glance: 25-113 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 25-113 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 25-581
+
+At a glance: 25-581 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 25-581 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## A170747M
+
+At a glance: A170747M is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch A170747M across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Biddle v. Biddle
+
+At a glance: Biddle v. Biddle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Biddle v. Biddle across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## California Court of Appeal
+
+At a glance: California Court of Appeal is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch California Court of Appeal across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Chattogram Water Supply and Sewerage Authority
 
 At a glance: Chattogram Water Supply and Sewerage Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -183,6 +273,26 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+
+## Court of Appeals for the Second Circuit
+
+At a glance: Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Second Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Court of Appeals of North Carolina
+
+At a glance: Court of Appeals of North Carolina is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals of North Carolina across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Finance Division, Ministry of Finance
 
@@ -194,6 +304,16 @@ Evidence: documented public-record association
 
 Watch next: Watch Finance Division, Ministry of Finance across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
+## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
+
+At a glance: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Kingdom of Morocco
 
 At a glance: Kingdom of Morocco is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -203,6 +323,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Kingdom of Morocco across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+
+## Matter of Pagliughi
+
+At a glance: Matter of Pagliughi is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Matter of Pagliughi across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)
 
@@ -223,6 +353,46 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Ministry of Health and Family Welfare across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
+
+## People v. Brim
+
+At a glance: People v. Brim is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch People v. Brim across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Sawas v. Elzanaty
+
+At a glance: Sawas v. Elzanaty is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Sawas v. Elzanaty across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Supreme Court of Rhode Island
+
+At a glance: Supreme Court of Rhode Island is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Supreme Court of Rhode Island across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## The New York and Presbyterian Hospital v. New York State Nurses Association
+
+At a glance: The New York and Presbyterian Hospital v. New York State Nurses Association is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch The New York and Presbyterian Hospital v. New York State Nurses Association across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## AAPL
 

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T06:33:55.078Z",
+  "updated": "2026-07-16T08:34:02.237Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -1749,8 +1749,63 @@
         "disclosure-gaps",
         "courts-law"
       ],
-      "latest_records": [],
-      "top_entities": [],
+      "latest_records": [
+        {
+          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Sawas v. Elzanaty",
+          "url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "People v. Brim",
+          "url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+          "url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Matter of Pagliughi",
+          "url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Biddle v. Biddle",
+          "url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        }
+      ],
+      "top_entities": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Supreme Court of Rhode Island",
+        "2025-0045-Appeal.",
+        "Sawas v. Elzanaty",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-00294",
+        "People v. Brim",
+        "California Court of Appeal",
+        "A170747M",
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Court of Appeals for the Second Circuit",
+        "25-113",
+        "Matter of Pagliughi",
+        "2024-07773",
+        "Biddle v. Biddle",
+        "Court of Appeals of North Carolina",
+        "25-581"
+      ],
       "relationship_candidates": [],
       "missing_records": [
         "Primary record route",

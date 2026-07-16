@@ -450,15 +450,16 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-16T06:33:34.826Z",
-    "eventCount": 18,
+    "updated": "2026-07-16T08:33:45.978Z",
+    "eventCount": 24,
     "feedCount": 7,
-    "reachedFeedCount": 3,
-    "entityObservationCount": 36,
+    "reachedFeedCount": 4,
+    "entityObservationCount": 53,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -690,6 +691,17 @@
       ]
     },
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ]
+    },
+    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -754,34 +766,60 @@
       "record_types": [
         "rule_or_notice"
       ]
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-16T06:33:54.916Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-16T08:34:01.445Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 6,
-    "relationshipCandidateCount": 94,
+    "removedRecordCount": 0,
+    "relationshipCandidateCount": 112,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Sawas v. Elzanaty",
+      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "People v. Brim",
+      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Matter of Pagliughi",
+      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/"
+    },
+    {
+      "lane": "courtlistener-court-records",
+      "grade": "charged / sued",
+      "summary": "Biddle v. Biddle",
+      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-16T06:33:55.044Z",
+    "updated": "2026-07-16T08:34:02.187Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -815,7 +853,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-16T06:33:55.078Z",
+    "updated": "2026-07-16T08:34:02.237Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

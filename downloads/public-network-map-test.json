@@ -1,19 +1,21 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-15T06:31:13.839Z",
+  "generatedAt": "2026-07-16T06:00:46.803Z",
   "totals": {
-    "entities": 4750,
-    "relationships": 7031,
-    "coreRelationships": 5904,
-    "officialRelationships": 6931,
+    "entities": 4846,
+    "relationships": 7187,
+    "coreRelationships": 5928,
+    "officialRelationships": 7087,
     "reviewedRelationships": 840,
-    "weakMentions": 1127,
+    "weakMentions": 1259,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
       "malformed": 0
     }
   },
+  "graphBytes": 16975094,
+  "cloudflareSafetyTarget": 25165824,
   "checks": [
     {
       "name": "graph schema version",
@@ -28,22 +30,32 @@
     {
       "name": "substantial entity graph",
       "ok": true,
-      "detail": "4750 nodes"
+      "detail": "4846 nodes"
     },
     {
       "name": "substantial relationship graph",
       "ok": true,
-      "detail": "7031 edges"
+      "detail": "7187 edges"
     },
     {
       "name": "relationship totals agree",
       "ok": true,
-      "detail": "7031 / 7031"
+      "detail": "7187 / 7187"
     },
     {
       "name": "entity totals agree",
       "ok": true,
-      "detail": "4750 / 4750"
+      "detail": "4846 / 4846"
+    },
+    {
+      "name": "browser graph remains below Cloudflare safety target",
+      "ok": true,
+      "detail": "16.19 MiB / 24 MiB"
+    },
+    {
+      "name": "browser graph uses compact serialization",
+      "ok": true,
+      "detail": "compact JSON required"
     },
     {
       "name": "no orphan relationships",
@@ -68,17 +80,17 @@
     {
       "name": "core view exists",
       "ok": true,
-      "detail": "5904 core edges"
+      "detail": "5928 core edges"
     },
     {
       "name": "official view exists",
       "ok": true,
-      "detail": "6931 official edges"
+      "detail": "7087 official edges"
     },
     {
       "name": "weak mentions are separated",
       "ok": true,
-      "detail": "1127 weak mentions"
+      "detail": "1259 weak mentions"
     },
     {
       "name": "relationship filter metadata",
@@ -109,6 +121,16 @@
       "name": "output downloads/evidence-network-map-build.json",
       "ok": true,
       "detail": "present"
+    },
+    {
+      "name": "build report records compact serialization",
+      "ok": true,
+      "detail": "compact-json"
+    },
+    {
+      "name": "build report confirms deployable size",
+      "ok": true,
+      "detail": "16975094 / 16975094"
     },
     {
       "name": "runtime syntax",

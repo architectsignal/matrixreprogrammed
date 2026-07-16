@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-15T05:53:15.041Z
+Updated: 2026-07-16T05:59:49.195Z
 
 Briefs generated: 58
 
@@ -204,6 +204,16 @@ Evidence: legal record present
 
 Watch next: Watch 2024-07773 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## 2025-0045-Appeal.
+
+At a glance: 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2025-0045-Appeal. across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## 25-113
 
 At a glance: 25-113 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -233,16 +243,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch A170747M across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## AC48383
-
-At a glance: AC48383 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch AC48383 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Biddle v. Biddle
 
@@ -274,16 +274,6 @@ Evidence: documented public-record association
 
 Watch next: Watch Chattogram Water Supply and Sewerage Authority across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
-## Connecticut Appellate Court
-
-At a glance: Connecticut Appellate Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Connecticut Appellate Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## Court of Appeals for the Second Circuit
 
 At a glance: Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -314,15 +304,15 @@ Evidence: documented public-record association
 
 Watch next: Watch Finance Division, Ministry of Finance across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
-## Khan v. Jewish Women International
+## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
 
-At a glance: Khan v. Jewish Women International is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch Khan v. Jewish Women International across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Kingdom of Morocco
 
@@ -383,6 +373,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Sawas v. Elzanaty across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Supreme Court of Rhode Island
+
+At a glance: Supreme Court of Rhode Island is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Supreme Court of Rhode Island across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## The New York and Presbyterian Hospital v. New York State Nurses Association
 

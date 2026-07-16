@@ -1,0 +1,789 @@
+{
+  "ok": true,
+  "overall": "working-with-gaps",
+  "updated": "2026-07-16T06:00:33.987Z",
+  "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
+  "summary": {
+    "green": 40,
+    "amber": 3,
+    "red": 0,
+    "total": 43
+  },
+  "pipeline": [
+    "Collect",
+    "Classify",
+    "Grade",
+    "Cross-check",
+    "Connect",
+    "Conclude",
+    "Publish",
+    "Clocks",
+    "Automate",
+    "Review"
+  ],
+  "checks": [
+    {
+      "id": "collect-latest-drops",
+      "stage": "Collect",
+      "status": "green",
+      "finding": "Curated current-source intake exists.",
+      "fix": "",
+      "evidence": [
+        "data/latest-public-drops.json"
+      ]
+    },
+    {
+      "id": "collect-seven-day",
+      "stage": "Collect",
+      "status": "green",
+      "finding": "Seven-day news intake exists.",
+      "fix": "",
+      "evidence": [
+        "downloads/seven-day-intel.json"
+      ]
+    },
+    {
+      "id": "collect-record-events",
+      "stage": "Collect",
+      "status": "green",
+      "finding": "Normalized public-record event feed exists.",
+      "fix": "",
+      "evidence": [
+        "data/record-events.json"
+      ]
+    },
+    {
+      "id": "collect-source-pulls",
+      "stage": "Collect",
+      "status": "green",
+      "finding": "Source-pull index exists.",
+      "fix": "",
+      "evidence": [
+        "data/source-pulls/source-pull-index.json"
+      ]
+    },
+    {
+      "id": "freshness-curated-drops",
+      "stage": "Collect",
+      "status": "amber",
+      "finding": "Curated source file age: 7 day(s).",
+      "fix": "Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.",
+      "evidence": [
+        "data/latest-public-drops.json"
+      ]
+    },
+    {
+      "id": "freshness-seven-day-feed",
+      "stage": "Collect",
+      "status": "amber",
+      "finding": "Seven-day feed file age: 7 day(s).",
+      "fix": "Run RSS/public-source intake every day and archive items automatically after seven days.",
+      "evidence": [
+        "downloads/seven-day-intel.json"
+      ]
+    },
+    {
+      "id": "fresh-current-news",
+      "stage": "Collect",
+      "status": "green",
+      "finding": "25 news item(s) are inside the active seven-day window.",
+      "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
+      "evidence": [
+        "downloads/seven-day-intel.json"
+      ]
+    },
+    {
+      "id": "classification-system",
+      "stage": "Classify",
+      "status": "green",
+      "finding": "Information-gathering operating model exists.",
+      "fix": "",
+      "evidence": [
+        "data/information-gathering-system.json"
+      ]
+    },
+    {
+      "id": "interpretation-standard",
+      "stage": "Grade",
+      "status": "green",
+      "finding": "Reader score and evidence interpretation standard exists.",
+      "fix": "",
+      "evidence": [
+        "data/reader-interpretation-standard.json"
+      ]
+    },
+    {
+      "id": "source-registry",
+      "stage": "Grade",
+      "status": "green",
+      "finding": "Master evidence source registry exists.",
+      "fix": "",
+      "evidence": [
+        "data/master-evidence-source-registry.json"
+      ]
+    },
+    {
+      "id": "pipeline-completeness",
+      "stage": "Classify",
+      "status": "green",
+      "finding": "8 collection-to-review pipeline step(s) are declared.",
+      "fix": "Require collect, classify, grade, cross-check, connect, conclude, publish and review stages.",
+      "evidence": [
+        "data/information-gathering-system.json"
+      ]
+    },
+    {
+      "id": "evidence-levels",
+      "stage": "Grade",
+      "status": "green",
+      "finding": "6 evidence/implementation level(s) are declared.",
+      "fix": "Ensure implementation, convergence and lock-in cannot be inferred from source volume alone.",
+      "evidence": [
+        "data/information-gathering-system.json"
+      ]
+    },
+    {
+      "id": "relationship-graph",
+      "stage": "Connect",
+      "status": "green",
+      "finding": "Evidence-weighted relationship graph exists.",
+      "fix": "",
+      "evidence": [
+        "data/evidence-weighted-relationship-graph.json"
+      ]
+    },
+    {
+      "id": "graph-population",
+      "stage": "Connect",
+      "status": "green",
+      "finding": "Relationship graph contains 120 node(s) and 172 edge(s).",
+      "fix": "Rebuild the graph and reject empty deployments.",
+      "evidence": [
+        "data/evidence-weighted-relationship-graph.json"
+      ]
+    },
+    {
+      "id": "graph-boundaries",
+      "stage": "Connect",
+      "status": "amber",
+      "finding": "172 relationship edge(s) lack an explicit grade or boundary field.",
+      "fix": "Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge.",
+      "evidence": [
+        "data/evidence-weighted-relationship-graph.json"
+      ]
+    },
+    {
+      "id": "daily-conclusions",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily power conclusions exists.",
+      "fix": "",
+      "evidence": [
+        "data/daily-power-conclusions.json"
+      ]
+    },
+    {
+      "id": "conclusion-engine",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Conclusion engine exists.",
+      "fix": "",
+      "evidence": [
+        "data/conclusion-engine.json"
+      ]
+    },
+    {
+      "id": "daily-command-json",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief data exists.",
+      "fix": "",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "brief-standard",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "Site-wide brief mission standard exists.",
+      "fix": "",
+      "evidence": [
+        "data/brief-mission-standard.json"
+      ]
+    },
+    {
+      "id": "daily-missionConclusion",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief contains its mission conclusion.",
+      "fix": "Generate mission conclusion from current evidence and canonical timers on every build.",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "daily-speculativeTrajectory",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief contains its labelled speculation.",
+      "fix": "Generate labelled speculation from current evidence and canonical timers on every build.",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "daily-counterpoint",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief contains its counterpoint.",
+      "fix": "Generate counterpoint from current evidence and canonical timers on every build.",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "daily-practicalMeaning",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief contains its practical meaning.",
+      "fix": "Generate practical meaning from current evidence and canonical timers on every build.",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "daily-conclusionBoundary",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "Daily Command Brief contains its claim boundary.",
+      "fix": "Generate claim boundary from current evidence and canonical timers on every build.",
+      "evidence": [
+        "data/daily-command-brief.json"
+      ]
+    },
+    {
+      "id": "brief-coverage",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "107 brief page(s) received the mission interpretation layer.",
+      "fix": "Apply the final mission lens after all legacy brief generators and audit every brief route.",
+      "evidence": [
+        "data/brief-mission-standard.json"
+      ]
+    },
+    {
+      "id": "conclusion-engine-population",
+      "stage": "Conclude",
+      "status": "green",
+      "finding": "5 conclusion-engine item(s) exist.",
+      "fix": "Do not publish an empty conclusion engine.",
+      "evidence": [
+        "data/conclusion-engine.json"
+      ]
+    },
+    {
+      "id": "clock-source",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "Canonical risk-clock source exists.",
+      "fix": "",
+      "evidence": [
+        "data/global-risk-clocks.json"
+      ]
+    },
+    {
+      "id": "clock-wall",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "Evidence-fed clock synthesis exists.",
+      "fix": "",
+      "evidence": [
+        "data/clock-wall.json"
+      ]
+    },
+    {
+      "id": "timer-page",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "Clean timer page exists.",
+      "fix": "",
+      "evidence": [
+        "timers.html"
+      ]
+    },
+    {
+      "id": "clock-score-integrity",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "0 clock score mismatch(es) exist between canonical source and visual synthesis.",
+      "fix": "Never add display bonuses or recalculate scores in the presentation layer.",
+      "evidence": [
+        "data/global-risk-clocks.json",
+        "data/clock-wall.json"
+      ]
+    },
+    {
+      "id": "clock-depth",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "0 clock(s) lack movement, mission relevance, boundary or direct evidence input.",
+      "fix": "Keep the card clean but require the deeper tab to contain those fields.",
+      "evidence": [
+        "data/clock-wall.json",
+        "timers.html"
+      ]
+    },
+    {
+      "id": "source-to-clock-links",
+      "stage": "Clocks",
+      "status": "green",
+      "finding": "7 timer-link slug(s) are present in current drops; 0 do not resolve.",
+      "fix": "Reject source drops that reference a nonexistent clock slug.",
+      "evidence": [
+        "data/latest-public-drops.json",
+        "data/global-risk-clocks.json"
+      ]
+    },
+    {
+      "id": "homepage-command-data",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "Homepage command-surface data exists.",
+      "fix": "",
+      "evidence": [
+        "data/homepage-command-surface.json"
+      ]
+    },
+    {
+      "id": "homepage",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "Homepage exists.",
+      "fix": "",
+      "evidence": [
+        "index.html"
+      ]
+    },
+    {
+      "id": "homepage-clock-sync",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "Homepage displays 1 critical clock(s); canonical synthesis requires 1.",
+      "fix": "Build the homepage from data/clock-wall.json only and use a strict greater-than-90 threshold.",
+      "evidence": [
+        "data/homepage-command-surface.json",
+        "data/clock-wall.json",
+        "index.html"
+      ]
+    },
+    {
+      "id": "homepage-news-freshness",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "0 stale homepage news item(s) exist.",
+      "fix": "Show only items published inside seven days; show an empty-state message rather than stale content.",
+      "evidence": [
+        "data/homepage-command-surface.json",
+        "index.html"
+      ]
+    },
+    {
+      "id": "homepage-conclusion-layer",
+      "stage": "Publish",
+      "status": "green",
+      "finding": "Homepage evidence conclusion, labelled speculation and counterpoint are checked together.",
+      "fix": "Block homepage publication if any of these three fields is missing.",
+      "evidence": [
+        "data/homepage-command-surface.json",
+        "index.html"
+      ]
+    },
+    {
+      "id": "build-order-build-mission-brief-conclusions.js",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "build-mission-brief-conclusions.js is included in the authoritative build path.",
+      "fix": "Add build-mission-brief-conclusions.js after legacy generators and before Cloudflare output.",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "build-order-build-homepage-command-surface.js",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "build-homepage-command-surface.js is included in the authoritative build path.",
+      "fix": "Add build-homepage-command-surface.js after legacy generators and before Cloudflare output.",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "build-order-site-intelligence-pipeline-audit.js",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "site-intelligence-pipeline-audit.js is included in the authoritative build path.",
+      "fix": "Add site-intelligence-pipeline-audit.js after legacy generators and before Cloudflare output.",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "build-order-patch-login-email-delivery.js",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "patch-login-email-delivery.js is included in the authoritative build path.",
+      "fix": "Add patch-login-email-delivery.js after legacy generators and before Cloudflare output.",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "daily-automation",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "89 workflow file(s) scanned for daily scheduling.",
+      "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
+      "evidence": [
+        ".github/workflows/auto-evidence-pipeline.yml",
+        ".github/workflows/auto-update-orchestrator.yml",
+        ".github/workflows/card-artwork-automation.yml",
+        ".github/workflows/cleanup-forum-test-posts.yml",
+        ".github/workflows/cloudflare-domain-repair.yml",
+        ".github/workflows/d1-export-command-assurance.yml",
+        ".github/workflows/daily-intel-drop.yml",
+        ".github/workflows/daily-investigation-machine.yml",
+        ".github/workflows/daily-sitewide-refresh.yml",
+        ".github/workflows/daily-update-check.yml",
+        ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-test.yml",
+        ".github/workflows/deploy-production.yml",
+        ".github/workflows/deploy.yml",
+        ".github/workflows/elevenlabs-endpoint-discovery.yml",
+        ".github/workflows/elevenlabs-video-post-test.yml",
+        ".github/workflows/elevenlabs-video-probe.yml",
+        ".github/workflows/elevenlabs-voice-test.yml",
+        ".github/workflows/epstein-sighting-watch-weekly.yml",
+        ".github/workflows/evidence-archive-verification.yml",
+        ".github/workflows/facebook-page-refresh.yml",
+        ".github/workflows/facebook-page-update.yml",
+        ".github/workflows/full-system-audit.yml",
+        ".github/workflows/geographic-power-atlas.yml",
+        ".github/workflows/link-audit.yml",
+        ".github/workflows/live-functionality-test.yml",
+        ".github/workflows/live-intel-update.yml",
+        ".github/workflows/live-smoke-test.yml",
+        ".github/workflows/machine-feed.yml",
+        ".github/workflows/market-activity-tracker.yml",
+        ".github/workflows/mission-readiness.yml",
+        ".github/workflows/mission-surface-compatibility.yml",
+        ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/open-source-research-suite.yml",
+        ".github/workflows/open-source-site-assurance.yml",
+        ".github/workflows/osint-tools-assurance.yml",
+        ".github/workflows/pdf-evidence-extraction.yml",
+        ".github/workflows/phase0-content-tier-classification.yml",
+        ".github/workflows/phase0-phase1-report-only.yml",
+        ".github/workflows/phase1-canonical-preview-bundle.yml",
+        ".github/workflows/phase1-daily-brain-preview.yml",
+        ".github/workflows/phase1-daily-power-preview.yml",
+        ".github/workflows/phase1-investigation-preview.yml",
+        ".github/workflows/phase1-live-intel-preview.yml",
+        ".github/workflows/phase1-outcome-preview.yml",
+        ".github/workflows/phase1-relationship-preview.yml",
+        ".github/workflows/phase2-conclusion-adversarial.yml",
+        ".github/workflows/phase2-conclusion-engine-preview.yml",
+        ".github/workflows/phase2-conclusion-review-preview.yml",
+        ".github/workflows/phase2-evidence-delta-preview.yml",
+        ".github/workflows/phase2-tier-projection-preview.yml",
+        ".github/workflows/phase2a-route-family-review.yml",
+        ".github/workflows/phase2b-preview-publishing.yml",
+        ".github/workflows/phase3-completion-audit.yml",
+        ".github/workflows/phase3-entity-topic-tags.yml",
+        ".github/workflows/phase3-locked-section-simulation.yml",
+        ".github/workflows/phase3-preview-generation.yml",
+        ".github/workflows/phase3-public-private-classification.yml",
+        ".github/workflows/phase3-redirect-map.yml",
+        ".github/workflows/phase3-related-content.yml",
+        ".github/workflows/phase3-search-repair.yml",
+        ".github/workflows/phase3-tier-matrix.yml",
+        ".github/workflows/phase4-email-lifecycle-inventory.yml",
+        ".github/workflows/phase4-email-lifecycle-test.yml",
+        ".github/workflows/phase4-email-schema-validation.yml",
+        ".github/workflows/phase5-auth-entitlement-test.yml",
+        ".github/workflows/phase5-guarded-build-test.yml",
+        ".github/workflows/phase6-paypal-state-test.yml",
+        ".github/workflows/phase8-autonomous-sandbox-readiness.yml",
+        ".github/workflows/production-failure-report.yml",
+        ".github/workflows/production-sync-assurance.yml",
+        ".github/workflows/public-data-lab.yml",
+        ".github/workflows/public-network-map-assurance.yml",
+        ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/search-v3-assurance.yml",
+        ".github/workflows/security-privacy-osint-hub.yml",
+        ".github/workflows/self-heal-generated-site.yml",
+        ".github/workflows/site-pressure-test.yml",
+        ".github/workflows/site-qa.yml",
+        ".github/workflows/site-wide-master-audit.yml",
+        ".github/workflows/source-preservation-hardening-assurance.yml",
+        ".github/workflows/structured-investigation-data.yml",
+        ".github/workflows/test-site.yml",
+        ".github/workflows/transparent-maintenance.yml",
+        ".github/workflows/unpack-site-upgrade.yml",
+        ".github/workflows/weekly-dog-video.yml",
+        ".github/workflows/weekly-investigation-machine.yml",
+        ".github/workflows/weekly-newsletter-send.yml",
+        ".github/workflows/weekly-update-check.yml"
+      ]
+    },
+    {
+      "id": "weekly-automation",
+      "stage": "Automate",
+      "status": "green",
+      "finding": "Workflow files were scanned for weekly synthesis scheduling.",
+      "fix": "Add a weekly delta report that compares score movement, new entities, new contracts, new missing records and downgraded conclusions.",
+      "evidence": [
+        ".github/workflows/auto-evidence-pipeline.yml",
+        ".github/workflows/auto-update-orchestrator.yml",
+        ".github/workflows/card-artwork-automation.yml",
+        ".github/workflows/cleanup-forum-test-posts.yml",
+        ".github/workflows/cloudflare-domain-repair.yml",
+        ".github/workflows/d1-export-command-assurance.yml",
+        ".github/workflows/daily-intel-drop.yml",
+        ".github/workflows/daily-investigation-machine.yml",
+        ".github/workflows/daily-sitewide-refresh.yml",
+        ".github/workflows/daily-update-check.yml",
+        ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-test.yml",
+        ".github/workflows/deploy-production.yml",
+        ".github/workflows/deploy.yml",
+        ".github/workflows/elevenlabs-endpoint-discovery.yml",
+        ".github/workflows/elevenlabs-video-post-test.yml",
+        ".github/workflows/elevenlabs-video-probe.yml",
+        ".github/workflows/elevenlabs-voice-test.yml",
+        ".github/workflows/epstein-sighting-watch-weekly.yml",
+        ".github/workflows/evidence-archive-verification.yml",
+        ".github/workflows/facebook-page-refresh.yml",
+        ".github/workflows/facebook-page-update.yml",
+        ".github/workflows/full-system-audit.yml",
+        ".github/workflows/geographic-power-atlas.yml",
+        ".github/workflows/link-audit.yml",
+        ".github/workflows/live-functionality-test.yml",
+        ".github/workflows/live-intel-update.yml",
+        ".github/workflows/live-smoke-test.yml",
+        ".github/workflows/machine-feed.yml",
+        ".github/workflows/market-activity-tracker.yml",
+        ".github/workflows/mission-readiness.yml",
+        ".github/workflows/mission-surface-compatibility.yml",
+        ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/open-source-research-suite.yml",
+        ".github/workflows/open-source-site-assurance.yml",
+        ".github/workflows/osint-tools-assurance.yml",
+        ".github/workflows/pdf-evidence-extraction.yml",
+        ".github/workflows/phase0-content-tier-classification.yml",
+        ".github/workflows/phase0-phase1-report-only.yml",
+        ".github/workflows/phase1-canonical-preview-bundle.yml",
+        ".github/workflows/phase1-daily-brain-preview.yml",
+        ".github/workflows/phase1-daily-power-preview.yml",
+        ".github/workflows/phase1-investigation-preview.yml",
+        ".github/workflows/phase1-live-intel-preview.yml",
+        ".github/workflows/phase1-outcome-preview.yml",
+        ".github/workflows/phase1-relationship-preview.yml",
+        ".github/workflows/phase2-conclusion-adversarial.yml",
+        ".github/workflows/phase2-conclusion-engine-preview.yml",
+        ".github/workflows/phase2-conclusion-review-preview.yml",
+        ".github/workflows/phase2-evidence-delta-preview.yml",
+        ".github/workflows/phase2-tier-projection-preview.yml",
+        ".github/workflows/phase2a-route-family-review.yml",
+        ".github/workflows/phase2b-preview-publishing.yml",
+        ".github/workflows/phase3-completion-audit.yml",
+        ".github/workflows/phase3-entity-topic-tags.yml",
+        ".github/workflows/phase3-locked-section-simulation.yml",
+        ".github/workflows/phase3-preview-generation.yml",
+        ".github/workflows/phase3-public-private-classification.yml",
+        ".github/workflows/phase3-redirect-map.yml",
+        ".github/workflows/phase3-related-content.yml",
+        ".github/workflows/phase3-search-repair.yml",
+        ".github/workflows/phase3-tier-matrix.yml",
+        ".github/workflows/phase4-email-lifecycle-inventory.yml",
+        ".github/workflows/phase4-email-lifecycle-test.yml",
+        ".github/workflows/phase4-email-schema-validation.yml",
+        ".github/workflows/phase5-auth-entitlement-test.yml",
+        ".github/workflows/phase5-guarded-build-test.yml",
+        ".github/workflows/phase6-paypal-state-test.yml",
+        ".github/workflows/phase8-autonomous-sandbox-readiness.yml",
+        ".github/workflows/production-failure-report.yml",
+        ".github/workflows/production-sync-assurance.yml",
+        ".github/workflows/public-data-lab.yml",
+        ".github/workflows/public-network-map-assurance.yml",
+        ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/search-v3-assurance.yml",
+        ".github/workflows/security-privacy-osint-hub.yml",
+        ".github/workflows/self-heal-generated-site.yml",
+        ".github/workflows/site-pressure-test.yml",
+        ".github/workflows/site-qa.yml",
+        ".github/workflows/site-wide-master-audit.yml",
+        ".github/workflows/source-preservation-hardening-assurance.yml",
+        ".github/workflows/structured-investigation-data.yml",
+        ".github/workflows/test-site.yml",
+        ".github/workflows/transparent-maintenance.yml",
+        ".github/workflows/unpack-site-upgrade.yml",
+        ".github/workflows/weekly-dog-video.yml",
+        ".github/workflows/weekly-investigation-machine.yml",
+        ".github/workflows/weekly-newsletter-send.yml",
+        ".github/workflows/weekly-update-check.yml"
+      ]
+    }
+  ],
+  "topFixes": [
+    {
+      "id": "freshness-curated-drops",
+      "stage": "Collect",
+      "priority": "improve",
+      "fix": "Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days."
+    },
+    {
+      "id": "freshness-seven-day-feed",
+      "stage": "Collect",
+      "priority": "improve",
+      "fix": "Run RSS/public-source intake every day and archive items automatically after seven days."
+    },
+    {
+      "id": "graph-boundaries",
+      "stage": "Connect",
+      "priority": "improve",
+      "fix": "Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge."
+    }
+  ],
+  "newClockIdeas": [
+    {
+      "title": "Digital Identity Integration Clock",
+      "purpose": "Track when identity wallets, biometrics and credentials become required across banking, benefits, health, travel, age verification and online access.",
+      "raiseOn": [
+        "mandatory use",
+        "cross-sector acceptance",
+        "biometric requirement",
+        "payment or benefit linkage"
+      ]
+    },
+    {
+      "title": "Public-Private Governance Clock",
+      "purpose": "Track when private vendors, foundations, forums and contractors gain operational roles in public policy or essential services.",
+      "raiseOn": [
+        "exclusive contracts",
+        "delegated enforcement",
+        "vendor lock-in",
+        "standards written by implementers"
+      ]
+    },
+    {
+      "title": "Global Standards Harmonisation Clock",
+      "purpose": "Track model laws, treaties and standards moving from guidance into domestic law, procurement or technical mandates.",
+      "raiseOn": [
+        "ratification",
+        "implementing law",
+        "procurement condition",
+        "cross-border interoperability mandate"
+      ]
+    },
+    {
+      "title": "Payment Access Control Clock",
+      "purpose": "Track financial exclusion, identity-linked wallets, programmable compliance, de-banking and platform-payment coupling.",
+      "raiseOn": [
+        "transaction restrictions",
+        "identity gating",
+        "cash limits",
+        "payment denial tied to policy or speech"
+      ]
+    },
+    {
+      "title": "Emergency Powers Permanence Clock",
+      "purpose": "Track temporary war, health, cyber or security powers becoming permanent governance infrastructure.",
+      "raiseOn": [
+        "renewal",
+        "scope expansion",
+        "peacetime retention",
+        "transfer into ordinary law"
+      ]
+    },
+    {
+      "title": "AI Government Dependency Clock",
+      "purpose": "Track government reliance on a small number of AI, cloud, data and analytics vendors for decisions and public services.",
+      "raiseOn": [
+        "sole-source contracts",
+        "automated eligibility or policing",
+        "shared government model infrastructure",
+        "appeal gaps"
+      ]
+    },
+    {
+      "title": "Information Gatekeeping Clock",
+      "purpose": "Track convergence of search, media, moderation, advertising, identity and payment controls.",
+      "raiseOn": [
+        "state-linked flagging",
+        "search suppression",
+        "identity-required access",
+        "payment or advertising penalties"
+      ]
+    },
+    {
+      "title": "Asset Manager Voting Power Clock",
+      "purpose": "Track concentration of proxy voting, stewardship mandates and ownership influence among major asset managers.",
+      "raiseOn": [
+        "voting concentration",
+        "common policy mandates",
+        "pension dependency",
+        "ownership and board influence growth"
+      ]
+    },
+    {
+      "title": "Contractor State Dependency Clock",
+      "purpose": "Track government dependence on intelligence, defense, logistics, consulting, security and data contractors.",
+      "raiseOn": [
+        "mission-critical outsourcing",
+        "oversight failure",
+        "contract consolidation",
+        "revolving-door concentration"
+      ]
+    },
+    {
+      "title": "Food, Water and Land Control Clock",
+      "purpose": "Track ownership concentration, traceability mandates, carbon-linked controls and access conditions across essentials.",
+      "raiseOn": [
+        "mandatory traceability",
+        "ownership concentration",
+        "rationing or identity linkage",
+        "local producer exclusion"
+      ]
+    },
+    {
+      "title": "Biometric Border and Mobility Clock",
+      "purpose": "Track biometric travel, border databases and movement permissions merging with national identity and security systems.",
+      "raiseOn": [
+        "mandatory biometrics",
+        "cross-border database sharing",
+        "domestic reuse",
+        "travel permission linkage"
+      ]
+    },
+    {
+      "title": "Institutional Religion Convergence Clock",
+      "purpose": "Track direct institutional movement toward shared religious governance or mandatory ethical doctrine while separating dialogue from control.",
+      "raiseOn": [
+        "binding doctrine",
+        "state-linked enforcement",
+        "mandatory curriculum or credential",
+        "formal supranational religious authority"
+      ]
+    }
+  ],
+  "optimizationPrinciples": [
+    "One canonical source of truth per score, entity, relationship and conclusion.",
+    "Latest information first; stale content archives automatically instead of remaining on the homepage.",
+    "Every conclusion includes evidence, mission relevance, labelled speculation, counterpoint, missing proof and next action.",
+    "Clocks move only on dated source-linked triggers, never because a generator adds a visual bonus.",
+    "The homepage is a command surface, not a directory: conclusion, speculation, critical clocks and current news first.",
+    "Every automation produces a receipt showing source freshness, changed conclusions, changed clocks and deployment SHA."
+  ]
+}

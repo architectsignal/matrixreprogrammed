@@ -7,7 +7,7 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-15T06:30:03.797Z",
+  "liveIntelUpdated": "2026-07-16T05:59:30.664Z",
   "latestDropsUpdated": "2026-07-08T09:00:00.000Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Intelligence Network Pack",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=intelligence-network",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=intelligence-network",
   "liveIntelWindow": {
-    "updated": "2026-07-15T06:30:03.797Z",
+    "updated": "2026-07-16T05:59:30.664Z",
     "itemCount": 12,
     "items": [
       {
@@ -133,7 +133,7 @@
         "title": "DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic",
         "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5",
         "published": "2026-07-07T16:35:40.000Z",
-        "fetchedAt": "2026-07-15T06:30:03.924Z",
+        "fetchedAt": "2026-07-16T05:59:33.560Z",
         "summary": "DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit The New Republic",
         "evidenceLevel": "News/source-watch item",
         "evidenceBoundary": "A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.",
@@ -201,7 +201,7 @@
         "title": "Todd Blanche & The Epstein Files: A Timeline - Public Citizen",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5",
         "published": "2026-07-07T18:18:16.000Z",
-        "fetchedAt": "2026-07-15T06:30:03.924Z",
+        "fetchedAt": "2026-07-16T05:59:33.560Z",
         "summary": "Todd Blanche & The Epstein Files: A Timeline Public Citizen",
         "evidenceLevel": "News/source-watch item",
         "evidenceBoundary": "A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.",
@@ -253,6 +253,38 @@
         "sourceRequirement": "Official Commission AI Act page, EU legal text, AI Office guidance, national authority page, enforcement decision, or official standardisation document",
         "sourceType": "latest-public-drop",
         "freshness": "active weekly drop"
+      },
+      {
+        "id": "declassified-files-2026-07-15-24",
+        "lane": "declassified-files",
+        "laneTitle": "Declassified Files And Public Archives",
+        "sourceLabel": "Google News / declassified files",
+        "title": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5",
+        "published": "2026-07-15T23:06:00.000Z",
+        "fetchedAt": "2026-07-16T05:59:33.557Z",
+        "summary": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws CBS News",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
+        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New public-record signal: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+        "rumbleShortTitle": "Pentagon proposes new secrecy power to withhold unclassified records fro",
+        "rumbleLongTitle": "Declassified Files And Public Archives — Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS",
+        "socialThread": [
+          "1/ Fresh declassified-files lead: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault-index.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "books.html",
+        "offerRoute": "download-center.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
       },
       {
         "id": "epstein-files-2026-06-26-epstein-s-billionaire-associate-subpoenaed-after-refusing-to-answer-ov",
@@ -425,14 +457,14 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "declassified-files-2026-07-11-24",
+        "id": "declassified-files-2026-07-11-25",
         "lane": "declassified-files",
         "laneTitle": "Declassified Files And Public Archives",
         "sourceLabel": "Google News / declassified files",
         "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
         "published": "2026-07-11T04:00:07.000Z",
-        "fetchedAt": "2026-07-15T06:30:03.921Z",
+        "fetchedAt": "2026-07-16T05:59:33.557Z",
         "summary": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -455,40 +487,6 @@
         "status": "rss-fetched",
         "sourceType": "live-intel",
         "freshness": "active live intel"
-      },
-      {
-        "id": "epstein-files-2026-06-29-epstein-files-history-timeline-vote-trump-updates-encyclopedia-britann",
-        "lane": "epstein-files",
-        "laneTitle": "Google News / Epstein timeline and files",
-        "sourceLabel": "Google News / Epstein timeline and files",
-        "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
-        "published": "2026-06-29T05:00:00.000Z",
-        "fetchedAt": "2026-07-06T08:02:25.608Z",
-        "summary": "Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica",
-        "evidenceLevel": "Seven-day public-record/news lead",
-        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New Epstein file lane: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica. The record matters, but the evidence class matters more.",
-        "rumbleShortTitle": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia",
-        "rumbleLongTitle": "Google News / Epstein timeline and files — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-        "socialThread": [
-          "1/ Fresh epstein-files lead: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-black-file.html",
-        "offerRoute": "offer-starter-library.html",
-        "optinRoute": "optin-black-file-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "archived-intel-vault",
-        "archivedAt": "2026-07-06T08:02:25.608Z",
-        "archiveReason": "not-current-feed-item",
-        "sourceType": "intel-vault",
-        "freshness": "archived historical lead"
       }
     ]
   },
@@ -594,6 +592,11 @@
       "kind": "European Commission AI Act page, last updated 2026-07-07"
     },
     {
+      "title": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+      "route": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5",
+      "kind": "Google News / declassified files"
+    },
+    {
       "title": "Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square",
       "route": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5",
       "kind": "Google News / Epstein timeline and files"
@@ -622,11 +625,6 @@
       "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
       "route": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
       "kind": "Google News / declassified files"
-    },
-    {
-      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-      "route": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
-      "kind": "Google News / Epstein timeline and files"
     }
   ],
   "routes": [

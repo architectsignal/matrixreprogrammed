@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-07-15T05:53:51.831Z
+Updated: 2026-07-16T06:00:28.668Z
 
-Files scanned: 4129
+Files scanned: 4157
 
-High issues: 2338
+High issues: 2452
 
 Review issues: 8
 
-Intake areas: 2202
+Intake areas: 2206
 
 Weak intake areas: 0
 
@@ -488,7 +488,6 @@ Weak intake areas: 0
 - _site/downloads/daily-brain-brief.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/daily-brief-master.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/daily-command-brief.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/downloads/daily-drop.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/dark-speculation-deep-dossiers.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/dark-speculation-deep-dossiers.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/dark-speculation-scan.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -510,6 +509,7 @@ Weak intake areas: 0
 - _site/downloads/entity-exposure-index.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/epstein-capital-class-map.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/downloads/epstein-email-signals.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/downloads/epstein-email-signals.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 None

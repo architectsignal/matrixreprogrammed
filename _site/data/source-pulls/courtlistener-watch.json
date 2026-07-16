@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T05:52:57.081Z",
+  "updated": "2026-07-16T05:59:34.320Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -10,10 +10,91 @@
   "evidence_grade": "charged / sued",
   "itemCount": 6,
   "raw": {
-    "count": 23267,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxMTM2MDAwMDAwJnM9MTA4NzM3MzcmdD1vJmQ9MjAyNi0wNy0xNCZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "count": 23269,
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgxNTY4MDAwMDAwJnM9MTA4NzUwMTYmdD1vJmQ9MjAyNi0wNy0xNSZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+        "attorney": "",
+        "caseName": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "caseNameFull": "",
+        "citation": [],
+        "citeCount": 0,
+        "cluster_id": 10928510,
+        "court": "Supreme Court of Rhode Island",
+        "court_citation_string": "R.I.",
+        "court_id": "ri",
+        "court_jurisdiction": "S",
+        "dateArgued": null,
+        "dateFiled": "2026-07-15",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "2025-0045-Appeal.",
+        "docket_id": 73619674,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-07-15T16:21:31.352639Z",
+          "date_created": "2026-07-15T16:21:31.170701Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              20920,
+              197399,
+              571328,
+              1027661,
+              1039044,
+              1521629,
+              1914893,
+              1997671,
+              1998712,
+              2370303,
+              3209154,
+              3866151,
+              3866296,
+              4178691,
+              4179515,
+              5115387,
+              6336333,
+              6953697,
+              9520047
+            ],
+            "download_url": "https://www.courts.ri.gov/Opinions/Supreme-25-45.pdf",
+            "id": 11396050,
+            "joined_by_ids": [],
+            "local_path": "pdf/2026/07/15/galbin_fernandez_in_his_capacity_as_the_administrator_of_the_estate_of_eva.pdf",
+            "meta": {
+              "timestamp": "2026-07-15T16:29:15.467964Z",
+              "date_created": "2026-07-15T16:21:31.174330Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "c9c9ec8bfba4af0bc996963d396b8d3c112d4e9f",
+            "snippet": "                                                      Supreme Court\n\n                                                      No. 2025-45-Appeal.\n                                                      (PC 15-2137)\n\nGalbin Fernandez, in his capacity as the :\nAdministrator of the Estate of Eva Pena\n\n                   v.                    :\n\nRhode Island Public Transit Authority :\n               et al.\n\n\n\n\n           NOTICE: This opinion is subject to formal revision\n           before publication in ",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11396050
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": "The plaintiff, Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena, appealed from a Superior Court order denying his motion for a new trial, which he filed after a jury returned a verdict in favor of the defendant, Rhode Island Public Transit Authority (defendant or RIPTA). On appeal, the plaintiff argued that the trial justice erred in admitting into evidence the alleged statements of Pena to a RIPTA supervisor, statements which were procured through an unidentified Spanish interpreter. The Supreme Court held that the trial justice abused her discretion in admitting the challenged statements into evidence, reversed the Superior Court order denying the plaintiff's motion, and remanded the case for a new trial."
+      },
       {
         "absolute_url": "/opinion/10919908/sawas-v-elzanaty/",
         "attorney": "",
@@ -1827,71 +1908,6 @@
         "status": "Published",
         "suitNature": "",
         "syllabus": "The petitioner appealed from the trial court's judgment concluding that the respondent attorney violated various Rules of Professional Conduct in con- nection with three grievances that had been filed against her. It claimed that the court erred in holding that the litigation privilege applied to statements that the respondent made during grievance proceedings so as to preclude further disciplinary action based on those statements. The respondent filed a cross appeal, claiming that the court's findings of misconduct were not factually or legally supported. Held: The trial court improperly determined that the respondent was immune from further disciplinary proceedings for her alleged misconduct at a grievance hearing, as, although the litigation privilege applies to statements made dur- ing grievance proceedings, the immunity afforded by the litigation privilege extends only to certain retaliatory lawsuits and does not shield an attorney who is alleged to have engaged in professional misconduct during grievance proceedings from further discipline stemming from that misconduct. The respondent's claim that the trial court's findings of misconduct were not factually and legally supported was unavailing, as the court's findings were supported by the evidence in the record. Argued December 10, 2025—officially released June 16, 2026"
-      },
-      {
-        "absolute_url": "/opinion/10873737/matter-of-barnes/",
-        "attorney": "",
-        "caseName": "Matter of Barnes",
-        "caseNameFull": "",
-        "citation": [
-          "2026 NY Slip Op 03711"
-        ],
-        "citeCount": 0,
-        "cluster_id": 10873737,
-        "court": "Appellate Division of the Supreme Court of the State of New York",
-        "court_citation_string": "N.Y. App. Div.",
-        "court_id": "nyappdiv",
-        "court_jurisdiction": "SA",
-        "dateArgued": null,
-        "dateFiled": "2026-06-11",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "CV-24-1931",
-        "docket_id": 73471774,
-        "judge": "",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-11T16:18:17.258476Z",
-          "date_created": "2026-06-11T16:18:17.133014Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              4147802
-            ],
-            "download_url": "http://www.nycourts.gov/reporter/current/3dseries/2026/2026_03711.shtml",
-            "id": 11341208,
-            "joined_by_ids": [],
-            "local_path": "html/2026/06/11/matter_of_barnes.html",
-            "meta": {
-              "timestamp": "2026-06-11T16:19:38.444552Z",
-              "date_created": "2026-06-11T16:18:17.153113Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "b5ef53ff3bb6333c6c1521778205a97f9fba2352",
-            "snippet": "Matter of Barnes - 2026 NY Slip Op 03711\n\t\n\t\n\t\t\n    skip to main content\n\n\n\n\n    It appears you are using Adblock. Please disable Adblock to best experience our website.\n\n\n\n\n    \n\n        \n            \n        \n\n        \n            Law Reporting Bureau \n            Thomas J.K. Smith, State Reporter\n\n            \n                \n             ",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [],
-        "panel_names": [],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11341208
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
       }
     ]
   },

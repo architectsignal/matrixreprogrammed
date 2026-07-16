@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-15T05:53:39.760Z",
+  "updated": "2026-07-16T06:00:15.434Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
     "nodes": 142,
@@ -228,12 +228,12 @@
       "missingPressure": 16,
       "contradictionPressure": 0,
       "records": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
         "Sawas v. Elzanaty",
         "People v. Brim",
         "The New York and Presbyterian Hospital v. New York State Nurses Association",
         "Matter of Pagliughi",
-        "Biddle v. Biddle",
-        "Khan v. Jewish Women International"
+        "Biddle v. Biddle"
       ],
       "missing": [
         "Primary record route",
@@ -2469,6 +2469,27 @@
     },
     {
       "from": "disclosure-gaps-and-missing-files",
+      "to": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-rhode-island",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2025-0045-appeal",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
       "to": "sawas-v-elzanaty",
       "type": "subject entity route",
       "weight": 2,
@@ -2561,27 +2582,6 @@
     {
       "from": "disclosure-gaps-and-missing-files",
       "to": "25-581",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "khan-v-jewish-women-international",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "connecticut-appellate-court",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "ac48383",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"

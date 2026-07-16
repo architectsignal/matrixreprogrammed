@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-15T05:53:15.099Z
+Updated: 2026-07-16T05:59:49.254Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -21,16 +21,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: California Court of Appeal deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Connecticut Appellate Court
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Connecticut Appellate Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Court of Appeals for the Second Circuit
 
@@ -62,6 +52,16 @@ Highest evidence: documented association
 
 Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Supreme Court of Rhode Island
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Supreme Court of Rhode Island deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## 2021-00294
 
 Score: 179
@@ -81,6 +81,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: 2024-07773 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 2025-0045-Appeal.
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## 25-113
 
@@ -112,16 +122,6 @@ Highest evidence: charged / sued
 
 Reading: A170747M deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## AC48383
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: AC48383 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## Biddle v. Biddle
 
 Score: 179
@@ -132,7 +132,7 @@ Highest evidence: charged / sued
 
 Reading: Biddle v. Biddle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Khan v. Jewish Women International
+## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
 
 Score: 179
 
@@ -140,7 +140,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Khan v. Jewish Women International deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Matter of Pagliughi
 

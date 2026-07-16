@@ -1,0 +1,176 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-15",
+  "sitePurpose": "Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.",
+  "missionThemes": [
+    {
+      "id": "elite-institutional-control",
+      "label": "Elite and institutional control",
+      "question": "Which people, institutions, companies, foundations, agencies or networks hold practical leverage, through what mechanism, and with what public-record evidence?"
+    },
+    {
+      "id": "global-governance-convergence",
+      "label": "Global governance convergence",
+      "question": "Are standards, treaties, procurement rules, public-private systems or cross-border frameworks converging into shared governance infrastructure, and where does democratic control remain?"
+    },
+    {
+      "id": "money-currency-access",
+      "label": "Money, currency and access",
+      "question": "Are payment, banking, digital currency, identity or compliance systems becoming permission layers that can enable or deny participation?"
+    },
+    {
+      "id": "identity-surveillance",
+      "label": "Identity, surveillance and access",
+      "question": "Is identity becoming a master key linking travel, payments, health, benefits, work, age verification, speech or public services?"
+    },
+    {
+      "id": "information-narrative",
+      "label": "Information and narrative control",
+      "question": "Who can rank, suppress, amplify, classify, censor, monetise or remove information, and what appeal or oversight exists?"
+    },
+    {
+      "id": "security-emergency-power",
+      "label": "Security and emergency power",
+      "question": "Are temporary crisis powers, contractors, surveillance or restrictions becoming permanent civil infrastructure?"
+    },
+    {
+      "id": "health-biosecurity",
+      "label": "Health and biosecurity governance",
+      "question": "Are health systems becoming linked to identity, movement, work, data exchange, emergency law or public access?"
+    },
+    {
+      "id": "religion-culture-meaning",
+      "label": "Religion, culture and meaning systems",
+      "question": "Are institutions attempting to harmonise, replace, manage or instrumentalise belief, ritual, morality or cultural meaning? Claims of a single imposed world religion require direct documentary evidence and must otherwise remain labelled hypotheses."
+    },
+    {
+      "id": "corporate-state-convergence",
+      "label": "Corporate-state convergence",
+      "question": "Where do public authority, private infrastructure, lobbying, contracts, standards and data systems merge into practical control?"
+    },
+    {
+      "id": "disclosure-record-control",
+      "label": "Disclosure and record control",
+      "question": "What is released, withheld, altered, removed, redacted or delayed; who controls the record; and what missing evidence would change the conclusion?"
+    }
+  ],
+  "conclusionRequiredFields": [
+    "plainEnglishConclusion",
+    "entityOrSystem",
+    "documentedConnection",
+    "mechanismOfPower",
+    "missionTheme",
+    "whyItMatters",
+    "evidenceStatus",
+    "confidenceExplanation",
+    "counterEvidenceOrAlternative",
+    "missingEvidence",
+    "whatWouldStrengthen",
+    "whatWouldWeaken",
+    "usefulNextAction",
+    "boundary"
+  ],
+  "speculativeConclusionRequiredFields": [
+    "exactHypothesis",
+    "entityOrSystem",
+    "missionTheme",
+    "documentedStartingPoint",
+    "inferenceChain",
+    "supportingEvidence",
+    "counterEvidence",
+    "alternativeExplanations",
+    "missingEvidence",
+    "falsifiers",
+    "probabilityOrConfidence",
+    "whyUseful",
+    "boundary"
+  ],
+  "scoreTypes": {
+    "pressureIndex": {
+      "label": "Pressure index",
+      "definition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
+      "method": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
+      "bands": [
+        {"min": 0, "max": 20, "label": "Background", "meaning": "Little current implementation evidence. Keep on file; no urgent action."},
+        {"min": 21, "max": 40, "label": "Watch", "meaning": "Some relevant signals exist, but the mechanism is weak, early or contested."},
+        {"min": 41, "max": 60, "label": "Developing", "meaning": "Multiple signals or early implementation exist. Pull missing records and track movement."},
+        {"min": 61, "max": 80, "label": "Elevated", "meaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards."},
+        {"min": 81, "max": 95, "label": "Active", "meaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation."},
+        {"min": 96, "max": 100, "label": "Embedded", "meaning": "The mechanism is deeply implemented or institutionally embedded. The score describes system pressure, not certainty about motive or final outcome."}
+      ],
+      "mustDisplay": ["definition", "bandMeaning", "calculationBasis", "lastMovement", "whatRaises", "whatLowers", "sourceRoutes", "boundary"]
+    },
+    "forecastProbability": {
+      "label": "Forecast probability",
+      "definition": "A provisional scenario forecast based on an explicit starting estimate plus listed supporting and counter-signals. It is not a fact, guarantee or betting market price.",
+      "bands": [
+        {"min": 0, "max": 20, "label": "Low", "meaning": "Possible but currently weakly supported."},
+        {"min": 21, "max": 40, "label": "Emerging", "meaning": "Plausible enough to watch; evidence remains limited or conflicted."},
+        {"min": 41, "max": 60, "label": "Contested", "meaning": "A live scenario with meaningful evidence on both sides."},
+        {"min": 61, "max": 80, "label": "Probable direction", "meaning": "Current signals support the scenario more than they oppose it, subject to listed assumptions."},
+        {"min": 81, "max": 95, "label": "Strongly indicated", "meaning": "Substantial evidence supports the direction, but confirmation and counter-signals still matter."},
+        {"min": 96, "max": 100, "label": "Confirmed only by event", "meaning": "Do not use this band before the defined event is independently confirmed."}
+      ],
+      "mustDisplay": ["baseProbability", "signalAdjustment", "computedProbability", "supportingSignals", "counterSignals", "assumptions", "whatRaises", "whatLowers", "boundary"]
+    },
+    "confidence": {
+      "label": "Confidence",
+      "definition": "How reliable the evidence and reasoning chain are, not how serious or emotionally powerful the claim sounds.",
+      "bands": {
+        "low": "One weak, indirect, old or unverified source; substantial uncertainty.",
+        "low-medium": "More than one lead or one credible source, but important gaps or counter-evidence remain.",
+        "medium": "Several relevant sources or a credible primary record support a bounded conclusion; alternatives remain plausible.",
+        "medium-high": "Multiple independent or primary sources support the same bounded mechanism with limited material contradiction.",
+        "high": "Strong primary evidence, corroboration and a clear mechanism support the narrow conclusion. High confidence never expands beyond the documented scope."
+      }
+    },
+    "evidenceGrade": {
+      "label": "Evidence grade",
+      "definition": "The quality and directness of the source trail supporting the exact statement.",
+      "bands": {
+        "A": "Primary official, court, regulator, audited, contractual or authenticated record directly supports the statement.",
+        "B": "Strong documented reporting or multiple reliable records support the statement, but direct primary proof is incomplete.",
+        "C": "Documented association, partial record or credible lead supports further investigation, not a strong conclusion.",
+        "D": "Unverified allegation, weak provenance, single-source claim or interpretive pattern.",
+        "E": "Unsupported, contradicted, fabricated or retained only for claim-history/debunk analysis."
+      }
+    },
+    "missionRelevance": {
+      "label": "Mission relevance",
+      "definition": "How directly the finding helps map practical control, access, governance, money, narrative, security, identity, belief systems or record control. It is not an accusation score.",
+      "bands": [
+        {"min": 0, "max": 20, "label": "Peripheral"},
+        {"min": 21, "max": 40, "label": "Contextual"},
+        {"min": 41, "max": 60, "label": "Relevant"},
+        {"min": 61, "max": 80, "label": "Strong mechanism link"},
+        {"min": 81, "max": 100, "label": "Core system link"}
+      ]
+    }
+  },
+  "claimBoundaries": [
+    "Association is not guilt, command, coordination or shared motive.",
+    "Convergence is not proof of a single central controller.",
+    "A global standard or interoperable system is not by itself proof of a secret one-world government.",
+    "A CBDC, digital wallet or cross-border payment project is not by itself proof of a planned single world currency.",
+    "Interfaith dialogue, shared ethics or institutional religious cooperation is not by itself proof of an imposed single world religion.",
+    "Symbols, ceremony, social proximity and membership are not proof of criminal conduct.",
+    "A probability or pressure score is not proof of intent or inevitability."
+  ],
+  "usefulnessStandard": {
+    "readerMustBeAbleToAnswer": [
+      "What happened?",
+      "Who or what entity is involved?",
+      "What public record supports this?",
+      "What mechanism of power or access is relevant?",
+      "How does it connect to the site mission?",
+      "What does the score or confidence label mean?",
+      "What does this not prove?",
+      "What record is missing?",
+      "What would change the conclusion?",
+      "What useful action can I take next?"
+    ],
+    "rawDataRule": "Raw technical data may be available in an expandable or downloadable section, but it must never be the primary reader output.",
+    "plainLanguageRule": "Lead with a short plain-English conclusion, then show evidence, mechanism, alternatives, missing records and next actions.",
+    "correctionRule": "Corrections, contradictory records, withdrawals, acquittals, dismissals and evidence downgrades must remain visible at every tier."
+  }
+}

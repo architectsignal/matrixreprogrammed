@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-16T06:00:33.938Z",
+  "purpose": "Prove repeated passwordless login requests produce complete, visibly distinct subject, HTML and text payloads; repeated builds remain idempotent; malformed queued messages never reach Brevo.",
+  "checks": {
+    "repeat request 1 accepted by provider": true,
+    "repeat request 1 returns reference": true,
+    "repeat request 2 accepted by provider": true,
+    "repeat request 2 returns reference": true,
+    "repeat request 3 accepted by provider": true,
+    "repeat request 3 returns reference": true,
+    "three complete Brevo payloads generated": true,
+    "payload 1 has unique login subject": true,
+    "payload 1 has complete HTML": true,
+    "payload 1 has complete text": true,
+    "payload 1 has recipient": true,
+    "payload 1 has provider reference header": true,
+    "payload 2 has unique login subject": true,
+    "payload 2 has complete HTML": true,
+    "payload 2 has complete text": true,
+    "payload 2 has recipient": true,
+    "payload 2 has provider reference header": true,
+    "payload 3 has unique login subject": true,
+    "payload 3 has complete HTML": true,
+    "payload 3 has complete text": true,
+    "payload 3 has recipient": true,
+    "payload 3 has provider reference header": true,
+    "all repeat subjects are distinct": true,
+    "all repeat request references are distinct": true,
+    "login request records delivery diagnostics": true,
+    "shared sender rejects empty payloads": true,
+    "shared sender validator declared exactly once": true,
+    "invalid outbox JSON fails closed": true
+  },
+  "issues": [],
+  "payloadLengths": [
+    {
+      "subject": 46,
+      "html": 1182,
+      "text": 360
+    },
+    {
+      "subject": 46,
+      "html": 1182,
+      "text": 360
+    },
+    {
+      "subject": 46,
+      "html": 1182,
+      "text": 360
+    }
+  ],
+  "subjects": [
+    "Your Matrix Reprogrammed login link · C7827711",
+    "Your Matrix Reprogrammed login link · E4502CA6",
+    "Your Matrix Reprogrammed login link · 2EB092B0"
+  ],
+  "references": [
+    "C7827711",
+    "E4502CA6",
+    "2EB092B0"
+  ]
+}

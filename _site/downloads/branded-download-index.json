@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T05:53:19.035Z",
+  "updated": "2026-07-16T05:59:53.132Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 220,
+  "count": 222,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -727,6 +727,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/login-email-resend-test.pdf",
+      "title": "Login Email Resend Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/logo-symbolism-dossiers.pdf",
       "title": "Logo Symbolism Dossiers",
       "reused": true,
@@ -927,6 +933,12 @@
     {
       "file": "downloads/phase6-worker-patch.pdf",
       "title": "Phase6 Worker Patch",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/phase7-paypal-sandbox-rehearsal-test.pdf",
+      "title": "PayPal sandbox rehearsal",
       "reused": true,
       "kind": "download"
     },

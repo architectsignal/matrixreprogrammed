@@ -4,7 +4,7 @@
 
   const authState = document.querySelector('[data-auth-state]');
   const runnerState = document.querySelector('[data-runner-state]');
-  const adminCard = document.querySelector('[data-admin-tool]');
+  const h8mailCard = document.querySelector('[data-h8mail-tool]');
   const jobsBody = document.querySelector('[data-jobs-body]');
   const forms = [...document.querySelectorAll('[data-tool-form]')];
   const activePolls = new Map();
@@ -369,17 +369,17 @@
     try {
       config = await request('/api/tools/config');
       const role = config.member?.role || 'member';
-      setText(authState, role === 'admin' ? 'Administrator authenticated' : 'Verified member authenticated');
+      setText(authState, role === 'admin' ? 'Administrator authenticated' : `Verified member · ${config.member?.tier || 'registered'}`);
       const onlineTools = Object.entries(config.tools || {}).filter(([, value]) => value.runnerOnline).map(([key]) => key);
       setText(runnerState, onlineTools.length ? `Private service online: ${onlineTools.join(', ')}` : config.configured ? 'Private service configured; runner currently offline' : 'Private service not configured');
-      if (adminCard && role === 'admin') adminCard.hidden = false;
+      if (h8mailCard) h8mailCard.hidden = false;
       forms.forEach(form => {
         const tool = form.dataset.toolForm;
         const toolConfig = config.tools?.[tool];
         const allowed = Boolean(config.configured && toolConfig?.allowed);
         setFormEnabled(form, allowed);
         const output = outputFor(tool);
-        if (!toolConfig?.allowed) setText(output, tool === 'h8mail' ? 'Administrator authentication required.' : 'This membership tier cannot use this tool.', 'error');
+        if (!toolConfig?.allowed) setText(output, tool === 'h8mail' ? 'Intelligence membership required. Members may review only their own verified email.' : 'This membership tier cannot use this tool.', 'error');
         else if (!config.configured) setText(output, 'The private tool service has not been configured yet.', 'error');
         else if (!toolConfig.runnerOnline) setText(output, 'The tool is configured, but the private runner is offline. Jobs can be queued and will run when it reconnects.');
         else setText(output, `Ready. Daily limit: ${toolConfig.dailyLimit}. Results will open as a plain-English decision brief.`);

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T05:53:15.003Z",
+  "updated": "2026-07-16T05:59:49.159Z",
   "records": [
     {
       "key": "federal-register-policy-2026-13656-1",
@@ -124,12 +124,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001045810-1",
-      "hash": "480bf6ae8aee4b0e",
+      "hash": "683ecb7410000703",
       "summary": "NVIDIA CORP (NVDA)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "NVIDIA CORP",
         "NVDA"
@@ -137,12 +137,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000320193-2",
-      "hash": "728b2042c53d1f26",
+      "hash": "194ffbb1e2b8d5c1",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "Apple Inc.",
         "AAPL"
@@ -150,12 +150,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "c4fc4599f8b65c8d",
+      "hash": "dbb5c134f8f17cfe",
       "summary": "Alphabet Inc. (GOOGL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "Alphabet Inc.",
         "GOOGL"
@@ -163,12 +163,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000789019-4",
-      "hash": "b6a92b3bd6a72dad",
+      "hash": "bd51b67c064fe81f",
       "summary": "MICROSOFT CORP (MSFT)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "MICROSOFT CORP",
         "MSFT"
@@ -176,12 +176,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001018724-5",
-      "hash": "3e22d78d64f1a114",
+      "hash": "17c68e957f9c816a",
       "summary": "AMAZON COM INC (AMZN)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "AMAZON COM INC",
         "AMZN"
@@ -189,19 +189,33 @@
     },
     {
       "key": "sec-edgar-filings-cik0001730168-6",
-      "hash": "14655ae0cecb995b",
+      "hash": "f9a2563ba6ab4c8f",
       "summary": "Broadcom Inc. (AVGO)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-07-15",
+      "date": "2026-07-16",
       "names": [
         "Broadcom Inc.",
         "AVGO"
       ]
     },
     {
-      "key": "courtlistener-court-records-10919908-1",
+      "key": "courtlistener-court-records-10928510-1",
+      "hash": "8fecafeb799b260d",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+      "date": "2026-07-15",
+      "names": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Supreme Court of Rhode Island",
+        "2025-0045-Appeal."
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10919908-2",
       "hash": "81e0bf4c2be8a6fd",
       "summary": "Sawas v. Elzanaty",
       "source_lane": "courtlistener-court-records",
@@ -215,7 +229,7 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10919846-2",
+      "key": "courtlistener-court-records-10919846-3",
       "hash": "49b2b26e8c22195c",
       "summary": "People v. Brim",
       "source_lane": "courtlistener-court-records",
@@ -229,7 +243,7 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10917016-3",
+      "key": "courtlistener-court-records-10917016-4",
       "hash": "8721abb56410f277",
       "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "source_lane": "courtlistener-court-records",
@@ -243,7 +257,7 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10883674-4",
+      "key": "courtlistener-court-records-10883674-5",
       "hash": "f95a37eb5eb447bc",
       "summary": "Matter of Pagliughi",
       "source_lane": "courtlistener-court-records",
@@ -257,7 +271,7 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10883331-5",
+      "key": "courtlistener-court-records-10883331-6",
       "hash": "b39adcd19b344458",
       "summary": "Biddle v. Biddle",
       "source_lane": "courtlistener-court-records",
@@ -268,20 +282,6 @@
         "Biddle v. Biddle",
         "Court of Appeals of North Carolina",
         "25-581"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10914068-6",
-      "hash": "8884760b222f1a37",
-      "summary": "Khan v. Jewish Women International",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10914068/khan-v-jewish-women-international/",
-      "date": "2026-06-30",
-      "names": [
-        "Khan v. Jewish Women International",
-        "Connecticut Appellate Court",
-        "AC48383"
       ]
     },
     {

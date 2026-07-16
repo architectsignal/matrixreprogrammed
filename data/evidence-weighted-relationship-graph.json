@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-07-15T07:33:20.417Z",
+  "updated": "2026-07-16T06:00:16.093Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
-  "nodeCount": 149,
+  "nodeCount": 137,
   "edgeCount": 172,
   "nodes": [
     {
@@ -418,150 +418,6 @@
         "ai-data"
       ],
       "score": 70
-    },
-    {
-      "id": "wwiii-escalation-clock",
-      "layer": "evidence-and-records",
-      "name": "WWIII Escalation Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "81%",
-        "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes"
-      ],
-      "score": 58
-    },
-    {
-      "id": "ai-breakout-clock",
-      "layer": "evidence-and-records",
-      "name": "AI Breakout Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "93%",
-        "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governa"
-      ],
-      "score": 58
-    },
-    {
-      "id": "surveillance-state-clock",
-      "layer": "evidence-and-records",
-      "name": "Surveillance State Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "97%",
-        "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, a"
-      ],
-      "score": 58
-    },
-    {
-      "id": "financial-reset-clock",
-      "layer": "evidence-and-records",
-      "name": "Financial Reset Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "75%",
-        "Debt stress, private payment dependence, tokenised settlement, stablecoin competition, CBDC planning and digital-euro legislation keep the financial-system lane elevated. July refresh raises the source quality through official ECB digital euro timeline language. Policy convergenc"
-      ],
-      "score": 58
-    },
-    {
-      "id": "cbdc-rollout-clock",
-      "layer": "evidence-and-records",
-      "name": "CBDC Rollout Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "91%",
-        "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. "
-      ],
-      "score": 58
-    },
-    {
-      "id": "cyber-blackout-clock",
-      "layer": "evidence-and-records",
-      "name": "Cyber Blackout Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "77%",
-        "Cyber risk remains elevated through AI-enabled misuse, infrastructure dependency, banking/payment concentration, state cyber operations and EU AI/cyber resilience planning. July refresh links cyber risk more strongly to AI governance rather than a specific blackout event. Policy "
-      ],
-      "score": 58
-    },
-    {
-      "id": "alien-disclosure-clock",
-      "layer": "evidence-and-records",
-      "name": "Alien Disclosure Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "35%",
-        "UAP hearings, whistleblower claims, NASA/DoD statements and anomalous-object reporting remain watch-level. No July 2026 source in this refresh warrants escalation."
-      ],
-      "score": 58
-    },
-    {
-      "id": "pandemic-biosecurity-clock",
-      "layer": "evidence-and-records",
-      "name": "Pandemic / Biosecurity Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "69%",
-        "WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures. Policy co"
-      ],
-      "score": 58
-    },
-    {
-      "id": "civil-unrest-clock",
-      "layer": "evidence-and-records",
-      "name": "Civil Unrest Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "65%",
-        "Civil-stability pressure remains elevated through elections, migration, economic strain, war protest cycles, platform/speech rules and emergency politics. July refresh adds no single acute civil-unrest trigger, so the score is held lower than homepage threshold. Policy convergenc"
-      ],
-      "score": 58
-    },
-    {
-      "id": "food-system-stress-clock",
-      "layer": "evidence-and-records",
-      "name": "Food System Stress Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "63%",
-        "Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water"
-      ],
-      "score": 58
-    },
-    {
-      "id": "energy-shock-clock",
-      "layer": "evidence-and-records",
-      "name": "Energy Shock Clock",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "70%",
-        "Energy pressure remains elevated through chokepoints, LNG/refinery risks, sanctions, cyber risk and grid strain. No new July source in this refresh justifies escalation. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains."
-      ],
-      "score": 58
-    },
-    {
-      "id": "machine-convergence",
-      "layer": "evidence-and-records",
-      "name": "Machine Convergence",
-      "type": "risk timer",
-      "route": "timers.html",
-      "notes": [
-        "87%",
-        "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tra"
-      ],
-      "score": 58
     },
     {
       "id": "orsini",
@@ -994,6 +850,17 @@
       "score": 54
     },
     {
+      "id": "2025-0045-appeal",
+      "layer": "evidence-and-records",
+      "name": "2025-0045-Appeal.",
+      "type": "missing record",
+      "route": "entity-briefs/2025-0045-appeal.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "25-113",
       "layer": "evidence-and-records",
       "name": "25-113",
@@ -1021,17 +888,6 @@
       "name": "A170747M",
       "type": "missing record",
       "route": "entity-briefs/a170747m.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "ac48383",
-      "layer": "evidence-and-records",
-      "name": "AC48383",
-      "type": "missing record",
-      "route": "entity-briefs/ac48383.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1071,17 +927,6 @@
       "score": 54
     },
     {
-      "id": "connecticut-appellate-court",
-      "layer": "evidence-and-records",
-      "name": "Connecticut Appellate Court",
-      "type": "missing record",
-      "route": "entity-briefs/connecticut-appellate-court.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "court-of-appeals-for-the-second-circuit",
       "layer": "evidence-and-records",
       "name": "Court of Appeals for the Second Circuit",
@@ -1115,11 +960,11 @@
       "score": 54
     },
     {
-      "id": "khan-v-jewish-women-international",
+      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
       "layer": "evidence-and-records",
-      "name": "Khan v. Jewish Women International",
+      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "type": "missing record",
-      "route": "entity-briefs/khan-v-jewish-women-international.html",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1186,6 +1031,17 @@
       "name": "Sawas v. Elzanaty",
       "type": "missing record",
       "route": "entity-briefs/sawas-v-elzanaty.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "supreme-court-of-rhode-island",
+      "layer": "evidence-and-records",
+      "name": "Supreme Court of Rhode Island",
+      "type": "missing record",
+      "route": "entity-briefs/supreme-court-of-rhode-island.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1348,54 +1204,6 @@
       "score": 43
     },
     {
-      "id": "feed-surveillance-state-clock-97",
-      "layer": "evidence-and-records",
-      "name": "Surveillance State Clock — 97%",
-      "type": "deep intel item",
-      "route": "timers.html",
-      "notes": [
-        "risk clock",
-        "Score 97"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-ai-breakout-clock-93",
-      "layer": "evidence-and-records",
-      "name": "AI Breakout Clock — 93%",
-      "type": "deep intel item",
-      "route": "timers.html",
-      "notes": [
-        "risk clock",
-        "Score 93"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-cbdc-rollout-clock-91",
-      "layer": "evidence-and-records",
-      "name": "CBDC Rollout Clock — 91%",
-      "type": "deep intel item",
-      "route": "timers.html",
-      "notes": [
-        "risk clock",
-        "Score 91"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-machine-convergence-87",
-      "layer": "evidence-and-records",
-      "name": "Machine Convergence — 87%",
-      "type": "deep intel item",
-      "route": "timers.html",
-      "notes": [
-        "risk clock",
-        "Score 87"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
       "layer": "evidence-and-records",
       "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1526,6 +1334,191 @@
         "Score 85"
       ],
       "score": 43
+    },
+    {
+      "id": "feed-people-s-republic-of-bangladesh-confirm-the-primary-record-p",
+      "layer": "evidence-and-records",
+      "name": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-transportation-department-confirm-the-primary-record-page-pd",
+      "layer": "evidence-and-records",
+      "name": "Transportation Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/transportation-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-appellate-division-of-the-supreme-court-of-the-state-of-new-",
+      "layer": "evidence-and-records",
+      "name": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-national-aeronautics-and-space-administration-confirm-the-pr",
+      "layer": "evidence-and-records",
+      "name": "National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
+      "layer": "evidence-and-records",
+      "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-federal-procurement-policy-office-confirm-the-primary-record",
+      "layer": "evidence-and-records",
+      "name": "Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/federal-procurement-policy-office.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-general-services-administration-confirm-the-primary-record-p",
+      "layer": "evidence-and-records",
+      "name": "General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/general-services-administration.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-2021-00294-confirm-the-primary-record-page-pdf-docket-filing",
+      "layer": "evidence-and-records",
+      "name": "2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/2021-00294.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-2024-07773-confirm-the-primary-record-page-pdf-docket-filing",
+      "layer": "evidence-and-records",
+      "name": "2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/2024-07773.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "money",
+      "layer": "control-rails",
+      "name": "money",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "identity",
+      "layer": "control-rails",
+      "name": "identity",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "information",
+      "layer": "control-rails",
+      "name": "information",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "security",
+      "layer": "control-rails",
+      "name": "security",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "health",
+      "layer": "control-rails",
+      "name": "health",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "war",
+      "layer": "control-rails",
+      "name": "war",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
+    },
+    {
+      "id": "migration",
+      "layer": "control-rails",
+      "name": "migration",
+      "type": "control rail",
+      "route": "control-structure.html",
+      "notes": [
+        "site layer"
+      ],
+      "score": 39
     }
   ],
   "edges": [

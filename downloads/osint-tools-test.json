@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-15T06:31:21.746Z",
+  "generatedAt": "2026-07-16T06:00:57.057Z",
   "checks": [
     {
       "name": "required file research-tools.html",
@@ -58,6 +58,11 @@
       "detail": "missing"
     },
     {
+      "name": "required file scripts/patch-osint-tool-tiers.js",
+      "ok": true,
+      "detail": "missing"
+    },
+    {
       "name": "required file src/worker.js",
       "ok": true,
       "detail": "missing"
@@ -68,12 +73,12 @@
       "detail": ""
     },
     {
-      "name": "h8mail is administrator-only",
+      "name": "h8mail is Intelligence verified-self",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "member tools identified",
+      "name": "Holehe and SpiderFoot tier labels identified",
       "ok": true,
       "detail": ""
     },
@@ -93,7 +98,7 @@
       "detail": ""
     },
     {
-      "name": "cache-busted report interface loaded",
+      "name": "cache-busted compatibility interface loaded",
       "ok": true,
       "detail": ""
     },
@@ -108,7 +113,7 @@
       "detail": ""
     },
     {
-      "name": "client reveals admin card only for admin role",
+      "name": "client uses server-returned tier gates",
       "ok": true,
       "detail": ""
     },
@@ -118,22 +123,32 @@
       "detail": ""
     },
     {
-      "name": "human-readable report renderer present",
+      "name": "single human-readable report renderer present",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "report shows risk and actions",
+      "name": "report explains priority and actions",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "sanitised technical appendix retained",
+      "name": "sanitised technical appendix retained but collapsed",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "sensitive category knowledge displayed",
+      "name": "sensitive category knowledge displayed safely",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "provider catalogues are collapsed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "completed jobs can be reopened",
       "ok": true,
       "detail": ""
     },
@@ -143,22 +158,12 @@
       "detail": ""
     },
     {
-      "name": "v3 converts raw JSON into reports",
+      "name": "v3 compatibility asset defers to authoritative renderer",
       "ok": true,
       "detail": ""
     },
     {
-      "name": "v3 prioritises useful findings",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "v3 collapses provider catalogues",
-      "ok": true,
-      "detail": ""
-    },
-    {
-      "name": "v3 displays verified-self masked clues",
+      "name": "v3 no longer duplicates report rendering",
       "ok": true,
       "detail": ""
     },
@@ -213,7 +218,27 @@
       "detail": ""
     },
     {
-      "name": "h8mail admin gate enforced",
+      "name": "Holehe registered tier enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SpiderFoot Intelligence tier enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "h8mail Intelligence tier enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "h8mail verified-self member boundary enforced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "administrator investigation scope remains available",
       "ok": true,
       "detail": ""
     },
@@ -359,6 +384,11 @@
     },
     {
       "name": "homepage keeps evidence boundary",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage explains Intelligence h8mail access",
       "ok": true,
       "detail": ""
     },

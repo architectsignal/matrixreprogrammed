@@ -1,0 +1,1179 @@
+{
+  "ok": true,
+  "version": "1.0.0",
+  "updated": "2026-07-16T06:00:33.889Z",
+  "title": "Speculative Intelligence Synthesis",
+  "evidenceLayer": {
+    "status": "documented records and canonical site data",
+    "files": [
+      "data/evidence-weighted-relationship-graph.json",
+      "data/entity-registry.json",
+      "data/relationship-registry.json",
+      "data/top-52-power-deck.json",
+      "data/institution-deck.json",
+      "data/controlled-opposition-deck.json",
+      "data/investigation-ledger.json",
+      "data/daily-power-conclusions.json",
+      "data/latest-public-drops.json",
+      "data/clock-wall.json",
+      "data/global-risk-clocks.json"
+    ],
+    "recordsInspected": 29693,
+    "criticalClocks": [
+      {
+        "slug": "surveillance-state",
+        "status": "Active",
+        "title": "Surveillance State Clock",
+        "score": 92,
+        "scoreLabel": "Pressure index — not event probability",
+        "window": "Already underway",
+        "signals": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until ",
+        "nextRoute": "surveillance-hub.html",
+        "homepageEligible": true,
+        "policyConvergenceRoute": "control-system-tracker.html",
+        "secondaryRoute": "control-system-tracker.html",
+        "timerUpdateRule": "When a linked policy lane moves from mention to pilot, procurement, mandate, integration, or lock-in, update this clock with source, date, actor, jurisdiction, evidence level, and boundary.",
+        "latestDrops": [
+          {
+            "id": "eu-ai-act-july-2026-implementation-and-cyber-ai-plan",
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "published": "2026-07-07T00:00:00.000Z",
+            "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+            "route": "answer-engine.html"
+          },
+          {
+            "id": "who-pandemic-agreement-pabs-igwg-july-2026",
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "published": "2026-07-06T00:00:00.000Z",
+            "evidenceLevel": "Official WHO treaty/implementation-process lane",
+            "route": "control-system-tracker.html#health-and-biosecurity"
+          },
+          {
+            "id": "digital-euro-2026-law-2027-pilot-2029-issuance-watch",
+            "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+            "published": "2026-07-08T00:00:00.000Z",
+            "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+            "route": "control-system-tracker.html#programmable-money"
+          }
+        ],
+        "policyConvergenceLinks": [
+          {
+            "trackerLane": "agenda-2030-and-global-standards",
+            "trackerTitle": "Agenda 2030 / Global Standards / Policy Harmonisation",
+            "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
+            "timerTrigger": "Global standards, treaties, model laws, funding conditions, or procurement rules begin routing into domestic mandates.",
+            "escalationRule": "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.",
+            "trackerRoute": "control-system-tracker.html#agenda-2030-and-global-standards"
+          },
+          {
+            "trackerLane": "digital-id",
+            "trackerTitle": "Digital ID / Biometrics / Identity Wallets",
+            "readerQuestion": "Is identity becoming a master permission key?",
+            "timerTrigger": "Digital identity becomes mandatory, biometric, cross-border, or linked to money, travel, benefits, health, age verification, or online access.",
+            "escalationRule": "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems.",
+            "trackerRoute": "control-system-tracker.html#digital-id"
+          },
+          {
+            "trackerLane": "security-and-war-powers",
+            "trackerTitle": "War / Security / Emergency Powers",
+            "readerQuestion": "Is crisis converting civilian life into permanent security architecture?",
+            "timerTrigger": "War, cyber, terror, or emergency language expands surveillance, contractor access, censorship, or domestic security power.",
+            "escalationRule": "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+            "trackerRoute": "control-system-tracker.html#security-and-war-powers"
+          },
+          {
+            "trackerLane": "speech-and-platform-governance",
+            "trackerTitle": "Speech / Platforms / Search / Payment Access",
+            "readerQuestion": "Is speech control being routed through platform and payment infrastructure?",
+            "timerTrigger": "Speech, search, payment, advertising, or platform access becomes governed by state-linked or public-private enforcement systems.",
+            "escalationRule": "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging.",
+            "trackerRoute": "control-system-tracker.html#speech-and-platform-governance"
+          },
+          {
+            "trackerLane": "health-and-biosecurity",
+            "trackerTitle": "Health Governance / Biosecurity / Emergency Health Powers",
+            "readerQuestion": "Is public health becoming a governance operating system?",
+            "timerTrigger": "Health governance connects to identity, travel, work, emergency law, procurement, digital records, or speech policy.",
+            "escalationRule": "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets.",
+            "trackerRoute": "control-system-tracker.html#health-and-biosecurity"
+          },
+          {
+            "trackerLane": "migration-borders-and-population-systems",
+            "trackerTitle": "Migration / Borders / Biometric Travel",
+            "readerQuestion": "Is movement being managed through identity, biometric, and security infrastructure?",
+            "timerTrigger": "Migration, border, biometric, NGO-state, housing, labor, or digital travel systems become integrated with identity and security infrastructure.",
+            "escalationRule": "Escalate when border biometrics become national identity rails, emergency contracts expand, or security narratives drive domestic powers.",
+            "trackerRoute": "control-system-tracker.html#migration-borders-and-population-systems"
+          }
+        ],
+        "scoreType": "pressureIndex",
+        "scoreBand": "Active",
+        "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+        "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
+        "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
+        "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+        "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
+        "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
+        "missionThemes": [
+          {
+            "id": "identity-surveillance",
+            "label": "Identity, surveillance and access",
+            "question": "Is identity becoming a master key linking travel, payments, health, benefits, work, age verification, speech or public services?"
+          },
+          {
+            "id": "information-narrative",
+            "label": "Information and narrative control",
+            "question": "Who can rank, suppress, amplify, classify, censor, monetise or remove information, and what appeal or oversight exists?"
+          },
+          {
+            "id": "global-governance-convergence",
+            "label": "Global governance convergence",
+            "question": "Are standards, treaties, procurement rules, public-private systems or cross-border frameworks converging into shared governance infrastructure, and where does democratic control remain?"
+          }
+        ],
+        "controlSystemMeaning": "This clock is relevant to Identity, surveillance and access, Information and narrative control, Global governance convergence because its source trail shows how rules, infrastructure, institutions or access systems may concentrate practical leverage. It does not by itself prove a single secret controller, one-world government, one-world currency or one-world religion.",
+        "evidenceStatus": "Source-linked watch lane",
+        "lastMovement": "Held at 92. No source-linked trigger justified a change in this build.",
+        "previousScore": 92,
+        "scoreChange": 0,
+        "whatRaises": [
+          "Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.",
+          "Move from watch to active when identity is no longer optional for a major service; move higher when it integrates with payment or speech systems.",
+          "Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.",
+          "Escalate when enforcement moves from platform policy into law, payment rails, search suppression, identity gating, or state-linked flagging.",
+          "Escalate when health credentials or emergency powers become tied to travel, work, benefits, data exchange, or identity wallets."
+        ],
+        "whatLowers": [
+          "Implementation is cancelled, delayed, legally blocked, defunded or reversed.",
+          "New primary records show the apparent connection was overstated or incorrectly classified.",
+          "Independent systems remain optional, decentralised, interoperable and subject to effective appeal or democratic oversight."
+        ],
+        "evidenceInputs": [
+          {
+            "title": "Surveillance State Clock",
+            "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+            "route": "surveillance-hub.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "Active",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 82
+          },
+          {
+            "title": "Surveillance State Clock",
+            "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+            "route": "surveillance-hub.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "Active",
+            "sourceFile": "data/speculative-intelligence-synthesis.json",
+            "matchScore": 82
+          },
+          {
+            "title": "Machine Convergence",
+            "summary": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is nego",
+            "route": "black-file.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "Classified",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 66
+          },
+          {
+            "title": "CBDC Rollout Clock",
+            "summary": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-0",
+            "route": "surveillance-hub.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "Active",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 29
+          },
+          {
+            "title": "AI Breakout Clock",
+            "summary": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August",
+            "route": "answer-engine.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "High",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 20
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+            "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "published": "2026-07-07T00:00:00.000Z",
+            "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+            "confidence": "",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 15
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "3",
+            "confidence": "medium",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 15
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "3",
+            "confidence": "medium",
+            "sourceFile": "data/speculative-conclusions.json",
+            "matchScore": 15
+          },
+          {
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+            "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+            "published": "2026-07-06T00:00:00.000Z",
+            "evidenceLevel": "Official WHO treaty/implementation-process lane",
+            "confidence": "",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 14
+          },
+          {
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "3",
+            "confidence": "medium",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 14
+          },
+          {
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "3",
+            "confidence": "medium",
+            "sourceFile": "data/speculative-conclusions.json",
+            "matchScore": 14
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "",
+            "route": "answer-engine.html",
+            "published": "2026-07-07T00:00:00.000Z",
+            "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+            "confidence": "",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 13
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "",
+            "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "published": "2026-07-07T00:00:00.000Z",
+            "evidenceLevel": "",
+            "confidence": "curated-latest-public-drop",
+            "sourceFile": "data/live-intel.json",
+            "matchScore": 13
+          },
+          {
+            "title": "Best source intake priority",
+            "summary": "The highest-priority source drop is EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "medium",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 13
+          },
+          {
+            "title": "WWIII Escalation Clock",
+            "summary": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
+            "route": "live-intel.html",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "Elevated",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 11
+          },
+          {
+            "title": "Access infrastructure is a measurable power layer.",
+            "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
+            "route": "",
+            "published": "",
+            "evidenceLevel": "",
+            "confidence": "",
+            "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 11
+          }
+        ],
+        "sourceRoutes": [
+          "surveillance-hub.html",
+          "control-system-tracker.html",
+          "answer-engine.html",
+          "control-system-tracker.html#health-and-biosecurity",
+          "control-system-tracker.html#programmable-money",
+          "control-system-tracker.html#agenda-2030-and-global-standards",
+          "control-system-tracker.html#digital-id",
+          "control-system-tracker.html#security-and-war-powers",
+          "control-system-tracker.html#speech-and-platform-governance",
+          "control-system-tracker.html#migration-borders-and-population-systems",
+          "black-file.html",
+          "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "https://www.who.int/health-topics/who-pandemic-agreement",
+          "live-intel.html",
+          "evidence-vault.html",
+          "search.html"
+        ],
+        "missingEvidence": [
+          "Primary records showing whether Agenda 2030 / Global Standards / Policy Harmonisation has moved from discussion into enforceable implementation.",
+          "Primary records showing whether Digital ID / Biometrics / Identity Wallets has moved from discussion into enforceable implementation.",
+          "Primary records showing whether War / Security / Emergency Powers has moved from discussion into enforceable implementation.",
+          "Primary records showing whether Speech / Platforms / Search / Payment Access has moved from discussion into enforceable implementation.",
+          "Primary records showing whether Health Governance / Biosecurity / Emergency Health Powers has moved from discussion into enforceable implementation.",
+          "Primary records showing whether Migration / Borders / Biometric Travel has moved from discussion into enforceable implementation.",
+          "Clear records identifying decision authority, legal safeguards, appeal rights, procurement ownership and implementation scope."
+        ],
+        "usefulNextActions": [
+          "Open surveillance-hub.html and verify the newest source before sharing the conclusion.",
+          "Compare supporting records with counter-evidence and legal or implementation status.",
+          "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
+        ],
+        "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
+        "generatedAt": "2026-07-16T06:00:32.629Z",
+        "id": "surveillance-state",
+        "name": "Surveillance State Clock",
+        "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+        "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
+      }
+    ],
+    "conclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Surveillance State Clock is the highest canonical pressure index at 92%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage."
+  },
+  "inferenceLayer": {
+    "status": "analytic inference — not direct proof of intent",
+    "confidenceScore": 73,
+    "confidenceBand": "substantial analytic support",
+    "confidenceMeaning": "Support for the observed convergence pattern, not probability that a scenario will occur.",
+    "pathways": [
+      {
+        "id": "information-access",
+        "title": "Information, media and platform access",
+        "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
+        "signalCount": 8266,
+        "actors": [
+          "Information and narrative control",
+          "Search Full Library"
+        ]
+      },
+      {
+        "id": "procurement-vendors",
+        "title": "Procurement and public-private implementation",
+        "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
+        "signalCount": 5190,
+        "actors": [
+          "ATT MOBILITY LLC — Department of Defense",
+          "ACCENTURE FEDERAL SERVICES LLC — Department of Energy",
+          "KATMAI INTEGRATED SOLUTIONS, LLC — Department of Energy"
+        ]
+      },
+      {
+        "id": "money-payments",
+        "title": "Money, banking and payment access",
+        "meaning": "Payment, custody and financial identity can make participation conditional.",
+        "signalCount": 3820,
+        "actors": [
+          "Money, currency and access"
+        ]
+      },
+      {
+        "id": "security-emergency",
+        "title": "Security, intelligence and emergency powers",
+        "meaning": "Crisis and security powers can accelerate integration and become permanent.",
+        "signalCount": 1737,
+        "actors": [
+          "Exercise or conversion of derivative security",
+          "Identity, surveillance and access",
+          "Security and emergency power",
+          "Customs and Border Protection (CBP)"
+        ]
+      },
+      {
+        "id": "law-standards",
+        "title": "Law, treaties and standards",
+        "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
+        "signalCount": 1401,
+        "actors": [
+          "Final Judgment",
+          "View files",
+          "ATT MOBILITY LLC — Department of Defense",
+          "Global governance convergence",
+          "Default Judgment",
+          "Skip to main content"
+        ]
+      },
+      {
+        "id": "health-mobility",
+        "title": "Health, biosecurity and mobility",
+        "meaning": "Health records and emergency credentials can become cross-border access controls.",
+        "signalCount": 1154,
+        "actors": []
+      },
+      {
+        "id": "identity-biometrics",
+        "title": "Identity, credentials and biometrics",
+        "meaning": "Reusable identity can connect decisions across otherwise separate services.",
+        "signalCount": 662,
+        "actors": [
+          "Identity, surveillance and access"
+        ]
+      },
+      {
+        "id": "data-ai-cloud",
+        "title": "Data, cloud and AI infrastructure",
+        "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
+        "signalCount": 289,
+        "actors": [
+          "Identity, surveillance and access"
+        ]
+      }
+    ],
+    "implementationChain": [
+      {
+        "stage": 1,
+        "title": "Agenda and standards",
+        "explanation": "Multilateral bodies, regulators, industry groups and standards organisations define common objectives and technical requirements."
+      },
+      {
+        "stage": 2,
+        "title": "Law, funding and procurement",
+        "explanation": "Governments translate selected objectives into law, budgets, tenders, licences or compliance duties."
+      },
+      {
+        "stage": 3,
+        "title": "Infrastructure and vendor dependency",
+        "explanation": "Technology, consulting, payment, security and cloud vendors build the operating systems."
+      },
+      {
+        "stage": 4,
+        "title": "Interoperability and shared identity",
+        "explanation": "Identity, payment, health, mobility, platform and public-service systems exchange credentials or status."
+      },
+      {
+        "stage": 5,
+        "title": "Conditional access and enforcement",
+        "explanation": "Eligibility, accounts, licences, travel, benefits or payment access can be restricted across connected systems."
+      },
+      {
+        "stage": 6,
+        "title": "Permanence and lock-in",
+        "explanation": "Contracts, data standards, sunk costs and emergency measures make reversal difficult without a single world state."
+      }
+    ],
+    "actorMap": [
+      {
+        "name": "increased position",
+        "documentedRole": "reportedPositionChange",
+        "roleGroup": "other documented institutional actor",
+        "records": 2474,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "mentions",
+        "documentedRole": "mentions",
+        "roleGroup": "other documented institutional actor",
+        "records": 1259,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "reduced position",
+        "documentedRole": "reportedPositionChange",
+        "roleGroup": "other documented institutional actor",
+        "records": 1238,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "exited position",
+        "documentedRole": "reportedPositionChange",
+        "roleGroup": "other documented institutional actor",
+        "records": 174,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Open-market or private sale",
+        "documentedRole": "reportedTransaction",
+        "roleGroup": "other documented institutional actor",
+        "records": 137,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "new position",
+        "documentedRole": "reportedPositionChange",
+        "roleGroup": "other documented institutional actor",
+        "records": 114,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 99,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "View files",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 72,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Exercise or conversion of derivative security",
+        "documentedRole": "reportedTransaction",
+        "roleGroup": "security, intelligence and emergency power",
+        "records": 58,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Grant, award or other acquisition",
+        "documentedRole": "reportedTransaction",
+        "roleGroup": "other documented institutional actor",
+        "records": 34,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "ATT MOBILITY LLC — Department of Defense",
+        "documentedRole": "Contract",
+        "roleGroup": "public authority and regulation",
+        "records": 20,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "operated or published by",
+        "documentedRole": "operatedBy",
+        "roleGroup": "other documented institutional actor",
+        "records": 20,
+        "sources": [
+          "data/relationship-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Corporate-state convergence",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "other documented institutional actor",
+        "records": 14,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Identity, surveillance and access",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "technology, identity, data and platforms",
+        "records": 12,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Global governance convergence",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "other documented institutional actor",
+        "records": 12,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Information and narrative control",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "media and information access",
+        "records": 10,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Default Judgment",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 8,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Skip to main content",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 8,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "SEC Complaint",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "other documented institutional actor",
+        "records": 8,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Consolidated Sanctions List (Non-SDN Lists)",
+        "documentedRole": "Finding",
+        "roleGroup": "other documented institutional actor",
+        "records": 8,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Security and emergency power",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "security, intelligence and emergency power",
+        "records": 8,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Attorney Review Protocol for Epstein Files",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "BOP Video Footage",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Customs and Border Protection (CBP)",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "DOJ Disclosures",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Epstein Library",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Facebook",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Federal Bureau of Investigation (FBI)",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Federal Bureau of Prisons (BOP)",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "First Phase of Declassified Epstein Files",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Florida",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "House Disclosures",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "LinkedIn",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Maxwell Proffer",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Memoranda and Correspondence",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Search Full Library",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 6,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Money, currency and access",
+        "documentedRole": "Role stated in the linked Matrix record",
+        "roleGroup": "money, banking and payment infrastructure",
+        "records": 6,
+        "sources": [
+          "data/clock-wall.json",
+          "data/global-risk-clocks.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Bongiorno",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Chad J. Miller",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Jeffrey Puzzullo",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Suzee Han",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Final Judgment - Titanium Capital LLC",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Sanctions List Service",
+        "documentedRole": "Finding",
+        "roleGroup": "other documented institutional actor",
+        "records": 5,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "ACCENTURE FEDERAL SERVICES LLC — Department of Energy",
+        "documentedRole": "Contract",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "KATMAI INTEGRATED SOLUTIONS, LLC — Department of Energy",
+        "documentedRole": "Contract",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Amended Judgment - Spartan Trading Company, LLC",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Consent Motion for Entry of Final Judgment",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Consent Motion for Final Judgments",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Consent of and Final Judgment as to Gautam Adani",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      },
+      {
+        "name": "Consent of and Final Judgment as to Sagar Adani",
+        "documentedRole": "CourtCase",
+        "roleGroup": "public authority and regulation",
+        "records": 4,
+        "sources": [
+          "data/entity-registry.json"
+        ],
+        "summaries": [],
+        "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+      }
+    ]
+  },
+  "speculativeLayer": {
+    "status": "scenario analysis — not fact or prediction",
+    "leadingTrajectory": "If the pattern continues, the most plausible outcome is a de facto governance layer rather than one dramatic declaration: compatible rules and public-private infrastructure connect identity, payments, AI, health, security, mobility and information access. This could make world-government-like functions or currency-like controls technically possible without proving one central authority. A one-world religion claim remains weak without direct evidence of mandatory doctrine and enforcement.",
+    "scenarios": [
+      {
+        "id": "functional-convergence",
+        "title": "Functional global governance without a single world state",
+        "status": "speculative scenario — not a factual forecast",
+        "plausibilityBand": "moderate-to-high under continuation of current signals",
+        "trajectory": "Compatible standards, public procurement and shared vendors create common governance effects while sovereignty formally remains national.",
+        "evidenceNeeded": [
+          "Binding cross-jurisdiction implementation",
+          "Shared technical standards",
+          "Documented identity, payment or eligibility exchange"
+        ],
+        "disconfirmingEvidence": [
+          "Durable decentralisation",
+          "Independent technical exit",
+          "Effective local veto and appeal"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "conditional-access",
+        "title": "Conditional-access society",
+        "status": "speculative scenario — not a factual forecast",
+        "plausibilityBand": "moderate enabling conditions; outcome not established",
+        "trajectory": "Identity, payment, health, mobility and platform status become linked, allowing a decision in one system to affect another.",
+        "evidenceNeeded": [
+          "Mandatory linkage rules",
+          "Shared identifiers",
+          "Cross-domain enforcement records"
+        ],
+        "disconfirmingEvidence": [
+          "Strict purpose limitation",
+          "Offline alternatives",
+          "Separated databases and effective appeal"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "one-world-government-threshold",
+        "title": "Formal one-world government threshold",
+        "status": "high-bar speculative scenario — currently unproven",
+        "plausibilityBand": "low on present evidence; functional convergence is more plausible",
+        "trajectory": "A central authority would require binding law-making, taxation, enforcement, adjudication and removal of meaningful national veto.",
+        "evidenceNeeded": [
+          "Supranational constitutional authority",
+          "Central taxation",
+          "Direct compulsory jurisdiction"
+        ],
+        "disconfirmingEvidence": [
+          "Sovereign vetoes",
+          "Treaty withdrawal",
+          "Competing blocs",
+          "Constitutional rejection"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "one-world-currency-threshold",
+        "title": "One-world currency or unified payment-control threshold",
+        "status": "speculative scenario — enabling infrastructure only",
+        "plausibilityBand": "low for one legal currency; moderate for interoperable digital payment governance",
+        "trajectory": "Common wallet, identity, settlement and compliance standards could create currency-like control across different legal currencies.",
+        "evidenceNeeded": [
+          "Mandatory legal-tender consolidation",
+          "Global settlement authority",
+          "Restrictions on competing rails"
+        ],
+        "disconfirmingEvidence": [
+          "Cash preservation",
+          "Competing currencies",
+          "Privacy-preserving offline payment"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "one-world-religion-threshold",
+        "title": "One-world religion threshold",
+        "status": "speculative scenario — weak and currently unsupported",
+        "plausibilityBand": "low without direct doctrinal and enforcement evidence",
+        "trajectory": "Shared ethical language would have to become mandatory doctrine backed by central religious authority and sanctions.",
+        "evidenceNeeded": [
+          "Mandatory doctrine",
+          "Central religious authority",
+          "Compulsory adherence"
+        ],
+        "disconfirmingEvidence": [
+          "Religious pluralism",
+          "Freedom of belief",
+          "Independent institutions"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "fragmented-blocs",
+        "title": "Competing digital-control blocs",
+        "status": "alternative speculative scenario",
+        "plausibilityBand": "moderate and compatible with geopolitical fragmentation",
+        "trajectory": "Rival blocs build incompatible identity, payment, AI, security and information regimes rather than one global system.",
+        "evidenceNeeded": [
+          "Divergent standards",
+          "Bloc-specific vendors",
+          "Restricted interoperability"
+        ],
+        "disconfirmingEvidence": [
+          "Successful global interoperability",
+          "Reduced sanctions and technical fragmentation"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      },
+      {
+        "id": "decentralised-countertrend",
+        "title": "Decentralised and rights-preserving countertrend",
+        "status": "alternative speculative scenario",
+        "plausibilityBand": "plausible where law and technology preserve exit and appeal",
+        "trajectory": "Open standards, privacy law, cash, judicial review, local control and competition prevent convergence from becoming coercive.",
+        "evidenceNeeded": [
+          "Working opt-outs",
+          "Open-source systems",
+          "Successful legal limits"
+        ],
+        "disconfirmingEvidence": [
+          "Mandatory central credentials",
+          "Vendor lock-in",
+          "Elimination of offline alternatives"
+        ],
+        "boundary": "Scenario analysis identifies enabling conditions and thresholds; it does not prove intent, inevitability or a secret controller."
+      }
+    ]
+  },
+  "uncertaintyLayer": {
+    "counterpoint": "The thesis weakens when participation remains voluntary, systems are decentralised and reversible, data stays separated, open standards preserve exit, meaningful competition exists, courts enforce rights, and primary records show parallel development rather than common enforcement.",
+    "watchNext": [
+      "Voluntary identity or wallet systems becoming mandatory",
+      "Identity linked to payments, benefits, health, travel or platform access",
+      "International standards becoming law or procurement conditions",
+      "Government dependence on a small vendor group",
+      "Emergency infrastructure becoming permanent",
+      "Risk or eligibility decisions reused across unrelated systems",
+      "Legal, technical or political reversals that weaken convergence"
+    ],
+    "boundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity."
+  }
+}

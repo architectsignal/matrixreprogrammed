@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-15T05:53:42.568Z",
+  "updated": "2026-07-16T06:00:18.822Z",
   "title": "Matrix Reprogrammed Review Dashboard",
   "mission": "Review unresolved source leads, missing records, card health, conclusion changes, score movement and submissions awaiting review.",
   "totals": {
@@ -13,7 +13,7 @@
     "primarySourceNeeded": 468,
     "submissionsAwaitingReview": 128,
     "artworkMissing": 468,
-    "publicHighIssues": 2339,
+    "publicHighIssues": 2332,
     "cardHighIssues": 0,
     "monetisationGaps": 5
   },
@@ -27,7 +27,7 @@
     "Think Tanks Deck: 52 card(s) need primary-source enrichment.",
     "Black Nobility & Allied Dynasties Deck: 52 card(s) need primary-source enrichment.",
     "Jurisdictions of Power Deck: 52 card(s) need primary-source enrichment.",
-    "Public copy audit has 2339 high issue(s)."
+    "Public copy audit has 2332 high issue(s)."
   ],
   "deckHealth": [
     {
@@ -60,7 +60,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 2204,
+      "missingRecords": 2207,
       "ok": true
     },
     {
@@ -93,7 +93,7 @@
       "directDossiers": 52,
       "artworkAssets": 52,
       "primarySourceNeeded": 52,
-      "missingRecords": 2203,
+      "missingRecords": 2206,
       "ok": true
     },
     {
@@ -658,6 +658,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 18",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "money",
         "identity"
@@ -681,31 +706,6 @@
         {
           "lane": "identity",
           "label": "Digital ID / surveillance route",
-          "deck": "policy"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 18",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
           "deck": "policy"
         }
       ],
@@ -870,6 +870,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 26",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "correction"
       ],
@@ -888,31 +913,6 @@
           "lane": "correction",
           "label": "Correction / counter-evidence",
           "deck": null
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 26",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -1001,6 +1001,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 31",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "security"
       ],
@@ -1019,31 +1044,6 @@
           "lane": "security",
           "label": "War/security route",
           "deck": "institutions"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 31",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -1479,7 +1479,7 @@
       "title": "Source 49",
       "origin": "intake-area-audit",
       "sourceUrl": "",
-      "confidence": "medium",
+      "confidence": "watch",
       "lanes": [
         "institution",
         "policy"
@@ -1504,7 +1504,7 @@
       "title": "Source 50",
       "origin": "intake-area-audit",
       "sourceUrl": "",
-      "confidence": "watch",
+      "confidence": "medium",
       "lanes": [
         "institution",
         "policy"
@@ -1657,6 +1657,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 57",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "society"
       ],
@@ -1675,31 +1700,6 @@
           "lane": "society",
           "label": "Secret Societies dossier",
           "deck": "secret-societies"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 57",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -1813,6 +1813,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 63",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "security"
       ],
@@ -1831,31 +1856,6 @@
           "lane": "security",
           "label": "War/security route",
           "deck": "institutions"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 63",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -1919,6 +1919,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 67",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "narrative"
       ],
@@ -1937,31 +1962,6 @@
           "lane": "narrative",
           "label": "Controlled Opposition / media route",
           "deck": "controlled-opposition"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 67",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -2225,6 +2225,31 @@
       "confidence": "watch",
       "lanes": [
         "institution",
+        "policy"
+      ],
+      "destinations": [
+        {
+          "lane": "institution",
+          "label": "Institution dossier",
+          "deck": "institutions"
+        },
+        {
+          "lane": "policy",
+          "label": "Policy dossier and clock",
+          "deck": "policy"
+        }
+      ],
+      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
+      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
+      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
+    },
+    {
+      "title": "Source 79",
+      "origin": "intake-area-audit",
+      "sourceUrl": "",
+      "confidence": "watch",
+      "lanes": [
+        "institution",
         "policy",
         "biosecurity"
       ],
@@ -2250,7 +2275,7 @@
       "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
     {
-      "title": "Source 79",
+      "title": "Source 80",
       "origin": "intake-area-audit",
       "sourceUrl": "",
       "confidence": "watch",
@@ -2274,31 +2299,6 @@
           "lane": "security",
           "label": "War/security route",
           "deck": "institutions"
-        }
-      ],
-      "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
-      "whatItDoesNotShow": "This source alone does not prove hidden control, unlawful conduct, shared intent or claims beyond the document.",
-      "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
-    },
-    {
-      "title": "Source 80",
-      "origin": "intake-area-audit",
-      "sourceUrl": "",
-      "confidence": "watch",
-      "lanes": [
-        "institution",
-        "policy"
-      ],
-      "destinations": [
-        {
-          "lane": "institution",
-          "label": "Institution dossier",
-          "deck": "institutions"
-        },
-        {
-          "lane": "policy",
-          "label": "Policy dossier and clock",
-          "deck": "policy"
         }
       ],
       "whatItShows": "Lead requires reviewed summary before becoming a conclusion.",
@@ -2600,13 +2600,13 @@
         "title": "Source 49",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 50",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 51",
@@ -3842,13 +3842,13 @@
         "title": "Source 256",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 257",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 258",
@@ -4586,13 +4586,13 @@
         "title": "Source 380",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 381",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 382",
@@ -4604,13 +4604,13 @@
         "title": "Source 383",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 384",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 385",
@@ -4778,13 +4778,13 @@
         "title": "Source 412",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 413",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 414",
@@ -4856,13 +4856,13 @@
         "title": "Source 425",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 426",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 427",
@@ -4886,13 +4886,13 @@
         "title": "Source 430",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 431",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 432",
@@ -4910,7 +4910,7 @@
         "title": "Source 434",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 435",
@@ -4928,7 +4928,7 @@
         "title": "Source 437",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 438",
@@ -4946,13 +4946,13 @@
         "title": "Source 440",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 441",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 442",
@@ -5042,13 +5042,13 @@
         "title": "Source 456",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 457",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 458",
@@ -5228,13 +5228,13 @@
         "title": "Source 487",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 488",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 489",
@@ -6464,25 +6464,25 @@
         "title": "Source 693",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 694",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 695",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 696",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 697",
@@ -6632,7 +6632,7 @@
         "title": "Source 721",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 722",
@@ -6644,7 +6644,7 @@
         "title": "Source 723",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 724",
@@ -6656,13 +6656,13 @@
         "title": "Source 725",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 726",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 727",
@@ -6674,19 +6674,19 @@
         "title": "Source 728",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 729",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 730",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 731",
@@ -6698,7 +6698,7 @@
         "title": "Source 732",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 733",
@@ -6710,25 +6710,25 @@
         "title": "Source 734",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 735",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 736",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 737",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 738",
@@ -6752,7 +6752,7 @@
         "title": "Source 741",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 742",
@@ -6764,7 +6764,7 @@
         "title": "Source 743",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 744",
@@ -6788,7 +6788,7 @@
         "title": "Source 747",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 748",
@@ -6812,7 +6812,7 @@
         "title": "Source 751",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 752",
@@ -6860,37 +6860,37 @@
         "title": "Source 759",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 760",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 761",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 762",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 763",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 764",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 765",
@@ -6902,13 +6902,13 @@
         "title": "Source 766",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 767",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 768",
@@ -6950,7 +6950,7 @@
         "title": "Source 774",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 775",
@@ -6962,7 +6962,7 @@
         "title": "Source 776",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 777",
@@ -7046,7 +7046,7 @@
         "title": "Source 790",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 791",
@@ -7058,7 +7058,7 @@
         "title": "Source 792",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 793",
@@ -7316,25 +7316,25 @@
         "title": "Source 835",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 836",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 837",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 838",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 839",
@@ -7364,7 +7364,7 @@
         "title": "Source 843",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 844",
@@ -7388,7 +7388,7 @@
         "title": "Source 847",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 848",
@@ -7808,7 +7808,7 @@
         "title": "Source 917",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 918",
@@ -7832,7 +7832,7 @@
         "title": "Source 921",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 922",
@@ -8000,7 +8000,7 @@
         "title": "Source 949",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 950",
@@ -8012,7 +8012,7 @@
         "title": "Source 951",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 952",
@@ -8912,7 +8912,7 @@
         "title": "Source 1101",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1102",
@@ -8924,7 +8924,7 @@
         "title": "Source 1103",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1104",
@@ -9200,7 +9200,7 @@
         "title": "Source 1149",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1150",
@@ -9212,7 +9212,7 @@
         "title": "Source 1151",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1152",
@@ -10442,7 +10442,7 @@
         "title": "Source 1356",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1357",
@@ -10454,7 +10454,7 @@
         "title": "Source 1358",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1359",
@@ -11186,7 +11186,7 @@
         "title": "Source 1480",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1481",
@@ -11198,13 +11198,13 @@
         "title": "Source 1482",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1483",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1484",
@@ -11216,7 +11216,7 @@
         "title": "Source 1485",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1486",
@@ -11378,7 +11378,7 @@
         "title": "Source 1512",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1513",
@@ -11390,7 +11390,7 @@
         "title": "Source 1514",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1515",
@@ -11456,7 +11456,7 @@
         "title": "Source 1525",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1526",
@@ -11468,7 +11468,7 @@
         "title": "Source 1527",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1528",
@@ -11486,7 +11486,7 @@
         "title": "Source 1530",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1531",
@@ -11498,7 +11498,7 @@
         "title": "Source 1532",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1533",
@@ -11510,13 +11510,13 @@
         "title": "Source 1534",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1535",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1536",
@@ -11528,13 +11528,13 @@
         "title": "Source 1537",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1538",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1539",
@@ -11546,7 +11546,7 @@
         "title": "Source 1540",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1541",
@@ -11558,7 +11558,7 @@
         "title": "Source 1542",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1543",
@@ -11642,7 +11642,7 @@
         "title": "Source 1556",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1557",
@@ -11654,7 +11654,7 @@
         "title": "Source 1558",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1559",
@@ -11828,7 +11828,7 @@
         "title": "Source 1587",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1588",
@@ -11840,7 +11840,7 @@
         "title": "Source 1589",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1590",
@@ -13064,13 +13064,13 @@
         "title": "Source 1793",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1794",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1795",
@@ -13082,13 +13082,13 @@
         "title": "Source 1796",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1797",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1798",
@@ -13232,7 +13232,7 @@
         "title": "Source 1821",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1822",
@@ -13250,37 +13250,37 @@
         "title": "Source 1824",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1825",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1826",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1827",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1828",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1829",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1830",
@@ -13304,19 +13304,19 @@
         "title": "Source 1833",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1834",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1835",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1836",
@@ -13328,13 +13328,13 @@
         "title": "Source 1837",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1838",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1839",
@@ -13352,7 +13352,7 @@
         "title": "Source 1841",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1842",
@@ -13370,7 +13370,7 @@
         "title": "Source 1844",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1845",
@@ -13388,7 +13388,7 @@
         "title": "Source 1847",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1848",
@@ -13400,13 +13400,13 @@
         "title": "Source 1849",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1850",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1851",
@@ -13418,7 +13418,7 @@
         "title": "Source 1852",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1853",
@@ -13460,13 +13460,13 @@
         "title": "Source 1859",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1860",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1861",
@@ -13478,7 +13478,7 @@
         "title": "Source 1862",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1863",
@@ -13490,31 +13490,31 @@
         "title": "Source 1864",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1865",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1866",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1867",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1868",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1869",
@@ -13550,7 +13550,7 @@
         "title": "Source 1874",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1875",
@@ -13568,7 +13568,7 @@
         "title": "Source 1877",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1878",
@@ -13646,7 +13646,7 @@
         "title": "Source 1890",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1891",
@@ -13664,7 +13664,7 @@
         "title": "Source 1893",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1894",
@@ -13916,13 +13916,13 @@
         "title": "Source 1935",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1936",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1937",
@@ -13934,13 +13934,13 @@
         "title": "Source 1938",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1939",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1940",
@@ -13964,7 +13964,7 @@
         "title": "Source 1943",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1944",
@@ -13976,13 +13976,13 @@
         "title": "Source 1945",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1946",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1947",
@@ -13994,7 +13994,7 @@
         "title": "Source 1948",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1949",
@@ -14408,7 +14408,7 @@
         "title": "Source 2017",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2018",
@@ -14420,13 +14420,13 @@
         "title": "Source 2019",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2020",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2021",
@@ -14438,7 +14438,7 @@
         "title": "Source 2022",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2023",
@@ -14600,7 +14600,7 @@
         "title": "Source 2049",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2050",
@@ -14618,7 +14618,7 @@
         "title": "Source 2052",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2053",
@@ -15512,7 +15512,7 @@
         "title": "Source 2201",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2202",
@@ -15522,6 +15522,24 @@
       },
       {
         "title": "Source 2203",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2204",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 2205",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2206",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -15826,13 +15844,13 @@
         "title": "Source 49",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 50",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 51",
@@ -17068,13 +17086,13 @@
         "title": "Source 256",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 257",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 258",
@@ -17812,13 +17830,13 @@
         "title": "Source 380",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 381",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 382",
@@ -17830,13 +17848,13 @@
         "title": "Source 383",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 384",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 385",
@@ -18004,13 +18022,13 @@
         "title": "Source 412",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 413",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 414",
@@ -18082,13 +18100,13 @@
         "title": "Source 425",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 426",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 427",
@@ -18112,13 +18130,13 @@
         "title": "Source 430",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 431",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 432",
@@ -18136,7 +18154,7 @@
         "title": "Source 434",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 435",
@@ -18154,7 +18172,7 @@
         "title": "Source 437",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 438",
@@ -18172,13 +18190,13 @@
         "title": "Source 440",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 441",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 442",
@@ -18268,13 +18286,13 @@
         "title": "Source 456",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 457",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 458",
@@ -18454,13 +18472,13 @@
         "title": "Source 487",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 488",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 489",
@@ -19690,25 +19708,25 @@
         "title": "Source 693",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 694",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 695",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 696",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 697",
@@ -19858,7 +19876,7 @@
         "title": "Source 721",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 722",
@@ -19870,7 +19888,7 @@
         "title": "Source 723",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 724",
@@ -19882,13 +19900,13 @@
         "title": "Source 725",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 726",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 727",
@@ -19900,19 +19918,19 @@
         "title": "Source 728",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 729",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 730",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 731",
@@ -19924,7 +19942,7 @@
         "title": "Source 732",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 733",
@@ -19936,25 +19954,25 @@
         "title": "Source 734",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 735",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 736",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 737",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 738",
@@ -19978,7 +19996,7 @@
         "title": "Source 741",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 742",
@@ -19990,7 +20008,7 @@
         "title": "Source 743",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 744",
@@ -20014,7 +20032,7 @@
         "title": "Source 747",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 748",
@@ -20038,7 +20056,7 @@
         "title": "Source 751",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 752",
@@ -20086,37 +20104,37 @@
         "title": "Source 759",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 760",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 761",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 762",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 763",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 764",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 765",
@@ -20128,13 +20146,13 @@
         "title": "Source 766",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 767",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 768",
@@ -20176,7 +20194,7 @@
         "title": "Source 774",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 775",
@@ -20188,7 +20206,7 @@
         "title": "Source 776",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 777",
@@ -20272,7 +20290,7 @@
         "title": "Source 790",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 791",
@@ -20284,7 +20302,7 @@
         "title": "Source 792",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 793",
@@ -20542,25 +20560,25 @@
         "title": "Source 835",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 836",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 837",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 838",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 839",
@@ -20590,7 +20608,7 @@
         "title": "Source 843",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 844",
@@ -20614,7 +20632,7 @@
         "title": "Source 847",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 848",
@@ -21034,7 +21052,7 @@
         "title": "Source 917",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 918",
@@ -21058,7 +21076,7 @@
         "title": "Source 921",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 922",
@@ -21226,7 +21244,7 @@
         "title": "Source 949",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 950",
@@ -21238,7 +21256,7 @@
         "title": "Source 951",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 952",
@@ -22138,7 +22156,7 @@
         "title": "Source 1101",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1102",
@@ -22150,7 +22168,7 @@
         "title": "Source 1103",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1104",
@@ -22426,7 +22444,7 @@
         "title": "Source 1149",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1150",
@@ -22438,7 +22456,7 @@
         "title": "Source 1151",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1152",
@@ -23668,7 +23686,7 @@
         "title": "Source 1356",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1357",
@@ -23680,7 +23698,7 @@
         "title": "Source 1358",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1359",
@@ -24412,7 +24430,7 @@
         "title": "Source 1480",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1481",
@@ -24424,13 +24442,13 @@
         "title": "Source 1482",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1483",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1484",
@@ -24442,7 +24460,7 @@
         "title": "Source 1485",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1486",
@@ -24604,7 +24622,7 @@
         "title": "Source 1512",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1513",
@@ -24616,7 +24634,7 @@
         "title": "Source 1514",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1515",
@@ -24682,7 +24700,7 @@
         "title": "Source 1525",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1526",
@@ -24694,7 +24712,7 @@
         "title": "Source 1527",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1528",
@@ -24712,7 +24730,7 @@
         "title": "Source 1530",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1531",
@@ -24724,7 +24742,7 @@
         "title": "Source 1532",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1533",
@@ -24736,13 +24754,13 @@
         "title": "Source 1534",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1535",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1536",
@@ -24754,13 +24772,13 @@
         "title": "Source 1537",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1538",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1539",
@@ -24772,7 +24790,7 @@
         "title": "Source 1540",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1541",
@@ -24784,7 +24802,7 @@
         "title": "Source 1542",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1543",
@@ -24868,7 +24886,7 @@
         "title": "Source 1556",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1557",
@@ -24880,7 +24898,7 @@
         "title": "Source 1558",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1559",
@@ -25054,7 +25072,7 @@
         "title": "Source 1587",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1588",
@@ -25066,7 +25084,7 @@
         "title": "Source 1589",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1590",
@@ -26290,13 +26308,13 @@
         "title": "Source 1793",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1794",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1795",
@@ -26308,13 +26326,13 @@
         "title": "Source 1796",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1797",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1798",
@@ -26458,7 +26476,7 @@
         "title": "Source 1821",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1822",
@@ -26476,37 +26494,37 @@
         "title": "Source 1824",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1825",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1826",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1827",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1828",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1829",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1830",
@@ -26530,19 +26548,19 @@
         "title": "Source 1833",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1834",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1835",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1836",
@@ -26554,13 +26572,13 @@
         "title": "Source 1837",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1838",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1839",
@@ -26578,7 +26596,7 @@
         "title": "Source 1841",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1842",
@@ -26596,7 +26614,7 @@
         "title": "Source 1844",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1845",
@@ -26614,7 +26632,7 @@
         "title": "Source 1847",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1848",
@@ -26626,13 +26644,13 @@
         "title": "Source 1849",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1850",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1851",
@@ -26644,7 +26662,7 @@
         "title": "Source 1852",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1853",
@@ -26686,13 +26704,13 @@
         "title": "Source 1859",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1860",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1861",
@@ -26704,7 +26722,7 @@
         "title": "Source 1862",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1863",
@@ -26716,31 +26734,31 @@
         "title": "Source 1864",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1865",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1866",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1867",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1868",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1869",
@@ -26776,7 +26794,7 @@
         "title": "Source 1874",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1875",
@@ -26794,7 +26812,7 @@
         "title": "Source 1877",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1878",
@@ -26872,7 +26890,7 @@
         "title": "Source 1890",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1891",
@@ -26890,7 +26908,7 @@
         "title": "Source 1893",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1894",
@@ -27142,13 +27160,13 @@
         "title": "Source 1935",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1936",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1937",
@@ -27160,13 +27178,13 @@
         "title": "Source 1938",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1939",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1940",
@@ -27190,7 +27208,7 @@
         "title": "Source 1943",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1944",
@@ -27202,13 +27220,13 @@
         "title": "Source 1945",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1946",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1947",
@@ -27220,7 +27238,7 @@
         "title": "Source 1948",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1949",
@@ -27634,7 +27652,7 @@
         "title": "Source 2017",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2018",
@@ -27646,13 +27664,13 @@
         "title": "Source 2019",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2020",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2021",
@@ -27664,7 +27682,7 @@
         "title": "Source 2022",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2023",
@@ -27826,7 +27844,7 @@
         "title": "Source 2049",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2050",
@@ -27844,7 +27862,7 @@
         "title": "Source 2052",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 2053",
@@ -28738,7 +28756,7 @@
         "title": "Source 2201",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 2202",
@@ -28748,6 +28766,24 @@
       },
       {
         "title": "Source 2203",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2204",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 2205",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2206",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -28761,19 +28797,13 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 66",
+        "title": "Source 67",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 223",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 305",
+        "title": "Source 224",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -29091,73 +29121,67 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 384",
+        "title": "Source 358",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 470",
+        "title": "Source 385",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 558",
+        "title": "Source 471",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 679",
+        "title": "Source 560",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 722",
+        "title": "Source 681",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 763",
+        "title": "Source 724",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 765",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 889",
+        "title": "Source 891",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1020",
+        "title": "Source 1022",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1166",
+        "title": "Source 1168",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1323",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1405",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1406",
+        "title": "Source 1325",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -29469,49 +29493,61 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1484",
+        "title": "Source 1458",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1570",
+        "title": "Source 1459",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1658",
+        "title": "Source 1486",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1779",
+        "title": "Source 1572",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1822",
+        "title": "Source 1661",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1863",
+        "title": "Source 1782",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1825",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1866",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1989",
+        "title": "Source 1992",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2120",
+        "title": "Source 2123",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -29531,28 +29567,16 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 154",
+        "title": "Source 155",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 412",
+        "title": "Source 413",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
-      },
-      {
-        "title": "Source 589",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 590",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
       },
       {
         "title": "Source 591",
@@ -29867,58 +29891,52 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 765",
+        "title": "Source 643",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 644",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 767",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 843",
+        "title": "Source 845",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 850",
+        "title": "Source 852",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 903",
+        "title": "Source 905",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1254",
+        "title": "Source 1256",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1512",
+        "title": "Source 1514",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
-      },
-      {
-        "title": "Source 1689",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1690",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1691",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
       },
       {
         "title": "Source 1692",
@@ -30227,25 +30245,43 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1865",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Source 1943",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Source 1950",
+        "title": "Source 1743",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2003",
+        "title": "Source 1744",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1745",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1868",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 1946",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 1953",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2006",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30259,49 +30295,43 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 256",
+        "title": "Source 257",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 532",
+        "title": "Source 534",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 544",
+        "title": "Source 546",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 713",
+        "title": "Source 715",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 741",
+        "title": "Source 743",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 759",
+        "title": "Source 761",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 760",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Source 763",
+        "title": "Source 762",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
@@ -30313,34 +30343,34 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 835",
+        "title": "Source 767",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 845",
+        "title": "Source 837",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 881",
+        "title": "Source 847",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 883",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 900",
+        "title": "Source 902",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
-      },
-      {
-        "title": "Source 917",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
       },
       {
         "title": "Source 919",
@@ -30349,67 +30379,67 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 972",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 990",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 991",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1101",
+        "title": "Source 921",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1356",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
-      },
-      {
-        "title": "Source 1632",
+        "title": "Source 974",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1644",
+        "title": "Source 992",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1813",
+        "title": "Source 993",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1841",
+        "title": "Source 1103",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1859",
+        "title": "Source 1358",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1860",
+        "title": "Source 1635",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1647",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1816",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1844",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 1862",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
@@ -30421,67 +30451,73 @@
         "confidence": "medium"
       },
       {
-        "title": "Source 1865",
+        "title": "Source 1866",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1935",
+        "title": "Source 1868",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1945",
+        "title": "Source 1938",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1981",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 2000",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 2017",
+        "title": "Source 1948",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 2019",
+        "title": "Source 1984",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2003",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2020",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 2072",
+        "title": "Source 2022",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "medium"
+      },
+      {
+        "title": "Source 2075",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2090",
+        "title": "Source 2093",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2091",
+        "title": "Source 2094",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2201",
+        "title": "Source 2204",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
@@ -30501,12 +30537,6 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 95",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
         "title": "Source 96",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -30519,13 +30549,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 296",
+        "title": "Source 98",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 373",
+        "title": "Source 297",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30555,7 +30585,7 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 473",
+        "title": "Source 378",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30567,61 +30597,55 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 506",
+        "title": "Source 475",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 680",
+        "title": "Source 507",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 688",
+        "title": "Source 682",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 847",
+        "title": "Source 690",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 960",
+        "title": "Source 849",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1075",
+        "title": "Source 962",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1108",
+        "title": "Source 1077",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1109",
+        "title": "Source 1110",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1195",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1196",
+        "title": "Source 1111",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30633,19 +30657,19 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1396",
+        "title": "Source 1198",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1473",
+        "title": "Source 1199",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1474",
+        "title": "Source 1398",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30669,49 +30693,61 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1573",
+        "title": "Source 1478",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1574",
+        "title": "Source 1479",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1606",
+        "title": "Source 1575",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1780",
+        "title": "Source 1576",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1788",
+        "title": "Source 1608",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1947",
+        "title": "Source 1783",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2060",
+        "title": "Source 1791",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2175",
+        "title": "Source 1950",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2063",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2178",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30719,19 +30755,13 @@
     ],
     "secret-societies": [
       {
-        "title": "Source 56",
+        "title": "Source 57",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 211",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 219",
+        "title": "Source 212",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30749,64 +30779,58 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 521",
+        "title": "Source 222",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 563",
+        "title": "Source 523",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 677",
+        "title": "Source 565",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 692",
+        "title": "Source 679",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 709",
+        "title": "Source 694",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 724",
+        "title": "Source 711",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 739",
+        "title": "Source 726",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 747",
+        "title": "Source 741",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 749",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
-      },
-      {
-        "title": "Source 855",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 856",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
       },
       {
         "title": "Source 857",
@@ -30815,37 +30839,43 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 860",
+        "title": "Source 858",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 863",
+        "title": "Source 859",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 866",
+        "title": "Source 862",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 869",
+        "title": "Source 865",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 870",
+        "title": "Source 868",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 875",
+        "title": "Source 871",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 872",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30857,19 +30887,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 878",
+        "title": "Source 879",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 883",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 884",
+        "title": "Source 880",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30881,25 +30905,31 @@
         "confidence": "watch"
       },
       {
+        "title": "Source 886",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
         "title": "Source 887",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 888",
+        "title": "Source 889",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 894",
+        "title": "Source 890",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 899",
+        "title": "Source 896",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30917,7 +30947,7 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 904",
+        "title": "Source 905",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30929,31 +30959,25 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 989",
+        "title": "Source 908",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1156",
+        "title": "Source 991",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1311",
+        "title": "Source 1158",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1319",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1320",
+        "title": "Source 1313",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -30965,67 +30989,73 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1621",
+        "title": "Source 1322",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1663",
+        "title": "Source 1323",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1777",
+        "title": "Source 1624",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1792",
+        "title": "Source 1666",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1809",
+        "title": "Source 1780",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1824",
+        "title": "Source 1795",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1839",
+        "title": "Source 1812",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1847",
+        "title": "Source 1827",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1842",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 1850",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "medium"
       },
       {
-        "title": "Source 1955",
+        "title": "Source 1958",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1956",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1957",
+        "title": "Source 1959",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31055,19 +31085,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1970",
+        "title": "Source 1972",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1975",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1977",
+        "title": "Source 1973",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31079,19 +31103,19 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1983",
+        "title": "Source 1980",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1984",
+        "title": "Source 1981",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1985",
+        "title": "Source 1986",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31109,25 +31133,25 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1994",
+        "title": "Source 1990",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1999",
+        "title": "Source 1991",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2001",
+        "title": "Source 1997",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2003",
+        "title": "Source 2002",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31145,7 +31169,19 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2089",
+        "title": "Source 2007",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2009",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2092",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31153,13 +31189,7 @@
     ],
     "power-families": [
       {
-        "title": "Source 86",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 107",
+        "title": "Source 87",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31477,79 +31507,73 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 168",
+        "title": "Source 160",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 261",
+        "title": "Source 169",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 400",
+        "title": "Source 262",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 453",
+        "title": "Source 401",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 503",
+        "title": "Source 454",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 576",
+        "title": "Source 504",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 701",
+        "title": "Source 578",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 702",
+        "title": "Source 703",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 712",
+        "title": "Source 704",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 717",
+        "title": "Source 714",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 768",
+        "title": "Source 719",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 781",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 782",
+        "title": "Source 770",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31600,7 +31624,7 @@
         "title": "Source 790",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 791",
@@ -31612,7 +31636,7 @@
         "title": "Source 792",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 793",
@@ -31681,13 +31705,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 805",
+        "title": "Source 804",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 806",
+        "title": "Source 805",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31747,13 +31771,13 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 817",
+        "title": "Source 816",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 818",
+        "title": "Source 817",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31843,37 +31867,37 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 876",
+        "title": "Source 833",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 890",
+        "title": "Source 834",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 914",
+        "title": "Source 878",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 959",
+        "title": "Source 892",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1079",
+        "title": "Source 916",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1080",
+        "title": "Source 961",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -31915,25 +31939,25 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1091",
+        "title": "Source 1087",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1186",
+        "title": "Source 1088",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1207",
+        "title": "Source 1093",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1208",
+        "title": "Source 1188",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32245,85 +32269,79 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1268",
+        "title": "Source 1260",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1361",
+        "title": "Source 1261",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1500",
+        "title": "Source 1270",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1553",
+        "title": "Source 1363",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1603",
+        "title": "Source 1502",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1676",
+        "title": "Source 1555",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1801",
+        "title": "Source 1605",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1802",
+        "title": "Source 1679",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1812",
+        "title": "Source 1804",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1817",
+        "title": "Source 1805",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1868",
+        "title": "Source 1815",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1881",
+        "title": "Source 1820",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1882",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1883",
+        "title": "Source 1871",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32368,7 +32386,7 @@
         "title": "Source 1890",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "medium"
+        "confidence": "watch"
       },
       {
         "title": "Source 1891",
@@ -32386,7 +32404,7 @@
         "title": "Source 1893",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
+        "confidence": "medium"
       },
       {
         "title": "Source 1894",
@@ -32449,6 +32467,12 @@
         "confidence": "watch"
       },
       {
+        "title": "Source 1904",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
         "title": "Source 1905",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -32456,12 +32480,6 @@
       },
       {
         "title": "Source 1906",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1907",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32515,6 +32533,12 @@
         "confidence": "watch"
       },
       {
+        "title": "Source 1916",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
         "title": "Source 1917",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
@@ -32522,12 +32546,6 @@
       },
       {
         "title": "Source 1918",
-        "sourceUrl": "",
-        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
-        "confidence": "watch"
-      },
-      {
-        "title": "Source 1919",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32611,43 +32629,43 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 1976",
+        "title": "Source 1933",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 1990",
+        "title": "Source 1934",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2014",
+        "title": "Source 1935",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2059",
+        "title": "Source 1979",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2179",
+        "title": "Source 1993",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2180",
+        "title": "Source 2017",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
       },
       {
-        "title": "Source 2181",
+        "title": "Source 2062",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32683,7 +32701,25 @@
         "confidence": "watch"
       },
       {
-        "title": "Source 2191",
+        "title": "Source 2187",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2188",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2189",
+        "sourceUrl": "",
+        "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
+        "confidence": "watch"
+      },
+      {
+        "title": "Source 2194",
         "sourceUrl": "",
         "missingRecord": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.",
         "confidence": "watch"
@@ -32699,7 +32735,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.130Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32716,7 +32752,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32733,7 +32769,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32748,7 +32784,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32765,7 +32801,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32781,7 +32817,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32797,7 +32833,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32813,7 +32849,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32829,7 +32865,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32846,7 +32882,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.872Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32861,7 +32897,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.873Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "people-of-interest",
         "institutions",
@@ -32876,7 +32912,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.873Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy"
@@ -32890,7 +32926,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.873Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "policy",
@@ -32905,7 +32941,7 @@
       "confidence": "watch",
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-07-15T05:53:41.873Z",
+      "updated": "2026-07-16T06:00:18.131Z",
       "relatedCardsOrPages": [
         "institutions",
         "power-families",
@@ -37541,7 +37577,7 @@
       "deckId": "institutions",
       "cardId": "",
       "sourceUrl": "",
-      "status": "medium",
+      "status": "watch",
       "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
     {
@@ -37550,7 +37586,7 @@
       "deckId": "institutions",
       "cardId": "",
       "sourceUrl": "",
-      "status": "watch",
+      "status": "medium",
       "reason": "Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence."
     },
     {
@@ -38116,7 +38152,7 @@
   "audits": {
     "cardAudit": {
       "ok": true,
-      "updated": "2026-07-15T05:53:40.305Z",
+      "updated": "2026-07-16T06:00:16.637Z",
       "expectedDecks": 9,
       "manifestDecks": 9,
       "manifestCards": 468,
@@ -38127,7 +38163,7 @@
     },
     "dossierAudit": {
       "ok": true,
-      "updated": "2026-07-15T05:53:40.259Z",
+      "updated": "2026-07-16T06:00:16.592Z",
       "checkedCards": 468,
       "patchedOrRefreshed": 468,
       "conclusionsInstalled": 468,
@@ -38136,11 +38172,11 @@
     "publicAudit": {
       "ok": false,
       "intakeOk": true,
-      "updated": "2026-07-14T07:29:48.930Z",
-      "filesScanned": 4125,
-      "highIssues": 2339,
+      "updated": "2026-07-15T07:33:42.375Z",
+      "filesScanned": 4135,
+      "highIssues": 2332,
       "reviewIssues": 7,
-      "intakeAreas": 2199,
+      "intakeAreas": 2202,
       "weakIntakeAreas": 0
     },
     "manifest": {
@@ -38158,7 +38194,7 @@
     "productPages": 519,
     "membershipPages": 77,
     "cardDeckProducts": 9,
-    "bookLinks": 486,
+    "bookLinks": 487,
     "reportProducts": 11,
     "customResearchPages": 2,
     "pagesMissingCTA": 1,

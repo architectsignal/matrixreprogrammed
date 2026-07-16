@@ -1,177 +1,225 @@
 (() => {
+  'use strict';
+  window.__MATRIX_RESEARCH_UI_AUTHORITATIVE__ = true;
+
   const authState = document.querySelector('[data-auth-state]');
   const runnerState = document.querySelector('[data-runner-state]');
-  const adminCard = document.querySelector('[data-admin-tool]');
+  const h8mailCard = document.querySelector('[data-h8mail-tool]');
   const jobsBody = document.querySelector('[data-jobs-body]');
   const forms = [...document.querySelectorAll('[data-tool-form]')];
   const activePolls = new Map();
   let config = null;
+  let jobsCache = [];
+
+  const priorityMeaning = {
+    informational: 'Informational means the scan returned context but no urgent defensive signal. Review when convenient.',
+    low: 'Low means no strong positive signal was returned. It does not prove the address is absent or safe.',
+    medium: 'Medium means one or more findings should be verified soon. It is a review priority, not proof of compromise or wrongdoing.',
+    moderate: 'Moderate means one or more findings should be verified soon. It is a review priority, not proof of compromise or wrongdoing.',
+    high: 'High means sensitive exposure or several important signals were reported. Take the listed defensive actions promptly and verify the sources.',
+    critical: 'Critical means the configured source reported a serious defensive indicator such as infostealer-related material. Act promptly, but verify before drawing broader conclusions.'
+  };
 
   const style = document.createElement('style');
   style.textContent = `
-    .email-intel-report{display:grid;gap:1rem;color:#f3e6bd}.email-intel-head{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.email-intel-head h3{margin:.1rem 0}.email-intel-badge{display:inline-flex;align-items:center;border:1px solid rgba(216,181,106,.45);border-radius:999px;padding:.35rem .7rem;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}.email-intel-badge[data-risk=low]{border-color:#4f9f70;color:#a8e7bd}.email-intel-badge[data-risk=medium],.email-intel-badge[data-risk=moderate]{border-color:#d2a74e;color:#f1d28d}.email-intel-badge[data-risk=high],.email-intel-badge[data-risk=critical]{border-color:#c75d55;color:#ffafa7}.email-intel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.7rem}.email-intel-stat{padding:.85rem;border:1px solid rgba(216,181,106,.22);border-radius:12px;background:rgba(216,181,106,.055)}.email-intel-stat strong{display:block;font-size:1.5rem;color:#d8b56a}.email-intel-stat span{font-size:.8rem;color:#c8bb95}.email-intel-section{border-top:1px solid rgba(216,181,106,.18);padding-top:.85rem}.email-intel-section h4{margin:0 0 .55rem}.email-intel-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}.email-intel-item{display:grid;grid-template-columns:minmax(105px,180px) 1fr;gap:.7rem;padding:.65rem .75rem;border:1px solid rgba(216,181,106,.16);border-radius:10px;background:rgba(0,0,0,.24)}.email-intel-item strong{overflow-wrap:anywhere}.email-intel-item span{color:#c8bb95}.email-intel-actions{margin:.3rem 0 0;padding-left:1.15rem}.email-intel-actions li{margin:.35rem 0}.email-intel-note{padding:.75rem;border-left:3px solid #d8b56a;background:rgba(216,181,106,.07);color:#d8cfb1}.email-intel-details{border:1px solid rgba(216,181,106,.18);border-radius:10px;padding:.7rem}.email-intel-details summary{cursor:pointer;font-weight:800}.email-intel-details pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:.76rem}.email-intel-empty{color:#c8bb95;font-style:italic}@media(max-width:560px){.email-intel-item{grid-template-columns:1fr}}
+    .tool-output{white-space:normal!important}.decision-report{display:grid;gap:1rem;color:#f3e6bd}.decision-head{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;flex-wrap:wrap}.decision-head h3{margin:.15rem 0}.decision-badges{display:flex;gap:.45rem;flex-wrap:wrap}.decision-badge{border:1px solid rgba(216,181,106,.4);border-radius:999px;padding:.35rem .7rem;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.decision-badge[data-level=low]{border-color:#4f9f70;color:#a8e7bd}.decision-badge[data-level=medium],.decision-badge[data-level=moderate]{border-color:#d2a74e;color:#f1d28d}.decision-badge[data-level=high],.decision-badge[data-level=critical]{border-color:#c75d55;color:#ffafa7}.decision-badge[data-level=verified]{border-color:#5d8fc7;color:#b6d8ff}.decision-summary{padding:1rem;border:1px solid rgba(216,181,106,.28);border-left:4px solid #d8b56a;border-radius:12px;background:rgba(216,181,106,.07)}.decision-summary h4{margin:0 0 .45rem}.decision-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.7rem}.decision-stat{padding:.8rem;border:1px solid rgba(216,181,106,.2);border-radius:11px;background:rgba(0,0,0,.24)}.decision-stat strong{display:block;color:#d8b56a;font-size:1.45rem}.decision-stat span{font-size:.8rem;color:#c8bb95}.decision-section{border-top:1px solid rgba(216,181,106,.18);padding-top:.9rem}.decision-section h4{margin:0 0 .55rem}.decision-list{display:grid;gap:.5rem;margin:0;padding:0;list-style:none}.decision-list li{display:grid;grid-template-columns:minmax(130px,205px) 1fr;gap:.7rem;padding:.65rem .75rem;border:1px solid rgba(216,181,106,.15);border-radius:9px;background:rgba(0,0,0,.18)}.decision-list li span{color:#c8bb95}.decision-actions{margin:.2rem 0 0;padding-left:1.25rem}.decision-actions li{margin:.45rem 0}.decision-note{padding:.8rem;border-left:3px solid #d8b56a;background:rgba(216,181,106,.06);color:#d8cfb1}.decision-details{border:1px solid rgba(216,181,106,.18);border-radius:10px;padding:.7rem}.decision-details summary{cursor:pointer;font-weight:800}.decision-details pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font-size:.76rem}.decision-empty{color:#c8bb95;font-style:italic}.job-open{margin-top:.45rem;padding:.35rem .6rem;border-radius:8px;border:1px solid rgba(216,181,106,.4);background:transparent;color:#f3e6bd;cursor:pointer}.job-open:hover{background:rgba(216,181,106,.1)}@media(max-width:620px){.decision-list li{grid-template-columns:1fr}}
   `;
   document.head.appendChild(style);
 
-  function setText(node, text, state = '') {
-    if (!node) return;
-    node.textContent = text;
-    if (state) node.dataset.state = state;
+  const arr = value => Array.isArray(value) ? value.filter(Boolean) : [];
+  const obj = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  const titleCase = value => String(value || '').replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[_-]+/g, ' ').replace(/\b\w/g, character => character.toUpperCase());
+  const node = (tag, text = '', className = '') => { const element = document.createElement(tag); if (text !== '') element.textContent = String(text); if (className) element.className = className; return element; };
+  const add = (parent, ...children) => { children.filter(Boolean).forEach(child => parent.appendChild(child)); return parent; };
+  const outputFor = tool => document.querySelector(`[data-tool-output="${tool}"]`);
+
+  function setText(target, text, state = '') {
+    if (!target) return;
+    target.textContent = text;
+    if (state) target.dataset.state = state;
   }
 
   function setFormEnabled(form, enabled) {
-    [...form.elements].forEach((element) => { element.disabled = !enabled; });
+    [...form.elements].forEach(element => { element.disabled = !enabled; });
   }
 
-  function outputFor(tool) { return document.querySelector(`[data-tool-output="${tool}"]`); }
   function formatDate(value) {
     if (!value) return '—';
     const date = new Date(value);
     return Number.isFinite(date.getTime()) ? date.toLocaleString() : String(value);
   }
-  function array(value) { return Array.isArray(value) ? value.filter(Boolean) : []; }
-  function object(value) { return value && typeof value === 'object' && !Array.isArray(value) ? value : {}; }
-  function titleCase(value) { return String(value || '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase()); }
-  function node(tag, text = '', className = '') {
-    const el = document.createElement(tag);
-    if (text !== '') el.textContent = String(text);
-    if (className) el.className = className;
-    return el;
-  }
-  function append(parent, ...children) { children.filter(Boolean).forEach(child => parent.appendChild(child)); return parent; }
+
   function stat(label, value) {
-    const box = node('div', '', 'email-intel-stat');
-    append(box, node('strong', value), node('span', label));
-    return box;
+    return add(node('div', '', 'decision-stat'), node('strong', value), node('span', label));
   }
-  function section(title, content) {
-    const wrap = node('section', '', 'email-intel-section');
-    append(wrap, node('h4', title), content);
-    return wrap;
+
+  function list(items, emptyText = 'Nothing reported.') {
+    const result = node('ul', '', 'decision-list');
+    if (!items.length) return add(result, node('li', emptyText, 'decision-empty'));
+    items.forEach(item => add(result, add(node('li'), node('strong', item.name || 'Finding'), node('span', item.detail || ''))));
+    return result;
   }
-  function itemList(items, explanation) {
-    const list = node('ul', '', 'email-intel-list');
-    if (!items.length) {
-      list.appendChild(node('li', 'None reported.', 'email-intel-empty'));
-      return list;
-    }
-    items.forEach((item) => {
-      const name = typeof item === 'string' ? item : item.service || item.name || item.label || 'Signal';
-      const detail = typeof item === 'string' ? explanation : item.explanation || item.detail || explanation;
-      const row = node('li', '', 'email-intel-item');
-      append(row, node('strong', name), node('span', detail));
-      list.appendChild(row);
-    });
-    return list;
+
+  function section(label, content) {
+    return add(node('section', '', 'decision-section'), node('h4', label), content);
   }
-  function actionList(actions) {
-    const list = node('ol', '', 'email-intel-actions');
-    (actions.length ? actions : ['Verify important signals directly with the provider before drawing a conclusion.']).forEach(action => list.appendChild(node('li', action)));
-    return list;
+
+  function details(label, content) {
+    return add(node('details', '', 'decision-details'), node('summary', label), content);
   }
-  function technicalDetails(result) {
-    const details = node('details', '', 'email-intel-details');
-    append(details, node('summary', 'Sanitised technical data'), node('pre', JSON.stringify(result || {}, null, 2)));
-    return details;
+
+  function ordered(items, fallback) {
+    const result = node('ol', '', 'decision-actions');
+    (items.length ? items : [fallback]).forEach(item => result.appendChild(node('li', item)));
+    return result;
   }
-  function runMetadata(result) {
-    const meta = object(result.meta);
-    const items = [];
-    if (meta.lookup_id) items.push({ name: 'Lookup ID', detail: meta.lookup_id });
-    if (meta.duration_ms !== undefined) items.push({ name: 'Duration', detail: `${meta.duration_ms} ms` });
-    if (meta.module_timeout_ms !== undefined) items.push({ name: 'Module timeout', detail: `${meta.module_timeout_ms} ms` });
-    if (meta.timed_out !== undefined) items.push({ name: 'Timed out', detail: meta.timed_out ? 'Yes — partial results may be shown.' : 'No' });
-    if (meta.version !== undefined) items.push({ name: 'Report version', detail: String(meta.version) });
-    return items;
+
+  function priority(result, fallback = 'informational') {
+    const risk = obj(result.riskAssessment);
+    const ai = obj(result.ai_summary);
+    return String(risk.level || risk.risk || ai.risk || fallback).toLowerCase();
   }
-  function reportShell(job, title, riskLevel, riskText) {
-    const report = node('div', '', 'email-intel-report');
-    const head = node('div', '', 'email-intel-head');
-    const heading = node('div');
-    append(heading, node('div', `Completed · ${formatDate(job.completedAt || job.createdAt)}`, 'eyebrow'), node('h3', title), node('p', riskText || job.summary || 'Sanitised report completed.'));
-    const badge = node('span', `${riskLevel || 'informational'} risk`, 'email-intel-badge');
-    badge.dataset.risk = String(riskLevel || 'informational').toLowerCase();
-    append(head, heading, badge);
+
+  function reportShell(job, title, summary, level) {
+    const report = node('div', '', 'decision-report');
+    const head = node('div', '', 'decision-head');
+    const heading = add(node('div'), node('div', `Completed · ${formatDate(job.completedAt || job.createdAt)}`, 'eyebrow'), node('h3', title), node('p', summary));
+    const badges = node('div', '', 'decision-badges');
+    const priorityBadge = node('span', `${titleCase(level)} review priority`, 'decision-badge');
+    priorityBadge.dataset.level = level;
+    badges.appendChild(priorityBadge);
+    if (job.selfVerified) { const verified = node('span', 'Verified-self report', 'decision-badge'); verified.dataset.level = 'verified'; badges.appendChild(verified); }
+    add(head, heading, badges);
     report.appendChild(head);
     return report;
   }
 
+  function summaryBox(title, text, bullets = []) {
+    const box = add(node('section', '', 'decision-summary'), node('h4', title), node('p', text));
+    if (bullets.length) box.appendChild(list(bullets));
+    return box;
+  }
+
+  function technical(result) {
+    return details('Sanitised technical appendix', node('pre', JSON.stringify(result || {}, null, 2)));
+  }
+
+  function runMetadata(result) {
+    const meta = obj(result.meta);
+    return [
+      meta.lookup_id ? { name: 'Lookup reference', detail: meta.lookup_id } : null,
+      meta.duration_ms !== undefined ? { name: 'Run time', detail: `${meta.duration_ms} ms` } : null,
+      meta.timed_out !== undefined ? { name: 'Timed out', detail: meta.timed_out ? 'Yes — treat the report as partial.' : 'No' } : null,
+      meta.version !== undefined ? { name: 'Report version', detail: String(meta.version) } : null
+    ].filter(Boolean);
+  }
+
   function renderHolehe(job) {
-    const result = object(job.result);
-    const possible = array(result.possibleAccounts || result.registrationSignals).filter(value => String(value).toLowerCase() !== 'email');
-    const absent = array(result.noAccountSignals);
-    const inconclusive = array(result.inconclusiveServices || result.unavailableOrRateLimited);
-    const anomalies = array(result.parserAnomalies);
-    const checked = Number(result.servicesChecked || result.counts?.checked || possible.length + absent.length + inconclusive.length);
-    const risk = object(result.riskAssessment);
-    const ai = object(result.ai_summary);
-    const level = risk.level || ai.risk || (possible.length >= 8 ? 'medium' : 'low');
-    const report = reportShell(job, 'Email account-signal report', level, risk.summary || ai.headline || `${possible.length} possible account signal${possible.length === 1 ? '' : 's'} found across ${checked} checked services.`);
-    const stats = node('div', '', 'email-intel-grid');
-    append(stats, stat('Services checked', checked), stat('Possible accounts', possible.length), stat('No-account signals', absent.length), stat('Inconclusive', inconclusive.length));
+    const result = obj(job.result);
+    const accountRows = arr(result.accounts);
+    const possibleRaw = accountRows.length ? accountRows : arr(result.possibleAccounts || result.registrationSignals);
+    const possible = possibleRaw.map(item => {
+      if (typeof item === 'string') return { name: item, detail: 'The provider response was consistent with an existing account. Verify through the provider directly.' };
+      const module = obj(item.module);
+      const name = module.name_formatted || module.domain || module.name || item.service || item.name || 'Service';
+      return { name, detail: 'Possible registration signal. This does not prove ownership, current use, compromise or wrongdoing.' };
+    });
+    const validator = obj(result.validator);
+    const absentRaw = arr(validator.unregistered).length ? arr(validator.unregistered) : arr(result.noAccountSignals);
+    const inconclusiveRaw = arr(validator.inconclusive).length ? arr(validator.inconclusive) : arr(result.inconclusiveServices || result.unavailableOrRateLimited);
+    const anomalies = arr(result.parserAnomalies);
+    const checked = Number(result.servicesChecked || result.counts?.checked || possible.length + absentRaw.length + inconclusiveRaw.length);
+    const reliable = Math.max(0, checked - inconclusiveRaw.length);
+    const level = priority(result, possible.length ? 'medium' : 'low');
+    const headline = possible.length
+      ? `${possible.length} possible account registration signal${possible.length === 1 ? '' : 's'} require verification.`
+      : 'No positive account registration signal was returned by this run.';
+    const report = reportShell(job, 'Email account-signal decision brief', headline, level);
+
+    report.appendChild(summaryBox('Bottom line', possible.length
+      ? `The address produced possible account signals at ${possible.slice(0, 4).map(item => item.name).join(', ')}${possible.length > 4 ? ' and other services' : ''}. Check these first. The result does not show that an account is active or compromised.`
+      : 'The configured providers did not return a positive registration signal. This is not proof that no accounts exist, because providers can block, change or limit these checks.', [
+        { name: 'Review priority', detail: priorityMeaning[level] || priorityMeaning.informational },
+        { name: 'How the label was formed', detail: 'The priority reflects positive account signals and the runner assessment. It is not a breach probability, guilt score or certainty rating.' },
+        { name: 'Result quality', detail: `${reliable} of ${checked} attempted services returned a classifiable response; ${inconclusiveRaw.length} did not.` }
+      ]));
+
+    const stats = node('div', '', 'decision-grid');
+    add(stats, stat('Services attempted', checked), stat('Verify first', possible.length), stat('No-account responses', absentRaw.length), stat('Inconclusive', inconclusiveRaw.length));
     report.appendChild(stats);
-    report.appendChild(section('Possible account associations', itemList(possible, 'The provider response was consistent with an existing account. This is a lead, not proof of ownership or current use.')));
-    if (absent.length) report.appendChild(section('No account signal returned', itemList(absent, 'The provider response was consistent with no account, but providers can change behaviour.')));
-    report.appendChild(section('Providers that gave no reliable answer', itemList(inconclusive, 'The check was blocked, rate-limited, changed, unavailable, or returned an unrecognised response. No account conclusion can be drawn.')));
-    if (anomalies.length) report.appendChild(section('Parser anomalies', itemList(anomalies, 'The runner could not classify this line confidently; ignore it until independently verified.')));
-    report.appendChild(section('Recommended actions', actionList(array(risk.actions || result.recommendedActions))));
-    const metaItems = runMetadata(result);
-    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
-    report.appendChild(node('p', 'Account-registration signals may be stale, shared, incorrect, or caused by provider behaviour. Verify each important result directly.', 'email-intel-note'));
-    report.appendChild(technicalDetails(result));
+    report.appendChild(section('Findings to verify first', list(possible, 'No positive account signal was returned.')));
+    report.appendChild(section('What to do next', ordered(arr(result.recommendedActions || result.riskAssessment?.actions), 'Verify any positive signal through the provider’s official sign-in or recovery route.')));
+    report.appendChild(node('p', 'What this does not prove: identity, ownership, present use, compromise, intent or wrongdoing. Provider responses can be stale or misleading.', 'decision-note'));
+    report.appendChild(details(`${absentRaw.length} no-account responses — lower priority`, list(absentRaw.map(item => ({ name: item.name_formatted || item.name || item, detail: 'Provider response was consistent with no account, but this can change.' })))));
+    report.appendChild(details(`${inconclusiveRaw.length} services gave no reliable answer`, list(inconclusiveRaw.map(item => ({ name: item.name_formatted || item.name || item, detail: 'Blocked, rate-limited, unavailable, changed or unrecognised. No conclusion can be drawn.' })))));
+    if (anomalies.length) report.appendChild(details(`${anomalies.length} parser anomal${anomalies.length === 1 ? 'y' : 'ies'}`, list(anomalies.map(item => ({ name: 'Unclassified runner line', detail: String(item) })))));
+    const metadata = runMetadata(result);
+    if (metadata.length) report.appendChild(details('Run metadata', list(metadata)));
+    report.appendChild(technical(result));
     return report;
   }
 
   function renderSpiderFoot(job) {
-    const result = object(job.result);
-    const counts = object(result.eventCounts);
-    const domains = array(result.publicDomainsObserved);
-    const modules = array(result.modulesReporting);
-    const totalEvents = Object.values(counts).reduce((sum, value) => sum + (Number(value) || 0), 0);
-    const ai = object(result.ai_summary);
-    const report = reportShell(job, 'Passive digital-footprint report', result.riskAssessment?.level || ai.risk || 'informational', result.riskAssessment?.summary || ai.headline || `${totalEvents} sanitised public-data events were grouped into ${Object.keys(counts).length} event types.`);
-    const stats = node('div', '', 'email-intel-grid');
-    append(stats, stat('Sanitised events', totalEvents), stat('Event types', Object.keys(counts).length), stat('Public domains', domains.length), stat('Modules reporting', modules.length));
+    const result = obj(job.result);
+    const counts = obj(result.eventCounts);
+    const domains = arr(result.publicDomainsObserved);
+    const modules = arr(result.modulesReporting);
+    const eventRows = Object.entries(counts).sort((a, b) => Number(b[1]) - Number(a[1])).map(([name, count]) => ({ name: titleCase(name), detail: `${count} sanitised event${Number(count) === 1 ? '' : 's'}.` }));
+    const total = Object.values(counts).reduce((sum, value) => sum + (Number(value) || 0), 0);
+    const level = priority(result, total ? 'medium' : 'informational');
+    const report = reportShell(job, 'Passive footprint decision brief', `${total} sanitised public-data events were grouped into ${eventRows.length} categories.`, level);
+    report.appendChild(summaryBox('Bottom line', domains.length
+      ? `The passive scan observed public associations involving ${domains.slice(0, 5).join(', ')}${domains.length > 5 ? ' and other domains' : ''}. Treat these as source leads, not ownership findings.`
+      : 'No public domain association was returned in the sanitised result. A quiet scan does not prove that no footprint exists.', [
+        { name: 'Review priority', detail: priorityMeaning[level] || priorityMeaning.informational },
+        { name: 'How the label was formed', detail: 'The priority reflects the volume and sensitivity of sanitised passive events. It is not a probability of guilt, compromise or control.' },
+        { name: 'Collection boundary', detail: 'Only passive modules were requested. External modules may be unavailable, rate-limited or require separate credentials.' }
+      ]));
+    const stats = node('div', '', 'decision-grid');
+    add(stats, stat('Sanitised events', total), stat('Evidence categories', eventRows.length), stat('Public domains', domains.length), stat('Modules reporting', modules.length));
     report.appendChild(stats);
-    const eventItems = Object.entries(counts).sort((a, b) => Number(b[1]) - Number(a[1])).map(([name, count]) => ({ name: titleCase(name), detail: `${count} event${Number(count) === 1 ? '' : 's'}` }));
-    report.appendChild(section('Evidence categories observed', itemList(eventItems, 'Sanitised passive event category.')));
-    report.appendChild(section('Public domains observed', itemList(domains, 'A public domain appeared in passive scan output; this does not prove control, ownership, or wrongdoing.')));
-    report.appendChild(section('Collection modules', itemList(modules, 'Passive SpiderFoot module that contributed a sanitised event.')));
-    report.appendChild(section('Recommended actions', actionList(array(result.recommendedActions || result.riskAssessment?.actions))));
-    const metaItems = runMetadata(result);
-    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
-    report.appendChild(node('p', 'Only passive modules were requested. External modules may be unavailable, rate-limited, or require separate API keys.', 'email-intel-note'));
-    report.appendChild(technicalDetails(result));
+    report.appendChild(section('Evidence categories', list(eventRows, 'No sanitised event category was returned.')));
+    report.appendChild(section('What to do next', ordered(arr(result.recommendedActions || result.riskAssessment?.actions), 'Open the relevant public source and verify the association, date and context.')));
+    report.appendChild(node('p', 'What this does not prove: ownership, control, identity, intent, current use or wrongdoing. A public association may be historical, indirect or incorrect.', 'decision-note'));
+    report.appendChild(details(`${domains.length} public domains observed`, list(domains.map(name => ({ name, detail: 'Public association requiring direct source verification.' })))));
+    report.appendChild(details(`${modules.length} collection modules contributed`, list(modules.map(name => ({ name, detail: 'Passive module contributing sanitised events.' })))));
+    const metadata = runMetadata(result);
+    if (metadata.length) report.appendChild(details('Run metadata', list(metadata)));
+    report.appendChild(technical(result));
     return report;
   }
 
   function renderH8mail(job) {
-    const result = object(job.result);
-    const indicators = object(result.exposureIndicators || result.exposureCategories);
-    const breaches = array(result.breachOrDatasetNames);
-    const sources = array(result.servicesReporting);
-    const classes = array(result.dataClasses || result.exposureClasses);
-    const dates = object(result.exposureDates);
-    const stealer = object(result.stealer_logs);
-    const ai = object(result.ai_summary);
-    const positiveIndicators = Object.entries(indicators).filter(([, value]) => value === true || Number(value) > 0);
-    const risk = object(result.riskAssessment);
-    const level = risk.level || ai.risk || (stealer.present ? 'critical' : indicators.authenticationMaterial || indicators.digestMaterial ? 'high' : breaches.length ? 'medium' : 'low');
-    const report = reportShell(job, 'Breach exposure report', level, risk.summary || ai.headline || `${breaches.length} sanitised breach or dataset reference${breaches.length === 1 ? '' : 's'} reported.`);
-    const stats = node('div', '', 'email-intel-grid');
-    append(stats, stat('Breach references', breaches.length), stat('Exposure classes', classes.length || positiveIndicators.length), stat('Infostealer indicators', Number(stealer.count || 0)), stat('Source records', Number(result.sourceRecordCount || indicators.sourceRowsObserved || 0)));
+    const result = obj(job.result);
+    const indicators = obj(result.exposureIndicators || result.exposureCategories);
+    const positive = Object.entries(indicators).filter(([, value]) => value === true || Number(value) > 0).map(([name, value]) => ({ name: titleCase(name), detail: typeof value === 'boolean' ? 'Category detected; underlying value withheld.' : `${value} sanitised occurrence${Number(value) === 1 ? '' : 's'}; underlying value withheld.` }));
+    const breachRows = arr(result.data_breaches?.results);
+    const breachNames = breachRows.length ? breachRows.map(row => obj(row.source).name || row.name || 'Unnamed source') : arr(result.breachOrDatasetNames);
+    const stealer = obj(result.stealer_logs);
+    const level = priority(result, stealer.present ? 'critical' : positive.length ? 'high' : breachNames.length ? 'medium' : 'low');
+    const report = reportShell(job, 'Defensive exposure decision brief', positive.length || breachNames.length
+      ? `${positive.length} sensitive-data categor${positive.length === 1 ? 'y' : 'ies'} and ${breachNames.length} source reference${breachNames.length === 1 ? '' : 's'} require review.`
+      : 'No sensitive exposure category was returned by the configured sources.', level);
+    report.appendChild(summaryBox('Bottom line', stealer.present
+      ? 'The configured source reported infostealer-related indicators. Change important credentials from a clean device, review sessions and enable multi-factor authentication, then verify the source details.'
+      : positive.length
+        ? 'The report found sanitised evidence categories associated with the address. The underlying secret values were withheld. Review the source dates and take the defensive actions below.'
+        : 'No positive sensitive-data category was returned. This is not proof that the address has never appeared in another dataset.', [
+          { name: 'Review priority', detail: priorityMeaning[level] || priorityMeaning.informational },
+          { name: 'How the label was formed', detail: 'The priority reflects sensitive categories, source references and infostealer indicators. It is not proof of current compromise or misuse.' },
+          { name: 'Privacy protection', detail: 'Passwords, digests, recovery values, telephone numbers, network addresses and raw breach rows are not displayed.' }
+        ]));
+    const stats = node('div', '', 'decision-grid');
+    add(stats, stat('Source references', breachNames.length), stat('Sensitive categories', positive.length), stat('Infostealer indicators', Number(stealer.count || 0)), stat('Source rows', Number(result.sourceRecordCount || indicators.sourceRowsObserved || 0)));
     report.appendChild(stats);
-    const indicatorItems = positiveIndicators.map(([key, value]) => ({ name: titleCase(key), detail: typeof value === 'boolean' ? 'Detected in source data; underlying sensitive value was discarded.' : `${value} sanitised occurrence${Number(value) === 1 ? '' : 's'} observed; underlying sensitive value was discarded.` }));
-    report.appendChild(section('Sensitive-data categories detected', itemList(indicatorItems, 'Category detected; underlying value was not retained.')));
-    report.appendChild(section('Infostealer indicators', itemList([{ name: stealer.present ? 'Detected' : 'Not detected', detail: stealer.present ? `${Number(stealer.count || 0)} infostealer-related indicator(s) were reported. Raw records and credentials were discarded.` : 'No infostealer-related indicator was reported by the configured source.' }], 'Infostealer status.')));
-    report.appendChild(section('Exposure classes', itemList(classes, 'Type of information reported by a breach source; no secret value is displayed or stored.')));
-    report.appendChild(section('Breach or dataset references', itemList(breaches, 'Sanitised source name. A reference does not prove current compromise or ownership.')));
-    if (dates.earliest || dates.latest) report.appendChild(section('Exposure date range', itemList([{ name: 'Earliest reported', detail: dates.earliest || 'Unknown' }, { name: 'Latest reported', detail: dates.latest || 'Unknown' }], 'Reported date.')));
-    report.appendChild(section('Recommended actions', actionList(array(result.recommendedActions || risk.actions))));
-    const metaItems = runMetadata(result);
-    if (metaItems.length) report.appendChild(section('Run metadata', itemList(metaItems, 'Lookup metadata.')));
-    report.appendChild(node('p', 'Passwords, digests, recovery values, telephone numbers, network addresses, and raw breach rows are never returned. The report records whether those categories were detected and how many sanitised indicators were observed.', 'email-intel-note'));
-    report.appendChild(technicalDetails(result));
+    report.appendChild(section('Exposure categories to address', list(positive, 'No positive sensitive-data category was returned.')));
+    report.appendChild(section('What to do next', ordered(arr(result.recommendedActions || result.riskAssessment?.actions), 'Change reused passwords, enable multi-factor authentication and review active sessions.')));
+    report.appendChild(node('p', 'What this does not prove: current compromise, who used the data, whether the address owner created the account, or any wrongdoing.', 'decision-note'));
+    report.appendChild(details(`${breachNames.length} source or dataset references`, list(breachNames.map(name => ({ name, detail: 'Sanitised source reference. Verify the reported date and scope.' })))));
+    report.appendChild(details('Infostealer assessment', list([{ name: stealer.present ? 'Indicator reported' : 'No indicator reported', detail: stealer.present ? `${Number(stealer.count || 0)} related indicator${Number(stealer.count || 0) === 1 ? '' : 's'} were returned; raw values were discarded.` : 'No infostealer-related indicator was returned by the configured source.' }])));
+    const metadata = runMetadata(result);
+    if (metadata.length) report.appendChild(details('Run metadata', list(metadata)));
+    report.appendChild(technical(result));
     return report;
   }
 
@@ -179,19 +227,24 @@
     const output = outputFor(tool);
     if (!output || !job) return;
     output.textContent = '';
+    output.dataset.reportJobId = job.id || '';
     if (job.status !== 'completed') {
-      const lines = [`Status: ${job.status}`, `Job: ${job.id}`, `Target reference: ${job.targetReference || '—'}`, `Created: ${formatDate(job.createdAt)}`];
-      if (job.summary) lines.push(`Summary: ${job.summary}`);
-      if (job.error) lines.push(`Error: ${job.error}`);
-      setText(output, lines.join('\n'), job.status === 'failed' ? 'error' : '');
+      const message = [
+        `Status: ${job.status}`,
+        `Created: ${formatDate(job.createdAt)}`,
+        job.summary ? `Summary: ${job.summary}` : '',
+        job.error ? `Error: ${job.error}` : ''
+      ].filter(Boolean).join('\n');
+      setText(output, message, job.status === 'failed' ? 'error' : '');
       return;
     }
     output.dataset.state = 'success';
     output.appendChild(tool === 'holehe' ? renderHolehe(job) : tool === 'spiderfoot' ? renderSpiderFoot(job) : renderH8mail(job));
+    output.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   async function request(path, options = {}) {
-    const response = await fetch(path, { credentials: 'same-origin', headers: { 'content-type': 'application/json', ...(options.headers || {}) }, ...options });
+    const response = await fetch(path, { credentials: 'same-origin', cache: 'no-store', headers: { 'content-type': 'application/json', ...(options.headers || {}) }, ...options });
     let payload = {};
     try { payload = await response.json(); } catch {}
     if (!response.ok) {
@@ -203,12 +256,22 @@
     return payload;
   }
 
-  async function loadJobs() {
+  async function openJob(job) {
+    try {
+      const complete = job.result ? job : (await request(`/api/tools/jobs/${encodeURIComponent(job.id)}`)).job;
+      renderResult(complete.tool, complete);
+    } catch (error) {
+      setText(outputFor(job.tool), error.message, 'error');
+    }
+  }
+
+  async function loadJobs({ restoreLatest = false } = {}) {
     if (!jobsBody || !config) return;
     try {
       const payload = await request('/api/tools/jobs');
+      jobsCache = arr(payload.jobs);
       jobsBody.textContent = '';
-      if (!payload.jobs?.length) {
+      if (!jobsCache.length) {
         const row = document.createElement('tr');
         const cell = document.createElement('td');
         cell.colSpan = 5;
@@ -217,79 +280,123 @@
         jobsBody.appendChild(row);
         return;
       }
-      payload.jobs.forEach((job) => {
+      jobsCache.forEach(job => {
         const row = document.createElement('tr');
-        const values = [job.tool, job.status, job.targetReference || '—', formatDate(job.createdAt), job.summary || job.error || '—'];
+        const values = [job.tool, job.status, job.targetReference || 'Private target', formatDate(job.createdAt)];
         values.forEach((value, index) => {
           const cell = document.createElement('td');
           if (index === 2) { const code = document.createElement('code'); code.textContent = String(value); cell.appendChild(code); }
           else cell.textContent = String(value);
           row.appendChild(cell);
         });
+        const summaryCell = document.createElement('td');
+        summaryCell.appendChild(node('div', job.summary || job.error || 'No summary available.'));
+        if (job.status === 'completed') {
+          const button = node('button', 'Open clear report', 'job-open');
+          button.type = 'button';
+          button.addEventListener('click', () => openJob(job));
+          summaryCell.appendChild(button);
+        }
+        row.appendChild(summaryCell);
         jobsBody.appendChild(row);
       });
-    } catch { jobsBody.innerHTML = '<tr><td colspan="5">Unable to load private jobs.</td></tr>'; }
+      if (restoreLatest) {
+        const seen = new Set();
+        for (const job of jobsCache) {
+          if (job.status !== 'completed' || seen.has(job.tool)) continue;
+          seen.add(job.tool);
+          await openJob(job);
+        }
+      }
+    } catch {
+      jobsBody.innerHTML = '<tr><td colspan="5">Unable to load private jobs.</td></tr>';
+    }
   }
 
-  function stopPolling(jobId) { const timer = activePolls.get(jobId); if (timer) clearTimeout(timer); activePolls.delete(jobId); }
+  function stopPolling(jobId) {
+    const timer = activePolls.get(jobId);
+    if (timer) clearTimeout(timer);
+    activePolls.delete(jobId);
+  }
+
   async function pollJob(jobId, tool, attempt = 0) {
     try {
       const payload = await request(`/api/tools/jobs/${encodeURIComponent(jobId)}`);
       renderResult(tool, payload.job);
       await loadJobs();
       if (['completed', 'failed', 'cancelled'].includes(payload.job.status)) { stopPolling(jobId); return; }
-      if (attempt >= 120) { setText(outputFor(tool), `Job ${jobId} is still processing. Return to this page later to view it.`); stopPolling(jobId); return; }
+      if (attempt >= 120) { setText(outputFor(tool), 'The job is still processing. It remains stored in Recent Tool Jobs and can be reopened later.'); stopPolling(jobId); return; }
       const timer = setTimeout(() => pollJob(jobId, tool, attempt + 1), 5000);
       activePolls.set(jobId, timer);
-    } catch (error) { setText(outputFor(tool), error.message, 'error'); stopPolling(jobId); }
+    } catch (error) {
+      setText(outputFor(tool), error.message, 'error');
+      stopPolling(jobId);
+    }
   }
 
   async function submitTool(form) {
     const tool = form.dataset.toolForm;
     const output = outputFor(tool);
     const data = new FormData(form);
-    const payload = { tool, target: String(data.get('target') || '').trim(), purpose: String(data.get('purpose') || '').trim(), confirmLawfulUse: data.get('confirmLawfulUse') === 'on', confirmNoMinor: data.get('confirmNoMinor') === 'on' };
+    const payload = {
+      tool,
+      target: String(data.get('target') || '').trim(),
+      purpose: String(data.get('purpose') || '').trim(),
+      confirmLawfulUse: data.get('confirmLawfulUse') === 'on',
+      confirmNoMinor: data.get('confirmNoMinor') === 'on'
+    };
     setFormEnabled(form, false);
-    setText(output, 'Submitting encrypted private job…');
+    setText(output, 'Submitting private job…');
     try {
       const response = await request('/api/tools/jobs', { method: 'POST', body: JSON.stringify(payload) });
       form.reset();
-      const job = response.job || { id: response.jobId, status: response.status || 'queued' };
-      setText(output, `Accepted. Job ${job.id} is ${job.status}.`);
+      const job = response.job || { id: response.jobId, tool, status: response.status || 'queued' };
+      setText(output, `Accepted. The ${tool} job is ${job.status}. The clear report will replace this message when complete.`);
       await loadJobs();
       pollJob(job.id, tool);
-    } catch (error) { setText(output, error.message, 'error'); }
-    finally { setFormEnabled(form, Boolean(config?.tools?.[tool]?.allowed && config?.configured)); }
+    } catch (error) {
+      setText(output, error.message, 'error');
+    } finally {
+      setFormEnabled(form, Boolean(config?.tools?.[tool]?.allowed && config?.configured));
+    }
   }
 
   async function initialise() {
-    forms.forEach((form) => { setFormEnabled(form, false); form.addEventListener('submit', event => { event.preventDefault(); submitTool(form); }); });
+    forms.forEach(form => {
+      setFormEnabled(form, false);
+      form.addEventListener('submit', event => { event.preventDefault(); submitTool(form); });
+    });
     try {
       config = await request('/api/tools/config');
       const role = config.member?.role || 'member';
-      setText(authState, role === 'admin' ? 'Administrator authenticated' : 'Verified member authenticated');
+      setText(authState, role === 'admin' ? 'Administrator authenticated' : `Verified member · ${config.member?.tier || 'registered'}`);
       const onlineTools = Object.entries(config.tools || {}).filter(([, value]) => value.runnerOnline).map(([key]) => key);
       setText(runnerState, onlineTools.length ? `Private service online: ${onlineTools.join(', ')}` : config.configured ? 'Private service configured; runner currently offline' : 'Private service not configured');
-      if (adminCard && role === 'admin') adminCard.hidden = false;
-      forms.forEach((form) => {
+      if (h8mailCard) h8mailCard.hidden = false;
+      forms.forEach(form => {
         const tool = form.dataset.toolForm;
         const toolConfig = config.tools?.[tool];
         const allowed = Boolean(config.configured && toolConfig?.allowed);
         setFormEnabled(form, allowed);
         const output = outputFor(tool);
-        if (!toolConfig?.allowed) setText(output, tool === 'h8mail' ? 'Administrator authentication required.' : 'This member account cannot use this tool.', 'error');
+        if (!toolConfig?.allowed) setText(output, tool === 'h8mail' ? 'Intelligence membership required. Members may review only their own verified email.' : 'This membership tier cannot use this tool.', 'error');
         else if (!config.configured) setText(output, 'The private tool service has not been configured yet.', 'error');
-        else if (!toolConfig.runnerOnline) setText(output, 'The tool is configured, but the private runner is currently offline. Jobs can be queued and will run when it reconnects.');
-        else setText(output, `Ready. Daily limit: ${toolConfig.dailyLimit}.`);
+        else if (!toolConfig.runnerOnline) setText(output, 'The tool is configured, but the private runner is offline. Jobs can be queued and will run when it reconnects.');
+        else setText(output, `Ready. Daily limit: ${toolConfig.dailyLimit}. Results will open as a plain-English decision brief.`);
       });
-      await loadJobs();
+      await loadJobs({ restoreLatest: true });
     } catch (error) {
-      if (error.status === 401) { setText(authState, 'Member login required'); setText(runnerState, 'Tools locked'); forms.forEach(form => setFormEnabled(form, false)); return; }
+      if (error.status === 401) {
+        setText(authState, 'Member login required');
+        setText(runnerState, 'Tools locked');
+        forms.forEach(form => setFormEnabled(form, false));
+        return;
+      }
       setText(authState, 'Membership check failed');
       setText(runnerState, error.message);
     }
   }
 
-  window.addEventListener('beforeunload', () => { activePolls.forEach(timer => clearTimeout(timer)); });
+  window.addEventListener('beforeunload', () => activePolls.forEach(timer => clearTimeout(timer)));
   initialise();
 })();

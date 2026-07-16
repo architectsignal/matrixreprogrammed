@@ -1,5 +1,5 @@
 import forumWorker from './worker-forum-persistence.js';
-import emailWorker, { emailRoutes } from './worker-email-lifecycle.js';
+import emailWorker, { emailRoutes, processOutbox } from './worker-email-lifecycle.js';
 import memberWorker, { isMemberExperienceRoute } from './worker-member-experience.js';
 import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js';
 import bootstrapWorker, { isPayPalSandboxBootstrapRoute } from './worker-paypal-sandbox-bootstrap.js';
@@ -7,6 +7,14 @@ import rehearsalWorker, {
   isPayPalSandboxRehearsalRoute,
   enforceSandboxRehearsalGate
 } from './worker-paypal-sandbox-rehearsal.js';
+import {
+  queuePendingVerifiedSelfReports,
+  queueVerifiedSelfReport
+} from './worker-report-delivery.js';
+import {
+  enforceProtectedAssetAccess,
+  protectedAssetTier
+} from './worker-access-gate.js';
 
 const forumRoutes = new Set([
   '/forum-health',
@@ -51,7 +59,9 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
           ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox bootstrap status ledger'
           : subsystem === 'paypal-rehearsal'
             ? 'Cloudflare D1 MEMBERS_DB PayPal sandbox rehearsal ledger'
-            : 'Cloudflare D1 MEMBERS_DB.forum_posts';
+            : subsystem === 'asset-gate'
+              ? 'Cloudflare D1 MEMBERS_DB effective entitlements'
+              : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
     : subsystem === 'member'
@@ -62,7 +72,9 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
           ? 'PayPal sandbox plan readiness is unavailable. Checkout remains closed.'
           : subsystem === 'paypal-rehearsal'
             ? 'PayPal sandbox rehearsal controls are unavailable. Checkout remains closed.'
-            : 'Forum storage is unavailable. No legacy success response was accepted.';
+            : subsystem === 'asset-gate'
+              ? 'Protected content entitlement could not be verified. Access remains closed.'
+              : 'Forum storage is unavailable. No legacy success response was accepted.';
   return new Response(JSON.stringify({
     ok: false,
     persistent: false,
@@ -101,6 +113,23 @@ function hasD1(env) {
 
 function d1OnlyForumEnv(env) {
   return { ...env, FORUM_POSTS: undefined };
+}
+
+function completedReportJobId(path, method) {
+  if (method !== 'POST') return '';
+  const match = String(path || '').match(/^\/api\/admin\/tools\/jobs\/([^/]+)\/result$/);
+  return match ? decodeURIComponent(match[1]) : '';
+}
+
+async function queueAndDeliverVerifiedReport(env, jobId) {
+  try {
+    const queued = await queueVerifiedSelfReport(env, jobId);
+    if (!queued.queued) return queued;
+    const delivery = await processOutbox(env, { limit: 10, memberId: queued.memberId });
+    return { ...queued, delivery };
+  } catch (error) {
+    return { queued: false, reportId: jobId, error: String(error?.message || error).slice(0, 500) };
+  }
 }
 
 async function validateForumResponse(path, response) {
@@ -164,6 +193,17 @@ async function validateRehearsalResponse(response) {
 export default {
   async fetch(request, env, ctx) {
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    const minimumTier = protectedAssetTier(path);
+    if (minimumTier) {
+      try {
+        const denied = await enforceProtectedAssetAccess(request, env, minimumTier);
+        if (denied) return denied;
+      } catch (error) {
+        return unavailable('protected-asset-gate-exception', error?.message || error, 'asset-gate');
+      }
+    }
+
     if (emailRoutes.has(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'email');
       try {
@@ -214,6 +254,16 @@ export default {
         return unavailable('member-worker-exception', error?.message || error, 'member');
       }
     }
+    const reportJobId = completedReportJobId(path, request.method);
+    if (reportJobId) {
+      const response = await forumWorker.fetch(request, env, ctx);
+      if (response.ok && hasD1(env)) {
+        const deliveryTask = queueAndDeliverVerifiedReport(env, reportJobId);
+        if (ctx?.waitUntil) ctx.waitUntil(deliveryTask);
+        else await deliveryTask;
+      }
+      return response;
+    }
     if (!forumRoutes.has(path)) return forumWorker.fetch(request, env, ctx);
     if (!hasD1(env)) return unavailable('members-db-binding-unavailable');
     try {
@@ -226,6 +276,7 @@ export default {
 
   async scheduled(event, env, ctx) {
     if (!hasD1(env)) return;
+    await queuePendingVerifiedSelfReports(env, { limit: 100 });
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),
       bootstrapWorker.scheduled(event, env, ctx),

@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-15T07:33:20.298Z
+Generated: 2026-07-16T06:00:16.088Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,10 +15,6 @@ Generated: 2026-07-15T07:33:20.298Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
-- 97 — Surveillance State Clock — 97% — timers.html
-- 93 — AI Breakout Clock — 93% — timers.html
-- 91 — CBDC Rollout Clock — 91% — timers.html
-- 87 — Machine Convergence — 87% — timers.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
 - 85 — Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/management-and-budget-office.html
 - 85 — Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/defense-department.html
@@ -39,9 +35,13 @@ Generated: 2026-07-15T07:33:20.298Z
 - 85 — General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/general-services-administration.html
 - 85 — 2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-00294.html
 - 85 — 2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-07773.html
+- 85 — 2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2025-0045-appeal.html
 - 85 — 25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-113.html
 - 85 — 25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-581.html
 - 85 — A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/a170747m.html
-- 85 — AC48383 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ac48383.html
 - 85 — Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/biddle-v-biddle.html
-- 81 — WWIII Escalation Clock — 81% — timers.html
+- 72 — What Blanche said about Trump, Epstein files during confirmation hearing for attorney general - PBS — live-intel.html
+- 72 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — live-intel.html
+- 72 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian — live-intel.html
+- 72 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC — live-intel.html
+- 72 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — live-intel.html

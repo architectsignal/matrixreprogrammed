@@ -42,7 +42,6 @@ Weak pages: 11
 - 84/100 — distribution-podcast.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — distribution-shorts.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — distribution-social-threads.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
-- 84/100 — document-library.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 12880 case, 130 case, 286 case
 - 84/100 — dossier-pack-black-file-starter.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — dossier-pack-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — dossier-pack-intelligence-network.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
@@ -66,6 +65,7 @@ Weak pages: 11
 - 84/100 — path-war-contractors.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — power-atlas.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — relationship-registry.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — sales-ladder.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-15T06:30:30.423Z
+Updated: 2026-07-16T05:59:53.132Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -129,6 +129,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf (custom PDF preserved)
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf (custom PDF preserved)
 - Live Intel Machine: downloads/live-intel-latest.pdf (custom PDF preserved)
+- Login Email Resend Test: downloads/login-email-resend-test.pdf
 - Logo Symbolism Dossiers: downloads/logo-symbolism-dossiers.pdf (custom PDF preserved)
 - Machine Digest: downloads/machine-digest.pdf (custom PDF preserved)
 - Machine Intelligence: downloads/machine-intelligence.pdf (custom PDF preserved)
@@ -163,7 +164,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf (custom PDF preserved)
 - Phase6 Data Integration: downloads/phase6-data-integration.pdf (custom PDF preserved)
 - Phase6 Worker Patch: downloads/phase6-worker-patch.pdf (custom PDF preserved)
-- PayPal sandbox rehearsal: downloads/phase7-paypal-sandbox-rehearsal-test.pdf
+- PayPal sandbox rehearsal: downloads/phase7-paypal-sandbox-rehearsal-test.pdf (custom PDF preserved)
 - Phase8 Evidence Archive Build: downloads/phase8-evidence-archive-build.pdf (custom PDF preserved)
 - Phase8 Evidence Archive Test: downloads/phase8-evidence-archive-test.pdf (custom PDF preserved)
 - Phase8 Wiring: downloads/phase8-wiring.pdf (custom PDF preserved)

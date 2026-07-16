@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-07-15T05:53:39.745Z
+Generated: 2026-07-16T06:00:15.414Z
 
 ## Daily Revelation Report
 
-Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
 
 Source: daily-command-brief.html
 

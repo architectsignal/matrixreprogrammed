@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "updated": "2026-07-16T06:00:32.513Z",
+  "purpose": "Require every serious brief to separate documented evidence, analytic inference, scenario speculation and uncertainty.",
+  "requiredLayers": [
+    "documented evidence",
+    "analytic inference",
+    "speculative scenario",
+    "uncertainty and falsifiers"
+  ],
+  "requiredSections": [
+    "actor map",
+    "control pathways",
+    "implementation chain",
+    "labelled scenario matrix",
+    "analytic confidence not probability",
+    "counterpoint",
+    "missing proof",
+    "falsifiers",
+    "claim boundary"
+  ],
+  "patchedBriefPages": 107,
+  "analyticConfidence": {
+    "score": 73,
+    "band": "substantial analytic support"
+  },
+  "actorCount": 50,
+  "pathways": [
+    "Information, media and platform access",
+    "Procurement and public-private implementation",
+    "Money, banking and payment access",
+    "Security, intelligence and emergency powers",
+    "Law, treaties and standards",
+    "Health, biosecurity and mobility",
+    "Identity, credentials and biometrics",
+    "Data, cloud and AI infrastructure"
+  ],
+  "scenarios": [
+    {
+      "id": "functional-convergence",
+      "title": "Functional global governance without a single world state",
+      "status": "speculative scenario — not a factual forecast",
+      "plausibilityBand": "moderate-to-high under continuation of current signals"
+    },
+    {
+      "id": "conditional-access",
+      "title": "Conditional-access society",
+      "status": "speculative scenario — not a factual forecast",
+      "plausibilityBand": "moderate enabling conditions; outcome not established"
+    },
+    {
+      "id": "one-world-government-threshold",
+      "title": "Formal one-world government threshold",
+      "status": "high-bar speculative scenario — currently unproven",
+      "plausibilityBand": "low on present evidence; functional convergence is more plausible"
+    },
+    {
+      "id": "one-world-currency-threshold",
+      "title": "One-world currency or unified payment-control threshold",
+      "status": "speculative scenario — enabling infrastructure only",
+      "plausibilityBand": "low for one legal currency; moderate for interoperable digital payment governance"
+    },
+    {
+      "id": "one-world-religion-threshold",
+      "title": "One-world religion threshold",
+      "status": "speculative scenario — weak and currently unsupported",
+      "plausibilityBand": "low without direct doctrinal and enforcement evidence"
+    },
+    {
+      "id": "fragmented-blocs",
+      "title": "Competing digital-control blocs",
+      "status": "alternative speculative scenario",
+      "plausibilityBand": "moderate and compatible with geopolitical fragmentation"
+    },
+    {
+      "id": "decentralised-countertrend",
+      "title": "Decentralised and rights-preserving countertrend",
+      "status": "alternative speculative scenario",
+      "plausibilityBand": "plausible where law and technology preserve exit and appeal"
+    }
+  ],
+  "missionConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Surveillance State Clock is the highest canonical pressure index at 92%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
+  "speculativeTrajectory": "If the pattern continues, the most plausible outcome is a de facto governance layer rather than one dramatic declaration: compatible rules and public-private infrastructure connect identity, payments, AI, health, security, mobility and information access. This could make world-government-like functions or currency-like controls technically possible without proving one central authority. A one-world religion claim remains weak without direct evidence of mandatory doctrine and enforcement.",
+  "counterpoint": "The thesis weakens when participation remains voluntary, systems are decentralised and reversible, data stays separated, open standards preserve exit, meaningful competition exists, courts enforce rights, and primary records show parallel development rather than common enforcement.",
+  "watchNext": [
+    "Voluntary identity or wallet systems becoming mandatory",
+    "Identity linked to payments, benefits, health, travel or platform access",
+    "International standards becoming law or procurement conditions",
+    "Government dependence on a small vendor group",
+    "Emergency infrastructure becoming permanent",
+    "Risk or eligibility decisions reused across unrelated systems",
+    "Legal, technical or political reversals that weaken convergence"
+  ]
+}

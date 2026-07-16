@@ -7,7 +7,7 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-15T05:52:53.471Z",
+  "liveIntelUpdated": "2026-07-16T05:59:30.664Z",
   "latestDropsUpdated": "2026-07-08T09:00:00.000Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Crime-State Overlap Pack",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=crime-state-overlap",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=crime-state-overlap",
   "liveIntelWindow": {
-    "updated": "2026-07-15T05:52:53.471Z",
+    "updated": "2026-07-16T05:59:30.664Z",
     "itemCount": 12,
     "items": [
       {
@@ -153,38 +153,6 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "crime-state-overlap-2026-07-10-60",
-        "lane": "crime-state-overlap",
-        "laneTitle": "Crime State Overlap",
-        "sourceLabel": "Google News / crime state overlap",
-        "title": "Panama Profile - InSight Crime",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5",
-        "published": "2026-07-10T20:48:39.000Z",
-        "fetchedAt": "2026-07-15T05:52:56.312Z",
-        "summary": "Panama Profile InSight Crime",
-        "evidenceLevel": "Seven-day public-record lead",
-        "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New public-record signal: Panama Profile - InSight Crime",
-        "rumbleShortTitle": "Panama Profile - InSight Crime",
-        "rumbleLongTitle": "Crime State Overlap — Panama Profile - InSight Crime",
-        "socialThread": [
-          "1/ Fresh crime-state-overlap lead: Panama Profile - InSight Crime",
-          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
-          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
-        ],
-        "evidenceRoute": "network-maps.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "book-crime-dossiers.html",
-        "offerRoute": "offer-crime-dossiers.html",
-        "optinRoute": "optin-crime-network-brief.html",
-        "storeRoute": "amazon-store-books.html",
-        "status": "rss-fetched",
-        "sourceType": "live-intel",
-        "freshness": "active live intel"
-      },
-      {
         "id": "crime-state-overlap-2026-06-09-alex-saab-profile-insight-crime",
         "lane": "crime-state-overlap",
         "laneTitle": "Google News / crime state overlap",
@@ -253,14 +221,46 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "declassified-files-2026-07-11-24",
+        "id": "declassified-files-2026-07-15-24",
+        "lane": "declassified-files",
+        "laneTitle": "Declassified Files And Public Archives",
+        "sourceLabel": "Google News / declassified files",
+        "title": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5",
+        "published": "2026-07-15T23:06:00.000Z",
+        "fetchedAt": "2026-07-16T05:59:33.557Z",
+        "summary": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws CBS News",
+        "evidenceLevel": "Seven-day public-record lead",
+        "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
+        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New public-record signal: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+        "rumbleShortTitle": "Pentagon proposes new secrecy power to withhold unclassified records fro",
+        "rumbleLongTitle": "Declassified Files And Public Archives — Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS",
+        "socialThread": [
+          "1/ Fresh declassified-files lead: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "evidence-vault-index.html",
+        "videoRoute": "videos.html",
+        "bookRoute": "books.html",
+        "offerRoute": "download-center.html",
+        "optinRoute": "optin-intelligence-files-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "rss-fetched",
+        "sourceType": "live-intel",
+        "freshness": "active live intel"
+      },
+      {
+        "id": "declassified-files-2026-07-11-25",
         "lane": "declassified-files",
         "laneTitle": "Declassified Files And Public Archives",
         "sourceLabel": "Google News / declassified files",
         "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
         "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
         "published": "2026-07-11T04:00:07.000Z",
-        "fetchedAt": "2026-07-15T05:52:56.309Z",
+        "fetchedAt": "2026-07-16T05:59:33.557Z",
         "summary": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
@@ -353,24 +353,24 @@
         "freshness": "archived historical lead"
       },
       {
-        "id": "epstein-files-2026-07-09-14",
+        "id": "epstein-files-2026-07-15-5",
         "lane": "epstein-files",
         "laneTitle": "Epstein Files, Timeline And Court Records",
-        "sourceLabel": "Google News / Epstein sighting and alive claims",
-        "title": "Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION",
-        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5",
-        "published": "2026-07-09T06:33:00.000Z",
-        "fetchedAt": "2026-07-15T05:52:56.312Z",
-        "summary": "Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch WION",
+        "sourceLabel": "Google News / Epstein timeline and files",
+        "title": "Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5",
+        "published": "2026-07-15T16:34:31.000Z",
+        "fetchedAt": "2026-07-16T05:59:33.556Z",
+        "summary": "Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women Yahoo! Finance Canada",
         "evidenceLevel": "Seven-day public-record lead",
         "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
         "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
         "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "videoHook": "New public-record signal: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION",
-        "rumbleShortTitle": "Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's p",
-        "rumbleLongTitle": "Epstein Files, Timeline And Court Records — Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St.",
+        "videoHook": "New public-record signal: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada",
+        "rumbleShortTitle": "Goldman Sachs's Ruemmler says she would have reported Epstein if she kne",
+        "rumbleLongTitle": "Epstein Files, Timeline And Court Records — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yaho",
         "socialThread": [
-          "1/ Fresh epstein-files lead: Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION",
+          "1/ Fresh epstein-files lead: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada",
           "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
           "3/ Open the source, then use the evidence route, source card, free brief, and book path."
         ],
@@ -575,11 +575,6 @@
       "kind": "Google News / crime state overlap"
     },
     {
-      "title": "Panama Profile - InSight Crime",
-      "route": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yVFF3VWVabzVuclNPbC1wR3RHVVdVT1A5b0NwVXA4RXp2YzdxYWU3NXhfM0dUZGFESG5GTmhSb1loS3FSUXc3UGdKQ25kNjJxcDh4ZERXLTFDNEdXanFhWVlYbExkdGlpV1Njcg?oc=5",
-      "kind": "Google News / crime state overlap"
-    },
-    {
       "title": "Alex Saab Profile - InSight Crime",
       "route": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFVHS0drbUZRQldmUUlwOERGUzlyaTFCeEJJZVFVWDY5X2kyTERZdW9fbUVRMGpJLUhpRENVWTdOVkN2RTZtNDRsbzRtNVRFR2kzazUwSzVqZF9qOEtvdTR5TUpBdnp5Z1k1blpwLWdOUW5RbW40?oc=5",
       "kind": "Google News / crime state overlap"
@@ -588,6 +583,11 @@
       "title": "Major UK banks back reusable digital ID network for financial services - Biometric Update",
       "route": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5",
       "kind": "Google News / control structure"
+    },
+    {
+      "title": "Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News",
+      "route": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5",
+      "kind": "Google News / declassified files"
     },
     {
       "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
@@ -605,9 +605,9 @@
       "kind": "Google News / Epstein timeline and files"
     },
     {
-      "title": "Never-before-seen footage exposes eerie interiors of Jeffrey Epstein's private island Little St. James | Watch - WION",
-      "route": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQWE0yUmdwTG9MNUdlajVPOEFqcXpya3lYSGlyMU40VWtReWtJanJEN0V6b2g0WWV6TGN1RnpYTGYzV1lfV3FFbHllcmhGcWI1dmI5RWFodms5QWx1R1p2LXZUWjdZcENZUXVfNTRNY2FfRllydFhabERoLWFXazRJTVFIZ0l4Sy05QTFtNHpVRXBiZE9kekJfZDNTdE02RlBpWkktS2VISmdGZ1M2bVRpZ25UNjZiNnM4WUtnU3FSbU9LZ0gyam5UVVBBVDFEc0IxdG1TVW1mRERpc0F1WTNBU2d1QXVsSkoxWTd3WXhKVUxFb0tlMFhEMHNQeVBTd9IBgwJBVV95cUxPZTVlRjcyYWJvcEt3V3VKVS1XMHRwZkwtV3RCWWI1Wk12NUpOLUJhTnFSR1JyYTZzNER0Rm9xR0Vmck9CbzRncG1zbjF4VHcyUUFfblo5amNaVUpMMGxnV1U3TlJtYzI5LS13eGFwNk9JQVFRNkt4Z0p0aHJrT0x2amFGTkh0TWxoYjhPT3hYZThnR3lOY25hQW5UbVhTbUItX3daZU0xTWZnM3RjVTRtUXV5RkM2ZDRiRURRaTdrc3VDMFA5MWtZSWQ4V0d3Rk5sS0J3d2N5bl8tZVdyYnZEc1Njb2pFdEZmRG1sblhTazZ1UzRubkVzY2tRdENwM0h1bkZn?oc=5",
-      "kind": "Google News / Epstein sighting and alive claims"
+      "title": "Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada",
+      "route": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb29wQVJkTjZ0MEs4VnpuV2FGY0duUE9kMmZiN1dJLXNER3pRSmpVU0VLSEE0T1V4QmdINmtmSjRHdUxJajF0eGJ4WUZud1Q4M2JTTHZkUVhhMXRXOThyZUJJVjE0MEYzeGtQVlo4bFJpVDRaOUR0T3o1YTVOWENWSW9XUEw1N2ha?oc=5",
+      "kind": "Google News / Epstein timeline and files"
     },
     {
       "title": "Moldova publishes declassified Soviet deportation lists from 1941 - Moldova 1",

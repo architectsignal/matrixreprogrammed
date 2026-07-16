@@ -20,7 +20,7 @@
     @media(max-width:960px){.data-lab-workbench{grid-template-columns:1fr}.data-lab-toolbar{grid-template-columns:1fr}.data-lab-table-scroll{max-height:520px}perspective-viewer{height:520px}}
     @media print{canvas,.signal-face,.veil,.topbar,.data-lab-toolbar,.data-lab-modes,.btn{display:none!important}.page,.card,.data-lab-editor,.data-lab-output{background:#fff;color:#000}.card{break-inside:avoid}.data-lab-table-scroll{max-height:none;overflow:visible}}
   </style>
-<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style></head>
+</head>
 <body>
   <canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div>
   <div class="page">
@@ -81,7 +81,7 @@
   <div class="cta-row small">
     <button class="btn" type="button" data-data-lab-dataset="entities">Query this dataset</button>
     <a class="btn alt" href="downloads/investigation-entities.csv" download>Download CSV</a>
-    <a class="btn alt internal-only" href="data/entity-registry.json">Open provenance</a>
+    <a class="btn alt" href="data/entity-registry.json">Open provenance</a>
   </div>
 </article>
 <article class="card data-lab-dataset-card">
@@ -93,7 +93,7 @@
   <div class="cta-row small">
     <button class="btn" type="button" data-data-lab-dataset="relationships">Query this dataset</button>
     <a class="btn alt" href="downloads/investigation-relationships.csv" download>Download CSV</a>
-    <a class="btn alt internal-only" href="data/relationship-registry.json">Open provenance</a>
+    <a class="btn alt" href="data/relationship-registry.json">Open provenance</a>
   </div>
 </article>
 <article class="card data-lab-dataset-card">
@@ -105,7 +105,7 @@
   <div class="cta-row small">
     <button class="btn" type="button" data-data-lab-dataset="market_activity">Query this dataset</button>
     <a class="btn alt" href="downloads/market-activity.csv" download>Download CSV</a>
-    <a class="btn alt internal-only" href="data/market-activity.json">Open provenance</a>
+    <a class="btn alt" href="data/market-activity.json">Open provenance</a>
   </div>
 </article>
 <article class="card data-lab-dataset-card">
@@ -117,7 +117,7 @@
   <div class="cta-row small">
     <button class="btn" type="button" data-data-lab-dataset="evidence_network">Query this dataset</button>
     <a class="btn alt" href="downloads/evidence-network-map.csv" download>Download CSV</a>
-    <a class="btn alt internal-only" href="data/evidence-network-map.json">Open provenance</a>
+    <a class="btn alt" href="data/evidence-network-map.json">Open provenance</a>
   </div>
 </article></div></section>
       <section class="section wrap" id="presets"><div class="eyebrow">Start with reproducible questions</div><h2>QUERY PRESETS.</h2><div class="grid">
@@ -194,5 +194,5 @@
   </div>
   <script src="matrix.js"></script>
   <script type="module" src="data-lab.js"></script>
-<script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Sell / Capture","Site Brain Router","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Mission + Money Engine","Capture System","Monetisation Dashboard"]}</script></body>
+</body>
 </html>

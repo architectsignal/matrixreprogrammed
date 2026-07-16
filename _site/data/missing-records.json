@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T05:53:15.198Z",
+  "updated": "2026-07-16T05:59:49.352Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
@@ -125,6 +125,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "2025-0045-Appeal.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2025-0045-appeal.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "25-113",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/25-113.html",
@@ -140,12 +146,6 @@
       "entity": "A170747M",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/a170747m.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AC48383",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/ac48383.html",
       "type": "entity brief"
     },
     {
@@ -167,12 +167,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "Connecticut Appellate Court",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/connecticut-appellate-court.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
@@ -191,9 +185,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Khan v. Jewish Women International",
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/khan-v-jewish-women-international.html",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "type": "entity brief"
     },
     {
@@ -230,6 +224,12 @@
       "entity": "Sawas v. Elzanaty",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/sawas-v-elzanaty.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Rhode Island",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-rhode-island.html",
       "type": "entity brief"
     },
     {
@@ -365,12 +365,6 @@
       "type": "record review"
     },
     {
-      "entity": "Connecticut Appellate Court",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/connecticut-appellate-court.html",
-      "type": "record review"
-    },
-    {
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
@@ -389,6 +383,12 @@
       "type": "record review"
     },
     {
+      "entity": "Supreme Court of Rhode Island",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/supreme-court-of-rhode-island.html",
+      "type": "record review"
+    },
+    {
       "entity": "2021-00294",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/2021-00294.html",
@@ -398,6 +398,12 @@
       "entity": "2024-07773",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/2024-07773.html",
+      "type": "record review"
+    },
+    {
+      "entity": "2025-0045-Appeal.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/2025-0045-appeal.html",
       "type": "record review"
     },
     {
@@ -419,21 +425,15 @@
       "type": "record review"
     },
     {
-      "entity": "AC48383",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/ac48383.html",
-      "type": "record review"
-    },
-    {
       "entity": "Biddle v. Biddle",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/biddle-v-biddle.html",
       "type": "record review"
     },
     {
-      "entity": "Khan v. Jewish Women International",
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/khan-v-jewish-women-international.html",
+      "route": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
       "type": "record review"
     },
     {

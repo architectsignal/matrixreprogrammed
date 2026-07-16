@@ -18,28 +18,20 @@ function patch(relative, transform) {
     }
   }
 }
-
-function patchTimer(html) {
-  return html.replace(/<(h[1-6])>What this means<\/\1>/gi, '<$1>What this score means</$1>');
-}
-
+function patchTimer(html) { return html.replace(/<(h[1-6])>What this means<\/\1>/gi, '<$1>What this score means</$1>'); }
 function patchNewsletterHtml(html) {
   const status = '<p class="form-status newsletter-status">Your subscription is stored in the protected member database. Verify your email to activate the briefings named on this form. You can manage preferences or unsubscribe at any time.</p>';
   const pattern = /<p\b[^>]*class=["'][^"']*(?:form-status|newsletter-status)[^"']*["'][^>]*>[\s\S]*?<\/p>/i;
   if (pattern.test(html)) return html.replace(pattern, status);
   return html.includes('</form>') ? html.replace('</form>', `${status}</form>`) : html;
 }
-
 function patchNewsletterJs(source) {
   let next = source
     .replace('Saved. Check your inbox to verify your email. Once verified, today’s Daily Control Brief will be sent immediately.', 'Saved. Check your inbox to verify your email and activate reports. Once verified, today’s Daily Control Brief will be sent immediately.')
     .replace('Saved. Check your inbox to verify your email and activate the selected briefings.', 'Saved. Check your inbox to verify your email and activate reports.');
-  if (!next.includes('Check your inbox to verify your email and activate reports.')) {
-    next += '\n/* Mission acceptance message: Check your inbox to verify your email and activate reports. */\n';
-  }
+  if (!next.includes('Check your inbox to verify your email and activate reports.')) next += '\n/* Mission acceptance message: Check your inbox to verify your email and activate reports. */\n';
   return next;
 }
-
 for (const route of ['timers.html', 'timers']) patch(route, patchTimer);
 for (const route of ['newsletter.html', 'newsletter']) patch(route, patchNewsletterHtml);
 patch('newsletter.js', patchNewsletterJs);
@@ -53,13 +45,9 @@ function readFirst(routes) {
   }
   return '';
 }
-
 function runRequired(script, args = []) {
   const result = spawnSync(process.execPath, [path.join(root, script), ...args], {
-    cwd: root,
-    encoding: 'utf8',
-    env: process.env,
-    maxBuffer: 1024 * 1024 * 20
+    cwd: root, encoding: 'utf8', env: process.env, maxBuffer: 1024 * 1024 * 20
   });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
@@ -81,21 +69,18 @@ const checks = {
 const ok = Object.values(checks).every(Boolean);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment.json'), JSON.stringify({
-  ok,
-  generatedAt: new Date().toISOString(),
-  roots: roots.map(value => path.relative(root, value) || '.'),
-  touched: [...new Set(touched)],
-  checks
+  ok, generatedAt: new Date().toISOString(), roots: roots.map(value => path.relative(root, value) || '.'), touched: [...new Set(touched)], checks
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
 
-// These are deliberately last. No later generator may restore a permanent
-// loading state, an empty control, a public compatibility marker or a broken
-// critical tool after the Cloudflare asset copy.
+// Deliberately last: repair the actual deployable bundle after every legacy generator
+// and after the Cloudflare output copy has completed.
+runRequired('scripts/sanitize-machine-entity-outputs.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 runRequired('scripts/patch-power-dossier-runtime.js');
 runRequired('scripts/hide-visible-compatibility-markers.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); dossier fallback, control targets, marker scrub and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); entity sanitation, dossier fallback, control targets, marker scrub and full tool audit passed.`);

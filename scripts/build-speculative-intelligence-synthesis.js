@@ -11,7 +11,8 @@ const files = [
   'data/relationship-registry.json', 'data/top-52-power-deck.json',
   'data/institution-deck.json', 'data/controlled-opposition-deck.json',
   'data/investigation-ledger.json', 'data/daily-power-conclusions.json',
-  'data/latest-public-drops.json', 'data/clock-wall.json', 'data/global-risk-clocks.json'
+  'data/latest-public-drops.json', 'data/clock-wall.json', 'data/global-risk-clocks.json',
+  'data/record-events.json', 'data/entity-observations.json', 'data/daily-investigation-conclusions.json'
 ].filter(p => fs.existsSync(at(p)));
 
 function objects(value, source, out = [], depth = 0) {
@@ -25,12 +26,13 @@ function objects(value, source, out = [], depth = 0) {
 const rows = files.flatMap(source => objects(read(source), source));
 const text = rows.map(row => clean(Object.values(row.value).filter(v => typeof v === 'string').join(' '), 1800)).join(' ').toLowerCase();
 const first = (o, keys, max = 300) => { for (const k of keys) if (typeof o?.[k] === 'string' && clean(o[k], max)) return clean(o[k], max); return ''; };
-const validActor = label => label && label.length >= 3 && label.length <= 110 && label.split(/\s+/).length <= 11 && !/[.!?].{8,}/.test(label) && !/(?:anonymous|redacted|unnamed|victim|survivor|minor|public record|evidence|report|brief|conclusion|record|source|unknown)/i.test(label);
+const genericAction = /^(?:increased position|reduced position|exited position|new position|mentions?|open-market or private sale|open market sale|private sale|final judgment|view files?|open files?|read more|source|filing|document|record|update|changed|unchanged|added|removed|position|transaction|judgment)$/i;
+const validActor = label => label && label.length >= 3 && label.length <= 130 && label.split(/\s+/).length <= 14 && !/[.!?].{8,}/.test(label) && !genericAction.test(label) && !/(?:anonymous|redacted|unnamed|victim|survivor|minor|public record|evidence|report|brief|conclusion|record|source|unknown|other documented institutional actor)/i.test(label);
 function group(name, role) {
   const h = `${name} ${role}`.toLowerCase();
   if (/bank|payment|currency|financial|asset manager|treasury|imf|bis|ecb|reserve/.test(h)) return 'money, banking and payment infrastructure';
   if (/united nations|world health|\bwho\b|oecd|european union|commission|nato|multilateral|treaty|standards/.test(h)) return 'multilateral governance and standards';
-  if (/government|ministry|department|agency|regulator|parliament|congress|court|justice/.test(h)) return 'public authority and regulation';
+  if (/government|ministry|department|agency|regulator|parliament|congress|court|justice|commission|authority/.test(h)) return 'public authority and regulation';
   if (/intelligence|security|defen[cs]e|military|police|border|cyber/.test(h)) return 'security, intelligence and emergency power';
   if (/cloud|technology|platform|software|artificial intelligence|\bai\b|data|identity|biometric|telecom/.test(h)) return 'technology, identity, data and platforms';
   if (/contractor|consulting|procurement|vendor|infrastructure|logistics/.test(h)) return 'contractors and public-private implementation';
@@ -38,19 +40,44 @@ function group(name, role) {
   if (/media|news|publisher|advertising|information/.test(h)) return 'media and information access';
   if (/health|medical|pharma|vaccine|hospital|biosecurity/.test(h)) return 'health and biosecurity systems';
   if (/religion|church|faith|interfaith|vatican/.test(h)) return 'religious and interfaith institutions';
-  return 'other documented institutional actor';
+  if (/inc\.?|corp\.?|company|holdings|capital|partners|fund|management/.test(h)) return 'corporate ownership and capital';
+  return 'documented person or institution';
+}
+function sourceRoute(source, value) {
+  const explicit = first(value, ['evidenceRoute','sourceRoute','route','detailRoute','entityRoute','page','localUrl'], 500);
+  if (explicit) return explicit;
+  if (/investigation|judgment|court|sec/i.test(source)) return 'daily-investigation-conclusions.html';
+  if (/record-event|entity-observation|relationship/i.test(source)) return 'entity-daily-briefs.html';
+  return 'daily-command-brief.html';
 }
 const actorMap = new Map();
 for (const { source, value } of rows) {
-  const label = first(value, ['entityName','actorName','organizationName','institutionName','companyName','personName','subjectName','entity','actor','organization','institution','company','subject','name','label'], 130);
-  if (!validActor(label)) continue;
+  const role = first(value, ['documentedRole','entityRole','role','entityType','type','category','kind','sector','action','changeType','eventType','filingType'], 220) || 'Documented in the linked public record';
+  const preferred = first(value, ['entityName','actorName','organizationName','institutionName','companyName','personName','subjectName','issuerName','filerName','ownerName','respondentName','defendantName','agencyName','authorityName'], 150);
+  const fallback = first(value, ['entity','actor','organization','institution','company','subject','name','label'], 150);
+  const label = validActor(preferred) ? preferred : validActor(fallback) ? fallback : '';
+  if (!label) continue;
   const key = label.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-  const role = first(value, ['documentedRole','entityRole','role','entityType','type','category','kind','sector'], 180) || 'Role stated in the linked Matrix record';
-  const summary = first(value, ['conclusion','summary','text','description','finding','whyItMatters','plainEnglishConclusion','controlSystemMeaning'], 600);
-  const item = actorMap.get(key) || { name: label, documentedRole: role, roleGroup: group(label, role), records: 0, sources: new Set(), summaries: [] };
-  item.records += 1; item.sources.add(source); if (summary && item.summaries.length < 3) item.summaries.push(summary); actorMap.set(key, item);
+  const authority = first(value, ['authority','regulator','agency','court','sourceLabel','publisher','institution','organization','issuer','filer'], 220);
+  const instrument = first(value, ['law','legalAuthority','legalInstrument','rule','regulation','statute','caseName','caseNumber','formType','filingType','documentTitle','title'], 260);
+  const action = first(value, ['action','changeType','eventType','transactionType','status','outcome','documentedRole','role'], 220) || role;
+  const summary = first(value, ['whyItMatters','plainEnglishConclusion','controlSystemMeaning','conclusion','summary','text','description','finding','implication'], 700);
+  const item = actorMap.get(key) || { name: label, documentedRole: role, roleGroup: group(label, `${role} ${authority}`), authority:'', instrument:'', action:'', whyItMatters:'', sourceRoute:sourceRoute(source,value), records: 0, sources: new Set(), summaries: [] };
+  item.records += 1;
+  item.sources.add(source);
+  if (!item.authority && authority && authority.toLowerCase() !== label.toLowerCase()) item.authority = authority;
+  if (!item.instrument && instrument && !genericAction.test(instrument)) item.instrument = instrument;
+  if (!item.action && action) item.action = action;
+  if (!item.whyItMatters && summary) item.whyItMatters = summary;
+  if (summary && item.summaries.length < 3) item.summaries.push(summary);
+  actorMap.set(key, item);
 }
-const actors = [...actorMap.values()].map(a => ({ ...a, sources: [...a.sources].slice(0, 8), summaries: uniq(a.summaries), boundary: 'The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command.' })).sort((a,b) => b.records - a.records).slice(0, 50);
+const actors = [...actorMap.values()].map(a => {
+  const sources=[...a.sources].slice(0,8);
+  const whyItMatters=a.whyItMatters || a.summaries[0] || `This record places ${a.name} inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.`;
+  const specificity=(a.authority?3:0)+(a.instrument?3:0)+(a.action?2:0)+(whyItMatters?2:0)+Math.min(5,a.records);
+  return { ...a, sources, summaries:uniq(a.summaries), whyItMatters, specificity, boundary:'The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command.' };
+}).sort((a,b) => b.specificity-a.specificity || b.records-a.records).slice(0,50);
 
 const pathways = [
   ['law-standards','Law, treaties and standards',['law','regulation','treaty','standard','directive','mandate','governance'],'Common rules can turn policy preference into cross-jurisdiction operating requirements.'],
@@ -61,7 +88,7 @@ const pathways = [
   ['health-mobility','Health, biosecurity and mobility',['health','pandemic','biosecurity','travel','vaccine','medical'],'Health records and emergency credentials can become cross-border access controls.'],
   ['information-access','Information, media and platform access',['media','information','moderation','search','advertising','speech'],'Visibility can be shaped through platforms, ownership, moderation and payment dependencies.'],
   ['procurement-vendors','Procurement and public-private implementation',['procurement','contract','contractor','vendor','consulting','outsourcing'],'Public authority can become dependent on private operators of critical infrastructure.']
-].map(([id,title,keywords,meaning]) => ({ id,title,meaning,signalCount: keywords.reduce((n,k) => n + text.split(k).length - 1, 0), actors: actors.filter(a => keywords.some(k => `${a.name} ${a.documentedRole} ${a.roleGroup}`.toLowerCase().includes(k))).slice(0,6).map(a => a.name) })).sort((a,b) => b.signalCount - a.signalCount);
+].map(([id,title,keywords,meaning]) => ({ id,title,meaning,signalCount: keywords.reduce((n,k) => n + text.split(k).length - 1, 0), actors: actors.filter(a => keywords.some(k => `${a.name} ${a.documentedRole} ${a.roleGroup} ${a.authority} ${a.instrument}`.toLowerCase().includes(k))).slice(0,6).map(a => a.name) })).sort((a,b) => b.signalCount - a.signalCount);
 
 const chain = [
   ['Agenda and standards','Multilateral bodies, regulators, industry groups and standards organisations define common objectives and technical requirements.'],
@@ -89,7 +116,7 @@ const leading = 'If the pattern continues, the most plausible outcome is a de fa
 const counterpoint = 'The thesis weakens when participation remains voluntary, systems are decentralised and reversible, data stays separated, open standards preserve exit, meaningful competition exists, courts enforce rights, and primary records show parallel development rather than common enforcement.';
 const watchNext = ['Voluntary identity or wallet systems becoming mandatory','Identity linked to payments, benefits, health, travel or platform access','International standards becoming law or procurement conditions','Government dependence on a small vendor group','Emergency infrastructure becoming permanent','Risk or eligibility decisions reused across unrelated systems','Legal, technical or political reversals that weaken convergence'];
 const synthesis = {
-  ok:true, version:'1.0.0', updated:new Date().toISOString(), title:'Speculative Intelligence Synthesis',
+  ok:true, version:'1.1.0', updated:new Date().toISOString(), title:'Speculative Intelligence Synthesis',
   evidenceLayer:{ status:'documented records and canonical site data', files, recordsInspected:rows.length, criticalClocks:critical, conclusion },
   inferenceLayer:{ status:'analytic inference — not direct proof of intent', confidenceScore:confidence, confidenceBand, confidenceMeaning:'Support for the observed convergence pattern, not probability that a scenario will occur.', pathways, implementationChain:chain, actorMap:actors },
   speculativeLayer:{ status:'scenario analysis — not fact or prediction', leadingTrajectory:leading, scenarios },
@@ -97,8 +124,9 @@ const synthesis = {
 };
 if (pathways.length !== 8 || chain.length !== 6 || scenarios.length < 7) throw new Error('Speculative synthesis structure incomplete');
 for (const id of ['one-world-government-threshold','one-world-currency-threshold','one-world-religion-threshold']) if (!scenarios.some(s => s.id===id && s.evidenceNeeded.length && s.disconfirmingEvidence.length)) throw new Error(`Missing bounded scenario ${id}`);
+if (actors.some(a => genericAction.test(a.name) || /other documented institutional actor/i.test(a.name))) throw new Error('Generic action label leaked into actor map');
 fs.mkdirSync(at('data'),{recursive:true}); fs.mkdirSync(at('downloads'),{recursive:true});
 fs.writeFileSync(at('data/speculative-intelligence-synthesis.json'),JSON.stringify(synthesis,null,2));
-const md = ['# Speculative Intelligence Synthesis','',`Updated: ${synthesis.updated}`,'','## Evidence-led conclusion','',conclusion,'',`Analytic confidence: **${confidence}/100 — ${confidenceBand}**`,'','> Pattern support only. This is not event probability.','','## Who is involved — documented roles only','',...actors.slice(0,20).map(a=>`- **${a.name}** — ${a.documentedRole}; ${a.roleGroup}. Records: ${a.records}.`),'','## How the systems fit together','',...chain.map(s=>`${s.stage}. **${s.title}:** ${s.explanation}`),'','## Scenario matrix','',...scenarios.flatMap(s=>[`### ${s.title}`,'',`**Status:** ${s.status}`,'',`**Plausibility:** ${s.plausibilityBand}`,'',s.trajectory,'',`**Evidence needed:** ${s.evidenceNeeded.join('; ')}`,'',`**Would weaken it:** ${s.disconfirmingEvidence.join('; ')}`,'',`**Boundary:** ${s.boundary}`,'']),'## Overall boundary','',synthesis.uncertaintyLayer.boundary].join('\n');
+const md = ['# Speculative Intelligence Synthesis','',`Updated: ${synthesis.updated}`,'','## Evidence-led conclusion','',conclusion,'',`Analytic confidence: **${confidence}/100 — ${confidenceBand}**`,'','> Pattern support only. This is not event probability.','','## Who is involved — documented roles only','',...actors.slice(0,20).map(a=>`- **${a.name}** — ${a.action || a.documentedRole}${a.authority?`; authority/institution: ${a.authority}`:''}${a.instrument?`; law, filing or instrument: ${a.instrument}`:''}. Why it matters: ${a.whyItMatters}`),'','## How the systems fit together','',...chain.map(s=>`${s.stage}. **${s.title}:** ${s.explanation}`),'','## Scenario matrix','',...scenarios.flatMap(s=>[`### ${s.title}`,'',`**Status:** ${s.status}`,'',`**Plausibility:** ${s.plausibilityBand}`,'',s.trajectory,'',`**Evidence needed:** ${s.evidenceNeeded.join('; ')}`,'',`**Would weaken it:** ${s.disconfirmingEvidence.join('; ')}`,'',`**Boundary:** ${s.boundary}`,'']),'## Overall boundary','',synthesis.uncertaintyLayer.boundary].join('\n');
 fs.writeFileSync(at('downloads/speculative-intelligence-synthesis.md'),md);
 module.exports = synthesis;

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "updated": "2026-07-16",
+  "name": "Full Site Function and Tool Audit",
+  "purpose": "Validate every public HTML surface, local route, linked asset, JavaScript syntax contract, JSON feed, download route, form surface and critical interactive tool before Cloudflare deployment.",
+  "criticalTools": [
+    "Geographic Power Atlas",
+    "Search V3 and Ask Matrix",
+    "Evidence Network Map",
+    "Evidence Timeline",
+    "Public Data Laboratory",
+    "Research Tools",
+    "Mission Timers",
+    "AI Speculative Conclusions",
+    "Membership and PayPal boundary",
+    "Passwordless member login",
+    "Member dashboard",
+    "Billing dashboard",
+    "Signal Board forums",
+    "Download Center"
+  ],
+  "hardFailureRules": [
+    "Missing critical page, script or data feed",
+    "JavaScript syntax failure",
+    "Invalid JSON",
+    "Broken local target on a critical page",
+    "Missing required DOM control",
+    "Leaked internal compatibility marker",
+    "Obsolete paid-tier wording or prices",
+    "Fragile Geographic Power Atlas runtime restored"
+  ],
+  "warningRules": [
+    "Broken noncritical legacy-page local target",
+    "Form without an obvious submit control or JavaScript hook",
+    "Noncritical script fetch target requiring manual review"
+  ],
+  "boundary": "Static and postbuild audits validate the shipped site bundle. Authenticated transactions, PayPal sandbox behavior, email delivery, D1 writes and third-party services also require live environment checks."
+}

@@ -75,3 +75,7 @@ Netlify files may remain as backup, but production for the live forum-backed sit
 - Netlify uses `netlify.toml`.
 - Cloudflare Worker deployment uses `wrangler.toml` and `_site`.
 - Do not put Cloudflare API tokens directly into this repo.
+
+## Deployment trigger record
+
+- 2026-07-16: external guarded deployment trigger issued after the Daily Investigation Machine committed fresh July 16 intelligence outputs. This documentation-only change exists to ensure the latest `main` state enters the production workflow; it does not alter runtime behaviour.

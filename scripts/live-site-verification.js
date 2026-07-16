@@ -40,8 +40,11 @@ const required = [
   { path: '/forum-health', json: true, markers: ['forumPostsBinding'], requireOrigin: true },
   { path: '/machine-digest.html', markers: ['MACHINE DIGEST.'], forbidden: ['[object Object]', ...commonForbidden] },
   { path: '/entity-daily-briefs.html', markers: ['ENTITY DAILY BRIEFS.'], forbidden: ['[object Object]', '<h3></h3>', ...commonForbidden] },
+  { path: '/entity-exposure-index.html', markers: ['ENTITY EXPOSURE'], forbidden: ['[object Object]', 'object-object', '<h3></h3>', ...commonForbidden] },
   { path: '/data/entity-observations.json', json: true, markers: ['observations'], forbidden: ['[object Object]', 'object-object'] },
   { path: '/data/entity-daily-briefs.json', json: true, markers: ['briefs'], forbidden: ['[object Object]', 'object-object'] },
+  { path: '/data/entity-exposure-index.json', json: true, markers: ['entities', 'profiles'], forbidden: ['[object Object]', 'object-object'] },
+  { path: '/entity-exposure/object-object.html', allowedStatuses: [404, 410], markers: [], forbidden: ['[object Object]'] },
   { path: '/dossier-elon-musk.html', markers: ['Power Dossier'], mustInclude: ['data/power-dossiers.json', 'power-dossier-runtime.js'] },
   { path: '/power-dossier-runtime.js', markers: ['DOSSIER TEMPORARILY UNAVAILABLE'], mustInclude: ["fetch('data/power-dossiers.json'"] },
   { path: '/data/power-dossiers.json', json: true, markers: ['elon-musk'] },
@@ -60,7 +63,7 @@ async function check(item) {
   const timeout = setTimeout(() => controller.abort(), Number(process.env.LIVE_VERIFY_TIMEOUT_MS || 20000));
   let res;
   try {
-    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.2', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
+    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.3', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
   } finally { clearTimeout(timeout); }
   const text = await res.text();
   const finalUrl = res.url || url;
@@ -95,7 +98,7 @@ async function check(item) {
   if (item.json && !challenged && result.jsonError) errors.push(`invalid JSON: ${result.jsonError}`);
   if (result.forbiddenHits && result.forbiddenHits.length) errors.push(`forbidden public output present: ${result.forbiddenHits.join(', ')}`);
   if (result.counts) for (const count of result.counts) if (count.count > count.max) errors.push(`duplicate marker ${count.text}: ${count.count} > ${count.max}`);
-  if (!challenged && result.bodyBytes === 0) errors.push('empty response body');
+  if (!challenged && result.bodyBytes === 0 && !Array.isArray(item.allowedStatuses)) errors.push('empty response body');
   if (errors.length) result.error = errors.join('; ');
   if (warnings.length) result.warnings = warnings;
   return result;

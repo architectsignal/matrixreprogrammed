@@ -23,6 +23,9 @@ function routeExists(route = '') {
   if (!clean || /^https?:\/\//i.test(clean)) return true;
   return fs.existsSync(path.join(root, clean));
 }
+function includesRoute(routes, route) {
+  return Array.isArray(routes) && routes.some(value => String(value || '').split('#')[0].split('?')[0] === route);
+}
 
 need(Array.isArray(sourceClaims.claims) && sourceClaims.claims.length >= 49, `canonical speculation dataset must contain at least 49 claims; found ${(sourceClaims.claims || []).length}`);
 need(definitions.length === (sourceClaims.claims || []).length, `speculation registry count ${definitions.length} does not match canonical claim count ${(sourceClaims.claims || []).length}`);
@@ -71,9 +74,9 @@ for (const definition of definitions) {
   need(Boolean(wallClock.falsificationTest), `${definition.slug} falsification test missing`);
   need(Boolean(wallClock.riskRating), `${definition.slug} risk rating missing`);
   need(Array.isArray(wallClock.evidenceInputs), `${definition.slug} evidence inputs missing`);
-  need(Array.isArray(wallClock.sourceRoutes) && wallClock.sourceRoutes.includes('dark-speculation-lab.html'), `${definition.slug} missing Dark Speculation Lab source route`);
-  need(Array.isArray(wallClock.sourceRoutes) && wallClock.sourceRoutes.includes('claim-classifier.html'), `${definition.slug} missing Claim Classifier route`);
-  need(Array.isArray(wallClock.sourceRoutes) && wallClock.sourceRoutes.includes('dark-speculation-forum.html'), `${definition.slug} missing counter-source route`);
+  need(includesRoute(wallClock.sourceRoutes, 'dark-speculation-lab.html'), `${definition.slug} missing Dark Speculation Lab source route`);
+  need(includesRoute(wallClock.sourceRoutes, 'claim-classifier.html'), `${definition.slug} missing Claim Classifier route`);
+  need(includesRoute(wallClock.sourceRoutes, 'dark-speculation-forum.html'), `${definition.slug} missing counter-source route`);
   need(/not confirmation|not truth|not a truth|not.*probability|not confirmation, probability/i.test(`${wallClock.scoreDefinition} ${wallClock.boundary}`), `${definition.slug} lacks explicit truth/probability boundary`);
   need(/repetition alone cannot raise/i.test(wallClock.calculationBasis || ''), `${definition.slug} does not reject repetition inflation`);
 

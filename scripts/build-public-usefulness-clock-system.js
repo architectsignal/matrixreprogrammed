@@ -11,7 +11,7 @@ const scripts = [
   'update-public-usefulness-clock-scores.js',
   'build-clock-wall.js',
   'enrich-public-usefulness-clock-evidence.js',
-  'group-clock-wall-page.js'
+  'render-public-usefulness-clock-wall.js'
 ];
 
 for (const script of scripts) {
@@ -22,4 +22,4 @@ for (const script of scripts) {
   });
 }
 
-console.log('Public usefulness clock system built and grouped.');
+console.log('Public usefulness clock system built, evidence-enriched and grouped.');

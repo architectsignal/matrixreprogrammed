@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const clocks = require('./public-usefulness-clocks.js');
+const clocks = require('./all-reader-clocks.js');
 
 const root = process.cwd();
 const target = path.join(root, 'data', 'global-risk-clocks.json');
@@ -52,14 +52,19 @@ for (const definition of clocks) {
 const originalOrder = (current.clocks || []).map(clock => clock.slug);
 const newOrder = clocks.map(clock => clock.slug).filter(slug => !originalOrder.includes(slug));
 const merged = [...originalOrder, ...newOrder].map(slug => existing.get(slug)).filter(Boolean);
+const practicalCount = clocks.filter(clock => !clock.speculationOnly).length;
+const speculationCount = clocks.filter(clock => clock.speculationOnly).length;
 
 fs.mkdirSync(path.dirname(target), { recursive: true });
 fs.writeFileSync(target, JSON.stringify({
   ...current,
   updated: new Date().toISOString(),
-  summary: 'Evidence-fed pressure indexes with reader-facing categories, bounded automatic movement, source trails, counter-signals and useful actions.',
-  automaticUpdatePolicy: 'Scores move only when a clock evidence fingerprint changes. Movement is capped per build and repetition alone cannot raise a score.',
+  summary: 'Evidence-fed pressure indexes with reader-facing categories, bounded automatic movement, source trails, counter-signals, useful actions and a separately gated speculation registry.',
+  automaticUpdatePolicy: 'Scores move only when a clock evidence fingerprint changes. Movement is capped per build and repetition alone cannot raise a score. Speculation clocks apply claim-class-specific evidence gates; mythology, paranormal and unsupported extreme allegations cannot rise automatically from mentions.',
+  practicalReaderClockCount: practicalCount,
+  speculativeReaderClockCount: speculationCount,
+  clockRegistryCount: clocks.length,
   clocks: merged
 }, null, 2));
 
-console.log(`Public usefulness clock merge complete: ${clocks.length} reader-facing clocks; ${merged.length} canonical clocks total.`);
+console.log(`Reader clock merge complete: ${practicalCount} practical clocks, ${speculationCount} speculation clocks; ${merged.length} canonical clocks total.`);

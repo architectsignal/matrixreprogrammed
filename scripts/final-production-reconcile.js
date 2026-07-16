@@ -25,7 +25,7 @@ function run(script, optional = false) {
     if (optional) return;
     throw new Error(`Missing reconciliation script: ${script}`);
   }
-  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', env: process.env });
+  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', env: process.env, maxBuffer: 1024 * 1024 * 30 });
   report.commands.push({ script, status: result.status, stdout: String(result.stdout || '').slice(-3000), stderr: String(result.stderr || '').slice(-3000) });
   if (result.status !== 0) throw new Error(`${script} failed: ${result.stderr || result.stdout}`);
 }
@@ -80,14 +80,11 @@ run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 
-// These are the final owners of the search and conclusion surfaces. Run them
-// after every legacy generator and immediately before the release manifest and
-// copy, so no later build stage can restore Search V2 or remove integrity cards.
+// Final owners of search and conclusion surfaces.
 run('scripts/repair-search-system.js');
 run('scripts/build-search-v3-index.js');
 run('scripts/build-search-v3-runtime.js');
 run('scripts/patch-conclusion-integrity-cards.js');
-
 run('scripts/build-deploy-manifest.js');
 run('scripts/build-production-health.js');
 
@@ -114,6 +111,9 @@ const critical = [
   'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
 ];
 critical.forEach(copy);
+
+// Nothing may mutate the deployable bundle after this sanitation and audit.
+run('scripts/final-release-sanitize.js');
 
 requireMarker('index.html', 'Security Tools');
 requireMarker('index.html', 'Dark Web Safety');
@@ -180,4 +180,4 @@ requireMarker('deploy-health.json', 'src/worker-production.js');
 requireMarker('deploy-health.json', '"paymentStatus": "sandbox-ready-disabled"');
 
 persistReport();
-console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied after legacy generators.`);
+console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, final deploy bundle sanitized and audited.`);

@@ -2,22 +2,26 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const reportPath = path.join(root, 'downloads', 'machine-entity-output-sanitizer.json');
+const outputOnly = process.argv.includes('--output');
+const outputRoot = path.join(root, '_site');
+const base = outputOnly && fs.existsSync(outputRoot) ? outputRoot : root;
+const reportPath = path.join(root, 'downloads', outputOnly ? 'machine-entity-output-sanitizer-output.json' : 'machine-entity-output-sanitizer.json');
 const changed = [];
 const removedFiles = [];
 const stats = { invalidStringsRemoved: 0, invalidObjectsRemoved: 0, arraysDeduplicated: 0, htmlCardsRemoved: 0, searchEntriesRemoved: 0 };
 
-function at(relative) { return path.join(root, relative); }
+function at(relative) { return path.join(base, relative); }
+function display(relative) { return path.relative(root, at(relative)).replace(/\\/g, '/'); }
 function readJson(relative) {
   const file = at(relative);
   if (!fs.existsSync(file)) return null;
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
-  catch (error) { throw new Error(`${relative} invalid JSON: ${error.message}`); }
+  catch (error) { throw new Error(`${display(relative)} invalid JSON: ${error.message}`); }
 }
 function writeJson(relative, value) {
   fs.mkdirSync(path.dirname(at(relative)), { recursive: true });
   fs.writeFileSync(at(relative), `${JSON.stringify(value, null, 2)}\n`);
-  changed.push(relative);
+  changed.push(display(relative));
 }
 function isInvalidName(value) {
   if (value == null) return true;
@@ -39,15 +43,9 @@ function cleanNameArray(values) {
   const seen = new Set();
   for (const value of values) {
     const name = objectName(value);
-    if (isInvalidName(name)) {
-      stats.invalidStringsRemoved++;
-      continue;
-    }
+    if (isInvalidName(name)) { stats.invalidStringsRemoved++; continue; }
     const key = name.toLowerCase();
-    if (seen.has(key)) {
-      stats.arraysDeduplicated++;
-      continue;
-    }
+    if (seen.has(key)) { stats.arraysDeduplicated++; continue; }
     seen.add(key);
     clean.push(name);
   }
@@ -56,10 +54,7 @@ function cleanNameArray(values) {
 function cleanObject(value) {
   if (Array.isArray(value)) {
     return value.map(cleanObject).filter(item => {
-      if (typeof item === 'string' && isInvalidName(item)) {
-        stats.invalidStringsRemoved++;
-        return false;
-      }
+      if (typeof item === 'string' && isInvalidName(item)) { stats.invalidStringsRemoved++; return false; }
       return item !== undefined;
     });
   }
@@ -85,10 +80,7 @@ function cleanNamedCollection(container, key) {
   if (!container || !Array.isArray(container[key])) return;
   const before = container[key].length;
   container[key] = container[key].filter(item => {
-    if (!item || typeof item !== 'object') {
-      stats.invalidObjectsRemoved++;
-      return false;
-    }
+    if (!item || typeof item !== 'object') { stats.invalidObjectsRemoved++; return false; }
     const name = item.name || item.title || item.label || '';
     const invalid = item.id === 'object-object' || isInvalidName(name);
     if (invalid) stats.invalidObjectsRemoved++;
@@ -102,14 +94,13 @@ function sanitizeJson(relative, namedKeys = []) {
   const before = JSON.stringify(data);
   cleanObject(data);
   for (const key of namedKeys) cleanNamedCollection(data, key);
-  const after = JSON.stringify(data);
-  if (after !== before) writeJson(relative, data);
+  if (JSON.stringify(data) !== before) writeJson(relative, data);
 }
 function removeGeneratedFile(relative) {
   const file = at(relative);
   if (!fs.existsSync(file)) return;
   fs.rmSync(file, { force: true });
-  removedFiles.push(relative);
+  removedFiles.push(display(relative));
 }
 function patchHtml(relative) {
   const file = at(relative);
@@ -121,15 +112,10 @@ function patchHtml(relative) {
     /<article\b[^>]*>[\s\S]*?href=["'][^"']*object-object\.html[^"']*["'][\s\S]*?<\/article>/gi,
     /<article\b[^>]*>[\s\S]*?<h3>\s*<\/h3>[\s\S]*?<\/article>/gi
   ];
-  for (const pattern of patterns) {
-    html = html.replace(pattern, () => {
-      stats.htmlCardsRemoved++;
-      return '';
-    });
-  }
+  for (const pattern of patterns) html = html.replace(pattern, () => { stats.htmlCardsRemoved++; return ''; });
   if (html !== before) {
     fs.writeFileSync(file, html);
-    changed.push(relative);
+    changed.push(display(relative));
   }
 }
 function sanitizeSearchIndex() {
@@ -150,7 +136,6 @@ sanitizeJson('data/entity-exposure-index.json', ['entities', 'profiles']);
 sanitizeJson('data/main-player-profiles.json', ['profiles', 'players']);
 sanitizeJson('data/entity-relationship-scores.json', ['entities', 'relationships']);
 sanitizeSearchIndex();
-
 removeGeneratedFile('entity-briefs/object-object.html');
 removeGeneratedFile('entity-timelines/object-object.html');
 for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html']) patchHtml(page);
@@ -160,16 +145,14 @@ for (const relative of ['data/record-events.json', 'data/entity-observations.jso
   const file = at(relative);
   if (!fs.existsSync(file)) continue;
   const text = fs.readFileSync(file, 'utf8');
-  if (/\[object Object\]/i.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(relative);
+  if (/\[object Object\]/i.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
 }
-
 const report = {
   ok: remaining.length === 0,
   generatedAt: new Date().toISOString(),
-  changed: [...new Set(changed)],
-  removedFiles,
-  stats,
-  remaining,
+  mode: outputOnly ? 'cloudflare-output' : 'source-tree',
+  base: path.relative(root, base) || '.',
+  changed: [...new Set(changed)], removedFiles, stats, remaining,
   boundary: 'Malformed object coercions and blank generated entities are excluded from public outputs. Valid court identifiers, company tickers and institutional names are preserved.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -178,4 +161,4 @@ if (remaining.length) {
   remaining.forEach(item => console.error(`MACHINE ENTITY SANITIZER FAILURE: ${item} still contains malformed entity output`));
   process.exit(1);
 }
-console.log(`Machine entity outputs sanitized: ${stats.invalidStringsRemoved} invalid names, ${stats.invalidObjectsRemoved} invalid objects, ${stats.htmlCardsRemoved} malformed cards and ${stats.searchEntriesRemoved} search entries removed.`);
+console.log(`Machine entity outputs sanitized (${report.mode}): ${stats.invalidStringsRemoved} invalid names, ${stats.invalidObjectsRemoved} invalid objects, ${stats.htmlCardsRemoved} malformed cards and ${stats.searchEntriesRemoved} search entries removed.`);

@@ -103,11 +103,13 @@ const critical = [
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', 'search.html', 'search.js', 'search-index.json',
+  'evidence-archive.html', 'timers.html', 'ai-speculative-conclusions.html',
+  'search.html', 'search.js', 'search-index.json',
   'data/search-facets.json', '_headers', 'data/membership-tiers.json',
   'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/weekly-investigation-conclusions.json',
   'data/daily-brain-brief.json', 'data/outcome-briefings.json',
+  'data/global-risk-clocks.json', 'data/clock-wall.json',
   'data/production-freshness-policy.json', 'deploy-manifest.json',
   'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
 ];
@@ -152,6 +154,11 @@ requireMarker('homepage-mask-intro.css', 'intro-fire-ring');
 requireMarker('homepage-mask-intro.css', 'intro-mask-dissolve');
 requireMarker('assets/intro-eye.svg', 'Eye of Providence seal');
 requireMarker('assets/intro-mask.svg', 'Anonymous revolutionary mask');
+requireMarker('timers.html', 'MISSION TIMERS.');
+requireMarker('timers.html', 'Classified claims, not confirmed events');
+requireMarker('ai-speculative-conclusions.html', 'ai-speculative-conclusion-integrity');
+requireMarker('data/global-risk-clocks.json', '"speculativeReaderClockCount": 49');
+requireMarker('data/clock-wall.json', '"speculativeClockCount": 49');
 requireMarker('search.html', 'SEARCH THE MACHINE');
 requireMarker('search.html', 'id="archive-search"');
 requireMarker('search.html', 'id="search-v3-filters"');

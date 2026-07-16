@@ -79,6 +79,15 @@ run('scripts/build-premier-resource-upgrade.js');
 run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
+
+// These are the final owners of the search and conclusion surfaces. Run them
+// after every legacy generator and immediately before the release manifest and
+// copy, so no later build stage can restore Search V2 or remove integrity cards.
+run('scripts/repair-search-system.js');
+run('scripts/build-search-v3-index.js');
+run('scripts/build-search-v3-runtime.js');
+run('scripts/patch-conclusion-integrity-cards.js');
+
 run('scripts/build-deploy-manifest.js');
 run('scripts/build-production-health.js');
 
@@ -94,7 +103,8 @@ const critical = [
   'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
   'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
   'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', 'search.html', '_headers', 'data/membership-tiers.json',
+  'evidence-archive.html', 'search.html', 'search.js', 'search-index.json',
+  'data/search-facets.json', '_headers', 'data/membership-tiers.json',
   'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/weekly-investigation-conclusions.json',
   'data/daily-brain-brief.json', 'data/outcome-briefings.json',
@@ -142,6 +152,12 @@ requireMarker('homepage-mask-intro.css', 'intro-fire-ring');
 requireMarker('homepage-mask-intro.css', 'intro-mask-dissolve');
 requireMarker('assets/intro-eye.svg', 'Eye of Providence seal');
 requireMarker('assets/intro-mask.svg', 'Anonymous revolutionary mask');
+requireMarker('search.html', 'SEARCH THE MACHINE');
+requireMarker('search.html', 'id="archive-search"');
+requireMarker('search.html', 'id="search-v3-filters"');
+requireMarker('search.js', 'SEARCH V3');
+requireMarker('search.js', "cache:'no-store'");
+requireMarker('search.js', 'HTML returned instead of JSON');
 requireMarker('daily-power-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-investigation-conclusions.html', '<!-- conclusion-integrity:start -->');
 requireMarker('daily-brain-brief.html', '<!-- conclusion-integrity:start -->');

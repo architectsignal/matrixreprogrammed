@@ -42,7 +42,7 @@ function isAbort(error) {
 }
 function forumSoft(name, error, extra = {}) {
   if (SOFT_FORUM_TIMEOUTS && isAbort(error)) {
-    addCheck(name, false, { ...extra, degraded: true, error: error.message || String(error), note: 'Forum KV endpoint timed out during live probe. The forum page is still tested as a hard page check; this endpoint is recorded as degraded instead of blocking the whole site.' }, { soft: true });
+    addCheck(name, false, { ...extra, degraded: true, error: error.message || String(error), note: 'Forum D1 endpoint timed out during live probe. The forum page is still tested as a hard page check; this endpoint is recorded as degraded instead of blocking the whole site.' }, { soft: true });
     return true;
   }
   return false;
@@ -79,16 +79,16 @@ async function feedVisibilityStatus(feedRoute, board, postId) {
       last = { status: feed.res.status, postCount: posts.length, attempt, found, persistent: Boolean(feed.json && feed.json.persistent === true) };
       if (feed.res.ok && found) return { ok: true, soft: false, details: last };
     } catch (error) {
-      if (SOFT_FORUM_TIMEOUTS && isAbort(error)) return { ok: false, soft: true, details: { ...last, degraded: true, error: error.message, board, note: 'Feed visibility timed out during live KV probe.' } };
+      if (SOFT_FORUM_TIMEOUTS && isAbort(error)) return { ok: false, soft: true, details: { ...last, degraded: true, error: error.message, board, note: 'Feed visibility timed out during live D1 probe.' } };
       throw error;
     }
     if (attempt < attempts) await sleep(waitMs);
   }
-  return { ok: last.status >= 200 && last.status < 300 && last.persistent === true, soft: false, details: { ...last, eventualVisibility: true, note: 'Cloudflare KV accepted the post but the public feed may expose the new index after propagation.' } };
+  return { ok: last.status >= 200 && last.status < 300 && last.persistent === true, soft: false, details: { ...last, eventualVisibility: true, note: 'Cloudflare D1 accepted the post; the public feed may expose the new index after propagation.' } };
 }
 async function submitBoardPost(board, submitRoute, feedRoute) {
   const stamp = new Date().toISOString();
-  const payload = { board, name: 'Matrix Synthetic Check', category: 'System Check', title: `Synthetic live persistence check ${stamp}`, body: `Automated live functionality check for ${board}. This confirms Cloudflare Worker submit, KV persistence, and feed retrieval semantics.`, sourceUrl: '/deploy-status.json', website: '' };
+  const payload = { board, name: 'Matrix Synthetic Check', category: 'System Check', title: `Synthetic live persistence check ${stamp}`, body: `Automated live functionality check for ${board}. This confirms Cloudflare Worker submit, D1 persistence, and feed retrieval semantics.`, sourceUrl: '/deploy-status.json', website: '' };
   try {
     const { res, json, text } = await fetchJson(submitRoute, { method: 'POST', headers: { 'content-type': 'application/json', accept: 'application/json' }, body: JSON.stringify(payload) });
     const post = json && json.post;
@@ -104,18 +104,23 @@ async function submitBoardPost(board, submitRoute, feedRoute) {
 }
 async function submitNewsletterTest() {
   const stamp = Date.now();
-  const payload = { name: 'Matrix Test Subscriber', email: `matrix-test-${stamp}@example.com`, source: 'live-functionality-test', tags: 'test,weekly,live-intel', consent: 'yes', website: '' };
+  const payload = { name: 'Matrix Test Subscriber', email: `matrix-test-${stamp}@example.com`, source: 'live-functionality-test', tags: 'test,weekly,live-intel', consent: 'yes', marketingConsent: true, public_weekly_digest: true, website: '' };
   try {
     const { res, json, text } = await fetchJson('/subscribe-newsletter', { method: 'POST', headers: { 'content-type': 'application/json', accept: 'application/json' }, body: JSON.stringify(payload) });
-    const ok = res.ok && json && json.ok === true && json.persistent === true && json.subscriber && json.subscriber.email === payload.email;
-    addCheck('newsletter persistent subscribe', ok, { status: res.status, json: json || text.slice(0, 250) });
+    const legacyPersistent = json && json.persistent === true && json.subscriber && json.subscriber.email === payload.email;
+    const lifecycleAccepted = json && json.accepted === true && json.saved === true && json.status === 'pending_verification'
+      && json.verification && (json.verification.sent === true || json.verification.queued === true || json.verification.retryQueued === true);
+    const ok = res.ok && json && json.ok === true && (legacyPersistent || lifecycleAccepted);
+    addCheck('newsletter persistent subscribe', ok, { status: res.status, json: json || text.slice(0, 250), acceptedStatuses: [200, 201, 202] });
   } catch (error) { addCheck('newsletter persistent subscribe', false, { error: error.message }); }
 }
 function newsletterHealthOk(json) {
-  return Boolean(json && (
-    json.capturePersistent === true ||
-    (json.ok === true && json.storage === 'Cloudflare KV FORUM_POSTS' && (json.signup === '/newsletter-signup' || json.signup === '/subscribe-newsletter'))
-  ));
+  const legacy = json && (json.capturePersistent === true
+    || (json.ok === true && json.storage === 'Cloudflare KV FORUM_POSTS' && (json.signup === '/newsletter-signup' || json.signup === '/subscribe-newsletter')));
+  const d1Lifecycle = json && json.ok === true && json.configured === true && json.d1Connected === true
+    && json.d1SchemaReady === true && json.storage === 'Cloudflare D1 MEMBERS_DB'
+    && ['/api/membership/signup', '/newsletter-signup', '/subscribe-newsletter'].includes(json.signup);
+  return Boolean(legacy || d1Lifecycle);
 }
 async function main() {
   await expectPage('/', ['Matrix', 'Reprogrammed']);

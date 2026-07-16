@@ -59,10 +59,12 @@ const detailHeadings = [
 ];
 need(Array.isArray(wall.clocks) && wall.clocks.length > 0, 'clock wall has no clocks');
 for (const clock of wall.clocks || []) {
-  const start = timers.indexOf(`<article class="clock-card" id="${escapeHtml(clock.slug || '')}"`);
+  const idMarker = `id="${escapeHtml(clock.slug || '')}"`;
+  const idAt = timers.indexOf(idMarker);
+  const start = idAt >= 0 ? timers.lastIndexOf('<article', idAt) : -1;
   need(start >= 0, `${clock.title || clock.slug} card missing from timers.html`);
   if (start < 0) continue;
-  const end = timers.indexOf('</article>', start);
+  const end = timers.indexOf('</article>', idAt);
   const block = timers.slice(start, end + 10);
   const detailsAt = block.indexOf('<details class="clock-detail">');
   need(detailsAt > 0, `${clock.title} deeper-information dropdown missing`);

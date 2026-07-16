@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const file = value => path.join(root, value);
@@ -11,6 +12,18 @@ const ageDays = value => asDate(value) ? Math.floor((Date.now() - asDate(value))
 const route = value => clean(value,800) || 'daily-command-brief.html';
 const genericActor = /^(?:increased position|reduced position|exited position|new position|mentions?|open-market or private sale|open market sale|private sale|final judgment|view files?|open files?|read more|source|filing|document|record|update|changed|position|transaction|judgment)$/i;
 const placeholderActor = /other documented institutional actor|documented person or institution|named actor map pending/i;
+
+if (process.env.MATRIX_CURRENT_INTELLIGENCE_ACTIVE !== '1') {
+  const refresh = spawnSync(process.execPath, [file('scripts/finalize-current-intelligence.js')], {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: 'pipe',
+    env: { ...process.env, MATRIX_CURRENT_INTELLIGENCE_FEEDS_ONLY: '1', MATRIX_CURRENT_INTELLIGENCE_ACTIVE: '1' }
+  });
+  if (refresh.stdout) process.stdout.write(refresh.stdout);
+  if (refresh.stderr) process.stderr.write(refresh.stderr);
+  if (refresh.status !== 0) throw new Error(`Current-intelligence feed refresh failed before homepage build with status ${refresh.status}`);
+}
 
 require('./build-clock-wall.js');
 const synthesis = require('./build-speculative-intelligence-synthesis.js');

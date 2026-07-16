@@ -53,7 +53,7 @@ need(statusPage.includes('No false delivery success was recorded.'), 'email stat
 const wall = readJson('data/clock-wall.json');
 const timers = read('timers.html');
 const detailHeadings = [
-  'What changed:', 'What this means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
+  'What changed:', 'What this score means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
   'What would raise it', 'What would lower it', 'Evidence feeding this timer', 'Missing records',
   'Useful next actions', 'Boundary:'
 ];

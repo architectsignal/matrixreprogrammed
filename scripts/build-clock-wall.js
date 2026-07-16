@@ -120,3 +120,8 @@ if (fs.existsSync(homepagePath)) {
 }
 
 console.log(`Clean timer wall built: ${clocks.length} clocks; homepage shows ${clocks.filter(clock => Number(clock.score) > 90).length} canonical clocks over 90%.`);
+
+if (fs.existsSync(path.join(root, 'scripts', 'public-usefulness-clocks.js'))) {
+  require('./enrich-public-usefulness-clock-evidence.js');
+  require('./render-public-usefulness-clock-wall.js');
+}

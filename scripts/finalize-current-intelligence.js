@@ -4,6 +4,7 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const at = relative => path.join(root, relative);
+const feedsOnly = process.env.MATRIX_CURRENT_INTELLIGENCE_FEEDS_ONLY === '1';
 const readJson = (relative, fallback = {}) => {
   try { return JSON.parse(fs.readFileSync(at(relative), 'utf8')); } catch { return fallback; }
 };
@@ -22,12 +23,12 @@ const ageDays = value => {
   return Number.isFinite(stamp) ? Math.floor((Date.now() - stamp) / 86400000) : null;
 };
 
-function runRequired(label, script) {
+function runRequired(label, script, extraEnv = {}) {
   const result = spawnSync(process.execPath, [at(script)], {
     cwd: root,
     encoding: 'utf8',
     stdio: 'pipe',
-    env: process.env
+    env: { ...process.env, ...extraEnv }
   });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
@@ -102,15 +103,23 @@ writeJson('data/latest-public-drops.json', latest);
 writeJson('downloads/latest-public-drops.json', latest);
 
 runRequired('Final Live Intel rebuild', 'scripts/build-live-intel-machine.js');
-runRequired('Final mission conclusion rebuild', 'scripts/build-mission-brief-conclusions.js');
-runRequired('Final homepage and clock intelligence rebuild', 'scripts/build-homepage-command-surface.js');
+if (!feedsOnly) {
+  const activeEnv = { MATRIX_CURRENT_INTELLIGENCE_ACTIVE: '1' };
+  runRequired('Final mission conclusion rebuild', 'scripts/build-mission-brief-conclusions.js', activeEnv);
+  runRequired('Final homepage and clock intelligence rebuild', 'scripts/build-homepage-command-surface.js', activeEnv);
+}
 
 const finalLive = readJson('downloads/seven-day-intel.json', {});
 const finalDrops = readJson('data/latest-public-drops.json', {});
 const report = {
   ok: ageDays(finalLive.updated) !== null && ageDays(finalLive.updated) <= 1 && ageDays(finalDrops.updated) !== null && ageDays(finalDrops.updated) <= 1,
   generatedAt: now,
-  authoritativeOrder: [
+  mode: feedsOnly ? 'feeds-only' : 'full-dependent-rebuild',
+  authoritativeOrder: feedsOnly ? [
+    'update-seven-day-intel',
+    'rebuild-latest-public-drops',
+    'build-live-intel-machine'
+  ] : [
     'update-seven-day-intel',
     'rebuild-latest-public-drops',
     'build-live-intel-machine',
@@ -127,4 +136,4 @@ const report = {
 };
 writeJson('downloads/current-intelligence-finalization.json', report);
 if (!report.ok) throw new Error(`Final current-intelligence freshness failed: ${JSON.stringify(report)}`);
-console.log(`Current intelligence finalised authoritatively: ${(finalDrops.drops || []).length} current drop(s); feed and curated surfaces age ${report.sevenDayFeedAgeDays}/${report.latestDropsAgeDays} day(s).`);
+console.log(`Current intelligence finalised authoritatively (${report.mode}): ${(finalDrops.drops || []).length} current drop(s); feed and curated surfaces age ${report.sevenDayFeedAgeDays}/${report.latestDropsAgeDays} day(s).`);

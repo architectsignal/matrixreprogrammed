@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Speculative Conclusions | Matrix Reprogrammed</title>
+  <meta name="description" content="Clearly labelled AI-generated hypotheses built from public records, with supporting evidence, contrary evidence, missing proof and falsification tests." />
+  <meta property="og:title" content="AI Speculative Conclusions | Matrix Reprogrammed" />
+  <meta property="og:description" content="Machine-generated hypotheses separated from verified evidence and published with explicit uncertainty, counter-evidence and source routes." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="fixes.css" />
+  <style>
+    .spec-hero{border:1px solid rgba(190,55,55,.45);border-radius:24px;padding:1.25rem;background:linear-gradient(145deg,rgba(35,3,3,.92),rgba(0,0,0,.96))}
+    .spec-warning{border-left:5px solid #be3737;background:rgba(120,0,0,.18);padding:1rem;border-radius:14px;margin:1rem 0}
+    .spec-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin:1rem 0}
+    .spec-metric,.spec-card{border:1px solid rgba(216,181,106,.2);border-radius:16px;padding:1rem;background:rgba(255,255,255,.025)}
+    .spec-metric strong{display:block;font-size:1.65rem;color:#d8b56a}
+    .spec-controls{display:flex;gap:.55rem;flex-wrap:wrap;margin:1rem 0}
+    .spec-controls button{border:1px solid rgba(216,181,106,.3);background:#080808;color:#f2e6c7;padding:.62rem .8rem;border-radius:999px;cursor:pointer}
+    .spec-controls button[aria-pressed="true"]{background:#d8b56a;color:#111}
+    .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1rem}
+    .spec-card{border-color:rgba(190,55,55,.42);background:linear-gradient(145deg,rgba(70,4,4,.16),rgba(0,0,0,.93))}
+    .spec-card[data-status="rejected"],.spec-card[data-status="weakened"]{border-color:rgba(120,170,150,.35);background:rgba(20,60,50,.1)}
+    .spec-card h3{margin:.3rem 0 .65rem}
+    .spec-badges{display:flex;gap:.4rem;flex-wrap:wrap;margin:.45rem 0 .8rem}
+    .spec-badge{font-size:.77rem;border:1px solid rgba(216,181,106,.28);border-radius:999px;padding:.28rem .5rem;color:#d8c79f}
+    .spec-section{border-top:1px solid rgba(216,181,106,.14);padding-top:.75rem;margin-top:.75rem}
+    .spec-section ul{padding-left:1.2rem}
+    .spec-source{display:block;margin:.45rem 0;padding:.55rem .65rem;border:1px solid rgba(216,181,106,.16);border-radius:10px;text-decoration:none}
+    .spec-empty{padding:1rem;border:1px dashed rgba(216,181,106,.25);border-radius:14px}
+    .spec-boundary{font-size:.9rem;color:#c6b98f}
+    .spec-error{border:1px solid #be3737;padding:1rem;border-radius:14px;background:rgba(120,0,0,.2)}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="signal-face"></div>
+  <div class="veil"></div>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>
+      <nav class="nav">
+        <a href="conclusion-engine.html">Conclusion Engine</a>
+        <a href="dark-speculation-lab.html">Dark Lab</a>
+        <a href="evidence-vault.html">Evidence</a>
+        <a href="source-document-vault.html">Sources</a>
+        <a href="search.html">Search</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero wrap spec-hero">
+        <div class="eyebrow">AI Speculative Conclusions</div>
+        <h1>HYPOTHESES.<br />NOT VERDICTS.</h1>
+        <p class="lead">This page publishes machine-generated hypotheses separately from verified intelligence. Every conclusion must show its source route, contrary evidence, missing proof, confidence band and falsification conditions.</p>
+        <div class="spec-warning">
+          <strong>Hard boundary:</strong> These are not established facts, accusations or findings of wrongdoing. Association is not guilt. A person appearing in a file, address book, flight log, email, photograph, court filing or institutional record does not by itself establish misconduct.
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="data/ai-speculative-conclusions.json">Open JSON Feed</a>
+          <a class="btn alt" href="downloads/ai-speculative-conclusions-policy.md">Method & Publication Rules</a>
+          <a class="btn alt" href="data/ai-speculative-conclusions.schema.json">Validation Schema</a>
+        </div>
+      </section>
+
+      <section class="section wrap">
+        <div id="spec-metrics" class="spec-metrics" aria-live="polite"></div>
+        <div class="spec-controls" aria-label="Filter speculative conclusions">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="evidence-supported">Evidence-supported</button>
+          <button type="button" data-filter="developing">Developing</button>
+          <button type="button" data-filter="weakened">Weakened</button>
+          <button type="button" data-filter="rejected">Rejected</button>
+        </div>
+        <div id="spec-status" class="spec-boundary">Loading the public speculation feed…</div>
+        <div id="spec-grid" class="spec-grid"></div>
+      </section>
+
+      <section class="section wrap split">
+        <article class="card redline">
+          <h2>Automatic publication scope</h2>
+          <p>The AI may publish only to this labelled page when the record passes the structured schema and contains public source routes, explicit uncertainty, counter-evidence, missing records and the statement that criminal conduct is not established.</p>
+        </article>
+        <aside class="card">
+          <h2>What never belongs here</h2>
+          <p>Private victim identities, minors, private addresses, phone numbers, intimate material, illegal content, doxxing, unsupported accusations, or claims presented as proven when the evidence only shows association or an allegation.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <p><strong>MATRIX REPROGRAMMED</strong> — source first, claim second, speculation clearly quarantined.</p>
+      <p class="warning">AI-generated hypotheses must remain reversible. New evidence may strengthen, weaken or reject them.</p>
+    </footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script src="ai-speculative-conclusions.js"></script>
+</body>
+</html>

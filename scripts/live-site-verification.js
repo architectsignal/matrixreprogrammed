@@ -9,31 +9,31 @@ const allowChallenge = String(process.env.ALLOW_CLOUDFLARE_CHALLENGE_IN_CI || 't
 const commonForbidden = ['preservedaftervisiblede-duplication', 'new-intelligence-toolspreserved', '€19/month', '€49/month'];
 const required = [
   { path: '/', marker: 'FOLLOW THE FILES.', forbidden: [...commonForbidden, 'rogue broadcast node inside the simulation'], maxCounts: [{ text: 'Open Source Trail', max: 1 }] },
-  { path: '/start-here.html', marker: 'CHOOSE YOUR DOOR.', forbidden: commonForbidden },
+  { path: '/start-here.html', marker: 'START HERE.', forbidden: commonForbidden },
   { path: '/deploy-status', marker: 'DEPLOY STATUS.' },
   { path: '/deploy-status.json', json: true, marker: 'aliases' },
   { path: '/search', marker: 'SEARCH THE SIGNAL.' },
   { path: '/search-index.json', json: true, marker: 'url', forbidden: ['object-object'] },
   { path: '/live-intel.html', marker: 'LIVE INTEL' },
   { path: '/books.html', marker: 'BOOK' },
-  { path: '/download-center.html', marker: 'DOWNLOAD CENTER.' },
+  { path: '/download-center.html', marker: 'DOWNLOAD CENTER.', forbidden: ['href=""'] },
   { path: '/geographic-power-atlas.html', marker: 'GEOGRAPHIC POWER ATLAS.', forbidden: ['maplibre-gl@6.0.0-20', ...commonForbidden] },
   { path: '/geographic-power-atlas.js', marker: 'mapModule.default || mapModule', forbidden: ['import * as maplibregl', 'maplibre-gl@6.0.0-20'] },
   { path: '/data/geographic-power-atlas.json', json: true, marker: 'locations' },
   { path: '/data/geographic-power-atlas-data.json', json: true, marker: 'FeatureCollection' },
-  { path: '/evidence-network-map.html', marker: 'EVIDENCE NETWORK MAP' },
+  { path: '/evidence-network-map.html', marker: 'PUBLIC EVIDENCE NETWORK.' },
   { path: '/data/evidence-network-map.json', json: true, marker: 'elements' },
-  { path: '/evidence-timeline.html', marker: 'EVIDENCE TIMELINE' },
+  { path: '/evidence-timeline.html', marker: 'EVIDENCE TIMELINE.' },
   { path: '/data/evidence-timeline.json', json: true, marker: 'events' },
-  { path: '/data-lab.html', marker: 'PUBLIC DATA LAB' },
+  { path: '/data-lab.html', marker: 'PUBLIC DATA LABORATORY.' },
   { path: '/data/public-data-lab.json', json: true, marker: 'datasets' },
-  { path: '/research-tools.html', marker: 'RESEARCH TOOLS' },
+  { path: '/research-tools.html', marker: 'RESEARCH TOOLS.' },
   { path: '/timers.html', marker: 'MISSION TIMERS.' },
   { path: '/data/global-risk-clocks.json', json: true, marker: 'clocks' },
   { path: '/ai-speculative-conclusions.html', marker: 'HYPOTHESES.', forbidden: commonForbidden },
   { path: '/data/ai-speculative-conclusions.json', json: true, marker: 'items' },
   { path: '/membership.html', marker: 'THE EVIDENCE IS FREE. DONATIONS FUND THE MACHINE.', forbidden: ['€19/month', '€49/month', 'Paid access to premium briefs'] },
-  { path: '/member-login.html', marker: 'passwordless' },
+  { path: '/member-login.html', marker: 'SIGN IN WITHOUT A PASSWORD.' },
   { path: '/member-dashboard.html', marker: 'Dashboard' },
   { path: '/billing-dashboard.html', marker: 'Billing' },
   { path: '/forum.html', marker: 'SIGNAL BOARD' },
@@ -63,7 +63,7 @@ async function check(item) {
   const timeout = setTimeout(() => controller.abort(), Number(process.env.LIVE_VERIFY_TIMEOUT_MS || 20000));
   let res;
   try {
-    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.0', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
+    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.1', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
   } finally {
     clearTimeout(timeout);
   }

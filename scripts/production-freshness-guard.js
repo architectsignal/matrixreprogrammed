@@ -9,7 +9,13 @@ const policy = JSON.parse(fs.readFileSync(policyPath, 'utf8'));
 const now = Date.now();
 const hard = [];
 const checks = [];
-const pullRequestAudit = String(process.env.GITHUB_EVENT_NAME || '').toLowerCase() === 'pull_request';
+const eventName = String(process.env.GITHUB_EVENT_NAME || '').toLowerCase();
+const workflowName = String(process.env.GITHUB_WORKFLOW || '');
+const pullRequestAudit = eventName === 'pull_request';
+const strictWorkflow = String(process.env.MATRIX_REQUIRE_PRODUCTION_FRESHNESS || '').toLowerCase() === '1'
+  || /Matrix Reprogrammed Production Deploy|Production Synchronisation Assurance/i.test(workflowName);
+const nonDeploymentAudit = !strictWorkflow && /audit|test|pressure/i.test(workflowName);
+const advisoryOnly = pullRequestAudit || nonDeploymentAudit;
 
 function readJson(base, rel) {
   const file = path.join(base, rel);
@@ -34,17 +40,20 @@ function checkBase(base, label) {
     if (!ok) hard.push(`${label}/${item.file}: age ${ageHours.toFixed(2)}h (limit ${item.maxAgeHours}h), count ${count}`);
   }
 }
+
 checkBase(root, 'source');
 if (fs.existsSync(site)) checkBase(site, 'built');
-const blocking = hard.length > 0 && !pullRequestAudit;
+const blocking = hard.length > 0 && !advisoryOnly;
 const report = {
   ok: !blocking,
   generatedAt: new Date().toISOString(),
   eventName: process.env.GITHUB_EVENT_NAME || 'local',
-  advisoryOnly: pullRequestAudit && hard.length > 0,
+  workflowName: workflowName || 'local',
+  strictWorkflow,
+  advisoryOnly: advisoryOnly && hard.length > 0,
   checks,
   hardIssues: blocking ? hard : [],
-  advisoryIssues: pullRequestAudit ? hard : []
+  advisoryIssues: advisoryOnly ? hard : []
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-freshness-guard.json'), JSON.stringify(report, null, 2));

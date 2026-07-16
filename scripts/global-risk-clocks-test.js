@@ -31,7 +31,7 @@ for (const name of [
 
 for (const text of [
   'MISSION TIMERS.', 'pressure indexes, not predictions', 'What changed:', 'Open deeper information',
-  'What this means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
+  'What this score means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
   'What would raise it', 'What would lower it', 'Missing records', 'Useful next actions',
   'one-world government', 'data/clock-wall.json', 'downloads/timer-synthesis.md',
   'Reader early-warning dashboard', 'Your Freedom', 'Your Money', 'Your Essential Services',

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-07-16",
   "name": "Full Site Function and Tool Audit",
   "purpose": "Validate every public HTML surface, local route, linked asset, JavaScript syntax contract, JSON feed, download route, form surface and critical interactive tool before Cloudflare deployment, then verify the critical routes again against the live Worker deployment.",
@@ -17,16 +17,18 @@
     "Member dashboard",
     "Billing dashboard",
     "Signal Board forums and D1 health",
-    "Download Center",
+    "Download Center and every visible action target",
     "Machine Digest",
     "Entity Daily Briefs",
-    "Power Dossiers"
+    "Power Dossiers and their loading fallback"
   ],
   "hardFailureRules": [
     "Missing critical page, script or data feed",
     "JavaScript syntax failure",
     "Invalid JSON",
     "Broken local target on a critical page",
+    "Visible button or link with no destination",
+    "Dossier page that can remain permanently stuck in a loading state",
     "Missing required DOM control",
     "Leaked internal compatibility marker",
     "Obsolete paid-tier wording or prices",
@@ -39,10 +41,21 @@
   "automaticRepairs": [
     "Use stable MapLibre dynamic import with an accessible-list-first fallback",
     "Fall back from the preferred atlas JSON alias to the canonical GeoJSON",
-    "Remove malformed entity names and generated object-object pages",
+    "Remove malformed entity names, invalid connections and generated object-object pages",
+    "Attach a resilient power-dossier runtime with a clear source-route fallback",
     "Remove visible compatibility and repair markers after all generators finish",
+    "Reject empty visible control targets",
     "Reject legacy €19 and €49 membership copy",
     "Preserve the free-evidence and monthly-donation membership promise"
+  ],
+  "auditScripts": [
+    "scripts/full-site-function-tool-audit.js",
+    "scripts/public-control-target-audit.js",
+    "scripts/patch-geographic-power-atlas-runtime.js",
+    "scripts/sanitize-machine-entity-outputs.js",
+    "scripts/patch-power-dossier-runtime.js",
+    "scripts/hide-visible-compatibility-markers.js",
+    "scripts/live-site-verification.js"
   ],
   "warningRules": [
     "Broken noncritical legacy-page local target",

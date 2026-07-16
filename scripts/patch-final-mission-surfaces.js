@@ -42,10 +42,12 @@ function patchTimers() {
   const page = file('timers.html');
   if (!fs.existsSync(page)) throw new Error('timers.html missing');
   let html = fs.readFileSync(page, 'utf8');
-  html = html
-    .replace(/<h3>What this means<\/h3>/g, '<h3>What this score means</h3>')
-    .replace(/<h2>What every score means<\/h2>/g, '<h2>What this score means</h2>');
-  if (!html.includes('What this score means')) throw new Error('timer score explanation heading missing');
+  html = html.replace(/<h3>What this score means<\/h3>/g, '<h3>What this means</h3>');
+  if (!html.includes('What changed:')) {
+    html = html.replace(/(<div class="clock-detail-body">)/g, '$1<section class="clock-change-detail"><h3>What changed:</h3><p>The latest source-linked movement is shown in the compact card above.</p></section>');
+  }
+  if (!html.includes('What this means')) throw new Error('timer score explanation heading missing');
+  if (!html.includes('What changed:')) throw new Error('timer change explanation heading missing');
   if (!html.includes('What would raise it') || !html.includes('What would lower it')) throw new Error('timer movement explanations missing');
   fs.writeFileSync(page, html);
 }
@@ -86,4 +88,4 @@ patchMigrationNews();
 ensureEpsteinTimeline();
 patchQueryOnlyLinks();
 require('./sanitize-timer-source-links.js');
-console.log('Final mission surfaces reconciled: timers, migration summary, Epstein timeline, query-only links and timer source routes.');
+console.log('Final mission surfaces reconciled: compact timers, migration summary, Epstein timeline, query-only links and timer source routes.');

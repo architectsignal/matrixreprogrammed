@@ -18,6 +18,8 @@ const failures = [];
 
 if (tiers.length !== 3) failures.push(`expected 3 paid membership tiers, found ${tiers.length}`);
 if (tiers.some((tier, index) => Number(tier.price) !== expectedPrices[index])) failures.push('membership tier prices must be €3, €6 and €9 in ascending order');
+if (registry.paymentLabel !== 'optional monthly donation') failures.push('membership registry payment label must be optional monthly donation');
+if (!String(registry.evidenceAccessPromise || '').includes('same underlying public-source evidence')) failures.push('membership registry must preserve the free evidence access promise');
 
 for (const marker of [
   'Free Member',
@@ -25,6 +27,11 @@ for (const marker of [
   '€3',
   '€6',
   '€9',
+  'Monthly donation',
+  'same underlying public-source evidence',
+  'THE EVIDENCE IS FREE. DONATIONS FUND THE MACHINE.',
+  'SAME EVIDENCE. DIFFERENT SERVICE LAYERS.',
+  'not charitable donations',
   'paypal-membership.js',
   'paypal-membership-status',
   'paypal-button-supporter',
@@ -36,7 +43,7 @@ for (const marker of [
   if (!html.includes(marker)) failures.push(`Phase 6 membership template missing marker: ${marker}`);
 }
 
-for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken']) {
+for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken', 'Paid access to premium briefs']) {
   if (html.includes(forbidden)) failures.push(`Phase 6 membership template contains obsolete marker: ${forbidden}`);
 }
 
@@ -52,9 +59,11 @@ const report = {
   mode: 'phase6-restore-protected-template',
   template: 'templates/phase6-membership.template',
   freeTier: true,
+  evidenceAccess: 'same-underlying-public-source-evidence',
+  paymentLabel: 'optional-monthly-donation',
   prices: expectedPrices,
   checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',
-  tiers: tiers.map(tier => ({ id: tier.id, name: tier.name, price: tier.price })),
+  tiers: tiers.map(tier => ({ id: tier.id, name: tier.name, price: tier.price, priceLabel: tier.priceLabel })),
   failures
 };
 
@@ -66,4 +75,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('Membership page restored from protected Phase 6 template: Free Member plus server-gated PayPal tiers at €3, €6 and €9.');
+console.log('Membership page restored from protected Phase 6 template: Free Member evidence access plus optional €3, €6 and €9 monthly donations.');

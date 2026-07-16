@@ -64,7 +64,8 @@ function timerCard(clock) {
     <details class="clock-detail">
       <summary>Open deeper information</summary>
       <div class="clock-detail-body">
-        <section><h3>What this score means</h3><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
+        <section><h3>What changed:</h3><p>${escapeHtml(latestChange(clock))}</p></section>
+        <section><h3>What this means</h3><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
         <section><h3>How it is calculated</h3><p>${escapeHtml(clock.calculationBasis || clock.scoreMethod || '')}</p></section>
         <section><h3>Control-system relevance</h3><p>${escapeHtml(clock.controlSystemMeaning || '')}</p><ul>${themes}</ul></section>
         <section class="speculation-panel"><h3>Speculation angle</h3><p><strong>Likely trajectory if the pattern continues:</strong> ${escapeHtml(speculation(clock))}</p></section>

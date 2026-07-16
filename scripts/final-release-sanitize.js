@@ -31,8 +31,6 @@ function copy(relative) {
   }
 }
 
-// Repair root assets first, then synchronise the small set of runtime assets that
-// can be overwritten by late production reconciliation.
 run('scripts/patch-geographic-power-atlas-runtime.js');
 for (const relative of [
   'geographic-power-atlas.html',
@@ -47,6 +45,8 @@ for (const relative of [
 run('scripts/sanitize-machine-entity-outputs.js');
 run('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 run('scripts/patch-power-dossier-runtime.js');
+run('scripts/repair-empty-public-controls.js');
+run('scripts/repair-empty-public-controls.js', ['--output']);
 run('scripts/hide-visible-compatibility-markers.js');
 run('scripts/hide-visible-compatibility-markers.js', ['--output']);
 run('scripts/public-control-target-audit.js');

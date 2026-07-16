@@ -104,6 +104,7 @@ writeJson('downloads/latest-public-drops.json', latest);
 
 runRequired('Final Live Intel rebuild', 'scripts/build-live-intel-machine.js');
 runRequired('Restore command-center conversion panels', 'scripts/build-command-center-polish.js');
+runRequired('Restore Live Intel research routes', 'scripts/restore-live-intel-research-routes.js');
 if (!feedsOnly) {
   const activeEnv = { MATRIX_CURRENT_INTELLIGENCE_ACTIVE: '1' };
   runRequired('Final mission conclusion rebuild', 'scripts/build-mission-brief-conclusions.js', activeEnv);
@@ -120,12 +121,14 @@ const report = {
     'update-seven-day-intel',
     'rebuild-latest-public-drops',
     'build-live-intel-machine',
-    'build-command-center-polish'
+    'build-command-center-polish',
+    'restore-live-intel-research-routes'
   ] : [
     'update-seven-day-intel',
     'rebuild-latest-public-drops',
     'build-live-intel-machine',
     'build-command-center-polish',
+    'restore-live-intel-research-routes',
     'build-mission-brief-conclusions',
     'build-homepage-command-surface'
   ],
@@ -136,7 +139,8 @@ const report = {
   currentDropCount: (finalDrops.drops || []).length,
   emptyStateAllowed: true,
   staleMaterialAllowedAsCurrent: false,
-  conversionPanelsRestoredAfterLiveIntel: true
+  conversionPanelsRestoredAfterLiveIntel: true,
+  researchRoutesRestoredAfterLiveIntel: true
 };
 writeJson('downloads/current-intelligence-finalization.json', report);
 if (!report.ok) throw new Error(`Final current-intelligence freshness failed: ${JSON.stringify(report)}`);

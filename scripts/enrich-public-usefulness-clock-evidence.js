@@ -132,6 +132,25 @@ wall.clocks = (wall.clocks || []).map(clock => {
       ? `Source-linked watch lane.${speculationNotice}`
       : `Editorial watch lane awaiting fresh direct evidence.${speculationNotice}`,
     calculationBasis: `${evidenceInputs.length} distinct matching evidence/feed records, including ${primaryCount} primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and ${definition.speculationOnly ? 'the claim-class evidence gate' : 'the published trigger rule'}; repetition alone cannot raise it.`,
+    scoreLabel: definition.speculationOnly ? 'Claim evidence-pressure index — not truth or probability' : clock.scoreLabel,
+    scoreMeaning: definition.speculationOnly ? `Evidence-pressure band for a ${definition.claimClass} claim. The percentage does not represent truth, guilt, likelihood or event probability.` : clock.scoreMeaning,
+    scoreDefinition: definition.speculationOnly ? 'A bounded index of source-linked evidential pressure around a classified claim. It is not a truth score, accusation, verdict or probability.' : clock.scoreDefinition,
+    scoreMethod: definition.speculationOnly ? `Updated only through the ${definition.automaticRaiseMode} gate. Mentions, repetition, symbols and association cannot independently increase the score.` : clock.scoreMethod,
+    plainEnglishConclusion: definition.speculationOnly ? definition.signals : clock.plainEnglishConclusion,
+    controlSystemMeaning: definition.speculationOnly ? `This lane is classified as ${definition.claimClass} within ${definition.speculationGroup}. It maps evidence, counter-evidence and falsifiers without treating the claim as established or attaching it to a real person without case-specific proof.` : clock.controlSystemMeaning,
+    whatRaises: definition.speculationOnly ? [definition.raiseRule] : clock.whatRaises,
+    whatLowers: definition.speculationOnly ? [definition.lowerRule] : clock.whatLowers,
+    missingEvidence: definition.speculationOnly ? [
+      definition.supportStandard,
+      definition.evidenceGate,
+      'Independent counter-sources and provenance checks sufficient to test the claim without circular citation.'
+    ] : clock.missingEvidence,
+    usefulNextActions: definition.speculationOnly ? [
+      `Open dark-speculation-lab.html and review the source claim classified as ${definition.claimClass}.`,
+      'Use the Claim Classifier before sharing or attaching the claim to any person or institution.',
+      'Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation.'
+    ] : clock.usefulNextActions,
+    boundary: definition.speculationOnly ? definition.boundary : clock.boundary,
     automaticUpdateEnabled: true,
     speculationOnly: Boolean(definition.speculationOnly),
     speculationSection: definition.speculationSection || '',

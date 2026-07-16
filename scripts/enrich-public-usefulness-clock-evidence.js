@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const registry = require('./public-usefulness-clocks.js');
+const registry = require('./all-reader-clocks.js');
 
 const root = process.cwd();
 const dataDir = path.join(root, 'data');
@@ -48,8 +48,8 @@ function extract(value, sourceFile, output, depth = 0) {
   }
 }
 function collect() {
-  const wanted = /(live|intel|probability|outcome|brief|finding|conclusion|tracker|policy|market|risk|evidence|entity|relationship|source|investigation)/i;
-  const excluded = new Set(['global-risk-clocks.json', 'clock-wall.json', 'reader-interpretation-standard.json']);
+  const wanted = /(live|intel|probability|outcome|brief|finding|conclusion|tracker|policy|market|risk|evidence|entity|relationship|source|investigation|court|regulator|audit|sanction|inspection)/i;
+  const excluded = new Set(['global-risk-clocks.json', 'clock-wall.json', 'reader-interpretation-standard.json', 'dark-speculation-claims.json']);
   const output = [];
   for (const name of fs.readdirSync(dataDir)) {
     if (!name.endsWith('.json') || excluded.has(name) || !wanted.test(name)) continue;
@@ -74,10 +74,18 @@ function match(signal, definition) {
     const needle = String(keyword).toLowerCase();
     if (needle && haystack.includes(needle)) score += needle.includes(' ') ? 4 : 2;
   }
-  const titleWords = definition.title.toLowerCase().split(/[^a-z0-9]+/).filter(word => word.length > 4 && !['clock', 'access'].includes(word));
+  const titleWords = definition.title.toLowerCase().split(/[^a-z0-9]+/).filter(word => word.length > 4 && !['clock', 'access', 'claim'].includes(word));
   for (const word of titleWords) if (haystack.includes(word)) score += 1;
-  if (/official|court|regulator|primary|audited|legislation|judgment|filing|government/i.test(signal.evidenceLevel)) score += 1;
+  if (/official|court|regulator|primary|audited|legislation|judgment|filing|government|inspection|sanction/i.test(signal.evidenceLevel)) score += 1;
   return score;
+}
+function threshold(definition) {
+  if (!definition.speculationOnly) return 4;
+  if (definition.claimClass === 'public-record fact lane') return 5;
+  if (definition.claimClass === 'public-record-adjacent') return 6;
+  if (definition.claimClass === 'control-system hypothesis') return 7;
+  if (definition.claimClass === 'case-specific evidence required') return 7;
+  return 8;
 }
 
 const wall = read(wallPath, { clocks: [] });
@@ -92,13 +100,27 @@ wall.clocks = (wall.clocks || []).map(clock => {
   if (!definition) return clock;
   const evidenceInputs = signals
     .map(signal => ({ ...signal, matchScore: match(signal, definition) }))
-    .filter(signal => signal.matchScore >= 4)
+    .filter(signal => signal.matchScore >= threshold(definition))
     .sort((a, b) => b.matchScore - a.matchScore || String(b.published).localeCompare(String(a.published)))
-    .slice(0, 16);
+    .slice(0, definition.speculationOnly ? 12 : 16);
   const themes = (definition.missionThemeIds || []).map(id => themeLookup.get(id)).filter(Boolean);
-  const sourceRoutes = unique([clock.nextRoute, clock.secondaryRoute, ...(clock.policyConvergenceLinks || []).map(item => item.trackerRoute), ...evidenceInputs.map(item => item.route), 'evidence-vault.html', 'search.html']);
-  const primaryCount = evidenceInputs.filter(item => /official|court|regulator|primary|audited|legislation|judgment|filing|government/i.test(item.evidenceLevel)).length;
+  const sourceRoutes = unique([
+    clock.nextRoute,
+    clock.secondaryRoute,
+    clock.claimClassifierRoute,
+    clock.sourceVaultRoute,
+    clock.counterSourceRoute,
+    clock.weeklyScanOutput,
+    ...(clock.policyConvergenceLinks || []).map(item => item.trackerRoute),
+    ...evidenceInputs.map(item => item.route),
+    'evidence-vault.html',
+    'search.html'
+  ]);
+  const primaryCount = evidenceInputs.filter(item => /official|court|regulator|primary|audited|legislation|judgment|filing|government|inspection|sanction/i.test(item.evidenceLevel)).length;
   enriched += 1;
+  const speculationNotice = definition.speculationOnly
+    ? ` Classified as ${definition.claimClass}. The score measures evidence pressure around the claim, not truth or probability.`
+    : '';
   return {
     ...clock,
     category: definition.category,
@@ -106,14 +128,51 @@ wall.clocks = (wall.clocks || []).map(clock => {
     missionThemes: themes.map(theme => ({ id: theme.id, label: theme.label, question: theme.question })),
     evidenceInputs,
     sourceRoutes,
-    evidenceStatus: evidenceInputs.length ? 'Source-linked watch lane' : 'Editorial watch lane awaiting fresh direct evidence',
-    calculationBasis: `${evidenceInputs.length} distinct matching evidence/feed records, including ${primaryCount} primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals and capped movement; repetition alone cannot raise it.`,
-    automaticUpdateEnabled: true
+    evidenceStatus: evidenceInputs.length
+      ? `Source-linked watch lane.${speculationNotice}`
+      : `Editorial watch lane awaiting fresh direct evidence.${speculationNotice}`,
+    calculationBasis: `${evidenceInputs.length} distinct matching evidence/feed records, including ${primaryCount} primary-or-official indicators. The score is governed by evidence fingerprints, freshness, counter-signals, capped movement and ${definition.speculationOnly ? 'the claim-class evidence gate' : 'the published trigger rule'}; repetition alone cannot raise it.`,
+    scoreLabel: definition.speculationOnly ? 'Claim evidence-pressure index — not truth or probability' : clock.scoreLabel,
+    scoreMeaning: definition.speculationOnly ? `Evidence-pressure band for a ${definition.claimClass} claim. The percentage does not represent truth, guilt, likelihood or event probability.` : clock.scoreMeaning,
+    scoreDefinition: definition.speculationOnly ? 'A bounded index of source-linked evidential pressure around a classified claim. It is not a truth score, accusation, verdict or probability.' : clock.scoreDefinition,
+    scoreMethod: definition.speculationOnly ? `Updated only through the ${definition.automaticRaiseMode} gate. Mentions, repetition, symbols and association cannot independently increase the score.` : clock.scoreMethod,
+    plainEnglishConclusion: definition.speculationOnly ? definition.signals : clock.plainEnglishConclusion,
+    controlSystemMeaning: definition.speculationOnly ? `This lane is classified as ${definition.claimClass} within ${definition.speculationGroup}. It maps evidence, counter-evidence and falsifiers without treating the claim as established or attaching it to a real person without case-specific proof.` : clock.controlSystemMeaning,
+    whatRaises: definition.speculationOnly ? [definition.raiseRule] : clock.whatRaises,
+    whatLowers: definition.speculationOnly ? [definition.lowerRule] : clock.whatLowers,
+    missingEvidence: definition.speculationOnly ? [
+      definition.supportStandard,
+      definition.evidenceGate,
+      'Independent counter-sources and provenance checks sufficient to test the claim without circular citation.'
+    ] : clock.missingEvidence,
+    usefulNextActions: definition.speculationOnly ? [
+      `Open dark-speculation-lab.html and review the source claim classified as ${definition.claimClass}.`,
+      'Use the Claim Classifier before sharing or attaching the claim to any person or institution.',
+      'Compare original records, authenticated media, counter-sources and falsifiers; do not treat mentions as confirmation.'
+    ] : clock.usefulNextActions,
+    boundary: definition.speculationOnly ? definition.boundary : clock.boundary,
+    automaticUpdateEnabled: true,
+    speculationOnly: Boolean(definition.speculationOnly),
+    speculationSection: definition.speculationSection || '',
+    speculationGroup: definition.speculationGroup || '',
+    claimClass: definition.claimClass || '',
+    evidenceGate: definition.evidenceGate || '',
+    automaticRaiseMode: definition.automaticRaiseMode || 'standard-evidence-gated',
+    researchBrief: definition.researchBrief || '',
+    supportStandard: definition.supportStandard || '',
+    falsificationTest: definition.falsificationTest || '',
+    riskRating: definition.riskRating || '',
+    sourceClaimSlug: definition.sourceClaimSlug || ''
   };
 });
-wall.publicUsefulnessClockCount = registry.length;
-wall.publicUsefulnessCategories = [...new Set(registry.map(item => item.category))];
+const practicalDefinitions = registry.filter(item => !item.speculationOnly);
+const speculationDefinitions = registry.filter(item => item.speculationOnly);
+wall.publicUsefulnessClockCount = practicalDefinitions.length;
+wall.speculativeClockCount = speculationDefinitions.length;
+wall.readerClockRegistryCount = registry.length;
+wall.publicUsefulnessCategories = [...new Set(practicalDefinitions.map(item => item.category))];
+wall.speculationSections = [...new Set(speculationDefinitions.map(item => item.speculationSection))];
 wall.candidateSignalCount = signals.length;
 wall.updated = new Date().toISOString();
 fs.writeFileSync(wallPath, JSON.stringify(wall, null, 2));
-console.log(`Public usefulness evidence enrichment complete: ${enriched} clocks, ${signals.length} candidate records.`);
+console.log(`Reader-clock evidence enrichment complete: ${enriched} clocks (${practicalDefinitions.length} practical, ${speculationDefinitions.length} speculative), ${signals.length} candidate records.`);

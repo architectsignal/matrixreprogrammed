@@ -101,7 +101,7 @@ const client = `(function(){
       wordingVersion:'newsletter-explicit-consent-v3'
     };
     if(!body.email||!/@/.test(body.email)){s.textContent='Enter a valid email first.';return}
-    if(!consentGranted){s.textContent='Please confirm that you agree to receive the selected email briefings.';consent.focus();return}
+    if(!consentGranted){s.textContent='Please confirm that you agree to receive email reports and updates. This activates the selected email briefings.';consent.focus();return}
     if(!selected.daily&&!selected.weekly&&!selected.releaseNotices){s.textContent='This form does not identify a briefing preference. Please use the newsletter page.';return}
     s.textContent='Saving your email and preparing verification...';
     try{

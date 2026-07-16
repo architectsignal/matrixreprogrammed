@@ -52,8 +52,8 @@ need(statusPage.includes('No false delivery success was recorded.'), 'email stat
 
 const wall = readJson('data/clock-wall.json');
 const timers = read('timers.html');
-const forbiddenBeforeDropdown = [
-  'What this score means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
+const detailHeadings = [
+  'What changed:', 'What this means', 'How it is calculated', 'Control-system relevance', 'Speculation angle',
   'What would raise it', 'What would lower it', 'Evidence feeding this timer', 'Missing records',
   'Useful next actions', 'Boundary:'
 ];
@@ -75,8 +75,8 @@ for (const clock of wall.clocks || []) {
   need(summary.includes(escapeHtml(clock.scoreBand || clock.status || 'Watch')), `${clock.title} summary missing status band`);
   need(summary.includes(escapeHtml(clock.title || '')), `${clock.title} summary missing title`);
   need(summary.includes(escapeHtml(clock.lastMovement || '')), `${clock.title} summary missing latest movement`);
-  for (const heading of forbiddenBeforeDropdown) need(!summary.includes(heading), `${clock.title} leaks ${heading} outside dropdown`);
-  for (const heading of forbiddenBeforeDropdown.slice(0, -1)) need(detail.includes(heading), `${clock.title} dropdown missing ${heading}`);
+  for (const heading of detailHeadings) need(!summary.includes(heading), `${clock.title} leaks ${heading} outside dropdown`);
+  for (const heading of detailHeadings) need(detail.includes(heading), `${clock.title} dropdown missing ${heading}`);
   need(!/<details[^>]*\sopen(?:\s|>|=)/i.test(block), `${clock.title} dropdown must be closed by default`);
 }
 

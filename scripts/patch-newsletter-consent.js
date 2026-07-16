@@ -16,9 +16,9 @@ function runRequired(label, script) {
 
 const consentLabel = `<label class="newsletter-consent">
             <input type="checkbox" name="marketingConsent" data-marketing-consent required>
-            <span>I agree to receive Matrix Reprogrammed reports and updates by email. I can unsubscribe or change preferences at any time.</span>
+            <span>I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.</span>
           </label>`;
-const truthfulStatus = '<p class="form-status newsletter-status">Your subscription is stored in the protected member database. Verify your email to activate reports, then manage preferences or unsubscribe at any time.</p>';
+const truthfulStatus = '<p class="form-status newsletter-status">Your subscription is stored in the protected member database. Verify your email to activate the briefings named on this form.</p>';
 
 let html = fs.readFileSync(pagePath, 'utf8');
 const formMatch = html.match(/<form\b[^>]*(?:data-newsletter-form|id=["']newsletter-form["'])[^>]*>[\s\S]*?<\/form>/i);
@@ -48,6 +48,17 @@ const client = `(function(){
   function emailInput(form){return form.querySelector('input[type="email"],input[name="email"],input[name="Email"]')}
   function status(form){let s=form.querySelector('.form-status,.newsletter-status');if(!s){s=document.createElement('p');s.className='form-status newsletter-status';form.appendChild(s)}return s}
   function shouldCapture(form){const email=emailInput(form);if(!email)return false;const hay=context(form);return /newsletter|black file|opt.?in|lead magnet|weekly|digest|brief|request|get the file|download|signal path/.test(hay)}
+  function explicitBool(form,names){for(const name of names){const field=form.querySelector('[name="'+name+'"]');if(!field)continue;if(field.type==='checkbox')return Boolean(field.checked);const raw=String(field.value||'').trim().toLowerCase();return ['1','true','yes','on'].includes(raw)}return null}
+  function selectedPreferences(form){
+    const hay=context(form);
+    const explicitDaily=explicitBool(form,['public_daily_brief','daily']);
+    const explicitWeekly=explicitBool(form,['public_weekly_digest','weekly']);
+    const explicitRelease=explicitBool(form,['release_notices']);
+    const daily=explicitDaily===null?/daily control brief|daily brief|daily intelligence/.test(hay):explicitDaily;
+    const weekly=explicitWeekly===null?/weekly signal drop|weekly digest|weekly brief/.test(hay):explicitWeekly;
+    const releaseNotices=explicitRelease===null?/release notice|release notices|public briefing|reports and updates/.test(hay):explicitRelease;
+    return{daily,weekly,releaseNotices}
+  }
   function ensureConsent(form){
     let consent=form.querySelector('input[type="checkbox"][name="marketingConsent"],input[data-marketing-consent]');
     if(consent){consent.required=true;return consent}
@@ -59,7 +70,7 @@ const client = `(function(){
     consent.required=true;
     consent.dataset.marketingConsent='true';
     const text=document.createElement('span');
-    text.textContent=' I agree to receive Matrix Reprogrammed reports and updates by email. I can unsubscribe or change preferences at any time.';
+    text.textContent=' I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.';
     label.appendChild(consent);
     label.appendChild(text);
     const button=form.querySelector('button[type="submit"],input[type="submit"]');
@@ -72,6 +83,7 @@ const client = `(function(){
     const consent=ensureConsent(form);
     const s=status(form);
     const consentGranted=Boolean(consent.checked);
+    const selected=selectedPreferences(form);
     const body={
       email:email.value,
       name:(form.querySelector('[name="name"],[name="Name"]')||{}).value||'',
@@ -81,16 +93,23 @@ const client = `(function(){
       interest:context(form).slice(0,300),
       consent:consentGranted,
       marketingConsent:consentGranted,
-      wordingVersion:'newsletter-explicit-consent-v2'
+      public_daily_brief:selected.daily,
+      daily:selected.daily,
+      public_weekly_digest:selected.weekly,
+      weekly:selected.weekly,
+      release_notices:selected.releaseNotices,
+      wordingVersion:'newsletter-explicit-consent-v3'
     };
     if(!body.email||!/@/.test(body.email)){s.textContent='Enter a valid email first.';return}
-    if(!consentGranted){s.textContent='Please confirm that you agree to receive email reports and updates.';consent.focus();return}
+    if(!consentGranted){s.textContent='Please confirm that you agree to receive email reports and updates. This activates the selected email briefings.';consent.focus();return}
+    if(!selected.daily&&!selected.weekly&&!selected.releaseNotices){s.textContent='This form does not identify a briefing preference. Please use the newsletter page.';return}
     s.textContent='Saving your email and preparing verification...';
     try{
       const res=await fetch('/newsletter-signup',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
       const data=await res.json();
       if(!data.ok)throw new Error(data.error||'Signup failed');
-      s.textContent=data.verificationRequired===false?'Saved. Your email preferences are active.':'Saved. Check your inbox to verify your email and activate reports.';
+      if(selected.daily)s.textContent='Saved. Check your inbox to verify your email. Once verified, today’s Daily Control Brief will be sent immediately.';
+      else s.textContent='Saved. Check your inbox to verify your email and activate the selected briefings.';
       form.reset();
       if(data.downloadUrl)setTimeout(()=>{location.href=data.downloadUrl},500)
     }catch(err){s.textContent='Email signup failed. Please try again later.'}
@@ -106,10 +125,11 @@ const finalClient = fs.readFileSync(clientPath, 'utf8');
 const checks = {
   oneConsentCheckbox: (finalHtml.match(/data-marketing-consent/g) || []).length === 1,
   requiredConsent: /data-marketing-consent[^>]*required|required[^>]*data-marketing-consent/.test(finalHtml),
-  truthfulStorageCopy: finalHtml.includes('protected member database') && finalHtml.includes('manage preferences or unsubscribe'),
-  runtimeConsentGate: finalClient.includes('const consentGranted=Boolean(consent.checked)') && finalClient.includes('Please confirm that you agree to receive email reports and updates.'),
-  truthfulPayload: finalClient.includes('consent:consentGranted') && finalClient.includes('marketingConsent:consentGranted'),
-  verificationMessage: finalClient.includes('Check your inbox to verify your email and activate reports.')
+  truthfulStorageCopy: finalHtml.includes('protected member database') && finalHtml.includes('briefings named on this form'),
+  runtimeConsentGate: finalClient.includes('const consentGranted=Boolean(consent.checked)') && finalClient.includes('selected email briefings'),
+  truthfulPayload: finalClient.includes('public_daily_brief:selected.daily') && finalClient.includes('public_weekly_digest:selected.weekly'),
+  dailyVerificationMessage: finalClient.includes('today’s Daily Control Brief will be sent immediately.'),
+  noUniversalWeeklyDefault: !finalClient.includes('public_weekly_digest:true') && !finalClient.includes('weekly:true')
 };
 const ok = Object.values(checks).every(Boolean);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -118,14 +138,19 @@ fs.writeFileSync(path.join(root, 'downloads', 'newsletter-consent-patch.json'), 
   generatedAt: new Date().toISOString(),
   checks,
   storage: 'Cloudflare D1 MEMBERS_DB',
-  consentVersion: 'newsletter-explicit-consent-v2'
+  consentVersion: 'newsletter-explicit-consent-v3'
 }, null, 2));
 if (!ok) throw new Error(`Newsletter consent self-heal failed: ${JSON.stringify(checks)}`);
-console.log('Newsletter explicit consent, verification and preference wording applied.');
+console.log('Newsletter consent and form-specific Daily / Weekly preferences applied.');
 
 // This script is the final self-heal called by every Cloudflare build. Rebuild the
-// authoritative mission surfaces here so older generators cannot overwrite them.
+// authoritative current intelligence and mission surfaces here so older generators
+// cannot overwrite fresh feeds, named actors, compact clocks or newsletter delivery.
+runRequired('Final authoritative current-intelligence refresh', 'scripts/finalize-current-intelligence.js');
+runRequired('Daily Control Brief lifecycle patch', 'scripts/patch-daily-control-brief-delivery.js');
 runRequired('Final Atlas Layers build', 'scripts/build-atlas-layers.js');
 runRequired('Final migration country grid', 'scripts/build-migration-crime-grid.js');
-runRequired('Final mission timer synthesis', 'scripts/build-mission-timers.js');
+runRequired('Final compact mission timer synthesis', 'scripts/build-clock-wall.js');
 runRequired('Final mission surface reconciliation', 'scripts/patch-final-mission-surfaces.js');
+runRequired('Living intelligence regression test', 'scripts/living-intelligence-regression-test.js');
+runRequired('Final Search V3 deployment compaction', 'scripts/build-search-v3-runtime.js');

@@ -30,9 +30,18 @@
     const copy=document.getElementById('status-copy');
     const dashboard=document.getElementById('dashboard-link');
     const token=params.get('token');
+    const dailyBrief=params.get('dailyBrief')||'not-selected';
     if(params.get('verified')==='1'){
       title.textContent='EMAIL VERIFIED.';
-      copy.textContent='Your address is verified, your selected briefings are active, and the welcome message has been queued.';
+      if(dailyBrief==='sent'||dailyBrief==='already-sent'){
+        copy.textContent='Daily Control Brief enabled. Today’s brief has been sent to your verified email.';
+      }else if(dailyBrief==='queued-for-retry'||dailyBrief==='already-queued'||dailyBrief==='queued'){
+        copy.textContent='Daily Control Brief enabled. Today’s brief is safely queued for delivery and will retry automatically if the provider is temporarily unavailable.';
+      }else if(dailyBrief==='failed'){
+        copy.textContent='Your email is verified and the Daily Control Brief is enabled, but today’s first delivery failed safely. No false delivery success was recorded.';
+      }else{
+        copy.textContent='Your address is verified and the briefings selected on the signup form are active. The welcome message has been processed.';
+      }
       if(token){dashboard.href='subscriber-dashboard.html?token='+encodeURIComponent(token);dashboard.hidden=false;sessionStorage.setItem('matrixEmailPreferenceToken',token)}
     }else if(params.get('unsubscribed')==='1'){
       title.textContent='UNSUBSCRIBED.';

@@ -32,13 +32,7 @@ const wall = readJson('data/clock-wall.json', { clocks: [] });
 const clocks = Array.isArray(wall.clocks) ? wall.clocks : [];
 
 function latestChange(clock) {
-  const latestDrop = (clock.latestDrops || [])[0];
-  const latestInput = (clock.evidenceInputs || [])[0];
-  const latest = latestDrop || latestInput;
-  const movement = clean(clock.lastMovement || `Held at ${clock.score}.`, 300);
-  if (!latest?.title) return movement;
-  const date = clean(latest.published || latest.date || '', 80);
-  return `${movement} Latest source-led change${date ? ` (${date.slice(0, 10)})` : ''}: ${clean(latest.title, 280)}`;
+  return clean(clock.lastMovement || `Held at ${clock.score}. No source-linked trigger justified a change in this build.`, 360);
 }
 
 function speculation(clock) {
@@ -48,25 +42,29 @@ function speculation(clock) {
 }
 
 function timerCard(clock) {
+  const score = Number(clock.score || 0);
   const sources = (clock.evidenceInputs || []).slice(0, 6).map(item => {
     const title = escapeHtml(item.title || 'Source record');
     const level = item.evidenceLevel ? ` — ${escapeHtml(item.evidenceLevel)}` : '';
+    const published = item.published ? ` · ${escapeHtml(String(item.published).slice(0, 10))}` : '';
     const route = item.route ? ` · <a href="${escapeHtml(item.route)}">open</a>` : '';
-    return `<li><strong>${title}</strong>${level}${route}</li>`;
+    return `<li><strong>${title}</strong>${level}${published}${route}</li>`;
   }).join('') || '<li>No fresh direct source matched this build. The clock remains an editorial watch lane.</li>';
   const themes = (clock.missionThemes || []).map(item => `<li><strong>${escapeHtml(item.label)}:</strong> ${escapeHtml(item.question || '')}</li>`).join('') || '<li>General system-pressure relevance; no single control theme assigned.</li>';
-  return `<article class="clock-card" id="${escapeHtml(clock.slug || '')}">
-    <div class="clock-summary">
-      <div class="clock-ring" style="--p:${Number(clock.score || 0)}"><strong>${Number(clock.score || 0)}%</strong></div>
+  return `<article class="clock-card" id="${escapeHtml(clock.slug || '')}" data-clock-score="${score}">
+    <div class="clock-topline" data-clock-summary-only="true"><span class="clock-score-badge">${score}%</span><span class="clock-window">${escapeHtml(clock.window || 'Review window not set')}</span></div>
+    <div class="clock-summary" data-clock-summary-only="true">
+      <div class="clock-ring" style="--p:${score}" aria-label="${score} percent pressure index"><strong>${score}%</strong></div>
       <div class="clock-heading">
-        <div class="clock-meta"><span>${escapeHtml(clock.scoreBand || clock.status || 'Watch')}</span><span>${escapeHtml(clock.window || 'Review window not set')}</span></div>
+        <span class="clock-band">${escapeHtml(clock.scoreBand || clock.status || 'Watch')}</span>
         <h2>${escapeHtml(clock.title)}</h2>
-        <p class="clock-change"><strong>What changed:</strong> ${escapeHtml(latestChange(clock))}</p>
+        <p class="clock-change">${escapeHtml(latestChange(clock))}</p>
       </div>
     </div>
     <details class="clock-detail">
       <summary>Open deeper information</summary>
       <div class="clock-detail-body">
+        <section><h3>What changed:</h3><p>${escapeHtml(latestChange(clock))}</p></section>
         <section><h3>What this means</h3><p>${escapeHtml(clock.plainEnglishConclusion || clock.signals || '')}</p><p><strong>Score meaning:</strong> ${escapeHtml(clock.scoreMeaning || '')}</p></section>
         <section><h3>How it is calculated</h3><p>${escapeHtml(clock.calculationBasis || clock.scoreMethod || '')}</p></section>
         <section><h3>Control-system relevance</h3><p>${escapeHtml(clock.controlSystemMeaning || '')}</p><ul>${themes}</ul></section>
@@ -86,10 +84,10 @@ const cards = clocks.map(timerCard).join('');
 const timerHtml = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Mission Timers | Matrix Reprogrammed</title><meta name="description" content="Clean evidence-fed risk clocks with deeper mission analysis available on demand."><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="fixes.css"><link rel="stylesheet" href="reader-experience.css"><style>
 .timer-hero{padding:2rem 1rem}.timer-hero-box{border:1px solid rgba(216,181,106,.35);border-radius:28px;padding:2rem;background:radial-gradient(circle at 30% 0,rgba(180,0,0,.25),transparent 38%),linear-gradient(135deg,rgba(12,0,0,.96),rgba(0,0,0,.94))}
 .timer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1rem;align-items:start}.clock-card{border:1px solid rgba(216,181,106,.25);border-radius:22px;padding:1.1rem;background:linear-gradient(150deg,rgba(12,12,12,.97),rgba(28,0,0,.72));box-shadow:0 18px 55px rgba(0,0,0,.28)}
-.clock-summary{display:grid;grid-template-columns:112px 1fr;gap:1rem;align-items:center}.clock-ring{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(rgba(210,40,35,.95) calc(var(--p)*1%),rgba(255,255,255,.08) 0)}.clock-ring strong{font-size:1.55rem}.clock-meta{display:flex;gap:.45rem;flex-wrap:wrap}.clock-meta span{border:1px solid rgba(216,181,106,.35);border-radius:999px;padding:.3rem .58rem;font-size:.82rem}.clock-heading h2{margin:.55rem 0}.clock-change{margin:0;color:#eee0bb}
+.clock-topline{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.85rem}.clock-score-badge,.clock-window,.clock-band{border:1px solid rgba(216,181,106,.35);border-radius:999px;padding:.3rem .58rem;font-size:.82rem}.clock-score-badge{font-weight:900;color:#f0d28b}.clock-summary{display:grid;grid-template-columns:112px 1fr;gap:1rem;align-items:center}.clock-ring{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(rgba(210,40,35,.95) calc(var(--p)*1%),rgba(255,255,255,.08) 0)}.clock-ring strong{font-size:1.55rem}.clock-heading h2{margin:.55rem 0}.clock-change{margin:0;color:#eee0bb}.clock-band{display:inline-block}
 .clock-detail{margin-top:1rem;border-top:1px solid rgba(216,181,106,.22);padding-top:.85rem}.clock-detail summary{cursor:pointer;font-weight:800;color:#f0d28b;list-style-position:inside}.clock-detail-body{display:grid;gap:.9rem;padding-top:.9rem}.clock-detail-body section,.clock-boundary{padding:.85rem;border:1px solid rgba(216,181,106,.16);border-radius:12px;background:rgba(255,255,255,.025)}.speculation-panel{border-color:rgba(190,55,55,.5)!important;background:rgba(120,0,0,.12)!important}.clock-columns{display:grid!important;grid-template-columns:1fr 1fr;gap:.8rem}.clock-links{display:flex;gap:.45rem;flex-wrap:wrap}.clock-links a{border:1px solid rgba(216,181,106,.25);border-radius:999px;padding:.3rem .55rem}
 @media(max-width:680px){.clock-summary{grid-template-columns:1fr}.clock-ring{margin:auto}.clock-columns{grid-template-columns:1fr!important}}
-</style></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a><nav class="nav"><a href="daily-command-brief.html">Daily Brief</a><a href="control-system-tracker.html">Control Tracker</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav></header><main><section class="timer-hero wrap"><div class="timer-hero-box"><div class="eyebrow">Evidence synthesis · updated ${escapeHtml(wall.updated || '')}</div><h1>MISSION TIMERS.</h1><p class="lead">Each card stays clean: the clock, percentage and what changed. Open the deeper-information tab for evidence, calculation, control-system relevance, speculation, counterpoints, missing records and next actions.</p><p><strong>Important:</strong> these percentages are pressure indexes, not predictions that an event has the same percentage chance of occurring.</p><div class="cta-row"><a class="btn" href="data/clock-wall.json">Open Machine Data</a><a class="btn alt" href="downloads/timer-synthesis.md">Download Synthesis</a><a class="btn alt" href="evidence-vault.html">Verify Evidence</a></div></div></section><section class="section wrap"><h2>Current visual synthesis</h2><div class="timer-grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — source first, claim second, usefulness always.</p></footer></div><script src="matrix.js"></script><script src="analytics.js"></script></body></html>`;
+</style></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page"><header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a><nav class="nav"><a href="daily-command-brief.html">Daily Brief</a><a href="control-system-tracker.html">Control Tracker</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav></header><main><section class="timer-hero wrap"><div class="timer-hero-box"><div class="eyebrow">Evidence synthesis · updated ${escapeHtml(wall.updated || '')}</div><h1>MISSION TIMERS.</h1><p class="lead">Each collapsed card shows only its percentage, timeframe, pressure band, title and latest movement. Open the deeper-information tab for the evidence, calculation, speculation, counterpoints and source routes.</p><p><strong>Important:</strong> these percentages are pressure indexes, not predictions that an event has the same percentage chance of occurring.</p><div class="cta-row"><a class="btn" href="data/clock-wall.json">Open Machine Data</a><a class="btn alt" href="downloads/timer-synthesis.md">Download Synthesis</a><a class="btn alt" href="evidence-vault.html">Verify Evidence</a></div></div></section><section class="section wrap"><h2>Current visual synthesis</h2><div class="timer-grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — source first, claim second, usefulness always.</p></footer></div><script src="matrix.js"></script><script src="analytics.js"></script></body></html>`;
 write('timers.html', timerHtml);
 
 function homepageCard(clock) {

@@ -1,0 +1,216 @@
+name: Automatic Update System Deep Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+      - '.github/workflows/investigation-deploy-handoff.yml'
+      - '.github/workflows/auto-update-system-deep-test.yml'
+      - 'scripts/run-investigation-machine.js'
+      - 'scripts/monitor-source-changes.js'
+      - 'scripts/harden-source-change-preservation.js'
+      - 'scripts/update-public-usefulness-clock-scores.js'
+      - 'scripts/build-public-usefulness-clock-system.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'scripts/production-sync-test.js'
+      - 'scripts/production-deploy-guard.js'
+      - 'scripts/auto-update-contract-test.js'
+      - 'scripts/auto-update-system-deep-test.js'
+      - 'data/investigation-source-registry.json'
+      - 'data/production-freshness-policy.json'
+      - 'package.json'
+  push:
+    branches:
+      - audit-auto-update-deep-test
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/**'
+      - 'data/investigation-source-registry.json'
+      - 'data/production-freshness-policy.json'
+      - 'package.json'
+  schedule:
+    - cron: '10 7 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: auto-update-system-deep-test-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  deep-test:
+    name: Live ingestion, idempotency, fault injection, rebuild and synchronization
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Syntax-check audit and critical update scripts
+        run: |
+          node --check scripts/auto-update-contract-test.js
+          node --check scripts/auto-update-system-deep-test.js
+          node --check scripts/run-investigation-machine.js
+          node --check scripts/monitor-source-changes.js
+          node --check scripts/harden-source-change-preservation.js
+          node --check scripts/update-public-usefulness-clock-scores.js
+          node --check scripts/production-freshness-guard.js
+
+      - name: Verify scheduler, deployment handoff and fail-closed contracts
+        run: node scripts/auto-update-contract-test.js
+
+      - name: Capture immutable pre-test baseline
+        run: node scripts/auto-update-system-deep-test.js baseline
+
+      - name: Execute real daily source collection
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+        run: |
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
+
+      - name: Detect and preserve real source changes
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          SOURCE_MONITOR_CONCURRENCY: '4'
+          SOURCE_MONITOR_TIMEOUT_MS: '25000'
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: |
+          node scripts/monitor-source-changes.js daily
+          node scripts/harden-source-change-preservation.js daily
+
+      - name: Rebuild every automatic intelligence surface
+        run: |
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/source-change-preservation-test.js
+          node scripts/source-change-preservation-hardening-test.js
+          node scripts/final-investigation-hardening.js
+          node scripts/build-public-usefulness-clock-system.js
+
+      - name: Verify live data, evidence ledger, clock safeguards and public surfaces
+        run: node scripts/auto-update-system-deep-test.js verify
+
+      - name: Prove repeat-run idempotency and score stability
+        run: node scripts/auto-update-system-deep-test.js idempotency
+
+      - name: Inject stale data, future timestamps and source outages safely
+        run: node scripts/auto-update-system-deep-test.js faults
+
+      - name: Restore a clean canonical update after fault injection
+        env:
+          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+          SOURCE_MONITOR_CONCURRENCY: '4'
+          SOURCE_MONITOR_TIMEOUT_MS: '25000'
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: |
+          node scripts/repair-investigation-source-registry.js
+          node scripts/run-investigation-machine.js daily
+          node scripts/monitor-source-changes.js daily
+          node scripts/harden-source-change-preservation.js daily
+          node scripts/update-live-intel.js
+          node scripts/record-live-intel-check.js
+          node scripts/update-seven-day-intel.js
+          node scripts/build-outcome-briefings.js
+          node scripts/build-daily-brain-brief.js
+          node scripts/build-investigation-pages.js
+          node scripts/build-mission-intelligence-10.js
+          node scripts/build-live-intel-machine.js
+          node scripts/patch-conclusion-integrity-cards.js
+          node scripts/repair-search-system.js
+          node scripts/extend-search-with-investigations.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/source-change-preservation-test.js
+          node scripts/source-change-preservation-hardening-test.js
+          node scripts/final-investigation-hardening.js
+          node scripts/build-public-usefulness-clock-system.js
+
+      - name: Enforce strict source freshness before full build
+        env:
+          MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+          GITHUB_ACTIONS: 'true'
+          GITHUB_WORKFLOW: 'Automatic Update System Deep Test'
+        run: node scripts/production-freshness-guard.js
+
+      - name: Run the complete production-equivalent site build
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: npm run build
+
+      - name: Verify root-to-Cloudflare output synchronization
+        run: node scripts/auto-update-system-deep-test.js verify-built
+
+      - name: Run production synchronization and deploy guards without deploying
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+          MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+          GITHUB_ACTIONS: 'true'
+          GITHUB_WORKFLOW: 'Production Synchronisation Assurance'
+        run: |
+          node scripts/production-freshness-guard.js
+          node scripts/production-sync-test.js
+          node scripts/production-deploy-guard.js
+
+      - name: Upload complete automatic-update proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automatic-update-deep-test-${{ github.run_id }}
+          path: |
+            downloads/auto-update-contract-test.json
+            downloads/auto-update-contract-test.md
+            downloads/auto-update-deep-test-*.json
+            downloads/auto-update-deep-test-*.md
+            downloads/investigation-machine-run-report.json
+            downloads/source-change-monitor-report.json
+            downloads/source-change-preservation-hardening-report.json
+            downloads/source-change-preservation-test.json
+            downloads/source-change-preservation-hardening-test.json
+            downloads/search-investigation-smoke-test.json
+            downloads/production-freshness-guard.json
+            downloads/production-sync-test.json
+            downloads/production-deploy-guard-report.json
+            downloads/final-investigation-hardening.json
+            downloads/conclusion-integrity-report.json
+            data/investigation-source-pulls/daily-latest.json
+            data/investigation-status.json
+            data/source-change-ledger.json
+            data/global-risk-clocks.json
+            data/clock-wall.json
+          if-no-files-found: warn
+          retention-days: 60

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-16T06:00:15.271Z",
+  "updated": "2026-07-16T06:34:21.391Z",
   "title": "Conclusion Engine",
   "boundary": "Conclusions are evidence-bounded editorial outputs. They must not turn speculation, association or source proximity into proof.",
   "conclusions": [
@@ -137,7 +137,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -183,6 +183,16 @@
           "evidenceLevel": "",
           "confidence": "Active",
           "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 82
+        },
+        {
+          "title": "Surveillance State Clock",
+          "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+          "route": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "Active",
+          "sourceFile": "data/speculative-intelligence-synthesis.json",
           "matchScore": 82
         },
         {
@@ -232,8 +242,28 @@
           "published": "",
           "evidenceLevel": "3",
           "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 15
+        },
+        {
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
           "sourceFile": "data/speculative-conclusions.json",
           "matchScore": 15
+        },
+        {
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged throug…",
+          "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "confidence": "curated-latest-public-drop",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 14
         },
         {
           "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
@@ -242,6 +272,26 @@
           "published": "2026-07-06T00:00:00.000Z",
           "evidenceLevel": "Official WHO treaty/implementation-process lane",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 14
+        },
+        {
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+          "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+          "published": "2026-07-06T00:00:00.000Z",
+          "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "confidence": "curated-latest-public-drop",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 14
+        },
+        {
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 14
         },
@@ -266,16 +316,6 @@
           "matchScore": 13
         },
         {
-          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-          "summary": "",
-          "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
-          "published": "2026-07-07T00:00:00.000Z",
-          "evidenceLevel": "",
-          "confidence": "curated-latest-public-drop",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 13
-        },
-        {
           "title": "Best source intake priority",
           "summary": "The highest-priority source drop is EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified.",
           "route": "",
@@ -294,46 +334,6 @@
           "confidence": "Elevated",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 11
-        },
-        {
-          "title": "Access infrastructure is a measurable power layer.",
-          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/conclusions-engine-batch-001.json",
-          "matchScore": 11
-        },
-        {
-          "title": "Gaza reconstruction draws questions on digital wallets, biometric surveillance - Biometric Update",
-          "summary": "Gaza reconstruction draws questions on digital wallets, biometric surveillance Biometric Update",
-          "route": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUnpqejFrYnZ5MUhjT2lob19RUC1XOW5jYk9YQzdBbHBhek5OZFh4eTdRWUY1QjJaT0pSekhmQmNBZUJRclhITHR4SUw1aTRWcG9jMnJFaUZzT0pHUFZFMWRhR2dDcmdLLUJpamwxMXpQZ0xIdHZpNWt5MVJ5NDhrSTYzY1BUVmk5T2xuS3RjVGJnX3pOejNhOGhESTJzTUI0bVJzVGZXYVlBal9ZMzU4LTJvNjR4MlE?oc=5",
-          "published": "2026-02-27T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 10
-        },
-        {
-          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-          "summary": "",
-          "route": "control-system-tracker.html#health-and-biosecurity",
-          "published": "2026-07-06T00:00:00.000Z",
-          "evidenceLevel": "Official WHO treaty/implementation-process lane",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 9
-        },
-        {
-          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-          "summary": "",
-          "route": "https://www.who.int/health-topics/who-pandemic-agreement",
-          "published": "2026-07-06T00:00:00.000Z",
-          "evidenceLevel": "",
-          "confidence": "curated-latest-public-drop",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 9
         }
       ],
       "sourceRoutes": [
@@ -351,7 +351,6 @@
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "live-intel.html",
-        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUnpqejFrYnZ5MUhjT2lob19RUC1XOW5jYk9YQzdBbHBhek5OZFh4eTdRWUY1QjJaT0pSekhmQmNBZUJRclhITHR4SUw1aTRWcG9jMnJFaUZzT0pHUFZFMWRhR2dDcmdLLUJpamwxMXpQZ0xIdHZpNWt5MVJ5NDhrSTYzY1BUVmk5T2xuS3RjVGJnX3pOejNhOGhESTJzTUI0bVJzVGZXYVlBal9ZMzU4LTJvNjR4MlE?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -370,7 +369,11 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-16T06:00:09.475Z"
+      "generatedAt": "2026-07-16T06:34:15.095Z",
+      "id": "surveillance-state",
+      "name": "Surveillance State Clock",
+      "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+      "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
     },
     {
       "slug": "ai-breakout",
@@ -399,7 +402,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high.",
       "readerQuestion": "What documented change would make AI Breakout Clock more or less important?",
       "missionThemes": [
@@ -470,7 +473,27 @@
           "published": "",
           "evidenceLevel": "3",
           "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 22
+        },
+        {
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
           "sourceFile": "data/speculative-conclusions.json",
+          "matchScore": 22
+        },
+        {
+          "title": "Surveillance State Clock",
+          "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+          "route": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "Active",
+          "sourceFile": "data/speculative-intelligence-synthesis.json",
           "matchScore": 22
         },
         {
@@ -485,22 +508,22 @@
         },
         {
           "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged throug…",
+          "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "published": "2026-07-07T00:00:00.000Z",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+          "confidence": "curated-latest-public-drop",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 19
+        },
+        {
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
           "summary": "",
           "route": "answer-engine.html",
           "published": "2026-07-07T00:00:00.000Z",
           "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 15
-        },
-        {
-          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-          "summary": "",
-          "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
-          "published": "2026-07-07T00:00:00.000Z",
-          "evidenceLevel": "",
-          "confidence": "curated-latest-public-drop",
-          "sourceFile": "data/live-intel.json",
           "matchScore": 15
         },
         {
@@ -530,7 +553,27 @@
           "published": "2026-06-25",
           "evidenceLevel": "",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 4
+        },
+        {
+          "title": "DOJ watchdog compliance review remains a core source lane",
+          "summary": "AP reported earlier in 2026 that the Justice Department inspector general is reviewing compliance with the law requiring Epstein-file disclosures, including collection, redaction, and disclosure processes. This stays on the watch list because process errors can reshape what the public record actually shows.",
+          "route": "evidence-vault.html",
+          "published": "2026-06-25",
+          "evidenceLevel": "",
+          "confidence": "",
           "sourceFile": "data/epstein-evidence-watch.json",
+          "matchScore": 4
+        },
+        {
+          "title": "Hancomwith joins South Korea’s 2026 Zero Trust pilot with SASE‑based security model - Biometric Update",
+          "summary": "Hancomwith joins South Korea’s 2026 Zero Trust pilot with SASE‑based security model Biometric Update",
+          "route": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3N2Sjc5N0JwWE5UdDlFZHpXNkU3bTNnMEoyLTU2ckdEY0lLeHFMcnNWaG5oYlFSNEdwNFo5bDVZNUp0LUk0QWt0Q0JmVUM5RW1FZktzalBOVklPVk5IUGhPT1gzeXVVdzdtY3NyVnBOdnZjQ1VNSzhxTjhiZ181UE9VcXZpcGZmTDNEZTFFWWt5cEl0Ry1PZlZZRmxIYW9xOFY2SU5kYm1mWGhSTUFBOFBHSEdlWjZqeEdxcVlB?oc=5",
+          "published": "2026-05-18T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "confidence": "archived-intel-vault",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 4
         },
         {
@@ -550,48 +593,8 @@
           "published": "2026-05-07T07:00:00.000Z",
           "evidenceLevel": "Seven-day public-record lead",
           "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 4
-        },
-        {
-          "title": "WWIII Escalation Clock",
-          "summary": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
-          "route": "live-intel.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "Elevated",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 4
-        },
-        {
-          "title": "Matrix Reprogrammed Structured Investigation Schema",
-          "summary": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/investigation-entity-schema.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Financial stress accelerates risk scoring and compliance automation",
-          "summary": "[object Object],[object Object],[object Object]",
-          "route": "",
-          "published": "2026-07-16T06:00:03.618Z",
-          "evidenceLevel": "",
-          "confidence": "low-medium",
-          "sourceFile": "data/probability-snapshot.json",
-          "matchScore": 3
-        },
-        {
-          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-          "summary": "",
-          "route": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
-          "published": "2026-07-16T05:59:49.195Z",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/entity-timelines.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -603,8 +606,6 @@
         "evidence-vault.html",
         "https://news.google.com/rss/articles/CBMivgFBVV95cUxOb3N2Sjc5N0JwWE5UdDlFZHpXNkU3bTNnMEoyLTU2ckdEY0lLeHFMcnNWaG5oYlFSNEdwNFo5bDVZNUp0LUk0QWt0Q0JmVUM5RW1FZktzalBOVklPVk5IUGhPT1gzeXVVdzdtY3NyVnBOdnZjQ1VNSzhxTjhiZ181UE9VcXZpcGZmTDNEZTFFWWt5cEl0Ry1PZlZZRmxIYW9xOFY2SU5kYm1mWGhSTUFBOFBHSEdlWjZqeEdxcVlB?oc=5",
         "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GeW1UbmhCeGtpMHZpeDBXa1ZOc2hZUE51cW9kOE94LTJzcXVidkxOalh0dUxOOU9qVUd3WFo2eFBtM1ZmX19LRktBZXlKV3NfX3c?oc=5",
-        "live-intel.html",
-        "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
         "search.html"
       ],
       "missingEvidence": [
@@ -616,7 +617,11 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-16T06:00:09.475Z"
+      "generatedAt": "2026-07-16T06:34:15.095Z",
+      "id": "ai-breakout",
+      "name": "AI Breakout Clock",
+      "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+      "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
     },
     {
       "slug": "cbdc-rollout",
@@ -671,7 +676,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -739,12 +744,42 @@
           "matchScore": 31
         },
         {
+          "title": "Surveillance State Clock",
+          "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+          "route": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "Active",
+          "sourceFile": "data/speculative-intelligence-synthesis.json",
+          "matchScore": 31
+        },
+        {
           "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
           "summary": "The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.",
           "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
           "published": "2026-07-08T00:00:00.000Z",
           "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 16
+        },
+        {
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "summary": "The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital eur…",
+          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
+          "published": "2026-07-08T00:00:00.000Z",
+          "evidenceLevel": "Official ECB CBDC project timeline / legislation and technical-readiness lane",
+          "confidence": "curated-latest-public-drop",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 16
+        },
+        {
+          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
+          "summary": "The ECB states the Eurosystem moved to the next phase of the digital euro project in October 2025 and aims to be ready for potential first issuance during 2029, assuming EU legislation is adopted during 2026. The ECB frames the digital euro as a central-bank digital form of cash complementing banknotes and coins.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 16
         },
@@ -769,14 +804,14 @@
           "matchScore": 14
         },
         {
-          "title": "ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026",
-          "summary": "",
-          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
-          "published": "2026-07-08T00:00:00.000Z",
+          "title": "Central-bank, BIS, IMF and digital-money records",
+          "summary": "Best lane for currency convergence, CBDC, settlement, programmable payment and monetary-control routes.",
+          "route": "deep-intel-feed.html",
+          "published": "",
           "evidenceLevel": "",
-          "confidence": "curated-latest-public-drop",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 14
+          "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 10
         },
         {
           "title": "Central-bank, BIS, IMF and digital-money records",
@@ -795,8 +830,28 @@
           "published": "",
           "evidenceLevel": "",
           "confidence": "",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 8
+        },
+        {
+          "title": "Access infrastructure is a measurable power layer.",
+          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
           "sourceFile": "data/conclusions-engine-batch-001.json",
           "matchScore": 8
+        },
+        {
+          "title": "Digital euro clears key European Parliament hurdle",
+          "summary": "The ECB secured key parliamentary backing for the digital euro, with negotiations expected to proceed and a pilot reported for 2027 before a possible 2029 rollout.",
+          "route": "https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/",
+          "published": "2026-06-23T12:00:00.000Z",
+          "evidenceLevel": "CBDC legislative-process / pilot-lane update",
+          "confidence": "archived-intel-vault",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 7
         },
         {
           "title": "Digital euro clears key European Parliament hurdle",
@@ -817,56 +872,6 @@
           "confidence": "Elevated",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
-        },
-        {
-          "title": "CBDC offline wallet design rules",
-          "summary": "",
-          "route": "Build from primary and public sources for CBDC offline wallet design rules: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/policy-deck.json",
-          "matchScore": 7
-        },
-        {
-          "title": "Money systems review lane created",
-          "summary": "Payment, wallet, banking and compliance records now have a lane that feeds forecasts.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "review lane",
-          "confidence": "",
-          "sourceFile": "data/probability-signal-feed-003.json",
-          "matchScore": 7
-        },
-        {
-          "title": "Money systems lane added for payment, wallet and compliance records",
-          "summary": "Payment and access rails are tracked as record-based system changes rather than unsupported general claims.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "review lane",
-          "confidence": "",
-          "sourceFile": "data/probability-signal-feed-004.json",
-          "matchScore": 7
-        },
-        {
-          "title": "CBDC offline wallet design rules",
-          "summary": "",
-          "route": "policy/cbdc-offline-wallet-design-rules.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 7
-        },
-        {
-          "title": "Digital identity and public-service dependency lane added",
-          "summary": "Identity, wallet and public-service routes can now feed the forecast engine once records confirm scope and requirements.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "review lane",
-          "confidence": "",
-          "sourceFile": "data/probability-signal-feed-004.json",
-          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -880,8 +885,6 @@
         "deep-intel-feed.html",
         "https://www.reuters.com/business/finance/ecb-secures-key-parliamentary-backing-digital-euro-2026-06-23/",
         "live-intel.html",
-        "Build from primary and public sources for CBDC offline wallet design rules: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.",
-        "policy/cbdc-offline-wallet-design-rules.html",
         "evidence-vault.html",
         "search.html"
       ],
@@ -897,7 +900,11 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-16T06:00:09.475Z"
+      "generatedAt": "2026-07-16T06:34:15.095Z",
+      "id": "cbdc-rollout",
+      "name": "CBDC Rollout Clock",
+      "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+      "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
     },
     {
       "slug": "machine-convergence",
@@ -998,7 +1005,7 @@
       "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 7 linked policy lanes, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 7 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel.",
       "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
       "missionThemes": [
@@ -1072,6 +1079,16 @@
           "matchScore": 62
         },
         {
+          "title": "Surveillance State Clock",
+          "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+          "route": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "Active",
+          "sourceFile": "data/speculative-intelligence-synthesis.json",
+          "matchScore": 62
+        },
+        {
           "title": "CBDC Rollout Clock",
           "summary": "The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance. Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-07-08 ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 Latest public drops: 2026-0",
           "route": "surveillance-hub.html",
@@ -1108,6 +1125,16 @@
           "published": "",
           "evidenceLevel": "3",
           "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 15
+        },
+        {
+          "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
           "sourceFile": "data/speculative-conclusions.json",
           "matchScore": 15
         },
@@ -1123,10 +1150,10 @@
         },
         {
           "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-          "summary": "",
+          "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged throug…",
           "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
           "published": "2026-07-07T00:00:00.000Z",
-          "evidenceLevel": "",
+          "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
           "confidence": "curated-latest-public-drop",
           "sourceFile": "data/live-intel.json",
           "matchScore": 13
@@ -1152,6 +1179,26 @@
           "matchScore": 12
         },
         {
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+          "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+          "published": "2026-07-06T00:00:00.000Z",
+          "evidenceLevel": "Official WHO treaty/implementation-process lane",
+          "confidence": "curated-latest-public-drop",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 12
+        },
+        {
+          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+          "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "3",
+          "confidence": "medium",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 12
+        },
+        {
           "title": "WWIII Escalation Clock",
           "summary": "Conflict pressure remains elevated through Ukraine/Russia, Middle East flashpoints, cyber operations, sanctions and nuclear rhetoric. Current July refresh did not add a new direct kinetic-escalation source, so the score is held rather than raised. Policy convergence tracker lanes: War / Security / Emergency Powers.",
           "route": "live-intel.html",
@@ -1168,48 +1215,8 @@
           "published": "",
           "evidenceLevel": "",
           "confidence": "",
-          "sourceFile": "data/conclusions-engine-batch-001.json",
-          "matchScore": 12
-        },
-        {
-          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-          "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "3",
-          "confidence": "medium",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 12
-        },
-        {
-          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-          "summary": "",
-          "route": "control-system-tracker.html#health-and-biosecurity",
-          "published": "2026-07-06T00:00:00.000Z",
-          "evidenceLevel": "Official WHO treaty/implementation-process lane",
-          "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 10
-        },
-        {
-          "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
-          "summary": "",
-          "route": "https://www.who.int/health-topics/who-pandemic-agreement",
-          "published": "2026-07-06T00:00:00.000Z",
-          "evidenceLevel": "",
-          "confidence": "curated-latest-public-drop",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 10
-        },
-        {
-          "title": "Central-bank, BIS, IMF and digital-money records",
-          "summary": "Best lane for currency convergence, CBDC, settlement, programmable payment and monetary-control routes.",
-          "route": "deep-intel-feed.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/deep-intel-feed-matrix.json",
-          "matchScore": 10
+          "matchScore": 12
         }
       ],
       "sourceRoutes": [
@@ -1227,7 +1234,6 @@
         "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "live-intel.html",
-        "deep-intel-feed.html",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1247,7 +1253,11 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-16T06:00:09.475Z"
+      "generatedAt": "2026-07-16T06:34:15.095Z",
+      "id": "machine-convergence",
+      "name": "Machine Convergence",
+      "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
+      "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
     },
     {
       "slug": "wwiii-escalation",
@@ -1329,6 +1339,16 @@
           "matchScore": 15
         },
         {
+          "title": "Surveillance State Clock",
+          "summary": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until",
+          "route": "surveillance-hub.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "Active",
+          "sourceFile": "data/speculative-intelligence-synthesis.json",
+          "matchScore": 15
+        },
+        {
           "title": "Machine Convergence",
           "summary": "Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified | 2026-07-06 WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is nego",
           "route": "black-file.html",
@@ -1337,6 +1357,16 @@
           "confidence": "Classified",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 12
+        },
+        {
+          "title": "Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News",
+          "summary": "Ukraine war undermining Russia’s Arctic plans, US intelligence says Defense News",
+          "route": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQUx6QjZiVWc1X0ZTb1RjTExxZG95VHlDMWEweG1RVzZhcVFrVUsyX29FU252T3dodmxBR2QzRjlfNHA0a1lva0hnRVBwWGloLUlVOUpTN0x0NTFmS2tJSmQ5TE5iSGt6c2lpMzdFQlo0WVMxeFBkMTUtM25qYmZqelJDS2VKTTgyQ3RMSDRSX081RzN0dHlSZDhOeFVmWUhrSUVSVXM2WThiMkxzWi1xd2E4UDhSZTV0Z0FxQ0twckZGOVU?oc=5",
+          "published": "2026-03-18T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "confidence": "archived-intel-vault",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 8
         },
         {
           "title": "Ukraine war undermining Russia’s Arctic plans, US intelligence says - Defense News",
@@ -1355,7 +1385,27 @@
           "published": "2026-06-01T14:25:37.000Z",
           "evidenceLevel": "Seven-day public-record lead",
           "confidence": "archived-intel-vault",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 7
+        },
+        {
+          "title": "From Coercion to Code: Iran’s Digital Security Transformation - Middle East Forum",
+          "summary": "From Coercion to Code: Iran’s Digital Security Transformation Middle East Forum",
+          "route": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5",
+          "published": "2026-06-01T14:25:37.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Inside Russia’s Shadow Military Sustaining the War - War on the Rocks",
+          "summary": "Inside Russia’s Shadow Military Sustaining the War War on the Rocks",
+          "route": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5",
+          "published": "2025-08-22T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "confidence": "archived-intel-vault",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
         },
         {
@@ -1375,6 +1425,16 @@
           "published": "",
           "evidenceLevel": "",
           "confidence": "Active",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 7
+        },
+        {
+          "title": "War Machine And Intelligence State",
+          "summary": "War, contractors, intelligence agencies, oversight failures, conflict narratives, military technology, and public-record power routes.",
+          "route": "dashboard-conflict.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
         },
@@ -1415,58 +1475,8 @@
           "published": "",
           "evidenceLevel": "",
           "confidence": "ingested",
-          "sourceFile": "data/tracker-core-investigations.json",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 6
-        },
-        {
-          "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
-          "summary": "Pentagon releases 72 UFO files: Military reports reveal new sightings RBC-Ukraine",
-          "route": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
-          "published": "2026-06-16T07:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "The War on Anthropic: Pretextual Designation and Unlawful Punishment - Just Security",
-          "summary": "The War on Anthropic: Pretextual Designation and Unlawful Punishment Just Security",
-          "route": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5GbUVlQURYX1M5MXItMFBOc1RmVkh1ZnY4OUl1SGZ3c1dpNWIyRzUyR3B2ekFNalZNd0x5WVh4d29kRDk4cFA4OElRazJoeFljQk5YTlFlNEFIMmdsbjJ3ZjRwUHZaaklkVnNWZE5XQVAxelo5bWM0b0daLUJFOHM?oc=5",
-          "published": "2026-03-06T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "Hegseth says U.S. \"just getting started\" in Iran war as conflict intensifies and spreads - CBS News",
-          "summary": "Hegseth says U.S. \"just getting started\" in Iran war as conflict intensifies and spreads CBS News",
-          "route": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNXM5TFNKSmxnUUIyVlVNY1M5Sl9rdkxmSEZ0amVJM1BJQzVLQmNMeENQcDRfLU1TLVh3Ukw4YjRqUnVqM0JOYjV6U0NMVTRrSU8tT2hKOVFqMF82MDNXbjZMRjZvR19lSUFXVTIzQ3pmZTgwTG1PZU1mTVo5cU52TW5aOVJTM1h0QnMxbnFGZm0xdDVIX04xTC1DeGFFa25Oa3VyUWpR0gGrAUFVX3lxTFBUTkdEeHVMREJsUm9qN19tQS1QSllDTVFmdHNFX0I4M3ExQjBOLUxMdlVjQUc3OUJIbi13dzNVSURzX0VncFB0M3IzMmFNUW5hT3ZiZUItckV2cThXdl9yOGVVUUxZRkdyc1B5YWY0aV9GeTdmU2VwcWNTVmdVMXBUTVI0d1JPWkZacURHQ0ctNmhnNjExWlMyb2MxajNiVlhYTVpIWFVGLUtmTQ?",
-          "published": "2026-03-05T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "Human Cost Sources",
-          "summary": "Conflict deaths, displacement, migration categories, missing migrants, food insecurity, compensation totals, and public-health data boundaries.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/evidence-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "How the military is using AI in war - CBS News",
-          "summary": "How the military is using AI in war CBS News",
-          "route": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZkszbHBCSUFTSnlNdTZjOUJsdjVlS3JYaXE3am1hR2VmMXJ3XzQ4SWxPam16djFzRUwtZ01qbGRKU3pjZjI3SlBTaWVlRnJhTHVZWEoxbkV2TFpfMHJYbFBQSGVUUVV0MUlQdkIzUEJnVEZIMFZ6VlE5RzliTFhmZkF30gGHAUFVX3lxTE1fdWNMaE4xYUVua3NERzFGVmNpSkFCUllZemJuVFhLRjM1dy1YQmFrcjNKX3c5dGVDZnJGZloxQmNybE1Kb1ExVm9VR19IUzk1LWFucFROVm9WYlFic2hBNGszZGhRRDJmbW01OXNXemhlaWpzYTVmTTE1dXlubEc5WmNkNnExZw?oc=5",
-          "published": "2026-03-18T07:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 4
         }
       ],
       "sourceRoutes": [
@@ -1480,10 +1490,6 @@
         "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUlRXcFk3SzdtbDExenpxY0ZuT3oyRFFfVjlUcXNPQ3NwVEFFaUc5SUQyUklIRjVpakZQbi1rWkZBcDNQQUtWMU1WSmVNb0lTQXVXNXIwZEYtblJ4SDBKOUNJSVJ4c0VIN3lSR3JxZ2JTYU1icklFQ1EtT2IyV3REVS1B?oc=5",
         "dashboard-conflict.html",
         "answer-engine.html",
-        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
-        "https://news.google.com/rss/articles/CBMif0FVX3lxTE5GbUVlQURYX1M5MXItMFBOc1RmVkh1ZnY4OUl1SGZ3c1dpNWIyRzUyR3B2ekFNalZNd0x5WVh4d29kRDk4cFA4OElRazJoeFljQk5YTlFlNEFIMmdsbjJ3ZjRwUHZaaklkVnNWZE5XQVAxelo5bWM0b0daLUJFOHM?oc=5",
-        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNXM5TFNKSmxnUUIyVlVNY1M5Sl9rdkxmSEZ0amVJM1BJQzVLQmNMeENQcDRfLU1TLVh3Ukw4YjRqUnVqM0JOYjV6U0NMVTRrSU8tT2hKOVFqMF82MDNXbjZMRjZvR19lSUFXVTIzQ3pmZTgwTG1PZU1mTVo5cU52TW5aOVJTM1h0QnMxbnFGZm0xdDVIX04xTC1DeGFFa25Oa3VyUWpR0gGrAUFVX3lxTFBUTkdEeHVMREJsUm9qN19tQS1QSllDTVFmdHNFX0I4M3ExQjBOLUxMdlVjQUc3OUJIbi13dzNVSURzX0VncFB0M3IzMmFNUW5hT3ZiZUItckV2cThXdl9yOGVVUUxZRkdyc1B5YWY0aV9GeTdmU2VwcWNTVmdVMXBUTVI0d1JPWkZacURHQ0ctNmhnNjExWlMyb2MxajNiVlhYTVpIWFVGLUtmTQ?",
-        "https://news.google.com/rss/articles/CBMiggFBVV95cUxOZkszbHBCSUFTSnlNdTZjOUJsdjVlS3JYaXE3am1hR2VmMXJ3XzQ4SWxPam16djFzRUwtZ01qbGRKU3pjZjI3SlBTaWVlRnJhTHVZWEoxbkV2TFpfMHJYbFBQSGVUUVV0MUlQdkIzUEJnVEZIMFZ6VlE5RzliTFhmZkF30gGHAUFVX3lxTE1fdWNMaE4xYUVua3NERzFGVmNpSkFCUllZemJuVFhLRjM1dy1YQmFrcjNKX3c5dGVDZnJGZloxQmNybE1Kb1ExVm9VR19IUzk1LWFucFROVm9WYlFic2hBNGszZGhRRDJmbW01OXNXemhlaWpzYTVmTTE1dXlubEc5WmNkNnExZw?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -1497,7 +1503,11 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-07-16T06:00:09.475Z"
+      "generatedAt": "2026-07-16T06:34:15.095Z",
+      "id": "wwiii-escalation",
+      "name": "WWIII Escalation Clock",
+      "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
+      "evidenceBoundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion."
     }
   ],
   "topDrops": [

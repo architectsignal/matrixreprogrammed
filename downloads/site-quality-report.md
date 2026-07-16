@@ -2,7 +2,7 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 520
+Scanned pages: 522
 Weak pages: 11
 
 ## Weakest Pages
@@ -18,6 +18,7 @@ Weak pages: 11
 - 68/100 — subject-trust-evidence-method.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — tracker-dashboard.html: Missing evidence route; Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route
 - 76/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i
+- 76/100 — membership.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: €0, €0, €3, €3, €6
 - 76/100 — network-search.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — subject-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
 - 76/100 — subject-intelligence-network.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
@@ -50,6 +51,7 @@ Weak pages: 11
 - 84/100 — dossier-pack-war-machine.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i
 - 84/100 — entity-registry.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — evidence-archive.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — evidence-graph.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — evidence-network-map.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — evidence-vault.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — feed-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
@@ -64,8 +66,6 @@ Weak pages: 11
 - 84/100 — path-survival-war.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-war-contractors.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — power-atlas.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — relationship-registry.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — sales-ladder.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

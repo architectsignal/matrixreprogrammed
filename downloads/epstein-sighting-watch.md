@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-07-16T05:59:55.634Z
+Generated: 2026-07-16T06:34:01.726Z
 
 ## Official Boundary
 
@@ -98,13 +98,3 @@ Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
-
-### Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Trump administration hindering investigation into Epstein’s ranch Nine.com.au

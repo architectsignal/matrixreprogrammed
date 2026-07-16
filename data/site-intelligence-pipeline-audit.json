@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "working-with-gaps",
-  "updated": "2026-07-16T06:00:33.987Z",
+  "updated": "2026-07-16T06:34:39.206Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 40,
@@ -86,7 +86,7 @@
       "id": "fresh-current-news",
       "stage": "Collect",
       "status": "green",
-      "finding": "25 news item(s) are inside the active seven-day window.",
+      "finding": "19 news item(s) are inside the active seven-day window.",
       "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
       "evidence": [
         "downloads/seven-day-intel.json"

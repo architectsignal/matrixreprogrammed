@@ -1,11 +1,11 @@
 # Control Brain V2
 
-Generated: 2026-07-16T06:00:15.434Z
+Generated: 2026-07-16T06:34:21.551Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 142
-Edges: 263
+Nodes: 125
+Edges: 246
 
 ## Digital ID and access systems
 
@@ -44,14 +44,6 @@ Source routes: subject-briefs.html
 Score: 100
 
 Health data and emergency systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Disclosure gaps and missing files
-
-Score: 100
-
-Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
 
@@ -206,3 +198,11 @@ Score: 73
 NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
+
+## Elon Musk
+
+Score: 73
+
+Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: billionaire-control-tracker.html

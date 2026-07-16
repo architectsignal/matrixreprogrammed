@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-07-16T05:59:56.445Z
+Generated: 2026-07-16T06:34:02.538Z
 
 ## Open Routes
 
@@ -18,7 +18,7 @@ Generated: 2026-07-16T05:59:56.445Z
 What Blanche said about Trump, Epstein files during confirmation hearing for attorney general PBS
 ### Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-16T05:15:28.000Z
+- Date: 2026-07-16T05:59:03.000Z
 - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
 ### Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
@@ -26,16 +26,16 @@ Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
 - Date: 2026-07-15T13:35:00.000Z
 - Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
 Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say The Guardian
-### Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-15T12:00:01.000Z
-- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
 ### Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-15T17:32:31.000Z
 - Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
 Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women Reuters
+### Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-07-15T12:00:01.000Z
+- Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
+Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing CNBC
 ### Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-15T16:34:31.000Z
@@ -56,11 +56,6 @@ Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties WCCB 
 - Date: 2026-07-15T14:26:50.000Z
 - Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUhhWGNhdF9Ucm1MaUp1WFpXNGJhczFhZms1WUJ4RE9qSHVwaFlERW5tQVdMd0ItNVZORHdhTHBOQTFHZklXaGZtcGtVVjE5eHpKRDZuZTFLQVphSkFLZGtsVXVyRm5OOEF1TkRpYUo3MU1RcFE2SjFqV21XRllpM0pOUmRIa0NWZWpFVGQ5TGYwMlU?oc=5
 Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women WKZO
-### Why the House’s Epstein investigation isn't going away - Politico
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-07-09T08:45:00.000Z
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
-Why the House’s Epstein investigation isn't going away Politico
 ### Goldman Sachs lawyer Ruemmler to face House panel on Epstein - SRN News
 - Lane: Epstein Files, Timeline And Court Records
 - Date: 2026-07-15T10:40:22.000Z
@@ -91,11 +86,6 @@ Jeffrey Epstein connected to CIA and Mossad, JD Vance claims Nine.com.au
 - Date: 2026-07-15T12:09:02.000Z
 - Source: https://news.google.com/rss/articles/CBMisgFBVV95cUxObHJBazdFX0JWR0FaR1ZlZ0hYcUVMTVVTVWZLazE0dFZ2RU10andWSDFxVHB6X3FrbFc3cG1Yc05HSG45UFpHeW5vX0dkNF8weHlFUXUwYURJUVhHcnhtdUZFU2hGd1JBNUhERmNsOV8xQ2szT3haVXZ4djQwU3J6VU5RZ2phb1FoNGhVbFpQU3RYYUtpTll2THBvMC1xM0JhT1BITFlZM0hrOTlQdDhwZVBR?oc=5
 Goldman Sachs lawyer Ruemmler to face House panel on Epstein The Standard (HK)
-### Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News
-- Lane: Declassified Files And Public Archives
-- Date: 2026-07-15T23:06:00.000Z
-- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5
-Pentagon proposes new secrecy power to withhold unclassified records from public-access laws CBS News
 ### Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
 - Lane: Declassified Files And Public Archives
 - Date: 2026-07-11T04:00:07.000Z
@@ -111,3 +101,8 @@ NASA insider hints bigger UFO file release as declassification ramps up Cybernew
 - Date: 2026-07-09T13:30:11.000Z
 - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 NSA revives 'Tailored Access Operations' name for elite hacking unit The Record from Recorded Future News
+### PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
+- Lane: War Machine And Intelligence State
+- Date: 2026-07-16T02:14:40.000Z
+- Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
+PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT U.S. Senator Dave McCormick (.gov)

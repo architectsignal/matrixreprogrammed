@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-16T05:59:30.664Z
+Updated: 2026-07-16T06:33:34.034Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -44,20 +44,20 @@ Updated: 2026-07-16T05:59:30.664Z
   - Longform title: Epstein Files, Timeline And Court Records — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardia
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
-  - Short title: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful li
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bols
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-15 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
   - Source: https://news.google.com/rss/articles/CBMioAFBVV95cUxPSkRVaTQzbmJmOFNUbHZORGJ1d2hsMklrWGhuTF9DaWwxa04tRGxOTU8zUk1HRHNkN0FTczRvbVZwQzBhQWZKcXo1UUlGZU83RUhsWmdXbjB5WHhnZV9RZ0V0NHFBQXJjczZNS2F2RE93WTdzc293azRaXzZLNGFpUkRLVUg4Q2xoLVN6cmdNcVhLdFFjRGYtWDRlTHJFUGJG?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters
   - Short title: Goldman counsel Ruemmler says she would have reported Epstein if she kne
   - Longform title: Epstein Files, Timeline And Court Records — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reut
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-15 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
+  - Source: https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbE9ZU1pBM1g4OUtONnlGNkI5eFFIUlNwSXhWRVFla2ZDZnFhQVBfZ3JONW5TMmZmQ0RaenJGZXJpdVI2SGFOMkozLV9OdXBUbk82eUl4b1hjOElYdWFXUFFtUncwZ19UMjF4eWVQaVR3TnJFdWNIelZQZXVfVTdzcjllcGRnNUI2MGJPSUVXa2lNeWk3YnN4YUZqdGJjY0ZPeTU5aXpTVVNlbE3SAbABQVVfeXFMUFA3V3NvX1Z1M0hnU2dHZWdFN0xSRW04STBDbkxuNmFxcWZLS0ZDZ0tjdnNzMjUzVmFJOHZDYWQzdGlNeUpnSkFKWnVsdWVTQ1Y3MC1nX3RnWWVLNWxMTlFwUlpxSDZSTUNVM2JCT0ExVXdCajk5bzlreFJWM0dpNXo0VXlwWlU5cDJPN1kwNjl6Z2hyNDhiRnIwQXNzZ0IwWjQ4aDMzWWpqU0x0LVlucVk?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
+  - Short title: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful li
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bols
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo! Finance Canada
@@ -90,14 +90,6 @@ Updated: 2026-07-16T05:59:30.664Z
   - Video hook: New public-record signal: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
   - Short title: Goldman counsel Ruemmler says she would have reported Epstein if she kne
   - Longform title: Epstein Files, Timeline And Court Records — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-09 — Why the House’s Epstein investigation isn't going away - Politico
-  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOaUtnQ2lnVFpxNklzZGRSNm5YMHZmRWZGSmlCanNSSUVidjBoOTVsNV9PU2JGRlFOLTVlbGtYSkRTQVVhbFllMDNWMzhoN1MwUW5UT25NdHJxSEVsd1ZYVG1EYnRNenZmTnZuTS1SdW81cklpTXFKdWtGbW9rOWNZMWFSOEJzUFZHTFZwdUxZN0M0TmtXNmc?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Why the House’s Epstein investigation isn't going away - Politico
-  - Short title: Why the House’s Epstein investigation isn't going away - Politico
-  - Longform title: Epstein Files, Timeline And Court Records — Why the House’s Epstein investigation isn't going away - Politico
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-15 — Goldman Sachs lawyer Ruemmler to face House panel on Epstein - SRN News
@@ -148,14 +140,6 @@ Updated: 2026-07-16T05:59:30.664Z
   - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs lawyer Ruemmler to face House panel on Epstein - The Standard (HK)
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOQXZCZHdpVEd0Y1BaaTJZOXNhYkdCbFVRQWV1UWgyUG1GNXNwaUtMWjlBWm9pYmhWcGVmdnlkYkMwVUd6OGxSZWJWWXpKcEN0MkJqN1hxdC1lcm5JZ1pFczg1Zm91U2RwZUxNVkpfcU50Y3NsdEw5eHdzd0R2WktqSDZHd2M?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS News
-  - Short title: Pentagon proposes new secrecy power to withhold unclassified records fro
-  - Longform title: Declassified Files And Public Archives — Pentagon proposes new secrecy power to withhold unclassified records from public-access laws - CBS
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: download-center.html
 - 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
   - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
   - Evidence: Seven-day public-record lead
@@ -180,7 +164,7 @@ Updated: 2026-07-16T05:59:30.664Z
   - Longform title: Elite Control Structure — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
+- 2026-07-16 — PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
   - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
@@ -188,75 +172,3 @@ Updated: 2026-07-16T05:59:30.664Z
   - Longform title: War Machine And Intelligence State — PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-intelligence-dossiers.html
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxPeTd3cEtZVEhXeTZCLWxMckFzclRWelZGMHZjQVREVFNkOV9IVng2UE5TV0ZDT0dGN0dMTUw2QURRRDFzQ2UyU2FpVU1VeHJSYmZDT3M3Nl9Ic3BDclpZVldnZHozRWV4bEp0SFFldzdSU1puRWJGaXNEd3JXWG5UT1l3Vjk4WXlxZHY0dGhzMzBhQTJPQXJn?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
-  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - SRN News
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-10 — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Source: https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNVF3bWs3clhyZGJLZ0pJeEQzbWltbUUxRy1EcVNNNmZVYUwtLXlGWjc2aWEzWUxGT1ZTWGtGVzNXd01UTHVFdmh2NlQyTW9wNkptT05TQi1JUlcxdXphc1lXQkV6R0xkZmZNeGg5ZHc3TVpfMmhFWlc4T3N6OE5reUZReTFYcEVPend5eDJQeXVJT051VjhJWjFHVEdiWjUwalJYSTFwYWx2OFo3MGJtZ3FraUZTRnRoR2trVjNVdGZJNEk?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Short title: Trump administration hindering investigation into Epstein’s ranch - Nine
-  - Longform title: Epstein Files, Timeline And Court Records — Trump administration hindering investigation into Epstein’s ranch - Nine.com.au
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-09 — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxNWXlITUpYS3hFcFNCWS1CejhhaW9PYmNGTXNneGNTbmd5d3lQMXkzNGFHOFpmQ3R5MFVXWEZNdXFtTUZRYmtIc2RBdXNsazJHVkdDcFpPWDQ3aTFlU1RoNlhGeHlLY283cmFqRGhBZmR2RWR0SVM0NUJONERvYXRwaTdDS3E?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key details - CNN
-  - Short title: Exclusive: Epstein survivors say his former assistant Lesley Groff lied
-  - Longform title: Epstein Files, Timeline And Court Records — Exclusive: Epstein survivors say his former assistant Lesley Groff lied to Congress about key de
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-08 — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026
-  - Source: https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-  - Evidence: Official ECB CBDC project timeline / legislation and technical-readiness lane
-  - Video hook: New public-source drop in the CBDC / Digital Euro / Sovereign Payment Rails lane: ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026. Source first, claim second.
-  - Short title: ECB says digital euro aims for potential first issuance during 2029 if E
-  - Longform title: CBDC / Digital Euro / Sovereign Payment Rails — ECB says digital euro aims for potential first issuance during 2029 if EU legislation is ado
-  - Next action: Update CBDC Rollout and Financial Reset clocks; watch 2026 legislative adoption, 2027 testing, wallet provider rules, privacy architecture, and 2029 issuance decision.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — Todd Blanche & The Epstein Files: A Timeline - Public Citizen
-  - Source: https://news.google.com/rss/articles/CBMif0FVX3lxTFB0ZDlhVjdCY2ptRVdYZzI1S1ZpRUE0Rk5BQnVoSWtjS241bTF6TG5TMzVvakpxUHBFSnY1a0FydnVCZ3I0SExvczg3WUk0bHAwVlNQcVZGUVZZbkpfQXhRMF9GY24zLWJNLXlaVFpjS3NRVnplaUE1RG1QWWljS2c?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Todd Blanche & The Epstein Files: A Timeline
-  - Short title: Epstein Files Update: Todd Blanche & The Epstein Files: A Timeline
-  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: Todd Blanche & The Epstein Files: A Timeline
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit - The New Republic
-  - Source: https://news.google.com/rss/articles/CBMipwFBVV95cUxOY1BpbzJYT3V1WGI1djFMc0ptQXhJMkxBSjdOR3c3WmpQN2YtNXNadnlsbV9ZejlsVlVyMGRXVWhGbGlBdldJMEdMb29ndFFDa0thRVQ0ZmRnbEtNaUhiZ1h2R0s1NGR6aUN4UjJsbTlJc2hBWVRJdGtic3hrYktpWERCeWw5V1FjNW5wOGxXd1VYak9qZlN3Z1A4Zk1mSUg1RFBDRjlzOA?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit
-  - Short title: Epstein Files Update: DOJ Tries to Hide Blanche’s Communications From Epstein Files Lawsuit
-  - Longform title: What This Public-Record Update Reveals About Epstein Files, Timeline And Court Records: DOJ Tries to Hide Blanche’s Communications From Epst
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
-  - Offer: offer-starter-library.html
-- 2026-07-07 — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified
-  - Source: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
-  - Evidence: Official EU implementation timeline / regulatory governance lane
-  - Video hook: New public-source drop in the AI Governance / EU AI Act / Cybersecurity lane: EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified. Source first, claim second.
-  - Short title: EU AI Act implementation enters 2026 enforcement phase with transparency
-  - Longform title: AI Governance / EU AI Act / Cybersecurity — EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 a
-  - Next action: Update AI Breakout, Surveillance State and Machine Convergence clocks; watch August 2026 transparency duties, 2027 high-risk application, AI Office guidance, and enforcement cases.
-  - Offer: offer-intelligence-dossiers.html
-- 2026-07-06 — WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated
-  - Source: https://www.who.int/health-topics/who-pandemic-agreement
-  - Evidence: Official WHO treaty/implementation-process lane
-  - Video hook: New public-source drop in the WHO Pandemic Agreement / PABS / Global Health Governance lane: WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated. Source first, claim second.
-  - Short title: WHO Pandemic Agreement remains adopted but not fully open for ratificati
-  - Longform title: WHO Pandemic Agreement / PABS / Global Health Governance — WHO Pandemic Agreement remains adopted but not fully open for ratification until
-  - Next action: Update Pandemic/Biosecurity and Surveillance State clocks; watch IGWG outputs, PABS annex text, ratification counts, national legislation, and financing mechanisms.
-  - Offer: offer-starter-library.html

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.0.0",
-  "updated": "2026-07-16T06:00:33.889Z",
+  "updated": "2026-07-16T06:35:02.553Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -111,7 +111,7 @@
         "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
         "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
         "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-        "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+        "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
         "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
         "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
         "missionThemes": [
@@ -212,6 +212,16 @@
           {
             "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
             "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
+            "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+            "published": "2026-07-07T00:00:00.000Z",
+            "evidenceLevel": "Official EU implementation timeline / regulatory governance lane",
+            "confidence": "curated-latest-public-drop",
+            "sourceFile": "data/live-intel.json",
+            "matchScore": 15
+          },
+          {
+            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
+            "summary": "The Commission's AI Act page now frames the AI Act as an active implementation file: prohibited practices applied from February 2025, GPAI rules from August 2025, transparency rules from August 2026, and high-risk obligations staged through December 2027 and August 2028 after simplification/political agreement language.",
             "route": "",
             "published": "",
             "evidenceLevel": "3",
@@ -237,6 +247,16 @@
             "evidenceLevel": "Official WHO treaty/implementation-process lane",
             "confidence": "",
             "sourceFile": "data/conclusion-engine.json",
+            "matchScore": 14
+          },
+          {
+            "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
+            "summary": "WHO states the Pandemic Agreement was adopted on 20 May 2025, but the next step is negotiation of the Pathogen Access and Benefit-Sharing system as an annex. WHO lists the seventh IGWG meeting on the Agreement for 6–17 July 2026.",
+            "route": "https://www.who.int/health-topics/who-pandemic-agreement",
+            "published": "2026-07-06T00:00:00.000Z",
+            "evidenceLevel": "Official WHO treaty/implementation-process lane",
+            "confidence": "curated-latest-public-drop",
+            "sourceFile": "data/live-intel.json",
             "matchScore": 14
           },
           {
@@ -270,16 +290,6 @@
             "matchScore": 13
           },
           {
-            "title": "EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified",
-            "summary": "",
-            "route": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
-            "published": "2026-07-07T00:00:00.000Z",
-            "evidenceLevel": "",
-            "confidence": "curated-latest-public-drop",
-            "sourceFile": "data/live-intel.json",
-            "matchScore": 13
-          },
-          {
             "title": "Best source intake priority",
             "summary": "The highest-priority source drop is EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified.",
             "route": "",
@@ -296,16 +306,6 @@
             "published": "",
             "evidenceLevel": "",
             "confidence": "Elevated",
-            "sourceFile": "data/conclusion-engine.json",
-            "matchScore": 11
-          },
-          {
-            "title": "Access infrastructure is a measurable power layer.",
-            "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
-            "route": "",
-            "published": "",
-            "evidenceLevel": "",
-            "confidence": "",
             "sourceFile": "data/conclusion-engine.json",
             "matchScore": 11
           }
@@ -343,7 +343,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-07-16T06:00:32.629Z",
+        "generatedAt": "2026-07-16T06:35:01.410Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -362,7 +362,7 @@
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 8266,
+        "signalCount": 8264,
         "actors": [
           "Information and narrative control",
           "Search Full Library"
@@ -372,7 +372,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 5190,
+        "signalCount": 5186,
         "actors": [
           "ATT MOBILITY LLC — Department of Defense",
           "ACCENTURE FEDERAL SERVICES LLC — Department of Energy",
@@ -383,7 +383,7 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 3820,
+        "signalCount": 3828,
         "actors": [
           "Money, currency and access"
         ]
@@ -392,7 +392,7 @@
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 1737,
+        "signalCount": 1738,
         "actors": [
           "Exercise or conversion of derivative security",
           "Identity, surveillance and access",
@@ -404,7 +404,7 @@
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 1401,
+        "signalCount": 1409,
         "actors": [
           "Final Judgment",
           "View files",
@@ -418,14 +418,14 @@
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 1154,
+        "signalCount": 1176,
         "actors": []
       },
       {
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 662,
+        "signalCount": 654,
         "actors": [
           "Identity, surveillance and access"
         ]

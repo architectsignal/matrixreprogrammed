@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Mission Timers
 
-Updated: 2026-07-16T06:00:57.588Z
+Updated: 2026-07-16T06:35:01.410Z
 
 Matrix Reprogrammed turns scattered public records, institutional relationships, money routes, policy systems, source changes and investigative leads into evidence-graded maps and useful conclusions that ordinary readers can understand, verify and act on.
 
@@ -62,7 +62,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 88% — Active
 - Meaning: The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.
 - Movement: Held at 88. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–36 months
 
 The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high.
@@ -75,13 +75,13 @@ This clock is relevant to Information and narrative control, Corporate-state con
 
 - AI Breakout Clock — answer-engine.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - Surveillance State Clock — surveillance-hub.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - Surveillance State Clock — surveillance-hub.html
 - Machine Convergence — black-file.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — answer-engine.html
-- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - Best source intake priority
 
 ### What would raise it
@@ -107,7 +107,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 92% — Active
 - Meaning: The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.
 - Movement: Held at 92. No source-linked trigger justified a change in this build.
-- Calculation basis: 3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: Already underway
 
 Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.
@@ -124,10 +124,10 @@ This clock is relevant to Identity, surveillance and access, Information and nar
 - CBDC Rollout Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
-- WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — 3
 
 ### What would raise it
 - Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.
@@ -162,7 +162,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 70% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
 - Movement: Held at 70. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 6–36 months
 
 Debt stress, private payment dependence, tokenised settlement, stablecoin competition, CBDC planning and digital-euro legislation keep the financial-system lane elevated. July refresh raises the source quality through official ECB digital euro timeline language. Policy convergence tracker lanes: CBDC / Tokenized Money / Programmable Finance · Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.
@@ -181,7 +181,7 @@ This clock is relevant to Money, currency and access, Corporate-state convergenc
 - Central-bank, BIS, IMF and digital-money records — deep-intel-feed.html
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — control-system-tracker.html#programmable-money
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
-- ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+- ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — 3
 
 ### What would raise it
@@ -213,7 +213,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 86% — Active
 - Meaning: The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.
 - Movement: Held at 86. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 3 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–5 years
 
 The digital euro remains the strongest current CBDC route: ECB says the Eurosystem aims to be ready for possible first issuance in 2029 if legislation is adopted in 2026. This connects public digital money, wallet infrastructure, privacy design and sovereign payment-rail policy. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance.
@@ -229,10 +229,10 @@ This clock is relevant to Money, currency and access, Identity, surveillance and
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
+- ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — 3
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — 3
 - ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — Official ECB CBDC project timeline / legislation and technical-readiness lane — control-system-tracker.html#programmable-money
-- ECB says digital euro aims for potential first issuance during 2029 if EU legislation is adopted in 2026 — https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html
 - Central-bank, BIS, IMF and digital-money records — deep-intel-feed.html
 
 ### What would raise it
@@ -264,7 +264,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 72% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
 - Movement: Held at 72. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 1–5 years
 
 Cyber risk remains elevated through AI-enabled misuse, infrastructure dependency, banking/payment concentration, state cyber operations and EU AI/cyber resilience planning. July refresh links cyber risk more strongly to AI governance rather than a specific blackout event. Policy convergence tracker lanes: War / Security / Emergency Powers.
@@ -281,10 +281,10 @@ This clock is relevant to Security and emergency power, Corporate-state converge
 - AI Breakout Clock — answer-engine.html
 - WWIII Escalation Clock — live-intel.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - CBDC Rollout Clock — surveillance-hub.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
-- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — answer-engine.html
 
 ### What would raise it
 - Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.
@@ -356,7 +356,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 64% — Elevated
 - Meaning: Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.
 - Movement: Held at 64. No source-linked trigger justified a change in this build.
-- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–24 months
 
 WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures. Policy convergence tracker lanes: Health Governance / Biosecurity / Emergency Health Powers.
@@ -371,10 +371,10 @@ This clock is relevant to Health and biosecurity governance, Global governance c
 - Surveillance State Clock — surveillance-hub.html
 - Machine Convergence — black-file.html
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
+- WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — 3
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — 3
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — control-system-tracker.html#health-and-biosecurity
-- WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — https://www.who.int/health-topics/who-pandemic-agreement
 - CBDC Rollout Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
 
@@ -403,7 +403,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 60% — Developing
 - Meaning: Multiple signals or early implementation exist. Pull missing records and track movement.
 - Movement: Held at 60. No source-linked trigger justified a change in this build.
-- Calculation basis: 0 curated current drops, 3 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 0 curated current drops, 3 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–24 months
 
 Civil-stability pressure remains elevated through elections, migration, economic strain, war protest cycles, platform/speech rules and emergency politics. July refresh adds no single acute civil-unrest trigger, so the score is held lower than homepage threshold. Policy convergence tracker lanes: War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Migration / Borders / Biometric Travel.
@@ -421,9 +421,9 @@ This clock is relevant to Security and emergency power, Information and narrativ
 - CBDC Rollout Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
 - WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
+- WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated — Official WHO treaty/implementation-process lane — https://www.who.int/health-topics/who-pandemic-agreement
 - Epstein Files: What US midterm elections could mean for investigation - Channel 4 News | Substack — Seven-day public-record/news lead — https://news.google.com/rss/articles/CBMigAFBVV95cUxNalhVZlYtbFZ1a1Q2MDJKU0E3UUhzSHAzTUNXQW5VbW9jVUdtQjNDZWZjLTlSbWU2NGRXalNjRHNtQnJIRDI0Z0wzM1RfT3dYXzhWVHducXliZ0FPVVB1Q2ZEMWhkc2dWcGNndGluYkpWXzFpWlFvUHljZjMzTFRWbg?oc=5
 - Idemia Public Security, Proof partner on single portable digital credential - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5
-- Surveillance shadows No Kings protests - Biometric Update — Seven-day public-record lead — https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5
 
 ### What would raise it
 - Escalate when emergency powers renew, security contractors enter civilian systems, or domestic restrictions are justified by external conflict.
@@ -470,11 +470,11 @@ This clock is relevant to Corporate-state convergence, Global governance converg
 - Surveillance State Clock — surveillance-hub.html
 - Surveillance State Clock — surveillance-hub.html
 - CBDC Rollout Clock — surveillance-hub.html
+- Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
 - Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
 - Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
 - Chattogram Water Supply Improvement Project — https://search.worldbank.org/api/v2/projects
 - Hackers may have breached FBI wiretap network via supply chain - Malwarebytes — Seven-day public-record lead — https://news.google.com/rss/articles/CBMiugFBVV95cUxPczJpTmZyYjRQdlpzdVRBd2VYSmtYM0huMlpVNkFnS0VRc1JMTVQ1OFNvUWNlLVNPSkpuZzBHU1hwSUR5dG40Z2RSS3I2TXhadlBON3dqR1JSSnlZaE1UVXNWT1ZyMFpVWUlCejdCdmpkREJPMU5SWVIxQTd5OXZaU21yUlpuaHZwZ0xmRVNZeTdOWldJT3FyWDNyeWxFcXliaTV4NWhZOGhSX2JKZm9XalI2Rk9XV0ZHMkE?oc=5
-- Pentagon Officially Notifies Anthropic It Is a ‘Supply Chain Risk’ - The New York Times — Seven-day public-record lead — https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5
 
 ### What would raise it
 - Escalate when policy becomes mandatory, financially enforced, linked to payments, or restricts movement, energy, food, or land use.
@@ -552,7 +552,7 @@ Boundary: This timer visualises evidence pressure and implementation convergence
 - Pressure index: 82% — Active
 - Meaning: The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.
 - Movement: Held at 82. No source-linked trigger justified a change in this build.
-- Calculation basis: 3 curated current drops, 7 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
+- Calculation basis: 3 curated current drops, 7 linked policy lanes, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.
 - Window: 0–5 years
 
 Composite convergence is rising through overlapping AI governance, digital identity wallets, CBDC readiness, health-governance data systems, platform regulation and cyber-security integration. This remains a composite editorial index, not a certainty claim. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · CBDC / Tokenized Money / Programmable Finance · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Climate / Energy / Carbon / Mobility · Migration / Borders / Biometric Travel.
@@ -569,10 +569,10 @@ This clock is relevant to Global governance convergence, Money, currency and acc
 - CBDC Rollout Clock — surveillance-hub.html
 - AI Breakout Clock — answer-engine.html
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — 3
 - EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — Official EU implementation timeline / regulatory governance lane — answer-engine.html
-- EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified — https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 
 ### What would raise it
 - Escalate only when a soft-law or policy framework becomes a domestic mandate, procurement requirement, or integrated identity/money/security rule.

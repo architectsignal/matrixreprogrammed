@@ -1,7 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-16T06:00:06.950Z",
+  "generatedAt": "2026-07-16T06:34:12.736Z",
   "hardIssues": [],
-  "softIssues": [],
+  "softIssues": [
+    "timers.html expected at least 10 timer cards, found 1"
+  ],
   "boundary": "Pressure test blocks only deploy-critical breaks. Historical phase copy/template expectations are soft so daily automation can ship while reporting drift."
 }

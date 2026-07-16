@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-07-16T05:59:34.320Z
+Updated: 2026-07-16T06:33:34.826Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 4
-Normalized events: 24
-Entity observations: 53
+Feeds reached: 3
+Normalized events: 18
+Entity observations: 36
 
 ## Latest Events
 
@@ -22,12 +22,6 @@ Entity observations: 53
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
-- charged / sued: Sawas v. Elzanaty — courtlistener-court-records — https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/
-- charged / sued: People v. Brim — courtlistener-court-records — https://www.courtlistener.com/opinion/10919846/people-v-brim/
-- charged / sued: The New York and Presbyterian Hospital v. New York State Nurses Association — courtlistener-court-records — https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/
-- charged / sued: Matter of Pagliughi — courtlistener-court-records — https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/
-- charged / sued: Biddle v. Biddle — courtlistener-court-records — https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/
 - documented association: Boosting Green Finance, Investment and Trade in Rwanda — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Chattogram Water Supply Improvement Project — world-bank-projects — https://search.worldbank.org/api/v2/projects
 - documented association: Transforming Agri-food Systems in Morocco — world-bank-projects — https://search.worldbank.org/api/v2/projects
@@ -42,7 +36,6 @@ Entity observations: 53
 - People's Republic of Bangladesh: 3 mention(s), lanes: world-bank-projects
 - Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
 - Management and Budget Office: 2 mention(s), lanes: federal-register-policy
-- Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
 - Homeland Security Department: 1 mention(s), lanes: federal-register-policy
 - Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
 - Federal Procurement Policy Office: 1 mention(s), lanes: federal-register-policy
@@ -67,3 +60,4 @@ Entity observations: 53
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
+- Republic of Rwanda: 1 mention(s), lanes: world-bank-projects

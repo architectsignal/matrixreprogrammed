@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T05:59:53.132Z",
+  "updated": "2026-07-16T06:33:58.596Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 222,
+  "count": 226,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -729,7 +729,7 @@
     {
       "file": "downloads/login-email-resend-test.pdf",
       "title": "Login Email Resend Test",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -832,6 +832,12 @@
       "file": "downloads/network-search.pdf",
       "title": "Network Search",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/newsletter-consent-patch.pdf",
+      "title": "Newsletter Consent Patch",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -1219,6 +1225,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/site-intelligence-pipeline-audit.pdf",
+      "title": "Matrix Reprogrammed Site Intelligence Pipeline Audit",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/site-population-audit.pdf",
       "title": "Site Population Audit",
       "reused": true,
@@ -1294,6 +1306,12 @@
       "file": "downloads/speculative-conclusions.pdf",
       "title": "Speculative Conclusions",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/speculative-intelligence-synthesis.pdf",
+      "title": "Speculative Intelligence Synthesis",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -1380,6 +1398,12 @@
       "file": "downloads/theory-lab-conclusions.pdf",
       "title": "Theory Lab Conclusions",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/timer-synthesis.pdf",
+      "title": "Matrix Reprogrammed Mission Timers",
+      "reused": false,
       "kind": "download"
     },
     {

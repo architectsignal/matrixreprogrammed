@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-16T06:00:33.987Z
+Updated: 2026-07-16T06:34:39.206Z
 Overall: working-with-gaps
 Green: 40 · Amber: 3 · Red: 0
 
@@ -12,7 +12,7 @@ Green: 40 · Amber: 3 · Red: 0
 - **GREEN · Collect · collect-source-pulls:** Source-pull index exists.
 - **AMBER · Collect · freshness-curated-drops:** Curated source file age: 7 day(s). Fix: Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.
 - **AMBER · Collect · freshness-seven-day-feed:** Seven-day feed file age: 7 day(s). Fix: Run RSS/public-source intake every day and archive items automatically after seven days.
-- **GREEN · Collect · fresh-current-news:** 25 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
+- **GREEN · Collect · fresh-current-news:** 19 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
 - **GREEN · Classify · classification-system:** Information-gathering operating model exists.
 - **GREEN · Grade · interpretation-standard:** Reader score and evidence interpretation standard exists.
 - **GREEN · Grade · source-registry:** Master evidence source registry exists.

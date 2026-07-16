@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T05:59:34.290Z",
+  "updated": "2026-07-16T06:33:34.797Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -215,7 +215,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-15T06:31:02.689Z",
+    "lastComputed": "2026-07-16T06:00:30.110Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "highestProbabilityScenario": {
@@ -329,7 +329,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-07-15T06:31:02.689Z",
+    "lastComputed": "2026-07-16T06:00:30.110Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "missingRecords": [
@@ -454,11 +454,11 @@
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-16T05:59:34.320Z",
-    "eventCount": 24,
+    "updated": "2026-07-16T06:33:34.826Z",
+    "eventCount": 18,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 53,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 36,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -690,17 +690,6 @@
       ]
     },
     {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ]
-    },
-    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "count": 1,
@@ -765,14 +754,25 @@
       "record_types": [
         "rule_or_notice"
       ]
+    },
+    {
+      "id": "agriculture-department",
+      "name": "Agriculture Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-16T05:59:49.159Z",
+    "updated": "2026-07-16T06:33:54.916Z",
     "newRecordCount": 0,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 112,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 94,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -781,7 +781,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-16T05:59:49.312Z",
+    "updated": "2026-07-16T06:33:55.044Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -815,7 +815,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-16T05:59:49.352Z",
+    "updated": "2026-07-16T06:33:55.078Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

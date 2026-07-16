@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-07-16T05:59:53.132Z
+Updated: 2026-07-16T06:33:58.596Z
 
 Every listed PDF is generated from the current site data at build time. The premium mini-book structure now includes a cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books, and reader actions.
 
@@ -129,7 +129,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf (custom PDF preserved)
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf (custom PDF preserved)
 - Live Intel Machine: downloads/live-intel-latest.pdf (custom PDF preserved)
-- Login Email Resend Test: downloads/login-email-resend-test.pdf
+- Login Email Resend Test: downloads/login-email-resend-test.pdf (custom PDF preserved)
 - Logo Symbolism Dossiers: downloads/logo-symbolism-dossiers.pdf (custom PDF preserved)
 - Machine Digest: downloads/machine-digest.pdf (custom PDF preserved)
 - Machine Intelligence: downloads/machine-intelligence.pdf (custom PDF preserved)
@@ -147,6 +147,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Mission Source Priority Index: downloads/mission-source-priority-index.pdf (custom PDF preserved)
 - Monetisation Dashboard: downloads/monetisation-dashboard.pdf (custom PDF preserved)
 - Network Search: downloads/network-search.pdf (custom PDF preserved)
+- Newsletter Consent Patch: downloads/newsletter-consent-patch.pdf
 - Newsletter Worker Patch Report: downloads/newsletter-worker-patch-report.pdf (custom PDF preserved)
 - Crime Dossiers Offer: downloads/offer-crime-dossiers.pdf (custom PDF preserved)
 - D.O.G The Architect Collector Offer: downloads/offer-dog-architect-collector.pdf (custom PDF preserved)
@@ -211,6 +212,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Site Function Harmony Report: downloads/site-function-harmony-report.pdf (custom PDF preserved)
 - Matrix Intelligence Core: downloads/site-intelligence-core.pdf (custom PDF preserved)
 - Site Intelligence Graph: downloads/site-intelligence-graph.pdf (custom PDF preserved)
+- Matrix Reprogrammed Site Intelligence Pipeline Audit: downloads/site-intelligence-pipeline-audit.pdf
 - Site Population Audit: downloads/site-population-audit.pdf (custom PDF preserved)
 - Site Public Copy And Intake Audit: downloads/site-public-copy-intake-audit.pdf (custom PDF preserved)
 - Site Quality Report: downloads/site-quality-report.pdf (custom PDF preserved)
@@ -224,6 +226,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Speculation / Needs Review: downloads/speculation-needs-review-public.pdf (custom PDF preserved)
 - Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf (custom PDF preserved)
 - Speculative Conclusions: downloads/speculative-conclusions.pdf (custom PDF preserved)
+- Speculative Intelligence Synthesis: downloads/speculative-intelligence-synthesis.pdf
 - Structured Investigation Data Build: downloads/structured-investigation-data-build.pdf (custom PDF preserved)
 - Structured Investigation Data Test: downloads/structured-investigation-data-test.pdf (custom PDF preserved)
 - Crime-State Overlap Brief: downloads/subject-crime-state-overlap.pdf
@@ -236,6 +239,7 @@ Every listed PDF is generated from the current site data at build time. The prem
 - Trust & Evidence Method: downloads/subject-trust-evidence-method.pdf
 - The Black File Preview: downloads/the-black-file-preview.pdf (custom PDF preserved)
 - Theory Lab Conclusions: downloads/theory-lab-conclusions.pdf (custom PDF preserved)
+- Matrix Reprogrammed Mission Timers: downloads/timer-synthesis.pdf
 - Top 52 Art System Style Bible: downloads/top-52-art-style-bible.pdf (custom PDF preserved)
 - Top 52 Batch 1 Art Queue: downloads/top-52-batch1-art-queue.pdf (custom PDF preserved)
 - Top 52 Card Art Manifest: downloads/top-52-card-art-manifest.pdf (custom PDF preserved)

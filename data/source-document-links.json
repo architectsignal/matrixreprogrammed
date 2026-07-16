@@ -1,9 +1,9 @@
 {
-  "updated": "2026-07-15T08:32:45.083Z",
+  "updated": "2026-07-16T08:29:50.849Z",
   "mode": "daily",
   "evidenceBoundary": "A linked PDF is a discovered source document, not a finding. Its contents require extraction, provenance review and evidential classification before supporting a conclusion.",
   "sourceCount": 12,
-  "documentCount": 258,
+  "documentCount": 346,
   "documents": [
     {
       "url": "https://oversight.house.gov/wp-content/uploads/2025/01/119th-Committee-Rules.pdf",
@@ -13,7 +13,7 @@
       "sourceUrl": "https://oversight.house.gov/release/",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -24,7 +24,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -35,7 +35,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -46,7 +46,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -57,7 +57,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -68,7 +68,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -79,7 +79,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -90,7 +90,348 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14162.pdf?1784033108",
+      "title": "2026-14162.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14163.pdf?1784033108",
+      "title": "2026-14163.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14164.pdf?1784033108",
+      "title": "2026-14164.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14165.pdf?1784033108",
+      "title": "2026-14165.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14166.pdf?1784033109",
+      "title": "2026-14166.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14167.pdf?1784033109",
+      "title": "2026-14167.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14168.pdf?1784033109",
+      "title": "2026-14168.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14169.pdf?1784033109",
+      "title": "2026-14169.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14170.pdf?1784033109",
+      "title": "2026-14170.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14171.pdf?1784033109",
+      "title": "2026-14171.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14172.pdf?1784033109",
+      "title": "2026-14172.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14173.pdf?1784033110",
+      "title": "2026-14173.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14174.pdf?1784033110",
+      "title": "2026-14174.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14175.pdf?1784033110",
+      "title": "2026-14175.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14176.pdf?1784033110",
+      "title": "2026-14176.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14177.pdf?1784033110",
+      "title": "2026-14177.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14178.pdf?1784033110",
+      "title": "2026-14178.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14179.pdf?1784033110",
+      "title": "2026-14179.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14180.pdf?1784033111",
+      "title": "2026-14180.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14181.pdf?1784033111",
+      "title": "2026-14181.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14182.pdf?1784033111",
+      "title": "2026-14182.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14183.pdf?1784033111",
+      "title": "2026-14183.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14184.pdf?1784033111",
+      "title": "2026-14184.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14185.pdf?1784033111",
+      "title": "2026-14185.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14186.pdf?1784033112",
+      "title": "2026-14186.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14187.pdf?1784033112",
+      "title": "2026-14187.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14188.pdf?1784033112",
+      "title": "2026-14188.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14189.pdf?1784033112",
+      "title": "2026-14189.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14190.pdf?1784033112",
+      "title": "2026-14190.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14191.pdf?1784033112",
+      "title": "2026-14191.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14192.pdf?1784033112",
+      "title": "2026-14192.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -101,7 +442,18 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14194.pdf?1784033112",
+      "title": "2026-14194.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -112,7 +464,161 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14196.pdf?1784033112",
+      "title": "2026-14196.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14197.pdf?1784033113",
+      "title": "2026-14197.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14198.pdf?1784033113",
+      "title": "2026-14198.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14199.pdf?1784033113",
+      "title": "2026-14199.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14200.pdf?1784033113",
+      "title": "2026-14200.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14201.pdf?1784033113",
+      "title": "2026-14201.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14202.pdf?1784033113",
+      "title": "2026-14202.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14203.pdf?1784033113",
+      "title": "2026-14203.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14204.pdf?1784033114",
+      "title": "2026-14204.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14205.pdf?1784033114",
+      "title": "2026-14205.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14206.pdf?1784033114",
+      "title": "2026-14206.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14207.pdf?1784033114",
+      "title": "2026-14207.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14208.pdf?1784033114",
+      "title": "2026-14208.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14209.pdf?1784033114",
+      "title": "2026-14209.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -123,7 +629,62 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14211.pdf?1784033114",
+      "title": "2026-14211.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14212.pdf?1784033115",
+      "title": "2026-14212.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14213.pdf?1784033115",
+      "title": "2026-14213.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14214.pdf?1784033115",
+      "title": "2026-14214.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14215.pdf?1784033115",
+      "title": "2026-14215.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -134,7 +695,337 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14217.pdf?1784033115",
+      "title": "2026-14217.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14218.pdf?1784033115",
+      "title": "2026-14218.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14219.pdf?1784033116",
+      "title": "2026-14219.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14220.pdf?1784033116",
+      "title": "2026-14220.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14221.pdf?1784033116",
+      "title": "2026-14221.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14222.pdf?1784033116",
+      "title": "2026-14222.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14223.pdf?1784033116",
+      "title": "2026-14223.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14224.pdf?1784033116",
+      "title": "2026-14224.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14225.pdf?1784033116",
+      "title": "2026-14225.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14226.pdf?1783955707",
+      "title": "2026-14226.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14227.pdf?1784033116",
+      "title": "2026-14227.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14228.pdf?1784033117",
+      "title": "2026-14228.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14229.pdf?1784033117",
+      "title": "2026-14229.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14230.pdf?1784033117",
+      "title": "2026-14230.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14231.pdf?1784033117",
+      "title": "2026-14231.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14232.pdf?1784033117",
+      "title": "2026-14232.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14234.pdf?1784033117",
+      "title": "2026-14234.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14235.pdf?1784033117",
+      "title": "2026-14235.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14236.pdf?1784033117",
+      "title": "2026-14236.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14237.pdf?1784033118",
+      "title": "2026-14237.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14238.pdf?1784033118",
+      "title": "2026-14238.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14239.pdf?1784033118",
+      "title": "2026-14239.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14240.pdf?1784033118",
+      "title": "2026-14240.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14241.pdf?1784033118",
+      "title": "2026-14241.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14242.pdf?1784033118",
+      "title": "2026-14242.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14243.pdf?1784033118",
+      "title": "2026-14243.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14244.pdf?1784033118",
+      "title": "2026-14244.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14245.pdf?1784033119",
+      "title": "2026-14245.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14246.pdf?1784033119",
+      "title": "2026-14246.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14247.pdf?1784033119",
+      "title": "2026-14247.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -145,7 +1036,84 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14249.pdf?1784033119",
+      "title": "2026-14249.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14250.pdf?1784033119",
+      "title": "2026-14250.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14260.pdf?1784033119",
+      "title": "2026-14260.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14261.pdf?1784033120",
+      "title": "2026-14261.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14281.pdf?1784033120",
+      "title": "2026-14281.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14282.pdf?1784033120",
+      "title": "2026-14282.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://public-inspection.federalregister.gov/2026-14334.pdf?1784042108",
+      "title": "2026-14334.pdf",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -156,7 +1124,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -167,7 +1135,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -178,7 +1146,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -189,7 +1157,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -200,7 +1168,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -211,7 +1179,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -222,7 +1190,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -233,7 +1201,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -244,7 +1212,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -255,7 +1223,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -266,7 +1234,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -277,7 +1245,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -288,7 +1256,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -299,7 +1267,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -310,7 +1278,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -321,7 +1289,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -332,7 +1300,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -343,7 +1311,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -354,7 +1322,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -365,7 +1333,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -376,7 +1344,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -387,7 +1355,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -398,7 +1366,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -409,7 +1377,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -420,7 +1388,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -431,7 +1399,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -442,7 +1410,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -453,7 +1421,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -464,7 +1432,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -475,7 +1443,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -486,7 +1454,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -497,7 +1465,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -508,7 +1476,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -519,7 +1487,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -530,7 +1498,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -541,7 +1509,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -552,7 +1520,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -563,7 +1531,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -574,7 +1542,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -585,7 +1553,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -596,7 +1564,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -607,7 +1575,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -618,7 +1586,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -629,7 +1597,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -640,7 +1608,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -651,7 +1619,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -662,7 +1630,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -673,7 +1641,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -684,7 +1652,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -695,7 +1663,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -706,7 +1674,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -717,7 +1685,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -728,7 +1696,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -739,7 +1707,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -750,7 +1718,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -761,7 +1729,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -772,7 +1740,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -783,7 +1751,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -794,7 +1762,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -805,7 +1773,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -816,7 +1784,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -827,7 +1795,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -838,7 +1806,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -849,7 +1817,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -860,7 +1828,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -871,7 +1839,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -882,7 +1850,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -893,7 +1861,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -904,7 +1872,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -915,7 +1883,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -926,7 +1894,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -937,7 +1905,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -948,7 +1916,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -959,7 +1927,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -970,7 +1938,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -981,7 +1949,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -992,7 +1960,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1003,7 +1971,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1014,7 +1982,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1025,7 +1993,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1036,7 +2004,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1047,7 +2015,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1058,7 +2026,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1069,7 +2037,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1080,7 +2048,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1091,7 +2059,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1102,7 +2070,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1113,7 +2081,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1124,7 +2092,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1135,7 +2103,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1146,7 +2114,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1157,7 +2125,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1168,7 +2136,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1179,7 +2147,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1190,7 +2158,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1201,7 +2169,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1212,7 +2180,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1223,7 +2191,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1234,7 +2202,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1245,7 +2213,7 @@
       "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "lane": "oversight-audit",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1256,7 +2224,7 @@
       "sourceUrl": "https://www.justice.gov/epstein/doj-disclosures",
       "lane": "epstein-disclosure",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1267,7 +2235,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1278,18 +2246,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
-      "discoveredFrom": "source-monitor-document-discovery"
-    },
-    {
-      "url": "https://www.sec.gov/files/litigation/complaints/2026/comp26486.pdf",
-      "title": "SEC Complaint",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "lane": "government-enforcement",
-      "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1300,7 +2257,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1311,7 +2268,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1322,7 +2279,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1333,7 +2290,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1344,7 +2301,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1355,7 +2312,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1366,7 +2323,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1377,7 +2334,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1388,7 +2345,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1399,7 +2356,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1410,7 +2367,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1421,7 +2378,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1432,7 +2389,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1443,7 +2400,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1454,7 +2411,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1465,7 +2422,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1476,7 +2433,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1487,7 +2444,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1498,7 +2455,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1509,7 +2466,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1520,7 +2477,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1531,7 +2488,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1542,7 +2499,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1553,7 +2510,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1564,7 +2521,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1575,7 +2532,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1586,7 +2543,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1597,7 +2554,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1608,7 +2565,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1619,7 +2576,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1630,7 +2587,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1641,7 +2598,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1652,7 +2609,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1663,7 +2620,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1674,7 +2631,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1685,7 +2642,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1696,7 +2653,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1707,7 +2664,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1718,7 +2675,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1729,7 +2686,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1740,7 +2697,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1751,7 +2708,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1762,7 +2719,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1773,7 +2730,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1784,7 +2741,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1795,7 +2752,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1806,7 +2763,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1817,7 +2774,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1828,7 +2785,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1839,7 +2796,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1850,7 +2807,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1861,7 +2818,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1872,7 +2829,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1883,7 +2840,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1894,7 +2851,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1905,7 +2862,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1916,7 +2873,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1927,7 +2884,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1938,7 +2895,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1949,7 +2906,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1960,7 +2917,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1971,7 +2928,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1982,7 +2939,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -1993,7 +2950,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2004,7 +2961,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2015,7 +2972,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2026,7 +2983,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2037,7 +2994,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2048,7 +3005,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2059,7 +3016,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2070,7 +3027,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2081,7 +3038,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2092,7 +3049,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2103,7 +3060,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2114,7 +3071,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2125,7 +3082,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2136,7 +3093,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2147,7 +3104,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2158,7 +3115,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2169,7 +3126,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2180,7 +3137,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2191,7 +3148,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2202,7 +3159,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2213,7 +3170,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2224,7 +3181,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2235,7 +3192,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2246,7 +3203,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2257,7 +3214,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2268,7 +3225,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2279,7 +3236,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2290,7 +3247,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2301,7 +3258,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2312,7 +3269,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2323,7 +3280,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2334,7 +3291,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2345,7 +3302,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2356,7 +3313,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2367,7 +3324,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2378,7 +3335,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2389,7 +3346,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2400,7 +3357,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2411,7 +3368,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2422,7 +3379,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2433,7 +3390,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2444,7 +3401,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2455,7 +3412,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2466,7 +3423,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2477,7 +3434,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2488,7 +3445,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2499,7 +3456,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2510,7 +3467,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2521,7 +3478,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2532,7 +3489,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2543,7 +3500,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2554,7 +3511,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2565,7 +3522,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2576,7 +3533,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2587,7 +3544,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2598,7 +3555,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2609,7 +3566,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2620,7 +3577,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2631,7 +3588,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2642,7 +3599,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2653,7 +3610,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2664,7 +3621,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2675,7 +3632,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2686,7 +3643,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2697,7 +3654,18 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
+      "discoveredFrom": "source-monitor-document-discovery"
+    },
+    {
+      "url": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+      "title": "Final Judgment",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2708,7 +3676,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2719,7 +3687,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2730,7 +3698,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2741,7 +3709,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2752,7 +3720,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2763,7 +3731,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2774,7 +3742,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2785,7 +3753,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2796,7 +3764,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2807,7 +3775,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2818,7 +3786,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2829,7 +3797,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     },
     {
@@ -2840,7 +3808,7 @@
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
-      "discoveredAt": "2026-07-15T08:32:45.083Z",
+      "discoveredAt": "2026-07-16T08:29:50.849Z",
       "discoveredFrom": "source-monitor-document-discovery"
     }
   ]

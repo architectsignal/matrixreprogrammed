@@ -23,9 +23,10 @@ function routeExists(route = '') {
 
 for (const name of [
   'data/global-risk-clocks.json', 'data/clock-wall.json', 'data/reader-interpretation-standard.json',
-  'data/homepage-command-surface.json', 'downloads/timer-synthesis.md', 'data/epstein-homepage-alerts.json',
-  'timers.html', 'index.html', 'scripts/build-mission-timers.js', 'scripts/build-clock-wall.js',
-  'scripts/build-homepage-command-surface.js', 'scripts/public-usefulness-clocks.js',
+  'data/dark-speculation-claims.json', 'data/homepage-command-surface.json', 'downloads/timer-synthesis.md',
+  'data/epstein-homepage-alerts.json', 'timers.html', 'index.html', 'scripts/build-mission-timers.js',
+  'scripts/build-clock-wall.js', 'scripts/build-homepage-command-surface.js', 'scripts/public-usefulness-clocks.js',
+  'scripts/speculation-clocks.js', 'scripts/all-reader-clocks.js', 'scripts/speculation-clocks-test.js',
   'scripts/update-public-usefulness-clock-scores.js', 'scripts/enrich-public-usefulness-clock-evidence.js'
 ]) needFile(name);
 
@@ -35,7 +36,8 @@ for (const text of [
   'What would raise it', 'What would lower it', 'Missing records', 'Useful next actions',
   'one-world government', 'data/clock-wall.json', 'downloads/timer-synthesis.md',
   'Reader early-warning dashboard', 'Your Freedom', 'Your Money', 'Your Essential Services',
-  'Your Government', 'Global Watch', 'Speculative Watch'
+  'Your Government', 'Global Watch', 'Speculative Watch', 'Classified claims, not confirmed events',
+  'do not measure truth, guilt or probability', 'cannot rise automatically from mentions'
 ]) needText('timers.html', text);
 needNoText('timers.html', 'Static page, not a live counter');
 needNoText('timers.html', 'Connected systems');
@@ -73,17 +75,19 @@ const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/glob
 const wall = exists('data/clock-wall.json') ? JSON.parse(read('data/clock-wall.json')) : {};
 const homepage = exists('data/homepage-command-surface.json') ? JSON.parse(read('data/homepage-command-surface.json')) : {};
 const publicDefinitions = require('./public-usefulness-clocks.js');
+const speculationDefinitions = require('./speculation-clocks.js');
 const originalSlugs = [
   'wwiii-escalation', 'ai-breakout', 'surveillance-state', 'financial-reset', 'cbdc-rollout', 'cyber-blackout',
   'alien-disclosure', 'pandemic-biosecurity', 'civil-unrest', 'food-system-stress', 'energy-shock', 'machine-convergence'
 ];
 const expectedPublicSlugs = publicDefinitions.map(clock => clock.slug);
-const expectedMinimum = originalSlugs.length + expectedPublicSlugs.length;
+const expectedSpeculationSlugs = speculationDefinitions.map(clock => clock.slug);
+const expectedMinimum = originalSlugs.length + expectedPublicSlugs.length + expectedSpeculationSlugs.length;
 if (!Array.isArray(data.clocks) || data.clocks.length < expectedMinimum) issues.push(`global risk clocks must contain at least ${expectedMinimum} clocks`);
 if (!Array.isArray(wall.clocks) || wall.clocks.length < expectedMinimum) issues.push(`clock wall must contain at least ${expectedMinimum} clocks`);
 const canonicalSlugs = new Set((data.clocks || []).map(clock => clock.slug));
 const wallSlugs = new Set((wall.clocks || []).map(clock => clock.slug));
-for (const slug of [...originalSlugs, ...expectedPublicSlugs]) {
+for (const slug of [...originalSlugs, ...expectedPublicSlugs, ...expectedSpeculationSlugs]) {
   if (!canonicalSlugs.has(slug)) issues.push(`canonical clocks missing ${slug}`);
   if (!wallSlugs.has(slug)) issues.push(`clock wall missing ${slug}`);
 }
@@ -91,7 +95,11 @@ if (wall.scoreType !== 'pressureIndex') issues.push('clock wall must declare pre
 if (!wall.scoreDefinition || !/not the probability/i.test(wall.scoreDefinition)) issues.push('clock wall must explain that pressure index is not event probability');
 if (!Number.isFinite(Number(wall.candidateSignalCount))) issues.push('clock wall must report candidate signal count');
 if (!Number.isFinite(Number(wall.sourceFileCount))) issues.push('clock wall must report source file count');
-if (Number(wall.publicUsefulnessClockCount) !== expectedPublicSlugs.length) issues.push('clock wall public usefulness count does not match registry');
+if (Number(wall.publicUsefulnessClockCount) !== expectedPublicSlugs.length) issues.push('clock wall public usefulness count does not match practical registry');
+if (Number(wall.speculativeClockCount) !== expectedSpeculationSlugs.length) issues.push('clock wall speculative count does not match speculation registry');
+if (Number(wall.readerClockRegistryCount) !== expectedPublicSlugs.length + expectedSpeculationSlugs.length) issues.push('clock wall reader registry count does not match practical plus speculative definitions');
+if (Number(data.practicalReaderClockCount) !== expectedPublicSlugs.length) issues.push('canonical practical reader count does not match registry');
+if (Number(data.speculativeReaderClockCount) !== expectedSpeculationSlugs.length) issues.push('canonical speculative reader count does not match registry');
 
 const sourceLookup = new Map((data.clocks || []).map(clock => [clock.slug, clock]));
 for (const clock of wall.clocks || []) {
@@ -100,21 +108,29 @@ for (const clock of wall.clocks || []) {
   if (sourceLookup.has(clock.slug) && Number(sourceLookup.get(clock.slug).score) !== Number(clock.score)) issues.push(`${clock.title} score differs from canonical data`);
   for (const field of ['scoreBand', 'scoreMeaning', 'scoreDefinition', 'scoreMethod', 'calculationBasis', 'plainEnglishConclusion', 'controlSystemMeaning', 'lastMovement', 'boundary']) if (!String(clock[field] || '').trim()) issues.push(`${clock.title} missing ${field}`);
   for (const field of ['whatRaises', 'whatLowers', 'sourceRoutes', 'missingEvidence', 'usefulNextActions']) if (!Array.isArray(clock[field]) || !clock[field].length) issues.push(`${clock.title} missing ${field}`);
-  if (!/not proof|does not by itself prove|not event probability/i.test(`${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} lacks a clear claim boundary`);
-  if (!/one-world government|one world government/i.test(`${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} does not bound one-world-government interpretation`);
+  if (!/not proof|does not by itself prove|not event probability|not confirmation|not truth|not a truth|not.*probability/i.test(`${clock.scoreDefinition} ${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} lacks a clear claim boundary`);
+  if (!clock.speculationOnly && !/one-world government|one world government/i.test(`${clock.controlSystemMeaning} ${clock.boundary}`)) issues.push(`${clock.title} does not bound one-world-government interpretation`);
 }
 
-for (const definition of publicDefinitions) {
+for (const definition of [...publicDefinitions, ...speculationDefinitions]) {
   const sourceClock = sourceLookup.get(definition.slug);
   const wallClock = (wall.clocks || []).find(clock => clock.slug === definition.slug);
   if (!sourceClock || !wallClock) continue;
   if (sourceClock.automaticUpdate !== true) issues.push(`${definition.title} automatic update disabled`);
   if (!String(sourceClock.evidenceFingerprint || '').trim()) issues.push(`${definition.title} missing evidence fingerprint`);
   if (!String(sourceClock.automaticUpdateStatus || '').trim()) issues.push(`${definition.title} missing automatic update status`);
+  if (!String(sourceClock.automaticUpdateReason || '').trim()) issues.push(`${definition.title} missing automatic update reason`);
   if (!Number.isFinite(Number(sourceClock.maxMovementPerBuild)) || Number(sourceClock.maxMovementPerBuild) < 1) issues.push(`${definition.title} missing movement cap`);
   if (!String(wallClock.category || '').trim()) issues.push(`${definition.title} missing reader category`);
   if (!Array.isArray(wallClock.evidenceInputs)) issues.push(`${definition.title} evidence inputs must be an array`);
   if (wallClock.automaticUpdateEnabled !== true) issues.push(`${definition.title} wall update marker disabled`);
+  if (definition.speculationOnly) {
+    if (sourceClock.homepageEligible !== false) issues.push(`${definition.title} must remain ineligible for homepage alarms`);
+    if (wallClock.speculationOnly !== true) issues.push(`${definition.title} missing speculation wall marker`);
+    if (!String(wallClock.claimClass || '').trim()) issues.push(`${definition.title} missing claim class`);
+    if (!String(wallClock.evidenceGate || '').trim()) issues.push(`${definition.title} missing evidence gate`);
+    if (!String(wallClock.falsificationTest || '').trim()) issues.push(`${definition.title} missing falsification test`);
+  }
 }
 
 if (homepage.rules?.clockThreshold !== 'strictly greater than 90') issues.push('homepage clock threshold is not strictly greater than 90');
@@ -124,6 +140,7 @@ if (!String(homepage.counterpoint || '').trim()) issues.push('homepage missing c
 const expectedCritical = (wall.clocks || []).filter(clock => Number(clock.score) > 90).map(clock => `${clock.slug}:${clock.score}`).sort();
 const actualCritical = (homepage.criticalClocks || []).map(clock => `${clock.slug}:${clock.score}`).sort();
 if (JSON.stringify(expectedCritical) !== JSON.stringify(actualCritical)) issues.push('homepage critical clocks do not exactly match canonical clocks over 90');
+if ((homepage.criticalClocks || []).some(clock => String(clock.slug || '').startsWith('spec-'))) issues.push('speculation clocks leaked into homepage critical rankings');
 for (const item of homepage.latestNews || []) {
   const age = Math.floor((Date.now() - Date.parse(item.published || 0)) / 86400000);
   if (!Number.isFinite(age) || age > 7) issues.push(`homepage contains stale news: ${item.title || 'untitled'}`);
@@ -142,4 +159,6 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`MISSION TIMERS TEST PASSED: ${wall.clocks.length} canonical clocks, ${expectedPublicSlugs.length} reader-facing clocks, ${homepage.criticalClocks.length} homepage clocks over 90, ${homepage.latestNews.length} current news items.`);
+
+require('./speculation-clocks-test.js');
+console.log(`MISSION TIMERS TEST PASSED: ${wall.clocks.length} canonical clocks, ${expectedPublicSlugs.length} practical reader clocks, ${expectedSpeculationSlugs.length} classified speculation clocks, ${homepage.criticalClocks.length} homepage clocks over 90, ${homepage.latestNews.length} current news items.`);

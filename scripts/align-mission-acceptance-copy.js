@@ -73,14 +73,14 @@ fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
 
-// Deliberately last: repair the actual deployable bundle after every legacy generator
-// and after the Cloudflare output copy has completed.
 runRequired('scripts/sanitize-machine-entity-outputs.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 runRequired('scripts/patch-power-dossier-runtime.js');
+runRequired('scripts/repair-empty-public-controls.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
 runRequired('scripts/hide-visible-compatibility-markers.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); entity sanitation, dossier fallback, control targets, marker scrub and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); entity sanitation, dossier fallback, empty-control repair, marker scrub and full tool audit passed.`);

@@ -165,7 +165,9 @@ jobs:
           MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
           GITHUB_ACTIONS: 'true'
           GITHUB_WORKFLOW: 'Automatic Update System Deep Test'
-        run: node scripts/production-freshness-guard.js
+        run: |
+          rm -rf _site
+          node scripts/production-freshness-guard.js
 
       - name: Run the complete production-equivalent site build
         env:

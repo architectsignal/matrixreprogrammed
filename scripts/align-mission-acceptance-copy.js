@@ -89,7 +89,8 @@ runRequired('scripts/hide-visible-compatibility-markers.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
 runRequired('scripts/repair-deep-audit-public-defects.js');
 runRequired('scripts/fix-final-live-audit-and-external-links.js');
+runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, KV traffic repair, entity sanitation, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, KV traffic repair, entity sanitation, generated-page consistency, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);

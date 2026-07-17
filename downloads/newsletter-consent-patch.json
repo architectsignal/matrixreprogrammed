@@ -1,14 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-16T06:34:58.009Z",
+  "generatedAt": "2026-07-17T06:31:36.907Z",
   "checks": {
     "oneConsentCheckbox": true,
     "requiredConsent": true,
     "truthfulStorageCopy": true,
     "runtimeConsentGate": true,
     "truthfulPayload": true,
-    "verificationMessage": true
+    "dailyVerificationMessage": true,
+    "noUniversalWeeklyDefault": true
   },
   "storage": "Cloudflare D1 MEMBERS_DB",
-  "consentVersion": "newsletter-explicit-consent-v2"
+  "consentVersion": "newsletter-explicit-consent-v3"
 }

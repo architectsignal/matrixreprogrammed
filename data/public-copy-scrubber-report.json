@@ -1,6 +1,6 @@
 {
   "ok": false,
-  "updated": "2026-07-16T06:34:36.821Z",
+  "updated": "2026-07-17T06:31:09.924Z",
   "changed": [
     "deploy-health.html"
   ],
@@ -196,11 +196,6 @@
       "severity": "review"
     },
     {
-      "file": "entity-briefs/object-object.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
       "file": "entity-briefs/people-s-republic-of-bangladesh.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
@@ -266,11 +261,6 @@
       "severity": "review"
     },
     {
-      "file": "entity-timelines/object-object.html",
-      "pattern": "/\\[object Object\\]/i",
-      "severity": "review"
-    },
-    {
       "file": "index.html",
       "pattern": "/do not show/i",
       "severity": "review"
@@ -316,6 +306,6 @@
       "severity": "review"
     }
   ],
-  "filesScanned": 2778,
+  "filesScanned": 2777,
   "note": "Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues."
 }

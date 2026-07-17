@@ -1,10 +1,10 @@
 # Public Copy Scrubber Report
 
-Updated: 2026-07-16T06:34:36.821Z
+Updated: 2026-07-17T06:31:09.924Z
 
 Changed files: 1
 
-Visible review issues: 62
+Visible review issues: 60
 
 ## Changed
 - deploy-health.html
@@ -48,7 +48,6 @@ Visible review issues: 62
 - entity-briefs/kingdom-of-morocco.html: /\[object Object\]/i
 - entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html: /\[object Object\]/i
 - entity-briefs/ministry-of-health-and-family-welfare.html: /\[object Object\]/i
-- entity-briefs/object-object.html: /\[object Object\]/i
 - entity-briefs/people-s-republic-of-bangladesh.html: /\[object Object\]/i
 - entity-briefs/republic-of-india.html: /\[object Object\]/i
 - entity-briefs/republic-of-rwanda.html: /\[object Object\]/i
@@ -62,7 +61,6 @@ Visible review issues: 62
 - entity-exposure/republic-of-india.html: /\[object Object\]/i
 - entity-exposure/republic-of-rwanda.html: /\[object Object\]/i
 - entity-exposure-index.html: /\[object Object\]/i
-- entity-timelines/object-object.html: /\[object Object\]/i
 - index.html: /do not show/i
 - information-gathering-system.html: /author note/i
 - information-gathering-system.html: /\[object Object\]/i

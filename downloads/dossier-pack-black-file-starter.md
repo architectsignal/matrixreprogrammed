@@ -45,7 +45,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-16T06:33:34.034Z
+Updated: 2026-07-17T06:29:57.362Z
 Items: 12
 
 - 2026-06-19 — What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News

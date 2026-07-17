@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "updated": "2026-07-16T07:48:23.481Z",
+  "updated": "2026-07-17T06:30:52.125Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 125,
-    "edges": 246,
+    "nodes": 142,
+    "edges": 263,
     "topNodes": 25
   },
   "top": [
@@ -211,6 +211,46 @@
         "subject-briefs.html"
       ],
       "summary": "Health data and emergency systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "disclosure-gaps-and-missing-files",
+      "name": "Disclosure gaps and missing files",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "disclosure-gaps",
+        "courts-law"
+      ],
+      "score": 100,
+      "centrality": 17,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Sawas v. Elzanaty",
+        "People v. Brim",
+        "The New York and Presbyterian Hospital v. New York State Nurses Association",
+        "Matter of Pagliughi",
+        "Biddle v. Biddle"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "foundation-and-ngo-policy-influence",
@@ -1066,46 +1106,6 @@
         "institution-control-tracker.html"
       ],
       "summary": "NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "elon-musk",
-      "name": "Elon Musk",
-      "types": [
-        "elite network profile"
-      ],
-      "layers": [
-        "ai-data",
-        "media-narrative",
-        "security",
-        "energy",
-        "public-private-contracts"
-      ],
-      "score": 73,
-      "centrality": 5,
-      "evidenceConfidence": 8,
-      "missingPressure": 20,
-      "contradictionPressure": 0,
-      "records": [
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "missing": [
-        "Current beneficial ownership and voting-control record where relevant",
-        "Public contracts touching the ecosystem",
-        "Foundation grant routes where relevant",
-        "Lobbying or political funding routes where relevant",
-        "Legal/regulatory records and counter-sources"
-      ],
-      "watch": [
-        "New filings",
-        "New contracts",
-        "New court or regulatory records",
-        "New foundation or policy-route records"
-      ],
-      "links": [
-        "billionaire-control-tracker.html"
-      ],
-      "summary": "Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     }
   ],
   "edges": [
@@ -2468,6 +2468,125 @@
       "source": "subject brief"
     },
     {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-rhode-island",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2025-0045-appeal",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "sawas-v-elzanaty",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2021-00294",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "people-v-brim",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "california-court-of-appeal",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "a170747m",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-for-the-second-circuit",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "25-113",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "matter-of-pagliughi",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "2024-07773",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "biddle-v-biddle",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-of-north-carolina",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "25-581",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
       "from": "foundation-and-ngo-policy-influence",
       "to": "health-and-human-services-department",
       "type": "subject entity route",
@@ -2889,6 +3008,17 @@
       ]
     },
     {
+      "entity": "Disclosure gaps and missing files",
+      "priority": "red",
+      "why": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "subject-briefs.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
       "entity": "Foundation and NGO policy influence",
       "priority": "red",
       "why": "Foundation and NGO policy influence is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
@@ -2951,18 +3081,6 @@
       "next": [
         "private-contractor-tracker.html",
         "contractor-briefs/dyncorp-amentum-lineage.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Palantir government platforms",
-      "priority": "red",
-      "why": "Palantir government platforms is ranked 91/100 because of 1 relationship route(s), 6 control layer(s), 8 record signal(s), 10 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "private-contractor-tracker.html",
-        "contractor-briefs/palantir-government-platforms.html",
         "evidence-vault.html",
         "daily-missing-records.html",
         "search.html"

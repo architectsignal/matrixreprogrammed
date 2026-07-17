@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Review Dashboard
 
-Updated: 2026-07-16T07:48:37.482Z
+Updated: 2026-07-17T06:30:56.907Z
 
 Decks: 9
 
@@ -28,11 +28,11 @@ Artwork missing: 468
 
 ## Deck Health
 - Top 52 Persons of Interest: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 38
-- Controlled Opposition: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 127
-- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2211
+- Controlled Opposition: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 126
+- Institution Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2224
 - Power Families Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 258
 - Secret Societies Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 72
-- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2210
-- Think Tanks Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 39
+- Policy Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 2223
+- Think Tanks Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 41
 - Black Nobility & Allied Dynasties Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 0
-- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 122
+- Jurisdictions of Power Deck: cards 52, dossiers 52, art 52, primary-source needed 52, missing records 121

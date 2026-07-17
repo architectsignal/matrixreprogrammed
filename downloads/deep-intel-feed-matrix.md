@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-16T07:48:24.322Z
+Generated: 2026-07-17T06:30:54.887Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -28,20 +28,20 @@ Generated: 2026-07-16T07:48:24.322Z
 - 85 — Interior Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/interior-department.html
 - 85 — People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-s-republic-of-bangladesh.html
 - 85 — Transportation Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/transportation-department.html
+- 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/national-aeronautics-and-space-administration.html
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
 - 85 — Federal Procurement Policy Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/federal-procurement-policy-office.html
 - 85 — General Services Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/general-services-administration.html
-- 85 — Chattogram Water Supply and Sewerage Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/chattogram-water-supply-and-sewerage-authority.html
-- 85 — Finance Division, Ministry of Finance — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/finance-division-ministry-of-finance.html
-- 85 — Kingdom of Morocco — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/kingdom-of-morocco.html
-- 85 — Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html
-- 85 — Ministry of Health and Family Welfare — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/ministry-of-health-and-family-welfare.html
-- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
-- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
-- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
-- 72 — What Blanche said about Trump, Epstein files during confirmation hearing for attorney general - PBS — live-intel.html
-- 72 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — live-intel.html
+- 85 — 2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-00294.html
+- 85 — 2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-07773.html
+- 85 — 2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2025-0045-appeal.html
+- 85 — 25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-113.html
+- 85 — 25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/25-581.html
+- 85 — A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/a170747m.html
+- 85 — Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/biddle-v-biddle.html
 - 72 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian — live-intel.html
-- 72 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — live-intel.html
+- 72 — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS — live-intel.html
 - 72 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC — live-intel.html
+- 72 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — live-intel.html
+- 72 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reuters — live-intel.html

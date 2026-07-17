@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-07-16T07:48:40.552Z
+Updated: 2026-07-17T06:32:15.716Z
 
 ## Evidence-led conclusion
 
@@ -12,26 +12,26 @@ Analytic confidence: **73/100 — substantial analytic support**
 
 ## Who is involved — documented roles only
 
-- **increased position** — reportedPositionChange; other documented institutional actor. Records: 2474.
-- **mentions** — mentions; other documented institutional actor. Records: 1259.
-- **reduced position** — reportedPositionChange; other documented institutional actor. Records: 1238.
-- **exited position** — reportedPositionChange; other documented institutional actor. Records: 174.
-- **Open-market or private sale** — reportedTransaction; other documented institutional actor. Records: 137.
-- **new position** — reportedPositionChange; other documented institutional actor. Records: 114.
-- **Final Judgment** — CourtCase; public authority and regulation. Records: 99.
-- **View files** — CourtCase; public authority and regulation. Records: 72.
-- **Exercise or conversion of derivative security** — reportedTransaction; security, intelligence and emergency power. Records: 58.
-- **Grant, award or other acquisition** — reportedTransaction; other documented institutional actor. Records: 34.
-- **ATT MOBILITY LLC — Department of Defense** — Contract; public authority and regulation. Records: 20.
-- **operated or published by** — operatedBy; other documented institutional actor. Records: 20.
-- **Corporate-state convergence** — Role stated in the linked Matrix record; other documented institutional actor. Records: 14.
-- **Identity, surveillance and access** — Role stated in the linked Matrix record; technology, identity, data and platforms. Records: 12.
-- **Global governance convergence** — Role stated in the linked Matrix record; other documented institutional actor. Records: 12.
-- **Information and narrative control** — Role stated in the linked Matrix record; media and information access. Records: 10.
-- **Default Judgment** — CourtCase; public authority and regulation. Records: 8.
-- **Skip to main content** — CourtCase; public authority and regulation. Records: 8.
-- **SEC Complaint** — Role stated in the linked Matrix record; other documented institutional actor. Records: 8.
-- **Consolidated Sanctions List (Non-SDN Lists)** — Finding; other documented institutional actor. Records: 8.
+- **SEC Complaint** — Documented in the linked public record; law, filing or instrument: Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas. Why it matters: This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Exercise or conversion of derivative security** — reportedTransaction. Why it matters: This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Corporate-state convergence** — Documented in the linked public record. Why it matters: This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Identity, surveillance and access** — Documented in the linked public record. Why it matters: This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Grant, award or other acquisition** — reportedTransaction. Why it matters: This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **ATT MOBILITY LLC — Department of Defense** — Contract. Why it matters: This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Global governance convergence** — Documented in the linked public record. Why it matters: This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **operated or published by** — operatedBy. Why it matters: This record places operated or published by inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Money, currency and access** — Documented in the linked public record. Why it matters: This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Security and emergency power** — Documented in the linked public record. Why it matters: This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Skip to main content** — CourtCase. Why it matters: This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Consolidated Sanctions List (Non-SDN Lists)** — Finding. Why it matters: This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Default Judgment** — CourtCase. Why it matters: This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Attorney Review Protocol for Epstein Files** — CourtCase. Why it matters: This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **BOP Video Footage** — CourtCase. Why it matters: This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Customs and Border Protection (CBP)** — CourtCase. Why it matters: This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **DOJ Disclosures** — CourtCase. Why it matters: This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Epstein Library** — CourtCase. Why it matters: This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Facebook** — CourtCase. Why it matters: This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

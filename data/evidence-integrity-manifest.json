@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": 1,
-  "generatedAt": "2026-07-16T06:34:47.630Z",
+  "generatedAt": "2026-07-17T06:31:24.264Z",
   "algorithm": "SHA-256",
   "signing": {
     "system": "Sigstore Cosign",
@@ -9,34 +9,34 @@
     "bundleUrl": "data/evidence-integrity-manifest.sigstore.json",
     "certificateIdentityRegexp": "^https://github.com/architectsignal/matrixreprogrammed/.github/workflows/evidence-archive-verification.yml@refs/heads/main$",
     "certificateOidcIssuer": "https://token.actions.githubusercontent.com",
-    "status": "awaiting-workflow-signature"
+    "status": "bundle-present"
   },
   "evidenceBoundary": "Integrity verification establishes that the published bytes match the signed manifest. It does not establish the truth of every statement inside a source or archive.",
   "files": [
     {
       "path": "data/evidence-archive-manifest.json",
       "bytes": 1157,
-      "sha256": "5e023fed6fa642fa4269e783981de845dc92e9aafb633502ff200d1409429a97"
+      "sha256": "41984e676d2e844791871ea7e9d2d41ef6b469a995d8a981d41327c4ce567435"
     },
     {
       "path": "data/source-change-public.json",
-      "bytes": 6137,
-      "sha256": "97fcd017ce79331f8dbb64744fb0022cfc56360868f1fb0b23a2a2dadb1d314e"
+      "bytes": 85994,
+      "sha256": "53e74abada48511faf111fd781fdf7637f0e19fc845fcdc08c5f1daa7e01030c"
     },
     {
       "path": "data/evidence-reader-manifest.json",
-      "bytes": 220722,
-      "sha256": "52c3b4a03e698a578dc1f891fd0d7ef32c6743db45c9c65ead151646785cbbcc"
+      "bytes": 231560,
+      "sha256": "7456093691c88f5eeb53de4a3e89b50acc22245a72e83f5f20d64aca08630dd0"
     },
     {
       "path": "data/evidence-timeline.json",
-      "bytes": 8235716,
-      "sha256": "67b0ea5333a82afdba7ac45c6ec139e7531ac3380c0ef6f510009e8b14da5e6b"
+      "bytes": 7989946,
+      "sha256": "fd5ed399563e01038d35e885863548729409cd657e2e51196a0a613794f2a8b4"
     },
     {
       "path": "data/relationship-registry.json",
-      "bytes": 10746416,
-      "sha256": "abd65eeb0e4f69f084f47b8cf7881f63fe25e04eaaee1ad15801d2ed3b9c776c"
+      "bytes": 12417499,
+      "sha256": "84ecfba730d2cd54001ac9085ee80144c3141f02e9773f772da48eda84b5d218"
     }
   ]
 }

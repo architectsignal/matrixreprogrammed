@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-16T06:33:34.034Z
+Updated: 2026-07-17T06:29:57.362Z
 Items: 12
 
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
@@ -81,13 +81,8 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-16 — PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov)
-  - Source: https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
+- 2026-07-15 — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -108,6 +103,11 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-08 — Bill Gates to testify on Epstein relationship Wednesday - The Center Square
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPczZUcGdUVGRLUDlwdjQyTGN5V3drNTZyTE01SXdfb3dHWEpqZWwtbkJtV0Vjakh6aGNBQ0w5Yng0b3hzUGNJMFQ4NlFEVlZaTnpOSXR1RU80OVBCcy0weXBFNnNnOU8xeUtYUWpKQ2d3dGVjeUxYejduYTFJRFk4N1Z6SFQxdGxadkpTWHdXdFF3WFdK0gGaAUFVX3lxTE96aHg1c21EWjhlazd5Wmlpa1RERkw1c3B0RG9DSEZISE9IQ0FGOWlCR0RaLUwyMDE3U0NidEx0TFljclN0QUI5OE00cE85bDZxVnp0NVRJV2dyYTRMYjM1UU0ybkFJcTQ0LWFabVJOYVp5T201QW0tVDFOYjhNdWdKV2JGQjVBVFN0Q3Y4WFRyWUVteUFTTnlQQXc?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -135,12 +135,12 @@ Items: 12
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
 - Google News / declassified files: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com — https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
 - Google News / declassified files: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews — https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
-- Google News / war machine: PENNSYLVANIA DEFENSE AND INNOVATION SUMMIT - U.S. Senator Dave McCormick (.gov) — https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2Z2QzRyX2daQXdtWE0xRnVybEFyb2ZhaEc1cVNHVXd5b1RCQU1hT3pCTVJqbzBIY01YenpwQlB1YmZTb0Y5QU1CY0RnOHliWVVHemlwM0EtVU5uamNqN2ZLUmNXTHA2WWEwaUx4RlQzNVlwRllXOWlUdXQySE1KOGxpd2lMZnhZLW9adA?oc=5
-- Google News / control structure: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News — https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
+- Google News / war machine: Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times — https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
 - Google News / crime state overlap: Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP — https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
 - Google News / Epstein timeline and files: Democrats to call on Vance to testify to House committee over Epstein files - The Guardian — https://news.google.com/rss/articles/CBMilgFBVV95cUxPZ29UWUxMalkwaVFZLUwtT04yOG5BZXNCakVfa3ZzSjg5M0dwU0JQUDBGUmlGRDlHQzczaFA2T1V1MG02MFNfZldOck0zTDZtMUJ0cFF2bkpiNWdxc09YeDhzb19ZcW5NMEJHOV9kZlo4dEQ2TDc5YklZXzBrc2J4MXJYMjJrYllZWnNMZVBLQk83dE1vd3c?oc=5
 - Google News / Epstein timeline and files: Bill Gates tells US House ‘I have never victimized anyone’ in Epstein testimony - The Guardian — https://news.google.com/rss/articles/CBMijAFBVV95cUxNaWpGR1luRUZpVHdCYzlYTEJWZVpVSFhBUzlLdnFIREtQRUZOc1ZTQndnem12cE43elNxeGpIOTFWdk5fQkpfRmktTnczZFNYN0o4X0lCb0NKdmdFcnRRZUxsRko3bmtRNDBhQk4yWWlabnE5akxmS2ZaOXAtanF5eFpuWXBuRi1JY2ZkcA?oc=5
 - Google News / Epstein timeline and files: Bill Gates to testify on Epstein relationship Wednesday - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxPczZUcGdUVGRLUDlwdjQyTGN5V3drNTZyTE01SXdfb3dHWEpqZWwtbkJtV0Vjakh6aGNBQ0w5Yng0b3hzUGNJMFQ4NlFEVlZaTnpOSXR1RU80OVBCcy0weXBFNnNnOU8xeUtYUWpKQ2d3dGVjeUxYejduYTFJRFk4N1Z6SFQxdGxadkpTWHdXdFF3WFdK0gGaAUFVX3lxTE96aHg1c21EWjhlazd5Wmlpa1RERkw1c3B0RG9DSEZISE9IQ0FGOWlCR0RaLUwyMDE3U0NidEx0TFljclN0QUI5OE00cE85bDZxVnp0NVRJV2dyYTRMYjM1UU0ybkFJcTQ0LWFabVJOYVp5T201QW0tVDFOYjhNdWdKV2JGQjVBVFN0Q3Y4WFRyWUVteUFTTnlQQXc?oc=5
+- Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 
 ## Book Routes
 

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "bfb343589ad6863678b7252f9086fbc1a405a19e",
-  "buildShortSha": "bfb343589ad6",
-  "generatedAt": "2026-07-16T06:34:07.993Z",
+  "buildSha": "bb9e8c40774ea5c1deb6c94598caddb28f74db83",
+  "buildShortSha": "bb9e8c40774e",
+  "generatedAt": "2026-07-17T06:30:29.560Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -345,7 +345,7 @@
       "marker": "FOLLOW THE FILES.",
       "exists": true,
       "markerPresent": true,
-      "hash": "8a7d966ecb679997"
+      "hash": "1c453b2c3766c34e"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "112d8c3903dc15b1"
+      "hash": "773b1e407a96151f"
     },
     {
       "name": "Epstein Command Center",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "fc4ec143a457299b"
+      "hash": "c46d7b4438206e4c"
     },
     {
       "name": "Dark Speculation Board",
@@ -433,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "d91a098057d60a37"
+      "hash": "f0e68b6ab34e59d6"
     },
     {
       "name": "Hard Board Routes",
@@ -441,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "d91a098057d60a37"
+      "hash": "f0e68b6ab34e59d6"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -449,14 +449,14 @@
       "marker": "_site",
       "exists": true,
       "markerPresent": true,
-      "hash": "2173a490ca7e986d"
+      "hash": "9fa9833fb894a22e"
     }
   ],
   "hashes": {
-    "worker": "d91a098057d60a37",
-    "package": "49a97283737f80c0",
+    "worker": "f0e68b6ab34e59d6",
+    "package": "963dc418a2d87fac",
     "epsteinFiles": "5e348d09a92645b2",
-    "liveIntel": "112d8c3903dc15b1"
+    "liveIntel": "773b1e407a96151f"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

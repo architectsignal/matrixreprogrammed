@@ -1,6 +1,6 @@
 # Site Function Harmony Report
 
-Generated: 2026-07-16T06:35:00.948Z
+Generated: 2026-07-17T06:31:53.799Z
 Result: PASS
 Worker stack: strict production boundary -> email/member/PayPal workers -> D1 forum -> static application
 Forum: Cloudflare D1 authoritative; KV compatibility and recovery only.

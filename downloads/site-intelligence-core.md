@@ -9,9 +9,9 @@ The core tracks public records, policy moves, mandates, pilots, contracts, court
 Every automated maintenance run must be visible through a workflow log, generated report, artifact, commit message, issue, or public change log.
 
 ## Counts
-- knowledgeItems: 95
+- knowledgeItems: 164
 - policyLanes: 9
-- riskClocks: 12
+- riskClocks: 81
 - speculationClaims: 49
 - deepDossiers: 5
 - epsteinPeople: 12

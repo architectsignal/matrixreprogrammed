@@ -46,11 +46,16 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-07-16T06:33:34.034Z
+Updated: 2026-07-17T06:29:57.362Z
 Items: 12
 
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: News/source-watch item
+  - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
+  - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
+  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
   - Evidence: News/source-watch item
   - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
   - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
@@ -104,11 +109,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Bill Gates tells Congress he didn’t know of Epstein’s crimes, renounces ties - The Washington Post
-  - Source: https://news.google.com/rss/articles/CBMiswFBVV95cUxOVnp5SkNYZEtZYVBDZVhhZ29sem5WWkQyQVFuQVQxZ1VsOFUtZDRvdHBRZ0NlS1dHTndvaDM3bWJpc1hoR280VXMwdnpheFZydk0xTzVBMUtIb2YyRVFlbVlTTUsxT0hMS1p6bEZSQ0FtRXB3OG5UOF85WGhjakpabXdpd3YzSkhBZGJGMDNGZ2NHY1JMZ2g1NWhMb19iR3ZUOFFKY0pyVXQ1Z0Z3UnlSV21wQQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -129,6 +129,7 @@ Items: 12
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Google News / control structure: NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News — https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 - Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
@@ -139,7 +140,6 @@ Items: 12
 - Google News / Epstein timeline and files: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS — https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
 - Google News / Epstein timeline and files: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS — https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
 - Google News / Epstein timeline and files: Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW — https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
-- Google News / Epstein timeline and files: Bill Gates tells Congress he didn’t know of Epstein’s crimes, renounces ties - The Washington Post — https://news.google.com/rss/articles/CBMiswFBVV95cUxOVnp5SkNYZEtZYVBDZVhhZ29sem5WWkQyQVFuQVQxZ1VsOFUtZDRvdHBRZ0NlS1dHTndvaDM3bWJpc1hoR280VXMwdnpheFZydk0xTzVBMUtIb2YyRVFlbVlTTUsxT0hMS1p6bEZSQ0FtRXB3OG5UOF85WGhjakpabXdpd3YzSkhBZGJGMDNGZ2NHY1JMZ2g1NWhMb19iR3ZUOFFKY0pyVXQ1Z0Z3UnlSV21wQQ?oc=5
 
 ## Book Routes
 

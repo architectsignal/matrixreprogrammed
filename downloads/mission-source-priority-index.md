@@ -1,6 +1,6 @@
 # Mission Source Priority Index
 
-Generated: 2026-07-16T07:48:24.937Z
+Generated: 2026-07-17T06:30:55.596Z
 
 Boundary: The site prioritizes top relevant evidence lanes for its mission. It does not claim to ingest every record. Priority is based on ability to prove, disprove or materially clarify control-route claims.
 

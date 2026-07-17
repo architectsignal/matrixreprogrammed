@@ -1,9 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-16T06:34:59.645Z",
+  "generatedAt": "2026-07-17T06:31:52.492Z",
   "mode": "phase6-restore-protected-template",
   "template": "templates/phase6-membership.template",
   "freeTier": true,
+  "evidenceAccess": "same-underlying-public-source-evidence",
+  "paymentLabel": "optional-monthly-donation",
   "prices": [
     3,
     6,
@@ -14,17 +16,20 @@
     {
       "id": "supporter",
       "name": "Supporter",
-      "price": 3
+      "price": 3,
+      "priceLabel": "€3 donation / month"
     },
     {
       "id": "intelligence-member",
       "name": "Intelligence Member",
-      "price": 6
+      "price": 6,
+      "priceLabel": "€6 donation / month"
     },
     {
       "id": "research-pro",
       "name": "Research Pro",
-      "price": 9
+      "price": 9,
+      "priceLabel": "€9 donation / month"
     }
   ],
   "failures": []

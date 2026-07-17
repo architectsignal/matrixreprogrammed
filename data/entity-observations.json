@@ -1,32 +1,9 @@
 {
-  "updated": "2026-07-17T03:35:54.404Z",
+  "updated": "2026-07-17T06:30:00.683Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
   "observations": [
-    {
-      "id": "object-object",
-      "name": "[object Object]",
-      "count": 6,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p505244-1",
-        "world-bank-projects-p176429-2",
-        "world-bank-projects-p181587-3",
-        "world-bank-projects-p180283-4",
-        "world-bank-projects-p507508-5",
-        "world-bank-projects-p180439-6"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
     {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",

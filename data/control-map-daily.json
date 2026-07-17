@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-16T07:48:24.938Z",
+  "updated": "2026-07-17T06:30:55.598Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -163,12 +163,6 @@
           "type": "asset manager route"
         },
         {
-          "name": "Elon Musk",
-          "score": 100,
-          "route": "billionaire-briefs/elon-musk.html",
-          "type": "profile route"
-        },
-        {
           "name": "Blackwater / Xe / Academi / Constellis lineage",
           "score": 100,
           "route": "contractor-briefs/blackwater-constellis-lineage.html",
@@ -202,6 +196,12 @@
           "name": "G4S / Allied Universal security lineage",
           "score": 100,
           "route": "contractor-briefs/g4s-allied-security-lineage.html",
+          "type": "contractor route"
+        },
+        {
+          "name": "SAIC / Leidos lineage",
+          "score": 100,
+          "route": "contractor-briefs/leidos-saic-lineage.html",
           "type": "contractor route"
         }
       ]

@@ -24,40 +24,39 @@ replace("  const attrs = [...html.matchAll(/\\b(?:href|src|action|poster)\\s*=\\
 replace("    if (isExternal(target)) { stats.externalReferences++; externalRefs.add(target); continue; }", "    if (isExternal(target)) {\n      stats.externalReferences++; externalRefs.add(target);\n      if (/^http:\/\//i.test(target) && !/\\.onion(?:[\\/:?#]|$)/i.test(target)) hard.push(`${name}: insecure external link ${target}`);\n      continue;\n    }", 'external HTTP boundary');
 replace("    for (const match of html.matchAll(/\\b(?:href|src|action|poster)\\s*=\\s*([\"'])([^\"']+)\\1/gi)) {", "    for (const match of html.matchAll(/(?:^|\\s)(?:href|src|action|poster)\\s*=\\s*([\"'])([^\"']+)\\1/gi)) {", 'live attribute-only reference extraction');
 
-const syntaxAnchor = `function resolveTargetFile(target, fromFile) {`;
-const inlineFunction = `function syntaxCheckInlineScripts(html, name) {
-  let index = 0;
-  for (const match of String(html || '').matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)) {
-    const attrs = match[1] || '';
-    const source = match[2] || '';
-    if (/\\bsrc\\s*=/i.test(attrs)) continue;
-    const type = (attrs.match(/\\btype\\s*=\\s*([\"'])([^\"']+)\\1/i) || [])[2] || '';
-    if (type && !/(?:java|ecma)script|module/i.test(type)) continue;
-    if (!source.trim()) continue;
-    stats.inlineScripts++;
-    index++;
-    const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-inline-audit-'));
-    const extension = /type\\s*=\\s*[\"']module[\"']/i.test(attrs) || /(^|\\n)\\s*(?:import|export)\\s/m.test(source) ? '.mjs' : '.js';
-    const target = path.join(temp, \\`inline-\\${index}\\${extension}\\`);
-    fs.writeFileSync(target, source);
-    const result = spawnSync(process.execPath, ['--check', target], { encoding: 'utf8' });
-    fs.rmSync(temp, { recursive: true, force: true });
-    if (result.status !== 0) hard.push(\\`\\${name}: inline script \\${index} syntax error: \\${(result.stderr || result.stdout || '').trim().slice(0, 700)}\\`);
-  }
-}
-`;
+const syntaxAnchor = 'function resolveTargetFile(target, fromFile) {';
+const inlineFunction = [
+  'function syntaxCheckInlineScripts(html, name) {',
+  '  let index = 0;',
+  "  for (const match of String(html || '').matchAll(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi)) {",
+  "    const attrs = match[1] || '';",
+  "    const source = match[2] || '';",
+  "    if (/\\bsrc\\s*=/i.test(attrs)) continue;",
+  "    const type = (attrs.match(/\\btype\\s*=\\s*([\"'])([^\"']+)\\1/i) || [])[2] || '';",
+  "    if (type && !/(?:java|ecma)script|module/i.test(type)) continue;",
+  '    if (!source.trim()) continue;',
+  '    stats.inlineScripts++;',
+  '    index++;',
+  "    const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-inline-audit-'));",
+  "    const extension = /type\\s*=\\s*[\"']module[\"']/i.test(attrs) || /(^|\\n)\\s*(?:import|export)\\s/m.test(source) ? '.mjs' : '.js';",
+  "    const target = path.join(temp, 'inline-' + index + extension);",
+  '    fs.writeFileSync(target, source);',
+  "    const result = spawnSync(process.execPath, ['--check', target], { encoding: 'utf8' });",
+  '    fs.rmSync(temp, { recursive: true, force: true });',
+  "    if (result.status !== 0) hard.push(name + ': inline script ' + index + ' syntax error: ' + String(result.stderr || result.stdout || '').trim().slice(0, 700));",
+  '  }',
+  '}',
+  ''
+].join('\n');
 if (!after.includes('function syntaxCheckInlineScripts')) {
   if (!after.includes(syntaxAnchor)) throw new Error('Deep audit inline script insertion anchor missing');
-  after = after.replace(syntaxAnchor, `${inlineFunction}${syntaxAnchor}`);
+  after = after.replace(syntaxAnchor, inlineFunction + syntaxAnchor);
   changed = true;
 }
 replace("  const html = read(file);\n  const ids = htmlIds(html);", "  const html = read(file);\n  syntaxCheckInlineScripts(html, name);\n  const ids = htmlIds(html);", 'inline script invocation');
 
-const forbiddenAnchor = `  for (const forbidden of ['object-object.html', '€29</', '€39</', 'Buy Placeholder', 'FOLLOW THE FILES']) {
-    if (html.includes(forbidden)) hard.push(\`${'${name}'}: contains retired or malformed public marker ${'${forbidden}'}\`);
-  }`;
-const forbiddenReplacement = `${forbiddenAnchor}
-  if (['store.html', 'card-deck-store.html', 'premium-reports.html'].includes(name) && /<div\\b[^>]*class=[\"'][^\"']*\\bprice\\b[^\"']*[\"'][^>]*>\\s*€\\s*\\d/i.test(html)) hard.push(\`${'${name}'}: fixed euro price remains on a voluntary-support page\`);`;
+const forbiddenAnchor = "  for (const forbidden of ['object-object.html', '€29</', '€39</', 'Buy Placeholder', 'FOLLOW THE FILES']) {\n    if (html.includes(forbidden)) hard.push(`${name}: contains retired or malformed public marker ${forbidden}`);\n  }";
+const forbiddenReplacement = forbiddenAnchor + "\n  if (['store.html', 'card-deck-store.html', 'premium-reports.html'].includes(name) && /<div\\b[^>]*class=[\"'][^\"']*\\bprice\\b[^\"']*[\"'][^>]*>\\s*€\\s*\\d/i.test(html)) hard.push(`${name}: fixed euro price remains on a voluntary-support page`);";
 replace(forbiddenAnchor, forbiddenReplacement, 'fixed-price audit boundary');
 
 for (const marker of [

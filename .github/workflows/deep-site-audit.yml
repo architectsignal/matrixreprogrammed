@@ -23,7 +23,7 @@ jobs:
   deep-audit:
     name: Rebuild and audit every page, function, link and live route
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v4
@@ -43,14 +43,17 @@ jobs:
       - name: Install locked dependencies
         run: npm ci
 
-      - name: Build complete site and Worker assets
+      - name: Build complete site and Worker assets twice
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         shell: bash
         run: |
           set -o pipefail
           mkdir -p downloads
-          npm run build 2>&1 | tee downloads/deep-audit-build.log
+          echo '===== BUILD PASS 1 =====' | tee downloads/deep-audit-build.log
+          npm run build 2>&1 | tee -a downloads/deep-audit-build.log
+          echo '===== BUILD PASS 2 =====' | tee -a downloads/deep-audit-build.log
+          npm run build 2>&1 | tee -a downloads/deep-audit-build.log
 
       - name: Reconcile exact Cloudflare bundle
         env:
@@ -98,12 +101,24 @@ jobs:
           DEPLOY_WAIT_DELAY_MS: '10000'
         run: node scripts/wait-for-live-deploy-commit.js
 
-      - name: Exhaustive live audit
+      - name: Exhaustive live audit V3
         id: live_audit
         continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
-        run: node scripts/deep-production-site-audit-v2.js --live
+        run: node scripts/deep-production-live-audit-v3.js
+
+      - name: Chromium browser interaction smoke
+        id: browser_smoke
+        continue-on-error: true
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        shell: bash
+        run: |
+          set -o pipefail
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node scripts/live-browser-interaction-smoke.mjs
 
       - name: Publish sanitized audit summary
         if: always()
@@ -118,18 +133,24 @@ jobs:
             }
             const staticReport = load('deep-production-site-audit-static.json');
             const liveReport = load('deep-production-site-audit-live.json');
+            const browserReport = load('live-browser-interaction-smoke.json');
             const deployWait = load('deep-audit-live-deploy-wait.json');
-            const reports = [staticReport, liveReport].filter(Boolean);
+            const reports = [staticReport, liveReport, browserReport].filter(Boolean);
             const hard = reports.flatMap(report => report.hardIssues || []);
             const warnings = reports.flatMap(report => report.warnings || []);
-            const coverage = reports.map(report => `- ${report.mode} v${report.version || 1}: ${JSON.stringify(report.stats || {})}`).join('\n') || '- No deep report was produced; inspect the build log.';
+            const coverage = [
+              staticReport ? `- static v${staticReport.version || 1}: ${JSON.stringify(staticReport.stats || {})}` : '- static: no report',
+              liveReport ? `- live v${liveReport.version || 1}: ${JSON.stringify(liveReport.stats || {})}` : '- live: no report',
+              browserReport ? `- browser: ${browserReport.tests?.length || 0} interaction tests` : '- browser: no report'
+            ].join('\n');
             const stageStatus = {
               static: '${{ steps.static_audit.outcome }}',
               existing: '${{ steps.existing_audits.outcome }}',
               deployWait: '${{ steps.deploy_wait.outcome }}',
-              live: '${{ steps.live_audit.outcome }}'
+              live: '${{ steps.live_audit.outcome }}',
+              browser: '${{ steps.browser_smoke.outcome }}'
             };
-            const status = reports.length === 2 && reports.every(report => report.ok) && deployWait?.ok === true && Object.values(stageStatus).every(value => value === 'success') ? 'PASS' : 'FAIL';
+            const status = staticReport?.ok === true && liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && Object.values(stageStatus).every(value => value === 'success') ? 'PASS' : 'FAIL';
             const hardLines = hard.length ? hard.slice(0, 180).map(item => `- ${item}`).join('\n') : '- None';
             const warningLines = warnings.length ? warnings.slice(0, 80).map(item => `- ${item}`).join('\n') : '- None';
             const body = [
@@ -149,7 +170,7 @@ jobs:
               `### Warnings (${warnings.length})`, warningLines,
               warnings.length > 80 ? `\n- … ${warnings.length - 80} additional warnings are retained in the workflow artifact.` : '',
               '',
-              'No credentials, secret values or customer data are included in this summary.'
+              'No credentials, secret values, payments, forum posts, login emails or customer data are created by the audit.'
             ].join('\n').slice(0, 60000);
             await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: 94, body });
 
@@ -160,20 +181,22 @@ jobs:
           EXISTING_OUTCOME: ${{ steps.existing_audits.outcome }}
           DEPLOY_WAIT_OUTCOME: ${{ steps.deploy_wait.outcome }}
           LIVE_OUTCOME: ${{ steps.live_audit.outcome }}
+          BROWSER_OUTCOME: ${{ steps.browser_smoke.outcome }}
         run: |
           node - <<'NODE'
           const fs = require('fs');
           function load(file) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; } }
           const staticReport = load('downloads/deep-production-site-audit-static.json');
           const liveReport = load('downloads/deep-production-site-audit-live.json');
+          const browserReport = load('downloads/live-browser-interaction-smoke.json');
           const deployWait = load('downloads/deep-audit-live-deploy-wait.json');
-          const outcomes = [process.env.STATIC_OUTCOME, process.env.EXISTING_OUTCOME, process.env.DEPLOY_WAIT_OUTCOME, process.env.LIVE_OUTCOME];
-          const ok = staticReport?.ok === true && liveReport?.ok === true && deployWait?.ok === true && outcomes.every(value => value === 'success');
+          const outcomes = [process.env.STATIC_OUTCOME, process.env.EXISTING_OUTCOME, process.env.DEPLOY_WAIT_OUTCOME, process.env.LIVE_OUTCOME, process.env.BROWSER_OUTCOME];
+          const ok = staticReport?.ok === true && liveReport?.ok === true && browserReport?.ok === true && deployWait?.ok === true && outcomes.every(value => value === 'success');
           if (!ok) {
-            console.error(JSON.stringify({ ok, outcomes, staticOk: staticReport?.ok ?? null, liveOk: liveReport?.ok ?? null, deploySynchronized: deployWait?.ok ?? null }, null, 2));
+            console.error(JSON.stringify({ ok, outcomes, staticOk: staticReport?.ok ?? null, liveOk: liveReport?.ok ?? null, browserOk: browserReport?.ok ?? null, deploySynchronized: deployWait?.ok ?? null }, null, 2));
             process.exit(1);
           }
-          console.log('Combined static, legacy-suite, exact-deploy and live audit result passed.');
+          console.log('Combined build-twice, static, legacy-suite, exact-deploy, live and Chromium interaction audit passed.');
           NODE
 
       - name: Upload complete audit evidence
@@ -189,6 +212,9 @@ jobs:
             downloads/deep-production-site-audit-static.md
             downloads/deep-production-site-audit-live.json
             downloads/deep-production-site-audit-live.md
+            downloads/live-browser-interaction-smoke.json
+            downloads/live-browser-interaction-smoke.md
+            downloads/canonical-external-source-repair.json
             downloads/full-site-function-tool-audit.json
             downloads/full-site-function-tool-audit.md
             downloads/site-function-harmony-report.json

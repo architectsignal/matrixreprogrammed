@@ -11,13 +11,17 @@ const checks = [];
 function display(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 function patch(base, relative, transform) {
   const file = path.join(base, relative);
-  if (!fs.existsSync(file)) return;
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return;
   const before = fs.readFileSync(file, 'utf8');
   const after = transform(before);
   if (after !== before) {
     fs.writeFileSync(file, after);
     changed.push(display(file));
   }
+}
+function patchAliases(base, htmlRoute, transform) {
+  patch(base, htmlRoute, transform);
+  patch(base, htmlRoute.replace(/\.html$/i, ''), transform);
 }
 function remove(base, relative) {
   const file = path.join(base, relative);
@@ -40,39 +44,49 @@ function repairEpstein(html) {
   next = next.replace(/Save Pending Review Placeholder/gi, 'Submit for Pending Review');
   return next;
 }
-function repairWrongdoing(html) {
+function repairTrackerJavaScript(html) {
   return html
+    .replace(/\bdata\.book links\b/g, 'data.moneyRoutes')
+    .replace(/\bitem\.book links\b/g, 'item.moneyRoutes')
+    .replace(/\bp\.book links\b/g, 'p.moneyRoutes')
+    .replace(/\bm\.book links\b/g, 'm.moneyRoutes');
+}
+function repairWrongdoing(html) {
+  return repairTrackerJavaScript(html)
     .replace(/<h1>WRONGDOING TRACKER\.<br>FOLLOW THE FILES\.<\/h1>/i, '<h1>WRONGDOING TRACKER.</h1>')
-    .replace(/\(data\.book links\|\|\[\]\)/g, '(data.moneyRoutes||[])')
     .replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.');
 }
 function repairDeployStatus(html) {
   return html.replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.');
 }
 
+const trackerPages = ['case-status-dashboard.html', 'epstein-billionaire-tracker.html', 'tracker-core.html', 'wrongdoing-tracker.html'];
 for (const base of bases) {
-  patch(base, 'epstein-upload-check.html', repairEpstein);
-  patch(base, 'wrongdoing-tracker.html', repairWrongdoing);
-  patch(base, 'deploy-status.html', repairDeployStatus);
+  patchAliases(base, 'epstein-upload-check.html', repairEpstein);
+  for (const route of trackerPages) patchAliases(base, route, route === 'wrongdoing-tracker.html' ? repairWrongdoing : repairTrackerJavaScript);
+  patchAliases(base, 'deploy-status.html', repairDeployStatus);
   for (const relative of ['reports/entity-object-object.html', 'reports/entity-object-object']) remove(base, relative);
 }
 
 for (const base of bases) {
-  const epstein = path.join(base, 'epstein-upload-check.html');
-  const wrongdoing = path.join(base, 'wrongdoing-tracker.html');
-  const deploy = path.join(base, 'deploy-status.html');
-  if (fs.existsSync(epstein)) {
-    const html = fs.readFileSync(epstein, 'utf8');
+  for (const route of ['epstein-upload-check.html', 'epstein-upload-check']) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const html = fs.readFileSync(file, 'utf8');
     const retiredPlaceholder = /Save Pending Review Placeholder|AI\/OCR pipeline is a placeholder until processing is connected/i.test(html);
-    checks.push({ file: display(epstein), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('intake-fallback.js') && !retiredPlaceholder });
+    checks.push({ file: display(file), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('intake-fallback.js') && !retiredPlaceholder });
   }
-  if (fs.existsSync(wrongdoing)) {
-    const html = fs.readFileSync(wrongdoing, 'utf8');
-    checks.push({ file: display(wrongdoing), ok: !html.includes('data.book links') && !html.includes('FOLLOW THE FILES') && html.includes('data.moneyRoutes') });
+  for (const route of trackerPages.flatMap(value => [value, value.replace(/\.html$/i, '')])) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    checks.push({ file: display(file), ok: !/\b(?:data|item|p|m)\.book links\b/.test(html) && (!/tracker/i.test(route) || html.includes('moneyRoutes')) });
   }
-  if (fs.existsSync(deploy)) {
-    const html = fs.readFileSync(deploy, 'utf8');
-    checks.push({ file: display(deploy), ok: !html.includes('FOLLOW THE FILES') && html.includes('MAP THE STRUCTURE. READ THE SIGNALS.') });
+  for (const route of ['deploy-status.html', 'deploy-status']) {
+    const file = path.join(base, route);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    checks.push({ file: display(file), ok: !html.includes('FOLLOW THE FILES') && html.includes('MAP THE STRUCTURE. READ THE SIGNALS.') });
   }
   for (const relative of ['reports/entity-object-object.html', 'reports/entity-object-object']) checks.push({ file: display(path.join(base, relative)), ok: !fs.existsSync(path.join(base, relative)) });
 }
@@ -84,7 +98,7 @@ const report = {
   changed: [...new Set(changed)],
   removed: [...new Set(removed)],
   checks,
-  boundary: 'The Epstein intake submits public-source leads to the reviewed forum endpoint with local fail-safe recovery; ordinary input placeholder hints are allowed, while dead feature placeholders, malformed object routes, stale mission copy and broken tracker JavaScript are excluded.'
+  boundary: 'The Epstein intake submits public-source leads to the reviewed forum endpoint with local fail-safe recovery. Canonical tracker pages and every extensionless alias use the valid moneyRoutes field. Dead feature placeholders, malformed object routes, stale mission copy and broken tracker JavaScript are excluded after every generator.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-public-defect-repair.json'), `${JSON.stringify(report, null, 2)}\n`);

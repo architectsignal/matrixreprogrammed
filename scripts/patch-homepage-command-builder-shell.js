@@ -55,6 +55,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
 require('./patch-paypal-voluntary-support.js');
 require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
+require('./patch-email-launch-console.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, Brevo readiness, operational audit, and safe production receipt applied.`);
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, Brevo readiness, controlled email launch console, operational audit, and safe production receipt applied.`);

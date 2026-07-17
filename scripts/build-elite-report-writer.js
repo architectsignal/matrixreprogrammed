@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { cleanEliteReports } = require('./cleanup-generated-machine-pages.js');
 const root = process.cwd();
 function fp(p){return path.join(root,p)}
 function exists(p){return fs.existsSync(fp(p))}
@@ -12,6 +13,7 @@ function arr(x){return Array.isArray(x)?x.filter(Boolean):(x?[x]:[])}
 function slug(s='report'){return txt(s).toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,80)||'report'}
 function ul(items){const out=arr(items).map(x=>txt(typeof x==='string'?x:JSON.stringify(x))).filter(Boolean).slice(0,10);return out.length?out.map(x=>`<li>${esc(x)}</li>`).join(''):'<li>No current item recorded.</li>'}
 function score(s){const n=Number(s||0);return n>=85?'critical watch':n>=65?'high watch':n>=40?'active watch':'developing watch'}
+cleanEliteReports();
 const now=new Date().toISOString();
 const command=json('data/daily-command-brief.json',{});
 const contractors=json('data/private-contractor-intelligence.json',{profiles:[]});

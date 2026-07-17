@@ -53,6 +53,8 @@ run('scripts/repair-public-runtime-controls.js', ['--output']);
 run('scripts/fix-public-editorial-audit-errors.js');
 run('scripts/hide-visible-compatibility-markers.js');
 run('scripts/hide-visible-compatibility-markers.js', ['--output']);
+run('scripts/patch-paypal-voluntary-support.js');
+run('scripts/patch-voluntary-support-store.js');
 run('scripts/enforce-phase1-cloudflare-config.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
@@ -65,10 +67,11 @@ const report = {
     'geographic-power-atlas.html', 'geographic-power-atlas.js',
     'data/geographic-power-atlas.json', 'data/geographic-power-atlas-data.json',
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
-    'power-dossier-runtime.js', '_site/search-index.json', 'wrangler.toml'
+    'power-dossier-runtime.js', '_site/search-index.json', 'store.html',
+    'card-deck-store.html', 'paypal-voluntary-support.js', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may overwrite repaired public output, inflate search assets, preserve dashboard variable drift, enable automated email, or enable live PayPal.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may overwrite repaired public output, fixed-price store conversion, €1–€5,000 voluntary support boundaries, search assets, dashboard variable safety, automated email state, or live PayPal state.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable _site bundle and Phase 1 Cloudflare configuration.');
+console.log('Final release sanitation passed for the deployable _site bundle, voluntary support store, and Phase 1 Cloudflare configuration.');

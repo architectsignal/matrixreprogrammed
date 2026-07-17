@@ -24,13 +24,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build generated site before audit
         run: npm run build
 
       - name: Run internal link audit
         run: npm run link-audit
+
+      - name: Upload Link Audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-audit-report-${{ github.run_id }}
+          path: downloads/link-audit-report.json
+          if-no-files-found: ignore
+          retention-days: 30

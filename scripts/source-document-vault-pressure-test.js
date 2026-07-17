@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();
+require('./restore-premier-resource-routes.js');
+require('./restore-evidence-badge-routes.js');
+require('./restore-source-document-vault-routes.js');
 const problems = [];
 function exists(file){ return fs.existsSync(path.join(root, file)); }
 function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }

@@ -58,4 +58,5 @@ require('./patch-brevo-transactional-readiness.js');
 require('./patch-email-launch-console.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, Brevo readiness, controlled email launch console, operational audit, and safe production receipt applied.`);
+require('./repair-deep-audit-public-defects.js');
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, Brevo readiness, controlled email launch console, operational audit, safe production receipt and deep-audit public repairs applied.`);

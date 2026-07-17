@@ -16,6 +16,15 @@ const replacements = {
   'eppo-news': {
     url: 'https://www.eppo.europa.eu/media/news_en',
     label: "European Public Prosecutor's Office — News"
+  },
+  'openfec-api': {
+    label: 'U.S. Federal Election Commission — Campaign Finance Data',
+    type: 'html',
+    parser: null,
+    optional: false,
+    requiredEnv: [],
+    url: 'https://www.fec.gov/data/',
+    securityBoundary: 'The public investigation registry uses the FEC data portal. Secret-bearing OpenFEC request URLs are not stored or published.'
   }
 };
 
@@ -24,7 +33,7 @@ for (const source of registry.sources || []) {
   const replacement = replacements[source.id];
   if (!replacement) continue;
   for (const [key, value] of Object.entries(replacement)) {
-    if (source[key] !== value) {
+    if (JSON.stringify(source[key]) !== JSON.stringify(value)) {
       source[key] = value;
       changed += 1;
     }
@@ -32,5 +41,6 @@ for (const source of registry.sources || []) {
 }
 
 registry.updated = new Date().toISOString().slice(0, 10);
+registry.securityBoundary = 'Public source registries and generated reports must not contain API keys, tokens, passwords, webhook secrets or secret-bearing request URLs.';
 fs.writeFileSync(file, JSON.stringify(registry, null, 2) + '\n');
 console.log(`Investigation source registry repaired: ${changed} field change(s).`);

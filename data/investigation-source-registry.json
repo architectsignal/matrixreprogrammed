@@ -514,19 +514,17 @@
     },
     {
       "id": "openfec-api",
-      "label": "OpenFEC API — Political Money",
+      "label": "U.S. Federal Election Commission — Campaign Finance Data",
       "lane": "money-contracts",
       "authority": "primary-official",
       "frequency": [
         "weekly"
       ],
-      "type": "json",
-      "parser": "openfec",
-      "optional": true,
-      "requiredEnv": [
-        "FEC_API_KEY"
-      ],
-      "url": "https://api.open.fec.gov/v1/schedules/schedule_a/by_date/?api_key={{FEC_API_KEY}}&min_date={{START_DATE}}&max_date={{END_DATE}}&per_page=100",
+      "type": "html",
+      "parser": null,
+      "optional": false,
+      "requiredEnv": [],
+      "url": "https://www.fec.gov/data/",
       "keywords": [
         "contribution",
         "committee",
@@ -534,7 +532,9 @@
         "political money",
         "date",
         "amount"
-      ]
+      ],
+      "securityBoundary": "The public investigation registry uses the FEC data portal. Secret-bearing OpenFEC request URLs are not stored or published."
     }
-  ]
+  ],
+  "securityBoundary": "Public source registries and generated reports must not contain API keys, tokens, passwords, webhook secrets or secret-bearing request URLs."
 }

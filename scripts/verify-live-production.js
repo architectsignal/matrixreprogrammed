@@ -9,7 +9,7 @@ const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || 36);
 const delayMs = Number(process.env.LIVE_VERIFY_DELAY_MS || 10000);
 const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'production-freshness-policy.json'), 'utf8'));
 const routeMarkers = {
-  '/': 'FOLLOW THE FILES',
+  '/': 'MAP THE STRUCTURE. READ THE SIGNALS.',
   '/start-here': 'Open Dark Web Safety',
   '/membership': 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.',
   '/billing-dashboard': 'billing-dashboard.js',
@@ -35,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/5.2',
+      'user-agent': 'MatrixProductionVerifier/5.3',
       ...(options.headers || {})
     }
   });
@@ -43,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.2' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.3' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -119,6 +119,26 @@ async function verifyPayPalBoundary() {
     status: response.status,
     origin: response.headers['x-matrix-origin'] || null,
     data
+  };
+}
+async function verifyEmailAutomationBoundary() {
+  const response = await fetchText('/api/email/admin/health');
+  const data = parseJson(response.text);
+  const unauthenticatedSafe = response.status === 401
+    && data?.ok === false
+    && data?.authenticated === false;
+  const publicStatusResponse = await fetchText('/email-status.json');
+  const publicStatus = parseJson(publicStatusResponse.text);
+  const publicSafe = publicStatusResponse.status === 404
+    || publicStatusResponse.status === 410
+    || publicStatus?.automationEnabled === false
+    || publicStatus?.emailAutomationEnabled === false;
+  return {
+    ok: unauthenticatedSafe && publicSafe,
+    adminHealth: { status: response.status, origin: response.headers['x-matrix-origin'] || null, data },
+    publicStatus: { status: publicStatusResponse.status, data: publicStatus },
+    requiredRuntimeValue: false,
+    boundary: 'Phase 1 requires automated email sending to remain disabled. The public endpoint must not claim automation is active and the administrator health route must remain protected.'
   };
 }
 async function verifyBootstrapBoundary() {
@@ -205,9 +225,6 @@ async function verifyOnce() {
     payloads[item.file] = parseJson(response.text);
   }
   const freshness = freshnessChecks(payloads);
-  // The workflow must verify the exact SHA it checked out and deployed. `main`
-  // may legitimately advance during a long build because data-generation jobs
-  // commit refreshed public outputs without triggering a replacement deploy.
   const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha);
   const mainAdvancedDuringRun = Boolean(mainSha && mainSha !== expectedSha);
   const healthMatches = Boolean(
@@ -223,6 +240,7 @@ async function verifyOnce() {
   );
   const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
+  const emailAutomationBoundary = coreOk ? await verifyEmailAutomationBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const bootstrapBoundary = coreOk && paypalBoundary.ok ? await verifyBootstrapBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
   const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ready
     ? await verifyRehearsalBoundary()
@@ -232,8 +250,8 @@ async function verifyOnce() {
   const forumPersistence = coreOk && paypalBoundary.ok
     ? await verifyForumPersistence()
     : { ok: false, skipped: true, reason: 'core or PayPal fail-closed boundary not proven yet' };
-  const ok = coreOk && paypalBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
+  const ok = coreOk && paypalBoundary.ok && emailAutomationBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
 }
 
 (async () => {
@@ -246,7 +264,7 @@ async function verifyOnce() {
     if (result.ok) {
       const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
       const paypalMode = result.bootstrapBoundary?.ready ? 'autonomous sandbox plans ready' : 'sandbox bootstrap pending with checkout disabled';
-      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
+      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, Phase 1 email automation safety, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);
@@ -254,4 +272,7 @@ async function verifyOnce() {
   }
   console.error(JSON.stringify(result, null, 2));
   process.exit(1);
-})().catch(error => { console.error(error.stack || error.message); process.exit(1); });
+})().catch(error => {
+  console.error(error.stack || error.message);
+  process.exit(1);
+});

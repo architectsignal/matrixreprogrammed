@@ -87,4 +87,5 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   commitRacePolicy: 'Accept exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.',
   boundary: 'Live verification proves the actual deployed email automation binding is false using the real Wrangler deployment log and commit-bound health JSON.'
 }, null, 2)}\n`);
-console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}.`);
+require('./patch-search-v3-compaction-headroom.js');
+console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; Search V3 compaction headroom applied.`);

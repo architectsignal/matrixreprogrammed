@@ -73,6 +73,7 @@ const deliveryTierFinal = `${deliveryTierAnchor}\n  const tierRank = { registere
 if (!delivery.includes("reason: 'current-membership-tier-required'")) delivery = replaceRequired(delivery, deliveryTierAnchor, deliveryTierFinal, 'report delivery tier boundary');
 write(deliveryFile, delivery);
 
+require('./upgrade-daily-control-brief-email.js');
 require('./sanitize-machine-entity-outputs.js');
 require('./patch-geographic-power-atlas-runtime.js');
 require('./patch-login-email-delivery.js');
@@ -80,4 +81,4 @@ require('./disable-production-kv-traffic.js');
 require('./repair-empty-public-controls.js');
 require('./patch-homepage-command-builder-shell.js');
 require('./patch-phase1-live-email-verifier.js');
-console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. KV-safe production policy, empty-control repair, homepage shell recovery and Phase 1 live email verification applied.');
+console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. Daily Control Brief v3, KV-safe production policy, empty-control repair, homepage shell recovery and Phase 1 live email verification applied.');

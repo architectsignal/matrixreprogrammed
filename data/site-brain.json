@@ -9,6 +9,7 @@
     "assetDirectory": "_site",
     "assetBinding": "ASSETS",
     "authoritativeDatabaseBinding": "MEMBERS_DB",
+    "kvBindings": ["FORUM_POSTS"],
     "compatibilityKvBindings": ["FORUM_POSTS"],
     "forbiddenOrigins": [
       "matrixreprogrammed.pages.dev",

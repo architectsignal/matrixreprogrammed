@@ -63,7 +63,8 @@ for (const base of bases) {
   const deploy = path.join(base, 'deploy-status.html');
   if (fs.existsSync(epstein)) {
     const html = fs.readFileSync(epstein, 'utf8');
-    checks.push({ file: display(epstein), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('intake-fallback.js') && !/Placeholder/i.test(html) });
+    const retiredPlaceholder = /Save Pending Review Placeholder|AI\/OCR pipeline is a placeholder until processing is connected/i.test(html);
+    checks.push({ file: display(epstein), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('intake-fallback.js') && !retiredPlaceholder });
   }
   if (fs.existsSync(wrongdoing)) {
     const html = fs.readFileSync(wrongdoing, 'utf8');
@@ -83,7 +84,7 @@ const report = {
   changed: [...new Set(changed)],
   removed: [...new Set(removed)],
   checks,
-  boundary: 'The Epstein intake submits public-source leads to the reviewed forum endpoint with local fail-safe recovery; malformed object routes, stale mission copy and broken tracker JavaScript are excluded from source and deploy output.'
+  boundary: 'The Epstein intake submits public-source leads to the reviewed forum endpoint with local fail-safe recovery; ordinary input placeholder hints are allowed, while dead feature placeholders, malformed object routes, stale mission copy and broken tracker JavaScript are excluded.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-public-defect-repair.json'), `${JSON.stringify(report, null, 2)}\n`);

@@ -10,7 +10,7 @@ function inject(html, marker, block, beforeNeedle) {
   const start = `<!-- ${marker}:start -->`;
   const end = `<!-- ${marker}:end -->`;
   const wrapped = `${start}${block}${end}`;
-  if (html.includes(start) && html.includes(end)) return html.replace(new RegExp(`${start}[\\s\\S]*?${end}`), wrapped);
+  if (html.includes(start) && html.includes(end)) return html.replace(new RegExp(`${start}[\s\S]*?${end}`), wrapped);
   if (html.includes(beforeNeedle)) return html.replace(beforeNeedle, wrapped + beforeNeedle);
   return html + wrapped;
 }
@@ -50,6 +50,7 @@ for (const file of ['index.html', 'matrix-brain.html', 'daily-brain-brief.html',
 }
 if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
   try {
+    runNodeScript('scripts/patch-machine-feed-object-names.js');
     runNodeScript('scripts/fetch-public-record-feeds.js');
     runNodeScript('scripts/patch-brain-with-record-events.js');
     runNodeScript('scripts/build-change-detection-engine.js');

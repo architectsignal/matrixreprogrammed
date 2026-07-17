@@ -79,4 +79,5 @@ require('./patch-login-email-delivery.js');
 require('./disable-production-kv-traffic.js');
 require('./repair-empty-public-controls.js');
 require('./patch-homepage-command-builder-shell.js');
-console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. KV-safe production policy, empty-control repair and homepage builder shell recovery applied.');
+require('./patch-phase1-live-email-verifier.js');
+console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. KV-safe production policy, empty-control repair, homepage shell recovery and Phase 1 live email verification applied.');

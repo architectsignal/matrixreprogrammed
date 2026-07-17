@@ -13,16 +13,20 @@ const steps = [
   ['deploy-status', 'scripts/build-deploy-status.js'],
   ['generated-repair', 'scripts/repair-generated-site-artifacts.js'],
   ['search-repair', 'scripts/repair-search-system.js'],
-  ['newsletter-persistence-patch', 'scripts/patch-worker-newsletter-system.js'],
-  ['newsletter-persistence-test', 'scripts/newsletter-persistence-test.js'],
+  ['newsletter-d1-health', 'scripts/newsletter-persistence-test.js'],
   ['critical-route-drift', 'scripts/repair-critical-route-drift.js'],
   ['shared-assets', 'scripts/ensure-shared-assets.js'],
   ['search-repair-final', 'scripts/repair-search-system.js'],
-  ['newsletter-persistence-patch-final', 'scripts/patch-worker-newsletter-system.js'],
-  ['newsletter-persistence-test-final', 'scripts/newsletter-persistence-test.js'],
+  ['membership-tiers-final', 'scripts/patch-membership-tiers.js'],
+  ['newsletter-consent-final', 'scripts/patch-newsletter-consent.js'],
+  ['login-email-delivery-final', 'scripts/patch-login-email-delivery.js'],
+  ['homepage-mission-final', 'scripts/normalize-homepage-mission-copy.js'],
   ['critical-route-drift-final', 'scripts/repair-critical-route-drift.js'],
   ['worker-pages-origin', 'scripts/patch-worker-pages-origin.js'],
   ['cloudflare-output', 'scripts/build-cloudflare-output.js'],
+  ['membership-tiers-output-final', 'scripts/patch-membership-tiers.js'],
+  ['homepage-mission-output-final', 'scripts/normalize-homepage-mission-copy.js'],
+  ['search-index-output-final', 'scripts/compact-cloudflare-search-index.js'],
   ['site-brain-health', 'scripts/site-brain-health.js'],
   ['site-function-harmony', 'scripts/site-function-harmony-test.js'],
   ['shared-assets-final', 'scripts/ensure-shared-assets.js']
@@ -68,7 +72,7 @@ function htmlFallback(file, title, body) {
 function run(label, script) {
   if (!exists(script)) return { label, script, status: 'missing-script', exitCode: 1, stdout: '', stderr: `${script} missing` };
   try {
-    const result = spawnSync(process.execPath, [full(script)], { cwd: root, encoding: 'utf8', stdio: 'pipe', maxBuffer: 20 * 1024 * 1024 });
+    const result = spawnSync(process.execPath, [full(script)], { cwd: root, encoding: 'utf8', stdio: 'pipe', maxBuffer: 30 * 1024 * 1024 });
     if (result.stdout) process.stdout.write(result.stdout);
     if (result.stderr) process.stderr.write(result.stderr);
     return {
@@ -115,7 +119,8 @@ const criticalFiles = [
   'index.html','search.html','search.js','search-index.json','deploy-status.json','deploy-health.json',
   'downloads/deploy-status.json','downloads/deploy-health.json','data/daily-sitewide-refresh-status.json',
   '_site/index.html','_site/search.html','_site/search','_site/search.js','_site/search-index.json',
-  'downloads/newsletter-persistence-test.json','downloads/critical-route-drift-report.json','downloads/site-function-harmony-report.json'
+  'downloads/newsletter-persistence-test.json','downloads/critical-route-drift-report.json','downloads/site-function-harmony-report.json',
+  'downloads/cloudflare-search-index-compaction.json','downloads/membership-tiers-report.json','downloads/homepage-mission-normalization.json'
 ];
 const missingCritical = criticalFiles.filter(file => !exists(file));
 const hardMissing = missingCritical.filter(file => !file.startsWith('_site/'));
@@ -130,7 +135,7 @@ const report = {
   status,
   startedAt,
   finishedAt: new Date().toISOString(),
-  purpose: 'Daily Sitewide Refresh builder. It creates emergency fallbacks when possible, but fallbacks and failed generators are reported as unhealthy rather than green.',
+  purpose: 'Daily Sitewide Refresh builder. It preserves the canonical D1 membership/email lifecycle, homepage mission, compact Cloudflare search asset and emergency fallbacks. Fallbacks and failed generators are reported as unhealthy rather than green.',
   failedSteps,
   missingCritical,
   hardMissing,

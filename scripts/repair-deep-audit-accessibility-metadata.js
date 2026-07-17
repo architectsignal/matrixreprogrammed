@@ -37,6 +37,10 @@ function imageLabel(tag) {
   if (/pixel|spacer|tracking|transparent/i.test(source)) return '';
   return attr(tag, 'title') || humanize(source);
 }
+function addAttribute(tag, text) {
+  if (/\s*\/>$/.test(tag)) return tag.replace(/\s*\/>$/, ` ${text} />`);
+  return tag.replace(/>$/, ` ${text}>`);
+}
 function patchHtml(html, file) {
   let next = html;
   if (/<html\b/i.test(next) && !/<html\b[^>]*\blang\s*=/i.test(next)) {
@@ -53,18 +57,18 @@ function patchHtml(html, file) {
     const label = controlLabel(tag);
     if (!label) return tag;
     stats.controlLabels++;
-    return tag.replace(/>$/, ` aria-label="${escapeAttr(label)}">`);
+    return addAttribute(tag, `aria-label="${escapeAttr(label)}"`);
   });
   next = next.replace(/<img\b[^>]*>/gi, tag => {
     if (/\balt\s*=/i.test(tag)) return tag;
     stats.imageAlt++;
-    return tag.replace(/>$/, ` alt="${escapeAttr(imageLabel(tag))}">`);
+    return addAttribute(tag, `alt="${escapeAttr(imageLabel(tag))}"`);
   });
   next = next.replace(/<a\b[^>]*target=["']_blank["'][^>]*>/gi, tag => {
     if (/\brel\s*=["'][^"']*(?:noopener|noreferrer)/i.test(tag)) return tag;
     stats.noopener++;
     if (/\brel\s*=/i.test(tag)) return tag.replace(/\brel\s*=\s*(["'])([^"']*)\1/i, (_match, quote, value) => `rel=${quote}${value} noopener noreferrer${quote}`);
-    return tag.replace(/>$/, ' rel="noopener noreferrer">');
+    return addAttribute(tag, 'rel="noopener noreferrer"');
   });
   return next;
 }
@@ -89,7 +93,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   stats,
   changed: [...new Set(changed)],
-  boundary: 'Final public HTML receives a language declaration, a useful description, accessible names for unlabeled controls, safe alternative text defaults and noopener/noreferrer protection. Existing explicit editorial labels and descriptions are preserved.'
+  boundary: 'Final public HTML receives a language declaration, a useful description, accessible names for unlabeled controls, safe alternative text defaults and noopener/noreferrer protection. Existing explicit editorial labels, descriptions and valid self-closing tag syntax are preserved.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-accessibility-metadata-repair.json'), `${JSON.stringify(report, null, 2)}\n`);

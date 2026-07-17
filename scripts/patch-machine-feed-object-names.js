@@ -32,15 +32,22 @@ if (!runner.includes("value !== '[object Object]'")) throw new Error('Machine fe
 
 if (runner !== beforeRunner) fs.writeFileSync(runnerPath, runner);
 
+const roots = [root, path.join(root, '_site')].filter((value, index, all) => all.indexOf(value) === index && fs.existsSync(value));
 const touched = [];
+function display(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 function writeJson(relative, transform) {
-  const file = path.join(root, relative);
-  if (!fs.existsSync(file)) return;
-  let data;
-  try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return; }
-  const next = transform(data);
-  fs.writeFileSync(file, `${JSON.stringify(next, null, 2)}\n`);
-  touched.push(relative);
+  for (const base of roots) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file)) continue;
+    let data;
+    try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { continue; }
+    const next = transform(data);
+    const before = JSON.stringify(data);
+    const after = JSON.stringify(next);
+    if (after === before) continue;
+    fs.writeFileSync(file, `${JSON.stringify(next, null, 2)}\n`);
+    touched.push(display(file));
+  }
 }
 function validName(value) {
   const text = String(value ?? '').trim();
@@ -56,26 +63,39 @@ writeJson('data/daily-brain-brief.json', data => ({
 }));
 
 function scrubText(relative) {
-  const file = path.join(root, relative);
-  if (!fs.existsSync(file)) return;
-  const before = fs.readFileSync(file, 'utf8');
-  let after = before;
-  after = after.replace(/<article\b[^>]*>[\s\S]*?<h3>\s*\[object Object\]\s*<\/h3>[\s\S]*?<\/article>/gi, '');
-  after = after.replace(/^.*\[object Object\].*$(?:\r?\n)?/gmi, '');
-  if (after !== before) {
-    fs.writeFileSync(file, after);
-    touched.push(relative);
+  for (const base of roots) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    let after = before;
+    after = after.replace(/<article\b[^>]*>[\s\S]*?<h3>\s*\[object Object\]\s*<\/h3>[\s\S]*?<\/article>/gi, '');
+    after = after.replace(/^.*\[object Object\].*$(?:\r?\n)?/gmi, '');
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      touched.push(display(file));
+    }
   }
 }
 for (const relative of ['machine-digest.html','daily-brain-brief.html','downloads/machine-digest.md','downloads/daily-brain-brief.md']) scrubText(relative);
 
+const residual = [];
+for (const base of roots) {
+  for (const relative of ['data/entity-observations.json','data/daily-brain-brief.json','machine-digest.html','daily-brain-brief.html','downloads/machine-digest.md','downloads/daily-brain-brief.md']) {
+    const file = path.join(base, relative);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+    if (fs.readFileSync(file, 'utf8').includes('[object Object]')) residual.push(display(file));
+  }
+}
 const report = {
-  ok: true,
+  ok: residual.length === 0,
   generatedAt: new Date().toISOString(),
   runnerPatched: runner !== beforeRunner,
+  roots: roots.map(value => path.relative(root, value) || '.'),
   touched: [...new Set(touched)],
+  residual,
   boundary: 'Object-valued upstream fields are converted into meaningful labels when available. Unresolvable object placeholders are excluded rather than published as entity names.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'machine-feed-object-name-patch.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Machine feed object-name normalization ${report.runnerPatched ? 'installed' : 'already current'}; ${report.touched.length} existing output(s) sanitized.`);
+if (!report.ok) throw new Error(`Machine feed object placeholders remain: ${residual.join(', ')}`);
+console.log(`Machine feed object-name normalization ${report.runnerPatched ? 'installed' : 'already current'}; ${report.touched.length} source/output file(s) sanitized.`);

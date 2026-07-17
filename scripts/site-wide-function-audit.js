@@ -95,8 +95,8 @@ function checkWorkflows() {
 
 function checkPostbuild() {
   if (mode !== 'postbuild') return;
-  needFile('index.html', 'FOLLOW THE FILES.');
-  needFile('_site/index.html', 'FOLLOW THE FILES.');
+  needFile('index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.');
+  needFile('_site/index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.');
   needFile('forum.html', 'data-board="main"');
   needFile('dark-speculation-forum.html', 'data-board="speculation"');
   needFile('epstein-alive-board.html', 'data-board="epstein-alive"');

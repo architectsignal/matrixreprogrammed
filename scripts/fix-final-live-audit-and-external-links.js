@@ -9,10 +9,18 @@ const checks = [];
 const replacements = new Map([
   ['https://www.bis.org/topic/cbdc.htm', 'https://www.bis.org/about/bisih/topics/cbdc.htm'],
   ['https://search.worldbank.org/api/v2/projects', 'https://projects.worldbank.org/en/projects-operations/project-search'],
-  ['https://efile.fara.gov/ords/fara/f?p=1381:1', 'https://efile.fara.gov/ords/fara/f?p=1235:10'],
+  ['https://efile.fara.gov/ords/fara/f?p=1381:1', 'https://efile.fara.gov/ords/fara/f?p=1235%3A10'],
   ['https://efile.fara.gov/ords/fara/f?p=1381%3A1', 'https://efile.fara.gov/ords/fara/f?p=1235%3A10'],
-  ['https://cde.ucr.cjis.gov/', 'https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home'],
+  ['https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home', 'https://cde.ucr.cjis.gov/'],
+  ['https://cde.ucr.cjis.gov/LATEST/webapp/', 'https://cde.ucr.cjis.gov/'],
+  ['https://cde.ucr.cjis.gov/LATEST/', 'https://cde.ucr.cjis.gov/'],
   ['https://www.bmi.gv.at/508/Statistiken/', 'https://www.bmi.gv.at/magazin/2026_05_06/01_kriminalstatistik_2025.html']
+]);
+
+const skippedDirs = new Set(['.git', 'node_modules', '.wrangler', 'downloads', 'browsertrix-output', 'evidence-archive', 'source-snapshots']);
+const repairDefinitions = new Set([
+  'scripts/fix-final-live-audit-and-external-links.js',
+  'scripts/repair-canonical-external-sources.js'
 ]);
 
 function display(file) { return path.relative(root, file).replace(/\\/g, '/'); }
@@ -24,7 +32,7 @@ function writeIfChanged(file, before, after) {
 function walk(dir, out = []) {
   if (!fs.existsSync(dir)) return out;
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (['.git', 'node_modules', '.wrangler'].includes(entry.name)) continue;
+    if (entry.isDirectory() && skippedDirs.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full, out); else out.push(full);
   }
@@ -33,16 +41,28 @@ function walk(dir, out = []) {
 function textFile(file) {
   return /\.(?:html?|js|mjs|json|md|txt|csv|xml|yml|yaml)$/i.test(file) || !path.extname(file);
 }
+function sourceFiles(base) {
+  return walk(base).filter(file => {
+    if (!textFile(file)) return false;
+    const relative = display(file);
+    if (repairDefinitions.has(relative)) return false;
+    if (base === root && relative.startsWith('_site/')) return false;
+    return true;
+  });
+}
+function replaceSafely(text) {
+  let next = text;
+  const ordered = [...replacements].sort((a, b) => b[0].length - a[0].length);
+  for (const [from, to] of ordered) next = next.split(from).join(to);
+  return next;
+}
 
 for (const base of [root, site]) {
   if (!fs.existsSync(base)) continue;
-  for (const file of walk(base)) {
-    if (!textFile(file) || file.includes(`${path.sep}.git${path.sep}`) || file.includes(`${path.sep}node_modules${path.sep}`)) continue;
+  for (const file of sourceFiles(base)) {
     let before;
     try { before = fs.readFileSync(file, 'utf8'); } catch { continue; }
-    let after = before;
-    for (const [from, to] of replacements) after = after.split(from).join(to);
-    writeIfChanged(file, before, after);
+    writeIfChanged(file, before, replaceSafely(before));
   }
 }
 
@@ -76,8 +96,7 @@ writeIfChanged(auditFile, originalAudit, audit);
 const forbidden = [...replacements.keys()];
 for (const base of [root, site]) {
   if (!fs.existsSync(base)) continue;
-  for (const file of walk(base)) {
-    if (!textFile(file)) continue;
+  for (const file of sourceFiles(base)) {
     let source;
     try { source = fs.readFileSync(file, 'utf8'); } catch { continue; }
     for (const stale of forbidden) if (source.includes(stale)) checks.push({ file: display(file), stale, ok: false });
@@ -90,6 +109,7 @@ for (const marker of [
   '/api/paypal/donation/order',
   '/api/email/admin/test-transactional'
 ]) checks.push({ file: 'scripts/deep-production-site-audit-v2.js', marker, ok: audit.includes(marker) });
+checks.push({ file: 'official-source-policy', marker: 'FBI CDE current root accepted', ok: !forbidden.includes('https://cde.ucr.cjis.gov/') });
 
 const ok = checks.every(item => item.ok !== false);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -99,6 +119,9 @@ fs.writeFileSync(path.join(root, 'downloads', 'final-live-audit-and-external-lin
   changed: [...new Set(changed)],
   replacements: Object.fromEntries(replacements),
   checks,
+  officialSourceNotes: {
+    fbiCde: 'The current official CDE root is valid. Retired or fragile /LATEST/ deep links are normalized back to the root.'
+  },
   boundary: 'Valid extensionless HTML is accepted by body plus optional content type; protected downloads may fail closed with HTTP 401; live API contracts test the deployed PayPal donation and transactional-email routes; stale public references are replaced with current official routes.'
 }, null, 2)}\n`);
 if (!ok) throw new Error(`Final live audit/link repair failed: ${JSON.stringify(checks.filter(item => item.ok === false))}`);

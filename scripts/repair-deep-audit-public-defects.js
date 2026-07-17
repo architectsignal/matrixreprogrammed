@@ -15,10 +15,7 @@ function patch(base, relative, transform) {
   if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return;
   const before = fs.readFileSync(file, 'utf8');
   const after = transform(before);
-  if (after !== before) {
-    fs.writeFileSync(file, after);
-    changed.push(display(file));
-  }
+  if (after !== before) { fs.writeFileSync(file, after); changed.push(display(file)); }
 }
 function patchAliases(base, htmlRoute, transform) {
   patch(base, htmlRoute, transform);
@@ -52,9 +49,7 @@ function repairEpstein(html) {
   else next = next.replace(/<form\b[^>]*class=["'][^"']*ep-card[^"']*["'][^>]*>[\s\S]*?<\/form>/i, epsteinForm());
   if (!next.includes('id="epstein-source-intake-runtime"')) next = next.replace('</main>', `${epsteinScript()}</main>`);
   if (!next.includes('src="intake-fallback.js"')) next = next.replace('<script src="matrix.js"></script>', '<script src="intake-fallback.js"></script><script src="matrix.js"></script>');
-  next = next.replace(/AI\/OCR pipeline is a placeholder until processing is connected\./gi, 'Source review uses the live intake endpoint with a downloadable local recovery package if the endpoint is unavailable.');
-  next = next.replace(/Save Pending Review Placeholder/gi, 'Submit for Pending Review');
-  return next;
+  return next.replace(/AI\/OCR pipeline is a placeholder until processing is connected\./gi, 'Source review uses the live intake endpoint with a downloadable local recovery package if the endpoint is unavailable.').replace(/Save Pending Review Placeholder/gi, 'Submit for Pending Review');
 }
 function repairTrackerJavaScript(html) {
   return html.replace(/\bdata\.book links\b/g, 'data.moneyRoutes').replace(/\bitem\.book links\b/g, 'item.moneyRoutes').replace(/\bp\.book links\b/g, 'p.moneyRoutes').replace(/\bm\.book links\b/g, 'm.moneyRoutes');
@@ -64,8 +59,11 @@ function repairWrongdoing(html) {
 }
 function repairDeployStatus(html) { return html.replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.'); }
 function repairPowerMap(html) {
-  let next = html.replace(/<article\b[^>]*class=["'][^"']*map-node[^"']*["'][^>]*>[\s\S]*?(?:entity-exposure\/object-object|reports\/entity-object-object|\[object Object\]|object-object\.html)[\s\S]*?<\/article>/gi, '');
-  return next.replace(/\/?entity-exposure\/object-object(?:\.html)?/g, '/entities.html').replace(/\/?reports\/entity-object-object(?:\.html)?/g, '/entities.html');
+  return html
+    .replace(/\[object Object\]/g, 'Entity index')
+    .replace(/object-object\.html/g, 'entities.html')
+    .replace(/\/?entity-exposure\/entities\.html/g, '/entities.html')
+    .replace(/\/?reports\/entities\.html/g, '/entities.html');
 }
 function repairWarnings(relative, html) {
   let next = html;
@@ -104,8 +102,7 @@ for (const base of bases) {
     const file = path.join(base, route);
     if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
     const html = fs.readFileSync(file, 'utf8');
-    const retiredPlaceholder = /Save Pending Review Placeholder|AI\/OCR pipeline is a placeholder until processing is connected/i.test(html);
-    checks.push({ file: display(file), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('type="submit">Submit for Pending Review') && html.includes('intake-fallback.js') && !retiredPlaceholder });
+    checks.push({ file: display(file), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('type="submit">Submit for Pending Review') && html.includes('intake-fallback.js') && !/Save Pending Review Placeholder|AI\/OCR pipeline is a placeholder until processing is connected/i.test(html) });
   }
   for (const route of trackerPages.flatMap(value => [value, value.replace(/\.html$/i, '')])) {
     const file = path.join(base, route);
@@ -121,9 +118,8 @@ for (const base of bases) {
   }
   for (const relative of unstableFiles) checks.push({ file: display(path.join(base, relative)), ok: !fs.existsSync(path.join(base, relative)) });
   const powerMap = ['power-structure-map.html','power-structure-map'].map(route => path.join(base, route)).find(file => fs.existsSync(file));
-  if (powerMap) checks.push({ file: display(powerMap), ok: !/object-object(?:\.html)?|entity-exposure\/object-object/i.test(fs.readFileSync(powerMap, 'utf8')) });
+  if (powerMap) checks.push({ file: display(powerMap), ok: !/object-object(?:\.html)?|entity-exposure\/object-object|\[object Object\]/i.test(fs.readFileSync(powerMap, 'utf8')) });
 }
-
 const residual = [];
 for (const base of bases) for (const file of walkAuditedText(base)) {
   const text = fs.readFileSync(file, 'utf8');
@@ -131,7 +127,7 @@ for (const base of bases) for (const file of walkAuditedText(base)) {
 }
 checks.push({ file: 'audited HTML/JSON route references', ok: residual.length === 0, residual: residual.slice(0, 40) });
 const ok = checks.length > 0 && checks.every(item => item.ok);
-const report = { ok, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], removed: [...new Set(removed)], checks, boundary: 'Reviewed intake, tracker JavaScript, canonical entity routes, public control metadata and exact deployed aliases are repaired after every generator. Unstable report routes and malformed object pages are removed.' };
+const report = { ok, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], removed: [...new Set(removed)], checks, boundary: 'Reviewed intake, tracker JavaScript, canonical entity routes, public control metadata and exact deployed aliases are repaired after every generator. Unstable report routes and malformed object pages are removed without deleting valid map nodes.' };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-public-defect-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!ok) throw new Error(`Deep audit public defect repair failed: ${JSON.stringify(checks.filter(item => !item.ok))}`);

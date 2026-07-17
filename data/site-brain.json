@@ -1,6 +1,6 @@
 {
   "name": "Matrix Reprogrammed Site Brain",
-  "version": 1,
+  "version": 2,
   "canonicalHost": "matrixreprogrammed.com",
   "productionUrl": "https://matrixreprogrammed.com",
   "cloudflare": {
@@ -8,7 +8,8 @@
     "workerName": "matrixreprogrammed",
     "assetDirectory": "_site",
     "assetBinding": "ASSETS",
-    "kvBindings": ["FORUM_POSTS"],
+    "authoritativeDatabaseBinding": "MEMBERS_DB",
+    "compatibilityKvBindings": ["FORUM_POSTS"],
     "forbiddenOrigins": [
       "matrixreprogrammed.pages.dev",
       "PAGES_STATIC_ORIGIN",
@@ -16,19 +17,24 @@
     ]
   },
   "freshness": {
-    "homepageCurrentMarker": "FOLLOW THE FILES.",
+    "homepageCurrentMarker": "MAP THE STRUCTURE. READ THE SIGNALS.",
+    "acceptedHomepageMarkers": [
+      "MAP THE STRUCTURE. READ THE SIGNALS.",
+      "READ THE SIGNALS."
+    ],
     "forbiddenStaleText": [
       "rogue broadcast node inside the simulation",
-      "Matrix Reprogrammed is a rogue broadcast node inside the simulation"
+      "Matrix Reprogrammed is a rogue broadcast node inside the simulation",
+      "FOLLOW THE FILES."
     ],
     "duplicateGuards": [
       { "text": "Open Source Trail", "max": 1 },
-      { "text": "FOLLOW THE FILES.", "max": 1 },
+      { "text": "MAP THE STRUCTURE. READ THE SIGNALS.", "max": 1 },
       { "text": "Request The Black File", "max": 3 }
     ]
   },
   "criticalRoutes": [
-    { "path": "/", "marker": "FOLLOW THE FILES.", "type": "html" },
+    { "path": "/", "marker": "MAP THE STRUCTURE. READ THE SIGNALS.", "type": "html" },
     { "path": "/search", "marker": "SEARCH THE SIGNAL.", "type": "html" },
     { "path": "/books", "marker": "Books", "type": "html" },
     { "path": "/live-intel", "marker": "Live Intel", "type": "html" },
@@ -36,7 +42,7 @@
     { "path": "/forum", "marker": "Signal Board", "type": "html" },
     { "path": "/deploy-status", "marker": "DEPLOY STATUS.", "type": "html" },
     { "path": "/deploy-status.json", "marker": "aliases", "type": "json" },
-    { "path": "/forum-health", "marker": "forumPostsBinding", "type": "json", "allow503": true }
+    { "path": "/forum-health", "marker": "authoritativeStorage", "type": "json", "allow503": true }
   ],
   "buildGuards": {
     "requiredFiles": [
@@ -50,6 +56,8 @@
       "deploy-status.json",
       "wrangler.toml",
       "src/worker.js",
+      "src/worker-production.js",
+      "src/worker-forum-persistence.js",
       "scripts/patch-worker-pages-origin.js",
       "scripts/build-cloudflare-output.js",
       "scripts/live-site-verification.js"

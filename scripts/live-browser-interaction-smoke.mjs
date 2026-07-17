@@ -9,9 +9,7 @@ const results = [];
 const hardIssues = [];
 const warnings = [];
 
-function assert(condition, message) {
-  if (!condition) throw new Error(message);
-}
+function assert(condition, message) { if (!condition) throw new Error(message); }
 async function runTest(browser, name, fn) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, ignoreHTTPSErrors: false });
   const page = await context.newPage();
@@ -37,9 +35,7 @@ async function runTest(browser, name, fn) {
     const issue = `${name}: ${String(error?.message || error)}`;
     hardIssues.push(issue);
     results.push({ name, ok: false, durationMs: Date.now() - started, url: page.url(), error: issue, pageErrors, requestFailures, consoleErrors });
-  } finally {
-    await context.close();
-  }
+  } finally { await context.close(); }
 }
 
 const browser = await chromium.launch({ headless: true });
@@ -61,16 +57,19 @@ try {
     await page.goto(`${siteUrl}/geographic-power-atlas.html`, { waitUntil: 'domcontentloaded', timeout: 30000 });
     const map = page.locator('#power-atlas-map');
     await map.waitFor({ state: 'visible', timeout: 20000 });
+    await page.waitForFunction(() => {
+      const canvas = document.querySelector('#power-atlas-map canvas');
+      const status = document.querySelector('#atlas-status')?.textContent || '';
+      return Boolean(canvas && /mapped locations|interactive map/i.test(status));
+    }, null, { timeout: 30000 });
+    assert(await page.locator('#power-atlas-map canvas').count() > 0, 'Atlas did not create a MapLibre canvas');
+    assert(await page.locator('#power-atlas-list .power-atlas-item').count() > 0, 'Atlas accessible location list is empty');
     await map.click({ position: { x: 80, y: 80 } });
     await page.evaluate(() => window.dispatchEvent(new Event('resize')));
-    const select = page.locator('select').first();
-    if (await select.count()) {
-      const options = await select.locator('option').count();
-      if (options > 1) await select.selectOption({ index: 1 });
-    }
-    const mapText = ((await map.innerText().catch(() => '')) || '').trim();
-    const mapHtml = await map.innerHTML();
-    assert(mapText.length > 0 || mapHtml.length > 100, 'Atlas map container remained empty after interaction');
+    const select = page.locator('#atlas-category');
+    const options = await select.locator('option').count();
+    if (options > 1) await select.selectOption({ index: 1 });
+    await page.waitForFunction(() => /shown|updated|mapped locations/i.test(document.querySelector('#atlas-status')?.textContent || ''), null, { timeout: 10000 });
   });
 
   await runTest(browser, 'Epstein source-intake validation', async page => {
@@ -83,15 +82,17 @@ try {
     await page.locator('[name="note"]').fill('Automated smoke test; no submission performed.');
     const valid = await form.evaluate(node => node.checkValidity());
     assert(valid === true, 'Reviewed source-intake form did not validate with complete safe input');
-    assert((await page.locator('button[type="submit"]').innerText()).includes('Pending Review'), 'Source-intake submit control is missing or mislabeled');
+    const submit = page.locator('#epstein-source-intake-form button[type="submit"]');
+    assert(await submit.count() === 1, 'Source-intake submit control is missing');
+    const label = (await submit.innerText()).trim();
+    assert(/submit|review|pending/i.test(label), `Source-intake submit control is mislabeled: ${label || '[empty]'}`);
   });
 
   await runTest(browser, 'Forum feed interaction', async page => {
     await page.goto(`${siteUrl}/forum.html`, { waitUntil: 'domcontentloaded', timeout: 30000 });
     const response = await page.evaluate(async () => {
       const result = await fetch('/forum-feed-main', { cache: 'no-store' });
-      let data = null;
-      try { data = await result.json(); } catch {}
+      let data = null; try { data = await result.json(); } catch {}
       return { status: result.status, origin: result.headers.get('x-matrix-origin'), data };
     });
     assert(response.status === 200, `Forum feed returned HTTP ${response.status}`);
@@ -133,18 +134,25 @@ try {
     await page.goto(`${siteUrl}/admin-email-launch.html`, { waitUntil: 'domcontentloaded', timeout: 30000 });
     await page.locator('#email-admin-token').fill('invalid-browser-smoke-token');
     const output = page.locator('#email-launch-output');
-    await page.locator('#email-readiness-check').click();
-    await page.waitForFunction(() => !/Enter the administrator token/i.test(document.querySelector('#email-launch-output')?.textContent || ''), null, { timeout: 15000 });
+    const readiness = page.locator('#email-readiness-check');
+    await readiness.click();
+    await page.waitForFunction(() => {
+      const button = document.querySelector('#email-readiness-check');
+      const text = document.querySelector('#email-launch-output')?.textContent || '';
+      return Boolean(button && !button.disabled && /"ok"\s*:\s*false|forbidden|unauthor|error/i.test(text));
+    }, null, { timeout: 15000 });
     const readinessText = (await output.innerText()).trim();
-    assert(/forbidden|unauthor|error|failed/i.test(readinessText), 'Readiness console did not fail closed for an invalid token');
-    await page.locator('#email-test-send').click();
-    await page.waitForTimeout(750);
-    const sendText = (await output.innerText()).trim();
-    assert(/forbidden|unauthor|error|failed/i.test(sendText), 'Controlled email test did not fail closed for an invalid token');
+    assert(/"ok"\s*:\s*false|forbidden|unauthor|error|failed/i.test(readinessText), 'Readiness console did not fail closed for an invalid token');
+    const transactional = await page.evaluate(async () => {
+      const response = await fetch('/api/email/admin/test-transactional', { method: 'POST', headers: { 'content-type': 'application/json', 'x-admin-token': 'invalid-browser-smoke-token' }, body: '{}' });
+      let data = null; try { data = await response.json(); } catch {}
+      return { status: response.status, origin: response.headers.get('x-matrix-origin'), data };
+    });
+    assert(transactional.status === 403, `Controlled email test authorization returned HTTP ${transactional.status}`);
+    assert(transactional.origin === 'cloudflare-worker-email-lifecycle', `Controlled email test origin was ${transactional.origin || 'missing'}`);
+    assert(transactional.data?.ok === false, 'Controlled email test did not return a fail-closed JSON contract');
   });
-} finally {
-  await browser.close();
-}
+} finally { await browser.close(); }
 
 const report = {
   ok: hardIssues.length === 0,

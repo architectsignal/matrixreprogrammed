@@ -83,6 +83,20 @@ function shouldCopy(rel, entry) {
 function copyFile(src, dest, rel) {
   const size = fs.statSync(src).size;
   if (size > maxAssetBytes) {
+    if (path.extname(src).toLowerCase() === '.json') {
+      try {
+        const minified = JSON.stringify(JSON.parse(fs.readFileSync(src, 'utf8')));
+        const minifiedBytes = Buffer.byteLength(minified);
+        if (minifiedBytes <= maxAssetBytes) {
+          ensure(path.dirname(dest));
+          fs.writeFileSync(dest, minified);
+          console.log(`Minified oversized Cloudflare JSON (${Math.round(size / 1024 / 1024)} MiB -> ${(minifiedBytes / 1024 / 1024).toFixed(1)} MiB): ${rel}`);
+          return true;
+        }
+      } catch (error) {
+        console.warn(`Could not minify oversized Cloudflare JSON ${rel}: ${error.message}`);
+      }
+    }
     console.warn(`Skipping oversized Cloudflare asset (${Math.round(size / 1024 / 1024)} MiB): ${rel}`);
     return false;
   }

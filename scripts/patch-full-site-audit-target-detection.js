@@ -31,7 +31,9 @@ fs.writeFileSync(path.join(root, 'downloads', 'full-site-audit-target-detection-
   changed: source !== before,
   fixes: [
     'Only real whitespace-delimited href, src and action attributes are treated as routes; data-action fields and JavaScript object properties are excluded.',
-    'The Worker-served /intro-voice route is recognized as dynamic.'
+    'The Worker-served /intro-voice route is recognized as dynamic.',
+    'Late-generated public pages are restored to the shared visual runtime before final audits.'
   ]
 }, null, 2)}\n`);
+require('./patch-late-generated-shared-runtime.js');
 console.log(`Full-site audit target detection ${source !== before ? 'patched' : 'already current'}.`);

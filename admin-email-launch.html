@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Email Launch Console | Matrix Reprogrammed</title>
+  <meta name="description" content="Administrator-only Brevo and transactional email readiness console.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>
+    .launch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+    .launch-state{font-size:1.05rem;font-weight:800}
+    .launch-state[data-state="pass"]{color:#9ee6ad}.launch-state[data-state="fail"]{color:#ff9b9b}.launch-state[data-state="pending"]{color:#d8b56a}
+    .launch-token{display:grid;gap:.45rem;max-width:720px}.launch-token input{background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.45);border-radius:12px;padding:.8rem}
+    .launch-output{white-space:pre-wrap;overflow:auto;min-height:180px}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="page">
+    <header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="member-dashboard.html">Member Dashboard</a><a href="admin-payment-dashboard.html">Payments</a><a href="email-status.html">Email Status</a><a href="newsletter.html">Newsletter</a></nav></header>
+    <main class="wrap section">
+      <div class="eyebrow">Administrator operations</div>
+      <h1>EMAIL LAUNCH CONSOLE.</h1>
+      <p class="lead">Prove the Brevo sender, reply-to identity, domain authentication, webhook boundary, D1 outbox and controlled transactional delivery without activating marketing automation.</p>
+
+      <section class="card redline">
+        <h2>Administrator token</h2>
+        <label class="launch-token">X-Admin-Token
+          <input id="email-admin-token" type="password" autocomplete="off" placeholder="Enter the protected administrator token">
+        </label>
+        <div class="cta-row">
+          <button class="btn" id="email-readiness-check" type="button">Check Email Readiness</button>
+          <button class="btn alt" id="email-test-send" type="button">Send Controlled Test</button>
+        </div>
+        <p class="warning">The controlled test cannot send to a browser-entered address. It uses only the server-configured test or support mailbox.</p>
+      </section>
+
+      <section class="section launch-grid" aria-live="polite">
+        <article class="card"><span class="label">Brevo</span><h2>Provider configuration</h2><p class="launch-state" id="state-brevo" data-state="pending">Not checked</p></article>
+        <article class="card"><span class="label">DNS</span><h2>Authenticated domain</h2><p class="launch-state" id="state-domain" data-state="pending">Not checked</p></article>
+        <article class="card"><span class="label">Identity</span><h2>Sender and reply-to</h2><p class="launch-state" id="state-sender" data-state="pending">Not checked</p></article>
+        <article class="card"><span class="label">Transactional</span><h2>Delivery switch</h2><p class="launch-state" id="state-transactional" data-state="pending">Not checked</p></article>
+        <article class="card"><span class="label">Marketing</span><h2>Automation safety</h2><p class="launch-state" id="state-automation" data-state="pending">Not checked</p></article>
+        <article class="card"><span class="label">D1</span><h2>Outbox and schema</h2><p class="launch-state" id="state-d1" data-state="pending">Not checked</p></article>
+      </section>
+
+      <section class="section card">
+        <h2>Readiness result</h2>
+        <pre class="terminal launch-output" id="email-launch-output">Enter the administrator token and run the readiness check.</pre>
+      </section>
+
+      <section class="section card">
+        <h2>Activation boundary</h2>
+        <ol>
+          <li>Authenticate a Matrix Reprogrammed sending domain or subdomain in Brevo.</li>
+          <li>Set the verified sender and monitored reply-to addresses in Cloudflare.</li>
+          <li>Confirm the Brevo API key, webhook secret and administrator token are stored as secrets.</li>
+          <li>Set <code>BREVO_DOMAIN_AUTHENTICATED=true</code> and <code>EMAIL_TRANSACTIONAL_ENABLED=true</code>.</li>
+          <li>Use this console to send one controlled test. Keep <code>EMAIL_AUTOMATION_ENABLED=false</code>.</li>
+        </ol>
+      </section>
+    </main>
+    <footer class="footer wrap"><p>Administrator route. No API keys, webhook secrets, recipient addresses or administrator tokens are displayed.</p></footer>
+  </div>
+  <script src="admin-email-launch.js"></script>
+  <script src="matrix.js"></script>
+</body>
+</html>

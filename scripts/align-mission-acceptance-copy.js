@@ -53,6 +53,15 @@ function runRequired(script, args = []) {
   if (result.stderr) process.stderr.write(result.stderr);
   if (result.status !== 0) throw new Error(`${script} ${args.join(' ')} failed`);
 }
+function copyToOutput(relative) {
+  const source = path.join(root, relative);
+  const outputRoot = path.join(root, '_site');
+  if (!fs.existsSync(source) || !fs.existsSync(outputRoot)) return;
+  const destination = path.join(outputRoot, relative);
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  fs.copyFileSync(source, destination);
+  touched.push(path.relative(root, destination).replace(/\\/g, '/'));
+}
 
 const timers = readFirst(['timers.html', 'timers']);
 const newsletterHtml = readFirst(['newsletter.html', 'newsletter']);
@@ -73,6 +82,8 @@ fs.writeFileSync(path.join(root, 'downloads', 'mission-acceptance-copy-alignment
 }, null, 2));
 if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.stringify(checks)}`);
 
+runRequired('scripts/repair-investigation-source-registry.js');
+copyToOutput('data/investigation-source-registry.json');
 runRequired('scripts/normalize-homepage-mission-copy.js');
 runRequired('scripts/patch-membership-tiers.js');
 runRequired('scripts/disable-production-kv-traffic.js');
@@ -91,8 +102,9 @@ runRequired('scripts/repair-deep-audit-public-defects.js');
 runRequired('scripts/fix-final-live-audit-and-external-links.js');
 runRequired('scripts/patch-full-site-audit-target-detection.js');
 runRequired('scripts/repair-stale-generated-brief-links.js');
+runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);

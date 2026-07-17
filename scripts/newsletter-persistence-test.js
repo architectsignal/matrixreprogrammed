@@ -25,8 +25,26 @@ function writeFailure(message, extra = {}) {
   process.exit(1);
 }
 
-const patch = runNode('scripts/patch-worker-newsletter-system.js');
-if (patch.status !== 0) writeFailure('Membership foundation/authentication patch chain failed before persistence test', { patchStatus: patch.status });
+const preparationScripts = [
+  'scripts/patch-osint-tool-tiers.js',
+  'scripts/patch-login-email-delivery.js',
+  'scripts/patch-membership-tiers.js',
+  'scripts/patch-newsletter-consent.js'
+];
+const preparation = [];
+for (const script of preparationScripts) {
+  const result = runNode(script);
+  preparation.push({ script, status: result.status });
+  if (result.status !== 0) writeFailure(`Modern D1 membership/email preparation failed: ${script}`, { preparation });
+}
+fs.writeFileSync(path.join(reportDir, 'newsletter-worker-patch-report.json'), JSON.stringify({
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  mode: 'D1 membership and consent lifecycle; legacy KV newsletter patch disabled',
+  preparation,
+  emailAutomationExpected: false,
+  boundary: 'The daily health path must preserve the modern D1 membership, passwordless login, explicit consent and PayPal-safe UI. It must not reinstall the retired KV newsletter handler.'
+}, null, 2));
 
 const membershipTest = runNode('scripts/membership-foundation-test.js');
 const membershipReportPath = path.join(reportDir, 'membership-foundation-test.json');
@@ -58,6 +76,7 @@ const report = {
   ok: membershipTest.status === 0 && membershipReport.ok === true && authTest.status === 0 && authReport.ok === true && checks.every(check => check.ok),
   generatedAt: new Date().toISOString(),
   checks,
+  preparation,
   membershipFoundation: {
     ok: membershipReport.ok,
     d1MemberCount: membershipReport.d1MemberCount,
@@ -68,7 +87,7 @@ const report = {
     verificationEmails: authReport.verificationEmails,
     loginEmails: authReport.loginEmails
   },
-  boundary: 'Newsletter and membership capture are healthy only when D1 persistence, explicit consent, email verification, one-use magic links, secure sessions, logout revocation, truthful delivery status and administrator-only member lists all pass.'
+  boundary: 'Newsletter and membership capture are healthy only when D1 persistence, explicit consent, email verification, one-use magic links, secure sessions, logout revocation, truthful delivery status and administrator-only member lists all pass. Legacy KV newsletter persistence is not reinstalled.'
 };
 
 fs.writeFileSync(path.join(reportDir, 'newsletter-persistence-test.json'), JSON.stringify(report, null, 2));
@@ -79,4 +98,4 @@ if (!report.ok) {
   checks.filter(check => !check.ok).forEach(check => console.error(`- ${check.name}`));
   process.exit(1);
 }
-console.log('NEWSLETTER / MEMBERSHIP AUTHENTICATION TEST PASSED');
+console.log('NEWSLETTER / MEMBERSHIP AUTHENTICATION TEST PASSED: modern D1 lifecycle preserved; legacy KV patch disabled.');

@@ -55,6 +55,7 @@ if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ign
   legacy = replaceFunction(legacy, 'handleTrackEvent', safeTrack);
 }
 legacy = legacy
+  .replace(/analytics:\$\{event\.id\}/g, 'analytics-endpoint-nonpersistent')
   .replace(/async function handleNewsletterSendWeekly\(\)\{return json\(\{ok:true,mode:'preview-only',storage:'Cloudflare KV FORUM_POSTS',digest:'\/downloads\/weekly-newsletter-latest\.json'\}\)\}/g, "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})}")
   .replace(/if\s*\(env\.FORUM_POSTS\)\s*\{?\s*await withTimeout\(env\.FORUM_POSTS\.put\(`analytics:[\s\S]*?\}\s*/g, '');
 writeIfChanged('src/worker.js', legacyBefore, legacy);

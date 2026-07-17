@@ -8,9 +8,10 @@ function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
 function fail(msg){ problems.push(msg); }
 function requireFile(file){ if(!exists(file)) fail(`missing required file: ${file}`); }
 function requireIncludes(file, text, label=text){ if(!exists(file)) return; if(!read(file).includes(text)) fail(`${file}: missing ${label}`); }
+function requireExcludes(file, text, label=text){ if(exists(file) && read(file).includes(text)) fail(`${file}: contains forbidden ${label}`); }
 function json(file){ return JSON.parse(read(file)); }
 
-for (const file of ['scripts/update-seven-day-intel.js','scripts/live-site-verification.js','analytics.js','src/worker.js','data/live-intel.json','data/live-intel-sources.json','downloads/seven-day-intel.json','package.json']) requireFile(file);
+for (const file of ['scripts/update-seven-day-intel.js','scripts/live-site-verification.js','scripts/disable-production-kv-traffic.js','analytics.js','src/worker.js','src/worker-production.js','src/worker-forum-persistence.js','wrangler.toml','data/live-intel.json','data/live-intel-sources.json','downloads/seven-day-intel.json','package.json']) requireFile(file);
 requireIncludes('scripts/update-seven-day-intel.js','Seven-day intel updater complete','seven-day updater completion log');
 requireIncludes('scripts/update-seven-day-intel.js','failed safely','fail-soft behavior');
 requireIncludes('scripts/update-seven-day-intel.js','evidenceBoundaryForLane','evidence boundary classification');
@@ -23,7 +24,13 @@ requireIncludes('analytics.js', "navigator.sendBeacon('/track-event'", 'analytic
 requireIncludes('analytics.js', "fetch('/track-event'", 'analytics fetch fallback uses Cloudflare /track-event');
 requireIncludes('src/worker.js', 'handleTrackEvent', 'Worker track-event handler');
 requireIncludes('src/worker.js', "originalPath === '/track-event'", 'Worker /track-event route');
-requireIncludes('src/worker.js', 'analytics:${event.id}', 'Worker KV analytics storage key');
+requireIncludes('src/worker.js', "'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'", 'Worker analytics endpoint is non-persistent');
+requireExcludes('src/worker.js', 'FORUM_POSTS.put(`analytics:', 'per-event KV analytics write');
+requireExcludes('src/worker.js', 'analytics:${event.id}', 'legacy KV analytics storage key');
+requireIncludes('src/worker-production.js', 'forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)', 'production legacy routes do not receive KV');
+requireIncludes('src/worker-forum-persistence.js', "ENABLE_KV_COMPATIBILITY_MIRROR || 'false'", 'forum KV compatibility is opt-in');
+requireIncludes('wrangler.toml', 'ENABLE_KV_COMPATIBILITY_MIRROR = "false"', 'production KV mirror is disabled');
+requireIncludes('scripts/disable-production-kv-traffic.js', 'analytics no longer creates one KV key per event', 'KV traffic repair is build-wired');
 for (const event of ['brief_open','brief_download','email_submit','black_file_click','amazon_click','rumble_click','epstein_source_click','source_card_click','evidence_route_click','forum_post_submit']) requireIncludes('analytics.js', event, `${event} analytics event`);
 if (exists('data/live-intel.json')) {
   const live = json('data/live-intel.json');
@@ -47,4 +54,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('INTEL + ANALYTICS PRESSURE TEST PASSED');
-console.log('Checked seven-day intel updater, live verifier, Cloudflare analytics endpoint, conversion event taxonomy, live-intel evidence fields, package wiring, and manual verify-live command.');
+console.log('Checked seven-day intel updater, live verifier, non-persistent analytics endpoint, KV-safe production policy, conversion taxonomy, live-intel evidence fields and package wiring.');

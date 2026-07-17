@@ -44,6 +44,7 @@ for (const relative of [
 
 run('scripts/sanitize-machine-entity-outputs.js');
 run('scripts/sanitize-machine-entity-outputs.js', ['--output']);
+run('scripts/compact-cloudflare-search-index.js');
 run('scripts/patch-power-dossier-runtime.js');
 run('scripts/repair-empty-public-controls.js');
 run('scripts/repair-empty-public-controls.js', ['--output']);
@@ -63,10 +64,10 @@ const report = {
     'geographic-power-atlas.html', 'geographic-power-atlas.js',
     'data/geographic-power-atlas.json', 'data/geographic-power-atlas-data.json',
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
-    'power-dossier-runtime.js'
+    'power-dossier-runtime.js', '_site/search-index.json'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle. No later generator may overwrite the repaired public output.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle. No later generator may overwrite the repaired public output or inflate the deploy search index beyond Cloudflare asset limits.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable _site bundle.');
+console.log('Final release sanitation passed for the deployable _site bundle, including Cloudflare search-index compaction.');

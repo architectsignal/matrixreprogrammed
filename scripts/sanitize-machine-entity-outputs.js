@@ -26,14 +26,21 @@ function writeJson(relative, value) {
 function isInvalidName(value) {
   if (value == null) return true;
   const text = String(value).trim();
-  return !text || /^\[object Object\]$/i.test(text) || /^(?:undefined|null|nan)$/i.test(text);
+  return !text || /^\[object Object\]$/i.test(text) || /^(?:undefined|null|nan)$/i.test(text) || /^object-object$/i.test(text);
+}
+function hasInvalidObjectSlug(value) {
+  return /(?:^|[\/-])object-object(?:\.html)?(?:$|[?#])/i.test(String(value || '').trim());
 }
 function objectName(value) {
   if (typeof value === 'string' || typeof value === 'number') return String(value).trim();
   if (!value || typeof value !== 'object') return '';
-  for (const key of ['name', 'title', 'label', 'entity_name', 'entityName', 'agency', 'institution', 'borrower', 'country', 'organization', 'organisation']) {
+  for (const key of ['name', 'title', 'label', 'entity_name', 'entityName', 'agency', 'institution', 'borrower', 'borrowername', 'country', 'countryname', 'organization', 'organisation', 'impagency']) {
     const candidate = value[key];
     if (typeof candidate === 'string' && candidate.trim()) return candidate.trim();
+    if (Array.isArray(candidate)) {
+      const first = candidate.find(item => typeof item === 'string' && item.trim());
+      if (first) return first.trim();
+    }
   }
   return '';
 }
@@ -51,10 +58,22 @@ function cleanNameArray(values) {
   }
   return clean;
 }
+function relationshipReferences(item) {
+  if (!item || typeof item !== 'object') return [];
+  if (Object.prototype.hasOwnProperty.call(item, 'with')) return [item.with];
+  if (Object.prototype.hasOwnProperty.call(item, 'from') || Object.prototype.hasOwnProperty.call(item, 'to')) return [item.from, item.to];
+  return [item.name || item.title || item.label];
+}
+function validRelationship(item) {
+  const refs = relationshipReferences(item);
+  const valid = Boolean(item) && refs.length > 0 && refs.every(ref => !isInvalidName(ref) && !hasInvalidObjectSlug(ref));
+  if (!valid) stats.invalidObjectsRemoved++;
+  return valid;
+}
 function cleanObject(value) {
   if (Array.isArray(value)) {
     return value.map(cleanObject).filter(item => {
-      if (typeof item === 'string' && isInvalidName(item)) { stats.invalidStringsRemoved++; return false; }
+      if (typeof item === 'string' && (isInvalidName(item) || hasInvalidObjectSlug(item))) { stats.invalidStringsRemoved++; return false; }
       return item !== undefined;
     });
   }
@@ -64,12 +83,8 @@ function cleanObject(value) {
       value[key] = cleanNameArray(current);
       continue;
     }
-    if (key === 'connections' && Array.isArray(current)) {
-      value[key] = current.filter(item => {
-        const ok = item && !isInvalidName(item.with || item.name || item.title);
-        if (!ok) stats.invalidObjectsRemoved++;
-        return ok;
-      }).map(cleanObject);
+    if (['connections', 'relationships'].includes(key) && Array.isArray(current)) {
+      value[key] = current.filter(validRelationship).map(cleanObject);
       continue;
     }
     value[key] = cleanObject(current);
@@ -82,7 +97,7 @@ function cleanNamedCollection(container, key) {
   container[key] = container[key].filter(item => {
     if (!item || typeof item !== 'object') { stats.invalidObjectsRemoved++; return false; }
     const name = item.name || item.title || item.label || '';
-    const invalid = item.id === 'object-object' || isInvalidName(name);
+    const invalid = item.id === 'object-object' || isInvalidName(name) || hasInvalidObjectSlug(item.id) || hasInvalidObjectSlug(item.url);
     if (invalid) stats.invalidObjectsRemoved++;
     return !invalid;
   }).map(cleanObject);
@@ -123,7 +138,7 @@ function sanitizeSearchIndex() {
   const data = readJson(relative);
   if (!Array.isArray(data)) return;
   const before = data.length;
-  const filtered = data.filter(item => item && !isInvalidName(item.title) && !/object-object/i.test(`${item.title || ''} ${item.url || ''}`));
+  const filtered = data.filter(item => item && !isInvalidName(item.title) && !hasInvalidObjectSlug(item.url) && !/\[object Object\]/i.test(String(item.title || '')));
   stats.searchEntriesRemoved += before - filtered.length;
   if (filtered.length !== before) writeJson(relative, filtered);
 }
@@ -152,6 +167,7 @@ for (const relative of [
   'data/entity-observations.json',
   'data/entity-daily-briefs.json',
   'data/entity-exposure-index.json',
+  'data/entity-relationship-scores.json',
   'machine-digest.html',
   'entity-daily-briefs.html',
   'entity-exposure-index.html',
@@ -160,7 +176,7 @@ for (const relative of [
   const file = at(relative);
   if (!fs.existsSync(file)) continue;
   const text = fs.readFileSync(file, 'utf8');
-  if (/\[object Object\]/i.test(text) || /object-object/i.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
+  if (/\[object Object\]/i.test(text) || /(?:^|[\/-])object-object(?:\.html)?(?:$|[?#])/im.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
 }
 for (const relative of ['entity-briefs/object-object.html', 'entity-timelines/object-object.html', 'entity-exposure/object-object.html']) {
   if (fs.existsSync(at(relative))) remaining.push(display(relative));
@@ -171,7 +187,7 @@ const report = {
   mode: outputOnly ? 'cloudflare-output' : 'source-tree',
   base: path.relative(root, base) || '.',
   changed: [...new Set(changed)], removedFiles, stats, remaining,
-  boundary: 'Malformed object coercions, blank generated entities and object-object routes are excluded from public outputs. Valid court identifiers, company tickers and institutional names are preserved.'
+  boundary: 'Malformed object coercions, invalid relationship references, blank generated entities and object-object routes are excluded from public outputs. Valid court identifiers, company tickers and institutional names are preserved.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);

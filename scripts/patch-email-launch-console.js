@@ -9,17 +9,44 @@ if (!fs.existsSync(workerPath)) throw new Error('src/worker-email-lifecycle.js i
 let source = fs.readFileSync(workerPath, 'utf8');
 let changed = false;
 
-const oldRoutes = "  '/api/email/admin/campaigns','/api/email/admin/process-outbox','/api/email/admin/run-automation'";
-const testRoutes = "  '/api/email/admin/campaigns','/api/email/admin/process-outbox','/api/email/admin/run-automation','/api/email/admin/test-transactional'";
-const newRoutes = "  '/api/email/admin/campaigns','/api/email/admin/process-outbox','/api/email/admin/run-automation','/api/email/admin/test-transactional','/api/email/admin/quarantine-retries'";
-if (!source.includes(newRoutes)) {
-  if (source.includes(testRoutes)) source = source.replace(testRoutes, newRoutes);
-  else if (source.includes(oldRoutes)) source = source.replace(oldRoutes, newRoutes);
-  else throw new Error('Email launch console route registry target not found');
+function ensureRoute(route) {
+  const start = source.indexOf('const emailRoutes=new Set([');
+  if (start < 0) throw new Error('Email route registry start not found');
+  const end = source.indexOf(']);', start);
+  if (end < 0) throw new Error('Email route registry end not found');
+  const registry = source.slice(start, end);
+  if (registry.includes(`'${route}'`)) return;
+  const before = source.slice(0, end).replace(/\s+$/, '');
+  const separator = before.endsWith(',') ? '' : ',';
+  source = `${before}${separator}\n  '${route}'${source.slice(end)}`;
   changed = true;
 }
 
-const automationAnchor = "async function handleAdminAutomation(request,env){if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403);const input=await body(request);const kind=clean(input.kind||'daily',20);if(!['daily','weekly'].includes(kind))return json({ok:false,error:'Kind must be daily or weekly'},400);return json({ok:true,result:await automatedCampaign(request,env,kind)}}";
+function insertHandler(marker, block) {
+  if (source.includes(marker)) return;
+  const anchor = 'async function fetchHandler(';
+  const index = source.indexOf(anchor);
+  if (index < 0) throw new Error(`Email launch console handler insertion anchor missing for ${marker}`);
+  source = `${source.slice(0, index)}${block}\n${source.slice(index)}`;
+  changed = true;
+}
+
+function ensureDispatch(route, handler) {
+  const routeMarker = `path==='${route}'`;
+  if (source.includes(routeMarker)) return;
+  const fetchStart = source.indexOf('async function fetchHandler(');
+  if (fetchStart < 0) throw new Error(`Email launch console fetch handler missing for ${route}`);
+  const returnMarker = "return json({ok:false,error:'Method not allowed'},405)";
+  const index = source.indexOf(returnMarker, fetchStart);
+  if (index < 0) throw new Error(`Email launch console dispatch insertion target missing for ${route}`);
+  const dispatch = `if(request.method==='POST'&&path==='${route}')return ${handler}(request,env);`;
+  source = `${source.slice(0, index)}${dispatch}${source.slice(index)}`;
+  changed = true;
+}
+
+ensureRoute('/api/email/admin/test-transactional');
+ensureRoute('/api/email/admin/quarantine-retries');
+
 const testHandler = `async function handleAdminTransactionalTest(request,env){
   if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403);
   const readiness=await adminHealth(env);
@@ -31,14 +58,8 @@ const testHandler = `async function handleAdminTransactionalTest(request,env){
   const delivery=await sendProviderEmail(env,payload);
   await audit(env,'admin','email.transactional_test','email_provider','brevo',{sent:delivery.sent,status:delivery.status||null,messageId:Boolean(delivery.messageId),recipientHash:await emailHash(recipient)});
   return json({ok:delivery.sent===true,sent:delivery.sent===true,status:delivery.status||null,messageId:delivery.messageId||null,recipientConfigured:true,recipientMasked:recipient.replace(/^(.{1,2}).*(@.*)$/,'$1***$2'),marketingAutomationEnabled:automationEnabled(env),transactionalEnabled:transactionalEnabled(env),domainAuthenticated:domainAuthenticated(env),message:delivery.sent?'Controlled transactional test accepted by Brevo.':'Brevo did not accept the controlled test.',error:delivery.error||null},delivery.sent?200:502);
-}
-
-`;
-if (!source.includes('async function handleAdminTransactionalTest')) {
-  if (!source.includes(automationAnchor)) throw new Error('Email launch console transactional handler insertion target not found');
-  source = source.replace(automationAnchor, `${testHandler}${automationAnchor}`);
-  changed = true;
-}
+}`;
+insertHandler('async function handleAdminTransactionalTest', testHandler);
 
 const quarantineHandler = `async function handleAdminQuarantineRetries(request,env){
   if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403);
@@ -65,24 +86,11 @@ const quarantineHandler = `async function handleAdminQuarantineRetries(request,e
   for(const campaignId of campaignIds)await refreshCampaign(env,campaignId);
   await audit(env,'admin','email.outbox.legacy_retries_quarantined','email_outbox','legacy-retry-batch',{before:cutoff,count:rows.length,byKind,campaignCount:campaignIds.size});
   return json({ok:true,quarantined:rows.length,before:cutoff,byKind,campaignsRefreshed:campaignIds.size,automationEnabled:automationEnabled(env),message:rows.length?'Pre-activation retry messages were quarantined and will not be sent.':'No retry messages matched the cutoff.'});
-}
+}`;
+insertHandler('async function handleAdminQuarantineRetries', quarantineHandler);
 
-`;
-if (!source.includes('async function handleAdminQuarantineRetries')) {
-  if (!source.includes(automationAnchor)) throw new Error('Email launch console quarantine handler insertion target not found');
-  source = source.replace(automationAnchor, `${quarantineHandler}${automationAnchor}`);
-  changed = true;
-}
-
-const baseDispatch = "if(request.method==='POST'&&path==='/api/email/admin/run-automation')return handleAdminAutomation(request,env);return json({ok:false,error:'Method not allowed'},405)";
-const testDispatch = "if(request.method==='POST'&&path==='/api/email/admin/run-automation')return handleAdminAutomation(request,env);if(request.method==='POST'&&path==='/api/email/admin/test-transactional')return handleAdminTransactionalTest(request,env);return json({ok:false,error:'Method not allowed'},405)";
-const newDispatch = "if(request.method==='POST'&&path==='/api/email/admin/run-automation')return handleAdminAutomation(request,env);if(request.method==='POST'&&path==='/api/email/admin/test-transactional')return handleAdminTransactionalTest(request,env);if(request.method==='POST'&&path==='/api/email/admin/quarantine-retries')return handleAdminQuarantineRetries(request,env);return json({ok:false,error:'Method not allowed'},405)";
-if (!source.includes(newDispatch)) {
-  if (source.includes(testDispatch)) source = source.replace(testDispatch, newDispatch);
-  else if (source.includes(baseDispatch)) source = source.replace(baseDispatch, newDispatch);
-  else throw new Error('Email launch console dispatch target not found');
-  changed = true;
-}
+ensureDispatch('/api/email/admin/test-transactional', 'handleAdminTransactionalTest');
+ensureDispatch('/api/email/admin/quarantine-retries', 'handleAdminQuarantineRetries');
 
 for (const marker of [
   '/api/email/admin/test-transactional',
@@ -104,6 +112,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   changed,
+  patchStrategy: 'structural route, handler and dispatch insertion; independent of minified function body shape',
   transactionalTestRoute: '/api/email/admin/test-transactional',
   retryQuarantineRoute: '/api/email/admin/quarantine-retries',
   authentication: 'X-Admin-Token required',
@@ -111,6 +120,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   quarantinePolicy: 'Explicit confirmation, automation-off gate, ISO cutoff, no recipient addresses returned, audit logged.',
   requiredState: ['transactionalConfigurationReady=true','EMAIL_TRANSACTIONAL_ENABLED=true','BREVO_DOMAIN_AUTHENTICATED=true'],
   marketingAutomationUnaffected: true,
+  repeatSafe: true,
   auditLogged: true
 }, null, 2)}\n`);
 console.log(`Controlled email launch and retry quarantine endpoints ${changed ? 'installed' : 'already current'}.`);

@@ -62,6 +62,7 @@ run('scripts/patch-brevo-transactional-readiness.js');
 run('scripts/patch-email-launch-console.js');
 run('scripts/patch-email-automation-guard.js');
 run('scripts/patch-email-campaign-quality.js');
+run('scripts/patch-membership-signup-server-fallback.js');
 run('scripts/brevo-operational-readiness-audit.js');
 run('scripts/patch-production-receipt-email-safety.js');
 run('scripts/repair-deep-audit-public-defects.js');
@@ -90,10 +91,11 @@ const report = {
     'downloads/email-launch-console-patch.json',
     'downloads/email-automation-guard-patch.json',
     'downloads/email-campaign-quality-patch.json',
+    'downloads/membership-signup-server-fallback.json',
     'downloads/brevo-operational-readiness.json', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, weak metadata, dead canonical source links, unsafe email/payment switches, generic newsletter content, missing unsubscribe controls, pre-activation retry delivery or oversized search assets.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, weak metadata, dead canonical source links, unsafe email/payment switches, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery or oversized search assets.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable bundle, canonical public sources, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');
+console.log('Final release sanitation passed for the deployable bundle, canonical public sources, membership signup defaults, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');

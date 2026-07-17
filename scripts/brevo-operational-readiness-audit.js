@@ -24,7 +24,8 @@ const codeChecks = {
   temporaryBrevoDomainDetected: worker.includes('temporaryBrevoDomain'),
   domainAuthenticationGate: worker.includes('BREVO_DOMAIN_AUTHENTICATED') && worker.includes('Brevo sender domain authentication has not been confirmed'),
   transactionalActivationGate: worker.includes('EMAIL_TRANSACTIONAL_ENABLED') && worker.includes('Transactional email delivery is disabled until Phase 2 readiness is approved'),
-  adminHealthProtected: worker.includes("if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403)")
+  adminHealthProtected: worker.includes("if(!adminAllowed(request,env))return json({ok:false,error:'Forbidden'},403)"),
+  legacyRetryQuarantineProtected: worker.includes('/api/email/admin/quarantine-retries') && worker.includes('QUARANTINE_PREACTIVATION_RETRIES') && worker.includes("status='quarantined'") && worker.includes('email.outbox.legacy_retries_quarantined')
 };
 
 const configurationChecks = {
@@ -58,8 +59,9 @@ const status = !codeReady
 const remainingSteps = transactionalActivationReady ? [
   'Confirm BREVO_API_KEY, EMAIL_WEBHOOK_SECRET and ADMIN_API_TOKEN are stored as Cloudflare secrets.',
   'Run real verification, welcome and passwordless-login inbox tests.',
+  'Quarantine pre-activation retry records through the protected administrator console while marketing automation remains off.',
   'Configure and verify the Brevo transactional webhook for delivery, bounce, complaint, click and unsubscribe events.',
-  'Keep EMAIL_AUTOMATION_ENABLED=false until daily and weekly campaign tests pass.'
+  'Enable EMAIL_AUTOMATION_ENABLED only after daily and weekly campaign acceptance tests pass.'
 ] : [
   'Authenticate the Matrix Reprogrammed sender domain in Brevo.',
   'Configure the verified sender and monitored reply-to identity.',
@@ -78,11 +80,12 @@ const report = {
     transactionalDelivery: transactionalActivationReady,
     domainAuthenticationConfirmed: configurationChecks.domainAuthenticationConfirmed,
     senderEmail: configurationChecks.senderEmailConfigured ? 'members@matrixreprogrammed.com' : null,
-    replyToEmail: configurationChecks.replyToEmailConfigured ? 'njmgroupfrance@gmail.com' : null
+    replyToEmail: configurationChecks.replyToEmailConfigured ? 'njmgroupfrance@gmail.com' : null,
+    legacyRetryQuarantineAvailable: codeChecks.legacyRetryQuarantineProtected
   },
   requiredRuntimeSecrets: ['BREVO_API_KEY','EMAIL_WEBHOOK_SECRET','ADMIN_API_TOKEN'],
   remainingSteps,
-  boundary: 'Transactional sending may be enabled only with an authenticated domain, verified sender, monitored reply-to identity and fail-closed delivery gates. Bulk daily and weekly automation remains a separate activation.'
+  boundary: 'Transactional sending may be enabled only with an authenticated domain, verified sender, monitored reply-to identity and fail-closed delivery gates. Pre-activation retries must be quarantined before bulk daily and weekly automation is enabled.'
 };
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);

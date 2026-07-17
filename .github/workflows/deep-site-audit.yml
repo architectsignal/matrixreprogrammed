@@ -55,10 +55,15 @@ jobs:
         run: node scripts/final-production-reconcile.js
 
       - name: Exhaustive static audit
+        id: static_audit
+        continue-on-error: true
         run: node scripts/deep-production-site-audit.js --static
 
       - name: Existing audit suite
+        id: existing_audits
+        continue-on-error: true
         run: |
+          set -o pipefail
           node scripts/full-site-function-tool-audit.js --postbuild
           node scripts/site-function-harmony-test.js
           node tools/link-audit.js
@@ -67,6 +72,8 @@ jobs:
           node scripts/site-wide-function-audit.js --postbuild
 
       - name: Exhaustive live audit
+        id: live_audit
+        continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
         run: node scripts/deep-production-site-audit.js --live
@@ -88,7 +95,12 @@ jobs:
             const hard = reports.flatMap(report => report.hardIssues || []);
             const warnings = reports.flatMap(report => report.warnings || []);
             const coverage = reports.map(report => `- ${report.mode}: ${JSON.stringify(report.stats || {})}`).join('\n') || '- No deep report was produced; inspect the build log.';
-            const status = reports.length === 2 && reports.every(report => report.ok) ? 'PASS' : 'FAIL';
+            const stageStatus = {
+              static: '${{ steps.static_audit.outcome }}',
+              existing: '${{ steps.existing_audits.outcome }}',
+              live: '${{ steps.live_audit.outcome }}'
+            };
+            const status = reports.length === 2 && reports.every(report => report.ok) && Object.values(stageStatus).every(value => value === 'success') ? 'PASS' : 'FAIL';
             const hardLines = hard.length ? hard.slice(0, 180).map(item => `- ${item}`).join('\n') : '- None';
             const warningLines = warnings.length ? warnings.slice(0, 80).map(item => `- ${item}`).join('\n') : '- None';
             const body = [
@@ -97,6 +109,7 @@ jobs:
               `Run: https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               `Commit: \`${context.sha}\``,
               `Generated: ${new Date().toISOString()}`,
+              `Stages: ${JSON.stringify(stageStatus)}`,
               '',
               '### Coverage', coverage,
               '',
@@ -109,6 +122,27 @@ jobs:
               'No credentials, secret values or customer data are included in this summary.'
             ].join('\n').slice(0, 60000);
             await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: 94, body });
+
+      - name: Enforce combined audit result
+        if: always()
+        env:
+          STATIC_OUTCOME: ${{ steps.static_audit.outcome }}
+          EXISTING_OUTCOME: ${{ steps.existing_audits.outcome }}
+          LIVE_OUTCOME: ${{ steps.live_audit.outcome }}
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          function load(file) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return null; } }
+          const staticReport = load('downloads/deep-production-site-audit-static.json');
+          const liveReport = load('downloads/deep-production-site-audit-live.json');
+          const outcomes = [process.env.STATIC_OUTCOME, process.env.EXISTING_OUTCOME, process.env.LIVE_OUTCOME];
+          const ok = staticReport?.ok === true && liveReport?.ok === true && outcomes.every(value => value === 'success');
+          if (!ok) {
+            console.error(JSON.stringify({ ok, outcomes, staticOk: staticReport?.ok ?? null, liveOk: liveReport?.ok ?? null }, null, 2));
+            process.exit(1);
+          }
+          console.log('Combined static, existing-suite and live audit result passed.');
+          NODE
 
       - name: Upload complete audit evidence
         if: always()
@@ -130,5 +164,8 @@ jobs:
             downloads/site-pressure-report.json
             downloads/site-wide-function-audit.json
             downloads/final-production-reconcile.json
+            downloads/deep-audit-accuracy-patch.json
+            downloads/deep-audit-public-defect-repair.json
+            downloads/voluntary-support-store-patch.json
           if-no-files-found: ignore
           retention-days: 60

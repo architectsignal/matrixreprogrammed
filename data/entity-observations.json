@@ -1,28 +1,31 @@
 {
-  "updated": "2026-07-17T06:30:00.683Z",
+  "updated": "2026-07-17T14:01:50.893Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
   "observations": [
     {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 3,
+      "id": "object-object",
+      "name": "[object Object]",
+      "count": 6,
       "lanes": [
-        "federal-register-policy"
+        "world-bank-projects"
       ],
       "record_types": [
-        "rule_or_notice"
+        "global_project_record"
       ],
       "evidence_grades": [
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-1",
-        "federal-register-policy-2026-13602-2",
-        "federal-register-policy-2026-10817-6"
+        "world-bank-projects-p505244-1",
+        "world-bank-projects-p176429-2",
+        "world-bank-projects-p181587-3",
+        "world-bank-projects-p180283-4",
+        "world-bank-projects-p507508-5",
+        "world-bank-projects-p180439-6"
       ],
-      "last_seen": "2026-05-29"
+      "last_seen": "2024-12-19T00:00:00Z"
     },
     {
       "id": "people-s-republic-of-bangladesh",
@@ -45,6 +48,44 @@
       "last_seen": "2024-12-19T00:00:00Z"
     },
     {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-14439-1",
+        "federal-register-policy-2026-13057-4"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13656-2",
+        "federal-register-policy-2026-13602-3"
+      ],
+      "last_seen": "2026-07-06"
+    },
+    {
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
       "count": 2,
@@ -58,29 +99,10 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-1",
-        "federal-register-policy-2026-13602-2"
+        "federal-register-policy-2026-13656-2",
+        "federal-register-policy-2026-13602-3"
       ],
       "last_seen": "2026-07-06"
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12559-5",
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
     },
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
@@ -102,24 +124,6 @@
       "last_seen": "2026-07-01"
     },
     {
-      "id": "homeland-security-department",
-      "name": "Homeland Security Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-13057-3"
-      ],
-      "last_seen": "2026-06-29"
-    },
-    {
       "id": "nuclear-regulatory-commission",
       "name": "Nuclear Regulatory Commission",
       "count": 1,
@@ -133,9 +137,27 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12989-4"
+        "federal-register-policy-2026-12989-5"
       ],
       "last_seen": "2026-06-26"
+    },
+    {
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "last_seen": "2026-06-23"
     },
     {
       "id": "federal-procurement-policy-office",
@@ -151,7 +173,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-5"
+        "federal-register-policy-2026-12559-6"
       ],
       "last_seen": "2026-06-23"
     },
@@ -169,7 +191,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-5"
+        "federal-register-policy-2026-12559-6"
       ],
       "last_seen": "2026-06-23"
     },
@@ -187,7 +209,7 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-5"
+        "federal-register-policy-2026-12559-6"
       ],
       "last_seen": "2026-06-23"
     },
@@ -205,117 +227,9 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-12559-5"
+        "federal-register-policy-2026-12559-6"
       ],
       "last_seen": "2026-06-23"
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
-    },
-    {
-      "id": "state-department",
-      "name": "State Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
-    },
-    {
-      "id": "agency-for-international-development",
-      "name": "Agency for International Development",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
-    },
-    {
-      "id": "veterans-affairs-department",
-      "name": "Veterans Affairs Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
-    },
-    {
-      "id": "energy-department",
-      "name": "Energy Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
-    },
-    {
-      "id": "treasury-department",
-      "name": "Treasury Department",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-10817-6"
-      ],
-      "last_seen": "2026-05-29"
     },
     {
       "id": "nvidia-corp",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T06:30:00.683Z",
+  "updated": "2026-07-17T14:01:50.893Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "federal-register-policy",
   "name": "Federal Register latest policy records",
@@ -11,10 +11,32 @@
   "itemCount": 6,
   "raw": {
     "description": "Documents matching 'digital identity OR emergency OR surveillance OR bank'",
-    "count": 181,
+    "count": 182,
     "total_pages": 19,
     "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=digital+identity+OR+emergency+OR+surveillance+OR+bank&format=json&order=newest&page=2&per_page=10",
     "results": [
+      {
+        "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "type": "Rule",
+        "abstract": "The Department of Homeland Security (DHS) is amending its regulations to change the admission period in the F, J, and I classifications from duration of status to an admission for a fixed time period, and additional changes to admission and extension requirements. This final rule will provide additional protections and oversight of these nonimmigrant categories and will allow DHS to better evaluate whether these nonimmigrants are maintaining status while temporarily in the United States. This final rule provides amendments to the proposed rule covering this topic that was published in the Federal Register on August 28, 2025.",
+        "document_number": "2026-14439",
+        "html_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/pdf/2026-14439.pdf",
+        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-14439.pdf?1784205917",
+        "publication_date": "2026-07-17",
+        "agencies": [
+          {
+            "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+            "name": "Homeland Security Department",
+            "id": 227,
+            "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+            "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+            "parent_id": null,
+            "slug": "homeland-security-department"
+          }
+        ],
+        "excerpts": "national security threats within the F-1 program. For example, on March 24, 2023, a Russian man was charged with acting as an agent of a foreign power, visa fraud, <span class=\"match\">bank</span> fraud, wire fraud, and other charges stemming from his illegal activities in the United States functioning as an “illegal” agent for a Russian Intelligence Service. He obtained an F-1 visa in 2018 under an assumed Brazilian <span class=\"match\">identity</span>, which he used to enter the United States and enroll in a U.S. university from 2018 to 2020.\n 76 \n \n In recent years, multiple F-1 students have been arrested"
+      },
       {
         "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
         "type": "Proposed Rule",
@@ -674,28 +696,6 @@
           }
         ],
         "excerpts": "(NHSN) is leading the development of fully electronic and automated <span class=\"match\">digital</span> quality measures for patient safety and public health <span class=\"match\">surveillance</span>, preparedness, and response.\n 239 \n \n We are working together with NHSN to explore a modernized approach for reporting quality measures to CMS via the NHSN data pipeline. There are currently nine <span class=\"match\">digital</span> quality measures reported to NHSN that are used in CMS programs.\n 240 \n \n CMS and CDC are working together to transition to fully automated <span class=\"match\">digital</span> quality measures using a two-pronged approach: (1) Develop new"
-      },
-      {
-        "title": "Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing of Amendment No. 1 to a Proposed Rule Change To Amend NYSE Arca Rule 8.500-E (Trust Units) and To List and Trade Shares of the Bitwise 10 Crypto Index ETF Under Amended NYSE Arca Rule 8.500-E",
-        "type": "Notice",
-        "abstract": null,
-        "document_number": "2025-13804",
-        "html_url": "https://www.federalregister.gov/documents/2025/07/23/2025-13804/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-of-amendment-no-1-to-a-proposed-rule",
-        "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-07-23/pdf/2025-13804.pdf",
-        "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-13804.pdf?1753188308",
-        "publication_date": "2025-07-23",
-        "agencies": [
-          {
-            "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
-            "name": "Securities and Exchange Commission",
-            "id": 466,
-            "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
-            "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
-            "parent_id": null,
-            "slug": "securities-and-exchange-commission"
-          }
-        ],
-        "excerpts": "• The <span class=\"match\">digital</span> asset must be freely traded \n 25 \n \n and can be freely held for the foreseeable future;\n \n \n \n 25 \n  The Committee considers assets to be freely traded if they may be traded by U.S. investors and do not have trading restrictions at Eligible <span class=\"match\">Digital</span> Asset Trading Platforms.\n \n \n \n • The <span class=\"match\">digital</span> asset must trade on an Eligible <span class=\"match\">Digital</span> Asset Trading Platform, without withdrawal issues specific to that <span class=\"match\">digital</span> asset; \n 26 \n \n \n \n \n 26 \n  For example, <span class=\"match\">digital</span> asset trading platforms have previously suspended withdrawals in <span class=\"match\">digital</span> assets"
       }
     ]
   },

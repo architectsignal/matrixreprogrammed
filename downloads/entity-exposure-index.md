@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-07-17T06:30:16.872Z
+Updated: 2026-07-17T14:02:07.471Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -41,16 +41,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Court of Appeals of North Carolina deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Health and Human Services Department
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: documented association
-
-Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Supreme Court of Rhode Island
 
@@ -192,26 +182,6 @@ Highest evidence: documented association
 
 Reading: [object Object] deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Defense Department
-
-Score: 154
-
-Level: critical public-record exposure
-
-Highest evidence: documented association
-
-Reading: Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Management and Budget Office
-
-Score: 154
-
-Level: critical public-record exposure
-
-Highest evidence: documented association
-
-Reading: Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## People's Republic of Bangladesh
 
 Score: 149
@@ -222,105 +192,15 @@ Highest evidence: documented association
 
 Reading: People's Republic of Bangladesh deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## National Aeronautics and Space Administration
+## Homeland Security Department
 
-Score: 100
+Score: 118
 
 Level: critical public-record exposure
 
 Highest evidence: documented association
 
-Reading: National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Agency for International Development
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Agency for International Development deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Agriculture Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Agriculture Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Commerce Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Commerce Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Energy Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Energy Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Interior Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Interior Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## State Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: State Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Transportation Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Transportation Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Treasury Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Treasury Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Veterans Affairs Department
-
-Score: 95
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Veterans Affairs Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Homeland Security Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Centers for Medicare & Medicaid Services
 
@@ -332,6 +212,16 @@ Highest evidence: documented association
 
 Reading: Centers for Medicare & Medicaid Services deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Health and Human Services Department
+
+Score: 89
+
+Level: high public-record exposure
+
+Highest evidence: documented association
+
+Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## Federal Procurement Policy Office
 
 Score: 79
@@ -342,6 +232,16 @@ Highest evidence: documented association
 
 Reading: Federal Procurement Policy Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Defense Department
+
+Score: 60
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Defense Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## General Services Administration
 
 Score: 60
@@ -351,6 +251,26 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: General Services Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Management and Budget Office
+
+Score: 60
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Management and Budget Office deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## National Aeronautics and Space Administration
+
+Score: 60
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: National Aeronautics and Space Administration deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Chattogram Water Supply and Sewerage Authority
 
@@ -542,26 +462,6 @@ Highest evidence: documented association
 
 Reading: Republic of Rwanda deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Environmental Protection Agency
-
-Score: 40
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Environmental Protection Agency deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Homeland Security Department
-
-Score: 40
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Homeland Security Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## Nuclear Regulatory Commission
 
 Score: 40
@@ -571,23 +471,3 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## U.S. International Development Finance Corporation
-
-Score: 40
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: U.S. International Development Finance Corporation deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## United States Agency for Global Media
-
-Score: 40
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: United States Agency for Global Media deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.

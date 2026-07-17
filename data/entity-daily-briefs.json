@@ -1,696 +1,14 @@
 {
-  "updated": "2026-07-17T06:30:16.816Z",
+  "updated": "2026-07-17T14:02:07.423Z",
   "title": "Entity Daily Briefs",
   "purpose": "User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors.",
   "boundary": "Briefs summarize public-record signals with evidence grades. They do not replace source review.",
   "briefs": [
     {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Health and Human Services Department is currently tracked as observed entity with 3 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "High-interest tracked entity because it appears across records and relationship candidates.",
-      "source_routes": [
-        {
-          "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-          "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
-          "grade": "documented association"
-        },
-        {
-          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
-          "grade": "documented association"
-        },
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Centers for Medicare & Medicaid Services",
-          "score": 18,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Health and Human Services Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Management and Budget Office is currently tracked as observed entity with 2 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        },
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Defense Department",
-          "score": 18,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Management and Budget Office across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "defense-department",
-      "name": "Defense Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Defense Department is currently tracked as observed entity with 2 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        },
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 18,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "National Aeronautics and Space Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Defense Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "agency-for-international-development",
-      "name": "Agency for International Development",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Agency for International Development is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Veterans Affairs Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Agency for International Development across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "agriculture-department",
-      "name": "Agriculture Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Agriculture Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Veterans Affairs Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Agriculture Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "energy-department",
-      "name": "Energy Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Energy Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Energy Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "state-department",
-      "name": "State Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "State Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Veterans Affairs Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch State Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "treasury-department",
-      "name": "Treasury Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Treasury Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Treasury Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "veterans-affairs-department",
-      "name": "Veterans Affairs Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Veterans Affairs Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Veterans Affairs Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "commerce-department",
-      "name": "Commerce Department",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Commerce Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "interior-department",
-      "name": "Interior Department",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Interior Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "people-s-republic-of-bangladesh",
       "name": "People's Republic of Bangladesh",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "People's Republic of Bangladesh is currently tracked as observed entity with 3 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Chattogram Water Supply Improvement Project",
@@ -718,6 +36,12 @@
         }
       ],
       "connections": [
+        {
+          "with": "[object Object]",
+          "score": 27,
+          "type": "repeated public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
         {
           "with": "Chattogram Water Supply and Sewerage Authority",
           "score": 9,
@@ -747,69 +71,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "transportation-department",
-      "name": "Transportation Department",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Transportation Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Health and Human Services Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agriculture Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "State Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Agency for International Development",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Sawas v. Elzanaty",
@@ -866,70 +131,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "national-aeronautics-and-space-administration",
-      "name": "National Aeronautics and Space Administration",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "National Aeronautics and Space Administration is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-          "grade": "documented association"
-        },
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Management and Budget Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Federal Procurement Policy Office",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Defense Department",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "General Services Administration",
-          "score": 9,
-          "type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch National Aeronautics and Space Administration across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Centers for Medicare & Medicaid Services is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
@@ -968,10 +173,64 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
+      "id": "defense-department",
+      "name": "Defense Department",
+      "type": "observed entity",
+      "updated": "2026-07-17T14:02:07.423Z",
+      "at_a_glance": "Defense Department is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
+      "evidence_grade": "documented public-record association",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Defense Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
       "id": "federal-procurement-policy-office",
       "name": "Federal Procurement Policy Office",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Federal Procurement Policy Office is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
@@ -1025,7 +284,7 @@
       "id": "general-services-administration",
       "name": "General Services Administration",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "General Services Administration is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
@@ -1076,10 +335,160 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "type": "observed entity",
+      "updated": "2026-07-17T14:02:07.423Z",
+      "at_a_glance": "Health and Human Services Department is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies"
+      ],
+      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
+      "evidence_grade": "documented public-record association",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+          "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+          "grade": "documented association"
+        },
+        {
+          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+          "grade": "documented association"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Centers for Medicare & Medicaid Services",
+          "score": 18,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Health and Human Services Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
+      "type": "observed entity",
+      "updated": "2026-07-17T14:02:07.423Z",
+      "at_a_glance": "Management and Budget Office is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
+      "evidence_grade": "documented public-record association",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "National Aeronautics and Space Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Management and Budget Office across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "name": "National Aeronautics and Space Administration",
+      "type": "observed entity",
+      "updated": "2026-07-17T14:02:07.423Z",
+      "at_a_glance": "National Aeronautics and Space Administration is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
+      "evidence_grade": "documented public-record association",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+          "url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
+          "grade": "documented association"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Management and Budget Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Federal Procurement Policy Office",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "Defense Department",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "General Services Administration",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch National Aeronautics and Space Administration across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
       "id": "2021-00294",
       "name": "2021-00294",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "2021-00294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Sawas v. Elzanaty"
@@ -1121,7 +530,7 @@
       "id": "2024-07773",
       "name": "2024-07773",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "2024-07773 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Matter of Pagliughi"
@@ -1163,7 +572,7 @@
       "id": "2025-0045-appeal",
       "name": "2025-0045-Appeal.",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
@@ -1205,7 +614,7 @@
       "id": "25-113",
       "name": "25-113",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "25-113 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "The New York and Presbyterian Hospital v. New York State Nurses Association"
@@ -1247,7 +656,7 @@
       "id": "25-581",
       "name": "25-581",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "25-581 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Biddle v. Biddle"
@@ -1289,7 +698,7 @@
       "id": "a170747m",
       "name": "A170747M",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "A170747M is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "People v. Brim"
@@ -1331,7 +740,7 @@
       "id": "biddle-v-biddle",
       "name": "Biddle v. Biddle",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Biddle v. Biddle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Biddle v. Biddle"
@@ -1373,7 +782,7 @@
       "id": "california-court-of-appeal",
       "name": "California Court of Appeal",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "California Court of Appeal is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "People v. Brim"
@@ -1415,7 +824,7 @@
       "id": "chattogram-water-supply-and-sewerage-authority",
       "name": "Chattogram Water Supply and Sewerage Authority",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Chattogram Water Supply and Sewerage Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Chattogram Water Supply Improvement Project"
@@ -1436,6 +845,12 @@
           "score": 9,
           "type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
       "missing_records": [
@@ -1451,7 +866,7 @@
       "id": "court-of-appeals-for-the-second-circuit",
       "name": "Court of Appeals for the Second Circuit",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "The New York and Presbyterian Hospital v. New York State Nurses Association"
@@ -1493,7 +908,7 @@
       "id": "court-of-appeals-of-north-carolina",
       "name": "Court of Appeals of North Carolina",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Court of Appeals of North Carolina is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Biddle v. Biddle"
@@ -1535,7 +950,7 @@
       "id": "finance-division-ministry-of-finance",
       "name": "Finance Division, Ministry of Finance",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Finance Division, Ministry of Finance is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Second Bangladesh Green and Climate Resilient Development Credit"
@@ -1556,6 +971,12 @@
           "score": 9,
           "type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
       "missing_records": [
@@ -1571,7 +992,7 @@
       "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
       "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
@@ -1610,10 +1031,45 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "type": "observed entity",
+      "updated": "2026-07-17T14:02:07.423Z",
+      "at_a_glance": "Homeland Security Department is currently tracked as observed entity with 2 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Alien Registration Form and Evidence of Registration"
+      ],
+      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
+      "evidence_grade": "documented public-record association",
+      "plain_english_judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
+      "source_routes": [
+        {
+          "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+          "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+          "grade": "documented association"
+        },
+        {
+          "title": "Alien Registration Form and Evidence of Registration",
+          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+          "grade": "documented association"
+        }
+      ],
+      "connections": [],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Homeland Security Department across federal-register-policy.",
+        "Check whether new federal-register-policy records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
       "id": "kingdom-of-morocco",
       "name": "Kingdom of Morocco",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Kingdom of Morocco is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Transforming Agri-food Systems in Morocco"
@@ -1634,6 +1090,12 @@
           "score": 9,
           "type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
       "missing_records": [
@@ -1649,7 +1111,7 @@
       "id": "matter-of-pagliughi",
       "name": "Matter of Pagliughi",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Matter of Pagliughi is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Matter of Pagliughi"
@@ -1691,7 +1153,7 @@
       "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
       "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF) is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Transforming Agri-food Systems in Morocco"
@@ -1712,6 +1174,12 @@
           "score": 9,
           "type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
       "missing_records": [
@@ -1727,7 +1195,7 @@
       "id": "ministry-of-health-and-family-welfare",
       "name": "Ministry of Health and Family Welfare",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Ministry of Health and Family Welfare is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Health, Nutrition and Population Sector Development Program"
@@ -1748,6 +1216,12 @@
           "score": 9,
           "type": "weak co-occurrence signal",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
       "missing_records": [
@@ -1763,7 +1237,7 @@
       "id": "people-v-brim",
       "name": "People v. Brim",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "People v. Brim is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "People v. Brim"
@@ -1805,7 +1279,7 @@
       "id": "sawas-v-elzanaty",
       "name": "Sawas v. Elzanaty",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Sawas v. Elzanaty is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Sawas v. Elzanaty"
@@ -1847,7 +1321,7 @@
       "id": "supreme-court-of-rhode-island",
       "name": "Supreme Court of Rhode Island",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Supreme Court of Rhode Island is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
@@ -1889,7 +1363,7 @@
       "id": "the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
       "name": "The New York and Presbyterian Hospital v. New York State Nurses Association",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "The New York and Presbyterian Hospital v. New York State Nurses Association is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "The New York and Presbyterian Hospital v. New York State Nurses Association"
@@ -1931,7 +1405,7 @@
       "id": "aapl",
       "name": "AAPL",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "AAPL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -1967,7 +1441,7 @@
       "id": "alphabet-inc",
       "name": "Alphabet Inc.",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Alphabet Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -2003,7 +1477,7 @@
       "id": "amazon-com-inc",
       "name": "AMAZON COM INC",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "AMAZON COM INC is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -2039,7 +1513,7 @@
       "id": "amzn",
       "name": "AMZN",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "AMZN is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -2075,7 +1549,7 @@
       "id": "apple-inc",
       "name": "Apple Inc.",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Apple Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -2111,7 +1585,7 @@
       "id": "avgo",
       "name": "AVGO",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "AVGO is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -2147,7 +1621,7 @@
       "id": "broadcom-inc",
       "name": "Broadcom Inc.",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Broadcom Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -2183,7 +1657,7 @@
       "id": "googl",
       "name": "GOOGL",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "GOOGL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -2219,7 +1693,7 @@
       "id": "microsoft-corp",
       "name": "MICROSOFT CORP",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "MICROSOFT CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -2255,7 +1729,7 @@
       "id": "msft",
       "name": "MSFT",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "MSFT is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -2291,7 +1765,7 @@
       "id": "nvda",
       "name": "NVDA",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "NVDA is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -2327,7 +1801,7 @@
       "id": "nvidia-corp",
       "name": "NVIDIA CORP",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "NVIDIA CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -2363,7 +1837,7 @@
       "id": "republic-of-india",
       "name": "Republic of India",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Republic of India is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Amaravati Integrated Urban Development Program"
@@ -2378,7 +1852,14 @@
           "grade": "documented association"
         }
       ],
-      "connections": [],
+      "connections": [
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
       "missing_records": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -2392,7 +1873,7 @@
       "id": "republic-of-rwanda",
       "name": "Republic of Rwanda",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Republic of Rwanda is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Boosting Green Finance, Investment and Trade in Rwanda"
@@ -2407,7 +1888,14 @@
           "grade": "documented association"
         }
       ],
-      "connections": [],
+      "connections": [
+        {
+          "with": "[object Object]",
+          "score": 9,
+          "type": "weak co-occurrence signal",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
       "missing_records": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -2418,39 +1906,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "homeland-security-department",
-      "name": "Homeland Security Department",
-      "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Homeland Security Department is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Alien Registration Form and Evidence of Registration"
-      ],
-      "why_it_matters": "This entity touches: federal-register-policy, policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "source_routes": [
-        {
-          "title": "Alien Registration Form and Evidence of Registration",
-          "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Homeland Security Department across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "nuclear-regulatory-commission",
       "name": "Nuclear Regulatory Commission",
       "type": "observed entity",
-      "updated": "2026-07-17T06:30:16.816Z",
+      "updated": "2026-07-17T14:02:07.423Z",
       "at_a_glance": "Nuclear Regulatory Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Modernizing Security Requirements"
@@ -2471,90 +1930,6 @@
       ],
       "watch_next": [
         "Watch Nuclear Regulatory Commission across federal-register-policy.",
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "environmental-protection-agency",
-      "name": "Environmental Protection Agency",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "Environmental Protection Agency is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "u-s-international-development-finance-corporation",
-      "name": "U.S. International Development Finance Corporation",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "U.S. International Development Finance Corporation is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Check whether new federal-register-policy records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
-      "id": "united-states-agency-for-global-media",
-      "name": "United States Agency for Global Media",
-      "type": "tracked entity",
-      "updated": "2026-07-17T06:30:16.816Z",
-      "at_a_glance": "United States Agency for Global Media is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).",
-      "what_changed": [
-        "Regulation for Federal Financial Assistance"
-      ],
-      "why_it_matters": "This entity touches: policy, emergency_power, identity_access.",
-      "evidence_grade": "documented public-record association",
-      "plain_english_judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "source_routes": [
-        {
-          "title": "Regulation for Federal Financial Assistance",
-          "url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-          "grade": "documented association"
-        }
-      ],
-      "connections": [],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
         "Check whether new federal-register-policy records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."

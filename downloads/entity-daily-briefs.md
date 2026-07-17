@@ -1,118 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-07-17T06:30:16.816Z
+Updated: 2026-07-17T14:02:07.423Z
 
-Briefs generated: 58
-
-## Health and Human Services Department
-
-At a glance: Health and Human Services Department is currently tracked as observed entity with 3 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: High-interest tracked entity because it appears across records and relationship candidates.
-
-Evidence: documented public-record association
-
-Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Management and Budget Office
-
-At a glance: Management and Budget Office is currently tracked as observed entity with 2 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Management and Budget Office across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Defense Department
-
-At a glance: Defense Department is currently tracked as observed entity with 2 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Defense Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Agency for International Development
-
-At a glance: Agency for International Development is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Agency for International Development across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Agriculture Department
-
-At a glance: Agriculture Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Agriculture Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Energy Department
-
-At a glance: Energy Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Energy Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## State Department
-
-At a glance: State Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch State Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Treasury Department
-
-At a glance: Treasury Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Treasury Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Veterans Affairs Department
-
-At a glance: Veterans Affairs Department is currently tracked as observed entity with 1 recent record route(s), 5 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Veterans Affairs Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Commerce Department
-
-At a glance: Commerce Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.
-
-## Interior Department
-
-At a glance: Interior Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.
+Briefs generated: 46
 
 ## People's Republic of Bangladesh
 
@@ -124,16 +14,6 @@ Evidence: documented public-record association
 
 Watch next: Watch People's Republic of Bangladesh across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
-## Transportation Department
-
-At a glance: Transportation Department is currently tracked as tracked entity with 1 recent record route(s), 5 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.
-
 ## Appellate Division of the Supreme Court of the State of New York
 
 At a glance: Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
@@ -144,16 +24,6 @@ Evidence: legal record present
 
 Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## National Aeronautics and Space Administration
-
-At a glance: National Aeronautics and Space Administration is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch National Aeronautics and Space Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
 ## Centers for Medicare & Medicaid Services
 
 At a glance: Centers for Medicare & Medicaid Services is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
@@ -163,6 +33,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch Centers for Medicare & Medicaid Services across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## Defense Department
+
+At a glance: Defense Department is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch Defense Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## Federal Procurement Policy Office
 
@@ -183,6 +63,36 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch General Services Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## Health and Human Services Department
+
+At a glance: Health and Human Services Department is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## Management and Budget Office
+
+At a glance: Management and Budget Office is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch Management and Budget Office across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## National Aeronautics and Space Administration
+
+At a glance: National Aeronautics and Space Administration is currently tracked as observed entity with 1 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch National Aeronautics and Space Administration across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## 2021-00294
 
@@ -313,6 +223,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Homeland Security Department
+
+At a glance: Homeland Security Department is currently tracked as observed entity with 2 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
+
+Evidence: documented public-record association
+
+Watch next: Watch Homeland Security Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## Kingdom of Morocco
 
@@ -534,16 +454,6 @@ Evidence: documented public-record association
 
 Watch next: Watch Republic of Rwanda across world-bank-projects.; Check whether new world-bank-projects records repeat this name.
 
-## Homeland Security Department
-
-At a glance: Homeland Security Department is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Watch Homeland Security Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
 ## Nuclear Regulatory Commission
 
 At a glance: Nuclear Regulatory Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
@@ -553,33 +463,3 @@ Judgement: A source route exists. More records are needed before drawing a stron
 Evidence: documented public-record association
 
 Watch next: Watch Nuclear Regulatory Commission across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Environmental Protection Agency
-
-At a glance: Environmental Protection Agency is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.
-
-## U.S. International Development Finance Corporation
-
-At a glance: U.S. International Development Finance Corporation is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.
-
-## United States Agency for Global Media
-
-At a glance: United States Agency for Global Media is currently tracked as tracked entity with 1 recent record route(s), 0 relationship candidate(s), and 3 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Check whether new federal-register-policy records repeat this name.

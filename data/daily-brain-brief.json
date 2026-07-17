@@ -450,22 +450,37 @@
     "Any central-bank gold purchase, repatriation statement, custody dispute or audit disclosure.",
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
   "publicRecordFeed": {
-    "updated": "2026-07-17T07:31:33.727Z",
+    "updated": "2026-07-17T14:01:50.893Z",
     "eventCount": 24,
     "feedCount": 7,
     "reachedFeedCount": 4,
-    "entityObservationCount": 53,
+    "entityObservationCount": 47,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
   },
   "topRecordEvents": [
     {
-      "id": "federal-register-policy-2026-13656-1",
+      "id": "federal-register-policy-2026-14439-1",
+      "date": "2026-07-17",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ]
+    },
+    {
+      "id": "federal-register-policy-2026-13656-2",
       "date": "2026-07-07",
       "lane": "federal-register-policy",
       "evidence_grade": "documented association",
@@ -479,7 +494,7 @@
       ]
     },
     {
-      "id": "federal-register-policy-2026-13602-2",
+      "id": "federal-register-policy-2026-13602-3",
       "date": "2026-07-06",
       "lane": "federal-register-policy",
       "evidence_grade": "documented association",
@@ -493,7 +508,7 @@
       ]
     },
     {
-      "id": "federal-register-policy-2026-13057-3",
+      "id": "federal-register-policy-2026-13057-4",
       "date": "2026-06-29",
       "lane": "federal-register-policy",
       "evidence_grade": "documented association",
@@ -507,7 +522,7 @@
       ]
     },
     {
-      "id": "federal-register-policy-2026-12989-4",
+      "id": "federal-register-policy-2026-12989-5",
       "date": "2026-06-26",
       "lane": "federal-register-policy",
       "evidence_grade": "documented association",
@@ -521,26 +536,12 @@
       ]
     },
     {
-      "id": "federal-register-policy-2026-12559-5",
+      "id": "federal-register-policy-2026-12559-6",
       "date": "2026-06-23",
       "lane": "federal-register-policy",
       "evidence_grade": "documented association",
       "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
       "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33",
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ]
-    },
-    {
-      "id": "federal-register-policy-2026-10817-6",
-      "date": "2026-05-29",
-      "lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "summary": "Regulation for Federal Financial Assistance",
-      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
       "send_to": [
         "daily-brain-brief",
         "global-risk-clocks",
@@ -646,17 +647,6 @@
       ]
     },
     {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 3,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ]
-    },
-    {
       "id": "people-s-republic-of-bangladesh",
       "name": "People's Republic of Bangladesh",
       "count": 3,
@@ -668,8 +658,8 @@
       ]
     },
     {
-      "id": "centers-for-medicare-and-medicaid-services",
-      "name": "Centers for Medicare & Medicaid Services",
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
       "count": 2,
       "lanes": [
         "federal-register-policy"
@@ -679,8 +669,19 @@
       ]
     },
     {
-      "id": "management-and-budget-office",
-      "name": "Management and Budget Office",
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ]
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
       "count": 2,
       "lanes": [
         "federal-register-policy"
@@ -701,8 +702,8 @@
       ]
     },
     {
-      "id": "homeland-security-department",
-      "name": "Homeland Security Department",
+      "id": "nuclear-regulatory-commission",
+      "name": "Nuclear Regulatory Commission",
       "count": 1,
       "lanes": [
         "federal-register-policy"
@@ -712,8 +713,8 @@
       ]
     },
     {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
+      "id": "management-and-budget-office",
+      "name": "Management and Budget Office",
       "count": 1,
       "lanes": [
         "federal-register-policy"
@@ -768,27 +769,64 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-17T07:31:49.327Z",
-    "newRecordCount": 0,
+    "updated": "2026-07-17T14:02:07.390Z",
+    "newRecordCount": 6,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 112,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 47,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
     "relationshipScoresRoute": "data/entity-relationship-scores.json",
     "boundary": "Change detection flags movement. It does not interpret intent."
   },
-  "topChangeSignals": [],
+  "topChangeSignals": [
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant"
+    },
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
+    },
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh"
+    },
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration"
+    },
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Modernizing Security Requirements",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements"
+    },
+    {
+      "lane": "federal-register-policy",
+      "grade": "documented association",
+      "summary": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/23/2026-12559/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-1-2-4-33"
+    }
+  ],
   "privateContractorIntelligence": {
-    "updated": "2026-07-17T07:31:49.482Z",
+    "updated": "2026-07-17T14:02:07.520Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
     "topProfiles": [
       {
         "name": "Blackwater / Xe / Academi / Constellis lineage",
-        "score": 42,
+        "score": 50,
         "level": "active contractor watch"
       },
       {
@@ -815,7 +853,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-17T07:31:49.522Z",
+    "updated": "2026-07-17T14:02:07.556Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

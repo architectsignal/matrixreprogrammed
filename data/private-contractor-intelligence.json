@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T06:30:16.925Z",
+  "updated": "2026-07-17T14:02:07.520Z",
   "title": "Private Contractor Intelligence",
   "purpose": "Track private military, security, intelligence, logistics, surveillance and government-platform contractors through public records, contracts, legal routes, ownership changes, main players, relationship candidates and missing records.",
   "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt.",
@@ -101,7 +101,7 @@
         "Sanctions / debarment checks",
         "News signals verified against primary records"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -144,9 +144,20 @@
           "use": "machine source-lane rules and evidence ladder"
         }
       ],
-      "related_records": [],
+      "related_records": [
+        {
+          "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+          "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+          "evidence_grade": "documented association",
+          "source_lane": "federal-register-policy",
+          "record_type": "rule_or_notice",
+          "missing_records": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        }
+      ],
       "relationship_candidates": [],
-      "contractor_score": 42,
+      "contractor_score": 50,
       "contractor_level": "active contractor watch",
       "missing_records": [
         "USAspending awards",
@@ -154,7 +165,8 @@
         "Congressional hearing material",
         "SEC or corporate records where available",
         "Sanctions / debarment checks",
-        "News signals verified against primary records"
+        "News signals verified against primary records",
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
         "Search new awards for Blackwater.",
@@ -201,7 +213,7 @@
         "Inspector General reports",
         "Corporate transaction records"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -293,7 +305,7 @@
         "Court records",
         "Contract notices"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -386,7 +398,7 @@
         "Lobbying records",
         "Court records"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -480,7 +492,7 @@
         "Court records",
         "Policy documents"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -573,7 +585,7 @@
         "Regulatory records",
         "Public contract routes"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",
@@ -667,7 +679,7 @@
         "Contract notices",
         "Court records"
       ],
-      "updated": "2026-07-17T06:30:16.925Z",
+      "updated": "2026-07-17T14:02:07.520Z",
       "source_routes": [
         {
           "label": "USAspending awards",

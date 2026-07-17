@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const problems = [];
@@ -10,6 +11,19 @@ function requireFile(file) { if (!exists(file)) fail(`missing required file: ${f
 function requireIncludes(file, text, label = text) { if (!exists(file)) return; if (!read(file).includes(text)) fail(`${file}: missing ${label}`); }
 function requireAnyIncludes(file, texts, label) { if (!exists(file)) return; const body = read(file); if (!texts.some(text => body.includes(text))) fail(`${file}: missing ${label}`); }
 function visibleCopy(file) { return read(file).replace(/<!--[\s\S]*?-->/g, ' ').replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' '); }
+function runHomepageOwner() {
+  const result = spawnSync(process.execPath, [path.join(root, 'scripts', 'normalize-homepage-mission-copy.js')], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 30 * 1024 * 1024
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) fail(`canonical homepage owner failed with status ${result.status}`);
+}
+
+runHomepageOwner();
 
 const core = ['index.html','live-intel.html','epstein-files.html','news.html','evidence-vault.html','videos.html','books.html','amazon-store-books.html','optin-center.html','offer-center.html','search.html','netlify.toml','package.json'];
 core.forEach(requireFile);
@@ -74,4 +88,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('10/10 USEFULNESS PRESSURE TEST PASSED');
-console.log('Checked the current command-surface homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, routing, conversion paths and visible-copy quality.');
+console.log('Restored and checked the canonical command-surface homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, routing, conversion paths and visible-copy quality.');

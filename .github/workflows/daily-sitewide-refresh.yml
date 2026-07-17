@@ -46,10 +46,12 @@ jobs:
       - name: Repair and test deploy-critical systems
         continue-on-error: true
         run: |
-          node scripts/patch-worker-newsletter-system.js
           node scripts/newsletter-persistence-test.js
+          node scripts/patch-membership-tiers.js
+          node scripts/normalize-homepage-mission-copy.js
           node scripts/repair-search-system.js
           node scripts/repair-critical-route-drift.js
+          node scripts/compact-cloudflare-search-index.js
           node scripts/site-function-harmony-test.js
 
       - name: Pressure test refreshed systems
@@ -93,6 +95,9 @@ jobs:
             downloads/search-runtime-hardening-report.json
             downloads/site-function-harmony-report.json
             downloads/site-function-harmony-report.md
+            downloads/cloudflare-search-index-compaction.json
+            downloads/membership-tiers-report.json
+            downloads/homepage-mission-normalization.json
             downloads/automation-health-daily.json
             downloads/automation-health-daily.md
           if-no-files-found: ignore

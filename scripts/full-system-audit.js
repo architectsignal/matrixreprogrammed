@@ -135,7 +135,7 @@ for (const [label, script] of focused) {
 }
 
 const checks = [
-  ['Homepage', 'index.html', 'FOLLOW THE FILES.'],
+  ['Homepage', 'index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.'],
   ['Homepage security route', 'index.html', 'Security Tools'],
   ['Homepage dark-web route', 'index.html', 'Dark Web Safety'],
   ['Free membership', 'membership.html', 'Free Member'],
@@ -161,7 +161,7 @@ const checks = [
   ['Main board', 'forum.html', 'data-board="main"'],
   ['Speculation board', 'dark-speculation-forum.html', 'data-board="speculation"'],
   ['Epstein sighting board', 'epstein-alive-board.html', 'data-board="epstein-alive"'],
-  ['Cloudflare output', '_site/index.html', 'FOLLOW THE FILES.'],
+  ['Cloudflare output', '_site/index.html', 'MAP THE STRUCTURE. READ THE SIGNALS.'],
   ['Built PayPal membership', '_site/membership.html', 'paypal-membership.js'],
   ['Built health D1', '_site/deploy-health.json', 'src/worker-production.js']
 ];

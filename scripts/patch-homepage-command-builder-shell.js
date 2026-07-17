@@ -52,7 +52,6 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   boundary: 'Every direct homepage command-surface build repairs a missing main shell before inserting the current mission surface.'
 }, null, 2)}\n`);
 
-require('./patch-deep-audit-accuracy.js');
 require('./patch-deploy-status-current-mission.js');
 require('./patch-paypal-voluntary-support.js');
 require('./patch-voluntary-support-store.js');
@@ -61,4 +60,4 @@ require('./patch-email-launch-console.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
 require('./repair-deep-audit-public-defects.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; deep audit accuracy, current deploy mission, €1–€5,000 voluntary support, Brevo readiness, controlled email launch console, operational audit, safe production receipt and public repairs applied.`);
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; stable audit v2, current deploy mission, €1–€5,000 voluntary support, Brevo readiness, controlled email launch console, operational audit, safe production receipt and public repairs applied.`);

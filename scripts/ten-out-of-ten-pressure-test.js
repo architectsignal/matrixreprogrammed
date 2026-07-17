@@ -15,19 +15,18 @@ const core = ['index.html','live-intel.html','epstein-files.html','news.html','e
 core.forEach(requireFile);
 
 const homepageMustHave = [
-  'FOLLOW THE FILES',
-  'READ THE SYSTEM',
+  'MAP THE STRUCTURE. READ THE SIGNALS.',
   'Open Live Intel',
-  'Epstein Files',
-  'Declassified Files',
   'Buy The Books',
-  'Get Free Briefs',
-  'Live source lanes',
-  'source → evidence → video hook → free brief → book/store',
-  'Join The Signal'
+  'Daily Brief',
+  'Power Map',
+  'Evidence',
+  'Search',
+  'What the evidence is pointing toward now',
+  'Evidence boundary'
 ];
-for (const marker of homepageMustHave) requireIncludes('index.html', marker, `homepage 10/10 marker: ${marker}`);
-requireAnyIncludes('index.html', ['Explore', 'Main Doors'], 'homepage reader navigation marker');
+for (const marker of homepageMustHave) requireIncludes('index.html', marker, `homepage current mission marker: ${marker}`);
+requireAnyIncludes('index.html', ['Enter The System', 'Start Here', 'Main Doors'], 'homepage reader navigation marker');
 
 const pageRoutes = {
   'index.html': ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html','optin-center.html','books.html','search.html'],
@@ -75,4 +74,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('10/10 USEFULNESS PRESSURE TEST PASSED');
-console.log('Checked command-center homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, Netlify routes/headers, conversion paths, and visible-copy quality.');
+console.log('Checked the current command-surface homepage, page-specific mission routes, live intel depth, Epstein source-watch depth, downloads, routing, conversion paths and visible-copy quality.');

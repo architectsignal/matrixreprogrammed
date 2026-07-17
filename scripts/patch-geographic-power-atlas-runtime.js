@@ -7,6 +7,7 @@ const legacyMapLibreVersion = '6.0.0-20';
 const files = {
   page: path.join(root, 'geographic-power-atlas.html'),
   runtime: path.join(root, 'geographic-power-atlas.js'),
+  protectedRuntime: path.join(root, 'templates', 'geographic-power-atlas.runtime.js'),
   builder: path.join(root, 'scripts', 'build-geographic-power-atlas.js'),
   seed: path.join(root, 'data', 'geographic-power-atlas-seed.json'),
   manifest: path.join(root, 'data', 'geographic-power-atlas.json'),
@@ -39,14 +40,43 @@ function updateEngineVersion(file) {
   if (changed) write(file, `${JSON.stringify(json, null, 2)}\n`);
   return changed;
 }
+const canonicalRuntimeMarkers = [
+  `maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.mjs`,
+  'const MAPLIBRE_MODULE_URL',
+  'mapModule.default || mapModule',
+  'fetchAtlasData',
+  'loadMapLibraries',
+  'geographic-power-atlas-data.json',
+  'geographic-power-atlas.geojson',
+  'Accessible list updated.',
+  'Interactive map unavailable'
+];
+function isCanonicalRuntime(source) {
+  return canonicalRuntimeMarkers.every(marker => source.includes(marker)) && !source.includes(`maplibre-gl@${legacyMapLibreVersion}`) && !source.includes('import * as maplibregl');
+}
 
 const changed = {
   page: replaceVersion(files.page),
   builder: replaceVersion(files.builder),
   seed: updateEngineVersion(files.seed),
   manifest: updateEngineVersion(files.manifest),
-  aliasSynced: false
+  aliasSynced: false,
+  protectedRuntimeCreated: false,
+  runtimeRestored: false
 };
+
+let runtimeBefore = read(files.runtime);
+if (!fs.existsSync(files.protectedRuntime) && isCanonicalRuntime(runtimeBefore)) {
+  write(files.protectedRuntime, runtimeBefore);
+  changed.protectedRuntimeCreated = true;
+}
+if (!isCanonicalRuntime(runtimeBefore) && fs.existsSync(files.protectedRuntime)) {
+  const protectedSource = read(files.protectedRuntime);
+  if (!isCanonicalRuntime(protectedSource)) throw new Error('Protected Geographic Atlas runtime is not canonical.');
+  write(files.runtime, protectedSource);
+  runtimeBefore = protectedSource;
+  changed.runtimeRestored = true;
+}
 
 if (fs.existsSync(files.geojson)) {
   const source = read(files.geojson);
@@ -75,27 +105,17 @@ for (const marker of [
 ]) {
   if (!page.includes(marker)) failures.push(`geographic-power-atlas.html missing ${marker}`);
 }
-for (const marker of [
-  `maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.mjs`,
-  'const MAPLIBRE_MODULE_URL',
-  'mapModule.default || mapModule',
-  'fetchAtlasData',
-  'loadMapLibraries',
-  "fetch('data/geographic-power-atlas-data.json'",
-  "fetch('data/geographic-power-atlas.geojson'",
-  'Accessible list updated.',
-  'Interactive map unavailable'
-]) {
+for (const marker of canonicalRuntimeMarkers) {
   if (!runtime.includes(marker)) failures.push(`geographic-power-atlas.js missing ${marker}`);
 }
 for (const forbidden of [
   `maplibre-gl@${legacyMapLibreVersion}`,
-  "import * as maplibregl",
-  "import {Protocol}"
+  'import * as maplibregl',
+  'import {Protocol}'
 ]) {
   if (page.includes(forbidden) || runtime.includes(forbidden)) failures.push(`atlas contains obsolete runtime marker ${forbidden}`);
 }
-
+if (!fs.existsSync(files.protectedRuntime)) failures.push('protected Geographic Atlas runtime template was not created');
 if (manifest.engines?.maplibre?.version !== stableMapLibreVersion) failures.push('atlas manifest does not use stable MapLibre version');
 if (!Array.isArray(data.features) || data.features.length < 1) failures.push('atlas GeoJSON contains no features');
 for (const feature of data.features || []) {
@@ -112,7 +132,7 @@ const report = {
   locations: Array.isArray(data.features) ? data.features.length : 0,
   countries: manifest.counts?.countries || 0,
   categories: manifest.counts?.categories || 0,
-  runtimeMode: 'dynamic stable MapLibre import with accessible-list-first and local graticule fallback',
+  runtimeMode: 'protected stable MapLibre runtime with accessible-list-first and local graticule fallback',
   changed,
   failures
 };
@@ -122,4 +142,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`GEOGRAPHIC ATLAS FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, stable MapLibre ${stableMapLibreVersion}, accessible fallback enabled.`);
+console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, stable MapLibre ${stableMapLibreVersion}, protected fallback enabled.`);

@@ -47,6 +47,7 @@ function patchRuntimeSource(source) {
   let next = patchMapLibreAssets(source)
     .replace(/^const MAPLIBRE_MODULE_URL\s*=.*(?:\r?\n)+/m, '')
     .replace(/^const PMTILES_MODULE_URL\s*=.*$/m, `const PMTILES_MODULE_URL = '${pmtilesModuleUrl}';`);
+  if (isCanonicalRuntime(next)) return next;
   const replacement = `async function waitForMapLibre(timeoutMs=15000) {
   const deadline=Date.now()+timeoutMs;
   while ((!globalThis.maplibregl || typeof globalThis.maplibregl.Map !== 'function') && Date.now()<deadline) {
@@ -114,7 +115,8 @@ function isCanonicalRuntime(source) {
 const changed = {
   page: updateFile(files.page, patchPageSource),
   builder: updateFile(files.builder, patchPageSource),
-  runtime: updateFile(files.runtime, patchRuntimeSource),
+  runtime: false,
+  runtimeRestored: false,
   protectedRuntime: false,
   seed: updateEngineVersion(files.seed),
   manifest: updateEngineVersion(files.manifest),
@@ -122,10 +124,36 @@ const changed = {
   protectedRuntimeCreated: false
 };
 
-const runtime = read(files.runtime);
-if (!isCanonicalRuntime(runtime)) throw new Error('Geographic Atlas runtime could not be normalized to the supported MapLibre browser bundle.');
-if (!fs.existsSync(files.protectedRuntime) || read(files.protectedRuntime) !== runtime) {
-  write(files.protectedRuntime, runtime);
+let runtimeBefore = read(files.runtime);
+let runtimeCandidate = runtimeBefore;
+let transformError = '';
+try {
+  runtimeCandidate = patchRuntimeSource(runtimeBefore);
+} catch (error) {
+  transformError = String(error?.message || error);
+}
+if (isCanonicalRuntime(runtimeCandidate)) {
+  if (runtimeCandidate !== runtimeBefore) {
+    write(files.runtime, runtimeCandidate);
+    changed.runtime = true;
+  }
+} else if (fs.existsSync(files.protectedRuntime)) {
+  let protectedSource = read(files.protectedRuntime);
+  if (!isCanonicalRuntime(protectedSource)) {
+    try { protectedSource = patchRuntimeSource(protectedSource); }
+    catch (error) { transformError = `${transformError}; protected template: ${String(error?.message || error)}`.replace(/^;\s*/, ''); }
+  }
+  if (isCanonicalRuntime(protectedSource)) {
+    write(files.runtime, protectedSource);
+    runtimeCandidate = protectedSource;
+    changed.runtimeRestored = true;
+  }
+}
+if (!isCanonicalRuntime(runtimeCandidate)) {
+  throw new Error(`Geographic Atlas runtime could not be normalized or restored from the protected canonical template.${transformError ? ` ${transformError}` : ''}`);
+}
+if (!fs.existsSync(files.protectedRuntime) || read(files.protectedRuntime) !== runtimeCandidate) {
+  write(files.protectedRuntime, runtimeCandidate);
   changed.protectedRuntime = true;
   changed.protectedRuntimeCreated = true;
 }
@@ -140,6 +168,7 @@ if (fs.existsSync(files.geojson)) {
 
 const page = read(files.page);
 const builder = read(files.builder);
+const runtime = read(files.runtime);
 const manifest = JSON.parse(read(files.manifest));
 const data = JSON.parse(read(files.alias));
 const failures = [];
@@ -184,8 +213,9 @@ const report = {
   locations: Array.isArray(data.features) ? data.features.length : 0,
   countries: manifest.counts?.countries || 0,
   categories: manifest.counts?.categories || 0,
-  runtimeMode: 'Official MapLibre browser bundle with global maplibregl, accessible-list-first rendering and local dark-grid fallback',
+  runtimeMode: 'Official MapLibre browser bundle with global maplibregl, protected canonical runtime restoration, accessible-list-first rendering and local dark-grid fallback',
   changed,
+  transformError: transformError || null,
   failures
 };
 write(files.report, `${JSON.stringify(report, null, 2)}\n`);
@@ -193,4 +223,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`GEOGRAPHIC ATLAS FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, MapLibre ${stableMapLibreVersion} official browser bundle enabled.`);
+console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, MapLibre ${stableMapLibreVersion} official browser bundle enabled${changed.runtimeRestored ? ' and canonical runtime restored after legacy generation' : ''}.`);

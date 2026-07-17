@@ -26,7 +26,8 @@ const requiredFiles = [
   'newsletter.html',
   'newsletter.js',
   'wrangler.toml',
-  'scripts/build-production-deploy-receipt.js'
+  'scripts/build-production-deploy-receipt.js',
+  'docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md'
 ];
 for (const file of requiredFiles) check(`required file ${file}`, fs.existsSync(path.join(root, file)), 'missing');
 
@@ -43,6 +44,7 @@ const newsletterUi = read('newsletter.js');
 const wrangler = read('wrangler.toml');
 const pkg = json('package.json');
 const receipt = read('scripts/build-production-deploy-receipt.js');
+const launchPlan = read('docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md');
 
 check('site purpose is explicit', typeof standard.sitePurpose === 'string' && standard.sitePurpose.length > 100);
 check('conclusion standard covers usefulness and boundaries', includesAll(JSON.stringify(standard), [
@@ -93,7 +95,8 @@ check('production Worker queues and processes reports', includesAll(production, 
   'queuePendingVerifiedSelfReports',
   'processOutbox'
 ]));
-check('daily and weekly email schedules are configured', includesAll(wrangler, ['"5 6 * * *"', '"15 7 * * 1"', 'EMAIL_AUTOMATION_ENABLED = "true"']));
+check('daily and weekly email schedules are configured', includesAll(wrangler, ['"5 6 * * *"', '"15 7 * * 1"']));
+check('automated email remains disabled before Phase 11', wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"') && launchPlan.includes('EMAIL_AUTOMATION_ENABLED remains false until Phase 11'));
 check('newsletter requires explicit consent', newsletterPage.includes('data-marketing-consent') && newsletterPage.includes('required'));
 check('newsletter runtime refuses absent consent', includesAll(newsletterUi, ['consentGranted', 'Please confirm that you agree to receive email reports and updates.']));
 

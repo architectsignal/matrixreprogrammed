@@ -51,4 +51,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   builder: 'scripts/build-homepage-command-surface.js',
   boundary: 'Every direct homepage command-surface build repairs a missing main shell before inserting the current mission surface.'
 }, null, 2)}\n`);
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}.`);
+
+require('./patch-paypal-voluntary-support.js');
+require('./patch-voluntary-support-store.js');
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support flow and free-evidence store cards applied.`);

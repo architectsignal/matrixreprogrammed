@@ -79,10 +79,12 @@ if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machi
 runRequired('scripts/patch-power-dossier-runtime.js');
 runRequired('scripts/repair-empty-public-controls.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
+runRequired('scripts/repair-public-runtime-controls.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-public-runtime-controls.js', ['--output']);
 runRequired('scripts/fix-public-editorial-audit-errors.js');
 runRequired('scripts/hide-visible-compatibility-markers.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); KV traffic repair, entity sanitation, dossier fallback, empty-control repair, editorial hardening, marker scrub and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); KV traffic repair, entity sanitation, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub and full tool audit passed.`);

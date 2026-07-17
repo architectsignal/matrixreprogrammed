@@ -39,7 +39,9 @@ for (const relative of [
   'data/geographic-power-atlas-data.json',
   'data/geographic-power-atlas.geojson',
   'downloads/geographic-power-atlas.csv',
-  'power-dossier-runtime.js'
+  'power-dossier-runtime.js',
+  'admin-email-launch.html',
+  'admin-email-launch.js'
 ]) copy(relative);
 
 run('scripts/sanitize-machine-entity-outputs.js');
@@ -56,6 +58,7 @@ run('scripts/hide-visible-compatibility-markers.js', ['--output']);
 run('scripts/patch-paypal-voluntary-support.js');
 run('scripts/patch-voluntary-support-store.js');
 run('scripts/patch-brevo-transactional-readiness.js');
+run('scripts/patch-email-launch-console.js');
 run('scripts/brevo-operational-readiness-audit.js');
 run('scripts/patch-production-receipt-email-safety.js');
 run('scripts/enforce-phase1-cloudflare-config.js');
@@ -72,12 +75,13 @@ const report = {
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
     'power-dossier-runtime.js', '_site/search-index.json', 'store.html',
     'card-deck-store.html', 'paypal-voluntary-support.js',
+    'admin-email-launch.html', 'admin-email-launch.js',
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
     'scripts/build-production-deploy-receipt.js',
     'downloads/brevo-operational-readiness.json', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may overwrite repaired public output, €1–€5,000 voluntary support boundaries, Brevo sender-domain readiness, reply-to support, readiness reporting, safe production receipt, search assets, or the disabled marketing, transactional-email, donation and live-PayPal switches.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may overwrite repaired public output, €1–€5,000 voluntary support boundaries, Brevo sender-domain readiness, reply-to support, controlled administrator testing, readiness reporting, safe production receipt, search assets, or the disabled marketing, transactional-email, donation and live-PayPal switches.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable _site bundle, voluntary support store, Brevo readiness, safe production receipt, and Cloudflare safety configuration.');
+console.log('Final release sanitation passed for the deployable _site bundle, voluntary support store, Brevo readiness, controlled email launch console, safe production receipt, and Cloudflare safety configuration.');

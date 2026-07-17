@@ -24,6 +24,10 @@ PAYPAL_SANDBOX_ENABLED = "true"
 PAYPAL_PRODUCTION_ENABLED = "false"
 PAYPAL_DONATIONS_ENABLED = "false"
 EMAIL_AUTOMATION_ENABLED = "false"
+EMAIL_TRANSACTIONAL_ENABLED = "false"
+BREVO_DOMAIN_AUTHENTICATED = "false"
+MEMBERS_FROM_NAME = "Matrix Reprogrammed"
+MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
 
 [assets]
 directory = "./_site"

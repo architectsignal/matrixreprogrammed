@@ -20,7 +20,7 @@ crons = ["5 6 * * *", "15 7 * * 1"]
 PAYPAL_ENVIRONMENT = "sandbox"
 PAYPAL_SANDBOX_ENABLED = "true"
 PAYPAL_PRODUCTION_ENABLED = "false"
-EMAIL_AUTOMATION_ENABLED = "true"
+EMAIL_AUTOMATION_ENABLED = "false"
 
 [assets]
 directory = "./_site"

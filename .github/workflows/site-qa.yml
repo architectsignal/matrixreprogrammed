@@ -46,4 +46,13 @@ jobs:
         run: npm run build
 
       - name: Run site audit report on built output
-        run: node scripts/audit-site.js
+        run: node scripts/run-site-qa-with-report.js
+
+      - name: Upload Site QA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-qa-report-${{ github.run_id }}
+          path: downloads/site-qa-report.json
+          if-no-files-found: ignore
+          retention-days: 30

@@ -47,6 +47,7 @@ run('scripts/sanitize-machine-entity-outputs.js', ['--output']);
 run('scripts/patch-power-dossier-runtime.js');
 run('scripts/repair-empty-public-controls.js');
 run('scripts/repair-empty-public-controls.js', ['--output']);
+run('scripts/fix-public-editorial-audit-errors.js');
 run('scripts/hide-visible-compatibility-markers.js');
 run('scripts/hide-visible-compatibility-markers.js', ['--output']);
 run('scripts/public-control-target-audit.js');

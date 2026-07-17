@@ -159,7 +159,7 @@ for (const relative of [
   'entity-exposure/object-object.html',
   'entity-exposure/object-object'
 ]) removeGeneratedFile(relative);
-for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html']) patchHtml(page);
+for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html', 'daily-missing-records.html']) patchHtml(page);
 
 const remaining = [];
 for (const relative of [
@@ -171,6 +171,7 @@ for (const relative of [
   'machine-digest.html',
   'entity-daily-briefs.html',
   'entity-exposure-index.html',
+  'daily-missing-records.html',
   'search-index.json'
 ]) {
   const file = at(relative);

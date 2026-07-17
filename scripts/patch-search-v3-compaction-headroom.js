@@ -49,6 +49,7 @@ for (const marker of [
 }
 
 if (changed) fs.writeFileSync(runtimePath, after);
+require('./patch-search-v3-adjudicated-ranking.js');
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
@@ -56,7 +57,8 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   changed,
   runtime: 'scripts/build-search-v3-runtime.js',
   addedProfiles: ['ultra-safe', 'minimum-route-safe'],
+  adjudicatedRankingApplied: true,
   preservesEverySearchableUrl: true,
-  boundary: 'Growing Search V3 data is compacted by bounding display metadata and long source URLs. No searchable route is removed; complete evidence remains on source pages, registries, graphs and documents.'
+  boundary: 'Growing Search V3 data is compacted by bounding display metadata and long source URLs. No searchable route is removed; conviction and judgment queries prioritize court, investigation and established records over generic relationship rows.'
 }, null, 2)}\n`);
-console.log(`Search V3 compaction headroom ${changed ? 'installed' : 'already current'}.`);
+console.log(`Search V3 compaction headroom ${changed ? 'installed' : 'already current'}; adjudicated ranking applied.`);

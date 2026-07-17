@@ -40,10 +40,15 @@ need(worker.includes("'/api/email/admin/subscriber'"), 'protected subscriber dia
 need(worker.includes("path==='/api/email/admin/subscriber'"), 'protected subscriber diagnostic handler is not routed');
 
 const newsletter = read('newsletter.js');
-need(newsletter.includes('public_daily_brief:selected.daily'), 'newsletter client does not submit the Daily Brief preference');
-need(newsletter.includes('public_weekly_digest:selected.weekly'), 'newsletter client does not submit the Weekly preference independently');
+const dailyPreferencePayload = /public_daily_brief\s*:\s*(?:preferences|selected)\.daily/.test(newsletter);
+const weeklyPreferencePayload = /public_weekly_digest\s*:\s*(?:preferences|selected)\.weekly/.test(newsletter);
+const releasePreferencePayload = /release_notices\s*:\s*(?:preferences\.release|selected\.releaseNotices)/.test(newsletter);
+need(dailyPreferencePayload, 'newsletter client does not submit the Daily Brief preference');
+need(weeklyPreferencePayload, 'newsletter client does not submit the Weekly preference independently');
+need(releasePreferencePayload, 'newsletter client does not submit release notices independently');
 need(newsletter.includes('today’s Daily Control Brief will be sent immediately.'), 'daily signup does not explain immediate post-verification delivery');
 need(!newsletter.includes('public_weekly_digest:true') && !newsletter.includes('weekly:true'), 'newsletter client silently forces weekly delivery');
+need(newsletter.includes('Select at least one briefing or release-notice preference.'), 'newsletter client lacks the explicit no-preference failure boundary');
 
 const statusPage = read('email-status.html');
 need(statusPage.includes("dailyBrief==='sent'"), 'email status page cannot distinguish a sent first brief');
@@ -103,7 +108,7 @@ const report = {
     immediateDailyBrief: true,
     sameDayDeduplication: true,
     truthfulDeliveryStatus: true,
-    independentNewsletterPreferences: true,
+    independentNewsletterPreferences: dailyPreferencePayload && weeklyPreferencePayload && releasePreferencePayload,
     compactClockCards: true,
     namedActorIntelligence: true
   },
@@ -117,4 +122,4 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery and same-day deduplication.`);
+console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery and independent daily, weekly and release preferences.`);

@@ -10,9 +10,10 @@ if (!fs.existsSync(tomlPath)) throw new Error('wrangler.toml is missing');
 if (!fs.existsSync(jsoncPath)) throw new Error('wrangler.jsonc is missing');
 
 const lockedVars = [
-  ['EMAIL_AUTOMATION_ENABLED', 'false'],
+  ['EMAIL_AUTOMATION_ENABLED', 'true'],
   ['EMAIL_TRANSACTIONAL_ENABLED', 'true'],
   ['BREVO_DOMAIN_AUTHENTICATED', 'true'],
+  ['EMAIL_RETRY_QUARANTINE_BEFORE', '2026-07-18T00:00:00.000Z'],
   ['MEMBERS_FROM_EMAIL', 'members@matrixreprogrammed.com'],
   ['MEMBERS_FROM_NAME', 'Matrix Reprogrammed'],
   ['MEMBERS_REPLY_TO_EMAIL', 'njmgroupfrance@gmail.com'],
@@ -100,21 +101,22 @@ fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  phase: 2,
+  phase: 3,
   changed,
   sourcesOfTruth: ['wrangler.jsonc', 'wrangler.toml'],
   activePrecedenceProtected: true,
   keepVars: false,
-  emailAutomationEnabled: false,
+  emailAutomationEnabled: true,
   emailTransactionalEnabled: true,
   brevoDomainAuthenticated: true,
+  retryQuarantineBefore: '2026-07-18T00:00:00.000Z',
   membersFromEmail: 'members@matrixreprogrammed.com',
   membersReplyToEmail: 'njmgroupfrance@gmail.com',
   paypalDonationsEnabled: false,
   paypalEnvironment: 'sandbox',
   paypalProductionEnabled: false,
   failures,
-  boundary: 'Both Wrangler formats are locked after every generator. Verified account, welcome and login email may send through the authenticated Brevo identity; bulk daily and weekly marketing remains disabled until campaign acceptance testing is complete.'
+  boundary: 'Both Wrangler formats are locked after every generator. Authenticated transactional email and guarded daily and weekly campaigns are active; retry records predating activation are automatically quarantined before any scheduled campaign sends.'
 }, null, 2)}\n`);
 if (failures.length) throw new Error(`Cloudflare configuration enforcement failed: ${failures.join('; ')}`);
-console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: authenticated transactional email on, marketing automation off, PayPal sandbox.`);
+console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: transactional email and guarded marketing automation on, legacy retries quarantined by cutoff, PayPal sandbox.`);

@@ -29,10 +29,13 @@ if (!quality.includes(qualityNew)) {
   qualityChanged = true;
 }
 
+const requiredMarkers = {
+  runtime: ['adjudicatedIntent', "item.resultKind==='relationship'", 'value+=88'],
+  quality: ['adjudicatedIntent', "item.resultKind === 'relationship'", 'value += 88']
+};
 for (const [label, text] of [['runtime', runtime], ['quality', quality]]) {
-  for (const marker of ['adjudicatedIntent', "item.resultKind==='relationship'", 'value+=88']) {
-    const normalized = label === 'quality' && marker === "item.resultKind==='relationship'" ? "item.resultKind === 'relationship'" : marker;
-    if (!text.includes(normalized)) throw new Error(`Search V3 ${label} ranking marker missing: ${normalized}`);
+  for (const marker of requiredMarkers[label]) {
+    if (!text.includes(marker)) throw new Error(`Search V3 ${label} ranking marker missing: ${marker}`);
   }
 }
 

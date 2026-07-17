@@ -15,6 +15,7 @@ const tiers = Array.isArray(registry.tiers) ? registry.tiers : [];
 const expectedPrices = [3, 6, 9];
 const html = fs.readFileSync(templatePath, 'utf8');
 const failures = [];
+const synchronized = [];
 
 if (tiers.length !== 3) failures.push(`expected 3 paid membership tiers, found ${tiers.length}`);
 if (tiers.some((tier, index) => Number(tier.price) !== expectedPrices[index])) failures.push('membership tier prices must be €3, €6 and €9 in ascending order');
@@ -51,7 +52,20 @@ const ids = [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => mat
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
 if (duplicateIds.length) failures.push(`Phase 6 membership template duplicate IDs: ${duplicateIds.join(', ')}`);
 
-if (!failures.length) fs.writeFileSync(pagePath, html);
+if (!failures.length) {
+  fs.writeFileSync(pagePath, html);
+  synchronized.push('membership.html');
+  const site = path.join(root, '_site');
+  if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
+    for (const relative of ['membership.html', 'membership']) {
+      const target = path.join(site, relative);
+      if (fs.existsSync(target) && fs.statSync(target).isDirectory()) continue;
+      fs.mkdirSync(path.dirname(target), { recursive: true });
+      fs.writeFileSync(target, html);
+      synchronized.push(`_site/${relative}`);
+    }
+  }
+}
 
 const report = {
   ok: failures.length === 0,
@@ -64,6 +78,7 @@ const report = {
   prices: expectedPrices,
   checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',
   tiers: tiers.map(tier => ({ id: tier.id, name: tier.name, price: tier.price, priceLabel: tier.priceLabel })),
+  synchronized,
   failures
 };
 
@@ -75,4 +90,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log('Membership page restored from protected Phase 6 template: Free Member evidence access plus optional €3, €6 and €9 monthly donations.');
+console.log(`Membership page restored from protected Phase 6 template across ${synchronized.length} source/output route(s): Free Member evidence access plus optional €3, €6 and €9 monthly donations.`);

@@ -38,7 +38,7 @@ function replaceText(oldValue, newValue, label) {
 
 replaceText("'/daily-power-conclusions': '<!-- conclusion-integrity:start -->'", "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'", 'daily power live marker');
 replaceText("'/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->'", "'/daily-investigation-conclusions': 'DAILY INVESTIGATION CONCLUSIONS.'", 'daily investigation live marker');
-replaceText("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health': 'DEPLOY HEALTH.'", 'deploy health live marker');
+replaceText("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health.html': 'DEPLOY HEALTH.'", 'canonical deploy health live marker');
 
 const emailPattern = /async function verifyEmailAutomationBoundary\(\) \{[\s\S]*?\n\}\nasync function verifyBootstrapBoundary/;
 if (!after.includes('deploymentLogPresent: Boolean(deployLog)')) {
@@ -64,7 +64,7 @@ for (const marker of [
   'deployedFalse && !deployedTrue && adminHealthProtected',
   'EMAIL_AUTOMATION_ENABLED=false',
   "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'",
-  "'/deploy-health': 'DEPLOY HEALTH.'",
+  "'/deploy-health.html': 'DEPLOY HEALTH.'",
   'manifestMatchesCurrentMain',
   'manifestIsCommitBound',
   'health?.buildSha === manifestSha'
@@ -80,6 +80,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   changed,
   verifier: 'scripts/verify-live-production.js',
   stableRouteMarkers: true,
+  canonicalDeployHealthRoute: '/deploy-health.html',
   commitRacePolicy: 'Accept exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.',
   boundary: 'Live verification proves the actual deployed email automation binding is false and rejects local-build or mismatched deployment metadata.'
 }, null, 2)}\n`);

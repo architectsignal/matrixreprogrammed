@@ -34,7 +34,6 @@ for (const file of walk(base)) {
   html = html.replace(/<a\b([^>]*?)\bhref\s*=\s*(["'])\s*\2([^>]*)>([\s\S]*?)<\/a>/gi, (full, left, quote, right, body) => {
     if (isHidden(full)) return full;
     const visibleLabel = plain(body);
-    const label = visibleLabel.toLowerCase();
     const tag = `${left} ${right}`;
     const machineOrForumLabel = /^(machine-readable data|forum posts json|forum posts export)$/i.test(visibleLabel);
     const genericSourceLabel = /^(source file|source export)$/i.test(visibleLabel);
@@ -55,6 +54,7 @@ for (const file of walk(base)) {
 }
 
 require('./restore-premier-resource-routes.js');
+require('./repair-public-runtime-controls.js');
 
 const report = {
   ok: unresolved.length === 0,
@@ -63,7 +63,7 @@ const report = {
   changed,
   unresolved,
   repairedRoute: 'downloads/forum-posts.json',
-  boundary: 'Only empty controls in an explicit dossier/forum-export context are repaired automatically. Unknown empty links still fail the build.'
+  boundary: 'Only empty controls in an explicit dossier/forum-export context are repaired automatically. Unknown empty links still fail the build. Dynamic public controls receive separate safe fallbacks.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', outputOnly ? 'empty-public-controls-output.json' : 'empty-public-controls.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -72,4 +72,4 @@ if (unresolved.length) {
   unresolved.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Empty public controls repaired (${report.mode}): ${changed.length} file(s) changed.`);
+console.log(`Empty public controls repaired (${report.mode}): ${changed.length} file(s) changed; dynamic fallbacks verified.`);

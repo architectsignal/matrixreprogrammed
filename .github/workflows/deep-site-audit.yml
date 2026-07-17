@@ -1,0 +1,94 @@
+name: Matrix Reprogrammed Deep Site Audit
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '20 3 * * 0'
+
+concurrency:
+  group: matrixreprogrammed-deep-site-audit
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  deep-audit:
+    name: Rebuild and audit every page, function, link and live route
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Build complete site and Worker assets
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          npm run build 2>&1 | tee downloads/deep-audit-build.log
+
+      - name: Reconcile exact Cloudflare bundle
+        env:
+          DEPLOY_COMMIT_SHA: ${{ github.sha }}
+        run: node scripts/final-production-reconcile.js
+
+      - name: Exhaustive static audit
+        run: node scripts/deep-production-site-audit.js --static
+
+      - name: Existing audit suite
+        run: |
+          node scripts/full-site-function-tool-audit.js --postbuild
+          node scripts/site-function-harmony-test.js
+          node tools/link-audit.js
+          node scripts/audit-site.js
+          node scripts/pressure-test-site.js
+          node scripts/site-wide-function-audit.js --postbuild
+
+      - name: Exhaustive live audit
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+        run: node scripts/deep-production-site-audit.js --live
+
+      - name: Upload complete audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deep-site-audit-${{ github.run_id }}
+          path: |
+            downloads/deep-audit-build.log
+            downloads/deep-production-site-audit-static.json
+            downloads/deep-production-site-audit-static.md
+            downloads/deep-production-site-audit-live.json
+            downloads/deep-production-site-audit-live.md
+            downloads/full-site-function-tool-audit.json
+            downloads/full-site-function-tool-audit.md
+            downloads/site-function-harmony-report.json
+            downloads/site-function-harmony-report.md
+            downloads/link-audit-report.json
+            downloads/site-audit-report.json
+            downloads/site-pressure-report.json
+            downloads/site-wide-function-audit.json
+            downloads/final-production-reconcile.json
+          if-no-files-found: ignore
+          retention-days: 60

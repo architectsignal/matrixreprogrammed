@@ -151,8 +151,8 @@ for (const file of files) {
   else if (file.endsWith('.json')) checkJson(file);
 }
 
-requireFile('geographic-power-atlas.html', ['id="atlas-search"', 'id="atlas-reset"', 'id="power-atlas-map"', 'id="power-atlas-list"', 'geographic-power-atlas.js']);
-requireFile('geographic-power-atlas.js', ['mapModule.default || mapModule', 'fetchAtlasData', 'loadMapLibraries', 'Interactive map unavailable']);
+requireFile('geographic-power-atlas.html', ['id="atlas-search"', 'id="atlas-reset"', 'id="power-atlas-map"', 'id="power-atlas-list"', 'maplibre-gl@5.24.0/dist/maplibre-gl.js', 'geographic-power-atlas.js']);
+requireFile('geographic-power-atlas.js', ['async function waitForMapLibre', 'globalThis.maplibregl', 'fetchAtlasData', 'loadMapLibraries', 'Interactive map unavailable']);
 requireFile('data/geographic-power-atlas.json', ['"locations"', '"categories"']);
 requireFile('data/geographic-power-atlas-data.json', ['"FeatureCollection"', '"features"']);
 requireFile('search.html', ['id="archive-search"', 'id="search-results"']);
@@ -184,8 +184,11 @@ requireFile('forum.js', ['/forum-feed-main', '/submit-main-post']);
 requireFile('download-center.html');
 
 const atlasRuntime = fs.existsSync(path.join(base, 'geographic-power-atlas.js')) ? read(path.join(base, 'geographic-power-atlas.js')) : '';
+const atlasPage = fs.existsSync(path.join(base, 'geographic-power-atlas.html')) ? read(path.join(base, 'geographic-power-atlas.html')) : '';
 if (/import\s+\*\s+as\s+maplibregl/.test(atlasRuntime)) hard.push('geographic-power-atlas.js still uses fragile namespace static import');
 if (atlasRuntime.includes('maplibre-gl@6.0.0-20')) hard.push('geographic-power-atlas.js still uses prerelease MapLibre 6.0.0-20');
+if (atlasRuntime.includes('maplibre-gl.mjs') || atlasRuntime.includes('MAPLIBRE_MODULE_URL')) hard.push('geographic-power-atlas.js still uses the unsupported MapLibre module URL');
+if (!atlasPage.includes('maplibre-gl@5.24.0/dist/maplibre-gl.js')) hard.push('geographic-power-atlas.html does not load the supported MapLibre browser bundle');
 
 fs.mkdirSync(reportDir, { recursive: true });
 const report = {
@@ -196,7 +199,7 @@ const report = {
   stats,
   hardIssues: hard,
   warnings,
-  boundary: 'Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require live environment verification.'
+  boundary: 'Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, supported MapLibre browser-bundle wiring, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require live environment verification.'
 };
 fs.writeFileSync(path.join(reportDir, 'full-site-function-tool-audit.json'), `${JSON.stringify(report, null, 2)}\n`);
 fs.writeFileSync(path.join(reportDir, 'full-site-function-tool-audit.md'), [

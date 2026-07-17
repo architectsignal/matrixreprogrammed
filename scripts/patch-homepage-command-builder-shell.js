@@ -12,30 +12,61 @@ let changed = false;
 
 const shellMarker = 'function ensureHomepageShell(';
 if (!after.includes(shellMarker)) {
-  const anchor = 'function read(file) {';
-  const index = after.indexOf(anchor);
-  if (index < 0) throw new Error('Homepage command builder read helper anchor missing');
+  const rootAnchor = 'const root = process.cwd();';
+  if (!after.includes(rootAnchor)) throw new Error('Homepage command builder root declaration missing');
   const helper = `function ensureHomepageShell(file){
   if(!fs.existsSync(file))return false;
   let html=fs.readFileSync(file,'utf8');
   if(/<main\\b/i.test(html))return false;
   const closeBody=/<\\/body>/i;
   const shell='<main id="main-content" class="wrap"></main>';
-  html=closeBody.test(html)?html.replace(closeBody,\`${shell}</body>\`):\`${html}${shell}\`;
+  html=closeBody.test(html)?html.replace(closeBody,shell+'</body>'):html+shell;
   fs.writeFileSync(file,html);
   return true;
-}
-
-`;
-  after = `${after.slice(0, index)}${helper}${after.slice(index)}`;
+}`;
+  after = after.replace(rootAnchor, `${rootAnchor}\n${helper}`);
   changed = true;
 }
 
-const homepageAnchor = "const homepagePath = path.join(root, 'index.html');";
-const ensureCall = "ensureHomepageShell(homepagePath);";
-if (!after.includes(ensureCall)) {
-  if (!after.includes(homepageAnchor)) throw new Error('Homepage command builder homepage path anchor missing');
-  after = after.replace(homepageAnchor, `${homepageAnchor}\n${ensureCall}`);
+const callCandidates = [
+  {
+    variable: 'indexPath',
+    anchor: "const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');"
+  },
+  {
+    variable: 'homepagePath',
+    anchor: "const homepagePath = path.join(root, 'index.html');"
+  },
+  {
+    variable: 'indexPath',
+    anchor: "const indexPath = file('index.html');"
+  },
+  {
+    variable: 'homepagePath',
+    anchor: "const homepagePath=path.join(root,'index.html');"
+  }
+];
+
+let ensureCall = '';
+for (const candidate of callCandidates) {
+  const call = `ensureHomepageShell(${candidate.variable});`;
+  if (after.includes(call)) {
+    ensureCall = call;
+    break;
+  }
+  if (after.includes(candidate.anchor)) {
+    after = after.replace(candidate.anchor, `${candidate.anchor}\n${call}`);
+    ensureCall = call;
+    changed = true;
+    break;
+  }
+}
+
+if (!ensureCall) {
+  const declaration = after.match(/const\s+([A-Za-z_$][\w$]*)\s*=\s*(?:file\(\s*['"]index\.html['"]\s*\)|path\.join\(\s*root\s*,\s*['"]index\.html['"]\s*\))\s*;[^\n]*/);
+  if (!declaration) throw new Error('Homepage command builder index path declaration missing');
+  ensureCall = `ensureHomepageShell(${declaration[1]});`;
+  after = after.replace(declaration[0], `${declaration[0]}\n${ensureCall}`);
   changed = true;
 }
 
@@ -50,6 +81,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   changed,
   builder: 'scripts/build-homepage-command-surface.js',
+  patchStrategy: 'Insert the shell helper after the stable root declaration and call it after any supported index-page declaration.',
+  ensureCall,
+  repeatSafe: true,
   boundary: 'Every direct homepage command-surface build repairs a missing main shell before inserting the current mission surface.'
 }, null, 2)}\n`);
 

@@ -8,7 +8,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const json = file => JSON.parse(read(file));
 const check = (name, condition, detail = '') => {
   const ok = Boolean(condition);
-  checks.push({ name, ok, detail });
+  checks.push({ name, ok, detail: ok ? '' : detail });
   if (!ok) failures.push(`${name}${detail ? `: ${detail}` : ''}`);
 };
 const includesAll = (text, values) => values.every(value => text.includes(value));
@@ -29,7 +29,10 @@ const requiredFiles = [
   'scripts/build-production-deploy-receipt.js',
   'docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md'
 ];
-for (const file of requiredFiles) check(`required file ${file}`, fs.existsSync(path.join(root, file)), 'missing');
+for (const file of requiredFiles) {
+  const exists = fs.existsSync(path.join(root, file));
+  check(`required file ${file}`, exists, 'missing');
+}
 
 const standard = json('data/reader-interpretation-standard.json');
 const policy = json('data/access-route-policy.json');
@@ -96,9 +99,28 @@ check('production Worker queues and processes reports', includesAll(production, 
   'processOutbox'
 ]));
 check('daily and weekly email schedules are configured', includesAll(wrangler, ['"5 6 * * *"', '"15 7 * * 1"']));
-check('automated email remains disabled before Phase 11', wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"') && launchPlan.includes('EMAIL_AUTOMATION_ENABLED remains false until Phase 11'));
+check('guarded Phase 11 email automation is active', includesAll(wrangler, [
+  'EMAIL_AUTOMATION_ENABLED = "true"',
+  'EMAIL_TRANSACTIONAL_ENABLED = "true"',
+  'BREVO_DOMAIN_AUTHENTICATED = "true"',
+  'EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"'
+]) && includesAll(launchPlan, [
+  'Phase 11 — Automated newsletter activation record',
+  'EMAIL_AUTOMATION_ENABLED is true under the recorded Phase 11 approval',
+  'Personalised preference and unsubscribe routes installed',
+  'Retry records predating activation automatically quarantined by cutoff'
+]));
 check('newsletter requires explicit consent', newsletterPage.includes('data-marketing-consent') && newsletterPage.includes('required'));
-check('newsletter runtime refuses absent consent', includesAll(newsletterUi, ['consentGranted', 'Please confirm that you agree to receive email reports and updates.']));
+check('newsletter runtime refuses absent consent', includesAll(newsletterUi, [
+  'const consentGranted=Boolean(consent.checked);',
+  'marketingConsent:consentGranted',
+  'Please confirm that you agree to receive the selected briefings.'
+]));
+check('newsletter runtime sends explicit preferences', includesAll(newsletterUi, [
+  'public_daily_brief:preferences.daily',
+  'public_weekly_digest:preferences.weekly',
+  'release_notices:preferences.release'
+]));
 
 check('timer builder is in normal build validation', pkg.scripts?.build?.includes('global-risk-clocks-test.js'));
 check('tier patch runs before every npm build', pkg.scripts?.prebuild === 'node scripts/patch-osint-tool-tiers.js');
@@ -115,6 +137,8 @@ check('production receipt certifies mission systems', includesAll(receipt, [
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
+  phase: 11,
+  emailAutomationState: 'guarded-live',
   checks,
   failures
 };

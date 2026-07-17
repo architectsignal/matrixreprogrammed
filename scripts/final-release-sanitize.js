@@ -53,6 +53,7 @@ run('scripts/repair-public-runtime-controls.js', ['--output']);
 run('scripts/fix-public-editorial-audit-errors.js');
 run('scripts/hide-visible-compatibility-markers.js');
 run('scripts/hide-visible-compatibility-markers.js', ['--output']);
+run('scripts/enforce-phase1-cloudflare-config.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
 
@@ -64,10 +65,10 @@ const report = {
     'geographic-power-atlas.html', 'geographic-power-atlas.js',
     'data/geographic-power-atlas.json', 'data/geographic-power-atlas-data.json',
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
-    'power-dossier-runtime.js', '_site/search-index.json'
+    'power-dossier-runtime.js', '_site/search-index.json', 'wrangler.toml'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle. No later generator may overwrite the repaired public output or inflate the deploy search index beyond Cloudflare asset limits.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may overwrite repaired public output, inflate search assets, preserve dashboard variable drift, enable automated email, or enable live PayPal.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable _site bundle, including Cloudflare search-index compaction.');
+console.log('Final release sanitation passed for the deployable _site bundle and Phase 1 Cloudflare configuration.');

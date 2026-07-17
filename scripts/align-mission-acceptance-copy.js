@@ -107,5 +107,8 @@ runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
+runRequired('scripts/hide-visible-compatibility-markers.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-compatibility-markers.js', ['--output']);
+runRequired('scripts/final-public-launch-acceptance.js', fs.existsSync(path.join(root, '_site')) ? ['--output'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, final marker scrub, tracker script repair, final live audit/source-link repair, full tool audit and immutable paid-launch acceptance gate passed.`);

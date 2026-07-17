@@ -63,6 +63,7 @@ run('scripts/patch-email-launch-console.js');
 run('scripts/brevo-operational-readiness-audit.js');
 run('scripts/patch-production-receipt-email-safety.js');
 run('scripts/repair-deep-audit-public-defects.js');
+run('scripts/repair-deep-audit-accessibility-metadata.js');
 run('scripts/enforce-phase1-cloudflare-config.js');
 run('scripts/public-control-target-audit.js');
 run('scripts/full-site-function-tool-audit.js', ['--postbuild']);
@@ -81,10 +82,11 @@ const report = {
     'admin-email-launch.html', 'admin-email-launch.js',
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
     'scripts/build-production-deploy-receipt.js',
+    'downloads/deep-audit-accessibility-metadata-repair.json',
     'downloads/brevo-operational-readiness.json', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, unsafe email/payment switches or oversized search assets.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, weak metadata, unsafe email/payment switches or oversized search assets.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable bundle, voluntary support pages, reviewed intake flow, deep-audit repairs, Brevo readiness and Cloudflare safety configuration.');
+console.log('Final release sanitation passed for the deployable bundle, voluntary support pages, reviewed intake flow, accessibility and metadata repairs, Brevo readiness and Cloudflare safety configuration.');

@@ -57,6 +57,7 @@ jobs:
         run: |
           node scripts/patch-osint-tool-tiers.js
           node scripts/patch-newsletter-consent.js
+          node scripts/align-mission-acceptance-copy.js
           node scripts/mission-readiness-test.js
           node scripts/global-risk-clocks-test.js
           node scripts/cloudflare-worker-routes-test.js

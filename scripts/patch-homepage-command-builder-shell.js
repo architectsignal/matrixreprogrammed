@@ -56,4 +56,5 @@ require('./patch-paypal-voluntary-support.js');
 require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
 require('./brevo-operational-readiness-audit.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, free-evidence store cards, Brevo transactional readiness and operational audit applied.`);
+require('./patch-production-receipt-email-safety.js');
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; €1–€5,000 voluntary support, Brevo readiness, operational audit, and safe production receipt applied.`);

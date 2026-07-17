@@ -5,9 +5,9 @@ const root = process.cwd();
 const stableMapLibreVersion = '5.24.0';
 const legacyMapLibreVersion = '6.0.0-20';
 const stablePmtilesVersion = '4.4.1';
-const mapLibreModuleUrl = `https://cdn.jsdelivr.net/npm/maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.mjs`;
-const mapLibreCssUrl = `https://cdn.jsdelivr.net/npm/maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.css`;
-const pmtilesModuleUrl = `https://cdn.jsdelivr.net/npm/pmtiles@${stablePmtilesVersion}/dist/esm/index.js`;
+const mapLibreScriptUrl = `https://unpkg.com/maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.js`;
+const mapLibreCssUrl = `https://unpkg.com/maplibre-gl@${stableMapLibreVersion}/dist/maplibre-gl.css`;
+const pmtilesModuleUrl = `https://unpkg.com/pmtiles@${stablePmtilesVersion}/dist/esm/index.js`;
 const files = {
   page: path.join(root, 'geographic-power-atlas.html'),
   runtime: path.join(root, 'geographic-power-atlas.js'),
@@ -28,17 +28,58 @@ function write(file, content) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, content);
 }
-function patchAtlasAssetUrls(file) {
-  if (!fs.existsSync(file)) return false;
-  const before = fs.readFileSync(file, 'utf8');
-  let after = before
-    .replace(/https:\/\/unpkg\.com\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.mjs/g, mapLibreModuleUrl)
-    .replace(/https:\/\/cdn\.jsdelivr\.net\/npm\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.mjs/g, mapLibreModuleUrl)
-    .replace(/https:\/\/unpkg\.com\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.css/g, mapLibreCssUrl)
-    .replace(/https:\/\/cdn\.jsdelivr\.net\/npm\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.css/g, mapLibreCssUrl)
-    .replace(/https:\/\/unpkg\.com\/pmtiles@[^/]+\/dist\/esm\/index\.js/g, pmtilesModuleUrl)
-    .replace(/https:\/\/cdn\.jsdelivr\.net\/npm\/pmtiles@[^/]+\/dist\/esm\/index\.js/g, pmtilesModuleUrl)
+function patchMapLibreAssets(source) {
+  return String(source)
+    .replace(/https:\/\/(?:unpkg\.com|cdn\.jsdelivr\.net\/npm)\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.(?:mjs|js)/g, mapLibreScriptUrl)
+    .replace(/https:\/\/(?:unpkg\.com|cdn\.jsdelivr\.net\/npm)\/maplibre-gl@[^/]+\/dist\/maplibre-gl\.css/g, mapLibreCssUrl)
+    .replace(/https:\/\/(?:unpkg\.com|cdn\.jsdelivr\.net\/npm)\/pmtiles@[^/]+\/dist\/esm\/index\.js/g, pmtilesModuleUrl)
     .split(`maplibre-gl@${legacyMapLibreVersion}`).join(`maplibre-gl@${stableMapLibreVersion}`);
+}
+function patchPageSource(source) {
+  let next = patchMapLibreAssets(source)
+    .replace(/<script\b[^>]*src=["'][^"']*maplibre-gl@[^"']*\/dist\/maplibre-gl\.(?:mjs|js)["'][^>]*><\/script>/gi, '');
+  const localRuntime = /<script\s+type=["']module["']\s+src=["']geographic-power-atlas\.js["']><\/script>/i;
+  const loader = `<script src="${mapLibreScriptUrl}"></script>`;
+  if (localRuntime.test(next) && !next.includes(loader)) next = next.replace(localRuntime, `${loader}<script type="module" src="geographic-power-atlas.js"></script>`);
+  return next;
+}
+function patchRuntimeSource(source) {
+  let next = patchMapLibreAssets(source)
+    .replace(/^const MAPLIBRE_MODULE_URL\s*=.*(?:\r?\n)+/m, '')
+    .replace(/^const PMTILES_MODULE_URL\s*=.*$/m, `const PMTILES_MODULE_URL = '${pmtilesModuleUrl}';`);
+  const replacement = `async function waitForMapLibre(timeoutMs=15000) {
+  const deadline=Date.now()+timeoutMs;
+  while ((!globalThis.maplibregl || typeof globalThis.maplibregl.Map !== 'function') && Date.now()<deadline) {
+    await new Promise(resolve=>setTimeout(resolve,50));
+  }
+  return globalThis.maplibregl;
+}
+async function loadMapLibraries() {
+  const maplibregl=await waitForMapLibre();
+  if (!maplibregl || typeof maplibregl.Map !== 'function') throw new Error('MapLibre browser bundle loaded without a usable Map constructor.');
+  state.maplibregl=maplibregl;
+  if ((state.manifest.pmtilesSources || []).some(source=>source && source.enabled)) {
+    try {
+      const pmModule=await import(PMTILES_MODULE_URL);
+      state.Protocol=pmModule.Protocol || pmModule.default?.Protocol || null;
+      if (state.Protocol) {
+        const protocol=new state.Protocol();
+        state.maplibregl.addProtocol('pmtiles',protocol.tile);
+      }
+    } catch (error) {
+      console.warn('Optional PMTiles support did not load:',error);
+    }
+  }
+}
+async function init`;
+  const pattern = /async function loadMapLibraries\(\) \{[\s\S]*?\n\}\nasync function init/;
+  if (!pattern.test(next)) throw new Error('Geographic Atlas loadMapLibraries function could not be located.');
+  return next.replace(pattern, replacement);
+}
+function updateFile(file, transform) {
+  if (!fs.existsSync(file)) return false;
+  const before = read(file);
+  const after = transform(before);
   if (after !== before) write(file, after);
   return after !== before;
 }
@@ -51,52 +92,43 @@ function updateEngineVersion(file) {
   if (changed) write(file, `${JSON.stringify(json, null, 2)}\n`);
   return changed;
 }
-const canonicalRuntimeMarkers = [
-  mapLibreModuleUrl,
-  pmtilesModuleUrl,
-  'const MAPLIBRE_MODULE_URL',
-  'mapModule.default || mapModule',
-  'fetchAtlasData',
-  'loadMapLibraries',
-  'geographic-power-atlas-data.json',
-  'geographic-power-atlas.geojson',
-  'Accessible list updated.',
-  'Interactive map unavailable'
-];
 function isCanonicalRuntime(source) {
-  return canonicalRuntimeMarkers.every(marker => source.includes(marker))
-    && !source.includes('https://unpkg.com/maplibre-gl@')
-    && !source.includes('https://unpkg.com/pmtiles@')
-    && !source.includes(`maplibre-gl@${legacyMapLibreVersion}`)
+  return [
+    'const PMTILES_MODULE_URL',
+    'async function waitForMapLibre',
+    'globalThis.maplibregl',
+    'MapLibre browser bundle loaded without a usable Map constructor.',
+    'fetchAtlasData',
+    'loadMapLibraries',
+    'geographic-power-atlas-data.json',
+    'geographic-power-atlas.geojson',
+    'Accessible list updated.',
+    'Interactive map unavailable'
+  ].every(marker => source.includes(marker))
+    && !source.includes('MAPLIBRE_MODULE_URL')
+    && !source.includes('maplibre-gl.mjs')
+    && !source.includes('mapModule.default || mapModule')
     && !source.includes('import * as maplibregl');
 }
 
 const changed = {
-  page: patchAtlasAssetUrls(files.page),
-  builder: patchAtlasAssetUrls(files.builder),
-  runtimeCdn: patchAtlasAssetUrls(files.runtime),
-  protectedRuntimeCdn: patchAtlasAssetUrls(files.protectedRuntime),
+  page: updateFile(files.page, patchPageSource),
+  builder: updateFile(files.builder, patchPageSource),
+  runtime: updateFile(files.runtime, patchRuntimeSource),
+  protectedRuntime: false,
   seed: updateEngineVersion(files.seed),
   manifest: updateEngineVersion(files.manifest),
   aliasSynced: false,
-  protectedRuntimeCreated: false,
-  runtimeRestored: false
+  protectedRuntimeCreated: false
 };
 
-let runtimeBefore = read(files.runtime);
-if (!fs.existsSync(files.protectedRuntime) && isCanonicalRuntime(runtimeBefore)) {
-  write(files.protectedRuntime, runtimeBefore);
+const runtime = read(files.runtime);
+if (!isCanonicalRuntime(runtime)) throw new Error('Geographic Atlas runtime could not be normalized to the supported MapLibre browser bundle.');
+if (!fs.existsSync(files.protectedRuntime) || read(files.protectedRuntime) !== runtime) {
+  write(files.protectedRuntime, runtime);
+  changed.protectedRuntime = true;
   changed.protectedRuntimeCreated = true;
 }
-if (!isCanonicalRuntime(runtimeBefore) && fs.existsSync(files.protectedRuntime)) {
-  patchAtlasAssetUrls(files.protectedRuntime);
-  const protectedSource = read(files.protectedRuntime);
-  if (!isCanonicalRuntime(protectedSource)) throw new Error('Protected Geographic Atlas runtime is not canonical or CORS-safe.');
-  write(files.runtime, protectedSource);
-  runtimeBefore = protectedSource;
-  changed.runtimeRestored = true;
-}
-if (!isCanonicalRuntime(runtimeBefore)) throw new Error('Geographic Atlas runtime could not be normalized to the CORS-safe canonical build.');
 
 if (fs.existsSync(files.geojson)) {
   const source = read(files.geojson);
@@ -107,12 +139,13 @@ if (fs.existsSync(files.geojson)) {
 }
 
 const page = read(files.page);
-const runtime = read(files.runtime);
+const builder = read(files.builder);
 const manifest = JSON.parse(read(files.manifest));
 const data = JSON.parse(read(files.alias));
 const failures = [];
 for (const marker of [
   mapLibreCssUrl,
+  mapLibreScriptUrl,
   'id="atlas-search"',
   'id="atlas-category"',
   'id="atlas-country"',
@@ -122,14 +155,16 @@ for (const marker of [
   'id="power-atlas-list"',
   'geographic-power-atlas.js'
 ]) if (!page.includes(marker)) failures.push(`geographic-power-atlas.html missing ${marker}`);
-for (const marker of canonicalRuntimeMarkers) if (!runtime.includes(marker)) failures.push(`geographic-power-atlas.js missing ${marker}`);
+for (const marker of [mapLibreCssUrl,mapLibreScriptUrl,'geographic-power-atlas.js']) if (!builder.includes(marker)) failures.push(`build-geographic-power-atlas.js missing ${marker}`);
+if (!isCanonicalRuntime(runtime)) failures.push('geographic-power-atlas.js is not the canonical browser-bundle runtime');
 for (const forbidden of [
   `maplibre-gl@${legacyMapLibreVersion}`,
-  'https://unpkg.com/maplibre-gl@',
-  'https://unpkg.com/pmtiles@',
+  'maplibre-gl.mjs',
+  'MAPLIBRE_MODULE_URL',
+  'mapModule.default || mapModule',
   'import * as maplibregl',
   'import {Protocol}'
-]) if (page.includes(forbidden) || runtime.includes(forbidden)) failures.push(`atlas contains obsolete or CORS-unsafe runtime marker ${forbidden}`);
+]) if (page.includes(forbidden) || runtime.includes(forbidden) || builder.includes(forbidden)) failures.push(`atlas contains obsolete runtime marker ${forbidden}`);
 if (!fs.existsSync(files.protectedRuntime)) failures.push('protected Geographic Atlas runtime template was not created');
 if (manifest.engines?.maplibre?.version !== stableMapLibreVersion) failures.push('atlas manifest does not use stable MapLibre version');
 if (!Array.isArray(data.features) || data.features.length < 1) failures.push('atlas GeoJSON contains no features');
@@ -143,12 +178,13 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   mapLibreVersion: stableMapLibreVersion,
-  mapLibreModuleUrl,
+  mapLibreScriptUrl,
+  mapLibreCssUrl,
   pmtilesModuleUrl,
   locations: Array.isArray(data.features) ? data.features.length : 0,
   countries: manifest.counts?.countries || 0,
   categories: manifest.counts?.categories || 0,
-  runtimeMode: 'CORS-safe jsDelivr MapLibre runtime with accessible-list-first and local dark-grid fallback',
+  runtimeMode: 'Official MapLibre browser bundle with global maplibregl, accessible-list-first rendering and local dark-grid fallback',
   changed,
   failures
 };
@@ -157,4 +193,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`GEOGRAPHIC ATLAS FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, stable MapLibre ${stableMapLibreVersion}, CORS-safe module delivery enabled.`);
+console.log(`Geographic Power Atlas runtime passed: ${report.locations} locations, MapLibre ${stableMapLibreVersion} official browser bundle enabled.`);

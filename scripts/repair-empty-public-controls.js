@@ -21,6 +21,11 @@ function walk(dir, out = []) {
 }
 function plain(value) { return String(value || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
 function isHidden(tag) { return /\bhidden\b/i.test(tag) || /\binternal-only\b/i.test(tag) || /data-internal-only=["']true["']/i.test(tag); }
+function isDossierExportContext(html, file) {
+  const pageName = path.basename(file).toLowerCase();
+  return /phase-fourteen-dossier-pack-engine|dossier pack \/ download center|signal board resource|forum posts|persistent cloudflare (?:kv|d1)|subject-filtered forum exports/i.test(html)
+    || /^(?:black-file|download-center|dossier-pack-)/i.test(pageName);
+}
 
 for (const file of walk(base)) {
   let html = '';
@@ -28,14 +33,19 @@ for (const file of walk(base)) {
   const before = html;
   html = html.replace(/<a\b([^>]*?)\bhref\s*=\s*(["'])\s*\2([^>]*)>([\s\S]*?)<\/a>/gi, (full, left, quote, right, body) => {
     if (isHidden(full)) return full;
-    const label = plain(body).toLowerCase();
+    const visibleLabel = plain(body);
+    const label = visibleLabel.toLowerCase();
     const tag = `${left} ${right}`;
-    const forumContext = /forum posts|signal board resource|persistent cloudflare (?:kv|d1)/i.test(html);
-    const machineLabel = /^(machine-readable data|forum posts json|forum posts export)$/i.test(plain(body));
-    if (machineLabel && (forumContext || /machine-data-link/i.test(tag))) {
-      return `<a${left}href=${quote}downloads/forum-posts.json${quote}${right}>${body}</a>`;
+    const machineOrForumLabel = /^(machine-readable data|forum posts json|forum posts export)$/i.test(visibleLabel);
+    const genericSourceLabel = /^(source file|source export)$/i.test(visibleLabel);
+    const dossierContext = isDossierExportContext(html, file);
+
+    if ((machineOrForumLabel && (dossierContext || /machine-data-link/i.test(tag))) || (genericSourceLabel && dossierContext)) {
+      const repairedLabel = genericSourceLabel ? 'Forum Posts Export' : body;
+      return `<a${left}href=${quote}downloads/forum-posts.json${quote}${right}>${repairedLabel}</a>`;
     }
-    unresolved.push(`${path.relative(root, file).replace(/\\/g, '/')}: ${plain(body) || '(no label)'}`);
+
+    unresolved.push(`${path.relative(root, file).replace(/\\/g, '/')}: ${visibleLabel || '(no label)'}`);
     return full;
   });
   if (html !== before) {
@@ -51,7 +61,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   mode: outputOnly ? 'cloudflare-output' : 'source-tree',
   changed,
-  unresolved
+  unresolved,
+  repairedRoute: 'downloads/forum-posts.json',
+  boundary: 'Only empty controls in an explicit dossier/forum-export context are repaired automatically. Unknown empty links still fail the build.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', outputOnly ? 'empty-public-controls-output.json' : 'empty-public-controls.json'), `${JSON.stringify(report, null, 2)}\n`);

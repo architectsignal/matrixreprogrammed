@@ -37,18 +37,32 @@ function readText(file) {
   if (buffer.includes(0)) return null;
   return buffer.toString('utf8');
 }
+function replaceSafely(text) {
+  let next = text;
+  const protectedValues = [];
+  let index = 0;
+  for (const to of replacements.values()) {
+    const token = `__MATRIX_CANONICAL_SOURCE_${index++}__`;
+    if (next.includes(to)) {
+      next = next.split(to).join(token);
+      protectedValues.push([token, to]);
+    }
+  }
+  for (const [from, to] of replacements) {
+    const count = next.split(from).length - 1;
+    if (!count) continue;
+    next = next.split(from).join(to);
+    replacementCounts[from].count += count;
+  }
+  for (const [token, to] of protectedValues) next = next.split(token).join(to);
+  return next;
+}
 
 const files = walk(root).filter(isTextCandidate);
 for (const file of files) {
   const before = readText(file);
   if (before === null) continue;
-  let after = before;
-  for (const [from, to] of replacements) {
-    const count = after.split(from).length - 1;
-    if (!count) continue;
-    after = after.split(from).join(to);
-    replacementCounts[from].count += count;
-  }
+  const after = replaceSafely(before);
   if (after !== before) {
     fs.writeFileSync(file, after);
     changed.push(display(file));
@@ -56,15 +70,16 @@ for (const file of files) {
 }
 
 const residual = [];
+const canonicalSeen = new Set();
 for (const file of files) {
   const text = readText(file);
   if (text === null) continue;
-  for (const from of replacements.keys()) if (text.includes(from)) residual.push({ file: display(file), url: from });
+  for (const [from, to] of replacements) {
+    if (text.includes(from) && !text.includes(to)) residual.push({ file: display(file), url: from });
+    if (text.includes(to)) canonicalSeen.add(to);
+  }
 }
-const canonicalPresent = Object.values(replacementCounts).every(item => item.count > 0 || files.some(file => {
-  const text = readText(file);
-  return text !== null && text.includes(item.to);
-}));
+const canonicalPresent = [...replacements.values()].every(to => canonicalSeen.has(to));
 const ok = residual.length === 0 && canonicalPresent;
 const report = {
   ok,
@@ -72,6 +87,7 @@ const report = {
   changed: [...new Set(changed)],
   replacements: replacementCounts,
   residual,
+  canonicalPresent: [...canonicalSeen],
   sources: {
     bis: 'BIS Innovation Hub CBDC topic',
     worldBank: 'World Bank Projects & Operations advanced search',
@@ -82,5 +98,5 @@ const report = {
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-if (!ok) throw new Error(`Canonical external source repair failed: ${JSON.stringify({ residual, replacementCounts })}`);
+if (!ok) throw new Error(`Canonical external source repair failed: ${JSON.stringify({ residual, canonicalSeen: [...canonicalSeen] })}`);
 console.log(`Canonical external source repair passed: ${changed.length} file(s) changed; ${Object.values(replacementCounts).reduce((sum, item) => sum + item.count, 0)} stale reference(s) replaced.`);

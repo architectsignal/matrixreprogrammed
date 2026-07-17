@@ -56,6 +56,24 @@ function replaceSafely(text) {
   for (const [from, to] of ordered) next = next.split(from).join(to);
   return next;
 }
+function ensureMainArchiveAnchor(file) {
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return false;
+  const before = fs.readFileSync(file, 'utf8');
+  if (!/href=["']#main-archive["']/i.test(before) || /id=["']main-archive["']/i.test(before)) return false;
+  let after = before;
+  const main = after.match(/<main\b([^>]*)>/i);
+  if (!main) {
+    const body = after.match(/<body\b[^>]*>/i);
+    if (!body) throw new Error(`${display(file)} links to #main-archive but has no body or main element`);
+    after = after.replace(body[0], `${body[0]}<span id="main-archive" tabindex="-1"></span>`);
+  } else if (/\bid\s*=/i.test(main[1])) {
+    after = after.replace(main[0], `<span id="main-archive" tabindex="-1"></span>${main[0]}`);
+  } else {
+    after = after.replace(main[0], `<main id="main-archive"${main[1]}>`);
+  }
+  writeIfChanged(file, before, after);
+  return true;
+}
 
 for (const base of [root, site]) {
   if (!fs.existsSync(base)) continue;
@@ -65,6 +83,13 @@ for (const base of [root, site]) {
     writeIfChanged(file, before, replaceSafely(before));
   }
 }
+
+const homepageTargets = [
+  path.join(root, 'index.html'),
+  path.join(site, 'index.html'),
+  path.join(site, 'index')
+];
+for (const file of homepageTargets) ensureMainArchiveAnchor(file);
 
 const auditFile = path.join(root, 'scripts', 'deep-production-site-audit-v2.js');
 if (!fs.existsSync(auditFile)) throw new Error('deep-production-site-audit-v2.js is missing');
@@ -110,6 +135,11 @@ for (const marker of [
   '/api/email/admin/test-transactional'
 ]) checks.push({ file: 'scripts/deep-production-site-audit-v2.js', marker, ok: audit.includes(marker) });
 checks.push({ file: 'official-source-policy', marker: 'FBI CDE current root accepted', ok: !forbidden.includes('https://cde.ucr.cjis.gov/') });
+for (const file of homepageTargets) {
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) continue;
+  const source = fs.readFileSync(file, 'utf8');
+  checks.push({ file: display(file), marker: 'main-archive target', ok: !/href=["']#main-archive["']/i.test(source) || /id=["']main-archive["']/i.test(source) });
+}
 
 const ok = checks.every(item => item.ok !== false);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -122,7 +152,8 @@ fs.writeFileSync(path.join(root, 'downloads', 'final-live-audit-and-external-lin
   officialSourceNotes: {
     fbiCde: 'The current official CDE root is valid. Retired or fragile /LATEST/ deep links are normalized back to the root.'
   },
+  homepageAnchorRepair: 'Any Enter The System #main-archive link is matched to the first semantic main element in both source and Cloudflare output.',
   boundary: 'Valid extensionless HTML is accepted by body plus optional content type; protected downloads may fail closed with HTTP 401; live API contracts test the deployed PayPal donation and transactional-email routes; stale public references are replaced with current official routes.'
 }, null, 2)}\n`);
 if (!ok) throw new Error(`Final live audit/link repair failed: ${JSON.stringify(checks.filter(item => item.ok === false))}`);
-console.log(`Final live audit rules and official links repaired (${[...new Set(changed)].length} file(s) changed).`);
+console.log(`Final live audit rules, homepage anchor and official links repaired (${[...new Set(changed)].length} file(s) changed).`);

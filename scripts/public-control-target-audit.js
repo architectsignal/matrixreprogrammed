@@ -22,6 +22,12 @@ function walk(dir, out = []) {
 function isHiddenTag(tag) {
   return /\bhidden\b/i.test(tag) || /\binternal-only\b/i.test(tag) || /data-internal-only=["']true["']/i.test(tag);
 }
+function isIndividualPowerDossier(html) {
+  return /Loading dossier/i.test(html)
+    && /data\/power-dossiers\.json/i.test(html)
+    && /\bid=["']name["']/i.test(html)
+    && /\bid=["']content["']/i.test(html);
+}
 
 for (const file of walk(base)) {
   let html = '';
@@ -49,7 +55,7 @@ for (const file of walk(base)) {
       if (!id && !hook && !/onclick\s*=/i.test(tag)) warnings.push(`${rel(file)}: type=button has no visible script hook: ${tag.slice(0, 180)}`);
     }
   }
-  if (/Loading dossier/i.test(html) && /data\/power-dossiers\.json/i.test(html) && !/power-dossier-runtime\.js/i.test(html)) problems.push(`${rel(file)}: dossier can remain stuck in loading state without resilient runtime`);
+  if (isIndividualPowerDossier(html) && !/power-dossier-runtime\.js/i.test(html)) problems.push(`${rel(file)}: dossier can remain stuck in loading state without resilient runtime`);
 }
 
 const report = {

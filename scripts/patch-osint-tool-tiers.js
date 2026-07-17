@@ -77,4 +77,5 @@ require('./sanitize-machine-entity-outputs.js');
 require('./patch-geographic-power-atlas-runtime.js');
 require('./patch-login-email-delivery.js');
 require('./disable-production-kv-traffic.js');
-console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. KV-safe production policy applied.');
+require('./repair-empty-public-controls.js');
+console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. KV-safe production policy and empty-control repair applied.');

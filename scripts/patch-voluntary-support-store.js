@@ -33,13 +33,18 @@ function ensureAssets(html) {
   }
   return next;
 }
+function suggestedAmount(article, fallback = 25) {
+  const match = article.match(/<div\b[^>]*class=["'][^"']*\bprice\b[^"']*["'][^>]*>\s*€\s*([\d,.]+)/i);
+  if (!match) return fallback;
+  const value = Number(String(match[1]).replace(/,/g, ''));
+  return Number.isFinite(value) && value >= 1 && value <= 5000 ? value : fallback;
+}
 function transformArticle(article, options = {}) {
   const titleMatch = article.match(/<h2>([\s\S]*?)<\/h2>/i) || article.match(/<h3>([\s\S]*?)<\/h3>/i);
   const label = stripTags(titleMatch ? titleMatch[1] : options.label || 'Matrix Reprogrammed research');
   const idMatch = article.match(/\bid="([^"]+)"/i);
   const key = slugify(options.key || (idMatch ? idMatch[1].replace(/^buy-/, '') : label));
-  const priceMatch = article.match(/<div class="price">€\s*(29|39)(?:\.\d{1,2})?<\/div>/i);
-  const suggested = Number(priceMatch ? priceMatch[1] : options.suggested || 25);
+  const suggested = suggestedAmount(article, Number(options.suggested) || 25);
   let next = article;
   if (/data-donation-card/i.test(next)) {
     next = next.replace(/\bdata-donation-label="[^"]*"/i, `data-donation-label="${attr(label)}"`);
@@ -47,10 +52,11 @@ function transformArticle(article, options = {}) {
   } else {
     next = next.replace(/<article\b/i, `<article data-donation-card data-donation-key="${attr(key)}" data-donation-label="${attr(label)}"`);
   }
-  next = next.replace(/<div class="price">€\s*(?:29|39)(?:\.\d{1,2})?<\/div>/i, '<div class="price">Choose your donation amount</div>');
-  next = next.replace(/<a class="btn alt" href="daily-control-brief-signup\.html">Buy Placeholder<\/a>/i, '');
+  next = next.replace(/<div\b[^>]*class=["'][^"']*\bprice\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i, '<div class="price">Choose your donation amount</div>');
+  next = next.replace(/<a\b[^>]*>\s*Buy Placeholder\s*<\/a>/gi, '');
   next = next.replace(/<li>Paid full PDF deck placeholder<\/li>/gi, '<li>Voluntary support option from €1 to €5,000</li>');
   next = next.replace(/<li>Paid print-ready deck placeholder<\/li>/gi, '<li>Public preview and evidence routes remain free</li>');
+  next = next.replace(/\b(?:€\s*\d+(?:[.,]\d+)?(?:\s*\/\s*month)?\s*)?placeholder\b/gi, 'voluntary support option');
   if (!next.includes('data-donation-panel')) next = next.replace('</article>', `${supportPanel(key, label, suggested)}</article>`);
   return next;
 }
@@ -71,9 +77,23 @@ function patchDeckStore(html) {
   next = next.replace(/Free online card walls plus paid full PDF, print-ready and future collector editions\./g, 'Free online card walls with an optional user-chosen support payment for the research and future editions.');
   return next;
 }
+function patchPremiumReports(html) {
+  let next = ensureAssets(html);
+  next = next.replace(/<article class="money-card"(?:\s+id="[^"]+")?>[\s\S]*?<\/article>/gi, article => {
+    if (!/<div\b[^>]*class=["'][^"']*\bprice\b/i.test(article) && !/Buy Placeholder/i.test(article)) return article;
+    return transformArticle(article, { suggested: 25 });
+  });
+  next = next.replace(/Evidence-bounded reports and trackers made from cards, dossiers, clocks and routed conclusions\./g, 'Free evidence-bounded reports, trackers and previews, with an optional user-chosen support payment.');
+  return next;
+}
 
+const transforms = [
+  ['store.html', patchStore],
+  ['card-deck-store.html', patchDeckStore],
+  ['premium-reports.html', patchPremiumReports]
+];
 for (const base of roots) {
-  for (const [relative, transform] of [['store.html', patchStore], ['card-deck-store.html', patchDeckStore]]) {
+  for (const [relative, transform] of transforms) {
     const file = path.join(base, relative);
     if (!fs.existsSync(file)) continue;
     const before = fs.readFileSync(file, 'utf8');
@@ -93,14 +113,15 @@ for (const base of roots) {
 
 const checks = [];
 for (const base of roots) {
-  for (const relative of ['store.html', 'card-deck-store.html']) {
+  for (const relative of transforms.map(item => item[0])) {
     const file = path.join(base, relative);
     if (!fs.existsSync(file)) continue;
     const html = fs.readFileSync(file, 'utf8');
     checks.push({
       file: path.relative(root, file).replace(/\\/g, '/'),
       donationCards: (html.match(/data-donation-card/g) || []).length,
-      fixedPricesRemoved: !/<div class="price">€\s*(29|39)/i.test(html),
+      fixedPricesRemoved: !/<div\b[^>]*class=["'][^"']*\bprice\b[^"']*["'][^>]*>\s*€\s*\d/i.test(html),
+      buyPlaceholdersRemoved: !/Buy Placeholder/i.test(html),
       rangePresent: html.includes('€1 to €5,000'),
       scriptPresent: html.includes('paypal-voluntary-support.js'),
       legalBoundary: html.includes('not a charitable or tax-deductible donation'),
@@ -108,8 +129,8 @@ for (const base of roots) {
     });
   }
 }
-const ok = checks.length >= 2 && checks.every(row => row.donationCards > 0 && row.fixedPricesRemoved && row.rangePresent && row.scriptPresent && row.legalBoundary && row.freeBoundary);
+const ok = checks.length >= 3 && checks.every(row => row.donationCards > 0 && row.fixedPricesRemoved && row.buyPlaceholdersRemoved && row.rangePresent && row.scriptPresent && row.legalBoundary && row.freeBoundary);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'voluntary-support-store-patch.json'), `${JSON.stringify({ ok, generatedAt: new Date().toISOString(), touched: [...new Set(touched)], checks, amount: { minimum: 1, maximum: 5000, currency: 'EUR' }, evidenceAccessRemainsFree: true }, null, 2)}\n`);
 if (!ok) throw new Error(`Voluntary support store patch failed: ${JSON.stringify(checks)}`);
-console.log(`Voluntary support store cards patched across source and Cloudflare output (${[...new Set(touched)].length} file(s)).`);
+console.log(`Voluntary support cards patched across store, deck store and premium reports (${[...new Set(touched)].length} file(s)).`);

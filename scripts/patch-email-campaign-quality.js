@@ -10,14 +10,12 @@ let source = fs.readFileSync(workerPath, 'utf8');
 let changed = false;
 
 function escapeRegex(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
-function replaceFunctionLine(prefix, replacement) {
+function replaceFunctionLine(prefix, replacement, marker) {
+  if (marker && source.includes(marker)) return;
   const pattern = new RegExp(`^${escapeRegex(prefix)}.*$`, 'm');
   if (!pattern.test(source)) throw new Error(`Email campaign function anchor missing: ${prefix}`);
-  const match = source.match(pattern)[0];
-  if (match !== replacement) {
-    source = source.replace(pattern, () => replacement);
-    changed = true;
-  }
+  source = source.replace(pattern, () => replacement);
+  changed = true;
 }
 function insertBefore(prefix, marker, block) {
   if (source.includes(marker)) return;
@@ -36,14 +34,14 @@ replaceFunctionLine('async function issueToken(', `async function issueToken(env
   else await env.MEMBERS_DB.prepare('UPDATE email_action_tokens SET revoked_at=? WHERE member_id=? AND purpose=? AND expires_at<=? AND revoked_at IS NULL').bind(stamp,memberId,purpose,stamp).run();
   await env.MEMBERS_DB.prepare('INSERT INTO email_action_tokens (id,member_id,token_hash,purpose,scope_json,expires_at,created_at) VALUES (?,?,?,?,?,?,?)').bind(id(env,'email-token'),memberId,tokenHash,purpose,JSON.stringify(scope),iso(env,minutes*60*1000),stamp).run();
   return raw;
-}`);
+}`, "const reusable=['preferences','unsubscribe'].includes(purpose)");
 
 replaceFunctionLine('async function enqueue(', `async function enqueue(env,member,{campaignId=null,messageKind,subject,htmlContent,textContent,idempotencyKey,headers=null}){
   const outboxId=id(env,'email-outbox');
   const payload={to:{email:member.email,name:member.display_name||'Reader'},subject,htmlContent,textContent,...(headers&&typeof headers==='object'?{headers}:{})};
   await env.MEMBERS_DB.prepare(\`INSERT OR IGNORE INTO email_outbox (id,member_id,campaign_id,message_kind,recipient_email_hash,payload_json,idempotency_key,status,available_at,updated_at,created_at) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)\`).bind(outboxId,member.id,campaignId,messageKind,await emailHash(member.email),JSON.stringify(payload),idempotencyKey,iso(env),iso(env),iso(env)).run();
   return outboxId;
-}`);
+}`, 'idempotencyKey,headers=null');
 
 replaceFunctionLine('async function loadCampaignSource(', `async function loadCampaignSource(request,env,kind){
   if(!env?.ASSETS||typeof env.ASSETS.fetch!=='function')return null;
@@ -57,7 +55,7 @@ replaceFunctionLine('async function loadCampaignSource(', `async function loadCa
     }catch{}
   }
   return null;
-}`);
+}`, '/data/weekly-investigation-conclusions.json');
 
 replaceFunctionLine('function sourceItems(', `function sourceItems(source){
   const data=source?.data;
@@ -81,7 +79,7 @@ replaceFunctionLine('function sourceItems(', `function sourceItems(source){
   if(Array.isArray(data.meaningfulSourceChanges))data.meaningfulSourceChanges.slice(0,3).forEach(add);
   for(const key of ['briefings','findings','records','items','entries','results','cards'])if(Array.isArray(data[key]))data[key].forEach(add);
   return rows.slice(0,10);
-}`);
+}`, 'const seen=new Set()');
 
 const helperBlock = `function campaignRow(item,index){
   if(typeof item==='string')return{heading:clean(item,180)||\`Signal \${index+1}\`,summary:'',label:'Evidence-bounded conclusion',route:'',canonicalId:''};
@@ -121,7 +119,7 @@ replaceFunctionLine('async function queueCampaign(', `async function queueCampai
   const status=recipients.length?'sending':'sent';
   await env.MEMBERS_DB.prepare(\`UPDATE email_campaigns SET status=?,started_at=COALESCE(started_at,?),completed_at=?,recipient_count=?,updated_at=? WHERE id=?\`).bind(status,stamp,recipients.length?null:stamp,recipients.length,stamp,campaign.id).run();
   return{recipientCount:recipients.length,status};
-}`);
+}`, "'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'");
 
 replaceFunctionLine('async function automatedCampaign(', `async function automatedCampaign(request,env,kind){
   if(!automationEnabled(env))return{enabled:false,created:false,reason:'EMAIL_AUTOMATION_ENABLED is not true'};
@@ -141,7 +139,7 @@ replaceFunctionLine('async function automatedCampaign(', `async function automat
   const delivery=await processOutbox(env,{limit:100});
   await audit(env,'email-automation','email.campaign.automated','email_campaign',campaign.id,{kind,source:sourceLabel,retryQuarantine,...queued,...delivery});
   return{enabled:true,created:true,campaignId:campaign.id,source:sourceLabel,retryQuarantine,...queued,...delivery};
-}`);
+}`, "const retryQuarantine=typeof quarantineConfiguredRetries==='function'");
 
 for (const marker of [
   '/data/daily-brain-brief.json',

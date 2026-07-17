@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const generatedCleanup = require('./cleanup-generated-machine-pages.js');
 const root = process.cwd();
 function exists(p) { return fs.existsSync(path.join(root, p)); }
 function read(p) { return fs.readFileSync(path.join(root, p), 'utf8'); }
@@ -52,7 +53,9 @@ if (process.env.MATRIX_SKIP_RECORD_FEEDS !== '1') {
     runNodeScript('scripts/fetch-public-record-feeds.js');
     runNodeScript('scripts/patch-brain-with-record-events.js');
     runNodeScript('scripts/build-change-detection-engine.js');
+    generatedCleanup.cleanEntityBriefs();
     runNodeScript('scripts/build-entity-daily-briefs.js');
+    generatedCleanup.cleanEntityExposure();
     runNodeScript('scripts/build-entity-record-review.js');
     runNodeScript('scripts/build-private-contractor-intelligence.js');
     runNodeScript('scripts/build-master-brief-engine.js');

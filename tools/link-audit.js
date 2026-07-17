@@ -8,37 +8,43 @@ const failures = [];
 const warnings = [];
 const dynamicWorkerRoutes = new Set([
   'forum-health',
-  '/forum-health',
   'forum-feed',
-  '/forum-feed',
-  'submit-forum-post',
-  '/submit-forum-post',
-  'report-forum-post',
-  '/report-forum-post',
-  'track-event',
-  '/track-event',
-  'intro-voice',
-  '/intro-voice',
-  'downloads/forum-posts.json',
-  '/downloads/forum-posts.json',
-  'downloads/forum-posts.md',
-  '/downloads/forum-posts.md',
+  'forum-feed-main',
+  'forum-feed-speculation',
+  'forum-feed-epstein-alive',
   'forum-posts.json',
-  '/forum-posts.json',
   'forum-posts.md',
-  '/forum-posts.md'
+  'downloads/forum-posts.json',
+  'downloads/forum-posts.md',
+  'submit-forum-post',
+  'submit-main-post',
+  'submit-speculation-post',
+  'submit-epstein-alive-post',
+  'report-forum-post',
+  'report-main-post',
+  'report-speculation-post',
+  'report-epstein-alive-post',
+  'track-event',
+  'intro-voice',
+  '.netlify/functions/forum-feed',
+  '.netlify/functions/submit-forum-post',
+  '.netlify/functions/report-forum-post'
 ]);
 
 function normalizeTarget(target) {
   return target.split('#')[0].split('?')[0].trim();
 }
 
+function normalizedRoute(target) {
+  return normalizeTarget(target).replace(/^\/+/, '');
+}
+
 function existsLocal(target) {
   const clean = normalizeTarget(target);
   if (!clean || clean.startsWith('#')) return true;
-  if (dynamicWorkerRoutes.has(clean)) return true;
-  if (dynamicWorkerRoutes.has(clean.replace(/^\//, ''))) return true;
-  if (clean.startsWith('/')) return fileSet.has(clean.replace(/^\//, ''));
+  const route = normalizedRoute(clean);
+  if (dynamicWorkerRoutes.has(route)) return true;
+  if (clean.startsWith('/')) return fileSet.has(route) || fs.existsSync(path.join(root, route));
   return fileSet.has(clean) || fs.existsSync(path.join(root, clean));
 }
 
@@ -57,7 +63,7 @@ for (const file of htmlFiles) {
   let match;
   while ((match = attrRegex.exec(html))) {
     const link = match[1].trim();
-    if (!link || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('javascript:')) continue;
+    if (!link || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('javascript:') || link.startsWith('data:')) continue;
     if (link.startsWith('http://') || link.startsWith('https://')) continue;
     if (link.startsWith('#')) {
       const id = link.slice(1);
@@ -69,7 +75,7 @@ for (const file of htmlFiles) {
       failures.push(`${file}: missing local target ${link}`);
       continue;
     }
-    if (anchor && localFile === file && !ids.has(anchor)) failures.push(`${file}: missing anchor target ${link}`);
+    if (anchor && normalizeTarget(localFile) === file && !ids.has(anchor)) failures.push(`${file}: missing anchor target ${link}`);
   }
 
   if (!html.includes('<script src="matrix.js"></script>') && file !== 'index_v2.html') {
@@ -80,15 +86,26 @@ for (const file of htmlFiles) {
   }
 }
 
+const report = {
+  ok: failures.length === 0,
+  generatedAt: new Date().toISOString(),
+  htmlFiles: htmlFiles.length,
+  dynamicWorkerRoutes: [...dynamicWorkerRoutes].sort(),
+  failureCount: failures.length,
+  warningCount: warnings.length,
+  failures,
+  warnings
+};
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'link-audit-report.json'), JSON.stringify(report, null, 2));
+
 if (warnings.length) {
   console.log('\nWARNINGS');
-  warnings.forEach((w) => console.log(`- ${w}`));
+  warnings.forEach((warning) => console.log(`- ${warning}`));
 }
-
 if (failures.length) {
   console.error('\nBROKEN LINKS');
-  failures.forEach((f) => console.error(`- ${f}`));
+  failures.forEach((failure) => console.error(`- ${failure}`));
   process.exit(1);
 }
-
 console.log(`Link audit passed for ${htmlFiles.length} HTML files. Dynamic Worker endpoints allowed: ${dynamicWorkerRoutes.size}.`);

@@ -57,7 +57,7 @@ jobs:
       - name: Exhaustive static audit
         id: static_audit
         continue-on-error: true
-        run: node scripts/deep-production-site-audit.js --static
+        run: node scripts/deep-production-site-audit-v2.js --static
 
       - name: Existing audit suite
         id: existing_audits
@@ -76,7 +76,7 @@ jobs:
         continue-on-error: true
         env:
           SITE_URL: https://matrixreprogrammed.com
-        run: node scripts/deep-production-site-audit.js --live
+        run: node scripts/deep-production-site-audit-v2.js --live
 
       - name: Publish sanitized audit summary
         if: always()
@@ -94,7 +94,7 @@ jobs:
             const reports = [staticReport, liveReport].filter(Boolean);
             const hard = reports.flatMap(report => report.hardIssues || []);
             const warnings = reports.flatMap(report => report.warnings || []);
-            const coverage = reports.map(report => `- ${report.mode}: ${JSON.stringify(report.stats || {})}`).join('\n') || '- No deep report was produced; inspect the build log.';
+            const coverage = reports.map(report => `- ${report.mode} v${report.version || 1}: ${JSON.stringify(report.stats || {})}`).join('\n') || '- No deep report was produced; inspect the build log.';
             const stageStatus = {
               static: '${{ steps.static_audit.outcome }}',
               existing: '${{ steps.existing_audits.outcome }}',
@@ -164,7 +164,6 @@ jobs:
             downloads/site-pressure-report.json
             downloads/site-wide-function-audit.json
             downloads/final-production-reconcile.json
-            downloads/deep-audit-accuracy-patch.json
             downloads/deep-audit-public-defect-repair.json
             downloads/voluntary-support-store-patch.json
           if-no-files-found: ignore

@@ -6,7 +6,9 @@
 name = "matrixreprogrammed"
 main = "src/worker-production.js"
 compatibility_date = "2026-06-25"
-keep_vars = true
+# Wrangler configuration is the source of truth for non-secret variables.
+# Secrets are preserved by Cloudflare deployments; dashboard variable drift is deliberately overwritten.
+keep_vars = false
 
 routes = [
   { pattern = "matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" },

@@ -9,16 +9,22 @@ const reportPath = path.join(root, 'downloads', 'phase1-cloudflare-config-enforc
 if (!fs.existsSync(tomlPath)) throw new Error('wrangler.toml is missing');
 if (!fs.existsSync(jsoncPath)) throw new Error('wrangler.jsonc is missing');
 
+const lockedFlags = [
+  ['EMAIL_AUTOMATION_ENABLED', 'false'],
+  ['EMAIL_TRANSACTIONAL_ENABLED', 'false'],
+  ['BREVO_DOMAIN_AUTHENTICATED', 'false'],
+  ['PAYPAL_DONATIONS_ENABLED', 'false']
+];
+
 function enforceToml(before) {
   let after = before;
-  if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) {
-    after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = false');
-  } else {
+  if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = false');
+  else {
     const compatibilityLine = /^compatibility_date\s*=.*$/m;
     if (!compatibilityLine.test(after)) throw new Error('wrangler.toml compatibility_date anchor is missing');
     after = after.replace(compatibilityLine, match => `${match}\nkeep_vars = false`);
   }
-  for (const [name, value] of [['EMAIL_AUTOMATION_ENABLED', 'false'], ['PAYPAL_DONATIONS_ENABLED', 'false']]) {
+  for (const [name, value] of lockedFlags) {
     const pattern = new RegExp(`^${name}\\s*=\\s*\"(?:true|false)\"\\s*$`, 'm');
     if (pattern.test(after)) after = after.replace(pattern, `${name} = \"${value}\"`);
     else {
@@ -32,14 +38,13 @@ function enforceToml(before) {
 
 function enforceJsonc(before) {
   let after = before;
-  if (/"keep_vars"\s*:\s*(?:true|false)/.test(after)) {
-    after = after.replace(/"keep_vars"\s*:\s*(?:true|false)/, '"keep_vars": false');
-  } else {
+  if (/"keep_vars"\s*:\s*(?:true|false)/.test(after)) after = after.replace(/"keep_vars"\s*:\s*(?:true|false)/, '"keep_vars": false');
+  else {
     const compatibility = /"compatibility_date"\s*:\s*"[^"]+"\s*,/;
     if (!compatibility.test(after)) throw new Error('wrangler.jsonc compatibility_date anchor is missing');
     after = after.replace(compatibility, match => `${match}\n  "keep_vars": false,`);
   }
-  for (const [name, value] of [['EMAIL_AUTOMATION_ENABLED', 'false'], ['PAYPAL_DONATIONS_ENABLED', 'false']]) {
+  for (const [name, value] of lockedFlags) {
     const pattern = new RegExp(`\"${name}\"\\s*:\\s*\"(?:true|false)\"`);
     if (pattern.test(after)) after = after.replace(pattern, `\"${name}\": \"${value}\"`);
     else {
@@ -61,6 +66,8 @@ for (const [label, text, checks] of [
   ['wrangler.toml', tomlAfter, [
     [/^keep_vars\s*=\s*false\s*$/m, 'keep_vars must be false'],
     [/^EMAIL_AUTOMATION_ENABLED\s*=\s*"false"\s*$/m, 'email automation must be false'],
+    [/^EMAIL_TRANSACTIONAL_ENABLED\s*=\s*"false"\s*$/m, 'transactional email must remain disabled until readiness approval'],
+    [/^BREVO_DOMAIN_AUTHENTICATED\s*=\s*"false"\s*$/m, 'Brevo domain authentication must remain unconfirmed until DNS verification'],
     [/^PAYPAL_DONATIONS_ENABLED\s*=\s*"false"\s*$/m, 'voluntary support checkout must be disabled by default'],
     [/^PAYPAL_ENVIRONMENT\s*=\s*"sandbox"\s*$/m, 'PayPal must remain sandbox'],
     [/^PAYPAL_PRODUCTION_ENABLED\s*=\s*"false"\s*$/m, 'PayPal production must remain disabled']
@@ -68,14 +75,15 @@ for (const [label, text, checks] of [
   ['wrangler.jsonc', jsoncAfter, [
     [/"keep_vars"\s*:\s*false/, 'keep_vars must be false'],
     [/"EMAIL_AUTOMATION_ENABLED"\s*:\s*"false"/, 'email automation must be false'],
+    [/"EMAIL_TRANSACTIONAL_ENABLED"\s*:\s*"false"/, 'transactional email must remain disabled until readiness approval'],
+    [/"BREVO_DOMAIN_AUTHENTICATED"\s*:\s*"false"/, 'Brevo domain authentication must remain unconfirmed until DNS verification'],
     [/"PAYPAL_DONATIONS_ENABLED"\s*:\s*"false"/, 'voluntary support checkout must be disabled by default'],
     [/"PAYPAL_ENVIRONMENT"\s*:\s*"sandbox"/, 'PayPal must remain sandbox'],
     [/"PAYPAL_PRODUCTION_ENABLED"\s*:\s*"false"/, 'PayPal production must remain disabled']
   ]]
 ]) {
   for (const [pattern, message] of checks) if (!pattern.test(text)) failures.push(`${label}: ${message}`);
-  if (/EMAIL_AUTOMATION_ENABLED[^\n]*true/.test(text)) failures.push(`${label}: EMAIL_AUTOMATION_ENABLED=true remains`);
-  if (/PAYPAL_DONATIONS_ENABLED[^\n]*true/.test(text)) failures.push(`${label}: PAYPAL_DONATIONS_ENABLED=true remains`);
+  for (const [name] of lockedFlags) if (new RegExp(`${name}[^\\n]*true`).test(text)) failures.push(`${label}: ${name}=true remains`);
 }
 
 if (!failures.length) {
@@ -93,11 +101,13 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   activePrecedenceProtected: true,
   keepVars: false,
   emailAutomationEnabled: false,
+  emailTransactionalEnabled: false,
+  brevoDomainAuthenticated: false,
   paypalDonationsEnabled: false,
   paypalEnvironment: 'sandbox',
   paypalProductionEnabled: false,
   failures,
-  boundary: 'Both Wrangler configuration formats are locked after every generator. The active JSONC configuration cannot preserve dashboard drift or reactivate automated email, voluntary support checkout, or live PayPal.'
+  boundary: 'Both Wrangler configuration formats are locked after every generator. Automated marketing, transactional email, Brevo domain approval, voluntary support checkout and live PayPal require separate deliberate activation.'
 }, null, 2)}\n`);
 if (failures.length) throw new Error(`Phase 1 Cloudflare configuration enforcement failed: ${failures.join('; ')}`);
-console.log(`Phase 1 Cloudflare configuration enforced in TOML and JSONC${changed.toml || changed.jsonc ? ' and repaired' : ''}: email automation false, voluntary support disabled, PayPal sandbox, live charging disabled.`);
+console.log(`Cloudflare safety configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: marketing off, transactional email off, Brevo domain unconfirmed, voluntary support off, PayPal sandbox.`);

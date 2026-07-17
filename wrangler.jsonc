@@ -3,7 +3,7 @@
   "name": "matrixreprogrammed",
   "main": "src/worker-production.js",
   "compatibility_date": "2026-06-28",
-  "keep_vars": true,
+  "keep_vars": false,
   "routes": [
     {
       "pattern": "matrixreprogrammed.com/*",
@@ -21,7 +21,7 @@
     "PAYPAL_ENVIRONMENT": "sandbox",
     "PAYPAL_SANDBOX_ENABLED": "true",
     "PAYPAL_PRODUCTION_ENABLED": "false",
-    "EMAIL_AUTOMATION_ENABLED": "true"
+    "EMAIL_AUTOMATION_ENABLED": "false"
   },
   "assets": {
     "binding": "ASSETS",

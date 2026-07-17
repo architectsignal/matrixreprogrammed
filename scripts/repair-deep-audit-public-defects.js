@@ -7,6 +7,7 @@ const bases = [root, site].filter((value, index, all) => fs.existsSync(value) &&
 const changed = [];
 const removed = [];
 const checks = [];
+const ignored = new Set(['.git', '.github', 'node_modules', '.wrangler', 'browsertrix-output', 'downloads', 'scripts', 'tools']);
 
 function display(file) { return path.relative(root, file).replace(/\\/g, '/'); }
 function patch(base, relative, transform) {
@@ -29,6 +30,16 @@ function remove(base, relative) {
   fs.rmSync(file, { recursive: true, force: true });
   removed.push(display(file));
 }
+function walkAuditedText(dir, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory() && ignored.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkAuditedText(full, out);
+    else if (/\.(?:html?|json|md|txt|csv)$/i.test(entry.name) || (!path.extname(entry.name) && fs.statSync(full).size < 5 * 1024 * 1024)) out.push(full);
+  }
+  return out;
+}
 function epsteinForm() {
   return `<form id="epstein-source-intake-form" class="ep-card" method="post" action="/submit-forum-post"><input type="hidden" name="board" value="main"/><input type="hidden" name="category" value="Epstein Source Intake"/><input type="hidden" name="title" value="Epstein Source Intake Lead"/><input type="hidden" name="body" value=""/><div class="form-grid"><label>Submitter name optional<input name="name" maxlength="80" autocomplete="name"/></label><label>Email optional<input name="email" type="email" maxlength="240" autocomplete="email"/></label><label>Source URL<input name="sourceUrl" type="url" placeholder="https://..."/></label><label>Document title<input name="leadTitle" maxlength="180" required/></label><label>Source type<select name="sourceType" required><option value="flight log">Flight log</option><option value="address book">Address book</option><option value="phone book">Phone book</option><option value="calendar">Calendar</option><option value="email">Email</option><option value="court filing">Court filing</option><option value="deposition">Deposition</option><option value="transcript">Transcript</option><option value="exhibit">Exhibit</option><option value="official record">Official record</option><option value="settlement document">Settlement document</option><option value="judgment">Judgment</option><option value="civil complaint">Civil complaint</option><option value="financial record">Financial record</option><option value="property record">Property record</option><option value="company record">Company record</option><option value="press report">Press report</option><option value="official release">Official release</option><option value="archive item">Archive item</option><option value="unclear / needs review">Unclear / needs review</option></select></label><label>Page number if known<input name="pageNumber" maxlength="50"/></label><label>Document date if known<input name="sourceDate" maxlength="80"/></label></div><label>Entity names mentioned<textarea name="entities" maxlength="1600"></textarea></label><label>What the source shows<textarea name="shows" maxlength="1600" required></textarea></label><label>What the source does not show<textarea name="doesNotShow" maxlength="1200" required></textarea></label><label>Missing record or next check<textarea name="missingRecord" maxlength="1200"></textarea></label><label>Additional review note<textarea name="note" maxlength="1600" required></textarea></label><label><input name="legalSensitive" value="yes" type="checkbox" style="width:auto"/> Legal-sensitive</label><label><input name="correction" value="yes" type="checkbox" style="width:auto"/> Correction / downgrade request</label><p class="mini">Submissions enter pending review. They do not alter a page, evidence grade, card or conclusion until checked.</p><button class="btn" type="submit">Submit for Pending Review</button></form>`;
 }
@@ -37,7 +48,8 @@ function epsteinScript() {
 }
 function repairEpstein(html) {
   let next = html;
-  next = next.replace(/<form class="ep-card">[\s\S]*?<\/form>/i, epsteinForm());
+  if (/<form\b[^>]*id=["']epstein-source-intake-form["'][^>]*>[\s\S]*?<\/form>/i.test(next)) next = next.replace(/<form\b[^>]*id=["']epstein-source-intake-form["'][^>]*>[\s\S]*?<\/form>/i, epsteinForm());
+  else next = next.replace(/<form\b[^>]*class=["'][^"']*ep-card[^"']*["'][^>]*>[\s\S]*?<\/form>/i, epsteinForm());
   if (!next.includes('id="epstein-source-intake-runtime"')) next = next.replace('</main>', `${epsteinScript()}</main>`);
   if (!next.includes('src="intake-fallback.js"')) next = next.replace('<script src="matrix.js"></script>', '<script src="intake-fallback.js"></script><script src="matrix.js"></script>');
   next = next.replace(/AI\/OCR pipeline is a placeholder until processing is connected\./gi, 'Source review uses the live intake endpoint with a downloadable local recovery package if the endpoint is unavailable.');
@@ -45,27 +57,46 @@ function repairEpstein(html) {
   return next;
 }
 function repairTrackerJavaScript(html) {
-  return html
-    .replace(/\bdata\.book links\b/g, 'data.moneyRoutes')
-    .replace(/\bitem\.book links\b/g, 'item.moneyRoutes')
-    .replace(/\bp\.book links\b/g, 'p.moneyRoutes')
-    .replace(/\bm\.book links\b/g, 'm.moneyRoutes');
+  return html.replace(/\bdata\.book links\b/g, 'data.moneyRoutes').replace(/\bitem\.book links\b/g, 'item.moneyRoutes').replace(/\bp\.book links\b/g, 'p.moneyRoutes').replace(/\bm\.book links\b/g, 'm.moneyRoutes');
 }
 function repairWrongdoing(html) {
-  return repairTrackerJavaScript(html)
-    .replace(/<h1>WRONGDOING TRACKER\.<br>FOLLOW THE FILES\.<\/h1>/i, '<h1>WRONGDOING TRACKER.</h1>')
-    .replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.');
+  return repairTrackerJavaScript(html).replace(/<h1>WRONGDOING TRACKER\.<br>FOLLOW THE FILES\.<\/h1>/i, '<h1>WRONGDOING TRACKER.</h1>').replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.');
 }
-function repairDeployStatus(html) {
-  return html.replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.');
+function repairDeployStatus(html) { return html.replace(/FOLLOW THE FILES\./g, 'MAP THE STRUCTURE. READ THE SIGNALS.'); }
+function repairPowerMap(html) {
+  let next = html.replace(/<article\b[^>]*class=["'][^"']*map-node[^"']*["'][^>]*>[\s\S]*?(?:entity-exposure\/object-object|reports\/entity-object-object|\[object Object\]|object-object\.html)[\s\S]*?<\/article>/gi, '');
+  return next.replace(/\/?entity-exposure\/object-object(?:\.html)?/g, '/entities.html').replace(/\/?reports\/entity-object-object(?:\.html)?/g, '/entities.html');
+}
+function repairWarnings(relative, html) {
+  let next = html;
+  if (/card-intelligence-feed(?:\.html)?$/i.test(relative)) next = next.replace(/'<button class="/g, "'<button type=\"button\" class=\"");
+  if (/search(?:\.html)?$/i.test(relative)) next = next.replace(/<button\b(?![^>]*\btype\s*=)([^>]*)>/gi, '<button type="button"$1>');
+  if (/dark-speculation-lab(?:\.html)?$/i.test(relative)) next = next.replace(/<meta\b[^>]*name=["']description["'][^>]*>/i, '<meta name="description" content="Evidence-bounded research lab for dark claims, public-record-adjacent theories, source requirements, counter-sources, falsifiers and clearly labelled speculation." />');
+  if (/site-population-audit(?:\.html)?$/i.test(relative) && !/<meta\b[^>]*name=["']viewport["']/i.test(next)) next = next.replace(/<meta\b[^>]*charset=[^>]*>/i, match => `${match}<meta name="viewport" content="width=device-width, initial-scale=1.0"/>`);
+  return next;
+}
+function repairUnstableEntityReferences(text) {
+  return text
+    .replace(/\/?reports\/entity-chattogram-water-supply-and-sewerage-authority(?:\.html)?/g, '/entity-briefs/chattogram-water-supply-and-sewerage-authority.html')
+    .replace(/\/?reports\/entity-finance-division-ministry-of-finance(?:\.html)?/g, '/entity-briefs/finance-division-ministry-of-finance.html')
+    .replace(/\/?entity-exposure\/object-object(?:\.html)?/g, '/entities.html')
+    .replace(/\/?reports\/entity-object-object(?:\.html)?/g, '/entities.html');
 }
 
 const trackerPages = ['case-status-dashboard.html', 'epstein-billionaire-tracker.html', 'tracker-core.html', 'wrongdoing-tracker.html'];
+const unstableFiles = ['reports/entity-object-object.html','reports/entity-object-object','entity-exposure/object-object.html','entity-exposure/object-object','reports/entity-chattogram-water-supply-and-sewerage-authority.html','reports/entity-chattogram-water-supply-and-sewerage-authority','reports/entity-finance-division-ministry-of-finance.html','reports/entity-finance-division-ministry-of-finance'];
 for (const base of bases) {
   patchAliases(base, 'epstein-upload-check.html', repairEpstein);
   for (const route of trackerPages) patchAliases(base, route, route === 'wrongdoing-tracker.html' ? repairWrongdoing : repairTrackerJavaScript);
   patchAliases(base, 'deploy-status.html', repairDeployStatus);
-  for (const relative of ['reports/entity-object-object.html', 'reports/entity-object-object']) remove(base, relative);
+  patchAliases(base, 'power-structure-map.html', repairPowerMap);
+  for (const file of walkAuditedText(base)) {
+    const relative = path.relative(base, file).replace(/\\/g, '/');
+    const before = fs.readFileSync(file, 'utf8');
+    const after = repairWarnings(relative, repairUnstableEntityReferences(before));
+    if (after !== before) { fs.writeFileSync(file, after); changed.push(display(file)); }
+  }
+  for (const relative of unstableFiles) remove(base, relative);
 }
 
 for (const base of bases) {
@@ -74,7 +105,7 @@ for (const base of bases) {
     if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
     const html = fs.readFileSync(file, 'utf8');
     const retiredPlaceholder = /Save Pending Review Placeholder|AI\/OCR pipeline is a placeholder until processing is connected/i.test(html);
-    checks.push({ file: display(file), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('intake-fallback.js') && !retiredPlaceholder });
+    checks.push({ file: display(file), ok: html.includes('id="epstein-source-intake-form"') && html.includes('action="/submit-forum-post"') && html.includes('type="submit">Submit for Pending Review') && html.includes('intake-fallback.js') && !retiredPlaceholder });
   }
   for (const route of trackerPages.flatMap(value => [value, value.replace(/\.html$/i, '')])) {
     const file = path.join(base, route);
@@ -88,19 +119,20 @@ for (const base of bases) {
     const html = fs.readFileSync(file, 'utf8');
     checks.push({ file: display(file), ok: !html.includes('FOLLOW THE FILES') && html.includes('MAP THE STRUCTURE. READ THE SIGNALS.') });
   }
-  for (const relative of ['reports/entity-object-object.html', 'reports/entity-object-object']) checks.push({ file: display(path.join(base, relative)), ok: !fs.existsSync(path.join(base, relative)) });
+  for (const relative of unstableFiles) checks.push({ file: display(path.join(base, relative)), ok: !fs.existsSync(path.join(base, relative)) });
+  const powerMap = ['power-structure-map.html','power-structure-map'].map(route => path.join(base, route)).find(file => fs.existsSync(file));
+  if (powerMap) checks.push({ file: display(powerMap), ok: !/object-object(?:\.html)?|entity-exposure\/object-object/i.test(fs.readFileSync(powerMap, 'utf8')) });
 }
 
+const residual = [];
+for (const base of bases) for (const file of walkAuditedText(base)) {
+  const text = fs.readFileSync(file, 'utf8');
+  if (/reports\/entity-(?:chattogram-water-supply-and-sewerage-authority|finance-division-ministry-of-finance|object-object)|entity-exposure\/object-object/i.test(text)) residual.push(display(file));
+}
+checks.push({ file: 'audited HTML/JSON route references', ok: residual.length === 0, residual: residual.slice(0, 40) });
 const ok = checks.length > 0 && checks.every(item => item.ok);
-const report = {
-  ok,
-  generatedAt: new Date().toISOString(),
-  changed: [...new Set(changed)],
-  removed: [...new Set(removed)],
-  checks,
-  boundary: 'The Epstein intake submits public-source leads to the reviewed forum endpoint with local fail-safe recovery. Canonical tracker pages and every extensionless alias use the valid moneyRoutes field. Dead feature placeholders, malformed object routes, stale mission copy and broken tracker JavaScript are excluded after every generator.'
-};
+const report = { ok, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], removed: [...new Set(removed)], checks, boundary: 'Reviewed intake, tracker JavaScript, canonical entity routes, public control metadata and exact deployed aliases are repaired after every generator. Unstable report routes and malformed object pages are removed.' };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'deep-audit-public-defect-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!ok) throw new Error(`Deep audit public defect repair failed: ${JSON.stringify(checks.filter(item => !item.ok))}`);
-console.log(`Deep audit public defects repaired: ${changed.length} file mutation(s), ${removed.length} malformed route(s) removed.`);
+console.log(`Deep audit public defects repaired: ${changed.length} file mutation(s), ${removed.length} malformed or unstable route(s) removed.`);

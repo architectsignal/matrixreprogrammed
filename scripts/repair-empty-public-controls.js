@@ -53,8 +53,10 @@ for (const file of walk(base)) {
   }
 }
 
+require('./protect-build-templates.js');
 require('./restore-premier-resource-routes.js');
 require('./repair-public-runtime-controls.js');
+require('./dedupe-public-utility-sections.js');
 
 const report = {
   ok: unresolved.length === 0,
@@ -63,7 +65,7 @@ const report = {
   changed,
   unresolved,
   repairedRoute: 'downloads/forum-posts.json',
-  boundary: 'Only empty controls in an explicit dossier/forum-export context are repaired automatically. Unknown empty links still fail the build. Dynamic public controls receive separate safe fallbacks.'
+  boundary: 'Only empty controls in an explicit dossier/forum-export context are repaired automatically. Unknown empty links still fail the build. Dynamic controls, duplicate utility sections and protected templates are repaired separately.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', outputOnly ? 'empty-public-controls-output.json' : 'empty-public-controls.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -72,4 +74,4 @@ if (unresolved.length) {
   unresolved.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Empty public controls repaired (${report.mode}): ${changed.length} file(s) changed; dynamic fallbacks verified.`);
+console.log(`Empty public controls repaired (${report.mode}): ${changed.length} file(s) changed; dynamic fallbacks, utility dedupe and template protection verified.`);

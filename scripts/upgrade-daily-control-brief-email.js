@@ -50,4 +50,5 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
     'Builds a useful subject line from the strongest current development.'
   ]
 }, null, 2)}\n`);
+require('./daily-control-brief-email-test.js');
 console.log(`Daily Control Brief email renderer ${source !== before ? 'upgraded' : 'already current'} (${requiredMarkers.length} contract markers verified).`);

@@ -30,7 +30,7 @@ for (const file of walk(base)) {
     if (isHidden(full)) return full;
     const label = plain(body).toLowerCase();
     const tag = `${left} ${right}`;
-    const forumContext = /forum posts|signal board resource|persistent cloudflare kv/i.test(html);
+    const forumContext = /forum posts|signal board resource|persistent cloudflare (?:kv|d1)/i.test(html);
     const machineLabel = /^(machine-readable data|forum posts json|forum posts export)$/i.test(plain(body));
     if (machineLabel && (forumContext || /machine-data-link/i.test(tag))) {
       return `<a${left}href=${quote}downloads/forum-posts.json${quote}${right}>${body}</a>`;
@@ -43,6 +43,8 @@ for (const file of walk(base)) {
     changed.push(path.relative(root, file).replace(/\\/g, '/'));
   }
 }
+
+require('./restore-premier-resource-routes.js');
 
 const report = {
   ok: unresolved.length === 0,

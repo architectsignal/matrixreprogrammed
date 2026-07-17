@@ -11,8 +11,8 @@
   const SUBMIT_ROUTES = { main: '/submit-main-post', speculation: '/submit-speculation-post', 'epstein-alive': '/submit-epstein-alive-post' };
   const REPORT_ROUTES = { main: '/report-main-post', speculation: '/report-speculation-post', 'epstein-alive': '/report-epstein-alive-post' };
   const PASS_KEY = 'matrix_signal_pass_unlocked_v1';
-  const LOCAL_POSTS_KEY = 'cloudflare_kv_only_no_browser_post_store';
-  function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }
+  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';
+  function loadFallback(message){ return offlineNotice(message || 'Cloudflare D1 persistent forum feed unavailable'); }
 
   function boardFromPath(){
     const p = String(location.pathname || '').toLowerCase();
@@ -47,20 +47,7 @@
     if (['hidden','test','synthetic','draft','deleted','reported','spam','qa','check'].includes(postStatus)) return false;
     const haystack = [post.id, post.title, post.body, post.message, post.category, post.name, post.sourceUrl].map(v => String(v || '').toLowerCase()).join(' ');
     const syntheticMarkers = [
-      'synthetic check post',
-      'synthetic forum check',
-      'forum persistence check',
-      'automated forum check',
-      'automation check post',
-      'qa check post',
-      'pressure test post',
-      'site pressure test',
-      'test post from audit',
-      'github actions forum',
-      'build check post',
-      'health check post',
-      'demo post',
-      'seed post'
+      'synthetic check post','synthetic forum check','forum persistence check','automated forum check','automation check post','qa check post','pressure test post','site pressure test','test post from audit','github actions forum','build check post','health check post','demo post','seed post'
     ];
     return !syntheticMarkers.some(marker => haystack.includes(marker));
   }
@@ -79,20 +66,21 @@
     if (form) Array.from(form.elements).forEach(el => { if (el.name !== 'website') el.disabled = !ok; });
     const lockMessage = document.querySelector('.signal-lock-message');
     if (lockMessage) lockMessage.textContent = ok ? 'Signal Pass unlocked. Persistent posting is open for ' + BOARD_LABEL + '.' : 'Posting is locked until Signal Pass is unlocked.';
-    if (passStatus) passStatus.textContent = ok ? 'Signal Pass unlocked. Posts must save live to Cloudflare KV.' : 'Signal Pass not unlocked yet.';
+    if (passStatus) passStatus.textContent = ok ? 'Signal Pass unlocked. Posts must save live to Cloudflare D1.' : 'Signal Pass not unlocked yet.';
   }
   function postBelongsHere(post){ return String(post && post.board || 'main') === BOARD; }
   function renderPost(post){
     const source = post.sourceUrl ? '<p class="source-list"><a href="' + esc(post.sourceUrl) + '" target="_blank" rel="noopener">Open source</a></p>' : '';
     const board = post.board ? ' <span class="pill">' + esc(BOARD_LABELS[post.board] || post.board) + '</span>' : '';
-    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + ' <span class="pill">persistent</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
+    return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Anonymous') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + ' <span class="pill">persistent D1</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
   }
   function offlineNotice(message){
-    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board only accepts persistent Cloudflare KV posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
+    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
   }
   async function loadFeed(){
     if (!feed) return;
     lockFormToBoard();
+    feed.innerHTML = '<article class="card"><span class="label">pending sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';
     try {
       const res = await fetch(FEED_ROUTE + '?t=' + Date.now(), { cache:'no-store', headers:{ 'Accept':'application/json' } });
       const data = await parse(res);
@@ -127,7 +115,7 @@
     if (!unlocked()) { status.textContent = 'Unlock Signal Pass before posting.'; const gate = document.getElementById('signal-pass'); if (gate) gate.scrollIntoView({ behavior:'smooth', block:'start' }); return; }
     const payload = Object.fromEntries(new FormData(form).entries()); payload.board = BOARD;
     if (payload.website) { status.textContent = 'Spam trap triggered.'; return; }
-    status.textContent = 'Saving persistent post to ' + BOARD_LABEL + '...';
+    status.textContent = 'pending sync: saving persistent post to ' + BOARD_LABEL + '...';
     try {
       const livePost = await postLive(payload);
       form.reset();

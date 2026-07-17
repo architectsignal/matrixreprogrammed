@@ -14,6 +14,7 @@ concurrency:
 
 permissions:
   contents: read
+  issues: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
@@ -69,6 +70,45 @@ jobs:
         env:
           SITE_URL: https://matrixreprogrammed.com
         run: node scripts/deep-production-site-audit.js --live
+
+      - name: Publish sanitized audit summary
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            function load(name) {
+              try { return JSON.parse(fs.readFileSync(path.join(process.cwd(), 'downloads', name), 'utf8')); }
+              catch { return null; }
+            }
+            const staticReport = load('deep-production-site-audit-static.json');
+            const liveReport = load('deep-production-site-audit-live.json');
+            const reports = [staticReport, liveReport].filter(Boolean);
+            const hard = reports.flatMap(report => report.hardIssues || []);
+            const warnings = reports.flatMap(report => report.warnings || []);
+            const coverage = reports.map(report => `- ${report.mode}: ${JSON.stringify(report.stats || {})}`).join('\n') || '- No deep report was produced; inspect the build log.';
+            const status = reports.length === 2 && reports.every(report => report.ok) ? 'PASS' : 'FAIL';
+            const hardLines = hard.length ? hard.slice(0, 180).map(item => `- ${item}`).join('\n') : '- None';
+            const warningLines = warnings.length ? warnings.slice(0, 80).map(item => `- ${item}`).join('\n') : '- None';
+            const body = [
+              `## Deep Site Audit ${status}`,
+              '',
+              `Run: https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              `Commit: \`${context.sha}\``,
+              `Generated: ${new Date().toISOString()}`,
+              '',
+              '### Coverage', coverage,
+              '',
+              `### Hard issues (${hard.length})`, hardLines,
+              hard.length > 180 ? `\n- … ${hard.length - 180} additional hard issues are retained in the workflow artifact.` : '',
+              '',
+              `### Warnings (${warnings.length})`, warningLines,
+              warnings.length > 80 ? `\n- … ${warnings.length - 80} additional warnings are retained in the workflow artifact.` : '',
+              '',
+              'No credentials, secret values or customer data are included in this summary.'
+            ].join('\n').slice(0, 60000);
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: 94, body });
 
       - name: Upload complete audit evidence
         if: always()

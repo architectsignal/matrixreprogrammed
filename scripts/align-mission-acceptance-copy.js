@@ -76,6 +76,7 @@ if (!ok) throw new Error(`Mission acceptance copy alignment failed: ${JSON.strin
 runRequired('scripts/disable-production-kv-traffic.js');
 runRequired('scripts/sanitize-machine-entity-outputs.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/sanitize-machine-entity-outputs.js', ['--output']);
+if (fs.existsSync(path.join(root, '_site', 'search-index.json'))) runRequired('scripts/compact-cloudflare-search-index.js');
 runRequired('scripts/patch-power-dossier-runtime.js');
 runRequired('scripts/repair-empty-public-controls.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-empty-public-controls.js', ['--output']);
@@ -87,4 +88,4 @@ if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/hide-visible-c
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); KV traffic repair, entity sanitation, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub and full tool audit passed.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); KV traffic repair, entity sanitation, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub and full tool audit passed.`);

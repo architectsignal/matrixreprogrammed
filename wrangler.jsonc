@@ -23,9 +23,11 @@
     "PAYPAL_PRODUCTION_ENABLED": "false",
     "PAYPAL_DONATIONS_ENABLED": "false",
     "EMAIL_AUTOMATION_ENABLED": "false",
-    "EMAIL_TRANSACTIONAL_ENABLED": "false",
-    "BREVO_DOMAIN_AUTHENTICATED": "false",
+    "EMAIL_TRANSACTIONAL_ENABLED": "true",
+    "BREVO_DOMAIN_AUTHENTICATED": "true",
+    "MEMBERS_FROM_EMAIL": "members@matrixreprogrammed.com",
     "MEMBERS_FROM_NAME": "Matrix Reprogrammed",
+    "MEMBERS_REPLY_TO_EMAIL": "njmgroupfrance@gmail.com",
     "MEMBERS_REPLY_TO_NAME": "Matrix Reprogrammed Support"
   },
   "assets": {

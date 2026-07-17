@@ -2,49 +2,94 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const configPath = path.join(root, 'wrangler.toml');
+const tomlPath = path.join(root, 'wrangler.toml');
+const jsoncPath = path.join(root, 'wrangler.jsonc');
 const reportPath = path.join(root, 'downloads', 'phase1-cloudflare-config-enforcement.json');
 
-if (!fs.existsSync(configPath)) throw new Error('wrangler.toml is missing');
-const before = fs.readFileSync(configPath, 'utf8');
-let after = before;
+if (!fs.existsSync(tomlPath)) throw new Error('wrangler.toml is missing');
+if (!fs.existsSync(jsoncPath)) throw new Error('wrangler.jsonc is missing');
 
-if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) {
-  after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = false');
-} else {
-  const compatibilityLine = /^compatibility_date\s*=.*$/m;
-  if (!compatibilityLine.test(after)) throw new Error('wrangler.toml compatibility_date anchor is missing');
-  after = after.replace(compatibilityLine, match => `${match}\nkeep_vars = false`);
+function enforceToml(before) {
+  let after = before;
+  if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) {
+    after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = false');
+  } else {
+    const compatibilityLine = /^compatibility_date\s*=.*$/m;
+    if (!compatibilityLine.test(after)) throw new Error('wrangler.toml compatibility_date anchor is missing');
+    after = after.replace(compatibilityLine, match => `${match}\nkeep_vars = false`);
+  }
+  if (/^EMAIL_AUTOMATION_ENABLED\s*=\s*"(?:true|false)"\s*$/m.test(after)) {
+    after = after.replace(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"(?:true|false)"\s*$/m, 'EMAIL_AUTOMATION_ENABLED = "false"');
+  } else {
+    const varsAnchor = /^\[vars\]\s*$/m;
+    if (!varsAnchor.test(after)) throw new Error('wrangler.toml [vars] section is missing');
+    after = after.replace(varsAnchor, match => `${match}\nEMAIL_AUTOMATION_ENABLED = "false"`);
+  }
+  return after;
 }
 
-if (/^EMAIL_AUTOMATION_ENABLED\s*=\s*"(?:true|false)"\s*$/m.test(after)) {
-  after = after.replace(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"(?:true|false)"\s*$/m, 'EMAIL_AUTOMATION_ENABLED = "false"');
-} else {
-  const varsAnchor = /^\[vars\]\s*$/m;
-  if (!varsAnchor.test(after)) throw new Error('wrangler.toml [vars] section is missing');
-  after = after.replace(varsAnchor, match => `${match}\nEMAIL_AUTOMATION_ENABLED = "false"`);
+function enforceJsonc(before) {
+  let after = before;
+  if (/"keep_vars"\s*:\s*(?:true|false)/.test(after)) {
+    after = after.replace(/"keep_vars"\s*:\s*(?:true|false)/, '"keep_vars": false');
+  } else {
+    const compatibility = /"compatibility_date"\s*:\s*"[^"]+"\s*,/;
+    if (!compatibility.test(after)) throw new Error('wrangler.jsonc compatibility_date anchor is missing');
+    after = after.replace(compatibility, match => `${match}\n  "keep_vars": false,`);
+  }
+  if (/"EMAIL_AUTOMATION_ENABLED"\s*:\s*"(?:true|false)"/.test(after)) {
+    after = after.replace(/"EMAIL_AUTOMATION_ENABLED"\s*:\s*"(?:true|false)"/, '"EMAIL_AUTOMATION_ENABLED": "false"');
+  } else {
+    const varsAnchor = /"vars"\s*:\s*\{/;
+    if (!varsAnchor.test(after)) throw new Error('wrangler.jsonc vars object is missing');
+    after = after.replace(varsAnchor, match => `${match}\n    "EMAIL_AUTOMATION_ENABLED": "false",`);
+  }
+  return after;
 }
 
+const tomlBefore = fs.readFileSync(tomlPath, 'utf8');
+const jsoncBefore = fs.readFileSync(jsoncPath, 'utf8');
+const tomlAfter = enforceToml(tomlBefore);
+const jsoncAfter = enforceJsonc(jsoncBefore);
 const failures = [];
-if (!/^keep_vars\s*=\s*false\s*$/m.test(after)) failures.push('keep_vars must be false');
-if (!/^EMAIL_AUTOMATION_ENABLED\s*=\s*"false"\s*$/m.test(after)) failures.push('EMAIL_AUTOMATION_ENABLED must be false');
-if (/^EMAIL_AUTOMATION_ENABLED\s*=\s*"true"\s*$/m.test(after)) failures.push('EMAIL_AUTOMATION_ENABLED=true remains');
-if (!/^PAYPAL_ENVIRONMENT\s*=\s*"sandbox"\s*$/m.test(after)) failures.push('PayPal environment must remain sandbox');
-if (!/^PAYPAL_PRODUCTION_ENABLED\s*=\s*"false"\s*$/m.test(after)) failures.push('PayPal production must remain disabled');
 
-if (!failures.length && after !== before) fs.writeFileSync(configPath, after);
+for (const [label, text, checks] of [
+  ['wrangler.toml', tomlAfter, [
+    [/^keep_vars\s*=\s*false\s*$/m, 'keep_vars must be false'],
+    [/^EMAIL_AUTOMATION_ENABLED\s*=\s*"false"\s*$/m, 'email automation must be false'],
+    [/^PAYPAL_ENVIRONMENT\s*=\s*"sandbox"\s*$/m, 'PayPal must remain sandbox'],
+    [/^PAYPAL_PRODUCTION_ENABLED\s*=\s*"false"\s*$/m, 'PayPal production must remain disabled']
+  ]],
+  ['wrangler.jsonc', jsoncAfter, [
+    [/"keep_vars"\s*:\s*false/, 'keep_vars must be false'],
+    [/"EMAIL_AUTOMATION_ENABLED"\s*:\s*"false"/, 'email automation must be false'],
+    [/"PAYPAL_ENVIRONMENT"\s*:\s*"sandbox"/, 'PayPal must remain sandbox'],
+    [/"PAYPAL_PRODUCTION_ENABLED"\s*:\s*"false"/, 'PayPal production must remain disabled']
+  ]]
+]) {
+  for (const [pattern, message] of checks) if (!pattern.test(text)) failures.push(`${label}: ${message}`);
+  if (/EMAIL_AUTOMATION_ENABLED[^\n]*true/.test(text)) failures.push(`${label}: EMAIL_AUTOMATION_ENABLED=true remains`);
+}
+
+if (!failures.length) {
+  if (tomlAfter !== tomlBefore) fs.writeFileSync(tomlPath, tomlAfter);
+  if (jsoncAfter !== jsoncBefore) fs.writeFileSync(jsoncPath, jsoncAfter);
+}
+
+const changed = { toml: tomlAfter !== tomlBefore, jsonc: jsoncAfter !== jsoncBefore };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  changed: after !== before,
-  sourceOfTruth: 'wrangler.toml',
+  changed,
+  sourcesOfTruth: ['wrangler.jsonc', 'wrangler.toml'],
+  activePrecedenceProtected: true,
   keepVars: false,
   emailAutomationEnabled: false,
   paypalEnvironment: 'sandbox',
   paypalProductionEnabled: false,
   failures,
-  boundary: 'This script runs after every generator and immediately before release audit so dashboard variable drift cannot reactivate automated email or live PayPal.'
+  boundary: 'Both Wrangler configuration formats are locked after every generator. The active JSONC configuration cannot preserve dashboard drift or reactivate automated email or live PayPal.'
 }, null, 2)}\n`);
 if (failures.length) throw new Error(`Phase 1 Cloudflare configuration enforcement failed: ${failures.join('; ')}`);
-console.log(`Phase 1 Cloudflare configuration enforced${after !== before ? ' and repaired' : ''}: email automation false, PayPal sandbox, live charging disabled.`);
+console.log(`Phase 1 Cloudflare configuration enforced in TOML and JSONC${changed.toml || changed.jsonc ? ' and repaired' : ''}: email automation false, PayPal sandbox, live charging disabled.`);

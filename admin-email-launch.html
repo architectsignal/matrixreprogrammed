@@ -34,8 +34,9 @@
         <div class="cta-row">
           <button class="btn" id="email-readiness-check" type="button">Check Email Readiness</button>
           <button class="btn alt" id="email-test-send" type="button">Send Controlled Test</button>
+          <button class="btn alt" id="email-quarantine-retries" type="button" disabled>Quarantine Old Retries</button>
         </div>
-        <p class="warning">The controlled test cannot send to a browser-entered address. It uses only the server-configured test or support mailbox.</p>
+        <p class="warning">The controlled test uses only the server-configured support mailbox. Retry quarantine never reveals recipient addresses, requires marketing automation to be off, and preserves the records for audit.</p>
       </section>
 
       <section class="section launch-grid" aria-live="polite">
@@ -55,11 +56,12 @@
       <section class="section card">
         <h2>Activation boundary</h2>
         <ol>
-          <li>Authenticate a Matrix Reprogrammed sending domain or subdomain in Brevo.</li>
+          <li>Authenticate the Matrix Reprogrammed sending domain in Brevo.</li>
           <li>Set the verified sender and monitored reply-to addresses in Cloudflare.</li>
           <li>Confirm the Brevo API key, webhook secret and administrator token are stored as secrets.</li>
-          <li>Set <code>BREVO_DOMAIN_AUTHENTICATED=true</code> and <code>EMAIL_TRANSACTIONAL_ENABLED=true</code>.</li>
-          <li>Use this console to send one controlled test. Keep <code>EMAIL_AUTOMATION_ENABLED=false</code>.</li>
+          <li>Enable authenticated transactional delivery and prove one real inbox message.</li>
+          <li>Quarantine any pre-activation retries while marketing automation remains off.</li>
+          <li>Only then activate scheduled daily and weekly campaigns.</li>
         </ol>
       </section>
     </main>

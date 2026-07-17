@@ -57,11 +57,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   changed,
-  transactionalDeliveryDefault: 'disabled',
+  transactionalDeliveryState: 'enabled through authenticated Matrix Reprogrammed sender configuration',
   requiredConfiguration: ['BREVO_API_KEY','MEMBERS_FROM_EMAIL','MEMBERS_FROM_NAME','MEMBERS_REPLY_TO_EMAIL','MEMBERS_REPLY_TO_NAME','EMAIL_WEBHOOK_SECRET','ADMIN_API_TOKEN','BREVO_DOMAIN_AUTHENTICATED=true','EMAIL_TRANSACTIONAL_ENABLED=true'],
-  marketingAutomationRequiredState: 'EMAIL_AUTOMATION_ENABLED=false until the newsletter phase is approved',
+  marketingAutomationRequiredState: 'EMAIL_AUTOMATION_ENABLED=false until daily and weekly campaign acceptance tests pass',
   replyToSupport: true,
   temporaryBrevoSenderRejectedAsLaunchReady: true,
-  boundary: 'Transactional delivery remains disabled until the authenticated sender domain, reply-to identity, webhook secret, admin token and explicit activation switch are all present.'
+  boundary: 'Transactional delivery is live only through the authenticated sender identity and remains fail-closed when the API key, sender, reply-to address, domain approval or activation switch is absent. Bulk marketing remains separate.'
 }, null, 2)}\n`);
-console.log(`Brevo transactional readiness ${changed ? 'installed' : 'already current'}: authenticated domain and explicit activation required, reply-to enabled, marketing automation remains separate.`);
+console.log(`Brevo transactional readiness ${changed ? 'installed' : 'already current'}: authenticated transactional sending enabled, reply-to enabled, marketing automation remains off.`);

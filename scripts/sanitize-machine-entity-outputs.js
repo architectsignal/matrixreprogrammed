@@ -151,15 +151,14 @@ sanitizeJson('data/entity-exposure-index.json', ['entities', 'profiles']);
 sanitizeJson('data/main-player-profiles.json', ['profiles', 'players']);
 sanitizeJson('data/entity-relationship-scores.json', ['entities', 'relationships']);
 sanitizeSearchIndex();
-for (const relative of [
-  'entity-briefs/object-object.html',
-  'entity-briefs/object-object',
-  'entity-timelines/object-object.html',
-  'entity-timelines/object-object',
-  'entity-exposure/object-object.html',
-  'entity-exposure/object-object'
-]) removeGeneratedFile(relative);
-for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html', 'daily-missing-records.html']) patchHtml(page);
+const malformedRoutes = [
+  'entity-briefs/object-object.html', 'entity-briefs/object-object',
+  'entity-timelines/object-object.html', 'entity-timelines/object-object',
+  'entity-exposure/object-object.html', 'entity-exposure/object-object',
+  'reports/entity-object-object.html', 'reports/entity-object-object'
+];
+malformedRoutes.forEach(removeGeneratedFile);
+for (const page of ['machine-digest.html', 'entity-daily-briefs.html', 'entity-exposure-index.html', 'machine-intelligence.html', 'daily-missing-records.html', 'reports.html']) patchHtml(page);
 
 const remaining = [];
 for (const relative of [
@@ -172,6 +171,7 @@ for (const relative of [
   'entity-daily-briefs.html',
   'entity-exposure-index.html',
   'daily-missing-records.html',
+  'reports.html',
   'search-index.json'
 ]) {
   const file = at(relative);
@@ -179,9 +179,7 @@ for (const relative of [
   const text = fs.readFileSync(file, 'utf8');
   if (/\[object Object\]/i.test(text) || /(?:^|[\/-])object-object(?:\.html)?(?:$|[?#])/im.test(text) || /"name"\s*:\s*"\s*"/.test(text)) remaining.push(display(relative));
 }
-for (const relative of ['entity-briefs/object-object.html', 'entity-timelines/object-object.html', 'entity-exposure/object-object.html']) {
-  if (fs.existsSync(at(relative))) remaining.push(display(relative));
-}
+for (const relative of malformedRoutes) if (fs.existsSync(at(relative))) remaining.push(display(relative));
 const report = {
   ok: remaining.length === 0,
   generatedAt: new Date().toISOString(),
@@ -196,4 +194,4 @@ if (remaining.length) {
   remaining.forEach(item => console.error(`MACHINE ENTITY SANITIZER FAILURE: ${item} still contains malformed entity output`));
   process.exit(1);
 }
-console.log(`Machine entity outputs sanitized (${report.mode}): ${stats.invalidStringsRemoved} invalid names, ${stats.invalidObjectsRemoved} invalid objects, ${stats.htmlCardsRemoved} malformed cards and ${stats.searchEntriesRemoved} search entries removed.`);
+console.log(`Machine entity outputs sanitized (${report.mode}): ${stats.invalidStringsRemoved} invalid names, ${stats.invalidObjectsRemoved} invalid objects, ${stats.htmlCardsRemoved} malformed cards and ${stats.searchEntriesRemoved} search entries removed; ${removedFiles.length} malformed routes deleted.`);

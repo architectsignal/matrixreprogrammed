@@ -24,7 +24,8 @@ if (!failures.length) {
   const jsonc = read('wrangler.jsonc');
   const migration = read('migrations/0004_forum_persistence.sql');
 
-  check('strict Worker does not delegate normal traffic', strict.includes("return forumWorker.fetch(request, env, ctx)"));
+  check('strict Worker does not strip KV from normal traffic', strict.includes('return forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)'));
+  check('strict Worker does not strip KV from completed report delivery', strict.includes('const response = await forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)'));
   check('strict Worker does not reject non-forum traffic', strict.includes('if (!forumRoutes.has(path))'));
   check('strict Worker accepts a missing D1 binding', strict.includes('members-db-binding-unavailable'));
   check('strict Worker accepts a legacy forum response', strict.includes('non-authoritative-forum-response-blocked'));
@@ -32,21 +33,24 @@ if (!failures.length) {
   check('strict Worker does not verify D1 health fields', strict.includes("health?.d1Connected === true") && strict.includes("health?.backend === 'src/worker-forum-persistence.js'"));
   check('strict Worker does not return a 503 boundary', strict.includes('status: 503'));
 
-  check('wrapper does not delegate non-forum traffic', wrapper.includes("return legacyWorker.fetch(request, env, ctx)"));
+  check('wrapper does not delegate non-forum traffic', wrapper.includes('return legacyWorker.fetch(request, env, ctx)'));
   check('wrapper missing D1 schema bootstrap', wrapper.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
   check('wrapper missing authoritative D1 insert', wrapper.includes('INSERT OR IGNORE INTO forum_posts'));
   check('wrapper missing authoritative D1 feed query', wrapper.includes("FROM forum_posts WHERE status='live'"));
   check('wrapper missing D1 report persistence', wrapper.includes('INSERT INTO forum_reports'));
-  check('wrapper missing KV migration', wrapper.includes('kv_forum_migration_v1') && wrapper.includes("prefix: 'post:'"));
-  check('wrapper missing KV mirror boundary', wrapper.includes('D1 authoritative; KV compatibility mirror'));
+  check('wrapper missing optional KV migration path', wrapper.includes('kv_forum_migration_v1') && wrapper.includes("prefix: 'post:'"));
+  check('wrapper missing disabled-by-default KV mirror boundary', wrapper.includes('D1 authoritative; KV compatibility mirror disabled by default'));
+  check('wrapper missing explicit KV opt-in gate', wrapper.includes("ENABLE_KV_COMPATIBILITY_MIRROR || 'false'"));
   check('wrapper accepts success without D1 write', !/saved:\s*true[\s\S]{0,300}legacyWorker/.test(wrapper));
   check('wrapper missing explicit failed persistence response', wrapper.includes('the post was not accepted as persistent'));
   check('wrapper missing board-specific routes', ['/forum-feed-main','/forum-feed-speculation','/forum-feed-epstein-alive','/submit-main-post','/submit-speculation-post','/submit-epstein-alive-post'].every(route => wrapper.includes(route)));
   check('legacy Worker lost non-forum asset delegation', legacy.includes('env.ASSETS.fetch'));
+  check('legacy analytics endpoint still writes to KV', !legacy.includes('FORUM_POSTS.put(`analytics:'));
   check('wrangler.toml not using strict production Worker', toml.includes('main = "src/worker-production.js"'));
   check('wrangler.jsonc not using strict production Worker', jsonc.includes('"main": "src/worker-production.js"'));
   check('MEMBERS_DB binding missing', toml.includes('binding = "MEMBERS_DB"') && jsonc.includes('"binding": "MEMBERS_DB"'));
-  check('FORUM_POSTS recovery mirror missing', toml.includes('FORUM_POSTS') && jsonc.includes('FORUM_POSTS'));
+  check('KV compatibility binding missing', toml.includes('FORUM_POSTS') && jsonc.includes('FORUM_POSTS'));
+  check('KV compatibility switch is not disabled', toml.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"'));
   check('forum_posts migration missing', migration.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
   check('forum_reports migration missing', migration.includes('CREATE TABLE IF NOT EXISTS forum_reports'));
   check('forum chronology index missing', migration.includes('idx_forum_posts_board_created'));
@@ -57,8 +61,8 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   failures,
-  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; KV is a compatibility mirror and migration source.',
-  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, reads limited to posts:index or success without an authoritative D1 write.'
+  persistenceModel: 'Cloudflare D1 is authoritative behind a strict production boundary; KV compatibility is disabled by default and normal traffic cannot create KV operations.',
+  boundary: 'The test rejects missing D1, legacy forum fallback, non-D1 health responses, success without authoritative D1 writes, analytics KV writes and unnecessary KV exposure to normal traffic.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'forum-persistence-d1-test.json'), JSON.stringify(report, null, 2));
@@ -68,4 +72,4 @@ if (failures.length) {
   process.exit(1);
 }
 console.log('FORUM D1 PERSISTENCE TEST PASSED');
-console.log('Verified strict D1 failure semantics, authoritative writes and reads, KV recovery, board routes, migration schema and legacy delegation only outside the forum boundary.');
+console.log('Verified strict D1 failure semantics, authoritative forum writes and reads, KV-safe normal routing, disabled analytics KV writes and optional recovery compatibility only.');

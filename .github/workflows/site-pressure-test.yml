@@ -110,9 +110,9 @@ jobs:
           test -f claim-taxonomy.json
           test -f crawler-map.json
           grep -q "SCHEMA ENGINE STATUS" schema-index.html
-          grep -q "phase-thirteen-schema-engine" index.html
           grep -q "schema-index.html" search-index.json
           grep -q "site-graph.json" llms.txt
+          grep -q "schema-site-graph.html" sitemap.xml
 
       - name: Verify Phase 14 Dossier Pack output
         run: |
@@ -120,9 +120,9 @@ jobs:
           grep -q "DOSSIER PACK ENGINE STATUS" download-center.html
           test -f dossier-pack-trust-evidence.html
           test -f downloads/dossier-pack-trust-evidence.md
-          grep -q "phase-fourteen-dossier-pack-engine" index.html
           grep -q "download-center.html" search-index.json
           grep -q "download-center.html" llms.txt
+          grep -q "dossier-pack-trust-evidence.html" sitemap.xml
 
       - name: Verify Phase 15 Feed Discovery output
         run: |
@@ -132,8 +132,8 @@ jobs:
           grep -q "<rss version=\"2.0\">" feeds/main-signal.xml
           grep -q "<feed xmlns=\"http://www.w3.org/2005/Atom\">" feeds/main-signal-atom.xml
           grep -q "jsonfeed.org/version/1.1" feeds/main-signal.json
-          grep -q "phase-fifteen-feed-engine" index.html
           grep -q "feed-center.html" search-index.json
+          grep -q "feed-evidence-trust.html" sitemap.xml
 
       - name: Verify Phase 16 Share Kit output
         run: |
@@ -141,7 +141,8 @@ jobs:
           grep -q "SHARE KIT ENGINE STATUS" share-center.html
           test -f share-kit-trust-evidence.html
           test -f downloads/share-kit-trust-evidence.json
-          grep -q "phase-sixteen-share-kit-engine" index.html
+          grep -q "share-center.html" search-index.json
+          grep -q "share-kit-trust-evidence.html" sitemap.xml
 
       - name: Verify Phase 17 Campaign Calendar output
         run: |
@@ -149,7 +150,8 @@ jobs:
           grep -q "LAUNCH ROOM STATUS" launch-room.html
           test -f campaign-trust-evidence-push.html
           test -f downloads/campaign-trust-evidence-push.json
-          grep -q "phase-seventeen-campaign-calendar-engine" index.html
+          grep -q "launch-room.html" search-index.json
+          grep -q "campaign-trust-evidence-push.html" sitemap.xml
 
       - name: Verify Phase 18 Offer Stack output
         run: |
@@ -159,7 +161,8 @@ jobs:
           test -f downloads/offer-trust-before-darkness.json
           test -f offer-trust-evidence-kit.html
           test -f downloads/offer-trust-evidence-kit.json
-          grep -q "phase-eighteen-offer-stack-engine" index.html
+          grep -q "offer-center.html" search-index.json
+          grep -q "offer-trust-evidence-kit.html" sitemap.xml
 
       - name: Verify Phase 19 Lead Magnet output
         run: |
@@ -167,7 +170,8 @@ jobs:
           grep -q "LEAD MAGNET ENGINE STATUS" optin-center.html
           test -f optin-trust-evidence-checklist.html
           test -f downloads/lead-magnet-trust-evidence-checklist.json
-          grep -q "phase-nineteen-lead-magnet-engine" index.html
+          grep -q "optin-center.html" search-index.json
+          grep -q "optin-trust-evidence-checklist.html" sitemap.xml
 
       - name: Verify Intel Desk generated output
         run: |

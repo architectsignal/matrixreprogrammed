@@ -35,9 +35,15 @@ if (!profileMarkers.every(marker => after.includes(marker))) {
 
 const newSourceUrl = "if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));";
 if (!after.includes(newSourceUrl)) {
-  const sourceUrlPattern = /if\s*\(\/\^https\?:\/i\.test\(sourceUrl\)\)\s*output\.sourceUrl\s*=\s*sourceUrl\.slice\(0,[^;]+\);/;
-  if (!sourceUrlPattern.test(after)) throw new Error('Search V3 source URL compaction target not found');
-  after = after.replace(sourceUrlPattern, newSourceUrl);
+  const sourceUrlAssignmentPattern = /^[ \t]*if\s*\(.*sourceUrl.*\)\s*output\.sourceUrl\s*=.*;[ \t]*$/m;
+  const sourceUrlDeclaration = "  const sourceUrl = String(record.sourceUrl || '').trim();";
+  if (sourceUrlAssignmentPattern.test(after)) {
+    after = after.replace(sourceUrlAssignmentPattern, `  ${newSourceUrl}`);
+  } else if (after.includes(sourceUrlDeclaration)) {
+    after = after.replace(sourceUrlDeclaration, `${sourceUrlDeclaration}\n  ${newSourceUrl}`);
+  } else {
+    throw new Error('Search V3 source URL declaration not found');
+  }
   changed = true;
 }
 

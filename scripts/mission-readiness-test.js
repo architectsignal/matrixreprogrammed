@@ -99,16 +99,16 @@ check('production Worker queues and processes reports', includesAll(production, 
   'processOutbox'
 ]));
 check('daily and weekly email schedules are configured', includesAll(wrangler, ['"5 6 * * *"', '"15 7 * * 1"']));
-check('guarded Phase 11 email automation is active', includesAll(wrangler, [
-  'EMAIL_AUTOMATION_ENABLED = "true"',
+check('transactional email is enabled while scheduled marketing remains disabled', includesAll(wrangler, [
+  'EMAIL_AUTOMATION_ENABLED = "false"',
   'EMAIL_TRANSACTIONAL_ENABLED = "true"',
   'BREVO_DOMAIN_AUTHENTICATED = "true"',
   'EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"'
 ]) && includesAll(launchPlan, [
-  'Phase 11 — Automated newsletter activation record',
-  'EMAIL_AUTOMATION_ENABLED is true under the recorded Phase 11 approval',
-  'Personalised preference and unsubscribe routes installed',
-  'Retry records predating activation automatically quarantined by cutoff'
+  'Automated marketing email is disabled.',
+  'Still required before `EMAIL_AUTOMATION_ENABLED=true`',
+  'Personalised preference and unsubscribe routes installed.',
+  'Retry records predating activation quarantined by cutoff.'
 ]));
 check('newsletter requires explicit consent', newsletterPage.includes('data-marketing-consent') && newsletterPage.includes('required'));
 check('newsletter runtime refuses absent consent', includesAll(newsletterUi, [
@@ -138,7 +138,7 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   phase: 11,
-  emailAutomationState: 'guarded-live',
+  emailAutomationState: 'transactional-live-marketing-disabled-pending-review',
   checks,
   failures
 };
@@ -150,4 +150,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`Mission readiness regression passed: ${checks.length} checks.`);
+console.log(`Mission readiness regression passed: ${checks.length} checks; transactional email enabled and scheduled marketing disabled pending review.`);

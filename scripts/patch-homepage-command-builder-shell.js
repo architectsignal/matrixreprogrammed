@@ -29,31 +29,16 @@ if (!after.includes(shellMarker)) {
 }
 
 const callCandidates = [
-  {
-    variable: 'indexPath',
-    anchor: "const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');"
-  },
-  {
-    variable: 'homepagePath',
-    anchor: "const homepagePath = path.join(root, 'index.html');"
-  },
-  {
-    variable: 'indexPath',
-    anchor: "const indexPath = file('index.html');"
-  },
-  {
-    variable: 'homepagePath',
-    anchor: "const homepagePath=path.join(root,'index.html');"
-  }
+  { variable: 'indexPath', anchor: "const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');" },
+  { variable: 'homepagePath', anchor: "const homepagePath = path.join(root, 'index.html');" },
+  { variable: 'indexPath', anchor: "const indexPath = file('index.html');" },
+  { variable: 'homepagePath', anchor: "const homepagePath=path.join(root,'index.html');" }
 ];
 
 let ensureCall = '';
 for (const candidate of callCandidates) {
   const call = `ensureHomepageShell(${candidate.variable});`;
-  if (after.includes(call)) {
-    ensureCall = call;
-    break;
-  }
+  if (after.includes(call)) { ensureCall = call; break; }
   if (after.includes(candidate.anchor)) {
     after = after.replace(candidate.anchor, `${candidate.anchor}\n${call}`);
     ensureCall = call;
@@ -93,7 +78,14 @@ require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
 require('./patch-email-launch-console.js');
 require('./patch-email-automation-guard.js');
-require('./patch-email-campaign-quality.js');
+try {
+  require('./patch-email-campaign-quality.js');
+} catch (error) {
+  const message = String(error && error.message || error);
+  const supersededAnchor = message.includes('Email campaign function anchor missing: async function loadCampaignSource(');
+  if (!supersededAnchor) throw error;
+  console.log('Legacy email campaign quality patch skipped: the Daily Control Brief v3 renderer supersedes the removed loadCampaignSource anchor.');
+}
 require('./patch-membership-signup-server-fallback.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');

@@ -33,6 +33,12 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Rebuild clean entity outputs
+        run: |
+          node --check scripts/repair-entity-exposure-object-names.js
+          node --check scripts/rebuild-clean-entity-outputs.js
+          node scripts/rebuild-clean-entity-outputs.js
+
       - name: Validate and run inventory scanner
         run: |
           node --check scripts/recovery-functional-inventory.js
@@ -51,5 +57,6 @@ jobs:
           path: |
             downloads/recovery-functional-inventory.json
             downloads/recovery-functional-inventory.md
+            downloads/recovery-entity-output-rebuild.json
           if-no-files-found: error
           retention-days: 30

@@ -2,12 +2,12 @@ const DUCKDB_VERSION = '1.30.0';
 const DUCKDB_PROVIDERS = [
   {
     name: 'jsDelivr',
-    module: 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/dist/duckdb-browser.mjs',
+    module: 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/+esm',
     base: 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/dist/'
   },
   {
-    name: 'UNPKG',
-    module: 'https://unpkg.com/@duckdb/duckdb-wasm@1.30.0/dist/duckdb-browser.mjs',
+    name: 'esm.sh with UNPKG assets',
+    module: 'https://esm.sh/@duckdb/duckdb-wasm@1.30.0',
     base: 'https://unpkg.com/@duckdb/duckdb-wasm@1.30.0/dist/'
   }
 ];
@@ -127,6 +127,7 @@ async function loadDuckDBModule() {
     setStatus(`Loading DuckDB-Wasm ${DUCKDB_VERSION} from ${provider.name}…`);
     try {
       const duckdb = await withTimeout(import(provider.module), 20000, `${provider.name} module load`);
+      if (!duckdb?.AsyncDuckDB || !duckdb?.selectBundle) throw new Error('Module loaded without the DuckDB browser API.');
       return { duckdb, provider };
     } catch (error) {
       failures.push(`${provider.name}: ${errorMessage(error)}`);

@@ -36,6 +36,7 @@ add('strict result cap', Number(registry?.limits?.maxRows) === 1000);
 add('strict query timeout', Number(registry?.limits?.queryTimeoutMs) > 0 && Number(registry?.limits?.queryTimeoutMs) <= 15000);
 add('pinned DuckDB-Wasm version', /^\d+\.\d+\.\d+$/.test(registry?.engines?.duckdbWasm || '') && runtime.includes(`@duckdb/duckdb-wasm@${registry.engines.duckdbWasm}`));
 add('pinned Perspective version', /^\d+\.\d+\.\d+$/.test(registry?.engines?.perspective || '') && runtime.includes(`@finos/perspective@${registry.engines.perspective}`));
+add('DuckDB package version exists', registry?.engines?.duckdbWasm !== '1.33.0');
 
 add('public page generated', page.includes('PUBLIC DATA LABORATORY.') && page.includes('QUERY THE PUBLIC RECORDS.'));
 add('page carries evidence boundary', page.includes('Evidence boundary:') && page.includes(registry?.boundary || '___missing___'));
@@ -43,15 +44,19 @@ add('query editor and controls rendered', page.includes('id="data-lab-query"') &
 add('accessible table and Perspective fallback rendered', page.includes('id="data-lab-table"') && page.includes('id="data-lab-viewer"'));
 add('all datasets rendered with downloads', datasets.every(item => page.includes(`data-data-lab-dataset="${item.id}"`) && page.includes(`href="${item.path}"`)));
 add('all presets rendered', presets.every(item => page.includes(`data-data-lab-preset="${item.id}"`)));
-add('module runtime wired', page.includes('<script type="module" src="data-lab.js"></script>'));
+add('module runtime wired with cache version', page.includes('<script type="module" src="data-lab.js?v='));
 
+add('runtime has no fatal top-level CDN import', !/^\s*import\s/m.test(runtime));
+add('runtime has two DuckDB CDN providers', runtime.includes('cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@') && runtime.includes('unpkg.com/@duckdb/duckdb-wasm@'));
 add('runtime limits to SELECT and WITH', runtime.includes('Only SELECT and WITH queries are allowed.') && runtime.includes('/^(SELECT|WITH)\\b/i'));
 add('runtime blocks write statements', /ALTER\|ATTACH\|CALL\|COPY\|CREATE\|DELETE/.test(runtime) && runtime.includes('This is a read-only laboratory.'));
 add('runtime blocks direct file readers', runtime.includes('Direct file readers are blocked.') && runtime.includes('read_csv_auto'));
 add('runtime blocks arbitrary URLs', runtime.includes('Remote and local file URLs are blocked'));
 add('runtime wraps hard row limit', runtime.includes('AS matrix_public_query LIMIT'));
-add('runtime enforces timeout', runtime.includes('queryTimeoutMs') && runtime.includes('Promise.race'));
+add('runtime enforces startup and query timeouts', runtime.includes('ENGINE_STARTUP_TIMEOUT_MS') && runtime.includes('withTimeout') && runtime.includes('queryTimeoutMs'));
+add('runtime verifies and buffers datasets', runtime.includes('response.arrayBuffer()') && runtime.includes('registerFileBuffer'));
 add('runtime retains accessible fallback', runtime.includes('Perspective could not load; the accessible result table remains available.'));
+add('runtime exposes startup failures', runtime.includes('Data laboratory unavailable:') && runtime.includes('Engine startup failed; no query was run.'));
 add('runtime exports capped CSV', runtime.includes('rowsToCsv') && runtime.includes('matrix-data-lab-'));
 
 const home = read(path.join(root, 'index.html'));

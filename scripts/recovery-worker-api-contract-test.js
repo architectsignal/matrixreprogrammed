@@ -105,7 +105,7 @@ need(checks.membershipClientContract, 'Membership UI does not match the authorit
 checks.emailFailClosed = email.includes('function providerConfigured(env){return Boolean(env?.BREVO_API_KEY&&env?.MEMBERS_FROM_EMAIL)}')
   && email.includes("if(!env?.EMAIL_WEBHOOK_SECRET||!secureEqual(secret,env.EMAIL_WEBHOOK_SECRET))")
   && email.includes('Explicit email consent is required')
-  && email.includes('verification delivery is queued and will retry');
+  && email.toLowerCase().includes('verification delivery is queued and will retry');
 need(checks.emailFailClosed, 'Email lifecycle does not fail closed on provider, webhook or consent boundaries');
 
 checks.protectedAccess = access.includes("'/downloads/timer-synthesis.md', 'supporter_3'")

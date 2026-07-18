@@ -16,7 +16,9 @@ const compactionProfiles = [
   { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96 },
   { id: 'compact', title: 160, description: 120, listItems: 6, listChars: 48, scalar: 80 },
   { id: 'tight', title: 144, description: 96, listItems: 5, listChars: 40, scalar: 72 },
-  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 }
+  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 },
+  { id: 'deploy-safe', title: 112, description: 56, listItems: 3, listChars: 28, scalar: 56 },
+  { id: 'deployment-floor', title: 96, description: 44, listItems: 3, listChars: 24, scalar: 48 }
 ];
 
 function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
@@ -44,9 +46,13 @@ function listValues(value) {
 function compactList(value, profile) {
   return [...new Set(listValues(value).map(item => bounded(item, profile.listChars)).filter(Boolean))].slice(0, profile.listItems);
 }
+function comparableUrl(value) {
+  return String(value || '').trim().replace(/^https?:\/\/(?:www\.)?matrixreprogrammed\.com\/?/i, '/').replace(/#$/, '');
+}
 function compactRecord(record, profile) {
   const url = String(record?.url || '').trim();
   if (!url) return null;
+  const primarySource = record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true';
   const output = {
     searchVersion: 3,
     title: bounded(record.title || url, profile.title),
@@ -54,7 +60,7 @@ function compactRecord(record, profile) {
     sourceType: bounded(record.sourceType || 'route', profile.scalar),
     resultKind: bounded(record.resultKind || 'route', profile.scalar),
     statusClass: bounded(record.statusClass || 'context', profile.scalar),
-    primarySource: record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true'
+    primarySource: primarySource ? true : 0
   };
   const scalarFields = [
     'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',
@@ -75,7 +81,7 @@ function compactRecord(record, profile) {
     if (value) output[field] = value;
   }
   const sourceUrl = String(record.sourceUrl || '').trim();
-  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);
+  if (/^https?:/i.test(sourceUrl) && comparableUrl(sourceUrl) !== comparableUrl(url)) output.sourceUrl = sourceUrl.slice(0, 1000);
   const priority = Number(record.priority || 0);
   if (Number.isFinite(priority) && priority) output.priority = priority;
   return output;
@@ -198,7 +204,7 @@ const report = {
     mebibytes: Number((compactStats.bytes / 1024 / 1024).toFixed(2)),
     targetMebibytes: 20,
     deploymentLimitMebibytes: 24,
-    evidenceBoundary: 'No valid searchable URL is removed. Only fields unused by the Search V3 browser runtime are discarded, while display text and keyword arrays are bounded adaptively. Complete records remain available in their source pages, graph, registries and document library.'
+    evidenceBoundary: 'No valid searchable URL is removed. Only duplicated source links and bounded display or keyword fragments are compacted adaptively. Complete records remain available in their source pages, graph, registries and document library.'
   }
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

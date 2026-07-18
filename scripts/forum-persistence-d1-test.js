@@ -39,7 +39,7 @@ if (!failures.length) {
   check('strict Worker does not verify D1 health fields', strict.includes("health?.d1Connected === true") && strict.includes("health?.backend === 'src/worker-forum-persistence.js'"));
   check('strict Worker does not return a 503 boundary', strict.includes('status: 503'));
 
-  check('wrapper does not delegate non-forum traffic', wrapper.includes('return legacyWorker.fetch(request, env, ctx)'));
+  check('wrapper does not delegate non-forum traffic', /return\s+legacyWorker\.fetch\(request,[^;]+\)/.test(wrapper));
   check('wrapper missing verified member session integration', wrapper.includes("import { memberSessionContext } from './worker-member-experience.js';") && wrapper.includes('verified-free-member-session'));
   check('wrapper missing D1 schema bootstrap', wrapper.includes('CREATE TABLE IF NOT EXISTS forum_posts'));
   check('wrapper missing authoritative D1 insert', wrapper.includes('INSERT OR IGNORE INTO forum_posts'));

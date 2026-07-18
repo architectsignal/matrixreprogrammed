@@ -59,29 +59,42 @@ for (const [templateRel, outputRel, markers] of pages) {
 
 const adminHtmlRel = 'admin-payment-dashboard.html';
 let adminHtml = read(adminHtmlRel);
+const paymentAnchor = '<article class="panel"><h2>Payment records</h2><div id="payment-payments" class="count">0</div></article>';
+const legalCard = '<article class="panel"><h2>Commercial legal gate</h2><div id="payment-commercial-legal" class="count">—</div></article>';
+const contractCard = '<article class="panel"><h2>Contract confirmation email</h2><div id="payment-contract-email" class="count">—</div></article>';
 if (!adminHtml.includes('id="payment-commercial-legal"')) {
-  const anchor = '<article class="panel"><h2>Payment records</h2><div id="payment-payments" class="count">0</div></article>';
-  if (!adminHtml.includes(anchor)) throw new Error('Payment administration status-grid anchor was not found');
-  adminHtml = adminHtml.replace(anchor, `${anchor}<article class="panel"><h2>Commercial legal gate</h2><div id="payment-commercial-legal" class="count">—</div></article>`);
+  if (!adminHtml.includes(paymentAnchor)) throw new Error('Payment administration status-grid anchor was not found');
+  adminHtml = adminHtml.replace(paymentAnchor, `${paymentAnchor}${legalCard}${contractCard}`);
+} else if (!adminHtml.includes('id="payment-contract-email"')) {
+  if (!adminHtml.includes(legalCard)) throw new Error('Commercial legal status card anchor was not found');
+  adminHtml = adminHtml.replace(legalCard, `${legalCard}${contractCard}`);
 }
 adminHtml = adminHtml.replace(
   'Live requires the production environment switch, confirmation secret and the exact activation phrase.',
-  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, the production environment switch, the D1 switch and the exact activation phrase.'
+  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.'
+);
+adminHtml = adminHtml.replace(
+  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, the production environment switch, the D1 switch and the exact activation phrase.',
+  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.'
 );
 requireMarker(adminHtmlRel, adminHtml, 'payment-commercial-legal');
-requireMarker(adminHtmlRel, adminHtml, 'protected commercial legal switch');
+requireMarker(adminHtmlRel, adminHtml, 'payment-contract-email');
+requireMarker(adminHtmlRel, adminHtml, 'authenticated transactional contract-confirmation email');
 write(adminHtmlRel, adminHtml);
 report.patched.push(adminHtmlRel);
 
 const adminJsRel = 'admin-payment-dashboard.js';
 let adminJs = read(adminJsRel);
-if (!adminJs.includes("$('payment-commercial-legal')")) {
-  const original = "function renderHealth(data){$('payment-environment').textContent=data.environment;$('payment-checkout').textContent=data.checkoutEnabled?'Enabled':'Disabled';$('payment-plans').textContent=data.plansReady?'3/3 ready':`${(data.plans||[]).length}/3 ready`;for(const [key,value] of Object.entries(data.counts||{})){const node=$(`payment-${key}`);if(node)node.textContent=String(value)}}";
-  const replacement = "function renderHealth(data){$('payment-environment').textContent=data.environment;$('payment-checkout').textContent=data.checkoutEnabled?'Enabled':'Disabled';$('payment-plans').textContent=data.plansReady?'3/3 ready':`${(data.plans||[]).length}/3 ready`;const legal=$('payment-commercial-legal');if(legal)legal.textContent=data.commercialLegalReady?'Ready':'Blocked';for(const [key,value] of Object.entries(data.counts||{})){const node=$(`payment-${key}`);if(node)node.textContent=String(value)}}";
-  if (!adminJs.includes(original)) throw new Error('Payment administration renderHealth anchor was not found');
-  adminJs = adminJs.replace(original, replacement);
+const originalRender = "function renderHealth(data){$('payment-environment').textContent=data.environment;$('payment-checkout').textContent=data.checkoutEnabled?'Enabled':'Disabled';$('payment-plans').textContent=data.plansReady?'3/3 ready':`${(data.plans||[]).length}/3 ready`;for(const [key,value] of Object.entries(data.counts||{})){const node=$(`payment-${key}`);if(node)node.textContent=String(value)}}";
+const legalRender = "function renderHealth(data){$('payment-environment').textContent=data.environment;$('payment-checkout').textContent=data.checkoutEnabled?'Enabled':'Disabled';$('payment-plans').textContent=data.plansReady?'3/3 ready':`${(data.plans||[]).length}/3 ready`;const legal=$('payment-commercial-legal');if(legal)legal.textContent=data.commercialLegalReady?'Ready':'Blocked';for(const [key,value] of Object.entries(data.counts||{})){const node=$(`payment-${key}`);if(node)node.textContent=String(value)}}";
+const finalRender = "function renderHealth(data){$('payment-environment').textContent=data.environment;$('payment-checkout').textContent=data.checkoutEnabled?'Enabled':'Disabled';$('payment-plans').textContent=data.plansReady?'3/3 ready':`${(data.plans||[]).length}/3 ready`;const legal=$('payment-commercial-legal');if(legal)legal.textContent=data.commercialLegalReady?'Ready':'Blocked';const contractEmail=$('payment-contract-email');if(contractEmail)contractEmail.textContent=data.contractConfirmationReady?'Ready':'Blocked';for(const [key,value] of Object.entries(data.counts||{})){const node=$(`payment-${key}`);if(node)node.textContent=String(value)}}";
+if (!adminJs.includes("$('payment-contract-email')")) {
+  if (adminJs.includes(legalRender)) adminJs = adminJs.replace(legalRender, finalRender);
+  else if (adminJs.includes(originalRender)) adminJs = adminJs.replace(originalRender, finalRender);
+  else throw new Error('Payment administration renderHealth anchor was not found');
 }
 requireMarker(adminJsRel, adminJs, 'commercialLegalReady');
+requireMarker(adminJsRel, adminJs, 'contractConfirmationReady');
 write(adminJsRel, adminJs);
 report.patched.push(adminJsRel);
 

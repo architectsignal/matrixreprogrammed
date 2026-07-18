@@ -76,8 +76,6 @@ const nodes = [...usedEntityIds].map(id => {
   const connections = Number(degree.get(id) || 0);
   return { data: {
     id,
-    rawId: id,
-    elementType: 'entity',
     entityType: entity.type || 'Entity',
     followTheMoneySchema: entity.followTheMoneySchema || entity.type || 'Entity',
     label: clean(entity.name || id, 130),
@@ -110,7 +108,6 @@ const edges = relationships.map(item => {
   const core = !weakMention && grade !== 'D' && confidence >= 0.6;
   return { data: {
     id: item.id,
-    elementType: 'relationship',
     source: item.from,
     target: item.to,
     relationshipType: item.type,
@@ -180,8 +177,8 @@ const graph = {
 
 const graphPath = path.join(dataDir, 'evidence-network-map.json');
 // This file is loaded directly by the browser and must stay below Cloudflare's
-// single-asset ceiling. Compact defaults avoid repeating the same long boundary
-// thousands of times; every record, source, evidence field and governing boundary remains available.
+// single-asset ceiling. Compact defaults and removal of duplicated type/id labels
+// preserve every record, source, evidence field and governing boundary.
 fs.writeFileSync(graphPath, JSON.stringify(graph));
 const graphBytes = fs.statSync(graphPath).size;
 const cloudflareTargetBytes = 24 * 1024 * 1024;
@@ -211,7 +208,7 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
   serialization: 'compact-json',
-  compaction: 'concise-repeated-default-boundaries',
+  compaction: 'concise-default-boundaries-and-redundant-element-metadata-removal',
   graphBytes,
   graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
   cloudflareTargetBytes,

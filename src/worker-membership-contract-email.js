@@ -25,6 +25,7 @@ export function transactionalMembershipEmailReady(env,target='live'){
 
 export async function queueMembershipContractConfirmation(env,{memberId,providerSubscriptionId,tier,checkoutIntentId=null,currentPeriodEnd=null}={}){
   if(!hasD1(env))return{queued:false,sent:false,error:'Membership database unavailable'};
+  if(!bool(env?.EMAIL_TRANSACTIONAL_ENABLED))return{queued:false,sent:false,error:'Transactional membership email is disabled'};
   await ensureSchema(env);
   const member=await first(env.MEMBERS_DB.prepare("SELECT id,email,display_name FROM members WHERE id=? AND status='active' LIMIT 1").bind(clean(memberId,180)));
   if(!member?.email)return{queued:false,sent:false,error:'Active member email unavailable'};

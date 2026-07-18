@@ -60,7 +60,7 @@ function compactRecord(record, profile) {
     sourceType: bounded(record.sourceType || 'route', profile.scalar),
     resultKind: bounded(record.resultKind || 'route', profile.scalar),
     statusClass: bounded(record.statusClass || 'context', profile.scalar),
-    primarySource: primarySource ? true : 0
+    primarySource
   };
   const scalarFields = [
     'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',

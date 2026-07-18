@@ -5,32 +5,15 @@ const root = process.cwd();
 const downloads = path.join(root, 'downloads');
 const output = path.join(downloads, 'production-deploy-receipt.json');
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
-const readJson = file => {
-  try { return JSON.parse(fs.readFileSync(path.join(root, file), 'utf8')); }
-  catch { return null; }
-};
-const readText = file => {
-  try { return fs.readFileSync(path.join(root, file), 'utf8'); }
-  catch { return ''; }
-};
+const readJson = file => { try { return JSON.parse(fs.readFileSync(path.join(root, file), 'utf8')); } catch { return null; } };
+const readText = file => { try { return fs.readFileSync(path.join(root, file), 'utf8'); } catch { return ''; } };
 const exists = file => fs.existsSync(path.join(root, file));
 const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
 
 async function fetchBoundary(route) {
-  const response = await fetch(`${siteUrl}${route}?receipt_check=${Date.now()}`, {
-    redirect: 'follow',
-    headers: {
-      'cache-control': 'no-cache',
-      pragma: 'no-cache',
-      'user-agent': 'MatrixProductionReceipt/4.0'
-    }
-  });
+  const response = await fetch(`${siteUrl}${route}?receipt_check=${Date.now()}`, { redirect: 'follow', headers: { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': 'MatrixProductionReceipt/5.0' } });
   const text = await response.text();
-  return {
-    status: response.status,
-    origin: response.headers.get('x-matrix-origin') || null,
-    data: parseJson(text)
-  };
+  return { status: response.status, origin: response.headers.get('x-matrix-origin') || null, data: parseJson(text) };
 }
 
 (async () => {
@@ -41,59 +24,36 @@ async function fetchBoundary(route) {
   const bootstrap = live.bootstrapBoundary || {};
   const rehearsal = live.rehearsalBoundary || {};
   const paypal = live.paypalBoundary || {};
-  const rows = payload => Array.isArray(payload)
-    ? payload.flatMap(item => item?.results || item?.result?.results || [])
-    : [];
+  const rows = payload => Array.isArray(payload) ? payload.flatMap(item => item?.results || item?.result?.results || []) : [];
   const schemaRows = rows(schema);
   const settingRows = rows(settings);
 
   const requiredObjects = [
-    'members', 'member_sessions', 'subscriptions', 'audit_log', 'email_campaigns',
-    'member_access_grants', 'member_saved_items', 'member_entity_follows', 'member_watch_items',
-    'member_archive_entries', 'member_download_catalog', 'paypal_runtime_settings', 'paypal_products',
-    'paypal_plans', 'paypal_subscription_transitions', 'paypal_payment_records',
-    'paypal_sandbox_rehearsal_runs', 'paypal_sandbox_rehearsal_evidence',
-    'paypal_sandbox_bootstrap_status', 'paypal_sandbox_bootstrap_health',
-    'member_effective_entitlements', 'member_download_eligibility'
+    'members','member_sessions','subscriptions','audit_log','email_campaigns','email_outbox','email_deliveries','email_events','email_suppressions',
+    'member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog',
+    'forum_posts','forum_reports','forum_post_owners','forum_report_owners','forum_board_state','forum_persistence_health',
+    'paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_checkout_consents','paypal_checkout_consent_summary',
+    'paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health',
+    'member_effective_entitlements','member_download_eligibility'
   ];
   const names = new Set(schemaRows.map(row => row.name));
   const missingObjects = requiredObjects.filter(name => !names.has(name));
   const checkoutClosed = settingRows.length >= 2 && settingRows.every(row => Number(row.checkout_enabled) === 0);
-  const rollbackPointCreated = rollback.ok === true
-    && rollback.database === 'matrix-members'
-    && rollback.method === 'Cloudflare D1 Time Travel bookmark'
-    && typeof rollback.bookmark === 'string'
-    && rollback.bookmark.trim().length >= 8
-    && typeof rollback.restoreCommand === 'string'
-    && rollback.restoreCommand.includes(rollback.bookmark);
+  const rollbackPointCreated = rollback.ok === true && rollback.database === 'matrix-members' && rollback.method === 'Cloudflare D1 Time Travel bookmark' && typeof rollback.bookmark === 'string' && rollback.bookmark.trim().length >= 8 && typeof rollback.restoreCommand === 'string' && rollback.restoreCommand.includes(rollback.bookmark);
 
-  const bootstrapReady = bootstrap.ready === true
-    && bootstrap.ok === true
-    && bootstrap.data?.plansReady === true
-    && Number(bootstrap.data?.planCount || 0) === 3;
-  const bootstrapSafeDisabled = bootstrap.safeDisabled === true
-    && bootstrap.ok === true
-    && bootstrap.data?.plansReady === false
-    && bootstrap.data?.databaseCheckoutEnabled === false
-    && bootstrap.data?.liveChargingEnabled === false;
+  const bootstrapReady = bootstrap.ready === true && bootstrap.ok === true && bootstrap.data?.plansReady === true && Number(bootstrap.data?.planCount || 0) === 3;
+  const bootstrapSafeDisabled = bootstrap.safeDisabled === true && bootstrap.ok === true && bootstrap.data?.plansReady === false && bootstrap.data?.databaseCheckoutEnabled === false && bootstrap.data?.liveChargingEnabled === false;
   const bootstrapSafe = bootstrapReady || bootstrapSafeDisabled;
-  const rehearsalSafe = bootstrapReady
-    ? rehearsal.ok === true
-    : bootstrapSafeDisabled
-      ? rehearsal.ok === true && rehearsal.skipped === true && rehearsal.safeDisabled === true
-      : false;
+  const rehearsalSafe = bootstrapReady ? rehearsal.ok === true : bootstrapSafeDisabled ? rehearsal.ok === true && rehearsal.skipped === true && rehearsal.safeDisabled === true : false;
 
-  const [memberBoundary, emailBoundary] = await Promise.all([
+  const [memberBoundary, emailBoundary, forumBoundary] = await Promise.all([
     fetchBoundary('/api/member/me'),
-    fetchBoundary('/api/email/admin/health')
+    fetchBoundary('/api/email/admin/health'),
+    fetchBoundary('/forum-health')
   ]);
-  const memberBoundaryPassed = memberBoundary.status === 401
-    && memberBoundary.origin === 'cloudflare-worker-member-experience'
-    && memberBoundary.data?.ok === false
-    && memberBoundary.data?.authenticated === false;
-  const emailBoundaryPassed = emailBoundary.status === 403
-    && emailBoundary.origin === 'cloudflare-worker-email-lifecycle'
-    && emailBoundary.data?.ok === false;
+  const memberBoundaryPassed = memberBoundary.status === 401 && memberBoundary.origin === 'cloudflare-worker-member-experience' && memberBoundary.data?.ok === false && memberBoundary.data?.authenticated === false;
+  const emailBoundaryPassed = emailBoundary.status === 403 && emailBoundary.origin === 'cloudflare-worker-email-lifecycle' && emailBoundary.data?.ok === false;
+  const forumBoundaryPassed = forumBoundary.status === 200 && forumBoundary.origin === 'cloudflare-worker-forum-d1' && forumBoundary.data?.persistent === true && forumBoundary.data?.d1Connected === true && forumBoundary.data?.postingAccess === 'verified-free-member-session' && forumBoundary.data?.crossDevice === true;
 
   const productionWorker = readText('src/worker-production.js');
   const reportDelivery = readText('src/worker-report-delivery.js');
@@ -101,46 +61,31 @@ async function fetchBoundary(route) {
   const accessPolicy = readText('data/access-route-policy.json');
   const worker = readText('src/worker.js');
   const wrangler = readText('wrangler.toml');
+  const emailLifecycle = readText('src/worker-email-lifecycle.js');
+  const dailyRenderer = readText('src/worker-daily-brief-email.js');
+  const dailyBrain = readJson('data/daily-brain-brief.json') || {};
+  const forumWorker = readText('src/worker-forum-persistence.js');
+  const forumClient = readText('forum.js');
   const timers = readJson('data/global-risk-clocks.json') || {};
   const timerPage = readText('timers.html');
 
-  const reportDeliveryWired = productionWorker.includes('queueVerifiedSelfReport')
-    && productionWorker.includes('queuePendingVerifiedSelfReports')
-    && productionWorker.includes('processOutbox')
-    && reportDelivery.includes('verified_self_intelligence_report')
-    && reportDelivery.includes('report-is-not-verified-self')
-    && reportDelivery.includes('current-membership-tier-required')
+  const reportDeliveryWired = productionWorker.includes('queueVerifiedSelfReport') && productionWorker.includes('queuePendingVerifiedSelfReports') && productionWorker.includes('processOutbox') && reportDelivery.includes('verified_self_intelligence_report') && reportDelivery.includes('report-is-not-verified-self') && reportDelivery.includes('current-membership-tier-required');
+  const deepBriefWired = dailyBrain.schemaVersion === 3 && Array.isArray(dailyBrain.briefings) && dailyBrain.briefings.length > 0
+    && ['Trigger','Primary record','Money and authority','Global convergence assessment','Speculative conclusion','Counter-analysis','Missing evidence','Watch next'].every(marker => dailyRenderer.includes(marker))
+    && emailLifecycle.includes('queueImmediateDailyBrief')
+    && emailLifecycle.includes("messageKind:'first_daily_brief'")
+    && emailLifecycle.includes('issueReusableEmailToken')
+    && emailLifecycle.includes("timeZone:'Europe/Paris'")
+    && emailLifecycle.includes("parts.hour==='08'&&parts.minute==='05'")
+    && emailLifecycle.includes("parts.weekday==='Mon'&&parts.hour==='09'&&parts.minute==='15'")
     && wrangler.includes('EMAIL_AUTOMATION_ENABLED = "true"')
-    && wrangler.includes('"5 6 * * *"')
-    && wrangler.includes('"15 7 * * 1"');
+    && ['"5 6 * * *"','"5 7 * * *"','"15 7 * * 1"','"15 8 * * 1"'].every(marker => wrangler.includes(marker));
+  const signalBoardWired = forumWorker.includes('forum_post_owners') && forumWorker.includes('forum_report_owners') && forumWorker.includes('verified-free-member-session') && forumWorker.includes('crossDevice:true') && forumWorker.includes('no browser or legacy fallback was accepted') && forumClient.includes('/api/member/me') && !forumClient.includes('localStorage') && wrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"');
 
-  const accessTiersWired = productionWorker.includes('protectedAssetTier')
-    && productionWorker.includes('enforceProtectedAssetAccess')
-    && accessGate.includes('member_effective_entitlements')
-    && accessGate.includes('tierRank')
-    && accessGate.includes('requiredTier')
-    && accessPolicy.includes('"exactRules"')
-    && accessPolicy.includes('"patternRules"')
-    && accessPolicy.includes('active-fail-closed')
-    && accessPolicy.includes('h8mail_verified_self')
-    && accessPolicy.includes('intelligence_6');
-
-  const osintTiersWired = worker.includes("h8mail:{label:'Breach exposure review',access:'member',minimumTier:'intelligence_6',selfOnlyForMembers:true")
-    && worker.includes("spiderfoot:{label:'Passive digital footprint scan',access:'member',minimumTier:'intelligence_6'")
-    && worker.includes('This Intelligence tool may review only your own verified account email');
-
+  const accessTiersWired = productionWorker.includes('protectedAssetTier') && productionWorker.includes('enforceProtectedAssetAccess') && accessGate.includes('member_effective_entitlements') && accessGate.includes('tierRank') && accessGate.includes('requiredTier') && accessPolicy.includes('"exactRules"') && accessPolicy.includes('"patternRules"') && accessPolicy.includes('active-fail-closed') && accessPolicy.includes('h8mail_verified_self') && accessPolicy.includes('intelligence_6');
+  const osintTiersWired = worker.includes("h8mail:{label:'Breach exposure review',access:'member',minimumTier:'intelligence_6',selfOnlyForMembers:true") && worker.includes("spiderfoot:{label:'Passive digital footprint scan',access:'member',minimumTier:'intelligence_6'") && worker.includes('This Intelligence tool may review only your own verified account email');
   const clocks = Array.isArray(timers.clocks) ? timers.clocks : [];
-  const timersExplained = clocks.length > 0
-    && clocks.every(clock => clock.scoreType === 'pressureIndex'
-      && clock.scoreMeaning
-      && clock.bandMeaning
-      && clock.calculationBasis
-      && clock.whatRaises
-      && clock.whatLowers
-      && clock.evidenceBoundary)
-    && timerPage.includes('What this score means')
-    && timerPage.includes('What would raise it')
-    && timerPage.includes('What would lower it');
+  const timersExplained = clocks.length > 0 && clocks.every(clock => clock.scoreType === 'pressureIndex' && clock.scoreMeaning && clock.bandMeaning && clock.calculationBasis && clock.whatRaises && clock.whatLowers && clock.evidenceBoundary) && timerPage.includes('What this score means') && timerPage.includes('What would raise it') && timerPage.includes('What would lower it');
 
   const receipt = {
     schemaVersion: 4,
@@ -150,104 +95,42 @@ async function fetchBoundary(route) {
     runAttempt: process.env.GITHUB_RUN_ATTEMPT || null,
     deployedCommit: process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || live.expectedSha || null,
     deployedAt: new Date().toISOString(),
-    cloudflare: {
-      authoritative: true,
-      worker: 'src/worker-production.js',
-      liveVerificationPassed: live.ok === true,
-      manifestMatchedMain: live.manifestMatches === true,
-      healthMatchedCommit: live.healthMatches === true
-    },
-    d1: {
-      database: 'matrix-members',
-      rollbackPointCreated,
-      rollbackMethod: rollback.method || null,
-      rollbackBookmarkRecorded: Boolean(rollback.bookmark),
-      restoreCommandRecorded: Boolean(rollback.restoreCommand),
-      migrationLogCreated: exists('downloads/d1-migration.log'),
-      requiredObjects: requiredObjects.length,
-      verifiedObjects: requiredObjects.length - missingObjects.length,
-      missingObjects,
-      schemaVerified: missingObjects.length === 0
-    },
-    memberArea: {
-      boundaryPassed: memberBoundaryPassed,
-      status: memberBoundary.status,
-      origin: memberBoundary.origin,
-      authenticationFailClosed: memberBoundary.data?.authenticated === false,
-      protectedAssetTiersWired: accessTiersWired,
-      osintToolTiersWired: osintTiersWired
-    },
+    cloudflare: { authoritative: true, worker: 'src/worker-production.js', liveVerificationPassed: live.ok === true, manifestMatchedMain: live.manifestMatches === true, healthMatchedCommit: live.healthMatches === true },
+    d1: { database: 'matrix-members', rollbackPointCreated, rollbackMethod: rollback.method || null, rollbackBookmarkRecorded: Boolean(rollback.bookmark), restoreCommandRecorded: Boolean(rollback.restoreCommand), migrationLogCreated: exists('downloads/d1-migration.log'), requiredObjects: requiredObjects.length, verifiedObjects: requiredObjects.length - missingObjects.length, missingObjects, schemaVerified: missingObjects.length === 0 },
+    memberArea: { boundaryPassed: memberBoundaryPassed, status: memberBoundary.status, origin: memberBoundary.origin, authenticationFailClosed: memberBoundary.data?.authenticated === false, protectedAssetTiersWired: accessTiersWired, osintToolTiersWired: osintTiersWired },
     email: {
       boundaryPassed: emailBoundaryPassed,
       status: emailBoundary.status,
       origin: emailBoundary.origin,
+      automationEnabled: wrangler.includes('EMAIL_AUTOMATION_ENABLED = "true"'),
+      consentAndSuppressionRequired: emailLifecycle.includes("marketing_status='subscribed'") && emailLifecycle.includes('email_verified_at IS NOT NULL') && emailLifecycle.includes('email_suppressions'),
+      deepBriefWired,
+      immediateFirstBrief: emailLifecycle.includes('queueImmediateDailyBrief'),
+      personalizedPreferenceAndUnsubscribe: emailLifecycle.includes('issueReusableEmailToken') && emailLifecycle.includes('Manage preferences:') && emailLifecycle.includes('Unsubscribe:'),
+      dailyLocalTime: '08:05 Europe/Paris',
+      weeklyLocalTime: 'Monday 09:15 Europe/Paris',
+      dstGuarded: true,
       verifiedSelfReportDeliveryWired: reportDeliveryWired,
-      dailyCron: '5 6 * * *',
-      weeklyCron: '15 7 * * 1',
-      providerSecretsRequired: ['BREVO_API_KEY', 'MEMBERS_FROM_EMAIL', 'EMAIL_WEBHOOK_SECRET']
+      providerSecretsRequired: ['BREVO_API_KEY','MEMBERS_FROM_EMAIL','EMAIL_WEBHOOK_SECRET']
     },
-    timers: {
-      count: clocks.length,
-      explained: timersExplained,
-      scoreType: 'pressureIndex',
-      visualSynthesisRoute: '/timers.html'
-    },
-    paypal: {
-      environment: 'sandbox',
-      checkoutClosed,
-      liveChargingEnabled: false,
-      unauthenticatedBoundaryPassed: paypal.ok === true,
-      bootstrapReady,
-      bootstrapSafeDisabled,
-      bootstrapSafe,
-      bootstrapMode: bootstrapReady ? 'sandbox-ready' : bootstrapSafeDisabled ? 'sandbox-pending-disabled' : 'unsafe',
-      bootstrapOrigin: bootstrap.origin || null,
-      planCount: Number(bootstrap.data?.planCount || 0),
-      prices: Array.isArray(bootstrap.data?.prices) ? bootstrap.data.prices.map(item => ({
-        tier: item.tier,
-        amount: item.amount,
-        currency: item.currency,
-        status: item.status
-      })) : [],
-      rehearsalBoundaryPassed: rehearsalSafe,
-      rehearsalCheckoutClosed: rehearsal.checkout?.data?.checkoutEnabled === false || bootstrapSafeDisabled
-    },
-    forum: {
+    signalBoard: {
+      boundaryPassed: forumBoundaryPassed,
       d1WriteReadPassed: live.forumPersistence?.ok === true,
-      origin: live.forumPersistence?.storage || null
+      origin: forumBoundary.origin,
+      postingAccess: forumBoundary.data?.postingAccess || null,
+      crossDevice: forumBoundary.data?.crossDevice === true,
+      ownerLedgerWired: signalBoardWired,
+      localFallbackDisabled: !forumClient.includes('localStorage'),
+      kvCompatibilityMirrorEnabled: false
     },
-    safety: {
-      secretsIncluded: false,
-      providerPlanIdsIncluded: false,
-      providerProductIdsIncluded: false,
-      customerDataIncluded: false,
-      reportsOnlyEmailVerifiedSelfResults: reportDelivery.includes('report-is-not-verified-self'),
-      h8mailMemberScopeVerifiedSelfOnly: worker.includes('selfOnlyForMembers:true')
-    },
-    ok: live.ok === true
-      && rollbackPointCreated
-      && missingObjects.length === 0
-      && checkoutClosed
-      && paypal.ok === true
-      && bootstrapSafe
-      && rehearsalSafe
-      && live.forumPersistence?.ok === true
-      && memberBoundaryPassed
-      && emailBoundaryPassed
-      && reportDeliveryWired
-      && accessTiersWired
-      && osintTiersWired
-      && timersExplained
+    timers: { count: clocks.length, explained: timersExplained, scoreType: 'pressureIndex', visualSynthesisRoute: '/timers.html' },
+    paypal: { environment: 'sandbox', checkoutClosed, liveChargingEnabled: false, unauthenticatedBoundaryPassed: paypal.ok === true, bootstrapReady, bootstrapSafeDisabled, bootstrapSafe, bootstrapMode: bootstrapReady ? 'sandbox-ready' : bootstrapSafeDisabled ? 'sandbox-pending-disabled' : 'unsafe', bootstrapOrigin: bootstrap.origin || null, planCount: Number(bootstrap.data?.planCount || 0), prices: Array.isArray(bootstrap.data?.prices) ? bootstrap.data.prices.map(item => ({ tier: item.tier, amount: item.amount, currency: item.currency, status: item.status })) : [], rehearsalBoundaryPassed: rehearsalSafe, rehearsalCheckoutClosed: rehearsal.checkout?.data?.checkoutEnabled === false || bootstrapSafeDisabled },
+    safety: { secretsIncluded: false, providerPlanIdsIncluded: false, providerProductIdsIncluded: false, customerDataIncluded: false, reportsOnlyEmailVerifiedSelfResults: reportDelivery.includes('report-is-not-verified-self'), h8mailMemberScopeVerifiedSelfOnly: worker.includes('selfOnlyForMembers:true') },
+    ok: live.ok === true && rollbackPointCreated && missingObjects.length === 0 && checkoutClosed && paypal.ok === true && bootstrapSafe && rehearsalSafe && live.forumPersistence?.ok === true && memberBoundaryPassed && emailBoundaryPassed && forumBoundaryPassed && reportDeliveryWired && deepBriefWired && signalBoardWired && accessTiersWired && osintTiersWired && timersExplained
   };
 
   fs.mkdirSync(downloads, { recursive: true });
   fs.writeFileSync(output, JSON.stringify(receipt, null, 2));
-  if (!receipt.ok) {
-    console.error(JSON.stringify(receipt, null, 2));
-    process.exit(1);
-  }
-  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with Time Travel rollback, member, email, PayPal, forum, timer and mission-tier boundaries verified.`);
-})().catch(error => {
-  console.error(error.stack || error.message);
-  process.exit(1);
-});
+  if (!receipt.ok) { console.error(JSON.stringify(receipt, null, 2)); process.exit(1); }
+  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with deep email, persistent Signal Board, Time Travel rollback, PayPal and mission boundaries verified.`);
+})().catch(error => { console.error(error.stack || error.message); process.exit(1); });

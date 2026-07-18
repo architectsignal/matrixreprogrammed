@@ -1,0 +1,50 @@
+name: Site Recovery Functional Inventory
+
+on:
+  push:
+    branches:
+      - recovery/site-mission-restoration
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: matrixreprogrammed-site-recovery-inventory
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    name: Inventory routes, controls, data and runtime ownership
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout recovery branch
+        uses: actions/checkout@v4
+        with:
+          ref: recovery/site-mission-restoration
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate and run inventory scanner
+        run: |
+          node --check scripts/recovery-functional-inventory.js
+          node scripts/recovery-functional-inventory.js
+
+      - name: Publish inventory summary
+        run: |
+          cat downloads/recovery-functional-inventory.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload complete inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-functional-inventory-${{ github.run_id }}
+          path: |
+            downloads/recovery-functional-inventory.json
+            downloads/recovery-functional-inventory.md
+          if-no-files-found: error
+          retention-days: 30

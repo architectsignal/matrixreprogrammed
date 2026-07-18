@@ -34,12 +34,28 @@ jobs:
           node-version: '24'
 
       - name: Rebuild clean entity outputs
+        id: rebuild
+        shell: bash
         run: |
-          node --check scripts/repair-entity-exposure-object-names.js
-          node --check scripts/rebuild-clean-entity-outputs.js
-          node scripts/rebuild-clean-entity-outputs.js
+          set +e
+          mkdir -p downloads
+          : > downloads/recovery-entity-rebuild.log
+          node --check scripts/repair-entity-exposure-object-names.js >> downloads/recovery-entity-rebuild.log 2>&1
+          code=$?
+          if [ "$code" -eq 0 ]; then
+            node --check scripts/rebuild-clean-entity-outputs.js >> downloads/recovery-entity-rebuild.log 2>&1
+            code=$?
+          fi
+          if [ "$code" -eq 0 ]; then
+            node scripts/rebuild-clean-entity-outputs.js >> downloads/recovery-entity-rebuild.log 2>&1
+            code=$?
+          fi
+          cat downloads/recovery-entity-rebuild.log
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Validate and run inventory scanner
+        if: steps.rebuild.outputs.exit_code == '0'
         run: |
           node --check scripts/recovery-functional-inventory.js
           node --check scripts/recovery-functional-inventory-refine.js
@@ -47,10 +63,12 @@ jobs:
           node scripts/recovery-functional-inventory-refine.js
 
       - name: Publish inventory summary
+        if: steps.rebuild.outputs.exit_code == '0'
         run: |
           cat downloads/recovery-functional-inventory.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload complete inventory
+      - name: Upload complete inventory and diagnostics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: recovery-functional-inventory-${{ github.run_id }}
@@ -58,5 +76,10 @@ jobs:
             downloads/recovery-functional-inventory.json
             downloads/recovery-functional-inventory.md
             downloads/recovery-entity-output-rebuild.json
+            downloads/recovery-entity-rebuild.log
           if-no-files-found: error
           retention-days: 30
+
+      - name: Fail on rebuild error
+        if: steps.rebuild.outputs.exit_code != '0'
+        run: exit 1

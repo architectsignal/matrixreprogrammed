@@ -6,6 +6,8 @@ const workerFile = path.join(root, 'src', 'worker.js');
 const pageFile = path.join(root, 'research-tools.html');
 const uiFile = path.join(root, 'research-tools.js');
 const deliveryFile = path.join(root, 'src', 'worker-report-delivery.js');
+const changeDetectionFile = path.join(root, 'scripts', 'build-change-detection-engine.js');
+const homepageFile = path.join(root, 'index.html');
 
 function read(file) { return fs.readFileSync(file, 'utf8'); }
 function write(file, text) { fs.writeFileSync(file, text); }
@@ -73,6 +75,26 @@ const deliveryTierFinal = `${deliveryTierAnchor}\n  const tierRank = { registere
 if (!delivery.includes("reason: 'current-membership-tier-required'")) delivery = replaceRequired(delivery, deliveryTierAnchor, deliveryTierFinal, 'report delivery tier boundary');
 write(deliveryFile, delivery);
 
+if (fs.existsSync(changeDetectionFile)) {
+  let detector = read(changeDetectionFile);
+  const oldCleaner = "function clean(value = ''){\n  const text = scalarText(value).replace(/<[^>]+>/g, ' ').replace(/\\s+/g, ' ').trim();\n  return ['[object Object]','object Object','[object Array]'].includes(text) ? '' : text;\n}";
+  const finalCleaner = "function clean(value = ''){\n  return scalarText(value)\n    .replace(/<[^>]+>/g, ' ')\n    .replace(/\\[object Object\\]|\\bobject Object\\b|\\[object Array\\]/gi, ' ')\n    .replace(/\\s+/g, ' ')\n    .trim();\n}";
+  if (!detector.includes(finalCleaner)) detector = replaceRequired(detector, oldCleaner, finalCleaner, 'Change Detection placeholder sanitizer');
+  write(changeDetectionFile, detector);
+}
+
+if (fs.existsSync(homepageFile)) {
+  let homepage = read(homepageFile);
+  const bookUniverseLink = '<a href="book-universe.html">Book Universe</a>';
+  if (!homepage.includes(bookUniverseLink)) {
+    const booksLink = '<a href="books.html">Books</a>';
+    if (homepage.includes(booksLink)) homepage = homepage.replace(booksLink, `${booksLink}${bookUniverseLink}`);
+    else if (homepage.includes('</nav>')) homepage = homepage.replace('</nav>', `${bookUniverseLink}</nav>`);
+    else throw new Error('Book Universe homepage route target not found');
+  }
+  write(homepageFile, homepage);
+}
+
 require('./upgrade-daily-control-brief-email.js');
 require('./sanitize-machine-entity-outputs.js');
 require('./patch-geographic-power-atlas-runtime.js');
@@ -81,4 +103,4 @@ require('./disable-production-kv-traffic.js');
 require('./repair-empty-public-controls.js');
 require('./patch-homepage-command-builder-shell.js');
 require('./patch-phase1-live-email-verifier.js');
-console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. Daily Control Brief v3, KV-safe production policy, empty-control repair, homepage shell recovery and Phase 1 live email verification applied.');
+console.log('OSINT tiers enforced: Holehe registered; SpiderFoot Intelligence; h8mail Intelligence verified-self, with administrator investigation scope. Daily Control Brief v3, KV-safe production policy, empty-control repair, homepage shell recovery, Book Universe route, Change Detection sanitization and Phase 1 live email verification applied.');

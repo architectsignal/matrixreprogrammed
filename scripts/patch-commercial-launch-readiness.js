@@ -1,10 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
 const reportPath = path.join(root, 'downloads', 'commercial-launch-page-patch.json');
-const report = { ok: true, generatedAt: new Date().toISOString(), written: [], patched: [], checks: [] };
+const report = { ok: true, generatedAt: new Date().toISOString(), written: [], patched: [], checks: [], integratedSystems: [] };
 
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }
 function write(rel, content) {
@@ -38,6 +39,15 @@ function rejectMarker(rel, content, marker) {
   report.checks.push({ rel, rejectedMarker: marker, ok });
   if (!ok) throw new Error(`${rel} contains obsolete marker: ${marker}`);
 }
+function runIntegrated(script, label) {
+  const target = path.join(root, script);
+  if (!fs.existsSync(target)) throw new Error(`${label} script is missing: ${script}`);
+  const result = spawnSync(process.execPath, [target], { cwd: root, encoding: 'utf8', maxBuffer: 30 * 1024 * 1024 });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  report.integratedSystems.push({ script, label, status: result.status });
+  if (result.status !== 0) throw new Error(`${label} failed with status ${result.status}`);
+}
 
 const pages = [
   ['templates/commercial-store.template', 'store.html', ['CURRENT COMMERCIAL STATUS.', 'data-newsletter-form', 'membership-terms.html']],
@@ -51,9 +61,7 @@ for (const [templateRel, outputRel, markers] of pages) {
   if (!fs.existsSync(templatePath)) throw new Error(`Missing commercial template: ${templateRel}`);
   const content = read(templateRel);
   markers.forEach(marker => requireMarker(templateRel, content, marker));
-  for (const obsolete of ['Buy Placeholder', 'Join Placeholder', 'Email capture placeholder', 'when the email provider is connected', '€19/month', '€49/month']) {
-    rejectMarker(templateRel, content, obsolete);
-  }
+  for (const obsolete of ['Buy Placeholder', 'Join Placeholder', 'Email capture placeholder', 'when the email provider is connected', '€19/month', '€49/month']) rejectMarker(templateRel, content, obsolete);
   write(outputRel, content);
 }
 
@@ -69,14 +77,8 @@ if (!adminHtml.includes('id="payment-commercial-legal"')) {
   if (!adminHtml.includes(legalCard)) throw new Error('Commercial legal status card anchor was not found');
   adminHtml = adminHtml.replace(legalCard, `${legalCard}${contractCard}`);
 }
-adminHtml = adminHtml.replace(
-  'Live requires the production environment switch, confirmation secret and the exact activation phrase.',
-  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.'
-);
-adminHtml = adminHtml.replace(
-  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, the production environment switch, the D1 switch and the exact activation phrase.',
-  'Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.'
-);
+adminHtml = adminHtml.replace('Live requires the production environment switch, confirmation secret and the exact activation phrase.','Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.');
+adminHtml = adminHtml.replace('Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, the production environment switch, the D1 switch and the exact activation phrase.','Live additionally requires verified commercial operator information, the protected commercial legal switch and confirmation secret, authenticated transactional contract-confirmation email, the production environment switch, the D1 switch and the exact activation phrase.');
 requireMarker(adminHtmlRel, adminHtml, 'payment-commercial-legal');
 requireMarker(adminHtmlRel, adminHtml, 'payment-contract-email');
 requireMarker(adminHtmlRel, adminHtml, 'authenticated transactional contract-confirmation email');
@@ -98,6 +100,10 @@ requireMarker(adminJsRel, adminJs, 'contractConfirmationReady');
 write(adminJsRel, adminJs);
 report.patched.push(adminJsRel);
 
+// These run from an existing protected prebuild hook and are repeated during final reconciliation.
+runIntegrated('scripts/patch-deep-email-automation.js', 'Deep structured email automation');
+runIntegrated('scripts/patch-persistent-signal-board.js', 'Persistent Signal Board');
+
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log(`Commercial launch pages patched: ${report.written.length} output writes and ${report.patched.length} admin surfaces.`);
+console.log(`Commercial launch pages patched: ${report.written.length} output writes, ${report.patched.length} admin surfaces and ${report.integratedSystems.length} integrated mission systems.`);

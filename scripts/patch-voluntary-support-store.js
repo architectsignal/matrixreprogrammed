@@ -14,6 +14,11 @@ function attr(value) {
 function stripTags(value) {
   return String(value || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
+function isCanonicalCommercialStore(html) {
+  return String(html || '').includes('CURRENT COMMERCIAL STATUS.')
+    && String(html || '').includes('data-newsletter-form')
+    && String(html || '').includes('membership-terms.html');
+}
 function supportPanel(key, label, suggested) {
   const safeKey = attr(key);
   const safeLabel = attr(label);
@@ -61,6 +66,7 @@ function transformArticle(article, options = {}) {
   return next;
 }
 function patchStore(html) {
+  if (isCanonicalCommercialStore(html)) return html;
   let next = ensureAssets(html);
   next = next.replace(/<article class="money-card" id="buy-[^"]+">[\s\S]*?<\/article>/gi, article => transformArticle(article));
   next = next.replace(/Reports, decks, memberships, books and public-record research services\./g, 'Free public-record reports, decks and evidence routes, with an optional user-chosen support payment.');
@@ -117,20 +123,29 @@ for (const base of roots) {
     const file = path.join(base, relative);
     if (!fs.existsSync(file)) continue;
     const html = fs.readFileSync(file, 'utf8');
-    checks.push({
+    const canonicalStore = relative === 'store.html' && isCanonicalCommercialStore(html);
+    const row = {
       file: path.relative(root, file).replace(/\\/g, '/'),
+      mode: canonicalStore ? 'canonical-commercial-store' : 'voluntary-support',
       donationCards: (html.match(/data-donation-card/g) || []).length,
       fixedPricesRemoved: !/<div\b[^>]*class=["'][^"']*\bprice\b[^"']*["'][^>]*>\s*€\s*\d/i.test(html),
       buyPlaceholdersRemoved: !/Buy Placeholder/i.test(html),
       rangePresent: html.includes('€1 to €5,000'),
       scriptPresent: html.includes('paypal-voluntary-support.js'),
       legalBoundary: html.includes('not a charitable or tax-deductible donation'),
-      freeBoundary: /remain free|remains free/i.test(html)
-    });
+      freeBoundary: /remain free|remains free/i.test(html),
+      canonicalStatus: canonicalStore && html.includes('CURRENT COMMERCIAL STATUS.'),
+      verifiedNewsletter: canonicalStore && html.includes('data-newsletter-form'),
+      termsRoute: canonicalStore && html.includes('membership-terms.html')
+    };
+    row.valid = canonicalStore
+      ? row.donationCards === 0 && row.fixedPricesRemoved && row.buyPlaceholdersRemoved && row.canonicalStatus && row.verifiedNewsletter && row.termsRoute
+      : row.donationCards > 0 && row.fixedPricesRemoved && row.buyPlaceholdersRemoved && row.rangePresent && row.scriptPresent && row.legalBoundary && row.freeBoundary;
+    checks.push(row);
   }
 }
-const ok = checks.length >= 3 && checks.every(row => row.donationCards > 0 && row.fixedPricesRemoved && row.buyPlaceholdersRemoved && row.rangePresent && row.scriptPresent && row.legalBoundary && row.freeBoundary);
+const ok = checks.length >= 3 && checks.every(row => row.valid);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
-fs.writeFileSync(path.join(root, 'downloads', 'voluntary-support-store-patch.json'), `${JSON.stringify({ ok, generatedAt: new Date().toISOString(), touched: [...new Set(touched)], checks, amount: { minimum: 1, maximum: 5000, currency: 'EUR' }, evidenceAccessRemainsFree: true }, null, 2)}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'voluntary-support-store-patch.json'), `${JSON.stringify({ ok, generatedAt: new Date().toISOString(), touched: [...new Set(touched)], checks, amount: { minimum: 1, maximum: 5000, currency: 'EUR' }, evidenceAccessRemainsFree: true, canonicalStorePreserved: checks.some(row => row.mode === 'canonical-commercial-store') }, null, 2)}\n`);
 if (!ok) throw new Error(`Voluntary support store patch failed: ${JSON.stringify(checks)}`);
-console.log(`Voluntary support cards patched across store, deck store and premium reports (${[...new Set(touched)].length} file(s)).`);
+console.log(`Voluntary support cards patched where applicable; canonical paid-launch store preserved (${[...new Set(touched)].length} file(s) changed).`);

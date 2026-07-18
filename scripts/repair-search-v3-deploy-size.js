@@ -16,12 +16,11 @@ const before = source;
 const profileMatch = source.match(/const compactionProfiles = \[[\s\S]*?\n\];/);
 if (!profileMatch) throw new Error('Search V3 compaction profile block is missing');
 let profileBlock = profileMatch[0]
-  .replace(/^\s*\{ id: 'deployment-safe',[^
-]*\},?\s*$/m, '')
+  .replace(/^\s*\{ id: 'deployment-safe',[^\r\n]*\},?\s*$/m, '')
   .replace(/,\s*\n\s*\n/g, ',\n');
 const close = profileBlock.lastIndexOf('\n];');
 if (close < 0) throw new Error('Search V3 compaction profile closing marker is missing');
-let body = profileBlock.slice(0, close).trimEnd().replace(/,+$/, '');
+const body = profileBlock.slice(0, close).trimEnd().replace(/,+$/, '');
 const deploymentSafeProfile = "  { id: 'deployment-safe', title: 84, description: 0, listItems: 3, listChars: 18, scalar: 30, sourceUrl: 100, sparseDefaults: true, mergeTerms: true, termItems: 4 }";
 profileBlock = `${body},\n${deploymentSafeProfile}\n];`;
 source = source.replace(profileMatch[0], profileBlock);

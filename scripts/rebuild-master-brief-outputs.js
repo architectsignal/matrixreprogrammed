@@ -4,7 +4,11 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const placeholder = /\[object Object\]|\bobject Object\b|(?:^|[\/-])object-object(?:\.html)?(?:$|[?#])/im;
+const intentionalPolicy = /No\s+\[object Object\]\s+visible in public pages\.?/gi;
 
+function hasMalformed(text) {
+  return placeholder.test(String(text || '').replace(intentionalPolicy, ''));
+}
 function run(relative) {
   const file = path.join(root, relative);
   if (!fs.existsSync(file)) throw new Error(`${relative} is missing`);
@@ -25,7 +29,7 @@ function removeMalformed(directory) {
     }
     if (!/\.(?:html|json|md)$/i.test(entry.name)) continue;
     const text = fs.readFileSync(file, 'utf8');
-    if (/object-object/i.test(entry.name) || placeholder.test(text)) {
+    if (/object-object/i.test(entry.name) || hasMalformed(text)) {
       fs.rmSync(file, { force: true });
       removed.push(path.relative(root, file).replace(/\\/g, '/'));
     }
@@ -41,7 +45,7 @@ function scan(relative, residual) {
     return;
   }
   if (!/\.(?:html|json|md)$/i.test(relative)) return;
-  if (placeholder.test(fs.readFileSync(full, 'utf8'))) residual.push(relative.replace(/\\/g, '/'));
+  if (hasMalformed(fs.readFileSync(full, 'utf8'))) residual.push(relative.replace(/\\/g, '/'));
 }
 
 run('scripts/sanitize-machine-entity-inputs.js');
@@ -87,6 +91,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   removedStaleMalformedOutputs: [...new Set(removed)],
   residual: [...new Set(residual)],
+  ignoredIntentionalPolicyText: 'No [object Object] visible in public pages.',
   boundary: 'Master briefs, subject reports, institution pages, timelines, machine digest, conclusion pages and freshness reports must be generated only from scalar-normalized inputs.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

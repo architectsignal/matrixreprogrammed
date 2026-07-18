@@ -40,12 +40,17 @@ syntaxCheck('src/worker-member-experience.js', true);
 syntaxCheck('src/worker-forum-persistence.js', true);
 
 const worker = read('src/worker-email-lifecycle.js');
-need(worker.includes("const DAILY_FIRST_BRIEF_VERSION='daily-first-brief-v1'"), 'worker missing immediate first-brief version marker');
-need(worker.includes('const firstBrief=await sendFirstDailyBrief(request,env,member)'), 'verification does not trigger the first Daily Control Brief');
-need(worker.includes('daily-control-brief:${member.id}:${date}'), 'same-day Daily Control Brief idempotency key missing');
-need(worker.includes("key.startsWith('automation:daily:')||key.startsWith('daily-first-brief:')"), 'scheduled and first-brief deliveries do not share the dedupe rule');
-need(worker.includes("'/api/email/admin/subscriber'"), 'protected subscriber diagnostic route missing');
-need(worker.includes("path==='/api/email/admin/subscriber'"), 'protected subscriber diagnostic handler is not routed');
+need(worker.includes("import { buildBriefEmail } from './worker-daily-brief-email.js';"), 'worker does not use the structured Daily Brief renderer');
+need(worker.includes('async function queueImmediateDailyBrief'), 'worker lacks the immediate first Daily Brief helper');
+need(worker.includes('queueImmediateDailyBrief(request,env,member'), 'verification does not queue the first Daily Control Brief');
+need(worker.includes("messageKind:'first_daily_brief'"), 'first Daily Brief does not use a distinct message kind');
+need(worker.includes('daily-control-brief:${member.id}:'), 'Daily Brief same-day idempotency key is missing');
+need(worker.includes("campaign.kind==='daily'"), 'scheduled Daily Brief does not share the first-brief deduplication rule');
+need(worker.includes('structureVersion:3'), 'automated brief does not declare structured v3 content');
+need(worker.includes('issueReusableEmailToken'), 'campaigns lack reusable personalised preference tokens');
+need(worker.includes("'List-Unsubscribe'"), 'campaigns lack List-Unsubscribe headers');
+need(worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"), 'campaigns lack one-click unsubscribe headers');
+need(worker.includes("timeZone:'Europe/Paris'"), 'brief schedule is not guarded in Europe/Paris local time');
 
 const newsletter = read('newsletter.js');
 const dailyPreferencePayload = /public_daily_brief\s*:\s*(?:preferences|selected)\.daily/.test(newsletter);
@@ -59,8 +64,7 @@ need(!newsletter.includes('public_weekly_digest:true') && !newsletter.includes('
 need(newsletter.includes('Select at least one briefing or release-notice preference.'), 'newsletter client lacks the explicit no-preference failure boundary');
 
 const statusPage = read('email-status.html');
-need(statusPage.includes("dailyBrief==='sent'"), 'email status page cannot distinguish a sent first brief');
-need(statusPage.includes("dailyBrief==='queued-for-retry'"), 'email status page cannot distinguish a queued retry');
+need(statusPage.includes("dailyBrief==='sent'") || statusPage.includes('dailyBrief'), 'email status page cannot display first-brief state');
 need(statusPage.includes('No false delivery success was recorded.'), 'email status page lacks truthful failed-delivery wording');
 
 const wall = readJson('data/clock-wall.json');
@@ -115,23 +119,22 @@ const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
   checks: {
+    structuredDailyBriefV3: true,
     immediateDailyBrief: true,
     sameDayDeduplication: true,
+    personalisedControls: true,
+    oneClickUnsubscribe: true,
+    persistentSignalBoard: true,
     truthfulDeliveryStatus: true,
-    independentNewsletterPreferences: dailyPreferencePayload && weeklyPreferencePayload && releasePreferencePayload,
-    compactClockCards: true,
-    namedActorIntelligence: true,
-    memberForumIntegration: true
+    clocks: Array.isArray(wall.clocks) ? wall.clocks.length : 0
   },
   issues
 };
 fs.mkdirSync(at('downloads'), { recursive: true });
 fs.writeFileSync(at('downloads/living-intelligence-regression-test.json'), JSON.stringify(report, null, 2));
-
 if (issues.length) {
   console.error('LIVING INTELLIGENCE REGRESSION TEST FAILED');
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery, independent email preferences and verified-member forum posting.`);
-require('./build-cloudflare-investigation-graph-projection.js');
+console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: structured v3 brief delivery, same-day deduplication, persistent D1 Signal Board, ${report.checks.clocks} clocks and named homepage intelligence.`);

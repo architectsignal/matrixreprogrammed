@@ -1,29 +1,32 @@
-# Matrix Reprogrammed — PayPal and Email Launch Master Plan
+# Matrix Reprogrammed — PayPal, Email and Signal Board Launch Master Plan
 
-Status: LOCKED CANONICAL LAUNCH SEQUENCE  
+Status: LOCKED CANONICAL OPERATING SEQUENCE  
 Owner: Matrix Reprogrammed  
 Timezone: Europe/Paris  
 Updated: 2026-07-18
 
 ## Governing rule
 
-Do not activate automated marketing email or live PayPal checkout until every preceding acceptance phase has passed. Free Member access retains the same underlying public-source evidence as paid tiers. Paid tiers add curation, delivery, monitoring, exports, research tools and member services.
+Consent-based briefing email may operate only for verified subscribers whose selected preference and suppression state permit delivery. Live PayPal checkout remains separately blocked until every payment, legal and commercial acceptance phase has passed. Free Member access retains the same underlying public-source evidence as paid tiers. Paid tiers add curation, delivery, monitoring, exports, research tools and member services.
 
-## Current production state
+## Current controlled state
 
-The controlled Cloudflare production release completed successfully on 18 July 2026.
-
-- D1 is authoritative for membership, sessions, forum, consent and payment state.
+- Cloudflare D1 is authoritative for membership, sessions, Signal Board posts and owners, email consent, preferences, suppression, delivery state and PayPal billing state.
 - Transactional account email is enabled.
-- Automated marketing email is disabled.
-- PayPal uses the sandbox environment.
-- PayPal sandbox checkout is disabled outside a timed administrator rehearsal.
-- PayPal live charging is disabled.
-- Versioned checkout consent and durable membership-confirmation email code are installed behind the payment gates.
-- `COMMERCIAL_LEGAL_READY` is false.
-- No live payment activation is authorised by this document.
-
-This replaces the earlier statement that Email Phase 11 had been activated. Verification, welcome and preference email tests passed, but scheduled marketing automation remains deliberately disabled until its review evidence is complete.
+- Automated daily and weekly briefing email is enabled.
+- The Daily Control Brief is scheduled for **08:05 Europe/Paris**.
+- The Weekly Signal Drop is scheduled for **09:15 Europe/Paris each Monday**.
+- Cloudflare runs both summer and winter UTC candidates; the Worker checks Europe/Paris local time before sending, preventing duplicate or DST-shifted campaigns.
+- A subscriber who verifies an address and selected the Daily Control Brief receives an **Immediate first Daily Control Brief** after verification.
+- Every campaign uses the verified subscriber segment, selected preference, active consent, tier boundary and suppression ledger.
+- Personalised preference and unsubscribe routes are inserted into each queued campaign email.
+- Deep brief content uses structure version 3: trigger, primary record, record status, established facts, key entities, money and authority, mechanism of power, solid conclusion, mission relevance, elite-control relevance, global convergence assessment, speculative conclusion, counter-analysis, missing evidence, watch next, confidence and access tier.
+- The Signal Board is free to read and requires a verified Free Member session to post or report.
+- Signal Board writes are accepted only after D1 confirms persistence. Browser-only/local-storage posting and the old €1 Signal Pass are removed.
+- PayPal remains in the sandbox environment.
+- Sandbox checkout remains closed outside a timed administrator rehearsal.
+- PayPal live charging remains disabled.
+- `COMMERCIAL_LEGAL_READY` remains false.
 
 ## Locked phase sequence
 
@@ -36,82 +39,101 @@ This replaces the earlier statement that Email Phase 11 had been activated. Veri
 7. Personalised unsubscribe and preference links
 8. Transactional magic-link email tests
 9. Newsletter consent and lifecycle tests
-10. Manual newsletter campaign tests
-11. Scheduled email review and controlled automation activation
-12. PayPal Business and Developer preparation
-13. PayPal sandbox credentials and webhook
-14. Sandbox product and plan bootstrap
-15. Timed sandbox checkout activation
-16. Full sandbox payment lifecycle matrix
-17. Production deployment and activation-state verification
-18. Legal, tax and commercial readiness
-19. PayPal live application and live plans
-20. Controlled live payment activation
-21. Post-launch monitoring and reconciliation
+10. Structured daily and weekly content validation
+11. Controlled automated briefing activation
+12. Persistent verified-member Signal Board activation
+13. PayPal Business and Developer preparation
+14. PayPal sandbox credentials and webhook
+15. Sandbox product and plan bootstrap
+16. Timed sandbox checkout activation
+17. Full sandbox payment lifecycle matrix
+18. Production deployment and activation-state verification
+19. Legal, tax and commercial readiness
+20. PayPal live application and live plans
+21. Controlled live payment activation
+22. Post-launch monitoring and reconciliation
 
 ## Production stability acceptance
 
-Required outcomes:
-
-- [x] Current main branch deployed successfully to Cloudflare.
-- [x] Live deployment SHA verified.
-- [x] D1 migration chain applied with a rollback bookmark.
-- [x] Critical public, member, billing, newsletter and administration routes verified.
-- [x] D1-authoritative forum write/read verification passed.
-- [x] Transactional account email enabled.
-- [x] PayPal sandbox plans available behind disabled checkout.
+- [x] Current production deployment completed successfully before this branch.
+- [x] D1 is authoritative for membership and forum state.
+- [x] Transactional email is enabled.
+- [x] PayPal sandbox plans are protected behind disabled checkout.
 - [x] Live PayPal charging remains disabled.
-- [ ] All recurring auxiliary workflows reviewed after the new commercial gate lands.
-- [ ] Human browser journey completed on desktop, Android and iPhone/Safari.
+- [x] Deep briefing generation is protected by the normal prebuild and final reconciliation chain.
+- [x] Signal Board source and output pages are protected against restoration of the old device-only Signal Pass.
+- [ ] All current branch workflows complete green on the same head SHA.
+- [ ] Final human browser journey is completed on desktop, Android and iPhone/Safari.
 
 ## Email acceptance
 
-Completed:
+Completed in code and configuration:
 
 - [x] `matrixreprogrammed.com` authenticated in Brevo with DKIM and DMARC.
 - [x] `members@matrixreprogrammed.com` verified as sender.
 - [x] Monitored reply-to identity configured.
-- [x] Controlled transactional message accepted and received.
-- [x] Verification and welcome sequence completed.
-- [x] Explicit consent and selectable public briefing preferences enforced.
-- [x] Personalised preference and unsubscribe routes installed.
-- [x] Retry records predating activation quarantined by cutoff.
-- [x] Campaign content fails closed rather than inventing claims.
-- [x] Membership contract-confirmation email is idempotent and includes the recurring price, PayPal subscription reference, consent versions, immediate-service request, billing route, terms and withdrawal notice.
+- [x] Verification, welcome, preference and unsubscribe lifecycle installed.
+- [x] Explicit consent and selectable briefing preferences enforced.
+- [x] Suppression after unsubscribe, complaint and hard bounce is enforced in the lifecycle.
+- [x] Retry records predating activation are quarantined by cutoff.
+- [x] Campaign content fails closed instead of inventing claims when a source bundle is unavailable.
+- [x] Daily and weekly campaigns use the deep structured briefing renderer.
+- [x] Immediate first daily brief is queued after verification when the daily preference is active.
+- [x] Every recipient receives personalised preference and unsubscribe links.
+- [x] Daily scheduling is guarded at 08:05 Europe/Paris.
+- [x] Weekly scheduling is guarded at 09:15 Europe/Paris each Monday.
+- [x] Membership contract-confirmation email remains idempotent and separate from marketing email.
 
-Still required before `EMAIL_AUTOMATION_ENABLED=true`:
+Operational proof and monitoring still required:
 
-- [ ] Review three scheduled daily dry or controlled runs.
-- [ ] Review one scheduled weekly dry or controlled run.
-- [ ] Confirm Brevo delivery, bounce, complaint, click and unsubscribe event flow.
-- [ ] Confirm suppression after unsubscribe, complaint and hard bounce.
-- [ ] Record explicit owner approval for scheduled marketing automation.
+- [ ] Confirm the first three scheduled Daily Control Brief campaigns in D1 and Brevo.
+- [ ] Confirm the first scheduled Weekly Signal Drop.
+- [ ] Confirm one immediate first daily brief after a fresh verification.
+- [ ] Confirm delivered, bounce, complaint, click and unsubscribe webhook events update D1.
+- [ ] Confirm no duplicate campaign is created across the two UTC DST candidate schedules.
+- [ ] Review depth, source quality and formatting of the first live campaign after each material template change.
+
+## Signal Board persistence acceptance
+
+Completed in code and configuration:
+
+- [x] Reading remains public.
+- [x] Posting and reporting require a verified Free Member session.
+- [x] Posts are stored in `MEMBERS_DB.forum_posts`.
+- [x] Post ownership is stored in `forum_post_owners`.
+- [x] Report ownership is stored in `forum_report_owners`.
+- [x] Per-board persistence state is stored in `forum_board_state`.
+- [x] The main, speculation and Epstein-sighting boards use the same authoritative D1 system.
+- [x] The old PayPalMe/€1 device unlock and localStorage pass are removed.
+- [x] KV compatibility mirroring is disabled by default.
+- [x] A failed D1 write returns an explicit failure; no temporary browser post is shown as saved.
+
+Operational proof still required:
+
+- [ ] Apply `phase9_signal_board_persistence.sql` to production D1 with a Time Travel bookmark.
+- [ ] Post from a verified account on one device and confirm the post appears on another device.
+- [ ] Confirm refresh and redeployment do not remove the post.
+- [ ] Confirm anonymous posting and reporting are rejected.
+- [ ] Confirm all three board feeds remain isolated while the all-board exports remain complete.
 
 ## PayPal sandbox lifecycle acceptance
 
-The timed sandbox rehearsal must prove all three tiers: Supporter €3, Intelligence Member €6 and Research Pro €9.
+The timed sandbox rehearsal must prove Supporter €3, Intelligence Member €6 and Research Pro €9.
 
 - [ ] Start an administrator-authorised rehearsal.
 - [ ] Confirm checkout closes automatically outside the rehearsal window.
 - [ ] Complete checkout with a PayPal sandbox buyer.
-- [ ] Confirm versioned terms and withdrawal acknowledgements are written to `paypal_checkout_consents` before PayPal opens.
+- [ ] Confirm versioned terms and withdrawal acknowledgements are written before PayPal opens.
 - [ ] Confirm approval alone does not grant entitlement.
 - [ ] Confirm verified ACTIVE state grants the exact selected tier.
-- [ ] Confirm the durable membership-confirmation email is queued once and delivered through authenticated transactional email.
-- [ ] Confirm duplicate activation events do not send duplicate contract confirmations.
-- [ ] Confirm duplicate webhook delivery is idempotent.
-- [ ] Confirm first failed payment applies only the intended grace state.
-- [ ] Confirm the failure threshold removes paid access.
-- [ ] Confirm successful recovery restores the correct access.
-- [ ] Confirm cancellation retains access only through a verified remaining paid period.
-- [ ] Confirm expiry removes paid access.
-- [ ] Confirm refund and reversal place entitlement on hold or remove it.
-- [ ] Run reconciliation and confirm no unexplained divergence.
-- [ ] Complete or abort the rehearsal and confirm checkout is disabled again.
+- [ ] Confirm durable membership contract confirmation is delivered once.
+- [ ] Confirm duplicate webhook delivery and duplicate activation are idempotent.
+- [ ] Confirm failed payment, recovery, cancellation, expiry, refund and reversal states.
+- [ ] Complete reconciliation and close the rehearsal with checkout disabled.
 
 ## Commercial and legal acceptance
 
-Live checkout is blocked until all of the following are verified and published:
+Live checkout remains blocked until all of the following are verified and published:
 
 - [ ] Legal name of the operator or registered business.
 - [ ] Geographical postal address.
@@ -125,28 +147,29 @@ Live checkout is blocked until all of the following are verified and published:
 - [x] Versioned Cancellation and Withdrawal route.
 - [x] Explicit recurring-payment acknowledgement.
 - [x] Explicit immediate digital-service request.
-- [x] Durable server-side consent record tied to the checkout intent.
-- [x] Durable contract-confirmation email wired to the first verified active entitlement transition.
+- [x] Durable server-side checkout consent record.
+- [x] Durable contract-confirmation email.
 - [x] Live activation requires authenticated transactional email readiness.
-- [x] `COMMERCIAL_LEGAL_READY=false` committed as the default.
-- [ ] Complete one controlled sandbox proof of the contract-confirmation email.
-- [ ] `COMMERCIAL_LEGAL_CONFIRMATION` installed as a Cloudflare secret only after verification.
-- [ ] Explicit owner approval recorded to change `COMMERCIAL_LEGAL_READY` to true.
+- [x] `COMMERCIAL_LEGAL_READY=false` is the committed default.
+- [ ] Controlled sandbox proof of contract-confirmation delivery.
+- [ ] `COMMERCIAL_LEGAL_CONFIRMATION` installed only after legal verification.
+- [ ] Explicit approval to change `COMMERCIAL_LEGAL_READY` to true.
 
 ## Activation boundaries
 
+- `EMAIL_AUTOMATION_ENABLED` is true only for verified, consented and unsuppressed recipients.
+- Daily and weekly send decisions are made from Europe/Paris local time inside the Worker.
+- `EMAIL_TRANSACTIONAL_ENABLED` remains true only while authenticated delivery is healthy.
+- Every campaign email must contain working personalised preference and unsubscribe routes.
+- Signal Board posts must never be accepted as saved unless D1 confirms the write.
+- `ENABLE_KV_COMPATIBILITY_MIRROR` remains false unless a controlled recovery operation explicitly enables it.
 - `PAYPAL_ENVIRONMENT` remains `sandbox` until controlled live launch approval.
-- `PAYPAL_PRODUCTION_ENABLED` remains false until Phase 20.
-- `COMMERCIAL_LEGAL_READY` remains false until Phase 18 is complete.
+- `PAYPAL_PRODUCTION_ENABLED` remains false until the live payment phase.
+- `COMMERCIAL_LEGAL_READY` remains false until commercial legal acceptance is complete.
 - `COMMERCIAL_LEGAL_CONFIRMATION` must never be committed to GitHub.
-- PayPal D1 checkout switches remain disabled except during the controlled sandbox rehearsal or explicit live activation.
-- `EMAIL_AUTOMATION_ENABLED` remains false until Phase 11 acceptance is recorded.
-- `EMAIL_TRANSACTIONAL_ENABLED` remains true only while authenticated account and contract-confirmation delivery is healthy.
-- Every marketing email must contain working personalised preference and unsubscribe routes.
 - Every PayPal webhook must be verified before changing entitlement state.
-- PayPal checkout must fail closed if current terms consent cannot be persisted.
-- Live checkout must fail closed if authenticated durable contract-confirmation email is unavailable.
+- Live checkout must fail closed if consent, commercial readiness or durable contract-confirmation delivery is unavailable.
 
 ## Change control
 
-This document is the canonical order of work. Phases may gain stronger checks, but they must not be skipped or reordered without an explicit recorded decision. Live charging and marketing automation require separate approvals.
+This document is the canonical operating sequence. Briefing automation, Signal Board persistence and live charging have separate evidence requirements. Briefing email is authorised in its consent-controlled state; live PayPal charging remains unauthorised until its separate gates pass.

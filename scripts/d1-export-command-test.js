@@ -20,17 +20,21 @@ for (const relative of workflows) {
   const text = fs.existsSync(full) ? fs.readFileSync(full, 'utf8') : '';
   const bookmarkLines = text.split(/\r?\n/).filter(line => /wrangler@latest\s+d1\s+time-travel\s+info\s+matrix-members/.test(line));
   const exportLines = text.split(/\r?\n/).filter(line => /wrangler@latest\s+d1\s+export\s+matrix-members/.test(line));
+  const bookmarkIndex = text.indexOf('d1 time-travel info matrix-members');
+  const productionMigrationIndex = bookmarkIndex >= 0
+    ? text.slice(bookmarkIndex).search(/d1\s+execute\s+matrix-members\s+--remote\s+--file=/)
+    : -1;
   check(`${relative} exists`, Boolean(text));
   check(`${relative} captures exactly one D1 Time Travel bookmark`, bookmarkLines.length === 1);
   const command = bookmarkLines[0] || '';
   check(`${relative} requests machine-readable bookmark JSON`, /\s--json(?:\s|$)/.test(command));
   check(`${relative} validates a bookmark before migrations`, /bookmark/.test(text) && /d1-rollback-proof\.json/.test(text));
   check(`${relative} avoids blocking remote SQL export during production`, exportLines.length === 0);
-  check(`${relative} keeps migrations after rollback capture`, text.indexOf('d1 time-travel info matrix-members') < text.indexOf('Apply idempotent D1 migration chain'));
+  check(`${relative} keeps production migrations after rollback capture`, bookmarkIndex >= 0 && productionMigrationIndex > 0);
 }
 
 const npx = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-const dryRun = spawnSync(npx, ['--yes', 'wrangler@latest', 'deploy', '--dry-run'], {
+const dryRun = spawnSync(npx, ['--yes', 'wrangler@latest', 'deploy', '--config', 'wrangler.jsonc', '--dry-run'], {
   cwd: root,
   encoding: 'utf8',
   env: process.env,

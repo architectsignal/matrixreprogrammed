@@ -107,7 +107,7 @@ const activationReplacement = `async function activation(request,env){
     }
   }
   const current=now();
-  await env.MEMBERS_DB.prepare('UPDATE paypal_runtime_settings SET checkout_enabled=?,activation_reason=?,activated_by=?,activated_at=CASE WHEN ?=1 THEN ? ELSE activated_at END,deactivated_at=CASE WHEN ?=0 THEN ? ELSE deactivated_at END,updated_at=? WHERE environment=?').bind(enabled?1:0,clean(input.reason||\`${enabled?'Enabled':'Disabled'} by administrator\`,500),required.auth.member.id,enabled?1:0,current,enabled?1:0,current,current,target).run();
+  await env.MEMBERS_DB.prepare('UPDATE paypal_runtime_settings SET checkout_enabled=?,activation_reason=?,activated_by=?,activated_at=CASE WHEN ?=1 THEN ? ELSE activated_at END,deactivated_at=CASE WHEN ?=0 THEN ? ELSE deactivated_at END,updated_at=? WHERE environment=?').bind(enabled?1:0,clean(input.reason||\`\${enabled?'Enabled':'Disabled'} by administrator\`,500),required.auth.member.id,enabled?1:0,current,enabled?1:0,current,current,target).run();
   await audit(env,required.auth.member.id,enabled?'paypal.activation.enabled':'paypal.activation.disabled','paypal_environment',target,{reason:input.reason||'',environmentSwitch:state.environmentSwitch,commercialLegalReady:state.commercialLegalReady});
   return json({ok:true,environment:target,commercialLegalReady:(await activationState(env)).commercialLegalReady,checkoutEnabled:(await activationState(env)).checkoutEnabled});
 }`;

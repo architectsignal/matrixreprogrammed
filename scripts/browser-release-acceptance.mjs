@@ -22,7 +22,7 @@ function walk(dir, files = []) {
 function relative(file) { return path.relative(deploy, file).split(path.sep).join('/'); }
 function route(file) {
   const rel = relative(file);
-  return rel === 'index.html' ? '/' : `/${rel.replace(/\.html$/i, '')}`;
+  return rel === 'index.html' ? '/' : `/${rel}`;
 }
 function addProblem(value) { problems.push(value); }
 
@@ -32,7 +32,7 @@ const browser = await chromium.launch({ headless: true });
 let cursor = 0;
 let checked = 0;
 
-async function worker(workerId) {
+async function auditWorker() {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   await context.route('**/*', async routeHandler => {
     const url = new URL(routeHandler.request().url());
@@ -78,7 +78,7 @@ async function worker(workerId) {
   await context.close();
 }
 
-await Promise.all(Array.from({ length: concurrency }, (_, index) => worker(index)));
+await Promise.all(Array.from({ length: concurrency }, () => auditWorker()));
 await browser.close();
 
 if (problems.length) {

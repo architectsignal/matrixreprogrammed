@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const changed = [];
@@ -10,8 +11,74 @@ function read(relative) {
   if (!fs.existsSync(file)) throw new Error(`Missing required file: ${relative}`);
   return fs.readFileSync(file, 'utf8');
 }
-function writeIfChanged(relative, before, after) { if (after === before) return; fs.writeFileSync(path.join(root, relative), after); changed.push(relative); }
-function replaceFunction(source, functionName, replacement) { const start = source.indexOf(`async function ${functionName}(`); if (start < 0) return source; const next = source.indexOf('\nasync function ', start + 16); if (next < 0) return source; return `${source.slice(0, start)}${replacement}\n${source.slice(next + 1)}`; }
+function writeIfChanged(relative, before, after) {
+  if (after === before) return;
+  fs.writeFileSync(path.join(root, relative), after);
+  changed.push(relative);
+}
+function functionRange(source, functionName) {
+  const candidates = [`async function ${functionName}`, `function ${functionName}`];
+  let start = -1;
+  for (const candidate of candidates) {
+    const found = source.indexOf(candidate);
+    if (found >= 0 && (start < 0 || found < start)) start = found;
+  }
+  if (start < 0) return null;
+  const paramsOpen = source.indexOf('(', start);
+  if (paramsOpen < 0) return null;
+  let quote = '', escaped = false, lineComment = false, blockComment = false, parenDepth = 0, paramsClose = -1;
+  for (let index = paramsOpen; index < source.length; index += 1) {
+    const char = source[index], next = source[index + 1] || '';
+    if (lineComment) { if (char === '\n') lineComment = false; continue; }
+    if (blockComment) { if (char === '*' && next === '/') { blockComment = false; index += 1; } continue; }
+    if (quote) {
+      if (escaped) { escaped = false; continue; }
+      if (char === '\\') { escaped = true; continue; }
+      if (char === quote) quote = '';
+      continue;
+    }
+    if (char === '/' && next === '/') { lineComment = true; index += 1; continue; }
+    if (char === '/' && next === '*') { blockComment = true; index += 1; continue; }
+    if (char === "'" || char === '"' || char === '`') { quote = char; continue; }
+    if (char === '(') parenDepth += 1;
+    else if (char === ')') {
+      parenDepth -= 1;
+      if (parenDepth === 0) { paramsClose = index; break; }
+    }
+  }
+  if (paramsClose < 0) return null;
+  const bodyOpen = source.indexOf('{', paramsClose + 1);
+  if (bodyOpen < 0) return null;
+  quote = ''; escaped = false; lineComment = false; blockComment = false;
+  let braceDepth = 0;
+  for (let index = bodyOpen; index < source.length; index += 1) {
+    const char = source[index], next = source[index + 1] || '';
+    if (lineComment) { if (char === '\n') lineComment = false; continue; }
+    if (blockComment) { if (char === '*' && next === '/') { blockComment = false; index += 1; } continue; }
+    if (quote) {
+      if (escaped) { escaped = false; continue; }
+      if (char === '\\') { escaped = true; continue; }
+      if (char === quote) quote = '';
+      continue;
+    }
+    if (char === '/' && next === '/') { lineComment = true; index += 1; continue; }
+    if (char === '/' && next === '*') { blockComment = true; index += 1; continue; }
+    if (char === "'" || char === '"' || char === '`') { quote = char; continue; }
+    if (char === '{') braceDepth += 1;
+    else if (char === '}') {
+      braceDepth -= 1;
+      if (braceDepth === 0) return { start, end: index + 1 };
+    }
+  }
+  return null;
+}
+function removeFunction(source, functionName) {
+  const found = functionRange(source, functionName);
+  if (!found) return source;
+  let end = found.end;
+  while (end < source.length && (source[end] === '\r' || source[end] === '\n')) end += 1;
+  return `${source.slice(0, found.start)}${source.slice(end)}`;
+}
 
 let production = read('src/worker-production.js');
 const productionBefore = production;
@@ -22,39 +89,48 @@ writeIfChanged('src/worker-production.js', productionBefore, production);
 
 let forum = read('src/worker-forum-persistence.js');
 const forumBefore = forum;
-if (!forum.includes('function kvMirrorEnabled(')) {
-  const hasD1Pattern = /function hasD1\(env\)\s*\{[\s\S]*?\n\}/;
-  const match = forum.match(hasD1Pattern);
-  if (match) forum = forum.replace(match[0], `${match[0]}\nfunction kvMirrorEnabled(env) {\n  return String(env?.ENABLE_KV_COMPATIBILITY_MIRROR || 'false').toLowerCase() === 'true' && Boolean(env?.FORUM_POSTS);\n}`);
-}
+for (const functionName of ['kvMirrorEnabled', 'migrateKvPosts', 'syncKvMirror', 'mirrorPost']) forum = removeFunction(forum, functionName);
 forum = forum
-  .replace(/if\s*\(!env\.FORUM_POSTS\)\s*return\s*\{\s*migrated:\s*0,\s*source:\s*['"]no-kv-binding['"]\s*\};/g, "if (!kvMirrorEnabled(env)) return { migrated: 0, source: 'kv-compatibility-disabled' };")
-  .replace(/if\s*\(!env\.FORUM_POSTS\s*\|\|\s*!hasD1\(env\)\)\s*return;/g, 'if (!kvMirrorEnabled(env) || !hasD1(env)) return;')
-  .replace(/if\s*\(!env\.FORUM_POSTS\)\s*return;\s*\n\s*await env\.FORUM_POSTS\.put\(`post:\$\{post\.id\}`/g, 'if (!kvMirrorEnabled(env)) return;\n  await env.FORUM_POSTS.put(`post:${post.id}`')
-  .replace(/kvBinding:\s*env\.FORUM_POSTS\s*\?\s*['"]connected compatibility mirror['"]\s*:\s*['"]missing['"]/g, "kvBinding: kvMirrorEnabled(env) ? 'connected opt-in compatibility mirror' : 'disabled in production'")
-  .replace(/compatibilityMirror:\s*Boolean\(env\.FORUM_POSTS\)/g, 'compatibilityMirror: kvMirrorEnabled(env)')
-  .replace(/indexSelfHealing:\s*['"]D1 authoritative; KV mirror rebuilt from D1['"]/g, "indexSelfHealing: 'D1 authoritative; KV compatibility mirror disabled by default'")
-  .replace(/if\s*\(ctx\?\.waitUntil\s*&&\s*env\.FORUM_POSTS\)/g, 'if (ctx?.waitUntil && kvMirrorEnabled(env))')
-  .replace(/mirroredToKv:\s*Boolean\(env\.FORUM_POSTS\)/g, 'mirroredToKv: kvMirrorEnabled(env)');
+  .replace(/\n?let migrationPromise;\n?/g, '\n')
+  .replace(/await ensureSchema\(env\);await migrateKvPosts\(env\);/g, 'await ensureSchema(env);')
+  .replace(/await migrateKvPosts\(env\);/g, '')
+  .replace(/compatibilityMirror:kvMirrorEnabled\(env\)/g, 'compatibilityMirror:false')
+  .replace(/const migration=await metaValue\(env,'kv_forum_migration_v1'\);/g, '')
+  .replace(/kvBinding:kvMirrorEnabled\(env\)\?'optional recovery mirror enabled':'D1 authoritative; KV compatibility mirror disabled by default'/g, "kvBinding:'not used; D1 is the only forum store'")
+  .replace(/kvMigration:migration\?JSON\.parse\(migration\):null/g, 'kvMigration:null')
+  .replace(/if\(ctx\?\.waitUntil&&kvMirrorEnabled\(env\)\)ctx\.waitUntil\(Promise\.allSettled\(\[mirrorPost\(env,saved\),syncKvMirror\(env\)\]\)\);/g, '')
+  .replace(/mirroredToKv:kvMirrorEnabled\(env\)/g, 'mirroredToKv:false')
+  .replace(/D1 authoritative; KV compatibility mirror disabled by default/g, 'D1 authoritative; no KV forum path exists');
 writeIfChanged('src/worker-forum-persistence.js', forumBefore, forum);
 
 let legacy = read('src/worker.js');
 const legacyBefore = legacy;
 const safeTrack = "async function handleTrackEvent(request,env){const body=await readBody(request);const eventName=cleanText(body.name||'event',80);return new Response(null,{status:204,headers:{...securityHeaders,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-api','X-Matrix-Worker':workerName,'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'}})}";
-if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")) legacy = replaceFunction(legacy, 'handleTrackEvent', safeTrack);
+if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")) {
+  const found = functionRange(legacy, 'handleTrackEvent');
+  if (found) legacy = `${legacy.slice(0, found.start)}${safeTrack}${legacy.slice(found.end)}`;
+}
 legacy = legacy
   .replace(/analytics:\$\{event\.id\}/g, 'analytics-endpoint-nonpersistent')
-  .replace(/async function handleNewsletterSendWeekly\(\)\{return json\(\{ok:true,mode:'preview-only',storage:'Cloudflare KV FORUM_POSTS',digest:'\/downloads\/weekly-newsletter-latest\.json'\}\)\}/g, "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})}")
+  .replace(/async function handleNewsletterSendWeekly\(\)\{return json\(\{ok:true,mode:'preview-only',storage:'Cloudflare KV FORUM_POSTS',digest:'\/downloads\/weekly-newsletter-latest\.json'\}\)\}/g, "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})")
   .replace(/if\s*\(env\.FORUM_POSTS\)\s*\{?\s*await withTimeout\(env\.FORUM_POSTS\.put\(`analytics:[\s\S]*?\}\s*/g, '');
 writeIfChanged('src/worker.js', legacyBefore, legacy);
 
-let wrangler = read('wrangler.toml');
-const wranglerBefore = wrangler;
-if (!wrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR')) {
-  if (wrangler.includes('EMAIL_AUTOMATION_ENABLED = "true"')) wrangler = wrangler.replace('EMAIL_AUTOMATION_ENABLED = "true"', 'EMAIL_AUTOMATION_ENABLED = "true"\nENABLE_KV_COMPATIBILITY_MIRROR = "false"');
-  else wrangler += '\n[vars]\nENABLE_KV_COMPATIBILITY_MIRROR = "false"\n';
+for (const configRel of ['wrangler.toml', 'wrangler.jsonc']) {
+  let config = read(configRel);
+  const before = config;
+  if (configRel.endsWith('.toml')) {
+    if (!config.includes('ENABLE_KV_COMPATIBILITY_MIRROR')) {
+      if (config.includes('EMAIL_AUTOMATION_ENABLED = "true"')) config = config.replace('EMAIL_AUTOMATION_ENABLED = "true"', 'EMAIL_AUTOMATION_ENABLED = "true"\nENABLE_KV_COMPATIBILITY_MIRROR = "false"');
+      else config += '\n[vars]\nENABLE_KV_COMPATIBILITY_MIRROR = "false"\n';
+    } else config = config.replace(/ENABLE_KV_COMPATIBILITY_MIRROR\s*=\s*"[^"]*"/g, 'ENABLE_KV_COMPATIBILITY_MIRROR = "false"');
+  } else {
+    if (!config.includes('"ENABLE_KV_COMPATIBILITY_MIRROR"')) {
+      config = config.replace(/("EMAIL_AUTOMATION_ENABLED"\s*:\s*"true"\s*,?)/, '$1\n    "ENABLE_KV_COMPATIBILITY_MIRROR": "false",');
+    } else config = config.replace(/"ENABLE_KV_COMPATIBILITY_MIRROR"\s*:\s*"[^"]*"/g, '"ENABLE_KV_COMPATIBILITY_MIRROR": "false"');
+  }
+  writeIfChanged(configRel, before, config);
 }
-writeIfChanged('wrangler.toml', wranglerBefore, wrangler);
 
 let verifier = read('scripts/live-site-verification.js');
 const verifierBefore = verifier;
@@ -65,26 +141,42 @@ const finalProduction = read('src/worker-production.js');
 const finalForum = read('src/worker-forum-persistence.js');
 const finalLegacy = read('src/worker.js');
 const finalWrangler = read('wrangler.toml');
+const finalWranglerJson = read('wrangler.jsonc');
 const finalVerifier = read('scripts/live-site-verification.js');
-const kvHelperStart = finalForum.indexOf('function kvMirrorEnabled(');
-const kvHelperEnd = kvHelperStart >= 0 ? finalForum.indexOf('\n', kvHelperStart) : -1;
-const kvHelperWindow = kvHelperStart >= 0 ? finalForum.slice(kvHelperStart, kvHelperEnd > kvHelperStart ? kvHelperEnd + 600 : kvHelperStart + 600) : '';
 const semanticChecks = [
   ['production legacy route strips KV', finalProduction.includes('forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)')],
-  ['KV mirror helper exists', kvHelperStart >= 0],
-  ['KV mirror requires explicit environment flag', kvHelperWindow.includes('ENABLE_KV_COMPATIBILITY_MIRROR') && kvHelperWindow.includes('FORUM_POSTS') && (kvHelperWindow.includes("'false'") || kvHelperWindow.includes('"false"'))],
-  ['forum migration checks opt-in helper', finalForum.includes('if(!kvMirrorEnabled(env))') || finalForum.includes('if (!kvMirrorEnabled(env))')],
-  ['forum write mirror checks opt-in helper', finalForum.includes('kvMirrorEnabled(env)') && finalForum.includes('FORUM_POSTS.put')],
+  ['forum has no KV mirror helper', !finalForum.includes('kvMirrorEnabled(')],
+  ['forum has no KV migration function', !finalForum.includes('migrateKvPosts(')],
+  ['forum has no KV read path', !finalForum.includes('FORUM_POSTS.get(') && !finalForum.includes('FORUM_POSTS.list(')],
+  ['forum has no KV write path', !finalForum.includes('FORUM_POSTS.put(')],
+  ['forum declares D1-only compatibility state', finalForum.includes('compatibilityMirror:false') && finalForum.includes('mirroredToKv:false')],
+  ['forum remains verified-member persistent', finalForum.includes('verified-free-member-session') && finalForum.includes('crossDevice:true')],
   ['analytics endpoint remains available', finalLegacy.includes('async function handleTrackEvent(')],
   ['analytics endpoint is non-persistent', finalLegacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")],
   ['analytics KV writes removed', !finalLegacy.includes('FORUM_POSTS.put(`analytics:') && !finalLegacy.includes('analytics:${event.id}')],
-  ['wrangler KV mirror switch false', finalWrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"')],
+  ['wrangler defensive KV switch false', finalWrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"')],
+  ['wrangler JSON defensive KV switch false', finalWranglerJson.includes('"ENABLE_KV_COMPATIBILITY_MIRROR": "false"')],
   ['forum health verifier is D1 based', finalVerifier.includes("markers: ['d1Connected', 'authoritativeStorage']")]
 ];
 for (const [label, ok] of semanticChecks) if (!ok) failures.push(label);
 
-const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], checks: Object.fromEntries(semanticChecks), failures, policy: 'Cloudflare D1 is authoritative. Workers KV compatibility and per-event analytics writes are disabled in production unless explicitly re-enabled.' };
+for (const relative of ['src/worker-production.js', 'src/worker-forum-persistence.js', 'src/worker.js']) {
+  const syntax = spawnSync(process.execPath, ['--check', path.join(root, relative)], { cwd: root, encoding: 'utf8' });
+  if (syntax.status !== 0) failures.push(`${relative} syntax: ${syntax.stderr || syntax.stdout}`);
+}
+
+const report = {
+  ok: failures.length === 0,
+  generatedAt: new Date().toISOString(),
+  changed: [...new Set(changed)],
+  checks: Object.fromEntries(semanticChecks),
+  failures,
+  policy: 'Cloudflare D1 is the only Signal Board persistence layer. Workers KV is unavailable to forum routes; analytics events are not persisted to KV.'
+};
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-kv-traffic-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
-if (failures.length) { failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`)); process.exit(1); }
-console.log('Production KV traffic disabled: D1 remains authoritative; optional KV mirror requires an explicit false-by-default environment flag.');
+if (failures.length) {
+  failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`));
+  process.exit(1);
+}
+console.log('Production KV traffic disabled: Signal Board is D1-only, cross-device and verified-member persistent; no KV compatibility read or write path remains.');

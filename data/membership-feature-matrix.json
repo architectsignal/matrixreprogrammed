@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11",
+  "updated": "2026-07-18",
   "principle": "Primary-source links, evidence boundaries, corrections and enough information to verify public claims remain free. Membership pays for convenience, history, alerts, exports and deeper research tools.",
   "tiers": [
     {
@@ -10,27 +10,31 @@
     },
     {
       "id": "free",
-      "label": "Free account",
+      "entitlementId": "registered",
+      "label": "Free Member",
       "priceEurMonthly": 0,
-      "features": ["verified member dashboard", "weekly email brief", "saved reading routes", "selected source-drop notifications"]
+      "features": ["free member dashboard", "passwordless login and session controls", "saved public reports and cards", "public topic follows", "public weekly archive", "newsletter and release preferences", "public download history", "verified-member Signal Board posting"]
     },
     {
       "id": "supporter",
+      "entitlementId": "supporter_3",
       "label": "Supporter",
-      "priceEurMonthly": 9,
-      "features": ["member weekly investigation brief", "early selected reports", "watchlist alerts", "member source drops", "supporter archive"]
+      "priceEurMonthly": 3,
+      "features": ["everything in Free Member", "weekly member intelligence brief", "member newsletter and editorial notes", "member-only public-source drops", "selected supporter downloads", "weekly brief archive", "supporter announcements and surveys"]
     },
     {
       "id": "intelligence",
+      "entitlementId": "intelligence_6",
       "label": "Intelligence Member",
-      "priceEurMonthly": 19,
-      "features": ["premium daily investigation brief", "historical evidence-map views", "advanced relationship and date filters", "full source-ledger change history", "entity comparison", "downloadable reports and datasets", "missing-record queue"]
+      "priceEurMonthly": 6,
+      "features": ["everything in Supporter and Free Member", "premium daily intelligence brief", "full card intelligence and evidence notes", "deeper entity and institution dossiers", "full relationship and source-ledger views", "historical evidence-map views and advanced filters", "missing-record queue", "downloadable intelligence packs"]
     },
     {
       "id": "research_pro",
+      "entitlementId": "research_pro_9",
       "label": "Research Pro",
-      "priceEurMonthly": 49,
-      "features": ["bulk evidence exports", "research API access", "private case boards", "document text and metadata extraction", "priority source requests", "professional monthly intelligence pack", "policy and jurisdiction exports"]
+      "priceEurMonthly": 9,
+      "features": ["everything in Intelligence Member", "full dossier and bulk evidence exports", "research API access", "private case boards and advanced watchlists", "document text and metadata extraction", "policy and jurisdiction trackers", "priority source requests", "professional monthly intelligence pack"]
     }
   ],
   "neverPaywalled": ["primary-source link supporting a public accusation", "evidence grade and evidence boundary", "correction or retraction", "record status: conviction, charge, allegation, audit finding or leak lead", "basic public search", "public-interest safety information"]

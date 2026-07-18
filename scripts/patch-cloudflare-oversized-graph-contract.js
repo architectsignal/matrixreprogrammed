@@ -1,45 +1,179 @@
 const fs = require('fs');
 const path = require('path');
-const { spawnSync } = require('child_process');
 
 const root = process.cwd();
-const target = path.join(root, 'scripts', 'build-cloudflare-output.js');
+const graphPath = path.join(root, 'data', 'investigation-knowledge-graph.json');
 const reportPath = path.join(root, 'downloads', 'cloudflare-oversized-graph-contract-patch.json');
-if (!fs.existsSync(target)) throw new Error('scripts/build-cloudflare-output.js is missing');
+const maximumBytes = 24 * 1024 * 1024;
+if (!fs.existsSync(graphPath)) throw new Error('data/investigation-knowledge-graph.json is missing');
 
-const before = fs.readFileSync(target, 'utf8');
-let after = before;
-const oversizedRequired = "'data/investigation-knowledge-graph.json',";
-if (after.includes(oversizedRequired)) after = after.replace(oversizedRequired, '');
+const originalText = fs.readFileSync(graphPath, 'utf8');
+const originalBytes = Buffer.byteLength(originalText);
+let compactBytes = originalBytes;
+let compacted = false;
+let projection = null;
 
-const privateAnchor = "'downloads/public-data-lab-build.json','downloads/public-data-lab-test.json','downloads/public-data-lab-output-test.json'";
-const privateReplacement = "'downloads/public-data-lab-build.json','downloads/public-data-lab-test.json','downloads/public-data-lab-output-test.json',\n  'data/investigation-knowledge-graph.json'";
-if (!after.includes("'data/investigation-knowledge-graph.json'")) {
-  if (!after.includes(privateAnchor)) throw new Error('Cloudflare private-path anchor is missing');
-  after = after.replace(privateAnchor, privateReplacement);
+function clean(value, max = 1000) {
+  const text = String(value ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim();
+  return text.length > max ? `${text.slice(0, Math.max(0, max - 1)).trim()}…` : text;
+}
+function scalarProperties(value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
+  const output = {};
+  for (const [key, item] of Object.entries(value).slice(0, 30)) {
+    if (item === null || ['string','number','boolean'].includes(typeof item)) output[key] = typeof item === 'string' ? clean(item, 500) : item;
+    else if (Array.isArray(item)) output[key] = item.slice(0, 12).map(entry => typeof entry === 'string' ? clean(entry, 300) : entry).filter(entry => entry === null || ['string','number','boolean'].includes(typeof entry));
+  }
+  return output;
+}
+function evidence(ref = {}) {
+  return {
+    sourceId: clean(ref.sourceId, 160),
+    sourceTitle: clean(ref.sourceTitle, 240),
+    sourceUrl: clean(ref.sourceUrl, 1000),
+    publicationDate: ref.publicationDate || null,
+    retrievalDate: ref.retrievalDate || null,
+    evidenceGrade: clean(ref.evidenceGrade, 4),
+    factualStatus: clean(ref.factualStatus, 120),
+    establishes: clean(ref.establishes, 700),
+    doesNotEstablish: clean(ref.doesNotEstablish, 700),
+    reviewStatus: clean(ref.reviewStatus, 120)
+  };
+}
+function entity(item = {}) {
+  return {
+    id: clean(item.id, 220),
+    type: clean(item.type, 100),
+    followTheMoneySchema: clean(item.followTheMoneySchema, 120),
+    name: clean(item.name, 300),
+    aliases: (item.aliases || []).slice(0, 20).map(value => clean(value, 220)).filter(Boolean),
+    roles: (item.roles || []).slice(0, 20).map(value => clean(value, 160)).filter(Boolean),
+    identifiers: (item.identifiers || []).slice(0, 20).map(identifier => ({ type: clean(identifier?.type, 100), value: clean(identifier?.value, 500) })).filter(identifier => identifier.value),
+    properties: scalarProperties(item.properties),
+    evidenceRefs: (item.evidenceRefs || []).slice(0, 3).map(evidence),
+    reviewStatus: clean(item.reviewStatus, 120),
+    firstSeen: item.firstSeen || null,
+    lastSeen: item.lastSeen || null
+  };
+}
+function relationship(item = {}) {
+  return {
+    id: clean(item.id, 220),
+    type: clean(item.type, 100),
+    from: clean(item.from, 220),
+    to: clean(item.to, 220),
+    label: clean(item.label, 180),
+    date: item.date || null,
+    sourceRecordId: item.sourceRecordId || null,
+    sourceId: clean(item.sourceId, 160),
+    sourceTitle: clean(item.sourceTitle, 240),
+    sourceUrl: clean(item.sourceUrl, 1000),
+    publicationDate: item.publicationDate || null,
+    retrievalDate: item.retrievalDate || null,
+    evidenceGrade: clean(item.evidenceGrade, 4),
+    factualStatus: clean(item.factualStatus, 120),
+    establishes: clean(item.establishes, 700),
+    doesNotEstablish: clean(item.doesNotEstablish, 700),
+    reviewStatus: clean(item.reviewStatus, 120),
+    extractionMethod: clean(item.extractionMethod, 160),
+    confidence: Number.isFinite(item.confidence) ? item.confidence : null
+  };
+}
+function rankRelationship(item = {}) {
+  const grade = String(item.evidenceGrade || '').toUpperCase();
+  const gradeScore = ({ A: 6, B: 5, C: 4, D: 3, E: 2, F: 1 })[grade] || 0;
+  const reviewScore = /human-reviewed|registry-defined/i.test(item.reviewStatus || '') ? 5 : /machine-classified/i.test(item.reviewStatus || '') ? 2 : 0;
+  return reviewScore * 100 + gradeScore * 10 + (item.sourceUrl ? 3 : 0) + (Number(item.confidence) || 0);
 }
 
-for (const marker of [
-  "'data/evidence-network-map.json'",
-  "'search-index.json'",
-  "'data/entity-registry.json'",
-  "'data/relationship-registry.json'"
-]) if (!after.includes(marker)) throw new Error(`Deployment-safe graph contract missing ${marker}`);
-if (after.includes(oversizedRequired)) throw new Error('Oversized source graph remains a required Cloudflare asset');
+if (originalBytes > maximumBytes) {
+  const graph = JSON.parse(originalText);
+  const compactEntities = (graph.entities || []).map(entity);
+  const compactRelationships = (graph.relationships || []).map(relationship).sort((a, b) => rankRelationship(b) - rankRelationship(a) || a.type.localeCompare(b.type) || a.id.localeCompare(b.id));
+  let relationshipLimit = compactRelationships.length;
+  let entityLimit = compactEntities.length;
+  let candidateText = '';
+  let candidate = null;
 
-if (after !== before) fs.writeFileSync(target, after);
-const syntax = spawnSync(process.execPath, ['--check', target], { cwd: root, encoding: 'utf8' });
-if (syntax.status !== 0) throw new Error(`Cloudflare output builder syntax failed: ${syntax.stderr || syntax.stdout}`);
+  function buildCandidate() {
+    const selectedRelationships = compactRelationships.slice(0, relationshipLimit);
+    const linked = new Set(selectedRelationships.flatMap(item => [item.from, item.to]));
+    const prioritisedEntities = compactEntities.slice().sort((a, b) => {
+      const aScore = (linked.has(a.id) ? 10 : 0) + (/human-reviewed|registry-defined/i.test(a.reviewStatus) ? 5 : 0) + (a.evidenceRefs.length ? 1 : 0);
+      const bScore = (linked.has(b.id) ? 10 : 0) + (/human-reviewed|registry-defined/i.test(b.reviewStatus) ? 5 : 0) + (b.evidenceRefs.length ? 1 : 0);
+      return bScore - aScore || a.type.localeCompare(b.type) || a.name.localeCompare(b.name);
+    }).slice(0, entityLimit);
+    const ids = new Set(prioritisedEntities.map(item => item.id));
+    const validRelationships = selectedRelationships.filter(item => ids.has(item.from) && ids.has(item.to));
+    candidate = {
+      ok: true,
+      schemaVersion: graph.schemaVersion || '1.0.0',
+      generatedAt: graph.generatedAt || new Date().toISOString(),
+      model: graph.model || 'Lightweight FollowTheMoney-compatible public-record graph',
+      evidenceBoundary: graph.evidenceBoundary || 'A structured record does not by itself establish guilt or wrongdoing.',
+      rules: graph.rules || [],
+      totals: graph.totals || { entities: compactEntities.length, relationships: compactRelationships.length },
+      countsByType: graph.countsByType || {},
+      countsByRelationship: graph.countsByRelationship || {},
+      reviewCounts: graph.reviewCounts || {},
+      publicProjection: {
+        compact: true,
+        completeSourceTotalsPreserved: true,
+        includedEntities: prioritisedEntities.length,
+        includedRelationships: validRelationships.length,
+        omittedHeavyArrays: ['findings','documents','missingRecords'],
+        fullRegistries: ['/data/entity-registry.json','/data/relationship-registry.json'],
+        compactNetwork: '/data/evidence-network-map.json',
+        searchIndex: '/search-index.json',
+        boundary: 'This deployment-safe projection preserves sourced entity and relationship records. Complete build-time arrays are not shipped as one oversized static asset.'
+      },
+      entities: prioritisedEntities,
+      relationships: validRelationships,
+      findings: [],
+      documents: [],
+      missingRecords: []
+    };
+    candidateText = JSON.stringify(candidate);
+    return Buffer.byteLength(candidateText);
+  }
+
+  compactBytes = buildCandidate();
+  while (compactBytes > maximumBytes && relationshipLimit > 1000) {
+    relationshipLimit = Math.max(1000, Math.floor(relationshipLimit * 0.82));
+    compactBytes = buildCandidate();
+  }
+  while (compactBytes > maximumBytes && entityLimit > 1000) {
+    entityLimit = Math.max(1000, Math.floor(entityLimit * 0.82));
+    compactBytes = buildCandidate();
+  }
+  if (compactBytes > maximumBytes) throw new Error(`Compact investigation graph remains too large for Cloudflare: ${(compactBytes / 1024 / 1024).toFixed(1)} MiB`);
+
+  fs.writeFileSync(graphPath, candidateText);
+  compacted = true;
+  projection = candidate.publicProjection;
+
+  if (!globalThis.__matrixInvestigationGraphRestoreRegistered) {
+    globalThis.__matrixInvestigationGraphRestoreRegistered = true;
+    process.once('exit', () => {
+      try { fs.writeFileSync(graphPath, originalText); } catch {}
+    });
+  }
+}
 
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
-  changed: after !== before,
-  excludedSourceAsset: 'data/investigation-knowledge-graph.json',
-  reason: 'Source graph exceeds the 25 MiB Cloudflare static-asset ceiling.',
-  deployedGraphArtifacts: ['data/evidence-network-map.json','data/entity-registry.json','data/relationship-registry.json','search-index.json','data/search-facets.json'],
-  boundary: 'The full source graph remains in repository build data; public Cloudflare delivery uses the compact evidence graph, registries and deployment-safe search index.',
-  syntaxChecked: true
+  compacted,
+  sourceBytes: originalBytes,
+  stagedBytes: compactBytes,
+  maximumBytes,
+  publicRoute: 'data/investigation-knowledge-graph.json',
+  projection,
+  companionArtifacts: ['data/evidence-network-map.json','data/entity-registry.json','data/relationship-registry.json','search-index.json','data/search-facets.json'],
+  restoration: compacted ? 'Full build-time graph restored automatically when the current Node process exits.' : 'No restoration required.',
+  boundary: 'The public route remains schema-compatible while the complete oversized graph stays build-time only.'
 }, null, 2));
-console.log(`Cloudflare graph contract patched: oversized source graph excluded; deployment-safe graph and search artifacts remain required.`);
+console.log(compacted
+  ? `Cloudflare graph projection staged: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB source -> ${(compactBytes / 1024 / 1024).toFixed(1)} MiB public projection.`
+  : `Cloudflare graph projection not required: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB.`);

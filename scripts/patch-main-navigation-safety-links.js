@@ -20,9 +20,14 @@ const primaryLinks = [
 const primaryHtml = primaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
 
 let html = fs.readFileSync(indexPath, 'utf8');
-const navMatch = html.match(/<div class="nav-primary">[\s\S]*?<\/div>/i);
-if (!navMatch) throw new Error('Homepage primary navigation container not found.');
-html = html.replace(navMatch[0], `<div class="nav-primary">${primaryHtml}</div>`);
+const primaryContainer = html.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i);
+if (primaryContainer) {
+  html = html.replace(primaryContainer[0], `<div class="nav-primary">${primaryHtml}</div>`);
+} else {
+  const navContainer = html.match(/(<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>)[\s\S]*?(<\/nav>)/i);
+  if (!navContainer) throw new Error('Homepage primary navigation container not found.');
+  html = html.replace(navContainer[0], `${navContainer[1]}${primaryHtml}${navContainer[2]}`);
+}
 fs.writeFileSync(indexPath, html);
 
 let startHere = fs.readFileSync(startHerePath, 'utf8');
@@ -39,7 +44,11 @@ startHere = startHere.replace('</main>', `${safetySection}</main>`);
 fs.writeFileSync(startHerePath, startHere);
 
 const count = (text, value) => (text.match(new RegExp(`href="${value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length;
-const renderedPrimary = (html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/i) || [])[1] || '';
+const renderedPrimary = (
+  (html.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i) || [])[1]
+  || (html.match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i) || [])[1]
+  || ''
+);
 const anchorCount = (renderedPrimary.match(/<a\b[^>]*href=/gi) || []).length;
 if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
 if (count(html, 'security-privacy.html') < 1 || count(html, 'dark-web-safety.html') < 1) throw new Error('Homepage safety links are missing.');
@@ -47,4 +56,4 @@ if (count(startHere, 'security-privacy.html') < 2 || count(startHere, 'dark-web-
 if (count(startHere, 'book-universe.html') < 1 || count(startHere, 'forum.html') < 1) throw new Error('Start Here compatibility routes are missing.');
 if (!startHere.includes('nav-shell') || !startHere.includes('nav-more') || !startHere.includes('<summary>More</summary>')) throw new Error('Start Here polished navigation shell is missing.');
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Primary navigation reconciled; polished Start Here shell and safety routes recreated after legacy generators.');
+console.log('Primary navigation reconciled across legacy and current homepage shells; polished Start Here shell and safety routes recreated.');

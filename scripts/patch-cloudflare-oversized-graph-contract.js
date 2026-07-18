@@ -28,55 +28,29 @@ function scalarProperties(value) {
 }
 function evidence(ref = {}) {
   return {
-    sourceId: clean(ref.sourceId, 160),
-    sourceTitle: clean(ref.sourceTitle, 240),
-    sourceUrl: clean(ref.sourceUrl, 1000),
-    publicationDate: ref.publicationDate || null,
-    retrievalDate: ref.retrievalDate || null,
-    evidenceGrade: clean(ref.evidenceGrade, 4),
-    factualStatus: clean(ref.factualStatus, 120),
-    establishes: clean(ref.establishes, 700),
-    doesNotEstablish: clean(ref.doesNotEstablish, 700),
-    reviewStatus: clean(ref.reviewStatus, 120)
+    sourceId: clean(ref.sourceId, 160), sourceTitle: clean(ref.sourceTitle, 240), sourceUrl: clean(ref.sourceUrl, 1000),
+    publicationDate: ref.publicationDate || null, retrievalDate: ref.retrievalDate || null,
+    evidenceGrade: clean(ref.evidenceGrade, 4), factualStatus: clean(ref.factualStatus, 120),
+    establishes: clean(ref.establishes, 700), doesNotEstablish: clean(ref.doesNotEstablish, 700), reviewStatus: clean(ref.reviewStatus, 120)
   };
 }
 function entity(item = {}) {
   return {
-    id: clean(item.id, 220),
-    type: clean(item.type, 100),
-    followTheMoneySchema: clean(item.followTheMoneySchema, 120),
-    name: clean(item.name, 300),
+    id: clean(item.id, 220), type: clean(item.type, 100), followTheMoneySchema: clean(item.followTheMoneySchema, 120), name: clean(item.name, 300),
     aliases: (item.aliases || []).slice(0, 20).map(value => clean(value, 220)).filter(Boolean),
     roles: (item.roles || []).slice(0, 20).map(value => clean(value, 160)).filter(Boolean),
     identifiers: (item.identifiers || []).slice(0, 20).map(identifier => ({ type: clean(identifier?.type, 100), value: clean(identifier?.value, 500) })).filter(identifier => identifier.value),
-    properties: scalarProperties(item.properties),
-    evidenceRefs: (item.evidenceRefs || []).slice(0, 3).map(evidence),
-    reviewStatus: clean(item.reviewStatus, 120),
-    firstSeen: item.firstSeen || null,
-    lastSeen: item.lastSeen || null
+    properties: scalarProperties(item.properties), evidenceRefs: (item.evidenceRefs || []).slice(0, 3).map(evidence),
+    reviewStatus: clean(item.reviewStatus, 120), firstSeen: item.firstSeen || null, lastSeen: item.lastSeen || null
   };
 }
 function relationship(item = {}) {
   return {
-    id: clean(item.id, 220),
-    type: clean(item.type, 100),
-    from: clean(item.from, 220),
-    to: clean(item.to, 220),
-    label: clean(item.label, 180),
-    date: item.date || null,
-    sourceRecordId: item.sourceRecordId || null,
-    sourceId: clean(item.sourceId, 160),
-    sourceTitle: clean(item.sourceTitle, 240),
-    sourceUrl: clean(item.sourceUrl, 1000),
-    publicationDate: item.publicationDate || null,
-    retrievalDate: item.retrievalDate || null,
-    evidenceGrade: clean(item.evidenceGrade, 4),
-    factualStatus: clean(item.factualStatus, 120),
-    establishes: clean(item.establishes, 700),
-    doesNotEstablish: clean(item.doesNotEstablish, 700),
-    reviewStatus: clean(item.reviewStatus, 120),
-    extractionMethod: clean(item.extractionMethod, 160),
-    confidence: Number.isFinite(item.confidence) ? item.confidence : null
+    id: clean(item.id, 220), type: clean(item.type, 100), from: clean(item.from, 220), to: clean(item.to, 220), label: clean(item.label, 180),
+    date: item.date || null, sourceRecordId: item.sourceRecordId || null, sourceId: clean(item.sourceId, 160), sourceTitle: clean(item.sourceTitle, 240), sourceUrl: clean(item.sourceUrl, 1000),
+    publicationDate: item.publicationDate || null, retrievalDate: item.retrievalDate || null, evidenceGrade: clean(item.evidenceGrade, 4), factualStatus: clean(item.factualStatus, 120),
+    establishes: clean(item.establishes, 700), doesNotEstablish: clean(item.doesNotEstablish, 700), reviewStatus: clean(item.reviewStatus, 120),
+    extractionMethod: clean(item.extractionMethod, 160), confidence: Number.isFinite(item.confidence) ? item.confidence : null
   };
 }
 function rankRelationship(item = {}) {
@@ -106,32 +80,18 @@ if (originalBytes > maximumBytes) {
     const ids = new Set(prioritisedEntities.map(item => item.id));
     const validRelationships = selectedRelationships.filter(item => ids.has(item.from) && ids.has(item.to));
     candidate = {
-      ok: true,
-      schemaVersion: graph.schemaVersion || '1.0.0',
-      generatedAt: graph.generatedAt || new Date().toISOString(),
+      ok: true, schemaVersion: graph.schemaVersion || '1.0.0', generatedAt: graph.generatedAt || new Date().toISOString(),
       model: graph.model || 'Lightweight FollowTheMoney-compatible public-record graph',
       evidenceBoundary: graph.evidenceBoundary || 'A structured record does not by itself establish guilt or wrongdoing.',
-      rules: graph.rules || [],
-      totals: graph.totals || { entities: compactEntities.length, relationships: compactRelationships.length },
-      countsByType: graph.countsByType || {},
-      countsByRelationship: graph.countsByRelationship || {},
-      reviewCounts: graph.reviewCounts || {},
+      rules: graph.rules || [], totals: graph.totals || { entities: compactEntities.length, relationships: compactRelationships.length },
+      countsByType: graph.countsByType || {}, countsByRelationship: graph.countsByRelationship || {}, reviewCounts: graph.reviewCounts || {},
       publicProjection: {
-        compact: true,
-        completeSourceTotalsPreserved: true,
-        includedEntities: prioritisedEntities.length,
-        includedRelationships: validRelationships.length,
-        omittedHeavyArrays: ['findings','documents','missingRecords'],
-        fullRegistries: ['/data/entity-registry.json','/data/relationship-registry.json'],
-        compactNetwork: '/data/evidence-network-map.json',
-        searchIndex: '/search-index.json',
+        compact: true, completeSourceTotalsPreserved: true, includedEntities: prioritisedEntities.length, includedRelationships: validRelationships.length,
+        omittedHeavyArrays: ['findings','documents','missingRecords'], fullRegistries: ['/data/entity-registry.json','/data/relationship-registry.json'],
+        compactNetwork: '/data/evidence-network-map.json', searchIndex: '/search-index.json',
         boundary: 'This deployment-safe projection preserves sourced entity and relationship records. Complete build-time arrays are not shipped as one oversized static asset.'
       },
-      entities: prioritisedEntities,
-      relationships: validRelationships,
-      findings: [],
-      documents: [],
-      missingRecords: []
+      entities: prioritisedEntities, relationships: validRelationships, findings: [], documents: [], missingRecords: []
     };
     candidateText = JSON.stringify(candidate);
     return Buffer.byteLength(candidateText);
@@ -151,27 +111,25 @@ if (originalBytes > maximumBytes) {
   fs.writeFileSync(graphPath, candidateText);
   compacted = true;
   projection = candidate.publicProjection;
-
   if (!globalThis.__matrixInvestigationGraphRestoreRegistered) {
     globalThis.__matrixInvestigationGraphRestoreRegistered = true;
-    process.once('exit', () => {
-      try { fs.writeFileSync(graphPath, originalText); } catch {}
-    });
+    process.once('exit', () => { try { fs.writeFileSync(graphPath, originalText); } catch {} });
   }
 }
 
+// The Signal Board patch may run repeatedly through legacy build owners. Normalize
+// its canonical and backwards-compatible status IDs at the final output boundary.
+const statusNormalizer = require.resolve('./normalize-signal-board-status-ids.js');
+delete require.cache[statusNormalizer];
+require(statusNormalizer);
+
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify({
-  ok: true,
-  generatedAt: new Date().toISOString(),
-  compacted,
-  sourceBytes: originalBytes,
-  stagedBytes: compactBytes,
-  maximumBytes,
-  publicRoute: 'data/investigation-knowledge-graph.json',
-  projection,
+  ok: true, generatedAt: new Date().toISOString(), compacted, sourceBytes: originalBytes, stagedBytes: compactBytes, maximumBytes,
+  publicRoute: 'data/investigation-knowledge-graph.json', projection,
   companionArtifacts: ['data/evidence-network-map.json','data/entity-registry.json','data/relationship-registry.json','search-index.json','data/search-facets.json'],
   restoration: compacted ? 'Full build-time graph restored automatically when the current Node process exits.' : 'No restoration required.',
+  signalBoardStatusIdsNormalized: true,
   boundary: 'The public route remains schema-compatible while the complete oversized graph stays build-time only.'
 }, null, 2));
 console.log(compacted

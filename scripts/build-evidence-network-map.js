@@ -106,14 +106,16 @@ const edges = relationships.map(item => {
   const official = ['A', 'B'].includes(grade) && !/unverified|leak|speculation/i.test(factualStatus);
   const reviewed = /human-reviewed|registry-defined|registry-linked|automated-source-monitor/i.test(reviewStatus);
   const core = !weakMention && grade !== 'D' && confidence >= 0.6;
+  const sourceRecordId = String(item.sourceRecordId || '').trim();
+  const sourceId = String(item.sourceId || '').trim();
   return { data: {
     id: item.id,
     source: item.from,
     target: item.to,
     relationshipType: item.type,
     label: clean(item.label || item.type, 100),
-    sourceRecordId: item.sourceRecordId || '',
-    sourceId: item.sourceId || '',
+    ...(sourceRecordId ? { sourceRecordId } : {}),
+    ...(sourceId ? { sourceId } : {}),
     sourceTitle: clean(item.sourceTitle || item.sourceId || 'Public source', 200),
     sourceUrl: String(item.sourceUrl || ''),
     date: validDate(item.date || item.publicationDate || item.retrievalDate),
@@ -177,8 +179,8 @@ const graph = {
 
 const graphPath = path.join(dataDir, 'evidence-network-map.json');
 // This file is loaded directly by the browser and must stay below Cloudflare's
-// single-asset ceiling. Compact defaults and removal of duplicated type/id labels
-// preserve every record, source, evidence field and governing boundary.
+// single-asset ceiling. Compact defaults, duplicated metadata removal and omission
+// of empty optional identifiers preserve every record, source and evidence field.
 fs.writeFileSync(graphPath, JSON.stringify(graph));
 const graphBytes = fs.statSync(graphPath).size;
 const cloudflareTargetBytes = 24 * 1024 * 1024;
@@ -208,7 +210,7 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
   serialization: 'compact-json',
-  compaction: 'concise-default-boundaries-and-redundant-element-metadata-removal',
+  compaction: 'concise-default-boundaries-redundant-metadata-removal-and-empty-optional-id-omission',
   graphBytes,
   graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
   cloudflareTargetBytes,

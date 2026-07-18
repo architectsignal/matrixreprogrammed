@@ -36,7 +36,9 @@ jobs:
       - name: Validate and run inventory scanner
         run: |
           node --check scripts/recovery-functional-inventory.js
+          node --check scripts/recovery-functional-inventory-refine.js
           node scripts/recovery-functional-inventory.js
+          node scripts/recovery-functional-inventory-refine.js
 
       - name: Publish inventory summary
         run: |

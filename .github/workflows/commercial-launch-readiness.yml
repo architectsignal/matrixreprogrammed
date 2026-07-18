@@ -10,12 +10,15 @@ on:
       - 'templates/legal-notice.template'
       - 'paypal-membership.js'
       - 'src/worker-paypal-subscriptions.js'
+      - 'src/worker-membership-contract-email.js'
       - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
       - 'scripts/patch-membership-tiers.js'
       - 'scripts/patch-commercial-paypal-guard.js'
       - 'scripts/patch-commercial-launch-readiness.js'
       - 'scripts/commercial-launch-readiness-test.js'
+      - 'scripts/mission-readiness-test.js'
       - 'scripts/final-production-reconcile.js'
+      - 'package.json'
       - 'wrangler.toml'
       - 'docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md'
       - '.github/workflows/commercial-launch-readiness.yml'
@@ -33,7 +36,7 @@ env:
 
 jobs:
   commercial-readiness:
-    name: Consent, legal pages and live-payment gates
+    name: Consent, contract confirmation, legal pages and live-payment gates
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -82,12 +85,13 @@ jobs:
           print('D1 consent migration passed twice and contains every required field.')
           PY
 
-      - name: Confirm disabled production switches
+      - name: Confirm disabled production switches and transactional delivery
         run: |
           grep -F 'PAYPAL_ENVIRONMENT = "sandbox"' wrangler.toml
           grep -F 'PAYPAL_PRODUCTION_ENABLED = "false"' wrangler.toml
           grep -F 'COMMERCIAL_LEGAL_READY = "false"' wrangler.toml
           grep -F 'EMAIL_AUTOMATION_ENABLED = "false"' wrangler.toml
+          grep -F 'EMAIL_TRANSACTIONAL_ENABLED = "true"' wrangler.toml
 
       - name: Upload commercial proof
         if: always()

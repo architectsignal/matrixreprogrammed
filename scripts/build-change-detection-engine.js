@@ -28,6 +28,27 @@ function clean(value = ''){
     .replace(/\s+/g, ' ')
     .trim();
 }
+function sanitizeStructured(value, depth = 0){
+  if (depth > 12) return null;
+  if (value == null || typeof value === 'number' || typeof value === 'boolean') return value;
+  if (typeof value === 'string') {
+    return value
+      .replace(/\[object Object\]|\bobject Object\b|\[object Array\]/gi, ' ')
+      .replace(/[\u0000-\u001f\u007f]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+  if (Array.isArray(value)) return value.map(item => sanitizeStructured(item, depth + 1)).filter(item => item !== undefined);
+  if (typeof value === 'object') {
+    const output = {};
+    for (const [key, item] of Object.entries(value)) {
+      const sanitized = sanitizeStructured(item, depth + 1);
+      if (sanitized !== undefined) output[key] = sanitized;
+    }
+    return output;
+  }
+  return undefined;
+}
 function esc(value = ''){ return clean(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c])); }
 function slug(value = 'item'){ return clean(value).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'item'; }
 function arr(value){ return Array.isArray(value) ? value.filter(Boolean) : (value ? [value] : []); }
@@ -84,8 +105,8 @@ const clockTriggers = newRecords.concat(changedRecords.map(item => item.after)).
 const evidenceUpgrades = changedRecords.filter(item => (gradeWeight[item.after.evidence_grade] || 0) > (gradeWeight[item.before.evidence_grade] || 0)).map(item => ({ id: item.after.key, from: item.before.evidence_grade, to: item.after.evidence_grade, summary: item.after.summary, source_url: item.after.source_url }));
 const repeatedEntities = arr(observationsFeed.observations).filter(observation => clean(observation.name) && Number(observation.count || 0) > 1).slice(0, 40);
 
-const changeDetection = { updated, title: 'Change Detection Engine', purpose: 'Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.', boundary: 'Change detection flags movement. It does not interpret intent.', previousUpdated: previousSnapshot.updated || null, currentRecordCount: current.length, previousRecordCount: previousRecords.length, newRecords, removedRecords: removedRecords.slice(0, 80), changedRecords: changedRecords.slice(0, 80), evidenceUpgrades, clockTriggers, repeatedEntities };
-const relationshipScores = { updated, title: 'Entity Relationship Scores', purpose: 'Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.', boundary: 'Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.', relationships };
+const changeDetection = sanitizeStructured({ updated, title: 'Change Detection Engine', purpose: 'Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.', boundary: 'Change detection flags movement. It does not interpret intent.', previousUpdated: previousSnapshot.updated || null, currentRecordCount: current.length, previousRecordCount: previousRecords.length, newRecords, removedRecords: removedRecords.slice(0, 80), changedRecords: changedRecords.slice(0, 80), evidenceUpgrades, clockTriggers, repeatedEntities });
+const relationshipScores = sanitizeStructured({ updated, title: 'Entity Relationship Scores', purpose: 'Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.', boundary: 'Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.', relationships });
 write('data/change-detection.json', `${JSON.stringify(changeDetection, null, 2)}\n`);
 write('data/entity-relationship-scores.json', `${JSON.stringify(relationshipScores, null, 2)}\n`);
 write('data/machine-state/record-event-snapshot.json', `${JSON.stringify({ updated, records: current }, null, 2)}\n`);
@@ -94,7 +115,7 @@ let brain = readJson('data/daily-brain-brief.json', null);
 if (brain) {
   brain.changeDetection = { updated, newRecordCount: newRecords.length, changedRecordCount: changedRecords.length, removedRecordCount: removedRecords.length, relationshipCandidateCount: relationships.length, evidenceUpgradeCount: evidenceUpgrades.length, machineIntelligenceRoute: 'machine-intelligence.html', changeDetectionRoute: 'data/change-detection.json', relationshipScoresRoute: 'data/entity-relationship-scores.json', boundary: changeDetection.boundary };
   brain.topChangeSignals = newRecords.slice(0, 8).map(record => ({ lane: record.source_lane, grade: record.evidence_grade, summary: record.summary, source_url: record.source_url }));
-  write('data/daily-brain-brief.json', `${JSON.stringify(brain, null, 2)}\n`);
+  write('data/daily-brain-brief.json', `${JSON.stringify(sanitizeStructured(brain), null, 2)}\n`);
 }
 
 function recordCard(record){ return `<article class="card redline"><span class="label">${esc(record.evidence_grade || 'record')}</span><h3>${esc(record.summary || record.key)}</h3><p><strong>Lane:</strong> ${esc(record.source_lane || 'unknown')}</p><p><a class="btn alt" href="${esc(record.source_url || 'machine-digest.html')}" target="_blank" rel="noopener">Open source route</a></p></article>`; }

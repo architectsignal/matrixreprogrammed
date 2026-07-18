@@ -1,43 +1,82 @@
 name: Matrix Reprogrammed Production Deploy
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: '35 */6 * * *'
-  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - Paid Launch Critical Gate
+    types:
+      - completed
 
 concurrency:
   group: matrixreprogrammed-production
   cancel-in-progress: true
 
 permissions:
+  actions: read
   contents: read
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
-  refresh-build-guard-deploy-verify:
-    name: Refresh, migrate, build, accept, deploy and prove live main
+  deploy-accepted-artifact:
+    name: Migrate, deploy and prove the exact accepted main artifact
+    if: >-
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.head_branch == 'main' &&
+          github.event.workflow_run.event != 'pull_request' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 120
     steps:
-      - name: Checkout latest main, never an obsolete queued SHA
+      - name: Checkout the exact SHA that passed the critical gate
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.workflow_run.head_sha }}
           fetch-depth: 0
 
-      - name: Record exact main commit and remove inherited deploy output
+      - name: Record and prove the accepted SHA
         shell: bash
         run: |
           set -euo pipefail
-          echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-          echo "COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          actual_sha="$(git rev-parse HEAD)"
+          accepted_sha="${{ github.event.workflow_run.head_sha }}"
+          test "$actual_sha" = "$accepted_sha" || {
+            echo "Checked out $actual_sha but the passing critical gate used $accepted_sha"
+            exit 1
+          }
+          echo "DEPLOY_COMMIT_SHA=$actual_sha" >> "$GITHUB_ENV"
+          echo "COMMIT_SHA=$actual_sha" >> "$GITHUB_ENV"
           rm -rf _site
           mkdir -p downloads
+
+      - name: Download the exact immutable artifact from the passing gate
+        uses: actions/download-artifact@v4
+        with:
+          name: paid-launch-artifact-${{ github.event.workflow_run.head_sha }}
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: .
+
+      - name: Verify artifact provenance, manifest and digest before any remote action
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d _site
+          test -s _site/build-provenance.json
+          test -s downloads/paid-launch-passing-sha.txt
+          test -s downloads/paid-launch-deploy-manifest.sha256
+          test -s downloads/paid-launch-deploy-manifest.digest
+          test "$(tr -d '\r\n' < downloads/paid-launch-passing-sha.txt)" = "$DEPLOY_COMMIT_SHA"
+          sha256sum -c downloads/paid-launch-deploy-manifest.digest
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+          node - <<'NODE'
+          const fs=require('fs');
+          const provenance=JSON.parse(fs.readFileSync('_site/build-provenance.json','utf8'));
+          if(provenance.sourceSha!==process.env.DEPLOY_COMMIT_SHA){
+            throw new Error(`Artifact provenance ${provenance.sourceSha} differs from accepted SHA ${process.env.DEPLOY_COMMIT_SHA}`);
+          }
+          console.log(`Exact accepted artifact verified for ${provenance.sourceSha}`);
+          NODE
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -45,47 +84,12 @@ jobs:
           node-version: '24'
           cache: npm
 
-      - name: Install locked dependencies
+      - name: Install locked dependencies without rebuilding the accepted artifact
         run: npm ci
 
-      - name: Refresh investigation, Live Intel and conclusion data
-        env:
-          FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
-          INVESTIGATION_MODE: daily
-          INVESTIGATION_CONCURRENCY: '4'
-          INVESTIGATION_TIMEOUT_MS: '25000'
+      - name: Prove Worker and payment boundary source still match the accepted SHA
         run: |
-          node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
-          node scripts/update-live-intel.js
-          node scripts/record-live-intel-check.js
-          node scripts/update-seven-day-intel.js
-          node scripts/build-outcome-briefings.js
-          node scripts/build-daily-brain-brief.js
-          node scripts/build-investigation-pages.js
-          node scripts/build-mission-intelligence-10.js
-          node scripts/build-live-intel-machine.js
-          node scripts/patch-conclusion-integrity-cards.js
-
-      - name: Build complete site and Worker assets
-        env:
-          SOURCE_DOCUMENTS_PER_RUN: '0'
-        shell: bash
-        run: |
-          set -o pipefail
-          mkdir -p downloads
-          npm run build 2>&1 | tee downloads/production-build.log
-
-      - name: Verify D1-authoritative forum, member, PayPal, bootstrap and rehearsal wiring
-        run: |
-          node scripts/forum-persistence-d1-test.js
-          node scripts/cloudflare-worker-routes-test.js
-          node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
-          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
-          node scripts/membership-auth-test.js
-          node scripts/login-email-resend-test.js
-          node scripts/phase4-email-lifecycle-test.mjs
-          node scripts/osint-tools-test.js
+          node --check src/worker.js
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
@@ -93,89 +97,11 @@ jobs:
           node --check src/worker-paypal-sandbox-bootstrap.js
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
-          node --check scripts/build-production-deploy-receipt.js
-          node scripts/d1-export-command-test.js
+          node scripts/cloudflare-worker-routes-test.js
+          node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
+          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+          node scripts/osint-tools-test.js
           npx --yes wrangler@latest deploy --dry-run
-
-      - name: Reconcile latest pages after every legacy generator
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/final-production-reconcile.js
-
-      - name: Run complete link, search and investigation categories
-        run: |
-          npm run link-audit
-          node scripts/free-ask-matrix-search-test.js
-          node scripts/search-v3-quality-test.js
-          node scripts/search-investigation-smoke-test.js
-          node scripts/structured-investigation-data-test.js
-          node scripts/open-source-research-suite-test.js
-          node scripts/market-activity-test.js
-          node scripts/public-network-map-test.js
-          node scripts/site-intelligence-pipeline-audit.js
-
-      - name: Rebuild deploy directory after every mutating generator and repair
-        env:
-          SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: node scripts/build-cloudflare-output.js
-
-      - name: Apply final public hardening and bind artifact to passing SHA
-        env:
-          GITHUB_SHA: ''
-          COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/final-paid-launch-hardening.js
-
-      - name: Fail closed on stale data
-        run: node scripts/production-freshness-guard.js
-
-      - name: Production synchronization test
-        run: node scripts/production-sync-test.js
-
-      - name: Production deploy guard
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/production-deploy-guard.js
-
-      - name: Run final site-wide postbuild audit
-        run: node scripts/site-wide-function-audit.js --postbuild
-
-      - name: Prove deploy directory is complete and non-mutating
-        env:
-          EXPECTED_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-          DEPLOY_DIR: _site
-        run: node scripts/release-acceptance-test.js
-
-      - name: Install isolated mobile and accessibility audit dependencies
-        run: |
-          npm install --no-save --package-lock=false playwright @axe-core/playwright http-server
-          npx playwright install --with-deps chromium
-
-      - name: Run every generated HTML route at mobile viewport
-        shell: bash
-        run: |
-          set -euo pipefail
-          npx http-server _site -p 4173 -c-1 > /tmp/matrix-http.log 2>&1 &
-          server_pid=$!
-          trap 'kill $server_pid || true' EXIT
-          for attempt in $(seq 1 30); do
-            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
-            sleep 1
-          done
-          RELEASE_BASE_URL=http://127.0.0.1:4173 DEPLOY_DIR=_site node scripts/browser-release-acceptance.mjs
-
-      - name: Freeze exact accepted artifact manifest
-        shell: bash
-        run: |
-          set -euo pipefail
-          printf '%s\n' "$DEPLOY_COMMIT_SHA" > downloads/paid-launch-passing-sha.txt
-          find _site -type f -print0 | sort -z | xargs -0 sha256sum > downloads/paid-launch-deploy-manifest.sha256
-          sha256sum downloads/paid-launch-deploy-manifest.sha256 > downloads/paid-launch-deploy-manifest.digest
-          node - <<'NODE'
-          const fs=require('fs');
-          const provenance=JSON.parse(fs.readFileSync('_site/build-provenance.json','utf8'));
-          if(provenance.sourceSha!==process.env.DEPLOY_COMMIT_SHA) throw new Error(`Artifact provenance ${provenance.sourceSha} differs from passing SHA ${process.env.DEPLOY_COMMIT_SHA}`);
-          console.log(`Accepted deploy artifact is bound to ${provenance.sourceSha}`);
-          NODE
 
       - name: Confirm Cloudflare credentials
         env:
@@ -194,13 +120,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p downloads
           npx --yes wrangler@latest d1 time-travel info matrix-members --json > downloads/d1-time-travel-bookmark.json
           node - <<'NODE'
           const fs=require('fs');
           const payload=JSON.parse(fs.readFileSync('downloads/d1-time-travel-bookmark.json','utf8'));
-          if(!payload || typeof payload.bookmark!=='string' || payload.bookmark.trim().length<8) throw new Error('Cloudflare D1 Time Travel did not return a valid rollback bookmark');
-          const proof={ok:true,commit:process.env.DEPLOY_COMMIT_SHA,createdAt:new Date().toISOString(),database:'matrix-members',method:'Cloudflare D1 Time Travel bookmark',bookmark:payload.bookmark,restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,retentionBoundary:'Cloudflare Time Travel retention applies; capture a new bookmark before every migration chain.'};
+          if(!payload || typeof payload.bookmark!=='string' || payload.bookmark.trim().length<8){
+            throw new Error('Cloudflare D1 Time Travel did not return a valid rollback bookmark');
+          }
+          const proof={
+            ok:true,
+            commit:process.env.DEPLOY_COMMIT_SHA,
+            createdAt:new Date().toISOString(),
+            database:'matrix-members',
+            method:'Cloudflare D1 Time Travel bookmark',
+            bookmark:payload.bookmark,
+            restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,
+            retentionBoundary:'Capture a new bookmark before every migration chain.'
+          };
           fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify(proof,null,2));
           console.log(`D1 rollback point captured: ${payload.bookmark}`);
           NODE
@@ -212,7 +148,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p downloads
           migrations=(
             migrations/0001_membership_foundation.sql
             migrations/0004_forum_persistence.sql
@@ -250,22 +185,21 @@ jobs:
           const names=new Set(rows(schema).map(row=>row.name));
           const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility'];
           const missing=required.filter(name=>!names.has(name));
-          if(missing.length) throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
-          if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing');
+          if(missing.length)throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
+          if(!rollback.ok||!rollback.bookmark)throw new Error('Validated D1 rollback point is missing');
           const switches=rows(settings);
-          if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live')) throw new Error('Both PayPal runtime environments were not created');
-          if(switches.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during deployment');
-          console.log(`D1 verification passed for ${required.length} required objects; entitlement views exist; sandbox and live checkout remain disabled.`);
+          if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live'))throw new Error('Both PayPal runtime environments were not created');
+          if(switches.some(row=>Number(row.checkout_enabled)!==0))throw new Error('PayPal checkout must remain disabled during deployment');
+          console.log(`D1 verification passed for ${required.length} objects; entitlement views exist; sandbox and live checkout remain disabled.`);
           NODE
 
-      - name: Prove accepted artifact did not change during remote migration checks
+      - name: Prove remote checks did not mutate the accepted deploy directory
         shell: bash
         run: |
           set -euo pipefail
-          find _site -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/post-d1-deploy-manifest.sha256
-          cmp downloads/paid-launch-deploy-manifest.sha256 /tmp/post-d1-deploy-manifest.sha256
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
 
-      - name: Deploy exact accepted _site and strict D1 forum and PayPal Worker to Cloudflare
+      - name: Deploy the exact accepted artifact and Worker to Cloudflare
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -274,7 +208,7 @@ jobs:
           set -euo pipefail
           npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
 
-      - name: Verify live routes, health SHA, sandbox plans, PayPal boundaries, forum D1 write/read and main SHA
+      - name: Verify live routes, health SHA, PayPal boundaries and D1 behavior
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
@@ -283,7 +217,7 @@ jobs:
           LIVE_VERIFY_DELAY_MS: '10000'
         run: node scripts/verify-live-production.js
 
-      - name: Verify live provenance matches the SHA that passed acceptance
+      - name: Verify live provenance matches the SHA and artifact that passed acceptance
         shell: bash
         run: |
           set -euo pipefail
@@ -291,7 +225,9 @@ jobs:
           node - <<'NODE'
           const fs=require('fs');
           const live=JSON.parse(fs.readFileSync('downloads/live-build-provenance.json','utf8'));
-          if(live.sourceSha!==process.env.DEPLOY_COMMIT_SHA) throw new Error(`Live provenance ${live.sourceSha} does not equal accepted SHA ${process.env.DEPLOY_COMMIT_SHA}`);
+          if(live.sourceSha!==process.env.DEPLOY_COMMIT_SHA){
+            throw new Error(`Live provenance ${live.sourceSha} does not equal accepted SHA ${process.env.DEPLOY_COMMIT_SHA}`);
+          }
           console.log(`Live deploy provenance verified: ${live.sourceSha}`);
           NODE
 
@@ -300,20 +236,15 @@ jobs:
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: node scripts/build-production-deploy-receipt.js
 
-      - name: Upload production proof and exact accepted artifact manifest
+      - name: Upload production proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: production-proof-${{ github.run_id }}
           path: |
-            downloads/production-build.log
-            downloads/deploy-manifest.json
-            downloads/deploy-health.json
-            downloads/production-freshness-guard.json
-            downloads/production-sync-test.json
-            downloads/production-deploy-guard-report.json
-            downloads/forum-persistence-d1-test.json
-            downloads/final-production-reconcile.json
+            downloads/paid-launch-passing-sha.txt
+            downloads/paid-launch-deploy-manifest.sha256
+            downloads/paid-launch-deploy-manifest.digest
             downloads/final-paid-launch-hardening.json
             downloads/site-wide-function-audit.json
             downloads/cloudflare-worker-routes-test.json
@@ -321,21 +252,16 @@ jobs:
             downloads/login-email-resend-test.json
             downloads/membership-auth-test.json
             downloads/phase4-email-lifecycle-test/
-            downloads/conclusion-integrity-report.json
-            downloads/live-production-verification.json
-            downloads/live-build-provenance.json
             downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/phase8-autonomous-sandbox-readiness-test.json
-            downloads/production-deploy-receipt.json
-            downloads/d1-export-command-test.json
             downloads/d1-time-travel-bookmark.json
             downloads/d1-rollback-proof.json
             downloads/d1-migration.log
             downloads/d1-schema-verification.json
             downloads/paypal-runtime-settings.json
-            downloads/paid-launch-passing-sha.txt
-            downloads/paid-launch-deploy-manifest.sha256
-            downloads/paid-launch-deploy-manifest.digest
             downloads/wrangler-deploy.log
+            downloads/live-production-verification.json
+            downloads/live-build-provenance.json
+            downloads/production-deploy-receipt.json
           if-no-files-found: ignore
           retention-days: 60

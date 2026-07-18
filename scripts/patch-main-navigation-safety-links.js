@@ -19,10 +19,35 @@ const primaryLinks = [
 ];
 const primaryHtml = primaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
 
-let html = fs.readFileSync(indexPath, 'utf8');
-const navMatch = html.match(/<div class="nav-primary">[\s\S]*?<\/div>/i);
-if (!navMatch) throw new Error('Homepage primary navigation container not found.');
-html = html.replace(navMatch[0], `<div class="nav-primary">${primaryHtml}</div>`);
+function replaceHomepageNavigation(document) {
+  const navPrimary = /<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i;
+  if (navPrimary.test(document)) {
+    return document.replace(navPrimary, `<div class="nav-primary">${primaryHtml}</div>`);
+  }
+
+  const topbar = /<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i;
+  const headerMatch = document.match(topbar);
+  if (!headerMatch) throw new Error('Homepage topbar header not found.');
+
+  const nav = /<nav\b([^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*)>[\s\S]*?<\/nav>/i;
+  let nextHeader;
+  if (nav.test(headerMatch[0])) {
+    nextHeader = headerMatch[0].replace(nav, `<nav$1>${primaryHtml}</nav>`);
+  } else {
+    nextHeader = headerMatch[0].replace(/<\/header>$/i, `<nav class="nav">${primaryHtml}</nav></header>`);
+  }
+  return document.replace(headerMatch[0], nextHeader);
+}
+
+function primaryNavigationMarkup(document) {
+  const navPrimary = document.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i);
+  if (navPrimary) return navPrimary[1];
+  const header = document.match(/<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i);
+  if (!header) return '';
+  return (header[0].match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i) || [])[1] || '';
+}
+
+let html = replaceHomepageNavigation(fs.readFileSync(indexPath, 'utf8'));
 fs.writeFileSync(indexPath, html);
 
 let startHere = fs.readFileSync(startHerePath, 'utf8');
@@ -39,7 +64,7 @@ startHere = startHere.replace('</main>', `${safetySection}</main>`);
 fs.writeFileSync(startHerePath, startHere);
 
 const count = (text, value) => (text.match(new RegExp(`href="${value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length;
-const renderedPrimary = (html.match(/<div class="nav-primary">([\s\S]*?)<\/div>/i) || [])[1] || '';
+const renderedPrimary = primaryNavigationMarkup(html);
 const anchorCount = (renderedPrimary.match(/<a\b[^>]*href=/gi) || []).length;
 if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
 if (count(html, 'security-privacy.html') < 1 || count(html, 'dark-web-safety.html') < 1) throw new Error('Homepage safety links are missing.');
@@ -47,4 +72,4 @@ if (count(startHere, 'security-privacy.html') < 2 || count(startHere, 'dark-web-
 if (count(startHere, 'book-universe.html') < 1 || count(startHere, 'forum.html') < 1) throw new Error('Start Here compatibility routes are missing.');
 if (!startHere.includes('nav-shell') || !startHere.includes('nav-more') || !startHere.includes('<summary>More</summary>')) throw new Error('Start Here polished navigation shell is missing.');
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Primary navigation reconciled; polished Start Here shell and safety routes recreated after legacy generators.');
+console.log('Primary navigation reconciled across current and legacy homepage shells; polished Start Here shell and safety routes recreated.');

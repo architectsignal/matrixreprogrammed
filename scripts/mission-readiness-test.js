@@ -18,9 +18,13 @@ const requiredFiles = [
   'data/access-route-policy.json',
   'scripts/build-mission-timers.js',
   'scripts/patch-osint-tool-tiers.js',
+  'scripts/patch-membership-tiers.js',
+  'scripts/patch-commercial-paypal-guard.js',
+  'scripts/patch-commercial-launch-readiness.js',
   'src/worker-access-gate.js',
   'src/worker-report-delivery.js',
   'src/worker-production.js',
+  'src/worker-membership-contract-email.js',
   'research-tools.html',
   'research-tools.js',
   'newsletter.html',
@@ -40,6 +44,8 @@ const worker = read('src/worker.js');
 const production = read('src/worker-production.js');
 const delivery = read('src/worker-report-delivery.js');
 const accessGate = read('src/worker-access-gate.js');
+const contractEmail = read('src/worker-membership-contract-email.js');
+const commercialGuard = read('scripts/patch-commercial-paypal-guard.js');
 const toolsPage = read('research-tools.html');
 const toolsUi = read('research-tools.js');
 const newsletterPage = read('newsletter.html');
@@ -110,6 +116,19 @@ check('transactional email is enabled while scheduled marketing remains disabled
   'Personalised preference and unsubscribe routes installed.',
   'Retry records predating activation quarantined by cutoff.'
 ]));
+check('durable membership confirmation email is wired', includesAll(contractEmail, [
+  'membership_contract_confirmation',
+  'Recurring price:',
+  'Immediate digital service requested: yes',
+  'Membership Terms',
+  'Cancellation & Withdrawal',
+  'processOutbox'
+]) && includesAll(commercialGuard, [
+  'queueMembershipContractConfirmation',
+  'contractConfirmationReady',
+  'paypal.membership_contract_confirmation',
+  'Authenticated transactional email is required to deliver the durable membership contract confirmation'
+]));
 check('newsletter requires explicit consent', newsletterPage.includes('data-marketing-consent') && newsletterPage.includes('required'));
 check('newsletter runtime refuses absent consent', includesAll(newsletterUi, [
   'const consentGranted=Boolean(consent.checked);',
@@ -123,7 +142,12 @@ check('newsletter runtime sends explicit preferences', includesAll(newsletterUi,
 ]));
 
 check('timer builder is in normal build validation', pkg.scripts?.build?.includes('global-risk-clocks-test.js'));
-check('tier patch runs before every npm build', pkg.scripts?.prebuild === 'node scripts/patch-osint-tool-tiers.js');
+check('tier and commercial guards run before every npm build', includesAll(pkg.scripts?.prebuild || '', [
+  'patch-osint-tool-tiers.js',
+  'patch-membership-tiers.js',
+  'patch-commercial-paypal-guard.js',
+  'patch-commercial-launch-readiness.js'
+]));
 check('tier patch runs again before Cloudflare output', pkg.scripts?.build?.includes('patch-osint-tool-tiers.js'));
 check('production receipt certifies mission systems', includesAll(receipt, [
   'schemaVersion: 4',
@@ -150,4 +174,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`Mission readiness regression passed: ${checks.length} checks; transactional email enabled and scheduled marketing disabled pending review.`);
+console.log(`Mission readiness regression passed: ${checks.length} checks; transactional email and contract confirmation enabled, scheduled marketing disabled pending review.`);

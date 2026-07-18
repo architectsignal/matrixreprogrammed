@@ -18,33 +18,29 @@ const primaryLinks = [
   ['search.html', 'Search']
 ];
 const primaryHtml = primaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
+const moreHtml = '<details class="nav-more"><summary>More</summary><div class="nav-drawer"><div class="nav-group"><strong>Research & Data</strong><a href="data-lab.html">Public Data Lab</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="evidence-network-map.html">Evidence Network</a><a href="geographic-power-atlas.html">Geographic Atlas</a></div><div class="nav-group"><strong>Community & Membership</strong><a href="forum.html">Signal Board</a><a href="membership.html">Membership</a><a href="subscriber-dashboard.html">Subscriber Dashboard</a><a href="amazon-store-books.html">Amazon Store</a><a href="videos.html">Rumble Channels</a></div></div></details>';
+const homepageNavHtml = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryHtml}</div>${moreHtml}</nav>`;
 
 function replaceHomepageNavigation(document) {
-  const navPrimary = /<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i;
-  if (navPrimary.test(document)) {
-    return document.replace(navPrimary, `<div class="nav-primary">${primaryHtml}</div>`);
-  }
-
   const topbar = /<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i;
   const headerMatch = document.match(topbar);
-  if (!headerMatch) throw new Error('Homepage topbar header not found.');
-
-  const nav = /<nav\b([^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*)>[\s\S]*?<\/nav>/i;
-  let nextHeader;
-  if (nav.test(headerMatch[0])) {
-    nextHeader = headerMatch[0].replace(nav, `<nav$1>${primaryHtml}</nav>`);
-  } else {
-    nextHeader = headerMatch[0].replace(/<\/header>$/i, `<nav class="nav">${primaryHtml}</nav></header>`);
+  if (headerMatch) {
+    const nav = /<nav\b[^>]*>[\s\S]*?<\/nav>/i;
+    const nextHeader = nav.test(headerMatch[0])
+      ? headerMatch[0].replace(nav, homepageNavHtml)
+      : headerMatch[0].replace(/<\/header>$/i, `${homepageNavHtml}</header>`);
+    return document.replace(headerMatch[0], nextHeader);
   }
-  return document.replace(headerMatch[0], nextHeader);
+
+  const navPrimary = /<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>[\s\S]*?<\/div>/i;
+  if (navPrimary.test(document)) {
+    return document.replace(navPrimary, `<div class="nav-primary">${primaryHtml}</div>${moreHtml}`);
+  }
+  throw new Error('Homepage primary navigation shell not found.');
 }
 
 function primaryNavigationMarkup(document) {
-  const navPrimary = document.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i);
-  if (navPrimary) return navPrimary[1];
-  const header = document.match(/<header\b[^>]*class=["'][^"']*\btopbar\b[^"']*["'][^>]*>[\s\S]*?<\/header>/i);
-  if (!header) return '';
-  return (header[0].match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>([\s\S]*?)<\/nav>/i) || [])[1] || '';
+  return (document.match(/<div\b[^>]*class=["'][^"']*\bnav-primary\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i) || [])[1] || '';
 }
 
 let html = replaceHomepageNavigation(fs.readFileSync(indexPath, 'utf8'));
@@ -55,7 +51,7 @@ startHere = startHere.replace(/<!-- start-here-safety:start -->[\s\S]*?<!-- star
 startHere = startHere.replace(/<section class="section commercial-internal">/g, '<section class="section">');
 const startNav = startHere.match(/<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>[\s\S]*?<\/nav>/i);
 if (!startNav) throw new Error('Start Here navigation not found.');
-const startNavHtml = `<nav class="nav nav-shell" aria-label="Start Here navigation"><div class="nav-primary">${primaryHtml}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer"><div class="nav-group"><strong>Reader Resources</strong><a href="amazon-store-books.html">Amazon Store</a><a href="videos.html">Rumble Channels</a><a href="optin-center.html">Opt-in Center</a><a href="offer-center.html">Offer Center</a><a href="book-universe.html">Book Universe</a></div><div class="nav-group"><strong>Evidence & Community</strong><a href="forum.html">Signal Board</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="data-lab.html">Public Data Lab</a><a href="geographic-power-atlas.html">Geographic Atlas</a></div></div></details></nav>`;
+const startNavHtml = `<nav class="nav nav-shell" aria-label="Start Here navigation"><div class="nav-primary">${primaryHtml}</div>${moreHtml}</nav>`;
 startHere = startHere.replace(startNav[0], startNavHtml);
 
 const safetySection = '<!-- start-here-safety:start --><section class="section wrap" id="start-here-safety"><div class="eyebrow">Protect The Researcher</div><h2>SECURITY, PRIVACY & DARK WEB SAFETY.</h2><p class="lead">Before opening sensitive records, building an OSINT workflow or using Tor, establish a threat model, separate identities and understand what each tool can and cannot protect.</p><div class="grid"><article id="start-here-security-tools" class="card redline"><h3>Security, Privacy & OSINT Safety</h3><p>Build a complete free protection system covering Tails, Tor, secure messaging, local PGP, email aliases, passwords, encryption, metadata removal, breach checks and defensive monitoring.</p><a class="btn alt" href="security-privacy.html">Open Security Tools</a></article><article id="start-here-dark-web-safety" class="card redline"><h3>Dark Web Safety Guide</h3><p>Follow the lawful step-by-step Tor workflow, verify official onion services, isolate downloads and understand the non-clickable danger watch before entering onion services.</p><a class="btn alt" href="dark-web-safety.html">Open Dark Web Safety</a></article></div><div class="cta-row"><a class="btn alt" href="book-universe.html">Book Universe</a><a class="btn alt" href="forum.html">Signal Board</a><a class="btn alt" href="research-tools.html">Research Tools</a></div><p><strong>Boundary:</strong> privacy tools reduce specific risks; they do not create invisibility, authorise illegal access or make unknown onion links safe.</p></section><!-- start-here-safety:end -->';
@@ -66,10 +62,11 @@ fs.writeFileSync(startHerePath, startHere);
 const count = (text, value) => (text.match(new RegExp(`href="${value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length;
 const renderedPrimary = primaryNavigationMarkup(html);
 const anchorCount = (renderedPrimary.match(/<a\b[^>]*href=/gi) || []).length;
-if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight links; found ${anchorCount}.`);
+if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight primary links; found ${anchorCount}.`);
+if (!html.includes('href="data-lab.html">Public Data Lab</a>')) throw new Error('Homepage Data Lab route is missing from the final navigation shell.');
 if (count(html, 'security-privacy.html') < 1 || count(html, 'dark-web-safety.html') < 1) throw new Error('Homepage safety links are missing.');
 if (count(startHere, 'security-privacy.html') < 2 || count(startHere, 'dark-web-safety.html') < 2) throw new Error('Start Here navigation or safety cards are missing.');
-if (count(startHere, 'book-universe.html') < 1 || count(startHere, 'forum.html') < 1) throw new Error('Start Here compatibility routes are missing.');
+if (count(startHere, 'book-universe.html') < 1 || count(startHere, 'forum.html') < 1 || count(startHere, 'data-lab.html') < 1) throw new Error('Start Here compatibility routes are missing.');
 if (!startHere.includes('nav-shell') || !startHere.includes('nav-more') || !startHere.includes('<summary>More</summary>')) throw new Error('Start Here polished navigation shell is missing.');
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Primary navigation reconciled across current and legacy homepage shells; polished Start Here shell and safety routes recreated.');
+console.log('Primary navigation reconciled across current and legacy homepage shells; Data Lab, research, community and safety routes preserved.');

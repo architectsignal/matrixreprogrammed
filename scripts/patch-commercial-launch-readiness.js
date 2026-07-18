@@ -100,7 +100,7 @@ requireMarker(adminJsRel, adminJs, 'contractConfirmationReady');
 write(adminJsRel, adminJs);
 report.patched.push(adminJsRel);
 
-// These run from an existing protected prebuild hook and are repeated during final reconciliation.
+runIntegrated('scripts/patch-cloudflare-oversized-graph-contract.js', 'Deployment-safe Cloudflare graph contract');
 runIntegrated('scripts/patch-deep-email-automation.js', 'Deep structured email automation');
 runIntegrated('scripts/patch-persistent-signal-board.js', 'Persistent Signal Board');
 

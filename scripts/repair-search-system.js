@@ -4,11 +4,12 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const repairs = [];
-const MINIMAL_REPAIR_VERSION = 'search-runtime-hardening-2026-07-11-investigation';
+const MINIMAL_REPAIR_VERSION = 'search-runtime-hardening-2026-07-18-v3-preservation';
 function fp(name){ return path.join(root, name); }
 function exists(name){ return fs.existsSync(fp(name)); }
 function read(name){ return fs.readFileSync(fp(name), 'utf8'); }
 function write(name, value){ fs.writeFileSync(fp(name), value); }
+function readJson(name, fallback){ try { return JSON.parse(read(name)); } catch { return fallback; } }
 function ensureText(file, marker, addition){
   if (!exists(file)) return;
   const text = read(file);
@@ -16,10 +17,28 @@ function ensureText(file, marker, addition){
   write(file, text + addition);
   repairs.push('patched:' + file + ':' + marker);
 }
+function detectSearchV3(){
+  if (!exists('search.js') || !exists('search.html') || !exists('search-index.json') || !exists('data/search-facets.json')) return false;
+  const js = read('search.js');
+  const html = read('search.html');
+  const index = readJson('search-index.json', []);
+  const facets = readJson('data/search-facets.json', {});
+  return js.includes('SEARCH V3')
+    && js.includes('SEARCH V2 compatibility')
+    && html.includes('id="search-v3-filters"')
+    && Array.isArray(index)
+    && index.length >= 1000
+    && index.every(item => item && item.searchVersion === 3)
+    && facets.searchVersion === 3
+    && Number(facets.totalResults) === index.length;
+}
+const preservingV3 = detectSearchV3();
+
 function ensureSearchPageMarker(){
   if (!exists('search.html')) return;
   let html = read('search.html');
   if (html.includes('id="archive-search"')) return;
+  if (preservingV3) throw new Error('Search V3 page is missing its canonical archive-search input; refusing to inject a V2 shell');
   const marker = '<input id="archive-search" type="search" placeholder="Search the machine" autocomplete="off"/>';
   if (html.includes('<main')) html = html.replace(/(<main[^>]*>)/, '$1' + marker);
   else if (html.includes('<body')) html = html.replace(/(<body[^>]*>)/, '$1' + marker);
@@ -27,16 +46,69 @@ function ensureSearchPageMarker(){
   write('search.html', html);
   repairs.push('patched:search.html:archive-search');
 }
+function completeV3Route(url, title, category, description, keywords, layer){
+  return {
+    searchVersion: 3,
+    url,
+    title,
+    category,
+    layer: layer || 'information-narrative',
+    description: description || 'Machine-readable Matrix Reprogrammed route.',
+    keywords: keywords || ['machine data'],
+    aliases: [],
+    identifiers: [],
+    exactTerms: [title],
+    priority: 76,
+    sourceType: url.endsWith('.html') ? 'mission-route' : url.endsWith('.json') ? 'json-feed' : 'route',
+    resultKind: url.endsWith('.html') ? 'route' : 'dataset',
+    sourceAuthority: 'Matrix Reprogrammed public route',
+    evidenceGrade: 'C',
+    factualStatus: 'context',
+    statusClass: 'context',
+    reviewStatus: 'published',
+    jurisdiction: 'International',
+    entityType: 'Route',
+    entity: title,
+    primarySource: false
+  };
+}
+let v3IndexChanged = false;
 function ensureSearchRoute(url, title, category, description, keywords, layer){
   if (!exists('search-index.json')) return;
-  let index;
-  try { index = JSON.parse(read('search-index.json')); } catch { index = []; }
+  let index = readJson('search-index.json', []);
   if (!Array.isArray(index)) index = [];
   if (!index.some(item => item && item.url === url)) {
-    index.push({ url, title, category, layer: layer || 'information-narrative', description: description || 'Machine-readable Matrix Reprogrammed route.', keywords: keywords || ['machine data'], priority: 76, sourceType: url.endsWith('.html') ? 'html' : 'json-feed' });
+    index.push(preservingV3
+      ? completeV3Route(url, title, category, description, keywords, layer)
+      : { url, title, category, layer: layer || 'information-narrative', description: description || 'Machine-readable Matrix Reprogrammed route.', keywords: keywords || ['machine data'], priority: 76, sourceType: url.endsWith('.html') ? 'html' : 'json-feed' });
     write('search-index.json', JSON.stringify(index, null, 2));
     repairs.push('search-route:' + url);
+    if (preservingV3) v3IndexChanged = true;
   }
+}
+function facetCounts(index, field){
+  const counts = new Map();
+  for (const item of index) {
+    const value = item && item[field];
+    if (value === undefined || value === null || value === '') continue;
+    counts.set(String(value), (counts.get(String(value)) || 0) + 1);
+  }
+  return [...counts.entries()].map(([value, count]) => ({ value, count })).sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
+}
+function syncV3Facets(){
+  if (!preservingV3 || !v3IndexChanged) return;
+  const index = readJson('search-index.json', []);
+  const current = readJson('data/search-facets.json', {});
+  const filters = {};
+  for (const field of ['evidenceGrade','sourceType','statusClass','jurisdiction','entityType','resultKind']) filters[field] = facetCounts(index, field);
+  write('data/search-facets.json', JSON.stringify({
+    searchVersion: 3,
+    updated: new Date().toISOString(),
+    totalResults: index.length,
+    evidenceBoundary: current.evidenceBoundary || 'Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.',
+    filters
+  }, null, 2));
+  repairs.push('synchronised-v3-facets');
 }
 function runRequired(label, script){
   const file = fp(script);
@@ -44,17 +116,22 @@ function runRequired(label, script){
     console.error(`${label} failed: ${script} missing`);
     process.exit(1);
   }
-  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
+  const result = spawnSync(process.execPath, [file], { cwd: root, encoding: 'utf8', stdio: 'pipe', maxBuffer: 1024 * 1024 * 40 });
   if (result.stdout) process.stdout.write(result.stdout);
   if (result.stderr) process.stderr.write(result.stderr);
   if (result.status !== 0) process.exit(result.status || 1);
   repairs.push(label);
 }
 
-runRequired('built-investigation-pages', 'scripts/build-investigation-pages.js');
-runRequired('rebuilt-search-v2', 'scripts/build-free-ask-matrix-search.js');
-runRequired('hardened-search-runtime', 'scripts/harden-search-runtime.js');
-runRequired('extended-investigation-search', 'scripts/extend-search-with-investigations.js');
+if (preservingV3) {
+  repairs.push('preserved-authoritative-search-v3');
+  console.log('Authoritative Search V3 detected; destructive Search V2 rebuild skipped.');
+} else {
+  runRequired('built-investigation-pages', 'scripts/build-investigation-pages.js');
+  runRequired('rebuilt-search-v2', 'scripts/build-free-ask-matrix-search.js');
+  runRequired('hardened-search-runtime', 'scripts/harden-search-runtime.js');
+  runRequired('extended-investigation-search', 'scripts/extend-search-with-investigations.js');
+}
 
 ensureSearchPageMarker();
 ensureSearchRoute('downloads/forum-posts.json', 'Forum Posts Export JSON', 'Machine Data', 'Machine-readable Signal Board export route.', ['forum','signal board','export','posts','machine data'], 'information-narrative');
@@ -99,6 +176,8 @@ const masterRoutes = [
   ['data/entity-timelines.json','Entity Timelines JSON','Machine Data','Machine-readable entity timelines.']
 ];
 for (const [url,title,category,description] of masterRoutes) ensureSearchRoute(url, title, category, description, ['master brief','daily command','brief quality','missing records','billionaire tracker','institution tracker','subject brief','timeline','elite reports','reader reports'], 'information-narrative');
+syncV3Facets();
+
 ensureText('robots.txt', 'search-index.json', '\nAllow: /search-index.json\n');
 ensureText('llms.txt', 'Ask Matrix Search', '\n- Ask Matrix Search: /search.html\n');
 ensureText('llms.txt', '/forum-feed-epstein-alive', '\n- Forum feed: /forum-feed-epstein-alive\n');
@@ -109,20 +188,31 @@ ensureText('llms.txt', 'Daily Command Brief', '\n- Daily Command Brief: /daily-c
 ensureText('llms.txt', 'Intelligent Investigation Machine', '\n- Intelligent Investigation Machine: /investigation-machine.html\n- Daily Investigation Conclusions: /daily-investigation-conclusions.html\n- Weekly Investigation Report: /weekly-investigation-report.html\n- Investigation Source Ledger: /investigation-source-ledger.html\n- Investigation Evidence Ledger JSON: /data/investigation-ledger.json\n');
 
 const js = exists('search.js') ? read('search.js') : '';
-const required = ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)','investigationQueryPrefill'];
+const required = preservingV3
+  ? ['SEARCH V3','SEARCH V2 compatibility','/search-index.json','investigationQueryPrefill','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)','primarySource','statusClass','jurisdiction','entityType','URLSearchParams','missingIntent']
+  : ['SEARCH V2','/search-index.json','layerMap','control-structure.html','evidence-vault.html','const fallbackIndex=',"cache:'no-store'",'HTML returned instead of JSON','init(fallbackIndex)','investigationQueryPrefill'];
 const missing = required.filter(marker => !js.includes(marker));
 if (missing.length) {
-  console.error('SEARCH V2 REPAIR FAILED');
+  console.error(`SEARCH ${preservingV3 ? 'V3 PRESERVATION' : 'V2 REPAIR'} FAILED`);
   for (const marker of missing) console.error('- final search.js missing ' + marker);
   process.exit(1);
 }
 const syntax = spawnSync(process.execPath, ['--check', fp('search.js')], { cwd: root, encoding: 'utf8', stdio: 'pipe' });
 if (syntax.status !== 0) {
-  console.error('SEARCH V2 REPAIR FAILED: search.js syntax invalid after runtime hardening');
+  console.error('SEARCH REPAIR FAILED: search.js syntax invalid after runtime hardening');
   console.error(syntax.stderr || syntax.stdout || 'node --check failed');
   process.exit(syntax.status || 1);
 }
+runRequired('verified-current-local-search', 'scripts/free-ask-matrix-search-test.js');
 runRequired('verified-investigation-search', 'scripts/search-investigation-smoke-test.js');
+if (preservingV3) runRequired('verified-search-v3-quality', 'scripts/search-v3-quality-test.js');
 fs.mkdirSync(fp('downloads'), { recursive: true });
-write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 plus investigation evidence runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
-console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 investigation runtime guard passed.');
+write('downloads/search-system-repair-report.json', JSON.stringify({
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  repairs,
+  mode: preservingV3 ? 'Authoritative Search V3 preservation and investigation runtime repair' : 'Search V2 fallback plus investigation evidence runtime repair',
+  version: MINIMAL_REPAIR_VERSION,
+  preservedSearchV3: preservingV3
+}, null, 2));
+console.log(`Search system repair complete: ${repairs.length} repair(s). ${preservingV3 ? 'Search V3 remained authoritative.' : 'Search V2 fallback guard passed.'}`);

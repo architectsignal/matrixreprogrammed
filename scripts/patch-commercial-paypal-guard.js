@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const workerPath = path.join(root, 'src', 'worker-paypal-subscriptions.js');
@@ -11,6 +12,49 @@ if (!fs.existsSync(contractEmailPath)) throw new Error('src/worker-membership-co
 let source = fs.readFileSync(workerPath, 'utf8');
 const report = { ok: true, generatedAt: new Date().toISOString(), patched: [], checks: [] };
 function need(condition, message) { report.checks.push({ message, ok: Boolean(condition) }); if (!condition) throw new Error(message); }
+function functionRange(text, signature) {
+  const start = text.indexOf(signature);
+  if (start < 0) return null;
+  const open = text.indexOf('{', start + signature.length);
+  if (open < 0) return null;
+  let depth = 0;
+  let quote = '';
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  for (let index = open; index < text.length; index += 1) {
+    const char = text[index];
+    const next = text[index + 1] || '';
+    if (lineComment) {
+      if (char === '\n') lineComment = false;
+      continue;
+    }
+    if (blockComment) {
+      if (char === '*' && next === '/') { blockComment = false; index += 1; }
+      continue;
+    }
+    if (quote) {
+      if (escaped) { escaped = false; continue; }
+      if (char === '\\') { escaped = true; continue; }
+      if (char === quote) quote = '';
+      continue;
+    }
+    if (char === '/' && next === '/') { lineComment = true; index += 1; continue; }
+    if (char === '/' && next === '*') { blockComment = true; index += 1; continue; }
+    if (char === "'" || char === '"' || char === '`') { quote = char; continue; }
+    if (char === '{') depth += 1;
+    else if (char === '}') {
+      depth -= 1;
+      if (depth === 0) return { start, end: index + 1 };
+    }
+  }
+  return null;
+}
+function replaceFunction(text, signature, replacement, label) {
+  const range = functionRange(text, signature);
+  need(Boolean(range), `${label} function anchor was not found or was unbalanced`);
+  return `${text.slice(0, range.start)}${replacement}${text.slice(range.end)}`;
+}
 
 const contractImport = "import { queueMembershipContractConfirmation, transactionalMembershipEmailReady } from './worker-membership-contract-email.js';";
 if (!source.includes(contractImport)) {
@@ -40,14 +84,17 @@ const activationStateReplacement = `async function activationState(env){
   const legalReady=commercialLegalReady(env,target);
   const contractEmailReady=contractConfirmationReady(env,target);
   const planRows=await plans(env,target);
-  const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE');
+  const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);
   return{environment:target,configured:configured(env),environmentSwitch,databaseSwitch:Boolean(setting.checkout_enabled),confirmation,commercialLegalReady:legalReady,contractConfirmationReady:contractEmailReady,plansReady,checkoutEnabled:configured(env)&&environmentSwitch&&Boolean(setting.checkout_enabled)&&confirmation&&legalReady&&contractEmailReady&&plansReady,setting,plans:planRows};
 }`;
+const weakPlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE');";
+const strongPlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);";
 if (!source.includes('contractConfirmationReady:contractEmailReady')) {
-  const pattern = /async function activationState\(env\)\{[\s\S]*?\n?\}/;
-  need(pattern.test(source), 'PayPal activationState function anchor was not found');
-  source = source.replace(pattern, activationStateReplacement);
+  source = replaceFunction(source, 'async function activationState(env)', activationStateReplacement, 'PayPal activationState');
   report.patched.push('activation-state-contract-email-gate');
+} else if (source.includes(weakPlanCheck)) {
+  source = source.replace(weakPlanCheck, strongPlanCheck);
+  report.patched.push('activation-state-plan-identifiers');
 }
 
 const configReplacement = `async function config(request,env){
@@ -61,9 +108,7 @@ if (!source.includes('termsVersion:commercialTermsVersion')) {
   source = source.replace(pattern, configReplacement);
   report.patched.push('config-commercial-readiness');
 } else if (!source.includes('contractConfirmationReady:state.contractConfirmationReady')) {
-  const pattern = /async function config\(request,env\)\{[\s\S]*?\n?\}/;
-  need(pattern.test(source), 'Patched PayPal config function anchor was not found');
-  source = source.replace(pattern, configReplacement);
+  source = replaceFunction(source, 'async function config(request,env)', configReplacement, 'PayPal config');
   report.patched.push('config-contract-email-readiness');
 }
 
@@ -103,9 +148,7 @@ if (!source.includes('paypal.checkout.consent_recorded')) {
   source = source.replace(pattern, `${checkoutReplacement}\n\nfunction billingTimes`);
   report.patched.push('durable-checkout-consent');
 } else if (!source.includes('contract-confirmation gate passes')) {
-  const pattern = /async function checkoutIntent\(request,env\)\{[\s\S]*?\n\nfunction billingTimes/;
-  need(pattern.test(source), 'Patched PayPal checkoutIntent function anchor was not found');
-  source = source.replace(pattern, `${checkoutReplacement}\n\nfunction billingTimes`);
+  source = replaceFunction(source, 'async function checkoutIntent(request,env)', checkoutReplacement, 'PayPal checkoutIntent');
   report.patched.push('checkout-contract-email-gate');
 }
 
@@ -153,9 +196,7 @@ const activationReplacement = `async function activation(request,env){
   return json({ok:true,environment:target,commercialLegalReady:updated.commercialLegalReady,contractConfirmationReady:updated.contractConfirmationReady,checkoutEnabled:updated.checkoutEnabled});
 }`;
 if (!source.includes('Authenticated transactional email is required to deliver the durable membership contract confirmation')) {
-  const pattern = /async function activation\(request,env\)\{[\s\S]*?\n\nasync function route/;
-  need(pattern.test(source), 'PayPal activation function anchor was not found');
-  source = source.replace(pattern, `${activationReplacement}\n\nasync function route`);
+  source = replaceFunction(source, 'async function activation(request,env)', activationReplacement, 'PayPal activation');
   report.patched.push('live-activation-contract-email-gate');
 }
 
@@ -165,6 +206,7 @@ for (const marker of [
   'function commercialLegalReady',
   'function contractConfirmationReady',
   'contractConfirmationReady:contractEmailReady',
+  strongPlanCheck,
   'paypal_checkout_consents',
   'paypal.checkout.consent_recorded',
   'paypal.membership_contract_confirmation',
@@ -172,6 +214,14 @@ for (const marker of [
 ]) need(source.includes(marker), `Patched PayPal Worker missing marker: ${marker}`);
 
 fs.writeFileSync(workerPath, source);
+const syntax = spawnSync(process.execPath, ['--check', workerPath], { cwd: root, encoding: 'utf8' });
+report.syntax = { status: syntax.status, stdout: String(syntax.stdout || ''), stderr: String(syntax.stderr || '') };
+if (syntax.status !== 0) {
+  report.ok = false;
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  throw new Error(`Patched PayPal Worker failed syntax validation: ${syntax.stderr || syntax.stdout}`);
+}
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log(`Commercial PayPal guard patched: ${report.patched.length} change group(s); consent, durable contract confirmation and live legal gates present.`);
+console.log(`Commercial PayPal guard patched: ${report.patched.length} change group(s); balanced parsing, consent, durable contract confirmation and live legal gates present.`);

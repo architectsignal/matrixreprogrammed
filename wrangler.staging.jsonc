@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "matrixreprogrammed-staging",
+  "main": "src/worker-production.js",
+  "compatibility_date": "2026-07-16",
+  "keep_vars": false,
+  "workers_dev": true,
+  "preview_urls": true,
+  "vars": {
+    "DEPLOYMENT_BOUNDARY": "staging",
+    "PAYPAL_ENVIRONMENT": "sandbox",
+    "PAYPAL_SANDBOX_ENABLED": "true",
+    "PAYPAL_PRODUCTION_ENABLED": "false",
+    "PAYPAL_DONATIONS_ENABLED": "false",
+    "EMAIL_AUTOMATION_ENABLED": "false",
+    "EMAIL_TRANSACTIONAL_ENABLED": "false",
+    "BREVO_DOMAIN_AUTHENTICATED": "false",
+    "MEMBERS_FROM_EMAIL": "members@matrixreprogrammed.com",
+    "MEMBERS_FROM_NAME": "Matrix Reprogrammed Staging",
+    "MEMBERS_REPLY_TO_EMAIL": "njmgroupfrance@gmail.com",
+    "MEMBERS_REPLY_TO_NAME": "Matrix Reprogrammed Staging"
+  },
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "_site",
+    "run_worker_first": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "FORUM_POSTS"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "MEMBERS_DB"
+    }
+  ]
+}

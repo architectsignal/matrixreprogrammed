@@ -123,3 +123,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery and independent daily, weekly and release preferences.`);
+require('./build-cloudflare-investigation-graph-projection.js');

@@ -10,18 +10,8 @@ function read(relative) {
   if (!fs.existsSync(file)) throw new Error(`Missing required file: ${relative}`);
   return fs.readFileSync(file, 'utf8');
 }
-function writeIfChanged(relative, before, after) {
-  if (after === before) return;
-  fs.writeFileSync(path.join(root, relative), after);
-  changed.push(relative);
-}
-function replaceFunction(source, functionName, replacement) {
-  const start = source.indexOf(`async function ${functionName}(`);
-  if (start < 0) return source;
-  const next = source.indexOf('\nasync function ', start + 16);
-  if (next < 0) return source;
-  return `${source.slice(0, start)}${replacement}\n${source.slice(next + 1)}`;
-}
+function writeIfChanged(relative, before, after) { if (after === before) return; fs.writeFileSync(path.join(root, relative), after); changed.push(relative); }
+function replaceFunction(source, functionName, replacement) { const start = source.indexOf(`async function ${functionName}(`); if (start < 0) return source; const next = source.indexOf('\nasync function ', start + 16); if (next < 0) return source; return `${source.slice(0, start)}${replacement}\n${source.slice(next + 1)}`; }
 
 let production = read('src/worker-production.js');
 const productionBefore = production;
@@ -51,9 +41,7 @@ writeIfChanged('src/worker-forum-persistence.js', forumBefore, forum);
 let legacy = read('src/worker.js');
 const legacyBefore = legacy;
 const safeTrack = "async function handleTrackEvent(request,env){const body=await readBody(request);const eventName=cleanText(body.name||'event',80);return new Response(null,{status:204,headers:{...securityHeaders,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-api','X-Matrix-Worker':workerName,'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'}})}";
-if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")) {
-  legacy = replaceFunction(legacy, 'handleTrackEvent', safeTrack);
-}
+if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")) legacy = replaceFunction(legacy, 'handleTrackEvent', safeTrack);
 legacy = legacy
   .replace(/analytics:\$\{event\.id\}/g, 'analytics-endpoint-nonpersistent')
   .replace(/async function handleNewsletterSendWeekly\(\)\{return json\(\{ok:true,mode:'preview-only',storage:'Cloudflare KV FORUM_POSTS',digest:'\/downloads\/weekly-newsletter-latest\.json'\}\)\}/g, "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})}")
@@ -78,28 +66,25 @@ const finalForum = read('src/worker-forum-persistence.js');
 const finalLegacy = read('src/worker.js');
 const finalWrangler = read('wrangler.toml');
 const finalVerifier = read('scripts/live-site-verification.js');
-for (const [label, ok] of [
+const kvHelperStart = finalForum.indexOf('function kvMirrorEnabled(');
+const kvHelperEnd = kvHelperStart >= 0 ? finalForum.indexOf('\n', kvHelperStart) : -1;
+const kvHelperWindow = kvHelperStart >= 0 ? finalForum.slice(kvHelperStart, kvHelperEnd > kvHelperStart ? kvHelperEnd + 600 : kvHelperStart + 600) : '';
+const semanticChecks = [
   ['production legacy route strips KV', finalProduction.includes('forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)')],
-  ['KV mirror helper exists', finalForum.includes('function kvMirrorEnabled(')],
-  ['KV mirror defaults off', finalForum.includes("ENABLE_KV_COMPATIBILITY_MIRROR || 'false'")],
+  ['KV mirror helper exists', kvHelperStart >= 0],
+  ['KV mirror requires explicit environment flag', kvHelperWindow.includes('ENABLE_KV_COMPATIBILITY_MIRROR') && kvHelperWindow.includes('FORUM_POSTS') && (kvHelperWindow.includes("'false'") || kvHelperWindow.includes('"false"'))],
+  ['forum migration checks opt-in helper', finalForum.includes('if(!kvMirrorEnabled(env))') || finalForum.includes('if (!kvMirrorEnabled(env))')],
+  ['forum write mirror checks opt-in helper', finalForum.includes('kvMirrorEnabled(env)') && finalForum.includes('FORUM_POSTS.put')],
   ['analytics endpoint remains available', finalLegacy.includes('async function handleTrackEvent(')],
   ['analytics endpoint is non-persistent', finalLegacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")],
   ['analytics KV writes removed', !finalLegacy.includes('FORUM_POSTS.put(`analytics:') && !finalLegacy.includes('analytics:${event.id}')],
   ['wrangler KV mirror switch false', finalWrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"')],
   ['forum health verifier is D1 based', finalVerifier.includes("markers: ['d1Connected', 'authoritativeStorage']")]
-]) if (!ok) failures.push(label);
+];
+for (const [label, ok] of semanticChecks) if (!ok) failures.push(label);
 
-const report = {
-  ok: failures.length === 0,
-  generatedAt: new Date().toISOString(),
-  changed: [...new Set(changed)],
-  failures,
-  policy: 'Cloudflare D1 is authoritative. Workers KV compatibility and per-event analytics writes are disabled in production unless explicitly re-enabled.'
-};
+const report = { ok: failures.length === 0, generatedAt: new Date().toISOString(), changed: [...new Set(changed)], checks: Object.fromEntries(semanticChecks), failures, policy: 'Cloudflare D1 is authoritative. Workers KV compatibility and per-event analytics writes are disabled in production unless explicitly re-enabled.' };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-kv-traffic-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
-if (failures.length) {
-  failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`));
-  process.exit(1);
-}
-console.log('Production KV traffic disabled: D1 remains authoritative; analytics no longer creates one KV key per event.');
+if (failures.length) { failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`)); process.exit(1); }
+console.log('Production KV traffic disabled: D1 remains authoritative; optional KV mirror requires an explicit false-by-default environment flag.');

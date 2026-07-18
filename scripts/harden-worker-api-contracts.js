@@ -42,6 +42,9 @@ function replaceRequired(source, before, after, label) {
 
 // The canonical recovery membership template must understand the authoritative
 // email lifecycle response and must not render PayPal while checkoutEnabled=false.
+// The same repaired template is authoritative for the source page and any existing
+// Cloudflare output so a late legacy generator cannot leave placeholder pricing or
+// client behaviour behind immediately before deployment.
 {
   const relative = 'scripts/templates/membership-auth/membership.template';
   let source = read(relative);
@@ -58,6 +61,8 @@ function replaceRequired(source, before, after, label) {
     'membership PayPal activation boundary'
   );
   write(relative, source);
+  write('membership.html', source);
+  if (fs.existsSync(at('_site/membership.html'))) write('_site/membership.html', source);
 }
 
 // Authentication remains implemented by the mature legacy module for now, but
@@ -108,6 +113,7 @@ const report = {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
+    membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

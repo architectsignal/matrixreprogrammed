@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Membership | Matrix Reprogrammed</title>
-  <meta name="description" content="Create a free Matrix Reprogrammed account or upgrade through a verified PayPal subscription."/>
+  <meta name="description" content="Create a free Matrix Reprogrammed account or choose a verified monthly intelligence membership."/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="reader-experience.css"/>
   <style>
@@ -13,7 +13,7 @@
     .price{font-size:2rem;color:#d8b56a;font-weight:900}.mini{font-size:.84rem;color:#c8b98c}
     .member-form{display:grid;gap:.8rem;max-width:720px}.member-form input{width:100%;box-sizing:border-box;background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);border-radius:12px;padding:.85rem}
     .consent-row{display:flex;gap:.65rem;align-items:flex-start}.consent-row input{width:auto;margin-top:.25rem}.status{min-height:1.4rem;font-weight:700}.status.ok{color:#9ddd9d}.status.error{color:#ff9b8f}.status.pending{color:#d8b56a}
-    .account-actions{display:flex;gap:.7rem;flex-wrap:wrap}.paypal-zone{min-height:48px;margin-top:.8rem}.plan-state{font-size:.86rem;color:#c8b98c;min-height:2.5rem}.secure-note{border-left:3px solid #d8b56a;padding-left:.8rem}
+    .account-actions{display:flex;gap:.7rem;flex-wrap:wrap}.paypal-zone{min-height:48px;margin-top:.8rem}.plan-state{font-size:.86rem;color:#c8b98c;min-height:2.5rem}.secure-note{border-left:3px solid #d8b56a;padding-left:.8rem}.tier-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;color:#c8b98c}
   </style>
 </head>
 <body>
@@ -21,55 +21,54 @@
 <div class="page">
   <header class="wrap topbar">
     <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"/> MATRIX REPROGRAMMED</a>
-    <nav class="nav"><a href="start-here.html">Start Here</a><a href="daily-command-brief.html">Daily Brief</a><a href="search.html">Search</a><a href="deck-expansion-hub.html">Decks</a><a href="review-dashboard.html">Review</a><a href="store.html">Store</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav>
+    <nav class="nav"><a href="start-here.html">Start Here</a><a href="daily-command-brief.html">Daily Brief</a><a href="search.html">Search</a><a href="evidence-vault.html">Evidence</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav>
   </header>
   <main class="wrap section">
-    <div class="eyebrow">Membership System</div>
-    <h1>JOIN THE PRIVATE MEMBER LAYER.</h1>
-    <p class="lead">Create a free account or upgrade through a PayPal subscription that is verified by the Matrix Reprogrammed backend before access is granted.</p>
-    <p><strong>Evidence boundary:</strong> Membership changes access, never the evidence standard applied to claims.</p>
+    <div class="eyebrow">Member Intelligence</div>
+    <h1>CHOOSE HOW DEEPLY YOU WANT TO INVESTIGATE.</h1>
+    <p class="lead">Create a free passwordless account, then upgrade only when you want deeper briefs, dossiers, evidence history, exports and research tools.</p>
+    <p><strong>Evidence boundary:</strong> payment never changes the evidence standard. Public accusations must retain their source route, grade, limitation and correction path.</p>
 
-    <section class="section money-card">
-      <h2>Free membership and Daily Control Brief</h2>
-      <p>Create an account using your email. You will receive a secure one-time verification link. No password is required.</p>
+    <section class="section money-card" id="free-member">
+      <div class="tier-kicker">No card required</div>
+      <h2>Free Member</h2><div class="price">€0</div>
+      <p>Create a passwordless account and keep your personal Matrix Reprogrammed workspace.</p>
+      <ul><li>free member dashboard</li><li>passwordless login and session controls</li><li>save public reports and cards</li><li>follow public topics</li><li>public weekly archive</li><li>newsletter and release preferences</li><li>public download history</li><li>verified-member Signal Board posting</li></ul>
       <form id="membership-signup" class="member-form" novalidate>
-        <label>Display name <input id="member-name" name="name" type="text" maxlength="120" autocomplete="name" placeholder="Your name (optional)"/></label>
+        <label>Display name <input id="member-name" name="name" type="text" maxlength="120" autocomplete="name" placeholder="Your name or public handle (optional)"/></label>
         <label>Email address <input id="member-email" name="email" type="email" maxlength="240" autocomplete="email" required placeholder="you@example.com"/></label>
         <label class="consent-row"><input id="member-consent" name="marketingConsent" type="checkbox" required/><span>I agree to receive the Matrix Reprogrammed member email and Daily Control Brief. I can unsubscribe at any time.</span></label>
         <button class="btn" type="submit">Create Free Member Account</button>
         <p id="signup-status" class="status" role="status" aria-live="polite"></p>
       </form>
-      <div class="account-actions">
-        <a class="btn" href="member-login.html">Already a member? Sign in</a>
-        <a class="btn" href="member-dashboard.html">Open member dashboard</a>
-      </div>
-      <p class="mini">Verification links expire after 15 minutes and can be used once. Login sessions use secure, HttpOnly cookies.</p>
+      <div class="account-actions"><a class="btn" href="member-login.html">Already a member? Sign in</a><a class="btn alt" href="member-dashboard.html">Open member dashboard</a></div>
+      <p class="mini"><strong>Billing boundary:</strong> Free Member access never creates a PayPal subscription and never requires payment details. Verification links expire after 15 minutes and can be used once.</p>
     </section>
 
     <section class="section">
-      <h2>PayPal membership tiers</h2>
-      <p id="paypal-system-status" class="status pending" role="status" aria-live="polite">Checking your member session and PayPal configuration…</p>
-      <p class="secure-note"><strong>Access rule:</strong> the browser cannot activate a membership. The backend checks the PayPal subscription, Plan ID, checkout intent and webhook status. Paid access is granted only while PayPal reports <strong>ACTIVE</strong>.</p>
+      <h2>Monthly intelligence memberships</h2>
+      <p id="paypal-system-status" class="status pending" role="status" aria-live="polite">Checking membership availability…</p>
+      <p class="secure-note"><strong>Access rule:</strong> the browser cannot grant paid access. The backend verifies the PayPal Plan ID, checkout intent, subscription status and webhook state. Paid access begins only while PayPal reports <strong>ACTIVE</strong>.</p>
       <div class="money-grid">
         <article class="money-card" id="join-supporter">
-          <h3>Supporter</h3><div class="price">€9/month</div>
-          <ul><li>weekly member brief</li><li>member newsletter</li><li>sample premium reports</li><li>member-only source drops</li></ul>
+          <div class="tier-kicker">Everything in Free Member</div><h3>Supporter</h3><div class="price">€3/month</div>
+          <ul><li>weekly member intelligence brief</li><li>member newsletter and editorial notes</li><li>member-only public-source drops</li><li>selected supporter downloads</li><li>weekly brief archive</li><li>supporter announcements and surveys</li></ul>
           <div id="paypal-supporter" class="paypal-zone"></div><p id="paypal-supporter-status" class="plan-state">Sign in to activate this plan.</p>
         </article>
         <article class="money-card" id="join-intelligence-member">
-          <h3>Intelligence Member</h3><div class="price">€19/month</div>
-          <ul><li>premium daily brief</li><li>full card intelligence</li><li>full source ledger</li><li>deeper dossiers</li><li>downloadable card decks</li><li>weekly control map</li><li>missing-record queue</li></ul>
+          <div class="tier-kicker">Everything in Supporter and Free Member</div><h3>Intelligence Member</h3><div class="price">€6/month</div>
+          <ul><li>premium daily intelligence brief</li><li>full card intelligence and evidence notes</li><li>deeper entity and institution dossiers</li><li>full relationship and source-ledger views</li><li>historical evidence-map views and advanced filters</li><li>missing-record queue</li><li>downloadable intelligence packs</li></ul>
           <div id="paypal-intelligence" class="paypal-zone"></div><p id="paypal-intelligence-status" class="plan-state">Sign in to activate this plan.</p>
         </article>
         <article class="money-card" id="join-research-pro">
-          <h3>Research Pro</h3><div class="price">€49/month</div>
-          <ul><li>advanced search</li><li>full dossier exports</li><li>monthly PDF intelligence report</li><li>source route maps</li><li>policy tracker</li><li>jurisdiction tracker</li><li>card score movement reports</li><li>priority source requests</li></ul>
+          <div class="tier-kicker">Everything in Intelligence Member</div><h3>Research Pro</h3><div class="price">€9/month</div>
+          <ul><li>full dossier and bulk evidence exports</li><li>research API access</li><li>private case boards and advanced watchlists</li><li>document text and metadata extraction</li><li>policy and jurisdiction trackers</li><li>priority source requests</li><li>professional monthly intelligence pack</li></ul>
           <div id="paypal-research-pro" class="paypal-zone"></div><p id="paypal-research-pro-status" class="plan-state">Sign in to activate this plan.</p>
         </article>
       </div>
     </section>
   </main>
-  <footer class="footer wrap"><p><strong>Billing boundary:</strong> PayPal holds payment details. Matrix Reprogrammed stores only the verified subscription identifiers, status and entitlement tier.</p></footer>
+  <footer class="footer wrap"><p><strong>Membership principle:</strong> public claims remain verifiable without payment. Membership funds preservation, alerts, history, exports and deeper investigation tools.</p></footer>
 </div>
 <script src="matrix.js"></script>
 <script>
@@ -79,7 +78,7 @@
   signupForm.addEventListener('submit', async event => {
     event.preventDefault();
     signupStatus.className = 'status pending';
-    signupStatus.textContent = 'Creating your member record…';
+    signupStatus.textContent = 'Creating your account…';
     const email = document.getElementById('member-email').value.trim();
     const name = document.getElementById('member-name').value.trim();
     const marketingConsent = document.getElementById('member-consent').checked;
@@ -91,7 +90,7 @@
       const data = await response.json();
       if (!response.ok || !data.saved) throw new Error(data.error || data.message || 'Account could not be created.');
       signupStatus.className = 'status ok';
-      signupStatus.textContent = data.emailSent ? 'Account saved. Check your email for the one-time verification link.' : 'Account saved, but verification email delivery is unavailable.';
+      signupStatus.textContent = data.emailSent ? 'Check your email for your verification link.' : 'Your account was saved, but the verification email could not be sent. Please try again later.';
       if (data.emailSent) signupForm.reset();
     } catch (error) {
       signupStatus.className = 'status error';
@@ -167,8 +166,8 @@
       }
       if (!response.ok || !config.configured || !config.clientId) {
         systemStatus.className = 'status pending';
-        systemStatus.textContent = 'PayPal checkout is being configured. Free membership remains available.';
-        setAllPlanMessages('PayPal activation pending.');
+        systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';
+        setAllPlanMessages('Coming soon. No payment can be taken yet.');
         return;
       }
       await loadSdk(config.clientId);
@@ -178,7 +177,7 @@
     } catch (error) {
       systemStatus.className = 'status error';
       systemStatus.textContent = error.message || 'PayPal checkout could not be initialised.';
-      setAllPlanMessages('Checkout unavailable at the moment.');
+      setAllPlanMessages('Checkout unavailable. No membership change was made.');
     }
   };
   initialisePayPal();

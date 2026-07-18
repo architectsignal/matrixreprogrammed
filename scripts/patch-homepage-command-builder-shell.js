@@ -93,6 +93,23 @@ require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
 require('./patch-email-launch-console.js');
 require('./patch-email-automation-guard.js');
+
+// Older patch chains can temporarily remove the compact campaign-source helper
+// before the quality patch runs. Restore only the stable function anchor here;
+// the authoritative quality patch replaces this fallback immediately afterward.
+{
+  const lifecyclePath = path.join(root, 'src', 'worker-email-lifecycle.js');
+  let lifecycle = fs.readFileSync(lifecyclePath, 'utf8');
+  if (!lifecycle.includes('async function loadCampaignSource(')) {
+    const anchor = 'function sourceItems(';
+    const index = lifecycle.indexOf(anchor);
+    if (index < 0) throw new Error('Email campaign source and item anchors are both missing');
+    const fallback = `async function loadCampaignSource(request,env,kind){if(!env?.ASSETS||typeof env.ASSETS.fetch!=='function')return null;const candidates=kind==='weekly'?['/downloads/weekly-investigation-report.json']:['/downloads/daily-brain-brief.json'];for(const pathname of candidates){try{const response=await env.ASSETS.fetch(new Request(new URL(pathname,request.url)));if(response.ok)return{pathname,data:await response.json()}}catch{}}return null}\n`;
+    lifecycle = `${lifecycle.slice(0, index)}${fallback}${lifecycle.slice(index)}`;
+    fs.writeFileSync(lifecyclePath, lifecycle);
+  }
+}
+
 require('./patch-email-campaign-quality.js');
 require('./patch-membership-signup-server-fallback.js');
 require('./brevo-operational-readiness-audit.js');

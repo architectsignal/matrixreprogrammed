@@ -5,6 +5,12 @@ on:
     paths:
       - 'src/worker-paypal-sandbox-bootstrap*.js'
       - 'src/worker-production.js'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-forum-persistence.js'
+      - 'src/worker-email-lifecycle.js'
+      - 'scripts/patch-persistent-signal-board.js'
+      - 'scripts/patch-deep-email-automation.js'
+      - 'scripts/patch-list-unsubscribe-headers.js'
       - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
       - 'scripts/phase8-autonomous-sandbox-readiness-test.mjs'
       - 'scripts/verify-live-production.js'
@@ -20,6 +26,12 @@ on:
     paths:
       - 'src/worker-paypal-sandbox-bootstrap*.js'
       - 'src/worker-production.js'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-forum-persistence.js'
+      - 'src/worker-email-lifecycle.js'
+      - 'scripts/patch-persistent-signal-board.js'
+      - 'scripts/patch-deep-email-automation.js'
+      - 'scripts/patch-list-unsubscribe-headers.js'
       - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
       - 'scripts/phase8-autonomous-sandbox-readiness-test.mjs'
       - 'scripts/verify-live-production.js'
@@ -58,6 +70,15 @@ jobs:
           node --check scripts/build-production-deploy-receipt.js
       - name: Phase 8 deterministic mock
         run: node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+      - name: Apply canonical Worker ownership patches
+        run: |
+          node scripts/patch-persistent-signal-board.js
+          node scripts/patch-deep-email-automation.js
+          node scripts/patch-list-unsubscribe-headers.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-forum-persistence.js
+          node --check src/worker-email-lifecycle.js
+          node --check src/worker-production.js
       - name: Cloudflare dry run
         run: npx --yes wrangler@latest deploy --dry-run
       - name: Upload Phase 8 proof
@@ -65,6 +86,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phase8-autonomous-sandbox-readiness-${{ github.run_id }}
-          path: downloads/phase8-autonomous-sandbox-readiness-test.json
+          path: |
+            downloads/phase8-autonomous-sandbox-readiness-test.json
+            downloads/persistent-signal-board-patch.json
+            downloads/deep-email-automation-patch.json
+            downloads/list-unsubscribe-header-patch.json
           if-no-files-found: ignore
           retention-days: 60

@@ -5,10 +5,11 @@ const { spawnSync } = require('child_process');
 const root=process.cwd();
 const site=path.join(root,'_site');
 const reportPath=path.join(root,'downloads','persistent-signal-board-patch.json');
-const report={ok:true,generatedAt:new Date().toISOString(),written:[],checks:[],failures:[]};
+const report={ok:true,generatedAt:new Date().toISOString(),written:[],checks:[],failures:[],integrated:[]};
 function read(rel){return fs.readFileSync(path.join(root,rel),'utf8')}
 function write(rel,content){const target=path.join(root,rel);fs.writeFileSync(target,content);report.written.push(rel);if(fs.existsSync(site)){const output=path.join(site,rel);if(fs.existsSync(output)&&!fs.statSync(output).isDirectory()){fs.writeFileSync(output,content);report.written.push(`_site/${rel}`)}if(rel.endsWith('.html')){const extensionless=path.join(site,rel.replace(/\.html$/,''));if(fs.existsSync(extensionless)&&!fs.statSync(extensionless).isDirectory()){fs.writeFileSync(extensionless,content);report.written.push(`_site/${rel.replace(/\.html$/,'')}`)}}}}
 function check(name,condition,detail=''){const ok=Boolean(condition);report.checks.push({name,ok,detail});if(!ok)report.failures.push(detail||name)}
+function run(script,label){const result=spawnSync(process.execPath,[path.join(root,script)],{cwd:root,encoding:'utf8',maxBuffer:30*1024*1024});if(result.stdout)process.stdout.write(result.stdout);if(result.stderr)process.stderr.write(result.stderr);report.integrated.push({script,label,status:result.status});if(result.status!==0)throw new Error(`${label} failed with status ${result.status}`)}
 
 const memberRel='src/worker-member-experience.js';
 let member=read(memberRel);
@@ -45,7 +46,6 @@ for(const rel of pages){
   check(`${rel}:persistence`,html.includes('Cloudflare D1'),`${rel} does not explain persistent D1 storage`);
 }
 
-// Any route that invokes the daily generator must finish by restoring the persistent boards.
 const dailyBuilderRel='scripts/build-daily-brain-brief.js';
 if(fs.existsSync(path.join(root,dailyBuilderRel))){
   let builder=read(dailyBuilderRel);
@@ -55,13 +55,22 @@ if(fs.existsSync(path.join(root,dailyBuilderRel))){
   report.written.push(dailyBuilderRel);
 }
 
+// Remove the old KV import/mirror route in a separate process. This is run every
+// time the Signal Board becomes final owner so module caching cannot hide a late restore.
+run('scripts/disable-production-kv-traffic.js','D1-only Signal Board storage enforcement');
+
 const forumJs=read('forum.js');
 const worker=read('src/worker-forum-persistence.js');
+member=read(memberRel);
 check('forum-js-no-local-pass',!forumJs.includes('localStorage')&&!forumJs.includes('matrix_signal_pass_unlocked'),'forum.js still uses a browser-only unlock');
 check('forum-js-member-session',forumJs.includes('/api/member/me')&&forumJs.includes('emailVerifiedAt'),'forum.js does not require a verified member session');
 check('worker-member-session',worker.includes("import { memberSessionContext } from './worker-member-experience.js';")&&worker.includes('verified-free-member-session'),'Forum Worker is not tied to member sessions');
 check('worker-owner-ledger',worker.includes('forum_post_owners')&&worker.includes('forum_report_owners'),'Forum Worker owner ledgers are missing');
 check('worker-no-legacy-for-forum',worker.includes('no browser or legacy fallback was accepted'),'Forum Worker does not fail closed for persistence');
+check('worker-no-kv-helper',!worker.includes('kvMirrorEnabled('),'Forum Worker still exposes the old KV mirror helper');
+check('worker-no-kv-reads',!worker.includes('FORUM_POSTS.get(')&&!worker.includes('FORUM_POSTS.list('),'Forum Worker still reads Signal Board state from KV');
+check('worker-no-kv-writes',!worker.includes('FORUM_POSTS.put('),'Forum Worker still writes Signal Board state to KV');
+check('worker-d1-only-state',worker.includes('compatibilityMirror:false')&&worker.includes('mirroredToKv:false'),'Forum Worker does not declare D1-only state');
 check('member-export',member.includes('export async function memberSessionContext'),'Member session context is not exported');
 
 for(const rel of [memberRel,'forum.js','src/worker-forum-persistence.js',dailyBuilderRel]){
@@ -72,4 +81,4 @@ report.ok=report.failures.length===0;
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 if(!report.ok){console.error(JSON.stringify(report,null,2));process.exit(1)}
-console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1 and late-generator ownership gates passed.`);
+console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1-only and late-generator ownership gates passed.`);

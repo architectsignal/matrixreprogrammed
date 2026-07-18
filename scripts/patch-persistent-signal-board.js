@@ -54,6 +54,7 @@ for(const rel of pages){
 // authoritative, so the just-confirmed D1 post remains visible while the feed catches up.
 let client=read('forum.js');
 client=client.replace('Reading is open. Log in with a verified free account to post persistently.','Reading is public and open to everyone. Log in with a verified free account to post persistently.');
+client=client.replace('Signal posted and stored persistently in Cloudflare D1.','Signal posted live and saved persistently in Cloudflare D1.');
 client=client.replace('<article class="card news-item">','<article class="card news-item" data-signal-post-id="'+"'+esc(post.id)+'"+'">');
 if(!client.includes('function mergePosts(')){
   const anchor="function offlineNotice(message){return'<article class=\"card redline\"><span class=\"label\">Persistent Signal Board</span><h3>'+esc(BOARD_LABEL)+' cannot save right now</h3><p>No browser-only or temporary fallback is accepted. This board reads and writes only through Cloudflare D1.</p><p><strong>Detail:</strong> '+esc(message||'feed unavailable')+'</p><p><a class=\"btn alt\" href=\"/forum-health\">Check forum health</a></p></article>'}";
@@ -87,6 +88,7 @@ check('forum-js-no-local-pass',!forumJs.includes('localStorage')&&!forumJs.inclu
 check('forum-js-member-session',forumJs.includes('/api/member/me')&&forumJs.includes('emailVerifiedAt'),'forum.js does not require a verified member session');
 check('forum-js-public-reading',forumJs.includes('Reading is public and open to everyone'),'forum.js does not explain public reading');
 check('forum-js-post-preservation',forumJs.includes('mergePosts(')&&forumJs.includes('loadFeed([livePost])'),'forum.js can hide a newly confirmed D1 post during feed refresh');
+check('forum-js-success-copy',forumJs.includes('Signal posted live and saved persistently in Cloudflare D1.'),'forum.js does not expose the canonical persistent success confirmation');
 check('forum-js-canonical-status',forumJs.includes("getElementById('forum-member-status')"),'forum.js does not bind the canonical member status element');
 check('worker-member-session',worker.includes("import { memberSessionContext } from './worker-member-experience.js';")&&worker.includes('verified-free-member-session'),'Forum Worker is not tied to member sessions');
 check('worker-owner-ledger',worker.includes('forum_post_owners')&&worker.includes('forum_report_owners'),'Forum Worker owner ledgers are missing');
@@ -105,4 +107,4 @@ report.ok=report.failures.length===0;
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 if(!report.ok){console.error(JSON.stringify(report,null,2));process.exit(1)}
-console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1-only, canonical status, post-preservation and late-generator ownership gates passed.`);
+console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1-only, canonical status, success copy, post-preservation and late-generator ownership gates passed.`);

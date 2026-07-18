@@ -72,7 +72,7 @@ check('live-paypal-default-disabled', wrangler.includes('PAYPAL_PRODUCTION_ENABL
 check('marketing-automation-default-disabled', wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"'), 'EMAIL_AUTOMATION_ENABLED must remain false');
 check('transactional-email-enabled', wrangler.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"'), 'Transactional account and contract email must remain enabled');
 check('commercial-prebuild', ['patch-membership-tiers.js','patch-commercial-paypal-guard.js','patch-commercial-launch-readiness.js'].every(marker=>String(pkg.scripts?.prebuild||'').includes(marker)), 'Commercial patches are not in npm prebuild');
-check('admin-commercial-status', adminHtml.includes('payment-commercial-legal') && adminJs.includes('commercialLegalReady'), 'Payment administration does not display commercial readiness');
+check('admin-commercial-status', adminHtml.includes('payment-commercial-legal') && adminHtml.includes('payment-contract-email') && adminJs.includes('commercialLegalReady') && adminJs.includes('contractConfirmationReady'), 'Payment administration does not display both commercial and contract-confirmation readiness');
 
 report.ok = report.failures.length === 0;
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

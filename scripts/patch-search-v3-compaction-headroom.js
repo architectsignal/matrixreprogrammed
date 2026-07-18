@@ -41,20 +41,20 @@ const compactRecordBlock = `function compactRecord(record, profile) {
   const url = String(record?.url || '').trim();
   if (!url) return null;
   const sparse = profile.sparseDefaults === true;
+  const preserveNormalizedMetadata = true;
   const primarySource = record.primarySource === true || record.primarySource === 1 || record.primarySource === 'true';
   const sourceType = bounded(record.sourceType || 'route', profile.scalar);
   const resultKind = bounded(record.resultKind || 'route', profile.scalar);
   const statusClass = bounded(record.statusClass || 'context', profile.scalar);
   const output = {
+    searchVersion: 3,
     title: bounded(record.title || url, profile.title),
-    url
+    url,
+    sourceType,
+    resultKind,
+    statusClass,
+    primarySource
   };
-  if (!sparse) output.searchVersion = 3;
-  if (!sparse || sourceType !== 'route') output.sourceType = sourceType;
-  if (!sparse || resultKind !== 'route') output.resultKind = resultKind;
-  if (!sparse || statusClass !== 'context') output.statusClass = statusClass;
-  if (primarySource) output.primarySource = true;
-  else if (!sparse) output.primarySource = false;
   const scalarFields = [
     'category', 'layer', 'sourceAuthority', 'evidenceGrade', 'factualStatus',
     'reviewStatus', 'jurisdiction', 'entityType', 'entity'
@@ -96,7 +96,7 @@ const compactRecordBlock = `function compactRecord(record, profile) {
   return output;
 }`;
 
-if (!after.includes('const sparse = profile.sparseDefaults === true;')) {
+if (!after.includes('const preserveNormalizedMetadata = true;')) {
   const compactRecordPattern = /function compactRecord\(record, profile\) \{[\s\S]*?\n\}/;
   if (!compactRecordPattern.test(after)) throw new Error('Search V3 compactRecord block not found');
   after = after.replace(compactRecordPattern, compactRecordBlock);
@@ -166,7 +166,8 @@ if (after.includes('removedDuplicateMarketRelationships: 0,')) {
 
 for (const marker of [
   "id: 'emergency-route-safe'",
-  'const sparse = profile.sparseDefaults === true;',
+  'const preserveNormalizedMetadata = true;',
+  'searchVersion: 3',
   'profile.mergeTerms === true',
   'sourceUrl.slice(0, Number(profile.sourceUrl || 320))',
   'function consolidateRecordsByUrl(records)',
@@ -187,10 +188,11 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   addedProfiles: ['ultra-safe', 'minimum-route-safe', 'emergency-route-safe'],
   duplicateRouteConsolidation: true,
   sparseDefaultCompaction: true,
+  normalizedFieldsRetained: ['searchVersion', 'sourceType', 'resultKind', 'statusClass', 'primarySource'],
   mergedSearchTerms: ['keywords', 'aliases', 'identifiers', 'exactTerms'],
   retainedExternalSources: 'all non-sparse profiles plus primary, official, court, government, regulator and evidence-grade A/B records in sparse profiles',
   adjudicatedRankingApplied: true,
   preservesEverySearchableUrl: true,
-  boundary: 'Growing Search V3 data is consolidated by public route before adaptive field compaction. Every searchable URL remains represented. Sparse profiles remove only repeated default metadata, merge equivalent search-term arrays and retain external source buttons for primary or high-authority records.'
+  boundary: 'Growing Search V3 data is consolidated by public route before adaptive field compaction. Every searchable URL and normalized filter field remains represented. Sparse profiles merge equivalent search-term arrays and retain external source buttons for primary or high-authority records.'
 }, null, 2)}\n`);
-console.log(`Search V3 route consolidation and sparse-default compaction ${changed ? 'installed' : 'already current'}; every searchable URL remains represented.`);
+console.log(`Search V3 route consolidation and normalized sparse compaction ${changed ? 'installed' : 'already current'}; every searchable URL remains represented.`);

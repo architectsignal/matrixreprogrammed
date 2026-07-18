@@ -40,11 +40,16 @@ const removed = [
   ...removeMalformed('entity-briefs'),
   ...removeMalformed('entity-exposure')
 ];
+run('scripts/build-change-detection-engine.js');
 run('scripts/build-entity-daily-briefs.js');
 run('scripts/build-entity-exposure-index.js');
 
 const residual = [];
 for (const target of [
+  'data/change-detection.json',
+  'data/entity-relationship-scores.json',
+  'machine-intelligence.html',
+  'downloads/machine-intelligence.md',
   'data/entity-daily-briefs.json',
   'data/entity-exposure-index.json',
   'entity-daily-briefs.html',
@@ -65,4 +70,4 @@ const report = {
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'recovery-entity-output-rebuild.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) throw new Error(`Entity output placeholders remain: ${residual.join(', ')}`);
-console.log(`Clean entity outputs rebuilt; removed ${removed.length} stale malformed page(s).`);
+console.log(`Clean relationship and entity outputs rebuilt; removed ${removed.length} stale malformed page(s).`);

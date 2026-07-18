@@ -12,12 +12,15 @@ function check(name, condition, detail = '') { const ok = Boolean(condition); re
 function run(script, label) { const result = spawnSync(process.execPath, [file(script)], { cwd: root, encoding: 'utf8', maxBuffer: 40 * 1024 * 1024 }); report.commands.push({ script, label, status: result.status, stdout: String(result.stdout || '').slice(-4000), stderr: String(result.stderr || '').slice(-4000) }); if (result.stdout) process.stdout.write(result.stdout); if (result.stderr) process.stderr.write(result.stderr); if (result.status !== 0) report.failures.push(`${label} failed with status ${result.status}`); }
 
 run('scripts/patch-deep-email-automation.js', 'Patch deep email automation');
+run('scripts/patch-list-unsubscribe-headers.js', 'Patch one-click unsubscribe headers');
 run('scripts/build-daily-brain-brief.js', 'Build daily brain brief and all late dependent surfaces');
 run('scripts/patch-persistent-signal-board.js', 'Reapply persistent Signal Board after late generators');
+run('scripts/patch-deep-email-automation.js', 'Reapply deep email automation after late generators');
+run('scripts/patch-list-unsubscribe-headers.js', 'Reapply one-click unsubscribe headers after late generators');
 
 const requiredFiles = ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html','data/daily-brain-brief.json','downloads/daily-brain-brief.json','downloads/daily-brain-brief.md','daily-brain-brief.html','migrations/phase9_signal_board_persistence.sql','wrangler.toml','wrangler.jsonc'];
 for (const rel of requiredFiles) check(`file:${rel}`, fs.existsSync(file(rel)), `${rel} is missing`);
-for (const rel of ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','scripts/patch-deep-email-automation.js','scripts/patch-persistent-signal-board.js','scripts/build-daily-brain-brief.js']) { const result = spawnSync(process.execPath, ['--check', file(rel)], { cwd: root, encoding: 'utf8' }); check(`syntax:${rel}`, result.status === 0, result.stderr || result.stdout || `${rel} syntax failed`); }
+for (const rel of ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','scripts/patch-deep-email-automation.js','scripts/patch-list-unsubscribe-headers.js','scripts/patch-persistent-signal-board.js','scripts/build-daily-brain-brief.js']) { const result = spawnSync(process.execPath, ['--check', file(rel)], { cwd: root, encoding: 'utf8' }); check(`syntax:${rel}`, result.status === 0, result.stderr || result.stdout || `${rel} syntax failed`); }
 
 let brain = {};
 try { brain = json('data/daily-brain-brief.json'); } catch (error) { report.failures.push(`daily brief JSON invalid: ${error.message}`); }
@@ -37,6 +40,7 @@ const lifecycle = read('src/worker-email-lifecycle.js');
 check('email-automation-enabled', read('wrangler.toml').includes('EMAIL_AUTOMATION_ENABLED = "true"'), 'Email automation is not enabled');
 check('immediate-first-brief', lifecycle.includes('queueImmediateDailyBrief') && lifecycle.includes("messageKind:'first_daily_brief'") && lifecycle.includes('public_daily_brief!==1'), 'Immediate first daily brief is not preference-gated');
 check('personalized-controls', lifecycle.includes('issueReusableEmailToken') && lifecycle.includes('Manage preferences:') && lifecycle.includes('Unsubscribe:'), 'Email campaigns lack personalized controls');
+check('one-click-unsubscribe', lifecycle.includes("'List-Unsubscribe'") && lifecycle.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'") && lifecycle.includes('headers:headers||undefined') && lifecycle.includes('headers:payload.headers||undefined'), 'Campaign and immediate brief emails lack machine-readable one-click unsubscribe headers');
 check('paris-schedule', lifecycle.includes("timeZone:'Europe/Paris'") && lifecycle.includes("parts.hour==='08'&&parts.minute==='05'") && lifecycle.includes("parts.weekday==='Mon'&&parts.hour==='09'&&parts.minute==='15'"), 'Email delivery is not guarded by Paris local time');
 check('four-cron-candidates', ['"5 6 * * *"','"5 7 * * *"','"15 7 * * 1"','"15 8 * * 1"'].every(marker => read('wrangler.toml').includes(marker)), 'Wrangler lacks summer/winter cron candidates');
 check('campaign-idempotency', lifecycle.includes('campaignKey:`automation:${kind}:${date}:v3`') && lifecycle.includes('idempotencyKey:`${campaign.id}:${member.id}`'), 'Campaign or recipient idempotency is missing');
@@ -59,4 +63,4 @@ report.ok = report.failures.length === 0;
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 if (!report.ok) { console.error(JSON.stringify(report, null, 2)); process.exit(1); }
-console.log(`Daily brief and Signal Board acceptance passed: ${report.checks.length} checks after late generators.`);
+console.log(`Daily brief and Signal Board acceptance passed: ${report.checks.length} checks after late generators, including one-click unsubscribe headers.`);

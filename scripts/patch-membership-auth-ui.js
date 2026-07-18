@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./harden-worker-api-contracts.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
 const pages = [
@@ -43,6 +44,8 @@ for (const required of [
   ['membership.html', '/api/paypal/checkout-intent'],
   ['membership.html', '/api/paypal/subscription/confirm'],
   ['membership.html', 'actions.subscription.create'],
+  ['membership.html', 'config.checkoutEnabled'],
+  ['membership.html', 'data.verification && data.verification.sent'],
   ['member-login.html', '/api/auth/request-link'],
   ['member-dashboard.html', '/api/member/me'],
   ['member-dashboard.html', '/api/auth/logout'],

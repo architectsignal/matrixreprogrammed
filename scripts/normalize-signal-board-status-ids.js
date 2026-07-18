@@ -21,7 +21,16 @@ function normalize(html) {
     next = next.replace(/<p([^>]*?)id=["']signal-pass-status["']([^>]*)>/i, '<p$1id="forum-member-status" data-signal-pass-status$2>');
     canonicalSeen = true;
   }
-  if (!/id=["']signal-pass-status["']/i.test(next)) {
+
+  let aliasSeen = false;
+  next = next.replace(/id=["']signal-pass-status["']/gi, () => {
+    if (!aliasSeen) {
+      aliasSeen = true;
+      return 'id="signal-pass-status"';
+    }
+    return 'data-signal-pass-status-compat="duplicate-removed"';
+  });
+  if (!aliasSeen) {
     next = next.replace(/(<p[^>]*id=["']forum-member-status["'][^>]*>[\s\S]*?<\/p>)/i, '$1<span id="signal-pass-status" class="sr-only" aria-live="polite">Reading is public and open to everyone.</span>');
   }
   return next;

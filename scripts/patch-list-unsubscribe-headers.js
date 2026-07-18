@@ -47,7 +47,8 @@ const enqueueReplacement = `async function enqueue(env,member,{campaignId=null,m
   await env.MEMBERS_DB.prepare(\`INSERT OR IGNORE INTO email_outbox (id,member_id,campaign_id,message_kind,recipient_email_hash,payload_json,idempotency_key,status,available_at,updated_at,created_at) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)\`).bind(outboxId,member.id,campaignId,messageKind,await emailHash(member.email),JSON.stringify(payload),idempotencyKey,iso(env),iso(env),iso(env)).run();
   return outboxId
 }`;
-if (!source.includes('headers:headers||undefined')) replaceFunction('async function enqueue(env,member', enqueueReplacement, 'header-aware-outbox-enqueue');
+const originalEnqueueSignature='async function enqueue(env,member,{campaignId=null,messageKind,subject,htmlContent,textContent,idempotencyKey})';
+if (!source.includes('headers:headers||undefined')) replaceFunction(originalEnqueueSignature, enqueueReplacement, 'header-aware-outbox-enqueue');
 
 const campaignOld = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,idempotencyKey:`${campaign.id}:${member.id}`});";
 const campaignNew = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`${campaign.id}:${member.id}`});";

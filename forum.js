@@ -3,7 +3,7 @@
   const status=document.getElementById('signal-form-status');
   const feed=document.getElementById('signal-board-feed');
   const accessButton=document.getElementById('unlock-signal-pass');
-  const accessStatus=document.getElementById('signal-pass-status');
+  const accessStatus=document.getElementById('forum-member-status')||document.querySelector('[data-signal-pass-status]')||document.getElementById('signal-pass-status');
   const submitSection=document.getElementById('submit-signal');
 
   const BOARD_LABELS={main:'Main Signal Board',speculation:'Dark Speculation Board','epstein-alive':'Epstein Alive / Sighting Board'};

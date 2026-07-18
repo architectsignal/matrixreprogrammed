@@ -129,7 +129,11 @@ jobs:
       - name: Build normal site
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: npm run build
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          npm run build 2>&1 | tee downloads/production-sync-build.log
       - name: Verify D1-authoritative forum persistence wiring
         run: node scripts/forum-persistence-d1-test.js
       - name: Bundle strict Worker without deploying
@@ -156,6 +160,7 @@ jobs:
         with:
           name: production-sync-assurance-${{ github.run_id }}
           path: |
+            downloads/production-sync-build.log
             downloads/production-sync-test.json
             downloads/production-freshness-guard.json
             downloads/production-deploy-guard-report.json

@@ -26,6 +26,28 @@ INSERT OR IGNORE INTO paypal_sandbox_bootstrap_status (
   'sandbox','pending',0,0,0,1,0,0,0,'{}',datetime('now'),datetime('now')
 );
 
+CREATE TABLE IF NOT EXISTS paypal_checkout_consents (
+  checkout_intent_id TEXT PRIMARY KEY,
+  member_id TEXT NOT NULL,
+  terms_version TEXT NOT NULL,
+  withdrawal_notice_version TEXT NOT NULL,
+  terms_accepted INTEGER NOT NULL CHECK (terms_accepted IN (0,1)),
+  recurring_payment_acknowledged INTEGER NOT NULL CHECK (recurring_payment_acknowledged IN (0,1)),
+  immediate_service_requested INTEGER NOT NULL CHECK (immediate_service_requested IN (0,1)),
+  withdrawal_notice_acknowledged INTEGER NOT NULL CHECK (withdrawal_notice_acknowledged IN (0,1)),
+  user_agent_hash TEXT NOT NULL,
+  ip_country TEXT,
+  consented_at TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  FOREIGN KEY(checkout_intent_id) REFERENCES paypal_checkout_intents(id) ON DELETE CASCADE,
+  FOREIGN KEY(member_id) REFERENCES members(id) ON DELETE CASCADE
+);
+
+CREATE INDEX IF NOT EXISTS idx_paypal_checkout_consents_member
+  ON paypal_checkout_consents(member_id,consented_at DESC);
+CREATE INDEX IF NOT EXISTS idx_paypal_checkout_consents_versions
+  ON paypal_checkout_consents(terms_version,withdrawal_notice_version,consented_at DESC);
+
 DROP VIEW IF EXISTS paypal_sandbox_bootstrap_health;
 CREATE VIEW paypal_sandbox_bootstrap_health AS
 SELECT
@@ -46,3 +68,18 @@ SELECT
   r.activation_reason
 FROM paypal_sandbox_bootstrap_status b
 LEFT JOIN paypal_runtime_settings r ON r.environment=b.environment;
+
+DROP VIEW IF EXISTS paypal_checkout_consent_summary;
+CREATE VIEW paypal_checkout_consent_summary AS
+SELECT
+  c.terms_version,
+  c.withdrawal_notice_version,
+  COUNT(*) AS consent_count,
+  MIN(c.consented_at) AS first_consent_at,
+  MAX(c.consented_at) AS latest_consent_at
+FROM paypal_checkout_consents c
+WHERE c.terms_accepted=1
+  AND c.recurring_payment_acknowledged=1
+  AND c.immediate_service_requested=1
+  AND c.withdrawal_notice_acknowledged=1
+GROUP BY c.terms_version,c.withdrawal_notice_version;

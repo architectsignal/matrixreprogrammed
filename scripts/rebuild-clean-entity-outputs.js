@@ -36,6 +36,7 @@ function scan(relative, residual) {
 }
 
 run('scripts/repair-entity-exposure-object-names.js');
+run('scripts/sanitize-machine-entity-inputs.js');
 const removed = [
   ...removeMalformed('entity-briefs'),
   ...removeMalformed('entity-exposure')
@@ -46,6 +47,9 @@ run('scripts/build-entity-exposure-index.js');
 
 const residual = [];
 for (const target of [
+  'data/record-events.json',
+  'data/entity-observations.json',
+  'data/machine-state/record-event-snapshot.json',
   'data/change-detection.json',
   'data/entity-relationship-scores.json',
   'machine-intelligence.html',

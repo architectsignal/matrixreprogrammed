@@ -71,3 +71,4 @@ if (issues.length) {
   process.exit(1);
 }
 console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers and verified-member D1 forum posting.');
+require('./recovery-worker-api-contract-test.js');

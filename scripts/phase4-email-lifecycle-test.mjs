@@ -8,6 +8,17 @@ const root=process.cwd();
 const outputDir=path.join(root,'downloads','phase4-email-lifecycle-test');
 fs.rmSync(outputDir,{recursive:true,force:true});
 fs.mkdirSync(outputDir,{recursive:true});
+let currentStage='initialising-clean-account-fixture';
+let failureWritten=false;
+function writeFailure(error){
+  if(failureWritten)return;
+  failureWritten=true;
+  const payload={ok:false,generatedAt:new Date().toISOString(),stage:currentStage,error:String(error&&error.message||error),stack:String(error&&error.stack||'').split('\n').slice(0,30),boundary:'The deterministic fixture failed before completion. No live subscriber, provider contact, email, payment, D1 database or deployment was changed.'};
+  try{fs.writeFileSync(path.join(outputDir,'failure.json'),JSON.stringify(payload,null,2)+'\n')}catch{}
+  console.error(`PHASE 4 CLEAN ACCOUNT FAILED at ${currentStage}: ${payload.error}`);
+}
+process.once('uncaughtException',error=>{writeFailure(error);process.exit(1)});
+process.once('unhandledRejection',error=>{writeFailure(error);process.exit(1)});
 
 function stable(value){if(Array.isArray(value))return value.map(stable);if(value&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])]));return value}
 function writeJson(name,value){fs.writeFileSync(path.join(outputDir,name),JSON.stringify(stable(value),null,2)+'\n')}
@@ -43,6 +54,7 @@ CREATE TABLE subscriptions (id TEXT PRIMARY KEY,member_id TEXT NOT NULL,provider
 CREATE TABLE audit_log (id TEXT PRIMARY KEY,actor_id TEXT,action TEXT NOT NULL,target_type TEXT NOT NULL,target_id TEXT,metadata_json TEXT NOT NULL DEFAULT '{}',created_at TEXT NOT NULL);
 `)}
 
+currentStage='creating-in-memory-d1-schema';
 const db=new DatabaseSync(':memory:');
 db.function('sha3',(value,bits)=>crypto.createHash('sha256').update(String(value)).digest());
 seedBaseSchema(db);
@@ -50,6 +62,7 @@ db.exec(fs.readFileSync(path.join(root,'migrations/phase4_email_lifecycle.sql'),
 db.exec(fs.readFileSync(path.join(root,'migrations/phase4_email_lifecycle_portability.sql'),'utf8'));
 const d1=new D1Database(db);
 
+currentStage='importing-final-email-worker';
 const workerSource=fs.readFileSync(path.join(root,'src/worker-email-lifecycle.js'),'utf8');
 const workerModule=await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
 const worker=workerModule.default;
@@ -65,7 +78,7 @@ async function providerFetch(url,options={}){
   if(url.endsWith('/v3/smtp/email')){providerMessageCounter+=1;return new Response(JSON.stringify({messageId:`brevo-test-message-${providerMessageCounter}`}),{status:201,headers:{'content-type':'application/json'}})}
   return new Response(JSON.stringify({message:'unexpected provider path'}),{status:404,headers:{'content-type':'application/json'}});
 }
-const assets={async fetch(request){const pathname=new URL(request.url).pathname;if(pathname.includes('weekly'))return new Response(JSON.stringify({generatedAt:'2026-07-13T10:00:00.000Z',records:[{canonicalId:'weekly-1',title:'Weekly evidence change',summary:'A verified public-record change entered the weekly review queue.'}]}),{status:200,headers:{'content-type':'application/json'}});if(pathname.includes('daily')||pathname.includes('live-intel'))return new Response(JSON.stringify({generatedAt:'2026-07-13T10:00:00.000Z',records:[{canonicalId:'daily-1',title:'Daily evidence update',summary:'A sourced daily record changed and retained its evidence boundary.'}]}),{status:200,headers:{'content-type':'application/json'}});return new Response('not found',{status:404})}};
+const assets={async fetch(request){const pathname=new URL(request.url).pathname;if(pathname.includes('weekly'))return new Response(JSON.stringify({generatedAt:'2026-07-13T10:00:00.000Z',records:[{canonicalId:'weekly-1',title:'Weekly evidence change',summary:'A verified public-record change entered the weekly review queue.'}]}),{status:200,headers:{'content-type':'application/json'}});if(pathname.includes('daily')||pathname.includes('live-intel')||pathname.includes('outcome')||pathname.includes('latest-public-drops')||pathname.includes('speculative'))return new Response(JSON.stringify({generatedAt:'2026-07-13T10:00:00.000Z',records:[{canonicalId:'daily-1',title:'Daily evidence update',summary:'A sourced daily record changed and retained its evidence boundary.'}]}),{status:200,headers:{'content-type':'application/json'}});return new Response('not found',{status:404})}};
 const env={
   MEMBERS_DB:d1,
   BREVO_API_KEY:'brevo-fixture-key',
@@ -82,8 +95,9 @@ const env={
 const adminHeaders={'x-admin-token':env.ADMIN_API_TOKEN};
 const lifecycle=[];
 async function call(pathname,{method='GET',body,headers={}}={}){const request=new Request(`https://matrixreprogrammed.com${pathname}`,{method,headers:body?{'content-type':'application/json',...headers}:headers,body:body?JSON.stringify(body):undefined});const response=await worker.fetch(request,env,{});let data=null;const text=await response.text();try{data=JSON.parse(text||'null')}catch{data=text}return{response,data}}
-function pass(name,details={}){lifecycle.push({name,passed:true,...details})}
+function pass(name,details={}){lifecycle.push({name,passed:true,...details});currentStage=name}
 
+currentStage='signup-d1-provider-verification-delivery';
 const signup=await call('/newsletter-signup',{method:'POST',body:{email:'clean.account@example.com',name:'Clean Account',consent:true,public_daily_brief:true,public_weekly_digest:true,release_notices:true,timezone:'Europe/Paris',path:'/newsletter.html'}});
 assert(signup.response.status===202&&signup.data.ok&&signup.data.saved,'Signup endpoint did not persist and accept the clean account');
 assert(signup.data.testVerificationToken,'Test verification token was not returned in explicit test mode');
@@ -94,6 +108,7 @@ assert(providerCalls.some(call=>call.url.endsWith('/v3/contacts')),'Brevo contac
 assert(providerCalls.some(call=>call.url.endsWith('/v3/smtp/email')&&call.payload.subject.includes('Verify')),'Verification email was not sent');
 pass('signup-d1-provider-verification-delivery');
 
+currentStage='verification-welcome-segments';
 const verify=await call(`/api/email/verify?purpose=verify_marketing&token=${encodeURIComponent(signup.data.testVerificationToken)}`);
 assert(verify.data.ok&&verify.data.verified,'Verification endpoint did not activate the account');
 assert(verify.data.preferenceToken&&verify.data.unsubscribeToken,'Verification did not issue subscriber action tokens');
@@ -102,6 +117,7 @@ assert(providerCalls.some(call=>call.url.endsWith('/v3/smtp/email')&&call.payloa
 assert(scalar(db,"SELECT COUNT(*) FROM email_segment_memberships WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND state='active'")>=3,'Daily, weekly and release segments were not activated');
 pass('verification-welcome-segments');
 
+currentStage='subscriber-dashboard-preferences';
 const subscriber=await call(`/api/email/subscriber?token=${encodeURIComponent(verify.data.preferenceToken)}`);
 assert(subscriber.data.ok&&subscriber.data.subscriber.marketingStatus==='subscribed','Subscriber dashboard API did not return the verified subscriber');
 const preferenceSave=await call('/api/email/preferences',{method:'POST',body:{token:verify.data.preferenceToken,public_daily_brief:true,public_weekly_digest:true,release_notices:false,timezone:'Europe/Paris'}});
@@ -109,6 +125,7 @@ assert(preferenceSave.data.ok&&preferenceSave.data.saved,'Preference update fail
 assert(scalar(db,"SELECT release_notices FROM email_preferences WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com')")===0,'Preference update was not persisted');
 pass('subscriber-dashboard-preferences');
 
+currentStage='daily-segment-campaign-send';
 const campaign=await call('/api/email/admin/campaigns',{method:'POST',headers:adminHeaders,body:{kind:'daily',segmentKey:'public_daily_brief',subject:'Fixture Daily Control Brief',htmlContent:'<html><body><h1>Fixture daily</h1><p>Evidence boundary retained.</p></body></html>',textContent:'Fixture daily\nEvidence boundary retained.',sendNow:true,campaignKey:'fixture-daily-1'}});
 assert(campaign.response.status===201&&campaign.data.ok,'Admin campaign creation failed');
 assert(campaign.data.queued.recipientCount===1&&campaign.data.delivery.sent===1,'Daily segment did not queue and send exactly one eligible recipient');
@@ -117,6 +134,7 @@ const deliveryRow=db.prepare('SELECT * FROM email_deliveries WHERE campaign_id=?
 assert(deliveryRow&&deliveryRow.provider_message_id,'Campaign delivery row or provider message ID missing');
 pass('daily-segment-campaign-send');
 
+currentStage='delivery-event-recording-idempotency';
 const deliveredWebhook=await call('/api/email/provider-webhook',{method:'POST',headers:{'x-email-webhook-secret':env.EMAIL_WEBHOOK_SECRET,'x-brevo-request-id':'fixture-webhook-delivered'},body:{event:'delivered',email:'clean.account@example.com','message-id':deliveryRow.provider_message_id,event_id:'fixture-event-delivered',date:'2026-07-13T12:01:00.000Z'}});
 assert(deliveredWebhook.data.ok&&deliveredWebhook.data.processed===1,'Delivery webhook was not processed');
 assert(scalar(db,'SELECT COUNT(*) FROM email_events WHERE provider_event_id=?','fixture-event-delivered')===1,'Delivery event was not recorded');
@@ -125,6 +143,7 @@ const duplicateWebhook=await call('/api/email/provider-webhook',{method:'POST',h
 assert(duplicateWebhook.data.ok&&duplicateWebhook.data.duplicate===true,'Webhook request replay was not idempotently ignored');
 pass('delivery-event-recording-idempotency');
 
+currentStage='subscriber-and-admin-dashboards';
 const health=await call('/api/email/admin/health',{headers:adminHeaders});
 const monitor=await call('/api/email/admin/campaigns',{headers:adminHeaders});
 assert(health.data.ok&&health.data.d1Connected&&health.data.brevoConfigured&&health.data.automationEnabled,'Admin health monitoring is incomplete');
@@ -132,6 +151,7 @@ assert(monitor.data.ok&&monitor.data.campaigns.some(item=>item.id===campaignId),
 assert(fs.existsSync(path.join(root,'subscriber-dashboard.html'))&&fs.existsSync(path.join(root,'admin-campaign-monitor.html')),'Subscriber or admin dashboard page missing');
 pass('subscriber-and-admin-dashboards');
 
+currentStage='unsubscribe-immediate-suppression';
 const unsubscribe=await call(`/api/email/unsubscribe?token=${encodeURIComponent(verify.data.unsubscribeToken)}`);
 assert(unsubscribe.data.ok&&unsubscribe.data.unsubscribed,'Unsubscribe endpoint failed');
 assert(scalar(db,"SELECT COUNT(*) FROM members WHERE email='clean.account@example.com' AND marketing_status='unsubscribed'")===1,'Unsubscribe did not update member marketing state');
@@ -140,6 +160,7 @@ const postUnsubscribeCampaign=await call('/api/email/admin/campaigns',{method:'P
 assert(postUnsubscribeCampaign.data.ok&&postUnsubscribeCampaign.data.queued.recipientCount===0,'Unsubscribed account remained eligible for a campaign');
 pass('unsubscribe-immediate-suppression');
 
+currentStage='explicit-resubscribe-lifecycle';
 const resubscribe=await call('/api/email/resubscribe',{method:'POST',body:{email:'clean.account@example.com',name:'Clean Account',consent:true,public_daily_brief:true,public_weekly_digest:true,release_notices:true,path:'/subscriber-dashboard.html'}});
 assert(resubscribe.response.status===202&&resubscribe.data.testVerificationToken,'Resubscribe request did not issue verification');
 const resubscribeVerify=await call(`/api/email/verify?purpose=resubscribe&token=${encodeURIComponent(resubscribe.data.testVerificationToken)}`);
@@ -148,6 +169,7 @@ assert(scalar(db,"SELECT COUNT(*) FROM email_suppressions WHERE member_id=(SELEC
 assert(scalar(db,"SELECT COUNT(*) FROM members WHERE email='clean.account@example.com' AND marketing_status='subscribed'")===1,'Resubscribe did not restore marketing state');
 pass('explicit-resubscribe-lifecycle');
 
+currentStage='daily-weekly-automated-sends';
 const scheduledPromises=[];
 await worker.scheduled({cron:'5 6 * * *'},env,{waitUntil(promise){scheduledPromises.push(promise)}});
 await Promise.all(scheduledPromises.splice(0));
@@ -158,12 +180,15 @@ assert(scalar(db,"SELECT COUNT(*) FROM email_campaigns WHERE campaign_key='autom
 assert(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE campaign_id IN (SELECT id FROM email_campaigns WHERE campaign_key LIKE 'automation:%') AND status='sent'")>=2,'Automated campaign sends were not completed');
 pass('daily-weekly-automated-sends');
 
+currentStage='bounce-complaint-suppression-path';
 const latestCampaignDelivery=db.prepare("SELECT d.provider_message_id FROM email_deliveries d JOIN email_campaigns c ON c.id=d.campaign_id WHERE c.campaign_key='automation:daily:2026-07-13' LIMIT 1").get();
+assert(latestCampaignDelivery&&latestCampaignDelivery.provider_message_id,'Automated daily delivery did not produce a provider message ID');
 const bounce=await call('/api/email/provider-webhook',{method:'POST',headers:{'x-email-webhook-secret':env.EMAIL_WEBHOOK_SECRET,'x-brevo-request-id':'fixture-webhook-bounce'},body:{event:'hard_bounce',email:'clean.account@example.com','message-id':latestCampaignDelivery.provider_message_id,event_id:'fixture-event-bounce',date:'2026-07-13T12:02:00.000Z'}});
 assert(bounce.data.ok&&bounce.data.suppressions===1,'Hard-bounce webhook did not suppress the subscriber');
 assert(scalar(db,"SELECT COUNT(*) FROM members WHERE email='clean.account@example.com' AND marketing_status='bounced'")===1,'Bounce state was not recorded');
 pass('bounce-complaint-suppression-path');
 
+currentStage='provider-failure-no-false-success';
 providerFailure=true;
 const failedProviderSignup=await call('/newsletter-signup',{method:'POST',body:{email:'provider.failure@example.com',name:'Provider Failure',consent:true,public_weekly_digest:true,path:'/newsletter.html'}});
 assert(failedProviderSignup.response.status===202&&failedProviderSignup.data.ok&&failedProviderSignup.data.saved,'Provider failure incorrectly lost the D1 subscriber record');
@@ -172,6 +197,7 @@ assert(scalar(db,"SELECT COUNT(*) FROM email_outbox WHERE member_id=(SELECT id F
 providerFailure=false;
 pass('provider-failure-no-false-success');
 
+currentStage='final-admin-health-and-proof-write';
 const finalHealth=await call('/api/email/admin/health',{headers:adminHeaders});
 assert(finalHealth.data.ok,'Final admin health failed');
 const result={

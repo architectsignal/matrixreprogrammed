@@ -22,8 +22,11 @@ function scalarText(value, depth = 0){
   return '';
 }
 function clean(value = ''){
-  const text = scalarText(value).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-  return ['[object Object]','object Object','[object Array]'].includes(text) ? '' : text;
+  return scalarText(value)
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\[object Object\]|\bobject Object\b|\[object Array\]/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 function esc(value = ''){ return clean(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c])); }
 function slug(value = 'item'){ return clean(value).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'item'; }
@@ -102,5 +105,5 @@ const markdown = ['# Machine Intelligence', '', `Updated: ${updated}`, '', `Curr
 write('downloads/machine-intelligence.md', `${markdown}\n`);
 
 const generated = [JSON.stringify(changeDetection), JSON.stringify(relationshipScores), html, markdown].join('\n');
-if (/\[object Object\]|\bobject Object\b/.test(generated)) throw new Error('Change Detection Engine produced an object placeholder');
+if (/\[object Object\]|\bobject Object\b/i.test(generated)) throw new Error('Change Detection Engine produced an object placeholder');
 console.log(`Change Detection Engine complete: ${newRecords.length} new, ${changedRecords.length} changed, ${relationships.length} relationship candidates.`);

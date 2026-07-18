@@ -33,7 +33,8 @@ for (const relative of [
   'migrations/0001_membership_foundation.sql',
   'migrations/phase5_member_experience.sql',
   'migrations/phase6_paypal_subscriptions.sql',
-  'wrangler.jsonc'
+  'wrangler.jsonc',
+  'wrangler.toml'
 ]) need(fs.existsSync(at(relative)), `Missing API contract file: ${relative}`);
 
 const production = read('src/worker-production.js');
@@ -48,7 +49,8 @@ const membership = read('membership.html');
 const foundation = read('migrations/0001_membership_foundation.sql');
 const experience = read('migrations/phase5_member_experience.sql');
 const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
-const wrangler = read('wrangler.jsonc');
+const wranglerJson = read('wrangler.jsonc');
+const wranglerToml = read('wrangler.toml');
 
 checks.authRouteOwnership = production.includes('const authRoutes = new Set([')
   && ['/api/auth/request-link','/api/auth/verify','/api/auth/logout','/api/auth/health'].every(route => production.includes(`'${route}'`))
@@ -88,12 +90,19 @@ checks.forumPersistence = forum.includes("import { memberSessionContext } from '
   && forum.includes("postingAccess: 'verified-free-member-session'");
 need(checks.forumPersistence, 'Forum posting is not fully tied to a verified D1 member session and audit trail');
 
-checks.paypalFailClosed = paypal.includes('const plansReady=')
-  && paypal.includes('&&confirmation&&plansReady,setting,plans:planRows')
-  && paypal.includes("error:'PayPal checkout is disabled until activation gates pass'")
-  && wrangler.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
-  && wrangler.includes('"PAYPAL_PRODUCTION_ENABLED": "false"');
-need(checks.paypalFailClosed, 'PayPal checkout does not require all activation gates or production is not explicitly disabled');
+checks.paypalFailClosed = paypal.includes("const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);")
+  && paypal.includes('commercialLegalReady:legalReady')
+  && paypal.includes('contractConfirmationReady:contractEmailReady')
+  && paypal.includes('&&confirmation&&legalReady&&contractEmailReady&&plansReady')
+  && paypal.includes("error:'PayPal checkout is disabled until every activation, commercial-readiness and contract-confirmation gate passes'")
+  && paypal.includes('paypal_checkout_consents')
+  && paypal.includes('paypal.membership_contract_confirmation')
+  && wranglerJson.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
+  && wranglerJson.includes('"PAYPAL_PRODUCTION_ENABLED": "false"')
+  && wranglerToml.includes('PAYPAL_ENVIRONMENT = "sandbox"')
+  && wranglerToml.includes('PAYPAL_PRODUCTION_ENABLED = "false"')
+  && wranglerToml.includes('COMMERCIAL_LEGAL_READY = "false"');
+need(checks.paypalFailClosed, 'PayPal checkout does not preserve all payment, legal, consent and durable-confirmation gates or production is not explicitly disabled');
 
 checks.membershipClientContract = template.includes('data.verification && data.verification.sent')
   && template.includes('if (!config.checkoutEnabled)')
@@ -179,4 +188,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('RECOVERY WORKER/API CONTRACT TEST PASSED: auth, D1, forum, protected access, email and PayPal remain authoritative and fail closed.');
+console.log('RECOVERY WORKER/API CONTRACT TEST PASSED: auth, D1, forum, protected access, email, consent, contract confirmation and PayPal remain authoritative and fail closed.');

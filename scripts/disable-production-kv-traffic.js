@@ -115,6 +115,7 @@ let legacy = read('src/worker.js');
 const legacyBefore = legacy;
 legacy = replaceFunction(legacy, 'handleTrackEvent', "async function handleTrackEvent(request,env){const body=await readBody(request);const eventName=cleanText(body.name||'event',80);return new Response(null,{status:204,headers:{...securityHeaders,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-api','X-Matrix-Worker':workerName,'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'}})}");
 legacy = replaceFunction(legacy, 'handleNewsletterSendWeekly', "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})}", false);
+legacy = legacy.replace(/analytics:\$\{event\.id\}/g, 'analytics-endpoint-nonpersistent');
 writeIfChanged('src/worker.js', legacyBefore, legacy);
 
 for (const configRel of ['wrangler.toml', 'wrangler.jsonc']) {
@@ -155,6 +156,7 @@ const semanticChecks = [
   ['analytics endpoint remains available', finalLegacy.includes('async function handleTrackEvent(')],
   ['analytics endpoint is non-persistent', finalLegacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")],
   ['analytics KV writes removed from handler', !functionRange(finalLegacy, 'handleTrackEvent') || !finalLegacy.slice(functionRange(finalLegacy, 'handleTrackEvent').start, functionRange(finalLegacy, 'handleTrackEvent').end).includes('FORUM_POSTS')],
+  ['obsolete analytics KV marker removed', !finalLegacy.includes('analytics:${event.id}')],
   ['wrangler defensive KV switch false', finalWrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"')],
   ['wrangler JSON defensive KV switch false', finalWranglerJson.includes('"ENABLE_KV_COMPATIBILITY_MIRROR": "false"')],
   ['forum health verifier is D1 based', finalVerifier.includes("markers: ['d1Connected', 'authoritativeStorage']")]
@@ -172,7 +174,7 @@ const report = {
   changed: [...new Set(changed)],
   checks: Object.fromEntries(semanticChecks),
   failures,
-  policy: 'Cloudflare D1 is the only Signal Board persistence layer. Production forum routes receive no KV binding, and analytics events are not persisted to KV.'
+  policy: 'Cloudflare D1 is the only Signal Board persistence layer. Production forum routes receive no KV binding, analytics events are not persisted to KV, and obsolete KV audit markers are removed.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-kv-traffic-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -180,4 +182,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`));
   process.exit(1);
 }
-console.log('Production KV traffic disabled: Signal Board is D1-only and analytics is non-persistent; Worker syntax validated.');
+console.log('Production KV traffic disabled: Signal Board is D1-only, analytics is non-persistent, and obsolete KV audit markers are removed.');

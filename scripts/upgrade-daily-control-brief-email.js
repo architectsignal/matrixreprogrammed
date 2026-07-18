@@ -14,14 +14,15 @@ const before = source;
 const fragment = fs.readFileSync(fragmentPath, 'utf8').trim();
 const marker = "const DAILY_CONTROL_BRIEF_VERSION='daily-control-brief-v3';";
 
-if (!source.includes(marker)) {
-  const pattern = /async function loadCampaignSource[\s\S]*?\n\nasync function adminHealth/;
-  if (!pattern.test(source)) throw new Error('Could not locate the existing automated campaign content block');
-  source = source.replace(pattern, `${fragment}\n\nasync function adminHealth`);
-}
-
-const requiredMarkers = [
+// Later campaign-quality patches can replace the automated campaign block while
+// leaving the version marker behind. Treat the whole v3 contract as the marker,
+// not the version constant alone, so repeated builds restore the authoritative
+// renderer instead of accepting a partially downgraded block.
+const contractMarkers = [
   marker,
+  'subjectSuffix',
+  'clean(rendered.subjectSuffix,82)',
+  'briefVersion:DAILY_CONTROL_BRIEF_VERSION',
   'Named people and institutions in the record',
   'Speculation desk — testable, not decorative',
   'What would strengthen it:',
@@ -29,7 +30,14 @@ const requiredMarkers = [
   "'/data/daily-command-brief.json'",
   "'/data/speculative-intelligence-synthesis.json'"
 ];
-for (const required of requiredMarkers) {
+const contractComplete = contractMarkers.every(required => source.includes(required));
+if (!contractComplete) {
+  const pattern = /async function loadCampaignSource[\s\S]*?\n\nasync function adminHealth/;
+  if (!pattern.test(source)) throw new Error('Could not locate the existing automated campaign content block');
+  source = source.replace(pattern, `${fragment}\n\nasync function adminHealth`);
+}
+
+for (const required of contractMarkers) {
   if (!source.includes(required)) throw new Error(`Daily Control Brief upgrade marker missing: ${required}`);
 }
 
@@ -40,6 +48,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   changed: source !== before,
   version: 'daily-control-brief-v3',
+  contractCompleteBeforeUpgrade: contractComplete,
   improvements: [
     'Uses the Daily Brain Brief, Daily Command Brief, speculative synthesis, public drops and Live Intel instead of flattening one generic array.',
     'Names people and institutions only when a documented role exists.',
@@ -47,8 +56,9 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
     'Adds current developments with evidence status and lane.',
     'Turns speculation into testable scenarios with strengthening and weakening evidence.',
     'Adds records to pull, watch-next triggers, source routes and a full evidence boundary.',
-    'Builds a useful subject line from the strongest current development.'
+    'Builds a useful subject line from the strongest current development.',
+    'Restores the entire v3 block when later patch chains leave only a stale version marker.'
   ]
 }, null, 2)}\n`);
 require('./daily-control-brief-email-test.js');
-console.log(`Daily Control Brief email renderer ${source !== before ? 'upgraded' : 'already current'} (${requiredMarkers.length} contract markers verified).`);
+console.log(`Daily Control Brief email renderer ${source !== before ? 'upgraded' : 'already current'} (${contractMarkers.length} contract markers verified).`);

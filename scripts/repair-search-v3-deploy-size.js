@@ -9,31 +9,34 @@ if (!fs.existsSync(target)) throw new Error('scripts/build-search-v3-runtime.js 
 let source = fs.readFileSync(target, 'utf8');
 const before = source;
 
-const profileAnchor = "  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 }\n];";
-const profileReplacement = "  { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 },\n  { id: 'deployment-safe', title: 120, description: 64, listItems: 3, listChars: 28, scalar: 56 }\n];";
 if (!source.includes("id: 'deployment-safe'")) {
-  if (!source.includes(profileAnchor)) throw new Error('Search V3 compaction profile anchor is missing');
-  source = source.replace(profileAnchor, profileReplacement);
+  const profileMatch = source.match(/const compactionProfiles = \[[\s\S]*?\n\];/);
+  if (!profileMatch) throw new Error('Search V3 compaction profile block is missing');
+  const block = profileMatch[0];
+  const close = block.lastIndexOf('\n];');
+  const body = block.slice(0, close).trimEnd();
+  const separator = body.endsWith(',') ? '\n' : ',\n';
+  const replacement = `${body}${separator}  { id: 'deployment-safe', title: 120, description: 64, listItems: 3, listChars: 28, scalar: 56 }\n];`;
+  source = source.replace(block, replacement);
 }
 
-const dateAnchor = `  for (const field of ['date', 'publicationDate', 'retrievalDate']) {
-    const value = bounded(record[field], 40);
-    if (value) output[field] = value;
-  }
-  const sourceUrl = String(record.sourceUrl || '').trim();
-  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);`;
-const dateReplacement = `  const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);
-  if (browserDate) output.date = browserDate;
-  const sourceUrl = String(record.sourceUrl || '').trim();
-  if (output.primarySource === true && /^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 500);`;
-if (!source.includes('const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);')) {
-  if (!source.includes(dateAnchor)) throw new Error('Search V3 date/source compaction anchor is missing');
-  source = source.replace(dateAnchor, dateReplacement);
+const browserDateMarker = 'const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);';
+if (!source.includes(browserDateMarker)) {
+  const dateLoop = /  for \(const field of \['date', 'publicationDate', 'retrievalDate'\]\) \{[\s\S]*?\n  \}\n/;
+  if (!dateLoop.test(source)) throw new Error('Search V3 date compaction block is missing');
+  source = source.replace(dateLoop, `  const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);\n  if (browserDate) output.date = browserDate;\n`);
+}
+
+const sourceBlock = /  const sourceUrl = String\(record\.sourceUrl \|\| ''\)\.trim\(\);\n  if \([^\n]*\) output\.sourceUrl = sourceUrl\.slice\(0,\s*\d+\);/;
+const sourceReplacement = `  const sourceUrl = String(record.sourceUrl || '').trim();\n  if (output.primarySource === true && /^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 500);`;
+if (!source.includes('output.primarySource === true') || !source.includes('sourceUrl.slice(0, 500)')) {
+  if (!sourceBlock.test(source)) throw new Error('Search V3 source URL compaction block is missing');
+  source = source.replace(sourceBlock, sourceReplacement);
 }
 
 for (const marker of [
   "id: 'deployment-safe'",
-  'const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);',
+  browserDateMarker,
   'output.primarySource === true',
   'sourceUrl.slice(0, 500)'
 ]) {

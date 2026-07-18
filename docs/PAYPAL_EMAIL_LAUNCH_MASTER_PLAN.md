@@ -1,17 +1,30 @@
 # Matrix Reprogrammed — PayPal and Email Launch Master Plan
 
-Status: LOCKED CANONICAL LAUNCH SEQUENCE
-Owner: Matrix Reprogrammed
-Timezone: Europe/Paris
-Updated: 2026-07-17
+Status: LOCKED CANONICAL LAUNCH SEQUENCE  
+Owner: Matrix Reprogrammed  
+Timezone: Europe/Paris  
+Updated: 2026-07-18
 
 ## Governing rule
 
-Do not activate automated marketing email or live PayPal checkout until every preceding phase has passed its acceptance checks. Free Member access retains the same underlying public-source evidence as paid tiers. Paid tiers add service, organisation, monitoring, exports and research tools.
+Do not activate automated marketing email or live PayPal checkout until every preceding acceptance phase has passed. Free Member access retains the same underlying public-source evidence as paid tiers. Paid tiers add curation, delivery, monitoring, exports, research tools and member services.
 
-Email Phase 11 was explicitly activated on 17 July 2026 after authenticated Brevo delivery, verification, welcome-email and preference tests succeeded. PayPal remains sandboxed and disabled for production charging.
+## Current production state
 
-## Phase sequence
+The controlled Cloudflare production release completed successfully on 18 July 2026.
+
+- D1 is authoritative for membership, sessions, forum, consent and payment state.
+- Transactional account email is enabled.
+- Automated marketing email is disabled.
+- PayPal uses the sandbox environment.
+- PayPal sandbox checkout is disabled outside a timed administrator rehearsal.
+- PayPal live charging is disabled.
+- `COMMERCIAL_LEGAL_READY` is false.
+- No live payment activation is authorised by this document.
+
+This replaces the earlier statement that Email Phase 11 had been activated. Verification, welcome and preference email tests passed, but scheduled marketing automation remains deliberately disabled until its review evidence is complete.
+
+## Locked phase sequence
 
 1. Production stability and green workflows
 2. D1 database protection and migrations
@@ -23,96 +36,109 @@ Email Phase 11 was explicitly activated on 17 July 2026 after authenticated Brev
 8. Transactional magic-link email tests
 9. Newsletter consent and lifecycle tests
 10. Manual newsletter campaign tests
-11. Automated newsletter activation
+11. Scheduled email review and controlled automation activation
 12. PayPal Business and Developer preparation
 13. PayPal sandbox credentials and webhook
 14. Sandbox product and plan bootstrap
-15. Sandbox checkout activation
-16. Full sandbox payment test matrix
-17. Production deployment and PayPal activation-state fix
+15. Timed sandbox checkout activation
+16. Full sandbox payment lifecycle matrix
+17. Production deployment and activation-state verification
 18. Legal, tax and commercial readiness
-19. PayPal live application and plans
+19. PayPal live application and live plans
 20. Controlled live payment activation
 21. Post-launch monitoring and reconciliation
 
-## Phase 1 — Production stability
+## Production stability acceptance
 
-### Required outcomes
+Required outcomes:
 
-- All major GitHub workflows green.
-- Current main branch deployed successfully to Cloudflare.
-- Critical public, member, billing, newsletter and administration routes return valid responses.
-- Automated newsletter sending remains guarded by authenticated delivery, verified consent and preferences, pre-activation retry quarantine, evidence-bounded content, personalised unsubscribe controls and post-send monitoring.
-- No recurring Cloudflare KV quota warnings.
-- D1 remains authoritative for membership, consent, sessions, forum and payment state.
-- Sandbox and live activation boundaries remain fail-closed.
+- [x] Current main branch deployed successfully to Cloudflare.
+- [x] Live deployment SHA verified.
+- [x] D1 migration chain applied with a rollback bookmark.
+- [x] Critical public, member, billing, newsletter and administration routes verified.
+- [x] D1-authoritative forum write/read verification passed.
+- [x] Transactional account email enabled.
+- [x] PayPal sandbox plans available behind disabled checkout.
+- [x] Live PayPal charging remains disabled.
+- [ ] All recurring auxiliary workflows reviewed after the new commercial gate lands.
+- [ ] Human browser journey completed on desktop, Android and iPhone/Safari.
 
-### Workflow targets
+## Email acceptance
 
-- Matrix Reprogrammed Production Deploy
-- Site Pressure Test
-- Site QA
-- Link Audit
-- Full System Audit
-- Site-Wide Master Audit
-- Mission Readiness Assurance
-- Gated OSINT Tools Assurance
-
-### Critical routes
-
-- /membership.html
-- /member-login.html
-- /member-dashboard.html
-- /billing-dashboard.html
-- /admin-payment-dashboard.html
-- /newsletter.html
-- /subscriber-dashboard.html
-- /email-status.html
-- /api/email/admin/health
-- /api/paypal/admin/health
-- /forum-health
-
-### Phase 1 acceptance record
-
-- [x] Current main commit identified
-- [x] Email automation activation approved under Phase 11 safety controls
-- [ ] Full build passes
-- [ ] Functional/tool audit passes
-- [ ] Link audit passes
-- [ ] Site Pressure Test passes
-- [ ] Site QA passes
-- [ ] Production Deploy passes
-- [ ] Cloudflare live SHA matches main
-- [ ] Critical route verification passes
-- [x] D1 email lifecycle health passes
-- [ ] KV traffic remains within limits
-
-## Phase 11 — Automated newsletter activation record
+Completed:
 
 - [x] `matrixreprogrammed.com` authenticated in Brevo with DKIM and DMARC.
-- [x] `members@matrixreprogrammed.com` verified as the sender.
+- [x] `members@matrixreprogrammed.com` verified as sender.
 - [x] Monitored reply-to identity configured.
-- [x] Controlled Brevo transactional message accepted and received.
-- [x] Verification and welcome sequence completed successfully.
-- [x] Explicit consent and selectable daily, weekly and release-notice preferences enforced.
+- [x] Controlled transactional message accepted and received.
+- [x] Verification and welcome sequence completed.
+- [x] Explicit consent and selectable public briefing preferences enforced.
 - [x] Personalised preference and unsubscribe routes installed.
-- [x] Daily and weekly Cloudflare cron schedules configured.
-- [x] Retry records predating activation automatically quarantined by cutoff.
-- [x] Daily and weekly campaign content fails closed rather than inventing claims.
-- [ ] First three scheduled daily runs reviewed.
-- [ ] First scheduled weekly run reviewed.
-- [ ] Brevo webhook event flow confirmed for delivery, bounce, complaint, click and unsubscribe.
+- [x] Retry records predating activation quarantined by cutoff.
+- [x] Campaign content fails closed rather than inventing claims.
+
+Still required before `EMAIL_AUTOMATION_ENABLED=true`:
+
+- [ ] Review three scheduled daily dry or controlled runs.
+- [ ] Review one scheduled weekly dry or controlled run.
+- [ ] Confirm Brevo delivery, bounce, complaint, click and unsubscribe event flow.
+- [ ] Confirm suppression after unsubscribe, complaint and hard bounce.
+- [ ] Record explicit owner approval for scheduled marketing automation.
+
+## PayPal sandbox lifecycle acceptance
+
+The timed sandbox rehearsal must prove all three tiers: Supporter €3, Intelligence Member €6 and Research Pro €9.
+
+- [ ] Start an administrator-authorised rehearsal.
+- [ ] Confirm checkout closes automatically outside the rehearsal window.
+- [ ] Complete checkout with a PayPal sandbox buyer.
+- [ ] Confirm versioned terms and withdrawal acknowledgements are written to `paypal_checkout_consents` before PayPal opens.
+- [ ] Confirm approval alone does not grant entitlement.
+- [ ] Confirm verified ACTIVE state grants the exact selected tier.
+- [ ] Confirm duplicate webhook delivery is idempotent.
+- [ ] Confirm first failed payment applies only the intended grace state.
+- [ ] Confirm the failure threshold removes paid access.
+- [ ] Confirm successful recovery restores the correct access.
+- [ ] Confirm cancellation retains access only through a verified remaining paid period.
+- [ ] Confirm expiry removes paid access.
+- [ ] Confirm refund and reversal place entitlement on hold or remove it.
+- [ ] Run reconciliation and confirm no unexplained divergence.
+- [ ] Complete or abort the rehearsal and confirm checkout is disabled again.
+
+## Commercial and legal acceptance
+
+Live checkout is blocked until all of the following are verified and published:
+
+- [ ] Legal name of the operator or registered business.
+- [ ] Geographical postal address.
+- [ ] Business registration details where applicable.
+- [ ] VAT identification or verified VAT-status wording where applicable.
+- [ ] Legally responsible publisher identity where required.
+- [ ] Hosting notice details required by the applicable jurisdiction.
+- [ ] Consumer-mediation service and contact route.
+- [ ] Final tax-inclusive price presentation and billing descriptor.
+- [x] Versioned Membership Terms route.
+- [x] Versioned Cancellation and Withdrawal route.
+- [x] Explicit recurring-payment acknowledgement.
+- [x] Explicit immediate digital-service request.
+- [x] Durable server-side consent record tied to the checkout intent.
+- [x] `COMMERCIAL_LEGAL_READY=false` committed as the default.
+- [ ] `COMMERCIAL_LEGAL_CONFIRMATION` installed as a Cloudflare secret only after verification.
+- [ ] Explicit owner approval recorded to change `COMMERCIAL_LEGAL_READY` to true.
 
 ## Activation boundaries
 
-- PAYPAL_ENVIRONMENT remains sandbox until live launch approval.
-- PAYPAL_PRODUCTION_ENABLED remains false until Phase 20.
-- PayPal D1 checkout switches remain disabled until the relevant activation phase.
-- EMAIL_AUTOMATION_ENABLED is true under the recorded Phase 11 approval and must fail closed if authenticated delivery, consent, preferences, source content, quarantine or unsubscribe controls are unavailable.
-- Brevo and PayPal secrets must never be committed to GitHub.
+- `PAYPAL_ENVIRONMENT` remains `sandbox` until controlled live launch approval.
+- `PAYPAL_PRODUCTION_ENABLED` remains false until Phase 20.
+- `COMMERCIAL_LEGAL_READY` remains false until Phase 18 is complete.
+- `COMMERCIAL_LEGAL_CONFIRMATION` must never be committed to GitHub.
+- PayPal D1 checkout switches remain disabled except during the controlled sandbox rehearsal or explicit live activation.
+- `EMAIL_AUTOMATION_ENABLED` remains false until Phase 11 acceptance is recorded.
+- `EMAIL_TRANSACTIONAL_ENABLED` may remain true while authenticated account delivery is healthy.
 - Every marketing email must contain working personalised preference and unsubscribe routes.
 - Every PayPal webhook must be verified before changing entitlement state.
+- PayPal checkout must fail closed if current terms consent cannot be persisted.
 
 ## Change control
 
-This document is the canonical order of work. New work may add acceptance checks, but phases must not be skipped or reordered without an explicit recorded decision.
+This document is the canonical order of work. Phases may gain stronger checks, but they must not be skipped or reordered without an explicit recorded decision. Live charging and marketing automation require separate approvals.

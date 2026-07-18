@@ -10,7 +10,7 @@ if (!fs.existsSync(tomlPath)) throw new Error('wrangler.toml is missing');
 if (!fs.existsSync(jsoncPath)) throw new Error('wrangler.jsonc is missing');
 
 const lockedVars = [
-  ['EMAIL_AUTOMATION_ENABLED', 'true'],
+  ['EMAIL_AUTOMATION_ENABLED', 'false'],
   ['EMAIL_TRANSACTIONAL_ENABLED', 'true'],
   ['BREVO_DOMAIN_AUTHENTICATED', 'true'],
   ['EMAIL_RETRY_QUARANTINE_BEFORE', '2026-07-18T00:00:00.000Z'],
@@ -101,12 +101,12 @@ fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify({
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  phase: 3,
+  phase: 1,
   changed,
   sourcesOfTruth: ['wrangler.jsonc', 'wrangler.toml'],
   activePrecedenceProtected: true,
   keepVars: false,
-  emailAutomationEnabled: true,
+  emailAutomationEnabled: false,
   emailTransactionalEnabled: true,
   brevoDomainAuthenticated: true,
   retryQuarantineBefore: '2026-07-18T00:00:00.000Z',
@@ -116,7 +116,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   paypalEnvironment: 'sandbox',
   paypalProductionEnabled: false,
   failures,
-  boundary: 'Both Wrangler formats are locked after every generator. Authenticated transactional email and guarded daily and weekly campaigns are active; retry records predating activation are automatically quarantined before any scheduled campaign sends.'
+  boundary: 'Both Wrangler formats are locked after every generator. Passwordless and transactional account email may operate, but scheduled and bulk email automation remains disabled until separately authorized. PayPal remains sandbox-only with live charging disabled.'
 }, null, 2)}\n`);
 if (failures.length) throw new Error(`Cloudflare configuration enforcement failed: ${failures.join('; ')}`);
-console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: transactional email and guarded marketing automation on, legacy retries quarantined by cutoff, PayPal sandbox.`);
+console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: transactional account email on, automated campaigns off, legacy retries quarantined, PayPal sandbox.`);

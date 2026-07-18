@@ -78,10 +78,11 @@ runRequired('scripts/repair-stale-generated-brief-links.js');
 // Final mission owners must run after every legacy page and Worker generator.
 runRequired('scripts/patch-deep-email-automation.js');
 runRequired('scripts/patch-persistent-signal-board.js');
+runRequired('scripts/normalize-signal-board-status-ids.js');
 
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
-console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); deep email and persistent Signal Board were reapplied as final postbuild owners before public audits.`);
+console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); deep email, persistent Signal Board and unique status IDs were reapplied as final postbuild owners before public audits.`);

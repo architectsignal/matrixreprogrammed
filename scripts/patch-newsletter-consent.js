@@ -122,7 +122,7 @@ const client = `(function(){
     const explicitWeekly=truthy(form.dataset.defaultWeekly);
     const explicitRelease=truthy(form.dataset.defaultRelease);
     let daily=explicitDaily||/daily control brief|daily intelligence|daily brief|daily updates/.test(hay);
-    let weekly=explicitWeekly||/weekly signal|weekly file|weekly digest|signal drop|\\bweekly\\b|\\bdigest\\b/.test(hay);
+    let weekly=explicitWeekly||/weekly signal|weekly file|weekly digest|signal drop|\bweekly\b|\bdigest\b/.test(hay);
     let release=explicitRelease||/release notice|release notices|public-source drops|file drop|book release/.test(hay);
     if(!daily&&!weekly&&!release){
       if(/download|get the file|lead magnet|black file/.test(hay))release=true;
@@ -253,3 +253,10 @@ runRequired('Final mission surface reconciliation', 'scripts/patch-final-mission
 runRequired('AI speculative conclusions integrity pass', 'scripts/patch-ai-speculative-conclusions.js');
 runRequired('Living intelligence regression test', 'scripts/living-intelligence-regression-test.js');
 runRequired('Final Search V3 deployment compaction', 'scripts/build-search-v3-runtime.js');
+
+// Force the graph projector to execute in this exact process after every graph/search
+// test and immediately before build-cloudflare-output.js walks the source tree.
+const graphModule = require.resolve('./patch-cloudflare-oversized-graph-contract.js');
+delete require.cache[graphModule];
+require(graphModule);
+console.log('Final Cloudflare self-heal complete: consent runtime, structured brief, mission surfaces, Search V3 and compact graph projection are staged.');

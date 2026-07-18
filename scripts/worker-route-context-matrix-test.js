@@ -29,21 +29,22 @@ function extractRoutes(file) {
 }
 function classify(route) {
   const publicExact = new Set([
-    '/intro-voice', '/forum-health', '/forum-feed', '/forum-posts.json', '/forum-posts.md',
+    '/intro-voice', '/forum', '/forum.html', '/forum-health', '/forum-feed', '/forum-posts.json', '/forum-posts.md',
     '/downloads/forum-posts.json', '/downloads/forum-posts.md', '/submit-forum-post', '/report-forum-post',
-    '/track-event', '/.netlify/functions/track-event', '/newsletter-signup', '/subscribe-newsletter',
+    '/track-event', '/.netlify/functions/track-event', '/newsletter', '/newsletter.html', '/newsletter-signup', '/subscribe-newsletter',
     '/api/membership/signup', '/api/auth/request-link', '/api/auth/verify', '/api/auth/logout',
     '/api/auth/health', '/newsletter-health', '/api/membership/health', '/api/paypal/health',
     '/unsubscribe-newsletter'
   ]);
-  if (publicExact.has(route) || /^\/forum-(?:feed|submit|report)-/.test(route)) return { boundary: 'public', reason: 'Public intake, health, read-only feed or safely idempotent account boundary.' };
+  if (route === '/api/paypal/bootstrap-health') return { boundary: 'public', reason: 'Read-only sandbox bootstrap health. The implementation is pinned to PayPal sandbox, requires the sandbox switch, and reports live charging disabled.' };
+  if (publicExact.has(route) || /^\/forum-(?:feed|submit|report)-/.test(route)) return { boundary: 'public', reason: 'Public page, intake, health, read-only feed or safely idempotent account boundary.' };
   if (/^\/api\/(?:paypal\/webhook|email\/provider-webhook)$/.test(route)) return { boundary: 'signed-provider', reason: 'Provider signature and event idempotency are required; membership role is irrelevant.' };
   if (/^\/api\/email\/(?:verify|unsubscribe|resubscribe)$/.test(route)) return { boundary: 'signed-token', reason: 'One-time scoped action token is required.' };
   if (/^\/api\/(?:admin|email\/admin|paypal\/(?:admin|sandbox|bootstrap))\//.test(route)) return { boundary: 'administrator', reason: 'Administrative token or administrator member role is required.' };
   if (new Set(['/newsletter-subscribers.json','/api/admin/members','/newsletter-send-weekly','/send-weekly-newsletter']).has(route)) return { boundary: 'administrator', reason: 'Subscriber export or campaign dispatch is administrative.' };
   if (/^\/api\/tools\/(?:config|jobs)(?:\/|$)/.test(route)) return { boundary: 'tool-tiered', reason: 'Authenticated route; the selected tool then enforces Registered or Intelligence tier and verified-self scope.' };
   if (/^\/api\/(?:member|market|email\/(?:preferences|subscriber)|paypal\/(?:config|checkout-intent|subscription))(?:\/|$)/.test(route)) return { boundary: 'registered', reason: 'Authenticated active member session is required; paid entitlements are checked where applicable.' };
-  if (/^\/api\/paypal\/donation\/(?:config|order)$/.test(route)) return { boundary: 'public', reason: 'Voluntary support configuration/order route does not grant membership entitlements.' };
+  if (/^\/api\/paypal\/donation\/(?:config|order|capture)$/.test(route)) return { boundary: 'public', reason: 'Voluntary support route. It creates or captures a donation but never grants membership entitlements.' };
   if (/^\/api\/email\/(?:health|public)/.test(route)) return { boundary: 'public', reason: 'Public email-system status or safe public intake.' };
   return null;
 }

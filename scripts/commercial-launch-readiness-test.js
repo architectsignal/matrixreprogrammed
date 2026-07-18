@@ -23,6 +23,7 @@ for (const rel of [
   'scripts/patch-commercial-launch-readiness.js',
   'scripts/commercial-launch-readiness-test.js',
   'src/worker-paypal-subscriptions.js',
+  'src/worker-membership-contract-email.js',
   'paypal-membership.js'
 ]) run(['--check', rel], `Syntax check ${rel}`);
 
@@ -33,8 +34,10 @@ const withdrawal = read('cancellation-withdrawal.html');
 const legal = read('legal-notice.html');
 const client = read('paypal-membership.js');
 const worker = read('src/worker-paypal-subscriptions.js');
+const contractEmail = read('src/worker-membership-contract-email.js');
 const migration = read('migrations/phase8_paypal_sandbox_bootstrap.sql');
 const wrangler = read('wrangler.toml');
+const pkg = JSON.parse(read('package.json'));
 const adminHtml = read('admin-payment-dashboard.html');
 const adminJs = read('admin-payment-dashboard.js');
 
@@ -55,8 +58,11 @@ check('legal-fail-closed', legal.includes('data-commercial-legal-ready="false"')
 for (const marker of ['termsAccepted','recurringPaymentAcknowledged','immediateServiceRequested','withdrawalNoticeAcknowledged','termsVersion','withdrawalNoticeVersion','consentRecorded']) {
   check(`client-consent:${marker}`, client.includes(marker), `paypal-membership.js missing ${marker}`);
 }
-for (const marker of ['commercialTermsVersion','commercialLegalReady','paypal_checkout_consents','paypal.checkout.consent_recorded','protected commercial legal confirmation']) {
+for (const marker of ['commercialTermsVersion','commercialLegalReady','contractConfirmationReady','paypal_checkout_consents','paypal.checkout.consent_recorded','paypal.membership_contract_confirmation','protected commercial legal confirmation','durable membership contract confirmation']) {
   check(`worker-commercial:${marker}`, worker.includes(marker), `PayPal Worker missing ${marker}`);
+}
+for (const marker of ['membership_contract_confirmation','Recurring price:','Immediate digital service requested: yes','Membership Terms','Cancellation & Withdrawal','processOutbox','transactionalMembershipEmailReady']) {
+  check(`contract-email:${marker}`, contractEmail.includes(marker), `Membership contract email missing ${marker}`);
 }
 for (const marker of ['CREATE TABLE IF NOT EXISTS paypal_checkout_consents','recurring_payment_acknowledged','immediate_service_requested','withdrawal_notice_acknowledged','paypal_checkout_consent_summary']) {
   check(`migration-consent:${marker}`, migration.includes(marker), `Consent migration missing ${marker}`);
@@ -64,6 +70,8 @@ for (const marker of ['CREATE TABLE IF NOT EXISTS paypal_checkout_consents','rec
 check('commercial-default-disabled', wrangler.includes('COMMERCIAL_LEGAL_READY = "false"'), 'COMMERCIAL_LEGAL_READY must default to false');
 check('live-paypal-default-disabled', wrangler.includes('PAYPAL_PRODUCTION_ENABLED = "false"'), 'PAYPAL_PRODUCTION_ENABLED must remain false');
 check('marketing-automation-default-disabled', wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"'), 'EMAIL_AUTOMATION_ENABLED must remain false');
+check('transactional-email-enabled', wrangler.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"'), 'Transactional account and contract email must remain enabled');
+check('commercial-prebuild', ['patch-membership-tiers.js','patch-commercial-paypal-guard.js','patch-commercial-launch-readiness.js'].every(marker=>String(pkg.scripts?.prebuild||'').includes(marker)), 'Commercial patches are not in npm prebuild');
 check('admin-commercial-status', adminHtml.includes('payment-commercial-legal') && adminJs.includes('commercialLegalReady'), 'Payment administration does not display commercial readiness');
 
 report.ok = report.failures.length === 0;
@@ -73,4 +81,4 @@ if (!report.ok) {
   console.error(JSON.stringify(report, null, 2));
   process.exit(1);
 }
-console.log(`Commercial launch readiness passed: ${report.checks.length} checks; live PayPal and marketing automation remain disabled.`);
+console.log(`Commercial launch readiness passed: ${report.checks.length} checks; durable contract confirmation is wired while live PayPal and marketing automation remain disabled.`);

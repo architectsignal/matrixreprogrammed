@@ -35,7 +35,7 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/5.3',
+      'user-agent': 'MatrixProductionVerifier/5.4',
       ...(options.headers || {})
     }
   });
@@ -43,7 +43,7 @@ async function fetchText(route, options = {}) {
 }
 function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.3' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.4' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
@@ -66,20 +66,32 @@ async function forumHealth() {
   return { response, data: parseJson(response.text) };
 }
 async function verifyForumPersistence() {
-  const before = await forumHealth();
-  const beforeCount = Number(before.data?.storedPostCount);
-  const healthReady = before.response.ok
-    && before.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
-    && before.data?.backend === 'src/worker-forum-persistence.js'
-    && before.data?.persistent === true
-    && before.data?.d1Connected === true
-    && String(before.data?.authoritativeStorage || '').includes('D1')
-    && Number.isFinite(beforeCount);
-  if (!healthReady) return { ok: false, stage: 'health-before', beforeStatus: before.response.status, beforeHeaders: before.response.headers, before: before.data };
+  const health = await forumHealth();
+  const storedPostCount = Number(health.data?.storedPostCount);
+  const healthReady = health.response.ok
+    && health.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+    && health.data?.backend === 'src/worker-forum-persistence.js'
+    && health.data?.persistent === true
+    && health.data?.d1Connected === true
+    && String(health.data?.authoritativeStorage || '').includes('D1')
+    && Number.isFinite(storedPostCount);
+  if (!healthReady) return { ok: false, stage: 'health', healthStatus: health.response.status, healthHeaders: health.response.headers, health: health.data };
+
+  const feedResponse = await fetchText('/forum-feed-main');
+  const feed = parseJson(feedResponse.text);
+  const readOk = feedResponse.ok
+    && feedResponse.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+    && feed?.ok === true
+    && feed?.persistent === true
+    && String(feed?.authoritativeStorage || '').includes('D1')
+    && feed?.board === 'main'
+    && Array.isArray(feed?.posts)
+    && Number.isFinite(Number(feed?.count));
+  if (!readOk) return { ok: false, stage: 'd1-read', storedPostCount, feedStatus: feedResponse.status, feedHeaders: feedResponse.headers, feed };
 
   const probeBody = {
-    title: `Health check ${expectedSha.slice(0, 12)}`,
-    message: 'Automated deployment persistence health check. Hidden from public feeds by the synthetic-record filter.',
+    title: `Authentication boundary check ${expectedSha.slice(0, 12)}`,
+    message: 'This anonymous verifier request must be rejected before any forum write occurs.',
     category: 'health check',
     name: 'Matrix System Check'
   };
@@ -89,24 +101,32 @@ async function verifyForumPersistence() {
     body: JSON.stringify(probeBody)
   });
   const submission = parseJson(submitted.text);
-  const writeOk = submitted.ok
+  const authGateOk = submitted.status === 401
     && submitted.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
-    && submission?.saved === true
+    && submission?.ok === false
+    && submission?.authenticated === false
+    && submission?.saved === false
     && submission?.persistent === true
-    && String(submission?.storage || '').includes('D1')
-    && Boolean(submission?.post?.id);
-  if (!writeOk) return { ok: false, stage: 'write', beforeCount, submitStatus: submitted.status, submitHeaders: submitted.headers, submission };
+    && String(submission?.error || '').includes('verified free member account');
+  if (!authGateOk) return { ok: false, stage: 'verified-member-write-gate', storedPostCount, feedCount: Number(feed.count), submitStatus: submitted.status, submitHeaders: submitted.headers, submission };
 
-  let after = null;
-  for (let check = 1; check <= 5; check++) {
-    after = await forumHealth();
-    const afterCount = Number(after.data?.storedPostCount);
-    if (after.response.ok && after.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1' && Number.isFinite(afterCount) && afterCount >= beforeCount + 1) {
-      return { ok: true, stage: 'd1-write-read', beforeCount, afterCount, postId: submission.post.id, storage: submission.storage, publicFeedVisibility: 'hidden synthetic health check' };
-    }
-    await sleep(500);
-  }
-  return { ok: false, stage: 'read-after-write', beforeCount, postId: submission.post.id, afterStatus: after?.response?.status, afterHeaders: after?.response?.headers, after: after?.data };
+  const after = await forumHealth();
+  const afterCount = Number(after.data?.storedPostCount);
+  const noAnonymousMutation = after.response.ok
+    && after.response.headers['x-matrix-origin'] === 'cloudflare-worker-forum-d1'
+    && Number.isFinite(afterCount)
+    && afterCount === storedPostCount;
+  return {
+    ok: noAnonymousMutation,
+    stage: noAnonymousMutation ? 'd1-read-and-verified-member-write-gate' : 'anonymous-mutation-detected',
+    storedPostCount,
+    afterCount,
+    feedCount: Number(feed.count),
+    postingAccess: 'verified-free-member-session',
+    anonymousWriteStatus: submitted.status,
+    anonymousWriteRejected: authGateOk,
+    authoritativeStorage: feed.authoritativeStorage
+  };
 }
 async function verifyPayPalBoundary() {
   const response = await fetchText('/api/paypal/config');
@@ -264,7 +284,7 @@ async function verifyOnce() {
     if (result.ok) {
       const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
       const paypalMode = result.bootstrapBoundary?.ready ? 'autonomous sandbox plans ready' : 'sandbox bootstrap pending with checkout disabled';
-      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, Phase 1 email automation safety, and D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
+      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, Phase 1 email automation safety, and authenticated D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

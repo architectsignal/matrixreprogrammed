@@ -29,39 +29,18 @@ if (!after.includes(shellMarker)) {
 }
 
 const callCandidates = [
-  {
-    variable: 'indexPath',
-    anchor: "const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');"
-  },
-  {
-    variable: 'homepagePath',
-    anchor: "const homepagePath = path.join(root, 'index.html');"
-  },
-  {
-    variable: 'indexPath',
-    anchor: "const indexPath = file('index.html');"
-  },
-  {
-    variable: 'homepagePath',
-    anchor: "const homepagePath=path.join(root,'index.html');"
-  }
+  { variable: 'indexPath', anchor: "const indexPath=file('index.html'); if(!fs.existsSync(indexPath)) throw new Error('index.html is required');" },
+  { variable: 'homepagePath', anchor: "const homepagePath = path.join(root, 'index.html');" },
+  { variable: 'indexPath', anchor: "const indexPath = file('index.html');" },
+  { variable: 'homepagePath', anchor: "const homepagePath=path.join(root,'index.html');" }
 ];
 
 let ensureCall = '';
 for (const candidate of callCandidates) {
   const call = `ensureHomepageShell(${candidate.variable});`;
-  if (after.includes(call)) {
-    ensureCall = call;
-    break;
-  }
-  if (after.includes(candidate.anchor)) {
-    after = after.replace(candidate.anchor, `${candidate.anchor}\n${call}`);
-    ensureCall = call;
-    changed = true;
-    break;
-  }
+  if (after.includes(call)) { ensureCall = call; break; }
+  if (after.includes(candidate.anchor)) { after = after.replace(candidate.anchor, `${candidate.anchor}\n${call}`); ensureCall = call; changed = true; break; }
 }
-
 if (!ensureCall) {
   const declaration = after.match(/const\s+([A-Za-z_$][\w$]*)\s*=\s*(?:file\(\s*['"]index\.html['"]\s*\)|path\.join\(\s*root\s*,\s*['"]index\.html['"]\s*\))\s*;[^\n]*/);
   if (!declaration) throw new Error('Homepage command builder index path declaration missing');
@@ -69,10 +48,7 @@ if (!ensureCall) {
   after = after.replace(declaration[0], `${declaration[0]}\n${ensureCall}`);
   changed = true;
 }
-
-for (const marker of [shellMarker, ensureCall, '<main id="main-content" class="wrap"></main>']) {
-  if (!after.includes(marker)) throw new Error(`Homepage command builder shell marker missing: ${marker}`);
-}
+for (const marker of [shellMarker, ensureCall, '<main id="main-content" class="wrap"></main>']) if (!after.includes(marker)) throw new Error(`Homepage command builder shell marker missing: ${marker}`);
 
 if (changed) fs.writeFileSync(builderPath, after);
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -96,7 +72,10 @@ require('./patch-email-automation-guard.js');
 require('./repair-email-campaign-source-anchor.js');
 require('./patch-email-campaign-quality.js');
 require('./patch-membership-signup-server-fallback.js');
+// Legacy email repair modules above may restore the shallow lifecycle. The authorised
+// deep briefing lifecycle is the final owner before operational certification.
+require('./patch-deep-email-automation.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
 require('./repair-deep-audit-public-defects.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; stable audit v2, current deploy mission, €1–€5,000 voluntary support, authenticated transactional email, guarded daily and weekly campaigns, membership signup fallback, operational audit, safe production receipt and public repairs applied.`);
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; deep consent-controlled briefing email was reapplied as the final lifecycle owner before Brevo certification.`);

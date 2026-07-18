@@ -170,7 +170,7 @@ jobs:
           if [ -f downloads/recovery-d1-rehearsal.json ]; then
             echo "" >> "$GITHUB_STEP_SUMMARY"
             echo "## D1 rehearsal" >> "$GITHUB_STEP_SUMMARY"
-            python3 -c 'import json; r=json.load(open("downloads/recovery-d1-rehearsal.json")); print("- ok: {}".format(r["ok"])); print("- checks: {}/{}".format(r["passed"],r["tests"])); print("- migrations: {}".format(r["migrationCount"]))' >> "$GITHUB_STEP_SUMMARY"
+            python3 -c 'import json; r=json.load(open("downloads/recovery-d1-rehearsal.json")); total=len(r["checks"]); passed=sum(bool(v) for v in r["checks"].values()); print("- ok: {}".format(r["ok"])); print("- checks: {}/{}".format(passed,total)); print("- migrations: {}".format(len(r["migrations"])))' >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Upload complete inventory and diagnostics

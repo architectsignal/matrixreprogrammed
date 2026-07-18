@@ -25,16 +25,51 @@ function patchForumJs(){
   s = s.replace(/async function syncPendingLocalPosts\([\s\S]*?\n  \}/g, '');
   s = s.replace(/localOnly/g, 'persistentOnly');
   s = s.replace(/not live yet/g, 'persistent only');
-  s = s.replace(/Saved only on this device[\s\S]*?reachable\./g, 'Not saved. Persistent backend unavailable.');
-  if (!s.includes('LOCAL_POSTS_KEY')) s = s.replace("const PASS_KEY = 'matrix_signal_pass_unlocked_v1';", "const PASS_KEY = 'matrix_signal_pass_unlocked_v1';\n  const LOCAL_POSTS_KEY = 'cloudflare_kv_only_no_browser_post_store';");
-  const oldOne = 'Signal Board is ' + 'syncing';
-  const oldTwo = 'pending ' + 'sync';
-  s = s.split(oldOne).join('Cloudflare KV feed refreshing');
-  s = s.split(oldTwo).join('Cloudflare KV queue disabled');
+  s = s.replace(/Saved only on this device[\s\S]*?reachable\./g, 'Not saved. Persistent Cloudflare D1 backend unavailable.');
+
+  if (/const LOCAL_POSTS_KEY\s*=/.test(s)) {
+    s = s.replace(/const LOCAL_POSTS_KEY\s*=\s*['"][^'"]*['"]\s*;/, "const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';");
+  } else {
+    s = s.replace("const PASS_KEY = 'matrix_signal_pass_unlocked_v1';", "const PASS_KEY = 'matrix_signal_pass_unlocked_v1';\n  const LOCAL_POSTS_KEY = 'd1_only_no_browser_post_store';");
+  }
+
+  s = s.split('Signal Board is syncing').join('Cloudflare D1 feed refreshing');
+  s = s.split('pending sync').join('Cloudflare D1 write pending');
+  s = s.replace(/Cloudflare KV/g, 'Cloudflare D1');
   s = s.replace(/\n\s*const SYNC_STATUS_COPY[\s\S]*?;\n/g, '\n');
   s = s.replace(/\n\s*const PENDING_SYNC_COPY[\s\S]*?;\n/g, '\n');
-  s = s.replace(/function loadFallback\(message\)\{ return offlineNotice\([\s\S]*?\); \}/g, "function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }");
-  if (!s.includes('loadFallback')) s = s.replace(/function offlineNotice\(message\)\{/, "function loadFallback(message){ return offlineNotice(message || 'Cloudflare KV persistent forum feed unavailable'); }\n  function offlineNotice(message){");
+
+  const loadFallback = "function loadFallback(message){ return offlineNotice(message || 'Cloudflare D1 persistent forum feed unavailable'); }";
+  if (/function loadFallback\(message\)\{[\s\S]*?\}/.test(s)) {
+    s = s.replace(/function loadFallback\(message\)\{[\s\S]*?\}/, loadFallback);
+  }
+
+  const offlineNotice = `function offlineNotice(message){
+    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
+  }`;
+  const offlinePattern = /function offlineNotice\(message\)\{[\s\S]*?\n  \}/;
+  if (offlinePattern.test(s)) {
+    s = s.replace(offlinePattern, offlineNotice);
+  } else if (s.includes('async function loadFeed(){')) {
+    s = s.replace('async function loadFeed(){', `${offlineNotice}\n  async function loadFeed(){`);
+  } else {
+    throw new Error('forum.js is missing the loadFeed anchor required for the D1 offline notice');
+  }
+
+  if (!s.includes('loadFallback')) {
+    s = s.replace(offlineNotice, `${loadFallback}\n  ${offlineNotice}`);
+  }
+
+  const markers = [
+    'Posts are not saved in this browser',
+    'only persistent Cloudflare D1 posts',
+    'Cloudflare D1 persistent forum feed unavailable',
+    'Signal posted live and saved persistently',
+    'persistent !== true'
+  ];
+  for (const marker of markers) if (!s.includes(marker)) throw new Error(`forum.js D1 persistence marker missing after repair: ${marker}`);
+  for (const route of requiredRoutes) if (!s.includes(route)) throw new Error(`forum.js hard board route missing after repair: ${route}`);
+
   if (s !== before) { write('forum.js', s); changed.push('forum.js'); }
 }
 
@@ -75,11 +110,11 @@ function patchWorker(){
 
 function patchSeed(){
   if (!exists('data/forum-seed.json')) return;
-  const text = JSON.stringify({ updated: new Date().toISOString().slice(0,10), mode: 'public-signal-seed', notice: 'Public Signal Board starter post. Live posting requires Cloudflare KV persistence.', posts: [{ id: 'seed-forum-public-source-drop', board: 'main', category: 'Source Drop', name: 'Matrix Reprogrammed', title: 'Post a source, not a rumour', body: 'Drop public links, documents, court records, archive pages, official releases, useful questions, or reader notes. Keep claims tied to sources and separate evidence from speculation.', sourceUrl: 'evidence-vault.html', createdAt: '2026-06-28T00:00:00Z' }]}, null, 2);
+  const text = JSON.stringify({ updated: new Date().toISOString().slice(0,10), mode: 'public-signal-seed', notice: 'Public Signal Board starter post. Live posting requires authoritative Cloudflare D1 persistence.', posts: [{ id: 'seed-forum-public-source-drop', board: 'main', category: 'Source Drop', name: 'Matrix Reprogrammed', title: 'Post a source, not a rumour', body: 'Drop public links, documents, court records, archive pages, official releases, useful questions, or reader notes. Keep claims tied to sources and separate evidence from speculation.', sourceUrl: 'evidence-vault.html', createdAt: '2026-06-28T00:00:00Z' }]}, null, 2);
   if (read('data/forum-seed.json') !== text) { write('data/forum-seed.json', text); changed.push('data/forum-seed.json'); }
 }
 
 patchForumJs();
 patchWorker();
 patchSeed();
-console.log(`Hard board split persistence guard applied: ${changed.length ? changed.join(', ') : 'already persistent'}`);
+console.log(`Hard board split D1 persistence guard applied: ${changed.length ? changed.join(', ') : 'already persistent'}`);

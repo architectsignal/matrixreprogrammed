@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const targets = [
@@ -7,11 +8,19 @@ const targets = [
   path.join(root, 'membership.html')
 ];
 const newsletterPath = path.join(root, 'newsletter.js');
+const newsletterRepairPath = path.join(root, 'scripts', 'repair-newsletter-preference-runtime.js');
 const reportPath = path.join(root, 'downloads', 'membership-brief-preferences-patch.json');
 const sitePath = path.join(root, '_site');
 const changed = [];
 const synchronized = [];
 const failures = [];
+const newsletterMarkers = [
+  'public_daily_brief:preferences.daily',
+  'public_weekly_digest:preferences.weekly',
+  'release_notices:preferences.release',
+  'Select at least one briefing or release-notice preference.',
+  "wordingVersion:'newsletter-explicit-consent-v3'"
+];
 
 const preferenceBlock = `          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
           <div class="newsletter-preferences" role="group" aria-labelledby="free-brief-preferences-label">
@@ -74,19 +83,36 @@ function patchMembership(file) {
   }
 }
 
+function newsletterMissingMarkers() {
+  if (!fs.existsSync(newsletterPath)) return newsletterMarkers.slice();
+  const newsletter = fs.readFileSync(newsletterPath, 'utf8');
+  return newsletterMarkers.filter(marker => !newsletter.includes(marker));
+}
+
+function repairNewsletterRuntime() {
+  if (!fs.existsSync(newsletterRepairPath)) {
+    failures.push('missing scripts/repair-newsletter-preference-runtime.js');
+    return;
+  }
+  const result = spawnSync(process.execPath, [newsletterRepairPath], {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: 'pipe',
+    env: process.env
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) failures.push(`newsletter preference runtime repair failed with status ${result.status || 1}`);
+}
+
 targets.forEach(patchMembership);
 
-if (!fs.existsSync(newsletterPath)) failures.push('missing newsletter.js');
-else {
-  const newsletter = fs.readFileSync(newsletterPath, 'utf8');
-  for (const marker of [
-    'public_daily_brief:preferences.daily',
-    'public_weekly_digest:preferences.weekly',
-    'release_notices:preferences.release',
-    'Select at least one briefing or release-notice preference.',
-    "wordingVersion:'newsletter-explicit-consent-v3'"
-  ]) if (!newsletter.includes(marker)) failures.push(`newsletter.js missing ${marker}`);
+let missingNewsletterMarkers = newsletterMissingMarkers();
+if (missingNewsletterMarkers.length) {
+  repairNewsletterRuntime();
+  missingNewsletterMarkers = newsletterMissingMarkers();
 }
+for (const marker of missingNewsletterMarkers) failures.push(`newsletter.js missing ${marker}`);
 
 if (!failures.length && fs.existsSync(sitePath) && fs.statSync(sitePath).isDirectory()) {
   for (const relative of ['membership.html', 'newsletter.js']) {
@@ -108,6 +134,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   changed,
   synchronized,
+  newsletterRuntimeSelfHeal: true,
   defaultPreferences: {
     publicDailyBrief: true,
     releaseNotices: true,
@@ -122,4 +149,4 @@ const report = {
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (failures.length) throw new Error(`Membership brief preference patch failed: ${failures.join('; ')}`);
-console.log(`Membership Daily Control Brief preference form patched: ${changed.length ? changed.join(', ') : 'already current'}.`);
+console.log(`Membership Daily Control Brief preference form patched: ${changed.length ? changed.join(', ') : 'already current'}; newsletter runtime verified.`);

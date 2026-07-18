@@ -55,36 +55,26 @@ for (const relationship of relationships) {
 const nodes = [...usedEntityIds].map(id => {
   const entity = entityById.get(id);
   const refs = Array.isArray(entity.evidenceRefs) ? entity.evidenceRefs : [];
-  const grades = unique(refs.map(ref => ref.evidenceGrade));
-  const statuses = unique(refs.map(ref => ref.factualStatus));
   const sources = unique(refs.map(ref => ref.sourceUrl));
+  // The browser projection keeps only fields used by the public map UI. Full
+  // identifiers, statuses, dates and evidence text remain in entity-registry.json.
   const evidenceRefs = refs.slice(0, 5).map(ref => ({
     sourceTitle: clean(ref.sourceTitle || ref.sourceId || 'Public source', 180),
     sourceUrl: String(ref.sourceUrl || ''),
-    publicationDate: validDate(ref.publicationDate),
-    retrievalDate: validDate(ref.retrievalDate),
     evidenceGrade: String(ref.evidenceGrade || 'C').toUpperCase(),
-    factualStatus: clean(ref.factualStatus || 'source-record', 80),
-    establishes: clean(ref.establishes || '', 420),
-    doesNotEstablish: clean(ref.doesNotEstablish || entityData.evidenceBoundary || '', 420)
+    factualStatus: clean(ref.factualStatus || 'source-record', 80)
   }));
   const connections = Number(degree.get(id) || 0);
   return { data: {
     id,
-    rawId: id,
-    elementType: 'entity',
     entityType: entity.type || 'Entity',
-    followTheMoneySchema: entity.followTheMoneySchema || entity.type || 'Entity',
     label: clean(entity.name || id, 130),
     aliases: (entity.aliases || []).map(value => clean(value, 120)).slice(0, 20),
     roles: (entity.roles || []).map(value => clean(value, 100)).slice(0, 20),
-    identifiers: (entity.identifiers || []).slice(0, 12),
     reviewStatus: entity.reviewStatus || 'unreviewed',
     firstSeen: validDate(entity.firstSeen),
     lastSeen: validDate(entity.lastSeen),
     grade: strongestGrade(refs),
-    grades,
-    factualStatuses: statuses,
     sourceCount: sources.length,
     connections,
     weight: Math.min(94, 24 + Math.sqrt(Math.max(1, connections)) * 9),
@@ -105,13 +95,10 @@ const edges = relationships.map(item => {
   const core = !weakMention && grade !== 'D' && confidence >= 0.6;
   return { data: {
     id: item.id,
-    elementType: 'relationship',
     source: item.from,
     target: item.to,
     relationshipType: item.type,
     label: clean(item.label || item.type, 100),
-    sourceRecordId: item.sourceRecordId || '',
-    sourceId: item.sourceId || '',
     sourceTitle: clean(item.sourceTitle || item.sourceId || 'Public source', 200),
     sourceUrl: String(item.sourceUrl || ''),
     date: validDate(item.date || item.publicationDate || item.retrievalDate),
@@ -149,7 +136,7 @@ const graph = {
   title: 'Matrix Reprogrammed Public Evidence Network',
   description: 'A public Cytoscape.js map of structured entities and sourced relationships generated from the Phase 3 registries.',
   boundary: 'Every line represents a relationship stated by a cited source or observed by a disclosed extraction method. It does not convert association, mention, office, proximity, wealth, a photograph, a flight entry, an allegation or an unauthenticated leak into guilt.',
-  methodology: 'Only relationships with two registered endpoints and a public source URL enter the graph. Weak textual mentions are visually separated from substantive relationship types and remain explicitly unreviewed where applicable.',
+  methodology: 'Only relationships with two registered endpoints and a public source URL enter the graph. Weak textual mentions are visually separated from substantive relationship types and remain explicitly unreviewed where applicable. The browser JSON is a compact projection; complete fields remain in the linked entity and relationship registries and CSV.',
   totals: {
     entities: nodes.length,
     relationships: edges.length,
@@ -174,9 +161,8 @@ const graph = {
 };
 
 const graphPath = path.join(dataDir, 'evidence-network-map.json');
-// This file is loaded directly by the browser and must stay below Cloudflare's
-// single-asset ceiling. Minification removes formatting only; every entity,
-// relationship, evidence field and boundary remains available.
+// The browser map is compacted by removing duplicated fields that the UI never
+// reads. No sourced relationship is dropped; full registries and CSV remain public.
 fs.writeFileSync(graphPath, JSON.stringify(graph));
 const graphBytes = fs.statSync(graphPath).size;
 const cloudflareTargetBytes = 24 * 1024 * 1024;
@@ -206,6 +192,7 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
   serialization: 'compact-json',
+  projection: 'UI-used node and edge fields only; complete registries and CSV retained separately.',
   graphBytes,
   graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
   cloudflareTargetBytes,

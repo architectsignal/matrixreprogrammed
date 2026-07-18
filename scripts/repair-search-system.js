@@ -123,6 +123,7 @@ if (syntax.status !== 0) {
   process.exit(syntax.status || 1);
 }
 runRequired('verified-investigation-search', 'scripts/search-investigation-smoke-test.js');
+runRequired('prepared-search-v3-deploy-size', 'scripts/repair-search-v3-deploy-size.js');
 fs.mkdirSync(fp('downloads'), { recursive: true });
 write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 plus investigation evidence runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
 console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 investigation runtime guard passed.');

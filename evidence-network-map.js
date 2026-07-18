@@ -3,6 +3,8 @@
   const map = q('#evidence-network-map');
   const status = q('#map-status');
   const details = q('#map-details');
+  if (!map || !status || !details) return;
+
   const controls = {
     query: q('#map-search'),
     mode: q('#map-mode'),
@@ -18,15 +20,24 @@
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const human = value => String(value || '').replace(/([a-z])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
   const formatDate = value => { const date = new Date(value || 0); return Number.isFinite(date.getTime()) && date.getTime() > 0 ? date.toLocaleString() : 'Date unavailable'; };
+  const nextFrame = () => new Promise(resolve => requestAnimationFrame(() => resolve()));
+  const INITIAL_EDGE_LIMIT = 500;
+  const EDGE_LIMIT_STEP = 500;
+  const MAX_EDGE_LIMIT = 3000;
+  const layouts = ['grid', 'concentric', 'breadthfirst', 'circle', 'cose'];
+
   let graph;
+  let nodeById = new Map();
   let cy;
   let layoutIndex = 0;
   let pathStart = '';
   let pathEnd = '';
-  const layouts = ['cose', 'concentric', 'breadthfirst', 'circle', 'grid'];
+  let edgeLimit = INITIAL_EDGE_LIMIT;
+  let matchingEdgeCount = 0;
+  let loadMoreButton;
 
   function setStatus(text, kind = '') { status.textContent = text; status.className = `map-status ${kind}`.trim(); }
-  function addOption(select, value, label) { const option = document.createElement('option'); option.value = value; option.textContent = label; select.appendChild(option); }
+  function addOption(select, value, label) { if (!select) return; const option = document.createElement('option'); option.value = value; option.textContent = label; select.appendChild(option); }
   function populateFilters() {
     (graph.filters?.relationshipTypes || []).forEach(value => addOption(controls.relationship, value, `${human(value)} (${graph.countsByRelationship?.[value] || 0})`));
     (graph.filters?.grades || []).forEach(value => addOption(controls.grade, value, `Grade ${value}`));
@@ -36,32 +47,32 @@
   }
   function readUrl() {
     const params = new URLSearchParams(location.search);
-    controls.query.value = params.get('q') || '';
-    controls.mode.value = params.get('mode') || 'core';
-    controls.relationship.value = params.get('relationship') || '';
-    controls.grade.value = params.get('grade') || '';
-    controls.factualStatus.value = params.get('status') || '';
-    controls.entityType.value = params.get('entity') || '';
-    controls.review.value = params.get('review') || '';
-    controls.confidence.value = params.get('confidence') || '0';
-    controls.from.value = params.get('from') || '';
-    controls.to.value = params.get('to') || '';
+    if (controls.query) controls.query.value = params.get('q') || '';
+    if (controls.mode) controls.mode.value = params.get('mode') || 'core';
+    if (controls.relationship) controls.relationship.value = params.get('relationship') || '';
+    if (controls.grade) controls.grade.value = params.get('grade') || '';
+    if (controls.factualStatus) controls.factualStatus.value = params.get('status') || '';
+    if (controls.entityType) controls.entityType.value = params.get('entity') || '';
+    if (controls.review) controls.review.value = params.get('review') || '';
+    if (controls.confidence) controls.confidence.value = params.get('confidence') || '0';
+    if (controls.from) controls.from.value = params.get('from') || '';
+    if (controls.to) controls.to.value = params.get('to') || '';
     pathStart = params.get('pathStart') || '';
     pathEnd = params.get('pathEnd') || '';
   }
   function writeUrl() {
     const params = new URLSearchParams();
     const values = {
-      q: controls.query.value.trim(), mode: controls.mode.value, relationship: controls.relationship.value,
-      grade: controls.grade.value, status: controls.factualStatus.value, entity: controls.entityType.value,
-      review: controls.review.value, confidence: controls.confidence.value, from: controls.from.value, to: controls.to.value,
+      q: controls.query?.value.trim() || '', mode: controls.mode?.value || 'core', relationship: controls.relationship?.value || '',
+      grade: controls.grade?.value || '', status: controls.factualStatus?.value || '', entity: controls.entityType?.value || '',
+      review: controls.review?.value || '', confidence: controls.confidence?.value || '0', from: controls.from?.value || '', to: controls.to?.value || '',
       pathStart, pathEnd
     };
     for (const [key, value] of Object.entries(values)) if (value && !(key === 'mode' && value === 'core') && !(key === 'confidence' && value === '0')) params.set(key, value);
     history.replaceState(null, '', `${location.pathname}${params.toString() ? `?${params}` : ''}${location.hash}`);
   }
   function modeMatches(data) {
-    const mode = controls.mode.value || 'core';
+    const mode = controls.mode?.value || 'core';
     if (mode === 'all') return true;
     if (mode === 'official') return Boolean(data.official);
     if (mode === 'reviewed') return Boolean(data.reviewed);
@@ -69,43 +80,79 @@
     return Boolean(data.core);
   }
   function dateMatches(data) {
-    if (!controls.from.value && !controls.to.value) return true;
+    if (!controls.from?.value && !controls.to?.value) return true;
     const time = new Date(data.date || 0).getTime();
     if (!Number.isFinite(time) || time <= 0) return false;
-    if (controls.from.value && time < new Date(`${controls.from.value}T00:00:00Z`).getTime()) return false;
-    if (controls.to.value && time > new Date(`${controls.to.value}T23:59:59Z`).getTime()) return false;
+    if (controls.from?.value && time < new Date(`${controls.from.value}T00:00:00Z`).getTime()) return false;
+    if (controls.to?.value && time > new Date(`${controls.to.value}T23:59:59Z`).getTime()) return false;
     return true;
   }
-  function edgeMatches(edge) {
-    const data = edge.data();
+  function edgeDataMatches(data) {
     if (!modeMatches(data)) return false;
-    if (controls.relationship.value && data.relationshipType !== controls.relationship.value) return false;
-    if (controls.grade.value && data.grade !== controls.grade.value) return false;
-    if (controls.factualStatus.value && data.factualStatus !== controls.factualStatus.value) return false;
-    if (controls.review.value && data.reviewStatus !== controls.review.value) return false;
-    if (Number(data.confidence || 0) < Number(controls.confidence.value || 0)) return false;
+    if (controls.relationship?.value && data.relationshipType !== controls.relationship.value) return false;
+    if (controls.grade?.value && data.grade !== controls.grade.value) return false;
+    if (controls.factualStatus?.value && data.factualStatus !== controls.factualStatus.value) return false;
+    if (controls.review?.value && data.reviewStatus !== controls.review.value) return false;
+    if (Number(data.confidence || 0) < Number(controls.confidence?.value || 0)) return false;
     if (!dateMatches(data)) return false;
-    const entityType = controls.entityType.value;
-    if (entityType && edge.source().data('entityType') !== entityType && edge.target().data('entityType') !== entityType) return false;
-    const term = controls.query.value.trim().toLowerCase();
+    const source = nodeById.get(data.source)?.data || {};
+    const target = nodeById.get(data.target)?.data || {};
+    const entityType = controls.entityType?.value || '';
+    if (entityType && source.entityType !== entityType && target.entityType !== entityType) return false;
+    const term = controls.query?.value.trim().toLowerCase() || '';
     if (!term) return true;
-    const source = edge.source().data();
-    const target = edge.target().data();
-    return [source.label,target.label,(source.aliases||[]).join(' '),(target.aliases||[]).join(' '),data.relationshipType,data.label,data.sourceTitle,data.establishes,data.doesNotEstablish,data.factualStatus].join(' ').toLowerCase().includes(term);
+    return [source.label,target.label,(source.aliases||[]).join(' '),(target.aliases||[]).join(' '),data.relationshipType,data.label,data.sourceTitle,data.establishes,data.doesNotEstablish,data.factualStatus]
+      .join(' ').toLowerCase().includes(term);
   }
-  function applyFilters(updateUrl = true) {
+  function edgePriority(edge) {
+    const data = edge.data || {};
+    const grade = ({ A: 4, B: 3, C: 2, D: 1 }[data.grade] || 0);
+    return (data.official ? 100 : 0) + (data.reviewed ? 50 : 0) + (data.core ? 30 : 0) + grade * 10 + Number(data.confidence || 0);
+  }
+  function selectProjection() {
+    const matches = (graph.elements?.edges || []).filter(edge => edgeDataMatches(edge.data));
+    matches.sort((a, b) => edgePriority(b) - edgePriority(a) || String(a.data.id).localeCompare(String(b.data.id)));
+    matchingEdgeCount = matches.length;
+    const selectedEdges = matches.slice(0, edgeLimit);
+    const nodeIds = new Set();
+    selectedEdges.forEach(edge => { nodeIds.add(edge.data.source); nodeIds.add(edge.data.target); });
+    const selectedNodes = [...nodeIds].map(id => nodeById.get(id)).filter(Boolean);
+    return { selectedNodes, selectedEdges };
+  }
+  function statusText(renderedEdges, renderedNodes) {
+    if (!matchingEdgeCount) return 'No sourced relationships match the current filters.';
+    const limited = matchingEdgeCount > renderedEdges;
+    return `${renderedEdges} of ${matchingEdgeCount} matching sourced relationship${matchingEdgeCount === 1 ? '' : 's'} shown across ${renderedNodes} entities.${limited ? ' Refine the filters or load a wider view.' : ' Select a node or line to inspect the evidence.'}`;
+  }
+  function updateLoadMore(renderedEdges) {
+    if (!loadMoreButton) return;
+    const canLoad = matchingEdgeCount > renderedEdges && edgeLimit < MAX_EDGE_LIMIT;
+    loadMoreButton.hidden = !canLoad;
+    loadMoreButton.textContent = canLoad ? `Load more (${Math.min(EDGE_LIMIT_STEP, matchingEdgeCount - renderedEdges)})` : 'Wider view loaded';
+  }
+  function layoutFor(count, requested = '') {
+    if (requested) return requested;
+    return count > 250 ? 'grid' : 'cose';
+  }
+  function runLayout(name) {
+    if (!cy || !cy.elements().length) return;
+    const options = name === 'cose'
+      ? { name, animate: false, fit: true, padding: 45, randomize: true, nodeRepulsion: 90000, idealEdgeLength: 90, gravity: .25, numIter: 250 }
+      : { name, animate: false, fit: true, padding: 45 };
+    cy.layout(options).run();
+  }
+  function refreshGraph({ updateUrl = true, requestedLayout = '' } = {}) {
     if (!cy) return;
-    cy.elements().removeClass('path-highlight path-endpoint');
-    cy.edges().forEach(edge => edge.style('display', edgeMatches(edge) ? 'element' : 'none'));
-    cy.nodes().forEach(node => {
-      const connected = node.connectedEdges().some(edge => edge.style('display') !== 'none');
-      node.style('display', connected ? 'element' : 'none');
-    });
-    const visibleEdges = cy.edges().filter(edge => edge.style('display') !== 'none').length;
-    const visibleNodes = cy.nodes().filter(node => node.style('display') !== 'none').length;
-    q('#map-visible-relationships').textContent = visibleEdges;
-    q('#map-visible-entities').textContent = visibleNodes;
-    setStatus(`${visibleEdges} sourced relationship${visibleEdges === 1 ? '' : 's'} across ${visibleNodes} entities. Select a node or line to inspect the evidence.`, 'ok');
+    const { selectedNodes, selectedEdges } = selectProjection();
+    cy.startBatch();
+    cy.elements().remove();
+    cy.add([...selectedNodes, ...selectedEdges]);
+    cy.endBatch();
+    q('#map-visible-relationships').textContent = selectedEdges.length;
+    q('#map-visible-entities').textContent = selectedNodes.length;
+    setStatus(statusText(selectedEdges.length, selectedNodes.length), selectedEdges.length ? 'ok' : 'error');
+    updateLoadMore(selectedEdges.length);
+    runLayout(layoutFor(selectedEdges.length, requestedLayout));
     if (updateUrl) writeUrl();
     if (pathStart && pathEnd) findPath(false);
   }
@@ -132,14 +179,14 @@
       <p><strong>Review:</strong> ${escapeHtml(human(data.reviewStatus))} · <strong>Extraction:</strong> ${escapeHtml(human(data.extractionMethod))} · <strong>Confidence:</strong> ${escapeHtml(Number(data.confidence || 0).toFixed(2))}</p>
       <div class="cta-row small"><a class="btn" href="${escapeHtml(data.sourceUrl)}" rel="noopener">Open primary source</a><a class="btn alt" href="${escapeHtml(data.route)}">Open relationship record</a></div>`;
   }
-  function renderSelection(element) {
-    if (element.isEdge()) edgeDetails(element.data()); else nodeDetails(element.data());
-  }
+  function renderSelection(element) { if (element.isEdge()) edgeDetails(element.data()); else nodeDetails(element.data()); }
   function findPath(updateUrl = true) {
-    if (!cy || !pathStart || !pathEnd || cy.getElementById(pathStart).empty() || cy.getElementById(pathEnd).empty()) return;
+    if (!cy || !pathStart || !pathEnd || cy.getElementById(pathStart).empty() || cy.getElementById(pathEnd).empty()) {
+      if (pathStart && pathEnd) setStatus('One or both path endpoints are outside the rendered evidence slice. Refine the filters or load a wider view.', 'error');
+      return;
+    }
     cy.elements().removeClass('path-highlight path-endpoint');
-    const visible = cy.elements().filter(element => element.style('display') !== 'none');
-    const result = visible.aStar({ root: `#${CSS.escape(pathStart)}`, goal: `#${CSS.escape(pathEnd)}`, directed: false });
+    const result = cy.elements().aStar({ root: `#${CSS.escape(pathStart)}`, goal: `#${CSS.escape(pathEnd)}`, directed: false });
     if (!result.found) { setStatus('No documented path is visible under the current filters.', 'error'); return; }
     result.path.addClass('path-highlight');
     cy.getElementById(pathStart).addClass('path-endpoint');
@@ -148,12 +195,12 @@
     setStatus(`Documented path highlighted: ${Math.max(0, Math.floor(result.path.length / 2))} relationship step${result.path.length > 3 ? 's' : ''}.`, 'ok');
     if (updateUrl) writeUrl();
   }
-  function clearPath() { pathStart = ''; pathEnd = ''; cy?.elements().removeClass('path-highlight path-endpoint'); writeUrl(); applyFilters(false); }
+  function clearPath() { pathStart = ''; pathEnd = ''; cy?.elements().removeClass('path-highlight path-endpoint'); writeUrl(); refreshGraph({ updateUrl: false }); }
   function init() {
     if (typeof cytoscape !== 'function') throw new Error('Cytoscape.js did not load.');
     cy = cytoscape({
       container: map,
-      elements: [...graph.elements.nodes, ...graph.elements.edges],
+      elements: [],
       minZoom: .08, maxZoom: 4, wheelSensitivity: .16,
       style: [
         { selector: 'node', style: { label: 'data(label)', 'font-size': 9, 'text-wrap': 'wrap', 'text-max-width': 120, 'text-valign': 'bottom', 'text-margin-y': 8, color: '#f3e6bd', 'background-color': '#5f512f', 'border-color': '#d8b56a', 'border-width': 1.5, width: 'mapData(weight,24,94,24,68)', height: 'mapData(weight,24,94,24,68)' } },
@@ -170,12 +217,26 @@
         { selector: '.path-endpoint', style: { 'border-color': '#fff', 'border-width': 5 } },
         { selector: ':selected', style: { 'border-color': '#fff', 'border-width': 4 } }
       ],
-      layout: { name: 'cose', animate: false, randomize: true, nodeRepulsion: 170000, idealEdgeLength: 110, gravity: .32, numIter: 1100 }
+      layout: { name: 'grid', animate: false, fit: true, padding: 45 }
     });
     cy.on('tap', 'node, edge', event => renderSelection(event.target));
-    cy.on('tap', event => { if (event.target === cy) details.innerHTML = '<span class="label">Evidence boundary</span><h3>Select an entity or relationship</h3><p>Every visible line keeps its source, date, grade, status, established fact and limitation attached.</p>'; });
-    applyFilters(false);
-    cy.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45);
+    cy.on('tap', event => { if (event.target === cy) details.innerHTML = '<span class="label">Evidence boundary</span><h3>Select an entity or relationship</h3><p>Every rendered line keeps its source, date, grade, status, established fact and limitation attached.</p>'; });
+    refreshGraph({ updateUrl: false });
+  }
+  function ensureLoadMoreButton() {
+    const actions = q('.map-actions');
+    if (!actions || q('#map-load-more')) return;
+    loadMoreButton = document.createElement('button');
+    loadMoreButton.id = 'map-load-more';
+    loadMoreButton.className = 'btn alt';
+    loadMoreButton.type = 'button';
+    loadMoreButton.textContent = 'Load more';
+    loadMoreButton.hidden = true;
+    loadMoreButton.addEventListener('click', () => {
+      edgeLimit = Math.min(MAX_EDGE_LIMIT, edgeLimit + EDGE_LIMIT_STEP);
+      refreshGraph({ requestedLayout: 'grid' });
+    });
+    actions.appendChild(loadMoreButton);
   }
   async function load() {
     setStatus('Loading structured evidence graph…', 'pending');
@@ -184,11 +245,17 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       graph = await response.json();
       if (!graph?.elements?.nodes?.length || !graph?.elements?.edges?.length) throw new Error('No sourced relationships were generated.');
-      populateFilters(); readUrl(); init();
+      nodeById = new Map(graph.elements.nodes.map(node => [node.data.id, node]));
+      populateFilters();
+      readUrl();
+      ensureLoadMoreButton();
       q('#map-total-relationships').textContent = graph.totals.relationships;
       q('#map-total-entities').textContent = graph.totals.entities;
       q('#map-total-official').textContent = graph.totals.officialRelationships;
       q('#map-generated').textContent = formatDate(graph.generatedAt);
+      setStatus('Preparing the first responsive evidence slice…', 'pending');
+      await nextFrame();
+      init();
       if (pathStart && pathEnd) findPath(false);
     } catch (error) {
       setStatus(`Evidence map unavailable: ${error.message}`, 'error');
@@ -196,12 +263,41 @@
     }
   }
 
-  Object.values(controls).forEach(control => control?.addEventListener(control === controls.query ? 'input' : 'change', () => applyFilters()));
-  q('#map-reset').onclick = () => { controls.query.value=''; controls.mode.value='core'; controls.relationship.value=''; controls.grade.value=''; controls.factualStatus.value=''; controls.entityType.value=''; controls.review.value=''; controls.confidence.value='0'; controls.from.value=''; controls.to.value=''; clearPath(); cy?.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45); };
-  q('#map-fit').onclick = () => cy?.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45);
-  q('#map-layout').onclick = () => { if (!cy) return; layoutIndex = (layoutIndex + 1) % layouts.length; const name = layouts[layoutIndex]; cy.layout({ name, animate: false, fit: true, padding: 45 }).run(); q('#map-layout').textContent = `Layout: ${human(name)}`; };
+  Object.values(controls).forEach(control => control?.addEventListener(control === controls.query ? 'input' : 'change', () => {
+    edgeLimit = INITIAL_EDGE_LIMIT;
+    refreshGraph({ requestedLayout: 'grid' });
+  }));
+  q('#map-reset').onclick = () => {
+    if (controls.query) controls.query.value='';
+    if (controls.mode) controls.mode.value='core';
+    if (controls.relationship) controls.relationship.value='';
+    if (controls.grade) controls.grade.value='';
+    if (controls.factualStatus) controls.factualStatus.value='';
+    if (controls.entityType) controls.entityType.value='';
+    if (controls.review) controls.review.value='';
+    if (controls.confidence) controls.confidence.value='0';
+    if (controls.from) controls.from.value='';
+    if (controls.to) controls.to.value='';
+    edgeLimit = INITIAL_EDGE_LIMIT;
+    pathStart=''; pathEnd='';
+    refreshGraph({ requestedLayout: 'grid' });
+  };
+  q('#map-fit').onclick = () => cy?.fit(cy.elements(), 45);
+  q('#map-layout').onclick = () => {
+    if (!cy) return;
+    layoutIndex = (layoutIndex + 1) % layouts.length;
+    const name = layouts[layoutIndex];
+    runLayout(name);
+    q('#map-layout').textContent = `Layout: ${human(name)}`;
+  };
   q('#map-share').onclick = async () => { writeUrl(); try { await navigator.clipboard.writeText(location.href); setStatus('This evidence-map view was copied as a shareable URL.', 'ok'); } catch { setStatus('The view is encoded in the current URL and can be copied from the address bar.', 'ok'); } };
   q('#map-clear-path').onclick = clearPath;
-  details.addEventListener('click', event => { const button = event.target.closest('[data-path-action]'); if (!button) return; if (button.dataset.pathAction === 'start') pathStart = button.dataset.nodeId; else pathEnd = button.dataset.nodeId; writeUrl(); if (pathStart && pathEnd) findPath(); else setStatus(`${button.dataset.pathAction === 'start' ? 'Path start' : 'Path end'} selected. Select the other endpoint.`, 'ok'); });
+  details.addEventListener('click', event => {
+    const button = event.target.closest('[data-path-action]');
+    if (!button) return;
+    if (button.dataset.pathAction === 'start') pathStart = button.dataset.nodeId; else pathEnd = button.dataset.nodeId;
+    writeUrl();
+    if (pathStart && pathEnd) findPath(); else setStatus(`${button.dataset.pathAction === 'start' ? 'Path start' : 'Path end'} selected. Select the other endpoint.`, 'ok');
+  });
   load();
 })();

@@ -13,6 +13,8 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character =>
 
 require('./patch-daily-control-brief-delivery.js');
 require('./build-homepage-command-surface.js');
+require('./normalize-forum-health-member-policy.js');
+require('./patch-member-forum-integration.js');
 
 function syntaxCheck(file, asModule = false) {
   const original = at(file);
@@ -28,8 +30,14 @@ function syntaxCheck(file, asModule = false) {
 }
 
 syntaxCheck('scripts/patch-daily-control-brief-delivery.js');
+syntaxCheck('scripts/normalize-forum-health-member-policy.js');
+syntaxCheck('scripts/patch-member-forum-integration.js');
+syntaxCheck('scripts/member-forum-integration-test.js');
 syntaxCheck('newsletter.js');
+syntaxCheck('forum.js');
 syntaxCheck('src/worker-email-lifecycle.js', true);
+syntaxCheck('src/worker-member-experience.js', true);
+syntaxCheck('src/worker-forum-persistence.js', true);
 
 const worker = read('src/worker-email-lifecycle.js');
 need(worker.includes("const DAILY_FIRST_BRIEF_VERSION='daily-first-brief-v1'"), 'worker missing immediate first-brief version marker');
@@ -101,6 +109,8 @@ need(homepage.includes('Why it matters:'), 'homepage actor cards lack significan
 need(homepage.includes('Evidence boundary:'), 'homepage actor cards lack evidence boundaries');
 need(homepage.includes('Open evidence'), 'homepage actor cards lack evidence routes');
 
+require('./member-forum-integration-test.js');
+
 const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
@@ -110,7 +120,8 @@ const report = {
     truthfulDeliveryStatus: true,
     independentNewsletterPreferences: dailyPreferencePayload && weeklyPreferencePayload && releasePreferencePayload,
     compactClockCards: true,
-    namedActorIntelligence: true
+    namedActorIntelligence: true,
+    memberForumIntegration: true
   },
   issues
 };
@@ -122,4 +133,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery and independent daily, weekly and release preferences.`);
+console.log(`LIVING INTELLIGENCE REGRESSION TEST PASSED: ${(wall.clocks || []).length} compact clocks, named actor cards, immediate Daily Brief delivery, independent email preferences and verified-member forum posting.`);
+require('./build-cloudflare-investigation-graph-projection.js');

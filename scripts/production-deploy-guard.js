@@ -163,21 +163,22 @@ for (const text of ['"main": "src/worker-production.js"', '"binding": "FORUM_POS
   if (!read('wrangler.jsonc').includes(text)) hard.push(`wrangler.jsonc missing ${text}`);
 }
 
-/* Prevent competing automatic deploys or legacy health ownership. */
+/* Prevent competing release workflows, interrupted migrations or legacy health ownership. */
 const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
-if (!/cancel-in-progress:\s*true/.test(canonicalDeploy)) hard.push('canonical deploy must cancel stale runs');
+if (!canonicalDeploy.includes('workflow_dispatch:') || /^\s*(?:push|pull_request):/m.test(canonicalDeploy)) hard.push('canonical deploy must be manually dispatched only');
+if (!canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') || !canonicalDeploy.includes('Production release refused: confirmation text did not match.')) hard.push('canonical deploy missing exact owner confirmation gate');
+if (!canonicalDeploy.includes('group: matrixreprogrammed-production') || !/cancel-in-progress:\s*false/.test(canonicalDeploy)) hard.push('canonical deploy must queue and never interrupt D1 migrations');
 if (!canonicalDeploy.includes('verify-live-production.js')) hard.push('canonical deploy missing live verification');
 if (!canonicalDeploy.includes('d1 time-travel info matrix-members --json') || !canonicalDeploy.includes('d1-rollback-proof.json') || !canonicalDeploy.includes('restoreCommand') || canonicalDeploy.includes('d1 export matrix-members --remote')) hard.push('canonical deploy missing validated D1 Time Travel rollback');
 if (!fallbackDeploy.includes('d1 time-travel info matrix-members --json') || !fallbackDeploy.includes('d1-rollback-proof.json') || !fallbackDeploy.includes('restoreCommand') || fallbackDeploy.includes('d1 export matrix-members --remote')) hard.push('manual fallback missing validated D1 Time Travel rollback');
 if (!canonicalDeploy.includes('phase6_paypal_subscriptions.sql')) hard.push('canonical deploy missing Phase 6 D1 migration');
 if (!canonicalDeploy.includes('checkout must remain disabled during deployment')) hard.push('canonical deploy does not prove disabled PayPal switches');
-if (/^\s*push:/m.test(fallbackDeploy)) hard.push('manual fallback deploy must not trigger on push');
+if (/^\s*(?:push|pull_request):/m.test(fallbackDeploy)) hard.push('manual fallback deploy must not trigger automatically');
 if (!fallbackDeploy.includes('workflow_dispatch:')) hard.push('manual fallback deploy missing workflow_dispatch');
-if (!fallbackDeploy.includes('group: matrixreprogrammed-production')) hard.push('manual fallback deploy must share canonical concurrency group');
-if (!/cancel-in-progress:\s*true/.test(fallbackDeploy)) hard.push('manual fallback must share stale-run cancellation');
+if (!fallbackDeploy.includes('group: matrixreprogrammed-production') || !/cancel-in-progress:\s*false/.test(fallbackDeploy)) hard.push('manual fallback must share the non-interrupting production queue');
 if (fallbackDeploy.includes('PAYPAL_PRODUCTION_ENABLED=true') || fallbackDeploy.includes('ACTIVATE MATRIX PAYPAL LIVE')) hard.push('manual fallback must not activate live PayPal');
 if (!legacyRepair.includes("productionHealthOwner: 'scripts/build-production-health.js'")) hard.push('legacy repair does not acknowledge canonical health owner');
 if (legacyRepair.includes("workerScript: 'src/worker.js'") || legacyRepair.includes("write('deploy-health.json'")) hard.push('legacy repair still writes obsolete production health');
@@ -196,12 +197,12 @@ const report = {
   builtHealthSha: builtHealth?.buildSha || null,
   hardIssues: hard,
   softIssues: soft,
-  deploymentModel: 'One automatic canonical deploy and one manual fallback using the same strict gates.',
+  deploymentModel: 'One manually confirmed canonical release and one manual fallback using the same non-interrupting production queue and strict fail-closed gates.',
   rollbackModel: 'Validated Cloudflare D1 Time Travel bookmark captured before migrations with an exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled by default.',
-  boundary: 'Deployment is blocked on competing automatic workflows, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or unguarded payment activation.'
+  boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
@@ -211,4 +212,4 @@ if (hard.length) {
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with Time Travel rollback, one automatic deploy, strict D1 forums and server-gated PayPal.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with manual confirmation, a non-interrupting migration queue, Time Travel rollback, strict D1 forums and server-gated PayPal.`);

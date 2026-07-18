@@ -93,6 +93,7 @@ require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
 require('./patch-email-launch-console.js');
 require('./patch-email-automation-guard.js');
+require('./repair-email-campaign-source-anchor.js');
 require('./patch-email-campaign-quality.js');
 require('./patch-membership-signup-server-fallback.js');
 require('./brevo-operational-readiness-audit.js');

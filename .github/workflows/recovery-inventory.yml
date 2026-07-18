@@ -84,7 +84,7 @@ jobs:
             code=$?
           fi
           if [ "$code" -eq 0 ]; then
-            python3 -m py_compile scripts/recovery-d1-rehearsal.py >> downloads/recovery-cloudflare-output.log 2>&1
+            node scripts/recovery-worker-api-contract-test.js >> downloads/recovery-cloudflare-output.log 2>&1
             code=$?
           fi
           if [ "$code" -eq 0 ]; then
@@ -162,15 +162,21 @@ jobs:
             echo "## Cloudflare asset versioning" >> "$GITHUB_STEP_SUMMARY"
             node -e "const r=require('./downloads/cloudflare-asset-versioning.json'); console.log('- ok: '+r.ok+'\n- assets: '+r.assetCount+'\n- pages changed: '+r.pagesChanged+'\n- references versioned: '+r.referencesVersioned+'\n- unresolved: '+r.unresolved.length+'\n- unversioned: '+r.unversioned.length+'\n- unsafe immutable headers: '+r.unsafeImmutable)" >> "$GITHUB_STEP_SUMMARY"
           fi
-          if [ -f downloads/recovery-d1-rehearsal.json ]; then
-            echo "" >> "$GITHUB_STEP_SUMMARY"
-            echo "## D1 migration rehearsal" >> "$GITHUB_STEP_SUMMARY"
-            python3 -c "import json; r=json.load(open('downloads/recovery-d1-rehearsal.json')); print(f'- ok: {r[\"ok\"]}\n- checks passed: {sum(1 for v in r.get(\"checks\",{}).values() if v)}/{len(r.get(\"checks\",{}))}\n- failures: {len(r.get(\"failures\",[]))}\n- email schema statements: {r.get(\"emailSchemaStatements\",0)}')" >> "$GITHUB_STEP_SUMMARY"
-          fi
           if [ -f downloads/recovery-browser-smoke.json ]; then
             echo "" >> "$GITHUB_STEP_SUMMARY"
             echo "## Browser journeys" >> "$GITHUB_STEP_SUMMARY"
             node -e "const r=require('./downloads/recovery-browser-smoke.json'); console.log('- ok: '+r.ok+'\n- passed: '+r.passed+'/'+r.tests+'\n- failed: '+r.failed)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f downloads/recovery-d1-rehearsal.json ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "## D1 rehearsal" >> "$GITHUB_STEP_SUMMARY"
+            python3 - <<'PY'
+import json
+r=json.load(open('downloads/recovery-d1-rehearsal.json'))
+print(f"- ok: {r['ok']}")
+print(f"- checks: {r['passed']}/{r['tests']}")
+print(f"- migrations: {r['migrationCount']}")
+PY
           fi
 
       - name: Upload complete inventory and diagnostics
@@ -187,6 +193,7 @@ jobs:
             downloads/recovery-cloudflare-output.log
             downloads/cloudflare-asset-versioning.json
             downloads/public-data-lab-output-test.json
+            downloads/recovery-worker-api-contract-test.json
             downloads/recovery-d1-rehearsal.json
             downloads/recovery-browser-smoke.json
             downloads/recovery-browser-smoke.log

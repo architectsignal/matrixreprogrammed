@@ -7,11 +7,16 @@ const pagePath = path.join(root, 'data-lab.html');
 const reportPath = path.join(root, 'downloads', 'public-data-lab-build.json');
 
 const read = file => fs.readFileSync(file, 'utf8');
-const write = (file, value) => { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, value); };
+const write = (file, value) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, value);
+};
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[char]));
 const attr = value => esc(value).replace(/\n/g, ' ');
+
 function replaceBlock(text, start, end, block, anchor) {
-  const a = text.indexOf(start), b = text.indexOf(end);
+  const a = text.indexOf(start);
+  const b = text.indexOf(end);
   if (a !== -1 && b !== -1 && b > a) return `${text.slice(0, a)}${block}${text.slice(b + end.length)}`;
   if (anchor && text.includes(anchor)) return text.replace(anchor, `${block}${anchor}`);
   return `${text}\n${block}\n`;
@@ -21,6 +26,8 @@ const registry = JSON.parse(read(registryPath));
 const datasets = registry.datasets || [];
 const presets = registry.presets || [];
 const ids = new Set(datasets.map(item => item.id));
+const runtimeVersion = String(registry.updated || registry.engines?.duckdbWasm || 'current').replace(/[^a-z0-9._-]/gi, '');
+
 if (datasets.length < 4) throw new Error('Public data laboratory requires at least four approved datasets.');
 for (const dataset of datasets) {
   if (!/^[a-z][a-z0-9_-]*$/i.test(dataset.id || '')) throw new Error(`Unsafe dataset id: ${dataset.id}`);
@@ -29,7 +36,11 @@ for (const dataset of datasets) {
   if (dataset.format !== 'csv') throw new Error(`Unsupported dataset format: ${dataset.format}`);
   if (!fs.existsSync(path.join(root, dataset.path))) throw new Error(`Approved public dataset is missing: ${dataset.path}`);
 }
-for (const preset of presets) for (const id of preset.datasetIds || []) if (!ids.has(id)) throw new Error(`Preset ${preset.id} references missing dataset ${id}`);
+for (const preset of presets) {
+  for (const id of preset.datasetIds || []) {
+    if (!ids.has(id)) throw new Error(`Preset ${preset.id} references missing dataset ${id}`);
+  }
+}
 
 const datasetCards = datasets.map(dataset => `
 <article class="card data-lab-dataset-card">
@@ -93,7 +104,6 @@ const html = `<!DOCTYPE html>
         <p class="data-lab-warning"><strong>Evidence boundary:</strong> ${esc(registry.boundary)}</p>
         <div class="cta-row"><a class="btn" href="#workbench">Open SQL Workbench</a><a class="btn alt" href="#datasets">Approved Datasets</a><a class="btn alt" href="#presets">Reproducible Presets</a></div>
       </section>
-
       <section class="section wrap">
         <div class="eyebrow">Fail-closed controls</div><h2>WHAT THE BROWSER MAY—and MAY NOT—DO.</h2>
         <div class="grid">
@@ -103,7 +113,6 @@ const html = `<!DOCTYPE html>
           <article class="card"><h3>Reproducible—not authoritative</h3><p>Readers can copy SQL, share a query link and download the capped result. The result still inherits every source, review-status and evidence limitation in the underlying records.</p></article>
         </div>
       </section>
-
       <section class="section wrap" id="workbench">
         <div class="eyebrow">Browser-side investigation workbench</div><h2>QUERY THE PUBLIC RECORDS.</h2>
         <div class="data-lab-workbench">
@@ -111,7 +120,7 @@ const html = `<!DOCTYPE html>
             <div class="data-lab-toolbar">
               <select id="data-lab-preset" aria-label="Choose a reproducible query preset"><option value="">Custom query</option>${presetOptions}</select>
               <select id="data-lab-limit" aria-label="Maximum result rows"><option value="100">100 rows</option><option value="250" selected>250 rows</option><option value="500">500 rows</option><option value="1000">1,000 rows</option></select>
-              <button class="btn" id="data-lab-run" type="button">Run Query</button>
+              <button class="btn" id="data-lab-run" type="button" disabled>Run Query</button>
               <button class="btn alt" id="data-lab-reset" type="button">Reset</button>
             </div>
             <textarea id="data-lab-query" spellcheck="false" aria-label="Read-only SQL query">${esc(defaultSql)}</textarea>
@@ -130,19 +139,17 @@ const html = `<!DOCTYPE html>
         <div id="data-lab-table" style="margin-top:1rem"><p class="figure-caption">Run a preset or write a read-only SELECT query.</p></div>
         <perspective-viewer id="data-lab-viewer" hidden></perspective-viewer>
       </section>
-
       <section class="section wrap" id="datasets"><div class="eyebrow">Public files with provenance attached</div><h2>APPROVED DATASETS.</h2><div class="grid data-lab-dataset-grid">${datasetCards}</div></section>
       <section class="section wrap" id="presets"><div class="eyebrow">Start with reproducible questions</div><h2>QUERY PRESETS.</h2><div class="grid">${presetCards}</div></section>
-
       <section class="section wrap data-lab-warning data-lab-engine-note">
         <h2>OPEN-SOURCE ENGINE NOTES.</h2>
-        <p>DuckDB-Wasm <code>${esc(registry.engines.duckdbWasm)}</code> executes SQL and reads approved CSV files in-browser. Perspective <code>${esc(registry.engines.perspective)}</code> is an optional local result explorer. When either CDN dependency is unavailable, the page retains direct dataset downloads, schema documentation and its accessible interface rather than sending records to a paid backend.</p>
+        <p>DuckDB-Wasm <code>${esc(registry.engines.duckdbWasm)}</code> executes SQL and reads approved CSV files in-browser. Perspective <code>${esc(registry.engines.perspective)}</code> is an optional local result explorer. The SQL runtime tries two independent CDN providers and reports a visible startup error if neither can load.</p>
       </section>
     </main>
     <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — inspect the data, preserve the boundary, publish the query.</p><p class="warning">Aggregations and correlations are leads for verification. They are not proof of causation, guilt, coordination or present fact.</p></footer>
   </div>
   <script src="matrix.js"></script>
-  <script type="module" src="data-lab.js"></script>
+  <script type="module" src="data-lab.js?v=${attr(runtimeVersion)}"></script>
 </body>
 </html>`;
 
@@ -169,6 +176,7 @@ if (fs.existsSync(sitemapPath)) {
   if (!sitemap.includes('/data-lab.html')) sitemap = sitemap.replace('</urlset>', '<url><loc>https://matrixreprogrammed.com/data-lab.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url></urlset>');
   write(sitemapPath, sitemap);
 }
+
 const llmsPath = path.join(root, 'llms.txt');
 if (fs.existsSync(llmsPath)) {
   let llms = read(llmsPath);
@@ -184,6 +192,7 @@ write(reportPath, JSON.stringify({
   maxRows: registry.limits.maxRows,
   queryTimeoutMs: registry.limits.queryTimeoutMs,
   engines: registry.engines,
+  runtimeVersion,
   homepageLinked: read(indexPath).includes('Open Public Data Lab'),
   researchLinked: !fs.existsSync(researchPath) || read(researchPath).includes('public-data-lab-research'),
   boundary: registry.boundary

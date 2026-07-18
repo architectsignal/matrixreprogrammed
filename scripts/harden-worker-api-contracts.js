@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const changed = [];
@@ -16,7 +17,7 @@ function write(relative, content) {
   const before = fs.readFileSync(file, 'utf8');
   if (before === content) return false;
   fs.writeFileSync(file, content);
-  changed.push(relative);
+  if (!changed.includes(relative)) changed.push(relative);
   return true;
 }
 
@@ -26,31 +27,61 @@ function replaceRequired(source, before, after, label) {
   return source.replace(before, after);
 }
 
+function runRequired(relative, label) {
+  const script = at(relative);
+  if (!fs.existsSync(script)) throw new Error(`${label} script is missing: ${relative}`);
+  const result = spawnSync(process.execPath, [script], {
+    cwd: root,
+    encoding: 'utf8',
+    maxBuffer: 30 * 1024 * 1024
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${label} failed with status ${result.status}`);
+}
+
 // Paid checkout must require credentials, the environment switch, the D1 switch,
 // live confirmation when applicable, three ACTIVE provider plans and every stronger
 // commercial/contract-confirmation gate installed by the canonical PayPal patch.
+// Late recovery generators may restore an older Worker, so this hardener reapplies
+// the complete commercial patch instead of accepting a legacy activation marker.
 {
   const relative = 'src/worker-paypal-subscriptions.js';
   let source = read(relative);
+  const beforeCommercialRepair = source;
+  const commercialMarkers = [
+    "import { queueMembershipContractConfirmation, transactionalMembershipEmailReady } from './worker-membership-contract-email.js';",
+    "const commercialTermsVersion='2026-07-18-v1'",
+    'commercialLegalReady:legalReady',
+    'contractConfirmationReady:contractEmailReady',
+    'paypal_checkout_consents',
+    'paypal.checkout.consent_recorded',
+    'paypal.membership_contract_confirmation',
+    'PayPal checkout is disabled until every activation, commercial-readiness and contract-confirmation gate passes'
+  ];
+  if (!commercialMarkers.every(marker => source.includes(marker))) {
+    runRequired('scripts/patch-commercial-paypal-guard.js', 'Canonical commercial PayPal guard');
+    source = read(relative);
+    if (source !== beforeCommercialRepair && !changed.includes(relative)) changed.push(relative);
+  }
+
   const weakMultilinePlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE');";
   const strongMultilinePlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);";
   if (source.includes(weakMultilinePlanCheck)) source = source.replace(weakMultilinePlanCheck, strongMultilinePlanCheck);
 
-  const hasCanonicalMultilineState = source.includes('async function activationState(env){')
-    && source.includes('commercialLegalReady:legalReady')
-    && source.includes('contractConfirmationReady:contractEmailReady')
-    && source.includes(strongMultilinePlanCheck)
-    && source.includes('&&confirmation&&legalReady&&contractEmailReady&&plansReady');
-
-  if (!hasCanonicalMultilineState) {
-    const pattern = /async function activationState\(env\)\{[^\n]*\}/;
-    const replacement = "async function activationState(env){const target=environment(env);const setting=await runtimeSetting(env,target);const environmentSwitch=target==='live'?bool(env?.PAYPAL_PRODUCTION_ENABLED):bool(env?.PAYPAL_SANDBOX_ENABLED);const confirmation=target!=='live'||String(env?.PAYPAL_LIVE_ACTIVATION_CONFIRMATION||'')==='MATRIX_PAYPAL_LIVE_CONFIRMED';const planRows=await plans(env,target);const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);return{environment:target,configured:configured(env),environmentSwitch,databaseSwitch:Boolean(setting.checkout_enabled),confirmation,plansReady,checkoutEnabled:configured(env)&&environmentSwitch&&Boolean(setting.checkout_enabled)&&confirmation&&plansReady,setting,plans:planRows}}";
-    if (!source.includes('&&confirmation&&plansReady,setting,plans:planRows')) {
-      if (!pattern.test(source)) throw new Error('PayPal activationState function is missing or does not expose the canonical guarded structure');
-      source = source.replace(pattern, replacement);
-    }
-  }
+  const finalMarkers = [
+    ...commercialMarkers,
+    strongMultilinePlanCheck,
+    '&&confirmation&&legalReady&&contractEmailReady&&plansReady'
+  ];
+  const missing = finalMarkers.filter(marker => !source.includes(marker));
+  if (missing.length) throw new Error(`PayPal commercial hardening remains incomplete: ${missing.join(' | ')}`);
   write(relative, source);
+
+  const syntax = spawnSync(process.execPath, ['--check', at(relative)], { cwd: root, encoding: 'utf8' });
+  if (syntax.stdout) process.stdout.write(syntax.stdout);
+  if (syntax.stderr) process.stderr.write(syntax.stderr);
+  if (syntax.status !== 0) throw new Error(`Hardened PayPal Worker failed syntax validation with status ${syntax.status}`);
 }
 
 // The canonical recovery membership template must understand the authoritative
@@ -125,7 +156,7 @@ const report = {
   contracts: {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
-    paypal: 'checkout preserves commercial legal and durable contract-confirmation gates while requiring credentials, environment switch, D1 switch, confirmation and three identified ACTIVE plans',
+    paypal: 'late recovery paths reapply the complete commercial guard; checkout requires legal readiness, durable confirmation, credentials, environment switch, D1 switch, confirmation and three identified ACTIVE plans',
     membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }

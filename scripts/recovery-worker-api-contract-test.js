@@ -21,20 +21,7 @@ if (hardening.stderr) process.stderr.write(hardening.stderr);
 need(hardening.status === 0, `Worker/API hardening failed with status ${hardening.status}`);
 
 for (const relative of [
-  'src/worker-production.js',
-  'src/worker.js',
-  'src/worker-member-experience.js',
-  'src/worker-forum-persistence.js',
-  'src/worker-paypal-subscriptions.js',
-  'src/worker-email-lifecycle.js',
-  'src/worker-access-gate.js',
-  'scripts/templates/membership-auth/membership.template',
-  'membership.html',
-  'migrations/0001_membership_foundation.sql',
-  'migrations/phase5_member_experience.sql',
-  'migrations/phase6_paypal_subscriptions.sql',
-  'wrangler.jsonc',
-  'wrangler.toml'
+  'src/worker-production.js','src/worker.js','src/worker-member-experience.js','src/worker-forum-persistence.js','src/worker-paypal-subscriptions.js','src/worker-email-lifecycle.js','src/worker-access-gate.js','scripts/templates/membership-auth/membership.template','membership.html','migrations/0001_membership_foundation.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_signal_board_persistence.sql','wrangler.jsonc','wrangler.toml'
 ]) need(fs.existsSync(at(relative)), `Missing API contract file: ${relative}`);
 
 const production = read('src/worker-production.js');
@@ -49,6 +36,7 @@ const membership = read('membership.html');
 const foundation = read('migrations/0001_membership_foundation.sql');
 const experience = read('migrations/phase5_member_experience.sql');
 const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
+const forumMigration = read('migrations/phase9_signal_board_persistence.sql');
 const wranglerJson = read('wrangler.jsonc');
 const wranglerToml = read('wrangler.toml');
 
@@ -83,42 +71,33 @@ checks.memberEntitlements = member.includes('supporter_3:2')
   && experience.includes("WHEN 1 THEN 'registered'");
 need(checks.memberEntitlements, 'Member entitlement ranks or effective entitlement view are incomplete');
 
-checks.forumPersistence = forum.includes("import { memberSessionContext } from './worker-member-experience.js';")
-  && forum.includes("error: 'A verified free member account is required to post.'")
-  && forum.includes("'forum.post.created'")
-  && forum.includes("member_id TEXT NOT NULL DEFAULT ''")
-  && forum.includes("postingAccess: 'verified-free-member-session'");
-need(checks.forumPersistence, 'Forum posting is not fully tied to a verified D1 member session and audit trail');
+checks.forumPersistenceChecks = {
+  memberAuthority: forum.includes("import { memberSessionContext } from './worker-member-experience.js';") && member.includes('export async function memberSessionContext'),
+  anonymousFailClosed: forum.includes('A verified free member account is required to post.'),
+  verifiedPostingPolicy: /postingAccess\s*:\s*['"]verified-free-member-session['"]/.test(forum),
+  publicReadingPolicy: /readingAccess\s*:\s*['"]public['"]/.test(forum),
+  postOwnershipLedger: forum.includes('forum_post_owners') && forumMigration.includes('CREATE TABLE IF NOT EXISTS forum_post_owners'),
+  reportOwnershipLedger: forum.includes('forum_report_owners') && forumMigration.includes('CREATE TABLE IF NOT EXISTS forum_report_owners'),
+  boardStateLedger: forum.includes('forum_board_state') && forumMigration.includes('CREATE TABLE IF NOT EXISTS forum_board_state'),
+  crossDevice: forum.includes('crossDevice:true'),
+  d1Authoritative: forum.includes('Cloudflare D1 MEMBERS_DB.forum_posts + forum_post_owners'),
+  productionStripsKv: production.includes('forumWorker.fetch(request, d1OnlyForumEnv(env), ctx)'),
+  noForumKvReads: !forum.includes('FORUM_POSTS.get(') && !forum.includes('FORUM_POSTS.list('),
+  noForumKvWrites: !forum.includes('FORUM_POSTS.put(')
+};
+checks.forumPersistence = Object.values(checks.forumPersistenceChecks).every(Boolean);
+need(checks.forumPersistence, `Forum persistence contract mismatch: ${Object.entries(checks.forumPersistenceChecks).filter(([,ok])=>!ok).map(([name])=>name).join(', ') || 'unknown'}`);
 
 checks.paypalGateChecks = {
-  threeIdentifiedActivePlans: paypal.includes('const plansReady=')
-    && paypal.includes('planRows.length===3')
-    && paypal.includes("String(row.status).toUpperCase()==='ACTIVE'")
-    && paypal.includes('row.provider_plan_id')
-    && paypal.includes('row.provider_product_id'),
-  commercialLegalState: paypal.includes('commercialLegalReady:legalReady')
-    && paypal.includes('COMMERCIAL_LEGAL_CONFIRMATION')
-    && paypal.includes('MATRIX_COMMERCIAL_LEGAL_CONFIRMED'),
-  durableConfirmationState: paypal.includes('contractConfirmationReady:contractEmailReady')
-    && paypal.includes('transactionalMembershipEmailReady')
-    && paypal.includes('queueMembershipContractConfirmation'),
-  checkoutRequiresAllGates: paypal.includes('checkoutEnabled:configured(env)')
-    && paypal.includes('environmentSwitch')
-    && paypal.includes('Boolean(setting.checkout_enabled)')
-    && paypal.includes('confirmation')
-    && paypal.includes('legalReady')
-    && paypal.includes('contractEmailReady')
-    && paypal.includes('plansReady'),
+  threeIdentifiedActivePlans: paypal.includes('const plansReady=') && paypal.includes('planRows.length===3') && paypal.includes("String(row.status).toUpperCase()==='ACTIVE'") && paypal.includes('row.provider_plan_id') && paypal.includes('row.provider_product_id'),
+  commercialLegalState: paypal.includes('commercialLegalReady:legalReady') && paypal.includes('COMMERCIAL_LEGAL_CONFIRMATION') && paypal.includes('MATRIX_COMMERCIAL_LEGAL_CONFIRMED'),
+  durableConfirmationState: paypal.includes('contractConfirmationReady:contractEmailReady') && paypal.includes('transactionalMembershipEmailReady') && paypal.includes('queueMembershipContractConfirmation'),
+  checkoutRequiresAllGates: paypal.includes('checkoutEnabled:configured(env)') && paypal.includes('environmentSwitch') && paypal.includes('Boolean(setting.checkout_enabled)') && paypal.includes('confirmation') && paypal.includes('legalReady') && paypal.includes('contractEmailReady') && paypal.includes('plansReady'),
   disabledCheckoutResponse: paypal.includes('PayPal checkout is disabled until every activation, commercial-readiness and contract-confirmation gate passes'),
-  durableConsentLedger: paypal.includes('paypal_checkout_consents')
-    && paypal.includes('paypal.checkout.consent_recorded'),
-  contractConfirmationAudit: paypal.includes('paypal.membership_contract_confirmation')
-    && paypal.includes('paypal.membership_contract_confirmation_failed'),
-  jsonSandboxDefault: wranglerJson.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
-    && wranglerJson.includes('"PAYPAL_PRODUCTION_ENABLED": "false"'),
-  productionDefaultsClosed: wranglerToml.includes('PAYPAL_ENVIRONMENT = "sandbox"')
-    && wranglerToml.includes('PAYPAL_PRODUCTION_ENABLED = "false"')
-    && wranglerToml.includes('COMMERCIAL_LEGAL_READY = "false"')
+  durableConsentLedger: paypal.includes('paypal_checkout_consents') && paypal.includes('paypal.checkout.consent_recorded'),
+  contractConfirmationAudit: paypal.includes('paypal.membership_contract_confirmation') && paypal.includes('paypal.membership_contract_confirmation_failed'),
+  jsonSandboxDefault: wranglerJson.includes('"PAYPAL_ENVIRONMENT": "sandbox"') && wranglerJson.includes('"PAYPAL_PRODUCTION_ENABLED": "false"'),
+  productionDefaultsClosed: wranglerToml.includes('PAYPAL_ENVIRONMENT = "sandbox"') && wranglerToml.includes('PAYPAL_PRODUCTION_ENABLED = "false"') && wranglerToml.includes('COMMERCIAL_LEGAL_READY = "false"')
 };
 checks.paypalFailClosed = Object.values(checks.paypalGateChecks).every(Boolean);
 need(checks.paypalFailClosed, `PayPal checkout gate mismatch: ${Object.entries(checks.paypalGateChecks).filter(([,ok])=>!ok).map(([name])=>name).join(', ') || 'unknown'}`);
@@ -146,15 +125,10 @@ checks.schemaFoundation = ['members','magic_links','member_sessions','subscripti
   && ['paypal_runtime_settings','paypal_plans','paypal_subscription_transitions'].every(table => paypalMigration.includes(table));
 need(checks.schemaFoundation, 'D1 membership or PayPal migration foundation is incomplete');
 
-// Execute the actual production Worker in a temporary ESM package with no D1,
-// provider secrets or payment credentials. Every protected subsystem must fail closed,
-// while ordinary static assets must still be delegated to ASSETS.
 const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-worker-contract-'));
 const tempSrc = path.join(tempRoot, 'src');
 fs.mkdirSync(tempSrc, { recursive: true });
-for (const entry of fs.readdirSync(at('src'), { withFileTypes: true })) {
-  if (entry.isFile() && entry.name.endsWith('.js')) fs.copyFileSync(at(`src/${entry.name}`), path.join(tempSrc, entry.name));
-}
+for (const entry of fs.readdirSync(at('src'), { withFileTypes: true })) if (entry.isFile() && entry.name.endsWith('.js')) fs.copyFileSync(at(`src/${entry.name}`), path.join(tempSrc, entry.name));
 fs.writeFileSync(path.join(tempRoot, 'package.json'), JSON.stringify({ type: 'module' }));
 const runtimeScript = `
 import production from ${JSON.stringify(pathToFileURL(path.join(tempSrc, 'worker-production.js')).href)};
@@ -177,11 +151,7 @@ const staticResponse=await call('/index.html',{ASSETS:{fetch:async()=>new Respon
 assert(staticResponse.status===200,'Static assets must remain available through ASSETS');
 console.log('runtime-boundaries-ok');
 `;
-const runtime = spawnSync(process.execPath, ['--input-type=module', '-e', runtimeScript], {
-  cwd: tempRoot,
-  encoding: 'utf8',
-  maxBuffer: 20 * 1024 * 1024
-});
+const runtime = spawnSync(process.execPath, ['--input-type=module', '-e', runtimeScript], { cwd: tempRoot, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
 fs.rmSync(tempRoot, { recursive: true, force: true });
 if (runtime.stdout) process.stdout.write(runtime.stdout);
 if (runtime.stderr) process.stderr.write(runtime.stderr);
@@ -193,11 +163,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   checks,
   failures,
-  externalActions: {
-    emailSent: false,
-    paypalCalled: false,
-    productionDeployed: false
-  },
+  externalActions: { emailSent: false, paypalCalled: false, productionDeployed: false },
   boundary: 'This test executes local Worker code only. It uses no live credentials, sends no email, calls no PayPal endpoint and deploys nothing.'
 };
 fs.mkdirSync(at('downloads'), { recursive: true });
@@ -207,4 +173,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('RECOVERY WORKER/API CONTRACT TEST PASSED: auth, D1, forum, protected access, email, consent, contract confirmation and PayPal remain authoritative and fail closed.');
+console.log('RECOVERY WORKER/API CONTRACT TEST PASSED: auth, D1 ownership-ledger forum, protected access, email, consent, contract confirmation and PayPal remain authoritative and fail closed.');

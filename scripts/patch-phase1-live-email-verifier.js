@@ -11,20 +11,20 @@ const before = fs.readFileSync(verifierPath, 'utf8');
 const emailReplacement = `async function verifyEmailAutomationBoundary() {
   const deployLogPath = path.join(root, 'downloads', 'wrangler-deploy.log');
   const deployLog = fs.existsSync(deployLogPath) ? fs.readFileSync(deployLogPath, 'utf8') : '';
-  const deployedFalse = /env\\.EMAIL_AUTOMATION_ENABLED \\(\"false\"\\)/.test(deployLog);
-  const deployedTrue = /env\\.EMAIL_AUTOMATION_ENABLED \\(\"true\"\\)/.test(deployLog);
+  const deployedFalse = /env\\.EMAIL_AUTOMATION_ENABLED \\("false"\\)/.test(deployLog);
+  const deployedTrue = /env\\.EMAIL_AUTOMATION_ENABLED \\("true"\\)/.test(deployLog);
   const response = await fetchText('/api/email/admin/health');
   const data = parseJson(response.text);
   const adminHealthProtected = [401, 403, 404].includes(response.status);
   return {
-    ok: deployedFalse && !deployedTrue && adminHealthProtected,
+    ok: deployedTrue && !deployedFalse && adminHealthProtected,
     deployedFalse,
     deployedTrue,
     deploymentLogPresent: Boolean(deployLog),
     deploymentLogPath: 'downloads/wrangler-deploy.log',
     adminHealth: { status: response.status, origin: response.headers['x-matrix-origin'] || null, data },
-    requiredRuntimeValue: false,
-    boundary: 'Phase 1 passes only when Wrangler proves the deployed Worker binding is EMAIL_AUTOMATION_ENABLED=false, no true binding appears, and the administrator email-health route remains protected.'
+    requiredRuntimeValue: true,
+    boundary: 'Production verification requires EMAIL_AUTOMATION_ENABLED=true in the Wrangler deployment log while the administrator health route remains protected. Delivery remains limited to verified, explicitly subscribed, preference-matched and unsuppressed recipients.'
   };
 }`;
 
@@ -42,9 +42,11 @@ replaceText("'/daily-investigation-conclusions': '<!-- conclusion-integrity:star
 replaceText("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'", 'commit-bound deploy health JSON marker');
 
 const emailPattern = /async function verifyEmailAutomationBoundary\(\) \{[\s\S]*?\n\}\nasync function verifyBootstrapBoundary/;
-if (!after.includes("path.join(root, 'downloads', 'wrangler-deploy.log')")) {
-  if (!emailPattern.test(after)) throw new Error('Phase 1 live email verifier patch target not found');
-  after = after.replace(emailPattern, `${emailReplacement}\nasync function verifyBootstrapBoundary`);
+if (!emailPattern.test(after)) throw new Error('Phase 1 live email verifier function target not found');
+const currentEmailFunction = after.match(emailPattern)?.[0] || '';
+const finalEmailBlock = `${emailReplacement}\nasync function verifyBootstrapBoundary`;
+if (currentEmailFunction !== finalEmailBlock) {
+  after = after.replace(emailPattern, finalEmailBlock);
   changed = true;
 }
 
@@ -63,8 +65,9 @@ replaceText("return { ok, checkedAt: new Date().toISOString(), expectedSha, main
 for (const marker of [
   "path.join(root, 'downloads', 'wrangler-deploy.log')",
   "deploymentLogPath: 'downloads/wrangler-deploy.log'",
-  'deployedFalse && !deployedTrue && adminHealthProtected',
-  'EMAIL_AUTOMATION_ENABLED=false',
+  'deployedTrue && !deployedFalse && adminHealthProtected',
+  'EMAIL_AUTOMATION_ENABLED=true',
+  'verified, explicitly subscribed, preference-matched and unsuppressed recipients',
   "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'",
   "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'",
   'manifestMatchesCurrentMain',
@@ -82,10 +85,16 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   changed,
   verifier: 'scripts/verify-live-production.js',
   deploymentLogPath: 'downloads/wrangler-deploy.log',
+  requiredEmailAutomationValue: true,
   stableRouteMarkers: true,
   canonicalDeployHealthRoute: '/deploy-health.json',
   commitRacePolicy: 'Accept exact deployed SHA or a newer current-main SHA only when manifest and health are commit-bound and mutually consistent.',
-  boundary: 'Live verification proves the actual deployed email automation binding is false using the real Wrangler deployment log and commit-bound health JSON.'
+  deliveryBoundary: 'Verified consent, selected preference, suppression checks, one-click unsubscribe and Europe/Paris schedule remain mandatory.',
+  boundary: 'Live verification proves the actual deployed email automation binding is true using the real Wrangler deployment log while live PayPal remains separately disabled.'
 }, null, 2)}\n`);
+
 require('./patch-search-v3-compaction-headroom.js');
-console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; Search V3 compaction headroom applied.`);
+const graphModule = require.resolve('./patch-cloudflare-oversized-graph-contract.js');
+delete require.cache[graphModule];
+require(graphModule);
+console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; active consent-controlled email, Search V3 headroom and final Cloudflare graph projection applied.`);

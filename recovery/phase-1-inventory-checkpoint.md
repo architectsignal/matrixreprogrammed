@@ -1,5 +1,5 @@
 # Phase 1 Functional Inventory Checkpoint
 
-Status: consolidated Search V3 compatibility and deploy-size audit triggered through draft PR #98.
+Status: D1 migration rehearsal, fail-closed entitlement state guard and full recovery gate triggered through draft PR #98.
 
-The public release workflow remains disabled. This checkpoint runs only the isolated recovery checks.
+The public release workflow remains disabled. This checkpoint runs only the isolated recovery checks and performs no Cloudflare deployment, email delivery or PayPal request.

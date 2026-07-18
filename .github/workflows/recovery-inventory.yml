@@ -83,6 +83,14 @@ jobs:
             node scripts/public-data-lab-output-test.js >> downloads/recovery-cloudflare-output.log 2>&1
             code=$?
           fi
+          if [ "$code" -eq 0 ]; then
+            node scripts/recovery-worker-api-contract-test.js >> downloads/recovery-cloudflare-output.log 2>&1
+            code=$?
+          fi
+          if [ "$code" -eq 0 ]; then
+            python3 scripts/recovery-d1-rehearsal.py >> downloads/recovery-cloudflare-output.log 2>&1
+            code=$?
+          fi
           cat downloads/recovery-cloudflare-output.log
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
@@ -159,6 +167,17 @@ jobs:
             echo "## Browser journeys" >> "$GITHUB_STEP_SUMMARY"
             node -e "const r=require('./downloads/recovery-browser-smoke.json'); console.log('- ok: '+r.ok+'\n- passed: '+r.passed+'/'+r.tests+'\n- failed: '+r.failed)" >> "$GITHUB_STEP_SUMMARY"
           fi
+          if [ -f downloads/recovery-d1-rehearsal.json ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "## D1 rehearsal" >> "$GITHUB_STEP_SUMMARY"
+            python3 - <<'PY'
+          import json
+          r=json.load(open('downloads/recovery-d1-rehearsal.json'))
+          print(f"- ok: {r['ok']}")
+          print(f"- checks: {r['passed']}/{r['tests']}")
+          print(f"- migrations: {r['migrationCount']}")
+          PY
+          fi
 
       - name: Upload complete inventory and diagnostics
         if: always()
@@ -174,6 +193,8 @@ jobs:
             downloads/recovery-cloudflare-output.log
             downloads/cloudflare-asset-versioning.json
             downloads/public-data-lab-output-test.json
+            downloads/recovery-worker-api-contract-test.json
+            downloads/recovery-d1-rehearsal.json
             downloads/recovery-browser-smoke.json
             downloads/recovery-browser-smoke.log
             downloads/recovery-browser/

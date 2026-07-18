@@ -18,7 +18,7 @@ const primaryLinks = [
   ['search.html', 'Search']
 ];
 const primaryHtml = primaryLinks.map(([href, label]) => `<a href="${href}">${label}</a>`).join('');
-const moreHtml = '<details class="nav-more"><summary>More</summary><div class="nav-drawer"><div class="nav-group"><strong>Research & Data</strong><a href="data-lab.html">Public Data Lab</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="evidence-network-map.html">Evidence Network</a><a href="geographic-power-atlas.html">Geographic Atlas</a></div><div class="nav-group"><strong>Community & Membership</strong><a href="forum.html">Signal Board</a><a href="membership.html">Membership</a><a href="subscriber-dashboard.html">Subscriber Dashboard</a><a href="amazon-store-books.html">Amazon Store</a><a href="videos.html">Rumble Channels</a></div></div></details>';
+const moreHtml = '<details class="nav-more"><summary>More</summary><div class="nav-drawer"><div class="nav-group"><strong>Research & Data</strong><a href="data-lab.html">Public Data Lab</a><a href="research-tools.html">Research Tools</a><a href="evidence-archive.html">Evidence Archive</a><a href="evidence-network-map.html">Evidence Network</a><a href="geographic-power-atlas.html">Geographic Atlas</a></div><div class="nav-group"><strong>Community, Books & Membership</strong><a href="book-universe.html">Book Universe</a><a href="forum.html">Signal Board</a><a href="membership.html">Membership</a><a href="subscriber-dashboard.html">Subscriber Dashboard</a><a href="amazon-store-books.html">Amazon Store</a><a href="videos.html">Rumble Channels</a></div></div></details>';
 const homepageNavHtml = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryHtml}</div>${moreHtml}</nav>`;
 
 function replaceHomepageNavigation(document) {
@@ -64,9 +64,10 @@ const renderedPrimary = primaryNavigationMarkup(html);
 const anchorCount = (renderedPrimary.match(/<a\b[^>]*href=/gi) || []).length;
 if (anchorCount !== 8) throw new Error(`Homepage primary navigation must contain exactly eight primary links; found ${anchorCount}.`);
 if (!html.includes('href="data-lab.html">Public Data Lab</a>')) throw new Error('Homepage Data Lab route is missing from the final navigation shell.');
+if (!html.includes('href="book-universe.html">Book Universe</a>')) throw new Error('Homepage Book Universe route is missing from the final navigation drawer.');
 if (count(html, 'security-privacy.html') < 1 || count(html, 'dark-web-safety.html') < 1) throw new Error('Homepage safety links are missing.');
 if (count(startHere, 'security-privacy.html') < 2 || count(startHere, 'dark-web-safety.html') < 2) throw new Error('Start Here navigation or safety cards are missing.');
 if (count(startHere, 'book-universe.html') < 1 || count(startHere, 'forum.html') < 1 || count(startHere, 'data-lab.html') < 1) throw new Error('Start Here compatibility routes are missing.');
 if (!startHere.includes('nav-shell') || !startHere.includes('nav-more') || !startHere.includes('<summary>More</summary>')) throw new Error('Start Here polished navigation shell is missing.');
 if ((startHere.match(/<!-- start-here-safety:start -->/g) || []).length !== 1) throw new Error('Start Here safety section is missing or duplicated.');
-console.log('Primary navigation reconciled across current and legacy homepage shells; Data Lab, research, community and safety routes preserved.');
+console.log('Primary navigation reconciled across current and legacy homepage shells; Data Lab, Book Universe, research, community and safety routes preserved.');

@@ -20,13 +20,13 @@ env:
 
 jobs:
   deploy-accepted-artifact:
-    name: Migrate, deploy and prove the exact accepted main artifact
+    name: Stage, migrate, deploy and prove the exact accepted main artifact
     if: >-
       ${{ github.event.workflow_run.conclusion == 'success' &&
           github.event.workflow_run.head_branch == 'main' &&
           github.event.workflow_run.event != 'pull_request' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - name: Checkout the exact SHA that passed the critical gate
         uses: actions/checkout@v4
@@ -98,10 +98,12 @@ jobs:
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
           node scripts/cloudflare-worker-routes-test.js
+          node scripts/worker-route-context-matrix-test.js
           node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
           node scripts/phase8-autonomous-sandbox-readiness-test.mjs
           node scripts/osint-tools-test.js
-          npx --yes wrangler@latest deploy --dry-run
+          npx --yes wrangler@latest deploy --config wrangler.jsonc --dry-run
+          npx --yes wrangler@latest deploy --config wrangler.staging.jsonc --dry-run
 
       - name: Confirm Cloudflare credentials
         env:
@@ -113,7 +115,99 @@ jobs:
           npx --yes wrangler@latest whoami
           npx --yes wrangler@latest d1 info matrix-members
 
-      - name: Capture D1 Time Travel rollback bookmark
+      - name: Deploy the exact accepted artifact to isolated Cloudflare staging
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest deploy --config wrangler.staging.jsonc 2>&1 | tee downloads/wrangler-staging-deploy.log
+          staging_url="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' downloads/wrangler-staging-deploy.log | tail -n 1 || true)"
+          test -n "$staging_url" || {
+            echo 'Wrangler did not report the isolated staging workers.dev URL'
+            exit 1
+          }
+          echo "STAGING_URL=$staging_url" >> "$GITHUB_ENV"
+          printf '%s\n' "$staging_url" > downloads/staging-url.txt
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+
+      - name: Apply complete migration chain to isolated staging D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          migrations=(
+            migrations/0001_membership_foundation.sql
+            migrations/0004_forum_persistence.sql
+            migrations/phase4_email_lifecycle.sql
+            migrations/phase4_email_lifecycle_portability.sql
+            migrations/phase5_member_experience.sql
+            migrations/phase5_member_experience_timestamp_fix.sql
+            migrations/phase6_paypal_subscriptions.sql
+            migrations/phase6_paypal_failure_counter_fix.sql
+            migrations/phase7_paypal_sandbox_rehearsal.sql
+            migrations/phase8_paypal_sandbox_bootstrap.sql
+          )
+          : > downloads/staging-d1-migration.log
+          for migration in "${migrations[@]}"; do
+            test -s "$migration"
+            echo "===== STAGING APPLY $migration =====" | tee -a downloads/staging-d1-migration.log
+            npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --file="$migration" --yes 2>&1 | tee -a downloads/staging-d1-migration.log
+          done
+
+      - name: Validate staging D1 schema, entitlement views and payment switches
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/staging-d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/staging-paypal-runtime-settings.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const rows=payload=>payload.flatMap(item=>item.results||item.result?.results||[]);
+          const schema=JSON.parse(fs.readFileSync('downloads/staging-d1-schema-verification.json','utf8'));
+          const settings=JSON.parse(fs.readFileSync('downloads/staging-paypal-runtime-settings.json','utf8'));
+          const names=new Set(rows(schema).map(row=>row.name));
+          const required=['members','member_sessions','subscriptions','audit_log','email_campaigns','member_access_grants','member_saved_items','member_entity_follows','member_watch_items','member_archive_entries','member_download_catalog','paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records','paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health','member_effective_entitlements','member_download_eligibility'];
+          const missing=required.filter(name=>!names.has(name));
+          if(missing.length)throw new Error(`Staging D1 missing objects: ${missing.join(', ')}`);
+          const switches=rows(settings);
+          if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live'))throw new Error('Staging D1 lacks both PayPal runtime environments');
+          if(switches.some(row=>Number(row.checkout_enabled)!==0))throw new Error('Staging PayPal checkout must remain disabled before controlled rehearsal');
+          console.log(`Staging D1 verified: ${required.length} required objects and entitlement views; all checkout switches disabled.`);
+          NODE
+
+      - name: Verify staging routes, privacy boundary and exact SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/build-provenance.json" > downloads/staging-build-provenance.json
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/api/auth/health" > downloads/staging-auth-health.json
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/api/paypal/health" > downloads/staging-paypal-health.json
+          member_status="$(curl -sS -o downloads/staging-member-anonymous.json -w '%{http_code}' "$STAGING_URL/api/member/me")"
+          tools_status="$(curl -sS -o downloads/staging-tools-anonymous.json -w '%{http_code}' "$STAGING_URL/api/tools/config")"
+          test "$member_status" = '401'
+          test "$tools_status" = '401'
+          node - <<'NODE'
+          const fs=require('fs');
+          const provenance=JSON.parse(fs.readFileSync('downloads/staging-build-provenance.json','utf8'));
+          const auth=JSON.parse(fs.readFileSync('downloads/staging-auth-health.json','utf8'));
+          const paypal=JSON.parse(fs.readFileSync('downloads/staging-paypal-health.json','utf8'));
+          if(provenance.sourceSha!==process.env.DEPLOY_COMMIT_SHA)throw new Error(`Staging SHA ${provenance.sourceSha} differs from accepted SHA ${process.env.DEPLOY_COMMIT_SHA}`);
+          if(!auth.d1Connected||!auth.authSchemaReady)throw new Error('Staging authentication is not using the migrated D1 schema');
+          if(auth.transactionalEmailConfigured)throw new Error('Staging transactional email must remain disabled');
+          if(paypal.environment!=='sandbox')throw new Error(`Staging PayPal environment is ${paypal.environment}`);
+          if(paypal.configured)throw new Error('Staging must not inherit production PayPal provider secrets');
+          console.log(`Staging live verification passed for ${provenance.sourceSha}`);
+          NODE
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+
+      - name: Capture production D1 Time Travel rollback bookmark
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -127,21 +221,12 @@ jobs:
           if(!payload || typeof payload.bookmark!=='string' || payload.bookmark.trim().length<8){
             throw new Error('Cloudflare D1 Time Travel did not return a valid rollback bookmark');
           }
-          const proof={
-            ok:true,
-            commit:process.env.DEPLOY_COMMIT_SHA,
-            createdAt:new Date().toISOString(),
-            database:'matrix-members',
-            method:'Cloudflare D1 Time Travel bookmark',
-            bookmark:payload.bookmark,
-            restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,
-            retentionBoundary:'Capture a new bookmark before every migration chain.'
-          };
+          const proof={ok:true,commit:process.env.DEPLOY_COMMIT_SHA,createdAt:new Date().toISOString(),database:'matrix-members',method:'Cloudflare D1 Time Travel bookmark',bookmark:payload.bookmark,restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,retentionBoundary:'Capture a new bookmark before every migration chain.'};
           fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify(proof,null,2));
           console.log(`D1 rollback point captured: ${payload.bookmark}`);
           NODE
 
-      - name: Apply idempotent D1 migration chain
+      - name: Apply idempotent production D1 migration chain
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -167,7 +252,7 @@ jobs:
             npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
           done
 
-      - name: Verify migrated D1 schema, entitlement views and disabled payment switches
+      - name: Verify production D1 schema, entitlement views and disabled payment switches
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -190,7 +275,7 @@ jobs:
           const switches=rows(settings);
           if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live'))throw new Error('Both PayPal runtime environments were not created');
           if(switches.some(row=>Number(row.checkout_enabled)!==0))throw new Error('PayPal checkout must remain disabled during deployment');
-          console.log(`D1 verification passed for ${required.length} objects; entitlement views exist; sandbox and live checkout remain disabled.`);
+          console.log(`Production D1 verification passed for ${required.length} objects; entitlement views exist; sandbox and live checkout remain disabled.`);
           NODE
 
       - name: Prove remote checks did not mutate the accepted deploy directory
@@ -199,14 +284,14 @@ jobs:
           set -euo pipefail
           sha256sum -c downloads/paid-launch-deploy-manifest.sha256
 
-      - name: Deploy the exact accepted artifact and Worker to Cloudflare
+      - name: Deploy the exact accepted artifact and Worker to production Cloudflare routes
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
+          npx --yes wrangler@latest deploy --config wrangler.jsonc 2>&1 | tee downloads/wrangler-deploy.log
 
       - name: Verify live routes, health SHA, PayPal boundaries and D1 behavior
         env:
@@ -236,7 +321,7 @@ jobs:
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
         run: node scripts/build-production-deploy-receipt.js
 
-      - name: Upload production proof
+      - name: Upload staging and production proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -247,13 +332,26 @@ jobs:
             downloads/paid-launch-deploy-manifest.digest
             downloads/final-paid-launch-hardening.json
             downloads/site-wide-function-audit.json
+            downloads/external-source-audit.json
             downloads/cloudflare-worker-routes-test.json
+            downloads/worker-route-context-matrix-test.json
             downloads/osint-tools-test.json
             downloads/login-email-resend-test.json
             downloads/membership-auth-test.json
+            downloads/passwordless-resend-expiry-test.json
             downloads/phase4-email-lifecycle-test/
             downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/phase8-autonomous-sandbox-readiness-test.json
+            downloads/staging-url.txt
+            downloads/wrangler-staging-deploy.log
+            downloads/staging-d1-migration.log
+            downloads/staging-d1-schema-verification.json
+            downloads/staging-paypal-runtime-settings.json
+            downloads/staging-build-provenance.json
+            downloads/staging-auth-health.json
+            downloads/staging-paypal-health.json
+            downloads/staging-member-anonymous.json
+            downloads/staging-tools-anonymous.json
             downloads/d1-time-travel-bookmark.json
             downloads/d1-rollback-proof.json
             downloads/d1-migration.log

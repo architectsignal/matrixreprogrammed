@@ -9,33 +9,41 @@ if (!fs.existsSync(target)) throw new Error('scripts/build-search-v3-runtime.js 
 let source = fs.readFileSync(target, 'utf8');
 const before = source;
 
-// Preserve the existing headroom profiles as the authoritative compaction
-// system, while adding one final profile if an older build lacks it.
-if (!source.includes("id: 'deployment-safe'")) {
-  const profileMatch = source.match(/const compactionProfiles = \[[\s\S]*?\n\];/);
-  if (!profileMatch) throw new Error('Search V3 compaction profile block is missing');
-  const block = profileMatch[0];
-  const close = block.lastIndexOf('\n];');
-  const body = block.slice(0, close).trimEnd();
-  const separator = body.endsWith(',') ? '\n' : ',\n';
-  const replacement = `${body}${separator}  { id: 'deployment-safe', title: 120, description: 64, listItems: 3, listChars: 28, scalar: 56, sourceUrl: 180 }\n];`;
-  source = source.replace(block, replacement);
-}
+// The final profile must always be the smallest candidate because the adaptive
+// loop retains the last attempted profile when no candidate reaches the 20 MiB
+// target. Older versions appended a larger deployment profile after the
+// emergency profile and could therefore turn a deployable result into a failure.
+const profileMatch = source.match(/const compactionProfiles = \[[\s\S]*?\n\];/);
+if (!profileMatch) throw new Error('Search V3 compaction profile block is missing');
+let profileBlock = profileMatch[0]
+  .replace(/^\s*\{ id: 'deployment-safe',[^
+]*\},?\s*$/m, '')
+  .replace(/,\s*\n\s*\n/g, ',\n');
+const close = profileBlock.lastIndexOf('\n];');
+if (close < 0) throw new Error('Search V3 compaction profile closing marker is missing');
+let body = profileBlock.slice(0, close).trimEnd().replace(/,+$/, '');
+const deploymentSafeProfile = "  { id: 'deployment-safe', title: 84, description: 0, listItems: 3, listChars: 18, scalar: 30, sourceUrl: 100, sparseDefaults: true, mergeTerms: true, termItems: 4 }";
+profileBlock = `${body},\n${deploymentSafeProfile}\n];`;
+source = source.replace(profileMatch[0], profileBlock);
 
-// Search only needs one sortable browser date. The full publication and
-// retrieval dates remain on the linked records and registries.
+// Search only needs one sortable browser date. The sparse compactor already
+// keeps the best available date; retain compatibility with older builders.
+const sparseDateMarker = 'const bestDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);';
 const browserDateMarker = 'const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);';
-if (!source.includes(browserDateMarker)) {
+if (!source.includes(sparseDateMarker) && !source.includes(browserDateMarker)) {
   const dateLoop = /  for \(const field of \['date', 'publicationDate', 'retrievalDate'\]\) \{[\s\S]*?\n  \}\n/;
   if (!dateLoop.test(source)) throw new Error('Search V3 date compaction block is missing');
-  source = source.replace(dateLoop, `  const browserDate = bounded(record.date || record.publicationDate || record.retrievalDate, 40);\n  if (browserDate) output.date = browserDate;\n`);
+  source = source.replace(dateLoop, `  ${browserDateMarker}\n  if (browserDate) output.date = browserDate;\n`);
 }
 
-// Keep direct external source links only for primary-source results. Every
-// searchable internal URL is preserved, and secondary records still link to
-// their complete site page, registry entry or document route.
-const desiredSourceLine = "  if (output.primarySource === true && /^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Math.min(500, Number(profile.sourceUrl || 320)));";
-if (!source.includes(desiredSourceLine)) {
+// The current sparse compactor retains external source links for primary,
+// official, court, government, regulator and Grade A/B records. Older builders
+// are reduced to primary-source links only. Both strategies preserve every
+// internal searchable URL.
+const sparseSourcePolicy = source.includes('const keepSourceUrl =')
+  && source.includes('sourceUrl.slice(0, Number(profile.sourceUrl || 320))');
+const legacyDesiredSourceLine = "  if (output.primarySource === true && /^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Math.min(500, Number(profile.sourceUrl || 320)));";
+if (!sparseSourcePolicy && !source.includes(legacyDesiredSourceLine)) {
   const alternatives = [
     "  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));",
     "  if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);",
@@ -43,16 +51,18 @@ if (!source.includes(desiredSourceLine)) {
   ];
   const matched = alternatives.find(line => source.includes(line));
   if (!matched) throw new Error('Search V3 source URL compaction block is missing');
-  source = source.replace(matched, desiredSourceLine);
+  source = source.replace(matched, legacyDesiredSourceLine);
 }
 
-for (const marker of [
-  "id: 'deployment-safe'",
-  browserDateMarker,
-  'output.primarySource === true',
-  'Math.min(500, Number(profile.sourceUrl || 320))'
+const datePolicyOk = source.includes(sparseDateMarker) || source.includes(browserDateMarker);
+const sourcePolicyOk = (source.includes('const keepSourceUrl =') && source.includes('sourceUrl.slice(0, Number(profile.sourceUrl || 320))'))
+  || source.includes(legacyDesiredSourceLine);
+for (const [label, ok] of [
+  ['strict final deployment profile', source.includes("id: 'deployment-safe'") && source.includes('termItems: 4') && source.includes('sourceUrl: 100')],
+  ['single browser date policy', datePolicyOk],
+  ['bounded external source policy', sourcePolicyOk]
 ]) {
-  if (!source.includes(marker)) throw new Error(`Search V3 deploy-size marker missing: ${marker}`);
+  if (!ok) throw new Error(`Search V3 deploy-size marker missing: ${label}`);
 }
 
 if (source !== before) fs.writeFileSync(target, source);
@@ -62,7 +72,19 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   changed: source !== before,
   owner: 'patch-search-v3-compaction-headroom.js profiles plus this compatibility guard',
-  strategy: 'Preserve every searchable result URL and evidence filter while collapsing duplicate date fields and retaining direct external source URLs only for primary-source results.',
-  boundary: 'Complete source URLs and unabridged metadata remain available on the linked result pages, registries, evidence network and document library.'
+  finalProfile: {
+    id: 'deployment-safe',
+    title: 84,
+    description: 0,
+    listItems: 3,
+    listChars: 18,
+    scalar: 30,
+    sourceUrl: 100,
+    sparseDefaults: true,
+    mergeTerms: true,
+    termItems: 4
+  },
+  strategy: 'Preserve every searchable internal URL, consolidate duplicate routes, remove repeated default metadata, keep one browser date and retain bounded direct sources for primary or high-authority records.',
+  boundary: 'Complete source URLs and unabridged metadata remain available on linked result pages, registries, the evidence network and document library.'
 }, null, 2)}\n`);
-console.log(`Search V3 deploy-size repair ${source !== before ? 'installed' : 'already current'}.`);
+console.log(`Search V3 deploy-size repair ${source !== before ? 'installed' : 'already current'} with the strictest profile last.`);

@@ -3,11 +3,10 @@ const path = require('path');
 
 const root = process.cwd();
 const mode = String(process.argv[2] || '').toLowerCase();
-const checkpoint = path.join(root, '.release-checkpoints', 'search-v3');
+const gitDir = path.join(root, '.git');
+const checkpoint = path.join(gitDir, 'matrix-release-checkpoints', 'search-v3');
 const files = ['search.html', 'search.js', 'search-index.json', 'data/search-facets.json'];
 
-function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
-function readJson(file) { return JSON.parse(read(file)); }
 function validate(base = root) {
   const get = file => fs.readFileSync(path.join(base, file), 'utf8');
   const js = get('search.js');
@@ -34,6 +33,10 @@ if (!['save', 'restore', 'verify'].includes(mode)) {
   console.error('Usage: node scripts/search-v3-checkpoint.js save|restore|verify');
   process.exit(2);
 }
+if (!fs.existsSync(gitDir) || !fs.statSync(gitDir).isDirectory()) {
+  console.error('SEARCH V3 CHECKPOINT FAILED: .git directory is required so the checkpoint cannot enter the public site tree.');
+  process.exit(1);
+}
 if (mode === 'save') {
   const state = validate(root);
   if (!state.ok) {
@@ -43,8 +46,8 @@ if (mode === 'save') {
   }
   fs.rmSync(checkpoint, { recursive: true, force: true });
   copy(root, checkpoint);
-  fs.writeFileSync(path.join(checkpoint, 'checkpoint.json'), JSON.stringify({ savedAt: new Date().toISOString(), results: state.results, files }, null, 2));
-  console.log(`Search V3 checkpoint saved: ${state.results} results.`);
+  fs.writeFileSync(path.join(checkpoint, 'checkpoint.json'), JSON.stringify({ savedAt: new Date().toISOString(), results: state.results, files, storageBoundary: '.git/matrix-release-checkpoints/search-v3' }, null, 2));
+  console.log(`Search V3 checkpoint saved outside the public audit tree: ${state.results} results.`);
   process.exit(0);
 }
 if (!fs.existsSync(path.join(checkpoint, 'checkpoint.json'))) {

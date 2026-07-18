@@ -23,7 +23,7 @@ jobs:
   clean-build-and-acceptance:
     name: Clean build, full functional gate and immutable artifact acceptance
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - name: Checkout the exact proposed commit
         uses: actions/checkout@v4
@@ -55,6 +55,9 @@ jobs:
           node --check scripts/final-paid-launch-hardening.js
           node --check scripts/release-acceptance-test.js
           node --check scripts/browser-release-acceptance.mjs
+          node --check scripts/external-source-audit.mjs
+          node --check scripts/passwordless-resend-expiry-test.js
+          node --check scripts/worker-route-context-matrix-test.js
           node scripts/site-wide-function-audit.js --prebuild
 
       - name: Build complete site from the clean checkout
@@ -108,16 +111,18 @@ jobs:
           COMMIT_SHA: ${{ env.COMMIT_SHA }}
         run: node scripts/final-paid-launch-hardening.js
 
-      - name: Test passwordless account lifecycle and email preferences
+      - name: Test passwordless signup, verification, resend, login, logout and expiry
         run: |
           node scripts/membership-auth-test.js
           node scripts/login-email-resend-test.js
+          node scripts/passwordless-resend-expiry-test.js
           node scripts/phase4-email-lifecycle-test.mjs
 
-      - name: Test Worker routes, D1 contracts, entitlements and OSINT boundaries
+      - name: Test every Worker route, D1 contract, entitlement and OSINT boundary
         run: |
           node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
+          node scripts/worker-route-context-matrix-test.js
           node scripts/osint-tools-test.js
           node scripts/phase8-autonomous-sandbox-readiness-test.mjs
           node scripts/d1-export-command-test.js
@@ -136,6 +141,13 @@ jobs:
       - name: Run final site-wide postbuild audit
         run: node scripts/site-wide-function-audit.js --postbuild
 
+      - name: Audit every external source destination, redirect and content type
+        env:
+          DEPLOY_DIR: _site
+          EXTERNAL_AUDIT_CONCURRENCY: '16'
+          EXTERNAL_AUDIT_TIMEOUT_MS: '15000'
+        run: node scripts/external-source-audit.mjs
+
       - name: Prove final deploy directory is accepted without mutation
         env:
           EXPECTED_SHA: ${{ env.COMMIT_SHA }}
@@ -147,7 +159,7 @@ jobs:
           npm install --no-save --package-lock=false playwright @axe-core/playwright http-server
           npx playwright install --with-deps chromium
 
-      - name: Run every generated page at mobile viewport with automated accessibility checks
+      - name: Run every generated page at mobile viewport with keyboard, privacy and accessibility checks
         shell: bash
         run: |
           set -euo pipefail
@@ -184,6 +196,7 @@ jobs:
             downloads/paid-launch-build.log
             downloads/paid-launch-query-gates.log
             downloads/link-audit-report.json
+            downloads/search-system-repair-report.json
             downloads/search-v3-quality-test.json
             downloads/search-investigation-smoke-test.json
             downloads/structured-investigation-data-test.json
@@ -196,10 +209,13 @@ jobs:
             downloads/paid-launch-deploy-manifest.digest
             downloads/final-paid-launch-hardening.json
             downloads/site-wide-function-audit.json
+            downloads/external-source-audit.json
             downloads/cloudflare-worker-routes-test.json
+            downloads/worker-route-context-matrix-test.json
             downloads/osint-tools-test.json
             downloads/login-email-resend-test.json
             downloads/membership-auth-test.json
+            downloads/passwordless-resend-expiry-test.json
             downloads/phase4-email-lifecycle-test/
             downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/phase8-autonomous-sandbox-readiness-test.json

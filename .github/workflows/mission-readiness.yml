@@ -53,15 +53,26 @@ jobs:
           SOURCE_DOCUMENTS_PER_RUN: '0'
         run: npm run build
 
-      - name: Re-run mission gate after all legacy generators
-        run: |
-          node scripts/patch-osint-tool-tiers.js
-          node scripts/patch-newsletter-consent.js
-          node scripts/align-mission-acceptance-copy.js
-          node scripts/mission-readiness-test.js
-          node scripts/global-risk-clocks-test.js
-          node scripts/cloudflare-worker-routes-test.js
-          node scripts/site-wide-function-audit.js --postbuild
+      - name: Restore OSINT tiers after legacy generators
+        run: node scripts/patch-osint-tool-tiers.js
+
+      - name: Restore newsletter consent after legacy generators
+        run: node scripts/patch-newsletter-consent.js
+
+      - name: Align final mission acceptance copy
+        run: node scripts/align-mission-acceptance-copy.js
+
+      - name: Re-run mission readiness contract
+        run: node scripts/mission-readiness-test.js
+
+      - name: Verify final global risk clocks
+        run: node scripts/global-risk-clocks-test.js
+
+      - name: Verify final Worker routes
+        run: node scripts/cloudflare-worker-routes-test.js
+
+      - name: Run postbuild site-wide function audit
+        run: node scripts/site-wide-function-audit.js --postbuild
 
       - name: Audit every page link download tool and mission route
         run: node scripts/mission-acceptance-audit.js
@@ -79,6 +90,7 @@ jobs:
             downloads/mission-acceptance-audit.json
             downloads/mission-acceptance-audit.md
             downloads/global-risk-clocks-test.json
+            downloads/cloudflare-worker-routes-test.json
             downloads/site-wide-function-audit.json
             downloads/site-audit.json
             downloads/pressure-test-report.json

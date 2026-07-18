@@ -13,13 +13,15 @@ const results = [];
 const failures = [];
 const assert = (condition, message) => { if (!condition) throw new Error(message); };
 const cleanName = value => String(value).replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
+const jsonResponse = (route, body, status = 200) => route.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
 
-async function runTest(browser, name, route, test) {
+async function runTest(browser, name, route, test, prepare = null) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   const page = await context.newPage();
   await page.route('**/track-event', async requestRoute => {
     await requestRoute.fulfill({ status: 204, contentType: 'application/json', body: '' });
   });
+  if (prepare) await prepare(page);
   const consoleErrors = [];
   const pageErrors = [];
   const localHttpErrors = [];
@@ -133,7 +135,7 @@ try {
     let submittedBody = null;
     await page.route('**/newsletter-signup', async route => {
       try { submittedBody = route.request().postDataJSON(); } catch {}
-      await route.fulfill({ status: 202, contentType: 'application/json', body: JSON.stringify({ ok: true, verification: { sent: true } }) });
+      await jsonResponse(route, { ok: true, verification: { sent: true } }, 202);
     });
     const form = page.locator('#newsletter-form');
     await form.waitFor({ state: 'visible' });
@@ -144,6 +146,117 @@ try {
     await page.waitForFunction(() => /saved\. check your inbox/i.test(document.querySelector('#newsletter-form .form-status')?.textContent || ''), null, { timeout: 10000 });
     assert(submittedBody?.consent === true, 'Newsletter request did not include explicit consent');
     assert(submittedBody?.public_weekly_digest === true, 'Newsletter request did not select the weekly digest');
+  });
+
+  await runTest(browser, 'Membership tiers and free signup', '/membership.html', async page => {
+    const body = await page.locator('body').innerText();
+    assert(body.includes('€3/month'), 'Supporter price is not €3/month');
+    assert(body.includes('€6/month'), 'Intelligence price is not €6/month');
+    assert(body.includes('€9/month'), 'Research Pro price is not €9/month');
+    assert(!body.includes('€19/month') && !body.includes('€49/month'), 'Legacy membership prices remain visible');
+    const form = page.locator('#membership-signup');
+    await form.locator('#member-name').fill('Recovery Member');
+    await form.locator('#member-email').fill('recovery-member@example.invalid');
+    await form.locator('#member-consent').check();
+    await form.locator('button[type="submit"]').click();
+    await page.waitForFunction(() => /check your email|check your inbox/i.test(document.querySelector('#signup-status')?.textContent || ''), null, { timeout: 10000 });
+    const payload = await page.evaluate(() => window.__membershipSignupPayload || null);
+    assert(payload?.marketingConsent === true, 'Membership signup omitted explicit marketing consent');
+    assert(payload?.email === 'recovery-member@example.invalid', 'Membership signup sent the wrong email');
+  }, async page => {
+    await page.addInitScript(() => { window.__membershipSignupPayload = null; });
+    await page.route('**/api/paypal/config', route => jsonResponse(route, { ok: true, configured: false, checkoutEnabled: false }));
+    await page.route('**/api/membership/signup', async route => {
+      let payload = null;
+      try { payload = route.request().postDataJSON(); } catch {}
+      await page.evaluate(value => { window.__membershipSignupPayload = value; }, payload);
+      await jsonResponse(route, { ok: true, saved: true, emailSent: true, verificationRequired: true }, 202);
+    });
+    await page.route('**/newsletter-signup', route => jsonResponse(route, { ok: true, saved: true, verificationRequired: true }, 202));
+  });
+
+  await runTest(browser, 'Passwordless login request', '/member-login.html', async page => {
+    const form = page.locator('#login-form');
+    await form.locator('#login-email').fill('recovery-member@example.invalid');
+    await form.locator('button[type="submit"]').click();
+    await page.waitForFunction(() => /one-time link has been sent|matching account exists/i.test(document.querySelector('#login-status')?.textContent || ''), null, { timeout: 10000 });
+    const payload = await page.evaluate(() => window.__loginRequestPayload || null);
+    assert(payload?.email === 'recovery-member@example.invalid', 'Login request sent the wrong email');
+  }, async page => {
+    await page.addInitScript(() => { window.__loginRequestPayload = null; });
+    await page.route('**/api/auth/request-link', async route => {
+      let payload = null;
+      try { payload = route.request().postDataJSON(); } catch {}
+      await page.evaluate(value => { window.__loginRequestPayload = value; }, payload);
+      await jsonResponse(route, { ok: true, accepted: true, message: 'If a matching account exists, a one-time link has been sent.' }, 202);
+    });
+  });
+
+  await runTest(browser, 'Registered member dashboard', '/member-dashboard.html', async page => {
+    await page.locator('#dashboard-content').waitFor({ state: 'visible', timeout: 15000 });
+    assert((await page.locator('#member-name').innerText()) === 'Recovery Member', 'Dashboard did not render the member name');
+    assert(/registered/i.test(await page.locator('#member-tier').innerText()), 'Dashboard did not render the registered tier');
+    assert(/free registered access/i.test(await page.locator('#paid-state').innerText()), 'Dashboard did not show the free entitlement boundary');
+    const capabilities = (await page.locator('#member-capabilities').innerText()).toLowerCase();
+    assert(capabilities.includes('free dashboard') && capabilities.includes('session controls'), 'Dashboard capabilities are incomplete');
+    assert(/current/i.test(await page.locator('#dashboard-status').innerText()), 'Dashboard did not complete loading');
+  }, async page => {
+    await page.route('**/api/member/**', async route => {
+      const pathname = new URL(route.request().url()).pathname;
+      if (pathname === '/api/member/dashboard') return jsonResponse(route, {
+        ok: true,
+        authenticated: true,
+        member: {
+          displayName: 'Recovery Member', email: 'recovery-member@example.invalid', effectiveTier: 'registered',
+          accountStatus: 'active', emailVerifiedAt: '2026-07-18T00:00:00.000Z', paidAccess: false, isAdmin: false,
+          capabilities: ['free_dashboard', 'session_controls', 'saved_public_content']
+        },
+        counts: { saved: 0, followed: 0, watchlists: 0, downloads: 0, activeSessions: 1, archiveEntries: 2 }
+      });
+      if (pathname === '/api/member/sessions') return jsonResponse(route, { ok: true, sessions: [{ id: 'session-current', current: true, active: true, createdAt: '2026-07-18T00:00:00.000Z', lastSeenAt: '2026-07-18T00:00:00.000Z', expiresAt: '2026-08-18T00:00:00.000Z' }] });
+      if (pathname === '/api/member/saved') return jsonResponse(route, { ok: true, items: [] });
+      if (pathname === '/api/member/follows') return jsonResponse(route, { ok: true, items: [] });
+      if (pathname === '/api/member/watchlists') return jsonResponse(route, { ok: true, items: [] });
+      if (pathname === '/api/member/archive') return jsonResponse(route, { ok: true, entries: [] });
+      if (pathname === '/api/member/downloads') return jsonResponse(route, { ok: true, downloads: [] });
+      return jsonResponse(route, { ok: true });
+    });
+  });
+
+  await runTest(browser, 'Forum public reading and member gate', '/forum.html', async page => {
+    await page.locator('#signal-board-feed').waitFor({ state: 'visible' });
+    await page.waitForFunction(() => /no persistent signals yet|source lead/i.test(document.querySelector('#signal-board-feed')?.textContent || ''), null, { timeout: 10000 });
+    const body = await page.locator('body').innerText();
+    assert(!/pay €1|i.ve paid|paypal\.me/i.test(body), 'Forum still exposes the false payment gate');
+    assert(/reading is public/i.test(await page.locator('#forum-member-status').innerText()), 'Forum does not explain public reading');
+    assert(await page.locator('#signal-board-form button[type="submit"]').isDisabled(), 'Anonymous forum posting is not locked');
+  }, async page => {
+    await page.route('**/api/member/me', route => jsonResponse(route, { ok: false, authenticated: false }));
+    await page.route('**/forum-feed-main*', route => jsonResponse(route, { ok: true, persistent: true, posts: [], board: 'main' }));
+  });
+
+  await runTest(browser, 'Verified member forum posting', '/forum.html', async page => {
+    const form = page.locator('#signal-board-form');
+    await page.waitForFunction(() => !document.querySelector('#signal-board-form button[type="submit"]')?.disabled, null, { timeout: 10000 });
+    await form.locator('input[name="name"]').fill('Recovery Member');
+    await form.locator('input[name="title"]').fill('Recovery source lead');
+    await form.locator('input[name="sourceUrl"]').fill('https://example.com/source');
+    await form.locator('textarea[name="body"]').fill('A browser-tested public-record source lead for the recovery gate.');
+    await form.locator('button[type="submit"]').click();
+    await page.waitForFunction(() => /posted live and saved persistently/i.test(document.querySelector('#signal-form-status')?.textContent || ''), null, { timeout: 10000 });
+    const payload = await page.evaluate(() => window.__forumSubmitPayload || null);
+    assert(payload?.board === 'main', 'Forum post was sent to the wrong board');
+    assert(payload?.title === 'Recovery source lead', 'Forum post title was not submitted');
+  }, async page => {
+    await page.addInitScript(() => { window.__forumSubmitPayload = null; });
+    await page.route('**/api/member/me', route => jsonResponse(route, { ok: true, authenticated: true, member: { displayName: 'Recovery Member', effectiveTier: 'registered', emailVerifiedAt: '2026-07-18T00:00:00.000Z' } }));
+    await page.route('**/forum-feed-main*', route => jsonResponse(route, { ok: true, persistent: true, posts: [], board: 'main' }));
+    await page.route('**/submit-main-post', async route => {
+      let payload = null;
+      try { payload = route.request().postDataJSON(); } catch {}
+      await page.evaluate(value => { window.__forumSubmitPayload = value; }, payload);
+      await jsonResponse(route, { ok: true, authenticated: true, persistent: true, saved: true, post: { id: 'recovery-post', board: 'main', title: payload?.title, body: payload?.body, name: 'Recovery Member', sourceUrl: payload?.sourceUrl, status: 'live', createdAt: new Date().toISOString() } }, 201);
+    });
   });
 
   await runTest(browser, 'Evidence network loads', '/evidence-network-map.html', async page => {

@@ -1,16 +1,22 @@
-name: Deploy Production (Manual Controlled Fallback)
+name: Deploy Production (Accepted Artifact Manual Fallback)
 
 on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type DEPLOY to run the manual Cloudflare fallback release'
+        description: 'Type DEPLOY ACCEPTED ARTIFACT'
         required: true
         default: 'NO'
+      critical_run_id:
+        description: 'Successful Paid Launch Critical Gate run ID'
+        required: true
+      passing_sha:
+        description: 'Exact 40-character SHA that passed that critical gate'
+        required: true
 
 permissions:
-  contents: read
   actions: read
+  contents: read
 
 concurrency:
   group: matrixreprogrammed-production
@@ -21,20 +27,62 @@ env:
 
 jobs:
   deploy:
-    name: Manual D1 migration and strict Cloudflare fallback
+    name: Manual staging and production deploy of one accepted artifact
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-    if: ${{ github.event.inputs.confirm == 'DEPLOY' }}
-
+    timeout-minutes: 180
+    if: ${{ github.event.inputs.confirm == 'DEPLOY ACCEPTED ARTIFACT' }}
     steps:
-      - name: Checkout latest main
+      - name: Validate immutable input format
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "${{ inputs.passing_sha }}" =~ ^[0-9a-f]{40}$ ]] || { echo 'passing_sha must be a full lowercase commit SHA'; exit 1; }
+          [[ "${{ inputs.critical_run_id }}" =~ ^[0-9]+$ ]] || { echo 'critical_run_id must be numeric'; exit 1; }
+
+      - name: Checkout the exact accepted SHA
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ inputs.passing_sha }}
           fetch-depth: 0
 
-      - name: Record exact main commit
-        run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - name: Record and prove accepted SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          actual_sha="$(git rev-parse HEAD)"
+          test "$actual_sha" = "${{ inputs.passing_sha }}"
+          git merge-base --is-ancestor "$actual_sha" origin/main || { echo 'Accepted SHA is not contained in main'; exit 1; }
+          echo "DEPLOY_COMMIT_SHA=$actual_sha" >> "$GITHUB_ENV"
+          echo "COMMIT_SHA=$actual_sha" >> "$GITHUB_ENV"
+          rm -rf _site
+          mkdir -p downloads
+
+      - name: Download exact artifact from the named critical-gate run
+        uses: actions/download-artifact@v4
+        with:
+          name: paid-launch-artifact-${{ inputs.passing_sha }}
+          run-id: ${{ inputs.critical_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: .
+
+      - name: Verify immutable artifact provenance and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d _site
+          test -s _site/build-provenance.json
+          test -s downloads/paid-launch-passing-sha.txt
+          test -s downloads/paid-launch-deploy-manifest.sha256
+          test -s downloads/paid-launch-deploy-manifest.digest
+          test "$(tr -d '\r\n' < downloads/paid-launch-passing-sha.txt)" = "$DEPLOY_COMMIT_SHA"
+          sha256sum -c downloads/paid-launch-deploy-manifest.digest
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+          node - <<'NODE'
+          const fs=require('fs');
+          const provenance=JSON.parse(fs.readFileSync('_site/build-provenance.json','utf8'));
+          if(provenance.sourceSha!==process.env.DEPLOY_COMMIT_SHA)throw new Error(`Artifact provenance ${provenance.sourceSha} differs from ${process.env.DEPLOY_COMMIT_SHA}`);
+          console.log(`Manual fallback accepted artifact verified: ${provenance.sourceSha}`);
+          NODE
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -42,36 +90,24 @@ jobs:
           node-version: '24'
           cache: npm
 
-      - name: Install locked dependencies
+      - name: Install locked dependencies without rebuilding
         run: npm ci
 
-      - name: Build complete site
-        env:
-          SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: npm run build
-
-      - name: Verify and reconcile release
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
+      - name: Recheck Worker, route, OSINT and payment boundaries
         run: |
-          node scripts/forum-persistence-d1-test.js
           node scripts/cloudflare-worker-routes-test.js
+          node scripts/worker-route-context-matrix-test.js
+          node scripts/osint-tools-test.js
           node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
           node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+          node --check src/worker.js
           node --check src/worker-email-lifecycle.js
           node --check src/worker-member-experience.js
           node --check src/worker-paypal-subscriptions.js
-          node --check src/worker-paypal-sandbox-bootstrap-v2.js
-          node --check src/worker-paypal-sandbox-bootstrap.js
           node --check src/worker-paypal-sandbox-rehearsal.js
           node --check src/worker-production.js
-          node --check scripts/build-production-deploy-receipt.js
-          node scripts/d1-export-command-test.js
-          node scripts/final-production-reconcile.js
-          node scripts/production-freshness-guard.js
-          node scripts/production-sync-test.js
-          node scripts/production-deploy-guard.js
-          npx --yes wrangler@latest deploy --dry-run
+          npx --yes wrangler@latest deploy --config wrangler.staging.jsonc --dry-run
+          npx --yes wrangler@latest deploy --config wrangler.jsonc --dry-run
 
       - name: Verify Cloudflare credentials
         env:
@@ -83,32 +119,91 @@ jobs:
           npx --yes wrangler@latest whoami
           npx --yes wrangler@latest d1 info matrix-members
 
-      - name: Capture D1 Time Travel rollback bookmark
+      - name: Deploy accepted artifact to isolated staging
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p downloads
+          npx --yes wrangler@latest deploy --config wrangler.staging.jsonc 2>&1 | tee downloads/manual-staging-deploy.log
+          staging_url="$(grep -Eo 'https://[A-Za-z0-9._-]+\.workers\.dev' downloads/manual-staging-deploy.log | tail -n 1 || true)"
+          test -n "$staging_url"
+          echo "STAGING_URL=$staging_url" >> "$GITHUB_ENV"
+          printf '%s\n' "$staging_url" > downloads/manual-staging-url.txt
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+
+      - name: Apply and validate isolated staging D1 migrations
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          migrations=(
+            migrations/0001_membership_foundation.sql
+            migrations/0004_forum_persistence.sql
+            migrations/phase4_email_lifecycle.sql
+            migrations/phase4_email_lifecycle_portability.sql
+            migrations/phase5_member_experience.sql
+            migrations/phase5_member_experience_timestamp_fix.sql
+            migrations/phase6_paypal_subscriptions.sql
+            migrations/phase6_paypal_failure_counter_fix.sql
+            migrations/phase7_paypal_sandbox_rehearsal.sql
+            migrations/phase8_paypal_sandbox_bootstrap.sql
+          )
+          : > downloads/manual-staging-d1-migration.log
+          for migration in "${migrations[@]}"; do
+            npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --file="$migration" --yes 2>&1 | tee -a downloads/manual-staging-d1-migration.log
+          done
+          npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','paypal_runtime_settings','member_effective_entitlements','member_download_eligibility') ORDER BY type,name;" --json > downloads/manual-staging-schema.json
+          npx --yes wrangler@latest d1 execute MEMBERS_DB --config wrangler.staging.jsonc --remote --command="SELECT environment,checkout_enabled FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/manual-staging-paypal-switches.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const rows=value=>value.flatMap(item=>item.results||item.result?.results||[]);
+          const schema=rows(JSON.parse(fs.readFileSync('downloads/manual-staging-schema.json','utf8')));
+          const names=new Set(schema.map(row=>row.name));
+          for(const name of ['members','member_sessions','subscriptions','paypal_runtime_settings','member_effective_entitlements','member_download_eligibility'])if(!names.has(name))throw new Error(`Staging missing ${name}`);
+          const switches=rows(JSON.parse(fs.readFileSync('downloads/manual-staging-paypal-switches.json','utf8')));
+          if(switches.some(row=>Number(row.checkout_enabled)!==0))throw new Error('Staging checkout must remain disabled');
+          NODE
+
+      - name: Verify isolated staging SHA and fail-closed routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/build-provenance.json" > downloads/manual-staging-provenance.json
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/api/auth/health" > downloads/manual-staging-auth-health.json
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$STAGING_URL/api/paypal/health" > downloads/manual-staging-paypal-health.json
+          test "$(curl -sS -o /dev/null -w '%{http_code}' "$STAGING_URL/api/member/me")" = '401'
+          test "$(curl -sS -o /dev/null -w '%{http_code}' "$STAGING_URL/api/tools/config")" = '401'
+          node - <<'NODE'
+          const fs=require('fs');
+          const provenance=JSON.parse(fs.readFileSync('downloads/manual-staging-provenance.json','utf8'));
+          const auth=JSON.parse(fs.readFileSync('downloads/manual-staging-auth-health.json','utf8'));
+          const paypal=JSON.parse(fs.readFileSync('downloads/manual-staging-paypal-health.json','utf8'));
+          if(provenance.sourceSha!==process.env.DEPLOY_COMMIT_SHA)throw new Error('Staging SHA mismatch');
+          if(!auth.d1Connected||!auth.authSchemaReady||auth.transactionalEmailConfigured)throw new Error('Staging authentication boundary invalid');
+          if(paypal.environment!=='sandbox'||paypal.configured)throw new Error('Staging PayPal boundary invalid');
+          NODE
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
+
+      - name: Capture production D1 rollback bookmark
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
           npx --yes wrangler@latest d1 time-travel info matrix-members --json > downloads/d1-time-travel-bookmark.json
           node - <<'NODE'
           const fs=require('fs');
           const payload=JSON.parse(fs.readFileSync('downloads/d1-time-travel-bookmark.json','utf8'));
-          if(!payload || typeof payload.bookmark!=='string' || payload.bookmark.trim().length<8) throw new Error('Cloudflare D1 Time Travel did not return a valid rollback bookmark');
-          fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify({
-            ok:true,
-            commit:process.env.DEPLOY_COMMIT_SHA,
-            createdAt:new Date().toISOString(),
-            database:'matrix-members',
-            method:'Cloudflare D1 Time Travel bookmark',
-            bookmark:payload.bookmark,
-            restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`,
-            retentionBoundary:'Cloudflare Time Travel retention applies; capture a new bookmark before every migration chain.'
-          },null,2));
+          if(!payload||typeof payload.bookmark!=='string'||payload.bookmark.trim().length<8)throw new Error('Valid D1 rollback bookmark missing');
+          fs.writeFileSync('downloads/d1-rollback-proof.json',JSON.stringify({ok:true,commit:process.env.DEPLOY_COMMIT_SHA,createdAt:new Date().toISOString(),database:'matrix-members',method:'Cloudflare D1 Time Travel bookmark',bookmark:payload.bookmark,restoreCommand:`wrangler d1 time-travel restore matrix-members --bookmark=${payload.bookmark}`},null,2));
           NODE
 
-      - name: Apply idempotent D1 migration chain
+      - name: Apply and validate production D1 migrations with PayPal disabled
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -131,62 +226,62 @@ jobs:
           for migration in "${migrations[@]}"; do
             npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
           done
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health') ORDER BY type,name;" --json > downloads/payment-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           node - <<'NODE'
           const fs=require('fs');
           const payload=JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
-          const schema=JSON.parse(fs.readFileSync('downloads/payment-schema-verification.json','utf8'));
-          const rollback=JSON.parse(fs.readFileSync('downloads/d1-rollback-proof.json','utf8'));
-          const rows=value=>value.flatMap(item=>item.results||item.result?.results||[]);
-          if(rows(payload).some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during fallback deployment');
-          if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing');
-          const names=new Set(rows(schema).map(row=>row.name));
-          const required=['paypal_sandbox_rehearsal_runs','paypal_sandbox_rehearsal_evidence','paypal_active_sandbox_rehearsal','paypal_sandbox_rehearsal_summary','paypal_sandbox_bootstrap_status','paypal_sandbox_bootstrap_health'];
-          const missing=required.filter(name=>!names.has(name));
-          if(missing.length) throw new Error(`Payment schema missing: ${missing.join(', ')}`);
+          const rows=payload.flatMap(item=>item.results||item.result?.results||[]);
+          if(rows.some(row=>Number(row.checkout_enabled)!==0))throw new Error('Production PayPal checkout must remain disabled');
           NODE
+          sha256sum -c downloads/paid-launch-deploy-manifest.sha256
 
-      - name: Deploy strict Worker and exact assets
+      - name: Deploy exact accepted artifact to production routes
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@latest deploy
+        run: npx --yes wrangler@latest deploy --config wrangler.jsonc 2>&1 | tee downloads/manual-production-deploy.log
 
-      - name: Verify live production
+      - name: Verify live production and accepted SHA
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LIVE_VERIFY_ATTEMPTS: '36'
           LIVE_VERIFY_DELAY_MS: '10000'
-        run: node scripts/verify-live-production.js
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/verify-live-production.js
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$SITE_URL/build-provenance.json" > downloads/live-build-provenance.json
+          node - <<'NODE'
+          const fs=require('fs');
+          const live=JSON.parse(fs.readFileSync('downloads/live-build-provenance.json','utf8'));
+          if(live.sourceSha!==process.env.DEPLOY_COMMIT_SHA)throw new Error(`Live SHA ${live.sourceSha} differs from accepted SHA ${process.env.DEPLOY_COMMIT_SHA}`);
+          NODE
 
-      - name: Build sanitized production deployment receipt
-        env:
-          DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}
-        run: node scripts/build-production-deploy-receipt.js
-
-      - name: Upload fallback proof
+      - name: Upload manual fallback proof
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: manual-production-proof-${{ github.run_id }}
+          name: manual-accepted-artifact-proof-${{ github.run_id }}
           path: |
-            downloads/deploy-manifest.json
-            downloads/deploy-health.json
-            downloads/production-sync-test.json
-            downloads/production-deploy-guard-report.json
-            downloads/final-production-reconcile.json
-            downloads/live-production-verification.json
-            downloads/phase7-paypal-sandbox-rehearsal-test.json
-            downloads/phase8-autonomous-sandbox-readiness-test.json
-            downloads/production-deploy-receipt.json
-            downloads/d1-export-command-test.json
+            downloads/paid-launch-passing-sha.txt
+            downloads/paid-launch-deploy-manifest.sha256
+            downloads/paid-launch-deploy-manifest.digest
+            downloads/manual-staging-deploy.log
+            downloads/manual-staging-url.txt
+            downloads/manual-staging-d1-migration.log
+            downloads/manual-staging-schema.json
+            downloads/manual-staging-paypal-switches.json
+            downloads/manual-staging-provenance.json
+            downloads/manual-staging-auth-health.json
+            downloads/manual-staging-paypal-health.json
             downloads/d1-time-travel-bookmark.json
             downloads/d1-rollback-proof.json
             downloads/d1-migration.log
-            downloads/payment-schema-verification.json
             downloads/paypal-runtime-settings.json
+            downloads/manual-production-deploy.log
+            downloads/live-production-verification.json
+            downloads/live-build-provenance.json
           if-no-files-found: ignore
           retention-days: 60

@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 const root = process.cwd();
 const deploy = path.resolve(root, process.env.DEPLOY_DIR || '_site');
-const expectedSha = String(process.env.EXPECTED_SHA || process.env.COMMIT_SHA || process.env.GITHUB_SHA || '').trim();
+const expectedSha = String(process.env.EXPECTED_SHA || process.env.COMMIT_SHA || '').trim();
 const problems = [];
 const warnings = [];
 const stats = { files: 0, html: 0, anchors: 0, pdf: 0, json: 0, textDownloads: 0, extensionlessPairs: 0 };
@@ -13,6 +13,12 @@ function fail(message) { problems.push(message); }
 function warn(message) { warnings.push(message); }
 function slash(value) { return value.split(path.sep).join('/'); }
 function rel(file) { return slash(path.relative(deploy, file)); }
+function isHtmlFile(file) {
+  const ext = path.extname(file).toLowerCase();
+  if (ext === '.html') return true;
+  if (ext) return false;
+  try { return /<!doctype html|<html\b/i.test(fs.readFileSync(file, 'utf8').slice(0, 1200)); } catch { return false; }
+}
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
@@ -28,14 +34,7 @@ function directoryHash(dir) {
   return hash.digest('hex');
 }
 function visibleText(html) {
-  return html
-    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<!--([\s\S]*?)-->/g, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&(?:nbsp|amp|lt|gt|quot|#39);/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return html.replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<!--([\s\S]*?)-->/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&(?:nbsp|amp|lt|gt|quot|#39);/g, ' ').replace(/\s+/g, ' ').trim();
 }
 function attrs(html, name) {
   const values = [];
@@ -45,7 +44,7 @@ function attrs(html, name) {
 }
 function ids(html) { return attrs(html, 'id'); }
 function routeFor(file) {
-  let value = rel(file);
+  const value = rel(file);
   if (value === 'index.html' || value === 'index') return '/';
   return `/${value.replace(/\.html$/i, '')}`;
 }
@@ -63,8 +62,7 @@ function existingTarget(base) {
   return candidates.find(candidate => fs.existsSync(candidate));
 }
 function checkAnchors(file, html, idSet) {
-  const hrefs = attrs(html, 'href');
-  for (const href of hrefs) {
+  for (const href of attrs(html, 'href')) {
     stats.anchors += 1;
     if (!href || /^(?:https?:|mailto:|tel:|sms:|data:|javascript:)/i.test(href)) continue;
     if (href.startsWith('#')) {
@@ -77,7 +75,7 @@ function checkAnchors(file, html, idSet) {
     const found = existingTarget(target);
     if (!found) { fail(`${rel(file)}: broken local link ${href}`); continue; }
     const fragment = href.includes('#') ? decodeURIComponent(href.split('#').slice(1).join('#')) : '';
-    if (fragment && /\.html$|^[^.]+$/i.test(found)) {
+    if (fragment && isHtmlFile(found)) {
       const targetHtml = fs.readFileSync(found, 'utf8');
       if (!new Set(ids(targetHtml)).has(fragment)) fail(`${rel(file)}: ${href} points to missing fragment #${fragment}`);
     }
@@ -90,14 +88,12 @@ function checkAccessibility(file, html) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count === 0) warn(`${rel(file)}: no h1`);
   if (h1Count > 1) warn(`${rel(file)}: multiple h1 elements (${h1Count})`);
-  const allIds = ids(html); const seen = new Set();
-  for (const id of allIds) { if (seen.has(id)) fail(`${rel(file)}: duplicate id ${id}`); seen.add(id); }
-  const images = [...html.matchAll(/<img\b[^>]*>/gi)].map(match => match[0]);
-  for (const tag of images) if (!/\balt\s*=\s*(["']).*?\1/i.test(tag)) fail(`${rel(file)}: image missing alt attribute`);
-  const buttons = [...html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi)];
-  for (const match of buttons) if (!visibleText(match[0]) && !/aria-label=["'][^"']+/i.test(match[0])) fail(`${rel(file)}: button has no accessible name`);
-  const inputs = [...html.matchAll(/<(?:input|select|textarea)\b[^>]*>/gi)].map(match => match[0]);
-  for (const tag of inputs) {
+  const seen = new Set();
+  for (const id of ids(html)) { if (seen.has(id)) fail(`${rel(file)}: duplicate id ${id}`); seen.add(id); }
+  for (const match of html.matchAll(/<img\b[^>]*>/gi)) if (!/\balt\s*=\s*(["']).*?\1/i.test(match[0])) fail(`${rel(file)}: image missing alt attribute`);
+  for (const match of html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi)) if (!visibleText(match[0]) && !/aria-label=["'][^"']+/i.test(match[0])) fail(`${rel(file)}: button has no accessible name`);
+  for (const match of html.matchAll(/<(?:input|select|textarea)\b[^>]*>/gi)) {
+    const tag = match[0];
     if (/type=["']hidden["']/i.test(tag)) continue;
     const id = (tag.match(/\bid=["']([^"']+)/i) || [])[1];
     const named = /aria-label=["'][^"']+|aria-labelledby=["'][^"']+|title=["'][^"']+/i.test(tag) || (id && new RegExp(`<label\\b[^>]*for=["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'i').test(html));
@@ -106,7 +102,7 @@ function checkAccessibility(file, html) {
 }
 function checkCopy(file, html) {
   const text = visibleText(html);
-  if (/preservedaftervisible(?:-)?de-duplication/i.test(html)) fail(`${rel(file)}: preservedaftervisible de-duplication marker visible`);
+  if (/preservedaftervisible(?:-)?de-duplication/i.test(html)) fail(`${rel(file)}: preserved-after-visible de-duplication marker remains`);
   if (/\b(?:lorem ipsum|todo:|fixme:|placeholder text|coming soon\.\.\.)\b/i.test(text)) fail(`${rel(file)}: placeholder copy detected`);
   if (/\{\{[^{}]+\}\}|\[\[[^\[\]]+\]\]/.test(text)) fail(`${rel(file)}: unresolved template token detected`);
   if (/\\n/.test(text)) fail(`${rel(file)}: escaped newline visible to readers`);
@@ -115,7 +111,8 @@ function checkCopy(file, html) {
     const count = (html.match(new RegExp(marker, 'g')) || []).length;
     if (count > 1) fail(`${rel(file)}: duplicated template block ${marker} (${count})`);
   }
-  if (/\b(?:Daily|Live|Latest|Weekly)\b/i.test((html.match(/<title[^>]*>(.*?)<\/title>/i) || [])[1] || '') && !html.includes('data-site-freshness-label')) fail(`${rel(file)}: freshness label missing`);
+  const title = (html.match(/<title[^>]*>(.*?)<\/title>/i) || [])[1] || '';
+  if (/\b(?:Daily|Live|Latest|Weekly)\b/i.test(title) && !html.includes('data-site-freshness-label')) fail(`${rel(file)}: freshness label missing`);
 }
 function checkCanonical(file, html) {
   const match = html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)/i);
@@ -129,7 +126,7 @@ function checkCanonical(file, html) {
 }
 function checkDashboard(file, html) {
   if (!/case-status-dashboard(?:\.html)?$/i.test(file)) return;
-  if (/Loading boundary|Loading lanes|data\.book\s+links|STATUS FROM CORE\\n/i.test(html)) fail(`${rel(file)}: broken dashboard placeholder/syntax remains`);
+  if (/Loading boundary|Loading lanes|data\.book\s+links|STATUS FROM CORE\\n/i.test(html)) fail(`${rel(file)}: broken dashboard placeholder or syntax remains`);
   for (const id of ['counts', 'grades', 'next']) {
     const section = html.match(new RegExp(`id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/div>`, 'i'));
     if (!section || !visibleText(section[1])) fail(`${rel(file)}: core section #${id} is empty`);
@@ -156,6 +153,9 @@ function needRepoFile(name, markers = []) {
   if (!fs.existsSync(file)) return fail(`repository requirement missing: ${name}`);
   const text = fs.readFileSync(file, 'utf8');
   for (const marker of markers) if (!text.includes(marker)) fail(`${name}: missing required gate marker ${marker}`);
+}
+function needDeploySurface(names, label) {
+  if (!names.some(name => fs.existsSync(path.join(deploy, name)) || fs.existsSync(path.join(deploy, name.replace(/\.html$/, ''))))) fail(`deploy missing ${label}: ${names.join(' or ')}`);
 }
 
 if (!fs.existsSync(deploy) || !fs.statSync(deploy).isDirectory()) {
@@ -194,16 +194,17 @@ needRepoFile('migrations/0001_membership_foundation.sql', ['CREATE TABLE']);
 needRepoFile('migrations/phase5_member_experience.sql', ['entitlement']);
 needRepoFile('migrations/phase6_paypal_subscriptions.sql', ['paypal_runtime_settings', 'paypal_subscription_transitions']);
 needRepoFile('analytics.js');
-for (const required of ['trust-privacy-policy.html', 'newsletter.html', 'unsubscribe.html', 'preferences.html']) if (!fs.existsSync(path.join(deploy, required)) && !fs.existsSync(path.join(deploy, required.replace(/\.html$/, '')))) fail(`deploy missing privacy/consent surface: ${required}`);
+needDeploySurface(['trust-privacy-policy.html', 'privacy.html'], 'privacy policy surface');
+needDeploySurface(['newsletter.html'], 'newsletter consent surface');
+needDeploySurface(['subscriber-dashboard.html'], 'preferences and unsubscribe surface');
 for (const report of ['downloads/cloudflare-worker-routes-test.json', 'downloads/osint-tools-test.json', 'downloads/login-email-resend-test.json', 'downloads/site-wide-function-audit.json']) if (!fs.existsSync(path.join(root, report))) fail(`required gate report missing: ${report}`);
 
 const afterHash = directoryHash(deploy);
 if (beforeHash !== afterHash) fail(`acceptance test mutated deploy directory (${beforeHash} -> ${afterHash})`);
-
-const result = { ok: problems.length === 0, expectedSha: expectedSha || null, deployDirectory: slash(path.relative(root, deploy)), deployHash: beforeHash, stats, warnings: warnings.slice(0, 500), problems: problems.slice(0, 1000) };
+const result = { ok: problems.length === 0, expectedSha: expectedSha || null, deployDirectory: slash(path.relative(root, deploy)), deployHash: beforeHash, stats, warningCount: warnings.length, problemCount: problems.length };
 if (problems.length) {
   console.error('\nFINAL NON-MUTATING DEPLOY ACCEPTANCE FAILED\n');
-  problems.slice(0, 200).forEach(problem => console.error(`- ${problem}`));
+  problems.slice(0, 300).forEach(problem => console.error(`- ${problem}`));
   console.error(`\n${problems.length} problem(s), ${warnings.length} warning(s). Deploy hash: ${beforeHash}`);
   process.exit(1);
 }

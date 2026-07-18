@@ -72,6 +72,14 @@ function functionRange(source, functionName) {
   }
   return null;
 }
+function replaceFunction(source, functionName, replacement, required = true) {
+  const found = functionRange(source, functionName);
+  if (!found) {
+    if (required) throw new Error(`Function ${functionName} was not found or was unbalanced`);
+    return source;
+  }
+  return `${source.slice(0, found.start)}${replacement}${source.slice(found.end)}`;
+}
 function removeFunction(source, functionName) {
   const found = functionRange(source, functionName);
   if (!found) return source;
@@ -105,15 +113,8 @@ writeIfChanged('src/worker-forum-persistence.js', forumBefore, forum);
 
 let legacy = read('src/worker.js');
 const legacyBefore = legacy;
-const safeTrack = "async function handleTrackEvent(request,env){const body=await readBody(request);const eventName=cleanText(body.name||'event',80);return new Response(null,{status:204,headers:{...securityHeaders,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-api','X-Matrix-Worker':workerName,'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'}})}";
-if (!legacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")) {
-  const found = functionRange(legacy, 'handleTrackEvent');
-  if (found) legacy = `${legacy.slice(0, found.start)}${safeTrack}${legacy.slice(found.end)}`;
-}
-legacy = legacy
-  .replace(/analytics:\$\{event\.id\}/g, 'analytics-endpoint-nonpersistent')
-  .replace(/async function handleNewsletterSendWeekly\(\)\{return json\(\{ok:true,mode:'preview-only',storage:'Cloudflare KV FORUM_POSTS',digest:'\/downloads\/weekly-newsletter-latest\.json'\}\)\}/g, "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})")
-  .replace(/if\s*\(env\.FORUM_POSTS\)\s*\{?\s*await withTimeout\(env\.FORUM_POSTS\.put\(`analytics:[\s\S]*?\}\s*/g, '');
+legacy = replaceFunction(legacy, 'handleTrackEvent', "async function handleTrackEvent(request,env){const body=await readBody(request);const eventName=cleanText(body.name||'event',80);return new Response(null,{status:204,headers:{...securityHeaders,'Cache-Control':'no-store','X-Matrix-Origin':'cloudflare-worker-api','X-Matrix-Worker':workerName,'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'}})}");
+legacy = replaceFunction(legacy, 'handleNewsletterSendWeekly', "async function handleNewsletterSendWeekly(){return json({ok:true,mode:'preview-only',storage:'No analytics or newsletter payload is written to KV',digest:'/downloads/weekly-newsletter-latest.json'})}", false);
 writeIfChanged('src/worker.js', legacyBefore, legacy);
 
 for (const configRel of ['wrangler.toml', 'wrangler.jsonc']) {
@@ -149,11 +150,11 @@ const semanticChecks = [
   ['forum has no KV migration function', !finalForum.includes('migrateKvPosts(')],
   ['forum has no KV read path', !finalForum.includes('FORUM_POSTS.get(') && !finalForum.includes('FORUM_POSTS.list(')],
   ['forum has no KV write path', !finalForum.includes('FORUM_POSTS.put(')],
-  ['forum declares D1-only compatibility state', finalForum.includes('compatibilityMirror:false') && finalForum.includes('mirroredToKv:false')],
+  ['forum declares D1-only state', finalForum.includes('compatibilityMirror:false') && finalForum.includes('mirroredToKv:false')],
   ['forum remains verified-member persistent', finalForum.includes('verified-free-member-session') && finalForum.includes('crossDevice:true')],
   ['analytics endpoint remains available', finalLegacy.includes('async function handleTrackEvent(')],
   ['analytics endpoint is non-persistent', finalLegacy.includes("'X-Matrix-Analytics':eventName?'client-provider-only':'ignored'")],
-  ['analytics KV writes removed', !finalLegacy.includes('FORUM_POSTS.put(`analytics:') && !finalLegacy.includes('analytics:${event.id}')],
+  ['analytics KV writes removed from handler', !functionRange(finalLegacy, 'handleTrackEvent') || !finalLegacy.slice(functionRange(finalLegacy, 'handleTrackEvent').start, functionRange(finalLegacy, 'handleTrackEvent').end).includes('FORUM_POSTS')],
   ['wrangler defensive KV switch false', finalWrangler.includes('ENABLE_KV_COMPATIBILITY_MIRROR = "false"')],
   ['wrangler JSON defensive KV switch false', finalWranglerJson.includes('"ENABLE_KV_COMPATIBILITY_MIRROR": "false"')],
   ['forum health verifier is D1 based', finalVerifier.includes("markers: ['d1Connected', 'authoritativeStorage']")]
@@ -171,7 +172,7 @@ const report = {
   changed: [...new Set(changed)],
   checks: Object.fromEntries(semanticChecks),
   failures,
-  policy: 'Cloudflare D1 is the only Signal Board persistence layer. Workers KV is unavailable to forum routes; analytics events are not persisted to KV.'
+  policy: 'Cloudflare D1 is the only Signal Board persistence layer. Production forum routes receive no KV binding, and analytics events are not persisted to KV.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-kv-traffic-repair.json'), `${JSON.stringify(report, null, 2)}\n`);
@@ -179,4 +180,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`PRODUCTION KV TRAFFIC FAILURE: ${item}`));
   process.exit(1);
 }
-console.log('Production KV traffic disabled: Signal Board is D1-only, cross-device and verified-member persistent; no KV compatibility read or write path remains.');
+console.log('Production KV traffic disabled: Signal Board is D1-only and analytics is non-persistent; Worker syntax validated.');

@@ -62,10 +62,17 @@ jobs:
           node scripts/recovery-functional-inventory.js
           node scripts/recovery-functional-inventory-refine.js
 
+      - name: Trace remaining output owners
+        if: steps.rebuild.outputs.exit_code == '0'
+        run: |
+          node --check scripts/recovery-trace-output-owners.js
+          node scripts/recovery-trace-output-owners.js
+
       - name: Publish inventory summary
         if: steps.rebuild.outputs.exit_code == '0'
         run: |
           cat downloads/recovery-functional-inventory.md >> "$GITHUB_STEP_SUMMARY"
+          cat downloads/recovery-output-owner-trace.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload complete inventory and diagnostics
         if: always()
@@ -77,6 +84,9 @@ jobs:
             downloads/recovery-functional-inventory.md
             downloads/recovery-entity-output-rebuild.json
             downloads/recovery-entity-rebuild.log
+            downloads/recovery-machine-input-sanitize.json
+            downloads/recovery-output-owner-trace.json
+            downloads/recovery-output-owner-trace.md
           if-no-files-found: error
           retention-days: 30
 

@@ -80,7 +80,11 @@ jobs:
           node --check src/worker-email-lifecycle.js
           node --check src/worker-production.js
       - name: Cloudflare dry run
-        run: npx --yes wrangler@latest deploy --dry-run
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          npx --yes wrangler@latest deploy --dry-run 2>&1 | tee downloads/phase8-wrangler-dry-run.log
       - name: Upload Phase 8 proof
         if: always()
         uses: actions/upload-artifact@v4
@@ -91,5 +95,6 @@ jobs:
             downloads/persistent-signal-board-patch.json
             downloads/deep-email-automation-patch.json
             downloads/list-unsubscribe-header-patch.json
+            downloads/phase8-wrangler-dry-run.log
           if-no-files-found: ignore
           retention-days: 60

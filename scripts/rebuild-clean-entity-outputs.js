@@ -36,6 +36,7 @@ function scan(relative, residual) {
 }
 
 run('scripts/repair-entity-exposure-object-names.js');
+run('scripts/repair-entity-html-entities.js');
 run('scripts/sanitize-machine-entity-inputs.js');
 const removed = [
   ...removeMalformed('entity-briefs'),
@@ -69,7 +70,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   removedStaleMalformedPages: removed,
   residual,
-  boundary: 'Object-valued upstream fields must resolve to a meaningful entity label or be excluded. A placeholder is never a valid entity.'
+  boundary: 'Object-valued upstream fields must resolve to a meaningful entity label or be excluded. Encoded names are decoded before safe HTML escaping. A placeholder is never a valid entity.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'recovery-entity-output-rebuild.json'), `${JSON.stringify(report, null, 2)}\n`);

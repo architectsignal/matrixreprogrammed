@@ -42,12 +42,21 @@ for (const marker of [
   'paypal-button-intelligence',
   'paypal-button-research_pro',
   'billing-dashboard.html',
+  'membership-terms.html',
+  'cancellation-withdrawal.html',
+  'legal-notice.html',
+  'membership-terms-accepted',
+  'membership-recurring-acknowledged',
+  'membership-immediate-service-requested',
+  'membership-withdrawal-notice-acknowledged',
+  'data-terms-version="2026-07-18-v1"',
+  'data-withdrawal-version="2026-07-18-v1"',
   'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
 ]) {
   if (!html.includes(marker)) failures.push(`Phase 6 membership template missing marker: ${marker}`);
 }
 
-for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken', 'Paid access to premium briefs']) {
+for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken', 'Paid access to premium briefs', 'Join Placeholder', 'Buy Placeholder', 'Email capture placeholder']) {
   if (html.includes(forbidden)) failures.push(`Phase 6 membership template contains obsolete marker: ${forbidden}`);
 }
 
@@ -97,13 +106,20 @@ if (!failures.length) {
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  mode: 'phase6-restore-protected-template-plus-explicit-email-preferences',
+  mode: 'phase6-restore-protected-template-plus-versioned-checkout-consent',
   template: 'templates/phase6-membership.template',
   freeTier: true,
   evidenceAccess: 'same-underlying-public-source-evidence',
   paymentLabel: 'optional-monthly-donation',
   prices: expectedPrices,
-  checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',
+  checkoutDefault: 'disabled-until-runtime-d1-consent-and-commercial-gates-pass',
+  checkoutConsent: {
+    termsVersion: '2026-07-18-v1',
+    withdrawalNoticeVersion: '2026-07-18-v1',
+    recurringPaymentAcknowledgement: true,
+    immediateServiceRequest: true,
+    durableServerRecordRequired: true
+  },
   briefingPreferences: {
     publicDailyBrief: true,
     releaseNotices: true,
@@ -123,4 +139,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Membership page restored across ${synchronized.length} source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.`);
+console.log(`Membership page restored across ${synchronized.length} source/output route(s): Free Member evidence access, explicit briefing preferences, versioned checkout consent and optional €3, €6 and €9 monthly memberships.`);

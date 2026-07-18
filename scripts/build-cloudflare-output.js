@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
@@ -9,6 +10,7 @@ const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xm
 const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools']);
 const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','CLOUDFLARE_PAGES_SETUP.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
 const maxAssetBytes = 25 * 1024 * 1024;
+const knowledgeGraphChunkTargetBytes = 2 * 1024 * 1024;
 
 function normalizeWorkerAuditMarkers() {
   const file = path.join(root, 'src', 'worker.js');
@@ -73,6 +75,7 @@ function runRequired(label, script) {
 
 function rm(dir) { if (fs.existsSync(dir)) fs.rmSync(dir, { recursive:true, force:true }); }
 function ensure(dir) { fs.mkdirSync(dir, { recursive:true }); }
+function sha256(value) { return crypto.createHash('sha256').update(value).digest('hex'); }
 function shouldCopy(rel, entry) {
   if (entry.isDirectory()) return !blockedDirs.has(entry.name);
   const base = path.basename(rel);
@@ -82,6 +85,10 @@ function shouldCopy(rel, entry) {
 }
 function copyFile(src, dest, rel) {
   const size = fs.statSync(src).size;
+  if (rel === 'data/investigation-knowledge-graph.json' && size > maxAssetBytes) {
+    console.log(`Deferring oversized knowledge graph to validated public manifest: ${rel}`);
+    return false;
+  }
   if (size > maxAssetBytes) {
     if (path.extname(src).toLowerCase() === '.json') {
       try {
@@ -122,6 +129,100 @@ function walk(dir) {
       if (copied) copyHtmlRouteVariant(full, rel);
     }
   }
+}
+
+function writeKnowledgeGraphChunks(kind, records, chunkDir) {
+  if (!Array.isArray(records) || records.length === 0) return [];
+  const groups = [];
+  let current = [];
+  let bytes = 2;
+  for (const record of records) {
+    const serialized = JSON.stringify(record);
+    const recordBytes = Buffer.byteLength(serialized) + (current.length ? 1 : 0);
+    if (current.length && bytes + recordBytes > knowledgeGraphChunkTargetBytes) {
+      groups.push(current);
+      current = [];
+      bytes = 2;
+    }
+    current.push(record);
+    bytes += recordBytes;
+  }
+  if (current.length) groups.push(current);
+  return groups.map((group, index) => {
+    const filename = `${kind}-${String(index + 1).padStart(4, '0')}.json`;
+    const relative = `data/investigation-knowledge-graph/${filename}`;
+    const target = path.join(chunkDir, filename);
+    const payload = JSON.stringify({
+      ok: true,
+      representation: 'investigation-knowledge-graph-chunk-v1',
+      kind,
+      index: index + 1,
+      totalChunks: groups.length,
+      count: group.length,
+      records: group
+    });
+    const payloadBytes = Buffer.byteLength(payload);
+    if (payloadBytes > maxAssetBytes) throw new Error(`Knowledge graph chunk exceeds Cloudflare limit: ${relative}`);
+    fs.writeFileSync(target, payload);
+    return { url: relative, count: group.length, bytes: payloadBytes, sha256: sha256(payload) };
+  });
+}
+
+function publishInvestigationKnowledgeGraphManifest() {
+  const sourcePath = path.join(root, 'data', 'investigation-knowledge-graph.json');
+  const manifestPath = path.join(out, 'data', 'investigation-knowledge-graph.json');
+  const entityPath = path.join(out, 'data', 'entity-registry.json');
+  const relationshipPath = path.join(out, 'data', 'relationship-registry.json');
+  if (!fs.existsSync(sourcePath)) throw new Error('Investigation knowledge graph source is missing');
+  if (!fs.existsSync(entityPath) || !fs.existsSync(relationshipPath)) throw new Error('Deployable entity or relationship registry is missing');
+  const graph = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+  const entityFeed = JSON.parse(fs.readFileSync(entityPath, 'utf8'));
+  const relationshipFeed = JSON.parse(fs.readFileSync(relationshipPath, 'utf8'));
+  if (!Array.isArray(graph.entities) || !Array.isArray(graph.relationships)) throw new Error('Investigation knowledge graph source arrays are missing');
+  if (entityFeed.entities?.length !== graph.entities.length) throw new Error('Deployable entity registry count differs from full graph');
+  if (relationshipFeed.relationships?.length !== graph.relationships.length) throw new Error('Deployable relationship registry count differs from full graph');
+
+  const chunkDir = path.join(out, 'data', 'investigation-knowledge-graph');
+  rm(chunkDir);
+  ensure(chunkDir);
+  const supplementary = {};
+  for (const key of ['findings','documents','missingRecords']) {
+    supplementary[key] = writeKnowledgeGraphChunks(key, graph[key] || [], chunkDir);
+  }
+  const entityBytes = fs.statSync(entityPath).size;
+  const relationshipBytes = fs.statSync(relationshipPath).size;
+  if (entityBytes > maxAssetBytes || relationshipBytes > maxAssetBytes) throw new Error('Canonical graph registry exceeds Cloudflare per-asset limit');
+  const manifest = {
+    ok: true,
+    schemaVersion: graph.schemaVersion,
+    generatedAt: graph.generatedAt,
+    representation: 'chunked-public-knowledge-graph-manifest-v1',
+    complete: true,
+    model: graph.model,
+    evidenceBoundary: graph.evidenceBoundary,
+    rules: graph.rules || [],
+    totals: graph.totals,
+    countsByType: graph.countsByType || {},
+    countsByRelationship: graph.countsByRelationship || {},
+    reviewCounts: graph.reviewCounts || {},
+    components: {
+      entities: { url: 'data/entity-registry.json', recordKey: 'entities', count: graph.entities.length, bytes: entityBytes, sha256: sha256(fs.readFileSync(entityPath)) },
+      relationships: { url: 'data/relationship-registry.json', recordKey: 'relationships', count: graph.relationships.length, bytes: relationshipBytes, sha256: sha256(fs.readFileSync(relationshipPath)) },
+      findings: { recordKey: 'records', count: (graph.findings || []).length, chunks: supplementary.findings },
+      documents: { recordKey: 'records', count: (graph.documents || []).length, chunks: supplementary.documents },
+      missingRecords: { recordKey: 'records', count: (graph.missingRecords || []).length, chunks: supplementary.missingRecords }
+    },
+    reconstruction: 'Load the entity and relationship component feeds, then concatenate each supplementary chunk in numerical order. Counts and SHA-256 digests are supplied for verification.',
+    boundary: 'The graph is split only to respect the hosting platform asset ceiling. No entity, relationship, finding, document or missing-record entry is removed.'
+  };
+  const payload = JSON.stringify(manifest);
+  if (Buffer.byteLength(payload) > maxAssetBytes) throw new Error('Knowledge graph manifest exceeds Cloudflare limit');
+  ensure(path.dirname(manifestPath));
+  fs.writeFileSync(manifestPath, payload);
+  const supplementaryCount = Object.values(supplementary).flat().reduce((sum, item) => sum + item.count, 0);
+  const expectedSupplementary = (graph.findings || []).length + (graph.documents || []).length + (graph.missingRecords || []).length;
+  if (supplementaryCount !== expectedSupplementary) throw new Error('Knowledge graph supplementary chunk counts do not match source');
+  console.log(`Investigation knowledge graph published as complete manifest: ${graph.entities.length} entities, ${graph.relationships.length} relationships, ${expectedSupplementary} supplementary records across ${Object.values(supplementary).flat().length} chunk(s).`);
 }
 
 normalizeWorkerAuditMarkers();
@@ -182,6 +283,7 @@ require('./patch-newsletter-consent.js');
 rm(out);
 ensure(out);
 walk(root);
+publishInvestigationKnowledgeGraphManifest();
 ensureArchiveSearchMarker(path.join(out, 'search.html'));
 ensureArchiveSearchMarker(path.join(out, 'search'));
 

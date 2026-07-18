@@ -27,15 +27,28 @@ function replaceRequired(source, before, after, label) {
 }
 
 // Paid checkout must require credentials, the environment switch, the D1 switch,
-// live confirmation when applicable, and three ACTIVE provider plans.
+// live confirmation when applicable, three ACTIVE provider plans and every stronger
+// commercial/contract-confirmation gate installed by the canonical PayPal patch.
 {
   const relative = 'src/worker-paypal-subscriptions.js';
   let source = read(relative);
-  const pattern = /async function activationState\(env\)\{[^\n]*\}/;
-  const replacement = "async function activationState(env){const target=environment(env);const setting=await runtimeSetting(env,target);const environmentSwitch=target==='live'?bool(env?.PAYPAL_PRODUCTION_ENABLED):bool(env?.PAYPAL_SANDBOX_ENABLED);const confirmation=target!=='live'||String(env?.PAYPAL_LIVE_ACTIVATION_CONFIRMATION||'')==='MATRIX_PAYPAL_LIVE_CONFIRMED';const planRows=await plans(env,target);const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);return{environment:target,configured:configured(env),environmentSwitch,databaseSwitch:Boolean(setting.checkout_enabled),confirmation,plansReady,checkoutEnabled:configured(env)&&environmentSwitch&&Boolean(setting.checkout_enabled)&&confirmation&&plansReady,setting,plans:planRows}}";
-  if (!source.includes('&&confirmation&&plansReady,setting,plans:planRows')) {
-    if (!pattern.test(source)) throw new Error('PayPal activationState function is missing');
-    source = source.replace(pattern, replacement);
+  const weakMultilinePlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE');";
+  const strongMultilinePlanCheck = "const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);";
+  if (source.includes(weakMultilinePlanCheck)) source = source.replace(weakMultilinePlanCheck, strongMultilinePlanCheck);
+
+  const hasCanonicalMultilineState = source.includes('async function activationState(env){')
+    && source.includes('commercialLegalReady:legalReady')
+    && source.includes('contractConfirmationReady:contractEmailReady')
+    && source.includes(strongMultilinePlanCheck)
+    && source.includes('&&confirmation&&legalReady&&contractEmailReady&&plansReady');
+
+  if (!hasCanonicalMultilineState) {
+    const pattern = /async function activationState\(env\)\{[^\n]*\}/;
+    const replacement = "async function activationState(env){const target=environment(env);const setting=await runtimeSetting(env,target);const environmentSwitch=target==='live'?bool(env?.PAYPAL_PRODUCTION_ENABLED):bool(env?.PAYPAL_SANDBOX_ENABLED);const confirmation=target!=='live'||String(env?.PAYPAL_LIVE_ACTIVATION_CONFIRMATION||'')==='MATRIX_PAYPAL_LIVE_CONFIRMED';const planRows=await plans(env,target);const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);return{environment:target,configured:configured(env),environmentSwitch,databaseSwitch:Boolean(setting.checkout_enabled),confirmation,plansReady,checkoutEnabled:configured(env)&&environmentSwitch&&Boolean(setting.checkout_enabled)&&confirmation&&plansReady,setting,plans:planRows}}";
+    if (!source.includes('&&confirmation&&plansReady,setting,plans:planRows')) {
+      if (!pattern.test(source)) throw new Error('PayPal activationState function is missing or does not expose the canonical guarded structure');
+      source = source.replace(pattern, replacement);
+    }
   }
   write(relative, source);
 }
@@ -112,7 +125,7 @@ const report = {
   contracts: {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
-    paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
+    paypal: 'checkout preserves commercial legal and durable contract-confirmation gates while requiring credentials, environment switch, D1 switch, confirmation and three identified ACTIVE plans',
     membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }

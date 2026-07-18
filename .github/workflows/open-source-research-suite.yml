@@ -52,7 +52,7 @@ jobs:
     if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[pagefind]')
     name: Build PDF reader, timeline and Pagefind fallback
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - name: Checkout current revision
         uses: actions/checkout@v4
@@ -69,10 +69,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build guarded Cloudflare site
+      - name: Remove inherited deploy output
+        run: rm -rf _site
+
+      - name: Build complete guarded site from the clean checkout
         env:
           SOURCE_DOCUMENTS_PER_RUN: '0'
-        run: node scripts/build-cloudflare-output.js
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          npm run build 2>&1 | tee downloads/open-source-full-build.log
 
       - name: Build independent Pagefind index
         run: npx --yes pagefind@1.4.0 --site _site --output-path _site/pagefind
@@ -80,7 +87,12 @@ jobs:
       - name: Validate generated Pagefind assets
         env:
           PAGEFIND_SITE: _site
-        run: node scripts/pagefind-output-test.js
+        run: |
+          node scripts/open-source-research-suite-test.js
+          node scripts/pagefind-output-test.js
+          test -s _site/evidence-reader.html
+          test -s _site/evidence-timeline.html
+          test -s _site/pagefind/pagefind.js
 
       - name: Commit generated open-source outputs
         if: github.event_name != 'pull_request'
@@ -157,9 +169,11 @@ jobs:
         with:
           name: open-source-research-suite-${{ github.run_id }}
           path: |
+            downloads/open-source-full-build.log
             downloads/open-source-research-suite-test.json
             downloads/pagefind-output-test.json
             downloads/open-source-research-wiring.json
+            downloads/cytoscape-network-map-test.json
             data/evidence-reader-manifest.json
             data/evidence-timeline.json
           if-no-files-found: ignore

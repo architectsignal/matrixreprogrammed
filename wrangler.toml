@@ -16,7 +16,8 @@ routes = [
 ]
 
 [triggers]
-crons = ["5 6 * * *", "15 7 * * 1"]
+# Run at both summer and winter UTC candidates. The Worker sends only when Europe/Paris is exactly 08:05 daily or 09:15 Monday.
+crons = ["5 6 * * *", "5 7 * * *", "15 7 * * 1", "15 8 * * 1"]
 
 [vars]
 PAYPAL_ENVIRONMENT = "sandbox"
@@ -24,7 +25,7 @@ PAYPAL_SANDBOX_ENABLED = "true"
 PAYPAL_PRODUCTION_ENABLED = "false"
 PAYPAL_DONATIONS_ENABLED = "false"
 COMMERCIAL_LEGAL_READY = "false"
-EMAIL_AUTOMATION_ENABLED = "false"
+EMAIL_AUTOMATION_ENABLED = "true"
 EMAIL_TRANSACTIONAL_ENABLED = "true"
 BREVO_DOMAIN_AUTHENTICATED = "true"
 EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"
@@ -32,18 +33,19 @@ MEMBERS_FROM_EMAIL = "members@matrixreprogrammed.com"
 MEMBERS_FROM_NAME = "Matrix Reprogrammed"
 MEMBERS_REPLY_TO_EMAIL = "njmgroupfrance@gmail.com"
 MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
+ENABLE_KV_COMPATIBILITY_MIRROR = "false"
 
 [assets]
 directory = "./_site"
 binding = "ASSETS"
 run_worker_first = true
 
-# Compatibility mirror and recovery source for historical forum posts.
+# Historical KV remains connected only as an explicitly disabled recovery source.
 [[kv_namespaces]]
 binding = "FORUM_POSTS"
 id = "99996d87016d4285a833707cbda5232f"
 
-# Authoritative membership, forum, consent, session and payment database.
+# Authoritative membership, Signal Board, consent, session and payment database.
 [[d1_databases]]
 binding = "MEMBERS_DB"
 database_name = "matrix-members"

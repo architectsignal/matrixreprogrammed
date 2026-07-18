@@ -47,6 +47,7 @@ jobs:
           node --check scripts/build-mission-timers.js
           node --check scripts/build-production-deploy-receipt.js
           node --check scripts/mission-acceptance-audit.js
+          node --check scripts/repair-newsletter-preference-runtime.js
 
       - name: Build and audit complete site
         env:
@@ -57,7 +58,7 @@ jobs:
         run: node scripts/patch-osint-tool-tiers.js
 
       - name: Restore newsletter consent after legacy generators
-        run: node scripts/patch-newsletter-consent.js
+        run: node scripts/repair-newsletter-preference-runtime.js
 
       - name: Align final mission acceptance copy
         run: node scripts/align-mission-acceptance-copy.js
@@ -95,5 +96,6 @@ jobs:
             downloads/site-audit.json
             downloads/pressure-test-report.json
             downloads/newsletter-consent-patch.json
+            downloads/newsletter-preference-runtime-repair.json
           if-no-files-found: ignore
           retention-days: 60

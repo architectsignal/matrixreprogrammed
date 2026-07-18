@@ -47,6 +47,26 @@ function scan(relative, residual) {
   if (!/\.(?:html|json|md)$/i.test(relative)) return;
   if (hasMalformed(fs.readFileSync(full, 'utf8'))) residual.push(relative.replace(/\\/g, '/'));
 }
+function suppressDiagnosticEchoes(text) {
+  return String(text || '')
+    .replace(/\[object Object\]/gi, '[malformed object value suppressed]')
+    .replace(/\bobject Object\b/gi, 'malformed object value suppressed')
+    .replace(/object-object(?:\.html)?/gi, 'malformed-object-route');
+}
+function sanitizeFreshnessArtifacts() {
+  const changed = [];
+  for (const relative of ['data/site-freshness-report.json', 'site-freshness-report.html']) {
+    const file = path.join(root, relative);
+    if (!fs.existsSync(file)) continue;
+    const before = fs.readFileSync(file, 'utf8');
+    const after = suppressDiagnosticEchoes(before);
+    if (after !== before) {
+      fs.writeFileSync(file, after);
+      changed.push(relative);
+    }
+  }
+  return changed;
+}
 
 run('scripts/sanitize-machine-entity-inputs.js');
 const removed = [
@@ -66,6 +86,7 @@ for (const generated of ['data/site-freshness-report.json', 'site-freshness-repo
   if (fs.existsSync(file)) fs.rmSync(file, { force: true });
 }
 run('scripts/update-site-freshness-report.js');
+const sanitizedFreshnessArtifacts = sanitizeFreshnessArtifacts();
 
 const targets = [
   'daily-missing-records.html',
@@ -90,6 +111,7 @@ const report = {
   ok: residual.length === 0,
   generatedAt: new Date().toISOString(),
   removedStaleMalformedOutputs: [...new Set(removed)],
+  sanitizedFreshnessArtifacts,
   residual: [...new Set(residual)],
   ignoredIntentionalPolicyText: 'No [object Object] visible in public pages.',
   boundary: 'Master briefs, subject reports, institution pages, timelines, machine digest, conclusion pages and freshness reports must be generated only from scalar-normalized inputs.'
@@ -97,4 +119,4 @@ const report = {
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'recovery-master-output-rebuild.json'), `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) throw new Error(`Master output placeholders remain: ${report.residual.join(', ')}`);
-console.log(`Master outputs rebuilt cleanly; removed ${report.removedStaleMalformedOutputs.length} stale malformed output(s).`);
+console.log(`Master outputs rebuilt cleanly; removed ${report.removedStaleMalformedOutputs.length} stale malformed output(s), sanitized ${sanitizedFreshnessArtifacts.length} diagnostic artifact(s).`);

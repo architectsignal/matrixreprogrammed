@@ -132,7 +132,9 @@
       <p><strong>Review:</strong> ${escapeHtml(human(data.reviewStatus))} · <strong>Extraction:</strong> ${escapeHtml(human(data.extractionMethod))} · <strong>Confidence:</strong> ${escapeHtml(Number(data.confidence || 0).toFixed(2))}</p>
       <div class="cta-row small"><a class="btn" href="${escapeHtml(data.sourceUrl)}" rel="noopener">Open primary source</a><a class="btn alt" href="${escapeHtml(data.route)}">Open relationship record</a></div>`;
   }
-  function renderSelection(element) { if (element.isEdge()) edgeDetails(element.data()); else nodeDetails(element.data()); }
+  function renderSelection(element) {
+    if (element.isEdge()) edgeDetails(element.data()); else nodeDetails(element.data());
+  }
   function findPath(updateUrl = true) {
     if (!cy || !pathStart || !pathEnd || cy.getElementById(pathStart).empty() || cy.getElementById(pathEnd).empty()) return;
     cy.elements().removeClass('path-highlight path-endpoint');
@@ -165,29 +167,41 @@
         { selector: 'edge[grade = "B"]', style: { 'line-color': '#9cc9e8', 'target-arrow-color': '#9cc9e8', width: 2 } },
         { selector: 'edge[weakMention]', style: { 'line-style': 'dashed', 'line-color': '#777', 'target-arrow-color': '#777', opacity: .42, width: 1 } },
         { selector: '.path-highlight', style: { 'line-color': '#ffdf78', 'target-arrow-color': '#ffdf78', 'background-color': '#b38a24', opacity: 1, width: 5, 'z-index': 9999 } },
-        { selector: '.path-endpoint', style: { 'border-color': '#fff', 'border-width': 5 } }
-      ]
+        { selector: '.path-endpoint', style: { 'border-color': '#fff', 'border-width': 5 } },
+        { selector: ':selected', style: { 'border-color': '#fff', 'border-width': 4 } }
+      ],
+      layout: { name: 'cose', animate: false, randomize: true, nodeRepulsion: 170000, idealEdgeLength: 110, gravity: .32, numIter: 1100 }
     });
     cy.on('tap', 'node, edge', event => renderSelection(event.target));
+    cy.on('tap', event => { if (event.target === cy) details.innerHTML = '<span class="label">Evidence boundary</span><h3>Select an entity or relationship</h3><p>Every visible line keeps its source, date, grade, status, established fact and limitation attached.</p>'; });
     applyFilters(false);
-    cy.layout({ name: layouts[layoutIndex], animate: false, fit: true, padding: 45 }).run();
-    q('#map-relayout').addEventListener('click', () => { layoutIndex = (layoutIndex + 1) % layouts.length; cy.layout({ name: layouts[layoutIndex], animate: true, animationDuration: 500, fit: true, padding: 45 }).run(); });
-    q('#map-share').addEventListener('click', async () => { writeUrl(); try { await navigator.clipboard.writeText(location.href); setStatus('Current map view copied to the clipboard.', 'ok'); } catch { setStatus('Copy was blocked. Copy the address from your browser.', 'error'); } });
-    q('#map-clear-path').addEventListener('click', clearPath);
-    details.addEventListener('click', event => { const button = event.target.closest('[data-path-action]'); if (!button) return; if (button.dataset.pathAction === 'start') pathStart = button.dataset.nodeId; else pathEnd = button.dataset.nodeId; writeUrl(); applyFilters(false); });
-    Object.values(controls).forEach(control => control?.addEventListener(control.tagName === 'INPUT' && control.type === 'search' ? 'input' : 'change', () => applyFilters()));
+    cy.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45);
   }
-  fetch('data/evidence-network-map.json', { cache: 'no-store' }).then(response => {
-    if (!response.ok) throw new Error(`Evidence network map unavailable (${response.status}).`);
-    return response.json();
-  }).then(data => {
-    graph = data;
-    readUrl();
-    populateFilters();
-    q('#map-total-entities').textContent = graph.totals.entities;
-    q('#map-total-relationships').textContent = graph.totals.relationships;
-    q('#map-total-core').textContent = graph.totals.coreRelationships;
-    q('#map-total-official').textContent = graph.totals.officialRelationships;
-    init();
-  }).catch(error => setStatus(error.message || 'Evidence network map could not load.', 'error'));
+  async function load() {
+    setStatus('Loading structured evidence graph…', 'pending');
+    try {
+      const response = await fetch('/data/evidence-network-map.json', { cache: 'no-store', headers: { accept: 'application/json' } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      graph = await response.json();
+      if (!graph?.elements?.nodes?.length || !graph?.elements?.edges?.length) throw new Error('No sourced relationships were generated.');
+      populateFilters(); readUrl(); init();
+      q('#map-total-relationships').textContent = graph.totals.relationships;
+      q('#map-total-entities').textContent = graph.totals.entities;
+      q('#map-total-official').textContent = graph.totals.officialRelationships;
+      q('#map-generated').textContent = formatDate(graph.generatedAt);
+      if (pathStart && pathEnd) findPath(false);
+    } catch (error) {
+      setStatus(`Evidence map unavailable: ${error.message}`, 'error');
+      map.innerHTML = '<div class="map-fallback"><h3>Interactive view unavailable</h3><p>The relationship registry, source links and public CSV remain available.</p><div class="cta-row"><a class="btn" href="relationship-registry.html">Relationship Registry</a><a class="btn alt" href="downloads/evidence-network-map.csv">Public CSV</a></div></div>';
+    }
+  }
+
+  Object.values(controls).forEach(control => control?.addEventListener(control === controls.query ? 'input' : 'change', () => applyFilters()));
+  q('#map-reset').onclick = () => { controls.query.value=''; controls.mode.value='core'; controls.relationship.value=''; controls.grade.value=''; controls.factualStatus.value=''; controls.entityType.value=''; controls.review.value=''; controls.confidence.value='0'; controls.from.value=''; controls.to.value=''; clearPath(); cy?.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45); };
+  q('#map-fit').onclick = () => cy?.fit(cy.elements().filter(element => element.style('display') !== 'none'), 45);
+  q('#map-layout').onclick = () => { if (!cy) return; layoutIndex = (layoutIndex + 1) % layouts.length; const name = layouts[layoutIndex]; cy.layout({ name, animate: false, fit: true, padding: 45 }).run(); q('#map-layout').textContent = `Layout: ${human(name)}`; };
+  q('#map-share').onclick = async () => { writeUrl(); try { await navigator.clipboard.writeText(location.href); setStatus('This evidence-map view was copied as a shareable URL.', 'ok'); } catch { setStatus('The view is encoded in the current URL and can be copied from the address bar.', 'ok'); } };
+  q('#map-clear-path').onclick = clearPath;
+  details.addEventListener('click', event => { const button = event.target.closest('[data-path-action]'); if (!button) return; if (button.dataset.pathAction === 'start') pathStart = button.dataset.nodeId; else pathEnd = button.dataset.nodeId; writeUrl(); if (pathStart && pathEnd) findPath(); else setStatus(`${button.dataset.pathAction === 'start' ? 'Path start' : 'Path end'} selected. Select the other endpoint.`, 'ok'); });
+  load();
 })();

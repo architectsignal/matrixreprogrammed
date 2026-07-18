@@ -1,14 +1,125 @@
 {
-  "updated": "2026-07-17T23:07:55.795Z",
+  "updated": "2026-07-18T07:12:31.532Z",
   "summary": {
     "registeredSources": 20,
     "checkedThisRun": 12,
-    "changesThisRun": 6,
-    "retainedChanges": 21,
+    "changesThisRun": 2,
+    "retainedChanges": 23,
     "unavailableSources": 0
   },
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
   "changes": [
+    {
+      "id": "bbf3afbd918f5c8ef1d82250",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-18T07:12:31.532Z",
+      "detectedAt": "2026-07-18T07:12:31.532Z",
+      "changeType": "content-changed",
+      "previousHash": "b135b162b5eac9b2ac8defd92d24915301857629c467d6d9a1387ac69454226a",
+      "currentHash": "65418e322b5ef9e53ed7f46d77e70b1949f148d74912d75e3d48cdd669f17429",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sat, 18 Jul 2026 03:12:31 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-18T03:12:31-04:00 4 - Langlois Sophia J.",
+        "(0001903130) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084781 <b>Size:</b> 6 KB 2026-07-17T21:58:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084781 4 - Yoskowitz Marc J (0001617306) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084780 <b>Size:</b> 6 KB 2026-07-17T21:57:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084780 4 - Hirsch Scott (0002024619) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084779 <b>Size:</b> 6 KB 2026-07-17T21:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084779 4 - Zinman Jon (0002001886) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084778 <b>Size:</b> 6 KB 2026-07-17T21:56:42-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084778 4 - Efron Paul (0002024711) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084777 <b>Size:</b> 6 KB 2026-07-17T21:56:10-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084777 4 - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084776 <b>Size:</b> 6 KB 2026-07-17T21:56:05-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084776 4 - Dorton Katina (0001617541) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084775 <b>Size:</b> 6 KB 2026-07-17T21:55:27-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084775 4 - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4 - Bisaro Paul (0001237253) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084774 <b>Size:</b> 6 KB 2026-07-17T21:54:51-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084774 4/A - Donato Leslie E (0001784795) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4/A - Keenova Therapeutics plc (0001567892) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001104659-26-084773 <b>Size:</b> 12 KB 2026-07-17T21:54:20-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-084773 4 - Jaffe Jennifer Anne (0002070626) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308143 <b>Size:</b> 4 KB 2026-07-17T21:52:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308143 4 - Kowalski Thomas Michael (0002070708) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BJs RESTAURANTS INC (0001013488) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308142 <b>Size:</b> 4 KB 2026-07-17T21:51:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308142 4 - BREITMEYER JAMES B (0001244823) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023810 <b>Size:</b> 7 KB 2026-07-17T21:50:37-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023810 4 - HERON ELAINE J (0001235471) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023809 <b>Size:</b> 7 KB 2026-07-17T21:50:26-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023809 4 - Watson W.",
+        "Mark (0001612372) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023808 <b>Size:</b> 7 KB 2026-07-17T21:50:16-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023808 4 - Wheadon David E.",
+        "(0001789507) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Vaxart, Inc.",
+        "(0000072444) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001437749-26-023807 <b>Size:</b> 7 KB 2026-07-17T21:50:05-04:00 urn:tag:sec.gov,2008:accession-number=0001437749-26-023807 4 - Prentiss Christopher B (0001717583) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308139 <b>Size:</b> 6 KB 2026-07-17T21:47:48-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308139 4 - Marasco Dominic (0002053897) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308137 <b>Size:</b> 4 KB 2026-07-17T21:47:08-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308137 4 - MapLight Therapeutics, Inc.",
+        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - Kroeger Christopher A.",
+        "(0001658918) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001658918-26-000014 <b>Size:</b> 18 KB 2026-07-17T21:46:47-04:00 urn:tag:sec.gov,2008:accession-number=0001658918-26-000014 4 - MapLight Therapeutics, Inc.",
+        "(0001770069) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Lillie James Woodruff (0001728746) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001728746-26-000012 <b>Size:</b> 17 KB 2026-07-17T21:45:31-04:00 urn:tag:sec.gov,2008:accession-number=0001728746-26-000012 4 - Tross Stuart A (0001589641) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134 4 - MANNKIND CORP (0000899460) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308134 <b>Size:</b> 13 KB 2026-07-17T21:45:30-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308134"
+      ],
+      "removals": [
+        "Latest Filings - Fri, 17 Jul 2026 19:07:55 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-17T19:07:55-04:00 SCHEDULE 13G - INVERSIONES ATLANTIDA S.A.",
+        "(0002142636) (Filed by) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308074 <b>Size:</b> 19 KB 2026-07-17T19:03:11-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308074 SCHEDULE 13G - USCB FINANCIAL HOLDINGS, INC.",
+        "(0001901637) (Subject) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308074 <b>Size:</b> 19 KB 2026-07-17T19:03:11-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308074 4 - Cloudflare, Inc.",
+        "(0001477333) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001473289-26-000018 <b>Size:</b> 36 KB 2026-07-17T19:01:56-04:00 urn:tag:sec.gov,2008:accession-number=0001473289-26-000018 4 - SEIFERT THOMAS J (0001473289) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001473289-26-000018 <b>Size:</b> 36 KB 2026-07-17T19:01:56-04:00 urn:tag:sec.gov,2008:accession-number=0001473289-26-000018 4 - Septerna, Inc.",
+        "(0001984086) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308073 <b>Size:</b> 8 KB 2026-07-17T19:00:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308073 4 - Bhatt Elizabeth (0001748622) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308073 <b>Size:</b> 8 KB 2026-07-17T19:00:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308073 4 - ALLEN SCOTT R.",
+        "(0001652149) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001652149-26-000004 <b>Size:</b> 6 KB 2026-07-17T18:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001652149-26-000004 4 - MICRON TECHNOLOGY INC (0000723125) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001652149-26-000004 <b>Size:</b> 6 KB 2026-07-17T18:57:15-04:00 urn:tag:sec.gov,2008:accession-number=0001652149-26-000004 4 - Hasan Zain Syed (0002102674) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079326 <b>Size:</b> 5 KB 2026-07-17T18:52:44-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079326 4 - Health In Tech, Inc.",
+        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079326 <b>Size:</b> 5 KB 2026-07-17T18:52:44-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079326 4 - Health In Tech, Inc.",
+        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079324 <b>Size:</b> 5 KB 2026-07-17T18:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079324 4 - Johnson Tim Donald (0001993657) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079324 <b>Size:</b> 5 KB 2026-07-17T18:52:31-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079324 4 - Health In Tech, Inc.",
+        "(0002019505) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079323 <b>Size:</b> 5 KB 2026-07-17T18:52:17-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079323 4 - Qian LinLin (0001849454) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001213900-26-079323 <b>Size:</b> 5 KB 2026-07-17T18:52:17-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-079323 4 - Ramaswamy Sridhar (0001715472) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001715472-26-000008 <b>Size:</b> 6 KB 2026-07-17T18:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001715472-26-000008 4 - Snowflake Inc.",
+        "(0001640147) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001715472-26-000008 <b>Size:</b> 6 KB 2026-07-17T18:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001715472-26-000008 4 - DERECHIN ADAM M (0001181440) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308068 <b>Size:</b> 5 KB 2026-07-17T18:45:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308068 4 - COHEN & STEERS QUALITY INCOME REALTY FUND INC (0001157842) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308068 <b>Size:</b> 5 KB 2026-07-17T18:45:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308068 4 - WILSON JAMES N (0001236387) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308061 <b>Size:</b> 12 KB 2026-07-17T18:38:28-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308061 4 - CORCEPT THERAPEUTICS INC (0001088856) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308061 <b>Size:</b> 12 KB 2026-07-17T18:38:28-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308061 4 - Oey Peter Henry (0001976718) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001976718-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001976718-26-000009 4 - Grab Holdings Ltd (0001855612) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001976718-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001976718-26-000009 4/A - Strahley John (0001875425) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001493152-26-033814 <b>Size:</b> 6 KB 2026-07-17T18:33:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-033814 4/A - Aspira Women's Health Inc.",
+        "(0000926617) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001493152-26-033814 <b>Size:</b> 6 KB 2026-07-17T18:33:23-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-033814 4 - Mendoza Marie (0001660112) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001660112-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:31:42-04:00 urn:tag:sec.gov,2008:accession-number=0001660112-26-000009 4 - KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
+        "(0001069258) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001660112-26-000009 <b>Size:</b> 5 KB 2026-07-17T18:31:42-04:00 urn:tag:sec.gov,2008:accession-number=0001660112-26-000009 4 - Mokari Atabak (0001678419) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308058 <b>Size:</b> 18 KB 2026-07-17T18:31:34-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308058 4 - CORCEPT THERAPEUTICS INC (0001088856) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001193125-26-308058 <b>Size:</b> 18 KB 2026-07-17T18:31:34-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-308058 4 - Sauvage Philippe (0002039891) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002039891-26-000008 <b>Size:</b> 11 KB 2026-07-17T18:27:20-04:00 urn:tag:sec.gov,2008:accession-number=0002039891-26-000008 4 - Nuvation Bio Inc.",
+        "(0001811063) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002039891-26-000008 <b>Size:</b> 11 KB 2026-07-17T18:27:20-04:00 urn:tag:sec.gov,2008:accession-number=0002039891-26-000008 4 - BlackRock, Inc.",
+        "(0002012383) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002012383-26-001977 <b>Size:</b> 4 KB 2026-07-17T18:26:44-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-001977 4 - FINK LAURENCE (0001059245) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0002012383-26-001977 <b>Size:</b> 4 KB 2026-07-17T18:26:44-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-001977 4 - Calabria Carlo (0001863192) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000148 <b>Size:</b> 8 KB 2026-07-17T18:23:33-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000148 4 - Arqit Quantum Inc.",
+        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000148 <b>Size:</b> 8 KB 2026-07-17T18:23:33-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000148 4 - Carrai Phillip D (0001509409) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001509409-26-000009 <b>Size:</b> 14 KB 2026-07-17T18:23:00-04:00 urn:tag:sec.gov,2008:accession-number=0001509409-26-000009 4 - KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
+        "(0001069258) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001509409-26-000009 <b>Size:</b> 14 KB 2026-07-17T18:23:00-04:00 urn:tag:sec.gov,2008:accession-number=0001509409-26-000009 4 - Arqit Quantum Inc.",
+        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000147 <b>Size:</b> 8 KB 2026-07-17T18:22:11-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000147 4 - Ritchie Garth (0001840684) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000147 <b>Size:</b> 8 KB 2026-07-17T18:22:11-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000147 4 - Arqit Quantum Inc.",
+        "(0001859690) (Issuer) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000146 <b>Size:</b> 9 KB 2026-07-17T18:21:03-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000146 4 - Lefebvre d'Ovidio Manfredi (0001840678) (Reporting) <b>Filed:</b> 2026-07-17 <b>AccNo:</b> 0001859690-26-000146 <b>Size:</b> 9 KB 2026-07-17T18:21:03-04:00 urn:tag:sec.gov,2008:accession-number=0001859690-26-000146"
+      ],
+      "additionCount": 11,
+      "removalCount": 18,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "3a612824bd2383e3b7554062",
+      "title": "content changed: Federal Register — Latest Documents",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-18T07:12:31.532Z",
+      "detectedAt": "2026-07-18T07:12:31.532Z",
+      "changeType": "content-changed",
+      "previousHash": "86b3dc25525bd2232653143353b5a8b7c5b90afb53b364faecd79b861e664a95",
+      "currentHash": "e05251257865a2d3bc4023df38aeb6f921dd425729bbcdebef8a7702f8a87024",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ1MDUiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ0MTMiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "18d7736864f2c8ac625f018d",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

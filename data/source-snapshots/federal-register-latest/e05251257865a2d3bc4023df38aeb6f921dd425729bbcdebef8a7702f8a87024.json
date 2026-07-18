@@ -1,0 +1,13 @@
+{
+  "sourceId": "federal-register-latest",
+  "sourceLabel": "Federal Register — Latest Documents",
+  "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+  "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+  "retrievedAt": "2026-07-18T07:12:31.532Z",
+  "contentType": "application/json; charset=utf-8",
+  "bytes": 149943,
+  "rawHash": "160d75a269b75ab1edffb0bb902bf8daed7bffb235d8a9f30d817b1f7ccc3fa7",
+  "normalizedHash": "e05251257865a2d3bc4023df38aeb6f921dd425729bbcdebef8a7702f8a87024",
+  "truncated": false,
+  "normalizedText": "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODQyNDY0MDAwMDAsIjIwMjYtMTQ1MDUiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+}

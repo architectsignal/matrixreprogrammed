@@ -85,14 +85,15 @@ try {
   });
 
   await runTest(browser, 'Search returns useful results', '/search.html', async page => {
-    await page.locator('#site-search').waitFor({ state: 'visible' });
-    await page.waitForFunction(() => document.querySelectorAll('#search-results .intel-card').length > 0, null, { timeout: 20000 });
-    await page.locator('#site-search').fill('World Bank');
-    await page.waitForTimeout(350);
-    const cards = page.locator('#search-results .intel-card');
-    assert(await cards.count() > 0, 'Search returned no cards for World Bank');
+    const input = page.locator('#archive-search');
+    await input.waitFor({ state: 'visible' });
+    await page.waitForFunction(() => document.querySelectorAll('#search-results .search-result-card').length > 0, null, { timeout: 30000 });
+    await input.fill('World Bank');
+    await page.waitForTimeout(500);
+    const cards = page.locator('#search-results .search-result-card');
+    assert(await cards.count() > 0, 'Search V3 returned no cards for World Bank');
     const text = (await page.locator('#search-results').innerText()).toLowerCase();
-    assert(!text.includes('no results'), 'Search returned the No results fallback for World Bank');
+    assert(!text.includes('no matching record'), 'Search V3 returned the no-match fallback for World Bank');
     assert(await page.locator('#search-results a[href]').count() > 0, 'Search results do not link to records');
   });
 

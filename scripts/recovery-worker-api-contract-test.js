@@ -90,19 +90,38 @@ checks.forumPersistence = forum.includes("import { memberSessionContext } from '
   && forum.includes("postingAccess: 'verified-free-member-session'");
 need(checks.forumPersistence, 'Forum posting is not fully tied to a verified D1 member session and audit trail');
 
-checks.paypalFailClosed = paypal.includes("const plansReady=planRows.length===3&&planRows.every(row=>String(row.status).toUpperCase()==='ACTIVE'&&row.provider_plan_id&&row.provider_product_id);")
-  && paypal.includes('commercialLegalReady:legalReady')
-  && paypal.includes('contractConfirmationReady:contractEmailReady')
-  && paypal.includes('&&confirmation&&legalReady&&contractEmailReady&&plansReady')
-  && paypal.includes("error:'PayPal checkout is disabled until every activation, commercial-readiness and contract-confirmation gate passes'")
-  && paypal.includes('paypal_checkout_consents')
-  && paypal.includes('paypal.membership_contract_confirmation')
-  && wranglerJson.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
-  && wranglerJson.includes('"PAYPAL_PRODUCTION_ENABLED": "false"')
-  && wranglerToml.includes('PAYPAL_ENVIRONMENT = "sandbox"')
-  && wranglerToml.includes('PAYPAL_PRODUCTION_ENABLED = "false"')
-  && wranglerToml.includes('COMMERCIAL_LEGAL_READY = "false"');
-need(checks.paypalFailClosed, 'PayPal checkout does not preserve all payment, legal, consent and durable-confirmation gates or production is not explicitly disabled');
+checks.paypalGateChecks = {
+  threeIdentifiedActivePlans: paypal.includes('const plansReady=')
+    && paypal.includes('planRows.length===3')
+    && paypal.includes("String(row.status).toUpperCase()==='ACTIVE'")
+    && paypal.includes('row.provider_plan_id')
+    && paypal.includes('row.provider_product_id'),
+  commercialLegalState: paypal.includes('commercialLegalReady:legalReady')
+    && paypal.includes('COMMERCIAL_LEGAL_CONFIRMATION')
+    && paypal.includes('MATRIX_COMMERCIAL_LEGAL_CONFIRMED'),
+  durableConfirmationState: paypal.includes('contractConfirmationReady:contractEmailReady')
+    && paypal.includes('transactionalMembershipEmailReady')
+    && paypal.includes('queueMembershipContractConfirmation'),
+  checkoutRequiresAllGates: paypal.includes('checkoutEnabled:configured(env)')
+    && paypal.includes('environmentSwitch')
+    && paypal.includes('Boolean(setting.checkout_enabled)')
+    && paypal.includes('confirmation')
+    && paypal.includes('legalReady')
+    && paypal.includes('contractEmailReady')
+    && paypal.includes('plansReady'),
+  disabledCheckoutResponse: paypal.includes('PayPal checkout is disabled until every activation, commercial-readiness and contract-confirmation gate passes'),
+  durableConsentLedger: paypal.includes('paypal_checkout_consents')
+    && paypal.includes('paypal.checkout.consent_recorded'),
+  contractConfirmationAudit: paypal.includes('paypal.membership_contract_confirmation')
+    && paypal.includes('paypal.membership_contract_confirmation_failed'),
+  jsonSandboxDefault: wranglerJson.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
+    && wranglerJson.includes('"PAYPAL_PRODUCTION_ENABLED": "false"'),
+  productionDefaultsClosed: wranglerToml.includes('PAYPAL_ENVIRONMENT = "sandbox"')
+    && wranglerToml.includes('PAYPAL_PRODUCTION_ENABLED = "false"')
+    && wranglerToml.includes('COMMERCIAL_LEGAL_READY = "false"')
+};
+checks.paypalFailClosed = Object.values(checks.paypalGateChecks).every(Boolean);
+need(checks.paypalFailClosed, `PayPal checkout gate mismatch: ${Object.entries(checks.paypalGateChecks).filter(([,ok])=>!ok).map(([name])=>name).join(', ') || 'unknown'}`);
 
 checks.membershipClientContract = template.includes('data.verification && data.verification.sent')
   && template.includes('if (!config.checkoutEnabled)')

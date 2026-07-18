@@ -52,6 +52,11 @@ for (const relationship of relationships) {
   degree.set(relationship.to, Number(degree.get(relationship.to) || 0) + 1);
 }
 
+const conciseEntityBoundary = 'Association or mention does not establish guilt, wrongdoing or shared intent.';
+const conciseRelationshipBoundary = 'This cited relationship does not establish guilt, wrongdoing or shared intent.';
+const conciseMentionBoundary = 'A textual mention does not establish a substantive relationship, shared intent or guilt.';
+const conciseEstablishes = 'The cited source records this relationship.';
+
 const nodes = [...usedEntityIds].map(id => {
   const entity = entityById.get(id);
   const refs = Array.isArray(entity.evidenceRefs) ? entity.evidenceRefs : [];
@@ -66,7 +71,7 @@ const nodes = [...usedEntityIds].map(id => {
     evidenceGrade: String(ref.evidenceGrade || 'C').toUpperCase(),
     factualStatus: clean(ref.factualStatus || 'source-record', 80),
     establishes: clean(ref.establishes || '', 420),
-    doesNotEstablish: clean(ref.doesNotEstablish || entityData.evidenceBoundary || '', 420)
+    doesNotEstablish: clean(ref.doesNotEstablish || conciseEntityBoundary, 420)
   }));
   const connections = Number(degree.get(id) || 0);
   return { data: {
@@ -90,7 +95,7 @@ const nodes = [...usedEntityIds].map(id => {
     weight: Math.min(94, 24 + Math.sqrt(Math.max(1, connections)) * 9),
     route: entityRoute(id),
     evidenceRefs,
-    boundary: clean(refs[0]?.doesNotEstablish || entityData.evidenceBoundary || relationshipData.evidenceBoundary || '', 520)
+    boundary: clean(refs[0]?.doesNotEstablish || conciseEntityBoundary, 420)
   } };
 });
 
@@ -119,8 +124,8 @@ const edges = relationships.map(item => {
     retrievalDate: validDate(item.retrievalDate),
     grade,
     factualStatus,
-    establishes: clean(item.establishes || 'The cited source records this relationship.', 650),
-    doesNotEstablish: clean(item.doesNotEstablish || relationshipData.evidenceBoundary || 'This relationship does not establish guilt or unlawful conduct beyond the cited record.', 650),
+    establishes: clean(item.establishes || conciseEstablishes, 650),
+    doesNotEstablish: clean(item.doesNotEstablish || (weakMention ? conciseMentionBoundary : conciseRelationshipBoundary), 650),
     reviewStatus,
     extractionMethod: clean(item.extractionMethod || 'structured-registry', 120),
     confidence,
@@ -175,8 +180,8 @@ const graph = {
 
 const graphPath = path.join(dataDir, 'evidence-network-map.json');
 // This file is loaded directly by the browser and must stay below Cloudflare's
-// single-asset ceiling. Minification removes formatting only; every entity,
-// relationship, evidence field and boundary remains available.
+// single-asset ceiling. Compact defaults avoid repeating the same long boundary
+// thousands of times; every record, source, evidence field and governing boundary remains available.
 fs.writeFileSync(graphPath, JSON.stringify(graph));
 const graphBytes = fs.statSync(graphPath).size;
 const cloudflareTargetBytes = 24 * 1024 * 1024;
@@ -206,6 +211,7 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
   serialization: 'compact-json',
+  compaction: 'concise-repeated-default-boundaries',
   graphBytes,
   graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
   cloudflareTargetBytes,

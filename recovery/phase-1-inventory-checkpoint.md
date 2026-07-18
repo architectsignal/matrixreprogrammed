@@ -1,5 +1,5 @@
 # Phase 1 Functional Inventory Checkpoint
 
-Status: full Cloudflare output, asset fingerprinting, Data Lab runtime, final navigation ownership and evidence-network compaction gate triggered through draft PR #98.
+Status: consolidated Search V3 compatibility and deploy-size audit triggered through draft PR #98.
 
-Production deployment remains frozen. This checkpoint only triggers the audit-only recovery workflow and does not deploy public pages, Worker routing, data, membership, email or payments.
+The public release workflow remains disabled. This checkpoint runs only the isolated recovery checks.

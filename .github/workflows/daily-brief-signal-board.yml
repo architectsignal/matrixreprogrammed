@@ -1,0 +1,94 @@
+name: Daily Brief and Signal Board Assurance
+
+on:
+  pull_request:
+    paths:
+      - 'data/outcome-briefings.json'
+      - 'scripts/build-daily-brain-brief.js'
+      - 'scripts/patch-deep-email-automation.js'
+      - 'scripts/patch-persistent-signal-board.js'
+      - 'scripts/daily-brief-signal-board-test.js'
+      - 'src/worker-daily-brief-email.js'
+      - 'src/worker-email-lifecycle.js'
+      - 'src/worker-forum-persistence.js'
+      - 'src/worker-member-experience.js'
+      - 'forum.js'
+      - 'forum.html'
+      - 'dark-speculation-forum.html'
+      - 'epstein-alive-board.html'
+      - 'migrations/0004_forum_persistence.sql'
+      - 'migrations/phase9_signal_board_persistence.sql'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - '.github/workflows/daily-brief-signal-board.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-brief-signal-board-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  assurance:
+    name: Structured email and D1 persistence
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run focused assurance
+        run: node scripts/daily-brief-signal-board-test.js
+
+      - name: Apply Signal Board migration twice
+        shell: bash
+        run: |
+          set -euo pipefail
+          database="$(mktemp)"
+          python3 - "$database" <<'PY'
+          import sqlite3, sys
+          from pathlib import Path
+          db = sqlite3.connect(sys.argv[1])
+          root = Path.cwd()
+          for rel in [
+              'migrations/0001_membership_foundation.sql',
+              'migrations/0004_forum_persistence.sql',
+              'migrations/phase9_signal_board_persistence.sql',
+              'migrations/phase9_signal_board_persistence.sql',
+          ]:
+              db.executescript((root / rel).read_text(encoding='utf-8'))
+          names = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type IN ('table','view')")}
+          required = {'forum_posts','forum_reports','forum_post_owners','forum_report_owners','forum_board_state','forum_persistence_health'}
+          missing = sorted(required - names)
+          if missing:
+              raise SystemExit(f'Missing Signal Board D1 objects: {missing}')
+          print('Signal Board migration passed twice and all persistence objects are present.')
+          PY
+
+      - name: Upload focused proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-brief-signal-board-${{ github.run_id }}
+          path: |
+            downloads/daily-brief-signal-board-test.json
+            downloads/deep-email-automation-patch.json
+            downloads/persistent-signal-board-patch.json
+            downloads/daily-brain-brief.json
+            downloads/daily-brain-brief.md
+          if-no-files-found: ignore
+          retention-days: 30

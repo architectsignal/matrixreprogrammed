@@ -19,6 +19,7 @@ The controlled Cloudflare production release completed successfully on 18 July 2
 - PayPal uses the sandbox environment.
 - PayPal sandbox checkout is disabled outside a timed administrator rehearsal.
 - PayPal live charging is disabled.
+- Versioned checkout consent and durable membership-confirmation email code are installed behind the payment gates.
 - `COMMERCIAL_LEGAL_READY` is false.
 - No live payment activation is authorised by this document.
 
@@ -76,6 +77,7 @@ Completed:
 - [x] Personalised preference and unsubscribe routes installed.
 - [x] Retry records predating activation quarantined by cutoff.
 - [x] Campaign content fails closed rather than inventing claims.
+- [x] Membership contract-confirmation email is idempotent and includes the recurring price, PayPal subscription reference, consent versions, immediate-service request, billing route, terms and withdrawal notice.
 
 Still required before `EMAIL_AUTOMATION_ENABLED=true`:
 
@@ -95,6 +97,8 @@ The timed sandbox rehearsal must prove all three tiers: Supporter €3, Intellig
 - [ ] Confirm versioned terms and withdrawal acknowledgements are written to `paypal_checkout_consents` before PayPal opens.
 - [ ] Confirm approval alone does not grant entitlement.
 - [ ] Confirm verified ACTIVE state grants the exact selected tier.
+- [ ] Confirm the durable membership-confirmation email is queued once and delivered through authenticated transactional email.
+- [ ] Confirm duplicate activation events do not send duplicate contract confirmations.
 - [ ] Confirm duplicate webhook delivery is idempotent.
 - [ ] Confirm first failed payment applies only the intended grace state.
 - [ ] Confirm the failure threshold removes paid access.
@@ -122,7 +126,10 @@ Live checkout is blocked until all of the following are verified and published:
 - [x] Explicit recurring-payment acknowledgement.
 - [x] Explicit immediate digital-service request.
 - [x] Durable server-side consent record tied to the checkout intent.
+- [x] Durable contract-confirmation email wired to the first verified active entitlement transition.
+- [x] Live activation requires authenticated transactional email readiness.
 - [x] `COMMERCIAL_LEGAL_READY=false` committed as the default.
+- [ ] Complete one controlled sandbox proof of the contract-confirmation email.
 - [ ] `COMMERCIAL_LEGAL_CONFIRMATION` installed as a Cloudflare secret only after verification.
 - [ ] Explicit owner approval recorded to change `COMMERCIAL_LEGAL_READY` to true.
 
@@ -134,10 +141,11 @@ Live checkout is blocked until all of the following are verified and published:
 - `COMMERCIAL_LEGAL_CONFIRMATION` must never be committed to GitHub.
 - PayPal D1 checkout switches remain disabled except during the controlled sandbox rehearsal or explicit live activation.
 - `EMAIL_AUTOMATION_ENABLED` remains false until Phase 11 acceptance is recorded.
-- `EMAIL_TRANSACTIONAL_ENABLED` may remain true while authenticated account delivery is healthy.
+- `EMAIL_TRANSACTIONAL_ENABLED` remains true only while authenticated account and contract-confirmation delivery is healthy.
 - Every marketing email must contain working personalised preference and unsubscribe routes.
 - Every PayPal webhook must be verified before changing entitlement state.
 - PayPal checkout must fail closed if current terms consent cannot be persisted.
+- Live checkout must fail closed if authenticated durable contract-confirmation email is unavailable.
 
 ## Change control
 

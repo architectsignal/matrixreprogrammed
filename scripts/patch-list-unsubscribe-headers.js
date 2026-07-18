@@ -10,13 +10,14 @@ if (!fs.existsSync(target)) throw new Error('src/worker-email-lifecycle.js is mi
 let source = fs.readFileSync(target, 'utf8');
 const report = { ok: true, generatedAt: new Date().toISOString(), changed: [], checks: [] };
 function need(condition, message) { report.checks.push({ message, ok: Boolean(condition) }); if (!condition) throw new Error(message); }
-function range(text, signature) {
+function functionRange(text, functionName) {
+  const signature = `async function ${functionName}`;
   const start = text.indexOf(signature);
   if (start < 0) return null;
-  const open = text.indexOf('{', start + signature.length);
-  if (open < 0) return null;
-  let depth = 0, quote = '', escaped = false, lineComment = false, blockComment = false;
-  for (let index = open; index < text.length; index += 1) {
+  const paramsOpen = text.indexOf('(', start + signature.length);
+  if (paramsOpen < 0) return null;
+  let quote = '', escaped = false, lineComment = false, blockComment = false, parenDepth = 0, paramsClose = -1;
+  for (let index = paramsOpen; index < text.length; index += 1) {
     const char = text[index], next = text[index + 1] || '';
     if (lineComment) { if (char === '\n') lineComment = false; continue; }
     if (blockComment) { if (char === '*' && next === '/') { blockComment = false; index += 1; } continue; }
@@ -29,13 +30,40 @@ function range(text, signature) {
     if (char === '/' && next === '/') { lineComment = true; index += 1; continue; }
     if (char === '/' && next === '*') { blockComment = true; index += 1; continue; }
     if (char === "'" || char === '"' || char === '`') { quote = char; continue; }
-    if (char === '{') depth += 1;
-    else if (char === '}') { depth -= 1; if (depth === 0) return { start, end: index + 1 }; }
+    if (char === '(') parenDepth += 1;
+    else if (char === ')') {
+      parenDepth -= 1;
+      if (parenDepth === 0) { paramsClose = index; break; }
+    }
+  }
+  if (paramsClose < 0) return null;
+  const bodyOpen = text.indexOf('{', paramsClose + 1);
+  if (bodyOpen < 0) return null;
+  quote = ''; escaped = false; lineComment = false; blockComment = false;
+  let braceDepth = 0;
+  for (let index = bodyOpen; index < text.length; index += 1) {
+    const char = text[index], next = text[index + 1] || '';
+    if (lineComment) { if (char === '\n') lineComment = false; continue; }
+    if (blockComment) { if (char === '*' && next === '/') { blockComment = false; index += 1; } continue; }
+    if (quote) {
+      if (escaped) { escaped = false; continue; }
+      if (char === '\\') { escaped = true; continue; }
+      if (char === quote) quote = '';
+      continue;
+    }
+    if (char === '/' && next === '/') { lineComment = true; index += 1; continue; }
+    if (char === '/' && next === '*') { blockComment = true; index += 1; continue; }
+    if (char === "'" || char === '"' || char === '`') { quote = char; continue; }
+    if (char === '{') braceDepth += 1;
+    else if (char === '}') {
+      braceDepth -= 1;
+      if (braceDepth === 0) return { start, end: index + 1 };
+    }
   }
   return null;
 }
-function replaceFunction(signature, replacement, label) {
-  const found = range(source, signature);
+function replaceFunction(functionName, replacement, label) {
+  const found = functionRange(source, functionName);
   need(Boolean(found), `${label} function was not found or was unbalanced`);
   source = `${source.slice(0, found.start)}${replacement}${source.slice(found.end)}`;
   report.changed.push(label);
@@ -47,8 +75,7 @@ const enqueueReplacement = `async function enqueue(env,member,{campaignId=null,m
   await env.MEMBERS_DB.prepare(\`INSERT OR IGNORE INTO email_outbox (id,member_id,campaign_id,message_kind,recipient_email_hash,payload_json,idempotency_key,status,available_at,updated_at,created_at) VALUES (?,?,?,?,?,?,?,'pending',?,?,?)\`).bind(outboxId,member.id,campaignId,messageKind,await emailHash(member.email),JSON.stringify(payload),idempotencyKey,iso(env),iso(env),iso(env)).run();
   return outboxId
 }`;
-const originalEnqueueSignature='async function enqueue(env,member,{campaignId=null,messageKind,subject,htmlContent,textContent,idempotencyKey})';
-if (!source.includes('headers:headers||undefined')) replaceFunction(originalEnqueueSignature, enqueueReplacement, 'header-aware-outbox-enqueue');
+if (!source.includes('headers:headers||undefined')) replaceFunction('enqueue', enqueueReplacement, 'header-aware-outbox-enqueue');
 
 const campaignOld = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,idempotencyKey:`${campaign.id}:${member.id}`});";
 const campaignNew = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`${campaign.id}:${member.id}`});";

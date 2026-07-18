@@ -1,217 +1,13 @@
 {
   "ok": true,
-  "updated": "2026-07-17T06:30:52.125Z",
+  "updated": "2026-07-18T07:19:43.081Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 142,
-    "edges": 263,
+    "nodes": 130,
+    "edges": 163,
     "topNodes": 25
   },
   "top": [
-    {
-      "id": "digital-id-and-access-systems",
-      "name": "Digital ID and access systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "identity-access",
-        "ai-data",
-        "public-private-contracts"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 9,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Digital ID and access systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "private-contractor-power",
-      "name": "Private contractor power",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "security",
-        "war",
-        "public-private-contracts"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 7,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Private contractor power is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "ai-surveillance-and-data-systems",
-      "name": "AI, surveillance and data systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "ai-data",
-        "security",
-        "identity-access"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 6,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "AI, surveillance and data systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 3 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "banking-and-payment-rails",
-      "name": "Banking and payment rails",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "money",
-        "banking",
-        "identity-access"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 12,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Regulation for Federal Financial Assistance",
-        "Boosting Green Finance, Investment and Trade in Rwanda",
-        "Chattogram Water Supply Improvement Project",
-        "Transforming Agri-food Systems in Morocco",
-        "Health, Nutrition and Population Sector Development Program",
-        "Amaravati Integrated Urban Development Program",
-        "Second Bangladesh Green and Climate Resilient Development Credit"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Banking and payment rails is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 9 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "health-data-and-emergency-systems",
-      "name": "Health data and emergency systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "health",
-        "identity-access",
-        "public-private-contracts"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 10,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance",
-        "Health, Nutrition and Population Sector Development Program"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Health data and emergency systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
     {
       "id": "disclosure-gaps-and-missing-files",
       "name": "Disclosure gaps and missing files",
@@ -251,47 +47,6 @@
         "subject-briefs.html"
       ],
       "summary": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "foundation-and-ngo-policy-influence",
-      "name": "Foundation and NGO policy influence",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "foundations-ngos",
-        "education",
-        "health"
-      ],
-      "score": 100,
-      "centrality": 25,
-      "evidenceConfidence": 9,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Foundation and NGO policy influence is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "blackrock",
@@ -490,7 +245,8 @@
         "Congressional hearing material",
         "SEC or corporate records where available",
         "Sanctions / debarment checks",
-        "News signals verified against primary records"
+        "News signals verified against primary records",
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch": [
         "Search new awards for Blackwater.",
@@ -502,7 +258,7 @@
         "private-contractor-tracker.html",
         "contractor-briefs/blackwater-constellis-lineage.html"
       ],
-      "summary": "Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 12 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 14 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "dyncorp-amentum-lineage",
@@ -599,6 +355,48 @@
         "contractor-briefs/palantir-government-platforms.html"
       ],
       "summary": "Palantir government platforms is ranked 91/100 because of 1 relationship route(s), 6 control layer(s), 8 record signal(s), 10 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "health-data-and-emergency-systems",
+      "name": "Health data and emergency systems",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "health",
+        "identity-access",
+        "public-private-contracts"
+      ],
+      "score": 91,
+      "centrality": 12,
+      "evidenceConfidence": 10,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements",
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
+        "Health, Nutrition and Population Sector Development Program"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "caci-international",
@@ -789,6 +587,49 @@
       "summary": "SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
+      "id": "banking-and-payment-rails",
+      "name": "Banking and payment rails",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "money",
+        "banking",
+        "identity-access"
+      ],
+      "score": 88,
+      "centrality": 11,
+      "evidenceConfidence": 11,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Boosting Green Finance, Investment and Trade in Rwanda",
+        "Chattogram Water Supply Improvement Project",
+        "Transforming Agri-food Systems in Morocco",
+        "Health, Nutrition and Population Sector Development Program",
+        "Amaravati Integrated Urban Development Program",
+        "Second Bangladesh Green and Climate Resilient Development Credit"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Banking and payment rails is ranked 88/100 because of 11 relationship route(s), 3 control layer(s), 8 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
       "id": "world-bank",
       "name": "World Bank",
       "types": [
@@ -801,14 +642,13 @@
         "foundations-ngos",
         "public-private-contracts"
       ],
-      "score": 81,
+      "score": 80,
       "centrality": 3,
-      "evidenceConfidence": 17,
+      "evidenceConfidence": 16,
       "missingPressure": 24,
       "contradictionPressure": 0,
       "records": [
         "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance",
         "Boosting Green Finance, Investment and Trade in Rwanda",
         "Chattogram Water Supply Improvement Project",
         "Transforming Agri-food Systems in Morocco",
@@ -833,7 +673,89 @@
       "links": [
         "institution-control-tracker.html"
       ],
-      "summary": "World Bank is ranked 81/100 because of 3 relationship route(s), 4 control layer(s), 8 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "World Bank is ranked 80/100 because of 3 relationship route(s), 4 control layer(s), 7 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "digital-id-and-access-systems",
+      "name": "Digital ID and access systems",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "identity-access",
+        "ai-data",
+        "public-private-contracts"
+      ],
+      "score": 78,
+      "centrality": 9,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements",
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "foundation-and-ngo-policy-influence",
+      "name": "Foundation and NGO policy influence",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "foundations-ngos",
+        "education",
+        "health"
+      ],
+      "score": 78,
+      "centrality": 9,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements",
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Foundation and NGO policy influence is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "united-nations",
@@ -889,14 +811,13 @@
         "migration",
         "public-private-contracts"
       ],
-      "score": 75,
+      "score": 74,
       "centrality": 3,
-      "evidenceConfidence": 11,
+      "evidenceConfidence": 10,
       "missingPressure": 24,
       "contradictionPressure": 0,
       "records": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Regulation for Federal Financial Assistance"
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
       ],
       "missing": [
         "Funding route",
@@ -915,7 +836,7 @@
       "links": [
         "institution-control-tracker.html"
       ],
-      "summary": "European Commission is ranked 75/100 because of 3 relationship route(s), 4 control layer(s), 2 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "European Commission is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "world-economic-forum",
@@ -1106,6 +1027,85 @@
         "institution-control-tracker.html"
       ],
       "summary": "NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "elon-musk",
+      "name": "Elon Musk",
+      "types": [
+        "elite network profile"
+      ],
+      "layers": [
+        "ai-data",
+        "media-narrative",
+        "security",
+        "energy",
+        "public-private-contracts"
+      ],
+      "score": 73,
+      "centrality": 5,
+      "evidenceConfidence": 8,
+      "missingPressure": 20,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies"
+      ],
+      "missing": [
+        "Current beneficial ownership and voting-control record where relevant",
+        "Public contracts touching the ecosystem",
+        "Foundation grant routes where relevant",
+        "Lobbying or political funding routes where relevant",
+        "Legal/regulatory records and counter-sources"
+      ],
+      "watch": [
+        "New filings",
+        "New contracts",
+        "New court or regulatory records",
+        "New foundation or policy-route records"
+      ],
+      "links": [
+        "billionaire-control-tracker.html"
+      ],
+      "summary": "Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "private-contractor-power",
+      "name": "Private contractor power",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "security",
+        "war",
+        "public-private-contracts"
+      ],
+      "score": 68,
+      "centrality": 7,
+      "evidenceConfidence": 7,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements",
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     }
   ],
   "edges": [
@@ -1594,6 +1594,13 @@
     },
     {
       "from": "digital-id-and-access-systems",
+      "to": "homeland-security-department",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "digital-id-and-access-systems",
       "to": "health-and-human-services-department",
       "type": "subject entity route",
       "weight": 2,
@@ -1602,13 +1609,6 @@
     {
       "from": "digital-id-and-access-systems",
       "to": "centers-for-medicare-medicaid-services",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "homeland-security-department",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1651,118 +1651,6 @@
     {
       "from": "digital-id-and-access-systems",
       "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "agriculture-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "state-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "agency-for-international-development",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "veterans-affairs-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "energy-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "treasury-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "digital-id-and-access-systems",
-      "to": "national-science-foundation",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -1817,132 +1705,6 @@
       "source": "subject brief"
     },
     {
-      "from": "private-contractor-power",
-      "to": "health-and-human-services-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "agriculture-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "state-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "agency-for-international-development",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "veterans-affairs-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "energy-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "treasury-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "national-science-foundation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "private-contractor-power",
-      "to": "national-archives-and-records-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
       "from": "ai-surveillance-and-data-systems",
       "to": "health-and-human-services-department",
       "type": "subject entity route",
@@ -1952,167 +1714,6 @@
     {
       "from": "ai-surveillance-and-data-systems",
       "to": "centers-for-medicare-medicaid-services",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "management-and-budget-office",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "agriculture-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "state-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "agency-for-international-development",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "veterans-affairs-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "energy-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "treasury-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "defense-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "nuclear-regulatory-commission",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "national-science-foundation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "national-archives-and-records-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "small-business-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "ai-surveillance-and-data-systems",
-      "to": "justice-department",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2133,175 +1734,63 @@
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "management-and-budget-office",
+      "to": "republic-of-rwanda",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "agriculture-department",
+      "to": "object-object",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "state-department",
+      "to": "chattogram-water-supply-and-sewerage-authority",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "agency-for-international-development",
+      "to": "people-s-republic-of-bangladesh",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "veterans-affairs-department",
+      "to": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "energy-department",
+      "to": "kingdom-of-morocco",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "treasury-department",
+      "to": "ministry-of-health-and-family-welfare",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "defense-department",
+      "to": "republic-of-india",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "banking-and-payment-rails",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "nuclear-regulatory-commission",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "national-science-foundation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "national-archives-and-records-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "small-business-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "justice-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "health-and-human-services-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "centers-for-medicare-medicaid-services",
+      "to": "finance-division-ministry-of-finance",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2309,6 +1798,20 @@
     {
       "from": "health-data-and-emergency-systems",
       "to": "homeland-security-department",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "health-data-and-emergency-systems",
+      "to": "health-and-human-services-department",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "health-data-and-emergency-systems",
+      "to": "centers-for-medicare-medicaid-services",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2357,112 +1860,21 @@
     },
     {
       "from": "health-data-and-emergency-systems",
-      "to": "agriculture-department",
+      "to": "ministry-of-health-and-family-welfare",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "health-data-and-emergency-systems",
-      "to": "state-department",
+      "to": "people-s-republic-of-bangladesh",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
     },
     {
       "from": "health-data-and-emergency-systems",
-      "to": "agency-for-international-development",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "veterans-affairs-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "energy-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "treasury-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "national-science-foundation",
+      "to": "object-object",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2588,6 +2000,13 @@
     },
     {
       "from": "foundation-and-ngo-policy-influence",
+      "to": "homeland-security-department",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "foundation-and-ngo-policy-influence",
       "to": "health-and-human-services-department",
       "type": "subject entity route",
       "weight": 2,
@@ -2596,13 +2015,6 @@
     {
       "from": "foundation-and-ngo-policy-influence",
       "to": "centers-for-medicare-medicaid-services",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "homeland-security-department",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2645,118 +2057,6 @@
     {
       "from": "foundation-and-ngo-policy-influence",
       "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "agriculture-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "state-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "agency-for-international-development",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "veterans-affairs-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "energy-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "treasury-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "transportation-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "commerce-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "interior-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "environmental-protection-agency",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "u-s-international-development-finance-corporation",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "united-states-agency-for-global-media",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "corporation-for-national-and-community-service",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "social-security-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "housing-and-urban-development-department",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "foundation-and-ngo-policy-influence",
-      "to": "national-science-foundation",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2953,75 +2253,9 @@
   ],
   "watchCascades": [
     {
-      "entity": "Digital ID and access systems",
-      "priority": "red",
-      "why": "Digital ID and access systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Private contractor power",
-      "priority": "red",
-      "why": "Private contractor power is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "AI, surveillance and data systems",
-      "priority": "red",
-      "why": "AI, surveillance and data systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 3 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Banking and payment rails",
-      "priority": "red",
-      "why": "Banking and payment rails is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 9 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Health data and emergency systems",
-      "priority": "red",
-      "why": "Health data and emergency systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
       "entity": "Disclosure gaps and missing files",
       "priority": "red",
       "why": "Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
-      "entity": "Foundation and NGO policy influence",
-      "priority": "red",
-      "why": "Foundation and NGO policy influence is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
         "subject-briefs.html",
         "evidence-vault.html",
@@ -3065,7 +2299,7 @@
     {
       "entity": "Blackwater / Xe / Academi / Constellis lineage",
       "priority": "red",
-      "why": "Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 12 missing-record prompt(s), and 0 review prompt(s).",
+      "why": "Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 14 missing-record prompt(s), and 0 review prompt(s).",
       "next": [
         "private-contractor-tracker.html",
         "contractor-briefs/blackwater-constellis-lineage.html",
@@ -3081,6 +2315,77 @@
       "next": [
         "private-contractor-tracker.html",
         "contractor-briefs/dyncorp-amentum-lineage.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "Palantir government platforms",
+      "priority": "red",
+      "why": "Palantir government platforms is ranked 91/100 because of 1 relationship route(s), 6 control layer(s), 8 record signal(s), 10 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "private-contractor-tracker.html",
+        "contractor-briefs/palantir-government-platforms.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "Health data and emergency systems",
+      "priority": "red",
+      "why": "Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "subject-briefs.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "CACI International",
+      "priority": "red",
+      "why": "CACI International is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "private-contractor-tracker.html",
+        "contractor-briefs/caci-intelligence-contractor.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "Booz Allen Hamilton",
+      "priority": "red",
+      "why": "Booz Allen Hamilton is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "private-contractor-tracker.html",
+        "contractor-briefs/booz-allen-intelligence-contractor.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "G4S / Allied Universal security lineage",
+      "priority": "red",
+      "why": "G4S / Allied Universal security lineage is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "private-contractor-tracker.html",
+        "contractor-briefs/g4s-allied-security-lineage.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "SAIC / Leidos lineage",
+      "priority": "red",
+      "why": "SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "private-contractor-tracker.html",
+        "contractor-briefs/leidos-saic-lineage.html",
         "evidence-vault.html",
         "daily-missing-records.html",
         "search.html"

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:12:58.437Z",
+  "updated": "2026-07-18T07:19:46.429Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
   "nodeCount": 137,
@@ -83,7 +83,7 @@
       "type": "institution route",
       "route": "institution-briefs/european-commission.html",
       "notes": [
-        "elite priority",
+        "high priority",
         "identity-access",
         "migration",
         "public-private-contracts"
@@ -161,6 +161,21 @@
         "custody and administration",
         "investment management",
         "market services"
+      ],
+      "score": 100
+    },
+    {
+      "id": "elon-musk",
+      "layer": "capital-and-ownership",
+      "name": "Elon Musk",
+      "type": "profile route",
+      "route": "billionaire-briefs/elon-musk.html",
+      "notes": [
+        "elite priority",
+        "Tesla",
+        "SpaceX",
+        "X",
+        "xAI"
       ],
       "score": 100
     },
@@ -268,21 +283,6 @@
         "public money"
       ],
       "score": 100
-    },
-    {
-      "id": "elon-musk",
-      "layer": "capital-and-ownership",
-      "name": "Elon Musk",
-      "type": "profile route",
-      "route": "billionaire-briefs/elon-musk.html",
-      "notes": [
-        "elite priority",
-        "Tesla",
-        "SpaceX",
-        "X",
-        "xAI"
-      ],
-      "score": 70
     },
     {
       "id": "jeff-bezos",
@@ -396,7 +396,7 @@
       "type": "profile route",
       "route": "billionaire-briefs/warren-buffett.html",
       "notes": [
-        "elite priority",
+        "active watch",
         "Berkshire Hathaway",
         "insurance",
         "energy",
@@ -630,143 +630,11 @@
       "score": 55
     },
     {
-      "id": "health-and-human-services-department",
-      "layer": "evidence-and-records",
-      "name": "Health and Human Services Department",
-      "type": "missing record",
-      "route": "entity-briefs/health-and-human-services-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "management-and-budget-office",
-      "layer": "evidence-and-records",
-      "name": "Management and Budget Office",
-      "type": "missing record",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "defense-department",
-      "layer": "evidence-and-records",
-      "name": "Defense Department",
-      "type": "missing record",
-      "route": "entity-briefs/defense-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "agency-for-international-development",
-      "layer": "evidence-and-records",
-      "name": "Agency for International Development",
-      "type": "missing record",
-      "route": "entity-briefs/agency-for-international-development.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "agriculture-department",
-      "layer": "evidence-and-records",
-      "name": "Agriculture Department",
-      "type": "missing record",
-      "route": "entity-briefs/agriculture-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "energy-department",
-      "layer": "evidence-and-records",
-      "name": "Energy Department",
-      "type": "missing record",
-      "route": "entity-briefs/energy-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "state-department",
-      "layer": "evidence-and-records",
-      "name": "State Department",
-      "type": "missing record",
-      "route": "entity-briefs/state-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "treasury-department",
-      "layer": "evidence-and-records",
-      "name": "Treasury Department",
-      "type": "missing record",
-      "route": "entity-briefs/treasury-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "veterans-affairs-department",
-      "layer": "evidence-and-records",
-      "name": "Veterans Affairs Department",
-      "type": "missing record",
-      "route": "entity-briefs/veterans-affairs-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "commerce-department",
-      "layer": "evidence-and-records",
-      "name": "Commerce Department",
-      "type": "missing record",
-      "route": "entity-briefs/commerce-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "interior-department",
-      "layer": "evidence-and-records",
-      "name": "Interior Department",
-      "type": "missing record",
-      "route": "entity-briefs/interior-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
       "id": "people-s-republic-of-bangladesh",
       "layer": "evidence-and-records",
       "name": "People's Republic of Bangladesh",
       "type": "missing record",
       "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "transportation-department",
-      "layer": "evidence-and-records",
-      "name": "Transportation Department",
-      "type": "missing record",
-      "route": "entity-briefs/transportation-department.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -784,22 +652,22 @@
       "score": 54
     },
     {
-      "id": "national-aeronautics-and-space-administration",
+      "id": "centers-for-medicare-medicaid-services",
       "layer": "evidence-and-records",
-      "name": "National Aeronautics and Space Administration",
+      "name": "Centers for Medicare & Medicaid Services",
       "type": "missing record",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "centers-for-medicare-medicaid-services",
+      "id": "defense-department",
       "layer": "evidence-and-records",
-      "name": "Centers for Medicare & Medicaid Services",
+      "name": "Defense Department",
       "type": "missing record",
-      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "route": "entity-briefs/defense-department.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -822,6 +690,39 @@
       "name": "General Services Administration",
       "type": "missing record",
       "route": "entity-briefs/general-services-administration.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "health-and-human-services-department",
+      "layer": "evidence-and-records",
+      "name": "Health and Human Services Department",
+      "type": "missing record",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "management-and-budget-office",
+      "layer": "evidence-and-records",
+      "name": "Management and Budget Office",
+      "type": "missing record",
+      "route": "entity-briefs/management-and-budget-office.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "national-aeronautics-and-space-administration",
+      "layer": "evidence-and-records",
+      "name": "National Aeronautics and Space Administration",
+      "type": "missing record",
+      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -971,6 +872,17 @@
       "score": 54
     },
     {
+      "id": "homeland-security-department",
+      "layer": "evidence-and-records",
+      "name": "Homeland Security Department",
+      "type": "missing record",
+      "route": "entity-briefs/homeland-security-department.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
       "id": "kingdom-of-morocco",
       "layer": "evidence-and-records",
       "name": "Kingdom of Morocco",
@@ -1064,6 +976,94 @@
       "name": "AAPL",
       "type": "missing record",
       "route": "entity-briefs/aapl.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "alphabet-inc",
+      "layer": "evidence-and-records",
+      "name": "Alphabet Inc.",
+      "type": "missing record",
+      "route": "entity-briefs/alphabet-inc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "amazon-com-inc",
+      "layer": "evidence-and-records",
+      "name": "AMAZON COM INC",
+      "type": "missing record",
+      "route": "entity-briefs/amazon-com-inc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "amzn",
+      "layer": "evidence-and-records",
+      "name": "AMZN",
+      "type": "missing record",
+      "route": "entity-briefs/amzn.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "apple-inc",
+      "layer": "evidence-and-records",
+      "name": "Apple Inc.",
+      "type": "missing record",
+      "route": "entity-briefs/apple-inc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "avgo",
+      "layer": "evidence-and-records",
+      "name": "AVGO",
+      "type": "missing record",
+      "route": "entity-briefs/avgo.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "broadcom-inc",
+      "layer": "evidence-and-records",
+      "name": "Broadcom Inc.",
+      "type": "missing record",
+      "route": "entity-briefs/broadcom-inc.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "googl",
+      "layer": "evidence-and-records",
+      "name": "GOOGL",
+      "type": "missing record",
+      "route": "entity-briefs/googl.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "microsoft-corp",
+      "layer": "evidence-and-records",
+      "name": "MICROSOFT CORP",
+      "type": "missing record",
+      "route": "entity-briefs/microsoft-corp.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1204,155 +1204,11 @@
       "score": 43
     },
     {
-      "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
-      "layer": "evidence-and-records",
-      "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/health-and-human-services-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-management-and-budget-office-confirm-the-primary-record-page",
-      "layer": "evidence-and-records",
-      "name": "Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/management-and-budget-office.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-defense-department-confirm-the-primary-record-page-pdf-docke",
-      "layer": "evidence-and-records",
-      "name": "Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/defense-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-agency-for-international-development-confirm-the-primary-rec",
-      "layer": "evidence-and-records",
-      "name": "Agency for International Development — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/agency-for-international-development.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-agriculture-department-confirm-the-primary-record-page-pdf-d",
-      "layer": "evidence-and-records",
-      "name": "Agriculture Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/agriculture-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-energy-department-confirm-the-primary-record-page-pdf-docket",
-      "layer": "evidence-and-records",
-      "name": "Energy Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/energy-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-state-department-confirm-the-primary-record-page-pdf-docket-",
-      "layer": "evidence-and-records",
-      "name": "State Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/state-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-treasury-department-confirm-the-primary-record-page-pdf-dock",
-      "layer": "evidence-and-records",
-      "name": "Treasury Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/treasury-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-veterans-affairs-department-confirm-the-primary-record-page-",
-      "layer": "evidence-and-records",
-      "name": "Veterans Affairs Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/veterans-affairs-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-commerce-department-confirm-the-primary-record-page-pdf-dock",
-      "layer": "evidence-and-records",
-      "name": "Commerce Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/commerce-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-interior-department-confirm-the-primary-record-page-pdf-dock",
-      "layer": "evidence-and-records",
-      "name": "Interior Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/interior-department.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
       "id": "feed-people-s-republic-of-bangladesh-confirm-the-primary-record-p",
       "layer": "evidence-and-records",
       "name": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-transportation-department-confirm-the-primary-record-page-pd",
-      "layer": "evidence-and-records",
-      "name": "Transportation Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/transportation-department.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1372,11 +1228,11 @@
       "score": 43
     },
     {
-      "id": "feed-national-aeronautics-and-space-administration-confirm-the-pr",
+      "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
       "layer": "evidence-and-records",
-      "name": "National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1384,11 +1240,11 @@
       "score": 43
     },
     {
-      "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
+      "id": "feed-defense-department-confirm-the-primary-record-page-pdf-docke",
       "layer": "evidence-and-records",
-      "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "route": "entity-briefs/defense-department.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1420,6 +1276,42 @@
       "score": 43
     },
     {
+      "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
+      "layer": "evidence-and-records",
+      "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-management-and-budget-office-confirm-the-primary-record-page",
+      "layer": "evidence-and-records",
+      "name": "Management and Budget Office — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/management-and-budget-office.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-national-aeronautics-and-space-administration-confirm-the-pr",
+      "layer": "evidence-and-records",
+      "name": "National Aeronautics and Space Administration — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/national-aeronautics-and-space-administration.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
       "id": "feed-2021-00294-confirm-the-primary-record-page-pdf-docket-filing",
       "layer": "evidence-and-records",
       "name": "2021-00294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -1437,6 +1329,114 @@
       "name": "2024-07773 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/2024-07773.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-2025-0045-appeal-confirm-the-primary-record-page-pdf-docket-",
+      "layer": "evidence-and-records",
+      "name": "2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/2025-0045-appeal.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-25-113-confirm-the-primary-record-page-pdf-docket-filing-awa",
+      "layer": "evidence-and-records",
+      "name": "25-113 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/25-113.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-25-581-confirm-the-primary-record-page-pdf-docket-filing-awa",
+      "layer": "evidence-and-records",
+      "name": "25-581 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/25-581.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-a170747m-confirm-the-primary-record-page-pdf-docket-filing-a",
+      "layer": "evidence-and-records",
+      "name": "A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/a170747m.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-biddle-v-biddle-confirm-the-primary-record-page-pdf-docket-f",
+      "layer": "evidence-and-records",
+      "name": "Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/biddle-v-biddle.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-california-court-of-appeal-confirm-the-primary-record-page-p",
+      "layer": "evidence-and-records",
+      "name": "California Court of Appeal — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/california-court-of-appeal.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-chattogram-water-supply-and-sewerage-authority-confirm-the-p",
+      "layer": "evidence-and-records",
+      "name": "Chattogram Water Supply and Sewerage Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-court-of-appeals-for-the-second-circuit-confirm-the-primary-",
+      "layer": "evidence-and-records",
+      "name": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-court-of-appeals-of-north-carolina-confirm-the-primary-recor",
+      "layer": "evidence-and-records",
+      "name": "Court of Appeals of North Carolina — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/court-of-appeals-of-north-carolina.html",
       "notes": [
         "missing record",
         "Score 85"

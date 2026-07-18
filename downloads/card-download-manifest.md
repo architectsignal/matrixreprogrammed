@@ -1,6 +1,6 @@
 # Card Download Manifest
 
-Updated: 2026-07-17T06:30:55.227Z
+Updated: 2026-07-18T07:20:02.558Z
 
 Decks: 9
 
@@ -11,54 +11,54 @@ Missing routes/assets: 0
 ## Top 52 Persons of Interest
 - 1. Elon Musk — assets/top-52/cards/elon-musk.svg — top-52/elon-musk.html — source route: billionaire-briefs/elon-musk.html
 - 2. Jeff Bezos — assets/top-52/cards/jeff-bezos.svg — top-52/jeff-bezos.html — source route: billionaire-briefs/jeff-bezos.html
-- 3. Warren Buffett — assets/top-52/cards/warren-buffett.svg — top-52/warren-buffett.html — source route: billionaire-briefs/warren-buffett.html
-- 4. World Health Organization — assets/top-52/cards/world-health-organization.svg — top-52/world-health-organization.html — source route: institution-briefs/world-health-organization.html
-- 5. Federal Reserve — assets/top-52/cards/federal-reserve.svg — top-52/federal-reserve.html — source route: institution-briefs/federal-reserve.html
-- 6. CACI International — assets/top-52/cards/caci-international.svg — top-52/caci-international.html — source route: contractor-briefs/caci-intelligence-contractor.html
-- 7. Booz Allen Hamilton — assets/top-52/cards/booz-allen-hamilton.svg — top-52/booz-allen-hamilton.html — source route: contractor-briefs/booz-allen-intelligence-contractor.html
-- 8. Larry Fink — assets/top-52/cards/larry-fink.svg — top-52/larry-fink.html — source route: big-three/blackrock.html
-- 9. Klaus Schwab — assets/top-52/cards/klaus-schwab.svg — top-52/klaus-schwab.html — source route: institution-briefs/world-economic-forum.html
-- 10. Emmanuel Macron — assets/top-52/cards/emmanuel-macron.svg — top-52/emmanuel-macron.html — source route: power-structure-map.html
-- 11. Tony Blair — assets/top-52/cards/tony-blair.svg — top-52/tony-blair.html — source route: power-structure-map.html
-- 12. Jamie Dimon — assets/top-52/cards/jamie-dimon.svg — top-52/jamie-dimon.html — source route: evidence-graph.html
-- 13. Jerome Powell — assets/top-52/cards/jerome-powell.svg — top-52/jerome-powell.html — source route: evidence-graph.html
-- 14. Jensen Huang — assets/top-52/cards/jensen-huang.svg — top-52/jensen-huang.html — source route: billionaire-briefs/jensen-huang.html
-- 15. Christine Lagarde — assets/top-52/cards/christine-lagarde.svg — top-52/christine-lagarde.html — source route: evidence-graph.html
-- 16. Pope Francis — assets/top-52/cards/pope-francis.svg — top-52/pope-francis.html — source route: power-structure-map.html
-- 17. King Charles III — assets/top-52/cards/king-charles-iii.svg — top-52/king-charles-iii.html — source route: power-structure-map.html
-- 18. Erik Prince — assets/top-52/cards/erik-prince.svg — top-52/erik-prince.html — source route: contractor-briefs/blackwater-constellis-lineage.html
-- 19. Bill Gates — assets/top-52/cards/bill-gates.svg — top-52/bill-gates.html — source route: billionaire-briefs/bill-gates.html
-- 20. Sam Altman — assets/top-52/cards/sam-altman.svg — top-52/sam-altman.html — source route: answer-engine.html
-- 21. Sundar Pichai — assets/top-52/cards/sundar-pichai.svg — top-52/sundar-pichai.html — source route: answer-engine.html
-- 22. Satya Nadella — assets/top-52/cards/satya-nadella.svg — top-52/satya-nadella.html — source route: answer-engine.html
-- 23. Tim Cook — assets/top-52/cards/tim-cook.svg — top-52/tim-cook.html — source route: evidence-graph.html
-- 24. George Soros — assets/top-52/cards/george-soros.svg — top-52/george-soros.html — source route: evidence-graph.html
-- 25. Mukesh Ambani — assets/top-52/cards/mukesh-ambani.svg — top-52/mukesh-ambani.html — source route: evidence-graph.html
-- 26. Xi Jinping — assets/top-52/cards/xi-jinping.svg — top-52/xi-jinping.html — source route: power-structure-map.html
-- 27. Narendra Modi — assets/top-52/cards/narendra-modi.svg — top-52/narendra-modi.html — source route: power-structure-map.html
-- 28. Vladimir Putin — assets/top-52/cards/vladimir-putin.svg — top-52/vladimir-putin.html — source route: power-structure-map.html
-- 29. Benjamin Netanyahu — assets/top-52/cards/benjamin-netanyahu.svg — top-52/benjamin-netanyahu.html — source route: power-structure-map.html
-- 30. Volodymyr Zelenskyy — assets/top-52/cards/volodymyr-zelenskyy.svg — top-52/volodymyr-zelenskyy.html — source route: power-structure-map.html
-- 31. Giorgia Meloni — assets/top-52/cards/giorgia-meloni.svg — top-52/giorgia-meloni.html — source route: power-structure-map.html
-- 32. Gautam Adani — assets/top-52/cards/gautam-adani.svg — top-52/gautam-adani.html — source route: evidence-graph.html
-- 33. Ray Dalio — assets/top-52/cards/ray-dalio.svg — top-52/ray-dalio.html — source route: evidence-graph.html
-- 34. Brian Moynihan — assets/top-52/cards/brian-moynihan.svg — top-52/brian-moynihan.html — source route: evidence-graph.html
-- 35. David Solomon — assets/top-52/cards/david-solomon.svg — top-52/david-solomon.html — source route: evidence-graph.html
-- 36. Jane Fraser — assets/top-52/cards/jane-fraser.svg — top-52/jane-fraser.html — source route: evidence-graph.html
-- 37. Ajay Banga — assets/top-52/cards/ajay-banga.svg — top-52/ajay-banga.html — source route: evidence-graph.html
-- 38. Kristalina Georgieva — assets/top-52/cards/kristalina-georgieva.svg — top-52/kristalina-georgieva.html — source route: evidence-graph.html
-- 39. Tedros Adhanom Ghebreyesus — assets/top-52/cards/tedros-adhanom-ghebreyesus.svg — top-52/tedros-adhanom-ghebreyesus.html — source route: power-structure-map.html
-- 40. António Guterres — assets/top-52/cards/ant-nio-guterres.svg — top-52/ant-nio-guterres.html — source route: power-structure-map.html
-- 41. Mark Rutte — assets/top-52/cards/mark-rutte.svg — top-52/mark-rutte.html — source route: power-structure-map.html
-- 42. Jens Stoltenberg — assets/top-52/cards/jens-stoltenberg.svg — top-52/jens-stoltenberg.html — source route: power-structure-map.html
-- 43. Alex Karp — assets/top-52/cards/alex-karp.svg — top-52/alex-karp.html — source route: evidence-graph.html
-- 44. Miriam Adelson — assets/top-52/cards/miriam-adelson.svg — top-52/miriam-adelson.html — source route: evidence-graph.html
-- 45. Rupert Murdoch — assets/top-52/cards/rupert-murdoch.svg — top-52/rupert-murdoch.html — source route: evidence-graph.html
-- 46. Laurene Powell Jobs — assets/top-52/cards/laurene-powell-jobs.svg — top-52/laurene-powell-jobs.html — source route: evidence-graph.html
-- 47. Mark Zuckerberg — assets/top-52/cards/mark-zuckerberg.svg — top-52/mark-zuckerberg.html — source route: billionaire-briefs/mark-zuckerberg.html
-- 48. Larry Ellison — assets/top-52/cards/larry-ellison.svg — top-52/larry-ellison.html — source route: billionaire-briefs/larry-ellison.html
-- 49. Peter Thiel — assets/top-52/cards/peter-thiel.svg — top-52/peter-thiel.html — source route: billionaire-briefs/peter-thiel.html
-- 50. Michael Bloomberg — assets/top-52/cards/michael-bloomberg.svg — top-52/michael-bloomberg.html — source route: billionaire-briefs/michael-bloomberg.html
+- 3. World Health Organization — assets/top-52/cards/world-health-organization.svg — top-52/world-health-organization.html — source route: institution-briefs/world-health-organization.html
+- 4. Federal Reserve — assets/top-52/cards/federal-reserve.svg — top-52/federal-reserve.html — source route: institution-briefs/federal-reserve.html
+- 5. CACI International — assets/top-52/cards/caci-international.svg — top-52/caci-international.html — source route: contractor-briefs/caci-intelligence-contractor.html
+- 6. Booz Allen Hamilton — assets/top-52/cards/booz-allen-hamilton.svg — top-52/booz-allen-hamilton.html — source route: contractor-briefs/booz-allen-intelligence-contractor.html
+- 7. Larry Fink — assets/top-52/cards/larry-fink.svg — top-52/larry-fink.html — source route: big-three/blackrock.html
+- 8. Klaus Schwab — assets/top-52/cards/klaus-schwab.svg — top-52/klaus-schwab.html — source route: institution-briefs/world-economic-forum.html
+- 9. Emmanuel Macron — assets/top-52/cards/emmanuel-macron.svg — top-52/emmanuel-macron.html — source route: power-structure-map.html
+- 10. Tony Blair — assets/top-52/cards/tony-blair.svg — top-52/tony-blair.html — source route: power-structure-map.html
+- 11. Jamie Dimon — assets/top-52/cards/jamie-dimon.svg — top-52/jamie-dimon.html — source route: evidence-graph.html
+- 12. Jerome Powell — assets/top-52/cards/jerome-powell.svg — top-52/jerome-powell.html — source route: evidence-graph.html
+- 13. Jensen Huang — assets/top-52/cards/jensen-huang.svg — top-52/jensen-huang.html — source route: billionaire-briefs/jensen-huang.html
+- 14. Christine Lagarde — assets/top-52/cards/christine-lagarde.svg — top-52/christine-lagarde.html — source route: evidence-graph.html
+- 15. Pope Francis — assets/top-52/cards/pope-francis.svg — top-52/pope-francis.html — source route: power-structure-map.html
+- 16. King Charles III — assets/top-52/cards/king-charles-iii.svg — top-52/king-charles-iii.html — source route: power-structure-map.html
+- 17. Erik Prince — assets/top-52/cards/erik-prince.svg — top-52/erik-prince.html — source route: contractor-briefs/blackwater-constellis-lineage.html
+- 18. Bill Gates — assets/top-52/cards/bill-gates.svg — top-52/bill-gates.html — source route: billionaire-briefs/bill-gates.html
+- 19. Sam Altman — assets/top-52/cards/sam-altman.svg — top-52/sam-altman.html — source route: answer-engine.html
+- 20. Sundar Pichai — assets/top-52/cards/sundar-pichai.svg — top-52/sundar-pichai.html — source route: answer-engine.html
+- 21. Satya Nadella — assets/top-52/cards/satya-nadella.svg — top-52/satya-nadella.html — source route: answer-engine.html
+- 22. Tim Cook — assets/top-52/cards/tim-cook.svg — top-52/tim-cook.html — source route: evidence-graph.html
+- 23. George Soros — assets/top-52/cards/george-soros.svg — top-52/george-soros.html — source route: evidence-graph.html
+- 24. Mukesh Ambani — assets/top-52/cards/mukesh-ambani.svg — top-52/mukesh-ambani.html — source route: evidence-graph.html
+- 25. Xi Jinping — assets/top-52/cards/xi-jinping.svg — top-52/xi-jinping.html — source route: power-structure-map.html
+- 26. Narendra Modi — assets/top-52/cards/narendra-modi.svg — top-52/narendra-modi.html — source route: power-structure-map.html
+- 27. Vladimir Putin — assets/top-52/cards/vladimir-putin.svg — top-52/vladimir-putin.html — source route: power-structure-map.html
+- 28. Benjamin Netanyahu — assets/top-52/cards/benjamin-netanyahu.svg — top-52/benjamin-netanyahu.html — source route: power-structure-map.html
+- 29. Volodymyr Zelenskyy — assets/top-52/cards/volodymyr-zelenskyy.svg — top-52/volodymyr-zelenskyy.html — source route: power-structure-map.html
+- 30. Giorgia Meloni — assets/top-52/cards/giorgia-meloni.svg — top-52/giorgia-meloni.html — source route: power-structure-map.html
+- 31. Gautam Adani — assets/top-52/cards/gautam-adani.svg — top-52/gautam-adani.html — source route: evidence-graph.html
+- 32. Ray Dalio — assets/top-52/cards/ray-dalio.svg — top-52/ray-dalio.html — source route: evidence-graph.html
+- 33. Brian Moynihan — assets/top-52/cards/brian-moynihan.svg — top-52/brian-moynihan.html — source route: evidence-graph.html
+- 34. David Solomon — assets/top-52/cards/david-solomon.svg — top-52/david-solomon.html — source route: evidence-graph.html
+- 35. Jane Fraser — assets/top-52/cards/jane-fraser.svg — top-52/jane-fraser.html — source route: evidence-graph.html
+- 36. Ajay Banga — assets/top-52/cards/ajay-banga.svg — top-52/ajay-banga.html — source route: evidence-graph.html
+- 37. Kristalina Georgieva — assets/top-52/cards/kristalina-georgieva.svg — top-52/kristalina-georgieva.html — source route: evidence-graph.html
+- 38. Tedros Adhanom Ghebreyesus — assets/top-52/cards/tedros-adhanom-ghebreyesus.svg — top-52/tedros-adhanom-ghebreyesus.html — source route: power-structure-map.html
+- 39. António Guterres — assets/top-52/cards/ant-nio-guterres.svg — top-52/ant-nio-guterres.html — source route: power-structure-map.html
+- 40. Mark Rutte — assets/top-52/cards/mark-rutte.svg — top-52/mark-rutte.html — source route: power-structure-map.html
+- 41. Jens Stoltenberg — assets/top-52/cards/jens-stoltenberg.svg — top-52/jens-stoltenberg.html — source route: power-structure-map.html
+- 42. Alex Karp — assets/top-52/cards/alex-karp.svg — top-52/alex-karp.html — source route: evidence-graph.html
+- 43. Miriam Adelson — assets/top-52/cards/miriam-adelson.svg — top-52/miriam-adelson.html — source route: evidence-graph.html
+- 44. Rupert Murdoch — assets/top-52/cards/rupert-murdoch.svg — top-52/rupert-murdoch.html — source route: evidence-graph.html
+- 45. Laurene Powell Jobs — assets/top-52/cards/laurene-powell-jobs.svg — top-52/laurene-powell-jobs.html — source route: evidence-graph.html
+- 46. Mark Zuckerberg — assets/top-52/cards/mark-zuckerberg.svg — top-52/mark-zuckerberg.html — source route: billionaire-briefs/mark-zuckerberg.html
+- 47. Larry Ellison — assets/top-52/cards/larry-ellison.svg — top-52/larry-ellison.html — source route: billionaire-briefs/larry-ellison.html
+- 48. Peter Thiel — assets/top-52/cards/peter-thiel.svg — top-52/peter-thiel.html — source route: billionaire-briefs/peter-thiel.html
+- 49. Michael Bloomberg — assets/top-52/cards/michael-bloomberg.svg — top-52/michael-bloomberg.html — source route: billionaire-briefs/michael-bloomberg.html
+- 50. Warren Buffett — assets/top-52/cards/warren-buffett.svg — top-52/warren-buffett.html — source route: billionaire-briefs/warren-buffett.html
 - 51. MacKenzie Scott — assets/top-52/cards/mackenzie-scott.svg — top-52/mackenzie-scott.html — source route: evidence-graph.html
 - 52. Priscilla Chan — assets/top-52/cards/priscilla-chan.svg — top-52/priscilla-chan.html — source route: evidence-graph.html
 

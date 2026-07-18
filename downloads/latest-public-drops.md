@@ -1,6 +1,6 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-17T06:30:43.353Z
+Updated: 2026-07-17T06:32:12.012Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.

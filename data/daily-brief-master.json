@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-17T06:30:55.598Z",
+  "updated": "2026-07-18T07:19:47.040Z",
   "title": "Deep Daily Control Brief",
   "boundary": "This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.",
   "mainConclusion": {
@@ -95,8 +95,8 @@
     {
       "rank": 7,
       "title": "Most important missing record",
-      "text": "Health and Human Services Department needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
-      "route": "entity-briefs/health-and-human-services-department.html",
+      "text": "People's Republic of Bangladesh needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
+      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
       "evidenceStrength": "Review",
       "readerAction": "Open the route, then check the missing-record queue before treating the pattern as settled."
     },
@@ -239,7 +239,7 @@
       "score": 100,
       "route": "institution-briefs/european-commission.html",
       "layer": "policy-and-institutions",
-      "why": "elite priority"
+      "why": "high priority"
     },
     {
       "name": "NATO",
@@ -280,6 +280,14 @@
       "route": "big-three/state-street.html",
       "layer": "capital-and-ownership",
       "why": "Latest public watch: about $5.4T AUM reported for Q3 2025; custody / administration figure must be tracked separately from AUM."
+    },
+    {
+      "name": "Elon Musk",
+      "type": "profile route",
+      "score": 100,
+      "route": "billionaire-briefs/elon-musk.html",
+      "layer": "capital-and-ownership",
+      "why": "elite priority"
     },
     {
       "name": "Blackwater / Xe / Academi / Constellis lineage",
@@ -326,14 +334,6 @@
       "type": "contractor route",
       "score": 100,
       "route": "contractor-briefs/g4s-allied-security-lineage.html",
-      "layer": "execution-and-contracts",
-      "why": "seed contractor profile"
-    },
-    {
-      "name": "SAIC / Leidos lineage",
-      "type": "contractor route",
-      "score": 100,
-      "route": "contractor-briefs/leidos-saic-lineage.html",
       "layer": "execution-and-contracts",
       "why": "seed contractor profile"
     }

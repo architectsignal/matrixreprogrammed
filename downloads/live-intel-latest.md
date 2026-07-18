@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-17T06:32:09.514Z
+Updated: 2026-07-18T07:20:08.779Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -20,20 +20,28 @@ Updated: 2026-07-17T06:32:09.514Z
 - Crime State Overlap: crime-hub.html
 
 ## Latest Items
+- 2026-07-17 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+  - Short title: Leon Black walked out of an Epstein House committee interview. Here's wh
+  - Longform title: Epstein Files, Timeline And Court Records — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Short title: House panel probing Epstein asked Leon Black about birthday book and the
+  - Longform title: Epstein Files, Timeline And Court Records — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-15 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
   - Source: https://news.google.com/rss/articles/CBMikgFBVV95cUxQTWhkbjR1Umw3a0ZHVVhGWV94aXRad2hvNmN6VWU0NDRfVEEzQnV0WElzeFc3VElzUU80V1VaSjAySFRWQk91TW1xdWNoczVoRkItdGtHZHVYcWR2dURueGJiYjJic0Z3QzJib3lMNGxNV1kwODJfRkJNaTVSS3BCeTlhaHZRTzFwU2h3RS1LNWhQZw?oc=5
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
   - Short title: Former Obama counsel ‘not completely truthful’ in Epstein testimony, Dem
   - Longform title: Epstein Files, Timeline And Court Records — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardia
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-15 — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
-  - Short title: 3 major takeaways from Todd Blanche's attorney general confirmation hear
-  - Longform title: Epstein Files, Timeline And Court Records — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-15 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
@@ -60,6 +68,14 @@ Updated: 2026-07-17T06:32:09.514Z
   - Longform title: Epstein Files, Timeline And Court Records — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - Reut
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-15 — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxQeUlLTlhNSGNPZmVCaTlCcGRMOWtRMXFQWVpzNVZhUkhLZXhYRFJuQWNhcDFzM0k4VHozVVV2elRLU1NZMzE0SXNoOW1mUnRZenU2bnhOWU1nUnRPcTFURDhPb0JCbWJDb3BSVFprVjFHTllOUnZnaU5sNmdpQnhIYjgwV2VyNU05UGo0UXBvUXJieW1jaHNaZ3E4X1pkWVVKNnBTSnpOMGE0SllyRWfSAbMBQVVfeXFMTTNZRmc0RE9oN2FRNU05SDg3Z2ZMVjRvNnMyeDZTazBGUXg0YVVYMUUxX0VXT0s3RUlGQjlUNXBraUJqbGlBa3JLSDFkQjJnMWpPUVhfczlTcTJ4ZDROaW9fVDM3Skt0WHVWVjlRb2twTTdYajcwY1dVNmx1Y295d0dmTXo0Y2tFUVhBay1Ha050d3ZZZG1ET01RRDMxU29xeXlid0lIendvemlYNHhyMEtqUHc?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
+  - Short title: 3 major takeaways from Todd Blanche's attorney general confirmation hear
+  - Longform title: Epstein Files, Timeline And Court Records — 3 major takeaways from Todd Blanche's attorney general confirmation hearing - PBS
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
 - 2026-07-15 — Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
   - Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxQN1VRdjAwUFZodEZKc3E0WmFIRmhJX2haS2tGRTJfbk9zNjlTMTRTVmdZQUZKTlFuVnVsejJZQ3I1aklFMWIxRXlmaFNsb1lpOVltbTVFNlBDLW1YZW0zc2Z1UGZUNXdxMEVIWGY5TnY5UEtLWjRUbk5kbkNQOEw0Rl8wY0NNYThwWTVtM25JSlUwSDJ5OXpiQ0RWOHFxdGdDYllrQXNyNDBKamNuYmFoVktpTjlaVzg?oc=5
   - Evidence: Seven-day public-record lead
@@ -84,20 +100,12 @@ Updated: 2026-07-17T06:32:09.514Z
   - Longform title: Epstein Files, Timeline And Court Records — 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
-  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxQdEdCMk5HcnpmVWxraThsM2VGcmZRYVRaZEc0TGNSaXNkaGpjNzlac3kzck9sS1pGWmhibUM5emttWWtrS3hEakI0Q1BRanloTVB2bVlSbVpLX21WZFVPem1scjBDMnpfY2NZTEozaEtwWnlocG9xcGNJSnhTTkt2MmhYUnV4WXdFaFE5QmhDa2JVYUR4U0I4bkFn?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
-  - Short title: Goldman Sachs's Ruemmler says she would have reported Epstein if she kne
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yaho
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-16 — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
+- 2026-07-16 — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
   - Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
+  - Video hook: New public-record signal: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
   - Short title: US Justice Dept says it cannot provide unredacted Epstein files for New
-  - Longform title: Epstein Files, Timeline And Court Records — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestanda
+  - Longform title: Epstein Files, Timeline And Court Records — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Stand
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
@@ -116,30 +124,14 @@ Updated: 2026-07-17T06:32:09.514Z
   - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-16 — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-  - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
+- 2026-07-17 — The surveillance networks cities do not have to buy - Biometric Update
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
-  - Short title: Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.
-  - Longform title: Epstein Files, Timeline And Court Records — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
+  - Video hook: New public-record signal: The surveillance networks cities do not have to buy - Biometric Update
+  - Short title: The surveillance networks cities do not have to buy - Biometric Update
+  - Longform title: Elite Control Structure — The surveillance networks cities do not have to buy - Biometric Update
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
-  - Short title: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aeria
-  - Longform title: Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: download-center.html
-- 2026-07-10 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
-  - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
-  - Short title: NASA insider hints bigger UFO file release as declassification ramps up
-  - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: download-center.html
 - 2026-07-15 — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
   - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
   - Evidence: Seven-day public-record lead
@@ -148,11 +140,35 @@ Updated: 2026-07-17T06:32:09.514Z
   - Longform title: War Machine And Intelligence State — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-intelligence-dossiers.html
-- 2026-07-09 — NSA revives 'Tailored Access Operations' name for elite hacking unit - The Record from Recorded Future News
-  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE5jVkhsdXhOa1F3bVdIOFg0U2dZLUZTLUpaUWM3VzQxLXJxUXkzLUNQa05id014b205QTd1cHFxSzRLSHdEV1Z0Q0VqcTdVV1JBSmEtMW1fZzg0RDlyb0daSVlLTUVsVDROZWlxXzZFa3BCLU5rclE?oc=5
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: NSA revives 'Tailored Access Operations' name for elite hacking unit
-  - Short title: Elite Control Update: NSA revives 'Tailored Access Operations' name for elite hacking unit
-  - Longform title: What This Public-Record Update Reveals About Elite Control Structure: NSA revives 'Tailored Access Operations' name for elite hacking unit
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+- 2026-07-16 — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
+  - Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk. Source first, claim second.
+  - Short title: US Justice Dept says it cannot provide unredacted Epstein files for New
+  - Longform title: Epstein Files, Timeline And Court Records — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestanda
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
+- 2026-07-16 — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
+  - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZ05ITHRHYkliaWpjTGVUUThUVnJ4OGdfWkUtdXNrTm04MExhTHBpZ25SU1pLZ0ZKQU1OUjZ4NHVOdGowa2o2bTJNMV9abE9LOFlldF9wM1daUUFvT2pJZENFbThfRGZOekJSQW5SSE5iNXpOanJyOG5GUDFHejZhZDEwTlVCc3pfNG5NZW9LLWxLTUdqeWZpaGp2d3FMSWZ5bnBNckpETXFIYlotd1l3ZW9oeWVRdEhITHRj?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au. Source first, claim second.
+  - Short title: Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.
+  - Longform title: Epstein Files, Timeline And Court Records — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com. Source first, claim second.
+  - Short title: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aeria
+  - Longform title: Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: download-center.html
+- 2026-07-10 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews. Source first, claim second.
+  - Short title: NASA insider hints bigger UFO file release as declassification ramps up
+  - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: download-center.html

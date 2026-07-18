@@ -1,65 +1,17 @@
 # Control Brain V2
 
-Generated: 2026-07-17T06:30:52.125Z
+Generated: 2026-07-18T07:19:43.081Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 142
-Edges: 263
-
-## Digital ID and access systems
-
-Score: 100
-
-Digital ID and access systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Private contractor power
-
-Score: 100
-
-Private contractor power is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## AI, surveillance and data systems
-
-Score: 100
-
-AI, surveillance and data systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 3 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Banking and payment rails
-
-Score: 100
-
-Banking and payment rails is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 9 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Health data and emergency systems
-
-Score: 100
-
-Health data and emergency systems is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
+Nodes: 130
+Edges: 163
 
 ## Disclosure gaps and missing files
 
 Score: 100
 
 Disclosure gaps and missing files is ranked 100/100 because of 17 relationship route(s), 2 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## Foundation and NGO policy influence
-
-Score: 100
-
-Foundation and NGO policy influence is ranked 100/100 because of 25 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
 
@@ -91,7 +43,7 @@ Source routes: big-three/state-street.html
 
 Score: 99
 
-Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 12 missing-record prompt(s), and 0 review prompt(s).
+Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 14 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: private-contractor-tracker.html, contractor-briefs/blackwater-constellis-lineage.html
 
@@ -110,6 +62,14 @@ Score: 91
 Palantir government platforms is ranked 91/100 because of 1 relationship route(s), 6 control layer(s), 8 record signal(s), 10 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: private-contractor-tracker.html, contractor-briefs/palantir-government-platforms.html
+
+## Health data and emergency systems
+
+Score: 91
+
+Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
 
 ## CACI International
 
@@ -143,13 +103,37 @@ SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 con
 
 Source routes: private-contractor-tracker.html, contractor-briefs/leidos-saic-lineage.html
 
+## Banking and payment rails
+
+Score: 88
+
+Banking and payment rails is ranked 88/100 because of 11 relationship route(s), 3 control layer(s), 8 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
 ## World Bank
 
-Score: 81
+Score: 80
 
-World Bank is ranked 81/100 because of 3 relationship route(s), 4 control layer(s), 8 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+World Bank is ranked 80/100 because of 3 relationship route(s), 4 control layer(s), 7 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
+
+## Digital ID and access systems
+
+Score: 78
+
+Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Foundation and NGO policy influence
+
+Score: 78
+
+Foundation and NGO policy influence is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
 
 ## United Nations
 
@@ -161,9 +145,9 @@ Source routes: institution-control-tracker.html
 
 ## European Commission
 
-Score: 75
+Score: 74
 
-European Commission is ranked 75/100 because of 3 relationship route(s), 4 control layer(s), 2 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+European Commission is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
 
@@ -206,3 +190,19 @@ Score: 73
 NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
+
+## Elon Musk
+
+Score: 73
+
+Elon Musk is ranked 73/100 because of 5 relationship route(s), 5 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: billionaire-control-tracker.html
+
+## Private contractor power
+
+Score: 68
+
+Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html

@@ -37,7 +37,7 @@ const codeChecks = {
 };
 
 const configurationChecks = {
-  marketingAutomationOn: both(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"true"\s*$/m, /"EMAIL_AUTOMATION_ENABLED"\s*:\s*"true"/),
+  marketingAutomationOff: both(/^EMAIL_AUTOMATION_ENABLED\s*=\s*"false"\s*$/m, /"EMAIL_AUTOMATION_ENABLED"\s*:\s*"false"/),
   transactionalDeliveryOn: both(/^EMAIL_TRANSACTIONAL_ENABLED\s*=\s*"true"\s*$/m, /"EMAIL_TRANSACTIONAL_ENABLED"\s*:\s*"true"/),
   domainAuthenticationConfirmed: both(/^BREVO_DOMAIN_AUTHENTICATED\s*=\s*"true"\s*$/m, /"BREVO_DOMAIN_AUTHENTICATED"\s*:\s*"true"/),
   retryQuarantineCutoffConfigured: both(/^EMAIL_RETRY_QUARANTINE_BEFORE\s*=\s*"2026-07-18T00:00:00\.000Z"\s*$/m, /"EMAIL_RETRY_QUARANTINE_BEFORE"\s*:\s*"2026-07-18T00:00:00\.000Z"/),
@@ -50,22 +50,23 @@ const configurationChecks = {
 };
 
 const codeReady = Object.values(codeChecks).every(Boolean);
-const liveConfigurationReady = Object.values(configurationChecks).every(Boolean);
+const safeConfigurationReady = Object.values(configurationChecks).every(Boolean);
 const checks = { ...codeChecks, ...configurationChecks };
 const status = !codeReady
   ? 'code-not-ready'
-  : liveConfigurationReady
-    ? 'email-automation-live-guarded'
+  : safeConfigurationReady
+    ? 'transactional-ready-automation-disabled'
     : 'configuration-inconsistent';
 
 const report = {
-  ok: codeReady && liveConfigurationReady,
+  ok: codeReady && safeConfigurationReady,
   generatedAt: new Date().toISOString(),
-  phase: 3,
+  phase: 1,
   status,
   checks,
   currentSafetyState: {
-    marketingAutomation: configurationChecks.marketingAutomationOn,
+    marketingAutomation: false,
+    marketingAutomationLockedOff: configurationChecks.marketingAutomationOff,
     transactionalDelivery: configurationChecks.transactionalDeliveryOn,
     domainAuthenticationConfirmed: configurationChecks.domainAuthenticationConfirmed,
     senderEmail: configurationChecks.senderEmailConfigured ? 'members@matrixreprogrammed.com' : null,
@@ -78,19 +79,19 @@ const report = {
     perRecipientUnsubscribe: codeChecks.perRecipientPreferenceAndUnsubscribe && codeChecks.listUnsubscribeHeaders
   },
   schedules: {
+    configuredButBlocked: true,
     dailyUtc: '06:05',
     weeklyUtc: 'Monday 07:15',
     franceSummer: { daily: '08:05', weekly: 'Monday 09:15' },
     franceWinter: { daily: '07:05', weekly: 'Monday 08:15' }
   },
   requiredRuntimeSecrets: ['BREVO_API_KEY','EMAIL_WEBHOOK_SECRET','ADMIN_API_TOKEN'],
-  monitoringSteps: [
-    'Confirm the first scheduled daily campaign uses /data/daily-brain-brief.json and completes without retrying pre-activation messages.',
-    'Confirm the first scheduled weekly campaign uses /data/weekly-investigation-conclusions.json.',
-    'Verify the Brevo transactional webhook records delivery, bounce, complaint, click and unsubscribe events.',
-    'Review campaign delivery, suppression and retry counts after each of the first three scheduled runs.'
+  activationRequirements: [
+    'Keep automated daily and weekly campaigns blocked until the owner separately authorizes marketing automation.',
+    'Preserve explicit consent, verified preferences, unsubscribe and suppression controls.',
+    'Confirm evidence-bounded content and retry quarantine before any future campaign activation.'
   ],
-  boundary: 'Daily and weekly automation is allowed only with authenticated transactional delivery, explicit consent, active verified preferences, automatic quarantine of retry records predating activation, evidence-bounded source content and per-recipient preference and unsubscribe controls.'
+  boundary: 'Transactional account and verification email may operate when authenticated and configured. Scheduled or bulk marketing automation remains disabled even though campaign code and cron schedules are installed.'
 };
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);

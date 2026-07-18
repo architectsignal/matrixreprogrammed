@@ -1,0 +1,180 @@
+name: Paid Launch Critical Gate
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paid-launch-critical-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  clean-build-and-acceptance:
+    name: Clean build, full functional gate and immutable artifact acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout the exact proposed commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Record immutable source SHA and remove inherited output
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          git clean -xffd
+          rm -rf _site
+          mkdir -p downloads
+          rm -f downloads/final-paid-launch-hardening.json downloads/site-wide-function-audit.json downloads/site-wide-function-audit.md
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Prebuild syntax and repository audit
+        run: |
+          node --check scripts/final-paid-launch-hardening.js
+          node --check scripts/release-acceptance-test.js
+          node --check scripts/browser-release-acceptance.mjs
+          node scripts/site-wide-function-audit.js --prebuild
+
+      - name: Build complete site from the clean checkout
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee downloads/paid-launch-build.log
+
+      - name: Run complete link, search and investigation gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run link-audit
+          node scripts/free-ask-matrix-search-test.js
+          node scripts/search-v3-quality-test.js
+          node scripts/search-investigation-smoke-test.js
+          node scripts/structured-investigation-data-test.js
+          node scripts/open-source-research-suite-test.js
+          node scripts/market-activity-test.js
+          node scripts/public-network-map-test.js
+          node scripts/site-intelligence-pipeline-audit.js
+
+      - name: Rebuild deploy directory after all mutating repair chains
+        env:
+          SOURCE_DOCUMENTS_PER_RUN: '0'
+        run: node scripts/build-cloudflare-output.js
+
+      - name: Apply final public hardening and bind artifact to SHA
+        env:
+          GITHUB_SHA: ''
+          COMMIT_SHA: ${{ env.COMMIT_SHA }}
+        run: node scripts/final-paid-launch-hardening.js
+
+      - name: Test passwordless account lifecycle and email preferences
+        run: |
+          node scripts/membership-auth-test.js
+          node scripts/login-email-resend-test.js
+          node scripts/phase4-email-lifecycle-test.mjs
+
+      - name: Test Worker routes, D1 contracts, entitlements and OSINT boundaries
+        run: |
+          node scripts/forum-persistence-d1-test.js
+          node scripts/cloudflare-worker-routes-test.js
+          node scripts/osint-tools-test.js
+          node scripts/phase8-autonomous-sandbox-readiness-test.mjs
+          node scripts/d1-export-command-test.js
+          node --check src/worker.js
+          node --check src/worker-email-lifecycle.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-paypal-sandbox-rehearsal.js
+          node --check src/worker-production.js
+
+      - name: Run PayPal subscription, webhook, cancellation and duplicate-event rehearsal
+        run: |
+          node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
+          node scripts/production-deploy-guard.js
+
+      - name: Run final site-wide postbuild audit
+        run: node scripts/site-wide-function-audit.js --postbuild
+
+      - name: Prove final deploy directory is accepted without mutation
+        env:
+          EXPECTED_SHA: ${{ env.COMMIT_SHA }}
+          DEPLOY_DIR: _site
+        run: node scripts/release-acceptance-test.js
+
+      - name: Install isolated browser audit dependencies
+        run: |
+          npm install --no-save --package-lock=false playwright @axe-core/playwright http-server
+          npx playwright install --with-deps chromium
+
+      - name: Run every generated page at mobile viewport with automated accessibility checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx http-server _site -p 4173 -c-1 > /tmp/matrix-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 1
+          done
+          RELEASE_BASE_URL=http://127.0.0.1:4173 DEPLOY_DIR=_site node scripts/browser-release-acceptance.mjs
+
+      - name: Create immutable deploy manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$COMMIT_SHA" > downloads/paid-launch-passing-sha.txt
+          find _site -type f -print0 | sort -z | xargs -0 sha256sum > downloads/paid-launch-deploy-manifest.sha256
+          sha256sum downloads/paid-launch-deploy-manifest.sha256 > downloads/paid-launch-deploy-manifest.digest
+          node - <<'NODE'
+          const fs=require('fs');
+          const provenance=JSON.parse(fs.readFileSync('_site/build-provenance.json','utf8'));
+          if(provenance.sourceSha!==process.env.COMMIT_SHA) throw new Error(`Artifact provenance ${provenance.sourceSha} differs from passing SHA ${process.env.COMMIT_SHA}`);
+          console.log(`Artifact is bound to ${provenance.sourceSha}`);
+          NODE
+
+      - name: Upload exact accepted artifact and audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paid-launch-artifact-${{ env.COMMIT_SHA }}
+          path: |
+            _site/
+            downloads/paid-launch-build.log
+            downloads/paid-launch-passing-sha.txt
+            downloads/paid-launch-deploy-manifest.sha256
+            downloads/paid-launch-deploy-manifest.digest
+            downloads/final-paid-launch-hardening.json
+            downloads/site-wide-function-audit.json
+            downloads/cloudflare-worker-routes-test.json
+            downloads/osint-tools-test.json
+            downloads/login-email-resend-test.json
+            downloads/membership-auth-test.json
+            downloads/phase4-email-lifecycle-test/
+            downloads/phase7-paypal-sandbox-rehearsal-test.json
+            downloads/phase8-autonomous-sandbox-readiness-test.json
+          if-no-files-found: warn
+          retention-days: 60

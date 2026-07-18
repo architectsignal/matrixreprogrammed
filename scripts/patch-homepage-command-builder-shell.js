@@ -17,8 +17,8 @@ if (!after.includes(shellMarker)) {
   const helper = `function ensureHomepageShell(file){
   if(!fs.existsSync(file))return false;
   let html=fs.readFileSync(file,'utf8');
-  if(/<main\\b/i.test(html))return false;
-  const closeBody=/<\\/body>/i;
+  if(/<main\b/i.test(html))return false;
+  const closeBody=/<\/body>/i;
   const shell='<main id="main-content" class="wrap"></main>';
   html=closeBody.test(html)?html.replace(closeBody,shell+'</body>'):html+shell;
   fs.writeFileSync(file,html);
@@ -75,7 +75,8 @@ require('./patch-membership-signup-server-fallback.js');
 // Legacy email repair modules above may restore the shallow lifecycle. The authorised
 // deep briefing lifecycle is the final owner before operational certification.
 require('./patch-deep-email-automation.js');
+require('./patch-list-unsubscribe-headers.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
 require('./repair-deep-audit-public-defects.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; deep consent-controlled briefing email was reapplied as the final lifecycle owner before Brevo certification.`);
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; deep consent-controlled briefing email and one-click unsubscribe headers were reapplied as the final lifecycle owners before Brevo certification.`);

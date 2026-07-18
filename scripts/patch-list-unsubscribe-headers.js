@@ -77,20 +77,28 @@ const enqueueReplacement = `async function enqueue(env,member,{campaignId=null,m
 }`;
 if (!source.includes('headers:headers||undefined')) replaceFunction('enqueue', enqueueReplacement, 'header-aware-outbox-enqueue');
 
-const campaignOld = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,idempotencyKey:`${campaign.id}:${member.id}`});";
-const campaignNew = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`${campaign.id}:${member.id}`});";
-if (!source.includes(campaignNew)) {
-  need(source.includes(campaignOld), 'Campaign enqueue anchor is missing');
-  source = source.replace(campaignOld, campaignNew);
-  report.changed.push('campaign-list-unsubscribe-headers');
+const campaignBase = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,idempotencyKey:`${campaign.id}:${member.id}`});";
+const campaignHeadersOld = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`${campaign.id}:${member.id}`});";
+const campaignFinal = "await enqueue(env,member,{campaignId:campaign.id,messageKind:campaign.kind,subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:campaign.kind==='daily'?`daily-control-brief:${member.id}:${(String(campaign.campaign_key||'').match(/\\d{4}-\\d{2}-\\d{2}/)||[iso(env).slice(0,10)])[0]}`:`${campaign.id}:${member.id}`});";
+if (!source.includes(campaignFinal)) {
+  if (source.includes(campaignHeadersOld)) source = source.replace(campaignHeadersOld, campaignFinal);
+  else {
+    need(source.includes(campaignBase), 'Campaign enqueue anchor is missing');
+    source = source.replace(campaignBase, campaignFinal);
+  }
+  report.changed.push('campaign-list-unsubscribe-and-daily-deduplication');
 }
 
-const immediateOld = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
-const immediateNew = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
-if (!source.includes(immediateNew)) {
-  need(source.includes(immediateOld), 'Immediate Daily Brief enqueue anchor is missing');
-  source = source.replace(immediateOld, immediateNew);
-  report.changed.push('immediate-brief-list-unsubscribe-headers');
+const immediateBase = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
+const immediateHeadersOld = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
+const immediateFinal = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`daily-control-brief:${member.id}:${iso(env).slice(0,10)}`});";
+if (!source.includes(immediateFinal)) {
+  if (source.includes(immediateHeadersOld)) source = source.replace(immediateHeadersOld, immediateFinal);
+  else {
+    need(source.includes(immediateBase), 'Immediate Daily Brief enqueue anchor is missing');
+    source = source.replace(immediateBase, immediateFinal);
+  }
+  report.changed.push('immediate-brief-list-unsubscribe-and-daily-deduplication');
 }
 
 for (const marker of [
@@ -98,8 +106,10 @@ for (const marker of [
   "'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'",
   'headers:headers||undefined',
   'headers:payload.headers||undefined',
-  '/api/email/unsubscribe?token='
-]) need(source.includes(marker), `Email lifecycle missing unsubscribe marker: ${marker}`);
+  '/api/email/unsubscribe?token=',
+  'daily-control-brief:${member.id}:',
+  "campaign.kind==='daily'"
+]) need(source.includes(marker), `Email lifecycle missing final delivery marker: ${marker}`);
 
 fs.writeFileSync(target, source);
 const syntax = spawnSync(process.execPath, ['--check', target], { cwd: root, encoding: 'utf8' });
@@ -108,8 +118,8 @@ if (syntax.status !== 0) {
   report.ok = false;
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  throw new Error(`List-Unsubscribe patch produced invalid email Worker syntax: ${syntax.stderr || syntax.stdout}`);
+  throw new Error(`Final email delivery patch produced invalid Worker syntax: ${syntax.stderr || syntax.stdout}`);
 }
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-console.log(`List-Unsubscribe headers installed: ${report.changed.length ? report.changed.join(', ') : 'already current'}.`);
+console.log(`Email delivery headers and same-day Daily Brief deduplication installed: ${report.changed.length ? report.changed.join(', ') : 'already current'}.`);

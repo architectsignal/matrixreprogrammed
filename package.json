@@ -66,9 +66,9 @@
     "phase18": "node scripts/build-phase18-offer-stack.js",
     "pressure-test:phase18": "node scripts/build-phase18-offer-stack.js && node scripts/ensure-shared-assets.js && node scripts/phase18-pressure-test.js",
     "cleanup": "node scripts/cleanup-duplicates.js",
-    "audit": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/ensure-shared-assets.js && node scripts/audit-site.js",
-    "link-audit": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/ensure-shared-assets.js && node tools/link-audit.js",
-    "pressure-test": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/ensure-shared-assets.js && node scripts/pressure-test-site.js && node scripts/site-function-harmony-test.js",
+    "audit": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/search-v3-checkpoint.js save && node scripts/ensure-shared-assets.js && node scripts/search-v3-checkpoint.js restore && node scripts/repair-search-system.js && node scripts/audit-site.js",
+    "link-audit": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/search-v3-checkpoint.js save && node scripts/ensure-shared-assets.js && node scripts/search-v3-checkpoint.js restore && node scripts/repair-search-system.js && node tools/link-audit.js",
+    "pressure-test": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/search-v3-checkpoint.js save && node scripts/ensure-shared-assets.js && node scripts/search-v3-checkpoint.js restore && node scripts/repair-search-system.js && node scripts/pressure-test-site.js && node scripts/site-function-harmony-test.js",
     "mission-readiness": "node scripts/patch-osint-tool-tiers.js && node scripts/build-public-usefulness-clock-system.js && node scripts/global-risk-clocks-test.js && node scripts/public-usefulness-clocks-test.js && npm run finalize-mission-surfaces && node scripts/cloudflare-worker-routes-test.js && node scripts/site-wide-function-audit.js --postbuild",
     "public-usefulness-clocks": "node scripts/build-public-usefulness-clock-system.js && node scripts/public-usefulness-clocks-test.js"
   },

@@ -11,13 +11,13 @@ const before = fs.readFileSync(runtimePath, 'utf8');
 let after = before;
 let changed = false;
 
-const oldProfiles = `const compactionProfiles = [
+const legacyProfiles = `const compactionProfiles = [
   { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96 },
   { id: 'compact', title: 160, description: 120, listItems: 6, listChars: 48, scalar: 80 },
   { id: 'tight', title: 144, description: 96, listItems: 5, listChars: 40, scalar: 72 },
   { id: 'minimum-safe', title: 128, description: 72, listItems: 4, listChars: 32, scalar: 64 }
 ];`;
-const newProfiles = `const compactionProfiles = [
+const fallbackProfiles = `const compactionProfiles = [
   { id: 'balanced', title: 180, description: 160, listItems: 8, listChars: 64, scalar: 96, sourceUrl: 700 },
   { id: 'compact', title: 160, description: 120, listItems: 6, listChars: 48, scalar: 80, sourceUrl: 500 },
   { id: 'tight', title: 144, description: 96, listItems: 5, listChars: 40, scalar: 72, sourceUrl: 360 },
@@ -26,27 +26,37 @@ const newProfiles = `const compactionProfiles = [
   { id: 'minimum-route-safe', title: 104, description: 24, listItems: 2, listChars: 20, scalar: 44, sourceUrl: 180 }
 ];`;
 
-if (!after.includes(newProfiles)) {
-  if (!after.includes(oldProfiles)) throw new Error('Search V3 compaction profile block not found');
-  after = after.replace(oldProfiles, newProfiles);
+const currentProfileFamily = after.includes("id: 'deploy-safe'") && after.includes("id: 'deployment-floor'");
+const fallbackProfileFamily = after.includes("id: 'ultra-safe'") && after.includes("id: 'minimum-route-safe'");
+if (!currentProfileFamily && !fallbackProfileFamily) {
+  if (!after.includes(legacyProfiles)) throw new Error('Search V3 compaction profile block not found or incomplete');
+  after = after.replace(legacyProfiles, fallbackProfiles);
   changed = true;
 }
 
 const oldSourceUrl = "if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, 1000);";
-const newSourceUrl = "if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));";
-if (!after.includes(newSourceUrl)) {
-  if (!after.includes(oldSourceUrl)) throw new Error('Search V3 source URL compaction target not found');
-  after = after.replace(oldSourceUrl, newSourceUrl);
+const currentDistinctSourceUrl = "if (/^https?:/i.test(sourceUrl) && comparableUrl(sourceUrl) !== comparableUrl(url)) output.sourceUrl = sourceUrl.slice(0, 1000);";
+const cappedDistinctSourceUrl = "if (/^https?:/i.test(sourceUrl) && comparableUrl(sourceUrl) !== comparableUrl(url)) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));";
+const cappedLegacySourceUrl = "if (/^https?:/i.test(sourceUrl)) output.sourceUrl = sourceUrl.slice(0, Number(profile.sourceUrl || 320));";
+
+if (!after.includes(cappedDistinctSourceUrl) && !after.includes(cappedLegacySourceUrl)) {
+  if (after.includes(currentDistinctSourceUrl)) {
+    after = after.replace(currentDistinctSourceUrl, cappedDistinctSourceUrl);
+  } else if (after.includes(oldSourceUrl)) {
+    after = after.replace(oldSourceUrl, cappedLegacySourceUrl);
+  } else {
+    throw new Error('Search V3 source URL compaction target not found');
+  }
   changed = true;
 }
 
-for (const marker of [
-  "id: 'ultra-safe'",
-  "id: 'minimum-route-safe'",
-  'sourceUrl.slice(0, Number(profile.sourceUrl || 320))'
-]) {
-  if (!after.includes(marker)) throw new Error(`Search V3 compaction headroom marker missing: ${marker}`);
-}
+const hasHeadroomProfiles = (
+  after.includes("id: 'deploy-safe'") && after.includes("id: 'deployment-floor'")
+) || (
+  after.includes("id: 'ultra-safe'") && after.includes("id: 'minimum-route-safe'")
+);
+if (!hasHeadroomProfiles) throw new Error('Search V3 deployment headroom profiles are missing');
+if (!after.includes('sourceUrl.slice(0, Number(profile.sourceUrl || 320))')) throw new Error('Search V3 bounded source URL marker is missing');
 
 if (changed) fs.writeFileSync(runtimePath, after);
 require('./patch-search-v3-adjudicated-ranking.js');
@@ -56,9 +66,10 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   changed,
   runtime: 'scripts/build-search-v3-runtime.js',
-  addedProfiles: ['ultra-safe', 'minimum-route-safe'],
+  acceptedProfileFamily: currentProfileFamily ? 'deploy-safe' : fallbackProfileFamily ? 'legacy-headroom' : 'installed-fallback-headroom',
   adjudicatedRankingApplied: true,
   preservesEverySearchableUrl: true,
-  boundary: 'Growing Search V3 data is compacted by bounding display metadata and long source URLs. No searchable route is removed; conviction and judgment queries prioritize court, investigation and established records over generic relationship rows.'
+  duplicateSameRouteSourceUrlsOmitted: after.includes('comparableUrl(sourceUrl) !== comparableUrl(url)'),
+  boundary: 'Growing Search V3 data is compacted by bounding display metadata and distinct long source URLs. No searchable route is removed; conviction and judgment queries prioritize court, investigation and established records over generic relationship rows.'
 }, null, 2)}\n`);
-console.log(`Search V3 compaction headroom ${changed ? 'installed' : 'already current'}; adjudicated ranking applied.`);
+console.log(`Search V3 compaction headroom ${changed ? 'installed' : 'already current'}; stronger profile families accepted and adjudicated ranking applied.`);

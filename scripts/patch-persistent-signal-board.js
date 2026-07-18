@@ -28,12 +28,13 @@ for(const rel of pages){
   if(!fs.existsSync(path.join(root,rel)))continue;
   let html=read(rel);
   const boardName=rel==='dark-speculation-forum.html'?'Dark Speculation Board':rel==='epstein-alive-board.html'?'Epstein Sighting Board':'Main Signal Board';
-  const verifiedSection=`<section id="signal-pass" class="section wrap split"><div class="card redline"><h2>Verified Free Member Access</h2><p>${boardName} is free to read. A verified Free Member session replaces the old device-only Signal Pass and unlocks persistent posting on every signed-in device.</p><a class="btn" href="${loginHref}">Log in or create a free account</a><button class="btn alt" type="button" id="unlock-signal-pass">Check member session</button><p class="form-status" id="forum-member-status" data-signal-pass-status>Checking verified member session…</p></div><aside class="card"><h2>Persistence promise</h2><p>Posts and reports are accepted only after Cloudflare D1 confirms the write. No browser-only, temporary or local-storage post is treated as saved.</p></aside></section>`;
+  const verifiedSection=`<section id="signal-pass" class="section wrap split"><div class="card redline"><h2>Verified Free Member Access</h2><p>${boardName} is free to read. Reading is public and open to everyone. A verified Free Member session replaces the old device-only Signal Pass and unlocks persistent posting on every signed-in device.</p><a class="btn" href="${loginHref}">Log in or create a free account</a><button class="btn alt" type="button" id="unlock-signal-pass">Check member session</button><p class="form-status" id="forum-member-status" data-signal-pass-status>Checking verified member session…</p><span id="signal-pass-status" class="sr-only" aria-live="polite">Reading is public and open to everyone.</span></div><aside class="card"><h2>Persistence promise</h2><p>Posts and reports are accepted only after Cloudflare D1 confirms the write. No browser-only, temporary or local-storage post is treated as saved.</p></aside></section>`;
   html=html.replace(/<aside class="card redline"><h2>Signal Pass<\/h2>[\s\S]*?<\/aside>/i,`<aside class="card redline"><h2>Verified Free Member Posting</h2><p>Reading is public and open to everyone. Posting requires a verified free account so every accepted signal is stored persistently in Cloudflare D1 and remains available across devices and deployments.</p><div class="cta-row small"><a class="btn" href="${loginHref}">Create or access free account</a><a class="btn alt" href="#submit-signal">Post a signal</a></div></aside>`);
   if(/<section id="signal-pass"[\s\S]*?<\/section>/i.test(html))html=html.replace(/<section id="signal-pass"[\s\S]*?<\/section>/i,verifiedSection);
   else if(html.includes('<section id="submit-signal"'))html=html.replace('<section id="submit-signal"',`${verifiedSection}<section id="submit-signal"`);
   else if(html.includes('</main>'))html=html.replace('</main>',`${verifiedSection}</main>`);
   html=html.replace(/id=["']signal-pass-status["']/gi,'id="forum-member-status" data-signal-pass-status');
+  if(!html.includes('id="signal-pass-status"'))html=html.replace('</div><aside class="card"><h2>Persistence promise</h2>','<span id="signal-pass-status" class="sr-only" aria-live="polite">Reading is public and open to everyone.</span></div><aside class="card"><h2>Persistence promise</h2>');
   html=html.replace(/https:\/\/www\.paypal\.me\/njmgroup\/1/gi,loginHref).replace(/https:\/\/paypal\.me\/njmgroup\/1/gi,loginHref);
   html=html.replace(/Pay €1 Signal Pass/gi,'Create or access free account').replace(/Pay €1 via PayPal/gi,'Log in or create a free account').replace(/I[’']ve Paid — Unlock Posting/gi,'Check member session');
   html=html.replace(/Signal Pass required to post/gi,'Verified Free Member session required to post').replace(/Signal Pass anti-spam gate/gi,'verified Free Member anti-spam gate').replace(/after Signal Pass unlock/gi,'after verified member login').replace(/until Signal Pass is unlocked on this device/gi,'until a verified Free Member session is active').replace(/until Signal Pass is unlocked/gi,'until a verified Free Member session is active').replace(/Signal Pass unlocked/gi,'Verified member session active').replace(/Signal Pass not unlocked yet/gi,'Verified member session not active');
@@ -48,6 +49,7 @@ for(const rel of pages){
   check(`${rel}:public-reading`,html.includes('free to read')||html.includes('Reading is public'),`${rel} does not explain public reading`);
   check(`${rel}:persistence`,html.includes('Cloudflare D1'),`${rel} does not explain persistent D1 storage`);
   check(`${rel}:member-status`,html.includes('id="forum-member-status"'),`${rel} lacks the canonical member status element`);
+  check(`${rel}:legacy-status-alias`,html.includes('id="signal-pass-status"'),`${rel} lacks the backwards-compatible public-reading status alias`);
 }
 
 // Repair the browser client after any legacy board generator. A successful POST is
@@ -55,17 +57,24 @@ for(const rel of pages){
 let client=read('forum.js');
 client=client.replace('Reading is open. Log in with a verified free account to post persistently.','Reading is public and open to everyone. Log in with a verified free account to post persistently.');
 client=client.replace('Signal posted and stored persistently in Cloudflare D1.','Signal posted live and saved persistently in Cloudflare D1.');
-client=client.replace('<article class="card news-item">','<article class="card news-item" data-signal-post-id="'+"'+esc(post.id)+'"+'">');
-if(!client.includes('function mergePosts(')){
+client=client.replace('<article class="card news-item">','<article class="card news-item" data-signal-post-id="' + "'+esc(post.id)+'" + '">');
+const mergeReplacement="function mergePosts(preserved,remote){const combined=[];const seen=new Set();const preservedCount=preserved.length;for(const [index,post] of [...preserved,...remote].entries()){const key=String(post&&post.id||'');const isConfirmedCurrentSession=index<preservedCount;if(!key||seen.has(key)||!postBelongsHere(post)||(!isConfirmedCurrentSession&&!isPublicUserPost(post)))continue;seen.add(key);combined.push(post)}return combined}";
+if(client.includes('function mergePosts(')){
+  const range=functionRange(client,'function mergePosts(');
+  if(!range)throw new Error('Signal Board mergePosts function is unbalanced');
+  client=`${client.slice(0,range.start)}${mergeReplacement}${client.slice(range.end)}`;
+}else{
   const anchor="function offlineNotice(message){return'<article class=\"card redline\"><span class=\"label\">Persistent Signal Board</span><h3>'+esc(BOARD_LABEL)+' cannot save right now</h3><p>No browser-only or temporary fallback is accepted. This board reads and writes only through Cloudflare D1.</p><p><strong>Detail:</strong> '+esc(message||'feed unavailable')+'</p><p><a class=\"btn alt\" href=\"/forum-health\">Check forum health</a></p></article>'}";
   if(!client.includes(anchor))throw new Error('Signal Board offline notice anchor is missing');
-  client=client.replace(anchor,`${anchor}\n  function mergePosts(preserved,remote){const combined=[];const seen=new Set();for(const post of [...preserved,...remote]){const key=String(post&&post.id||'');if(!key||seen.has(key)||!postBelongsHere(post)||!isPublicUserPost(post))continue;seen.add(key);combined.push(post)}return combined}`);
+  client=client.replace(anchor,`${anchor}\n  ${mergeReplacement}`);
 }
 if(!client.includes('async function loadFeed(preserved=[])')){
-  const replacement="async function loadFeed(preserved=[]){if(!feed)return;lockFormToBoard();if(!preserved.length)feed.innerHTML='<article class=\"card\"><span class=\"label\">persistent sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for '+esc(BOARD_LABEL)+'.</p></article>';try{const response=await fetch(FEED_ROUTE+'?t='+Date.now(),{cache:'no-store',headers:{accept:'application/json'}});const data=await parse(response);if(!response.ok||data.ok===false||data.persistent!==true)throw new Error(data.error||'persistent feed unavailable');const posts=mergePosts(preserved,listFrom(data));feed.innerHTML=posts.length?posts.map(renderPost).join(''):'<article class=\"card redline\"><h3>No persistent signals yet</h3><p>'+esc(BOARD_LABEL)+' is connected. Verified Free Members can post a source, question, reader note or public-record lead.</p></article>'}catch(error){if(preserved.length)feed.innerHTML=preserved.filter(postBelongsHere).filter(isPublicUserPost).map(renderPost).join('')+offlineNotice(systemErrorLabel('Feed refresh delayed',error));else feed.innerHTML=offlineNotice(systemErrorLabel('Feed failed',error))}}";
+  const replacement="async function loadFeed(preserved=[]){if(!feed)return;lockFormToBoard();if(!preserved.length)feed.innerHTML='<article class=\"card\"><span class=\"label\">persistent sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for '+esc(BOARD_LABEL)+'.</p></article>';try{const response=await fetch(FEED_ROUTE+'?t='+Date.now(),{cache:'no-store',headers:{accept:'application/json'}});const data=await parse(response);if(!response.ok||data.ok===false||data.persistent!==true)throw new Error(data.error||'persistent feed unavailable');const posts=mergePosts(preserved,listFrom(data));feed.innerHTML=posts.length?posts.map(renderPost).join(''):'<article class=\"card redline\"><h3>No persistent signals yet</h3><p>'+esc(BOARD_LABEL)+' is connected. Verified Free Members can post a source, question, reader note or public-record lead.</p></article>'}catch(error){if(preserved.length)feed.innerHTML=preserved.filter(postBelongsHere).map(renderPost).join('')+offlineNotice(systemErrorLabel('Feed refresh delayed',error));else feed.innerHTML=offlineNotice(systemErrorLabel('Feed failed',error))}}";
   const range=functionRange(client,'async function loadFeed()');
   if(!range)throw new Error('Signal Board loadFeed function anchor is missing');
   client=`${client.slice(0,range.start)}${replacement}${client.slice(range.end)}`;
+}else{
+  client=client.replace("preserved.filter(postBelongsHere).filter(isPublicUserPost).map(renderPost)","preserved.filter(postBelongsHere).map(renderPost)");
 }
 client=client.replace("if(feed&&isPublicUserPost(livePost))feed.innerHTML=renderPost(livePost)+(feed.innerHTML||'');await loadFeed();applyAccess()","await loadFeed([livePost]);applyAccess()");
 write('forum.js',client);
@@ -87,7 +96,7 @@ member=read(memberRel);
 check('forum-js-no-local-pass',!forumJs.includes('localStorage')&&!forumJs.includes('matrix_signal_pass_unlocked'),'forum.js still uses a browser-only unlock');
 check('forum-js-member-session',forumJs.includes('/api/member/me')&&forumJs.includes('emailVerifiedAt'),'forum.js does not require a verified member session');
 check('forum-js-public-reading',forumJs.includes('Reading is public and open to everyone'),'forum.js does not explain public reading');
-check('forum-js-post-preservation',forumJs.includes('mergePosts(')&&forumJs.includes('loadFeed([livePost])'),'forum.js can hide a newly confirmed D1 post during feed refresh');
+check('forum-js-post-preservation',forumJs.includes('isConfirmedCurrentSession')&&forumJs.includes('loadFeed([livePost])'),'forum.js can hide a newly confirmed D1 post during feed refresh');
 check('forum-js-success-copy',forumJs.includes('Signal posted live and saved persistently in Cloudflare D1.'),'forum.js does not expose the canonical persistent success confirmation');
 check('forum-js-canonical-status',forumJs.includes("getElementById('forum-member-status')"),'forum.js does not bind the canonical member status element');
 check('worker-member-session',worker.includes("import { memberSessionContext } from './worker-member-experience.js';")&&worker.includes('verified-free-member-session'),'Forum Worker is not tied to member sessions');
@@ -107,4 +116,4 @@ report.ok=report.failures.length===0;
 fs.mkdirSync(path.dirname(reportPath),{recursive:true});
 fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 if(!report.ok){console.error(JSON.stringify(report,null,2));process.exit(1)}
-console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1-only, canonical status, success copy, post-preservation and late-generator ownership gates passed.`);
+console.log(`Persistent Signal Board patched: ${report.written.length} source/output writes; verified member, D1-only, canonical status, legacy-selector compatibility, success copy, authoritative post-preservation and late-generator ownership gates passed.`);

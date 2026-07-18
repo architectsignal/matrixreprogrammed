@@ -9,30 +9,15 @@ const file = rel => path.join(root, rel);
 const read = rel => fs.existsSync(file(rel)) ? fs.readFileSync(file(rel), 'utf8') : '';
 const json = rel => JSON.parse(read(rel));
 function check(name, condition, detail = '') { const ok = Boolean(condition); report.checks.push({ name, ok, detail: ok ? '' : detail }); if (!ok) report.failures.push(detail || name); }
-function run(script, label) {
-  const result = spawnSync(process.execPath, [file(script)], { cwd: root, encoding: 'utf8', maxBuffer: 40 * 1024 * 1024 });
-  report.commands.push({ script, label, status: result.status, stdout: String(result.stdout || '').slice(-4000), stderr: String(result.stderr || '').slice(-4000) });
-  if (result.stdout) process.stdout.write(result.stdout);
-  if (result.stderr) process.stderr.write(result.stderr);
-  if (result.status !== 0) report.failures.push(`${label} failed with status ${result.status}`);
-}
+function run(script, label) { const result = spawnSync(process.execPath, [file(script)], { cwd: root, encoding: 'utf8', maxBuffer: 40 * 1024 * 1024 }); report.commands.push({ script, label, status: result.status, stdout: String(result.stdout || '').slice(-4000), stderr: String(result.stderr || '').slice(-4000) }); if (result.stdout) process.stdout.write(result.stdout); if (result.stderr) process.stderr.write(result.stderr); if (result.status !== 0) report.failures.push(`${label} failed with status ${result.status}`); }
 
 run('scripts/patch-deep-email-automation.js', 'Patch deep email automation');
-run('scripts/patch-persistent-signal-board.js', 'Patch persistent Signal Board');
-run('scripts/build-daily-brain-brief.js', 'Build daily brain brief');
+run('scripts/build-daily-brain-brief.js', 'Build daily brain brief and all late dependent surfaces');
+run('scripts/patch-persistent-signal-board.js', 'Reapply persistent Signal Board after late generators');
 
-const requiredFiles = [
-  'src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js',
-  'forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html',
-  'data/daily-brain-brief.json','downloads/daily-brain-brief.json','downloads/daily-brain-brief.md','daily-brain-brief.html',
-  'migrations/phase9_signal_board_persistence.sql','wrangler.toml','wrangler.jsonc'
-];
+const requiredFiles = ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html','data/daily-brain-brief.json','downloads/daily-brain-brief.json','downloads/daily-brain-brief.md','daily-brain-brief.html','migrations/phase9_signal_board_persistence.sql','wrangler.toml','wrangler.jsonc'];
 for (const rel of requiredFiles) check(`file:${rel}`, fs.existsSync(file(rel)), `${rel} is missing`);
-
-for (const rel of ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','scripts/patch-deep-email-automation.js','scripts/patch-persistent-signal-board.js','scripts/build-daily-brain-brief.js']) {
-  const result = spawnSync(process.execPath, ['--check', file(rel)], { cwd: root, encoding: 'utf8' });
-  check(`syntax:${rel}`, result.status === 0, result.stderr || result.stdout || `${rel} syntax failed`);
-}
+for (const rel of ['src/worker-daily-brief-email.js','src/worker-email-lifecycle.js','src/worker-forum-persistence.js','src/worker-member-experience.js','forum.js','scripts/patch-deep-email-automation.js','scripts/patch-persistent-signal-board.js','scripts/build-daily-brain-brief.js']) { const result = spawnSync(process.execPath, ['--check', file(rel)], { cwd: root, encoding: 'utf8' }); check(`syntax:${rel}`, result.status === 0, result.stderr || result.stdout || `${rel} syntax failed`); }
 
 let brain = {};
 try { brain = json('data/daily-brain-brief.json'); } catch (error) { report.failures.push(`daily brief JSON invalid: ${error.message}`); }
@@ -74,4 +59,4 @@ report.ok = report.failures.length === 0;
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 if (!report.ok) { console.error(JSON.stringify(report, null, 2)); process.exit(1); }
-console.log(`Daily brief and Signal Board acceptance passed: ${report.checks.length} checks.`);
+console.log(`Daily brief and Signal Board acceptance passed: ${report.checks.length} checks after late generators.`);

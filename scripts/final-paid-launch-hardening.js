@@ -3,8 +3,14 @@ const path = require('path');
 
 const root = process.cwd();
 const sourceSha = String(process.env.GITHUB_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.COMMIT_SHA || 'local').trim();
-const ignored = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
-const report = { generatedAt: new Date().toISOString(), sourceSha, htmlChecked: 0, htmlChanged: 0, markersRemoved: 0, canonicalTagsAdded: 0, freshnessLabelsAdded: 0, publicCopyReplacements: 0, dashboardRepairs: 0, actorDocumentLabelsRemoved: 0, problems: [] };
+const ignored = new Set(['.git', '.github', 'node_modules', '.wrangler', '_site', 'scripts', 'tools', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
+const report = {
+  generatedAt: new Date().toISOString(), sourceSha,
+  htmlChecked: 0, htmlChanged: 0, markersRemoved: 0, canonicalTagsAdded: 0,
+  freshnessLabelsAdded: 0, publicCopyReplacements: 0, dashboardRepairs: 0,
+  actorDocumentLabelsRemoved: 0, visibleEscapedNewlinesRemoved: 0,
+  malformedRuntimeValuesRemoved: 0, problems: []
+};
 
 function slash(value) { return value.split(path.sep).join('/'); }
 function isHtmlFile(file) {
@@ -31,7 +37,10 @@ function routeFor(file, base) {
 }
 function replaceCount(input, pattern, replacement, counter) {
   let count = 0;
-  const output = input.replace(pattern, (...args) => { count += 1; return typeof replacement === 'function' ? replacement(...args) : replacement; });
+  const output = input.replace(pattern, (...args) => {
+    count += 1;
+    return typeof replacement === 'function' ? replacement(...args) : replacement;
+  });
   report[counter] += count;
   return output;
 }
@@ -58,14 +67,35 @@ function replacePublicJargon(html) {
     ['Reader Money Path', 'Membership options'],
     ['Operational Board', 'Status dashboard']
   ]);
-  for (const [from, to] of replacements) html = replaceCount(html, new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to, 'publicCopyReplacements');
+  for (const [from, to] of replacements) {
+    html = replaceCount(html, new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to, 'publicCopyReplacements');
+  }
   return html;
 }
 function removeActorDocumentNames(html) {
   const documentNames = '(?:SEC Complaint|Court Complaint|Indictment|Charging Document|Affidavit|Exhibit|Docket Entry)';
   const actorArticle = new RegExp(`<article\\b(?=[^>]*(?:class=["'][^"']*(?:actor|person|entity)[^"']*["']|data-entity-type=["']actor["']))[^>]*>[\\s\\S]*?<h[2-4][^>]*>\\s*${documentNames}\\s*</h[2-4]>[\\s\\S]*?<\\/article>`, 'gi');
-  html = replaceCount(html, actorArticle, '', 'actorDocumentLabelsRemoved');
-  return html;
+  return replaceCount(html, actorArticle, '', 'actorDocumentLabelsRemoved');
+}
+function sanitizeVisibleTextNodes(html) {
+  return html.replace(/<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<!--([\s\S]*?)-->|<[^>]+>|[^<]+/gi, token => {
+    if (token.startsWith('<')) return token;
+    let next = token;
+    next = replaceCount(next, /\\r\\n|\\n|\\r/g, '\n', 'visibleEscapedNewlinesRemoved');
+    next = replaceCount(next, /\b(Card\s+ID\s*:\s*)(?:undefined|null|NaN)\b/gi, '$1not assigned', 'malformedRuntimeValuesRemoved');
+    next = replaceCount(next, /\b(?:undefined|null|NaN)\b/g, 'not available', 'malformedRuntimeValuesRemoved');
+    return next;
+  });
+}
+function visibleText(html) {
+  return html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<!--([\s\S]*?)-->/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&(?:nbsp|amp|lt|gt|quot|#39);/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 function canonicalize(html, route) {
   const canonical = `https://matrixreprogrammed.com${route}`;
@@ -114,44 +144,57 @@ function patch(file, base) {
   html = replacePublicJargon(html);
   html = removeActorDocumentNames(html);
   html = repairDashboard(html, file);
+  html = sanitizeVisibleTextNodes(html);
   html = canonicalize(html, routeFor(file, base));
   html = addFreshness(html, file);
   html = addPartialRefreshMessage(html, file);
-  html = html.replace(/\\n(?=[^<]{0,200}<\/div>)/g, '\n');
   html = html.replace(/\n{4,}/g, '\n\n\n');
-  if (html !== before) { fs.writeFileSync(file, html); report.htmlChanged += 1; }
+  if (html !== before) {
+    fs.writeFileSync(file, html);
+    report.htmlChanged += 1;
+  }
 }
 
-const roots = [root];
 const output = path.join(root, '_site');
-if (fs.existsSync(output)) roots.push(output);
+const roots = [{ base: root, files: walk(root) }];
+if (fs.existsSync(output)) roots.push({ base: output, files: walk(output) });
 const seen = new Set();
-for (const base of roots) {
-  for (const file of walk(base)) {
+for (const group of roots) {
+  for (const file of group.files) {
     const key = path.resolve(file);
     if (seen.has(key)) continue;
     seen.add(key);
-    patch(file, base === root && file.startsWith(output + path.sep) ? output : base);
+    patch(file, group.base);
   }
 }
 
 for (const file of seen) {
   const html = fs.readFileSync(file, 'utf8');
+  const text = visibleText(html);
   if (/preservedaftervisible(?:-)?de-duplication/i.test(html)) report.problems.push(`${slash(path.relative(root, file))}: visible de-duplication marker remains`);
+  if (/\\r\\n|\\n|\\r/.test(text)) report.problems.push(`${slash(path.relative(root, file))}: escaped newline remains visible`);
+  if (/\b(?:undefined|null|NaN)\b/.test(text)) report.problems.push(`${slash(path.relative(root, file))}: malformed runtime value remains visible`);
   if (/case-status-dashboard(?:\.html)?$/i.test(file)) {
     if (/Loading boundary|Loading lanes|data\.book\s+links|STATUS FROM CORE\\n/i.test(html)) report.problems.push(`${slash(path.relative(root, file))}: dashboard placeholder or syntax defect remains`);
-    for (const id of ['counts', 'grades', 'next']) if (new RegExp(`id=["']${id}["']\\s*>\\s*<\\/div>`, 'i').test(html)) report.problems.push(`${slash(path.relative(root, file))}: empty core section #${id}`);
+    for (const id of ['counts', 'grades', 'next']) {
+      if (new RegExp(`id=["']${id}["']\\s*>\\s*<\\/div>`, 'i').test(html)) report.problems.push(`${slash(path.relative(root, file))}: empty core section #${id}`);
+    }
   }
 }
 
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-paid-launch-hardening.json'), JSON.stringify(report, null, 2));
 if (fs.existsSync(output)) {
-  fs.writeFileSync(path.join(output, 'build-provenance.json'), JSON.stringify({ sourceSha, generatedAt: report.generatedAt, gate: 'paid-launch-critical-gate', artifactDirectory: '_site' }, null, 2));
+  fs.writeFileSync(path.join(output, 'build-provenance.json'), JSON.stringify({
+    sourceSha,
+    generatedAt: report.generatedAt,
+    gate: 'paid-launch-critical-gate',
+    artifactDirectory: '_site'
+  }, null, 2));
 }
 if (report.problems.length) {
   console.error('FINAL PAID LAUNCH HARDENING FAILED');
   report.problems.forEach(problem => console.error(`- ${problem}`));
   process.exit(1);
 }
-console.log(`FINAL PAID LAUNCH HARDENING PASSED: ${report.htmlChecked} HTML surfaces checked; ${report.htmlChanged} changed; ${report.markersRemoved} marker leaks removed.`);
+console.log(`FINAL PAID LAUNCH HARDENING PASSED: ${report.htmlChecked} HTML surfaces checked; ${report.htmlChanged} changed; ${report.markersRemoved} marker leaks, ${report.visibleEscapedNewlinesRemoved} escaped newlines and ${report.malformedRuntimeValuesRemoved} malformed values removed.`);

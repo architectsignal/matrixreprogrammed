@@ -21,7 +21,7 @@ jobs:
   inventory:
     name: Inventory routes, controls, data and runtime ownership
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout proposed recovery changes
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Rebuild clean entity outputs
+      - name: Rebuild clean intelligence outputs
         id: rebuild
         shell: bash
         run: |
@@ -50,6 +50,14 @@ jobs:
             node scripts/rebuild-clean-entity-outputs.js >> downloads/recovery-entity-rebuild.log 2>&1
             code=$?
           fi
+          if [ "$code" -eq 0 ]; then
+            node --check scripts/rebuild-master-brief-outputs.js >> downloads/recovery-entity-rebuild.log 2>&1
+            code=$?
+          fi
+          if [ "$code" -eq 0 ]; then
+            node scripts/rebuild-master-brief-outputs.js >> downloads/recovery-entity-rebuild.log 2>&1
+            code=$?
+          fi
           cat downloads/recovery-entity-rebuild.log
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
@@ -59,8 +67,10 @@ jobs:
         run: |
           node --check scripts/recovery-functional-inventory.js
           node --check scripts/recovery-functional-inventory-refine.js
+          node --check scripts/recovery-functional-inventory-bindings.js
           node scripts/recovery-functional-inventory.js
           node scripts/recovery-functional-inventory-refine.js
+          node scripts/recovery-functional-inventory-bindings.js
 
       - name: Trace remaining output owners
         if: steps.rebuild.outputs.exit_code == '0'
@@ -83,6 +93,7 @@ jobs:
             downloads/recovery-functional-inventory.json
             downloads/recovery-functional-inventory.md
             downloads/recovery-entity-output-rebuild.json
+            downloads/recovery-master-output-rebuild.json
             downloads/recovery-entity-rebuild.log
             downloads/recovery-machine-input-sanitize.json
             downloads/recovery-output-owner-trace.json

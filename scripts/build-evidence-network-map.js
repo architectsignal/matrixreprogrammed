@@ -47,7 +47,8 @@ for (const item of relationshipData.relationships || []) {
 const usedEntityIds = new Set();
 const degree = new Map();
 for (const relationship of relationships) {
-  usedEntityIds.add(relationship.from); usedEntityIds.add(relationship.to);
+  usedEntityIds.add(relationship.from);
+  usedEntityIds.add(relationship.to);
   degree.set(relationship.from, Number(degree.get(relationship.from) || 0) + 1);
   degree.set(relationship.to, Number(degree.get(relationship.to) || 0) + 1);
 }
@@ -63,36 +64,46 @@ const nodes = [...usedEntityIds].map(id => {
   const grades = unique(refs.map(ref => ref.evidenceGrade));
   const statuses = unique(refs.map(ref => ref.factualStatus));
   const sources = unique(refs.map(ref => ref.sourceUrl));
-  const evidenceRefs = refs.slice(0, 5).map(ref => ({
-    sourceTitle: clean(ref.sourceTitle || ref.sourceId || 'Public source', 180),
-    sourceUrl: String(ref.sourceUrl || ''),
-    publicationDate: validDate(ref.publicationDate),
-    retrievalDate: validDate(ref.retrievalDate),
-    evidenceGrade: String(ref.evidenceGrade || 'C').toUpperCase(),
-    factualStatus: clean(ref.factualStatus || 'source-record', 80),
-    establishes: clean(ref.establishes || '', 420),
-    doesNotEstablish: clean(ref.doesNotEstablish || conciseEntityBoundary, 420)
-  }));
+  const evidenceRefs = refs.slice(0, 5).map(ref => {
+    const publicationDate = validDate(ref.publicationDate);
+    const retrievalDate = validDate(ref.retrievalDate);
+    const establishes = clean(ref.establishes || '', 420);
+    return {
+      sourceTitle: clean(ref.sourceTitle || ref.sourceId || 'Public source', 180),
+      sourceUrl: String(ref.sourceUrl || ''),
+      ...(publicationDate ? { publicationDate } : {}),
+      ...(retrievalDate ? { retrievalDate } : {}),
+      evidenceGrade: String(ref.evidenceGrade || 'C').toUpperCase(),
+      factualStatus: clean(ref.factualStatus || 'source-record', 80),
+      ...(establishes ? { establishes } : {}),
+      doesNotEstablish: clean(ref.doesNotEstablish || conciseEntityBoundary, 420)
+    };
+  });
+  const aliases = (entity.aliases || []).map(value => clean(value, 120)).filter(Boolean).slice(0, 20);
+  const roles = (entity.roles || []).map(value => clean(value, 100)).filter(Boolean).slice(0, 20);
+  const identifiers = (entity.identifiers || []).filter(Boolean).slice(0, 12);
+  const firstSeen = validDate(entity.firstSeen);
+  const lastSeen = validDate(entity.lastSeen);
   const connections = Number(degree.get(id) || 0);
   return { data: {
     id,
     entityType: entity.type || 'Entity',
     followTheMoneySchema: entity.followTheMoneySchema || entity.type || 'Entity',
     label: clean(entity.name || id, 130),
-    aliases: (entity.aliases || []).map(value => clean(value, 120)).slice(0, 20),
-    roles: (entity.roles || []).map(value => clean(value, 100)).slice(0, 20),
-    identifiers: (entity.identifiers || []).slice(0, 12),
+    ...(aliases.length ? { aliases } : {}),
+    ...(roles.length ? { roles } : {}),
+    ...(identifiers.length ? { identifiers } : {}),
     reviewStatus: entity.reviewStatus || 'unreviewed',
-    firstSeen: validDate(entity.firstSeen),
-    lastSeen: validDate(entity.lastSeen),
+    ...(firstSeen ? { firstSeen } : {}),
+    ...(lastSeen ? { lastSeen } : {}),
     grade: strongestGrade(refs),
-    grades,
-    factualStatuses: statuses,
+    ...(grades.length ? { grades } : {}),
+    ...(statuses.length ? { factualStatuses: statuses } : {}),
     sourceCount: sources.length,
     connections,
     weight: Math.min(94, 24 + Math.sqrt(Math.max(1, connections)) * 9),
     route: entityRoute(id),
-    evidenceRefs,
+    ...(evidenceRefs.length ? { evidenceRefs } : {}),
     boundary: clean(refs[0]?.doesNotEstablish || conciseEntityBoundary, 420)
   } };
 });
@@ -108,6 +119,8 @@ const edges = relationships.map(item => {
   const core = !weakMention && grade !== 'D' && confidence >= 0.6;
   const sourceRecordId = String(item.sourceRecordId || '').trim();
   const sourceId = String(item.sourceId || '').trim();
+  const publicationDate = validDate(item.publicationDate);
+  const retrievalDate = validDate(item.retrievalDate);
   return { data: {
     id: item.id,
     source: item.from,
@@ -119,8 +132,8 @@ const edges = relationships.map(item => {
     sourceTitle: clean(item.sourceTitle || item.sourceId || 'Public source', 200),
     sourceUrl: String(item.sourceUrl || ''),
     date: validDate(item.date || item.publicationDate || item.retrievalDate),
-    publicationDate: validDate(item.publicationDate),
-    retrievalDate: validDate(item.retrievalDate),
+    ...(publicationDate ? { publicationDate } : {}),
+    ...(retrievalDate ? { retrievalDate } : {}),
     grade,
     factualStatus,
     establishes: clean(item.establishes || conciseEstablishes, 650),
@@ -128,10 +141,10 @@ const edges = relationships.map(item => {
     reviewStatus,
     extractionMethod: clean(item.extractionMethod || 'structured-registry', 120),
     confidence,
-    core,
-    official,
-    reviewed,
-    weakMention,
+    ...(core ? { core: true } : {}),
+    ...(official ? { official: true } : {}),
+    ...(reviewed ? { reviewed: true } : {}),
+    ...(weakMention ? { weakMention: true } : {}),
     route: relationshipRoute(item.id)
   } };
 });
@@ -178,9 +191,9 @@ const graph = {
 };
 
 const graphPath = path.join(dataDir, 'evidence-network-map.json');
-// This file is loaded directly by the browser and must stay below Cloudflare's
-// single-asset ceiling. Compact defaults, duplicated metadata removal and omission
-// of empty optional identifiers preserve every record, source and evidence field.
+// The browser graph must remain below Cloudflare's single-asset ceiling. Only
+// empty optional values and false computed view flags are omitted. Every populated
+// record, source, date, identifier and evidence field remains available.
 fs.writeFileSync(graphPath, JSON.stringify(graph));
 const graphBytes = fs.statSync(graphPath).size;
 const cloudflareTargetBytes = 24 * 1024 * 1024;
@@ -210,7 +223,7 @@ fs.writeFileSync(path.join(downloadsDir, 'evidence-network-map-build.json'), JSO
   csvRoute: 'downloads/evidence-network-map.csv',
   software: 'Cytoscape.js',
   serialization: 'compact-json',
-  compaction: 'concise-default-boundaries-redundant-metadata-removal-and-empty-optional-id-omission',
+  compaction: 'omit-empty-optional-values-and-false-computed-view-flags',
   graphBytes,
   graphMiB: Number((graphBytes / 1024 / 1024).toFixed(2)),
   cloudflareTargetBytes,

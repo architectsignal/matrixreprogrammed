@@ -65,6 +65,8 @@ function rejectMarker(rel, marker) {
 if (!fs.existsSync(site)) throw new Error('_site does not exist; run the normal build first.');
 run('scripts/patch-main-navigation-safety-links.js');
 run('scripts/patch-membership-tiers.js');
+run('scripts/patch-commercial-paypal-guard.js');
+run('scripts/patch-commercial-launch-readiness.js');
 run('scripts/patch-homepage-mask-intro.js');
 run('scripts/homepage-mask-intro-test.js');
 run('scripts/build-live-intel-machine.js');
@@ -80,18 +82,23 @@ run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
 
-// Final owners of search and conclusion surfaces.
+// Final owners of search, conclusion and commercial surfaces.
 run('scripts/repair-search-system.js');
 run('scripts/build-search-v3-index.js');
 run('scripts/build-search-v3-runtime.js');
 run('scripts/patch-conclusion-integrity-cards.js');
+run('scripts/patch-membership-tiers.js');
+run('scripts/patch-commercial-paypal-guard.js');
+run('scripts/patch-commercial-launch-readiness.js');
+run('scripts/commercial-launch-readiness-test.js');
 run('scripts/build-deploy-manifest.js');
 run('scripts/build-production-health.js');
 
 const critical = [
   'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js',
   'assets/intro-eye.svg', 'assets/intro-mask.svg',
-  'start-here.html', 'membership.html', 'paypal-membership.js',
+  'start-here.html', 'store.html', 'membership.html', 'paypal-membership.js',
+  'membership-terms.html', 'cancellation-withdrawal.html', 'legal-notice.html',
   'member-dashboard.html', 'member-dashboard-app.js',
   'billing-dashboard.html', 'billing-dashboard.js',
   'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
@@ -124,20 +131,41 @@ requireMarker('index.html', 'homepage-intro__burn');
 requireMarker('index.html', 'homepage-mask-intro.js');
 requireMarker('start-here.html', 'Open Security Tools');
 requireMarker('start-here.html', 'Open Dark Web Safety');
+requireMarker('store.html', 'CURRENT COMMERCIAL STATUS.');
+requireMarker('store.html', 'data-newsletter-form');
+rejectMarker('store.html', 'Buy Placeholder');
+rejectMarker('store.html', 'Email capture placeholder');
 requireMarker('membership.html', 'Free Member');
 requireMarker('membership.html', '€3');
 requireMarker('membership.html', '€6');
 requireMarker('membership.html', '€9');
 requireMarker('membership.html', 'paypal-membership.js');
 requireMarker('membership.html', 'paypal-membership-status');
+requireMarker('membership.html', 'membership-terms-accepted');
+requireMarker('membership.html', 'membership-recurring-acknowledged');
+requireMarker('membership.html', 'membership-immediate-service-requested');
+requireMarker('membership.html', 'membership-withdrawal-notice-acknowledged');
 requireMarker('membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.');
 rejectMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
+requireMarker('membership-terms.html', 'Version 2026-07-18-v1');
+requireMarker('cancellation-withdrawal.html', 'Version 2026-07-18-v1');
+requireMarker('legal-notice.html', 'data-commercial-legal-ready="false"');
+requireMarker('legal-notice.html', 'LIVE CHECKOUT REMAINS BLOCKED.');
 requireMarker('paypal-membership.js', '/api/paypal/checkout-intent');
 requireMarker('paypal-membership.js', '/api/paypal/subscription/confirm');
+requireMarker('paypal-membership.js', 'recurringPaymentAcknowledged');
+requireMarker('paypal-membership.js', 'consentRecorded');
+requireMarker('src/worker-paypal-subscriptions.js', 'paypal_checkout_consents');
+requireMarker('src/worker-paypal-subscriptions.js', 'commercialLegalReady');
+requireMarker('src/worker-paypal-subscriptions.js', 'paypal.checkout.consent_recorded');
+requireMarker('migrations/phase8_paypal_sandbox_bootstrap.sql', 'CREATE TABLE IF NOT EXISTS paypal_checkout_consents');
+requireMarker('wrangler.toml', 'COMMERCIAL_LEGAL_READY = "false"');
 requireMarker('billing-dashboard.html', 'billing-dashboard.js');
 requireMarker('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
+requireMarker('admin-payment-dashboard.html', 'payment-commercial-legal');
+requireMarker('admin-payment-dashboard.js', 'commercialLegalReady');
 requireMarker('admin-payment-dashboard.js', 'admin-paypal-rehearsal.html');
 requireMarker('admin-paypal-rehearsal.html', 'PAYPAL SANDBOX REHEARSAL.');
 requireMarker('admin-paypal-rehearsal.html', 'maximum 45-minute window');
@@ -180,4 +208,4 @@ requireMarker('deploy-health.json', 'src/worker-production.js');
 requireMarker('deploy-health.json', '"paymentStatus": "sandbox-ready-disabled"');
 
 persistReport();
-console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, final deploy bundle sanitized and audited.`);
+console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, commercial consent enforced, final deploy bundle sanitized and audited.`);

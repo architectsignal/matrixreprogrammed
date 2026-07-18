@@ -27,6 +27,7 @@ const criticalFiles = [
   'deploy-status.html', 'deploy-status.json', 'matrix.js', 'styles.css', 'fixes.css',
   'wrangler.toml', 'wrangler.jsonc', 'src/worker.js', 'src/worker-forum-persistence.js',
   'src/worker-member-experience.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',
+  'migrations/phase9_signal_board_persistence.sql',
   'scripts/build-free-ask-matrix-search.js', 'scripts/build-cloudflare-output.js',
   'scripts/build-production-health.js', 'scripts/final-production-reconcile.js',
   'scripts/repair-generated-site-artifacts.js'
@@ -56,7 +57,10 @@ for (const [file, text, label] of [
   ['src/worker-forum-persistence.js', '/forum-health', 'D1 forum health route'],
   ['src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'authoritative D1 post insert'],
   ['src/worker-forum-persistence.js', 'Cloudflare D1 MEMBERS_DB.forum_posts', 'D1 persistence wording'],
-  ['src/worker-forum-persistence.js', 'D1 authoritative; KV compatibility mirror', 'KV recovery boundary'],
+  ['src/worker-forum-persistence.js', 'forum_post_owners', 'D1 post ownership ledger'],
+  ['src/worker-forum-persistence.js', 'forum_report_owners', 'D1 report ownership ledger'],
+  ['src/worker-forum-persistence.js', 'compatibilityMirror:false', 'D1-only compatibility boundary'],
+  ['src/worker-forum-persistence.js', 'no browser or legacy fallback was accepted', 'D1 fail-closed persistence boundary'],
   ['src/worker-paypal-subscriptions.js', '/api/paypal/checkout-intent', 'PayPal checkout intent'],
   ['src/worker-paypal-subscriptions.js', '/api/paypal/webhook', 'verified PayPal webhook'],
   ['src/worker-paypal-subscriptions.js', 'PAYPAL_SANDBOX_ENABLED', 'sandbox environment switch'],
@@ -68,6 +72,8 @@ for (const [file, text, label] of [
   ['wrangler.toml', 'directory = "./_site"', 'Cloudflare asset output directory'],
   ['wrangler.toml', 'run_worker_first = true', 'Worker-first routing']
 ]) needText(file, text, label);
+for (const marker of ['FORUM_POSTS.get(', 'FORUM_POSTS.list(', 'FORUM_POSTS.put(', 'kvMirrorEnabled(']) forbidText('src/worker-forum-persistence.js', marker, `deleted forum KV path ${marker}`);
+for (const marker of ['forum_post_owners','forum_report_owners','forum_board_state','forum_persistence_health']) needText('migrations/phase9_signal_board_persistence.sql', marker, `Signal Board migration ${marker}`);
 forbidSoftText('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin');
 forbidSoftText('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 
@@ -75,6 +81,8 @@ for (const file of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-
   if (exists(file)) {
     needText(file, 'forum.js', `${file} forum script`);
     needSoftText(file, 'data-board=', `${file} board marker`);
+    needAnyText(file, ['free to read','Reading is public'], `${file} public reading boundary`);
+    needText(file, 'Cloudflare D1', `${file} D1 persistence wording`);
   } else if (file === 'forum.html') hard.push(`missing file: ${file}`);
   else soft.push(`missing optional board page: ${file}`);
 }
@@ -82,13 +90,15 @@ for (const [text, label] of [
   ['/forum-feed-main', 'frontend main feed'], ['/forum-feed-speculation', 'frontend speculation feed'],
   ['/forum-feed-epstein-alive', 'frontend Epstein feed'], ['/submit-main-post', 'frontend main submit'],
   ['/submit-speculation-post', 'frontend speculation submit'], ['/submit-epstein-alive-post', 'frontend Epstein submit'],
-  ['/report-main-post', 'frontend main report route'], ['persistent !== true', 'frontend refuses non-persistent save'],
-  ['Signal posted live and saved persistently', 'persistent success message'], ["cache:'no-store'", 'forum no-store fetches']
+  ['/report-main-post', 'frontend main report route'], ['data.persistent!==true', 'frontend refuses non-persistent save'],
+  ['Signal posted live and saved persistently', 'persistent success message'], ['mergePosts(', 'confirmed post preservation'],
+  ['loadFeed([livePost])', 'post-confirmation feed merge'], ["cache:'no-store'", 'forum no-store fetches']
 ]) needText('forum.js', text, label);
 for (const [text, label] of [
   ['saveLocalPosts', 'browser-only post persistence'], ['syncPendingLocalPosts', 'local retry sync'],
-  ['localOnly', 'local-only marker'], ['Not posted live yet. Saved only on this device', 'non-persistent save message']
-]) forbidSoftText('forum.js', text, label);
+  ['localOnly', 'local-only marker'], ['Not posted live yet. Saved only on this device', 'non-persistent save message'],
+  ['localStorage', 'browser-only unlock storage'], ['matrix_signal_pass_unlocked', 'device-only Signal Pass']
+]) forbidText('forum.js', text, label);
 
 for (const file of ['membership.html', '_site/membership.html']) {
   for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) needText(file, marker, `server-gated membership marker ${marker}`);
@@ -147,9 +157,9 @@ const report = {
   generatedAt: new Date().toISOString(),
   hardIssues: hard,
   softIssues: soft,
-  workerStack: 'strict production boundary -> email/member/PayPal workers -> D1 forum -> static application',
-  forumStorage: 'Cloudflare D1 authoritative; KV compatibility and recovery only.',
-  paymentStatus: 'PayPal sandbox-ready behind runtime, plan and D1 activation gates; checkout disabled by default.',
+  workerStack: 'strict production boundary -> email/member/PayPal workers -> D1-only Signal Board -> static application',
+  forumStorage: 'Cloudflare D1 authoritative and cross-device; browser and Workers KV fallbacks forbidden.',
+  paymentStatus: 'PayPal sandbox-ready behind runtime, plan, consent, commercial legal and D1 activation gates; live checkout disabled by default.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   boundary: 'Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, unverified PayPal responses or unguarded checkout activation.'
 };
@@ -163,4 +173,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log(`Checked search, strict Worker routing, D1 forums, server-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);
+console.log(`Checked search, strict Worker routing, D1-only Signal Board, server-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);

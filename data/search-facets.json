@@ -1,31 +1,31 @@
 {
   "searchVersion": 3,
-  "updated": "2026-07-17T09:19:34.249Z",
-  "totalResults": 24208,
+  "updated": "2026-07-18T15:20:09.008Z",
+  "totalResults": 27492,
   "evidenceBoundary": "Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.",
   "filters": {
     "evidenceGrade": [
       {
         "value": "A",
-        "count": 13428
+        "count": 14061
       },
       {
         "value": "B",
-        "count": 8781
+        "count": 11295
       },
       {
         "value": "C",
-        "count": 554
+        "count": 690
       }
     ],
     "sourceType": [
       {
         "value": "structured-relationship",
-        "count": 9905
+        "count": 11454
       },
       {
         "value": "structured-entity",
-        "count": 6848
+        "count": 8009
       },
       {
         "value": "SEC filing",
@@ -33,11 +33,11 @@
       },
       {
         "value": "investigation-finding",
-        "count": 1689
+        "count": 2254
       },
       {
         "value": "html",
-        "count": 1359
+        "count": 1360
       },
       {
         "value": "document-extraction",
@@ -52,12 +52,12 @@
         "count": 23
       },
       {
-        "value": "source-registry",
-        "count": 20
+        "value": "source-change",
+        "count": 23
       },
       {
-        "value": "source-change",
-        "count": 15
+        "value": "source-registry",
+        "count": 20
       },
       {
         "value": "investigation-route",
@@ -68,26 +68,26 @@
         "count": 1
       },
       {
-        "value": "structured-relationship-registry",
+        "value": "structured-relationship-regist",
         "count": 1
       }
     ],
     "statusClass": [
       {
         "value": "source-record",
-        "count": 21622
+        "count": 24560
       },
       {
         "value": "context",
-        "count": 1771
+        "count": 1863
       },
       {
         "value": "enforcement",
-        "count": 750
+        "count": 980
       },
       {
         "value": "source-change",
-        "count": 53
+        "count": 77
       },
       {
         "value": "allegation",
@@ -101,19 +101,19 @@
     "jurisdiction": [
       {
         "value": "United States",
-        "count": 21688
+        "count": 24707
       },
       {
         "value": "International",
-        "count": 556
+        "count": 692
       },
       {
         "value": "United Kingdom",
-        "count": 270
+        "count": 330
       },
       {
         "value": "European Union",
-        "count": 183
+        "count": 232
       },
       {
         "value": "France",
@@ -123,55 +123,55 @@
     "entityType": [
       {
         "value": "Organization",
-        "count": 4073
+        "count": 4088
       },
       {
         "value": "Organization→Company",
-        "count": 3985
+        "count": 3984
       },
       {
         "value": "Company",
-        "count": 2679
+        "count": 2696
       },
       {
         "value": "Finding",
-        "count": 1681
+        "count": 2246
       },
       {
         "value": "Source→Finding",
-        "count": 1681
+        "count": 2246
       },
       {
         "value": "Finding→GovernmentAgency",
-        "count": 1133
+        "count": 1532
       },
       {
         "value": "CourtCase",
-        "count": 644
+        "count": 808
       },
       {
         "value": "CourtCase→Finding",
-        "count": 644
+        "count": 808
       },
       {
         "value": "Contract",
-        "count": 444
+        "count": 565
       },
       {
         "value": "Contract→Finding",
-        "count": 444
+        "count": 565
       },
       {
         "value": "GovernmentAgency",
-        "count": 410
+        "count": 514
       },
       {
         "value": "Investigation",
-        "count": 394
+        "count": 502
       },
       {
         "value": "Investigation→Finding",
-        "count": 394
+        "count": 502
       },
       {
         "value": "Document→GovernmentAgency",
@@ -179,7 +179,7 @@
       },
       {
         "value": "Person",
-        "count": 317
+        "count": 318
       },
       {
         "value": "Document→LegalAuthority",
@@ -190,32 +190,40 @@
         "count": 239
       },
       {
+        "value": "Finding→LegalAuthority",
+        "count": 176
+      },
+      {
         "value": "LegalAuthority",
-        "count": 135
+        "count": 153
       },
       {
         "value": "Finding→Contractor",
-        "count": 123
-      },
-      {
-        "value": "Document→Company",
-        "count": 96
-      },
-      {
-        "value": "Finding→LegalAuthority",
-        "count": 96
-      },
-      {
-        "value": "Contractor",
-        "count": 80
+        "count": 137
       },
       {
         "value": "Sanction",
-        "count": 80
+        "count": 106
       },
       {
         "value": "Sanction→Finding",
-        "count": 80
+        "count": 106
+      },
+      {
+        "value": "Document→Company",
+        "count": 95
+      },
+      {
+        "value": "Contractor",
+        "count": 89
+      },
+      {
+        "value": "Finding→Company",
+        "count": 86
+      },
+      {
+        "value": "Finding→Organization",
+        "count": 71
       },
       {
         "value": "Document",
@@ -230,24 +238,24 @@
         "count": 67
       },
       {
-        "value": "Finding→Company",
-        "count": 57
-      },
-      {
         "value": "Document→Organization",
         "count": 56
       },
       {
-        "value": "Finding→Organization",
-        "count": 44
-      },
-      {
         "value": "Finding→Payment",
-        "count": 26
+        "count": 29
       },
       {
         "value": "Payment",
-        "count": 26
+        "count": 29
+      },
+      {
+        "value": "MissingRecord",
+        "count": 23
+      },
+      {
+        "value": "MissingRecord→Source",
+        "count": 23
       },
       {
         "value": "Document→Person",
@@ -258,62 +266,58 @@
         "count": 20
       },
       {
+        "value": "Foundation",
+        "count": 18
+      },
+      {
         "value": "Source→GovernmentAgency",
         "count": 18
       },
       {
-        "value": "Foundation",
-        "count": 17
+        "value": "Organization→Contractor",
+        "count": 16
       },
       {
         "value": "Document→Foundation",
         "count": 15
       },
       {
-        "value": "MissingRecord",
-        "count": 15
-      },
-      {
-        "value": "MissingRecord→Source",
-        "count": 15
-      },
-      {
-        "value": "Organization→Contractor",
-        "count": 15
-      },
-      {
         "value": "Trust",
-        "count": 5
+        "count": 6
       },
       {
         "value": "Document→Trust",
         "count": 4
       },
       {
-        "value": "Finding→Person",
-        "count": 3
+        "value": "Finding→Foundation",
+        "count": 4
       },
       {
-        "value": "Finding→Foundation",
-        "count": 2
+        "value": "Finding→Person",
+        "count": 4
+      },
+      {
+        "value": "Finding→Trust",
+        "count": 3
       },
       {
         "value": "Source→Organization",
         "count": 2
       },
       {
-        "value": "Finding→Trust",
+        "value": "Document→Contractor",
         "count": 1
       }
     ],
     "resultKind": [
       {
         "value": "relationship",
-        "count": 9906
+        "count": 11455
       },
       {
         "value": "entity",
-        "count": 6849
+        "count": 8010
       },
       {
         "value": "institutional position change",
@@ -321,11 +325,11 @@
       },
       {
         "value": "finding",
-        "count": 1689
+        "count": 2254
       },
       {
         "value": "route",
-        "count": 1387
+        "count": 1388
       },
       {
         "value": "insider transaction",
@@ -336,12 +340,12 @@
         "count": 67
       },
       {
-        "value": "dataset",
-        "count": 36
+        "value": "source-record",
+        "count": 43
       },
       {
-        "value": "source-record",
-        "count": 35
+        "value": "dataset",
+        "count": 36
       }
     ]
   }

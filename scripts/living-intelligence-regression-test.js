@@ -13,6 +13,7 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character =>
 
 require('./patch-daily-control-brief-delivery.js');
 require('./build-homepage-command-surface.js');
+require('./normalize-forum-health-member-policy.js');
 require('./patch-member-forum-integration.js');
 
 function syntaxCheck(file, asModule = false) {
@@ -29,6 +30,7 @@ function syntaxCheck(file, asModule = false) {
 }
 
 syntaxCheck('scripts/patch-daily-control-brief-delivery.js');
+syntaxCheck('scripts/normalize-forum-health-member-policy.js');
 syntaxCheck('scripts/patch-member-forum-integration.js');
 syntaxCheck('scripts/member-forum-integration-test.js');
 syntaxCheck('newsletter.js');

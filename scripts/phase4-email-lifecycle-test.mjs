@@ -10,10 +10,11 @@ fs.rmSync(outputDir,{recursive:true,force:true});
 fs.mkdirSync(outputDir,{recursive:true});
 let currentStage='initialising-clean-account-fixture';
 let failureWritten=false;
+const diagnosticState={providerCalls:[],signup:null,outbox:[]};
 function writeFailure(error){
   if(failureWritten)return;
   failureWritten=true;
-  const payload={ok:false,generatedAt:new Date().toISOString(),stage:currentStage,error:String(error&&error.message||error),stack:String(error&&error.stack||'').split('\n').slice(0,30),boundary:'The deterministic fixture failed before completion. No live subscriber, provider contact, email, payment, D1 database or deployment was changed.'};
+  const payload={ok:false,generatedAt:new Date().toISOString(),stage:currentStage,error:String(error&&error.message||error),stack:String(error&&error.stack||'').split('\n').slice(0,30),diagnosticState,boundary:'The deterministic fixture failed before completion. No live subscriber, provider contact, email, payment, D1 database or deployment was changed.'};
   try{fs.writeFileSync(path.join(outputDir,'failure.json'),JSON.stringify(payload,null,2)+'\n')}catch{}
   console.error(`PHASE 4 CLEAN ACCOUNT FAILED at ${currentStage}: ${payload.error}`);
 }
@@ -67,7 +68,7 @@ const workerSource=fs.readFileSync(path.join(root,'src/worker-email-lifecycle.js
 const workerModule=await import(`data:text/javascript;base64,${Buffer.from(workerSource).toString('base64')}`);
 const worker=workerModule.default;
 
-const providerCalls=[];
+const providerCalls=diagnosticState.providerCalls;
 let providerMessageCounter=0;
 let providerFailure=false;
 async function providerFetch(url,options={}){
@@ -84,6 +85,10 @@ const env={
   BREVO_API_KEY:'brevo-fixture-key',
   MEMBERS_FROM_EMAIL:'briefs@matrixreprogrammed.com',
   MEMBERS_FROM_NAME:'Matrix Reprogrammed',
+  MEMBERS_REPLY_TO_EMAIL:'support@matrixreprogrammed.com',
+  MEMBERS_REPLY_TO_NAME:'Matrix Reprogrammed Support',
+  BREVO_DOMAIN_AUTHENTICATED:'true',
+  EMAIL_TRANSACTIONAL_ENABLED:'true',
   EMAIL_PROVIDER_FETCH:providerFetch,
   EMAIL_TEST_MODE:'true',
   EMAIL_TEST_NOW:'2026-07-13T12:00:00.000Z',
@@ -99,13 +104,15 @@ function pass(name,details={}){lifecycle.push({name,passed:true,...details});cur
 
 currentStage='signup-d1-provider-verification-delivery';
 const signup=await call('/newsletter-signup',{method:'POST',body:{email:'clean.account@example.com',name:'Clean Account',consent:true,public_daily_brief:true,public_weekly_digest:true,release_notices:true,timezone:'Europe/Paris',path:'/newsletter.html'}});
+diagnosticState.signup={status:signup.response.status,data:signup.data};
+diagnosticState.outbox=rows(db,'SELECT id,status,attempt_count,last_error,message_kind FROM email_outbox ORDER BY created_at');
 assert(signup.response.status===202&&signup.data.ok&&signup.data.saved,'Signup endpoint did not persist and accept the clean account');
 assert(signup.data.testVerificationToken,'Test verification token was not returned in explicit test mode');
 assert(scalar(db,"SELECT COUNT(*) FROM members WHERE email='clean.account@example.com' AND status='pending' AND marketing_status='pending'")===1,'Pending D1 subscriber record missing');
 assert(scalar(db,"SELECT COUNT(*) FROM email_consents WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND granted=1")===1,'Consent record missing');
 assert(scalar(db,"SELECT COUNT(*) FROM email_provider_contacts WHERE member_id=(SELECT id FROM members WHERE email='clean.account@example.com') AND sync_status='synced'")===1,'Brevo contact synchronization was not recorded');
 assert(providerCalls.some(call=>call.url.endsWith('/v3/contacts')),'Brevo contact endpoint was not called');
-assert(providerCalls.some(call=>call.url.endsWith('/v3/smtp/email')&&call.payload.subject.includes('Verify')),'Verification email was not sent');
+assert(providerCalls.some(call=>call.url.endsWith('/v3/smtp/email')&&call.payload.subject.includes('Verify')),'Verification email was not sent through the explicitly enabled authenticated fixture boundary');
 pass('signup-d1-provider-verification-delivery');
 
 currentStage='verification-welcome-segments';
@@ -147,6 +154,7 @@ currentStage='subscriber-and-admin-dashboards';
 const health=await call('/api/email/admin/health',{headers:adminHeaders});
 const monitor=await call('/api/email/admin/campaigns',{headers:adminHeaders});
 assert(health.data.ok&&health.data.d1Connected&&health.data.brevoConfigured&&health.data.automationEnabled,'Admin health monitoring is incomplete');
+if(Object.prototype.hasOwnProperty.call(health.data,'transactionalLive'))assert(health.data.transactionalLive===true&&health.data.domainAuthenticated===true&&health.data.transactionalEnabled===true,'Fail-closed transactional readiness flags were not satisfied inside the explicit fixture boundary');
 assert(monitor.data.ok&&monitor.data.campaigns.some(item=>item.id===campaignId),'Admin campaign monitoring did not show the campaign');
 assert(fs.existsSync(path.join(root,'subscriber-dashboard.html'))&&fs.existsSync(path.join(root,'admin-campaign-monitor.html')),'Subscriber or admin dashboard page missing');
 pass('subscriber-and-admin-dashboards');
@@ -219,8 +227,9 @@ const result={
     providerContactCalls:providerCalls.filter(call=>call.url.endsWith('/v3/contacts')).length,
     providerEmailCalls:providerCalls.filter(call=>call.url.endsWith('/v3/smtp/email')).length
   },
+  transactionalFixtureBoundary:{domainAuthenticated:true,transactionalEnabled:true,replyToConfigured:true,providerMocked:true},
   protectedBoundaries:{cloudflareD1Mutation:false,liveBrevoMutation:false,liveEmailSend:false,paymentActivation:false,productionDeployment:false},
-  boundary:'The complete lifecycle ran against an in-memory SQLite D1 adapter and a deterministic Brevo mock. No live subscriber, provider contact, email, campaign, payment or production deployment was changed.'
+  boundary:'The complete lifecycle ran against an in-memory SQLite D1 adapter and a deterministic Brevo mock with the authenticated transactional flags explicitly enabled. No live subscriber, provider contact, email, campaign, payment or production deployment was changed.'
 };
 writeJson('lifecycle-test.json',result);
 writeJson('steps.json',{ok:result.ok,recordCount:lifecycle.length,records:lifecycle});

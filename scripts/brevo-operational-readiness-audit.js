@@ -39,7 +39,7 @@ const codeChecks = {
   perRecipientPreferenceAndUnsubscribe: worker.includes('subscriber-dashboard.html?token=') && worker.includes('/api/email/unsubscribe?token='),
   listUnsubscribeHeaders: worker.includes("'List-Unsubscribe'") && worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"),
   reusableMarketingActionLinks: worker.includes('issueReusableEmailToken') || worker.includes("const reusable=['preferences','unsubscribe'].includes(purpose)"),
-  campaignIdempotency: worker.includes('campaignKey:`automation:${kind}:${date}:v3`') && worker.includes('idempotencyKey:`${campaign.id}:${member.id}`'),
+  campaignIdempotency: worker.includes('campaignKey:`automation:${kind}:${date}:v3`') && worker.includes('daily-control-brief:${member.id}:') && worker.includes("campaign.kind==='daily'") && worker.includes('`${campaign.id}:${member.id}`'),
   zeroRecipientCampaignCompletion: worker.includes("const status=recipients.length?'sending':'sent'") || worker.includes("status='sending'"),
   parisLocalTimeGuard: worker.includes("timeZone:'Europe/Paris'") && worker.includes("parts.hour==='08'&&parts.minute==='05'") && worker.includes("parts.weekday==='Mon'&&parts.hour==='09'&&parts.minute==='15'")
 };
@@ -94,7 +94,7 @@ const report = {
     dailyLocal: '08:05',
     weeklyLocal: 'Monday 09:15',
     utcCandidates: { daily: ['06:05','07:05'], weeklyMonday: ['07:15','08:15'] },
-    duplicatePrevention: 'The Worker sends only when Europe/Paris local time matches and campaign keys are unique by kind/date/version.'
+    duplicatePrevention: 'The Worker sends only when Europe/Paris local time matches. Immediate and scheduled Daily Briefs share a member/date key; other campaigns retain campaign/member keys.'
   },
   requiredRuntimeSecrets: ['BREVO_API_KEY','EMAIL_WEBHOOK_SECRET','ADMIN_API_TOKEN'],
   operatingRequirements: [
@@ -103,7 +103,7 @@ const report = {
     'Preserve fact, analysis, speculation, counter-analysis and missing-evidence boundaries.',
     'Review delivery, bounce, complaint, click and unsubscribe events in D1 and Brevo.'
   ],
-  boundary: 'Automated daily and weekly briefing delivery is authorised only through the verified consent, preference, suppression, evidence-quality and Europe/Paris scheduling controls audited here.'
+  boundary: 'Automated daily and weekly briefing delivery is authorised only through the verified consent, preference, suppression, evidence-quality, idempotency and Europe/Paris scheduling controls audited here.'
 };
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);

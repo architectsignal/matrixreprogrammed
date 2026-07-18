@@ -1,0 +1,103 @@
+name: Commercial Launch Readiness
+
+on:
+  pull_request:
+    paths:
+      - 'templates/phase6-membership.template'
+      - 'templates/commercial-store.template'
+      - 'templates/membership-terms.template'
+      - 'templates/cancellation-withdrawal.template'
+      - 'templates/legal-notice.template'
+      - 'paypal-membership.js'
+      - 'src/worker-paypal-subscriptions.js'
+      - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
+      - 'scripts/patch-membership-tiers.js'
+      - 'scripts/patch-commercial-paypal-guard.js'
+      - 'scripts/patch-commercial-launch-readiness.js'
+      - 'scripts/commercial-launch-readiness-test.js'
+      - 'scripts/final-production-reconcile.js'
+      - 'wrangler.toml'
+      - 'docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md'
+      - '.github/workflows/commercial-launch-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commercial-launch-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  commercial-readiness:
+    name: Consent, legal pages and live-payment gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run commercial launch acceptance
+        run: node scripts/commercial-launch-readiness-test.js
+
+      - name: Confirm D1 consent migration is repeat-safe
+        shell: bash
+        run: |
+          set -euo pipefail
+          database="$(mktemp)"
+          python3 - "$database" <<'PY'
+          import sqlite3, sys
+          from pathlib import Path
+          db = sqlite3.connect(sys.argv[1])
+          root = Path.cwd()
+          for rel in [
+              'migrations/0001_membership_foundation.sql',
+              'migrations/phase6_paypal_subscriptions.sql',
+              'migrations/phase8_paypal_sandbox_bootstrap.sql',
+              'migrations/phase8_paypal_sandbox_bootstrap.sql',
+          ]:
+              db.executescript((root / rel).read_text(encoding='utf-8'))
+          names = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type IN ('table','view')")}
+          required = {'paypal_checkout_consents','paypal_checkout_consent_summary'}
+          missing = sorted(required - names)
+          if missing:
+              raise SystemExit(f'Missing consent database objects: {missing}')
+          columns = {row[1] for row in db.execute('PRAGMA table_info(paypal_checkout_consents)')}
+          expected = {'checkout_intent_id','member_id','terms_version','withdrawal_notice_version','terms_accepted','recurring_payment_acknowledged','immediate_service_requested','withdrawal_notice_acknowledged','consented_at'}
+          missing_columns = sorted(expected - columns)
+          if missing_columns:
+              raise SystemExit(f'Missing consent columns: {missing_columns}')
+          print('D1 consent migration passed twice and contains every required field.')
+          PY
+
+      - name: Confirm disabled production switches
+        run: |
+          grep -F 'PAYPAL_ENVIRONMENT = "sandbox"' wrangler.toml
+          grep -F 'PAYPAL_PRODUCTION_ENABLED = "false"' wrangler.toml
+          grep -F 'COMMERCIAL_LEGAL_READY = "false"' wrangler.toml
+          grep -F 'EMAIL_AUTOMATION_ENABLED = "false"' wrangler.toml
+
+      - name: Upload commercial proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: commercial-launch-readiness-${{ github.run_id }}
+          path: |
+            downloads/commercial-launch-readiness.json
+            downloads/commercial-paypal-guard-patch.json
+            downloads/commercial-launch-page-patch.json
+            downloads/membership-tiers-report.json
+          if-no-files-found: ignore
+          retention-days: 30

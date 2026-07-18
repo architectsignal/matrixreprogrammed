@@ -17,6 +17,9 @@ const cleanName = value => String(value).replace(/[^a-z0-9]+/gi, '-').replace(/^
 async function runTest(browser, name, route, test) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   const page = await context.newPage();
+  await page.route('**/track-event', async requestRoute => {
+    await requestRoute.fulfill({ status: 204, contentType: 'application/json', body: '' });
+  });
   const consoleErrors = [];
   const pageErrors = [];
   const localHttpErrors = [];
@@ -108,6 +111,7 @@ try {
     assert(/evidence boundary/i.test(text), 'Entity brief lacks an evidence boundary');
     assert(/missing records/i.test(text), 'Entity brief lacks a missing-record section');
     assert(/watch next/i.test(text), 'Entity brief lacks a watch-next section');
+    assert(!/&(?:#\d+|#x[0-9a-f]+|amp|quot|apos|lt|gt);/i.test(text), 'Entity brief exposes an encoded HTML entity');
   });
 
   await runTest(browser, 'Data Lab executes a browser query', '/data-lab.html', async page => {
@@ -146,10 +150,12 @@ try {
     await page.locator('#evidence-network-map').waitFor({ state: 'visible' });
     await page.waitForFunction(() => {
       const text = document.querySelector('#map-status')?.textContent || '';
-      return /sourced relationship|select a node|visible/i.test(text) && !/loading|preparing|initial/i.test(text);
-    }, null, { timeout: 90000 });
+      return /sourced relationship|select a node|shown across/i.test(text) && !/loading|preparing|initial/i.test(text);
+    }, null, { timeout: 45000 });
     const status = await page.locator('#map-status').innerText();
     assert(!/failed|unavailable|error/i.test(status), `Evidence network failed: ${status}`);
+    assert(await page.locator('#evidence-network-map canvas').count() > 0, 'Evidence network did not create a Cytoscape canvas');
+    assert(Number(await page.locator('#map-visible-relationships').innerText()) > 0, 'Evidence network rendered zero relationships');
   });
 } finally {
   await browser.close();

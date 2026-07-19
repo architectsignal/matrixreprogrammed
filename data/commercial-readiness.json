@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-19T20:00:00.000+02:00",
+  "updatedAt": "2026-07-19T20:30:00.000+02:00",
   "status": "blocked-before-live-charging",
   "liveChargingApproved": false,
   "serviceName": "Matrix Reprogrammed",
@@ -10,10 +10,11 @@
     "email": "members@matrixreprogrammed.com"
   },
   "consumerMediation": {
-    "status": "selected-pending-convention",
+    "status": "application-submitted-pending-acceptance",
     "name": "Centre de la Médiation de la Consommation des Conciliateurs de Justice (CM2C)",
     "postalAddress": "49 rue de Ponthieu, 75008 Paris, France",
     "website": "https://www.cm2c.net",
+    "submittedAt": "2026-07-19",
     "conventionReference": null,
     "effectiveDate": null
   },

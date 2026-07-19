@@ -1,0 +1,74 @@
+name: Ensure AI Speculation Link
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ensure-ai-speculation-link
+  cancel-in-progress: false
+
+jobs:
+  enforce-link:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Insert permanent Answer Engine routes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          page = Path('answer-engine.html')
+          text = page.read_text(encoding='utf-8')
+
+          speculation = 'ai-speculative-conclusions.html'
+
+          old_cta = '<div class="cta-row"><a class="btn" href="answer-index.html">Legacy Answer Index</a><a class="btn alt" href="black-file-index.html">Black File Index</a><a class="btn alt" href="search.html">Search Archive</a></div>'
+          new_cta = '<div class="cta-row"><a class="btn" href="ai-speculative-conclusions.html">AI Speculative Conclusions</a><a class="btn alt" href="answer-index.html">Legacy Answer Index</a><a class="btn alt" href="black-file-index.html">Black File Index</a><a class="btn alt" href="search.html">Search Archive</a></div>'
+
+          if speculation not in text:
+              if old_cta not in text:
+                  raise SystemExit('Answer Engine CTA marker not found; refusing unsafe rewrite.')
+              text = text.replace(old_cta, new_cta, 1)
+
+          old_nav = '<a href="investigations.html">Investigations</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav>'
+          new_nav = '<a href="investigations.html">Investigations</a><a href="ai-speculative-conclusions.html">AI Hypotheses</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav>'
+          if 'AI Hypotheses</a>' not in text and old_nav in text:
+              text = text.replace(old_nav, new_nav, 1)
+
+          text = text.replace(
+              '<script src="investigation-pulse.js"></script>',
+              '<script src="investigation-pulse.js?v=20260719-3"></script>'
+          )
+
+          page.write_text(text, encoding='utf-8', newline='\n')
+          PY
+
+      - name: Verify visible link
+        run: |
+          grep -q 'href="ai-speculative-conclusions.html">AI Speculative Conclusions</a>' answer-engine.html
+          grep -q 'href="ai-speculative-conclusions.html">AI Hypotheses</a>' answer-engine.html
+
+      - name: Commit repair when needed
+        run: |
+          if git diff --quiet -- answer-engine.html; then
+            echo "Answer Engine link already present."
+            exit 0
+          fi
+          git config user.name "matrix-link-guard"
+          git config user.email "actions@github.com"
+          git add answer-engine.html
+          git commit -m "Restore permanent AI speculation link [deploy]"
+          git push || (git pull --rebase --autostash origin main && git push)

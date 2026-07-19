@@ -33,7 +33,7 @@ for (const migration of ['phase4_email_lifecycle.sql','phase4_email_lifecycle_po
 }
 check('canonical deploy verifies rollback before release', canonicalDeploy.includes("if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing')"));
 check('canonical deploy preserves live payment state and closes sandbox', canonicalDeploy.includes('preserve payment switches') && canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal') && canonicalDeploy.includes('live checkout state preserved'));
-check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
+check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 
 check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(fallbackDeploy));
 check('fallback deploy shares production concurrency without interruption', fallbackDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(fallbackDeploy));
@@ -48,7 +48,7 @@ check('regression wrapper tests strict Worker', regressionWrapper.includes('src/
 
 check('live verifier proves forum D1 write/read', liveVerifier.includes('verifyForumPersistence') && liveVerifier.includes('/submit-main-post') && liveVerifier.includes('storedPostCount'));
 check('live verifier proves health SHA', liveVerifier.includes('/deploy-health.json') && liveVerifier.includes('healthMatches'));
-check('live verifier proves anonymous PayPal fail-closed boundary', liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/checkout-intent') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
+check('live verifier proves anonymous PayPal fail-closed boundary', liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('subscriptionCreate') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
 check('production health uses runtime-gated model', productionHealth.includes("paymentStatus: 'runtime-gated-dashboard-managed'") && productionHealth.includes("checkoutDefault: 'runtime-d1-gated'"));
 check('Wrangler preserves dashboard variables', /^keep_vars\s*=\s*true\s*$/m.test(wranglerToml) && /"keep_vars"\s*:\s*true/.test(wranglerJsonc));
 check('Wrangler does not contain active PayPal overrides', !/^PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml) && !/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc));
@@ -62,7 +62,7 @@ check('production health is regenerated last', read('scripts/final-production-re
 check('main navigation safety links', read('index.html').includes('security-privacy.html') && read('index.html').includes('dark-web-safety.html'));
 check('Start Here safety links', read('start-here.html').includes('Open Security Tools') && read('start-here.html').includes('Open Dark Web Safety'));
 check('membership preserves free and server-gated paid tiers', read('membership.html').includes('Free Member') && read('membership.html').includes('paypal-membership.js') && read('membership.html').includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.') && !read('membership.html').includes('Coming soon — no payment taken'));
-check('built membership preserves PayPal runtime', siteRead('membership.html').includes('paypal-membership.js') && siteRead('paypal-membership.js').includes('/api/paypal/checkout-intent'));
+check('built membership preserves SDK-free PayPal redirect runtime', siteRead('membership.html').includes('paypal-membership.js') && siteRead('paypal-membership.js').includes('/api/paypal/subscription/create') && siteRead('paypal-membership.js').includes('Continue securely to PayPal') && siteRead('paypal-membership.js').includes('location.assign') && !siteRead('paypal-membership.js').includes('paypal.com/sdk/js'));
 for (const rel of ['daily-power-conclusions.html', 'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html']) {
   check(`${rel} integrity cards`, read(rel).includes('<!-- conclusion-integrity:start -->'));
   check(`built ${rel} integrity cards`, siteRead(rel).includes('<!-- conclusion-integrity:start -->'));
@@ -83,7 +83,7 @@ const report = {
   rollbackModel: 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'D1 authoritative behind a strict fail-closed Worker with KV recovery mirror and live write/read proof.',
-  paymentStatus: 'PayPal runtime values are Cloudflare-managed and preserved by Wrangler; checkout remains controlled by credentials, matching environment switch, D1 state, live confirmation and three active plans.'
+  paymentStatus: 'PayPal runtime values are Cloudflare-managed and preserved by Wrangler; the Worker creates subscriptions and returns an official PayPal approval URL while checkout remains controlled by credentials, matching environment switch, D1 state, live confirmation and three active plans.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-sync-test.json'), JSON.stringify(report, null, 2));
@@ -91,4 +91,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`FAILED: ${item}`));
   process.exit(1);
 }
-console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict forums and runtime-gated PayPal.');
+console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict forums and SDK-free runtime-gated PayPal.');

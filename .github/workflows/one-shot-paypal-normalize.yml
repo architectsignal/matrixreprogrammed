@@ -35,7 +35,7 @@ jobs:
             const started = runs.data.workflow_runs.find(run => new Date(run.created_at) >= new Date(Date.now() - 120000));
             const receipt = {
               ok: Boolean(started),
-              purpose: 'Normalize Cloudflare-managed PayPal credentials before OAuth',
+              purpose: 'Protect homepage operational navigation and normalize Cloudflare-managed PayPal credentials before OAuth',
               recordedAt: new Date().toISOString(),
               run: started ? { id: started.id, status: started.status, headSha: started.head_sha, htmlUrl: started.html_url } : null
             };
@@ -43,7 +43,7 @@ jobs:
               owner,
               repo,
               path: '.github/paypal-normalization-deploy-receipt.json',
-              message: 'Record PayPal normalization deployment',
+              message: 'Record homepage navigation and PayPal normalization deployment',
               content: Buffer.from(JSON.stringify(receipt, null, 2) + '\n').toString('base64'),
               branch: 'main'
             });

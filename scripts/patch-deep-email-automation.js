@@ -99,7 +99,8 @@ const sourceItemsReplacement = `function sourceItems(source){
 }`;
 replaceFunction('function sourceItems(source)', sourceItemsReplacement, 'deep-campaign-source-items');
 
-if (!source.includes('async function queueImmediateDailyBrief')) {
+const hasCurrentFirstBriefHelper = source.includes('async function sendFirstDailyBrief');
+if (!source.includes('async function queueImmediateDailyBrief') && !hasCurrentFirstBriefHelper) {
   const anchor = 'async function handleVerify(request,env)';
   need(source.includes(anchor), 'handleVerify anchor is missing');
   const helper = `async function queueImmediateDailyBrief(request,env,member,{dashboardUrl='',unsubscribeUrl=''}={}){
@@ -115,13 +116,17 @@ if (!source.includes('async function queueImmediateDailyBrief')) {
 }\n`;
   source = source.replace(anchor, `${helper}${anchor}`);
   report.patched.push('immediate-first-daily-brief-helper');
+} else if (hasCurrentFirstBriefHelper) {
+  report.patched.push('newer-send-first-daily-brief-preserved');
 }
 
 {
   const found = range(source, 'async function handleVerify(request,env)');
   need(Boolean(found), 'handleVerify function is missing');
   let functionText = source.slice(found.start, found.end);
-  if (!functionText.includes('queueImmediateDailyBrief(request,env,member')) {
+  const currentFirstBrief = functionText.includes('sendFirstDailyBrief(request,env,member)');
+  const legacyImmediateBrief = functionText.includes('queueImmediateDailyBrief(request,env,member');
+  if (!currentFirstBrief && !legacyImmediateBrief) {
     const deliveryAnchor = 'const delivery=await processOutbox(env,{memberId:member.id,limit:5});';
     need(functionText.includes(deliveryAnchor), 'handleVerify delivery anchor is missing');
     functionText = functionText.replace(deliveryAnchor, "const immediateBrief=await queueImmediateDailyBrief(request,env,member,{dashboardUrl,unsubscribeUrl});const delivery=await processOutbox(env,{memberId:member.id,limit:10});");
@@ -129,6 +134,8 @@ if (!source.includes('async function queueImmediateDailyBrief')) {
     functionText = functionText.replace('providerSync,welcomeSent:delivery.sent>0}', 'providerSync,welcomeSent:delivery.sent>0,immediateBrief}');
     source = `${source.slice(0, found.start)}${functionText}${source.slice(found.end)}`;
     report.patched.push('verification-immediate-first-brief');
+  } else if (currentFirstBrief) {
+    report.patched.push('verification-newer-first-brief-flow-preserved');
   }
 }
 
@@ -176,8 +183,6 @@ replaceFunction('async function scheduledHandler(event,env,ctx)', scheduledRepla
 for (const marker of [
   importLine,
   'issueReusableEmailToken',
-  'queueImmediateDailyBrief',
-  'first_daily_brief',
   'buildBriefEmail({kind',
   'structureVersion:3',
   "timeZone:'Europe/Paris'",
@@ -186,6 +191,8 @@ for (const marker of [
   'Manage preferences:',
   'Unsubscribe:'
 ]) need(source.includes(marker), `Patched email lifecycle missing marker: ${marker}`);
+need(source.includes('queueImmediateDailyBrief') || source.includes('sendFirstDailyBrief'), 'Patched email lifecycle is missing a first-daily-brief helper');
+need(source.includes('first_daily_brief') || source.includes('daily-first-brief') || source.includes('firstDailyBrief'), 'Patched email lifecycle is missing first-daily-brief delivery state');
 
 fs.writeFileSync(target, source);
 const syntax = spawnSync(process.execPath, ['--check', target], { cwd: root, encoding: 'utf8' });

@@ -59,6 +59,7 @@ run('scripts/hide-visible-compatibility-markers.js', ['--output']);
 run('scripts/patch-paypal-voluntary-support.js');
 run('scripts/ensure-store-commercial-terms.js');
 run('scripts/patch-voluntary-support-store.js');
+run('scripts/patch-verified-member-sighting-submit.js');
 run('scripts/patch-brevo-transactional-readiness.js');
 run('scripts/patch-email-launch-console.js');
 run('scripts/patch-email-automation-guard.js');
@@ -83,11 +84,13 @@ const report = {
     'data/geographic-power-atlas.geojson', 'downloads/geographic-power-atlas.csv',
     'power-dossier-runtime.js', '_site/search-index.json', 'store.html',
     'card-deck-store.html', 'premium-reports.html', 'paypal-voluntary-support.js',
+    'epstein-sighting-submit.html', 'scripts/templates/epstein-sighting-submit.template',
     'epstein-upload-check.html', 'wrongdoing-tracker.html', 'intake-fallback.js',
     'admin-email-launch.html', 'admin-email-launch.js',
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
     'scripts/build-production-deploy-receipt.js',
     'downloads/store-commercial-terms.json',
+    'downloads/verified-member-sighting-submit.json',
     'downloads/deep-audit-accessibility-metadata-repair.json',
     'downloads/canonical-external-source-repair.json',
     'downloads/email-launch-console-patch.json',
@@ -96,8 +99,8 @@ const report = {
     'downloads/membership-signup-server-fallback.json',
     'downloads/brevo-operational-readiness.json', 'wrangler.toml', 'wrangler.jsonc'
   ],
-  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, weak metadata, dead canonical source links, unsafe email/payment switches, missing commercial terms, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery or oversized search assets.'
+  boundary: 'This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, browser-only payment gates, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, weak metadata, dead canonical source links, unsafe email/payment switches, missing commercial terms, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery or oversized search assets.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'final-release-sanitize.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log('Final release sanitation passed for the deployable bundle, canonical public sources, commercial terms, membership signup defaults, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');
+console.log('Final release sanitation passed for the deployable bundle, canonical public sources, verified-member posting gates, commercial terms, membership signup defaults, email automation safety, evidence-bounded campaign content, voluntary support pages, accessibility, metadata and Cloudflare configuration.');

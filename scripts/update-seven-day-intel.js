@@ -11,6 +11,7 @@ const sevenDayIntelDownloadRoute = 'downloads/seven-day-intel.json';
 const sevenDayIntelDownloadPath = path.join(root, sevenDayIntelDownloadRoute);
 const vaultDownloadPath = path.join(root, 'downloads', 'intel-vault.json');
 const vaultMarkdownPath = path.join(root, 'downloads', 'intel-vault.md');
+const recoveryReceiptPath = path.join(root, 'downloads', 'seven-day-intel-recovery.json');
 const ACTIVE_WINDOW_DAYS = 7;
 const MAX_CURRENT_ITEMS = 120;
 const MAX_VAULT_ITEMS = 2000;
@@ -19,7 +20,7 @@ const FUTURE_TOLERANCE_MS = 6 * 60 * 60 * 1000;
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
 
 function readJson(file, fallback) { try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; } }
-function writeJson(file, data) { fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`); }
+function writeJson(file, data) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`); }
 function decodeEntities(value = '') {
   return String(value)
     .replace(/<!\[CDATA\[|\]\]>/g, '')
@@ -229,7 +230,7 @@ function itemFromLead(raw, lanes, index, fetchedAt) {
     offerRoute: clean(raw.offerRoute || lane.offerRoute || offerForLane(laneId), 500),
     optinRoute: clean(raw.optinRoute || optinForLane(laneId), 500),
     storeRoute: clean(raw.storeRoute || 'amazon-store-books.html', 500),
-    status: clean(raw.status || 'current-seven-day', 100)
+    status: clean(raw.status || 'current-window', 80)
   };
 }
 function chooseBetter(existing, candidate) {
@@ -352,6 +353,35 @@ async function main() {
 }
 
 main().catch(error => {
-  console.error(`Seven-day intel updater failed: ${error?.stack || error}`);
-  process.exit(1);
+  const recoveredAt = new Date().toISOString();
+  const errorMessage = clean(error?.stack || error, 2000);
+  let preservedItems = 0;
+  let recoveryWriteOk = false;
+  try {
+    const existing = readJson(livePath, { items: [] });
+    const vault = readJson(vaultPath, { updated: recoveredAt, title: 'Intel Vault', boundary: 'Vault items are historical public-source leads. Re-check the source before treating them as current.', items: [] });
+    preservedItems = Array.isArray(existing.items) ? existing.items.length : 0;
+    const recovered = {
+      ...existing,
+      updated: recoveredAt,
+      collectionCompletedAt: recoveredAt,
+      status: preservedItems ? 'collector-failed-safely-preserved-current-window' : 'collector-failed-safely-no-current-items',
+      freshnessTruth: preservedItems
+        ? 'The collection attempt failed safely. Existing dated records were preserved and were not relabelled as new.'
+        : 'The collection attempt failed safely and no dated current records were available to preserve.',
+      lastCollectionError: errorMessage,
+      feedErrors: [...(Array.isArray(existing.feedErrors) ? existing.feedErrors : []), { label: 'collector-runtime', url: '', error: errorMessage, failedAt: recoveredAt }].slice(-100)
+    };
+    writeJson(livePath, recovered);
+    writeJson(sevenDayIntelDownloadPath, recovered);
+    writeJson(vaultPath, vault);
+    writeJson(vaultDownloadPath, vault);
+    writeVaultMarkdown(vault);
+    writeJson(recoveryReceiptPath, { ok: true, failedSafely: true, recoveredAt, preservedItems, error: errorMessage, note: 'Existing source dates were preserved. The freshness hard gate remains responsible for blocking genuinely stale output.' });
+    recoveryWriteOk = true;
+  } catch (recoveryError) {
+    try { writeJson(recoveryReceiptPath, { ok: false, failedSafely: false, recoveredAt, preservedItems, originalError: errorMessage, recoveryError: clean(recoveryError?.stack || recoveryError, 2000) }); } catch {}
+  }
+  console.error(`Seven-day intel updater failed safely: ${errorMessage}. Preserved ${preservedItems} existing item(s); recovery write ${recoveryWriteOk ? 'completed' : 'failed'}.`);
+  process.exitCode = recoveryWriteOk ? 0 : 1;
 });

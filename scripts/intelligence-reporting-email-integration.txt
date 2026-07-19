@@ -1,0 +1,59 @@
+async function sendDetailedFirstDailyBrief(request,env,member){
+  const p=await preferences(env,member.id)||{};
+  if(p.public_daily_brief!==1)return{eligible:false,state:'not-selected',queued:false,sent:false,retry:false};
+  const date=iso(env).slice(0,10);
+  const idempotencyKey=`daily-control-brief:${member.id}:${date}`;
+  const existing=await first(env.MEMBERS_DB.prepare('SELECT id,status,provider_message_id,last_error FROM email_outbox WHERE idempotency_key=? LIMIT 1').bind(idempotencyKey));
+  if(existing)return{eligible:true,state:existing.status==='sent'?'already-sent':'already-queued',queued:true,sent:existing.status==='sent',retry:existing.status==='retry',providerMessageId:existing.provider_message_id||null,error:existing.last_error||null};
+  try{
+    const report=await buildMemberIntelligenceReport(request,env,member,'daily');
+    if(report.profile?.deliveryMode==='archive_only')return{eligible:true,state:'archive-only',queued:false,sent:false,retry:false,reportId:report.reportId};
+    const preferenceToken=await issueToken(env,member.id,'preferences',{memberId:member.id},365*24*60);
+    const unsubscribeToken=await issueToken(env,member.id,'unsubscribe',{memberId:member.id},365*24*60);
+    const preferenceUrl=`${origin(request)}/subscriber-dashboard.html?token=${encodeURIComponent(preferenceToken)}`;
+    const unsubscribeUrl=`${origin(request)}/api/email/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`;
+    const content=appendMarketingFooter(report.htmlContent,report.textContent,preferenceUrl,unsubscribeUrl);
+    const campaign=await createCampaign(env,{kind:'daily',segmentKey:'public_daily_brief',subject:report.emailSubject,preheader:report.emailPreheader,htmlContent:content.htmlContent,textContent:content.textContent,campaignKey:`detailed-first-brief:${member.id}:${date}`,canonicalRecordIds:report.sourceIds,evidenceCheckpointAt:report.sourceCollectionCutoff},'email-verification');
+    await env.MEMBERS_DB.prepare(`INSERT OR IGNORE INTO email_deliveries (id,campaign_id,member_id,recipient_email_hash,status,queued_at,updated_at) VALUES (?,?,?,?, 'queued',?,?)`).bind(id(env,'email-delivery'),campaign.id,member.id,await emailHash(member.email),iso(env),iso(env)).run();
+    await enqueue(env,member,{campaignId:campaign.id,messageKind:'daily',subject:report.emailSubject,htmlContent:content.htmlContent,textContent:content.textContent,idempotencyKey});
+    await env.MEMBERS_DB.prepare(`UPDATE email_campaigns SET status='sending',started_at=COALESCE(started_at,?),recipient_count=1,updated_at=? WHERE id=?`).bind(iso(env),iso(env),campaign.id).run();
+    const delivery=await processOutbox(env,{memberId:member.id,limit:10});
+    const state=delivery.sent>0?'sent':delivery.retry>0?'queued-for-retry':delivery.failed>0?'failed':'queued';
+    await audit(env,member.id,'email.daily.detailed_first_brief','intelligence_report',report.reportId,{state,version:report.version,unchanged:report.unchanged,...delivery});
+    return{eligible:true,state,queued:true,sent:delivery.sent>0,retry:delivery.retry>0,failed:delivery.failed>0,campaignId:campaign.id,reportId:report.reportId,reportVersion:report.version,pdfUrl:report.links?.pdf||null,...delivery};
+  }catch(error){
+    await audit(env,member.id,'email.daily.detailed_first_brief_fallback','member',member.id,{error:clean(error?.message||error,500)});
+    return sendFirstDailyBrief(request,env,member);
+  }
+}
+
+async function queuePersonalizedAutomatedCampaign(request,env,campaign,kind){
+  const content=await first(env.MEMBERS_DB.prepare('SELECT * FROM email_campaign_content_versions WHERE id=?').bind(campaign.content_version_id));
+  const segment=await first(env.MEMBERS_DB.prepare('SELECT segment_key FROM email_segments WHERE id=?').bind(campaign.segment_id));
+  const recipients=await eligibleMembers(env,segment.segment_key);
+  const batchLimit=Math.max(1,Math.min(250,Number(env?.INTELLIGENCE_REPORT_BATCH_LIMIT||100)));
+  let queued=0,skippedExisting=0,archiveOnly=0,personalizationFallbacks=0;
+  for(const member of recipients){
+    if(queued>=batchLimit)break;
+    const idempotencyKey=dailyControlBriefIdempotency(campaign,member,env);
+    const existing=await first(env.MEMBERS_DB.prepare('SELECT id FROM email_outbox WHERE idempotency_key=? LIMIT 1').bind(idempotencyKey));
+    if(existing){skippedExisting+=1;continue}
+    let subject=content.subject,htmlContent=content.html_content,textContent=content.text_content,reportId=null;
+    try{
+      const report=await buildMemberIntelligenceReport(request,env,member,kind);
+      reportId=report.reportId;
+      if(report.profile?.deliveryMode==='archive_only'){archiveOnly+=1;continue}
+      subject=report.emailSubject;htmlContent=report.htmlContent;textContent=report.textContent;
+    }catch(error){personalizationFallbacks+=1;await audit(env,member.id,'email.campaign.personalization_fallback','email_campaign',campaign.id,{kind,error:clean(error?.message||error,500)})}
+    const preferenceToken=await issueToken(env,member.id,'preferences',{memberId:member.id},365*24*60);
+    const unsubscribeToken=await issueToken(env,member.id,'unsubscribe',{memberId:member.id},365*24*60);
+    const preferenceUrl=`${origin(request)}/subscriber-dashboard.html?token=${encodeURIComponent(preferenceToken)}`;
+    const unsubscribeUrl=`${origin(request)}/api/email/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`;
+    const withFooter=appendMarketingFooter(htmlContent,textContent,preferenceUrl,unsubscribeUrl);
+    await env.MEMBERS_DB.prepare(`INSERT OR IGNORE INTO email_deliveries (id,campaign_id,member_id,recipient_email_hash,status,queued_at,updated_at) VALUES (?,?,?,?, 'queued',?,?)`).bind(id(env,'email-delivery'),campaign.id,member.id,await emailHash(member.email),iso(env),iso(env)).run();
+    await enqueue(env,member,{campaignId:campaign.id,messageKind:kind,subject,htmlContent:withFooter.htmlContent,textContent:withFooter.textContent,idempotencyKey,headers:reportId?{'X-Matrix-Report-Id':reportId}:null});
+    queued+=1;
+  }
+  await env.MEMBERS_DB.prepare(`UPDATE email_campaigns SET status=?,started_at=COALESCE(started_at,?),recipient_count=?,updated_at=? WHERE id=?`).bind(queued?'sending':'sent',iso(env),queued,iso(env),campaign.id).run();
+  return{recipientCount:queued,skippedExisting,archiveOnly,personalizationFallbacks,batchLimit,remainingEstimate:Math.max(0,recipients.length-skippedExisting-archiveOnly-queued)};
+}

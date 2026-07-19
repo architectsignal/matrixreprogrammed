@@ -30,6 +30,8 @@ for (const relative of [
   'src/worker-access-gate.js',
   'scripts/templates/membership-auth/membership.template',
   'membership.html',
+  'newsletter.js',
+  'paypal-membership.js',
   'migrations/0001_membership_foundation.sql',
   'migrations/phase5_member_experience.sql',
   'migrations/phase6_paypal_subscriptions.sql',
@@ -45,6 +47,8 @@ const email = read('src/worker-email-lifecycle.js');
 const access = read('src/worker-access-gate.js');
 const template = read('scripts/templates/membership-auth/membership.template');
 const membership = read('membership.html');
+const newsletterClient = read('newsletter.js');
+const paypalClient = read('paypal-membership.js');
 const foundation = read('migrations/0001_membership_foundation.sql');
 const experience = read('migrations/phase5_member_experience.sql');
 const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
@@ -95,12 +99,42 @@ checks.paypalFailClosed = paypal.includes('const plansReady=')
   && wrangler.includes('"PAYPAL_PRODUCTION_ENABLED": "false"');
 need(checks.paypalFailClosed, 'PayPal checkout does not require all activation gates or production is not explicitly disabled');
 
-checks.membershipClientContract = template.includes('data.verification && data.verification.sent')
-  && template.includes('if (!config.checkoutEnabled)')
-  && template.indexOf('if (!config.checkoutEnabled)') < template.indexOf('await loadSdk(config.clientId)')
-  && membership.includes('data.verification && data.verification.sent')
-  && membership.includes('if (!config.checkoutEnabled)');
-need(checks.membershipClientContract, 'Membership UI does not match the authoritative signup response or PayPal activation contract');
+const uiMarkers = [
+  'data-newsletter-form',
+  'newsletter.js',
+  'paypal-membership.js',
+  'paypal-membership-status',
+  'paypal-button-supporter',
+  'paypal-button-intelligence',
+  'paypal-button-research_pro',
+  'Paid memberships are opening soon. Free Member registration is available now.',
+  'Checkout approval alone never grants access.'
+];
+const obsoleteInlineMarkers = [
+  'data.verification && data.verification.sent',
+  'if (!config.checkoutEnabled)',
+  'await loadSdk(config.clientId)',
+  'Coming soon. No payment can be taken yet.',
+  'PayPal is installed but checkout remains disabled behind the server activation gates.'
+];
+checks.membershipClientContract = template === membership
+  && uiMarkers.every(marker => template.includes(marker))
+  && obsoleteInlineMarkers.every(marker => !template.includes(marker))
+  && newsletterClient.includes("fetch('/newsletter-signup'")
+  && newsletterClient.includes('marketingConsent:consentGranted')
+  && newsletterClient.includes('public_daily_brief:preferences.daily')
+  && newsletterClient.includes('public_weekly_digest:preferences.weekly')
+  && newsletterClient.includes('release_notices:preferences.release')
+  && newsletterClient.includes('const verificationRequired=data.verificationRequired!==false')
+  && paypalClient.includes("api('/api/paypal/config')")
+  && paypalClient.includes("if(!state.config.configured||!state.config.checkoutEnabled)")
+  && paypalClient.indexOf("if(!state.config.configured||!state.config.checkoutEnabled)") < paypalClient.indexOf('loadSdk(state.config.clientId)')
+  && paypalClient.includes("api('/api/paypal/checkout-intent'")
+  && paypalClient.includes("api('/api/paypal/subscription/confirm'")
+  && paypalClient.includes('actions.subscription.create')
+  && paypalClient.includes('plan_id:intent.planId')
+  && paypalClient.includes('custom_id:intent.customId');
+need(checks.membershipClientContract, 'Membership UI or its dedicated newsletter/PayPal runtimes do not match the authoritative signup and activation contracts');
 
 checks.emailFailClosed = email.includes('function providerConfigured(env){return Boolean(env?.BREVO_API_KEY&&env?.MEMBERS_FROM_EMAIL)}')
   && email.includes("if(!env?.EMAIL_WEBHOOK_SECRET||!secureEqual(secret,env.EMAIL_WEBHOOK_SECRET))")
@@ -169,6 +203,11 @@ const report = {
     emailSent: false,
     paypalCalled: false,
     productionDeployed: false
+  },
+  membershipRuntimeOwnership: {
+    signup: 'newsletter.js → /newsletter-signup',
+    payment: 'paypal-membership.js → server-verified PayPal APIs',
+    html: 'canonical reader-facing template without obsolete inline client code'
   },
   boundary: 'This test executes local Worker code only. It uses no live credentials, sends no email, calls no PayPal endpoint and deploys nothing.'
 };

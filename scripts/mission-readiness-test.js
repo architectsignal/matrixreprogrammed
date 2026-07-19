@@ -99,16 +99,18 @@ check('production Worker queues and processes reports', includesAll(production, 
   'processOutbox'
 ]));
 check('daily and weekly email schedules are configured', includesAll(wrangler, ['"5 6 * * *"', '"15 7 * * 1"']));
-check('guarded Phase 11 email automation is active', includesAll(wrangler, [
-  'EMAIL_AUTOMATION_ENABLED = "true"',
+check('transactional email is active while scheduled marketing remains disabled', includesAll(wrangler, [
+  'EMAIL_AUTOMATION_ENABLED = "false"',
   'EMAIL_TRANSACTIONAL_ENABLED = "true"',
   'BREVO_DOMAIN_AUTHENTICATED = "true"',
   'EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"'
 ]) && includesAll(launchPlan, [
-  'Phase 11 — Automated newsletter activation record',
-  'EMAIL_AUTOMATION_ENABLED is true under the recorded Phase 11 approval',
-  'Personalised preference and unsubscribe routes installed',
-  'Retry records predating activation automatically quarantined by cutoff'
+  'Phase 11 — Scheduled email proof',
+  'scheduled marketing automation disabled',
+  'Review the first three controlled daily deliveries',
+  'Review the first controlled weekly delivery',
+  'Confirm Brevo delivery webhook processing',
+  'EMAIL_AUTOMATION_ENABLED` remains `false`'
 ]));
 check('newsletter requires explicit consent', newsletterPage.includes('data-marketing-consent') && newsletterPage.includes('required'));
 check('newsletter runtime refuses absent consent', includesAll(newsletterUi, [
@@ -138,7 +140,7 @@ const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
   phase: 11,
-  emailAutomationState: 'guarded-live',
+  emailAutomationState: 'transactional-live-scheduled-disabled',
   checks,
   failures
 };

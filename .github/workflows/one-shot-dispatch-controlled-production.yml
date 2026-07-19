@@ -74,6 +74,7 @@ jobs:
               checkedAt: new Date().toISOString(),
               targetWorkflowId: target.id,
               targetWorkflowName: target.name,
+              targetWorkflowPath: target.path,
               run: run ? {
                 id: run.id,
                 status: run.status,

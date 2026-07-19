@@ -13,6 +13,10 @@ const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
 const liveVerifier = read('scripts/verify-live-production.js');
+const membership = read('membership.html');
+const membershipClient = read('paypal-membership.js');
+const paypalWorker = read('src/worker-paypal-subscriptions.js');
+const wrangler = read('wrangler.toml');
 
 check('canonical deploy workflow refreshes intelligence', canonicalDeploy.includes('run-investigation-machine.js daily') && canonicalDeploy.includes('update-live-intel.js'));
 check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(canonicalDeploy));
@@ -50,8 +54,30 @@ check('built production health exists', fs.existsSync(path.join(site, 'deploy-he
 check('production health is regenerated last', read('scripts/final-production-reconcile.js').includes('build-production-health.js') && read('scripts/final-production-reconcile.js').includes('downloads/deploy-health.json'));
 check('main navigation safety links', read('index.html').includes('security-privacy.html') && read('index.html').includes('dark-web-safety.html'));
 check('Start Here safety links', read('start-here.html').includes('Open Security Tools') && read('start-here.html').includes('Open Dark Web Safety'));
-check('membership preserves free and server-gated paid tiers', read('membership.html').includes('Free Member') && read('membership.html').includes('paypal-membership.js') && read('membership.html').includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.') && !read('membership.html').includes('Coming soon — no payment taken'));
-check('built membership preserves PayPal runtime', siteRead('membership.html').includes('paypal-membership.js') && siteRead('paypal-membership.js').includes('/api/paypal/checkout-intent'));
+check('membership preserves free and server-gated paid tiers', [
+  membership.includes('Free Member'),
+  membership.includes('€3'),
+  membership.includes('€6'),
+  membership.includes('€9'),
+  membership.includes('paypal-membership.js'),
+  membership.includes('Paid memberships are opening soon. Free Member registration is available now.'),
+  membership.includes('Checkout approval alone never grants access.'),
+  membership.includes('Only the verified €6 plan can grant the Intelligence tier.'),
+  membership.includes('Only the verified €9 plan can grant Research Pro.'),
+  !membership.includes('Coming soon — no payment taken'),
+  !membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'),
+  membershipClient.includes('/api/paypal/config'),
+  membershipClient.includes('checkoutEnabled'),
+  membershipClient.includes('/api/paypal/checkout-intent'),
+  membershipClient.includes('/api/paypal/subscription/confirm'),
+  paypalWorker.includes('/v1/notifications/verify-webhook-signature'),
+  paypalWorker.includes('plansReady'),
+  paypalWorker.includes('paypal_runtime_settings'),
+  wrangler.includes('PAYPAL_ENVIRONMENT = "sandbox"'),
+  wrangler.includes('PAYPAL_PRODUCTION_ENABLED = "false"'),
+  wrangler.includes('COMMERCIAL_LAUNCH_APPROVED = "false"')
+].every(Boolean));
+check('built membership preserves PayPal runtime', siteRead('membership.html').includes('paypal-membership.js') && siteRead('membership.html').includes('Checkout approval alone never grants access.') && siteRead('paypal-membership.js').includes('/api/paypal/checkout-intent') && siteRead('paypal-membership.js').includes('/api/paypal/subscription/confirm'));
 for (const rel of ['daily-power-conclusions.html', 'daily-investigation-conclusions.html', 'daily-brain-brief.html', 'outcome-briefings.html']) {
   check(`${rel} integrity cards`, read(rel).includes('<!-- conclusion-integrity:start -->'));
   check(`built ${rel} integrity cards`, siteRead(rel).includes('<!-- conclusion-integrity:start -->'));
@@ -75,7 +101,9 @@ const report = {
   rollbackModel: 'A validated Cloudflare D1 Time Travel bookmark is captured before every migration chain and recorded with its exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'D1 authoritative behind a strict fail-closed Worker with KV recovery mirror and live write/read proof.',
-  paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled during migration and deployment.'
+  paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled during migration and deployment.',
+  scheduledMarketingEnabled: false,
+  transactionalEmailEnabled: true
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-sync-test.json'), JSON.stringify(report, null, 2));
@@ -83,4 +111,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`FAILED: ${item}`));
   process.exit(1);
 }
-console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict forums and server-gated PayPal.');
+console.log('Production synchronization assurance passed: manually confirmed Cloudflare release, non-interrupting D1 migration queue, Time Travel rollback, strict forums, launch-safe membership and server-gated PayPal.');

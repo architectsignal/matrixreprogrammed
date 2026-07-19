@@ -1,4 +1,4 @@
-name: PayPal Worker credential normalization hotfix
+name: PayPal and homepage navigation hotfix
 
 on:
   push:
@@ -21,12 +21,13 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Build Cloudflare output with PayPal credential normalization
+      - name: Build repaired Cloudflare output
         run: |
           node scripts/repair-paypal-subscription-create-runtime.js
           npm run cloudflare-output
+          node scripts/restore-homepage-navigation.js
           node scripts/cloudflare-worker-routes-test.js
-      - name: Deploy Worker and assets
+      - name: Deploy repaired Worker and homepage
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

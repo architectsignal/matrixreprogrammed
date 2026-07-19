@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T21:19:44.392Z",
+  "state": [
+    {
+      "status": "failed",
+      "failure_reason": "Client Authentication failed",
+      "created_at": "2026-07-19T21:18:10.000Z",
+      "updated_at": "2026-07-19T21:18:10.472Z"
+    },
+    {
+      "status": "failed",
+      "failure_reason": "Client Authentication failed",
+      "created_at": "2026-07-19T20:27:33.134Z",
+      "updated_at": "2026-07-19T20:27:33.757Z"
+    },
+    {
+      "status": "failed",
+      "failure_reason": "Client Authentication failed",
+      "created_at": "2026-07-19T20:25:00.300Z",
+      "updated_at": "2026-07-19T20:25:00.789Z"
+    },
+    {
+      "status": "failed",
+      "failure_reason": "Client Authentication failed",
+      "created_at": "2026-07-19T20:24:59.040Z",
+      "updated_at": "2026-07-19T20:24:59.477Z"
+    },
+    {
+      "status": "failed",
+      "failure_reason": "Client Authentication failed",
+      "created_at": "2026-07-19T20:24:57.554Z",
+      "updated_at": "2026-07-19T20:24:58.005Z"
+    }
+  ],
+  "audit": [
+    {
+      "created_at": "2026-07-19T21:18:10.509Z",
+      "action": "paypal.subscription.create_failed",
+      "errorCode": "PAYPAL_SUBSCRIPTION_CREATE_FAILED",
+      "debugId": null,
+      "message": "Client Authentication failed",
+      "tier": "supporter",
+      "environment": "live"
+    },
+    {
+      "created_at": "2026-07-19T20:27:33.794Z",
+      "action": "paypal.subscription.create_failed",
+      "errorCode": "PAYPAL_SUBSCRIPTION_CREATE_FAILED",
+      "debugId": null,
+      "message": "Client Authentication failed",
+      "tier": "supporter",
+      "environment": "live"
+    },
+    {
+      "created_at": "2026-07-19T20:25:00.949Z",
+      "action": "paypal.subscription.create_failed",
+      "errorCode": "PAYPAL_SUBSCRIPTION_CREATE_FAILED",
+      "debugId": null,
+      "message": "Client Authentication failed",
+      "tier": "research_pro",
+      "environment": "live"
+    },
+    {
+      "created_at": "2026-07-19T20:24:59.515Z",
+      "action": "paypal.subscription.create_failed",
+      "errorCode": "PAYPAL_SUBSCRIPTION_CREATE_FAILED",
+      "debugId": null,
+      "message": "Client Authentication failed",
+      "tier": "intelligence",
+      "environment": "live"
+    },
+    {
+      "created_at": "2026-07-19T20:24:58.038Z",
+      "action": "paypal.subscription.create_failed",
+      "errorCode": "PAYPAL_SUBSCRIPTION_CREATE_FAILED",
+      "debugId": null,
+      "message": "Client Authentication failed",
+      "tier": "supporter",
+      "environment": "live"
+    }
+  ]
+}

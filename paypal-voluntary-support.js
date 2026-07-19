@@ -18,10 +18,10 @@ function applyConfig(){
     const button=card.querySelector('[data-donation-submit]');
     const state=card.querySelector('[data-donation-status]');
     if(button)button.disabled=!config.enabled;
-    if(!config.enabled)setStatus(state,config.configured===false?'PayPal support is not configured yet. The free preview remains available.':'PayPal support is safely disabled until its payment gates pass.','pending');
-    else setStatus(state,config.environment==='sandbox'?'Sandbox checkout is active. No real payment will be taken.':'Live PayPal support is active. Review the amount before approval.','ready');
+    if(!config.enabled)setStatus(state,'Paid support is opening soon. Create a free account to save reports and receive launch news.','pending');
+    else setStatus(state,config.environment==='sandbox'?'Sandbox rehearsal checkout is active. No real payment will be taken.':'Secure PayPal support is available. Review the amount and merchant details before approval.','ready');
   });
-  if(globalStatus)setStatus(globalStatus,config.enabled?(config.environment==='sandbox'?'Sandbox support checkout ready; no real charges.':'Live support checkout ready.'):'Support checkout is currently disabled. All public evidence and previews remain free.',config.enabled?'ready':'pending');
+  if(globalStatus)setStatus(globalStatus,config.enabled?(config.environment==='sandbox'?'Sandbox rehearsal checkout is active; no real charges.':'Secure PayPal support is available.'):'Paid support is opening soon. Public evidence and previews remain free.',config.enabled?'ready':'pending');
 }
 async function loadConfig(){
   try{config=await api('/api/paypal/donation/config',{method:'GET',headers:{}});}catch(error){config={enabled:false,configured:false,environment:'sandbox',liveChargingEnabled:false};}
@@ -36,7 +36,7 @@ function bindCard(card){
   button.addEventListener('click',async()=>{
     const amount=validAmount(input);
     if(!amount){setStatus(status,'Choose an amount between €1.00 and €5,000.00.','error');input.focus();return;}
-    button.disabled=true;setStatus(status,'Creating the secure PayPal approval…','working');
+    button.disabled=true;setStatus(status,'Opening secure PayPal approval…','working');
     try{
       const result=await api('/api/paypal/donation/order',{method:'POST',body:JSON.stringify({amount:money(amount),productKey:card.dataset.donationKey,label:card.dataset.donationLabel})});
       if(!result.approveUrl)throw new Error('PayPal approval link was not returned.');
@@ -45,7 +45,7 @@ function bindCard(card){
       location.assign(result.approveUrl);
     }catch(error){
       if(error.status===401){setStatus(status,'Create or access your free member account before opening PayPal.','error');location.assign(loginUrl());return;}
-      setStatus(status,error.message||'PayPal support checkout could not start.','error');button.disabled=!config.enabled;
+      setStatus(status,error.message||'PayPal support could not start. No payment was taken.','error');button.disabled=!config.enabled;
     }
   });
 }
@@ -62,10 +62,10 @@ async function captureReturn(){
   setStatus(globalStatus,'Confirming the PayPal support payment…','working');
   try{
     const result=await api('/api/paypal/donation/capture',{method:'POST',body:JSON.stringify({orderId:token})});
-    setStatus(globalStatus,`Thank you. PayPal confirmed €${result.amount} of voluntary support for Matrix Reprogrammed.`,'success');
+    setStatus(globalStatus,`Thank you. PayPal confirmed €${result.amount} of voluntary project support.`,'success');
   }catch(error){
     if(error.status===401){setStatus(globalStatus,'Sign back into your free member account to confirm the approved PayPal payment.','error');location.assign(loginUrl());return;}
-    setStatus(globalStatus,error.message||'PayPal approval was received but capture could not be confirmed.','error');
+    setStatus(globalStatus,error.message||'PayPal approval was received but the payment could not be confirmed.','error');
   }finally{
     history.replaceState(null,'',location.pathname+location.hash);
   }

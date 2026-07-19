@@ -79,13 +79,21 @@ for (const rel of ['index.html', 'start-here.html', 'membership.html', 'member-d
 
 requireText('index.html', 'Security Tools');
 requireText('index.html', 'Dark Web Safety');
-for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) {
+for (const marker of [
+  'Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status',
+  'Paid memberships are opening soon. Free Member registration is available now.',
+  'Checkout approval alone never grants access.',
+  'Only the verified €6 plan can grant the Intelligence tier.',
+  'Only the verified €9 plan can grant Research Pro.'
+]) {
   requireText('membership.html', marker);
   requireText('membership.html', marker, true);
 }
 forbidText('membership.html', 'Coming soon — no payment taken');
 forbidText('membership.html', 'Coming soon — no payment taken', true);
-for (const marker of ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
+forbidText('membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.');
+forbidText('membership.html', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.', true);
+for (const marker of ['/api/paypal/config', 'checkoutEnabled', '/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
   requireText('paypal-membership.js', marker);
   requireText('paypal-membership.js', marker, true);
 }
@@ -117,7 +125,10 @@ for (const [label, item] of [['source', health], ['built', builtHealth]]) {
   if (item.workerScript !== 'src/worker-production.js') hard.push(`${label} production health does not name strict Worker`);
   if (item.paymentStatus !== 'sandbox-ready-disabled') hard.push(`${label} production health does not report sandbox-ready disabled payments`);
   if (item.checkoutDefault !== 'disabled') hard.push(`${label} production health does not keep checkout disabled by default`);
-  if (!String(item.paymentMessage || '').includes('checkout remains disabled')) hard.push(`${label} production health does not describe the activation gates`);
+  if (item.paymentReadinessProof !== true) hard.push(`${label} production health does not prove the payment gates`);
+  if (item.productionPaymentsEnabled !== false) hard.push(`${label} production health does not keep live charging disabled`);
+  if (item.scheduledMarketingEnabled !== false) hard.push(`${label} production health does not keep scheduled marketing disabled`);
+  if (item.transactionalEmailEnabled !== true) hard.push(`${label} production health does not preserve transactional email`);
 }
 
 const freshnessReport = exists('downloads/production-freshness-guard.json') ? parse('downloads/production-freshness-guard.json') : null;
@@ -147,7 +158,11 @@ for (const text of [
 ]) {
   if (!read('src/worker-forum-persistence.js').includes(text)) hard.push(`forum persistence wrapper missing ${text}`);
 }
-for (const text of ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', 'PAYPAL_SANDBOX_ENABLED', 'PAYPAL_PRODUCTION_ENABLED', 'paypal_runtime_settings']) {
+for (const text of [
+  'cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook',
+  '/v1/notifications/verify-webhook-signature', 'PAYPAL_SANDBOX_ENABLED',
+  'PAYPAL_PRODUCTION_ENABLED', 'paypal_runtime_settings', 'plansReady'
+]) {
   if (!read('src/worker-paypal-subscriptions.js').includes(text)) hard.push(`PayPal Worker missing ${text}`);
 }
 for (const text of ['CREATE TABLE IF NOT EXISTS forum_posts', 'CREATE TABLE IF NOT EXISTS forum_reports', 'idx_forum_posts_board_created']) {
@@ -156,7 +171,12 @@ for (const text of ['CREATE TABLE IF NOT EXISTS forum_posts', 'CREATE TABLE IF N
 for (const text of ['paypal_runtime_settings', 'paypal_products', 'paypal_plans', 'paypal_subscription_transitions', 'paypal_payment_records']) {
   if (!read('migrations/phase6_paypal_subscriptions.sql').includes(text)) hard.push(`PayPal migration missing ${text}`);
 }
-for (const text of ['main = "src/worker-production.js"', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"', 'directory = "./_site"', 'run_worker_first = true']) {
+for (const text of [
+  'main = "src/worker-production.js"', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"',
+  'directory = "./_site"', 'run_worker_first = true', 'PAYPAL_ENVIRONMENT = "sandbox"',
+  'PAYPAL_PRODUCTION_ENABLED = "false"', 'COMMERCIAL_LAUNCH_APPROVED = "false"',
+  'EMAIL_AUTOMATION_ENABLED = "false"', 'EMAIL_TRANSACTIONAL_ENABLED = "true"'
+]) {
   if (!read('wrangler.toml').includes(text)) hard.push(`wrangler.toml missing ${text}`);
 }
 for (const text of ['"main": "src/worker-production.js"', '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"']) {
@@ -202,11 +222,13 @@ const report = {
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   paymentStatus: 'PayPal sandbox-ready behind strict server-side activation gates; checkout disabled by default.',
+  scheduledMarketingEnabled: false,
+  transactionalEmailEnabled: true,
   boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.md'), `# Production Deploy Guard\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nExpected SHA: ${expectedSha}\nManifest SHA: ${report.manifestSha}\nHealth SHA: ${report.healthSha}\nDeployment model: ${report.deploymentModel}\nRollback: ${report.rollbackModel}\nForum storage: ${report.forumPersistence}\nPayments: ${report.paymentStatus}\nScheduled marketing: DISABLED\nTransactional email: ENABLED\n\n## Hard Issues\n${hard.map(issue => `- ${issue}`).join('\n') || '- None'}\n`);
 if (hard.length) {
   console.error('PRODUCTION DEPLOY GUARD FAILED');
   hard.forEach(issue => console.error(`- ${issue}`));

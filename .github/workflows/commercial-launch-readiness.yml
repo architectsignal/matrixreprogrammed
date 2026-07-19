@@ -1,0 +1,142 @@
+name: Commercial Launch Readiness
+
+on:
+  pull_request:
+    paths:
+      - 'templates/phase6-membership.template'
+      - 'templates/commercial-store.template'
+      - 'templates/membership-terms.template'
+      - 'templates/cancellation-withdrawal.template'
+      - 'templates/legal-notice.template'
+      - 'paypal-membership.js'
+      - 'src/worker-paypal-subscriptions.js'
+      - 'src/worker-membership-contract-email.js'
+      - 'src/worker-daily-brief-email.js'
+      - 'src/worker-email-lifecycle.js'
+      - 'src/worker-forum-persistence.js'
+      - 'src/worker-member-experience.js'
+      - 'forum.js'
+      - 'forum.html'
+      - 'dark-speculation-forum.html'
+      - 'epstein-alive-board.html'
+      - 'migrations/phase8_paypal_sandbox_bootstrap.sql'
+      - 'migrations/phase9_signal_board_persistence.sql'
+      - 'scripts/build-daily-brain-brief.js'
+      - 'scripts/patch-membership-tiers.js'
+      - 'scripts/patch-commercial-paypal-guard.js'
+      - 'scripts/patch-commercial-launch-readiness.js'
+      - 'scripts/patch-deep-email-automation.js'
+      - 'scripts/patch-persistent-signal-board.js'
+      - 'scripts/commercial-launch-readiness-test.js'
+      - 'scripts/mission-readiness-test.js'
+      - 'scripts/final-production-reconcile.js'
+      - 'package.json'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+      - 'docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md'
+      - '.github/workflows/commercial-launch-readiness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commercial-launch-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  commercial-readiness:
+    name: Consent, deep brief, Signal Board and live-payment gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout change
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run commercial and mission acceptance
+        run: |
+          node scripts/commercial-launch-readiness-test.js
+          node scripts/mission-readiness-test.js
+
+      - name: Confirm D1 consent and Signal Board migrations are repeat-safe
+        shell: bash
+        run: |
+          set -euo pipefail
+          database="$(mktemp)"
+          python3 - "$database" <<'PY'
+          import sqlite3, sys
+          from pathlib import Path
+          db = sqlite3.connect(sys.argv[1])
+          root = Path.cwd()
+          sequence = [
+              'migrations/0001_membership_foundation.sql',
+              'migrations/0004_forum_persistence.sql',
+              'migrations/phase6_paypal_subscriptions.sql',
+              'migrations/phase8_paypal_sandbox_bootstrap.sql',
+              'migrations/phase9_signal_board_persistence.sql',
+              'migrations/phase8_paypal_sandbox_bootstrap.sql',
+              'migrations/phase9_signal_board_persistence.sql',
+          ]
+          for rel in sequence:
+              db.executescript((root / rel).read_text(encoding='utf-8'))
+          names = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type IN ('table','view')")}
+          required = {
+              'paypal_checkout_consents','paypal_checkout_consent_summary',
+              'forum_post_owners','forum_report_owners','forum_board_state','forum_persistence_health'
+          }
+          missing = sorted(required - names)
+          if missing:
+              raise SystemExit(f'Missing D1 objects: {missing}')
+          consent_columns = {row[1] for row in db.execute('PRAGMA table_info(paypal_checkout_consents)')}
+          consent_expected = {'checkout_intent_id','member_id','terms_version','withdrawal_notice_version','terms_accepted','recurring_payment_acknowledged','immediate_service_requested','withdrawal_notice_acknowledged','consented_at'}
+          if consent_expected - consent_columns:
+              raise SystemExit(f'Missing consent columns: {sorted(consent_expected - consent_columns)}')
+          owner_columns = {row[1] for row in db.execute('PRAGMA table_info(forum_post_owners)')}
+          owner_expected = {'post_id','member_id','session_id','created_at','updated_at'}
+          if owner_expected - owner_columns:
+              raise SystemExit(f'Missing Signal Board owner columns: {sorted(owner_expected - owner_columns)}')
+          print('D1 consent and Signal Board migrations passed twice with all required objects.')
+          PY
+
+      - name: Confirm active email, persistent board and disabled live payment switches
+        run: |
+          grep -F 'PAYPAL_ENVIRONMENT = "sandbox"' wrangler.toml
+          grep -F 'PAYPAL_PRODUCTION_ENABLED = "false"' wrangler.toml
+          grep -F 'COMMERCIAL_LEGAL_READY = "false"' wrangler.toml
+          grep -F 'EMAIL_AUTOMATION_ENABLED = "true"' wrangler.toml
+          grep -F 'EMAIL_TRANSACTIONAL_ENABLED = "true"' wrangler.toml
+          grep -F 'ENABLE_KV_COMPATIBILITY_MIRROR = "false"' wrangler.toml
+          grep -F '"5 6 * * *"' wrangler.toml
+          grep -F '"5 7 * * *"' wrangler.toml
+          grep -F '"15 7 * * 1"' wrangler.toml
+          grep -F '"15 8 * * 1"' wrangler.toml
+
+      - name: Upload launch proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: commercial-launch-readiness-${{ github.run_id }}
+          path: |
+            downloads/commercial-launch-readiness.json
+            downloads/mission-readiness-test.json
+            downloads/commercial-paypal-guard-patch.json
+            downloads/commercial-launch-page-patch.json
+            downloads/deep-email-automation-patch.json
+            downloads/persistent-signal-board-patch.json
+            downloads/membership-tiers-report.json
+            downloads/daily-brain-brief.json
+            downloads/daily-brain-brief.md
+          if-no-files-found: ignore
+          retention-days: 30

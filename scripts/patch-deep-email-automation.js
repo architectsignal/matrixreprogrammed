@@ -124,7 +124,7 @@ if (!source.includes('async function queueImmediateDailyBrief') && !hasCurrentFi
   const found = range(source, 'async function handleVerify(request,env)');
   need(Boolean(found), 'handleVerify function is missing');
   let functionText = source.slice(found.start, found.end);
-  const currentFirstBrief = functionText.includes('sendFirstDailyBrief(request,env,member)');
+  const currentFirstBrief = functionText.includes('sendFirstDailyBrief(request,env,member');
   const legacyImmediateBrief = functionText.includes('queueImmediateDailyBrief(request,env,member');
   if (!currentFirstBrief && !legacyImmediateBrief) {
     const deliveryAnchor = 'const delivery=await processOutbox(env,{memberId:member.id,limit:5});';

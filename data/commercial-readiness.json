@@ -1,13 +1,21 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-19T00:00:00.000+02:00",
+  "updatedAt": "2026-07-19T20:00:00.000+02:00",
   "status": "blocked-before-live-charging",
   "liveChargingApproved": false,
   "serviceName": "Matrix Reprogrammed",
   "operatorContact": {
-    "name": "Nicholas John Matthews",
+    "name": "NJM GROUP",
     "country": "France",
-    "email": "njmgroupfrance@gmail.com"
+    "email": "members@matrixreprogrammed.com"
+  },
+  "consumerMediation": {
+    "status": "selected-pending-convention",
+    "name": "Centre de la Médiation de la Consommation des Conciliateurs de Justice (CM2C)",
+    "postalAddress": "49 rue de Ponthieu, 75008 Paris, France",
+    "website": "https://www.cm2c.net",
+    "conventionReference": null,
+    "effectiveDate": null
   },
   "checks": {
     "termsOfUseInstalled": true,

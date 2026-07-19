@@ -26,6 +26,19 @@ function count(text, needle) {
   return text.split(needle).length - 1;
 }
 
+function headerRuleBlock(text, route) {
+  const lines = String(text || '').split(/\r?\n/);
+  const start = lines.findIndex(line => line.trim() === route);
+  if (start < 0) return '';
+  const block = [];
+  for (let index = start + 1; index < lines.length; index++) {
+    const line = lines[index];
+    if (line.trim().startsWith('/')) break;
+    block.push(line);
+  }
+  return block.join('\n');
+}
+
 function loadBrain() {
   if (!fs.existsSync(brainPath)) {
     fail('data/site-brain.json missing');
@@ -38,6 +51,11 @@ function loadBrain() {
     return null;
   }
 }
+
+// Cloudflare output builders copy the current source headers. Older generators may
+// temporarily restore long-lived JS/CSS caching, so the authoritative short-cache
+// policy is applied immediately after output exists and before any route audit.
+if (exists('_site')) require('./enforce-production-cache-policy.js');
 
 const brain = loadBrain();
 if (brain) {
@@ -83,6 +101,12 @@ if (brain) {
     for (const file of brain.buildGuards && brain.buildGuards.forbiddenOutputFiles ? brain.buildGuards.forbiddenOutputFiles : []) {
       if (exists(file)) fail(`forbidden generated output file present: ${file}`);
     }
+    const headers = exists('_site/_headers') ? read('_site/_headers') : '';
+    for (const route of ['/*.css', '/*.js']) {
+      const block = headerRuleBlock(headers, route);
+      if (!block) fail(`generated Cloudflare headers missing ${route} cache rule`);
+      else if (/max-age=31536000[^\n]*immutable/i.test(block)) fail(`generated Cloudflare headers use unsafe immutable caching for ${route}`);
+    }
   }
 
   const report = {
@@ -90,6 +114,7 @@ if (brain) {
     checkedAt: new Date().toISOString(),
     brainVersion: brain.version,
     productionUrl: brain.productionUrl,
+    cachePolicy: 'HTML and live data revalidate; JavaScript and CSS use five-minute revalidation; static images may remain immutable.',
     problems
   };
 
@@ -104,4 +129,4 @@ if (problems.length) {
 }
 
 console.log('MATRIX SITE BRAIN HEALTH CHECK PASSED');
-console.log('Checked central brain config, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');
+console.log('Checked central brain config, stale homepage markers, duplicate guards, safe Cloudflare cache policy, Worker asset serving, Wrangler config, source files, and generated _site routes when present.');

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Membership Terms | Matrix Reprogrammed</title>
+  <meta name="description" content="Recurring membership, cancellation, withdrawal, refund, failed-payment and PayPal billing terms for Matrix Reprogrammed.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>.legal{max-width:980px}.legal section{margin:1.4rem 0;padding:1.2rem;border:1px solid rgba(216,181,106,.24);border-radius:18px;background:rgba(0,0,0,.42)}.legal h2{color:#d8b56a}.legal table{width:100%;border-collapse:collapse}.legal th,.legal td{padding:.75rem;border-bottom:1px solid rgba(216,181,106,.2);text-align:left;vertical-align:top}.notice{border-left:4px solid #d8b56a;padding:1rem;background:rgba(216,181,106,.08)}.legal-nav{display:flex;gap:.6rem;flex-wrap:wrap}</style>
+</head>
+<body>
+<canvas id="matrix"></canvas>
+<div class="page">
+  <header class="wrap topbar">
+    <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a>
+    <nav class="nav" aria-label="Primary navigation"><a href="start-here.html">Start Here</a><a href="membership.html">Membership</a><a href="member-dashboard.html">Dashboard</a><a href="billing-dashboard.html">Billing</a><a href="trust-center.html">Trust</a></nav>
+  </header>
+  <main class="wrap section legal">
+    <div class="eyebrow">Recurring service contract</div>
+    <h1>MEMBERSHIP TERMS.</h1>
+    <p class="lead">These terms apply to paid monthly Supporter, Intelligence Member and Research Pro memberships. They supplement the Website Terms of Use and mandatory consumer law.</p>
+    <p class="notice"><strong>Pre-launch status:</strong> paid checkout is not open. The prices and rules below are the intended contract, but no paid contract can begin until the site displays complete operator, tax, billing-descriptor and consumer-mediation information and the full PayPal sandbox matrix has passed.</p>
+    <div class="legal-nav"><a class="btn" href="membership.html">Membership Page</a><a class="btn alt" href="terms-of-use.html">Website Terms</a><a class="btn alt" href="billing-dashboard.html">Billing Dashboard</a><a class="btn alt" href="trust-privacy-policy.html">Privacy</a></div>
+
+    <section>
+      <h2>1. Plans, price and billing cycle</h2>
+      <table>
+        <thead><tr><th>Plan</th><th>Price</th><th>Billing</th><th>Core service layer</th></tr></thead>
+        <tbody>
+          <tr><td>Supporter</td><td>€3</td><td>Monthly until cancelled</td><td>Weekly member curation, newsletter, archive and selected formats</td></tr>
+          <tr><td>Intelligence Member</td><td>€6</td><td>Monthly until cancelled</td><td>Supporter services plus premium daily delivery, monitoring, follows, watchlists and intelligence downloads</td></tr>
+          <tr><td>Research Pro</td><td>€9</td><td>Monthly until cancelled</td><td>Intelligence services plus advanced filters, exports, citation tools and research workflow features</td></tr>
+        </tbody>
+      </table>
+      <p>Prices are stated in euros. Any legally applicable tax must be shown before approval and on the payment record or invoice. There is no minimum commitment beyond the current paid billing period and no trial period unless the checkout expressly says otherwise.</p>
+    </section>
+
+    <section>
+      <h2>2. Recurring authorisation</h2>
+      <p>By approving a plan in PayPal, you authorise PayPal to make the displayed monthly payment until the subscription is cancelled. PayPal presents the plan, amount, merchant identity and approval controls before you subscribe. Matrix Reprogrammed does not receive your PayPal password or full payment-card details.</p>
+      <p>The expected customer statement description must match the merchant identity displayed by PayPal. Live checkout must remain disabled until that descriptor has been confirmed and recorded in the commercial-readiness file.</p>
+    </section>
+
+    <section>
+      <h2>3. When paid access begins</h2>
+      <p>PayPal approval in the browser does not grant access. Paid access begins only after the server verifies the checkout intent, member, configured Plan ID, PayPal subscription ID and a provider state that permits entitlement. A verified PayPal webhook or reconciliation record must support ongoing access. No unverified event, duplicate event or client-side message can grant a tier.</p>
+      <p>Each PayPal plan maps to one fixed tier. A Supporter event cannot grant Intelligence or Research Pro. A subscription cannot be attached to a different member, and the same provider event cannot be processed twice.</p>
+    </section>
+
+    <section>
+      <h2>4. Cancellation</h2>
+      <p>You may cancel at any time from the Matrix Reprogrammed Billing Dashboard or through PayPal's automatic-payment controls. Cancellation stops future renewals. When PayPal confirms a paid period ending in the future, paid access continues until that verified period end and then returns to Free Member access. When no future paid period is established, paid access ends when cancellation is verified.</p>
+      <p>Cancelling a membership does not delete the Free Member account, public saved items or lawful billing records. Account deletion is a separate request handled under the privacy policy.</p>
+    </section>
+
+    <section id="withdrawal">
+      <h2>5. EU and French withdrawal right</h2>
+      <p>Consumers who conclude a service contract online generally have a 14-day withdrawal period from the date of the contract, subject to applicable exceptions and rules for services or digital content that begin immediately. Before live checkout opens, the checkout must obtain any consent legally required to begin performance during that period and must explain the effect of that request.</p>
+      <p>To exercise withdrawal, send an unambiguous statement within the applicable period to <a href="mailto:njmgroupfrance@gmail.com?subject=Membership%20withdrawal">njmgroupfrance@gmail.com</a> containing your account email, PayPal subscription ID if available, plan and contract date. You may use: “I hereby withdraw from my Matrix Reprogrammed membership contract concluded on [date].” Receipt will be acknowledged on a durable medium.</p>
+      <p>Withdrawal is different from ordinary cancellation. Cancellation prevents later renewals; a valid withdrawal is handled under mandatory law, including any lawful proportional charge for service already supplied at the consumer's express request.</p>
+    </section>
+
+    <section>
+      <h2>6. Refunds, duplicate charges and reversals</h2>
+      <p>Verified duplicate or incorrect charges will be investigated and corrected. A valid statutory withdrawal, non-conforming digital service or other mandatory consumer remedy will be handled according to applicable law. Other refund requests are assessed against the payment record, service supplied, billing period and circumstances.</p>
+      <p>A verified PayPal refund or reversal immediately places the paid entitlement on hold and returns the account to the appropriate non-paid access level while the event is reconciled. A later completed payment may restore only the tier attached to the verified PayPal plan. Chargebacks, reversals and refunds are recorded for accounting, fraud prevention and audit purposes.</p>
+    </section>
+
+    <section>
+      <h2>7. Failed renewal and suspension</h2>
+      <p>When PayPal reports a first renewal failure, the system may retain paid access during a limited provider-verified grace state. A second failure, PayPal suspension, expired paid period or other provider state that does not permit entitlement removes paid access. Free Member access remains available unless the account itself is suspended for a separate lawful reason.</p>
+      <p>A later verified completed payment resets the failure state and restores only the correct plan tier. Reconciliation may remove access when PayPal and local records disagree; it must never invent a payment, raise a tier or duplicate an entitlement.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to price or service</h2>
+      <p>A price increase or material adverse change will be communicated before it applies to a future renewal, with a clear opportunity to cancel. Mandatory rights are not reduced. Features may be improved or reorganised, but the evidence standard remains independent of payment and the underlying public-source evidence remains available through the free layer as described on the membership page.</p>
+    </section>
+
+    <section>
+      <h2>9. Non-charitable payment</h2>
+      <p>Paid memberships are recurring service payments that also support the project. They are not charitable donations, do not create a charitable receipt and must not be treated as tax-deductible unless a qualified adviser confirms otherwise under the payer's circumstances.</p>
+    </section>
+
+    <section>
+      <h2>10. Operator, tax, mediation and contact</h2>
+      <p><strong>Service:</strong> Matrix Reprogrammed<br><strong>Responsible contact:</strong> Nicholas John Matthews, France<br><strong>Email:</strong> <a href="mailto:njmgroupfrance@gmail.com">njmgroupfrance@gmail.com</a></p>
+      <p>Complete postal address, registration identifiers, VAT treatment, PayPal billing descriptor and consumer-mediation details must be confirmed and displayed before live checkout is activated. Their absence is a blocking launch condition, not permission to omit them after charging begins.</p>
+    </section>
+
+    <section>
+      <h2>11. Law and consumer rights</h2>
+      <p>French law governs these terms, without depriving an EU consumer of mandatory protections available in the consumer's country of residence. Nothing in these terms limits a non-excludable statutory remedy. Records of consent, checkout, payment, cancellation, withdrawal, refund, webhook verification and reconciliation may be retained as required for contract, security, tax and legal compliance.</p>
+      <p><strong>Effective date:</strong> 19 July 2026.</p>
+    </section>
+  </main>
+  <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — monthly service, clear cancellation and verified billing state.</p><p><a href="terms-of-use.html">Terms of Use</a> · <a href="membership-terms.html">Membership Terms</a> · <a href="trust-privacy-policy.html">Privacy</a> · <a href="trust-corrections-policy.html">Corrections</a></p></footer>
+</div>
+<script src="matrix.js"></script><script src="analytics.js"></script>
+</body>
+</html>

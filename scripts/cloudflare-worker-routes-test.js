@@ -28,21 +28,14 @@ if (exists('membership.html') && exists('_site')) {
 }
 
 [
-  'src/worker.js', 'src/worker-forum-persistence.js', 'src/worker-member-experience.js',
-  'src/worker-paypal-subscriptions.js', 'src/worker-production.js',
-  'wrangler.toml', 'wrangler.jsonc', '_headers',
-  'membership.html', 'paypal-membership.js', 'billing-dashboard.html', 'billing-dashboard.js',
-  'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
-  'templates/phase6-membership.template', 'data/membership-tiers.json',
-  'migrations/0001_membership_foundation.sql', 'migrations/0004_forum_persistence.sql',
-  'migrations/phase5_member_experience.sql', 'migrations/phase6_paypal_subscriptions.sql',
-  'migrations/phase6_paypal_failure_counter_fix.sql',
-  'scripts/build-cloudflare-output.js', 'scripts/build-production-health.js',
-  'scripts/final-production-reconcile.js', 'scripts/forum-persistence-d1-test.js',
-  'scripts/patch-membership-tiers.js', 'scripts/repair-generated-site-artifacts.js',
-  '_site/index.html', '_site/index', '_site/search.html', '_site/search',
-  '_site/membership.html', '_site/membership', '_site/paypal-membership.js',
-  '_site/forum.html', '_site/forum'
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js',
+  'wrangler.toml','wrangler.jsonc','_headers','membership.html','paypal-membership.js','billing-dashboard.html','billing-dashboard.js',
+  'admin-payment-dashboard.html','admin-payment-dashboard.js','templates/phase6-membership.template','data/membership-tiers.json',
+  'migrations/0001_membership_foundation.sql','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql',
+  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql',
+  'scripts/build-cloudflare-output.js','scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/forum-persistence-d1-test.js',
+  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js',
+  '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum'
 ].forEach(need);
 
 if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with Worker assets');
@@ -50,70 +43,46 @@ if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with
 for (const marker of [
   "import forumWorker from './worker-forum-persistence.js'",
   "import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'",
-  'members-db-binding-unavailable', 'non-authoritative-forum-response-blocked',
-  'non-authoritative-paypal-response-blocked', "origin !== 'cloudflare-worker-forum-d1'",
-  "origin !== 'cloudflare-worker-paypal-subscriptions'", 'isPayPalRoute(path)', 'status: 503'
+  'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',
+  "origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','status: 503'
 ]) needText('src/worker-production.js', marker, `strict production marker ${marker}`);
 
-for (const marker of [
-  'Cloudflare D1 MEMBERS_DB.forum_posts', 'CREATE TABLE IF NOT EXISTS forum_posts',
-  'INSERT OR IGNORE INTO forum_posts', 'INSERT INTO forum_reports',
-  'kv_forum_migration_v1', "prefix: 'post:'", 'D1 authoritative; KV compatibility mirror'
-]) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
+for (const marker of ['Cloudflare D1 MEMBERS_DB.forum_posts','CREATE TABLE IF NOT EXISTS forum_posts','INSERT OR IGNORE INTO forum_posts','INSERT INTO forum_reports','kv_forum_migration_v1',"prefix: 'post:'",'D1 authoritative; KV compatibility mirror']) needText('src/worker-forum-persistence.js', marker, `D1 forum marker ${marker}`);
 
-for (const marker of [
-  'cloudflare-worker-paypal-subscriptions', '/api/paypal/config', '/api/paypal/checkout-intent',
-  '/api/paypal/subscription/confirm', '/api/paypal/subscription/cancel', '/api/paypal/webhook',
-  '/api/paypal/admin/activation', '/v1/notifications/verify-webhook-signature',
-  'PAYPAL_SANDBOX_ENABLED', 'PAYPAL_PRODUCTION_ENABLED',
-  'PAYPAL_LIVE_ACTIVATION_CONFIRMATION', 'paypal_runtime_settings'
-]) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
+for (const marker of ['cloudflare-worker-paypal-subscriptions','/api/paypal/config','/api/paypal/checkout-intent','/api/paypal/subscription/confirm','/api/paypal/subscription/cancel','/api/paypal/webhook','/api/paypal/admin/activation','/v1/notifications/verify-webhook-signature','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) needText('src/worker-paypal-subscriptions.js', marker, `PayPal Worker marker ${marker}`);
 
-for (const marker of [
-  'Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js',
-  'paypal-membership-status', 'paypal-button-supporter', 'paypal-button-intelligence',
-  'paypal-button-research_pro',
-  'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
-]) {
+for (const marker of ['Free Member','€0','€3','€6','€9','paypal-membership.js','paypal-membership-status','paypal-button-supporter','paypal-button-intelligence','paypal-button-research_pro','Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) {
   needText('templates/phase6-membership.template', marker, `protected template marker ${marker}`);
   needText('membership.html', marker, `server-gated membership marker ${marker}`);
   needText('_site/membership.html', marker, `built membership marker ${marker}`);
 }
-for (const file of ['templates/phase6-membership.template', 'membership.html', '_site/membership.html']) {
+for (const file of ['templates/phase6-membership.template','membership.html','_site/membership.html']) {
   forbidText(file, 'Coming soon — no payment taken', 'obsolete deferred membership page');
   forbidText(file, '€19/month', 'legacy €19 tier');
   forbidText(file, '€49/month', 'legacy €49 tier');
 }
-for (const marker of ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
+for (const marker of ['/api/paypal/checkout-intent','/api/paypal/subscription/confirm','Retry PayPal checkout']) {
   needText('paypal-membership.js', marker, `PayPal membership runtime ${marker}`);
   needText('_site/paypal-membership.js', marker, `built PayPal membership runtime ${marker}`);
 }
 needText('billing-dashboard.html', 'billing-dashboard.js');
 needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 
-for (const marker of ['paypal_runtime_settings', 'paypal_products', 'paypal_plans', 'paypal_subscription_transitions', 'paypal_payment_records']) {
-  needText('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
-}
+for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans','paypal_subscription_transitions','paypal_payment_records']) needText('migrations/phase6_paypal_subscriptions.sql', marker, `Phase 6 migration marker ${marker}`);
 needText('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot');
 
-for (const marker of [
-  'main = "src/worker-production.js"', 'directory = "./_site"', 'binding = "ASSETS"',
-  'run_worker_first = true', 'binding = "FORUM_POSTS"', 'binding = "MEMBERS_DB"',
-  'database_name = "matrix-members"', 'c6e465d3-4e36-4a00-b8f8-309447240c52'
-]) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
-for (const marker of [
-  '"main": "src/worker-production.js"', '"binding": "ASSETS"',
-  '"binding": "FORUM_POSTS"', '"binding": "MEMBERS_DB"',
-  '"database_name": "matrix-members"', '"pattern": "matrixreprogrammed.com/*"',
-  '"pattern": "www.matrixreprogrammed.com/*"'
-]) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
+for (const marker of ['main = "src/worker-production.js"','directory = "./_site"','binding = "ASSETS"','run_worker_first = true','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+for (const marker of ['"main": "src/worker-production.js"','"binding": "ASSETS"','"binding": "FORUM_POSTS"','"binding": "MEMBERS_DB"','"database_name": "matrix-members"','"pattern": "matrixreprogrammed.com/*"','"pattern": "www.matrixreprogrammed.com/*"','"keep_vars": true']) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
+if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) fail('wrangler.toml must not contain active PAYPAL_* overrides');
+if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(read('wrangler.jsonc'))) fail('wrangler.jsonc must not contain active PAYPAL_* overrides');
 
 needText('_headers', 'Strict-Transport-Security', 'HSTS header');
 needText('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
 needText('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
-needText('scripts/final-production-reconcile.js', 'SANDBOX READY / CHECKOUT DISABLED', 'final payment guard');
+needText('scripts/final-production-reconcile.js', 'Payments: RUNTIME GATED / DASHBOARD MANAGED', 'final runtime-gated payment guard');
 needText('scripts/build-production-health.js', "workerScript: 'src/worker-production.js'", 'strict Worker health identity');
-needText('scripts/build-production-health.js', "paymentStatus: 'sandbox-ready-disabled'", 'sandbox-ready disabled health status');
+needText('scripts/build-production-health.js', "paymentStatus: 'runtime-gated-dashboard-managed'", 'runtime-gated dashboard-managed health status');
+needText('scripts/build-production-health.js', "checkoutDefault: 'runtime-d1-gated'", 'D1-gated checkout health status');
 needText('scripts/repair-generated-site-artifacts.js', "productionHealthOwner: 'scripts/build-production-health.js'", 'single production-health owner');
 forbidText('scripts/repair-generated-site-artifacts.js', "workerScript: 'src/worker.js'", 'legacy health Worker identity');
 
@@ -131,8 +100,8 @@ const report = {
   },
   workerEntrypoint: 'src/worker-production.js',
   forumStorage: 'Cloudflare D1 authoritative with KV compatibility/recovery only',
-  paymentStatus: 'sandbox-ready-disabled',
-  boundary: 'PayPal routes and browser UI may be deployed, but checkout remains fail-closed until environment, credentials, verified plans and the D1 activation switch agree.'
+  paymentStatus: 'runtime-gated-dashboard-managed',
+  boundary: 'PayPal runtime values are preserved from Cloudflare. Checkout remains fail-closed unless environment, credentials, verified plans, live confirmation and the D1 activation switch agree; anonymous checkout remains blocked.'
 };
 fs.mkdirSync(full('downloads'), { recursive: true });
 fs.writeFileSync(full('downloads/cloudflare-worker-routes-test.json'), JSON.stringify(report, null, 2));
@@ -144,4 +113,4 @@ if (problems.length) {
   process.exit(1);
 }
 console.log('CLOUDFLARE WORKER ROUTES TEST PASSED');
-console.log('Checked strict routing, D1 forums, protected membership restoration, PayPal fail-closed gates, bindings and commit-bound health.');
+console.log('Checked strict routing, D1 forums, protected membership restoration, runtime-gated PayPal, preserved bindings and commit-bound health.');

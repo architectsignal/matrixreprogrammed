@@ -1,0 +1,45 @@
+name: One-shot controlled production dispatch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/one-shot-controlled-production.trigger
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  dispatch-controlled-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch existing controlled production workflow
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const response = await github.rest.actions.listRepoWorkflows({
+              owner,
+              repo,
+              per_page: 100
+            });
+            const target = response.data.workflows.find(
+              workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
+            );
+            if (!target) {
+              core.setFailed('Controlled production workflow was not found.');
+              return;
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: target.id,
+              ref: 'main',
+              inputs: {
+                confirmation: 'DEPLOY MATRIX REPROGRAMMED'
+              }
+            });
+            core.info(`Dispatched controlled production workflow ${target.id} on main.`);

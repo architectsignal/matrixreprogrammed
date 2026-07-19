@@ -74,10 +74,12 @@ for (const marker of ['Free Member','€0','€3','€6','€9','paypal-membersh
 }
 forbidText('membership.html', 'Coming soon — no payment taken');
 forbidText('membership.html', 'Coming soon — no payment taken', true);
-for (const marker of ['/api/paypal/checkout-intent','/api/paypal/subscription/confirm','Retry PayPal checkout']) {
+for (const marker of ['/api/paypal/subscription/create','Continue securely to PayPal','location.assign']) {
   requireText('paypal-membership.js', marker);
   requireText('paypal-membership.js', marker, true);
 }
+forbidText('paypal-membership.js', 'paypal.com/sdk/js');
+forbidText('paypal-membership.js', 'paypal.com/sdk/js', true);
 requireText('billing-dashboard.html', 'billing-dashboard.js');
 requireText('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 requireText('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
@@ -111,7 +113,7 @@ else if (!freshnessReport.ok) hard.push(`production freshness guard reports ${fr
 for (const text of ["import forumWorker from './worker-forum-persistence.js'","import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'",'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',"origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)']) {
   if (!read('src/worker-production.js').includes(text)) hard.push(`strict production Worker missing ${text}`);
 }
-for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) {
+for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/subscription/create','/api/paypal/subscription/return','/v1/billing/subscriptions','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) {
   if (!read('src/worker-paypal-subscriptions.js').includes(text)) hard.push(`PayPal Worker missing ${text}`);
 }
 
@@ -160,8 +162,8 @@ const report = {
   rollbackModel: 'Validated Cloudflare D1 Time Travel bookmark captured before migrations with an exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
-  paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; checkout requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
-  boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides or unguarded payment activation.'
+  paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; the Worker creates subscriptions and redirects to the official approval URL while checkout still requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
+  boundary: 'Deployment is blocked on automatic triggers, missing owner confirmation, interruptible migration concurrency, missing rollback protection, legacy health overwrite, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
@@ -171,4 +173,4 @@ if (hard.length) {
   hard.forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with manual confirmation, a non-interrupting migration queue, Time Travel rollback, strict D1 forums and runtime-gated PayPal.`);
+console.log(`PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with manual confirmation, a non-interrupting migration queue, Time Travel rollback, strict D1 forums and SDK-free runtime-gated PayPal.`);

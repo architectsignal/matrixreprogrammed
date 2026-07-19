@@ -1,7 +1,954 @@
 {
-  "updated": "2026-07-19T06:44:45.890Z",
+  "updated": "2026-07-19T08:32:37.609Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
-  "relationships": []
+  "relationships": [
+    {
+      "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
+      "from": "Health and Human Services Department",
+      "to": "Centers for Medicare & Medicaid Services",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13656-2",
+        "federal-register-policy-2026-13602-3"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 18,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is__supreme-court-of-rhode-island",
+      "from": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "to": "Supreme Court of Rhode Island",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2025-0045-appeal__galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
+      "from": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "to": "2025-0045-Appeal.",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2025-0045-appeal__supreme-court-of-rhode-island",
+      "from": "Supreme Court of Rhode Island",
+      "to": "2025-0045-Appeal.",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10928510-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york__sawas-v-elzanaty",
+      "from": "Sawas v. Elzanaty",
+      "to": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2021-00294__sawas-v-elzanaty",
+      "from": "Sawas v. Elzanaty",
+      "to": "2021-00294",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2021-00294__appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "from": "Appellate Division of the Supreme Court of the State of New York",
+      "to": "2021-00294",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919908-2"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "california-court-of-appeal__people-v-brim",
+      "from": "People v. Brim",
+      "to": "California Court of Appeal",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-3"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "a170747m__people-v-brim",
+      "from": "People v. Brim",
+      "to": "A170747M",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-3"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "a170747m__california-court-of-appeal",
+      "from": "California Court of Appeal",
+      "to": "A170747M",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10919846-3"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "court-of-appeals-for-the-second-circuit__the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "from": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "to": "Court of Appeals for the Second Circuit",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-4"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-113__the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association",
+      "from": "The New York and Presbyterian Hospital v. New York State Nurses Association",
+      "to": "25-113",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-4"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-113__court-of-appeals-for-the-second-circuit",
+      "from": "Court of Appeals for the Second Circuit",
+      "to": "25-113",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10917016-4"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york__matter-of-pagliughi",
+      "from": "Matter of Pagliughi",
+      "to": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-5"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2024-07773__matter-of-pagliughi",
+      "from": "Matter of Pagliughi",
+      "to": "2024-07773",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-5"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "2024-07773__appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "from": "Appellate Division of the Supreme Court of the State of New York",
+      "to": "2024-07773",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883674-5"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "biddle-v-biddle__court-of-appeals-of-north-carolina",
+      "from": "Biddle v. Biddle",
+      "to": "Court of Appeals of North Carolina",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-6"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-581__biddle-v-biddle",
+      "from": "Biddle v. Biddle",
+      "to": "25-581",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-6"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "25-581__court-of-appeals-of-north-carolina",
+      "from": "Court of Appeals of North Carolina",
+      "to": "25-581",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10883331-6"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "federal-procurement-policy-office__management-and-budget-office",
+      "from": "Management and Budget Office",
+      "to": "Federal Procurement Policy Office",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "defense-department__management-and-budget-office",
+      "from": "Management and Budget Office",
+      "to": "Defense Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "general-services-administration__management-and-budget-office",
+      "from": "Management and Budget Office",
+      "to": "General Services Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "management-and-budget-office__national-aeronautics-and-space-administration",
+      "from": "Management and Budget Office",
+      "to": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "defense-department__federal-procurement-policy-office",
+      "from": "Federal Procurement Policy Office",
+      "to": "Defense Department",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "federal-procurement-policy-office__general-services-administration",
+      "from": "Federal Procurement Policy Office",
+      "to": "General Services Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "federal-procurement-policy-office__national-aeronautics-and-space-administration",
+      "from": "Federal Procurement Policy Office",
+      "to": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "defense-department__general-services-administration",
+      "from": "Defense Department",
+      "to": "General Services Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "defense-department__national-aeronautics-and-space-administration",
+      "from": "Defense Department",
+      "to": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "general-services-administration__national-aeronautics-and-space-administration",
+      "from": "General Services Administration",
+      "to": "National Aeronautics and Space Administration",
+      "count": 1,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-12559-6"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "nvda__nvidia-corp",
+      "from": "NVIDIA CORP",
+      "to": "NVDA",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001045810-1"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "aapl__apple-inc",
+      "from": "Apple Inc.",
+      "to": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-2"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "alphabet-inc__googl",
+      "from": "Alphabet Inc.",
+      "to": "GOOGL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001652044-3"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "microsoft-corp__msft",
+      "from": "MICROSOFT CORP",
+      "to": "MSFT",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000789019-4"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "amazon-com-inc__amzn",
+      "from": "AMAZON COM INC",
+      "to": "AMZN",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001018724-5"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "avgo__broadcom-inc",
+      "from": "Broadcom Inc.",
+      "to": "AVGO",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0001730168-6"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    }
+  ]
 }

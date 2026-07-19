@@ -79,6 +79,7 @@ run('scripts/build-premier-resource-upgrade.js');
 run('scripts/ensure-evidence-badge-routes.js');
 run('scripts/enforce-production-cache-policy.js');
 run('scripts/phase7-paypal-sandbox-rehearsal-test.mjs');
+run('scripts/patch-paypal-server-redirect.js');
 
 // Final owners of search and conclusion surfaces.
 run('scripts/repair-search-system.js');
@@ -124,9 +125,10 @@ requireMarker('membership.html', 'Paid checkout remains disabled until the sandb
 rejectMarker('membership.html', 'Coming soon — no payment taken');
 rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
-requireMarker('paypal-membership.js', '/api/paypal/checkout-intent');
-requireMarker('paypal-membership.js', '/api/paypal/subscription/confirm');
-requireMarker('paypal-membership.js', 'Retry PayPal checkout');
+requireMarker('paypal-membership.js', '/api/paypal/subscription/create');
+requireMarker('paypal-membership.js', 'Continue securely to PayPal');
+requireMarker('paypal-membership.js', 'location.assign');
+rejectMarker('paypal-membership.js', 'paypal.com/sdk/js');
 requireMarker('billing-dashboard.html', 'billing-dashboard.js');
 requireMarker('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 requireMarker('admin-payment-dashboard.js', 'admin-paypal-rehearsal.html');

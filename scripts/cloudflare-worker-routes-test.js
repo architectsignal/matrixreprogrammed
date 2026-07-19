@@ -1,3 +1,4 @@
+// d1-only-final-cloudflare-owner-v2
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');

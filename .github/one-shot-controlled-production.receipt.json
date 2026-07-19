@@ -1,19 +1,19 @@
 {
   "ok": true,
-  "dispatched": false,
-  "checkedAt": "2026-07-19T13:17:25.720Z",
-  "supersededRunId": 29687662933,
+  "dispatched": true,
+  "dispatchedAt": "2026-07-19T13:18:49.633Z",
+  "checkedAt": "2026-07-19T13:18:53.424Z",
   "targetWorkflowId": 302110600,
   "targetWorkflowName": "Matrix Reprogrammed Controlled Production Deploy",
   "targetWorkflowPath": ".github/workflows/deploy.yml",
   "run": {
-    "id": 29651244492,
-    "status": "completed",
-    "conclusion": "success",
+    "id": 29688636388,
+    "status": "queued",
+    "conclusion": null,
     "event": "workflow_dispatch",
-    "headSha": "fb2eedc8ef71dbdbfaf3ad29b5d267bf26c9b231",
-    "createdAt": "2026-07-18T16:04:41Z",
-    "updatedAt": "2026-07-18T16:31:56Z",
-    "htmlUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29651244492"
+    "headSha": "4756c2c47c59a178f39f16cfb05b5b72d689ffc2",
+    "createdAt": "2026-07-19T13:18:50Z",
+    "updatedAt": "2026-07-19T13:18:50Z",
+    "htmlUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29688636388"
   }
 }

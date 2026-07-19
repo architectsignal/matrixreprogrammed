@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-07-19T06:47:27.476Z
+Updated: 2026-07-19T07:50:17.391Z
 
 ## Evidence-led conclusion
 
@@ -14,24 +14,24 @@ Analytic confidence: **73/100 — substantial analytic support**
 
 - **SEC Complaint** — Documented in the linked public record; law, filing or instrument: Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas. Why it matters: This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Exercise or conversion of derivative security** — reportedTransaction. Why it matters: This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Corporate-state convergence** — Documented in the linked public record. Why it matters: This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **ATT MOBILITY LLC — Department of Defense** — Contract. Why it matters: This record places ATT MOBILITY LLC — Department of Defense inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Identity, surveillance and access** — Documented in the linked public record. Why it matters: This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Grant, award or other acquisition** — reportedTransaction. Why it matters: This record places Grant, award or other acquisition inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Global governance convergence** — Documented in the linked public record. Why it matters: This record places Global governance convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Skip to main content** — CourtCase. Why it matters: This record places Skip to main content inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consolidated Sanctions List (Non-SDN Lists)** — Finding. Why it matters: This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **operated or published by** — operatedBy. Why it matters: This record places operated or published by inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Money, currency and access** — Documented in the linked public record. Why it matters: This record places Money, currency and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **4 - Keenova Therapeutics plc (0001567892) (Issuer)** — Contract. Why it matters: This record places 4 - Keenova Therapeutics plc (0001567892) (Issuer) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Security and emergency power** — Documented in the linked public record. Why it matters: This record places Security and emergency power inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Attorney Review Protocol for Epstein Files** — CourtCase. Why it matters: This record places Attorney Review Protocol for Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **BOP Video Footage** — CourtCase. Why it matters: This record places BOP Video Footage inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Customs and Border Protection (CBP)** — CourtCase. Why it matters: This record places Customs and Border Protection (CBP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Default Judgment** — CourtCase. Why it matters: This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **DOJ Disclosures** — CourtCase. Why it matters: This record places DOJ Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Epstein Library** — CourtCase. Why it matters: This record places Epstein Library inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Facebook** — CourtCase. Why it matters: This record places Facebook inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Federal Bureau of Investigation (FBI)** — CourtCase. Why it matters: This record places Federal Bureau of Investigation (FBI) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Federal Bureau of Prisons (BOP)** — CourtCase. Why it matters: This record places Federal Bureau of Prisons (BOP) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **First Phase of Declassified Epstein Files** — CourtCase. Why it matters: This record places First Phase of Declassified Epstein Files inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Florida** — CourtCase. Why it matters: This record places Florida inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **House Disclosures** — CourtCase. Why it matters: This record places House Disclosures inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

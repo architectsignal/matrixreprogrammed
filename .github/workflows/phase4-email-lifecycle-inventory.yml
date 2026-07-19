@@ -57,15 +57,17 @@ jobs:
           NODE
 
       - name: Clean generated inventory
-        run: rm -rf downloads/phase4-email-lifecycle-inventory
+        run: |
+          rm -rf downloads/phase4-email-lifecycle-inventory
+          rm -f downloads/phase4-email-lifecycle-build.log
 
       - name: Build lifecycle inventory
         id: build_inventory
         shell: bash
         run: |
           set +e
-          mkdir -p downloads/phase4-email-lifecycle-inventory
-          node scripts/phase4-email-lifecycle-inventory.js 2>&1 | tee downloads/phase4-email-lifecycle-inventory/build.log
+          mkdir -p downloads
+          node scripts/phase4-email-lifecycle-inventory.js 2>&1 | tee downloads/phase4-email-lifecycle-build.log
           status=${PIPESTATUS[0]}
           echo "status=$status" >> "$GITHUB_OUTPUT"
           exit 0
@@ -107,7 +109,7 @@ jobs:
         run: |
           node - <<'NODE'
           const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-inventory';
-          const hashes=Object.fromEntries(fs.readdirSync(root).filter(file=>file!=='build.log').sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
           fs.writeFileSync('/tmp/phase4-email-first-hashes.json',JSON.stringify(hashes,null,2));
           NODE
 
@@ -142,7 +144,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: phase4-email-lifecycle-inventory-${{ github.run_id }}
-          path: downloads/phase4-email-lifecycle-inventory/
+          path: |
+            downloads/phase4-email-lifecycle-inventory/
+            downloads/phase4-email-lifecycle-build.log
           if-no-files-found: error
           retention-days: 30
 

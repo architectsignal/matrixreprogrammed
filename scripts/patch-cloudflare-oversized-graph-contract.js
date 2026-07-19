@@ -117,8 +117,14 @@ if (originalBytes > maximumBytes) {
   }
 }
 
-// The Signal Board patch may run repeatedly through legacy build owners. Normalize
-// its canonical and backwards-compatible status IDs at the final output boundary.
+// This module is the final same-process owner immediately before build-cloudflare-output
+// walks the source tree. Reapply the complete D1 Signal Board here so late generators
+// cannot ship an older browser client or public-reading copy into _site.
+const signalBoardModule = require.resolve('./patch-persistent-signal-board.js');
+delete require.cache[signalBoardModule];
+require(signalBoardModule);
+
+// Normalize canonical and backwards-compatible status IDs after the full board repair.
 const statusNormalizer = require.resolve('./normalize-signal-board-status-ids.js');
 delete require.cache[statusNormalizer];
 require(statusNormalizer);
@@ -129,9 +135,10 @@ fs.writeFileSync(reportPath, JSON.stringify({
   publicRoute: 'data/investigation-knowledge-graph.json', projection,
   companionArtifacts: ['data/evidence-network-map.json','data/entity-registry.json','data/relationship-registry.json','search-index.json','data/search-facets.json'],
   restoration: compacted ? 'Full build-time graph restored automatically when the current Node process exits.' : 'No restoration required.',
+  signalBoardFinalOwnerApplied: true,
   signalBoardStatusIdsNormalized: true,
-  boundary: 'The public route remains schema-compatible while the complete oversized graph stays build-time only.'
+  boundary: 'The public route remains schema-compatible while the complete oversized graph stays build-time only. The Signal Board is re-owned by the D1 implementation immediately before Cloudflare asset copying.'
 }, null, 2));
 console.log(compacted
-  ? `Cloudflare graph projection staged: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB source -> ${(compactBytes / 1024 / 1024).toFixed(1)} MiB public projection.`
-  : `Cloudflare graph projection not required: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB.`);
+  ? `Cloudflare graph projection staged: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB source -> ${(compactBytes / 1024 / 1024).toFixed(1)} MiB public projection; persistent Signal Board reapplied.`
+  : `Cloudflare graph projection not required: ${(originalBytes / 1024 / 1024).toFixed(1)} MiB; persistent Signal Board reapplied.`);

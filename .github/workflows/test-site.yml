@@ -33,30 +33,22 @@ jobs:
         run: npm ci
 
       - name: Full build and pressure tests
-        id: full_build
         shell: bash
         run: |
-          set +e
+          set -o pipefail
           mkdir -p downloads
           npm run build 2>&1 | tee downloads/test-site-full-build.log
-          status=${PIPESTATUS[0]}
-          echo "status=$status" >> "$GITHUB_OUTPUT"
-          exit 0
 
       - name: Atlas Layers test
-        if: always()
         run: node scripts/atlas-layers-test.js
 
       - name: Migration Flow test
-        if: always()
         run: node scripts/migration-flow-test.js
 
       - name: Risk Clocks and Forum Cloudflare test
-        if: always()
         run: node scripts/global-risk-clocks-test.js
 
       - name: Update cadence audit
-        if: always()
         run: node scripts/update-cadence-test.js
 
       - name: Upload build and diagnostic artifacts
@@ -72,9 +64,6 @@ jobs:
             downloads/membership-tiers-report.json
             downloads/voluntary-support-store-patch.json
             downloads/store-commercial-terms.json
+            downloads/verified-member-sighting-submit.json
           if-no-files-found: warn
           retention-days: 14
-
-      - name: Preserve full-build failure
-        if: steps.full_build.outputs.status != '0'
-        run: exit 1

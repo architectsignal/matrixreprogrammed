@@ -27,15 +27,19 @@ function slug(value = '') { return String(value).toLowerCase().replace(/&/g, ' a
 function normalizeFilename(value = '') {
   return slug(value)
     .replace(/^(img|image|card|art|final|approved|upload|generated)-+/, '')
-    .replace(/-+(img|image|card|card-art|artwork|art|portrait|final|approved|upload|generated|v\d+|\d+x\d+)$/g, '');
+    .replace(/-+(img|image|card|card-art|artwork|art|portrait|final|approved|upload|generated|installed|v\d+|\d+x\d+)$/g, '');
 }
 function isRaster(relative) { return RASTER_EXTENSIONS.has(path.extname(relative).toLowerCase()); }
+function svgContent(relative) { try { return fs.readFileSync(fp(relative), 'utf8').slice(0, 160000); } catch { return ''; } }
 function isGeneratedPlaceholderSvg(relative) {
   if (path.extname(relative).toLowerCase() !== '.svg') return false;
-  try {
-    const content = fs.readFileSync(fp(relative), 'utf8').slice(0, 120000);
-    return /VISUAL CARD PLACEHOLDER|GENERATED CARD ART LAYER|Editorial SVG card assets|PUBLIC-RECORD ROUTE[^<]{0,80}NOT ACCUSATION/i.test(content);
-  } catch { return false; }
+  const content = svgContent(relative);
+  return /VISUAL CARD PLACEHOLDER|GENERATED CARD ART LAYER|Editorial SVG card assets|ARTWORK PENDING|OVERALL INFLUENCE SCORE|CARD SCORE|PUBLIC-RECORD ROUTE[^<]{0,80}NOT ACCUSATION/i.test(content) && !/<image\b/i.test(content);
+}
+function isEmbeddedArtSvg(relative) {
+  if (path.extname(relative).toLowerCase() !== '.svg') return false;
+  const content = svgContent(relative);
+  return /<image\b/i.test(content) && (/data:image\//i.test(content) || /\.installed\.(webp|png|jpe?g|avif)/i.test(content) || /installed Matrix Reprogrammed card artwork/i.test(content));
 }
 function walk(directory = root, output = []) {
   let entries = [];
@@ -68,19 +72,20 @@ function candidateScore(relative, card, config) {
   else if (normalized.includes(id) || normalized.includes(name)) score += 250;
   else return -Infinity;
   if (RASTER_EXTENSIONS.has(extension)) score += 500;
+  if (isEmbeddedArtSvg(relative)) score += 420;
   if (/\/(images?|uploads?|card-art-inbox|generated-images?|approved-art)\//i.test(`/${relative}`)) score += 250;
   if (relative.startsWith(`${config.assetDir}/`)) score += 180;
   if (relative.toLowerCase().includes(config.id.replace(/-/g, ''))) score += 40;
   if (/share|thumbnail|thumb|social/i.test(relative)) score -= 80;
-  if (isGeneratedPlaceholderSvg(relative)) score -= 450;
+  if (isGeneratedPlaceholderSvg(relative)) score -= 650;
   try { score += Math.min(100, Math.round(fs.statSync(fp(relative)).size / 50000)); } catch {}
   return score;
 }
 function chooseCandidate(images, card, config) {
   return images
-    .map(relative => ({ relative, score: candidateScore(relative, card, config), raster: isRaster(relative), placeholder: isGeneratedPlaceholderSvg(relative) }))
+    .map(relative => ({ relative, score: candidateScore(relative, card, config), raster: isRaster(relative), embeddedArtSvg: isEmbeddedArtSvg(relative), placeholder: isGeneratedPlaceholderSvg(relative) }))
     .filter(candidate => Number.isFinite(candidate.score) && candidate.score > 0)
-    .sort((a, b) => b.score - a.score || Number(b.raster) - Number(a.raster) || a.relative.localeCompare(b.relative))[0] || null;
+    .sort((a, b) => b.score - a.score || Number(b.raster) - Number(a.raster) || Number(b.embeddedArtSvg) - Number(a.embeddedArtSvg) || a.relative.localeCompare(b.relative))[0] || null;
 }
 function canonicalAsset(config, cardId, sourceRelative) {
   const extension = path.extname(sourceRelative).toLowerCase() || '.webp';
@@ -91,26 +96,7 @@ function copyCanonical(sourceRelative, destinationRelative) {
   fs.mkdirSync(path.dirname(fp(destinationRelative)), { recursive: true });
   fs.copyFileSync(fp(sourceRelative), fp(destinationRelative));
 }
-function registryLookup(registry, deckId, cardId) {
-  return registry?.byKey?.[`${deckId}:${slug(cardId)}`] || null;
-}
+function registryLookup(registry, deckId, cardId) { return registry?.byKey?.[`${deckId}:${slug(cardId)}`] || null; }
 function loadRegistry() { return readJson('data/card-art-registry.json', { cards: [], byKey: {} }); }
 
-module.exports = {
-  root,
-  deckConfigs,
-  fp,
-  exists,
-  readJson,
-  writeJson,
-  slug,
-  isRaster,
-  isGeneratedPlaceholderSvg,
-  walk,
-  cardsForDeck,
-  chooseCandidate,
-  canonicalAsset,
-  copyCanonical,
-  registryLookup,
-  loadRegistry
-};
+module.exports = { root, deckConfigs, fp, exists, readJson, writeJson, slug, isRaster, isGeneratedPlaceholderSvg, isEmbeddedArtSvg, walk, cardsForDeck, chooseCandidate, canonicalAsset, copyCanonical, registryLookup, loadRegistry };

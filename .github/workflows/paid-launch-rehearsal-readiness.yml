@@ -47,6 +47,7 @@ jobs:
           node --check scripts/patch-voluntary-support-store.js
           node --check scripts/patch-membership-tiers.js
           node --check scripts/paid-launch-payment-matrix-test.mjs
+          node --check scripts/paid-launch-payment-matrix-test-v2.mjs
 
       - name: Verify canonical membership owner
         run: node scripts/patch-membership-tiers.js
@@ -55,7 +56,7 @@ jobs:
         run: node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
 
       - name: Verify paid launch matrix
-        run: node scripts/paid-launch-payment-matrix-test.mjs
+        run: node scripts/paid-launch-payment-matrix-test-v2.mjs
 
       - name: Confirm no live or marketing activation drift
         shell: bash
@@ -89,6 +90,7 @@ jobs:
           path: |
             downloads/phase7-paypal-sandbox-rehearsal-test.json
             downloads/paid-launch-payment-matrix-test.json
+            downloads/paid-launch-payment-matrix-test-v2.json
             downloads/voluntary-support-store-patch.json
             downloads/store-commercial-terms.json
             downloads/membership-tiers-report.json

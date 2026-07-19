@@ -89,26 +89,16 @@ run('scripts/build-deploy-manifest.js');
 run('scripts/build-production-health.js');
 
 const critical = [
-  'index.html', 'homepage-mask-intro.css', 'homepage-mask-intro.js',
-  'assets/intro-eye.svg', 'assets/intro-mask.svg',
-  'start-here.html', 'membership.html', 'paypal-membership.js',
-  'member-dashboard.html', 'member-dashboard-app.js',
-  'billing-dashboard.html', 'billing-dashboard.js',
-  'admin-payment-dashboard.html', 'admin-payment-dashboard.js',
-  'admin-paypal-rehearsal.html', 'admin-paypal-rehearsal.js',
-  'live-intel.html', 'daily-power-conclusions.html',
-  'daily-investigation-conclusions.html', 'weekly-investigation-report.html',
-  'daily-brain-brief.html', 'outcome-briefings.html', 'security-privacy.html',
-  'dark-web-safety.html', 'geographic-power-atlas.html', 'data-lab.html',
-  'evidence-archive.html', 'timers.html', 'ai-speculative-conclusions.html',
-  'search.html', 'search.js', 'search-index.json',
-  'data/search-facets.json', '_headers', 'data/membership-tiers.json',
-  'data/live-intel.json', 'data/daily-power-conclusions.json',
-  'data/daily-investigation-conclusions.json', 'data/weekly-investigation-conclusions.json',
-  'data/daily-brain-brief.json', 'data/outcome-briefings.json',
-  'data/global-risk-clocks.json', 'data/clock-wall.json',
-  'data/production-freshness-policy.json', 'deploy-manifest.json',
-  'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json'
+  'index.html','homepage-mask-intro.css','homepage-mask-intro.js','assets/intro-eye.svg','assets/intro-mask.svg',
+  'start-here.html','membership.html','paypal-membership.js','member-dashboard.html','member-dashboard-app.js',
+  'billing-dashboard.html','billing-dashboard.js','admin-payment-dashboard.html','admin-payment-dashboard.js',
+  'admin-paypal-rehearsal.html','admin-paypal-rehearsal.js','live-intel.html','daily-power-conclusions.html',
+  'daily-investigation-conclusions.html','weekly-investigation-report.html','daily-brain-brief.html','outcome-briefings.html','security-privacy.html',
+  'dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','timers.html','ai-speculative-conclusions.html',
+  'search.html','search.js','search-index.json','data/search-facets.json','_headers','data/membership-tiers.json',
+  'data/live-intel.json','data/daily-power-conclusions.json','data/daily-investigation-conclusions.json','data/weekly-investigation-conclusions.json',
+  'data/daily-brain-brief.json','data/outcome-briefings.json','data/global-risk-clocks.json','data/clock-wall.json',
+  'data/production-freshness-policy.json','deploy-manifest.json','deploy-health.html','deploy-health.json','downloads/deploy-health.json'
 ];
 critical.forEach(copy);
 
@@ -136,6 +126,7 @@ rejectMarker('membership.html', '€19/month');
 rejectMarker('membership.html', '€49/month');
 requireMarker('paypal-membership.js', '/api/paypal/checkout-intent');
 requireMarker('paypal-membership.js', '/api/paypal/subscription/confirm');
+requireMarker('paypal-membership.js', 'Retry PayPal checkout');
 requireMarker('billing-dashboard.html', 'billing-dashboard.js');
 requireMarker('admin-payment-dashboard.html', 'admin-payment-dashboard.js');
 requireMarker('admin-payment-dashboard.js', 'admin-paypal-rehearsal.html');
@@ -175,9 +166,10 @@ requireMarker('_headers', '/deploy-manifest.json');
 requireMarker('_headers', '/deploy-health.json');
 requireMarker('_headers', 'Cache-Control: no-store');
 requireMarker('deploy-health.html', 'D1 AUTHORITATIVE / FAIL CLOSED');
-requireMarker('deploy-health.html', 'Payments: SANDBOX READY / CHECKOUT DISABLED');
+requireMarker('deploy-health.html', 'Payments: RUNTIME GATED / DASHBOARD MANAGED');
 requireMarker('deploy-health.json', 'src/worker-production.js');
-requireMarker('deploy-health.json', '"paymentStatus": "sandbox-ready-disabled"');
+requireMarker('deploy-health.json', '"paymentStatus": "runtime-gated-dashboard-managed"');
+requireMarker('deploy-health.json', '"checkoutDefault": "runtime-d1-gated"');
 
 persistReport();
 console.log(`Final production reconciliation passed: ${report.copied.length} critical files copied, final deploy bundle sanitized and audited.`);

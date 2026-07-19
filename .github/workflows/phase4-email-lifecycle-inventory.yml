@@ -60,9 +60,18 @@ jobs:
         run: rm -rf downloads/phase4-email-lifecycle-inventory
 
       - name: Build lifecycle inventory
-        run: node scripts/phase4-email-lifecycle-inventory.js
+        id: build_inventory
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads/phase4-email-lifecycle-inventory
+          node scripts/phase4-email-lifecycle-inventory.js 2>&1 | tee downloads/phase4-email-lifecycle-inventory/build.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
 
       - name: Validate inventory boundaries and completed foundation
+        if: steps.build_inventory.outputs.status == '0'
         run: |
           node - <<'NODE'
           const fs=require('fs');
@@ -94,14 +103,16 @@ jobs:
           NODE
 
       - name: Snapshot deterministic inventory hashes
+        if: steps.build_inventory.outputs.status == '0'
         run: |
           node - <<'NODE'
           const fs=require('fs');const path=require('path');const crypto=require('crypto');const root='downloads/phase4-email-lifecycle-inventory';
-          const hashes=Object.fromEntries(fs.readdirSync(root).sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
+          const hashes=Object.fromEntries(fs.readdirSync(root).filter(file=>file!=='build.log').sort().map(file=>[file,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
           fs.writeFileSync('/tmp/phase4-email-first-hashes.json',JSON.stringify(hashes,null,2));
           NODE
 
       - name: Rebuild and prove deterministic inventory
+        if: steps.build_inventory.outputs.status == '0'
         run: |
           rm -rf downloads/phase4-email-lifecycle-inventory
           node scripts/phase4-email-lifecycle-inventory.js
@@ -114,6 +125,7 @@ jobs:
           NODE
 
       - name: Prove production files were not changed
+        if: steps.build_inventory.outputs.status == '0'
         run: |
           node - <<'NODE'
           const fs=require('fs');const crypto=require('crypto');
@@ -133,3 +145,7 @@ jobs:
           path: downloads/phase4-email-lifecycle-inventory/
           if-no-files-found: error
           retention-days: 30
+
+      - name: Preserve inventory failure
+        if: steps.build_inventory.outputs.status != '0'
+        run: exit 1

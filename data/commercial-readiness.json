@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-19T00:00:00.000+02:00",
+  "status": "blocked-before-live-charging",
+  "liveChargingApproved": false,
+  "serviceName": "Matrix Reprogrammed",
+  "operatorContact": {
+    "name": "Nicholas John Matthews",
+    "country": "France",
+    "email": "njmgroupfrance@gmail.com"
+  },
+  "checks": {
+    "termsOfUseInstalled": true,
+    "membershipTermsInstalled": true,
+    "cancellationProcedureInstalled": true,
+    "withdrawalProcedureInstalled": true,
+    "refundAndReversalPolicyInstalled": true,
+    "failedPaymentTreatmentInstalled": true,
+    "nonCharitableStatementInstalled": true,
+    "completeLegalOperatorIdentityConfirmed": false,
+    "postalAddressConfirmed": false,
+    "registrationIdentifiersConfirmed": false,
+    "vatTreatmentConfirmed": false,
+    "paypalBillingDescriptorConfirmed": false,
+    "consumerMediatorConfirmed": false,
+    "fullSandboxMatrixPassed": false,
+    "scheduledEmailProofPassed": false,
+    "humanDeviceCheckoutPassed": false
+  },
+  "approvalRule": "liveChargingApproved may become true only when every check is true, PAYPAL_PRODUCTION_ENABLED is true, the live activation phrase is supplied, and the D1 live checkout switch is deliberately enabled by an authenticated administrator.",
+  "safetyBoundary": "This record contains no PayPal, Brevo, Cloudflare or buyer credentials. Missing commercial facts must block live charging rather than be replaced with public placeholders or assumptions."
+}

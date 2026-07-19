@@ -8,13 +8,14 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const mode = process.argv[2] || 'verify';
 const baseScript = path.join(root, 'scripts', 'auto-update-system-deep-test.js');
+const scopeAwareModes = new Set(['verify', 'verify-built']);
 
-if (mode !== 'verify') {
-  const result = spawnSync(process.execPath, [baseScript, mode], { cwd: root, stdio: 'inherit', env: process.env });
-  process.exit(result.status ?? 1);
+if (!scopeAwareModes.has(mode)) {
+  const delegated = spawnSync(process.execPath, [baseScript, mode], { cwd: root, stdio: 'inherit', env: process.env });
+  process.exit(delegated.status ?? 1);
 }
 
-const result = spawnSync(process.execPath, [baseScript, 'verify'], {
+const result = spawnSync(process.execPath, [baseScript, mode], {
   cwd: root,
   encoding: 'utf8',
   env: process.env,
@@ -30,9 +31,9 @@ function writeJson(relative, value) {
   fs.writeFileSync(path.join(root, relative), `${JSON.stringify(value, null, 2)}\n`);
 }
 
-const reportPath = 'downloads/auto-update-deep-test-verify.json';
+const reportPath = `downloads/auto-update-deep-test-${mode}.json`;
 if (!fs.existsSync(path.join(root, reportPath))) {
-  console.error('Automatic update verifier did not produce its JSON report.');
+  console.error(`Automatic update verifier did not produce ${reportPath}.`);
   process.exit(result.status ?? 1);
 }
 
@@ -80,17 +81,18 @@ report.ok = report.failures.length === 0;
 report.generatedAt = new Date().toISOString();
 report.verifier = {
   version: 2,
+  mode,
   baseExitStatus: result.status,
   correctedCheck: checkName,
   boundary: 'Only the daily-versus-full-registry scope comparison is recalculated. Every other automatic-update check is preserved exactly.'
 };
 writeJson(reportPath, report);
-writeJson('downloads/auto-update-deep-test-verify-v2.json', report);
+writeJson(`downloads/auto-update-deep-test-${mode}-v2.json`, report);
 
 const markdown = [
   '# Automatic Update System Deep Test',
   '',
-  'Mode: verify',
+  `Mode: ${mode}`,
   `Result: ${report.ok ? 'PASS' : 'FAIL'}`,
   `Generated: ${report.generatedAt}`,
   '',
@@ -112,10 +114,10 @@ const markdown = [
   '```',
   ''
 ].join('\n');
-fs.writeFileSync(path.join(root, 'downloads', 'auto-update-deep-test-verify.md'), markdown);
+fs.writeFileSync(path.join(root, 'downloads', `auto-update-deep-test-${mode}.md`), markdown);
 
 if (!report.ok) {
-  console.error(`AUTO UPDATE DEEP TEST V2 FAILED: ${report.failures.join(', ')}`);
+  console.error(`AUTO UPDATE DEEP TEST V2 FAILED (${mode}): ${report.failures.join(', ')}`);
   process.exit(1);
 }
-console.log(`AUTO UPDATE DEEP TEST V2 PASSED: ${(report.checks || []).length} checks; daily and full-registry scopes reconciled without weakening other safeguards.`);
+console.log(`AUTO UPDATE DEEP TEST V2 PASSED (${mode}): ${(report.checks || []).length} checks; daily and full-registry scopes reconciled without weakening other safeguards.`);

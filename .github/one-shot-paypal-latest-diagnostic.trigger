@@ -1,1 +1,0 @@
-run latest PayPal diagnostic

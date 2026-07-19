@@ -1,0 +1,144 @@
+name: Resolve PR 99 Merge Conflicts
+
+on:
+  push:
+    branches:
+      - agent/paid-launch-final-readiness
+    paths:
+      - '.github/workflows/resolve-pr-99-conflicts.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-pr-99-conflicts
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/paid-launch-final-readiness
+          fetch-depth: 0
+
+      - name: Merge current main with deterministic ownership
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          cat > /tmp/pr99-launch-files <<'EOF'
+          .github/workflows/commercial-launch-readiness.yml
+          .github/workflows/daily-brief-signal-board.yml
+          .github/workflows/phase8-autonomous-sandbox-readiness.yml
+          docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md
+          forum.js
+          migrations/phase8_paypal_sandbox_bootstrap.sql
+          migrations/phase9_signal_board_persistence.sql
+          package.json
+          paypal-membership.js
+          scripts/align-mission-acceptance-copy.js
+          scripts/brevo-operational-readiness-audit.js
+          scripts/build-daily-brain-brief.js
+          scripts/build-information-gathering-conclusion-system.js
+          scripts/build-production-deploy-receipt.js
+          scripts/build-production-health.js
+          scripts/cloudflare-worker-routes-test.js
+          scripts/commercial-launch-readiness-test.js
+          scripts/daily-brief-signal-board-test.js
+          scripts/disable-production-kv-traffic.js
+          scripts/final-production-reconcile.js
+          scripts/forum-persistence-d1-test.js
+          scripts/harden-worker-api-contracts.js
+          scripts/intel-analytics-pressure-test.js
+          scripts/living-intelligence-regression-test.js
+          scripts/member-forum-integration-test.js
+          scripts/mission-readiness-test.js
+          scripts/normalize-forum-health-member-policy.js
+          scripts/normalize-signal-board-status-ids.js
+          scripts/patch-cloudflare-oversized-graph-contract.js
+          scripts/patch-commercial-launch-readiness.js
+          scripts/patch-commercial-paypal-guard.js
+          scripts/patch-daily-control-brief-delivery.js
+          scripts/patch-deep-email-automation.js
+          scripts/patch-email-campaign-quality.js
+          scripts/patch-homepage-command-builder-shell.js
+          scripts/patch-list-unsubscribe-headers.js
+          scripts/patch-member-forum-integration.js
+          scripts/patch-membership-tiers.js
+          scripts/patch-newsletter-consent.js
+          scripts/patch-persistent-signal-board.js
+          scripts/patch-phase1-live-email-verifier.js
+          scripts/patch-production-receipt-email-safety.js
+          scripts/patch-voluntary-support-store.js
+          scripts/recovery-worker-api-contract-test.js
+          scripts/site-function-harmony-test.js
+          src/worker-daily-brief-email.js
+          src/worker-forum-persistence.js
+          src/worker-membership-contract-email.js
+          templates/cancellation-withdrawal.template
+          templates/commercial-store.template
+          templates/legal-notice.template
+          templates/membership-terms.template
+          templates/phase6-membership.template
+          wrangler.jsonc
+          wrangler.toml
+          EOF
+
+          pr_head="$(git rev-parse HEAD)"
+          git fetch origin main
+
+          set +e
+          git merge --no-ff --no-commit origin/main
+          merge_status=$?
+          set -e
+
+          if [ "$merge_status" -ne 0 ]; then
+            while IFS= read -r -d '' path; do
+              if grep -Fxq -- "$path" /tmp/pr99-launch-files; then
+                if git cat-file -e "${pr_head}:${path}" 2>/dev/null; then
+                  git checkout "$pr_head" -- "$path"
+                else
+                  git rm -f --ignore-unmatch -- "$path"
+                fi
+              else
+                if ! git checkout --theirs -- "$path" 2>/dev/null; then
+                  git rm -f --ignore-unmatch -- "$path"
+                else
+                  git add -- "$path"
+                fi
+              fi
+            done < <(git diff --name-only --diff-filter=U -z)
+          fi
+
+          # The launch-system files must remain byte-for-byte the PR versions,
+          # even where Git could have auto-merged non-conflicting main edits.
+          while IFS= read -r path; do
+            [ -n "$path" ] || continue
+            if git cat-file -e "${pr_head}:${path}" 2>/dev/null; then
+              git checkout "$pr_head" -- "$path"
+            else
+              git rm -f --ignore-unmatch -- "$path"
+            fi
+          done < /tmp/pr99-launch-files
+
+          unresolved="$(git diff --name-only --diff-filter=U)"
+          if [ -n "$unresolved" ]; then
+            echo "Unresolved paths remain:"
+            echo "$unresolved"
+            exit 1
+          fi
+
+          git rm -f -- .github/workflows/resolve-pr-99-conflicts.yml
+          git add -A
+          git diff --cached --check
+
+          git commit -m "Merge main into PR #99 with launch files preserved"
+          git push origin HEAD:agent/paid-launch-final-readiness

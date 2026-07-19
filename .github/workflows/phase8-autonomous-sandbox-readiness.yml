@@ -71,10 +71,12 @@ jobs:
       - name: Phase 8 deterministic mock
         run: node scripts/phase8-autonomous-sandbox-readiness-test.mjs
       - name: Apply canonical Worker ownership patches
+        shell: bash
         run: |
-          node scripts/patch-persistent-signal-board.js
-          node scripts/patch-deep-email-automation.js
-          node scripts/patch-list-unsubscribe-headers.js
+          mkdir -p downloads
+          node scripts/patch-persistent-signal-board.js 2>&1 | tee downloads/patch-persistent-signal-board.log
+          node scripts/patch-deep-email-automation.js 2>&1 | tee downloads/patch-deep-email-automation.log
+          node scripts/patch-list-unsubscribe-headers.js 2>&1 | tee downloads/patch-list-unsubscribe-headers.log
           node --check src/worker-member-experience.js
           node --check src/worker-forum-persistence.js
           node --check src/worker-email-lifecycle.js
@@ -95,6 +97,9 @@ jobs:
             downloads/persistent-signal-board-patch.json
             downloads/deep-email-automation-patch.json
             downloads/list-unsubscribe-header-patch.json
+            downloads/patch-persistent-signal-board.log
+            downloads/patch-deep-email-automation.log
+            downloads/patch-list-unsubscribe-headers.log
             downloads/phase8-wrangler-dry-run.log
           if-no-files-found: ignore
           retention-days: 60

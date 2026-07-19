@@ -17,8 +17,7 @@ const lockedVars = [
   ['MEMBERS_FROM_EMAIL', 'members@matrixreprogrammed.com'],
   ['MEMBERS_FROM_NAME', 'Matrix Reprogrammed'],
   ['MEMBERS_REPLY_TO_EMAIL', 'njmgroupfrance@gmail.com'],
-  ['MEMBERS_REPLY_TO_NAME', 'Matrix Reprogrammed Support'],
-  ['PAYPAL_DONATIONS_ENABLED', 'false']
+  ['MEMBERS_REPLY_TO_NAME', 'Matrix Reprogrammed Support']
 ];
 
 function escapeRegex(value) {
@@ -27,12 +26,17 @@ function escapeRegex(value) {
 
 function enforceToml(before) {
   let after = before;
-  if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = false');
+  if (/^keep_vars\s*=\s*(?:true|false)\s*$/m.test(after)) after = after.replace(/^keep_vars\s*=\s*(?:true|false)\s*$/m, 'keep_vars = true');
   else {
     const compatibilityLine = /^compatibility_date\s*=.*$/m;
     if (!compatibilityLine.test(after)) throw new Error('wrangler.toml compatibility_date anchor is missing');
-    after = after.replace(compatibilityLine, match => `${match}\nkeep_vars = false`);
+    after = after.replace(compatibilityLine, match => `${match}\nkeep_vars = true`);
   }
+
+  // PayPal credentials and live/sandbox switches are runtime state owned by the
+  // Cloudflare dashboard. Active config entries would overwrite those values.
+  after = after.replace(/^PAYPAL_[A-Z0-9_]+\s*=\s*"[^"]*"\s*\n?/gm, '');
+
   for (const [name, value] of lockedVars) {
     const pattern = new RegExp(`^${escapeRegex(name)}\\s*=\\s*"[^"]*"\\s*$`, 'm');
     if (pattern.test(after)) after = after.replace(pattern, `${name} = "${value}"`);
@@ -47,12 +51,17 @@ function enforceToml(before) {
 
 function enforceJsonc(before) {
   let after = before;
-  if (/"keep_vars"\s*:\s*(?:true|false)/.test(after)) after = after.replace(/"keep_vars"\s*:\s*(?:true|false)/, '"keep_vars": false');
+  if (/"keep_vars"\s*:\s*(?:true|false)/.test(after)) after = after.replace(/"keep_vars"\s*:\s*(?:true|false)/, '"keep_vars": true');
   else {
     const compatibility = /"compatibility_date"\s*:\s*"[^"]+"\s*,/;
     if (!compatibility.test(after)) throw new Error('wrangler.jsonc compatibility_date anchor is missing');
-    after = after.replace(compatibility, match => `${match}\n  "keep_vars": false,`);
+    after = after.replace(compatibility, match => `${match}\n  "keep_vars": true,`);
   }
+
+  // Keep all PAYPAL_* values out of repository configuration so deployment
+  // preserves the Cloudflare dashboard values instead of replacing them.
+  after = after.split('\n').filter(line => !/"PAYPAL_[A-Z0-9_]+"\s*:/.test(line)).join('\n');
+
   for (const [name, value] of lockedVars) {
     const pattern = new RegExp(`"${escapeRegex(name)}"\\s*:\\s*"[^"]*"`);
     if (pattern.test(after)) after = after.replace(pattern, `"${name}": "${value}"`);
@@ -76,20 +85,19 @@ const exactJsonc = value => new RegExp(`"${escapeRegex(value[0])}"\\s*:\\s*"${es
 
 for (const [label, text, checks] of [
   ['wrangler.toml', tomlAfter, [
-    [/^keep_vars\s*=\s*false\s*$/m, 'keep_vars must be false'],
+    [/^keep_vars\s*=\s*true\s*$/m, 'keep_vars must be true'],
     ...lockedVars.map(value => [exactToml(value), `${value[0]} must equal ${value[1]}`]),
-    [/^PAYPAL_ENVIRONMENT\s*=\s*"sandbox"\s*$/m, 'PayPal must remain sandbox'],
-    [/^PAYPAL_PRODUCTION_ENABLED\s*=\s*"false"\s*$/m, 'PayPal production must remain disabled']
+    [/^(?!PAYPAL_)[\s\S]*$/m, '']
   ]],
   ['wrangler.jsonc', jsoncAfter, [
-    [/"keep_vars"\s*:\s*false/, 'keep_vars must be false'],
-    ...lockedVars.map(value => [exactJsonc(value), `${value[0]} must equal ${value[1]}`]),
-    [/"PAYPAL_ENVIRONMENT"\s*:\s*"sandbox"/, 'PayPal must remain sandbox'],
-    [/"PAYPAL_PRODUCTION_ENABLED"\s*:\s*"false"/, 'PayPal production must remain disabled']
+    [/"keep_vars"\s*:\s*true/, 'keep_vars must be true'],
+    ...lockedVars.map(value => [exactJsonc(value), `${value[0]} must equal ${value[1]}`])
   ]]
 ]) {
-  for (const [pattern, message] of checks) if (!pattern.test(text)) failures.push(`${label}: ${message}`);
+  for (const [pattern, message] of checks) if (message && !pattern.test(text)) failures.push(`${label}: ${message}`);
 }
+if (/^PAYPAL_[A-Z0-9_]+\s*=/m.test(tomlAfter)) failures.push('wrangler.toml: active PAYPAL_* values must be dashboard-managed');
+if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(jsoncAfter)) failures.push('wrangler.jsonc: active PAYPAL_* values must be dashboard-managed');
 
 if (!failures.length) {
   if (tomlAfter !== tomlBefore) fs.writeFileSync(tomlPath, tomlAfter);
@@ -103,20 +111,19 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   generatedAt: new Date().toISOString(),
   phase: 1,
   changed,
-  sourcesOfTruth: ['wrangler.jsonc', 'wrangler.toml'],
+  sourcesOfTruth: ['wrangler.jsonc', 'wrangler.toml', 'Cloudflare dashboard runtime variables'],
   activePrecedenceProtected: true,
-  keepVars: false,
+  keepVars: true,
   emailAutomationEnabled: false,
   emailTransactionalEnabled: true,
   brevoDomainAuthenticated: true,
   retryQuarantineBefore: '2026-07-18T00:00:00.000Z',
   membersFromEmail: 'members@matrixreprogrammed.com',
   membersReplyToEmail: 'njmgroupfrance@gmail.com',
-  paypalDonationsEnabled: false,
-  paypalEnvironment: 'sandbox',
-  paypalProductionEnabled: false,
+  paypalRuntimeSource: 'Cloudflare dashboard',
+  paypalRepositoryOverrides: false,
   failures,
-  boundary: 'Both Wrangler formats are locked after every generator. Passwordless and transactional account email may operate, but scheduled and bulk email automation remains disabled until separately authorized. PayPal remains sandbox-only with live charging disabled.'
+  boundary: 'Both Wrangler formats preserve Cloudflare dashboard runtime variables. Passwordless and transactional account email may operate, scheduled and bulk email automation remains disabled, and PayPal live/sandbox state is controlled by the explicit Worker gates plus dashboard-managed credentials and switches.'
 }, null, 2)}\n`);
 if (failures.length) throw new Error(`Cloudflare configuration enforcement failed: ${failures.join('; ')}`);
-console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: transactional account email on, automated campaigns off, legacy retries quarantined, PayPal sandbox.`);
+console.log(`Cloudflare configuration enforced${changed.toml || changed.jsonc ? ' and repaired' : ''}: transactional account email on, automated campaigns off, PayPal runtime values preserved from the Cloudflare dashboard.`);

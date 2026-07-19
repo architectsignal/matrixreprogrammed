@@ -1,3 +1,11 @@
+async function safeWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl}={}){
+  try{return await buildWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl})}
+  catch(error){
+    await audit(env,member.id,'email.welcome.intelligence_fallback','member',member.id,{error:clean(error?.message||error,500)});
+    return emailTemplate({heading:'Welcome to Matrix Reprogrammed',name:member.display_name,copy:'Your verified email preferences are active. Use the dashboard to control daily, weekly and release notices.',actionLabel:'Open subscriber dashboard',actionUrl:dashboardUrl,footer:`Unsubscribe: ${unsubscribeUrl}`});
+  }
+}
+
 async function sendDetailedFirstDailyBrief(request,env,member){
   const p=await preferences(env,member.id)||{};
   if(p.public_daily_brief!==1)return{eligible:false,state:'not-selected',queued:false,sent:false,retry:false};

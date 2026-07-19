@@ -20,12 +20,6 @@ function write(relative, content) {
   return true;
 }
 
-function replaceRequired(source, before, after, label) {
-  if (source.includes(after)) return source;
-  if (!source.includes(before)) throw new Error(`${label} anchor is missing`);
-  return source.replace(before, after);
-}
-
 // Paid checkout must require credentials, the environment switch, the D1 switch,
 // live confirmation when applicable, and three ACTIVE provider plans.
 {
@@ -40,27 +34,41 @@ function replaceRequired(source, before, after, label) {
   write(relative, source);
 }
 
-// The canonical recovery membership template must understand the authoritative
-// email lifecycle response and must not render PayPal while checkoutEnabled=false.
-// The same repaired template is authoritative for the source page and any existing
-// Cloudflare output so a late legacy generator cannot leave placeholder pricing or
-// client behaviour behind immediately before deployment.
+// The canonical membership template now owns only reader-facing HTML. Signup
+// delivery compatibility is implemented by newsletter.js and the email lifecycle
+// Worker, while PayPal activation is implemented by paypal-membership.js and the
+// server activation state. Do not restore legacy inline scripts or technical copy.
 {
   const relative = 'scripts/templates/membership-auth/membership.template';
-  let source = read(relative);
-  source = replaceRequired(
-    source,
-    "      signupStatus.className = 'status ok';\n      signupStatus.textContent = data.emailSent ? 'Check your email for your verification link.' : 'Your account was saved, but the verification email could not be sent. Please try again later.';\n      if (data.emailSent) signupForm.reset();",
-    "      const emailSent = Boolean(data.emailSent || (data.verification && data.verification.sent));\n      signupStatus.className = emailSent ? 'status ok' : 'status pending';\n      signupStatus.textContent = emailSent ? 'Check your email for your verification link.' : 'Your account was saved. Verification delivery is queued and will retry when email delivery is available.';\n      if (emailSent) signupForm.reset();",
-    'membership email response compatibility'
-  );
-  source = replaceRequired(
-    source,
-    "      if (!response.ok || !config.configured || !config.clientId) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';\n        setAllPlanMessages('Coming soon. No payment can be taken yet.');\n        return;\n      }\n      await loadSdk(config.clientId);",
-    "      if (!response.ok || !config.configured || !config.clientId) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';\n        setAllPlanMessages('Checkout is not configured. No payment can be taken.');\n        return;\n      }\n      if (!config.checkoutEnabled) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'PayPal is installed but checkout remains disabled behind the server activation gates. No payment can be taken.';\n        setAllPlanMessages('Checkout disabled. Free Member access remains available.');\n        return;\n      }\n      await loadSdk(config.clientId);",
-    'membership PayPal activation boundary'
-  );
-  write(relative, source);
+  const source = read(relative);
+  const required = [
+    'data-newsletter-form',
+    'newsletter.js',
+    'paypal-membership.js',
+    'paypal-membership-status',
+    'Paid memberships are opening soon. Free Member registration is available now.',
+    'Create or access free account',
+    'membership-terms.html',
+    'terms-of-use.html',
+    'Checkout approval alone never grants access.',
+    'Only the verified €6 plan can grant the Intelligence tier.',
+    'Only the verified €9 plan can grant Research Pro.'
+  ];
+  for (const marker of required) {
+    if (!source.includes(marker)) throw new Error(`Current membership contract marker is missing: ${marker}`);
+  }
+  for (const forbidden of [
+    'Your account was saved, but the verification email could not be sent',
+    'Coming soon. No payment can be taken yet.',
+    'Checkout is not configured. No payment can be taken.',
+    'PayPal is installed but checkout remains disabled behind the server activation gates.',
+    'Join Placeholder',
+    'Monthly donation',
+    '€19/month',
+    '€49/month'
+  ]) {
+    if (source.includes(forbidden)) throw new Error(`Obsolete membership contract marker remains: ${forbidden}`);
+  }
   write('membership.html', source);
   if (fs.existsSync(at('_site/membership.html'))) write('_site/membership.html', source);
 }
@@ -111,9 +119,9 @@ const report = {
   changed,
   contracts: {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
-    freeSignup: 'supports verification.sent and queued delivery truthfully',
+    freeSignup: 'reader form uses newsletter.js; email lifecycle supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
-    membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',
+    membershipSource: 'launch-safe reader-facing template is synchronized into source and existing Cloudflare output without restoring obsolete inline scripts',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

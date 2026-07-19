@@ -88,12 +88,18 @@ checks.forumPersistence = forum.includes("import { memberSessionContext } from '
   && forum.includes("postingAccess: 'verified-free-member-session'");
 need(checks.forumPersistence, 'Forum posting is not fully tied to a verified D1 member session and audit trail');
 
+const paypalRuntimeManaged = wrangler.includes('"keep_vars": true')
+  && !wrangler.includes('"PAYPAL_ENVIRONMENT":')
+  && !wrangler.includes('"PAYPAL_PRODUCTION_ENABLED":')
+  && !wrangler.includes('"PAYPAL_SANDBOX_ENABLED":')
+  && !wrangler.includes('"PAYPAL_LIVE_ACTIVATION_CONFIRMATION":');
 checks.paypalFailClosed = paypal.includes('const plansReady=')
   && paypal.includes('&&confirmation&&plansReady,setting,plans:planRows')
   && paypal.includes("error:'PayPal checkout is disabled until activation gates pass'")
-  && wrangler.includes('"PAYPAL_ENVIRONMENT": "sandbox"')
-  && wrangler.includes('"PAYPAL_PRODUCTION_ENABLED": "false"');
-need(checks.paypalFailClosed, 'PayPal checkout does not require all activation gates or production is not explicitly disabled');
+  && paypal.includes("String(env?.PAYPAL_LIVE_ACTIVATION_CONFIRMATION||'')==='MATRIX_PAYPAL_LIVE_CONFIRMED'")
+  && paypal.includes("String(input.phrase||'')!=='ACTIVATE MATRIX PAYPAL LIVE'")
+  && paypalRuntimeManaged;
+need(checks.paypalFailClosed, 'PayPal checkout does not require credentials, environment switch, D1 switch, confirmation, active plans and the exact live activation phrase, or Wrangler does not preserve dashboard-managed variables');
 
 checks.membershipClientContract = template.includes('data.verification && data.verification.sent')
   && template.includes('if (!config.checkoutEnabled)')
@@ -142,7 +148,7 @@ const protectedResponse=await call('/downloads/timer-synthesis.md',{ASSETS:{fetc
 assert(protectedResponse.status===503,'Protected asset must remain closed without D1');
 assert(protectedAssetTier('/downloads/timer-synthesis.md')==='supporter_3','Supporter asset mapping failed');
 assert(protectedAssetTier('/downloads/probability-snapshot.md')==='intelligence_6','Intelligence asset mapping failed');
-assert(protectedAssetTier('/downloads/research-bundle.zip')==='research_pro_9','Research asset mapping failed');
+assert(protectedAssetTier('/downloads/research-bundle.zip')==='research_pro_9','Research Pro asset mapping failed');
 const direct=await enforceProtectedAssetAccess(new Request('https://matrixreprogrammed.com/downloads/the-black-file-matrix-reprogrammed.pdf'),{});
 assert(direct.status===503,'Direct access gate must fail closed without D1');
 const staticResponse=await call('/index.html',{ASSETS:{fetch:async()=>new Response('<!doctype html><title>ok</title>',{status:200,headers:{'content-type':'text/html'}})}});

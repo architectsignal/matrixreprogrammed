@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-19T06:14:02.852Z
+Generated: 2026-07-19T06:45:30.304Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,7 +15,6 @@ Generated: 2026-07-19T06:14:02.852Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
-- 85 — People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-s-republic-of-bangladesh.html
 - 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
 - 85 — Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/defense-department.html
@@ -40,6 +39,7 @@ Generated: 2026-07-19T06:14:02.852Z
 - 85 — People v. Brim — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-v-brim.html
 - 85 — Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/sawas-v-elzanaty.html
 - 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
+- 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
 - 72 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — live-intel.html
 - 72 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — live-intel.html
 - 72 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian — live-intel.html

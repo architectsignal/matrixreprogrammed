@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:15:47.757Z",
+  "generatedAt": "2026-07-19T06:47:10.958Z",
   "failures": [],
   "inventory": {
     "entityBriefs": {
-      "expected": 46,
+      "expected": 38,
       "roots": [
         {
           "root": "source",
-          "files": 46,
-          "actualIds": 46,
+          "files": 38,
+          "actualIds": 38,
           "stale": [],
           "missingHtml": [],
           "missingAliases": []
         },
         {
           "root": "_site",
-          "files": 92,
-          "actualIds": 46,
+          "files": 76,
+          "actualIds": 38,
           "stale": [],
           "missingHtml": [],
           "missingAliases": []
@@ -25,20 +25,20 @@
       ]
     },
     "entityExposure": {
-      "expected": 46,
+      "expected": 38,
       "roots": [
         {
           "root": "source",
-          "files": 46,
-          "actualIds": 46,
+          "files": 38,
+          "actualIds": 38,
           "stale": [],
           "missingHtml": [],
           "missingAliases": []
         },
         {
           "root": "_site",
-          "files": 92,
-          "actualIds": 46,
+          "files": 76,
+          "actualIds": 38,
           "stale": [],
           "missingHtml": [],
           "missingAliases": []

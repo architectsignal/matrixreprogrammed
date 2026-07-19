@@ -1,6 +1,6 @@
 # Daily Brain Brief
 
-Updated: 2026-07-19T06:13:03.461Z
+Updated: 2026-07-19T06:44:30.738Z
 
 This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.
 

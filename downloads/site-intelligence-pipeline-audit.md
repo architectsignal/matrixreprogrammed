@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-07-19T06:14:29.763Z
+Updated: 2026-07-19T06:45:58.975Z
 Overall: working-with-gaps
 Green: 41 · Amber: 2 · Red: 0
 
@@ -30,7 +30,7 @@ Green: 41 · Amber: 2 · Red: 0
 - **GREEN · Conclude · daily-counterpoint:** Daily Command Brief contains its counterpoint. Fix: Generate counterpoint from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-practicalMeaning:** Daily Command Brief contains its practical meaning. Fix: Generate practical meaning from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-conclusionBoundary:** Daily Command Brief contains its claim boundary. Fix: Generate claim boundary from current evidence and canonical timers on every build.
-- **GREEN · Publish · brief-coverage:** 85 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
+- **GREEN · Publish · brief-coverage:** 77 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
 - **GREEN · Conclude · conclusion-engine-population:** 5 conclusion-engine item(s) exist. Fix: Do not publish an empty conclusion engine.
 - **GREEN · Clocks · clock-source:** Canonical risk-clock source exists.
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:03.565Z",
+  "updated": "2026-07-19T06:45:31.016Z",
   "title": "Deep Daily Control Brief",
   "boundary": "This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.",
   "mainConclusion": {
@@ -95,9 +95,9 @@
     {
       "rank": 7,
       "title": "Most important missing record",
-      "text": "People's Republic of Bangladesh needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "evidenceStrength": "Review",
+      "text": "Appellate Division of the Supreme Court of the State of New York needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "evidenceStrength": "High",
       "readerAction": "Open the route, then check the missing-record queue before treating the pattern as settled."
     },
     {
@@ -215,7 +215,7 @@
       "score": 100,
       "route": "institution-briefs/world-bank.html",
       "layer": "policy-and-institutions",
-      "why": "elite priority"
+      "why": "high priority"
     },
     {
       "name": "International Monetary Fund",
@@ -290,6 +290,14 @@
       "why": "elite priority"
     },
     {
+      "name": "Jeff Bezos",
+      "type": "profile route",
+      "score": 100,
+      "route": "billionaire-briefs/jeff-bezos.html",
+      "layer": "capital-and-ownership",
+      "why": "elite priority"
+    },
+    {
       "name": "Blackwater / Xe / Academi / Constellis lineage",
       "type": "contractor route",
       "score": 100,
@@ -328,14 +336,6 @@
       "route": "contractor-briefs/palantir-government-platforms.html",
       "layer": "execution-and-contracts",
       "why": "active contractor watch"
-    },
-    {
-      "name": "G4S / Allied Universal security lineage",
-      "type": "contractor route",
-      "score": 100,
-      "route": "contractor-briefs/g4s-allied-security-lineage.html",
-      "layer": "execution-and-contracts",
-      "why": "seed contractor profile"
     }
   ],
   "sourceRegistryRoutes": [

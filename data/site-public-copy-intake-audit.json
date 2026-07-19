@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-07-19T06:14:16.458Z",
-    "filesScanned": 4058,
-    "highIssues": 2353,
-    "reviewIssues": 8,
-    "intakeAreas": 2311,
+    "updated": "2026-07-19T06:45:44.296Z",
+    "filesScanned": 4129,
+    "highIssues": 2296,
+    "reviewIssues": 9,
+    "intakeAreas": 2399,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -43,6 +43,18 @@
     },
     {
       "severity": "high",
+      "file": "_site/SITE_RECOVERY_MASTER.md",
+      "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/SITE_RECOVERY_MASTER.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/about.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -50,6 +62,12 @@
     {
       "severity": "high",
       "file": "_site/agenda-2030.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/ai-speculative-conclusions.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1033,6 +1051,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/books.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/brief-quality-report.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1447,6 +1471,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/daily-brain-brief.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/daily-brief-master.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1467,12 +1497,6 @@
       "severity": "high",
       "file": "_site/daily-investigation-conclusions.html",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/daily-missing-records.html",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -1520,6 +1544,12 @@
     {
       "severity": "high",
       "file": "_site/data/ai-answer-engine.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/ai-speculative-conclusions.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1640,7 +1670,7 @@
     {
       "severity": "high",
       "file": "_site/data/change-detection.json",
-      "pattern": "/\\[object Object\\]/i",
+      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -1736,12 +1766,12 @@
     {
       "severity": "high",
       "file": "_site/data/daily-command-brief.json",
-      "pattern": "/\\[object Object\\]/i",
+      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
-      "file": "_site/data/daily-command-brief.json",
+      "file": "_site/data/daily-investigation-conclusions.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1826,12 +1856,6 @@
     {
       "severity": "high",
       "file": "_site/data/elite-reports.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/elite-reports.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1844,19 +1868,7 @@
     {
       "severity": "high",
       "file": "_site/data/entity-daily-briefs.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/entity-daily-briefs.json",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/entity-exposure-index.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -1874,18 +1886,6 @@
     {
       "severity": "high",
       "file": "_site/data/entity-registry.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/entity-relationship-scores.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/entity-relationship-scores.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2017,6 +2017,18 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/full-site-function-tool-audit-policy.json",
+      "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "review",
+      "file": "_site/data/full-site-function-tool-audit-policy.json",
+      "pattern": "/compatibility marker/i",
+      "note": "Review whether this text is intentionally visible."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/full-vrc-review-batch-002.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2085,12 +2097,6 @@
       "severity": "high",
       "file": "_site/data/information-gathering-system.json",
       "pattern": "/author note/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/institution-control-index.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2167,12 +2173,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/latest-public-drops.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/latest-video-package.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2185,20 +2185,8 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/live-intel.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/logo-symbolism-dossiers.json",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/machine-state/record-event-snapshot.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2313,12 +2301,6 @@
       "severity": "high",
       "file": "_site/data/missing-record-queue.json",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/missing-records.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2503,12 +2485,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/public-copy-scrubber-report.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/public-data-lab.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2535,12 +2511,6 @@
       "severity": "high",
       "file": "_site/data/reader-interpretation-standard.json",
       "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/record-events.json",
-      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2624,12 +2594,6 @@
     {
       "severity": "high",
       "file": "_site/data/site-freshness-report.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/site-freshness-report.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2695,7 +2659,7 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/source-cards.json",
+      "file": "_site/data/source-change-public.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2744,13 +2708,13 @@
     {
       "severity": "high",
       "file": "_site/data/speculative-intelligence-synthesis.json",
-      "pattern": "/NaN/i",
+      "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
-      "file": "_site/data/subject-briefs.json",
-      "pattern": "/\\[object Object\\]/i",
+      "file": "_site/data/speculative-intelligence-synthesis.json",
+      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
@@ -2839,6 +2803,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/weekly-investigation-conclusions.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data-lab.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2846,6 +2816,12 @@
     {
       "severity": "high",
       "file": "_site/deck-expansion-hub.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/deep-intel-feed.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2893,6 +2869,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/docs/speculation-clock-registry.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/document-library.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2906,12 +2888,6 @@
     {
       "severity": "high",
       "file": "_site/dossier-pack-crime-state-overlap.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/dossier-pack-intelligence-network.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -3010,6 +2986,30 @@
       "file": "_site/downloads/clock-wall.md",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/control-map-daily.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/convergence-control-lenses.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/daily-brief-master.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/downloads/daily-command-brief.md",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
   "intake": [
@@ -3042,6 +3042,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/admin-email-launch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/admin-member-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3064,6 +3071,13 @@
     },
     {
       "file": "_site/agenda-2030.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/ai-speculative-conclusions.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3546,6 +3560,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/atlas-layers.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/atlas-medical-power.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3644,7 +3665,98 @@
       "status": "ok"
     },
     {
+      "file": "_site/big-three/state-street.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/big-three/vanguard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/big-three-asset-managers.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/billing-dashboard.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/bernard-arnault.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/bill-gates.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/elon-musk.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/jeff-bezos.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/jensen-huang.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/larry-ellison.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/mark-zuckerberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/michael-bloomberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/peter-thiel.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/billionaire-briefs/warren-buffett.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4995,6 +5107,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/card-artwork-batches.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
+      "status": "ok"
+    },
+    {
       "file": "_site/card-artwork-queue.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5093,7 +5212,70 @@
       "status": "ok"
     },
     {
+      "file": "_site/contractor-briefs/blackwater-constellis-lineage.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/booz-allen-intelligence-contractor.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/caci-intelligence-contractor.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/dyncorp-amentum-lineage.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/g4s-allied-security-lineage.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/leidos-saic-lineage.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/contractor-briefs/palantir-government-platforms.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/contradiction-watch.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/control-brain.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/control-map-daily.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5478,6 +5660,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/controlled-opposition-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/controlled-opposition-profile.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5513,6 +5702,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/cross-reference-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/custom-research.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5521,6 +5717,13 @@
     },
     {
       "file": "_site/daily-brain-brief.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/daily-brief-master.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5556,6 +5759,13 @@
     },
     {
       "file": "_site/daily-missing-records.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/daily-power-conclusions.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5626,6 +5836,27 @@
     },
     {
       "file": "_site/data-lab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/deck-expansion-hub.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/deep-intel-feed.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/deploy-health.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5821,7 +6052,70 @@
       "status": "ok"
     },
     {
+      "file": "_site/elite-families/breakspear.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/habsburg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/medici.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/orsini.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/rockefeller.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/rothschild.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-families/windsor.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-family-tracker.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/elite-power-theory.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/elite-reports.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5870,6 +6164,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-relationship-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/2021-00294.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5898,6 +6199,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/25-365.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/25-581.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5920,6 +6228,13 @@
     },
     {
       "file": "_site/entity-timelines/ac48383.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/accountability-now-usa-v-griess.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6017,6 +6332,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/civil-action-no-2026-1385.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/commerce-department.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6046,6 +6368,13 @@
     },
     {
       "file": "_site/entity-timelines/defense-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/district-court-district-of-columbia.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6206,13 +6535,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/entity-timelines/object-object.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/entity-timelines/people-s-republic-of-bangladesh.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6262,6 +6584,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/supreme-court-of-the-united-states.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6277,6 +6606,20 @@
     },
     {
       "file": "_site/entity-timelines/treasury-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/trump-v-barbara-revisions-7-01-26.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/trump-v-barbara.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6332,7 +6675,28 @@
       "status": "ok"
     },
     {
+      "file": "_site/epstein-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-entity-map.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/epstein-evidence-boundary.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-file-check-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6367,6 +6731,20 @@
       "status": "ok"
     },
     {
+      "file": "_site/epstein-missing-records.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-review-queue.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/epstein-search.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6388,6 +6766,27 @@
       "status": "ok"
     },
     {
+      "file": "_site/epstein-source-ledger.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-theory-lab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/epstein-timeline.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/epstein-upload-check.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6396,6 +6795,13 @@
     },
     {
       "file": "_site/evidence-archive.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/evidence-graph.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6682,7 +7088,70 @@
       "status": "ok"
     },
     {
+      "file": "_site/institution-briefs/european-commission.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/federal-reserve.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/international-monetary-fund.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/nato.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/united-nations.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/world-bank.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/world-economic-forum.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-briefs/world-health-organization.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/institution-control-tracker.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/institution-deck.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7117,6 +7586,13 @@
     },
     {
       "file": "_site/investigation-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/investigation-source-ledger.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7998,6 +8474,62 @@
       "status": "ok"
     },
     {
+      "file": "_site/orders/bilderberg.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/bohemian-grove.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/freemasonry.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/jesuits.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/knights-of-malta.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/knights-templar.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/opus-dei.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/orders/skull-and-bones.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/outcome-briefings.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8432,6 +8964,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/policy-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/policy-watch.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8838,7 +9377,21 @@
       "status": "ok"
     },
     {
+      "file": "_site/power-families-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/power-research-method.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/power-structure-map.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8979,6 +9532,13 @@
     },
     {
       "file": "_site/search.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/sec-filing-feed.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9349,7 +9909,21 @@
       "status": "ok"
     },
     {
+      "file": "_site/secret-societies-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/secret-societies-hub.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/secret-societies-tracker.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9430,6 +10004,20 @@
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/site-intelligence-system-audit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/site-population-audit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": false,
       "status": "ok"
     },
     {
@@ -9588,6 +10176,13 @@
     },
     {
       "file": "_site/speculative-conclusions.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/start-here.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10154,6 +10749,20 @@
       "status": "ok"
     },
     {
+      "file": "_site/think-tanks-deck.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/timers.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/top-52/ajay-banga.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10512,6 +11121,125 @@
     },
     {
       "file": "_site/top-52/xi-jinping.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/booz-allen-hamilton.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/caci-international.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/elon-musk.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/emmanuel-macron.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/federal-reserve.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/jamie-dimon.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/jeff-bezos.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/jerome-powell.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/klaus-schwab.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/larry-fink.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/tony-blair.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/warren-buffett.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art/batch-1/world-health-organization.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-art-studio.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-batch1-art-queue.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-generated-art.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/top-52-power-deck.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13703,13 +14431,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/chattogram-water-supply-and-sewerage-authority.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -13732,13 +14453,6 @@
     },
     {
       "file": "entity-briefs/federal-procurement-policy-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/finance-division-ministry-of-finance.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13780,13 +14494,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/kingdom-of-morocco.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/management-and-budget-office.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -13802,20 +14509,6 @@
     },
     {
       "file": "entity-briefs/microsoft-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/ministry-of-health-and-family-welfare.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13857,28 +14550,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-briefs/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/republic-of-india.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-briefs/republic-of-rwanda.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14032,13 +14704,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/chattogram-water-supply-and-sewerage-authority.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14061,13 +14726,6 @@
     },
     {
       "file": "entity-exposure/federal-procurement-policy-office.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/finance-division-ministry-of-finance.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14109,13 +14767,6 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/kingdom-of-morocco.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/management-and-budget-office.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14131,20 +14782,6 @@
     },
     {
       "file": "entity-exposure/microsoft-corp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/ministry-of-health-and-family-welfare.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14186,28 +14823,7 @@
       "status": "ok"
     },
     {
-      "file": "entity-exposure/people-s-republic-of-bangladesh.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "entity-exposure/people-v-brim.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/republic-of-india.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "entity-exposure/republic-of-rwanda.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

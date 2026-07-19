@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T06:13:03.530Z",
+  "updated": "2026-07-19T06:44:30.813Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -56,7 +56,7 @@
       "ok": true,
       "status": 200,
       "output": "data/source-pulls/worldbank-watch.json",
-      "itemCount": 6,
+      "itemCount": 0,
       "error": null
     },
     {
@@ -73,7 +73,7 @@
     {
       "id": "federal-register-policy-2026-14439-1",
       "date": "2026-07-17",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -107,7 +107,7 @@
     {
       "id": "federal-register-policy-2026-13656-2",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -142,7 +142,7 @@
     {
       "id": "federal-register-policy-2026-13602-3",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -177,7 +177,7 @@
     {
       "id": "federal-register-policy-2026-13057-4",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -211,7 +211,7 @@
     {
       "id": "federal-register-policy-2026-12989-5",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -245,7 +245,7 @@
     {
       "id": "federal-register-policy-2026-12559-6",
       "date": "2026-06-23",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -283,7 +283,7 @@
     {
       "id": "sec-edgar-filings-cik0001045810-1",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -318,7 +318,7 @@
     {
       "id": "sec-edgar-filings-cik0000320193-2",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -353,7 +353,7 @@
     {
       "id": "sec-edgar-filings-cik0001652044-3",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -388,7 +388,7 @@
     {
       "id": "sec-edgar-filings-cik0000789019-4",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -423,7 +423,7 @@
     {
       "id": "sec-edgar-filings-cik0001018724-5",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -458,7 +458,7 @@
     {
       "id": "sec-edgar-filings-cik0001730168-6",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -493,7 +493,7 @@
     {
       "id": "courtlistener-court-records-10928510-1",
       "date": "2026-07-15",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -529,7 +529,7 @@
     {
       "id": "courtlistener-court-records-10919908-2",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -565,7 +565,7 @@
     {
       "id": "courtlistener-court-records-10919846-3",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -601,7 +601,7 @@
     {
       "id": "courtlistener-court-records-10917016-4",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -637,7 +637,7 @@
     {
       "id": "courtlistener-court-records-10883674-5",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -673,7 +673,7 @@
     {
       "id": "courtlistener-court-records-10883331-6",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "pulled_at": "2026-07-19T06:44:30.813Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -703,208 +703,6 @@
         "epstein-files",
         "record-intake-queue",
         "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p505244-1",
-      "date": "2024-12-20T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Republic of Rwanda",
-        "0"
-      ],
-      "institution_names": [],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P505244",
-      "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p176429-2",
-      "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Chattogram Water Supply and Sewerage Authority",
-        "People's Republic of Bangladesh",
-        "0"
-      ],
-      "institution_names": [],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P176429",
-      "summary": "Chattogram Water Supply Improvement Project",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p181587-3",
-      "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-        "Kingdom of Morocco",
-        "0"
-      ],
-      "institution_names": [
-        "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)"
-      ],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P181587",
-      "summary": "Transforming Agri-food Systems in Morocco",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p180283-4",
-      "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Ministry of Health and Family Welfare",
-        "People's Republic of Bangladesh",
-        "0"
-      ],
-      "institution_names": [
-        "Ministry of Health and Family Welfare"
-      ],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P180283",
-      "summary": "Health, Nutrition and Population Sector Development Program",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p507508-5",
-      "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Republic of India",
-        "0"
-      ],
-      "institution_names": [],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P507508",
-      "summary": "Amaravati Integrated Urban Development Program",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "world-bank-projects-p180439-6",
-      "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-19T06:13:03.530Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "world-bank-projects",
-      "source_name": "World Bank project search",
-      "entity_names": [
-        "Finance Division, Ministry of Finance",
-        "People's Republic of Bangladesh",
-        "0"
-      ],
-      "institution_names": [
-        "Finance Division, Ministry of Finance"
-      ],
-      "control_layers": [
-        "development_finance",
-        "infrastructure",
-        "global_money"
-      ],
-      "record_type": "global_project_record",
-      "evidence_grade": "documented association",
-      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
-      "source_record_id": "P180439",
-      "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "control-structure",
-        "power-entities",
-        "global-risk-clocks"
       ],
       "boundary": "Documented source route. Interpret only within the evidence grade."
     }

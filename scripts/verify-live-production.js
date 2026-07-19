@@ -14,7 +14,6 @@ const routeMarkers = {
   '/membership': 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.',
   '/billing-dashboard': 'billing-dashboard.js',
   '/admin-payment-dashboard': 'admin-payment-dashboard.js',
-  '/admin-paypal-rehearsal': 'PAYPAL SANDBOX REHEARSAL.',
   '/live-intel': 'LIVE INTEL',
   '/daily-power-conclusions': 'DAILY POWER CONCLUSIONS',
   '/daily-investigation-conclusions': 'DAILY INVESTIGATION CONCLUSIONS.',
@@ -26,7 +25,8 @@ const routeMarkers = {
   '/search': 'SEARCH THE MACHINE',
   '/deploy-health.json': '"workerScript": "src/worker-production.js"'
 };
-function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function fetchText(route, options = {}) {
   const join = route.includes('?') ? '&' : '?';
   const response = await fetch(`${siteUrl}${route}${join}deployment_check=${Date.now()}`, {
@@ -35,21 +35,21 @@ async function fetchText(route, options = {}) {
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/5.4',
+      'user-agent': 'MatrixProductionVerifier/6.0',
       ...(options.headers || {})
     }
   });
   return { status: response.status, ok: response.ok, text: await response.text(), headers: Object.fromEntries(response.headers.entries()) };
 }
-function parseJson(text) { try { return JSON.parse(text); } catch { return null; } }
+const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
 async function currentMainSha() {
-  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/5.4' };
+  const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/6.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
   const response = await fetch(`https://api.github.com/repos/${repository}/commits/main`, { headers });
   if (!response.ok) throw new Error(`GitHub main lookup failed: HTTP ${response.status}`);
   return (await response.json()).sha;
 }
-function getField(object, field) { return String(field).split('.').reduce((value, key) => value && value[key], object); }
+const getField = (object, field) => String(field).split('.').reduce((value, key) => value && value[key], object);
 function freshnessChecks(payloads) {
   const results = [];
   for (const item of policy.datasets || []) {
@@ -61,6 +61,7 @@ function freshnessChecks(payloads) {
   }
   return results;
 }
+
 async function forumHealth() {
   const response = await fetchText('/forum-health');
   return { response, data: parseJson(response.text) };
@@ -89,16 +90,15 @@ async function verifyForumPersistence() {
     && Number.isFinite(Number(feed?.count));
   if (!readOk) return { ok: false, stage: 'd1-read', storedPostCount, feedStatus: feedResponse.status, feedHeaders: feedResponse.headers, feed };
 
-  const probeBody = {
-    title: `Authentication boundary check ${expectedSha.slice(0, 12)}`,
-    message: 'This anonymous verifier request must be rejected before any forum write occurs.',
-    category: 'health check',
-    name: 'Matrix System Check'
-  };
   const submitted = await fetchText('/submit-main-post', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(probeBody)
+    body: JSON.stringify({
+      title: `Authentication boundary check ${expectedSha.slice(0, 12)}`,
+      message: 'This anonymous verifier request must be rejected before any forum write occurs.',
+      category: 'health check',
+      name: 'Matrix System Check'
+    })
   });
   const submission = parseJson(submitted.text);
   const authGateOk = submitted.status === 401
@@ -128,19 +128,33 @@ async function verifyForumPersistence() {
     authoritativeStorage: feed.authoritativeStorage
   };
 }
+
 async function verifyPayPalBoundary() {
-  const response = await fetchText('/api/paypal/config');
-  const data = parseJson(response.text);
+  const configResponse = await fetchText('/api/paypal/config');
+  const config = parseJson(configResponse.text);
+  const checkoutResponse = await fetchText('/api/paypal/checkout-intent', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ tier: 'supporter' })
+  });
+  const checkout = parseJson(checkoutResponse.text);
+  const configProtected = configResponse.status === 401
+    && configResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
+    && config?.ok === false
+    && config?.authenticated === false;
+  const checkoutProtected = checkoutResponse.status === 401
+    && checkoutResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
+    && checkout?.ok === false
+    && checkout?.authenticated === false;
   return {
-    ok: response.status === 401
-      && response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-subscriptions'
-      && data?.ok === false
-      && data?.authenticated === false,
-    status: response.status,
-    origin: response.headers['x-matrix-origin'] || null,
-    data
+    ok: configProtected && checkoutProtected,
+    runtimeModel: 'authenticated-member-only; Cloudflare-managed credentials and switches; D1 activation gate',
+    config: { status: configResponse.status, origin: configResponse.headers['x-matrix-origin'] || null, data: config },
+    checkout: { status: checkoutResponse.status, origin: checkoutResponse.headers['x-matrix-origin'] || null, data: checkout },
+    anonymousChargePossible: false
   };
 }
+
 async function verifyEmailAutomationBoundary() {
   const deployLogPath = path.join(root, 'downloads', 'wrangler-deploy.log');
   const deployLog = fs.existsSync(deployLogPath) ? fs.readFileSync(deployLogPath, 'utf8') : '';
@@ -154,79 +168,11 @@ async function verifyEmailAutomationBoundary() {
     deployedFalse,
     deployedTrue,
     deploymentLogPresent: Boolean(deployLog),
-    deploymentLogPath: 'downloads/wrangler-deploy.log',
     adminHealth: { status: response.status, origin: response.headers['x-matrix-origin'] || null, data },
-    requiredRuntimeValue: false,
-    boundary: 'Phase 1 passes only when Wrangler proves the deployed Worker binding is EMAIL_AUTOMATION_ENABLED=false, no true binding appears, and the administrator email-health route remains protected.'
+    requiredRuntimeValue: false
   };
 }
-async function verifyBootstrapBoundary() {
-  const response = await fetchText('/api/paypal/bootstrap-health');
-  const data = parseJson(response.text);
-  const prices = Array.isArray(data?.prices) ? data.prices : [];
-  const expected = { supporter: '3.00', intelligence: '6.00', research_pro: '9.00' };
-  const pricesValid = Object.entries(expected).every(([tier, amount]) => {
-    const row = prices.find(item => item.tier === tier);
-    return row
-      && String(row.amount) === amount
-      && String(row.currency).toUpperCase() === 'EUR'
-      && String(row.status).toUpperCase() === 'ACTIVE';
-  });
-  const originValid = response.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-bootstrap';
-  const ready = response.status === 200
-    && originValid
-    && data?.ok === true
-    && data?.ready === true
-    && data?.environment === 'sandbox'
-    && data?.configured === true
-    && data?.sandboxSwitchEnabled === true
-    && data?.productionSwitchDisabled === true
-    && data?.plansReady === true
-    && Number(data?.planCount) === 3
-    && pricesValid
-    && data?.liveChargingEnabled === false;
-  const safeDisabled = response.status === 503
-    && originValid
-    && data?.ok === false
-    && data?.ready === false
-    && data?.environment === 'sandbox'
-    && data?.productionSwitchDisabled === true
-    && data?.plansReady === false
-    && data?.databaseCheckoutEnabled === false
-    && data?.liveChargingEnabled === false;
-  return {
-    ok: ready || safeDisabled,
-    ready,
-    safeDisabled,
-    mode: ready ? 'sandbox-ready' : safeDisabled ? 'sandbox-pending-disabled' : 'unsafe',
-    status: response.status,
-    origin: response.headers['x-matrix-origin'] || null,
-    data
-  };
-}
-async function verifyRehearsalBoundary() {
-  const readinessResponse = await fetchText('/api/paypal/admin/rehearsal/readiness');
-  const readiness = parseJson(readinessResponse.text);
-  const checkoutResponse = await fetchText('/api/paypal/checkout-intent', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ tier: 'supporter' })
-  });
-  const checkout = parseJson(checkoutResponse.text);
-  return {
-    ok: readinessResponse.status === 401
-      && readinessResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-rehearsal'
-      && readiness?.ok === false
-      && readiness?.authenticated === false
-      && checkoutResponse.status === 503
-      && checkoutResponse.headers['x-matrix-origin'] === 'cloudflare-worker-paypal-sandbox-rehearsal'
-      && checkout?.ok === false
-      && checkout?.rehearsalRequired === true
-      && checkout?.liveChargingEnabled === false,
-    readiness: { status: readinessResponse.status, origin: readinessResponse.headers['x-matrix-origin'] || null, data: readiness },
-    checkout: { status: checkoutResponse.status, origin: checkoutResponse.headers['x-matrix-origin'] || null, data: checkout }
-  };
-}
+
 async function verifyOnce() {
   const mainSha = await currentMainSha();
   const manifestResponse = await fetchText('/deploy-manifest.json');
@@ -258,37 +204,30 @@ async function verifyOnce() {
     && health?.manifestSha === manifestSha
     && health?.manifestMatches === true
     && health?.workerScript === 'src/worker-production.js'
-    && health?.paymentStatus === 'sandbox-ready-disabled'
-    && health?.checkoutDefault === 'disabled'
-    && String(health?.paymentMessage || '').includes('checkout remains disabled')
+    && health?.paymentStatus === 'runtime-gated-dashboard-managed'
+    && health?.checkoutDefault === 'runtime-d1-gated'
+    && health?.runtimeConfigurationOwner === 'Cloudflare dashboard'
+    && String(health?.paymentMessage || '').includes('three active plans')
   );
   const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const emailAutomationBoundary = coreOk ? await verifyEmailAutomationBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
-  const bootstrapBoundary = coreOk && paypalBoundary.ok ? await verifyBootstrapBoundary() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
-  const rehearsalBoundary = coreOk && paypalBoundary.ok && bootstrapBoundary.ready
-    ? await verifyRehearsalBoundary()
-    : bootstrapBoundary.safeDisabled
-      ? { ok: true, skipped: true, safeDisabled: true, reason: 'sandbox bootstrap is pending; checkout and live charging remain disabled' }
-      : { ok: false, skipped: true, reason: 'core, PayPal or safe bootstrap boundary not proven yet' };
-  const forumPersistence = coreOk && paypalBoundary.ok
-    ? await verifyForumPersistence()
-    : { ok: false, skipped: true, reason: 'core or PayPal fail-closed boundary not proven yet' };
-  const ok = coreOk && paypalBoundary.ok && emailAutomationBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifestSha, manifestIsCommitBound, manifestMatchesExpected, manifestMatchesCurrentMain, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
+  const forumPersistence = coreOk && paypalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
+  const ok = coreOk && paypalBoundary.ok && emailAutomationBoundary.ok && forumPersistence.ok;
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifestSha, manifestIsCommitBound, manifestMatchesExpected, manifestMatchesCurrentMain, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, forumPersistence };
 }
 
 (async () => {
   let result = null;
   for (let attempt = 1; attempt <= attempts; attempt++) {
-    try { result = await verifyOnce(); } catch (error) { result = { ok: false, checkedAt: new Date().toISOString(), expectedSha, error: error.message }; }
+    try { result = await verifyOnce(); }
+    catch (error) { result = { ok: false, checkedAt: new Date().toISOString(), expectedSha, error: error.message }; }
     result.attempt = attempt;
     fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
     fs.writeFileSync(path.join(root, 'downloads', 'live-production-verification.json'), JSON.stringify(result, null, 2));
     if (result.ok) {
       const advancement = result.mainAdvancedDuringRun ? `; main advanced to ${String(result.mainSha).slice(0, 12)} during verification` : '';
-      const paypalMode = result.bootstrapBoundary?.ready ? 'autonomous sandbox plans ready' : 'sandbox bootstrap pending with checkout disabled';
-      console.log(`Live production, ${paypalMode}, PayPal fail-closed boundaries, Phase 1 email automation safety, and authenticated D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
+      console.log(`Live production, runtime-gated PayPal boundaries, Phase 1 email automation safety and authenticated D1 forum persistence verified at ${expectedSha.slice(0, 12)} on attempt ${attempt}${advancement}.`);
       process.exit(0);
     }
     console.log(`Live production not synchronized yet (${attempt}/${attempts}).`);

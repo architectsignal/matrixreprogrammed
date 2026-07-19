@@ -1,0 +1,55 @@
+name: Paid Launch Full Build Diagnostic
+
+on:
+  push:
+    branches:
+      - agent/paid-launch-rehearsal-hardening
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paid-launch-full-build-diagnostic-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  diagnose:
+    name: Capture complete build failure
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - name: Run full build and preserve complete transcript
+        id: build
+        shell: bash
+        run: |
+          set +e
+          mkdir -p downloads
+          npm run build > downloads/paid-launch-full-build.log 2>&1
+          status=$?
+          printf '{"exitStatus":%s,"commit":"%s","liveChargingEnabled":false,"scheduledMarketingEnabled":false}\n' "$status" "$GITHUB_SHA" > downloads/paid-launch-full-build-diagnostic.json
+          tail -n 120 downloads/paid-launch-full-build.log
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Upload complete diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: paid-launch-full-build-diagnostic-${{ github.sha }}
+          path: |
+            downloads/paid-launch-full-build.log
+            downloads/paid-launch-full-build-diagnostic.json
+            downloads/final-production-reconcile.json
+            downloads/membership-tiers-report.json
+            downloads/voluntary-support-store-patch.json
+            downloads/store-commercial-terms.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Preserve failing status
+        if: steps.build.outputs.status != '0'
+        run: exit 1

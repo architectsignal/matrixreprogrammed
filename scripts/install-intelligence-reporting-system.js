@@ -62,7 +62,7 @@ function patchEmail(source) {
   }
 
   const welcomeOld = "const template=emailTemplate({heading:'Welcome to Matrix Reprogrammed',name:member.display_name,copy:'Your verified email preferences are active. Use the dashboard to control daily, weekly and release notices.',actionLabel:'Open subscriber dashboard',actionUrl:dashboardUrl,footer:`Unsubscribe: ${unsubscribeUrl}`});";
-  const welcomeNew = "const template=await buildWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl});";
+  const welcomeNew = "const template=await safeWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl});";
   source = replaceOnce(source, welcomeOld, welcomeNew, 'Detailed welcome email');
 
   const verifyCallOld = 'const firstBrief=await sendFirstDailyBrief(request,env,member);';
@@ -84,6 +84,7 @@ function patchEmail(source) {
   for (const marker of [
     'buildMemberIntelligenceReport',
     'buildWelcomeIntelligenceEmail',
+    'safeWelcomeIntelligenceEmail',
     'sendDetailedFirstDailyBrief',
     'queuePersonalizedAutomatedCampaign',
     '/api/email/admin/report-system-health'

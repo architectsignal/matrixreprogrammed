@@ -92,13 +92,22 @@ if (!source.includes(campaignFinal)) {
 const immediateBase = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
 const immediateHeadersOld = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`first-daily-brief:${member.id}:${content.evidenceCheckpointAt||iso(env).slice(0,10)}`});";
 const immediateFinal = "await enqueue(env,member,{messageKind:'first_daily_brief',subject:content.subject,htmlContent,textContent,headers:{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'},idempotencyKey:`daily-control-brief:${member.id}:${iso(env).slice(0,10)}`});";
-if (!source.includes(immediateFinal)) {
-  if (source.includes(immediateHeadersOld)) source = source.replace(immediateHeadersOld, immediateFinal);
-  else {
+const currentFirstBase = "await enqueue(env,member,{campaignId:campaign.id,messageKind:'daily',subject:content.subject,htmlContent:content.html_content,textContent:content.text_content,idempotencyKey});";
+const currentFirstFinal = "await enqueue(env,member,{campaignId:campaign.id,messageKind:'daily',subject:content.subject,htmlContent:content.html_content,textContent:content.text_content,headers:unsubscribeUrl?{'List-Unsubscribe':`<${unsubscribeUrl}>`,'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'}:undefined,idempotencyKey});";
+if (!source.includes(immediateFinal) && !source.includes(currentFirstFinal)) {
+  if (source.includes('async function sendFirstDailyBrief(request,env,member)') && source.includes(currentFirstBase)) {
+    source = source.replace('async function sendFirstDailyBrief(request,env,member)', "async function sendFirstDailyBrief(request,env,member,{unsubscribeUrl=''}={})");
+    source = source.replace('sendFirstDailyBrief(request,env,member)', 'sendFirstDailyBrief(request,env,member,{unsubscribeUrl})');
+    source = source.replace(currentFirstBase, currentFirstFinal);
+    report.changed.push('current-first-brief-list-unsubscribe-preserved');
+  } else if (source.includes(immediateHeadersOld)) {
+    source = source.replace(immediateHeadersOld, immediateFinal);
+    report.changed.push('immediate-brief-list-unsubscribe-and-daily-deduplication');
+  } else {
     need(source.includes(immediateBase), 'Immediate Daily Brief enqueue anchor is missing');
     source = source.replace(immediateBase, immediateFinal);
+    report.changed.push('immediate-brief-list-unsubscribe-and-daily-deduplication');
   }
-  report.changed.push('immediate-brief-list-unsubscribe-and-daily-deduplication');
 }
 
 for (const marker of [
@@ -110,6 +119,7 @@ for (const marker of [
   'daily-control-brief:${member.id}:',
   "campaign.kind==='daily'"
 ]) need(source.includes(marker), `Email lifecycle missing final delivery marker: ${marker}`);
+need(source.includes(immediateFinal) || source.includes(currentFirstFinal), 'Email lifecycle is missing List-Unsubscribe headers on the immediate Daily Brief');
 
 fs.writeFileSync(target, source);
 const syntax = spawnSync(process.execPath, ['--check', target], { cwd: root, encoding: 'utf8' });

@@ -60,24 +60,50 @@ for (const marker of ['intro-eye-burn', 'intro-fire-ring', 'intro-embers', 'intr
 }
 if (!css.includes('width:min(99vw,1040px)')) fail('mask is not configured to fill the screen');
 
-for (const rel of ['homepage-mask-intro.js', 'scripts/patch-homepage-mask-intro.js', 'scripts/patch-membership-tiers.js']) {
+for (const rel of ['homepage-mask-intro.js', 'scripts/patch-homepage-mask-intro.js', 'scripts/patch-membership-tiers.js', 'paypal-membership.js', 'src/worker-paypal-subscriptions.js']) {
   const result = spawnSync(process.execPath, ['--check', path.join(root, rel)], { encoding: 'utf8' });
   if (result.status !== 0) fail(`${rel} syntax check failed: ${String(result.stderr || result.stdout).trim()}`);
 }
 
-/* The intro release test also protects the current cumulative membership surface. */
+/* The intro release test also protects the current cumulative membership surface and its server boundary. */
 const membership = read('membership.html');
-for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status']) {
+const membershipClient = read('paypal-membership.js');
+const paypalWorker = read('src/worker-paypal-subscriptions.js');
+const wrangler = read('wrangler.toml');
+for (const marker of [
+  'Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status',
+  'Paid memberships are opening soon. Free Member registration is available now.',
+  'Checkout approval alone never grants access.',
+  'Only the verified €6 plan can grant the Intelligence tier.',
+  'Only the verified €9 plan can grant Research Pro.'
+]) {
   if (!membership.includes(marker)) fail(`membership page missing ${marker}`);
 }
-for (const legacy of ['€19/month', '€49/month', 'Coming soon — no payment taken']) {
-  if (membership.includes(legacy)) fail(`membership page still contains obsolete marker: ${legacy}`);
+for (const legacy of [
+  '€19/month', '€49/month', 'Coming soon — no payment taken', 'Join Placeholder',
+  'Monthly donation', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
+]) {
+  if (membership.includes(legacy)) fail(`membership page still contains obsolete or reader-visible implementation marker: ${legacy}`);
 }
 if (!membership.includes('Everything in Supporter and Free Member')) fail('Intelligence Member is not explicitly cumulative');
-if (!membership.includes('Everything in Intelligence Member, Supporter and Free Member')) fail('Research Pro is not explicitly cumulative');
-if (!membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')) fail('membership page does not explain the server-side activation boundary');
+if (!membership.includes('Everything in Intelligence, Supporter and Free Member')) fail('Research Pro is not explicitly cumulative');
 for (const slot of ['paypal-button-supporter', 'paypal-button-intelligence', 'paypal-button-research_pro']) {
   if (!membership.includes(slot)) fail(`membership page missing ${slot}`);
+}
+for (const marker of ['/api/paypal/config', 'checkoutEnabled', '/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']) {
+  if (!membershipClient.includes(marker)) fail(`PayPal membership runtime missing ${marker}`);
+}
+for (const marker of [
+  '/v1/notifications/verify-webhook-signature', 'plansReady', 'paypal_runtime_settings',
+  'PAYPAL_SANDBOX_ENABLED', 'PAYPAL_PRODUCTION_ENABLED', 'checkoutEnabled'
+]) {
+  if (!paypalWorker.includes(marker)) fail(`PayPal Worker missing activation boundary ${marker}`);
+}
+for (const marker of [
+  'PAYPAL_ENVIRONMENT = "sandbox"', 'PAYPAL_PRODUCTION_ENABLED = "false"',
+  'COMMERCIAL_LAUNCH_APPROVED = "false"'
+]) {
+  if (!wrangler.includes(marker)) fail(`wrangler.toml missing disabled launch boundary ${marker}`);
 }
 
 const report = {
@@ -85,7 +111,13 @@ const report = {
   generatedAt: new Date().toISOString(),
   sequence: { eyeMs: 3000, burnMs: 1100, maskMs: 3000, dissolveMs: 1200 },
   assets: { eye, mask, transparentBackground: true },
-  membership: { freeTier: true, paidPrices: [3, 6, 9], checkoutDefault: 'server-gated-disabled' },
+  membership: {
+    freeTier: true,
+    paidPrices: [3, 6, 9],
+    cumulative: true,
+    checkoutDefault: 'reader-facing-opening-soon; server-and-D1-gated-disabled',
+    liveChargingEnabled: false
+  },
   failures
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -94,4 +126,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`INTRO RELEASE FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Eye → burn → mask intro test passed (${eye.paths + mask.paths} vector paths); current membership surface also verified.`);
+console.log(`Eye → burn → mask intro test passed (${eye.paths + mask.paths} vector paths); current cumulative membership and server activation boundaries also verified.`);

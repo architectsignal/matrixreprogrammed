@@ -1,5 +1,5 @@
 DEPLOY MATRIX REPROGRAMMED
 Requested by repository administrator on 2026-07-19.
 Target: main
-Purpose: verify or dispatch PayPal membership loader fix f243f7663eed8903128f84406a302a95a2970c71
-Verification nonce: 2026-07-19T12:51:00Z
+Purpose: locate controlled production workflow for live-safe guard repair
+Verification nonce: 2026-07-19T13:02:00Z

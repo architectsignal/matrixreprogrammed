@@ -1,0 +1,85 @@
+name: Paid Launch Rehearsal Readiness
+
+on:
+  push:
+    branches:
+      - agent/paid-launch-rehearsal-hardening
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paid-launch-rehearsal-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-and-safety-matrix:
+    name: Source, payment and commercial safety matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact branch commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Apply canonical reader-facing commercial patch
+        run: node scripts/patch-voluntary-support-store.js
+
+      - name: Verify JavaScript syntax
+        run: |
+          node --check src/worker-paypal-subscriptions.js
+          node --check src/worker-paypal-sandbox-rehearsal.js
+          node --check src/worker-email-lifecycle.js
+          node --check src/worker-production.js
+          node --check paypal-membership.js
+          node --check paypal-voluntary-support.js
+          node --check scripts/patch-voluntary-support-store.js
+          node --check scripts/paid-launch-payment-matrix-test.mjs
+
+      - name: Verify timed sandbox gate
+        run: node scripts/phase7-paypal-sandbox-rehearsal-test.mjs
+
+      - name: Verify paid launch matrix
+        run: node scripts/paid-launch-payment-matrix-test.mjs
+
+      - name: Confirm no live or marketing activation drift
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fx 'PAYPAL_ENVIRONMENT = "sandbox"' wrangler.toml
+          grep -Fx 'PAYPAL_PRODUCTION_ENABLED = "false"' wrangler.toml
+          grep -Fx 'PAYPAL_DONATIONS_ENABLED = "false"' wrangler.toml
+          grep -Fx 'COMMERCIAL_LAUNCH_APPROVED = "false"' wrangler.toml
+          grep -Fx 'EMAIL_AUTOMATION_ENABLED = "false"' wrangler.toml
+          grep -Fx 'EMAIL_TRANSACTIONAL_ENABLED = "true"' wrangler.toml
+          test "$(grep -c '^\[vars\]$' wrangler.toml)" = "1"
+
+      - name: Confirm canonical public membership source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cmp membership.html scripts/templates/membership-auth/membership.template
+          grep -q '€3' membership.html
+          grep -q '€6' membership.html
+          grep -q '€9' membership.html
+          ! grep -Eq '€19|€49|Join Placeholder|activation switches|configured yet' membership.html
+          grep -q 'membership-terms.html' membership.html
+          grep -q 'terms-of-use.html' membership.html
+
+      - name: Upload sanitized readiness proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paid-launch-readiness-${{ github.sha }}
+          path: |
+            downloads/phase7-paypal-sandbox-rehearsal-test.json
+            downloads/paid-launch-payment-matrix-test.json
+            downloads/voluntary-support-store-patch.json
+            data/commercial-readiness.json
+            docs/PAYPAL_EMAIL_LAUNCH_MASTER_PLAN.md
+          if-no-files-found: error

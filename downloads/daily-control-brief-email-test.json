@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.153Z",
+  "version": "daily-control-brief-v3",
+  "checks": {
+    "version": true,
+    "dailyBrainSource": true,
+    "dailyCommandSource": true,
+    "speculativeSynthesisSource": true,
+    "publicDropsSource": true,
+    "namedActors": true,
+    "actorContext": true,
+    "currentDevelopments": true,
+    "evidenceStatus": true,
+    "speculationDesk": true,
+    "confirmationTest": true,
+    "disconfirmationTest": true,
+    "priorityRecords": true,
+    "watchNext": true,
+    "usefulSubject": true,
+    "fullBoundary": true,
+    "auditVersion": true
+  },
+  "failures": [],
+  "contract": {
+    "maximumNamedActors": 8,
+    "maximumDevelopments": 6,
+    "maximumScenarios": 4,
+    "scenarioRequirements": [
+      "trajectory",
+      "evidence needed",
+      "disconfirming evidence",
+      "boundary"
+    ],
+    "evidenceRule": "Names require a documented role or source-linked relationship; inclusion is not an accusation."
+  }
+}

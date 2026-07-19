@@ -1,6 +1,6 @@
 # Live Intel Machine
 
-Updated: 2026-07-18T07:20:08.779Z
+Updated: 2026-07-19T07:50:17.483Z
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -28,12 +28,12 @@ Updated: 2026-07-18T07:20:08.779Z
   - Longform title: Epstein Files, Timeline And Court Records — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
+- 2026-07-16 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
-  - Short title: House panel probing Epstein asked Leon Black about birthday book and the
-  - Longform title: Epstein Files, Timeline And Court Records — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Short title: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia
+  - Longform title: Epstein Files, Timeline And Court Records — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-15 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian
@@ -50,6 +50,14 @@ Updated: 2026-07-18T07:20:08.779Z
   - Video hook: New public-record signal: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC
   - Short title: Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful li
   - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bols
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-17 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+  - Short title: House panel probing Epstein asked Leon Black about birthday book and the
+  - Longform title: Epstein Files, Timeline And Court Records — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
@@ -84,20 +92,12 @@ Updated: 2026-07-18T07:20:08.779Z
   - Longform title: Epstein Files, Timeline And Court Records — Former Obama counsel Kathryn Ruemmler grilled by lawmakers on Epstein ties - WCCB Charlotte
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-  - Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUhhWGNhdF9Ucm1MaUp1WFpXNGJhczFhZms1WUJ4RE9qSHVwaFlERW5tQVdMd0ItNVZORHdhTHBOQTFHZklXaGZtcGtVVjE5eHpKRDZuZTFLQVphSkFLZGtsVXVyRm5OOEF1TkRpYUo3MU1RcFE2SjFqV21XRllpM0pOUmRIa0NWZWpFVGQ5TGYwMlU?oc=5
+- 2026-07-13 — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-  - Short title: Goldman counsel Ruemmler says she would have reported Epstein if she kne
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-15 — 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxOTm1VUEIyajY5Nll2T0xaSHlNNDNKMHIzYVozOUhwNDlvTWk5ZW5BNXE1bnROb3VEdGVnUzNfNnhqSGFEUC1KMmczbTlGWG5EbjFwS0NVdFVHNTBZcjdOaGNtb085eElJNVlvNDNkR29CWnBaSlNWQm1JRVRrTkNFY0tZTnNoaEpDOWo4cUtVSUh2ck90NlNWanFvdlhoQzVKelBpSE5VSDBtUGNkVk9jLdIBtgFBVV95cUxQYmdOWUhmVEVQbUM0Q0laZlRlMTM3UGtTRTJ4R3pvWEhiVDc2OTdlVDh2QS1rcjFDTUpPOEQyUy12VmNQcVVBRDZmZm9aWF91ejJRQ0lVcWNfVkJYTUNCWUdUaTB2cnQwcXlqYXNKS2dsWTRiQnozM3RUWkdJcGo3RmJxNzd1TGM5TnJ0UHR1aGhoTjFSaVBIbnFZdy1Rd2dzZWEtUjAycUdkSmY0dDAzbDhuQUdZdw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
-  - Short title: 'She saw dollar signs': Former Obama counsel pressed over years-long Eps
-  - Longform title: Epstein Files, Timeline And Court Records — 'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News
+  - Video hook: New public-record signal: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
+  - Short title: Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
 - 2026-07-16 — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
@@ -108,38 +108,14 @@ Updated: 2026-07-18T07:20:08.779Z
   - Longform title: Epstein Files, Timeline And Court Records — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Stand
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-  - Short title: Warren Buffett cuts off donations to Gates Foundation following Epstein
-  - Longform title: Epstein Files, Timeline And Court Records — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
-- 2026-07-15 — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-  - Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-  - Short title: Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used he
-  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-starter-library.html
 - 2026-07-17 — The surveillance networks cities do not have to buy - Biometric Update
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: The surveillance networks cities do not have to buy - Biometric Update
+  - Video hook: New public-source drop in the Elite Control Structure lane: The surveillance networks cities do not have to buy - Biometric Update. Source first, claim second.
   - Short title: The surveillance networks cities do not have to buy - Biometric Update
   - Longform title: Elite Control Structure — The surveillance networks cities do not have to buy - Biometric Update
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-15 — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
-  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
-  - Short title: Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in L
-  - Longform title: War Machine And Intelligence State — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
-  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: offer-intelligence-dossiers.html
 - 2026-07-16 — US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
   - Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
   - Evidence: Seven-day public-record lead
@@ -156,19 +132,43 @@ Updated: 2026-07-18T07:20:08.779Z
   - Longform title: Epstein Files, Timeline And Court Records — Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
   - Offer: offer-starter-library.html
-- 2026-07-11 — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
+- 2026-07-15 — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo
+  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxQdEdCMk5HcnpmVWxraThsM2VGcmZRYVRaZEc0TGNSaXNkaGpjNzlac3kzck9sS1pGWmhibUM5emttWWtrS3hEakI0Q1BRanloTVB2bVlSbVpLX21WZFVPem1scjBDMnpfY2NZTEozaEtwWnlocG9xcGNJSnhTTkt2MmhYUnV4WXdFaFE5QmhDa2JVYUR4U0I4bkFn?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com. Source first, claim second.
-  - Short title: Pentagon Releases New UFO Records Detailing Decades of Unexplained Aeria
-  - Longform title: Declassified Files And Public Archives — Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yahoo. Source first, claim second.
+  - Short title: Goldman Sachs's Ruemmler says she would have reported Epstein if she kne
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs's Ruemmler says she would have reported Epstein if she knew he abused women - Yaho
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: download-center.html
-- 2026-07-10 — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
-  - Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
+  - Offer: offer-starter-library.html
+- 2026-07-15 — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
+  - Source: https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUHlpMFdYdllKWXpQX09pcm9ENHJ0TkMyUkpTZExqbUd1WXhyay1SQUhYVFBlcnRiZkkyQnMwdk5jemtZbnlLaFk2STFZSjhxdnA0YVNvbGh4Y1lxYXd1TVkzSWVUdGpaT2x2cnd1UFB0U095enhwY0dJaXFMWHFYeldlalJoRGhQY1BLeU5pZzVBSjhkSlRCX2FacHNwZVd4M1dkV1JRTVFURmgzMV9DeV9lQlJfOTNpVlNOUVEycnFfdGJ6dmxwMQ?oc=5
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: NASA insider hints bigger UFO file release as declassification ramps up - Cybernews. Source first, claim second.
-  - Short title: NASA insider hints bigger UFO file release as declassification ramps up
-  - Longform title: Declassified Files And Public Archives — NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post. Source first, claim second.
+  - Short title: Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used he
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post
   - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-  - Offer: download-center.html
+  - Offer: offer-starter-library.html
+- 2026-07-15 — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
+  - Source: https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUhhWGNhdF9Ucm1MaUp1WFpXNGJhczFhZms1WUJ4RE9qSHVwaFlERW5tQVdMd0ItNVZORHdhTHBOQTFHZklXaGZtcGtVVjE5eHpKRDZuZTFLQVphSkFLZGtsVXVyRm5OOEF1TkRpYUo3MU1RcFE2SjFqV21XRllpM0pOUmRIa0NWZWpFVGQ5TGYwMlU?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO. Source first, claim second.
+  - Short title: Goldman counsel Ruemmler says she would have reported Epstein if she kne
+  - Longform title: Epstein Files, Timeline And Court Records — Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html
+- 2026-07-15 — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxQVU43bDVxX0xnOTMzeWVzZDF2a3lOaVJYS29ZZGE2TmpEWVVBbkxHaC1XQ016V1ZtZFJTMV9POXFtb0FvMWxqN3lsMXpYUmY4Z1dxWkhsTWtpeHZ2dGt4X2NEb29iVDhCeHUyR2g0WS1mVG1OVHpvc2NTdTlNTDJidXh4SVkyUnFMSjBCN0JqZVBhNkFYU2JIcFNmeTNvTVpXNTByWkZvVk9xakJaakJlSGR5b3ljbFpJTUlIbE5law?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the War Machine And Intelligence State lane: Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times. Source first, claim second.
+  - Short title: Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in L
+  - Longform title: War Machine And Intelligence State — Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-intelligence-dossiers.html
+- 2026-07-14 — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters. Source first, claim second.
+  - Short title: Warren Buffett cuts off donations to Gates Foundation following Epstein
+  - Longform title: Epstein Files, Timeline And Court Records — Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters
+  - Next action: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+  - Offer: offer-starter-library.html

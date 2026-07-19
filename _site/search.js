@@ -80,7 +80,10 @@ function score(item,tokens,query){
   if(item.primarySource)value+=tokens.some(function(token){return ['official','court','government','regulator','sec','doj','judgment','conviction','enforcement','audit'].indexOf(token)>=0;})?42:20;
   if(String(item.sourceAuthority||'').toLowerCase()==='primary-official')value+=16;
   value+=gradeBoost(item.evidenceGrade)+statusBoost(item.statusClass)+reviewBoost(item.reviewStatus);
-  if(tokens.some(function(token){return ['conviction','guilty','judgment','proven','established','order'].indexOf(token)>=0;})&&item.statusClass==='established')value+=42;
+  const adjudicatedIntent=tokens.some(function(token){return ['conviction','guilty','judgment','proven','established','order'].indexOf(token)>=0;});
+  if(adjudicatedIntent&&item.statusClass==='established')value+=88;
+  if(adjudicatedIntent&&['investigation-finding','court-record','document-extraction'].indexOf(String(item.sourceType||''))>=0)value+=36;
+  if(adjudicatedIntent&&item.resultKind==='relationship'&&item.statusClass!=='established')value-=72;
   if(tokens.some(function(token){return ['charge','charged','complaint','allegation','indictment'].indexOf(token)>=0;})&&(item.statusClass==='allegation'||item.statusClass==='enforcement'))value+=28;
   const missingIntent=tokens.some(function(token){return ['missing','removed','redaction','redacted','restored','hash','withheld'].indexOf(token)>=0;});
   if(missingIntent&&item.statusClass==='source-change')value+=150;

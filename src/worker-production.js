@@ -39,6 +39,13 @@ const forumRoutes = new Set([
   '/.netlify/functions/report-forum-post'
 ]);
 
+const authRoutes = new Set([
+  '/api/auth/request-link',
+  '/api/auth/verify',
+  '/api/auth/logout',
+  '/api/auth/health'
+]);
+
 const jsonHeaders = {
   'Content-Type': 'application/json; charset=utf-8',
   'Cache-Control': 'no-store',
@@ -166,6 +173,14 @@ async function validateMemberResponse(response) {
   return response;
 }
 
+async function validateAuthResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-api') {
+    return unavailable('non-authoritative-auth-response-blocked', `Origin was ${origin || 'missing'}`, 'member');
+  }
+  return response;
+}
+
 async function validatePayPalResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-paypal-subscriptions') {
@@ -246,6 +261,14 @@ export default {
         return unavailable('paypal-worker-exception', error?.message || error, 'paypal');
       }
     }
+    if (authRoutes.has(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
+      try {
+        return validateAuthResponse(await forumWorker.fetch(request, d1OnlyForumEnv(env), ctx));
+      } catch (error) {
+        return unavailable('auth-worker-exception', error?.message || error, 'member');
+      }
+    }
     if (isMemberExperienceRoute(path)) {
       if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'member');
       try {
@@ -256,7 +279,7 @@ export default {
     }
     const reportJobId = completedReportJobId(path, request.method);
     if (reportJobId) {
-      const response = await forumWorker.fetch(request, env, ctx);
+      const response = await forumWorker.fetch(request, d1OnlyForumEnv(env), ctx);
       if (response.ok && hasD1(env)) {
         const deliveryTask = queueAndDeliverVerifiedReport(env, reportJobId);
         if (ctx?.waitUntil) ctx.waitUntil(deliveryTask);
@@ -264,7 +287,7 @@ export default {
       }
       return response;
     }
-    if (!forumRoutes.has(path)) return forumWorker.fetch(request, env, ctx);
+    if (!forumRoutes.has(path)) return forumWorker.fetch(request, d1OnlyForumEnv(env), ctx);
     if (!hasD1(env)) return unavailable('members-db-binding-unavailable');
     try {
       const response = await forumWorker.fetch(request, d1OnlyForumEnv(env), ctx);

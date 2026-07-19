@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:19:43.081Z",
+  "updated": "2026-07-19T07:49:47.981Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
-    "nodes": 130,
-    "edges": 163,
+    "nodes": 121,
+    "edges": 151,
     "topNodes": 25
   },
   "top": [
@@ -357,48 +357,6 @@
       "summary": "Palantir government platforms is ranked 91/100 because of 1 relationship route(s), 6 control layer(s), 8 record signal(s), 10 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
-      "id": "health-data-and-emergency-systems",
-      "name": "Health data and emergency systems",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "health",
-        "identity-access",
-        "public-private-contracts"
-      ],
-      "score": 91,
-      "centrality": 12,
-      "evidenceConfidence": 10,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Alien Registration Form and Evidence of Registration",
-        "Modernizing Security Requirements",
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Health, Nutrition and Population Sector Development Program"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
       "id": "caci-international",
       "name": "CACI International",
       "types": [
@@ -587,95 +545,6 @@
       "summary": "SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
-      "id": "banking-and-payment-rails",
-      "name": "Banking and payment rails",
-      "types": [
-        "subject lane"
-      ],
-      "layers": [
-        "money",
-        "banking",
-        "identity-access"
-      ],
-      "score": 88,
-      "centrality": 11,
-      "evidenceConfidence": 11,
-      "missingPressure": 16,
-      "contradictionPressure": 0,
-      "records": [
-        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Boosting Green Finance, Investment and Trade in Rwanda",
-        "Chattogram Water Supply Improvement Project",
-        "Transforming Agri-food Systems in Morocco",
-        "Health, Nutrition and Population Sector Development Program",
-        "Amaravati Integrated Urban Development Program",
-        "Second Bangladesh Green and Climate Resilient Development Credit"
-      ],
-      "missing": [
-        "Primary record route",
-        "Entity brief links",
-        "Counter-source route",
-        "Court/filing/contract route where relevant"
-      ],
-      "watch": [
-        "New records in this subject lane",
-        "Repeated entities",
-        "Evidence upgrades",
-        "Contradictions"
-      ],
-      "links": [
-        "subject-briefs.html"
-      ],
-      "summary": "Banking and payment rails is ranked 88/100 because of 11 relationship route(s), 3 control layer(s), 8 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
-      "id": "world-bank",
-      "name": "World Bank",
-      "types": [
-        "institution signal",
-        "institution"
-      ],
-      "layers": [
-        "institution",
-        "money",
-        "foundations-ngos",
-        "public-private-contracts"
-      ],
-      "score": 80,
-      "centrality": 3,
-      "evidenceConfidence": 16,
-      "missingPressure": 24,
-      "contradictionPressure": 0,
-      "records": [
-        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53",
-        "Boosting Green Finance, Investment and Trade in Rwanda",
-        "Chattogram Water Supply Improvement Project",
-        "Transforming Agri-food Systems in Morocco",
-        "Health, Nutrition and Population Sector Development Program",
-        "Amaravati Integrated Urban Development Program",
-        "Second Bangladesh Green and Climate Resilient Development Credit"
-      ],
-      "missing": [
-        "Funding route",
-        "Board / leadership record",
-        "Partner companies",
-        "Procurement or grant route",
-        "Legal, audit or oversight record",
-        "Counter-source route"
-      ],
-      "watch": [
-        "Policy changes",
-        "Procurement records",
-        "Partner announcements",
-        "Legal or oversight records"
-      ],
-      "links": [
-        "institution-control-tracker.html"
-      ],
-      "summary": "World Bank is ranked 80/100 because of 3 relationship route(s), 4 control layer(s), 7 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
-    },
-    {
       "id": "digital-id-and-access-systems",
       "name": "Digital ID and access systems",
       "types": [
@@ -715,6 +584,47 @@
         "subject-briefs.html"
       ],
       "summary": "Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "health-data-and-emergency-systems",
+      "name": "Health data and emergency systems",
+      "types": [
+        "subject lane"
+      ],
+      "layers": [
+        "health",
+        "identity-access",
+        "public-private-contracts"
+      ],
+      "score": 78,
+      "centrality": 9,
+      "evidenceConfidence": 9,
+      "missingPressure": 16,
+      "contradictionPressure": 0,
+      "records": [
+        "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+        "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+        "Alien Registration Form and Evidence of Registration",
+        "Modernizing Security Requirements",
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "missing": [
+        "Primary record route",
+        "Entity brief links",
+        "Counter-source route",
+        "Court/filing/contract route where relevant"
+      ],
+      "watch": [
+        "New records in this subject lane",
+        "Repeated entities",
+        "Evidence upgrades",
+        "Contradictions"
+      ],
+      "links": [
+        "subject-briefs.html"
+      ],
+      "summary": "Health data and emergency systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "foundation-and-ngo-policy-influence",
@@ -797,6 +707,46 @@
         "institution-control-tracker.html"
       ],
       "summary": "United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "world-bank",
+      "name": "World Bank",
+      "types": [
+        "institution signal",
+        "institution"
+      ],
+      "layers": [
+        "institution",
+        "money",
+        "foundations-ngos",
+        "public-private-contracts"
+      ],
+      "score": 74,
+      "centrality": 3,
+      "evidenceConfidence": 10,
+      "missingPressure": 24,
+      "contradictionPressure": 0,
+      "records": [
+        "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 1, 2, 4, 33, 39, 40, and 53"
+      ],
+      "missing": [
+        "Funding route",
+        "Board / leadership record",
+        "Partner companies",
+        "Procurement or grant route",
+        "Legal, audit or oversight record",
+        "Counter-source route"
+      ],
+      "watch": [
+        "Policy changes",
+        "Procurement records",
+        "Partner announcements",
+        "Legal or oversight records"
+      ],
+      "links": [
+        "institution-control-tracker.html"
+      ],
+      "summary": "World Bank is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "european-commission",
@@ -1106,6 +1056,44 @@
         "subject-briefs.html"
       ],
       "summary": "Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s)."
+    },
+    {
+      "id": "jeff-bezos",
+      "name": "Jeff Bezos",
+      "types": [
+        "elite network profile"
+      ],
+      "layers": [
+        "ai-data",
+        "media-narrative",
+        "public-private-contracts",
+        "security"
+      ],
+      "score": 65,
+      "centrality": 4,
+      "evidenceConfidence": 7,
+      "missingPressure": 20,
+      "contradictionPressure": 0,
+      "records": [
+        "AMAZON COM INC (AMZN)"
+      ],
+      "missing": [
+        "Current beneficial ownership and voting-control record where relevant",
+        "Public contracts touching the ecosystem",
+        "Foundation grant routes where relevant",
+        "Lobbying or political funding routes where relevant",
+        "Legal/regulatory records and counter-sources"
+      ],
+      "watch": [
+        "New filings",
+        "New contracts",
+        "New court or regulatory records",
+        "New foundation or policy-route records"
+      ],
+      "links": [
+        "billionaire-control-tracker.html"
+      ],
+      "summary": "Jeff Bezos is ranked 65/100 because of 4 relationship route(s), 4 control layer(s), 1 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     }
   ],
   "edges": [
@@ -1733,69 +1721,6 @@
       "source": "subject brief"
     },
     {
-      "from": "banking-and-payment-rails",
-      "to": "republic-of-rwanda",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "object-object",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "chattogram-water-supply-and-sewerage-authority",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "people-s-republic-of-bangladesh",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "kingdom-of-morocco",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "ministry-of-health-and-family-welfare",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "republic-of-india",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "banking-and-payment-rails",
-      "to": "finance-division-ministry-of-finance",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
       "from": "health-data-and-emergency-systems",
       "to": "homeland-security-department",
       "type": "subject entity route",
@@ -1854,27 +1779,6 @@
     {
       "from": "health-data-and-emergency-systems",
       "to": "national-aeronautics-and-space-administration",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "ministry-of-health-and-family-welfare",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "people-s-republic-of-bangladesh",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "health-data-and-emergency-systems",
-      "to": "object-object",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"
@@ -2333,17 +2237,6 @@
       ]
     },
     {
-      "entity": "Health data and emergency systems",
-      "priority": "red",
-      "why": "Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
-      "next": [
-        "subject-briefs.html",
-        "evidence-vault.html",
-        "daily-missing-records.html",
-        "search.html"
-      ]
-    },
-    {
       "entity": "CACI International",
       "priority": "red",
       "why": "CACI International is ranked 88/100 because of 1 relationship route(s), 5 control layer(s), 8 record signal(s), 8 missing-record prompt(s), and 0 review prompt(s).",
@@ -2386,6 +2279,17 @@
       "next": [
         "private-contractor-tracker.html",
         "contractor-briefs/leidos-saic-lineage.html",
+        "evidence-vault.html",
+        "daily-missing-records.html",
+        "search.html"
+      ]
+    },
+    {
+      "entity": "Digital ID and access systems",
+      "priority": "amber",
+      "why": "Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).",
+      "next": [
+        "subject-briefs.html",
         "evidence-vault.html",
         "daily-missing-records.html",
         "search.html"

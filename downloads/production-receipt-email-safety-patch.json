@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.309Z",
+  "changed": false,
+  "receipt": "scripts/build-production-deploy-receipt.js",
+  "requiredState": {
+    "marketingAutomation": false,
+    "transactionalEmail": true,
+    "brevoDomainAuthenticated": true,
+    "preActivationRetryGuard": true,
+    "evidenceBoundedCampaignQuality": true
+  },
+  "dailyCron": "5 6 * * *",
+  "weeklyCron": "15 7 * * 1",
+  "boundary": "A production receipt passes when authenticated transactional delivery is ready, scheduled marketing remains disabled, legacy retries are quarantined, evidence-bounded campaign code and unsubscribe controls are present, and no bulk campaign can send without separate activation."
+}

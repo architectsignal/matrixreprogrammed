@@ -3,8 +3,14 @@
   "generatedPolicy": "Only explicitly registered public locations may be mapped. The build never geocodes names, addresses or inferred relationships.",
   "evidenceBoundary": "A mapped point establishes only the registered geographic scope stated by its precision class and cited public source. It does not prove control, coordination, presence at a particular time, ownership, wrongdoing or a relationship between nearby points.",
   "engines": {
-    "maplibre": {"version": "6.0.0-20", "license": "BSD-3-Clause"},
-    "pmtiles": {"version": "4.4.1", "license": "BSD-3-Clause"}
+    "maplibre": {
+      "version": "5.24.0",
+      "license": "BSD-3-Clause"
+    },
+    "pmtiles": {
+      "version": "4.4.1",
+      "license": "BSD-3-Clause"
+    }
   },
   "basemap": {
     "styleUrl": "https://demotiles.maplibre.org/style.json",
@@ -13,43 +19,663 @@
     "fallback": "local-dark-graticule"
   },
   "precisionClasses": {
-    "public-campus": {"label": "Public campus", "maximumUncertaintyMetres": 1500},
-    "city-centroid": {"label": "City-level", "maximumUncertaintyMetres": 25000},
-    "jurisdiction-centroid": {"label": "Jurisdiction-level", "maximumUncertaintyMetres": 150000}
+    "public-campus": {
+      "label": "Public campus",
+      "maximumUncertaintyMetres": 1500
+    },
+    "city-centroid": {
+      "label": "City-level",
+      "maximumUncertaintyMetres": 25000
+    },
+    "jurisdiction-centroid": {
+      "label": "Jurisdiction-level",
+      "maximumUncertaintyMetres": 150000
+    }
   },
   "pmtilesSources": [],
   "locations": [
-    {"id":"sec-hq","name":"U.S. Securities and Exchange Commission","category":"regulator","role":"securities regulator","country":"United States","city":"Washington, DC","coordinates":[-77.0091,38.8977],"precision":"public-campus","sourceDomains":["sec.gov"],"sourceUrl":"https://www.sec.gov/contact-information/sec-directory","sourceTitle":"SEC directory and contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"federal-reserve-board","name":"Board of Governors of the Federal Reserve System","category":"central-bank","role":"central bank governance","country":"United States","city":"Washington, DC","coordinates":[-77.0457,38.8936],"precision":"public-campus","sourceDomains":["federalreserve.gov"],"sourceUrl":"https://www.federalreserve.gov/aboutthefed/contact-us-topics.htm","sourceTitle":"Federal Reserve contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"us-treasury","name":"United States Department of the Treasury","category":"government","role":"treasury and financial policy","country":"United States","city":"Washington, DC","coordinates":[-77.0341,38.8974],"precision":"public-campus","sourceDomains":["treasury.gov","home.treasury.gov"],"sourceUrl":"https://home.treasury.gov/utility/contact","sourceTitle":"U.S. Treasury contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"us-doj","name":"United States Department of Justice","category":"justice","role":"federal justice department","country":"United States","city":"Washington, DC","coordinates":[-77.0251,38.8939],"precision":"public-campus","sourceDomains":["justice.gov"],"sourceUrl":"https://www.justice.gov/contact-us","sourceTitle":"Department of Justice contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"fbi-hq","name":"Federal Bureau of Investigation Headquarters","category":"law-enforcement","role":"federal law enforcement","country":"United States","city":"Washington, DC","coordinates":[-77.0259,38.8957],"precision":"public-campus","sourceDomains":["fbi.gov"],"sourceUrl":"https://www.fbi.gov/contact-us/fbi-headquarters","sourceTitle":"FBI Headquarters contact page","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"cia-hq","name":"Central Intelligence Agency Headquarters","category":"intelligence","role":"foreign intelligence","country":"United States","city":"Langley area, Virginia","coordinates":[-77.1467,38.9517],"precision":"city-centroid","sourceDomains":["cia.gov"],"sourceUrl":"https://www.cia.gov/contact-cia/","sourceTitle":"CIA public contact page","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"nsa-hq","name":"National Security Agency","category":"intelligence","role":"signals intelligence and cybersecurity","country":"United States","city":"Fort Meade area, Maryland","coordinates":[-76.7436,39.1082],"precision":"city-centroid","sourceDomains":["nsa.gov"],"sourceUrl":"https://www.nsa.gov/about/contact-us/","sourceTitle":"NSA public contact page","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"gao-hq","name":"U.S. Government Accountability Office","category":"oversight","role":"public audit and oversight","country":"United States","city":"Washington, DC","coordinates":[-77.0199,38.8995],"precision":"public-campus","sourceDomains":["gao.gov"],"sourceUrl":"https://www.gao.gov/about/contact-us","sourceTitle":"GAO contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"fincen","name":"Financial Crimes Enforcement Network","category":"financial-intelligence","role":"financial intelligence unit","country":"United States","city":"Vienna, Virginia","coordinates":[-77.2653,38.9012],"precision":"city-centroid","sourceDomains":["fincen.gov"],"sourceUrl":"https://www.fincen.gov/contact","sourceTitle":"FinCEN contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"un-hq","name":"United Nations Headquarters","category":"intergovernmental","role":"multilateral governance","country":"United States","city":"New York","coordinates":[-73.9680,40.7494],"precision":"public-campus","sourceDomains":["un.org"],"sourceUrl":"https://www.un.org/en/about-us/contact-us","sourceTitle":"United Nations contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"imf-hq","name":"International Monetary Fund","category":"financial-institution","role":"international monetary cooperation","country":"United States","city":"Washington, DC","coordinates":[-77.0443,38.8988],"precision":"public-campus","sourceDomains":["imf.org"],"sourceUrl":"https://www.imf.org/en/About/contact-us","sourceTitle":"IMF contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"world-bank-hq","name":"World Bank Group","category":"financial-institution","role":"international development finance","country":"United States","city":"Washington, DC","coordinates":[-77.0426,38.8993],"precision":"public-campus","sourceDomains":["worldbank.org"],"sourceUrl":"https://www.worldbank.org/en/about/contacts","sourceTitle":"World Bank contacts","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"eu-commission","name":"European Commission","category":"government","role":"European Union executive","country":"Belgium","city":"Brussels","coordinates":[4.3805,50.8430],"precision":"public-campus","sourceDomains":["ec.europa.eu","commission.europa.eu","europa.eu"],"sourceUrl":"https://commission.europa.eu/about-european-commission/contact_en","sourceTitle":"European Commission contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"european-parliament-brussels","name":"European Parliament — Brussels","category":"parliament","role":"European Union legislature","country":"Belgium","city":"Brussels","coordinates":[4.3745,50.8389],"precision":"public-campus","sourceDomains":["europarl.europa.eu"],"sourceUrl":"https://www.europarl.europa.eu/at-your-service/en/contact","sourceTitle":"European Parliament contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"nato-hq","name":"NATO Headquarters","category":"security-alliance","role":"collective defence alliance","country":"Belgium","city":"Brussels","coordinates":[4.4298,50.8798],"precision":"public-campus","sourceDomains":["nato.int"],"sourceUrl":"https://www.nato.int/cps/en/natohq/contact.htm","sourceTitle":"NATO contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"europol","name":"Europol","category":"law-enforcement","role":"European law-enforcement cooperation","country":"Netherlands","city":"The Hague","coordinates":[4.2824,52.0787],"precision":"public-campus","sourceDomains":["europol.europa.eu"],"sourceUrl":"https://www.europol.europa.eu/about-europol/contact","sourceTitle":"Europol contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"icc","name":"International Criminal Court","category":"justice","role":"international criminal court","country":"Netherlands","city":"The Hague","coordinates":[4.3582,52.1079],"precision":"public-campus","sourceDomains":["icc-cpi.int"],"sourceUrl":"https://www.icc-cpi.int/contact","sourceTitle":"ICC contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"icj","name":"International Court of Justice","category":"justice","role":"principal judicial organ of the United Nations","country":"Netherlands","city":"The Hague","coordinates":[4.2955,52.0866],"precision":"public-campus","sourceDomains":["icj-cij.org"],"sourceUrl":"https://www.icj-cij.org/contact","sourceTitle":"ICJ contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"interpol","name":"INTERPOL General Secretariat","category":"law-enforcement","role":"international police cooperation","country":"France","city":"Lyon","coordinates":[4.8497,45.7827],"precision":"public-campus","sourceDomains":["interpol.int"],"sourceUrl":"https://www.interpol.int/Who-we-are/Contact-INTERPOL","sourceTitle":"INTERPOL contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"oecd","name":"Organisation for Economic Co-operation and Development","category":"intergovernmental","role":"economic policy cooperation","country":"France","city":"Paris","coordinates":[2.2663,48.8610],"precision":"public-campus","sourceDomains":["oecd.org"],"sourceUrl":"https://www.oecd.org/contact/","sourceTitle":"OECD contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"fatf","name":"Financial Action Task Force","category":"financial-governance","role":"anti-money-laundering standards","country":"France","city":"Paris","coordinates":[2.2660,48.8612],"precision":"public-campus","sourceDomains":["fatf-gafi.org"],"sourceUrl":"https://www.fatf-gafi.org/en/contact-us.html","sourceTitle":"FATF contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"bis","name":"Bank for International Settlements","category":"financial-institution","role":"central-bank cooperation","country":"Switzerland","city":"Basel","coordinates":[7.5910,47.5487],"precision":"public-campus","sourceDomains":["bis.org"],"sourceUrl":"https://www.bis.org/about/contact.htm","sourceTitle":"BIS contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"who","name":"World Health Organization","category":"intergovernmental","role":"international public health","country":"Switzerland","city":"Geneva","coordinates":[6.1341,46.2324],"precision":"public-campus","sourceDomains":["who.int"],"sourceUrl":"https://www.who.int/about/contact-us","sourceTitle":"WHO contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"wto","name":"World Trade Organization","category":"intergovernmental","role":"international trade governance","country":"Switzerland","city":"Geneva","coordinates":[6.1405,46.2232],"precision":"public-campus","sourceDomains":["wto.org"],"sourceUrl":"https://www.wto.org/english/info_e/cont_e.htm","sourceTitle":"WTO contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"iaea","name":"International Atomic Energy Agency","category":"intergovernmental","role":"nuclear safeguards and cooperation","country":"Austria","city":"Vienna","coordinates":[16.4169,48.2348],"precision":"public-campus","sourceDomains":["iaea.org"],"sourceUrl":"https://www.iaea.org/contact","sourceTitle":"IAEA contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"unodc","name":"United Nations Office on Drugs and Crime","category":"intergovernmental","role":"crime, drugs and corruption programmes","country":"Austria","city":"Vienna","coordinates":[16.4165,48.2345],"precision":"public-campus","sourceDomains":["unodc.org"],"sourceUrl":"https://www.unodc.org/unodc/en/contact-us.html","sourceTitle":"UNODC contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"ecb","name":"European Central Bank","category":"central-bank","role":"euro-area monetary authority","country":"Germany","city":"Frankfurt","coordinates":[8.7452,50.1095],"precision":"public-campus","sourceDomains":["ecb.europa.eu"],"sourceUrl":"https://www.ecb.europa.eu/services/contact/html/index.en.html","sourceTitle":"ECB contact information","evidenceGrade":"A","reviewStatus":"registry-defined"},
-    {"id":"gchq","name":"Government Communications Headquarters","category":"intelligence","role":"signals intelligence and cyber security","country":"United Kingdom","city":"Cheltenham","coordinates":[-2.1260,51.8991],"precision":"city-centroid","sourceDomains":["gchq.gov.uk"],"sourceUrl":"https://www.gchq.gov.uk/contact","sourceTitle":"GCHQ public contact page","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"mi5","name":"Security Service (MI5)","category":"intelligence","role":"domestic security intelligence","country":"United Kingdom","city":"London","coordinates":[-0.1257,51.4950],"precision":"city-centroid","sourceDomains":["mi5.gov.uk"],"sourceUrl":"https://www.mi5.gov.uk/contact-us","sourceTitle":"MI5 public contact page","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"sis","name":"Secret Intelligence Service (MI6)","category":"intelligence","role":"foreign intelligence","country":"United Kingdom","city":"London","coordinates":[-0.1246,51.4872],"precision":"city-centroid","sourceDomains":["sis.gov.uk"],"sourceUrl":"https://www.sis.gov.uk/contact-us.html","sourceTitle":"SIS public contact page","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"port-rotterdam","name":"Port of Rotterdam","category":"infrastructure","role":"maritime logistics hub","country":"Netherlands","city":"Rotterdam","coordinates":[4.2867,51.9160],"precision":"jurisdiction-centroid","sourceDomains":["portofrotterdam.com"],"sourceUrl":"https://www.portofrotterdam.com/en/contact","sourceTitle":"Port of Rotterdam contact information","evidenceGrade":"B","reviewStatus":"registry-defined"},
-    {"id":"port-singapore","name":"Port of Singapore","category":"infrastructure","role":"maritime logistics hub","country":"Singapore","city":"Singapore","coordinates":[103.8000,1.2640],"precision":"jurisdiction-centroid","sourceDomains":["mpa.gov.sg"],"sourceUrl":"https://www.mpa.gov.sg/contact-us","sourceTitle":"Maritime and Port Authority of Singapore contact information","evidenceGrade":"B","reviewStatus":"registry-defined"}
+    {
+      "id": "sec-hq",
+      "name": "U.S. Securities and Exchange Commission",
+      "category": "regulator",
+      "role": "securities regulator",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0091,
+        38.8977
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "sec.gov"
+      ],
+      "sourceUrl": "https://www.sec.gov/contact-information/sec-directory",
+      "sourceTitle": "SEC directory and contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "federal-reserve-board",
+      "name": "Board of Governors of the Federal Reserve System",
+      "category": "central-bank",
+      "role": "central bank governance",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0457,
+        38.8936
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "federalreserve.gov"
+      ],
+      "sourceUrl": "https://www.federalreserve.gov/aboutthefed/contact-us-topics.htm",
+      "sourceTitle": "Federal Reserve contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "us-treasury",
+      "name": "United States Department of the Treasury",
+      "category": "government",
+      "role": "treasury and financial policy",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0341,
+        38.8974
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "treasury.gov",
+        "home.treasury.gov"
+      ],
+      "sourceUrl": "https://home.treasury.gov/utility/contact",
+      "sourceTitle": "U.S. Treasury contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "us-doj",
+      "name": "United States Department of Justice",
+      "category": "justice",
+      "role": "federal justice department",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0251,
+        38.8939
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "justice.gov"
+      ],
+      "sourceUrl": "https://www.justice.gov/contact-us",
+      "sourceTitle": "Department of Justice contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "fbi-hq",
+      "name": "Federal Bureau of Investigation Headquarters",
+      "category": "law-enforcement",
+      "role": "federal law enforcement",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0259,
+        38.8957
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "fbi.gov"
+      ],
+      "sourceUrl": "https://www.fbi.gov/contact-us/fbi-headquarters",
+      "sourceTitle": "FBI Headquarters contact page",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "cia-hq",
+      "name": "Central Intelligence Agency Headquarters",
+      "category": "intelligence",
+      "role": "foreign intelligence",
+      "country": "United States",
+      "city": "Langley area, Virginia",
+      "coordinates": [
+        -77.1467,
+        38.9517
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "cia.gov"
+      ],
+      "sourceUrl": "https://www.cia.gov/contact-cia/",
+      "sourceTitle": "CIA public contact page",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "nsa-hq",
+      "name": "National Security Agency",
+      "category": "intelligence",
+      "role": "signals intelligence and cybersecurity",
+      "country": "United States",
+      "city": "Fort Meade area, Maryland",
+      "coordinates": [
+        -76.7436,
+        39.1082
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "nsa.gov"
+      ],
+      "sourceUrl": "https://www.nsa.gov/about/contact-us/",
+      "sourceTitle": "NSA public contact page",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "gao-hq",
+      "name": "U.S. Government Accountability Office",
+      "category": "oversight",
+      "role": "public audit and oversight",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0199,
+        38.8995
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "gao.gov"
+      ],
+      "sourceUrl": "https://www.gao.gov/about/contact-us",
+      "sourceTitle": "GAO contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "fincen",
+      "name": "Financial Crimes Enforcement Network",
+      "category": "financial-intelligence",
+      "role": "financial intelligence unit",
+      "country": "United States",
+      "city": "Vienna, Virginia",
+      "coordinates": [
+        -77.2653,
+        38.9012
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "fincen.gov"
+      ],
+      "sourceUrl": "https://www.fincen.gov/contact",
+      "sourceTitle": "FinCEN contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "un-hq",
+      "name": "United Nations Headquarters",
+      "category": "intergovernmental",
+      "role": "multilateral governance",
+      "country": "United States",
+      "city": "New York",
+      "coordinates": [
+        -73.968,
+        40.7494
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "un.org"
+      ],
+      "sourceUrl": "https://www.un.org/en/about-us/contact-us",
+      "sourceTitle": "United Nations contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "imf-hq",
+      "name": "International Monetary Fund",
+      "category": "financial-institution",
+      "role": "international monetary cooperation",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0443,
+        38.8988
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "imf.org"
+      ],
+      "sourceUrl": "https://www.imf.org/en/About/contact-us",
+      "sourceTitle": "IMF contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "world-bank-hq",
+      "name": "World Bank Group",
+      "category": "financial-institution",
+      "role": "international development finance",
+      "country": "United States",
+      "city": "Washington, DC",
+      "coordinates": [
+        -77.0426,
+        38.8993
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "worldbank.org"
+      ],
+      "sourceUrl": "https://www.worldbank.org/en/about/contacts",
+      "sourceTitle": "World Bank contacts",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "eu-commission",
+      "name": "European Commission",
+      "category": "government",
+      "role": "European Union executive",
+      "country": "Belgium",
+      "city": "Brussels",
+      "coordinates": [
+        4.3805,
+        50.843
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "ec.europa.eu",
+        "commission.europa.eu",
+        "europa.eu"
+      ],
+      "sourceUrl": "https://commission.europa.eu/about-european-commission/contact_en",
+      "sourceTitle": "European Commission contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "european-parliament-brussels",
+      "name": "European Parliament — Brussels",
+      "category": "parliament",
+      "role": "European Union legislature",
+      "country": "Belgium",
+      "city": "Brussels",
+      "coordinates": [
+        4.3745,
+        50.8389
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "europarl.europa.eu"
+      ],
+      "sourceUrl": "https://www.europarl.europa.eu/at-your-service/en/contact",
+      "sourceTitle": "European Parliament contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "nato-hq",
+      "name": "NATO Headquarters",
+      "category": "security-alliance",
+      "role": "collective defence alliance",
+      "country": "Belgium",
+      "city": "Brussels",
+      "coordinates": [
+        4.4298,
+        50.8798
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "nato.int"
+      ],
+      "sourceUrl": "https://www.nato.int/cps/en/natohq/contact.htm",
+      "sourceTitle": "NATO contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "europol",
+      "name": "Europol",
+      "category": "law-enforcement",
+      "role": "European law-enforcement cooperation",
+      "country": "Netherlands",
+      "city": "The Hague",
+      "coordinates": [
+        4.2824,
+        52.0787
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "europol.europa.eu"
+      ],
+      "sourceUrl": "https://www.europol.europa.eu/about-europol/contact",
+      "sourceTitle": "Europol contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "icc",
+      "name": "International Criminal Court",
+      "category": "justice",
+      "role": "international criminal court",
+      "country": "Netherlands",
+      "city": "The Hague",
+      "coordinates": [
+        4.3582,
+        52.1079
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "icc-cpi.int"
+      ],
+      "sourceUrl": "https://www.icc-cpi.int/contact",
+      "sourceTitle": "ICC contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "icj",
+      "name": "International Court of Justice",
+      "category": "justice",
+      "role": "principal judicial organ of the United Nations",
+      "country": "Netherlands",
+      "city": "The Hague",
+      "coordinates": [
+        4.2955,
+        52.0866
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "icj-cij.org"
+      ],
+      "sourceUrl": "https://www.icj-cij.org/contact",
+      "sourceTitle": "ICJ contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "interpol",
+      "name": "INTERPOL General Secretariat",
+      "category": "law-enforcement",
+      "role": "international police cooperation",
+      "country": "France",
+      "city": "Lyon",
+      "coordinates": [
+        4.8497,
+        45.7827
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "interpol.int"
+      ],
+      "sourceUrl": "https://www.interpol.int/Who-we-are/Contact-INTERPOL",
+      "sourceTitle": "INTERPOL contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "oecd",
+      "name": "Organisation for Economic Co-operation and Development",
+      "category": "intergovernmental",
+      "role": "economic policy cooperation",
+      "country": "France",
+      "city": "Paris",
+      "coordinates": [
+        2.2663,
+        48.861
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "oecd.org"
+      ],
+      "sourceUrl": "https://www.oecd.org/contact/",
+      "sourceTitle": "OECD contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "fatf",
+      "name": "Financial Action Task Force",
+      "category": "financial-governance",
+      "role": "anti-money-laundering standards",
+      "country": "France",
+      "city": "Paris",
+      "coordinates": [
+        2.266,
+        48.8612
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "fatf-gafi.org"
+      ],
+      "sourceUrl": "https://www.fatf-gafi.org/en/contact-us.html",
+      "sourceTitle": "FATF contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "bis",
+      "name": "Bank for International Settlements",
+      "category": "financial-institution",
+      "role": "central-bank cooperation",
+      "country": "Switzerland",
+      "city": "Basel",
+      "coordinates": [
+        7.591,
+        47.5487
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "bis.org"
+      ],
+      "sourceUrl": "https://www.bis.org/about/contact.htm",
+      "sourceTitle": "BIS contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "who",
+      "name": "World Health Organization",
+      "category": "intergovernmental",
+      "role": "international public health",
+      "country": "Switzerland",
+      "city": "Geneva",
+      "coordinates": [
+        6.1341,
+        46.2324
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "who.int"
+      ],
+      "sourceUrl": "https://www.who.int/about/contact-us",
+      "sourceTitle": "WHO contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "wto",
+      "name": "World Trade Organization",
+      "category": "intergovernmental",
+      "role": "international trade governance",
+      "country": "Switzerland",
+      "city": "Geneva",
+      "coordinates": [
+        6.1405,
+        46.2232
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "wto.org"
+      ],
+      "sourceUrl": "https://www.wto.org/english/info_e/cont_e.htm",
+      "sourceTitle": "WTO contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "iaea",
+      "name": "International Atomic Energy Agency",
+      "category": "intergovernmental",
+      "role": "nuclear safeguards and cooperation",
+      "country": "Austria",
+      "city": "Vienna",
+      "coordinates": [
+        16.4169,
+        48.2348
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "iaea.org"
+      ],
+      "sourceUrl": "https://www.iaea.org/contact",
+      "sourceTitle": "IAEA contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "unodc",
+      "name": "United Nations Office on Drugs and Crime",
+      "category": "intergovernmental",
+      "role": "crime, drugs and corruption programmes",
+      "country": "Austria",
+      "city": "Vienna",
+      "coordinates": [
+        16.4165,
+        48.2345
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "unodc.org"
+      ],
+      "sourceUrl": "https://www.unodc.org/unodc/en/contact-us.html",
+      "sourceTitle": "UNODC contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "ecb",
+      "name": "European Central Bank",
+      "category": "central-bank",
+      "role": "euro-area monetary authority",
+      "country": "Germany",
+      "city": "Frankfurt",
+      "coordinates": [
+        8.7452,
+        50.1095
+      ],
+      "precision": "public-campus",
+      "sourceDomains": [
+        "ecb.europa.eu"
+      ],
+      "sourceUrl": "https://www.ecb.europa.eu/services/contact/html/index.en.html",
+      "sourceTitle": "ECB contact information",
+      "evidenceGrade": "A",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "gchq",
+      "name": "Government Communications Headquarters",
+      "category": "intelligence",
+      "role": "signals intelligence and cyber security",
+      "country": "United Kingdom",
+      "city": "Cheltenham",
+      "coordinates": [
+        -2.126,
+        51.8991
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "gchq.gov.uk"
+      ],
+      "sourceUrl": "https://www.gchq.gov.uk/contact",
+      "sourceTitle": "GCHQ public contact page",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "mi5",
+      "name": "Security Service (MI5)",
+      "category": "intelligence",
+      "role": "domestic security intelligence",
+      "country": "United Kingdom",
+      "city": "London",
+      "coordinates": [
+        -0.1257,
+        51.495
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "mi5.gov.uk"
+      ],
+      "sourceUrl": "https://www.mi5.gov.uk/contact-us",
+      "sourceTitle": "MI5 public contact page",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "sis",
+      "name": "Secret Intelligence Service (MI6)",
+      "category": "intelligence",
+      "role": "foreign intelligence",
+      "country": "United Kingdom",
+      "city": "London",
+      "coordinates": [
+        -0.1246,
+        51.4872
+      ],
+      "precision": "city-centroid",
+      "sourceDomains": [
+        "sis.gov.uk"
+      ],
+      "sourceUrl": "https://www.sis.gov.uk/contact-us.html",
+      "sourceTitle": "SIS public contact page",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "port-rotterdam",
+      "name": "Port of Rotterdam",
+      "category": "infrastructure",
+      "role": "maritime logistics hub",
+      "country": "Netherlands",
+      "city": "Rotterdam",
+      "coordinates": [
+        4.2867,
+        51.916
+      ],
+      "precision": "jurisdiction-centroid",
+      "sourceDomains": [
+        "portofrotterdam.com"
+      ],
+      "sourceUrl": "https://www.portofrotterdam.com/en/contact",
+      "sourceTitle": "Port of Rotterdam contact information",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    },
+    {
+      "id": "port-singapore",
+      "name": "Port of Singapore",
+      "category": "infrastructure",
+      "role": "maritime logistics hub",
+      "country": "Singapore",
+      "city": "Singapore",
+      "coordinates": [
+        103.8,
+        1.264
+      ],
+      "precision": "jurisdiction-centroid",
+      "sourceDomains": [
+        "mpa.gov.sg"
+      ],
+      "sourceUrl": "https://www.mpa.gov.sg/contact-us",
+      "sourceTitle": "Maritime and Port Authority of Singapore contact information",
+      "evidenceGrade": "B",
+      "reviewStatus": "registry-defined"
+    }
   ]
 }

@@ -19,10 +19,23 @@ function file(name) { return path.join(root, name); }
 function write(name, value) { fs.mkdirSync(path.dirname(file(name)), { recursive: true }); fs.writeFileSync(file(name), value); }
 function readJson(name, fallback) { try { const full = file(name); return fs.existsSync(full) ? JSON.parse(fs.readFileSync(full, 'utf8')) : fallback; } catch { return fallback; } }
 function esc(value = '') { return String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c])); }
-function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
+function scalarText(value, depth = 0) {
+  if (value == null || depth > 4) return '';
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value);
+  if (Array.isArray(value)) return value.map(item => scalarText(item, depth + 1)).filter(Boolean).join(', ');
+  if (typeof value === 'object') {
+    for (const key of ['name','label','title','text','value','display_name','project_name','countryname','sector','agency','agency_name','description']) {
+      const resolved = scalarText(value[key], depth + 1);
+      if (resolved) return resolved;
+    }
+    return Object.values(value).map(item => scalarText(item, depth + 1)).filter(Boolean).slice(0, 4).join(', ');
+  }
+  return '';
+}
+function clean(value = '') { return scalarText(value).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }
 function slug(value = 'record') { return clean(value).toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 90) || 'record'; }
 function arr(value) { return Array.isArray(value) ? value.filter(Boolean) : (value ? [value] : []); }
-function uniq(items) { return [...new Set(arr(items).map(clean).filter(Boolean))]; }
+function uniq(items) { return [...new Set(arr(items).map(clean).filter(value => value && value !== '[object Object]' && value !== 'object Object'))]; }
 
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController();
@@ -137,13 +150,13 @@ const lanes = [
     name: 'World Bank project search',
     output: 'data/source-pulls/worldbank-watch.json',
     method: 'GET',
-    url: 'https://search.worldbank.org/api/v2/projects?format=json&rows=10&fl=project_name,countryname,sector1,boardapprovaldate,totalamt,impagency',
+    url: 'https://projects.worldbank.org/en/projects-operations/project-search?format=json&rows=10&fl=project_name,countryname,sector1,boardapprovaldate,totalamt,impagency',
     recordType: 'global_project_record',
     evidenceGrade: 'documented association',
     controlLayers: ['development_finance', 'infrastructure', 'global_money'],
     sendTo: ['control-structure', 'power-entities', 'global-risk-clocks'],
     items: pull => Object.values(getByPath(pull, ['body', 'projects']) || {}).slice(0, 12),
-    normalize: item => ({ title: item.project_name || item.id || 'World Bank project', date: item.boardapprovaldate, source_url: 'https://search.worldbank.org/api/v2/projects', record_id: item.id, names: [item.impagency, item.countryname, item.sector1] })
+    normalize: item => ({ title: item.project_name || item.id || 'World Bank project', date: item.boardapprovaldate, source_url: 'https://projects.worldbank.org/en/projects-operations/project-search', record_id: item.id, names: [item.impagency, item.countryname, item.sector1] })
   },
   {
     id: 'news-signal-not-evidence',

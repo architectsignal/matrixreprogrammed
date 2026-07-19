@@ -1,20 +1,26 @@
 # Elite Reports
 
-Generated: 2026-07-16T06:00:15.414Z
+Generated: 2026-07-19T06:13:59.682Z
 
 ## Daily Revelation Report
 
-Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
+House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 
 Source: daily-command-brief.html
 
-## Health and Human Services Department — Entity Report
+## People's Republic of Bangladesh — Entity Report
 
 High-interest tracked entity because it appears across records and relationship candidates.
 
 Source: entity-daily-briefs.html
 
-## Management and Budget Office — Entity Report
+## Appellate Division of the Supreme Court of the State of New York — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Centers for Medicare & Medicaid Services — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
@@ -26,43 +32,37 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Agency for International Development — Entity Report
+## Federal Procurement Policy Office — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Agriculture Department — Entity Report
+## General Services Administration — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Energy Department — Entity Report
+## Health and Human Services Department — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## State Department — Entity Report
+## Management and Budget Office — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Treasury Department — Entity Report
+## National Aeronautics and Space Administration — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Veterans Affairs Department — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Commerce Department — Entity Report
+## 2021-00294 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

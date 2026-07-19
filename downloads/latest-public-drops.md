@@ -1,9 +1,45 @@
 # Latest Public-Source Drops
 
-Updated: 2026-07-17T06:32:12.012Z
+Updated: 2026-07-19T06:47:23.305Z
 
 ## Boundary
 These are dated public-source leads, not proof of wrongdoing. Every item must preserve its source, date, evidence class, boundary and verification route. An empty current window is preferable to stale material.
+
+## House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
+
+- Date: 2026-07-17
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxQU0NYdUNhVTJFeTRPNlFpVXZyWnFaaW1td2RJN0RuM3hmMnQ3WS1iREtwNjhfX19ndmhSV0hfOWlrWTgzblV0Z2NRaU5PSWxhdkpkM0RvQWFxVzBxZjVtSDR6c1ZSLUNFYzNtVXlXak5zNlBham94SFFRbW50a1pBdk1ONEM?oc=5
+- Timers: none
+
+House panel probing Epstein asked Leon Black about birthday book and their friendship CBS News
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+
+- Date: 2026-07-17
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
+- Timers: none
+
+Leon Black walked out of an Epstein House committee interview. Here's what we know PBS
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## The surveillance networks cities do not have to buy - Biometric Update
+
+- Date: 2026-07-17
+- Lane: Elite Control Structure
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQQnFleHUxeldqZ2N3V1RIQl9WVDk0TXhuSWgyRjBSUkU0WnNiUEpzNW93WHc1RE1sMEJUNUJxTDJROUZHYlNCZGtOYU9YQ1h3NkdPYmxCbS0xZzZFSGp3eHZhUVA2bXYyRVlBTGQ2aUNzQno4ekFPdmt1WUlWYkc4T1hQbVFhbHhHM0JOX09yVHhpVzd6?oc=5
+- Timers: none
+
+The surveillance networks cities do not have to buy Biometric Update
+
+Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 
 ## Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
 
@@ -17,6 +53,18 @@ Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill The Washington Post
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
+## Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+
+- Date: 2026-07-16
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+- Timers: none
+
+Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
 ## US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk
 
 - Date: 2026-07-16
@@ -26,6 +74,18 @@ Boundary: A fresh news or archive item is a lead, not a verdict. Open the source
 - Timers: none
 
 US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe thestandard.com.hk
+
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+
+## US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - The Standard (HK)
+
+- Date: 2026-07-16
+- Lane: Epstein Files, Timeline And Court Records
+- Evidence: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMi0gFBVV95cUxQXzY5M2tXUzFMSjhON0x2cHoyZFVITVA4NzJ6TDlEMXFhcDVTcXF6T2ItdnVGMGJHSWNpRnFoSDdtTGRUQTZwa1B2elJDRjVabmUzMUxxZ1NLajB0S2dGcnZBbU1ENTFhcklDOEdNc21ibzNzLVFFR190cE9EZGNlV1JKMW0ySkFmYXhYWG5UTlhxWGdDNlN2UkM1Q3psc2VRVElOWDB3Yndtc0xrOUtvQXNwZVQ3dVFRNG5GMWpvcEFpRjc3b1lCOTJROHRUd2NiTGc?oc=5
+- Timers: none
+
+US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe The Standard (HK)
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
@@ -173,26 +233,14 @@ Warren Buffett cuts off donations to Gates Foundation following Epstein revelati
 
 Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 
-## Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com
+## Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties - Reuters
 
-- Date: 2026-07-11
-- Lane: Declassified Files And Public Archives
+- Date: 2026-07-13
+- Lane: Epstein Files, Timeline And Court Records
 - Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5
+- Source: https://news.google.com/rss/articles/CBMivgFBVV95cUxOUVNqUk05ckUzeV93eFROQ0Jpc0ZjQWIxanZRbjdLc0hSTW1uREtMVnRJZTltUHp2UnBvVFBRVndPTDV6YWhGcGUyY1NPaWtxdnZZeTU1X2Qtd0N3YUlmUFQxSFhrRkRhUktWdEhleUhLaTVwNkNEU1JFU0hlR016eTUxekFqU2FpLUlPdVJEcTZPVW1CRGpJYklic1RtT1dFNFlfSWV4WHFDZ2Izc24zM3pYOHcyZ3l4X1pNOHN3?oc=5
 - Timers: none
 
-Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com
+Goldman lawyer Ruemmler to be questioned by House panel on Epstein ties Reuters
 
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-
-## NASA insider hints bigger UFO file release as declassification ramps up - Cybernews
-
-- Date: 2026-07-10
-- Lane: Declassified Files And Public Archives
-- Evidence: Seven-day public-record lead
-- Source: https://news.google.com/rss/articles/CBMiZkFVX3lxTE1yOWNmaDVZckoxYnU0UnUzMmlEVF94TG5OUlNQVFJqTU9Eb29vQWZvYTdXYXFMckY3dXQzbU1GTVZvSFVJREtGdXQ0YzFLNGpaa2dNN1pJRTNuUnZ0ZWVtTHpuaDFvZw?oc=5
-- Timers: none
-
-NASA insider hints bigger UFO file release as declassification ramps up Cybernews
-
-Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.

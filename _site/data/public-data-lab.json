@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "updated": "2026-07-12",
+  "updated": "2026-07-18",
   "title": "Matrix Public Data Laboratory",
   "engines": {
-    "duckdbWasm": "1.33.0",
+    "duckdbWasm": "1.30.0",
     "perspective": "4.5.2"
   },
   "boundary": "The laboratory lets readers reproduce counts, filters, joins and aggregations over approved public datasets. Query output reflects the selected records and code; it does not prove causation, motive, coordination, identity, present ownership or wrongdoing. Machine-extracted and machine-classified records remain subject to their stated review status and source limitations.",

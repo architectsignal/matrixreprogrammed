@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:19:47.040Z",
+  "updated": "2026-07-19T07:49:54.126Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -169,6 +169,12 @@
           "type": "profile route"
         },
         {
+          "name": "Jeff Bezos",
+          "score": 100,
+          "route": "billionaire-briefs/jeff-bezos.html",
+          "type": "profile route"
+        },
+        {
           "name": "Blackwater / Xe / Academi / Constellis lineage",
           "score": 100,
           "route": "contractor-briefs/blackwater-constellis-lineage.html",
@@ -196,12 +202,6 @@
           "name": "Palantir government platforms",
           "score": 100,
           "route": "contractor-briefs/palantir-government-platforms.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "G4S / Allied Universal security lineage",
-          "score": 100,
-          "route": "contractor-briefs/g4s-allied-security-lineage.html",
           "type": "contractor route"
         }
       ]
@@ -249,7 +249,7 @@
         {
           "name": "Most important missing record",
           "score": 80,
-          "route": "entity-briefs/people-s-republic-of-bangladesh.html",
+          "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
           "type": "daily conclusion"
         },
         {

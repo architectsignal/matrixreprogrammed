@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:47:10.958Z",
+  "failures": [],
+  "inventory": {
+    "entityBriefs": {
+      "expected": 38,
+      "roots": [
+        {
+          "root": "source",
+          "files": 38,
+          "actualIds": 38,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        },
+        {
+          "root": "_site",
+          "files": 76,
+          "actualIds": 38,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        }
+      ]
+    },
+    "entityExposure": {
+      "expected": 38,
+      "roots": [
+        {
+          "root": "source",
+          "files": 38,
+          "actualIds": 38,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        },
+        {
+          "root": "_site",
+          "files": 76,
+          "actualIds": 38,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        }
+      ]
+    },
+    "eliteReports": {
+      "expected": 46,
+      "roots": [
+        {
+          "root": "source",
+          "files": 46,
+          "actualIds": 46,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        },
+        {
+          "root": "_site",
+          "files": 92,
+          "actualIds": 46,
+          "stale": [],
+          "missingHtml": [],
+          "missingAliases": []
+        }
+      ]
+    }
+  },
+  "boundary": "Generated entity briefs, entity exposure pages and elite reports must exactly match their current JSON indexes. The Cloudflare bundle must include both .html and extensionless aliases, with no ghost pages from earlier build passes."
+}

@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.301Z",
+  "changed": false,
+  "patchStrategy": "structural route, handler and dispatch insertion; independent of minified function body shape",
+  "transactionalTestRoute": "/api/email/admin/test-transactional",
+  "retryQuarantineRoute": "/api/email/admin/quarantine-retries",
+  "authentication": "X-Admin-Token required",
+  "recipientPolicy": "Server-configured EMAIL_TEST_RECIPIENT or MEMBERS_REPLY_TO_EMAIL only; no client-selected recipient.",
+  "quarantinePolicy": "Explicit confirmation, automation-off gate, ISO cutoff, no recipient addresses returned, audit logged.",
+  "requiredState": [
+    "transactionalConfigurationReady=true",
+    "EMAIL_TRANSACTIONAL_ENABLED=true",
+    "BREVO_DOMAIN_AUTHENTICATED=true"
+  ],
+  "marketingAutomationUnaffected": true,
+  "repeatSafe": true,
+  "auditLogged": true
+}

@@ -1,6 +1,6 @@
 # Top 52 Influence Profiles
 
-Generated: 2026-07-16T06:00:16.122Z
+Generated: 2026-07-19T06:14:02.891Z
 
 ## Elon Musk
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
@@ -10,13 +10,6 @@ Boundary: Person of Interest card: this is a public-record influence route. It d
 - Intelligence & Security: 75
 
 ## Jeff Bezos
-Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
-- Religion & Interfaith: 80
-- Update Priority: 80
-- Finance & Banking: 77
-- Intelligence & Security: 75
-
-## Warren Buffett
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
 - Religion & Interfaith: 80
 - Update Priority: 80
@@ -351,6 +344,13 @@ Boundary: Person of Interest card: this is a public-record influence route. It d
 - Finance & Banking: 77
 - Corporate & Asset Management: 75
 - Government: 73
+
+## Warren Buffett
+Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
+- Religion & Interfaith: 80
+- Finance & Banking: 77
+- Intelligence & Security: 75
+- Corporate & Asset Management: 75
 
 ## MacKenzie Scott
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.

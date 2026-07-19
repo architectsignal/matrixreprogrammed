@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "working-with-gaps",
-  "updated": "2026-07-17T06:31:15.289Z",
+  "updated": "2026-07-19T06:45:58.975Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 41,
@@ -86,7 +86,7 @@
       "id": "fresh-current-news",
       "stage": "Collect",
       "status": "green",
-      "finding": "17 news item(s) are inside the active seven-day window.",
+      "finding": "19 news item(s) are inside the active seven-day window.",
       "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
       "evidence": [
         "downloads/seven-day-intel.json"
@@ -266,7 +266,7 @@
       "id": "brief-coverage",
       "stage": "Publish",
       "status": "green",
-      "finding": "107 brief page(s) received the mission interpretation layer.",
+      "finding": "77 brief page(s) received the mission interpretation layer.",
       "fix": "Apply the final mission lens after all legacy brief generators and audit every brief route.",
       "evidence": [
         "data/brief-mission-standard.json"
@@ -443,7 +443,7 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "91 workflow file(s) scanned for daily scheduling.",
+      "finding": "94 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
         ".github/workflows/auto-evidence-pipeline.yml",
@@ -458,6 +458,7 @@
         ".github/workflows/daily-sitewide-refresh.yml",
         ".github/workflows/daily-update-check.yml",
         ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-audit.yml",
         ".github/workflows/deep-site-test.yml",
         ".github/workflows/deploy-production.yml",
         ".github/workflows/deploy.yml",
@@ -481,6 +482,7 @@
         ".github/workflows/mission-readiness.yml",
         ".github/workflows/mission-surface-compatibility.yml",
         ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/one-time-release-dispatch.yml",
         ".github/workflows/open-source-research-suite.yml",
         ".github/workflows/open-source-site-assurance.yml",
         ".github/workflows/osint-tools-assurance.yml",
@@ -522,6 +524,7 @@
         ".github/workflows/public-data-lab.yml",
         ".github/workflows/public-network-map-assurance.yml",
         ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/recovery-inventory.yml",
         ".github/workflows/search-v3-assurance.yml",
         ".github/workflows/security-privacy-osint-hub.yml",
         ".github/workflows/self-heal-generated-site.yml",
@@ -558,6 +561,7 @@
         ".github/workflows/daily-sitewide-refresh.yml",
         ".github/workflows/daily-update-check.yml",
         ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-audit.yml",
         ".github/workflows/deep-site-test.yml",
         ".github/workflows/deploy-production.yml",
         ".github/workflows/deploy.yml",
@@ -581,6 +585,7 @@
         ".github/workflows/mission-readiness.yml",
         ".github/workflows/mission-surface-compatibility.yml",
         ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/one-time-release-dispatch.yml",
         ".github/workflows/open-source-research-suite.yml",
         ".github/workflows/open-source-site-assurance.yml",
         ".github/workflows/osint-tools-assurance.yml",
@@ -622,6 +627,7 @@
         ".github/workflows/public-data-lab.yml",
         ".github/workflows/public-network-map-assurance.yml",
         ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/recovery-inventory.yml",
         ".github/workflows/search-v3-assurance.yml",
         ".github/workflows/security-privacy-osint-hub.yml",
         ".github/workflows/self-heal-generated-site.yml",

@@ -1,12 +1,85 @@
 {
   "ok": true,
-  "updated": "2026-07-16T06:00:58.218Z",
-  "purpose": "Prevent free-text source instructions from being emitted as hyperlinks on the public timer page.",
-  "rejectedCount": 1,
+  "updated": "2026-07-19T06:15:18.837Z",
+  "purpose": "Prevent free-text or stale generated source instructions from being emitted as broken hyperlinks on the public timer page.",
+  "rejectedCount": 15,
+  "repairedCount": 0,
   "rejected": [
     {
-      "href": "Build from primary and public sources for WHO Pandemic Agreement: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs.",
-      "text": "Build from primary and public sources for WHO Pandemic Agreement: official pages, public records, archives, filings, annual reports, legislation, credible histories and documented policy outputs."
+      "href": "#clock-group-your-freedom",
+      "text": "Your Freedom",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#clock-group-your-money",
+      "text": "Your Money",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#clock-group-your-essential-services",
+      "text": "Your Essential Services",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#clock-group-your-government",
+      "text": "Your Government",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#clock-group-global-watch",
+      "text": "Global Watch",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#clock-group-speculative-watch",
+      "text": "Speculative Watch",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-control-system-convergence",
+      "text": "Control System Convergence",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-elite-blackmail-and-ritual-claims",
+      "text": "Elite, Blackmail and Ritual Claims",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-metaphysics-and-soul-prison-claims",
+      "text": "Metaphysics and Soul-Prison Claims",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-aliens-uap-and-hidden-bases",
+      "text": "Aliens, UAP and Hidden Bases",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-mind-control-media-and-psyops",
+      "text": "Mind Control, Media and Psyops",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-documentable-exploitation-and-trafficking",
+      "text": "Documentable Exploitation and Trafficking",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-medical-and-bio-allegations",
+      "text": "Medical and Bio Allegations",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-hidden-history-and-cataclysm-claims",
+      "text": "Hidden History and Cataclysm Claims",
+      "reason": "invalid-syntax"
+    },
+    {
+      "href": "#speculation-section-other-classified-claims",
+      "text": "Other Classified Claims",
+      "reason": "invalid-syntax"
     }
-  ]
+  ],
+  "repaired": []
 }

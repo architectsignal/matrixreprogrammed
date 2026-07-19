@@ -1,11 +1,11 @@
 {
   "ok": true,
   "overall": "working-with-gaps",
-  "updated": "2026-07-16T06:00:33.987Z",
+  "updated": "2026-07-19T06:14:29.763Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
-    "green": 40,
-    "amber": 3,
+    "green": 41,
+    "amber": 2,
     "red": 0,
     "total": 43
   },
@@ -65,8 +65,8 @@
     {
       "id": "freshness-curated-drops",
       "stage": "Collect",
-      "status": "amber",
-      "finding": "Curated source file age: 7 day(s).",
+      "status": "green",
+      "finding": "Curated source file age: 0 day(s).",
       "fix": "Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.",
       "evidence": [
         "data/latest-public-drops.json"
@@ -75,8 +75,8 @@
     {
       "id": "freshness-seven-day-feed",
       "stage": "Collect",
-      "status": "amber",
-      "finding": "Seven-day feed file age: 7 day(s).",
+      "status": "green",
+      "finding": "Seven-day feed file age: 0 day(s).",
       "fix": "Run RSS/public-source intake every day and archive items automatically after seven days.",
       "evidence": [
         "downloads/seven-day-intel.json"
@@ -86,7 +86,7 @@
       "id": "fresh-current-news",
       "stage": "Collect",
       "status": "green",
-      "finding": "25 news item(s) are inside the active seven-day window.",
+      "finding": "19 news item(s) are inside the active seven-day window.",
       "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
       "evidence": [
         "downloads/seven-day-intel.json"
@@ -266,7 +266,7 @@
       "id": "brief-coverage",
       "stage": "Publish",
       "status": "green",
-      "finding": "107 brief page(s) received the mission interpretation layer.",
+      "finding": "85 brief page(s) received the mission interpretation layer.",
       "fix": "Apply the final mission lens after all legacy brief generators and audit every brief route.",
       "evidence": [
         "data/brief-mission-standard.json"
@@ -326,8 +326,8 @@
     {
       "id": "clock-depth",
       "stage": "Clocks",
-      "status": "green",
-      "finding": "0 clock(s) lack movement, mission relevance, boundary or direct evidence input.",
+      "status": "amber",
+      "finding": "54 clock(s) lack movement, mission relevance, boundary or direct evidence input.",
       "fix": "Keep the card clean but require the deeper tab to contain those fields.",
       "evidence": [
         "data/clock-wall.json",
@@ -338,7 +338,7 @@
       "id": "source-to-clock-links",
       "stage": "Clocks",
       "status": "green",
-      "finding": "7 timer-link slug(s) are present in current drops; 0 do not resolve.",
+      "finding": "0 timer-link slug(s) are present in current drops; 0 do not resolve.",
       "fix": "Reject source drops that reference a nonexistent clock slug.",
       "evidence": [
         "data/latest-public-drops.json",
@@ -443,11 +443,12 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "89 workflow file(s) scanned for daily scheduling.",
+      "finding": "94 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
         ".github/workflows/auto-evidence-pipeline.yml",
         ".github/workflows/auto-update-orchestrator.yml",
+        ".github/workflows/auto-update-system-deep-test.yml",
         ".github/workflows/card-artwork-automation.yml",
         ".github/workflows/cleanup-forum-test-posts.yml",
         ".github/workflows/cloudflare-domain-repair.yml",
@@ -457,6 +458,7 @@
         ".github/workflows/daily-sitewide-refresh.yml",
         ".github/workflows/daily-update-check.yml",
         ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-audit.yml",
         ".github/workflows/deep-site-test.yml",
         ".github/workflows/deploy-production.yml",
         ".github/workflows/deploy.yml",
@@ -470,6 +472,7 @@
         ".github/workflows/facebook-page-update.yml",
         ".github/workflows/full-system-audit.yml",
         ".github/workflows/geographic-power-atlas.yml",
+        ".github/workflows/investigation-deploy-handoff.yml",
         ".github/workflows/link-audit.yml",
         ".github/workflows/live-functionality-test.yml",
         ".github/workflows/live-intel-update.yml",
@@ -479,6 +482,7 @@
         ".github/workflows/mission-readiness.yml",
         ".github/workflows/mission-surface-compatibility.yml",
         ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/one-time-release-dispatch.yml",
         ".github/workflows/open-source-research-suite.yml",
         ".github/workflows/open-source-site-assurance.yml",
         ".github/workflows/osint-tools-assurance.yml",
@@ -520,6 +524,7 @@
         ".github/workflows/public-data-lab.yml",
         ".github/workflows/public-network-map-assurance.yml",
         ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/recovery-inventory.yml",
         ".github/workflows/search-v3-assurance.yml",
         ".github/workflows/security-privacy-osint-hub.yml",
         ".github/workflows/self-heal-generated-site.yml",
@@ -546,6 +551,7 @@
       "evidence": [
         ".github/workflows/auto-evidence-pipeline.yml",
         ".github/workflows/auto-update-orchestrator.yml",
+        ".github/workflows/auto-update-system-deep-test.yml",
         ".github/workflows/card-artwork-automation.yml",
         ".github/workflows/cleanup-forum-test-posts.yml",
         ".github/workflows/cloudflare-domain-repair.yml",
@@ -555,6 +561,7 @@
         ".github/workflows/daily-sitewide-refresh.yml",
         ".github/workflows/daily-update-check.yml",
         ".github/workflows/dark-speculation-weekly.yml",
+        ".github/workflows/deep-site-audit.yml",
         ".github/workflows/deep-site-test.yml",
         ".github/workflows/deploy-production.yml",
         ".github/workflows/deploy.yml",
@@ -568,6 +575,7 @@
         ".github/workflows/facebook-page-update.yml",
         ".github/workflows/full-system-audit.yml",
         ".github/workflows/geographic-power-atlas.yml",
+        ".github/workflows/investigation-deploy-handoff.yml",
         ".github/workflows/link-audit.yml",
         ".github/workflows/live-functionality-test.yml",
         ".github/workflows/live-intel-update.yml",
@@ -577,6 +585,7 @@
         ".github/workflows/mission-readiness.yml",
         ".github/workflows/mission-surface-compatibility.yml",
         ".github/workflows/monthly-archive-audit.yml",
+        ".github/workflows/one-time-release-dispatch.yml",
         ".github/workflows/open-source-research-suite.yml",
         ".github/workflows/open-source-site-assurance.yml",
         ".github/workflows/osint-tools-assurance.yml",
@@ -618,6 +627,7 @@
         ".github/workflows/public-data-lab.yml",
         ".github/workflows/public-network-map-assurance.yml",
         ".github/workflows/rebuild-book-system.yml",
+        ".github/workflows/recovery-inventory.yml",
         ".github/workflows/search-v3-assurance.yml",
         ".github/workflows/security-privacy-osint-hub.yml",
         ".github/workflows/self-heal-generated-site.yml",
@@ -638,22 +648,16 @@
   ],
   "topFixes": [
     {
-      "id": "freshness-curated-drops",
-      "stage": "Collect",
-      "priority": "improve",
-      "fix": "Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days."
-    },
-    {
-      "id": "freshness-seven-day-feed",
-      "stage": "Collect",
-      "priority": "improve",
-      "fix": "Run RSS/public-source intake every day and archive items automatically after seven days."
-    },
-    {
       "id": "graph-boundaries",
       "stage": "Connect",
       "priority": "improve",
       "fix": "Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge."
+    },
+    {
+      "id": "clock-depth",
+      "stage": "Clocks",
+      "priority": "improve",
+      "fix": "Keep the card clean but require the deeper tab to contain those fields."
     }
   ],
   "newClockIdeas": [

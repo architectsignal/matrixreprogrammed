@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-16T05:59:34.320Z",
+  "updated": "2026-07-19T06:13:03.530Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "world-bank-projects",
   "name": "World Bank project search",
   "ok": true,
   "status": 200,
-  "url": "https://search.worldbank.org/api/v2/projects?format=json&rows=10&fl=project_name,countryname,sector1,boardapprovaldate,totalamt,impagency",
+  "url": "https://projects.worldbank.org/en/projects-operations/project-search?format=json&rows=10&fl=project_name,countryname,sector1,boardapprovaldate,totalamt,impagency",
   "source_type": "global_project_record",
   "evidence_grade": "documented association",
   "itemCount": 6,

@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-07-17T19:32:02.649Z
+Updated: 2026-07-19T06:44:46.090Z
 
 ## Top Contractor Signals
 
@@ -14,7 +14,6 @@ Updated: 2026-07-17T19:32:02.649Z
 
 ## Missing Records
 
-- People's Republic of Bangladesh: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Defense Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -31,16 +30,11 @@ Updated: 2026-07-17T19:32:02.649Z
 - A170747M: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Biddle v. Biddle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Chattogram Water Supply and Sewerage Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals of North Carolina: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Finance Division, Ministry of Finance: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Kingdom of Morocco: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Matter of Pagliughi: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF): Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Ministry of Health and Family Welfare: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - People v. Brim: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Sawas v. Elzanaty: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Supreme Court of Rhode Island: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -54,3 +48,9 @@ Updated: 2026-07-17T19:32:02.649Z
 - Broadcom Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - GOOGL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - MICROSOFT CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- MSFT: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Nuclear Regulatory Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- California Court of Appeal: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

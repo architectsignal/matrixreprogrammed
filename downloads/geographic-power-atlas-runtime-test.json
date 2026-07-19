@@ -1,19 +1,25 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:15.456Z",
+  "generatedAt": "2026-07-19T06:45:59.184Z",
   "mapLibreVersion": "5.24.0",
+  "mapLibreScriptUrl": "https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js",
+  "mapLibreCssUrl": "https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css",
+  "pmtilesModuleUrl": "https://unpkg.com/pmtiles@4.4.1/dist/esm/index.js",
   "locations": 32,
   "countries": 9,
   "categories": 14,
-  "runtimeMode": "protected stable MapLibre runtime with accessible-list-first and local graticule fallback",
+  "runtimeMode": "Official MapLibre browser bundle with global maplibregl, protected canonical runtime restoration, accessible-list-first rendering and local dark-grid fallback",
   "changed": {
     "page": false,
     "builder": false,
+    "runtime": false,
+    "runtimeRestored": false,
+    "protectedRuntime": false,
     "seed": false,
     "manifest": false,
     "aliasSynced": false,
-    "protectedRuntimeCreated": false,
-    "runtimeRestored": false
+    "protectedRuntimeCreated": false
   },
+  "transformError": null,
   "failures": []
 }

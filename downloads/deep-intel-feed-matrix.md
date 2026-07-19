@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-07-18T07:19:46.421Z
+Generated: 2026-07-19T07:49:52.308Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,7 +15,6 @@ Generated: 2026-07-18T07:19:46.421Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
-- 85 — People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-s-republic-of-bangladesh.html
 - 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
 - 85 — Defense Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/defense-department.html
@@ -32,16 +31,17 @@ Generated: 2026-07-18T07:19:46.421Z
 - 85 — A170747M — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/a170747m.html
 - 85 — Biddle v. Biddle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/biddle-v-biddle.html
 - 85 — California Court of Appeal — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/california-court-of-appeal.html
-- 85 — Chattogram Water Supply and Sewerage Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/chattogram-water-supply-and-sewerage-authority.html
 - 85 — Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-second-circuit.html
 - 85 — Court of Appeals of North Carolina — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-of-north-carolina.html
-- 85 — Finance Division, Ministry of Finance — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/finance-division-ministry-of-finance.html
 - 85 — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
 - 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
-- 85 — Kingdom of Morocco — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/kingdom-of-morocco.html
 - 85 — Matter of Pagliughi — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/matter-of-pagliughi.html
+- 85 — People v. Brim — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/people-v-brim.html
+- 85 — Sawas v. Elzanaty — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/sawas-v-elzanaty.html
+- 85 — Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-rhode-island.html
+- 85 — The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html
 - 72 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — live-intel.html
-- 72 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News — live-intel.html
+- 72 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — live-intel.html
 - 72 — Former Obama counsel ‘not completely truthful’ in Epstein testimony, Democrats say - The Guardian — live-intel.html
 - 72 — Goldman Sachs’ former top lawyer tells House Epstein was a ‘masterful liar’ who used her to bolster his standing - CNBC — live-intel.html
-- 72 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — live-intel.html
+- 72 — House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News — live-intel.html

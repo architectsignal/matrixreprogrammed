@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.298Z",
+  "touched": [
+    "_site/paypal-voluntary-support.js"
+  ],
+  "checks": [
+    {
+      "file": "store.html",
+      "donationCards": 6,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    },
+    {
+      "file": "card-deck-store.html",
+      "donationCards": 9,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    },
+    {
+      "file": "premium-reports.html",
+      "donationCards": 13,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    },
+    {
+      "file": "_site/store.html",
+      "donationCards": 6,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    },
+    {
+      "file": "_site/card-deck-store.html",
+      "donationCards": 9,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    },
+    {
+      "file": "_site/premium-reports.html",
+      "donationCards": 13,
+      "fixedPricesRemoved": true,
+      "buyPlaceholdersRemoved": true,
+      "rangePresent": true,
+      "scriptPresent": true,
+      "legalBoundary": true,
+      "freeBoundary": true
+    }
+  ],
+  "amount": {
+    "minimum": 1,
+    "maximum": 5000,
+    "currency": "EUR"
+  },
+  "evidenceAccessRemainsFree": true
+}

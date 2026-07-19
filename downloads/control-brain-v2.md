@@ -1,11 +1,11 @@
 # Control Brain V2
 
-Generated: 2026-07-18T07:19:43.081Z
+Generated: 2026-07-19T07:49:47.981Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 130
-Edges: 163
+Nodes: 121
+Edges: 151
 
 ## Disclosure gaps and missing files
 
@@ -63,14 +63,6 @@ Palantir government platforms is ranked 91/100 because of 1 relationship route(s
 
 Source routes: private-contractor-tracker.html, contractor-briefs/palantir-government-platforms.html
 
-## Health data and emergency systems
-
-Score: 91
-
-Health data and emergency systems is ranked 91/100 because of 12 relationship route(s), 3 control layer(s), 7 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
 ## CACI International
 
 Score: 88
@@ -103,27 +95,19 @@ SAIC / Leidos lineage is ranked 88/100 because of 1 relationship route(s), 5 con
 
 Source routes: private-contractor-tracker.html, contractor-briefs/leidos-saic-lineage.html
 
-## Banking and payment rails
-
-Score: 88
-
-Banking and payment rails is ranked 88/100 because of 11 relationship route(s), 3 control layer(s), 8 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: subject-briefs.html
-
-## World Bank
-
-Score: 80
-
-World Bank is ranked 80/100 because of 3 relationship route(s), 4 control layer(s), 7 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: institution-control-tracker.html
-
 ## Digital ID and access systems
 
 Score: 78
 
 Digital ID and access systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Health data and emergency systems
+
+Score: 78
+
+Health data and emergency systems is ranked 78/100 because of 9 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
 
@@ -140,6 +124,14 @@ Source routes: subject-briefs.html
 Score: 77
 
 United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: institution-control-tracker.html
+
+## World Bank
+
+Score: 74
+
+World Bank is ranked 74/100 because of 3 relationship route(s), 4 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
 
@@ -206,3 +198,11 @@ Score: 68
 Private contractor power is ranked 68/100 because of 7 relationship route(s), 3 control layer(s), 4 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: subject-briefs.html
+
+## Jeff Bezos
+
+Score: 65
+
+Jeff Bezos is ranked 65/100 because of 4 relationship route(s), 4 control layer(s), 1 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: billionaire-control-tracker.html

@@ -38,7 +38,10 @@ function score(item, tokens, query) {
   }
   value += (matched / Math.max(tokens.length, 1)) * 48;
   if (item.primarySource && tokens.some(token => ['official','court','government','regulator','sec','doj','judgment','conviction','enforcement','audit'].includes(token))) value += 42;
-  if (tokens.some(token => ['conviction','guilty','judgment','proven','established','order'].includes(token)) && item.statusClass === 'established') value += 42;
+  const adjudicatedIntent = tokens.some(token => ['conviction','guilty','judgment','proven','established','order'].includes(token));
+  if (adjudicatedIntent && item.statusClass === 'established') value += 88;
+  if (adjudicatedIntent && ['investigation-finding','court-record','document-extraction'].includes(String(item.sourceType || ''))) value += 36;
+  if (adjudicatedIntent && item.resultKind === 'relationship' && item.statusClass !== 'established') value -= 72;
   const missingIntent = tokens.some(token => ['missing','removed','redaction','redacted','restored','hash','withheld'].includes(token));
   if (missingIntent && item.statusClass === 'source-change') value += 150;
   if (missingIntent && item.sourceType === 'source-change') value += 70;

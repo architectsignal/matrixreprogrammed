@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:46:04.523Z",
+  "changed": false,
+  "runtime": "scripts/build-search-v3-runtime.js",
+  "addedProfiles": [
+    "ultra-safe",
+    "minimum-route-safe",
+    "emergency-route-safe"
+  ],
+  "duplicateRouteConsolidation": true,
+  "sparseDefaultCompaction": true,
+  "normalizedFieldsRetained": [
+    "searchVersion",
+    "sourceType",
+    "resultKind",
+    "statusClass",
+    "primarySource"
+  ],
+  "mergedSearchTerms": [
+    "keywords",
+    "aliases",
+    "identifiers",
+    "exactTerms"
+  ],
+  "retainedExternalSources": "all non-sparse profiles plus primary, official, court, government, regulator and evidence-grade A/B records in sparse profiles",
+  "adjudicatedRankingApplied": true,
+  "preservesEverySearchableUrl": true,
+  "boundary": "Growing Search V3 data is consolidated by public route before adaptive field compaction. Every searchable URL and normalized filter field remains represented. Sparse profiles merge equivalent search-term arrays and retain external source buttons for primary or high-authority records."
+}

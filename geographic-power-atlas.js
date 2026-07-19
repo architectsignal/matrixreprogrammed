@@ -1,4 +1,3 @@
-const MAPLIBRE_MODULE_URL = 'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.mjs';
 const PMTILES_MODULE_URL = 'https://unpkg.com/pmtiles@4.4.1/dist/esm/index.js';
 
 const $ = id => document.getElementById(id);
@@ -210,16 +209,22 @@ async function fetchAtlasData() {
   const manifestResponse=await fetch('data/geographic-power-atlas.json',{cache:'no-store'});
   if (!manifestResponse.ok) throw new Error(`Atlas manifest could not be loaded (${manifestResponse.status}).`);
   let geoResponse=await fetch('data/geographic-power-atlas-data.json',{cache:'no-store'});
-  if (!geoResponse.ok) geoResponse=await fetch('data/geographic-power-atlas.geojson',{cache:'no-store'});
+  if (!geoResponse.ok) geoResponse=await fetch('data/geographic-power-atlas-data.json',{cache:'no-store'});
   if (!geoResponse.ok) throw new Error(`Atlas location data could not be loaded (${geoResponse.status}).`);
   const [manifest,geojson]=await Promise.all([manifestResponse.json(),geoResponse.json()]);
   if (!geojson || !Array.isArray(geojson.features)) throw new Error('Atlas location data is malformed.');
   return {manifest,geojson};
 }
+async function waitForMapLibre(timeoutMs=15000) {
+  const deadline=Date.now()+timeoutMs;
+  while ((!globalThis.maplibregl || typeof globalThis.maplibregl.Map !== 'function') && Date.now()<deadline) {
+    await new Promise(resolve=>setTimeout(resolve,50));
+  }
+  return globalThis.maplibregl;
+}
 async function loadMapLibraries() {
-  const mapModule=await import(MAPLIBRE_MODULE_URL);
-  const maplibregl=mapModule.default || mapModule;
-  if (!maplibregl || typeof maplibregl.Map !== 'function') throw new Error('MapLibre loaded without a usable Map constructor.');
+  const maplibregl=await waitForMapLibre();
+  if (!maplibregl || typeof maplibregl.Map !== 'function') throw new Error('MapLibre browser bundle loaded without a usable Map constructor.');
   state.maplibregl=maplibregl;
   if ((state.manifest.pmtilesSources || []).some(source=>source && source.enabled)) {
     try {

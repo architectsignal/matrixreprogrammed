@@ -1,14 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-17T06:31:24.431Z",
+  "generatedAt": "2026-07-19T06:46:14.652Z",
   "datasets": 4,
   "presets": 9,
   "maxRows": 1000,
   "queryTimeoutMs": 12000,
   "engines": {
-    "duckdbWasm": "1.33.0",
+    "duckdbWasm": "1.30.0",
     "perspective": "4.5.2"
   },
+  "runtimeVersion": "2026-07-18",
   "homepageLinked": true,
   "researchLinked": true,
   "boundary": "The laboratory lets readers reproduce counts, filters, joins and aggregations over approved public datasets. Query output reflects the selected records and code; it does not prove causation, motive, coordination, identity, present ownership or wrongdoing. Machine-extracted and machine-classified records remain subject to their stated review status and source limitations."

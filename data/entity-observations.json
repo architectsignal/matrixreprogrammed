@@ -1,52 +1,9 @@
 {
-  "updated": "2026-07-17T19:31:45.514Z",
+  "updated": "2026-07-19T06:44:30.813Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
   "observations": [
-    {
-      "id": "object-object",
-      "name": "[object Object]",
-      "count": 6,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p505244-1",
-        "world-bank-projects-p176429-2",
-        "world-bank-projects-p181587-3",
-        "world-bank-projects-p180283-4",
-        "world-bank-projects-p507508-5",
-        "world-bank-projects-p180439-6"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "people-s-republic-of-bangladesh",
-      "name": "People's Republic of Bangladesh",
-      "count": 3,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p176429-2",
-        "world-bank-projects-p180283-4",
-        "world-bank-projects-p180439-6"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
     {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
@@ -247,7 +204,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "nvda",
@@ -265,7 +222,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001045810-1"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "apple-inc",
@@ -283,7 +240,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "aapl",
@@ -301,7 +258,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000320193-2"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "alphabet-inc",
@@ -319,7 +276,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "googl",
@@ -337,7 +294,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001652044-3"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "microsoft-corp",
@@ -355,7 +312,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "msft",
@@ -373,7 +330,7 @@
       "source_events": [
         "sec-edgar-filings-cik0000789019-4"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "amazon-com-inc",
@@ -391,7 +348,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "amzn",
@@ -409,7 +366,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001018724-5"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "broadcom-inc",
@@ -427,7 +384,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "avgo",
@@ -445,7 +402,7 @@
       "source_events": [
         "sec-edgar-filings-cik0001730168-6"
       ],
-      "last_seen": "2026-07-17"
+      "last_seen": "2026-07-19"
     },
     {
       "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
@@ -734,132 +691,6 @@
         "courtlistener-court-records-10883331-6"
       ],
       "last_seen": "2026-07-01"
-    },
-    {
-      "id": "republic-of-rwanda",
-      "name": "Republic of Rwanda",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p505244-1"
-      ],
-      "last_seen": "2024-12-20T00:00:00Z"
-    },
-    {
-      "id": "chattogram-water-supply-and-sewerage-authority",
-      "name": "Chattogram Water Supply and Sewerage Authority",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p176429-2"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref",
-      "name": "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p181587-3"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "kingdom-of-morocco",
-      "name": "Kingdom of Morocco",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p181587-3"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "ministry-of-health-and-family-welfare",
-      "name": "Ministry of Health and Family Welfare",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p180283-4"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "republic-of-india",
-      "name": "Republic of India",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p507508-5"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
-    },
-    {
-      "id": "finance-division-ministry-of-finance",
-      "name": "Finance Division, Ministry of Finance",
-      "count": 1,
-      "lanes": [
-        "world-bank-projects"
-      ],
-      "record_types": [
-        "global_project_record"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "world-bank-projects-p180439-6"
-      ],
-      "last_seen": "2024-12-19T00:00:00Z"
     }
   ]
 }

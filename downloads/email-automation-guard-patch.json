@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.302Z",
+  "changed": false,
+  "cutoffVariable": "EMAIL_RETRY_QUARANTINE_BEFORE",
+  "behavior": "Every automated campaign quarantines retry records older than the configured activation cutoff before creating or sending new campaign mail.",
+  "recipientDataExposed": false,
+  "auditLogged": true,
+  "repeatSafe": true
+}

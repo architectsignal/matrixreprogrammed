@@ -37,7 +37,7 @@ const required = [
   { path: '/member-dashboard.html', markers: ['Member Dashboard', 'MEMBER DASHBOARD'], mustInclude: ['member-dashboard-app.js'] },
   { path: '/billing-dashboard.html', markers: ['Billing', 'BILLING'], mustInclude: ['billing-dashboard.js'] },
   { path: '/forum.html', markers: ['SIGNAL BOARD'], mustInclude: ['forum.js'] },
-  { path: '/forum-health', json: true, markers: ['forumPostsBinding'], requireOrigin: true },
+  { path: '/forum-health', json: true, markers: ['d1Connected', 'authoritativeStorage'], mustInclude: ['Cloudflare D1 MEMBERS_DB.forum_posts'], requireOrigin: true },
   { path: '/machine-digest.html', markers: ['MACHINE DIGEST.'], forbidden: ['[object Object]', ...commonForbidden] },
   { path: '/entity-daily-briefs.html', markers: ['ENTITY DAILY BRIEFS.'], forbidden: ['[object Object]', '<h3></h3>', ...commonForbidden] },
   { path: '/entity-exposure-index.html', markers: ['ENTITY EXPOSURE'], forbidden: ['[object Object]', 'object-object', '<h3></h3>', ...commonForbidden] },

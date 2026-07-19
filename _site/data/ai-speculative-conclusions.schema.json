@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://matrixreprogrammed.com/data/ai-speculative-conclusions.schema.json",
+  "title": "Matrix Reprogrammed AI Speculative Conclusions Feed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "updated",
+    "pageClassification",
+    "automaticPublicationScope",
+    "automaticPublicationApproved",
+    "verifiedEvidencePagesAffected",
+    "boundary",
+    "publicationRules",
+    "items"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "updated": { "type": "string", "format": "date-time" },
+    "pageClassification": { "const": "ai_speculative_conclusions" },
+    "automaticPublicationScope": { "const": "speculation_page_only" },
+    "automaticPublicationApproved": { "const": true },
+    "verifiedEvidencePagesAffected": { "const": false },
+    "boundary": { "type": "string", "minLength": 80 },
+    "publicationRules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "publicSourcesRequired",
+        "contraryEvidenceRequired",
+        "missingRecordsRequired",
+        "falsificationTestsRequired",
+        "criminalConductEstablishedMustBeFalse",
+        "privateVictimDataProhibited",
+        "minorsProhibited",
+        "privateAddressesProhibited",
+        "intimateMaterialProhibited",
+        "unsupportedDirectAccusationsProhibited"
+      ],
+      "properties": {
+        "publicSourcesRequired": { "const": true },
+        "contraryEvidenceRequired": { "const": true },
+        "missingRecordsRequired": { "const": true },
+        "falsificationTestsRequired": { "const": true },
+        "criminalConductEstablishedMustBeFalse": { "const": true },
+        "privateVictimDataProhibited": { "const": true },
+        "minorsProhibited": { "const": true },
+        "privateAddressesProhibited": { "const": true },
+        "intimateMaterialProhibited": { "const": true },
+        "unsupportedDirectAccusationsProhibited": { "const": true }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/item" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "locator", "evidenceClass"],
+      "properties": {
+        "label": { "type": "string", "minLength": 2 },
+        "url": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 },
+        "evidenceClass": { "type": "string", "minLength": 1 }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "band", "meaning"],
+      "properties": {
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "band": { "type": "string", "minLength": 3 },
+        "meaning": { "type": "string", "minLength": 20 }
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "classification",
+        "status",
+        "confidence",
+        "conclusion",
+        "documentedSupport",
+        "sources",
+        "contraryEvidence",
+        "missingRecords",
+        "alternativeExplanations",
+        "falsificationTests",
+        "criminalConductEstablished",
+        "humanReviewed",
+        "generatedAt",
+        "lastReviewedAt",
+        "boundary"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^ASC-[A-Z0-9-]+$" },
+        "title": { "type": "string", "minLength": 8 },
+        "classification": { "const": "ai_speculative_conclusion" },
+        "status": {
+          "enum": ["evidence-supported", "developing", "weakened", "rejected"]
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "conclusion": { "type": "string", "minLength": 40 },
+        "documentedSupport": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 20 }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "contraryEvidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 15 }
+        },
+        "missingRecords": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 8 }
+        },
+        "alternativeExplanations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 5 }
+        },
+        "falsificationTests": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 8 }
+        },
+        "criminalConductEstablished": { "const": false },
+        "humanReviewed": { "type": "boolean" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "lastReviewedAt": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "format": "date-time" }
+          ]
+        },
+        "boundary": { "type": "string", "minLength": 40 }
+      }
+    }
+  }
+}

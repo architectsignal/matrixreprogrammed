@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:47:07.094Z",
+  "changed": [
+    "index.html",
+    "_site/index.html",
+    "_site/index"
+  ],
+  "replacements": {
+    "https://www.bis.org/topic/cbdc.htm": "https://www.bis.org/about/bisih/topics/cbdc.htm",
+    "https://search.worldbank.org/api/v2/projects": "https://projects.worldbank.org/en/projects-operations/project-search",
+    "https://efile.fara.gov/ords/fara/f?p=1381:1": "https://efile.fara.gov/ords/fara/f?p=1235%3A10",
+    "https://efile.fara.gov/ords/fara/f?p=1381%3A1": "https://efile.fara.gov/ords/fara/f?p=1235%3A10",
+    "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home": "https://cde.ucr.cjis.gov/",
+    "https://cde.ucr.cjis.gov/LATEST/webapp/": "https://cde.ucr.cjis.gov/",
+    "https://cde.ucr.cjis.gov/LATEST/": "https://cde.ucr.cjis.gov/",
+    "https://www.bmi.gv.at/508/Statistiken/": "https://www.bmi.gv.at/magazin/2026_05_06/01_kriminalstatistik_2025.html"
+  },
+  "checks": [
+    {
+      "file": "scripts/deep-production-site-audit-v2.js",
+      "marker": "(response.type && !/text\\/html/i.test(response.type))",
+      "ok": true
+    },
+    {
+      "file": "scripts/deep-production-site-audit-v2.js",
+      "marker": "function protectedAssetExpected(route)",
+      "ok": true
+    },
+    {
+      "file": "scripts/deep-production-site-audit-v2.js",
+      "marker": "/api/paypal/donation/config",
+      "ok": true
+    },
+    {
+      "file": "scripts/deep-production-site-audit-v2.js",
+      "marker": "/api/paypal/donation/order",
+      "ok": true
+    },
+    {
+      "file": "scripts/deep-production-site-audit-v2.js",
+      "marker": "/api/email/admin/test-transactional",
+      "ok": true
+    },
+    {
+      "file": "official-source-policy",
+      "marker": "FBI CDE current root accepted",
+      "ok": true
+    },
+    {
+      "file": "index.html",
+      "marker": "main-archive target",
+      "ok": true
+    },
+    {
+      "file": "_site/index.html",
+      "marker": "main-archive target",
+      "ok": true
+    },
+    {
+      "file": "_site/index",
+      "marker": "main-archive target",
+      "ok": true
+    }
+  ],
+  "officialSourceNotes": {
+    "fbiCde": "The current official CDE root is valid. Retired or fragile /LATEST/ deep links are normalized back to the root."
+  },
+  "homepageAnchorRepair": "Any Enter The System #main-archive link is matched to the first semantic main element in both source and Cloudflare output.",
+  "boundary": "Valid extensionless HTML is accepted by body plus optional content type; protected downloads may fail closed with HTTP 401; live API contracts test the deployed PayPal donation and transactional-email routes; stale public references are replaced with current official routes."
+}

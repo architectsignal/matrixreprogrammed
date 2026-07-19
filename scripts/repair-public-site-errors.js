@@ -10,7 +10,7 @@ const replacements=new Map([
   ["href='forum-health'","href='/forum-health'"],
   ['https://www.who.int/about/policies/publishing/logos-and-use','https://www.who.int/about/policies/publishing/copyright'],
   ['https://www.un.org/en/about-us/un-logo-and-flag','https://www.un.org/en/about-us/un-emblem-and-flag'],
-  ['https://www.bis.org/topic/cbdc.htm',verifiedBis],
+  ['https://www.bis.org/about/bisih/topics/cbdc.htm',verifiedBis],
   ['https://www.bis.org/topics/cbdc.htm',verifiedBis]
 ]);
 const unavailableAmazon=[

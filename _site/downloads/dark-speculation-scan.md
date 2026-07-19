@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-07-16T05:59:55.572Z
+Updated: 2026-07-19T06:13:24.788Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -8,7 +8,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Global Governance
 - Label: control-system hypothesis
-- Matches: 8
+- Matches: 2
 - Boundary: Agenda 2030 and SDGs are public policy frameworks. The speculation lane asks whether they converge with mandates, finance, identity, energy and speech rules; it does not prove secret coordination by itself.
 - Research brief: Map the public mechanisms: policy papers, funding, legal mandates, enforcement tools, public-private partnerships, identity layers, financial rails and opt-out limits.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -30,7 +30,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Global Governance
 - Label: control-system hypothesis
-- Matches: 4
+- Matches: 1
 - Boundary: International cooperation is not automatically world government. Track enforceability, funding conditions, domestic mandates, and loss of local opt-out.
 - Research brief: Map the public mechanisms: policy papers, funding, legal mandates, enforcement tools, public-private partnerships, identity layers, financial rails and opt-out limits.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -63,7 +63,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Climate
 - Label: control-system hypothesis
-- Matches: 6
+- Matches: 1
 - Boundary: Climate policy critique is not proof of planned imprisonment. Track mandates, enforcement, financial pressure, opt-out and mobility restrictions.
 - Research brief: Map the public mechanisms: policy papers, funding, legal mandates, enforcement tools, public-private partnerships, identity layers, financial rails and opt-out limits.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -107,7 +107,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Elite / Ritual / Child-Harm
 - Label: unsupported extreme allegation
-- Matches: 7
+- Matches: 4
 - Boundary: Do not treat rumour, symbol, or association as evidence of child harm.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -173,7 +173,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 5
+- Matches: 0
 - Boundary: A ritual reference is not proof of literal worship or crime.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -184,7 +184,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Occult Power
 - Label: symbolic/occult speculation
-- Matches: 4
+- Matches: 0
 - Boundary: Do not convert ancient-name symbolism into factual accusation.
 - Research brief: Separate symbolism, rumour, satire, folklore, public association and case records. Do not convert symbols or social proximity into crime claims.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -305,7 +305,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Mind Control
 - Label: internet mythology
-- Matches: 4
+- Matches: 1
 - Boundary: Requires careful sourcing; do not present internet lore as confirmed.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -316,7 +316,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 1
+- Matches: 0
 - Boundary: Fiction resembling events does not prove foreknowledge.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -327,7 +327,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 6
+- Matches: 1
 - Boundary: Aesthetic symbolism is not proof of ritual control.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -349,7 +349,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Tech / Psyops
 - Label: internet mythology
-- Matches: 4
+- Matches: 2
 - Boundary: Patents or concepts do not prove mass deployment.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -360,7 +360,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 5
+- Matches: 1
 - Boundary: Track as a classic narrative unless direct documents are found.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -371,7 +371,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: False Reality
 - Label: internet mythology
-- Matches: 3
+- Matches: 2
 - Boundary: Do not present as planned event without primary evidence.
 - Research brief: Track official statements, declassified records, scientific evidence, photographs, metadata, witness claims and debunks separately.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -437,7 +437,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Modern Slavery
 - Label: case-specific evidence required
-- Matches: 8
+- Matches: 4
 - Boundary: Needs case-level sources and careful language.
 - Research brief: Use case-level records: court files, police reports, labour inspections, NGO investigations, sanctions, company statements and victim-protection boundaries.
 - Support standard: Would need a court file, official report, dated record, investigative finding, authenticated exhibit, or multiple independent sources.
@@ -470,7 +470,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Medical / Bio
 - Label: case-specific evidence required
-- Matches: 8
+- Matches: 6
 - Boundary: Requires very high evidentiary standard.
 - Research brief: Use court records, regulator files, official datasets, peer-reviewed material, contracts and whistleblower records; avoid medical certainty without evidence.
 - Support standard: Would need a court file, official report, dated record, investigative finding, authenticated exhibit, or multiple independent sources.
@@ -514,7 +514,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Hidden History
 - Label: internet mythology
-- Matches: 0
+- Matches: 1
 - Boundary: Requires verifiable archaeology, not screenshots or recycled images.
 - Research brief: Use primary documents, archaeology, archive references, provenance, dating methods and expert disagreement; screenshots are not enough.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.

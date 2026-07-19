@@ -1,0 +1,23 @@
+{
+  "authorized": true,
+  "authorization": "owner confirmed controlled production release",
+  "workflow": "Matrix Reprogrammed Controlled Production Deploy",
+  "runId": "29651244492",
+  "runAttempt": 3,
+  "runUrl": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/29651244492",
+  "conclusion": "success",
+  "deployedCommit": "0f897016be653f21417820413b8fb08443aa75e3",
+  "deployedAt": "2026-07-18T16:31:51.442Z",
+  "recordedAt": "2026-07-18T16:31:51.442Z",
+  "liveVerificationPassed": true,
+  "productionReceiptPassed": true,
+  "d1Authoritative": true,
+  "d1RollbackBookmarkRecorded": true,
+  "emailTransactionalEnabled": true,
+  "emailMarketingAutomationEnabled": false,
+  "forumPostingAccess": "verified-free-member-session",
+  "paypalEnvironment": "sandbox",
+  "paypalCheckoutEnabled": false,
+  "paypalLiveCharging": false,
+  "paymentBoundary": "Live PayPal charging remains disabled until separately activated through the server-side gates."
+}

@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:14:30.067Z",
+  "changed": true,
+  "dailySource": "/data/daily-brain-brief.json",
+  "weeklySource": "/data/weekly-investigation-conclusions.json",
+  "contentPolicy": "Ranked source-backed conclusions, signals, records and watch items; fail closed when no usable records exist.",
+  "compliance": [
+    "Per-recipient preferences link",
+    "Per-recipient unsubscribe link",
+    "List-Unsubscribe header",
+    "One-click unsubscribe header",
+    "Privacy link",
+    "Long-lived reusable action links"
+  ],
+  "campaignStateRepair": "Zero-recipient campaigns complete as sent instead of remaining stuck in sending.",
+  "evidenceBoundary": true
+}

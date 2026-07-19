@@ -80,6 +80,7 @@ async function authContext(request,env){
   const entitlement=await entitlementForMember(env,member);
   return{session,member,entitlement,capabilities:capabilities(entitlement.effective_tier)};
 }
+export async function memberSessionContext(request,env){return authContext(request,env);}
 async function requireAuth(request,env){const auth=await authContext(request,env);return auth?{auth}:{response:noLeakDenied(null,'registered','Authentication required')};}
 async function requireTier(request,env,minimumTier){const auth=await authContext(request,env);if(!auth)return{response:noLeakDenied(null,minimumTier,'Authentication required')};if(auth.entitlement.tier_rank<rank(minimumTier)&&!auth.entitlement.is_admin)return{response:noLeakDenied(auth,minimumTier,'This membership tier does not include the requested resource')};return{auth};}
 async function requireAdmin(request,env){const required=await requireAuth(request,env);if(required.response)return required;if(!required.auth.entitlement.is_admin)return{response:noLeakDenied(required.auth,'admin','Administrator access required')};return required;}

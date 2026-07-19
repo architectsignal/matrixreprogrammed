@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:46:47.426Z",
+  "changed": [
+    "membership.html",
+    "_site/membership.html"
+  ],
+  "contracts": {
+    "passwordlessAuth": "explicit production-owned route set with response-origin validation",
+    "freeSignup": "supports verification.sent and queued delivery truthfully",
+    "paypal": "checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans",
+    "membershipSource": "the repaired template is synchronized into source and existing Cloudflare output before contract verification",
+    "externalActions": "no email delivery or PayPal request is performed by this hardening script"
+  }
+}

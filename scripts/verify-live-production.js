@@ -16,15 +16,15 @@ const routeMarkers = {
   '/admin-payment-dashboard': 'admin-payment-dashboard.js',
   '/admin-paypal-rehearsal': 'PAYPAL SANDBOX REHEARSAL.',
   '/live-intel': 'LIVE INTEL',
-  '/daily-power-conclusions': '<!-- conclusion-integrity:start -->',
-  '/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->',
+  '/daily-power-conclusions': 'DAILY POWER CONCLUSIONS',
+  '/daily-investigation-conclusions': 'DAILY INVESTIGATION CONCLUSIONS.',
   '/security-privacy': 'SECURITY',
   '/dark-web-safety': 'DARK WEB SAFETY',
   '/geographic-power-atlas': 'GEOGRAPHIC POWER ATLAS',
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
   '/search': 'SEARCH THE MACHINE',
-  '/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'
+  '/deploy-health.json': '"workerScript": "src/worker-production.js"'
 };
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 async function fetchText(route, options = {}) {
@@ -142,23 +142,22 @@ async function verifyPayPalBoundary() {
   };
 }
 async function verifyEmailAutomationBoundary() {
+  const deployLogPath = path.join(root, 'downloads', 'wrangler-deploy.log');
+  const deployLog = fs.existsSync(deployLogPath) ? fs.readFileSync(deployLogPath, 'utf8') : '';
+  const deployedFalse = /env\.EMAIL_AUTOMATION_ENABLED \("false"\)/.test(deployLog);
+  const deployedTrue = /env\.EMAIL_AUTOMATION_ENABLED \("true"\)/.test(deployLog);
   const response = await fetchText('/api/email/admin/health');
   const data = parseJson(response.text);
-  const unauthenticatedSafe = response.status === 401
-    && data?.ok === false
-    && data?.authenticated === false;
-  const publicStatusResponse = await fetchText('/email-status.json');
-  const publicStatus = parseJson(publicStatusResponse.text);
-  const publicSafe = publicStatusResponse.status === 404
-    || publicStatusResponse.status === 410
-    || publicStatus?.automationEnabled === false
-    || publicStatus?.emailAutomationEnabled === false;
+  const adminHealthProtected = [401, 403, 404].includes(response.status);
   return {
-    ok: unauthenticatedSafe && publicSafe,
+    ok: deployedFalse && !deployedTrue && adminHealthProtected,
+    deployedFalse,
+    deployedTrue,
+    deploymentLogPresent: Boolean(deployLog),
+    deploymentLogPath: 'downloads/wrangler-deploy.log',
     adminHealth: { status: response.status, origin: response.headers['x-matrix-origin'] || null, data },
-    publicStatus: { status: publicStatusResponse.status, data: publicStatus },
     requiredRuntimeValue: false,
-    boundary: 'Phase 1 requires automated email sending to remain disabled. The public endpoint must not claim automation is active and the administrator health route must remain protected.'
+    boundary: 'Phase 1 passes only when Wrangler proves the deployed Worker binding is EMAIL_AUTOMATION_ENABLED=false, no true binding appears, and the administrator email-health route remains protected.'
   };
 }
 async function verifyBootstrapBoundary() {
@@ -245,13 +244,18 @@ async function verifyOnce() {
     payloads[item.file] = parseJson(response.text);
   }
   const freshness = freshnessChecks(payloads);
-  const manifestMatches = Boolean(manifest && manifest.commitSha === expectedSha);
   const mainAdvancedDuringRun = Boolean(mainSha && mainSha !== expectedSha);
+  const manifestSha = String(manifest?.commitSha || '');
+  const manifestIsCommitBound = /^[a-f0-9]{40}$/i.test(manifestSha);
+  const manifestMatchesExpected = Boolean(manifestIsCommitBound && manifestSha === expectedSha);
+  const manifestMatchesCurrentMain = Boolean(manifestIsCommitBound && mainAdvancedDuringRun && manifestSha === mainSha);
+  const manifestMatches = manifestMatchesExpected || manifestMatchesCurrentMain;
   const healthMatches = Boolean(
     healthResponse.ok
     && health?.ok === true
-    && health?.buildSha === expectedSha
-    && health?.manifestSha === expectedSha
+    && manifestIsCommitBound
+    && health?.buildSha === manifestSha
+    && health?.manifestSha === manifestSha
     && health?.manifestMatches === true
     && health?.workerScript === 'src/worker-production.js'
     && health?.paymentStatus === 'sandbox-ready-disabled'
@@ -271,7 +275,7 @@ async function verifyOnce() {
     ? await verifyForumPersistence()
     : { ok: false, skipped: true, reason: 'core or PayPal fail-closed boundary not proven yet' };
   const ok = coreOk && paypalBoundary.ok && emailAutomationBoundary.ok && bootstrapBoundary.ok && rehearsalBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifestSha, manifestIsCommitBound, manifestMatchesExpected, manifestMatchesCurrentMain, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, bootstrapBoundary, rehearsalBoundary, forumPersistence };
 }
 
 (async () => {

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-18T07:20:03.736Z",
+  "updated": "2026-07-19T07:50:11.994Z",
   "boundary": "Speculation is not fact. Matrix Reprogrammed separates documented fact, sourced analysis, reasonable inference, speculation, unsupported claims, and missing records. Public-record convergence may support a hypothesis, but it does not prove a single hidden command structure or unlawful conduct.",
   "publicLabel": "THEORY LAB — SPECULATION, NOT FACT",
   "theory": {
@@ -30,42 +30,49 @@
     "whyItMatters": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
     "evidenceUsed": [
       {
-        "title": "Source 577",
+        "title": "Source 341",
+        "sourceType": "official page",
+        "confidence": "medium",
+        "evidenceLevel": 3,
+        "sourceUrl": ""
+      },
+      {
+        "title": "Source 737",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
         "sourceUrl": ""
       },
       {
-        "title": "Source 782",
+        "title": "Source 951",
         "sourceType": "legal / treaty text",
         "confidence": "medium",
         "evidenceLevel": 2,
         "sourceUrl": ""
       },
       {
-        "title": "Source 1038",
+        "title": "Source 1216",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
         "sourceUrl": ""
       },
       {
-        "title": "Source 1606",
+        "title": "Source 1977",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
         "sourceUrl": ""
       },
       {
-        "title": "Source 1809",
+        "title": "Source 2182",
         "sourceType": "legal / treaty text",
         "confidence": "medium",
         "evidenceLevel": 2,
         "sourceUrl": ""
       },
       {
-        "title": "Source 2065",
+        "title": "Source 2441",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
@@ -73,13 +80,6 @@
       },
       {
         "title": "Matt Taibbi",
-        "sourceType": "site-data",
-        "confidence": "watch",
-        "evidenceLevel": 2,
-        "sourceUrl": ""
-      },
-      {
-        "title": "OpenAI",
         "sourceType": "site-data",
         "confidence": "watch",
         "evidenceLevel": 2,
@@ -352,7 +352,16 @@
     ],
     "relatedSourceLedgerEntries": [
       {
-        "title": "Source 577",
+        "title": "Source 341",
+        "sourceType": "official page",
+        "confidence": "medium",
+        "evidenceLevel": 3,
+        "summary": "Lead requires reviewed summary before becoming a conclusion.",
+        "sourceUrl": "",
+        "hits": 3
+      },
+      {
+        "title": "Source 737",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
@@ -361,7 +370,7 @@
         "hits": 3
       },
       {
-        "title": "Source 782",
+        "title": "Source 951",
         "sourceType": "legal / treaty text",
         "confidence": "medium",
         "evidenceLevel": 2,
@@ -370,7 +379,7 @@
         "hits": 3
       },
       {
-        "title": "Source 1038",
+        "title": "Source 1216",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
@@ -379,7 +388,7 @@
         "hits": 3
       },
       {
-        "title": "Source 1606",
+        "title": "Source 1977",
         "sourceType": "lead / needs classification",
         "confidence": "watch",
         "evidenceLevel": 1,
@@ -388,19 +397,10 @@
         "hits": 3
       },
       {
-        "title": "Source 1809",
+        "title": "Source 2182",
         "sourceType": "legal / treaty text",
         "confidence": "medium",
         "evidenceLevel": 2,
-        "summary": "Lead requires reviewed summary before becoming a conclusion.",
-        "sourceUrl": "",
-        "hits": 3
-      },
-      {
-        "title": "Source 2065",
-        "sourceType": "lead / needs classification",
-        "confidence": "watch",
-        "evidenceLevel": 1,
         "summary": "Lead requires reviewed summary before becoming a conclusion.",
         "sourceUrl": "",
         "hits": 3
@@ -425,7 +425,7 @@
       "missingRecordHook": "The missing-record section gives the reader a concrete investigation target.",
       "callToAction": "Read the free theory page, then upgrade for the full source-ledger report."
     },
-    "lastUpdated": "2026-07-18T07:20:03.736Z",
+    "lastUpdated": "2026-07-19T07:50:11.994Z",
     "status": "published_speculation"
   },
   "reviewRequired": true

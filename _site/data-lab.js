@@ -1,9 +1,25 @@
-import * as duckdb from 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.33.0/+esm';
+const DUCKDB_VERSION = '1.30.0';
+const DUCKDB_PROVIDERS = [
+  {
+    name: 'jsDelivr',
+    module: 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/+esm',
+    base: 'https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.30.0/dist/'
+  },
+  {
+    name: 'esm.sh with UNPKG assets',
+    module: 'https://esm.sh/@duckdb/duckdb-wasm@1.30.0',
+    base: 'https://unpkg.com/@duckdb/duckdb-wasm@1.30.0/dist/'
+  }
+];
+const ENGINE_STARTUP_TIMEOUT_MS = 60000;
 
 const q = selector => document.querySelector(selector);
 const qa = selector => [...document.querySelectorAll(selector)];
 const state = {
   manifest: null,
+  duckdb: null,
+  provider: null,
+  worker: null,
   db: null,
   conn: null,
   rows: [],
@@ -37,6 +53,19 @@ function setStatus(message, kind = 'info') {
   if (!els.status) return;
   els.status.textContent = message;
   els.status.dataset.kind = kind;
+}
+
+function errorMessage(error) {
+  if (error instanceof Error && error.message) return error.message;
+  return String(error || 'Unknown error');
+}
+
+function withTimeout(promise, timeoutMs, label) {
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label} exceeded ${Math.round(timeoutMs / 1000)} seconds.`)), timeoutMs);
+  });
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timer));
 }
 
 function normaliseValue(value) {
@@ -86,34 +115,91 @@ function wrapQuery(sql) {
   return `SELECT * FROM (${sql}) AS matrix_public_query LIMIT ${selectedLimit()}`;
 }
 
+function setEngineControlsReady(ready) {
+  state.engineReady = ready;
+  if (els.run) els.run.disabled = !ready;
+  qa('[data-data-lab-preset], [data-data-lab-dataset]').forEach(button => { button.disabled = !ready; });
+}
+
+async function loadDuckDBModule() {
+  const failures = [];
+  for (const provider of DUCKDB_PROVIDERS) {
+    setStatus(`Loading DuckDB-Wasm ${DUCKDB_VERSION} from ${provider.name}…`);
+    try {
+      const duckdb = await withTimeout(import(provider.module), 20000, `${provider.name} module load`);
+      if (!duckdb?.AsyncDuckDB || !duckdb?.selectBundle) throw new Error('Module loaded without the DuckDB browser API.');
+      return { duckdb, provider };
+    } catch (error) {
+      failures.push(`${provider.name}: ${errorMessage(error)}`);
+    }
+  }
+  throw new Error(`DuckDB-Wasm could not load from either CDN. ${failures.join(' | ')}`);
+}
+
+function providerBundles(provider) {
+  return {
+    mvp: {
+      mainModule: `${provider.base}duckdb-mvp.wasm`,
+      mainWorker: `${provider.base}duckdb-browser-mvp.worker.js`
+    },
+    eh: {
+      mainModule: `${provider.base}duckdb-eh.wasm`,
+      mainWorker: `${provider.base}duckdb-browser-eh.worker.js`
+    }
+  };
+}
+
+async function fetchDataset(dataset, index, total) {
+  setStatus(`Loading approved dataset ${index + 1}/${total}: ${dataset.title}…`);
+  const url = new URL(dataset.path, window.location.href);
+  url.searchParams.set('v', state.manifest.updated || 'current');
+  const response = await withTimeout(fetch(url, { cache: 'no-store' }), 30000, `${dataset.title} download`);
+  if (!response.ok) throw new Error(`${dataset.title} returned HTTP ${response.status}.`);
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  if (bytes.byteLength < 2) throw new Error(`${dataset.title} returned an empty file.`);
+  return bytes;
+}
+
 async function initialiseDuckDB() {
-  setStatus('Loading DuckDB-Wasm in this browser…');
-  const bundles = duckdb.getJsDelivrBundles();
-  const bundle = await duckdb.selectBundle(bundles);
+  setEngineControlsReady(false);
+  const loaded = await loadDuckDBModule();
+  const duckdb = loaded.duckdb;
+  const provider = loaded.provider;
+  const bundle = await withTimeout(duckdb.selectBundle(providerBundles(provider)), 10000, 'DuckDB bundle selection');
+  if (!bundle?.mainModule || !bundle?.mainWorker) throw new Error('No compatible DuckDB-Wasm bundle was selected for this browser.');
+
+  setStatus(`Starting DuckDB-Wasm with ${provider.name}…`);
   const workerUrl = URL.createObjectURL(new Blob([`importScripts("${bundle.mainWorker}");`], { type: 'text/javascript' }));
-  const worker = new Worker(workerUrl);
-  const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
-  const db = new duckdb.AsyncDuckDB(logger, worker);
+  let worker;
   try {
-    await db.instantiate(bundle.mainModule, bundle.pthreadWorker);
+    worker = new Worker(workerUrl);
+    const logger = new duckdb.ConsoleLogger(duckdb.LogLevel.WARNING);
+    const db = new duckdb.AsyncDuckDB(logger, worker);
+    await withTimeout(db.instantiate(bundle.mainModule, bundle.pthreadWorker), ENGINE_STARTUP_TIMEOUT_MS, 'DuckDB WebAssembly startup');
+    const conn = await withTimeout(db.connect(), 15000, 'DuckDB connection');
+
+    for (let index = 0; index < state.manifest.datasets.length; index += 1) {
+      const dataset = state.manifest.datasets[index];
+      const bytes = await fetchDataset(dataset, index, state.manifest.datasets.length);
+      await db.registerFileBuffer(dataset.fileName, bytes);
+      const table = identifier(dataset.table);
+      if (dataset.format !== 'csv') throw new Error(`Unsupported public dataset format: ${dataset.format}`);
+      await conn.query(`CREATE VIEW ${table} AS SELECT * FROM read_csv_auto('${dataset.fileName.replaceAll("'", "''")}', header = true, all_varchar = true, sample_size = -1, ignore_errors = true)`);
+    }
+
+    state.duckdb = duckdb;
+    state.provider = provider;
+    state.worker = worker;
+    state.db = db;
+    state.conn = conn;
+    setEngineControlsReady(true);
+    setStatus(`Ready: ${state.manifest.datasets.length} approved datasets loaded through ${provider.name}.`, 'success');
+  } catch (error) {
+    worker?.terminate();
+    throw error;
   } finally {
     URL.revokeObjectURL(workerUrl);
   }
-  const conn = await db.connect();
-  for (const dataset of state.manifest.datasets) {
-    const url = new URL(dataset.path, window.location.href).href;
-    await db.registerFileURL(dataset.fileName, url, duckdb.DuckDBDataProtocol.HTTP, false);
-    const table = identifier(dataset.table);
-    if (dataset.format === 'csv') {
-      await conn.query(`CREATE VIEW ${table} AS SELECT * FROM read_csv_auto('${dataset.fileName.replaceAll("'", "''")}', header = true, all_varchar = true, sample_size = -1, ignore_errors = true)`);
-    } else {
-      throw new Error(`Unsupported public dataset format: ${dataset.format}`);
-    }
-  }
-  state.db = db;
-  state.conn = conn;
-  state.engineReady = true;
-  setStatus(`Ready: ${state.manifest.datasets.length} approved datasets loaded as read-only views.`, 'success');
 }
 
 function currentPreset() {
@@ -132,7 +218,7 @@ async function showSchema(dataset) {
     const rows = result.toArray().map(row => ({ column: normaliseValue(row.column_name), type: normaliseValue(row.column_type) }));
     els.schema.innerHTML = rows.map(row => `<span><strong>${escapeHtml(row.column)}</strong> <small>${escapeHtml(row.type)}</small></span>`).join('');
   } catch (error) {
-    els.schema.textContent = `Schema unavailable: ${error.message}`;
+    els.schema.textContent = `Schema unavailable: ${errorMessage(error)}`;
   }
 }
 
@@ -191,7 +277,7 @@ async function renderPerspective(rows, preset) {
     els.viewer.hidden = true;
     els.table.hidden = false;
     setMode('table');
-    setStatus(`Perspective could not load; the accessible result table remains available. ${error.message}`, 'warning');
+    setStatus(`Perspective could not load; the accessible result table remains available. ${errorMessage(error)}`, 'warning');
   }
 }
 
@@ -206,21 +292,20 @@ function setMode(mode) {
 async function runQuery() {
   if (state.running) return;
   if (!state.engineReady || !state.conn) {
-    setStatus('The browser SQL engine is not ready. Reload the page or use the direct dataset downloads.', 'error');
+    setStatus('The browser SQL engine is still loading. Use the direct dataset downloads if it cannot start.', 'error');
     return;
   }
   let sql;
   try { sql = validateSql(els.query?.value); }
-  catch (error) { setStatus(error.message, 'error'); return; }
+  catch (error) { setStatus(errorMessage(error), 'error'); return; }
   state.running = true;
-  els.run?.setAttribute('disabled', '');
+  if (els.run) els.run.disabled = true;
   const started = performance.now();
   setStatus('Running a capped, read-only browser query…');
   updateBoundary(sql);
   try {
     const timeoutMs = state.manifest.limits.queryTimeoutMs;
-    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error(`Query exceeded the ${Math.round(timeoutMs / 1000)} second browser limit.`)), timeoutMs));
-    const result = await Promise.race([state.conn.query(wrapQuery(sql)), timeout]);
+    const result = await withTimeout(state.conn.query(wrapQuery(sql)), timeoutMs, 'Query');
     const converted = arrowToRows(result);
     state.columns = converted.columns;
     state.rows = converted.rows;
@@ -232,11 +317,11 @@ async function runQuery() {
     els.perspectiveMode?.removeAttribute('disabled');
     setStatus('Query complete. Results are derived locally from the approved public files.', 'success');
   } catch (error) {
-    setStatus(`Query failed: ${error.message}`, 'error');
+    setStatus(`Query failed: ${errorMessage(error)}`, 'error');
     if (els.resultMeta) els.resultMeta.textContent = 'No result produced.';
   } finally {
     state.running = false;
-    els.run?.removeAttribute('disabled');
+    if (els.run) els.run.disabled = !state.engineReady;
   }
 }
 
@@ -331,17 +416,27 @@ function bind() {
 }
 
 async function boot() {
+  setEngineControlsReady(false);
+  bind();
   try {
-    const response = await fetch('data/public-data-lab.json', { cache: 'no-store' });
+    const response = await withTimeout(fetch('data/public-data-lab.json', { cache: 'no-store' }), 15000, 'Dataset registry load');
     if (!response.ok) throw new Error(`Registry returned HTTP ${response.status}.`);
     state.manifest = await response.json();
-    bind();
     restoreFromUrl();
     await initialiseDuckDB();
     if (!els.query?.value && state.manifest.presets.length) applyPreset(state.manifest.presets[0].id, false);
+    await runQuery();
   } catch (error) {
-    setStatus(`Data laboratory unavailable: ${error.message}. Direct dataset downloads remain available below.`, 'error');
+    setEngineControlsReady(false);
+    setStatus(`Data laboratory unavailable: ${errorMessage(error)} Direct dataset downloads remain available below.`, 'error');
+    if (els.resultMeta) els.resultMeta.textContent = 'Engine startup failed; no query was run.';
   }
 }
+
+window.addEventListener('pagehide', () => {
+  try { state.conn?.close?.(); } catch { /* best effort */ }
+  try { state.db?.terminate?.(); } catch { /* best effort */ }
+  try { state.worker?.terminate?.(); } catch { /* best effort */ }
+});
 
 boot();

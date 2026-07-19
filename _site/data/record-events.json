@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T05:59:34.320Z",
+  "updated": "2026-07-19T06:13:03.530Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -71,9 +71,43 @@
   ],
   "events": [
     {
-      "id": "federal-register-policy-2026-13656-1",
+      "id": "federal-register-policy-2026-14439-1",
+      "date": "2026-07-17",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
+      "runner_version": "machine-feed-runner-2026-07-04-b",
+      "source_lane": "federal-register-policy",
+      "source_name": "Federal Register latest policy records",
+      "entity_names": [
+        "Homeland Security Department"
+      ],
+      "institution_names": [
+        "Homeland Security Department"
+      ],
+      "control_layers": [
+        "policy",
+        "emergency_power",
+        "identity_access"
+      ],
+      "record_type": "rule_or_notice",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "source_record_id": "2026-14439",
+      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "send_to": [
+        "daily-brain-brief",
+        "global-risk-clocks",
+        "control-structure",
+        "search-index"
+      ],
+      "boundary": "Documented source route. Interpret only within the evidence grade."
+    },
+    {
+      "id": "federal-register-policy-2026-13656-2",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -106,9 +140,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-13602-2",
+      "id": "federal-register-policy-2026-13602-3",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -141,9 +175,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-13057-3",
+      "id": "federal-register-policy-2026-13057-4",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -175,9 +209,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-12989-4",
+      "id": "federal-register-policy-2026-12989-5",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -209,9 +243,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-12559-5",
+      "id": "federal-register-policy-2026-12559-6",
       "date": "2026-06-23",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -247,115 +281,9 @@
       "boundary": "Documented source route. Interpret only within the evidence grade."
     },
     {
-      "id": "federal-register-policy-2026-10817-6",
-      "date": "2026-05-29",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "federal-register-policy",
-      "source_name": "Federal Register latest policy records",
-      "entity_names": [
-        "Management and Budget Office",
-        "Health and Human Services Department",
-        "Agriculture Department",
-        "State Department",
-        "Agency for International Development",
-        "Veterans Affairs Department",
-        "Energy Department",
-        "Treasury Department",
-        "Defense Department",
-        "Transportation Department",
-        "Commerce Department",
-        "Interior Department",
-        "Environmental Protection Agency",
-        "U.S. International Development Finance Corporation",
-        "National Aeronautics and Space Administration",
-        "United States Agency for Global Media",
-        "Nuclear Regulatory Commission",
-        "Corporation for National and Community Service",
-        "Social Security Administration",
-        "Housing and Urban Development Department",
-        "National Science Foundation",
-        "National Archives and Records Administration",
-        "Small Business Administration",
-        "Justice Department",
-        "Labor Department",
-        "Homeland Security Department",
-        "National Foundation on the Arts and the Humanities",
-        "Institute of Museum and Library Services",
-        "National Endowment for the Arts",
-        "National Endowment for the Humanities",
-        "Education Department",
-        "Export-Import Bank",
-        "Executive Office of the President",
-        "Office of National Drug Control Policy",
-        "Peace Corps",
-        "Election Assistance Commission",
-        "Gulf Coast Ecosystem Restoration Council",
-        "Federal Communications Commission",
-        "Consumer Product Safety Commission",
-        "Delta Regional Authority",
-        "Appraisal Subcommittee of the Federal Financial Institutions Examination Council",
-        "Marine Mammal Commission",
-        "Millennium Challenge Corporation",
-        "National Credit Union Administration"
-      ],
-      "institution_names": [
-        "Health and Human Services Department",
-        "Agriculture Department",
-        "State Department",
-        "Agency for International Development",
-        "Veterans Affairs Department",
-        "Energy Department",
-        "Treasury Department",
-        "Defense Department",
-        "Transportation Department",
-        "Commerce Department",
-        "Interior Department",
-        "Environmental Protection Agency",
-        "U.S. International Development Finance Corporation",
-        "United States Agency for Global Media",
-        "Nuclear Regulatory Commission",
-        "Corporation for National and Community Service",
-        "Housing and Urban Development Department",
-        "National Science Foundation",
-        "Justice Department",
-        "Labor Department",
-        "Homeland Security Department",
-        "National Foundation on the Arts and the Humanities",
-        "Education Department",
-        "Export-Import Bank",
-        "Peace Corps",
-        "Election Assistance Commission",
-        "Federal Communications Commission",
-        "Consumer Product Safety Commission",
-        "Marine Mammal Commission",
-        "Millennium Challenge Corporation"
-      ],
-      "control_layers": [
-        "policy",
-        "emergency_power",
-        "identity_access"
-      ],
-      "record_type": "rule_or_notice",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.federalregister.gov/documents/2026/05/29/2026-10817/regulation-for-federal-financial-assistance",
-      "source_record_id": "2026-10817",
-      "summary": "Regulation for Federal Financial Assistance",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "daily-brain-brief",
-        "global-risk-clocks",
-        "control-structure",
-        "search-index"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -389,8 +317,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -424,8 +352,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -459,8 +387,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -494,8 +422,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -529,8 +457,8 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-07-16",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "date": "2026-07-19",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -565,7 +493,7 @@
     {
       "id": "courtlistener-court-records-10928510-1",
       "date": "2026-07-15",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -601,7 +529,7 @@
     {
       "id": "courtlistener-court-records-10919908-2",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -637,7 +565,7 @@
     {
       "id": "courtlistener-court-records-10919846-3",
       "date": "2026-07-08",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -673,7 +601,7 @@
     {
       "id": "courtlistener-court-records-10917016-4",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -709,7 +637,7 @@
     {
       "id": "courtlistener-court-records-10883674-5",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -745,7 +673,7 @@
     {
       "id": "courtlistener-court-records-10883331-6",
       "date": "2026-07-01",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "courtlistener-court-records",
       "source_name": "CourtListener court record signal",
@@ -781,13 +709,13 @@
     {
       "id": "world-bank-projects-p505244-1",
       "date": "2024-12-20T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Republic of Rwanda",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [],
       "control_layers": [
@@ -797,7 +725,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P505244",
       "summary": "Boosting Green Finance, Investment and Trade in Rwanda",
       "missing_records": [
@@ -813,14 +741,14 @@
     {
       "id": "world-bank-projects-p176429-2",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Chattogram Water Supply and Sewerage Authority",
         "People's Republic of Bangladesh",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [],
       "control_layers": [
@@ -830,7 +758,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P176429",
       "summary": "Chattogram Water Supply Improvement Project",
       "missing_records": [
@@ -846,14 +774,14 @@
     {
       "id": "world-bank-projects-p181587-3",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)",
         "Kingdom of Morocco",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [
         "Ministry of Agriculture, Maritime Fisheries, Rural Development, Water and Forests (MAPMDREF)"
@@ -865,7 +793,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P181587",
       "summary": "Transforming Agri-food Systems in Morocco",
       "missing_records": [
@@ -881,14 +809,14 @@
     {
       "id": "world-bank-projects-p180283-4",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Ministry of Health and Family Welfare",
         "People's Republic of Bangladesh",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [
         "Ministry of Health and Family Welfare"
@@ -900,7 +828,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P180283",
       "summary": "Health, Nutrition and Population Sector Development Program",
       "missing_records": [
@@ -916,13 +844,13 @@
     {
       "id": "world-bank-projects-p507508-5",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Republic of India",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [],
       "control_layers": [
@@ -932,7 +860,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P507508",
       "summary": "Amaravati Integrated Urban Development Program",
       "missing_records": [
@@ -948,14 +876,14 @@
     {
       "id": "world-bank-projects-p180439-6",
       "date": "2024-12-19T00:00:00Z",
-      "pulled_at": "2026-07-16T05:59:34.320Z",
+      "pulled_at": "2026-07-19T06:13:03.530Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "world-bank-projects",
       "source_name": "World Bank project search",
       "entity_names": [
         "Finance Division, Ministry of Finance",
         "People's Republic of Bangladesh",
-        "[object Object]"
+        "0"
       ],
       "institution_names": [
         "Finance Division, Ministry of Finance"
@@ -967,7 +895,7 @@
       ],
       "record_type": "global_project_record",
       "evidence_grade": "documented association",
-      "source_url": "https://search.worldbank.org/api/v2/projects",
+      "source_url": "https://projects.worldbank.org/en/projects-operations/project-search",
       "source_record_id": "P180439",
       "summary": "Second Bangladesh Green and Climate Resilient Development Credit",
       "missing_records": [

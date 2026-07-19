@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:15:24.321Z",
+  "checks": {
+    "authRouteOwnership": true,
+    "routeOrder": true,
+    "authOrigin": true,
+    "sessionSecurity": true,
+    "memberEntitlements": true,
+    "forumPersistence": true,
+    "paypalFailClosed": true,
+    "membershipClientContract": true,
+    "emailFailClosed": true,
+    "protectedAccess": true,
+    "schemaFoundation": true,
+    "runtimeBoundaries": true
+  },
+  "failures": [],
+  "externalActions": {
+    "emailSent": false,
+    "paypalCalled": false,
+    "productionDeployed": false
+  },
+  "boundary": "This test executes local Worker code only. It uses no live credentials, sends no email, calls no PayPal endpoint and deploys nothing."
+}

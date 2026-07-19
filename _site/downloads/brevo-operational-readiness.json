@@ -1,0 +1,76 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:14:30.070Z",
+  "phase": 1,
+  "status": "transactional-ready-automation-disabled",
+  "checks": {
+    "emailLifecycleD1Authoritative": true,
+    "explicitConsentRequired": true,
+    "verificationTokensPresent": true,
+    "unsubscribeAndSuppressionPresent": true,
+    "brevoWebhookProtected": true,
+    "outboxRetryPresent": true,
+    "replyToSupported": true,
+    "temporaryBrevoDomainDetected": true,
+    "domainAuthenticationGate": true,
+    "transactionalActivationGate": true,
+    "adminHealthProtected": true,
+    "manualRetryQuarantineProtected": true,
+    "automaticRetryQuarantineConfigured": true,
+    "dailyCampaignSourceReady": true,
+    "weeklyCampaignSourceReady": true,
+    "evidenceBoundedFallback": true,
+    "perRecipientPreferenceAndUnsubscribe": true,
+    "listUnsubscribeHeaders": true,
+    "reusableMarketingActionLinks": true,
+    "zeroRecipientCampaignCompletion": true,
+    "marketingAutomationOff": true,
+    "transactionalDeliveryOn": true,
+    "domainAuthenticationConfirmed": true,
+    "retryQuarantineCutoffConfigured": true,
+    "senderEmailConfigured": true,
+    "senderNameConfigured": true,
+    "replyToEmailConfigured": true,
+    "replyToNameConfigured": true,
+    "dailyCronConfigured": true,
+    "weeklyCronConfigured": true
+  },
+  "currentSafetyState": {
+    "marketingAutomation": false,
+    "marketingAutomationLockedOff": true,
+    "transactionalDelivery": true,
+    "domainAuthenticationConfirmed": true,
+    "senderEmail": "members@matrixreprogrammed.com",
+    "replyToEmail": "njmgroupfrance@gmail.com",
+    "retryQuarantineBefore": "2026-07-18T00:00:00.000Z",
+    "manualRetryQuarantineAvailable": true,
+    "automaticRetryQuarantineAvailable": true,
+    "dailyCampaignSource": "/data/daily-brain-brief.json",
+    "weeklyCampaignSource": "/data/weekly-investigation-conclusions.json",
+    "perRecipientUnsubscribe": true
+  },
+  "schedules": {
+    "configuredButBlocked": true,
+    "dailyUtc": "06:05",
+    "weeklyUtc": "Monday 07:15",
+    "franceSummer": {
+      "daily": "08:05",
+      "weekly": "Monday 09:15"
+    },
+    "franceWinter": {
+      "daily": "07:05",
+      "weekly": "Monday 08:15"
+    }
+  },
+  "requiredRuntimeSecrets": [
+    "BREVO_API_KEY",
+    "EMAIL_WEBHOOK_SECRET",
+    "ADMIN_API_TOKEN"
+  ],
+  "activationRequirements": [
+    "Keep automated daily and weekly campaigns blocked until the owner separately authorizes marketing automation.",
+    "Preserve explicit consent, verified preferences, unsubscribe and suppression controls.",
+    "Confirm evidence-bounded content and retry quarantine before any future campaign activation."
+  ],
+  "boundary": "Transactional account and verification email may operate when authenticated and configured. Scheduled or bulk marketing automation remains disabled even though campaign code and cron schedules are installed."
+}

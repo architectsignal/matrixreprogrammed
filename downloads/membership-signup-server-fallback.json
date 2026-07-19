@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:45:59.307Z",
+  "changed": false,
+  "membershipDefaultsWhenAbsent": {
+    "publicDailyBrief": true,
+    "releaseNotices": true,
+    "publicWeeklyDigest": false
+  },
+  "newsletterDefaultsWhenAbsent": {
+    "publicWeeklyDigest": true
+  },
+  "explicitSubmittedChoicesPreserved": true,
+  "purpose": "Accept the membership Daily Control Brief form even when a cached page or script omits preference fields.",
+  "boundary": "Defaults apply only when the relevant fields are absent. Explicit true or false choices remain authoritative."
+}

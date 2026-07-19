@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "generatedAt": "2026-07-19T06:15:23.969Z",
+  "changed": [
+    "src/worker-member-experience.js",
+    "src/worker-forum-persistence.js",
+    "forum.js",
+    "forum.html",
+    "dark-speculation-forum.html",
+    "epstein-alive-board.html"
+  ],
+  "membershipPrices": {
+    "free": 0,
+    "supporter": 3,
+    "intelligence": 6,
+    "researchPro": 9
+  },
+  "forumReading": "public",
+  "forumPosting": "verified free member session",
+  "paymentGateRemoved": true,
+  "boundary": "No browser-only switch may claim that payment, authentication or entitlement has been verified."
+}

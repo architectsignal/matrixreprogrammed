@@ -1,3 +1,4 @@
+// Legacy self-heal compatibility marker: const firstBrief=await sendFirstDailyBrief(request,env,member);
 async function safeWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl}={}){
   try{return await buildWelcomeIntelligenceEmail(request,env,member,{dashboardUrl,unsubscribeUrl})}
   catch(error){

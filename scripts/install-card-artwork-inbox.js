@@ -19,6 +19,7 @@ function extFromMime(mime, fallback) {
   if (m.includes('webp')) return 'webp';
   if (m.includes('png')) return 'png';
   if (m.includes('jpeg') || m.includes('jpg')) return 'jpg';
+  if (m.includes('avif')) return 'avif';
   if (m.includes('svg')) return 'svg';
   return fallback || 'webp';
 }
@@ -29,17 +30,26 @@ function parseDataUri(uri) {
   const isBase64 = Boolean(match[2]);
   const raw = match[3] || '';
   const buffer = isBase64 ? Buffer.from(raw, 'base64') : Buffer.from(decodeURIComponent(raw), 'utf8');
-  return { mime, buffer, dataUri: uri };
+  return { mime, buffer };
 }
 async function fetchImage(url) {
-  const res = await fetch(url, { redirect: 'follow' });
+  const res = await fetch(url, { redirect: 'follow', headers: { 'User-Agent': 'MatrixReprogrammedCardArtInstaller/2.0' } });
   if (!res.ok) throw new Error(`download failed ${res.status} ${res.statusText}`);
   const mime = res.headers.get('content-type') || 'image/webp';
   const buffer = Buffer.from(await res.arrayBuffer());
+  if (!buffer.length) throw new Error('downloaded image is empty');
   return { mime, buffer };
 }
-function svgWrapper({ label, cardId, sourceHref }) {
+function svgWrapper({ label, sourceHref }) {
   return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800" role="img" aria-label="${esc(label)} installed Matrix Reprogrammed card artwork"><rect width="1200" height="1800" fill="#020202"/><image href="${esc(sourceHref)}" x="0" y="0" width="1200" height="1800" preserveAspectRatio="xMidYMid slice"/><rect x="24" y="24" width="1152" height="1752" rx="38" fill="none" stroke="#d8b56a" stroke-width="6" opacity=".74"/><title>${esc(label)} · installed generated artwork</title><desc>Installed through the automated card artwork inbox. Evidence and current intelligence remain in the linked dossier.</desc></svg>`;
+}
+function refreshCardSurfaces() {
+  for (const script of ['ensure-card-art-assets.js', 'build-clean-card-decks.js', 'build-card-download-manifest.js', 'card-deck-system-audit.js']) {
+    const scriptPath = path.join(root, 'scripts', script);
+    if (!fs.existsSync(scriptPath)) continue;
+    delete require.cache[require.resolve(scriptPath)];
+    require(scriptPath);
+  }
 }
 async function main() {
   const inboxPath = 'data/card-artwork-inbox.json';
@@ -57,35 +67,32 @@ async function main() {
     try {
       let image;
       let ext;
-      let href;
       if (item.sourceDataUri) {
         image = parseDataUri(item.sourceDataUri);
         if (!image) throw new Error('invalid sourceDataUri');
         ext = extFromMime(image.mime, 'webp');
-        href = item.sourceDataUri;
       } else if (item.sourceUrl) {
         image = await fetchImage(item.sourceUrl);
         ext = extFromMime(image.mime, path.extname(new URL(item.sourceUrl).pathname).replace(/^\./, '') || 'webp');
-        const imagePath = `assets/${dir}/cards/${cardId}.installed.${ext}`;
-        wb(imagePath, image.buffer);
-        href = `${cardId}.installed.${ext}`;
       } else if (item.sourcePath && ex(item.sourcePath)) {
-        const buffer = fs.readFileSync(fp(item.sourcePath));
+        image = { mime: '', buffer: fs.readFileSync(fp(item.sourcePath)) };
         ext = path.extname(item.sourcePath).replace(/^\./, '') || 'webp';
-        const imagePath = `assets/${dir}/cards/${cardId}.installed.${ext}`;
-        wb(imagePath, buffer);
-        href = `${cardId}.installed.${ext}`;
       } else {
         throw new Error('missing sourceUrl, sourceDataUri, or valid sourcePath');
       }
+      const imagePath = `assets/${dir}/cards/${cardId}.installed.${ext}`;
+      wb(imagePath, image.buffer);
+      const canonicalPath = `assets/${dir}/cards/${cardId}.${ext}`;
+      wb(canonicalPath, image.buffer);
       const svgPath = `assets/${dir}/cards/${cardId}.svg`;
-      wr(svgPath, svgWrapper({ label, cardId, sourceHref: href }));
+      wr(svgPath, svgWrapper({ label, sourceHref: `${cardId}.installed.${ext}` }));
       item.status = 'installed';
       item.installedAt = new Date().toISOString();
-      item.assetPath = svgPath;
+      item.assetPath = canonicalPath;
+      item.wrapperPath = svgPath;
       item.deckId = deckId;
       item.cardId = cardId;
-      installed.push({ deckId, cardId, label, assetPath: svgPath, sourceUrl: item.sourceUrl || null, sourcePath: item.sourcePath || null, installedAt: item.installedAt });
+      installed.push({ deckId, cardId, label, assetPath: canonicalPath, wrapperPath: svgPath, sourceUrl: item.sourceUrl || null, sourcePath: item.sourcePath || null, installedAt: item.installedAt });
     } catch (error) {
       item.status = process.env.ARTWORK_INBOX_KEEP_PENDING === '1' ? 'pending' : 'error';
       item.error = error.message;
@@ -107,6 +114,7 @@ async function main() {
   };
   wr('data/card-artwork-install-log.json', JSON.stringify(merged, null, 2));
   wr('downloads/card-artwork-install-log.md', '# Card Artwork Install Log\n\nUpdated: ' + merged.updated + '\n\nLatest installed: ' + installed.length + '\n\nErrors: ' + errors.length + '\n\n## Latest Installed\n' + (installed.map(i => `- ${i.label} — ${i.assetPath}`).join('\n') || 'None') + '\n\n## Errors\n' + (errors.map(e => `- ${e.label}: ${e.error}`).join('\n') || 'None'));
+  if (installed.length) refreshCardSurfaces();
   console.log(`Card artwork inbox installer complete: ${installed.length} installed, ${errors.length} error(s).`);
   if (errors.length && process.env.STRICT_CARD_ART_INSTALL === '1') process.exit(1);
 }

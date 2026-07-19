@@ -90,6 +90,8 @@ for (const relative of targets) {
   }
 }
 
+require('./restore-homepage-navigation.js');
+
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),

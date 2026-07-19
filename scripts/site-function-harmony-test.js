@@ -66,8 +66,8 @@ for (const [file, text, label] of [
   ['wrangler.toml', 'keep_vars = true', 'Cloudflare dashboard variable preservation'],
   ['wrangler.jsonc', '"keep_vars": true', 'JSONC dashboard variable preservation']
 ]) needText(file, text, label);
-forbidText('wrangler.toml', 'PAYPAL_ENVIRONMENT =', 'active PayPal environment override');
-forbidText('wrangler.jsonc', '"PAYPAL_ENVIRONMENT":', 'active PayPal JSONC environment override');
+if (/^\s*PAYPAL_[A-Z0-9_]+\s*=/m.test(read('wrangler.toml'))) hard.push('wrangler.toml contains active PayPal override');
+if (/^\s*"PAYPAL_[A-Z0-9_]+"\s*:/m.test(read('wrangler.jsonc'))) hard.push('wrangler.jsonc contains active PayPal override');
 forbidSoftText('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin');
 forbidSoftText('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
 

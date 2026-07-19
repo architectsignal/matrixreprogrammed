@@ -3,6 +3,7 @@ const path = require('path');
 
 const root = process.cwd();
 require('./harden-worker-api-contracts.js');
+require('./ensure-billing-commercial-terms.js');
 const templateDir = path.join(root, 'scripts', 'templates', 'membership-auth');
 const siteDir = path.join(root, '_site');
 const pages = [
@@ -62,7 +63,10 @@ for (const required of [
   ['paypal-membership.js', '/api/paypal/checkout-intent'],
   ['paypal-membership.js', '/api/paypal/subscription/confirm'],
   ['paypal-membership.js', 'actions.subscription.create'],
-  ['paypal-membership.js', 'checkoutEnabled']
+  ['paypal-membership.js', 'checkoutEnabled'],
+  ['billing-dashboard.html', 'data-billing-commercial-terms'],
+  ['billing-dashboard.html', 'membership-terms.html'],
+  ['billing-dashboard.html', 'terms-of-use.html']
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
@@ -86,11 +90,12 @@ const report = {
   runtimes: {
     signup: 'newsletter.js → /newsletter-signup',
     payment: 'paypal-membership.js',
-    authentication: 'member-login.html and member-dashboard.js'
+    authentication: 'member-login.html and member-dashboard.js',
+    billingTerms: 'billing-dashboard.html → membership-terms.html and terms-of-use.html'
   },
   paypalCheckout: 'server-verified-and-fail-closed',
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
-  boundary: 'Canonical membership and passwordless pages are restored after generated-site builders. Signup and PayPal behavior remain in their dedicated audited runtimes rather than obsolete inline scripts.'
+  boundary: 'Canonical membership, billing and passwordless pages are restored after generated-site builders. Signup and PayPal behavior remain in their dedicated audited runtimes rather than obsolete inline scripts.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));

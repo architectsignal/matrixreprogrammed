@@ -7,8 +7,8 @@
     "archiveRoute": "intel-vault.html",
     "latestDropsRoute": "downloads/latest-public-drops.json"
   },
-  "liveIntelUpdated": "2026-07-19T06:13:00.128Z",
-  "latestDropsUpdated": "2026-07-18T07:20:09.012Z",
+  "liveIntelUpdated": "2026-07-19T06:44:29.910Z",
+  "latestDropsUpdated": "2026-07-19T06:15:19.100Z",
   "intelVaultUpdated": "2026-07-06T08:02:25.608Z",
   "title": "Crime-State Overlap Pack",
   "label": "Crime / corruption pack",
@@ -81,7 +81,7 @@
   "forumPostsRoute": "downloads/forum-posts.json?pack=crime-state-overlap",
   "forumPostsMarkdownRoute": "downloads/forum-posts.md?pack=crime-state-overlap",
   "liveIntelWindow": {
-    "updated": "2026-07-19T06:13:00.128Z",
+    "updated": "2026-07-19T06:44:29.910Z",
     "itemCount": 12,
     "items": [
       {
@@ -219,29 +219,6 @@
         "archiveReason": "not-current-feed-item",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
-      },
-      {
-        "id": "declassified-files-2026-07-11-25",
-        "lane": "declassified-files",
-        "laneTitle": "Declassified Files And Public Archives",
-        "sourceLabel": "Google News / declassified files",
-        "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
-        "published": "2026-07-11T04:00:07.000Z",
-        "summary": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters People.com",
-        "evidenceLevel": "Seven-day public-record lead",
-        "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-        "whyItMatters": "This item is fresh enough to route readers into the evidence, source-card, video, free-brief, offer and book system.",
-        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
-        "evidenceRoute": "evidence-vault-index.html",
-        "videoRoute": "videos.html",
-        "bookRoute": "books.html",
-        "offerRoute": "download-center.html",
-        "optinRoute": "optin-intelligence-files-brief.html",
-        "timerLinks": [],
-        "sourceRequirement": "Underlying primary record, official release, court filing, regulator notice, corporate filing or independently verified source.",
-        "sourceType": "latest-public-drop",
-        "freshness": "active weekly drop"
       },
       {
         "id": "epstein-files-2026-06-26-judge-orders-doj-to-either-unredact-more-epstein-files-or-explain-why-",
@@ -480,6 +457,40 @@
         "archiveReason": "expired-after-7-day-window",
         "sourceType": "intel-vault",
         "freshness": "archived historical lead"
+      },
+      {
+        "id": "epstein-files-2026-06-25-epstein-associate-ghislaine-maxwell-says-new-evidence-undermines-convi",
+        "lane": "epstein-files",
+        "laneTitle": "Google News / Epstein sighting and alive claims",
+        "sourceLabel": "Google News / Epstein sighting and alive claims",
+        "title": "Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5",
+        "published": "2026-06-25T01:25:29.000Z",
+        "fetchedAt": "2026-07-06T08:02:25.608Z",
+        "summary": "Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree The Standard (HK)",
+        "evidenceLevel": "Seven-day public-record/news lead",
+        "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+        "whyItMatters": "This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "nextAction": "Open the source first, then follow the evidence route and only share the claim at the strength the record supports.",
+        "videoHook": "New Epstein file lane: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK). The record matters, but the evidence class matters more.",
+        "rumbleShortTitle": "Epstein associate Ghislaine Maxwell says new evidence undermines convict",
+        "rumbleLongTitle": "Google News / Epstein sighting and alive claims — Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutor",
+        "socialThread": [
+          "1/ Fresh epstein-files lead: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)",
+          "2/ Do not treat a headline as proof. First classify the source type and evidence level.",
+          "3/ Open the source, then use the evidence route, source card, free brief, and book path."
+        ],
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
+        "videoRoute": "videos.html",
+        "bookRoute": "book-black-file.html",
+        "offerRoute": "offer-starter-library.html",
+        "optinRoute": "optin-black-file-brief.html",
+        "storeRoute": "amazon-store-books.html",
+        "status": "archived-intel-vault",
+        "archivedAt": "2026-07-06T08:02:25.608Z",
+        "archiveReason": "expired-after-7-day-window",
+        "sourceType": "intel-vault",
+        "freshness": "archived historical lead"
       }
     ]
   },
@@ -580,11 +591,6 @@
       "kind": "Google News / control structure"
     },
     {
-      "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
-      "route": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZF96S0FNRkUtZXdvdXpGZEtScjFWZURvbGZvbkRHbkotNktkUVlvRF9LbVZWREczWTAtc05XbGVBQlNoamZlVmZwWmtuMG5XQTFJSlFxdXhlYm9LTGpMZmZydnNEQUdrTzkxTThUaHZ3b3ZkWEwyQUhTY1RkVGR6LUpZXzdBOGw0Y21KNE9YOUpWcGZEZmFJ?oc=5",
-      "kind": "Google News / declassified files"
-    },
-    {
       "title": "Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News",
       "route": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5",
       "kind": "Google News / Epstein timeline and files"
@@ -618,6 +624,11 @@
       "title": "South Africa boosts Smart ID adoption through expanded bank network - Biometric Update",
       "route": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5",
       "kind": "Google News / control structure"
+    },
+    {
+      "title": "Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK)",
+      "route": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5",
+      "kind": "Google News / Epstein sighting and alive claims"
     }
   ],
   "routes": [

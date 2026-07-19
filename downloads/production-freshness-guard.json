@@ -1,20 +1,20 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-18T07:12:58.588Z",
+  "generatedAt": "2026-07-19T07:37:48.823Z",
   "eventName": "schedule",
   "workflowName": "Daily Investigation Machine",
   "strictWorkflow": false,
   "localManualRun": false,
-  "advisoryOnly": true,
+  "advisoryOnly": false,
   "checks": [
     {
       "scope": "source",
       "id": "live-intel",
       "file": "data/live-intel.json",
-      "timestamp": "2026-07-18T07:12:43.526Z",
+      "timestamp": "2026-07-19T07:37:32.091Z",
       "ageHours": 0,
       "maxAgeHours": 26,
-      "count": 16,
+      "count": 11,
       "minimumCount": 1,
       "ok": true
     },
@@ -22,7 +22,7 @@
       "scope": "source",
       "id": "daily-investigation",
       "file": "data/daily-investigation-conclusions.json",
-      "timestamp": "2026-07-18T07:12:22.630Z",
+      "timestamp": "2026-07-19T07:37:07.820Z",
       "ageHours": 0.01,
       "maxAgeHours": 30,
       "count": 26,
@@ -33,7 +33,7 @@
       "scope": "source",
       "id": "daily-power-conclusions",
       "file": "data/daily-power-conclusions.json",
-      "timestamp": "2026-07-18T07:12:58.437Z",
+      "timestamp": "2026-07-19T07:37:48.678Z",
       "ageHours": 0,
       "maxAgeHours": 30,
       "count": 7,
@@ -44,7 +44,7 @@
       "scope": "source",
       "id": "daily-brain-brief",
       "file": "data/daily-brain-brief.json",
-      "timestamp": "2026-07-18T07:12:43.724Z",
+      "timestamp": "2026-07-19T07:37:32.334Z",
       "ageHours": 0,
       "maxAgeHours": 30,
       "count": 5,
@@ -55,7 +55,7 @@
       "scope": "source",
       "id": "outcome-briefings",
       "file": "data/outcome-briefings.json",
-      "timestamp": "2026-07-18T07:12:43.695Z",
+      "timestamp": "2026-07-19T07:37:32.303Z",
       "ageHours": 0,
       "maxAgeHours": 30,
       "count": 5,
@@ -66,64 +66,58 @@
       "scope": "built",
       "id": "live-intel",
       "file": "data/live-intel.json",
-      "timestamp": "2026-07-08T09:00:00.000Z",
-      "ageHours": 238.22,
+      "timestamp": "2026-07-18T07:12:43.526Z",
+      "ageHours": 24.42,
       "maxAgeHours": 26,
-      "count": 30,
+      "count": 21,
       "minimumCount": 1,
-      "ok": false
+      "ok": true
     },
     {
       "scope": "built",
       "id": "daily-investigation",
       "file": "data/daily-investigation-conclusions.json",
-      "timestamp": "2026-07-12T07:38:48.644Z",
-      "ageHours": 143.57,
+      "timestamp": "2026-07-18T07:12:22.630Z",
+      "ageHours": 24.42,
       "maxAgeHours": 30,
-      "count": 18,
+      "count": 26,
       "minimumCount": 0,
-      "ok": false
+      "ok": true
     },
     {
       "scope": "built",
       "id": "daily-power-conclusions",
       "file": "data/daily-power-conclusions.json",
-      "timestamp": "2026-07-16T06:00:16.812Z",
-      "ageHours": 49.21,
+      "timestamp": "2026-07-19T06:14:03.562Z",
+      "ageHours": 1.4,
       "maxAgeHours": 30,
       "count": 11,
       "minimumCount": 1,
-      "ok": false
+      "ok": true
     },
     {
       "scope": "built",
       "id": "daily-brain-brief",
       "file": "data/daily-brain-brief.json",
-      "timestamp": "2026-07-16T05:59:34.290Z",
-      "ageHours": 49.22,
+      "timestamp": "2026-07-19T06:13:03.461Z",
+      "ageHours": 1.41,
       "maxAgeHours": 30,
       "count": 5,
       "minimumCount": 1,
-      "ok": false
+      "ok": true
     },
     {
       "scope": "built",
       "id": "outcome-briefings",
       "file": "data/outcome-briefings.json",
-      "timestamp": "2026-07-16T05:59:34.259Z",
-      "ageHours": 49.22,
+      "timestamp": "2026-07-19T06:13:03.432Z",
+      "ageHours": 1.41,
       "maxAgeHours": 30,
       "count": 5,
       "minimumCount": 1,
-      "ok": false
+      "ok": true
     }
   ],
   "hardIssues": [],
-  "advisoryIssues": [
-    "built/data/live-intel.json: age 238.22h (limit 26h), count 30",
-    "built/data/daily-investigation-conclusions.json: age 143.57h (limit 30h), count 18",
-    "built/data/daily-power-conclusions.json: age 49.21h (limit 30h), count 11",
-    "built/data/daily-brain-brief.json: age 49.22h (limit 30h), count 5",
-    "built/data/outcome-briefings.json: age 49.22h (limit 30h), count 5"
-  ]
+  "advisoryIssues": []
 }

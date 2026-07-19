@@ -1,14 +1,14 @@
 # Site Brain Router
 
-Updated: 2026-07-19T06:14:04.890Z
+Updated: 2026-07-19T07:50:11.178Z
 
-Inputs: 2150
+Inputs: 2526
 
-Routed sources: 2150
+Routed sources: 2526
 
 Conclusions: 14
 
-Missing-record queue: 2150
+Missing-record queue: 2526
 
 ## Conclusions
 ### Institution dossier

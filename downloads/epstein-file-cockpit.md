@@ -17,7 +17,7 @@ A document route is a starting point, not a conclusion. Readers should open the 
 - CIA Reading Room: https://www.cia.gov/readingroom/ — Search declassified CIA reading-room material where intelligence-history context is relevant.
 - National Archives Catalog: https://catalog.archives.gov/ — Search U.S. archival records, agency material, photographs, legal records, and historical files.
 - SEC EDGAR: https://www.sec.gov/edgar/search/ — Search corporate filings, directors, funds, entities, securities records, and financial relationships that may help map money or institutional access.
-- FARA Records: https://efile.fara.gov/ords/fara/f?p=1381:1 — Search foreign-agent registration records, lobbying, representation, and influence disclosures.
+- FARA Records: https://efile.fara.gov/ords/fara/f?p=1235%3A10 — Search foreign-agent registration records, lobbying, representation, and influence disclosures.
 - OpenSecrets: https://www.opensecrets.org/ — Search campaign finance, donors, PACs, lobbying, and political-money patterns.
 - ICIJ Offshore Leaks Database: https://offshoreleaks.icij.org/ — Search offshore entities, intermediaries, and company links. Treat results as leads requiring context and verification.
 

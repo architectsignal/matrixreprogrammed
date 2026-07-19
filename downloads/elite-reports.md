@@ -1,18 +1,12 @@
 # Elite Reports
 
-Generated: 2026-07-19T06:13:59.682Z
+Generated: 2026-07-19T07:49:47.962Z
 
 ## Daily Revelation Report
 
 House panel probing Epstein asked Leon Black about birthday book and their friendship - CBS News
 
 Source: daily-command-brief.html
-
-## People's Republic of Bangladesh — Entity Report
-
-High-interest tracked entity because it appears across records and relationship candidates.
-
-Source: entity-daily-briefs.html
 
 ## Appellate Division of the Supreme Court of the State of New York — Entity Report
 
@@ -63,6 +57,12 @@ Worth watching because records and relationship signals both exist.
 Source: entity-daily-briefs.html
 
 ## 2021-00294 — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## 2024-07773 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T06:13:22.626Z",
+  "updated": "2026-07-19T06:44:50.357Z",
   "purpose": "Auto-generated branded PDF index for Matrix Reprogrammed downloads. PDFs are regenerated during the site build from current JSON/Markdown/TXT data, subject profiles, and live-intel context.",
   "premiumStructure": [
     "cover page",
@@ -14,7 +14,7 @@
   "subjectProfileSource": "data/subject-intelligence-profiles.json",
   "subjectProfileCount": 7,
   "flagshipCount": 10,
-  "count": 275,
+  "count": 289,
   "flagships": [
     {
       "file": "downloads/subject-epstein-black-file.pdf",
@@ -129,7 +129,7 @@
     {
       "file": "downloads/ai-speculative-conclusions-integrity.pdf",
       "title": "Ai Speculative Conclusions Integrity",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -207,13 +207,13 @@
     {
       "file": "downloads/brevo-operational-readiness.pdf",
       "title": "Brevo Operational Readiness",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/brevo-transactional-readiness-patch.pdf",
       "title": "Brevo Transactional Readiness Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -319,6 +319,18 @@
       "kind": "download"
     },
     {
+      "file": "downloads/cloudflare-investigation-graph-projection.pdf",
+      "title": "Cloudflare Investigation Graph Projection",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/cloudflare-search-index-compaction.pdf",
+      "title": "Cloudflare Search Index Compaction",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/cloudflare-worker-routes-test.pdf",
       "title": "Cloudflare Worker Routes Test",
       "reused": true,
@@ -369,7 +381,7 @@
     {
       "file": "downloads/current-intelligence-finalization.pdf",
       "title": "Current Intelligence Finalization",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -405,19 +417,19 @@
     {
       "file": "downloads/daily-control-brief-delivery-patch.pdf",
       "title": "Daily Control Brief Delivery Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/daily-control-brief-email-test.pdf",
       "title": "Daily Control Brief Email Test",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/daily-control-brief-email-upgrade.pdf",
       "title": "Daily Control Brief Email Upgrade",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -447,7 +459,7 @@
     {
       "file": "downloads/deep-audit-public-defect-repair.pdf",
       "title": "Deep Audit Public Defect Repair",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -471,7 +483,7 @@
     {
       "file": "downloads/deploy-status-current-mission-patch.pdf",
       "title": "Deploy Status Current Mission Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -537,31 +549,31 @@
     {
       "file": "downloads/email-automation-guard-patch.pdf",
       "title": "Email Automation Guard Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/email-campaign-quality-patch.pdf",
       "title": "Email Campaign Quality Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/email-campaign-source-anchor-repair.pdf",
       "title": "Email Campaign Source Anchor Repair",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/email-launch-console-patch.pdf",
       "title": "Email Launch Console Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/empty-public-controls-output.pdf",
       "title": "Empty Public Controls Output",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -687,7 +699,7 @@
     {
       "file": "downloads/evidence-badge-route-restore.pdf",
       "title": "Evidence Badge Route Restore",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -721,6 +733,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/final-live-audit-and-external-links.pdf",
+      "title": "Final Live Audit And External Links",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/final-public-editorial-hardening.pdf",
       "title": "Final Public Editorial Hardening",
       "reused": true,
@@ -745,20 +763,38 @@
       "kind": "download"
     },
     {
+      "file": "downloads/forum-health-member-policy-normalize.pdf",
+      "title": "Forum Health Member Policy Normalize",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/forum-posts.pdf",
       "title": "Forum Posts Export",
       "reused": true,
       "kind": "download"
     },
     {
+      "file": "downloads/full-site-audit-target-detection-patch.pdf",
+      "title": "Full Site Audit Target Detection Patch",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/full-site-function-tool-audit.pdf",
       "title": "Full Site Function and Tool Audit",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/generated-machine-page-cleanup.pdf",
       "title": "Generated Machine Page Cleanup",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/generated-machine-pages-test.pdf",
+      "title": "Generated Machine Pages Test",
       "reused": false,
       "kind": "download"
     },
@@ -783,6 +819,12 @@
     {
       "file": "downloads/homepage-command-builder-shell-patch.pdf",
       "title": "Homepage Command Builder Shell Patch",
+      "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/homepage-mission-normalization.pdf",
+      "title": "Homepage Mission Normalization",
       "reused": false,
       "kind": "download"
     },
@@ -808,6 +850,12 @@
       "file": "downloads/investigation-source-ledger.pdf",
       "title": "Investigation Source Ledger",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/late-generated-shared-runtime-patch.pdf",
+      "title": "Late Generated Shared Runtime Patch",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -861,13 +909,13 @@
     {
       "file": "downloads/live-intel-research-routes.pdf",
       "title": "Live Intel Research Routes",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/living-intelligence-regression-test.pdf",
       "title": "Living Intelligence Regression Test",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -891,7 +939,7 @@
     {
       "file": "downloads/machine-entity-output-sanitizer-output.pdf",
       "title": "Machine Entity Output Sanitizer Output",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -903,7 +951,7 @@
     {
       "file": "downloads/machine-feed-object-name-patch.pdf",
       "title": "Machine Feed Object Name Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -931,6 +979,18 @@
       "kind": "download"
     },
     {
+      "file": "downloads/member-forum-integration-patch.pdf",
+      "title": "Member Forum Integration Patch",
+      "reused": false,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/member-forum-integration-test.pdf",
+      "title": "Member Forum Integration Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/membership-access-copy-report.pdf",
       "title": "Membership Access Copy Report",
       "reused": true,
@@ -949,6 +1009,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/membership-brief-preferences-patch.pdf",
+      "title": "Membership Brief Preferences Patch",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/membership-foundation-patch-report.pdf",
       "title": "Membership Foundation Patch Report",
       "reused": true,
@@ -957,7 +1023,7 @@
     {
       "file": "downloads/membership-signup-server-fallback.pdf",
       "title": "Membership Signup Server Fallback",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -975,7 +1041,7 @@
     {
       "file": "downloads/mission-acceptance-copy-alignment.pdf",
       "title": "Mission Acceptance Copy Alignment",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1107,13 +1173,13 @@
     {
       "file": "downloads/paypal-voluntary-support-patch.pdf",
       "title": "Paypal Voluntary Support Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/phase1-live-email-verifier-patch.pdf",
       "title": "Phase1 Live Email Verifier Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1173,7 +1239,7 @@
     {
       "file": "downloads/power-dossier-runtime-report.pdf",
       "title": "Power Dossier Runtime Report",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1215,7 +1281,7 @@
     {
       "file": "downloads/production-receipt-email-safety-patch.pdf",
       "title": "Production Receipt Email Safety Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1227,7 +1293,7 @@
     {
       "file": "downloads/public-control-target-audit.pdf",
       "title": "Public Control Target Audit",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1257,13 +1323,19 @@
     {
       "file": "downloads/public-editorial-audit-repair.pdf",
       "title": "Public Editorial Audit Repair",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/public-network-map-test.pdf",
       "title": "Public Network Map Test",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/public-output-secret-audit.pdf",
+      "title": "Public Output Secret Audit",
+      "reused": false,
       "kind": "download"
     },
     {
@@ -1275,7 +1347,7 @@
     {
       "file": "downloads/public-runtime-controls-output.pdf",
       "title": "Public Runtime Controls Output",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1293,7 +1365,7 @@
     {
       "file": "downloads/public-utility-dedupe-output.pdf",
       "title": "Public Utility Dedupe Output",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1339,6 +1411,12 @@
       "kind": "download"
     },
     {
+      "file": "downloads/recovery-worker-api-contract-test.pdf",
+      "title": "Recovery Worker Api Contract Test",
+      "reused": false,
+      "kind": "download"
+    },
+    {
       "file": "downloads/research-tools-ui-patch.pdf",
       "title": "Research Tools Ui Patch",
       "reused": true,
@@ -1377,7 +1455,7 @@
     {
       "file": "downloads/search-v3-adjudicated-ranking-patch.pdf",
       "title": "Search V3 Adjudicated Ranking Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1389,13 +1467,13 @@
     {
       "file": "downloads/search-v3-compaction-headroom-patch.pdf",
       "title": "Search V3 Compaction Headroom Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
       "file": "downloads/search-v3-deploy-size-repair.pdf",
       "title": "Search V3 Deploy Size Repair",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1563,7 +1641,7 @@
     {
       "file": "downloads/source-document-vault-route-restore.pdf",
       "title": "Source Document Vault Route Restore",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1599,7 +1677,7 @@
     {
       "file": "downloads/stale-generated-brief-link-repair.pdf",
       "title": "Stale Generated Brief Link Repair",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1769,7 +1847,7 @@
     {
       "file": "downloads/voluntary-support-store-patch.pdf",
       "title": "Voluntary Support Store Patch",
-      "reused": false,
+      "reused": true,
       "kind": "download"
     },
     {
@@ -1782,6 +1860,12 @@
       "file": "downloads/weekly-newsletter-latest.pdf",
       "title": "Matrix Reprogrammed Weekly Signal Drop",
       "reused": true,
+      "kind": "download"
+    },
+    {
+      "file": "downloads/worker-api-contract-hardening.pdf",
+      "title": "Worker Api Contract Hardening",
+      "reused": false,
       "kind": "download"
     },
     {

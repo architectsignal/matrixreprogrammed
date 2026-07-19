@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-07-19T06:14:03.563Z",
+  "updated": "2026-07-19T07:49:54.125Z",
   "title": "Deep Intel Feed Matrix",
   "boundary": "This feed matrix ranks public-record source lanes and site signals. It does not make private claims or treat association as proof.",
   "lanes": [
@@ -232,15 +232,6 @@
   ],
   "items": [
     {
-      "title": "People's Republic of Bangladesh — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/people-s-republic-of-bangladesh.html",
-      "source": "missing record",
-      "score": 85,
-      "tags": [
-        "record gap"
-      ]
-    },
-    {
       "title": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "source": "missing record",
@@ -457,6 +448,15 @@
       ]
     },
     {
+      "title": "The New York and Presbyterian Hospital v. New York State Nurses Association — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
+      "source": "missing record",
+      "score": 85,
+      "tags": [
+        "record gap"
+      ]
+    },
+    {
       "title": "Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS",
       "route": "live-intel.html",
       "source": "epstein-files",
@@ -554,92 +554,11 @@
       "tags": [
         "epstein-files"
       ]
-    },
-    {
-      "title": "Warren Buffett cuts off donations to Gates Foundation following Epstein revelations - Reuters",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Goldman counsel Ruemmler says she would have reported Epstein if she knew he abused women - WKZO",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "'She saw dollar signs': Former Obama counsel pressed over years-long Epstein ties - Fox News",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Goldman Sachs’ ex-top lawyer tells Congress that Jeffrey Epstein used her - New York Post",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "The surveillance networks cities do not have to buy - Biometric Update",
-      "route": "live-intel.html",
-      "source": "control-system",
-      "score": 72,
-      "tags": [
-        "control-system"
-      ]
-    },
-    {
-      "title": "Senate Blocks FY2027 NDAA Over Iran War: $1.15T in Weapons Programs in Limbo - Tech Times",
-      "route": "live-intel.html",
-      "source": "war-machine",
-      "score": 72,
-      "tags": [
-        "war-machine"
-      ]
-    },
-    {
-      "title": "US Justice Dept says it cannot provide unredacted Epstein files for New Mexico probe - thestandard.com.hk",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Jeffrey Epstein connected to CIA and Mossad, JD Vance claims - Nine.com.au",
-      "route": "live-intel.html",
-      "source": "epstein-files",
-      "score": 72,
-      "tags": [
-        "epstein-files"
-      ]
-    },
-    {
-      "title": "Pentagon Releases New UFO Records Detailing Decades of Unexplained Aerial Encounters - People.com",
-      "route": "live-intel.html",
-      "source": "declassified-files",
-      "score": 72,
-      "tags": [
-        "declassified-files"
-      ]
     }
   ],
   "brainInjection": {
     "layer": "evidence-and-records",
-    "nodeCount": 55
+    "nodeCount": 46
   },
   "missionPriorityIndex": true
 }

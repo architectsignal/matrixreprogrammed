@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-07-19T06:15:06.029Z",
-  "checks": 2368,
+  "generatedAt": "2026-07-19T06:46:31.309Z",
+  "checks": 2410,
   "failures": 0,
-  "manifestDocuments": 276,
+  "manifestDocuments": 290,
   "timelineEvents": 8000,
   "results": [
     {
@@ -587,6 +587,36 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-cloudflare-investigation-graph-projection-31b99f4c4fb0 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-cloudflare-investigation-graph-projection-31b99f4c4fb0 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-cloudflare-investigation-graph-projection-31b99f4c4fb0 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-cloudflare-search-index-compaction-afc08e611d63 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-cloudflare-search-index-compaction-afc08e611d63 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-cloudflare-search-index-compaction-afc08e611d63 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-cloudflare-worker-routes-test-ab13e699f294 has local PDF URL",
       "pass": true,
       "detail": ""
@@ -1007,32 +1037,32 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-7ef728e3f427 has local PDF URL",
+      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-e4753ddd3108 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-7ef728e3f427 has SHA-256",
+      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-e4753ddd3108 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-7ef728e3f427 has evidence fields",
+      "name": "Manifest document pdf-dossier-pack-crime-state-overlap-e4753ddd3108 has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-intelligence-network-2d04856884d8 has local PDF URL",
+      "name": "Manifest document pdf-dossier-pack-intelligence-network-eea99b68df37 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-intelligence-network-2d04856884d8 has SHA-256",
+      "name": "Manifest document pdf-dossier-pack-intelligence-network-eea99b68df37 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-intelligence-network-2d04856884d8 has evidence fields",
+      "name": "Manifest document pdf-dossier-pack-intelligence-network-eea99b68df37 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -1052,17 +1082,17 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-trust-evidence-a5fa1c7b6ef4 has local PDF URL",
+      "name": "Manifest document pdf-dossier-pack-trust-evidence-c71cceb28c44 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-trust-evidence-a5fa1c7b6ef4 has SHA-256",
+      "name": "Manifest document pdf-dossier-pack-trust-evidence-c71cceb28c44 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-dossier-pack-trust-evidence-a5fa1c7b6ef4 has evidence fields",
+      "name": "Manifest document pdf-dossier-pack-trust-evidence-c71cceb28c44 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -1592,6 +1622,21 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-final-live-audit-and-external-links-c6a85a801607 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-final-live-audit-and-external-links-c6a85a801607 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-final-live-audit-and-external-links-c6a85a801607 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-final-public-editorial-hardening-a8392b38aceb has local PDF URL",
       "pass": true,
       "detail": ""
@@ -1652,6 +1697,21 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-forum-health-member-policy-normalize-3440fbd06e70 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-forum-health-member-policy-normalize-3440fbd06e70 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-forum-health-member-policy-normalize-3440fbd06e70 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-forum-posts-d6c6b15d54fe has local PDF URL",
       "pass": true,
       "detail": ""
@@ -1663,6 +1723,21 @@
     },
     {
       "name": "Manifest document pdf-forum-posts-d6c6b15d54fe has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-full-site-audit-target-detection-patch-fda6def11b7a has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-full-site-audit-target-detection-patch-fda6def11b7a has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-full-site-audit-target-detection-patch-fda6def11b7a has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -1693,6 +1768,21 @@
     },
     {
       "name": "Manifest document pdf-generated-machine-page-cleanup-079bf6f13910 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-generated-machine-pages-test-ad944bd9b106 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-generated-machine-pages-test-ad944bd9b106 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-generated-machine-pages-test-ad944bd9b106 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -1757,6 +1847,21 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-homepage-mission-normalization-2e01bf9a4773 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-homepage-mission-normalization-2e01bf9a4773 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-homepage-mission-normalization-2e01bf9a4773 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-intel-drop-vault-6b488acd240a has local PDF URL",
       "pass": true,
       "detail": ""
@@ -1813,6 +1918,21 @@
     },
     {
       "name": "Manifest document pdf-investigation-source-ledger-06ba199d59a9 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-late-generated-shared-runtime-patch-e00c9a3f3dac has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-late-generated-shared-runtime-patch-e00c9a3f3dac has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-late-generated-shared-runtime-patch-e00c9a3f3dac has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -2117,6 +2237,36 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-member-forum-integration-patch-0fcee9166cc8 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-member-forum-integration-patch-0fcee9166cc8 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-member-forum-integration-patch-0fcee9166cc8 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-member-forum-integration-test-f78660e88609 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-member-forum-integration-test-f78660e88609 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-member-forum-integration-test-f78660e88609 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-membership-access-copy-report-ef460ce0330c has local PDF URL",
       "pass": true,
       "detail": ""
@@ -2158,6 +2308,21 @@
     },
     {
       "name": "Manifest document pdf-membership-auth-ui-patch-3c6a57fbaba8 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-membership-brief-preferences-patch-39d8258896ea has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-membership-brief-preferences-patch-39d8258896ea has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-membership-brief-preferences-patch-39d8258896ea has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -2957,6 +3122,21 @@
       "detail": ""
     },
     {
+      "name": "Manifest document pdf-public-output-secret-audit-f9857f8a9603 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-public-output-secret-audit-f9857f8a9603 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-public-output-secret-audit-f9857f8a9603 has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
       "name": "Manifest document pdf-public-record-intake-df3b7dbd4920 has local PDF URL",
       "pass": true,
       "detail": ""
@@ -3133,6 +3313,21 @@
     },
     {
       "name": "Manifest document pdf-reader-page-repair-7282fd49847b has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-recovery-worker-api-contract-test-b6dbfbc726d7 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-recovery-worker-api-contract-test-b6dbfbc726d7 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-recovery-worker-api-contract-test-b6dbfbc726d7 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -3392,77 +3587,77 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-crime-state-overlap-38b588c75e74 has local PDF URL",
+      "name": "Manifest document pdf-share-kit-crime-state-overlap-b2d61229857e has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-crime-state-overlap-38b588c75e74 has SHA-256",
+      "name": "Manifest document pdf-share-kit-crime-state-overlap-b2d61229857e has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-crime-state-overlap-38b588c75e74 has evidence fields",
+      "name": "Manifest document pdf-share-kit-crime-state-overlap-b2d61229857e has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-intelligence-network-c48d5c504f1f has local PDF URL",
+      "name": "Manifest document pdf-share-kit-intelligence-network-51f3c706a83a has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-intelligence-network-c48d5c504f1f has SHA-256",
+      "name": "Manifest document pdf-share-kit-intelligence-network-51f3c706a83a has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-intelligence-network-c48d5c504f1f has evidence fields",
+      "name": "Manifest document pdf-share-kit-intelligence-network-51f3c706a83a has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-symbolic-power-2517bbd0c7f3 has local PDF URL",
+      "name": "Manifest document pdf-share-kit-symbolic-power-667c08f715f2 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-symbolic-power-2517bbd0c7f3 has SHA-256",
+      "name": "Manifest document pdf-share-kit-symbolic-power-667c08f715f2 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-symbolic-power-2517bbd0c7f3 has evidence fields",
+      "name": "Manifest document pdf-share-kit-symbolic-power-667c08f715f2 has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-trust-evidence-6dc89ca127ae has local PDF URL",
+      "name": "Manifest document pdf-share-kit-trust-evidence-89d4dd38d3a4 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-trust-evidence-6dc89ca127ae has SHA-256",
+      "name": "Manifest document pdf-share-kit-trust-evidence-89d4dd38d3a4 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-trust-evidence-6dc89ca127ae has evidence fields",
+      "name": "Manifest document pdf-share-kit-trust-evidence-89d4dd38d3a4 has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-war-machine-4bdf261ed244 has local PDF URL",
+      "name": "Manifest document pdf-share-kit-war-machine-6eb3b379d10e has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-war-machine-4bdf261ed244 has SHA-256",
+      "name": "Manifest document pdf-share-kit-war-machine-6eb3b379d10e has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-share-kit-war-machine-4bdf261ed244 has evidence fields",
+      "name": "Manifest document pdf-share-kit-war-machine-6eb3b379d10e has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -3827,17 +4022,17 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-crime-state-overlap-45688990d53f has local PDF URL",
+      "name": "Manifest document pdf-subject-crime-state-overlap-a21ed53ec61b has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-crime-state-overlap-45688990d53f has SHA-256",
+      "name": "Manifest document pdf-subject-crime-state-overlap-a21ed53ec61b has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-crime-state-overlap-45688990d53f has evidence fields",
+      "name": "Manifest document pdf-subject-crime-state-overlap-a21ed53ec61b has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -3857,32 +4052,32 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-epstein-black-file-2057b88ed555 has local PDF URL",
+      "name": "Manifest document pdf-subject-epstein-black-file-d8fb0bbf8bcf has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-epstein-black-file-2057b88ed555 has SHA-256",
+      "name": "Manifest document pdf-subject-epstein-black-file-d8fb0bbf8bcf has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-epstein-black-file-2057b88ed555 has evidence fields",
+      "name": "Manifest document pdf-subject-epstein-black-file-d8fb0bbf8bcf has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-freemasonry-symbol-system-1812dd2c78c1 has local PDF URL",
+      "name": "Manifest document pdf-subject-freemasonry-symbol-system-6feed39e0898 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-freemasonry-symbol-system-1812dd2c78c1 has SHA-256",
+      "name": "Manifest document pdf-subject-freemasonry-symbol-system-6feed39e0898 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-freemasonry-symbol-system-1812dd2c78c1 has evidence fields",
+      "name": "Manifest document pdf-subject-freemasonry-symbol-system-6feed39e0898 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -3902,47 +4097,47 @@
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-intelligence-network-98b2fb76e034 has local PDF URL",
+      "name": "Manifest document pdf-subject-intelligence-network-e29b44145459 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-intelligence-network-98b2fb76e034 has SHA-256",
+      "name": "Manifest document pdf-subject-intelligence-network-e29b44145459 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-intelligence-network-98b2fb76e034 has evidence fields",
+      "name": "Manifest document pdf-subject-intelligence-network-e29b44145459 has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-nasa-hidden-architecture-473cda53e046 has local PDF URL",
+      "name": "Manifest document pdf-subject-nasa-hidden-architecture-323c64684b89 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-nasa-hidden-architecture-473cda53e046 has SHA-256",
+      "name": "Manifest document pdf-subject-nasa-hidden-architecture-323c64684b89 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-nasa-hidden-architecture-473cda53e046 has evidence fields",
+      "name": "Manifest document pdf-subject-nasa-hidden-architecture-323c64684b89 has evidence fields",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-trust-evidence-method-a6f6a3a8b2dd has local PDF URL",
+      "name": "Manifest document pdf-subject-trust-evidence-method-db6a6f0423c3 has local PDF URL",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-trust-evidence-method-a6f6a3a8b2dd has SHA-256",
+      "name": "Manifest document pdf-subject-trust-evidence-method-db6a6f0423c3 has SHA-256",
       "pass": true,
       "detail": ""
     },
     {
-      "name": "Manifest document pdf-subject-trust-evidence-method-a6f6a3a8b2dd has evidence fields",
+      "name": "Manifest document pdf-subject-trust-evidence-method-db6a6f0423c3 has evidence fields",
       "pass": true,
       "detail": ""
     },
@@ -4228,6 +4423,21 @@
     },
     {
       "name": "Manifest document pdf-weekly-newsletter-latest-02fdafd17abe has evidence fields",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-worker-api-contract-hardening-38e241abcd38 has local PDF URL",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-worker-api-contract-hardening-38e241abcd38 has SHA-256",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Manifest document pdf-worker-api-contract-hardening-38e241abcd38 has evidence fields",
       "pass": true,
       "detail": ""
     },

@@ -1,9 +1,52 @@
 {
-  "updated": "2026-07-18T07:12:31.532Z",
+  "updated": "2026-07-19T07:37:18.905Z",
   "mode": "daily",
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
-  "changeCount": 23,
+  "changeCount": 24,
   "changes": [
+    {
+      "id": "cac4acf03dae66ffc38d1dab",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "detectedAt": "2026-07-19T07:37:18.905Z",
+      "changeType": "content-changed",
+      "previousHash": "65418e322b5ef9e53ed7f46d77e70b1949f148d74912d75e3d48cdd669f17429",
+      "currentHash": "f9b7cecad09c27569022e470795c6b5ee9f67973ef7faf8293ae758bb8ab05cd",
+      "rawHash": "d68ecbdc5c6a165c29a18e8918171e65a219f9d3cae94ab2df320be47322083b",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sun, 19 Jul 2026 03:37:18 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-19T03:37:18-04:00 4 - Langlois Sophia J."
+      ],
+      "removals": [
+        "Latest Filings - Sat, 18 Jul 2026 03:12:31 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-18T03:12:31-04:00 4 - Langlois Sophia J."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceGrade": "B",
+      "status": "source-change",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "publicationDate": null,
+      "retrievalDate": "2026-07-19T07:37:18.905Z",
+      "factualStatus": "source-change-observation",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      }
+    },
     {
       "id": "bbf3afbd918f5c8ef1d82250",
       "sourceId": "sec-current-filings",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T06:44:30.706Z",
+  "updated": "2026-07-19T07:37:32.303Z",
   "title": "Outcome Briefings",
   "sourceFeeds": [
     "matrixBrain",
@@ -49,7 +49,30 @@
         "epstein-files.html",
         "trigger-watchtower.html",
         "record-intake-queue.html"
-      ]
+      ],
+      "integrity": {
+        "id": "OB-001",
+        "title": "The key outcome is the disclosure logic, not just another file drop.",
+        "conclusion": "More staged releases, more argument over privacy and legal categories, more demand for a public redaction explanation, and more pressure to compare duplicate records for inconsistent treatment.",
+        "route": "epstein-files.html",
+        "classification": "scenario briefing",
+        "confidence": "medium",
+        "evidenceBasis": "6 named record types and 5 institution classes.",
+        "supportingCount": 6,
+        "freshness": "2026-07-19T07:37:32.303Z",
+        "formula": "Current situation + named records + institutional mechanism + explicit watch conditions.",
+        "counterEvidence": "Watch conditions: new filing deadline; public redaction log; appeal notice; large file removal or reposting; changed document count.",
+        "limitation": "Outcome briefings are evidence graded and update from repo feeds when the daily build runs.",
+        "sources": [
+          "data/outcome-briefings.json",
+          "response filing",
+          "redaction explanation",
+          "follow-up order",
+          "changed file index",
+          "less-redacted record set",
+          "duplicate comparison table"
+        ]
+      }
     },
     {
       "id": "OB-002",
@@ -87,7 +110,30 @@
         "policy-watch.html",
         "probability-snapshot.html",
         "matrix-brain.html"
-      ]
+      ],
+      "integrity": {
+        "id": "OB-002",
+        "title": "The strongest public pattern is convergence across access systems.",
+        "conclusion": "More interoperability, more public-private infrastructure, more compliance-linked access points, and more disputes over privacy, consent, exclusion and resilience.",
+        "route": "policy-watch.html",
+        "classification": "scenario briefing",
+        "confidence": "medium",
+        "evidenceBasis": "6 named record types and 7 institution classes.",
+        "supportingCount": 6,
+        "freshness": "2026-07-19T07:37:32.303Z",
+        "formula": "Current situation + named records + institutional mechanism + explicit watch conditions.",
+        "counterEvidence": "Watch conditions: mandatory language; data sharing terms; private vendor role; denial-of-access rules; cross-border interoperability.",
+        "limitation": "Outcome briefings are evidence graded and update from repo feeds when the daily build runs.",
+        "sources": [
+          "data/outcome-briefings.json",
+          "implementation plans",
+          "procurement records",
+          "vendor contracts",
+          "privacy assessments",
+          "payment-system papers",
+          "access terms"
+        ]
+      }
     },
     {
       "id": "OB-003",
@@ -123,7 +169,30 @@
       "pages": [
         "gold-reserve-tracker.html",
         "matrix-brain.html"
-      ]
+      ],
+      "integrity": {
+        "id": "OB-003",
+        "title": "Gold is a custody map as much as a tonnage table.",
+        "conclusion": "During debt stress, sanctions risk, reserve diversification and currency stress, gold custody transparency becomes a more valuable geopolitical signal.",
+        "route": "gold-reserve-tracker.html",
+        "classification": "scenario briefing",
+        "confidence": "medium-high",
+        "evidenceBasis": "6 named record types and 6 institution classes.",
+        "supportingCount": 6,
+        "freshness": "2026-07-19T07:37:32.303Z",
+        "formula": "Current situation + named records + institutional mechanism + explicit watch conditions.",
+        "counterEvidence": "Watch conditions: central bank purchases; reserve-share changes; repatriation statements; audit disputes; custody concentration.",
+        "limitation": "Outcome briefings are evidence graded and update from repo feeds when the daily build runs.",
+        "sources": [
+          "data/outcome-briefings.json",
+          "central bank annual report",
+          "reserve statement",
+          "custody disclosure",
+          "audit report",
+          "swap or lease disclosure",
+          "repatriation announcement"
+        ]
+      }
     },
     {
       "id": "OB-004",
@@ -161,7 +230,30 @@
         "billionaire-watch.html",
         "power-atlas.html",
         "network-map-index.html"
-      ]
+      ],
+      "integrity": {
+        "id": "OB-004",
+        "title": "Influence should be mapped through infrastructure, filings and contracts.",
+        "conclusion": "The largest influence lanes will remain AI/cloud infrastructure, payments, energy, data centers, defense/security, media platforms, philanthropy and public-private digital systems.",
+        "route": "billionaire-watch.html",
+        "classification": "scenario briefing",
+        "confidence": "medium",
+        "evidenceBasis": "6 named record types and 7 institution classes.",
+        "supportingCount": 6,
+        "freshness": "2026-07-19T07:37:32.303Z",
+        "formula": "Current situation + named records + institutional mechanism + explicit watch conditions.",
+        "counterEvidence": "Watch conditions: infrastructure acquisition; policy partnership; large public contract; foundation grant cluster; cross-board relationship.",
+        "limitation": "Outcome briefings are evidence graded and update from repo feeds when the daily build runs.",
+        "sources": [
+          "data/outcome-briefings.json",
+          "SEC filings",
+          "foundation filings",
+          "lobbying records",
+          "government contracts",
+          "board records",
+          "grant records"
+        ]
+      }
     },
     {
       "id": "OB-005",
@@ -197,7 +289,31 @@
         "speculation-review.html",
         "dark-speculation-lab.html",
         "dark-speculation-forum.html"
-      ]
+      ],
+      "integrity": {
+        "id": "OB-005",
+        "title": "Speculation becomes useful when it produces records and counter-records.",
+        "conclusion": "The strongest speculation pages will be the ones that openly show what is unproven and what record would change the status.",
+        "route": "speculation-review.html",
+        "classification": "scenario briefing",
+        "confidence": "method",
+        "evidenceBasis": "6 named record types and 6 institution classes.",
+        "supportingCount": 6,
+        "freshness": "2026-07-19T07:37:32.303Z",
+        "formula": "Current situation + named records + institutional mechanism + explicit watch conditions.",
+        "counterEvidence": "Watch conditions: testable claims; claims without source chain; claims contradicted by records; newly surfaced archive material.",
+        "limitation": "Outcome briefings are evidence graded and update from repo feeds when the daily build runs.",
+        "sources": [
+          "data/outcome-briefings.json",
+          "original archive",
+          "metadata",
+          "official record",
+          "credible report",
+          "counter-source",
+          "source timeline"
+        ]
+      }
     }
-  ]
+  ],
+  "integrityVersion": 1
 }

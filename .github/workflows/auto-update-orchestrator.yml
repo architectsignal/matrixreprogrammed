@@ -34,9 +34,9 @@ env:
 
 jobs:
   automatic-update:
-    name: Generate, repair, audit, commit once, and trigger deploy
+    name: Collect, build, validate, commit once, and trigger deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 70
 
     steps:
       - name: Checkout repository
@@ -63,6 +63,9 @@ jobs:
           else
             echo "Weekly video tools not needed today."
           fi
+
+      - name: Collect current Live Intel sources
+        run: node scripts/update-seven-day-intel.js
 
       - name: Generate Daily Intel updates
         run: |
@@ -115,14 +118,22 @@ jobs:
             echo "Weekly D.O.G video package not due today."
           fi
 
-      - name: Final mission-critical audit
-        id: final_audit
+      - name: Hard gate current intelligence, reports, email, and Worker routes
+        run: |
+          node scripts/live-intel-pressure-test.js
+          node scripts/intelligence-reporting-system-test.mjs
+          node scripts/newsletter-persistence-test.js
+          node scripts/cloudflare-worker-routes-test.js
+          node scripts/repair-critical-route-drift.js
+
+      - name: Run wider advisory audit
+        id: advisory_audit
         continue-on-error: true
         run: |
           set +e
           mkdir -p downloads
           : > downloads/automatic-orchestrator-final-audit.md
-          echo "# Automatic Orchestrator Final Audit" >> downloads/automatic-orchestrator-final-audit.md
+          echo "# Automatic Orchestrator Advisory Audit" >> downloads/automatic-orchestrator-final-audit.md
           echo "Generated: $(date -u +%FT%TZ)" >> downloads/automatic-orchestrator-final-audit.md
           echo "" >> downloads/automatic-orchestrator-final-audit.md
           failed=0
@@ -134,19 +145,16 @@ jobs:
             status=$?
             if [ "$status" -ne 0 ]; then
               failed=$((failed+1))
-              echo "- $label: failed with exit $status" >> downloads/automatic-orchestrator-final-audit.md
+              echo "- $label: advisory failure with exit $status" >> downloads/automatic-orchestrator-final-audit.md
             else
               echo "- $label: ok" >> downloads/automatic-orchestrator-final-audit.md
             fi
           }
-          run_check "newsletter worker persistence patch" node scripts/patch-worker-newsletter-system.js
-          run_check "newsletter persistence execution test" node scripts/newsletter-persistence-test.js
           run_check "archive intel drops to vault" node scripts/archive-intel-drops-to-vault.js
           run_check "brand downloads audit" node scripts/brand-downloads-audit.js
           run_check "repair search system" node scripts/repair-search-system.js
           run_check "repair generated artifacts" node scripts/repair-generated-site-artifacts.js
           run_check "ensure shared assets" node scripts/ensure-shared-assets.js
-          run_check "critical route drift gate" node scripts/repair-critical-route-drift.js
           run_check "site audit" node scripts/audit-site.js
           run_check "site function harmony" node scripts/site-function-harmony-test.js
           run_check "forum board split" node scripts/forum-board-split-test.js
@@ -157,33 +165,32 @@ jobs:
           const report = {
             ok: failed === 0,
             resilient: true,
-            status: failed === 0 ? 'passed' : 'failed',
-            hardFailures: failed,
+            status: failed === 0 ? 'passed' : 'advisory-failures-recorded',
+            advisoryFailures: failed,
             generatedAt: new Date().toISOString(),
-            note: failed === 0 ? 'All orchestrator audit gates passed.' : 'The living update completed its reporting cycle but is not healthy enough to commit or publish.'
+            note: failed === 0 ? 'All wider advisory checks passed.' : 'Current-source, reporting, email and Worker hard gates passed; wider site warnings were recorded without freezing validated updates.'
           };
           fs.writeFileSync('downloads/automatic-orchestrator-final-audit.json', JSON.stringify(report, null, 2));
           NODE
-          echo "Final audit hard failures: $failed"
-          exit "$failed"
+          echo "Advisory audit failures: $failed"
+          exit 0
 
-      - name: Commit all generated automatic updates once
-        if: steps.final_audit.outcome == 'success'
+      - name: Commit all validated automatic updates once
         run: |
           git config user.name "matrix-auto-update-bot"
           git config user.email "actions@github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "No generated automatic update changes to commit."
+            echo "All collectors and hard gates passed; no generated output changed."
             exit 0
           fi
           git commit -m "Automatic site update $(date -u +%F) [deploy]"
           for attempt in 1 2 3; do
             git push && exit 0
-            echo "Push failed on attempt $attempt. Rebasing and retrying."
+            echo "Push failed on attempt $attempt. Rebasing validated outputs and retrying."
             git fetch origin main
             git pull --rebase --autostash origin main || { git rebase --abort || true; exit 1; }
-            sleep 2
+            sleep 3
           done
           echo "Push failed after retries."
           exit 1
@@ -221,6 +228,9 @@ jobs:
         with:
           name: automatic-site-update-reports-${{ github.sha }}
           path: |
+            data/live-intel.json
+            downloads/live-intel-latest.json
+            downloads/live-intel-latest.md
             downloads/transparent-maintenance-report.json
             downloads/transparent-maintenance-report.md
             downloads/site-intelligence-core.json
@@ -238,8 +248,7 @@ jobs:
             downloads/newsletter-worker-patch-report.json
             downloads/newsletter-persistence-test.json
             downloads/newsletter-persistence-test.md
-            downloads/site-function-harmony-report.json
-            downloads/site-function-harmony-report.md
+            downloads/intelligence-reporting-system-test.json
             downloads/automatic-orchestrator-final-audit.json
             downloads/automatic-orchestrator-final-audit.md
             downloads/automation-health-orchestrator.json

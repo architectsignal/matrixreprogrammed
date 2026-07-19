@@ -15,6 +15,8 @@ const toml = fs.readFileSync(tomlPath, 'utf8');
 const jsonc = fs.readFileSync(jsoncPath, 'utf8');
 
 function both(tomlPattern, jsoncPattern) { return tomlPattern.test(toml) && jsoncPattern.test(jsonc); }
+const legacyFirstBrief = worker.includes('queueImmediateDailyBrief') && worker.includes("messageKind:'first_daily_brief'") && worker.includes('public_daily_brief!==1');
+const currentFirstBrief = worker.includes('sendFirstDailyBrief') && worker.includes('public_daily_brief!==1') && worker.includes('daily-control-brief:${member.id}:') && worker.includes('firstDailyBrief');
 const codeChecks = {
   emailLifecycleD1Authoritative: worker.includes("X-Matrix-Origin':'cloudflare-worker-email-lifecycle") && worker.includes('MEMBERS_DB'),
   explicitConsentRequired: worker.includes('Explicit email consent is required') && worker.includes("marketing_status='subscribed'"),
@@ -35,7 +37,7 @@ const codeChecks = {
   weeklyCampaignSourceReady: worker.includes('/downloads/weekly-investigation-report.json') || worker.includes('/data/weekly-investigation-conclusions.json'),
   deepStructuredRenderer: ['Trigger','Primary record','Record status','Established facts','Key entities','Money and authority','Mechanism of power','Solid conclusion','Mission relevance','Elite-control relevance','Global convergence assessment','Speculative conclusion','Counter-analysis','Missing evidence','Watch next','Access tier'].every(marker => renderer.includes(marker)),
   failClosedSourceFallback: renderer.includes('No verified source changes were available') || renderer.includes('No evidence-graded briefings were available'),
-  immediateFirstBrief: worker.includes('queueImmediateDailyBrief') && worker.includes("messageKind:'first_daily_brief'") && worker.includes('public_daily_brief!==1'),
+  immediateFirstBrief: legacyFirstBrief || currentFirstBrief,
   perRecipientPreferenceAndUnsubscribe: worker.includes('subscriber-dashboard.html?token=') && worker.includes('/api/email/unsubscribe?token='),
   listUnsubscribeHeaders: worker.includes("'List-Unsubscribe'") && worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"),
   reusableMarketingActionLinks: worker.includes('issueReusableEmailToken') || worker.includes("const reusable=['preferences','unsubscribe'].includes(purpose)"),

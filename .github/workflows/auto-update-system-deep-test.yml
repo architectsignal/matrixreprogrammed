@@ -18,6 +18,7 @@ on:
       - 'scripts/production-deploy-guard.js'
       - 'scripts/auto-update-contract-test.js'
       - 'scripts/auto-update-system-deep-test.js'
+      - 'scripts/auto-update-system-deep-test-v2.js'
       - 'data/investigation-source-registry.json'
       - 'data/production-freshness-policy.json'
       - 'package.json'
@@ -68,6 +69,7 @@ jobs:
         run: |
           node --check scripts/auto-update-contract-test.js
           node --check scripts/auto-update-system-deep-test.js
+          node --check scripts/auto-update-system-deep-test-v2.js
           node --check scripts/run-investigation-machine.js
           node --check scripts/monitor-source-changes.js
           node --check scripts/harden-source-change-preservation.js
@@ -121,7 +123,7 @@ jobs:
           node scripts/build-public-usefulness-clock-system.js
 
       - name: Verify live data, evidence ledger, clock safeguards and public surfaces
-        run: node scripts/auto-update-system-deep-test.js verify
+        run: node scripts/auto-update-system-deep-test-v2.js verify
 
       - name: Prove repeat-run idempotency and score stability
         run: node scripts/auto-update-system-deep-test.js idempotency

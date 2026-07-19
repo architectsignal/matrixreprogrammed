@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T13:52:26.022Z",
+  "updated": "2026-07-19T19:31:18.848Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Public Record Events",
   "purpose": "Normalized events produced by the public-record feed runner. These are additive machine inputs and do not replace Live Intel, Daily Brain or existing update systems.",
@@ -26,11 +26,11 @@
     {
       "lane": "courtlistener-court-records",
       "name": "CourtListener court record signal",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/courtlistener-watch.json",
-      "itemCount": 6,
-      "error": null
+      "itemCount": 0,
+      "error": "This operation was aborted"
     },
     {
       "lane": "usaspending-contracts",
@@ -73,7 +73,7 @@
     {
       "id": "federal-register-policy-2026-14439-1",
       "date": "2026-07-17",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -107,7 +107,7 @@
     {
       "id": "federal-register-policy-2026-13656-2",
       "date": "2026-07-07",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -142,7 +142,7 @@
     {
       "id": "federal-register-policy-2026-13602-3",
       "date": "2026-07-06",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -177,7 +177,7 @@
     {
       "id": "federal-register-policy-2026-13057-4",
       "date": "2026-06-29",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -211,7 +211,7 @@
     {
       "id": "federal-register-policy-2026-12989-5",
       "date": "2026-06-26",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -245,7 +245,7 @@
     {
       "id": "federal-register-policy-2026-12559-6",
       "date": "2026-06-23",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "federal-register-policy",
       "source_name": "Federal Register latest policy records",
@@ -283,7 +283,7 @@
     {
       "id": "sec-edgar-filings-cik0001045810-1",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -318,7 +318,7 @@
     {
       "id": "sec-edgar-filings-cik0000320193-2",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -353,7 +353,7 @@
     {
       "id": "sec-edgar-filings-cik0001652044-3",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -388,7 +388,7 @@
     {
       "id": "sec-edgar-filings-cik0000789019-4",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -423,7 +423,7 @@
     {
       "id": "sec-edgar-filings-cik0001018724-5",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -458,7 +458,7 @@
     {
       "id": "sec-edgar-filings-cik0001730168-6",
       "date": "2026-07-19",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
+      "pulled_at": "2026-07-19T19:31:18.848Z",
       "runner_version": "machine-feed-runner-2026-07-04-b",
       "source_lane": "sec-edgar-filings",
       "source_name": "SEC EDGAR company tickers snapshot",
@@ -487,222 +487,6 @@
         "evidence-vault",
         "outcome-briefings",
         "search-index"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10928510-1",
-      "date": "2026-07-15",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-        "Supreme Court of Rhode Island",
-        "2025-0045-Appeal."
-      ],
-      "institution_names": [
-        "Supreme Court of Rhode Island"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-      "source_record_id": 10928510,
-      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10919908-2",
-      "date": "2026-07-08",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Sawas v. Elzanaty",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2021-00294"
-      ],
-      "institution_names": [
-        "Appellate Division of the Supreme Court of the State of New York"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10919908/sawas-v-elzanaty/",
-      "source_record_id": 10919908,
-      "summary": "Sawas v. Elzanaty",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10919846-3",
-      "date": "2026-07-08",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "People v. Brim",
-        "California Court of Appeal",
-        "A170747M"
-      ],
-      "institution_names": [
-        "California Court of Appeal"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10919846/people-v-brim/",
-      "source_record_id": 10919846,
-      "summary": "People v. Brim",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10917016-4",
-      "date": "2026-07-07",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "The New York and Presbyterian Hospital v. New York State Nurses Association",
-        "Court of Appeals for the Second Circuit",
-        "25-113"
-      ],
-      "institution_names": [
-        "Court of Appeals for the Second Circuit"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10917016/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association/",
-      "source_record_id": 10917016,
-      "summary": "The New York and Presbyterian Hospital v. New York State Nurses Association",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883674-5",
-      "date": "2026-07-01",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Matter of Pagliughi",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-07773"
-      ],
-      "institution_names": [
-        "Appellate Division of the Supreme Court of the State of New York"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883674/matter-of-pagliughi/",
-      "source_record_id": 10883674,
-      "summary": "Matter of Pagliughi",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
-      ],
-      "boundary": "Documented source route. Interpret only within the evidence grade."
-    },
-    {
-      "id": "courtlistener-court-records-10883331-6",
-      "date": "2026-07-01",
-      "pulled_at": "2026-07-19T13:52:26.022Z",
-      "runner_version": "machine-feed-runner-2026-07-04-b",
-      "source_lane": "courtlistener-court-records",
-      "source_name": "CourtListener court record signal",
-      "entity_names": [
-        "Biddle v. Biddle",
-        "Court of Appeals of North Carolina",
-        "25-581"
-      ],
-      "institution_names": [
-        "Court of Appeals of North Carolina"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "record_type": "court_record_signal",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10883331/biddle-v-biddle/",
-      "source_record_id": 10883331,
-      "summary": "Biddle v. Biddle",
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "send_to": [
-        "evidence-vault",
-        "epstein-files",
-        "record-intake-queue",
-        "black-file"
       ],
       "boundary": "Documented source route. Interpret only within the evidence grade."
     }

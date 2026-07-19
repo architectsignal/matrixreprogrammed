@@ -451,6 +451,7 @@
     "Any major cloud, AI, payment, energy, identity or security infrastructure contract involving public systems.",
     "Any speculation claim that gains an original source, metadata, official record or credible counter-source.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
+    "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing.",
     "Review Machine Digest for any new public-record event that should upgrade an entity file, risk clock, evidence vault route or outcome briefing."
   ],
   "nextAction": "Use this brief as the top-of-site output layer: update affected pages, pull missing records, and adjust probabilities when records change.",
@@ -486,17 +487,6 @@
       ],
       "record_types": [
         "rule_or_notice"
-      ]
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
       ]
     },
     {
@@ -586,14 +576,25 @@
       "record_types": [
         "company_registry_snapshot"
       ]
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ]
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-07-19T13:52:26.022Z",
-    "eventCount": 18,
+    "updated": "2026-07-19T19:31:18.848Z",
+    "eventCount": 12,
     "feedCount": 7,
-    "reachedFeedCount": 4,
-    "entityObservationCount": 38,
+    "reachedFeedCount": 3,
+    "entityObservationCount": 21,
     "digestRoute": "machine-digest.html",
     "recordEventsRoute": "data/record-events.json",
     "boundary": "Public-record feed events are additive machine inputs. They do not replace existing Live Intel or Daily Brain updates."
@@ -769,11 +770,11 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-07-19T13:52:39.449Z",
+    "updated": "2026-07-19T19:31:39.034Z",
     "newRecordCount": 0,
     "changedRecordCount": 0,
-    "removedRecordCount": 0,
-    "relationshipCandidateCount": 35,
+    "removedRecordCount": 6,
+    "relationshipCandidateCount": 17,
     "evidenceUpgradeCount": 0,
     "machineIntelligenceRoute": "machine-intelligence.html",
     "changeDetectionRoute": "data/change-detection.json",
@@ -782,7 +783,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-07-19T13:52:39.600Z",
+    "updated": "2026-07-19T19:31:39.166Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -816,7 +817,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-07-19T13:52:39.638Z",
+    "updated": "2026-07-19T19:31:39.202Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",

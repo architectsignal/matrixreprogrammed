@@ -33,6 +33,8 @@ const worker = fs.readFileSync(workerPath, 'utf8');
 const renderer = fs.readFileSync(rendererPath, 'utf8');
 const graphBytes = fs.statSync(graphPath).size;
 const graph = JSON.parse(fs.readFileSync(graphPath, 'utf8'));
+const legacyFirstBrief = worker.includes('queueImmediateDailyBrief') && worker.includes("messageKind:'first_daily_brief'");
+const currentFirstBrief = worker.includes('sendFirstDailyBrief') && worker.includes('public_daily_brief!==1') && worker.includes('daily-control-brief:${member.id}:') && worker.includes('firstDailyBrief');
 const checks = {
   structuredV3: worker.includes('structureVersion:3'),
   deepRenderer: ['Trigger','Primary record','Established facts','Mechanism of power','Solid conclusion','Speculative conclusion','Counter-analysis','Missing evidence','Watch next'].every(marker => renderer.includes(marker)),
@@ -43,7 +45,7 @@ const checks = {
   suppressionRequired: worker.includes('email_suppressions'),
   personalisedControls: worker.includes('subscriber-dashboard.html?token=') && worker.includes('/api/email/unsubscribe?token='),
   oneClickHeaders: worker.includes("'List-Unsubscribe'") && worker.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'"),
-  immediateFirstBrief: worker.includes('queueImmediateDailyBrief') && worker.includes("messageKind:'first_daily_brief'"),
+  immediateFirstBrief: legacyFirstBrief || currentFirstBrief,
   dailyDeduplication: worker.includes('daily-control-brief:${member.id}:') && worker.includes("campaign.kind==='daily'"),
   normalCampaignIdempotency: worker.includes('`${campaign.id}:${member.id}`'),
   zeroRecipientCompletion: worker.includes("const status=recipients.length?'sending':'sent'") || (worker.includes("status='sending'") && worker.includes('recipientCount:recipients.length')),

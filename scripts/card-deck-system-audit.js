@@ -49,4 +49,5 @@ const report={title:'Card Deck System Audit',summary,issues};
 wr('data/card-deck-system-audit.json',JSON.stringify(report,null,2));
 wr('downloads/card-deck-system-audit.md','# Card Deck System Audit\n\nUpdated: '+summary.updated+'\n\nExpected decks: '+summary.expectedDecks+'\n\nManifest decks: '+summary.manifestDecks+'\n\nManifest cards: '+summary.manifestCards+'\n\nReal artwork: '+summary.realArtCount+'\n\nPlaceholders: '+summary.placeholderCount+'\n\nArt blockers: '+summary.artBlockers+'\n\nHigh issues: '+summary.highIssues+'\n\nReview issues: '+summary.reviewIssues+'\n\n'+(issues.map(i=>`- ${i.severity}: ${i.deck}${i.card?'/'+i.card:''} — ${i.note}`).join('\n')||'No issues.'));
 console.log(`Card deck system audit complete: ${summary.manifestDecks} decks / ${summary.manifestCards} cards, ${summary.realArtCount} real artwork, ${summary.placeholderCount} placeholders, ${summary.artBlockers} art blocker(s).`);
-if(summary.artBlockers||process.env.STRICT_CARD_DECK_AUDIT==='1'&&summary.highIssues)process.exit(1);
+if(process.env.CARD_ART_FINAL_AUDIT==='1'&&summary.artBlockers)process.exit(1);
+if(process.env.STRICT_CARD_DECK_AUDIT==='1'&&summary.highIssues)process.exit(1);

@@ -53,8 +53,11 @@ for (const required of [
   ['member-dashboard.html', '/api/auth/logout'],
   ['member-dashboard.html', '/api/paypal/subscription/cancel'],
   ['member-dashboard.html', 'paidAccessEnabled'],
-  ['newsletter.js', '/api/membership/signup'],
+  ['newsletter.js', '/newsletter-signup'],
   ['newsletter.js', 'marketingConsent'],
+  ['newsletter.js', 'public_daily_brief:preferences.daily'],
+  ['newsletter.js', 'public_weekly_digest:preferences.weekly'],
+  ['newsletter.js', 'release_notices:preferences.release'],
   ['paypal-membership.js', '/api/paypal/config'],
   ['paypal-membership.js', '/api/paypal/checkout-intent'],
   ['paypal-membership.js', '/api/paypal/subscription/confirm'],
@@ -81,7 +84,7 @@ const report = {
   changed,
   pages: pages.map(page => page.name),
   runtimes: {
-    signup: 'newsletter.js',
+    signup: 'newsletter.js → /newsletter-signup',
     payment: 'paypal-membership.js',
     authentication: 'member-login.html and member-dashboard.js'
   },

@@ -182,7 +182,7 @@ jobs:
         run: node scripts/final-production-reconcile.js
 
       - name: Verify root-to-Cloudflare output synchronization
-        run: node scripts/auto-update-system-deep-test.js verify-built
+        run: node scripts/auto-update-system-deep-test-v2.js verify-built
 
       - name: Run production synchronization and deploy guards without deploying
         env:

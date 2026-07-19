@@ -89,6 +89,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
 
 require('./patch-deploy-status-current-mission.js');
 require('./patch-paypal-voluntary-support.js');
+require('./ensure-store-commercial-terms.js');
 require('./patch-voluntary-support-store.js');
 require('./patch-brevo-transactional-readiness.js');
 require('./patch-email-launch-console.js');
@@ -99,4 +100,4 @@ require('./patch-membership-signup-server-fallback.js');
 require('./brevo-operational-readiness-audit.js');
 require('./patch-production-receipt-email-safety.js');
 require('./repair-deep-audit-public-defects.js');
-console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; stable audit v2, current deploy mission, €1–€5,000 voluntary support, authenticated transactional email, guarded daily and weekly campaigns, membership signup fallback, operational audit, safe production receipt and public repairs applied.`);
+console.log(`Homepage command builder shell recovery ${changed ? 'installed' : 'already present'}; stable audit v2, current deploy mission, €1–€5,000 voluntary support, commercial terms, authenticated transactional email, guarded daily and weekly campaigns, membership signup fallback, operational audit, safe production receipt and public repairs applied.`);

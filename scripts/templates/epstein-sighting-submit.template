@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Submit Epstein Sighting Claim | Matrix Reprogrammed</title>
+  <meta name="description" content="Submit an unverified Epstein sighting, lookalike, fake-media or debunk link through the verified Free Member signal board.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="reader-experience.css">
+  <style>.submission-boundary{border:1px solid rgba(216,181,106,.32);border-radius:18px;padding:1rem;background:rgba(216,181,106,.07)}.submission-actions{display:flex;gap:.6rem;flex-wrap:wrap}.form-status{min-height:1.4rem}</style>
+</head>
+<body data-board="epstein-alive">
+<canvas id="matrix"></canvas>
+<div class="signal-face"></div><div class="veil"></div>
+<div class="page">
+  <header class="wrap topbar">
+    <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a>
+    <nav class="nav"><a href="epstein-sighting-watch.html">Sighting Watch</a><a href="epstein-files.html">Epstein Command Center</a><a href="forum.html">Main Board</a><a href="dark-speculation-forum.html">Speculation Board</a><a href="epstein-alive-board.html">Sighting Board</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">Submit a sighting claim</div>
+      <h1>DROP THE CLAIM. KEEP THE BOUNDARY.</h1>
+      <p class="lead">Submit source links only. No doxxing, private addresses, naming ordinary lookalikes, illegal material or claim stronger than the source supports.</p>
+    </section>
+
+    <section class="section wrap split">
+      <div class="card redline submission-boundary">
+        <h2>Verified Free Member posting</h2>
+        <p>Reading is public. Posting requires a verified Free Member session to reduce spam and preserve an accountable correction trail. No payment is required.</p>
+        <div class="submission-actions"><a class="btn" href="member-login.html?return=%2Fepstein-sighting-submit.html">Create or access free account</a><a class="btn alt" href="terms-of-use.html">Posting terms</a><a class="btn alt" href="trust-privacy-policy.html">Privacy</a></div>
+        <p class="form-status" id="forum-member-status" aria-live="polite">Checking member session…</p>
+      </div>
+      <aside class="card"><h2>What to include</h2><p>Source URL, claimed location and date, media link, why it matters, and any counter-source or debunk.</p></aside>
+    </section>
+
+    <section id="submit-signal" class="section wrap split">
+      <div class="card redline">
+        <h2>Post to Sighting Watch</h2>
+        <p class="signal-lock-message">Posting unlocks only after the server confirms a verified Free Member session.</p>
+        <form id="signal-board-form" data-board="epstein-alive">
+          <input type="hidden" name="board" value="epstein-alive">
+          <label>Category</label>
+          <select name="category" required><option value="Epstein Sighting Claim">Epstein Sighting Claim</option><option value="Epstein Lookalike Claim">Epstein Lookalike Claim</option><option value="Epstein Fake Media / AI Claim">Fake Media / AI Claim</option><option value="Epstein Sighting Debunk">Debunk / Counter-Source</option></select>
+          <label>Name or handle</label><input name="name" maxlength="80" placeholder="Anonymous / handle">
+          <label>Title</label><input name="title" maxlength="140" required placeholder="Short sighting claim title">
+          <label>Source link, photo link or archive link</label><input name="sourceUrl" type="url" maxlength="500" placeholder="https://…">
+          <label>Message</label><textarea name="body" maxlength="2400" required placeholder="Claimed location/date, source chain, why it matters, and counter-source if available. Do not include private addresses, private victim names, doxxing or direct accusations against ordinary people."></textarea>
+          <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button class="btn" type="submit" disabled>Post Sighting Claim</button>
+          <p class="form-status" id="signal-form-status" aria-live="polite"></p>
+        </form>
+      </div>
+      <aside class="card"><h2>Evidence boundary</h2><p>This is a claim-submission page, not a proof engine. Submissions remain reader signals unless separately source-carded, reviewed and verified.</p></aside>
+    </section>
+
+    <section id="board-feed" class="section wrap"><h2>Epstein Sighting Board</h2><p class="lead">Sighting, lookalike, fake-media and debunk claims stay separated from the main board.</p><div class="grid" id="signal-board-feed"><article class="card"><h3>Loading signals…</h3><p>The board is checking for posts.</p></article></div></section>
+  </main>
+  <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — sighting is not identity.</p><p><a href="terms-of-use.html">Terms of Use</a> · <a href="trust-privacy-policy.html">Privacy</a> · <a href="trust-corrections-policy.html">Corrections</a></p></footer>
+</div>
+<script src="matrix.js"></script><script src="forum.js"></script><script src="analytics.js"></script>
+</body>
+</html>

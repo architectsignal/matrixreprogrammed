@@ -33,7 +33,11 @@ jobs:
         run: npm ci
 
       - name: Apply deterministic tier and report patches
-        run: node scripts/patch-osint-tool-tiers.js
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p downloads
+          node scripts/patch-osint-tool-tiers.js 2>&1 | tee downloads/osint-worker-patch.log
 
       - name: Run mission readiness regression
         run: node scripts/mission-readiness-test.js
@@ -87,6 +91,8 @@ jobs:
         with:
           name: mission-readiness-${{ github.run_id }}
           path: |
+            downloads/osint-worker-patch.log
+            downloads/osint-worker-patch-report.json
             downloads/mission-readiness-test.json
             downloads/mission-acceptance-audit.json
             downloads/mission-acceptance-audit.md

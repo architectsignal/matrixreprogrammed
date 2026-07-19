@@ -4,12 +4,12 @@ const { spawnSync } = require('child_process');
 
 const root = process.cwd();
 const pagePath = path.join(root, 'membership.html');
-const templatePath = path.join(root, 'templates', 'phase6-membership.template');
+const templatePath = path.join(root, 'scripts', 'templates', 'membership-auth', 'membership.template');
 const registryPath = path.join(root, 'data', 'membership-tiers.json');
 const reportPath = path.join(root, 'downloads', 'membership-tiers-report.json');
 const preferencePatchPath = path.join(root, 'scripts', 'patch-membership-brief-preferences.js');
 
-if (!fs.existsSync(templatePath)) throw new Error('templates/phase6-membership.template is missing');
+if (!fs.existsSync(templatePath)) throw new Error('scripts/templates/membership-auth/membership.template is missing');
 if (!fs.existsSync(registryPath)) throw new Error('data/membership-tiers.json is missing');
 
 const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
@@ -22,7 +22,6 @@ let briefingPreferencePatch = { ran: false, status: null };
 
 if (tiers.length !== 3) failures.push(`expected 3 paid membership tiers, found ${tiers.length}`);
 if (tiers.some((tier, index) => Number(tier.price) !== expectedPrices[index])) failures.push('membership tier prices must be €3, €6 and €9 in ascending order');
-if (registry.paymentLabel !== 'optional monthly donation') failures.push('membership registry payment label must be optional monthly donation');
 if (!String(registry.evidenceAccessPromise || '').includes('same underlying public-source evidence')) failures.push('membership registry must preserve the free evidence access promise');
 
 for (const marker of [
@@ -31,29 +30,45 @@ for (const marker of [
   '€3',
   '€6',
   '€9',
-  'Monthly donation',
-  'same underlying public-source evidence',
-  'THE EVIDENCE IS FREE. DONATIONS FUND THE MACHINE.',
+  'Monthly membership',
+  'Underlying public-source evidence',
+  'THE EVIDENCE IS FREE. PAID TIERS ADD SERVICE.',
   'SAME EVIDENCE. DIFFERENT SERVICE LAYERS.',
-  'not charitable donations',
+  'Paid memberships are opening soon. Free Member registration is available now.',
+  'Create or access free account',
   'paypal-membership.js',
   'paypal-membership-status',
   'paypal-button-supporter',
   'paypal-button-intelligence',
   'paypal-button-research_pro',
   'billing-dashboard.html',
-  'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
+  'membership-terms.html',
+  'terms-of-use.html',
+  'Checkout approval alone never grants access.',
+  'Only the verified €6 plan can grant the Intelligence tier.',
+  'Only the verified €9 plan can grant Research Pro.'
 ]) {
-  if (!html.includes(marker)) failures.push(`Phase 6 membership template missing marker: ${marker}`);
+  if (!html.includes(marker)) failures.push(`canonical membership template missing marker: ${marker}`);
 }
 
-for (const forbidden of ['€19/month', '€49/month', 'Coming soon — no payment taken', 'Paid access to premium briefs']) {
-  if (html.includes(forbidden)) failures.push(`Phase 6 membership template contains obsolete marker: ${forbidden}`);
+for (const forbidden of [
+  '€19/month',
+  '€49/month',
+  'Coming soon — no payment taken',
+  'Paid access to premium briefs',
+  'Join Placeholder',
+  'Monthly donation',
+  'donation / month',
+  'activation gates',
+  'checkout remains disabled until',
+  'configured yet'
+]) {
+  if (html.includes(forbidden)) failures.push(`canonical membership template contains obsolete or implementation-facing marker: ${forbidden}`);
 }
 
 const ids = [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
 const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
-if (duplicateIds.length) failures.push(`Phase 6 membership template duplicate IDs: ${duplicateIds.join(', ')}`);
+if (duplicateIds.length) failures.push(`canonical membership template duplicate IDs: ${duplicateIds.join(', ')}`);
 
 if (!failures.length) {
   fs.writeFileSync(pagePath, html);
@@ -97,13 +112,14 @@ if (!failures.length) {
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  mode: 'phase6-restore-protected-template-plus-explicit-email-preferences',
-  template: 'templates/phase6-membership.template',
+  mode: 'launch-safe-canonical-template-plus-explicit-email-preferences',
+  template: 'scripts/templates/membership-auth/membership.template',
   freeTier: true,
   evidenceAccess: 'same-underlying-public-source-evidence',
-  paymentLabel: 'optional-monthly-donation',
+  publicPaymentLabel: 'monthly-membership',
+  registryPaymentLabel: registry.paymentLabel || null,
   prices: expectedPrices,
-  checkoutDefault: 'disabled-until-runtime-and-d1-gates-pass',
+  checkoutDefault: 'reader-facing-opening-soon-and-server-disabled',
   briefingPreferences: {
     publicDailyBrief: true,
     releaseNotices: true,
@@ -123,4 +139,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Membership page restored across ${synchronized.length} source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.`);
+console.log(`Membership page restored from the launch-safe canonical template across ${synchronized.length} source/output route(s): Free Member evidence access plus €3, €6 and €9 monthly service tiers.`);

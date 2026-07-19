@@ -11,6 +11,9 @@ const pages = [
   { name: 'member-login.html', template: path.join(root, 'member-login.html') },
   { name: 'member-dashboard.html', template: path.join(root, 'member-dashboard.html') }
 ];
+const runtimes = [
+  { name: 'newsletter.js', template: path.join(templateDir, 'newsletter.template.js') }
+];
 
 const changed = [];
 
@@ -20,6 +23,20 @@ function writeIfDifferent(target, content) {
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, content);
   return true;
+}
+
+for (const runtime of runtimes) {
+  if (!fs.existsSync(runtime.template)) {
+    console.error(`Membership auth UI patch failed: runtime template missing for ${runtime.name}`);
+    process.exit(1);
+  }
+  const content = fs.readFileSync(runtime.template, 'utf8');
+  const rootTarget = path.join(root, runtime.name);
+  if (writeIfDifferent(rootTarget, content)) changed.push(runtime.name);
+  if (fs.existsSync(siteDir)) {
+    const siteTarget = path.join(siteDir, runtime.name);
+    if (writeIfDifferent(siteTarget, content)) changed.push(`_site/${runtime.name}`);
+  }
 }
 
 for (const page of pages) {
@@ -56,9 +73,11 @@ for (const required of [
   ['member-dashboard.html', 'paidAccessEnabled'],
   ['newsletter.js', '/newsletter-signup'],
   ['newsletter.js', 'marketingConsent'],
+  ['newsletter.js', 'consentGranted=Boolean(consent.checked)'],
   ['newsletter.js', 'public_daily_brief:preferences.daily'],
   ['newsletter.js', 'public_weekly_digest:preferences.weekly'],
   ['newsletter.js', 'release_notices:preferences.release'],
+  ['newsletter.js', 'wordingVersion:\'newsletter-explicit-consent-v3\''],
   ['paypal-membership.js', '/api/paypal/config'],
   ['paypal-membership.js', '/api/paypal/checkout-intent'],
   ['paypal-membership.js', '/api/paypal/subscription/confirm'],
@@ -75,6 +94,12 @@ for (const required of [
   }
 }
 
+const canonicalNewsletter = fs.readFileSync(path.join(templateDir, 'newsletter.template.js'), 'utf8');
+if (fs.readFileSync(path.join(root, 'newsletter.js'), 'utf8') !== canonicalNewsletter) {
+  console.error('Membership auth UI patch failed: newsletter.js differs from its canonical template');
+  process.exit(1);
+}
+
 for (const forbidden of ['Join Placeholder', 'Monthly donation', '€19/month', '€49/month', 'activation gates']) {
   if (fs.readFileSync(path.join(root, 'membership.html'), 'utf8').includes(forbidden)) {
     console.error(`Membership auth UI patch failed: membership.html contains obsolete marker ${forbidden}`);
@@ -87,15 +112,16 @@ const report = {
   generatedAt: new Date().toISOString(),
   changed,
   pages: pages.map(page => page.name),
+  canonicalRuntimes: runtimes.map(runtime => ({ name: runtime.name, template: path.relative(root, runtime.template).replace(/\\/g, '/') })),
   runtimes: {
-    signup: 'newsletter.js → /newsletter-signup',
+    signup: 'newsletter.js → /newsletter-signup with explicit consent and selectable daily, weekly and release preferences',
     payment: 'paypal-membership.js',
     authentication: 'member-login.html and member-dashboard.js',
     billingTerms: 'billing-dashboard.html → membership-terms.html and terms-of-use.html'
   },
   paypalCheckout: 'server-verified-and-fail-closed',
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
-  boundary: 'Canonical membership, billing and passwordless pages are restored after generated-site builders. Signup and PayPal behavior remain in their dedicated audited runtimes rather than obsolete inline scripts.'
+  boundary: 'Canonical membership, billing, passwordless pages and the consent-aware newsletter runtime are restored after generated-site builders. Legacy generators cannot silently replace the newsletter contract with implied consent or missing preference fields.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));

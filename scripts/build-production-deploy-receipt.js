@@ -17,12 +17,13 @@ const exists = file => fs.existsSync(path.join(root, file));
 const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
 
 async function fetchBoundary(route) {
-  const response = await fetch(`${siteUrl}${route}?receipt_check=${Date.now()}`, {
+  const separator = route.includes('?') ? '&' : '?';
+  const response = await fetch(`${siteUrl}${route}${separator}receipt_check=${Date.now()}`, {
     redirect: 'follow',
     headers: {
       'cache-control': 'no-cache',
       pragma: 'no-cache',
-      'user-agent': 'MatrixProductionReceipt/4.0'
+      'user-agent': 'MatrixProductionReceipt/5.0'
     }
   });
   const text = await response.text();
@@ -38,12 +39,10 @@ async function fetchBoundary(route) {
   const rollback = readJson('downloads/d1-rollback-proof.json') || {};
   const schema = readJson('downloads/d1-schema-verification.json') || [];
   const settings = readJson('downloads/paypal-runtime-settings.json') || [];
-  const bootstrap = live.bootstrapBoundary || {};
   const brevoReadiness = readJson('downloads/brevo-operational-readiness.json') || {};
   const emailCampaignQuality = readJson('downloads/email-campaign-quality-patch.json') || {};
   const emailAutomationGuard = readJson('downloads/email-automation-guard-patch.json') || {};
-  const rehearsal = live.rehearsalBoundary || {};
-  const paypal = live.paypalBoundary || {};
+  const paypalBoundary = live.paypalBoundary || {};
   const rows = payload => Array.isArray(payload)
     ? payload.flatMap(item => item?.results || item?.result?.results || [])
     : [];
@@ -61,7 +60,14 @@ async function fetchBoundary(route) {
   ];
   const names = new Set(schemaRows.map(row => row.name));
   const missingObjects = requiredObjects.filter(name => !names.has(name));
-  const checkoutClosed = settingRows.length >= 2 && settingRows.every(row => Number(row.checkout_enabled) === 0);
+  const sandboxSetting = settingRows.find(row => row.environment === 'sandbox') || null;
+  const liveSetting = settingRows.find(row => row.environment === 'live') || null;
+  const sandboxCheckoutClosed = Number(sandboxSetting?.checkout_enabled) === 0;
+  const liveCheckoutEnabled = Number(liveSetting?.checkout_enabled) === 1;
+  const runtimeSettingsValid = Boolean(sandboxSetting && liveSetting)
+    && [0, 1].includes(Number(sandboxSetting.checkout_enabled))
+    && [0, 1].includes(Number(liveSetting.checkout_enabled));
+
   const rollbackPointCreated = rollback.ok === true
     && rollback.database === 'matrix-members'
     && rollback.method === 'Cloudflare D1 Time Travel bookmark'
@@ -69,22 +75,6 @@ async function fetchBoundary(route) {
     && rollback.bookmark.trim().length >= 8
     && typeof rollback.restoreCommand === 'string'
     && rollback.restoreCommand.includes(rollback.bookmark);
-
-  const bootstrapReady = bootstrap.ready === true
-    && bootstrap.ok === true
-    && bootstrap.data?.plansReady === true
-    && Number(bootstrap.data?.planCount || 0) === 3;
-  const bootstrapSafeDisabled = bootstrap.safeDisabled === true
-    && bootstrap.ok === true
-    && bootstrap.data?.plansReady === false
-    && bootstrap.data?.databaseCheckoutEnabled === false
-    && bootstrap.data?.liveChargingEnabled === false;
-  const bootstrapSafe = bootstrapReady || bootstrapSafeDisabled;
-  const rehearsalSafe = bootstrapReady
-    ? rehearsal.ok === true
-    : bootstrapSafeDisabled
-      ? rehearsal.ok === true && rehearsal.skipped === true && rehearsal.safeDisabled === true
-      : false;
 
   const [memberBoundary, emailBoundary] = await Promise.all([
     fetchBoundary('/api/member/me'),
@@ -99,11 +89,14 @@ async function fetchBoundary(route) {
     && emailBoundary.data?.ok === false;
 
   const productionWorker = readText('src/worker-production.js');
+  const paypalWorker = readText('src/worker-paypal-subscriptions.js');
+  const paypalClient = readText('paypal-membership.js');
   const reportDelivery = readText('src/worker-report-delivery.js');
   const accessGate = readText('src/worker-access-gate.js');
   const accessPolicy = readText('data/access-route-policy.json');
   const worker = readText('src/worker.js');
-  const wrangler = readText('wrangler.toml');
+  const wranglerToml = readText('wrangler.toml');
+  const wranglerJsonc = readText('wrangler.jsonc');
   const timers = readJson('data/global-risk-clocks.json') || {};
   const timerPage = readText('timers.html');
 
@@ -113,16 +106,16 @@ async function fetchBoundary(route) {
     && reportDelivery.includes('verified_self_intelligence_report')
     && reportDelivery.includes('report-is-not-verified-self')
     && reportDelivery.includes('current-membership-tier-required')
-    && wrangler.includes('EMAIL_AUTOMATION_ENABLED = "false"')
-    && wrangler.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"')
-    && wrangler.includes('BREVO_DOMAIN_AUTHENTICATED = "true"')
-    && wrangler.includes('EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"')
+    && wranglerToml.includes('EMAIL_AUTOMATION_ENABLED = "false"')
+    && wranglerToml.includes('EMAIL_TRANSACTIONAL_ENABLED = "true"')
+    && wranglerToml.includes('BREVO_DOMAIN_AUTHENTICATED = "true"')
+    && wranglerToml.includes('EMAIL_RETRY_QUARANTINE_BEFORE = "2026-07-18T00:00:00.000Z"')
     && brevoReadiness.ok === true
     && brevoReadiness.status === 'transactional-ready-automation-disabled'
     && emailCampaignQuality.ok === true
     && emailAutomationGuard.ok === true
-    && wrangler.includes('"5 6 * * *"')
-    && wrangler.includes('"15 7 * * 1"');
+    && wranglerToml.includes('"5 6 * * *"')
+    && wranglerToml.includes('"15 7 * * 1"');
 
   const accessTiersWired = productionWorker.includes('protectedAssetTier')
     && productionWorker.includes('enforceProtectedAssetAccess')
@@ -152,8 +145,23 @@ async function fetchBoundary(route) {
     && timerPage.includes('What would raise it')
     && timerPage.includes('What would lower it');
 
+  const runtimeVariablesPreserved = /^keep_vars\s*=\s*true\s*$/m.test(wranglerToml)
+    && /"keep_vars"\s*:\s*true/.test(wranglerJsonc)
+    && !/^\s*PAYPAL_[A-Z0-9_]+\s*=/m.test(wranglerToml)
+    && !/^\s*"PAYPAL_[A-Z0-9_]+"\s*:/m.test(wranglerJsonc);
+
+  const activationContractWired = paypalWorker.includes('const plansReady=')
+    && paypalWorker.includes('&&confirmation&&plansReady')
+    && paypalWorker.includes("String(env?.PAYPAL_LIVE_ACTIVATION_CONFIRMATION||'')==='MATRIX_PAYPAL_LIVE_CONFIRMED'")
+    && paypalWorker.includes("String(input.phrase||'')!=='ACTIVATE MATRIX PAYPAL LIVE'")
+    && paypalWorker.includes("error:'PayPal checkout is disabled until activation gates pass'");
+
+  const sdkFallbackWired = paypalClient.includes('Retry PayPal checkout')
+    && paypalClient.includes('PayPal SDK network request was blocked or rejected')
+    && paypalClient.includes('credentials:\'include\'');
+
   const receipt = {
-    schemaVersion: 4,
+    schemaVersion: 5,
     repository: process.env.GITHUB_REPOSITORY || 'architectsignal/matrixreprogrammed',
     workflow: process.env.GITHUB_WORKFLOW || 'Matrix Reprogrammed Production Deploy',
     runId: process.env.GITHUB_RUN_ID || null,
@@ -164,8 +172,9 @@ async function fetchBoundary(route) {
       authoritative: true,
       worker: 'src/worker-production.js',
       liveVerificationPassed: live.ok === true,
-      manifestMatchedMain: live.manifestMatches === true,
-      healthMatchedCommit: live.healthMatches === true
+      manifestMatchedDeployment: live.manifestMatches === true,
+      healthMatchedCommit: live.healthMatches === true,
+      runtimeVariablesPreserved
     },
     d1: {
       database: 'matrix-members',
@@ -214,28 +223,27 @@ async function fetchBoundary(route) {
       visualSynthesisRoute: '/timers.html'
     },
     paypal: {
-      environment: 'sandbox',
-      checkoutClosed,
-      liveChargingEnabled: false,
-      unauthenticatedBoundaryPassed: paypal.ok === true,
-      bootstrapReady,
-      bootstrapSafeDisabled,
-      bootstrapSafe,
-      bootstrapMode: bootstrapReady ? 'sandbox-ready' : bootstrapSafeDisabled ? 'sandbox-pending-disabled' : 'unsafe',
-      bootstrapOrigin: bootstrap.origin || null,
-      planCount: Number(bootstrap.data?.planCount || 0),
-      prices: Array.isArray(bootstrap.data?.prices) ? bootstrap.data.prices.map(item => ({
-        tier: item.tier,
-        amount: item.amount,
-        currency: item.currency,
-        status: item.status
-      })) : [],
-      rehearsalBoundaryPassed: rehearsalSafe,
-      rehearsalCheckoutClosed: rehearsal.checkout?.data?.checkoutEnabled === false || bootstrapSafeDisabled
+      runtimeModel: 'Cloudflare-dashboard-managed and D1-gated',
+      configuredEnvironment: liveCheckoutEnabled ? 'live' : 'dashboard-managed',
+      liveCheckoutEnabled,
+      liveActivationReason: liveSetting?.activation_reason || null,
+      sandboxCheckoutClosed,
+      sandboxActivationReason: sandboxSetting?.activation_reason || null,
+      runtimeSettingsValid,
+      runtimeVariablesPreserved,
+      unauthenticatedBoundaryPassed: paypalBoundary.ok === true,
+      anonymousChargePossible: paypalBoundary.anonymousChargePossible === false,
+      boundaryOrigin: paypalBoundary.checkout?.origin || paypalBoundary.config?.origin || null,
+      activationContractWired,
+      sdkFallbackWired,
+      plansRequiredByWorker: true,
+      webhookRequiredByWorker: true,
+      liveConfirmationRequiredByWorker: true
     },
     forum: {
       d1WriteReadPassed: live.forumPersistence?.ok === true,
-      origin: live.forumPersistence?.storage || null
+      authoritativeStorage: live.forumPersistence?.authoritativeStorage || null,
+      anonymousWriteRejected: live.forumPersistence?.anonymousWriteRejected === true
     },
     safety: {
       secretsIncluded: false,
@@ -248,10 +256,13 @@ async function fetchBoundary(route) {
     ok: live.ok === true
       && rollbackPointCreated
       && missingObjects.length === 0
-      && checkoutClosed
-      && paypal.ok === true
-      && bootstrapSafe
-      && rehearsalSafe
+      && runtimeSettingsValid
+      && sandboxCheckoutClosed
+      && paypalBoundary.ok === true
+      && paypalBoundary.anonymousChargePossible === false
+      && runtimeVariablesPreserved
+      && activationContractWired
+      && sdkFallbackWired
       && live.forumPersistence?.ok === true
       && memberBoundaryPassed
       && emailBoundaryPassed
@@ -271,7 +282,7 @@ async function fetchBoundary(route) {
     console.error(JSON.stringify(receipt, null, 2));
     process.exit(1);
   }
-  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with Time Travel rollback, member, email, PayPal, forum, timer and mission-tier boundaries verified.`);
+  console.log(`Production deployment receipt created for ${String(receipt.deployedCommit).slice(0, 12)} with Time Travel rollback, live PayPal runtime preservation, member, email, forum, timer and mission-tier boundaries verified.`);
 })().catch(error => {
   console.error(error.stack || error.message);
   process.exit(1);

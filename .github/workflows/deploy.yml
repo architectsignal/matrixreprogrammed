@@ -180,7 +180,7 @@ jobs:
             npx --yes wrangler@latest d1 execute matrix-members --remote --file="$migration" --yes 2>&1 | tee -a downloads/d1-migration.log
           done
 
-      - name: Verify migrated D1 schema and disabled payment switches
+      - name: Verify migrated D1 schema and preserve payment switches
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -201,9 +201,12 @@ jobs:
           if(missing.length) throw new Error(`Missing migrated D1 objects: ${missing.join(', ')}`);
           if(!rollback.ok||!rollback.bookmark) throw new Error('Validated D1 rollback point is missing');
           const switches=rows(settings);
-          if(!switches.some(row=>row.environment==='sandbox')||!switches.some(row=>row.environment==='live')) throw new Error('Both PayPal runtime environments were not created');
-          if(switches.some(row=>Number(row.checkout_enabled)!==0)) throw new Error('PayPal checkout must remain disabled during deployment');
-          console.log(`D1 migration verification passed for ${required.length} required objects; rollback bookmark is valid; sandbox and live checkout remain disabled.`);
+          const sandbox=switches.find(row=>row.environment==='sandbox');
+          const live=switches.find(row=>row.environment==='live');
+          if(!sandbox||!live) throw new Error('Both PayPal runtime environments were not created');
+          if(![0,1].includes(Number(sandbox.checkout_enabled))||![0,1].includes(Number(live.checkout_enabled))) throw new Error('PayPal checkout switches contain an invalid value');
+          if(Number(sandbox.checkout_enabled)!==0) throw new Error('Sandbox checkout must remain closed outside an explicit rehearsal');
+          console.log(`D1 migration verification passed for ${required.length} required objects; rollback bookmark is valid; sandbox checkout is closed; live checkout state preserved at ${Number(live.checkout_enabled)}.`);
           NODE
 
       - name: Deploy exact reconciled _site and strict D1 forum and PayPal Worker to Cloudflare
@@ -215,7 +218,7 @@ jobs:
           set -euo pipefail
           npx --yes wrangler@latest deploy 2>&1 | tee downloads/wrangler-deploy.log
 
-      - name: Verify live routes, health SHA, sandbox plans, PayPal boundaries, forum D1 write/read and main SHA
+      - name: Verify live routes, health SHA, PayPal boundaries, forum D1 write/read and main SHA
         env:
           SITE_URL: https://matrixreprogrammed.com
           DEPLOY_COMMIT_SHA: ${{ env.DEPLOY_COMMIT_SHA }}

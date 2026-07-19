@@ -38,23 +38,39 @@ for (const page of pages) {
 }
 
 for (const required of [
-  ['membership.html', '/api/membership/signup'],
-  ['membership.html', 'marketingConsent'],
-  ['membership.html', '/api/paypal/config'],
-  ['membership.html', '/api/paypal/checkout-intent'],
-  ['membership.html', '/api/paypal/subscription/confirm'],
-  ['membership.html', 'actions.subscription.create'],
-  ['membership.html', 'config.checkoutEnabled'],
-  ['membership.html', 'data.verification && data.verification.sent'],
+  ['membership.html', 'data-newsletter-form'],
+  ['membership.html', 'newsletter.js'],
+  ['membership.html', 'paypal-membership.js'],
+  ['membership.html', 'paypal-membership-status'],
+  ['membership.html', 'paypal-button-supporter'],
+  ['membership.html', 'paypal-button-intelligence'],
+  ['membership.html', 'paypal-button-research_pro'],
+  ['membership.html', 'Paid memberships are opening soon. Free Member registration is available now.'],
+  ['membership.html', 'membership-terms.html'],
+  ['membership.html', 'terms-of-use.html'],
   ['member-login.html', '/api/auth/request-link'],
   ['member-dashboard.html', '/api/member/me'],
   ['member-dashboard.html', '/api/auth/logout'],
   ['member-dashboard.html', '/api/paypal/subscription/cancel'],
-  ['member-dashboard.html', 'paidAccessEnabled']
+  ['member-dashboard.html', 'paidAccessEnabled'],
+  ['newsletter.js', '/api/membership/signup'],
+  ['newsletter.js', 'marketingConsent'],
+  ['paypal-membership.js', '/api/paypal/config'],
+  ['paypal-membership.js', '/api/paypal/checkout-intent'],
+  ['paypal-membership.js', '/api/paypal/subscription/confirm'],
+  ['paypal-membership.js', 'actions.subscription.create'],
+  ['paypal-membership.js', 'checkoutEnabled']
 ]) {
   const file = path.join(root, required[0]);
   if (!fs.readFileSync(file, 'utf8').includes(required[1])) {
     console.error(`Membership auth UI patch failed: ${required[0]} missing ${required[1]}`);
+    process.exit(1);
+  }
+}
+
+for (const forbidden of ['Join Placeholder', 'Monthly donation', '€19/month', '€49/month', 'activation gates']) {
+  if (fs.readFileSync(path.join(root, 'membership.html'), 'utf8').includes(forbidden)) {
+    console.error(`Membership auth UI patch failed: membership.html contains obsolete marker ${forbidden}`);
     process.exit(1);
   }
 }
@@ -64,9 +80,14 @@ const report = {
   generatedAt: new Date().toISOString(),
   changed,
   pages: pages.map(page => page.name),
-  paypalCheckout: true,
+  runtimes: {
+    signup: 'newsletter.js',
+    payment: 'paypal-membership.js',
+    authentication: 'member-login.html and member-dashboard.js'
+  },
+  paypalCheckout: 'server-verified-and-fail-closed',
   paidAccessPolicy: 'Server-verified PayPal ACTIVE subscriptions only',
-  boundary: 'Canonical membership, passwordless authentication and PayPal subscription pages are restored after generated-site builders and copied to both HTML and extensionless Cloudflare asset routes.'
+  boundary: 'Canonical membership and passwordless pages are restored after generated-site builders. Signup and PayPal behavior remain in their dedicated audited runtimes rather than obsolete inline scripts.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'membership-auth-ui-patch.json'), JSON.stringify(report, null, 2));

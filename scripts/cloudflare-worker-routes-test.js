@@ -11,6 +11,18 @@ const fail = message => problems.push(message);
 const need = file => { if (!exists(file)) fail(`missing required file: ${file}`); };
 const needText = (file, text, label = text) => { if (!exists(file) || !read(file).includes(text)) fail(`${file}: missing ${label}`); };
 const forbidText = (file, text, label = text) => { if (exists(file) && read(file).includes(text)) fail(`${file}: should not contain ${label}`); };
+function headerRuleBlock(text, route) {
+  const lines = String(text || '').split(/\r?\n/);
+  const start = lines.findIndex(line => line.trim() === route);
+  if (start < 0) return '';
+  const block = [];
+  for (let index = start + 1; index < lines.length; index++) {
+    const line = lines[index];
+    if (line.trim().startsWith('/')) break;
+    block.push(line);
+  }
+  return block.join('\n');
+}
 
 const membershipPatch = spawnSync(process.execPath, [full('scripts/patch-membership-tiers.js')], {
   cwd: root,
@@ -134,7 +146,12 @@ for (const marker of [
 ]) needText('wrangler.jsonc', marker, `wrangler.jsonc marker ${marker}`);
 
 needText('_headers', 'Strict-Transport-Security', 'HSTS header');
-forbidText('_headers', 'max-age=31536000, immutable', 'unsafe year-long immutable JavaScript/CSS cache policy');
+const headersText = read('_headers');
+for (const route of ['/*.css', '/*.js']) {
+  const block = headerRuleBlock(headersText, route);
+  if (!block) fail(`_headers: missing ${route} cache rule`);
+  else if (/max-age=31536000[^\n]*immutable/i.test(block)) fail(`_headers: ${route} must not use year-long immutable caching`);
+}
 needText('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensionless route copier');
 needText('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
 needText('scripts/final-production-reconcile.js', 'SANDBOX READY / CHECKOUT DISABLED', 'final payment guard');

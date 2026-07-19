@@ -29,7 +29,6 @@ function normalizeFilename(value = '') {
     .replace(/^(img|image|card|art|final|approved|upload|generated)-+/, '')
     .replace(/-+(img|image|card|card-art|artwork|art|portrait|final|approved|upload|generated|installed|v\d+|\d+x\d+)$/g, '');
 }
-function isRaster(relative) { return RASTER_EXTENSIONS.has(path.extname(relative).toLowerCase()); }
 function svgContent(relative) { try { return fs.readFileSync(fp(relative), 'utf8').slice(0, 160000); } catch { return ''; } }
 function isGeneratedPlaceholderSvg(relative) {
   if (path.extname(relative).toLowerCase() !== '.svg') return false;
@@ -39,8 +38,9 @@ function isGeneratedPlaceholderSvg(relative) {
 function isEmbeddedArtSvg(relative) {
   if (path.extname(relative).toLowerCase() !== '.svg') return false;
   const content = svgContent(relative);
-  return /<image\b/i.test(content) && (/data:image\//i.test(content) || /\.installed\.(webp|png|jpe?g|avif)/i.test(content) || /installed Matrix Reprogrammed card artwork/i.test(content) || /original Matrix Reprogrammed card artwork/i.test(content));
+  return /<image\b/i.test(content) && (/data:image\//i.test(content) || /\.installed\.(webp|png|jpe?g|avif)/i.test(content) || /installed Matrix Reprogrammed card artwork/i.test(content));
 }
+function isRaster(relative) { const extension = path.extname(relative).toLowerCase(); return RASTER_EXTENSIONS.has(extension) || (extension === '.svg' && isEmbeddedArtSvg(relative)); }
 function walk(directory = root, output = []) {
   let entries = [];
   try { entries = fs.readdirSync(directory, { withFileTypes: true }); } catch { return output; }
@@ -83,10 +83,7 @@ function candidateScore(relative, card, config) {
 }
 function chooseCandidate(images, card, config) {
   return images
-    .map(relative => {
-      const embeddedArtSvg = isEmbeddedArtSvg(relative);
-      return { relative, score: candidateScore(relative, card, config), raster: isRaster(relative) || embeddedArtSvg, embeddedArtSvg, placeholder: isGeneratedPlaceholderSvg(relative) };
-    })
+    .map(relative => ({ relative, score: candidateScore(relative, card, config), raster: isRaster(relative), embeddedArtSvg: isEmbeddedArtSvg(relative), placeholder: isGeneratedPlaceholderSvg(relative) }))
     .filter(candidate => Number.isFinite(candidate.score) && candidate.score > 0)
     .sort((a, b) => b.score - a.score || Number(b.raster) - Number(a.raster) || Number(b.embeddedArtSvg) - Number(a.embeddedArtSvg) || a.relative.localeCompare(b.relative))[0] || null;
 }

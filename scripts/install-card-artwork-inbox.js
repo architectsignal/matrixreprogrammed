@@ -44,12 +44,22 @@ function svgWrapper({ label, sourceHref }) {
   return `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1800" viewBox="0 0 1200 1800" role="img" aria-label="${esc(label)} installed Matrix Reprogrammed card artwork"><rect width="1200" height="1800" fill="#020202"/><image href="${esc(sourceHref)}" x="0" y="0" width="1200" height="1800" preserveAspectRatio="xMidYMid slice"/><rect x="24" y="24" width="1152" height="1752" rx="38" fill="none" stroke="#d8b56a" stroke-width="6" opacity=".74"/><title>${esc(label)} · installed generated artwork</title><desc>Installed through the automated card artwork inbox. Evidence and current intelligence remain in the linked dossier.</desc></svg>`;
 }
 function refreshCardSurfaces() {
-  for (const script of ['ensure-card-art-assets.js', 'build-clean-card-decks.js', 'build-card-download-manifest.js', 'card-deck-system-audit.js']) {
+  const scripts = ['ensure-card-art-assets.js', 'build-clean-card-decks.js', 'build-card-download-manifest.js'];
+  for (const script of scripts) {
     const scriptPath = path.join(root, 'scripts', script);
     if (!fs.existsSync(scriptPath)) continue;
     delete require.cache[require.resolve(scriptPath)];
     require(scriptPath);
   }
+  const previous = process.env.CARD_ART_FINAL_AUDIT;
+  process.env.CARD_ART_FINAL_AUDIT = '1';
+  const auditPath = path.join(root, 'scripts', 'card-deck-system-audit.js');
+  if (fs.existsSync(auditPath)) {
+    delete require.cache[require.resolve(auditPath)];
+    require(auditPath);
+  }
+  if (previous === undefined) delete process.env.CARD_ART_FINAL_AUDIT;
+  else process.env.CARD_ART_FINAL_AUDIT = previous;
 }
 async function main() {
   const inboxPath = 'data/card-artwork-inbox.json';
@@ -114,8 +124,8 @@ async function main() {
   };
   wr('data/card-artwork-install-log.json', JSON.stringify(merged, null, 2));
   wr('downloads/card-artwork-install-log.md', '# Card Artwork Install Log\n\nUpdated: ' + merged.updated + '\n\nLatest installed: ' + installed.length + '\n\nErrors: ' + errors.length + '\n\n## Latest Installed\n' + (installed.map(i => `- ${i.label} — ${i.assetPath}`).join('\n') || 'None') + '\n\n## Errors\n' + (errors.map(e => `- ${e.label}: ${e.error}`).join('\n') || 'None'));
-  if (installed.length) refreshCardSurfaces();
+  refreshCardSurfaces();
   console.log(`Card artwork inbox installer complete: ${installed.length} installed, ${errors.length} error(s).`);
   if (errors.length && process.env.STRICT_CARD_ART_INSTALL === '1') process.exit(1);
 }
-main().catch(error => { console.error(error); if (process.env.STRICT_CARD_ART_INSTALL === '1') process.exit(1); });
+main().catch(error => { console.error(error); process.exit(1); });

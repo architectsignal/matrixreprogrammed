@@ -22,10 +22,11 @@
     "crons": ["5 6 * * *", "15 7 * * 1"]
   },
   "vars": {
-    "EMAIL_AUTOMATION_ENABLED": "false",
+    "EMAIL_AUTOMATION_ENABLED": "true",
     "EMAIL_TRANSACTIONAL_ENABLED": "true",
     "BREVO_DOMAIN_AUTHENTICATED": "true",
     "EMAIL_RETRY_QUARANTINE_BEFORE": "2026-07-18T00:00:00.000Z",
+    "INTELLIGENCE_REPORT_BATCH_LIMIT": "100",
     "MEMBERS_FROM_EMAIL": "members@matrixreprogrammed.com",
     "MEMBERS_FROM_NAME": "Matrix Reprogrammed",
     "MEMBERS_REPLY_TO_EMAIL": "njmgroupfrance@gmail.com",

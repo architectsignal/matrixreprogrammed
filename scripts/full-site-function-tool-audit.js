@@ -88,7 +88,7 @@ function checkHtml(file) {
   const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   if (duplicateIds.length) hard.push(`${name}: duplicate IDs ${duplicateIds.join(', ')}`);
   for (const marker of leakedMarkers) if (html.includes(marker)) hard.push(`${name}: leaked internal compatibility marker ${marker}`);
-  for (const obsolete of ['€19/month', '€49/month', 'Paid access to premium briefs']) if (html.includes(obsolete)) hard.push(`${name}: obsolete public copy ${obsolete}`);
+  for (const obsolete of ['€19/month', '€49/month', 'Paid access to premium briefs', 'Monthly donation']) if (html.includes(obsolete)) hard.push(`${name}: obsolete public copy ${obsolete}`);
 
   const idSet = new Set(ids);
   const attributes = [...html.matchAll(/(?:^|\s)(?:href|src|action)\s*=\s*(["'])([^"']+)\1/gi)];
@@ -174,11 +174,21 @@ requireFile('data/global-risk-clocks.json');
 requireFile('ai-speculative-conclusions.html', ['HYPOTHESES.', 'ai-speculative-conclusions.js']);
 requireFile('ai-speculative-conclusions.js');
 requireFile('data/ai-speculative-conclusions.json');
-requireFile('membership.html', ['Free Member', 'Monthly donation', 'same underlying public-source evidence', 'paypal-membership.js']);
-requireFile('paypal-membership.js', ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']);
+requireFile('membership.html', [
+  'Free Member',
+  'Monthly membership',
+  'same underlying public-source evidence',
+  'Paid memberships are opening soon. Free Member registration is available now.',
+  'Checkout approval alone never grants access.',
+  'Only the verified €6 plan can grant the Intelligence tier.',
+  'Only the verified €9 plan can grant Research Pro.',
+  'membership-terms.html',
+  'paypal-membership.js'
+]);
+requireFile('paypal-membership.js', ['/api/paypal/config', 'checkoutEnabled', '/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']);
 requireFile('member-login.html');
 requireFile('member-dashboard.html', ['member-dashboard-app.js']);
-requireFile('billing-dashboard.html', ['billing-dashboard.js']);
+requireFile('billing-dashboard.html', ['billing-dashboard.js', 'membership-terms.html']);
 requireFile('forum.html', ['forum.js']);
 requireFile('forum.js', ['/forum-feed-main', '/submit-main-post']);
 requireFile('download-center.html');
@@ -199,7 +209,7 @@ const report = {
   stats,
   hardIssues: hard,
   warnings,
-  boundary: 'Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, supported MapLibre browser-bundle wiring, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require live environment verification.'
+  boundary: 'Static audit validates local routes, syntax, JSON, critical DOM contracts, core tool wiring, supported MapLibre browser-bundle wiring, launch-safe membership copy, public-copy leaks and generated Cloudflare assets. Authenticated transactions and third-party services still require controlled environment verification.'
 };
 fs.writeFileSync(path.join(reportDir, 'full-site-function-tool-audit.json'), `${JSON.stringify(report, null, 2)}\n`);
 fs.writeFileSync(path.join(reportDir, 'full-site-function-tool-audit.md'), [

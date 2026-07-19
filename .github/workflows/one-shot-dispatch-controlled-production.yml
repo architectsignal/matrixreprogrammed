@@ -21,7 +21,6 @@ jobs:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const supersededRunId = 29687662933;
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
             const target = workflows.data.workflows.find(
               workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
@@ -31,7 +30,16 @@ jobs:
               return;
             }
 
-            async function freshTargetRun() {
+            const dispatchedAtMs = Date.now();
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: target.id,
+              ref: 'main',
+              inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+            });
+
+            async function exactFreshRun() {
               const runs = await github.rest.actions.listWorkflowRuns({
                 owner,
                 repo,
@@ -40,31 +48,22 @@ jobs:
                 branch: 'main',
                 per_page: 30
               });
-              return runs.data.workflow_runs.find(run => run.id !== supersededRunId) || null;
+              return runs.data.workflow_runs.find(
+                run => Date.parse(run.created_at) >= dispatchedAtMs - 5000
+              ) || null;
             }
 
-            let run = await freshTargetRun();
-            let dispatched = false;
-            if (!run) {
-              await github.rest.actions.createWorkflowDispatch({
-                owner,
-                repo,
-                workflow_id: target.id,
-                ref: 'main',
-                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
-              });
-              dispatched = true;
-              for (let attempt = 0; attempt < 16 && !run; attempt += 1) {
-                await new Promise(resolve => setTimeout(resolve, 2500));
-                run = await freshTargetRun();
-              }
+            let run = null;
+            for (let attempt = 0; attempt < 20 && !run; attempt += 1) {
+              await new Promise(resolve => setTimeout(resolve, 2500));
+              run = await exactFreshRun();
             }
 
             const receipt = {
               ok: Boolean(run),
-              dispatched,
+              dispatched: true,
+              dispatchedAt: new Date(dispatchedAtMs).toISOString(),
               checkedAt: new Date().toISOString(),
-              supersededRunId,
               targetWorkflowId: target.id,
               targetWorkflowName: target.name,
               targetWorkflowPath: target.path,
@@ -93,7 +92,7 @@ jobs:
               repo,
               path: receiptPath,
               branch: 'main',
-              message: 'Record fresh controlled production dispatch receipt',
+              message: 'Record exact fresh controlled production dispatch receipt',
               content: Buffer.from(`${JSON.stringify(receipt, null, 2)}\n`).toString('base64'),
               ...(sha ? { sha } : {})
             });

@@ -29,7 +29,9 @@ const criticalFiles = [
   'src/worker-member-experience.js', 'src/worker-paypal-subscriptions.js', 'src/worker-production.js',
   'scripts/build-free-ask-matrix-search.js', 'scripts/build-cloudflare-output.js',
   'scripts/build-production-health.js', 'scripts/final-production-reconcile.js',
-  'scripts/repair-generated-site-artifacts.js'
+  'scripts/repair-generated-site-artifacts.js',
+  'scripts/templates/membership-auth/membership.template',
+  'scripts/templates/membership-auth/newsletter.template.js'
 ];
 criticalFiles.forEach(needFile);
 
@@ -59,14 +61,21 @@ for (const [file, text, label] of [
   ['src/worker-forum-persistence.js', 'D1 authoritative; KV compatibility mirror', 'KV recovery boundary'],
   ['src/worker-paypal-subscriptions.js', '/api/paypal/checkout-intent', 'PayPal checkout intent'],
   ['src/worker-paypal-subscriptions.js', '/api/paypal/webhook', 'verified PayPal webhook'],
+  ['src/worker-paypal-subscriptions.js', '/v1/notifications/verify-webhook-signature', 'PayPal webhook verification postback'],
   ['src/worker-paypal-subscriptions.js', 'PAYPAL_SANDBOX_ENABLED', 'sandbox environment switch'],
   ['src/worker-paypal-subscriptions.js', 'PAYPAL_PRODUCTION_ENABLED', 'production environment switch'],
   ['src/worker-paypal-subscriptions.js', 'paypal_runtime_settings', 'D1 checkout switch'],
+  ['src/worker-paypal-subscriptions.js', 'plansReady', 'three-plan activation requirement'],
+  ['src/worker-paypal-subscriptions.js', 'checkoutEnabled', 'authoritative checkout state'],
   ['src/worker.js', 'env.ASSETS.fetch', 'Cloudflare ASSETS fetch'],
   ['wrangler.toml', 'main = "src/worker-production.js"', 'strict production entrypoint'],
   ['wrangler.toml', 'binding = "MEMBERS_DB"', 'MEMBERS_DB D1 binding'],
   ['wrangler.toml', 'directory = "./_site"', 'Cloudflare asset output directory'],
-  ['wrangler.toml', 'run_worker_first = true', 'Worker-first routing']
+  ['wrangler.toml', 'run_worker_first = true', 'Worker-first routing'],
+  ['wrangler.toml', 'PAYPAL_PRODUCTION_ENABLED = "false"', 'live PayPal disabled'],
+  ['wrangler.toml', 'COMMERCIAL_LAUNCH_APPROVED = "false"', 'commercial launch disabled'],
+  ['wrangler.toml', 'EMAIL_AUTOMATION_ENABLED = "false"', 'scheduled marketing disabled'],
+  ['wrangler.toml', 'EMAIL_TRANSACTIONAL_ENABLED = "true"', 'transactional email enabled']
 ]) needText(file, text, label);
 forbidSoftText('src/worker.js', 'matrixreprogrammed.pages.dev', 'stale Pages origin');
 forbidSoftText('src/worker.js', 'PAGES_STATIC_ORIGIN', 'stale Pages origin constant');
@@ -90,17 +99,36 @@ for (const [text, label] of [
   ['localOnly', 'local-only marker'], ['Not posted live yet. Saved only on this device', 'non-persistent save message']
 ]) forbidSoftText('forum.js', text, label);
 
-for (const file of ['membership.html', '_site/membership.html']) {
-  for (const marker of ['Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.']) needText(file, marker, `server-gated membership marker ${marker}`);
+const membershipFiles = ['scripts/templates/membership-auth/membership.template', 'membership.html', '_site/membership.html'];
+for (const file of membershipFiles) {
+  for (const marker of [
+    'Free Member', '€0', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status',
+    'paypal-button-supporter', 'paypal-button-intelligence', 'paypal-button-research_pro',
+    'Paid memberships are opening soon. Free Member registration is available now.',
+    'Create or access free account',
+    'Checkout approval alone never grants access.',
+    'Only the verified €6 plan can grant the Intelligence tier.',
+    'Only the verified €9 plan can grant Research Pro.',
+    'membership-terms.html', 'terms-of-use.html'
+  ]) needText(file, marker, `launch-safe membership marker ${marker}`);
+  forbidText(file, 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.', 'reader-visible technical gate language');
   forbidText(file, 'Coming soon — no payment taken', 'obsolete deferred membership page');
+  forbidText(file, 'Join Placeholder', 'join placeholder');
+  forbidText(file, 'Monthly donation', 'obsolete donation wording');
   forbidText(file, '€19/month', 'legacy €19 tier');
   forbidText(file, '€49/month', 'legacy €49 tier');
 }
 for (const file of ['paypal-membership.js', '_site/paypal-membership.js']) {
+  needText(file, '/api/paypal/config', 'PayPal configuration runtime');
+  needText(file, 'checkoutEnabled', 'server checkout-state runtime');
   needText(file, '/api/paypal/checkout-intent', 'PayPal checkout intent runtime');
   needText(file, '/api/paypal/subscription/confirm', 'PayPal confirmation runtime');
 }
+for (const marker of ['marketingConsent', 'public_daily_brief:preferences.daily', 'public_weekly_digest:preferences.weekly', 'release_notices:preferences.release']) {
+  needText('scripts/templates/membership-auth/newsletter.template.js', marker, `canonical newsletter marker ${marker}`);
+}
 needText('billing-dashboard.html', 'billing-dashboard.js', 'member billing dashboard');
+needText('billing-dashboard.html', 'membership-terms.html', 'billing membership terms');
 needText('admin-payment-dashboard.html', 'admin-payment-dashboard.js', 'admin payment dashboard');
 
 for (const file of ['downloads/forum-posts.json', 'downloads/forum-posts.md', 'downloads/deploy-status.json', 'llms.txt', 'robots.txt', 'sitemap.xml']) needFile(file);
@@ -149,12 +177,13 @@ const report = {
   softIssues: soft,
   workerStack: 'strict production boundary -> email/member/PayPal workers -> D1 forum -> static application',
   forumStorage: 'Cloudflare D1 authoritative; KV compatibility and recovery only.',
-  paymentStatus: 'PayPal sandbox-ready behind runtime, plan and D1 activation gates; checkout disabled by default.',
+  paymentStatus: 'PayPal sandbox-ready behind runtime, verified-plan and D1 activation gates; checkout and live charging disabled by default.',
+  emailStatus: 'Transactional email enabled; scheduled marketing disabled pending controlled delivery evidence.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
-  boundary: 'Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, unverified PayPal responses or unguarded checkout activation.'
+  boundary: 'Site harmony blocks broken search/assets, non-D1 forum persistence, malformed output, unverified PayPal responses, unguarded checkout activation, reader-visible implementation language or missing consent controls.'
 };
 fs.writeFileSync(path.join(root, 'downloads', 'site-function-harmony-report.json'), JSON.stringify(report, null, 2));
-fs.writeFileSync(path.join(root, 'downloads', 'site-function-harmony-report.md'), `# Site Function Harmony Report\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nWorker stack: ${report.workerStack}\nForum: ${report.forumStorage}\nPayments: ${report.paymentStatus}\n\n## Hard Issues\n${hard.map(item => `- ${item}`).join('\n') || '- None'}\n\n## Soft Review\n${soft.map(item => `- ${item}`).join('\n') || '- None'}\n`);
+fs.writeFileSync(path.join(root, 'downloads', 'site-function-harmony-report.md'), `# Site Function Harmony Report\n\nGenerated: ${report.generatedAt}\nResult: ${report.ok ? 'PASS' : 'FAIL'}\nWorker stack: ${report.workerStack}\nForum: ${report.forumStorage}\nPayments: ${report.paymentStatus}\nEmail: ${report.emailStatus}\n\n## Hard Issues\n${hard.map(item => `- ${item}`).join('\n') || '- None'}\n\n## Soft Review\n${soft.map(item => `- ${item}`).join('\n') || '- None'}\n`);
 
 if (hard.length) {
   console.error('\nSITE FUNCTION HARMONY TEST FAILED\n');
@@ -163,4 +192,4 @@ if (hard.length) {
   process.exit(1);
 }
 console.log('SITE FUNCTION HARMONY TEST PASSED');
-console.log(`Checked search, strict Worker routing, D1 forums, server-gated PayPal, downloads and Cloudflare output. Soft review items: ${soft.length}.`);
+console.log(`Checked search, strict Worker routing, D1 forums, launch-safe PayPal, email consent, downloads and Cloudflare output. Soft review items: ${soft.length}.`);

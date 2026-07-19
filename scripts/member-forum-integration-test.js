@@ -15,13 +15,16 @@ const forumWorker = read('src/worker-forum-persistence.js');
 const memberWorker = read('src/worker-member-experience.js');
 const productionWorker = read('src/worker-production.js');
 
-for (const html of [template, membership]) {
-  need(html.includes('€0'), 'Free Member price is missing');
-  need(html.includes('€3/month'), 'Supporter €3 price is missing');
-  need(html.includes('€6/month'), 'Intelligence €6 price is missing');
-  need(html.includes('€9/month'), 'Research Pro €9 price is missing');
-  need(!/€19\/month|€49\/month/.test(html), 'Legacy €19/€49 membership pricing remains');
-  need(html.includes('Free Member access never creates a PayPal subscription'), 'Free Member billing boundary is missing');
+for (const [label, html] of [['canonical template', template], ['membership source', membership]]) {
+  need(html.includes('€0'), `${label}: Free Member price is missing`);
+  need(html.includes('id="join-supporter"') && html.includes('€3') && html.includes('paypal-button-supporter'), `${label}: Supporter €3 card or fixed PayPal slot is missing`);
+  need(html.includes('id="join-intelligence-member"') && html.includes('€6') && html.includes('paypal-button-intelligence'), `${label}: Intelligence €6 card or fixed PayPal slot is missing`);
+  need(html.includes('id="join-research-pro"') && html.includes('€9') && html.includes('paypal-button-research_pro'), `${label}: Research Pro €9 card or fixed PayPal slot is missing`);
+  need(!/€\s*19(?:\s*\/\s*month|\/month)|€\s*49(?:\s*\/\s*month|\/month)/.test(html), `${label}: Legacy €19/€49 membership pricing remains`);
+  need(html.includes('Free Member access never creates a PayPal subscription'), `${label}: Free Member billing boundary is missing`);
+  need(html.includes('Checkout approval alone never grants access.'), `${label}: server-verified Supporter access boundary is missing`);
+  need(html.includes('Only the verified €6 plan can grant the Intelligence tier.'), `${label}: fixed Intelligence tier mapping is missing`);
+  need(html.includes('Only the verified €9 plan can grant Research Pro.'), `${label}: fixed Research Pro tier mapping is missing`);
 }
 
 const priceById = Object.fromEntries((matrix.tiers || []).map(tier => [tier.id, tier.priceEurMonthly]));
@@ -59,6 +62,7 @@ const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
   membershipPrices: priceById,
+  membershipVerification: 'tier-card-price-plus-fixed-paypal-slot',
   forumReading: 'public',
   forumPosting: 'verified-free-member-session',
   issues
@@ -70,5 +74,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers and verified-member D1 forum posting.');
+console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers are bound to their canonical cards and fixed PayPal slots; forum posting remains verified-member D1 only.');
 require('./recovery-worker-api-contract-test.js');

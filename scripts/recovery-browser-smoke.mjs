@@ -150,29 +150,41 @@ try {
 
   await runTest(browser, 'Membership tiers and free signup', '/membership.html', async page => {
     const body = await page.locator('body').innerText();
-    assert(body.includes('€3/month'), 'Supporter price is not €3/month');
-    assert(body.includes('€6/month'), 'Intelligence price is not €6/month');
-    assert(body.includes('€9/month'), 'Research Pro price is not €9/month');
-    assert(!body.includes('€19/month') && !body.includes('€49/month'), 'Legacy membership prices remain visible');
-    const form = page.locator('#membership-signup');
-    await form.locator('#member-name').fill('Recovery Member');
-    await form.locator('#member-email').fill('recovery-member@example.invalid');
-    await form.locator('#member-consent').check();
+    const supporter = page.locator('#join-supporter');
+    const intelligence = page.locator('#join-intelligence-member');
+    const research = page.locator('#join-research-pro');
+    assert(await supporter.count() === 1 && /€\s*3/.test(await supporter.innerText()) && /month/i.test(await supporter.innerText()), 'Supporter card is not the €3 monthly tier');
+    assert(await intelligence.count() === 1 && /€\s*6/.test(await intelligence.innerText()) && /month/i.test(await intelligence.innerText()), 'Intelligence card is not the €6 monthly tier');
+    assert(await research.count() === 1 && /€\s*9/.test(await research.innerText()) && /month/i.test(await research.innerText()), 'Research Pro card is not the €9 monthly tier');
+    assert(await supporter.locator('#paypal-button-supporter').count() === 1, 'Supporter PayPal slot is missing');
+    assert(await intelligence.locator('#paypal-button-intelligence').count() === 1, 'Intelligence PayPal slot is missing');
+    assert(await research.locator('#paypal-button-research_pro').count() === 1, 'Research Pro PayPal slot is missing');
+    assert(!/€\s*19|€\s*49/.test(body), 'Legacy membership prices remain visible');
+    assert(/paid memberships are opening soon/i.test(body), 'Reader-facing paid launch state is missing');
+
+    const form = page.locator('#newsletter-form');
+    await form.waitFor({ state: 'visible' });
+    await form.locator('input[name="name"]').fill('Recovery Member');
+    await form.locator('input[type="email"]').fill('recovery-member@example.invalid');
+    const consent = form.locator('input[data-marketing-consent]');
+    await consent.waitFor({ state: 'visible' });
+    await consent.check();
     await form.locator('button[type="submit"]').click();
-    await page.waitForFunction(() => /check your email|check your inbox/i.test(document.querySelector('#signup-status')?.textContent || ''), null, { timeout: 10000 });
+    await page.waitForFunction(() => /saved\. check your inbox/i.test(document.querySelector('#newsletter-form .form-status')?.textContent || ''), null, { timeout: 10000 });
     const payload = await page.evaluate(() => window.__membershipSignupPayload || null);
-    assert(payload?.marketingConsent === true, 'Membership signup omitted explicit marketing consent');
-    assert(payload?.email === 'recovery-member@example.invalid', 'Membership signup sent the wrong email');
+    assert(payload?.marketingConsent === true, 'Membership free signup omitted explicit marketing consent');
+    assert(payload?.email === 'recovery-member@example.invalid', 'Membership free signup sent the wrong email');
+    assert(payload?.public_daily_brief === true, 'Membership free signup did not preserve Daily Control Brief preference');
+    assert(payload?.release_notices === true, 'Membership free signup did not preserve release notices');
   }, async page => {
     await page.addInitScript(() => { window.__membershipSignupPayload = null; });
     await page.route('**/api/paypal/config', route => jsonResponse(route, { ok: true, configured: false, checkoutEnabled: false }));
-    await page.route('**/api/membership/signup', async route => {
+    await page.route('**/newsletter-signup', async route => {
       let payload = null;
       try { payload = route.request().postDataJSON(); } catch {}
       await page.evaluate(value => { window.__membershipSignupPayload = value; }, payload);
-      await jsonResponse(route, { ok: true, saved: true, emailSent: true, verificationRequired: true }, 202);
+      await jsonResponse(route, { ok: true, saved: true, verificationRequired: true, verification: { sent: true } }, 202);
     });
-    await page.route('**/newsletter-signup', route => jsonResponse(route, { ok: true, saved: true, verificationRequired: true }, 202));
   });
 
   await runTest(browser, 'Passwordless login request', '/member-login.html', async page => {

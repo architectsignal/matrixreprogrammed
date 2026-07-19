@@ -24,11 +24,11 @@ const buildSha = commitSha();
 const manifest = parse('deploy-manifest.json');
 const modules = [
   { name: 'Homepage eye-to-mask sequence', route: '/', file: 'index.html', markers: ['data-homepage-mask-intro', 'assets/intro-eye.svg', 'assets/intro-mask.svg'] },
-  { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status'] },
-  { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js'] },
+  { name: 'Server-gated membership tiers', route: '/membership', file: 'membership.html', markers: ['Free Member', '€3', '€6', '€9', 'paypal-membership.js', 'paypal-membership-status', 'Checkout approval alone never grants access.'] },
+  { name: 'Member billing dashboard', route: '/billing-dashboard', file: 'billing-dashboard.html', markers: ['billing-dashboard.js', 'membership-terms.html'] },
   { name: 'Payment administration', route: '/admin-payment-dashboard', file: 'admin-payment-dashboard.html', markers: ['admin-payment-dashboard.js'] },
   { name: 'Phase 7 sandbox rehearsal control room', route: '/admin-paypal-rehearsal', file: 'admin-paypal-rehearsal.html', markers: ['PAYPAL SANDBOX REHEARSAL.', 'maximum 45-minute window', 'admin-paypal-rehearsal.js'] },
-  { name: 'PayPal subscription Worker', route: '/api/paypal/config', file: 'src/worker-paypal-subscriptions.js', markers: ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', 'PAYPAL_SANDBOX_ENABLED', 'paypal_runtime_settings'] },
+  { name: 'PayPal subscription Worker', route: '/api/paypal/config', file: 'src/worker-paypal-subscriptions.js', markers: ['cloudflare-worker-paypal-subscriptions', '/api/paypal/webhook', '/v1/notifications/verify-webhook-signature', 'PAYPAL_SANDBOX_ENABLED', 'paypal_runtime_settings', 'plansReady'] },
   { name: 'Phase 7 rehearsal Worker', route: '/api/paypal/admin/rehearsal/readiness', file: 'src/worker-paypal-sandbox-rehearsal.js', markers: ['cloudflare-worker-paypal-sandbox-rehearsal', 'START MATRIX PAYPAL SANDBOX REHEARSAL', 'expireStaleRuns', 'liveChargingEnabled: false'] },
   { name: 'Phase 7 rehearsal D1 ledger', route: '/api/paypal/admin/rehearsals', file: 'migrations/phase7_paypal_sandbox_rehearsal.sql', markers: ['paypal_sandbox_rehearsal_runs', 'paypal_sandbox_rehearsal_evidence', 'paypal_active_sandbox_rehearsal', 'checkout_enabled=0'] },
   { name: 'Live Intel', route: '/live-intel', file: 'live-intel.html', markers: ['LIVE INTEL'] },
@@ -49,9 +49,31 @@ const modules = [
 
 const manifestMatches = Boolean(manifest && manifest.commitSha === buildSha);
 const membership = read('membership.html');
-const paymentReadyDisabled = membership.includes('paypal-membership.js')
-  && membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')
-  && !membership.includes('Coming soon — no payment taken');
+const membershipClient = read('paypal-membership.js');
+const paypalWorker = read('src/worker-paypal-subscriptions.js');
+const wrangler = read('wrangler.toml');
+const paymentReadyDisabled = [
+  membership.includes('Paid memberships are opening soon. Free Member registration is available now.'),
+  membership.includes('Checkout approval alone never grants access.'),
+  membership.includes('Only the verified €6 plan can grant the Intelligence tier.'),
+  membership.includes('Only the verified €9 plan can grant Research Pro.'),
+  membership.includes('paypal-button-supporter'),
+  membership.includes('paypal-button-intelligence'),
+  membership.includes('paypal-button-research_pro'),
+  !membership.includes('Coming soon — no payment taken'),
+  !membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'),
+  membershipClient.includes('/api/paypal/config'),
+  membershipClient.includes('checkoutEnabled'),
+  membershipClient.includes('/api/paypal/checkout-intent'),
+  membershipClient.includes('/api/paypal/subscription/confirm'),
+  paypalWorker.includes('/v1/notifications/verify-webhook-signature'),
+  paypalWorker.includes('plansReady'),
+  paypalWorker.includes('paypal_runtime_settings'),
+  wrangler.includes('PAYPAL_ENVIRONMENT = "sandbox"'),
+  wrangler.includes('PAYPAL_PRODUCTION_ENABLED = "false"'),
+  wrangler.includes('COMMERCIAL_LAUNCH_APPROVED = "false"')
+].every(Boolean);
+const uniqueRoutes = [...new Set(modules.map(item => item.route))];
 const health = {
   ok: modules.every(item => item.ready) && manifestMatches && paymentReadyDisabled,
   buildSha,
@@ -62,15 +84,18 @@ const health = {
   forumStorage: 'Cloudflare D1 MEMBERS_DB.forum_posts is authoritative; KV is compatibility and recovery only.',
   forumFailureMode: 'Fail closed. Legacy forum responses cannot report success when D1 is missing or unhealthy.',
   paymentStatus: 'sandbox-ready-disabled',
-  paymentMessage: 'PayPal subscription code is deployed behind server-side gates; checkout remains disabled until Cloudflare configuration, D1 activation and verified plans agree.',
+  paymentMessage: 'Reader-facing paid memberships are opening soon. Server activation still requires configured credentials, the sandbox environment switch, an active D1 rehearsal window, three verified plans, verified provider state and verified webhooks. Live charging remains disabled.',
+  paymentReadinessProof: paymentReadyDisabled,
   checkoutDefault: 'disabled',
   rehearsalStatus: 'timed-sandbox-only',
   rehearsalWindowMaxMinutes: 45,
   rehearsalMessage: 'Sandbox checkout may open only inside an administrator-started Phase 7 rehearsal. Expiry, abort or completion closes checkout automatically.',
   productionPaymentsEnabled: false,
+  scheduledMarketingEnabled: false,
+  transactionalEmailEnabled: true,
   manifestSha: manifest?.commitSha || null,
   manifestMatches,
-  routes: modules.map(item => item.route),
+  routes: uniqueRoutes,
   modules
 };
 
@@ -86,6 +111,8 @@ const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta
 &gt; Payments: SANDBOX READY / CHECKOUT DISABLED
 &gt; Rehearsal: TIMED SANDBOX ONLY / 45 MIN MAX
 &gt; Live charging: DISABLED
+&gt; Scheduled marketing: DISABLED
+&gt; Transactional email: ENABLED
 &gt; Manifest match: ${health.manifestMatches ? 'YES' : 'NO'}
 &gt; Overall: ${health.ok ? 'READY' : 'BLOCKED'}</div><aside class="card redline"><div class="pill">Phase 7 controlled billing test</div><h2>PayPal is deployed but closed by default.</h2><p>The Free Member tier is active. Sandbox checkout can open only during a timed administrator rehearsal. Production charging remains disabled.</p></aside></section><section class="section wrap"><h2>Production checks</h2><div class="grid">${cards}</div></section></main><footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — production health ${esc(health.buildShortSha)}</p></footer></div></body></html>`;
 fs.writeFileSync(full('deploy-health.html'), html);
@@ -97,4 +124,4 @@ if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));
   process.exit(1);
 }
-console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, Phase 7 timed sandbox rehearsal ready, live charging disabled.`);
+console.log(`Production health built for ${health.buildShortSha}: D1 fail-closed, Phase 7 timed sandbox rehearsal ready, live charging and scheduled marketing disabled.`);

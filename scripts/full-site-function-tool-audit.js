@@ -63,8 +63,7 @@ function localPathExists(target, fromFile) {
   return candidates.some(candidate => fs.existsSync(candidate));
 }
 function idsIn(html) {
-  const ids = [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
-  return ids;
+  return [...html.matchAll(/\bid\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
 }
 function checkJsSyntax(file) {
   const source = read(file);
@@ -175,7 +174,7 @@ requireFile('ai-speculative-conclusions.html', ['HYPOTHESES.', 'ai-speculative-c
 requireFile('ai-speculative-conclusions.js');
 requireFile('data/ai-speculative-conclusions.json');
 requireFile('membership.html', ['Free Member', 'Monthly donation', 'same underlying public-source evidence', 'paypal-membership.js']);
-requireFile('paypal-membership.js', ['/api/paypal/checkout-intent', '/api/paypal/subscription/confirm']);
+requireFile('paypal-membership.js', ['/api/paypal/subscription/create', 'Continue securely to PayPal', 'location.assign']);
 requireFile('member-login.html');
 requireFile('member-dashboard.html', ['member-dashboard-app.js']);
 requireFile('billing-dashboard.html', ['billing-dashboard.js']);

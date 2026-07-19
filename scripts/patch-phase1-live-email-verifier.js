@@ -54,5 +54,6 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   paypalVerificationModel: 'Runtime-gated, Cloudflare-dashboard-managed, anonymous checkout rejected.',
   boundary: 'Live verification proves the deployed email automation binding is false, health JSON is commit-bound, and anonymous PayPal configuration and checkout routes remain closed.'
 }, null, 2)}\n`);
+require('./patch-paypal-server-redirect.js');
 require('./patch-search-v3-compaction-headroom.js');
-console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; runtime-gated PayPal and Search V3 compaction headroom verified.`);
+console.log(`Phase 1 live production verifier ${changed ? 'patched' : 'already current'}; server-redirect PayPal and Search V3 compaction headroom verified.`);

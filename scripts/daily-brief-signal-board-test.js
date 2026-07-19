@@ -38,7 +38,9 @@ check('renderer-links', ['Open full brief','Evidence Vault','Persistent Signal B
 
 const lifecycle = read('src/worker-email-lifecycle.js');
 check('email-automation-enabled', read('wrangler.toml').includes('EMAIL_AUTOMATION_ENABLED = "true"'), 'Email automation is not enabled');
-check('immediate-first-brief', lifecycle.includes('queueImmediateDailyBrief') && lifecycle.includes("messageKind:'first_daily_brief'") && lifecycle.includes('public_daily_brief!==1'), 'Immediate first daily brief is not preference-gated');
+const legacyFirstBrief = lifecycle.includes('queueImmediateDailyBrief') && lifecycle.includes("messageKind:'first_daily_brief'") && lifecycle.includes('public_daily_brief!==1');
+const currentFirstBrief = lifecycle.includes('sendFirstDailyBrief') && lifecycle.includes('public_daily_brief!==1') && lifecycle.includes('daily-control-brief:${member.id}:') && lifecycle.includes('firstDailyBrief');
+check('immediate-first-brief', legacyFirstBrief || currentFirstBrief, 'Immediate first daily brief is not preference-gated and same-day deduplicated');
 check('personalized-controls', lifecycle.includes('issueReusableEmailToken') && lifecycle.includes('Manage preferences:') && lifecycle.includes('Unsubscribe:'), 'Email campaigns lack personalized controls');
 check('one-click-unsubscribe', lifecycle.includes("'List-Unsubscribe'") && lifecycle.includes("'List-Unsubscribe-Post':'List-Unsubscribe=One-Click'") && lifecycle.includes('headers:headers||undefined') && lifecycle.includes('headers:payload.headers||undefined'), 'Campaign and immediate brief emails lack machine-readable one-click unsubscribe headers');
 check('paris-schedule', lifecycle.includes("timeZone:'Europe/Paris'") && lifecycle.includes("parts.hour==='08'&&parts.minute==='05'") && lifecycle.includes("parts.weekday==='Mon'&&parts.hour==='09'&&parts.minute==='15'"), 'Email delivery is not guarded by Paris local time');

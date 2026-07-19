@@ -39,7 +39,7 @@ function isGeneratedPlaceholderSvg(relative) {
 function isEmbeddedArtSvg(relative) {
   if (path.extname(relative).toLowerCase() !== '.svg') return false;
   const content = svgContent(relative);
-  return /<image\b/i.test(content) && (/data:image\//i.test(content) || /\.installed\.(webp|png|jpe?g|avif)/i.test(content) || /installed Matrix Reprogrammed card artwork/i.test(content));
+  return /<image\b/i.test(content) && (/data:image\//i.test(content) || /\.installed\.(webp|png|jpe?g|avif)/i.test(content) || /installed Matrix Reprogrammed card artwork/i.test(content) || /original Matrix Reprogrammed card artwork/i.test(content));
 }
 function walk(directory = root, output = []) {
   let entries = [];
@@ -83,7 +83,10 @@ function candidateScore(relative, card, config) {
 }
 function chooseCandidate(images, card, config) {
   return images
-    .map(relative => ({ relative, score: candidateScore(relative, card, config), raster: isRaster(relative), embeddedArtSvg: isEmbeddedArtSvg(relative), placeholder: isGeneratedPlaceholderSvg(relative) }))
+    .map(relative => {
+      const embeddedArtSvg = isEmbeddedArtSvg(relative);
+      return { relative, score: candidateScore(relative, card, config), raster: isRaster(relative) || embeddedArtSvg, embeddedArtSvg, placeholder: isGeneratedPlaceholderSvg(relative) };
+    })
     .filter(candidate => Number.isFinite(candidate.score) && candidate.score > 0)
     .sort((a, b) => b.score - a.score || Number(b.raster) - Number(a.raster) || Number(b.embeddedArtSvg) - Number(a.embeddedArtSvg) || a.relative.localeCompare(b.relative))[0] || null;
 }

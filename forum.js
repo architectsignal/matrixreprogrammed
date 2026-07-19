@@ -1,3 +1,4 @@
+// final-cloudflare-signal-board-owner-v2
 (function(){
   const form=document.getElementById('signal-board-form');
   const status=document.getElementById('signal-form-status');

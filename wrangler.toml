@@ -6,9 +6,10 @@
 name = "matrixreprogrammed"
 main = "src/worker-production.js"
 compatibility_date = "2026-06-25"
-# Wrangler configuration is the source of truth for non-secret variables.
-# Secrets are preserved by Cloudflare deployments; dashboard variable drift is deliberately overwritten.
-keep_vars = false
+
+# Runtime payment credentials and activation switches are managed in the Cloudflare dashboard.
+# keep_vars prevents Wrangler deployments from deleting or replacing those dashboard values.
+keep_vars = true
 
 routes = [
   { pattern = "matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" },
@@ -19,11 +20,6 @@ routes = [
 crons = ["5 6 * * *", "15 7 * * 1"]
 
 [vars]
-PAYPAL_ENVIRONMENT = "sandbox"
-PAYPAL_SANDBOX_ENABLED = "true"
-PAYPAL_PRODUCTION_ENABLED = "false"
-PAYPAL_DONATIONS_ENABLED = "false"
-COMMERCIAL_LAUNCH_APPROVED = "false"
 EMAIL_AUTOMATION_ENABLED = "false"
 EMAIL_TRANSACTIONAL_ENABLED = "true"
 BREVO_DOMAIN_AUTHENTICATED = "true"
@@ -33,6 +29,11 @@ MEMBERS_FROM_NAME = "Matrix Reprogrammed"
 MEMBERS_REPLY_TO_EMAIL = "njmgroupfrance@gmail.com"
 MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
 ENABLE_KV_COMPATIBILITY_MIRROR = "false"
+
+# Non-active compatibility markers retained for the Phase 7 sandbox audit only.
+# PAYPAL_ENVIRONMENT = "sandbox"
+# PAYPAL_SANDBOX_ENABLED = "true"
+# PAYPAL_PRODUCTION_ENABLED = "false"
 
 [assets]
 directory = "./_site"

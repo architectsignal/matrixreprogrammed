@@ -49,6 +49,26 @@ if (!worker.includes('function redirect(location)')) {
   );
 }
 
+// Normalize dashboard-managed credentials before OAuth. Copy/paste can add hidden
+// whitespace or surrounding quotes, which PayPal correctly rejects as invalid credentials.
+if (!worker.includes('function paypalCredential(value)')) {
+  const cleanAnchor = "function clean(value,max=500){return String(value??'').replace(/[\\u0000-\\u001f\\u007f]/g,' ').replace(/\\s+/g,' ').trim().slice(0,max)}";
+  const credentialHelper = "\nfunction paypalCredential(value){let text=String(value??'').trim();if(text.length>=2&&((text.startsWith('\\\"')&&text.endsWith('\\\"'))||(text.startsWith(\"'\")&&text.endsWith(\"'\"))))text=text.slice(1,-1).trim();return text}";
+  worker = insertAfter(worker, cleanAnchor, credentialHelper, 'PayPal credential normalizer');
+}
+
+worker = worker.replace(
+  "function configured(env){return Boolean(env?.PAYPAL_CLIENT_ID&&env?.PAYPAL_CLIENT_SECRET&&env?.PAYPAL_WEBHOOK_ID)}",
+  "function configured(env){return Boolean(paypalCredential(env?.PAYPAL_CLIENT_ID)&&paypalCredential(env?.PAYPAL_CLIENT_SECRET)&&paypalCredential(env?.PAYPAL_WEBHOOK_ID))}"
+);
+
+const legacyAccessToken = "async function accessToken(env){if(!configured(env))throw new Error('PayPal credentials and webhook ID are not configured');const credential=btoa(`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`);const response=await fetch(`${apiBase(env)}/v1/oauth2/token`,{method:'POST',headers:{Authorization:`Basic ${credential}`,'Content-Type':'application/x-www-form-urlencoded',Accept:'application/json'},body:'grant_type=client_credentials'});const text=await response.text();let payload={};try{payload=JSON.parse(text||'{}')}catch{}if(!response.ok||!payload.access_token)throw new Error(clean(payload.error_description||payload.message||text||'PayPal OAuth failed',700));return payload.access_token}";
+const normalizedAccessToken = "async function accessToken(env){const clientId=paypalCredential(env?.PAYPAL_CLIENT_ID);const clientSecret=paypalCredential(env?.PAYPAL_CLIENT_SECRET);const webhookId=paypalCredential(env?.PAYPAL_WEBHOOK_ID);if(!clientId||!clientSecret||!webhookId)throw new Error('PayPal credentials and webhook ID are not configured');const oauthCredential=btoa(`${clientId}:${clientSecret}`);const response=await fetch(`${apiBase(env)}/v1/oauth2/token`,{method:'POST',headers:{Authorization:`Basic ${oauthCredential}`,'Content-Type':'application/x-www-form-urlencoded',Accept:'application/json'},body:'grant_type=client_credentials'});const text=await response.text();let payload={};try{payload=JSON.parse(text||'{}')}catch{}if(!response.ok||!payload.access_token)throw new Error(clean(payload.error_description||payload.message||text||'PayPal OAuth failed',700));return payload.access_token}";
+if (!worker.includes(normalizedAccessToken)) {
+  if (!worker.includes(legacyAccessToken)) throw new Error('PayPal OAuth credential anchor missing');
+  worker = worker.replace(legacyAccessToken, normalizedAccessToken);
+}
+
 // Preserve PayPal's safe issue description and debug identifier without exposing credentials.
 if (!worker.includes('error.paypalDebugId')) {
   const oldPaypal = "if(!response.ok)throw new Error(clean(payload.message||payload.error_description||payload.name||text||`PayPal HTTP ${response.status}`,900));return{status:response.status,payload}";
@@ -111,7 +131,10 @@ for (const marker of [
   "status='failed',failed_at=?,failure_reason=?,updated_at=?",
   "return json({ok:false,error:'PayPal could not start the subscription.'",
   'error.paypalDebugId',
-  "rel==='approve'"
+  "rel==='approve'",
+  'function paypalCredential(value)',
+  'const clientId=paypalCredential(env?.PAYPAL_CLIENT_ID)',
+  'const clientSecret=paypalCredential(env?.PAYPAL_CLIENT_SECRET)'
 ]) {
   if (!finalWorker.includes(marker)) throw new Error(`PayPal durable-create marker missing: ${marker}`);
 }
@@ -129,7 +152,8 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   approvalLinkPolicy: 'accept the official PayPal rel=approve link',
   providerFailurePolicy: 'return a safe PayPal issue description, code and debug ID without exposing credentials',
   bookkeepingPolicy: 'a nonessential D1 provider-ID update cannot block an already-created PayPal approval redirect',
+  credentialPolicy: 'trim hidden whitespace and remove accidental surrounding quotes before OAuth',
   sourceOwnership: 'server create/return routes are restored before build and after late sanitation',
   schemaCompatibility: 'uses only statuses allowed by phase6_paypal_subscriptions.sql'
 }, null, 2)}\n`);
-console.log('PayPal subscription creation repaired permanently: routes restored, D1-compatible state, resilient redirect and provider diagnostics installed.');
+console.log('PayPal subscription creation repaired permanently: routes restored, normalized OAuth credentials, D1-compatible state, resilient redirect and provider diagnostics installed.');

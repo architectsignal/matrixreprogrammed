@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Personal Intelligence Reports | Matrix Reprogrammed</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    :root{color-scheme:dark}.report-shell{max-width:1180px;margin:0 auto;padding:32px 18px 80px}.report-hero,.report-panel{border:1px solid #6c572c;background:#0b0905;border-radius:18px;padding:24px}.report-hero{margin-bottom:22px}.report-kicker{letter-spacing:.14em;text-transform:uppercase;color:#d8b56a;font-size:.76rem}.report-grid{display:grid;grid-template-columns:minmax(260px,360px) minmax(0,1fr);gap:22px}.report-list{display:grid;gap:10px}.report-button{width:100%;text-align:left;border:1px solid #3e321d;background:#100d08;color:#f3e6bd;border-radius:12px;padding:14px;cursor:pointer}.report-button[aria-current="true"]{border-color:#d8b56a;background:#171208}.report-meta{color:#b9aa82;font-size:.86rem}.report-actions{display:flex;gap:10px;flex-wrap:wrap}.report-action{display:inline-block;padding:11px 15px;border-radius:9px;text-decoration:none;font-weight:700;background:#d8b56a;color:#090702}.report-action.secondary{background:transparent;color:#d8b56a;border:1px solid #d8b56a}.report-section{border-top:1px solid #3e321d;padding-top:18px;margin-top:22px}.record-card{border-left:3px solid #8d7137;padding:4px 0 4px 14px;margin:14px 0}.badge{display:inline-block;border:1px solid #6c572c;border-radius:999px;padding:3px 8px;font-size:.72rem;color:#d8b56a}.status{padding:14px;border:1px solid #3e321d;border-radius:10px;background:#100d08}.preferences label{display:block;margin:12px 0}.preferences select{width:100%;max-width:360px;padding:10px;background:#050505;color:#f3e6bd;border:1px solid #6c572c;border-radius:8px}.preferences button{padding:11px 16px;border:0;border-radius:9px;background:#d8b56a;color:#090702;font-weight:700;cursor:pointer}@media(max-width:820px){.report-grid{grid-template-columns:1fr}.report-shell{padding-top:18px}}
+  </style>
+</head>
+<body>
+  <main class="report-shell">
+    <header class="report-hero">
+      <p class="report-kicker">Matrix Reprogrammed · Member Intelligence Workspace</p>
+      <h1>Personal intelligence reports</h1>
+      <p>Daily reviews, integrated weekly reports and living PDF dossiers built around the people, institutions, cases, records and themes you track.</p>
+      <div class="report-actions"><a class="report-action secondary" href="/member-dashboard.html">Member dashboard</a><a class="report-action secondary" href="/daily-brain-brief.html">Latest public brief</a></div>
+    </header>
+    <div id="report-status" class="status" role="status">Loading your reporting workspace…</div>
+    <div id="report-workspace" class="report-grid" hidden>
+      <aside class="report-panel">
+        <h2>Your dossiers</h2><div id="report-list" class="report-list"></div>
+        <section id="preferences" class="report-section preferences">
+          <h2>Report settings</h2>
+          <form id="report-profile-form">
+            <label>Depth<select name="depth" id="profile-depth"><option value="essential">Essential</option><option value="detailed">Detailed</option><option value="forensic">Forensic</option></select></label>
+            <label><input type="checkbox" id="profile-history"> Include historical context</label>
+            <label><input type="checkbox" id="profile-speculation"> Include clearly labelled speculative analysis</label>
+            <label><input type="checkbox" id="profile-sources"> Include extended source ledger</label>
+            <label>Delivery<select id="profile-delivery"><option value="email_and_pdf">Email and PDF</option><option value="email">Email</option><option value="archive_only">Archive only</option></select></label>
+            <label>Immediate-alert threshold<select id="profile-alert"><option value="routine">Routine</option><option value="material">Material</option><option value="major">Major</option><option value="critical">Critical only</option></select></label>
+            <button type="submit">Save settings</button>
+          </form>
+        </section>
+      </aside>
+      <article id="report-detail" class="report-panel"><h2>Select a report</h2><p>Your most recent report will open automatically when available.</p></article>
+    </div>
+  </main>
+  <script type="module" src="/intelligence-reports.js"></script>
+</body>
+</html>
